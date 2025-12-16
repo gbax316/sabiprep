@@ -1,39 +1,6 @@
 // SABIPREP - Question Types
 
-import type { Question } from './database';
-
-/**
- * Subject (e.g., Mathematics, English)
- */
-export interface Subject {
-  id: string;
-  name: string;
-  description: string;
-  icon: SubjectIcon;
-  color: SubjectColor;
-  totalQuestions: number;
-  totalTopics: number;
-  exams: ExamType[];
-  isAvailable: boolean;
-  createdAt: string;
-  updatedAt: string;
-}
-
-/**
- * Topic within a subject
- */
-export interface Topic {
-  id: string;
-  subjectId: string;
-  name: string;
-  description: string;
-  totalQuestions: number;
-  difficulty: Difficulty;
-  exams: ExamType[];
-  order: number;
-  createdAt: string;
-  updatedAt: string;
-}
+import type { Question, Subject, Topic } from './database';
 
 /**
  * Topic with user progress
