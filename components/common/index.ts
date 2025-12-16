@@ -20,3 +20,7 @@ export type { ModalProps, ConfirmModalProps, AlertModalProps } from './Modal';
 
 export { BottomNav, NavButton } from './BottomNav';
 export type { BottomNavProps, NavItem, NavButtonProps } from './BottomNav';
+
+export { SplashScreen } from './SplashScreen';
+export { CircularTimer } from './CircularTimer';
+export { QuestionNavigator } from './QuestionNavigator';

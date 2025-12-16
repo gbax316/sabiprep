@@ -38,7 +38,8 @@ export function Header({
   const pathname = usePathname();
 
   // Determine if we're on a page that needs a back button
-  const isSubPage = pathname?.split('/').filter(Boolean).length > 1;
+  const pathSegments = pathname?.split('/').filter(Boolean) || [];
+  const isSubPage = pathSegments.length > 1;
   const shouldShowBack = showBack || isSubPage;
 
   const handleBack = () => {
