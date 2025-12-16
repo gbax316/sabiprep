@@ -44,6 +44,7 @@ export function BottomNav({ items = defaultNavItems, className }: BottomNavProps
   const pathname = usePathname();
 
   const isActive = (href: string) => {
+    if (!pathname) return false;
     if (href === '/home') {
       return pathname === '/' || pathname === '/home';
     }
