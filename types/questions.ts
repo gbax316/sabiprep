@@ -1,5 +1,7 @@
 // SABIPREP - Question Types
 
+import type { Question } from './database';
+
 /**
  * Subject (e.g., Mathematics, English)
  */
@@ -42,27 +44,6 @@ export interface TopicWithProgress extends Topic {
   questionsCorrect: number;
   accuracy: number;
   lastAttemptedAt?: string;
-}
-
-/**
- * Question
- */
-export interface Question {
-  id: string;
-  topicId: string;
-  subjectId: string;
-  questionText: string;
-  questionImage?: string;
-  options: QuestionOption[];
-  correctAnswer: OptionKey;
-  explanation: string;
-  hint?: string;
-  difficulty: Difficulty;
-  exams: ExamType[];
-  year?: number;
-  tags?: string[];
-  createdAt: string;
-  updatedAt: string;
 }
 
 /**
