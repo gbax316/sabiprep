@@ -2,6 +2,7 @@
 // This file exports all types for the application
 
 export * from './database';
+export * from './admin';
 
 export type { LoginCredentials, SignupData, AuthState, AuthResponse, Session, AuthError, PasswordResetRequest, PasswordUpdateData, Grade, OAuthProvider, OnboardingStep, OnboardingState } from '@/types/auth';
 export type { UserProfile, UserPreferences, NotificationPreferences, PremiumStatus, MasteryLevel, Theme, Language, StreakData, StreakDay, AchievementCategory, LeaderboardEntry, ActivityLogEntry, ActivityType } from '@/types/user';

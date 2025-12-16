@@ -1,36 +1,297 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SabiPrep - Exam Preparation Platform
+
+SabiPrep is a comprehensive exam preparation platform designed to help students master their subjects through adaptive learning and comprehensive practice.
+
+## Overview
+
+SabiPrep provides:
+- 📚 **Structured Learning**: Organized by subjects and topics
+- 🎯 **Multiple Practice Modes**: Practice, Timed, and Test modes
+- 📊 **Progress Analytics**: Track performance and improvement
+- 🏆 **Achievements System**: Gamified learning experience
+- 👨‍🏫 **Admin Portal**: Comprehensive content management system
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18.x or higher
+- npm or yarn
+- Supabase account (for database and authentication)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/sabiprep.git
+   cd sabiprep
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env.local` file in the root directory:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Set up the database**
+   
+   See [DATABASE_SETUP.md](./DATABASE_SETUP.md) for detailed instructions on:
+   - Running database migrations
+   - Setting up tables and relationships
+   - Configuring Row Level Security
+
+5. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+6. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+
+## Project Structure
+
+```
+sabiprep/
+├── app/                    # Next.js app directory
+│   ├── (auth)/            # Authentication pages
+│   ├── (dashboard)/       # Student dashboard pages
+│   ├── (learning)/        # Learning mode pages
+│   ├── (admin)/           # Admin portal pages
+│   └── api/               # API routes
+├── components/            # React components
+│   ├── common/           # Shared components
+│   ├── navigation/       # Navigation components
+│   └── admin/            # Admin-specific components
+├── lib/                  # Utilities and helpers
+│   ├── supabaseClient.ts # Supabase client config
+│   ├── auth-context.tsx  # Authentication context
+│   └── api/              # API helpers
+├── hooks/                # Custom React hooks
+├── supabase/             # Database migrations
+└── public/               # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### For Students
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Subject Selection**: Browse and select from available subjects
+- **Topic Navigation**: Explore topics within each subject
+- **Practice Modes**:
+  - **Practice Mode**: Untimed, see explanations immediately
+  - **Timed Mode**: Race against the clock
+  - **Test Mode**: Simulate real exam conditions
+- **Progress Tracking**: View scores, completion rates, and improvement
+- **Achievements**: Earn badges and unlock milestones
 
-## Learn More
+### For Tutors
 
-To learn more about Next.js, take a look at the following resources:
+- **Content Management**: Create and organize subjects and topics
+- **Question Bank**: Add, edit, and manage practice questions
+- **CSV Import**: Bulk import questions from spreadsheets
+- **Analytics**: View student performance and question difficulty
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### For Administrators
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **User Management**: Create and manage user accounts and roles
+- **Full Content Control**: Complete access to all content features
+- **System Monitoring**: Dashboard with statistics and alerts
+- **Import Reports**: Track all CSV imports and their results
 
-## Deploy on Vercel
+## Admin Portal
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The Admin Portal provides comprehensive content management capabilities for administrators and tutors.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Quick Links
+
+- 📖 **[Admin Portal Documentation](./ADMIN_PORTAL_README.md)** - Complete guide to the admin portal
+- 📊 **[CSV Import Guide](./CSV_IMPORT_GUIDE.md)** - Detailed instructions for bulk question imports
+- 🔧 **[API Reference](./API_REFERENCE.md)** - Complete API endpoint documentation
+- 🚀 **[Admin Deployment Checklist](./ADMIN_DEPLOYMENT_CHECKLIST.md)** - Deployment guide
+
+### Admin Access
+
+1. **First-time setup**: Use the script in [`scripts/setup-first-admin.sql`](./scripts/setup-first-admin.sql) to promote your first admin user
+2. **Access the portal**: Navigate to `/admin/login`
+3. **Features available**:
+   - Dashboard with real-time statistics
+   - User management (admins only)
+   - Content management (subjects and topics)
+   - Question bank with full CRUD operations
+   - CSV import for bulk question uploads
+   - Import history and reporting
+
+### Admin Roles
+
+| Role | Dashboard | Users | Content | Questions | Import |
+|------|-----------|-------|---------|-----------|--------|
+| Student | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Tutor | ✅ | ❌ | ✅ | ✅ | ✅ |
+| Admin | ✅ | ✅ | ✅ | ✅ | ✅ |
+
+## Documentation
+
+### General Documentation
+
+- [DESIGN.md](./DESIGN.md) - UI/UX design guidelines
+- [ARCHITECTURE.md](./ARCHITECTURE.md) - System architecture overview
+- [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) - Production deployment guide
+- [DATABASE_SETUP.md](./DATABASE_SETUP.md) - Database configuration
+
+### Admin Portal Documentation
+
+- [ADMIN_PORTAL_README.md](./ADMIN_PORTAL_README.md) - Complete admin portal guide
+- [CSV_IMPORT_GUIDE.md](./CSV_IMPORT_GUIDE.md) - CSV import instructions
+- [API_REFERENCE.md](./API_REFERENCE.md) - API endpoint documentation
+- [ADMIN_DEPLOYMENT_CHECKLIST.md](./ADMIN_DEPLOYMENT_CHECKLIST.md) - Admin deployment steps
+
+### Development Documentation
+
+- [AUTHENTICATION_UPDATE_GUIDE.md](./AUTHENTICATION_UPDATE_GUIDE.md) - Authentication setup
+- [SUPABASE_USAGE.md](./SUPABASE_USAGE.md) - Supabase integration guide
+- [IMPLEMENTATION_CHECKLIST.md](./IMPLEMENTATION_CHECKLIST.md) - Feature implementation status
+
+## Technology Stack
+
+- **Frontend**: Next.js 14 (App Router), React, TypeScript
+- **Styling**: Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Database**: PostgreSQL (Supabase)
+- **Authentication**: Supabase Auth
+- **Deployment**: Vercel (recommended)
+
+## Development
+
+### Running Locally
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+
+# Lint code
+npm run lint
+```
+
+### Environment Variables
+
+Required environment variables:
+
+```env
+# Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# Optional: Add more configuration as needed
+```
+
+### Database Migrations
+
+Database migration files are located in `supabase/migrations/`:
+
+1. `20231216_initial_schema.sql` - Initial database schema
+2. `20231216_seed_data.sql` - Seed data for testing
+3. `admin_portal_schema.sql` - Admin portal tables and RLS policies
+
+Run migrations through the Supabase Dashboard SQL Editor.
+
+## Contributing
+
+We welcome contributions! Please follow these guidelines:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Code Standards
+
+- Follow TypeScript best practices
+- Write meaningful commit messages
+- Add tests for new features
+- Update documentation as needed
+- Ensure `npm run build` passes before submitting
+
+## Testing
+
+```bash
+# Run type checking
+npx tsc --noEmit
+
+# Build application (verifies no build errors)
+npm run build
+
+# Run linting
+npm run lint
+```
+
+## Deployment
+
+### Vercel Deployment (Recommended)
+
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy!
+
+See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed deployment instructions.
+
+### Other Platforms
+
+SabiPrep can be deployed to any platform that supports Next.js:
+- AWS Amplify
+- Netlify
+- Railway
+- Self-hosted with Node.js
+
+## Security
+
+- All admin routes are protected by middleware
+- Row Level Security (RLS) enabled on all database tables
+- Authentication required for all sensitive operations
+- Role-based access control (RBAC) for admin features
+- Audit logging for important actions
+
+See [ADMIN_PORTAL_README.md](./ADMIN_PORTAL_README.md#security) for detailed security information.
+
+## Support
+
+For issues, questions, or contributions:
+
+- 📧 Email: support@sabiprep.com
+- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/sabiprep/issues)
+- 📖 Docs: Check the documentation files in this repository
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Database and auth powered by [Supabase](https://supabase.com/)
+- UI components styled with [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+**Version**: 1.0.0  
+**Last Updated**: December 2024
+
+For more information about the Admin Portal, see [ADMIN_PORTAL_README.md](./ADMIN_PORTAL_README.md).

@@ -2,12 +2,39 @@
 // Types that match the actual Supabase database schema (snake_case)
 
 /**
+ * User role type
+ */
+export type UserRole = 'student' | 'tutor' | 'admin';
+
+/**
+ * User status type
+ */
+export type UserStatus = 'active' | 'suspended' | 'deleted';
+
+/**
+ * Question status type
+ */
+export type QuestionStatus = 'draft' | 'published' | 'archived';
+
+/**
+ * Content status type (for subjects and topics)
+ */
+export type ContentStatus = 'active' | 'inactive';
+
+/**
+ * Import status type
+ */
+export type ImportStatus = 'pending' | 'processing' | 'completed' | 'failed';
+
+/**
  * Database User type (matches users table)
  */
 export interface User {
   id: string;
   email: string;
   full_name: string;
+  role: UserRole;
+  status: UserStatus;
   grade?: 'SS1' | 'SS2' | 'SS3' | 'Graduate';
   avatar_url?: string;
   streak_count: number;
@@ -31,6 +58,8 @@ export interface Subject {
   color?: string;
   exam_types?: string[];
   total_questions: number;
+  status: ContentStatus;
+  display_order: number;
   created_at: string;
   updated_at: string;
 }
@@ -46,6 +75,8 @@ export interface Topic {
   description?: string;
   difficulty?: 'Easy' | 'Medium' | 'Hard';
   total_questions: number;
+  status: ContentStatus;
+  display_order: number;
   created_at: string;
   updated_at: string;
 }
@@ -58,17 +89,23 @@ export interface Question {
   subject_id: string;
   topic_id: string;
   question_text: string;
+  passage?: string;
   question_image_url?: string;
   option_a: string;
   option_b: string;
   option_c: string;
   option_d: string;
-  correct_answer: 'A' | 'B' | 'C' | 'D';
+  option_e?: string;
+  correct_answer: 'A' | 'B' | 'C' | 'D' | 'E';
   explanation?: string;
   hint?: string;
+  solution?: string;
+  further_study_links?: string[];
   difficulty?: 'Easy' | 'Medium' | 'Hard';
   exam_type?: string;
   exam_year?: number;
+  status: QuestionStatus;
+  created_by?: string;
   created_at: string;
   updated_at: string;
 }
@@ -102,7 +139,7 @@ export interface SessionAnswer {
   id: string;
   session_id: string;
   question_id: string;
-  user_answer?: 'A' | 'B' | 'C' | 'D';
+  user_answer?: 'A' | 'B' | 'C' | 'D' | 'E';
   is_correct?: boolean;
   time_spent_seconds: number;
   hint_used: boolean;
@@ -149,6 +186,50 @@ export interface UserAchievement {
   achievement_id: string;
   earned_at: string;
   achievement?: Achievement;
+}
+
+/**
+ * Database AdminAuditLog type (matches admin_audit_logs table)
+ */
+export interface AdminAuditLog {
+  id: string;
+  admin_id: string;
+  action: string;
+  entity_type: 'user' | 'question' | 'subject' | 'topic' | 'import';
+  entity_id?: string;
+  details?: Record<string, unknown>;
+  ip_address?: string;
+  user_agent?: string;
+  created_at: string;
+}
+
+/**
+ * Database ImportReport type (matches import_reports table)
+ */
+export interface ImportReport {
+  id: string;
+  admin_id: string;
+  filename: string;
+  file_size_bytes?: number;
+  total_rows: number;
+  successful_rows: number;
+  failed_rows: number;
+  status: ImportStatus;
+  error_details?: ImportError[];
+  import_type: 'questions' | 'users' | 'subjects' | 'topics';
+  started_at: string;
+  completed_at?: string;
+  created_at: string;
+}
+
+/**
+ * Import error detail
+ */
+export interface ImportError {
+  row: number;
+  column?: string;
+  message: string;
+  value?: string;
 }
 
 /**
