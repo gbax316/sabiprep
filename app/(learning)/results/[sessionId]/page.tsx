@@ -12,7 +12,7 @@ import {
   getSubject,
   getGradeLabel,
 } from '@/lib/api';
-import type { Session, SessionAnswer, Topic, Subject } from '@/types/database';
+import type { LearningSession, SessionAnswer, Topic, Subject } from '@/types/database';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
@@ -30,7 +30,7 @@ import {
 export default function ResultsPage({ params }: { params: { sessionId: string } }) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
-  const [session, setSession] = useState<Session | null>(null);
+  const [session, setSession] = useState<LearningSession | null>(null);
   const [answers, setAnswers] = useState<SessionAnswer[]>([]);
   const [topic, setTopic] = useState<Topic | null>(null);
   const [subject, setSubject] = useState<Subject | null>(null);
