@@ -1,5 +1,7 @@
 // SABIPREP - Authentication Types
 
+import type { User } from './database';
+
 /**
  * Login credentials for email/password authentication
  */
@@ -24,28 +26,17 @@ export interface SignupData {
  * Authentication state
  */
 export interface AuthState {
-  user: AuthUser | null;
+  user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
   error: string | null;
 }
 
 /**
- * Authenticated user from Supabase
- */
-export interface AuthUser {
-  id: string;
-  email: string;
-  emailVerified: boolean;
-  createdAt: string;
-  lastSignInAt: string;
-}
-
-/**
  * Authentication response from Supabase
  */
 export interface AuthResponse {
-  user: AuthUser | null;
+  user: User | null;
   session: Session | null;
   error: AuthError | null;
 }
@@ -59,7 +50,7 @@ export interface Session {
   expiresAt: number;
   expiresIn: number;
   tokenType: string;
-  user: AuthUser;
+  user: User;
 }
 
 /**
