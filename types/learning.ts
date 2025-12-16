@@ -1,6 +1,7 @@
 // SABIPREP - Learning Session Types
 
-import type { Answer, Question, OptionKey } from './questions';
+import type { Answer, OptionKey } from './questions';
+import type { Question } from './database';
 import type { LearningSession } from './database';
 
 /**
