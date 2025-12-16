@@ -13,7 +13,7 @@ import {
   updateSession,
   completeSession,
 } from '@/lib/api';
-import type { Session, Question, Topic, Subject } from '@/types/database';
+import type { LearningSession, Question, Topic, Subject } from '@/types/database';
 import { useRouter } from 'next/navigation';
 import {
   ArrowLeft,
@@ -28,7 +28,7 @@ import {
 export default function PracticeModePage({ params }: { params: { sessionId: string } }) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
-  const [session, setSession] = useState<Session | null>(null);
+  const [session, setSession] = useState<LearningSession | null>(null);
   const [topic, setTopic] = useState<Topic | null>(null);
   const [subject, setSubject] = useState<Subject | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
