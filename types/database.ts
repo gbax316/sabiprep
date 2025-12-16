@@ -74,9 +74,10 @@ export interface Question {
 }
 
 /**
- * Database Session type (matches sessions table)
+ * Database LearningSession type (matches sessions table)
+ * Renamed from Session to avoid conflict with auth Session type
  */
-export interface Session {
+export interface LearningSession {
   id: string;
   user_id: string;
   subject_id: string;
