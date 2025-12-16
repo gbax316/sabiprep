@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { BottomNav } from '@/components/common/BottomNav';
+import { Header } from '@/components/navigation/Header';
 import { useAuth } from '@/lib/auth-context';
 import { getSubjects, getUserStats, getUserProgress, updateUserStreak, getUserProfile } from '@/lib/api';
 import type { Subject, UserStats, UserProgress } from '@/types/database';
@@ -15,12 +16,41 @@ import {
   Clock,
   TrendingUp,
   ChevronRight,
-  Bell,
-  User as UserIcon,
+  Zap,
+  BookOpen,
+  Timer,
+  Sparkles,
 } from 'lucide-react';
 
+const quickActions = [
+  {
+    icon: Zap,
+    label: 'Quick Practice',
+    description: 'Random questions',
+    href: '/quick-practice',
+    color: 'bg-amber-500',
+    lightColor: 'bg-amber-50',
+  },
+  {
+    icon: Timer,
+    label: '5-min Sprint',
+    description: 'Quick challenge',
+    href: '/sprint',
+    color: 'bg-emerald-500',
+    lightColor: 'bg-emerald-50',
+  },
+  {
+    icon: Sparkles,
+    label: 'Daily Challenge',
+    description: 'Earn bonus XP',
+    href: '/daily-challenge',
+    color: 'bg-purple-500',
+    lightColor: 'bg-purple-50',
+  },
+];
+
 export default function HomePage() {
-  const { userId, isLoading: authLoading } = useAuth();
+  const { userId, user, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<UserStats | null>(null);
@@ -59,7 +89,7 @@ export default function HomePage() {
       ]);
 
       if (userProfile) {
-        setUserName(userProfile.full_name);
+        setUserName(userProfile.full_name || 'Student');
       }
       setStats(userStats);
       setSubjects(allSubjects);
@@ -73,135 +103,157 @@ export default function HomePage() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <div className="flex items-center justify-center min-h-screen bg-slate-50">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600">Loading your dashboard...</p>
+          <div className="w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-slate-600">Loading your dashboard...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-24">
+    <div className="min-h-screen bg-slate-50 pb-24">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <Header />
+
+      <div className="container-app py-6 space-y-6">
+        {/* Welcome Section */}
+        <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">
-              Hello, {userName}! 👋
+            <h1 className="font-display text-2xl font-bold text-slate-900">
+              Welcome back, {userName.split(' ')[0]}!
             </h1>
-            <p className="text-sm text-gray-600">Ready to learn something new?</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <button className="relative p-2 hover:bg-gray-100 rounded-full transition-colors">
-              <Bell className="w-6 h-6 text-gray-600" />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
-            </button>
-            <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-              <UserIcon className="w-6 h-6 text-gray-600" />
-            </button>
+            <p className="text-slate-500">Ready to continue learning?</p>
           </div>
         </div>
-      </header>
 
-      <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         {/* Streak Card */}
-        <Card variant="gradient" className="bg-gradient-to-br from-orange-500 to-pink-500 text-white">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <Flame className="w-8 h-8" />
-                <span className="text-5xl font-bold">{stats?.currentStreak || 0}</span>
+        <Card className="overflow-hidden">
+          <div className="gradient-warm p-6 text-white">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <Flame className="w-8 h-8" />
+                  <span className="font-display text-4xl font-bold">{stats?.currentStreak || 0}</span>
+                </div>
+                <p className="text-white/90 font-medium">Day Streak</p>
+                <p className="text-white/70 text-sm mt-1">
+                  {(stats?.currentStreak || 0) > 0 ? 'Keep it going! 🔥' : 'Start your streak today!'}
+                </p>
               </div>
-              <p className="text-white/90 text-lg">Day Streak</p>
-              <p className="text-white/75 text-sm mt-1">
-                Keep it going! 🔥
-              </p>
-            </div>
-            <div className="text-right">
-              <p className="text-white/90 text-sm">Next milestone</p>
-              <p className="text-2xl font-bold">{Math.ceil(((stats?.currentStreak || 0) + 1) / 7) * 7} days</p>
+              <div className="text-right">
+                <p className="text-white/80 text-sm">Next milestone</p>
+                <p className="text-2xl font-bold">{Math.ceil(((stats?.currentStreak || 0) + 1) / 7) * 7} days</p>
+              </div>
             </div>
           </div>
         </Card>
 
         {/* Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card className="hover:shadow-md transition-shadow">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center">
-                <Target className="w-6 h-6 text-indigo-600" />
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-gray-900">{stats?.questionsAnswered || 0}</p>
-                <p className="text-sm text-gray-600">Questions Answered</p>
-              </div>
+        <div className="grid grid-cols-3 gap-3">
+          <Card className="text-center p-4">
+            <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <Target className="w-5 h-5 text-primary-600" />
             </div>
+            <p className="font-display text-xl font-bold text-slate-900">{stats?.questionsAnswered || 0}</p>
+            <p className="text-xs text-slate-500">Questions</p>
           </Card>
 
-          <Card className="hover:shadow-md transition-shadow">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-green-600" />
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-gray-900">{Math.round(stats?.accuracy || 0)}%</p>
-                <p className="text-sm text-gray-600">Accuracy Rate</p>
-              </div>
+          <Card className="text-center p-4">
+            <div className="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <TrendingUp className="w-5 h-5 text-emerald-600" />
             </div>
+            <p className="font-display text-xl font-bold text-slate-900">{Math.round(stats?.accuracy || 0)}%</p>
+            <p className="text-xs text-slate-500">Accuracy</p>
           </Card>
 
-          <Card className="hover:shadow-md transition-shadow">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                <Clock className="w-6 h-6 text-purple-600" />
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-gray-900">
-                  {Math.floor((stats?.studyTimeMinutes || 0) / 60)}h {(stats?.studyTimeMinutes || 0) % 60}m
-                </p>
-                <p className="text-sm text-gray-600">Study Time</p>
-              </div>
+          <Card className="text-center p-4">
+            <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <Clock className="w-5 h-5 text-purple-600" />
             </div>
+            <p className="font-display text-xl font-bold text-slate-900">
+              {Math.floor((stats?.studyTimeMinutes || 0) / 60)}h
+            </p>
+            <p className="text-xs text-slate-500">Study Time</p>
           </Card>
+        </div>
+
+        {/* Quick Actions */}
+        <div>
+          <h2 className="font-display text-lg font-bold text-slate-900 mb-3">Quick Start</h2>
+          <div className="grid grid-cols-3 gap-3">
+            {quickActions.map((action) => {
+              const Icon = action.icon;
+              return (
+                <Link
+                  key={action.href}
+                  href={action.href}
+                  className="block"
+                >
+                  <Card className="text-center p-4 card-hover h-full">
+                    <div className={`w-12 h-12 ${action.lightColor} rounded-xl flex items-center justify-center mx-auto mb-2`}>
+                      <Icon className={`w-6 h-6 ${action.color.replace('bg-', 'text-')}`} />
+                    </div>
+                    <p className="font-medium text-sm text-slate-900">{action.label}</p>
+                    <p className="text-xs text-slate-500 mt-0.5">{action.description}</p>
+                  </Card>
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
         {/* Continue Learning */}
         {progress.length > 0 && (
           <div>
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-bold text-gray-900">Continue Learning</h2>
-              <Link href="/progress" className="text-indigo-600 hover:text-indigo-700 text-sm font-medium flex items-center gap-1">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="font-display text-lg font-bold text-slate-900">Continue Learning</h2>
+              <Link 
+                href="/subjects" 
+                className="text-sm font-medium text-primary-600 hover:text-primary-700 flex items-center gap-1"
+              >
                 View All
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
-            <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => {
-              const latestProgress = progress.sort((a, b) => 
-                new Date(b.last_practiced_at || 0).getTime() - new Date(a.last_practiced_at || 0).getTime()
-              )[0];
-              window.location.href = `/topics/${latestProgress.subject_id}`;
-            }}>
+            <Card 
+              className="card-hover cursor-pointer" 
+              onClick={() => {
+                const latestProgress = progress.sort((a, b) => 
+                  new Date(b.last_practiced_at || 0).getTime() - new Date(a.last_practiced_at || 0).getTime()
+                )[0];
+                router.push(`/topics/${latestProgress.subject_id}`);
+              }}
+            >
               <div className="flex items-center justify-between">
                 <div className="flex-1">
-                  <p className="font-semibold text-gray-900 mb-1">
-                    {subjects.find(s => s.id === progress[0].subject_id)?.name || 'Subject'}
-                  </p>
-                  <p className="text-sm text-gray-600 mb-3">
-                    Last practiced {new Date(progress[0].last_practiced_at || '').toLocaleDateString()}
-                  </p>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-slate-600" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-slate-900">
+                        {subjects.find(s => s.id === progress[0].subject_id)?.name || 'Subject'}
+                      </p>
+                      <p className="text-xs text-slate-500">
+                        Last practiced {progress[0].last_practiced_at 
+                          ? new Date(progress[0].last_practiced_at).toLocaleDateString() 
+                          : 'recently'}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="w-full bg-slate-100 rounded-full h-1.5 mt-3">
                     <div 
-                      className="bg-indigo-600 h-2 rounded-full transition-all" 
+                      className="bg-primary-500 h-1.5 rounded-full transition-all" 
                       style={{ width: `${progress[0].accuracy_percentage || 0}%` }}
                     />
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">
-                    {progress[0].questions_correct} / {progress[0].questions_attempted} correct ({Math.round(progress[0].accuracy_percentage || 0)}%)
+                  <p className="text-xs text-slate-500 mt-1">
+                    {progress[0].questions_correct} / {progress[0].questions_attempted} correct
                   </p>
                 </div>
-                <ChevronRight className="w-6 h-6 text-gray-400 ml-4" />
+                <ChevronRight className="w-5 h-5 text-slate-400 ml-4" />
               </div>
             </Card>
           </div>
@@ -209,43 +261,40 @@ export default function HomePage() {
 
         {/* Subjects Grid */}
         <div>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Subjects</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {subjects.map((subject) => (
-              <Link key={subject.id} href={`/subjects/${subject.id}`}>
-                <Card className="hover:shadow-lg transition-all hover:scale-105 cursor-pointer h-full">
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">{subject.icon || '📚'}</div>
-                    <h3 className="font-semibold text-gray-900 mb-1 text-sm">{subject.name}</h3>
-                    <p className="text-xs text-gray-600">{subject.total_questions} questions</p>
-                    {progress.find(p => p.subject_id === subject.id) && (
-                      <Badge variant="success" size="sm" className="mt-2">
-                        {Math.round(progress.find(p => p.subject_id === subject.id)?.accuracy_percentage || 0)}% accuracy
-                      </Badge>
-                    )}
-                  </div>
-                </Card>
-              </Link>
-            ))}
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="font-display text-lg font-bold text-slate-900">Subjects</h2>
+            <Link 
+              href="/subjects" 
+              className="text-sm font-medium text-primary-600 hover:text-primary-700 flex items-center gap-1"
+            >
+              See All
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            {subjects.slice(0, 4).map((subject) => {
+              const subjectProgress = progress.find(p => p.subject_id === subject.id);
+              return (
+                <Link key={subject.id} href={`/topics/${subject.id}`}>
+                  <Card className="card-hover h-full">
+                    <div className="text-center py-2">
+                      <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mx-auto mb-2">
+                        <BookOpen className="w-6 h-6 text-slate-600" />
+                      </div>
+                      <h3 className="font-semibold text-sm text-slate-900 mb-1">{subject.name}</h3>
+                      <p className="text-xs text-slate-500">{subject.total_questions} questions</p>
+                      {subjectProgress && (
+                        <Badge variant="success" size="sm" className="mt-2">
+                          {Math.round(subjectProgress.accuracy_percentage || 0)}%
+                        </Badge>
+                      )}
+                    </div>
+                  </Card>
+                </Link>
+              );
+            })}
           </div>
         </div>
-
-        {/* Daily Challenge (Placeholder) */}
-        <Card variant="outlined" className="border-2 border-indigo-200 bg-indigo-50">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">🎯</span>
-                <h3 className="font-bold text-gray-900">Daily Challenge</h3>
-              </div>
-              <p className="text-sm text-gray-600 mb-3">
-                Complete today's challenge and earn bonus points!
-              </p>
-              <Badge variant="warning">Coming Soon</Badge>
-            </div>
-            <ChevronRight className="w-6 h-6 text-gray-400" />
-          </div>
-        </Card>
       </div>
 
       {/* Bottom Navigation */}
