@@ -1,6 +1,7 @@
 // SABIPREP - Learning Session Types
 
 import type { Answer, Question, OptionKey } from './questions';
+import type { LearningSession } from './database';
 
 /**
  * Learning session modes
@@ -11,30 +12,6 @@ export type SessionMode = 'practice' | 'test' | 'timed';
  * Session status
  */
 export type SessionStatus = 'active' | 'paused' | 'completed' | 'abandoned';
-
-/**
- * Learning session
- */
-export interface LearningSession {
-  id: string;
-  userId: string;
-  topicId: string;
-  subjectId: string;
-  mode: SessionMode;
-  status: SessionStatus;
-  totalQuestions: number;
-  questionsAnswered: number;
-  correctAnswers: number;
-  accuracy: number;
-  timeSpent: number; // in seconds
-  timeLimit?: number; // in seconds (for timed mode)
-  startedAt: string;
-  completedAt?: string;
-  pausedAt?: string;
-  answers: Answer[];
-  currentQuestionIndex: number;
-  score?: number;
-}
 
 /**
  * Session configuration
