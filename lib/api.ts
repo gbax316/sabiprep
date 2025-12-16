@@ -6,7 +6,7 @@ import type {
   Subject,
   Topic,
   Question,
-  Session,
+  LearningSession,
   SessionAnswer,
   UserProgress,
   User,
@@ -171,7 +171,7 @@ export interface CreateSessionParams {
 /**
  * Create a new learning session
  */
-export async function createSession(params: CreateSessionParams): Promise<Session> {
+export async function createSession(params: CreateSessionParams): Promise<LearningSession> {
   const { data, error } = await supabase
     .from('sessions')
     .insert({
@@ -192,7 +192,7 @@ export async function createSession(params: CreateSessionParams): Promise<Sessio
 /**
  * Get a session by ID
  */
-export async function getSession(sessionId: string): Promise<Session | null> {
+export async function getSession(sessionId: string): Promise<LearningSession | null> {
   const { data, error } = await supabase
     .from('sessions')
     .select('*')
@@ -209,7 +209,7 @@ export async function getSession(sessionId: string): Promise<Session | null> {
 export async function getUserSessions(
   userId: string,
   limit: number = 10
-): Promise<Session[]> {
+): Promise<LearningSession[]> {
   const { data, error } = await supabase
     .from('sessions')
     .select('*')
@@ -226,8 +226,8 @@ export async function getUserSessions(
  */
 export async function updateSession(
   sessionId: string,
-  updates: Partial<Session>
-): Promise<Session> {
+  updates: Partial<LearningSession>
+): Promise<LearningSession> {
   const { data, error } = await supabase
     .from('sessions')
     .update(updates)
@@ -245,7 +245,7 @@ export async function updateSession(
 export async function completeSession(
   sessionId: string,
   scorePercentage: number
-): Promise<Session> {
+): Promise<LearningSession> {
   const { data, error } = await supabase
     .from('sessions')
     .update({
