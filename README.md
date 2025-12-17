@@ -13,6 +13,55 @@ SabiPrep provides:
 - 🧭 **Comprehensive Navigation**: Header, drawer, and bottom navigation
 - 🏆 **Achievements System**: Gamified learning experience
 - 👨‍🏫 **Admin Portal**: Comprehensive content management system
+- 🎨 **Magic UI Design**: Dark-first, gradient-rich modern interface
+
+## Design System
+
+SabiPrep uses the **Magic UI design system**, a dark-first, gradient-rich design language built with:
+
+- **Tailwind CSS** - Utility-first styling with custom design tokens
+- **Framer Motion** - Smooth, performant animations
+- **Custom Components** - Reusable Magic UI component library
+
+### Key Features
+
+🌑 **Dark Theme** - Sophisticated slate backgrounds with vibrant cyan and violet accents
+✨ **Smooth Animations** - Framer Motion-powered micro-interactions
+🎨 **Gradient Magic** - Beautiful color transitions and glowing effects
+📱 **Mobile-First** - Responsive design for all screen sizes
+♿ **Accessible** - WCAG 2.1 Level AA compliant
+
+### Component Library
+
+The Magic UI component library includes:
+- **MagicCard** - Base card with gradient borders and glow effects
+- **MagicButton** - Pill-shaped buttons with smooth animations
+- **MagicBadge** - Status tags and labels
+- **StatCard** - Large number displays with icons
+- **BentoGrid** - Flexible grid layouts for dashboards
+
+All components are located in [`components/magic/`](components/magic/index.ts:1).
+
+### Documentation
+
+For complete design system documentation, see:
+- **[`MAGIC_UI_DESIGN_SYSTEM.md`](MAGIC_UI_DESIGN_SYSTEM.md:1)** - Complete design tokens, components, and guidelines
+- **[`MAGIC_UI_IMPLEMENTATION_SUMMARY.md`](MAGIC_UI_IMPLEMENTATION_SUMMARY.md:1)** - Implementation details and migration guide
+
+### Quick Start
+
+```tsx
+import { MagicCard, MagicButton, MagicBadge } from '@/components/magic';
+
+// Use Magic UI components
+<MagicCard hover glow className="p-6">
+  <h3 className="text-xl font-bold text-white">Card Title</h3>
+  <p className="text-slate-400">Card content</p>
+  <MagicButton variant="primary">
+    Click Me
+  </MagicButton>
+</MagicCard>
+```
 
 ## Getting Started
 

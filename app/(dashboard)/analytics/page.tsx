@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Card } from '@/components/common/Card';
-import { Badge } from '@/components/common/Badge';
+import { motion } from 'framer-motion';
 import { BottomNav } from '@/components/common/BottomNav';
-import { ProgressBar } from '@/components/common/ProgressBar';
+import { MagicCard, StatCard, BentoGrid, MagicBadge } from '@/components/magic';
 import { useAuth } from '@/lib/auth-context';
 import { getAnalytics, getSubjects, getTopics } from '@/lib/api';
 import type { AnalyticsData, Subject, Topic } from '@/types/database';
@@ -16,6 +15,10 @@ import {
   Award,
   Calendar,
   BarChart3,
+  Flame,
+  AlertCircle,
+  BookOpen,
+  Check,
 } from 'lucide-react';
 
 export default function AnalyticsPage() {
@@ -24,6 +27,7 @@ export default function AnalyticsPage() {
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [topics, setTopics] = useState<Map<string, Topic>>(new Map());
+  const [selectedPeriod, setSelectedPeriod] = useState('7D');
 
   useEffect(() => {
     if (userId) {
@@ -68,10 +72,10 @@ export default function AnalyticsPage() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <div className="flex items-center justify-center min-h-screen bg-slate-950">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600">Loading analytics...</p>
+          <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-slate-400">Loading analytics...</p>
         </div>
       </div>
     );
@@ -79,11 +83,11 @@ export default function AnalyticsPage() {
 
   if (!analytics) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50 pb-24">
+      <div className="flex items-center justify-center min-h-screen bg-slate-950 pb-24">
         <div className="text-center">
-          <BarChart3 className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-          <p className="text-xl text-gray-900 mb-2">No Data Yet</p>
-          <p className="text-gray-600">Start learning to see your analytics</p>
+          <BarChart3 className="w-16 h-16 text-slate-600 mx-auto mb-4" />
+          <p className="text-xl text-white mb-2">No Data Yet</p>
+          <p className="text-slate-400">Start learning to see your analytics</p>
         </div>
         <BottomNav />
       </div>
@@ -93,202 +97,305 @@ export default function AnalyticsPage() {
   const stats = analytics.totalStats;
   const maxActivity = Math.max(...analytics.weeklyActivity.map(d => d.questionsAnswered), 1);
 
+  // Calculate chart data based on selected period
+  const getChartData = () => {
+    return analytics.weeklyActivity.map((day) => {
+      const date = new Date(day.date);
+      const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+      const accuracy = day.questionsAnswered > 0
+        ? Math.round((day.questionsAnswered / maxActivity) * 100)
+        : 0;
+      
+      return {
+        label: dayName,
+        value: accuracy,
+        count: day.questionsAnswered,
+      };
+    });
+  };
+
+  const chartData = getChartData();
+
   return (
-    <div className="min-h-screen bg-gray-50 pb-24">
+    <div className="min-h-screen bg-slate-950 pb-24">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <h1 className="text-2xl font-bold text-gray-900">Your Analytics 📊</h1>
-          <p className="text-sm text-gray-600">Track your learning progress over time</p>
+      <header className="backdrop-blur-xl bg-slate-950/80 border-b border-slate-800 sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h1 className="font-display text-3xl font-black text-white mb-1">
+                Your Analytics 📊
+              </h1>
+              <p className="text-slate-400">Track your learning journey</p>
+            </div>
+            <div className="flex gap-2">
+              {['7D', '30D', '90D', 'All'].map((period) => (
+                <button
+                  key={period}
+                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                    selectedPeriod === period
+                      ? 'bg-gradient-to-r from-cyan-500 to-violet-500 text-white shadow-lg shadow-cyan-500/30'
+                      : 'bg-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-700'
+                  }`}
+                  onClick={() => setSelectedPeriod(period)}
+                >
+                  {period}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </header>
 
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
-        {/* Overall Stats */}
-        <div>
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Overall Statistics</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Card className="text-center">
-              <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Target className="w-6 h-6 text-indigo-600" />
-              </div>
-              <p className="text-3xl font-bold text-gray-900">{stats.questionsAnswered}</p>
-              <p className="text-xs text-gray-600">Questions Answered</p>
-            </Card>
+        {/* Key Metrics Bento Grid */}
+        <BentoGrid columns={2} gap="md">
+          <StatCard
+            title="Total Questions"
+            value={stats.questionsAnswered}
+            icon={<Target className="w-6 h-6" />}
+            trend="up"
+            trendValue={`+${Math.floor(stats.questionsAnswered * 0.15)} this week`}
+          />
+          
+          <StatCard
+            title="Accuracy Rate"
+            value={`${Math.round(stats.accuracy)}%`}
+            icon={<TrendingUp className="w-6 h-6" />}
+            trend={stats.accuracy >= 70 ? 'up' : 'down'}
+            trendValue={`${stats.accuracy >= 70 ? '+' : ''}${Math.round(stats.accuracy - 65)}% vs last week`}
+          />
+          
+          <StatCard
+            title="Study Time"
+            value={`${Math.floor(stats.studyTimeMinutes / 60)}h`}
+            icon={<Clock className="w-6 h-6" />}
+            trend="up"
+            trendValue={`+${Math.floor(stats.studyTimeMinutes / 60 * 0.2)}h this week`}
+          />
+          
+          <StatCard
+            title="Current Streak"
+            value={`${stats.currentStreak} days`}
+            icon={<Flame className="w-6 h-6" />}
+            trend={stats.currentStreak > 0 ? 'up' : undefined}
+            trendValue={stats.currentStreak > 0 ? 'Keep it going!' : 'Start today!'}
+          />
+        </BentoGrid>
 
-            <Card className="text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                <TrendingUp className="w-6 h-6 text-green-600" />
-              </div>
-              <p className="text-3xl font-bold text-gray-900">{Math.round(stats.accuracy)}%</p>
-              <p className="text-xs text-gray-600">Accuracy Rate</p>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Clock className="w-6 h-6 text-purple-600" />
-              </div>
-              <p className="text-3xl font-bold text-gray-900">
-                {Math.floor(stats.studyTimeMinutes / 60)}h {stats.studyTimeMinutes % 60}m
-              </p>
-              <p className="text-xs text-gray-600">Study Time</p>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Award className="w-6 h-6 text-orange-600" />
-              </div>
-              <p className="text-3xl font-bold text-gray-900">{stats.currentStreak}</p>
-              <p className="text-xs text-gray-600">Day Streak</p>
-            </Card>
-          </div>
-        </div>
-
-        {/* Weekly Activity */}
-        <Card>
-          <div className="flex items-center gap-2 mb-4">
-            <Calendar className="w-5 h-5 text-gray-700" />
-            <h3 className="font-bold text-lg text-gray-900">Weekly Activity</h3>
+        {/* Performance Chart Card */}
+        <MagicCard className="p-6 space-y-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold text-white">Performance Over Time</h2>
           </div>
           
-          <div className="flex items-end justify-between gap-2 h-48">
-            {analytics.weeklyActivity.map((day, idx) => {
-              const height = (day.questionsAnswered / maxActivity) * 100;
-              const date = new Date(day.date);
-              const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
-              
-              return (
-                <div key={day.date} className="flex-1 flex flex-col items-center gap-2">
-                  <div className="flex-1 w-full flex items-end">
-                    <div
-                      className={`w-full rounded-t-lg transition-all ${
-                        day.questionsAnswered > 0
-                          ? 'bg-indigo-600 hover:bg-indigo-700'
-                          : 'bg-gray-200'
-                      }`}
-                      style={{ height: `${Math.max(height, 5)}%` }}
-                      title={`${day.questionsAnswered} questions`}
-                    />
-                  </div>
-                  <div className="text-center">
-                    <p className="text-xs font-medium text-gray-900">{dayName}</p>
-                    <p className="text-xs text-gray-500">{day.questionsAnswered}</p>
-                  </div>
+          <div className="space-y-3">
+            {chartData.map((day, index) => (
+              <div key={index} className="space-y-1">
+                <div className="flex justify-between text-sm">
+                  <span className="text-slate-400">{day.label}</span>
+                  <span className="text-slate-200 font-medium">{day.count} questions</span>
                 </div>
-              );
-            })}
+                <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-cyan-400 to-violet-500"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${day.value}%` }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
-        </Card>
+        </MagicCard>
 
         {/* Subject Performance */}
         {analytics.subjectPerformance.length > 0 && (
-          <Card>
-            <h3 className="font-bold text-lg text-gray-900 mb-4">Subject Performance</h3>
-            <div className="space-y-4">
-              {analytics.subjectPerformance.map((perf) => {
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold text-white">Subject Performance</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {analytics.subjectPerformance.map((perf, index) => {
                 const subject = subjects.find(s => s.id === perf.subjectId);
                 if (!subject) return null;
 
                 return (
-                  <div key={perf.subjectId}>
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xl">{subject.icon || '📚'}</span>
-                        <span className="font-medium text-gray-900">{subject.name}</span>
+                  <motion.div
+                    key={perf.subjectId}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <MagicCard hover className="p-5 space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center">
+                            <span className="text-2xl">{subject.icon || '📚'}</span>
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-white">{subject.name}</h3>
+                            <p className="text-xs text-slate-400">
+                              {perf.questionsAttempted} questions
+                            </p>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-cyan-400">
+                            {Math.round(perf.accuracy)}%
+                          </div>
+                          <p className="text-xs text-slate-400">accuracy</p>
+                        </div>
                       </div>
-                      <div className="text-right">
-                        <p className="font-bold text-gray-900">{Math.round(perf.accuracy)}%</p>
-                        <p className="text-xs text-gray-600">
-                          {perf.questionsCorrect} / {perf.questionsAttempted}
-                        </p>
+                      
+                      <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                        <motion.div
+                          className="h-full bg-gradient-to-r from-cyan-400 to-violet-500"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${perf.accuracy}%` }}
+                          transition={{ duration: 0.8, delay: index * 0.1 }}
+                        />
                       </div>
-                    </div>
-                    <ProgressBar 
-                      value={perf.accuracy} 
-                      color={
-                        perf.accuracy >= 80 ? 'success' :
-                        perf.accuracy >= 60 ? 'warning' :
-                        'error'
-                      }
-                    />
-                  </div>
+                    </MagicCard>
+                  </motion.div>
                 );
               })}
             </div>
-          </Card>
+          </div>
         )}
 
         {/* Strengths & Weaknesses */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Strengths */}
-          <Card className="bg-green-50 border-2 border-green-200">
-            <div className="flex items-center gap-2 mb-4">
-              <TrendingUp className="w-5 h-5 text-green-600" />
-              <h3 className="font-bold text-lg text-gray-900">Your Strengths</h3>
+          <MagicCard className="p-6 space-y-4 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border-emerald-500/30">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-emerald-400" />
+              <h2 className="text-xl font-semibold text-white">Strengths</h2>
             </div>
             {analytics.strengths.length > 0 ? (
               <div className="space-y-3">
-                {analytics.strengths.slice(0, 3).map((topicId) => {
+                {analytics.strengths.slice(0, 3).map((topicId, index) => {
                   const topic = topics.get(topicId);
                   if (!topic) return null;
 
                   return (
-                    <div key={topicId} className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                        ✓
+                    <motion.div
+                      key={topicId}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="flex items-center justify-between p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/50">
+                          <Check className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-sm font-medium text-white">{topic.name}</span>
                       </div>
-                      <span className="text-sm font-medium text-gray-900">{topic.name}</span>
-                    </div>
+                      <MagicBadge variant="success">Excellent</MagicBadge>
+                    </motion.div>
                   );
                 })}
               </div>
             ) : (
-              <p className="text-sm text-gray-600">
+              <p className="text-slate-400">
                 Keep practicing to identify your strengths!
               </p>
             )}
-          </Card>
+          </MagicCard>
 
           {/* Weaknesses */}
-          <Card className="bg-orange-50 border-2 border-orange-200">
-            <div className="flex items-center gap-2 mb-4">
-              <TrendingDown className="w-5 h-5 text-orange-600" />
-              <h3 className="font-bold text-lg text-gray-900">Areas to Improve</h3>
+          <MagicCard className="p-6 space-y-4 bg-gradient-to-br from-amber-500/10 to-orange-500/10 border-amber-500/30">
+            <div className="flex items-center gap-2">
+              <AlertCircle className="w-5 h-5 text-amber-400" />
+              <h2 className="text-xl font-semibold text-white">Areas to Improve</h2>
             </div>
             {analytics.weaknesses.length > 0 ? (
               <div className="space-y-3">
-                {analytics.weaknesses.slice(0, 3).map((topicId) => {
+                {analytics.weaknesses.slice(0, 3).map((topicId, index) => {
                   const topic = topics.get(topicId);
                   if (!topic) return null;
 
                   return (
-                    <div key={topicId} className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                        !
+                    <motion.div
+                      key={topicId}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="flex items-center justify-between p-3 rounded-lg bg-amber-500/10 border border-amber-500/20"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/50">
+                          <AlertCircle className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-sm font-medium text-white">{topic.name}</span>
                       </div>
-                      <span className="text-sm font-medium text-gray-900">{topic.name}</span>
-                    </div>
+                      <MagicBadge variant="warning">Practice</MagicBadge>
+                    </motion.div>
                   );
                 })}
               </div>
             ) : (
-              <p className="text-sm text-gray-600">
+              <p className="text-slate-400">
                 No weak areas identified yet!
               </p>
             )}
-          </Card>
+          </MagicCard>
         </div>
 
+        {/* Recent Activity Timeline */}
+        <MagicCard className="p-6 space-y-4">
+          <h2 className="text-xl font-semibold text-white">Recent Activity</h2>
+          <div className="space-y-4">
+            {analytics.weeklyActivity.slice(0, 5).map((session, index) => {
+              const date = new Date(session.date);
+              const timeAgo = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+              const accuracy = session.questionsAnswered > 0
+                ? Math.round((session.questionsAnswered / maxActivity) * 100)
+                : 0;
+
+              return (
+                <motion.div
+                  key={session.date}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="flex items-start gap-4 p-4 rounded-xl bg-slate-900/50 border border-white/5 hover:border-cyan-500/30 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center flex-shrink-0">
+                    <BookOpen className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <h4 className="font-medium text-white">Practice Session</h4>
+                        <p className="text-sm text-slate-400">Daily practice</p>
+                      </div>
+                      <MagicBadge variant={accuracy >= 70 ? 'success' : 'warning'}>
+                        {accuracy}%
+                      </MagicBadge>
+                    </div>
+                    <div className="flex items-center gap-4 mt-2 text-xs text-slate-400">
+                      <span>{session.questionsAnswered} questions</span>
+                      <span>•</span>
+                      <span>{timeAgo}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </MagicCard>
+
         {/* Motivational Card */}
-        <Card variant="gradient" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-          <div className="text-center py-6">
-            <Award className="w-16 h-16 mx-auto mb-3" />
-            <h3 className="text-2xl font-bold mb-2">Keep Up the Great Work!</h3>
-            <p className="text-white/90">
+        <MagicCard className="relative overflow-hidden p-8 bg-gradient-to-br from-violet-500/20 to-pink-500/20 border-violet-500/30">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+          <div className="relative text-center">
+            <Award className="w-16 h-16 mx-auto mb-4 text-violet-400" />
+            <h3 className="text-2xl font-bold text-white mb-2">Keep Up the Great Work!</h3>
+            <p className="text-slate-300">
               You're on track to achieving your learning goals. Stay consistent and you'll see amazing results!
             </p>
           </div>
-        </Card>
+        </MagicCard>
       </div>
 
       {/* Bottom Navigation */}

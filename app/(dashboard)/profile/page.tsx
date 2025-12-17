@@ -1,26 +1,36 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Card } from '@/components/common/Card';
-import { Badge } from '@/components/common/Badge';
 import { BottomNav } from '@/components/common/BottomNav';
-import { Button } from '@/components/common/Button';
+import { MagicCard } from '@/components/magic/MagicCard';
+import { MagicButton } from '@/components/magic/MagicButton';
+import { MagicBadge } from '@/components/magic/MagicBadge';
+import { StatCard } from '@/components/magic/StatCard';
+import { BentoGrid } from '@/components/magic/BentoGrid';
 import { useAuth } from '@/lib/auth-context';
 import { getUserProfile, getUserStats, getUserAchievements } from '@/lib/api';
 import type { User, UserStats, UserAchievement } from '@/types/database';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import {
   User as UserIcon,
   Mail,
   Calendar,
   Award,
   Settings,
-  History,
   Target,
   Trophy,
   LogOut,
   ChevronRight,
-  Edit,
+  Camera,
+  Clock,
+  Flame,
+  TrendingUp,
+  Bell,
+  Lock,
+  Zap,
+  Star,
+  BookOpen,
 } from 'lucide-react';
 
 export default function ProfilePage() {
@@ -30,6 +40,8 @@ export default function ProfilePage() {
   const [user, setUser] = useState<User | null>(null);
   const [stats, setStats] = useState<UserStats | null>(null);
   const [achievements, setAchievements] = useState<UserAchievement[]>([]);
+  const [dailyGoal, setDailyGoal] = useState(20);
+  const [notifications, setNotifications] = useState(true);
 
   useEffect(() => {
     if (userId) {
@@ -68,10 +80,10 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <div className="flex items-center justify-center min-h-screen bg-slate-950">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600">Loading profile...</p>
+          <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-slate-400">Loading profile...</p>
         </div>
       </div>
     );
@@ -79,222 +91,304 @@ export default function ProfilePage() {
 
   if (!user) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50 pb-24">
-        <p>User not found</p>
+      <div className="flex items-center justify-center min-h-screen bg-slate-950 pb-24">
+        <p className="text-slate-400">User not found</p>
         <BottomNav />
       </div>
     );
   }
 
-  const menuItems = [
-    { icon: <Edit className="w-5 h-5" />, label: 'Edit Profile', href: '/profile/edit', badge: null },
-    { icon: <Target className="w-5 h-5" />, label: 'My Goals', href: '/profile/goals', badge: 'Coming Soon' },
-    { icon: <Trophy className="w-5 h-5" />, label: 'Achievements', href: '/profile/achievements', badge: `${achievements.length}` },
-    { icon: <History className="w-5 h-5" />, label: 'Study History', href: '/profile/history', badge: null },
-    { icon: <Settings className="w-5 h-5" />, label: 'Settings', href: '/profile/settings', badge: null },
+  const userInitials = user.full_name
+    .split(' ')
+    .map(n => n[0])
+    .join('')
+    .toUpperCase()
+    .slice(0, 2);
+
+  const joinDate = new Date(user.created_at).toLocaleDateString('en-US', { 
+    month: 'long', 
+    year: 'numeric' 
+  });
+
+  // Mock achievements data with icons
+  const achievementsList = [
+    { id: 1, name: 'First Steps', description: 'Complete 10 questions', icon: '🎯', unlocked: true },
+    { id: 2, name: 'Week Warrior', description: '7 day streak', icon: '🔥', unlocked: true },
+    { id: 3, name: 'Century Club', description: '100 questions answered', icon: '💯', unlocked: stats && stats.questionsAnswered >= 100 },
+    { id: 4, name: 'Perfect Score', description: 'Get 100% in a test', icon: '⭐', unlocked: false },
+    { id: 5, name: 'Speed Demon', description: 'Complete timed mode', icon: '⚡', unlocked: false },
+    { id: 6, name: 'Subject Master', description: 'Master a subject', icon: '🏆', unlocked: false },
+    { id: 7, name: 'Early Bird', description: 'Study before 8am', icon: '🌅', unlocked: false },
+    { id: 8, name: 'Night Owl', description: 'Study after 10pm', icon: '🦉', unlocked: false },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-24">
+    <div className="min-h-screen bg-slate-950 pb-24">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200">
+      <header className="backdrop-blur-xl bg-slate-950/80 border-b border-slate-800 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <h1 className="text-2xl font-bold text-gray-900">Profile</h1>
-          <p className="text-sm text-gray-600">Manage your account and preferences</p>
+          <h1 className="font-display text-3xl font-black text-white">Profile</h1>
+          <p className="text-slate-400">Manage your account and preferences</p>
         </div>
       </header>
 
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
-        {/* Profile Header */}
-        <Card variant="elevated">
-          <div className="flex items-start gap-4">
-            {/* Avatar */}
+        {/* Profile Header Card */}
+        <MagicCard glow className="p-6 space-y-6">
+          {/* Avatar and Basic Info */}
+          <div className="flex items-start gap-6">
             <div className="relative">
               {user.avatar_url ? (
                 <img
                   src={user.avatar_url}
                   alt={user.full_name}
-                  className="w-20 h-20 rounded-full object-cover"
+                  className="w-24 h-24 rounded-2xl object-cover ring-4 ring-violet-500/50 shadow-lg shadow-violet-500/50"
                 />
               ) : (
-                <div className="w-20 h-20 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-3xl font-bold text-white">
-                    {user.full_name.charAt(0).toUpperCase()}
-                  </span>
+                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center text-3xl font-bold text-white shadow-lg shadow-cyan-500/50">
+                  {userInitials}
                 </div>
               )}
-              <button className="absolute -bottom-1 -right-1 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center hover:bg-indigo-700 transition-colors">
-                <Edit className="w-4 h-4" />
+              <button className="absolute -bottom-2 -right-2 w-10 h-10 rounded-xl bg-slate-800 border-2 border-slate-700 flex items-center justify-center hover:bg-slate-700 transition-colors">
+                <Camera className="w-5 h-5 text-slate-300" />
               </button>
             </div>
-
-            {/* User Info */}
-            <div className="flex-1">
-              <h2 className="text-2xl font-bold text-gray-900 mb-1">{user.full_name}</h2>
-              <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
+            
+            <div className="flex-1 space-y-2">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+                {user.full_name}
+              </h1>
+              <p className="text-slate-400 flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>{user.email}</span>
-              </div>
-              {user.grade && (
-                <Badge variant="info">{user.grade}</Badge>
-              )}
-            </div>
-          </div>
-
-          {/* Joined Date */}
-          <div className="mt-4 pt-4 border-t border-gray-100">
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Calendar className="w-4 h-4" />
-              <span>Joined {new Date(user.created_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
-            </div>
-          </div>
-        </Card>
-
-        {/* Stats Overview */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <Card className="text-center">
-            <div className="text-2xl mb-1">🎯</div>
-            <p className="text-2xl font-bold text-gray-900">{stats?.questionsAnswered || 0}</p>
-            <p className="text-xs text-gray-600">Questions</p>
-          </Card>
-
-          <Card className="text-center">
-            <div className="text-2xl mb-1">📊</div>
-            <p className="text-2xl font-bold text-gray-900">{Math.round(stats?.accuracy || 0)}%</p>
-            <p className="text-xs text-gray-600">Accuracy</p>
-          </Card>
-
-          <Card className="text-center">
-            <div className="text-2xl mb-1">🔥</div>
-            <p className="text-2xl font-bold text-gray-900">{stats?.currentStreak || 0}</p>
-            <p className="text-xs text-gray-600">Day Streak</p>
-          </Card>
-
-          <Card className="text-center">
-            <div className="text-2xl mb-1">🏆</div>
-            <p className="text-2xl font-bold text-gray-900">{achievements.length}</p>
-            <p className="text-xs text-gray-600">Achievements</p>
-          </Card>
-        </div>
-
-        {/* Menu Items */}
-        <div>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Account</h2>
-          <Card className="divide-y divide-gray-100">
-            {menuItems.map((item, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  if (item.badge === 'Coming Soon') {
-                    alert('This feature is coming soon!');
-                  } else {
-                    router.push(item.href);
-                  }
-                }}
-                className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors text-left"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="text-gray-600">{item.icon}</div>
-                  <span className="font-medium text-gray-900">{item.label}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  {item.badge && (
-                    <Badge variant={item.badge === 'Coming Soon' ? 'warning' : 'info'} size="sm">
-                      {item.badge}
-                    </Badge>
-                  )}
-                  <ChevronRight className="w-5 h-5 text-gray-400" />
-                </div>
-              </button>
-            ))}
-          </Card>
-        </div>
-
-        {/* Quick Actions */}
-        <div>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Quick Actions</h2>
-          <div className="grid grid-cols-2 gap-4">
-            <Button
-              variant="outline"
-              size="md"
-              leftIcon={<History className="w-5 h-5" />}
-              onClick={() => router.push('/profile/history')}
-            >
-              View History
-            </Button>
-            <Button
-              variant="outline"
-              size="md"
-              leftIcon={<Award className="w-5 h-5" />}
-              onClick={() => router.push('/profile/achievements')}
-            >
-              Achievements
-            </Button>
-          </div>
-        </div>
-
-        {/* Achievements Preview */}
-        {achievements.length > 0 && (
-          <Card>
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="font-bold text-lg text-gray-900">Recent Achievements</h3>
-              <button className="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
-                View All
-              </button>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {achievements.slice(0, 3).map((achievement) => (
-                <div key={achievement.id} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <span className="text-3xl">{achievement.achievement?.icon || '🏆'}</span>
-                  </div>
-                  <p className="text-xs font-semibold text-gray-900">
-                    {achievement.achievement?.name}
-                  </p>
-                  <p className="text-xs text-gray-600 mt-1">
-                    {new Date(achievement.earned_at).toLocaleDateString()}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Card>
-        )}
-
-        {/* Subscription Card (Placeholder) */}
-        <Card variant="gradient" className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-xl font-bold mb-1">Free Plan</h3>
-              <p className="text-white/90 text-sm mb-3">
-                Upgrade to Premium for unlimited access
+                {user.email}
               </p>
-              <Badge variant="warning" className="bg-yellow-500 text-white border-0">
-                Coming Soon
-              </Badge>
+              <div className="flex gap-2">
+                {user.grade && (
+                  <MagicBadge variant="primary">
+                    {user.grade}
+                  </MagicBadge>
+                )}
+                <MagicBadge variant="success">
+                  Member since {joinDate}
+                </MagicBadge>
+              </div>
             </div>
-            <div className="text-5xl">👑</div>
+            
+            <MagicButton variant="secondary" size="sm">
+              Edit Profile
+            </MagicButton>
           </div>
-        </Card>
+          
+          {/* Quick Stats */}
+          <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/10">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-cyan-400">{stats?.questionsAnswered || 0}</div>
+              <div className="text-xs text-slate-500">Questions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-violet-400">{Math.round(stats?.accuracy || 0)}%</div>
+              <div className="text-xs text-slate-500">Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-emerald-400">{stats?.currentStreak || 0}</div>
+              <div className="text-xs text-slate-500">Day Streak</div>
+            </div>
+          </div>
+        </MagicCard>
 
-        {/* Logout Button */}
-        <Button
-          variant="danger"
-          size="full"
-          leftIcon={<LogOut className="w-5 h-5" />}
+        {/* Stats Bento Grid */}
+        <BentoGrid columns={3} gap="md">
+          <StatCard
+            title="Total Study Time"
+            value={`${Math.floor((stats?.studyTimeMinutes || 0) / 60)}h`}
+            icon={<Clock className="w-6 h-6" />}
+            trend="up"
+            trendValue="+5h this week"
+          />
+          
+          <StatCard
+            title="Achievements"
+            value={achievementsList.filter(a => a.unlocked).length}
+            icon={<Award className="w-6 h-6" />}
+          />
+          
+          <StatCard
+            title="Rank"
+            value="#42"
+            icon={<Trophy className="w-6 h-6" />}
+            trend="up"
+            trendValue="+3 positions"
+          />
+        </BentoGrid>
+
+        {/* Learning Preferences Card */}
+        <MagicCard className="p-6 space-y-4">
+          <h2 className="text-xl font-semibold flex items-center gap-2 text-white">
+            <Settings className="w-5 h-5" />
+            Learning Preferences
+          </h2>
+          
+          <div className="space-y-4">
+            {/* Daily Goal */}
+            <div className="space-y-2">
+              <div className="flex justify-between text-sm">
+                <span className="text-slate-400">Daily Question Goal</span>
+                <span className="font-medium text-white">{dailyGoal} questions</span>
+              </div>
+              <div className="flex gap-2">
+                {[10, 20, 30, 50].map((goal) => (
+                  <button
+                    key={goal}
+                    className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${
+                      dailyGoal === goal
+                        ? 'bg-gradient-to-r from-cyan-500 to-violet-500 text-white shadow-lg shadow-cyan-500/30'
+                        : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
+                    }`}
+                    onClick={() => setDailyGoal(goal)}
+                  >
+                    {goal}
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            {/* Notifications Toggle */}
+            <div className="flex items-center justify-between p-4 rounded-lg bg-slate-900/50 border border-white/5">
+              <div className="flex items-center gap-3">
+                <Bell className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <div className="font-medium text-white">Daily Reminders</div>
+                  <div className="text-xs text-slate-500">Get notified to practice</div>
+                </div>
+              </div>
+              <button
+                className={`relative w-12 h-6 rounded-full transition-colors ${
+                  notifications ? 'bg-gradient-to-r from-cyan-500 to-violet-500' : 'bg-slate-700'
+                }`}
+                onClick={() => setNotifications(!notifications)}
+              >
+                <div
+                  className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-transform ${
+                    notifications ? 'translate-x-7' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+            </div>
+          </div>
+        </MagicCard>
+
+        {/* Achievements Section */}
+        <MagicCard className="p-6 space-y-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold flex items-center gap-2 text-white">
+              <Award className="w-5 h-5" />
+              Achievements
+            </h2>
+            <MagicButton variant="ghost" size="sm">
+              View All →
+            </MagicButton>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {achievementsList.map((achievement, index) => (
+              <motion.div
+                key={achievement.id}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.1 }}
+                className={`p-4 rounded-xl text-center space-y-2 ${
+                  achievement.unlocked
+                    ? 'bg-gradient-to-br from-cyan-500/20 to-violet-500/20 border border-cyan-500/30'
+                    : 'bg-slate-900/50 border border-white/5 opacity-50'
+                }`}
+              >
+                <div className={`w-12 h-12 mx-auto rounded-xl flex items-center justify-center text-2xl ${
+                  achievement.unlocked
+                    ? 'bg-gradient-to-br from-cyan-500 to-violet-500 shadow-lg shadow-cyan-500/50'
+                    : 'bg-slate-800'
+                }`}>
+                  {achievement.icon}
+                </div>
+                <div className="text-sm font-medium text-white">{achievement.name}</div>
+                <div className="text-xs text-slate-500">{achievement.description}</div>
+              </motion.div>
+            ))}
+          </div>
+        </MagicCard>
+
+        {/* Account Settings Card */}
+        <MagicCard className="p-6 space-y-4">
+          <h2 className="text-xl font-semibold text-white">Account Settings</h2>
+          
+          <div className="space-y-2">
+            <button 
+              onClick={() => router.push('/profile/edit')}
+              className="w-full flex items-center justify-between p-4 rounded-lg bg-slate-900/50 border border-white/5 hover:border-cyan-500/30 transition-colors text-left"
+            >
+              <div className="flex items-center gap-3">
+                <UserIcon className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <div className="font-medium text-white">Edit Profile</div>
+                  <div className="text-xs text-slate-500">Update your personal information</div>
+                </div>
+              </div>
+              <ChevronRight className="w-5 h-5 text-slate-400" />
+            </button>
+            
+            <button 
+              onClick={() => router.push('/profile/settings')}
+              className="w-full flex items-center justify-between p-4 rounded-lg bg-slate-900/50 border border-white/5 hover:border-cyan-500/30 transition-colors text-left"
+            >
+              <div className="flex items-center gap-3">
+                <Settings className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <div className="font-medium text-white">Preferences</div>
+                  <div className="text-xs text-slate-500">Customize your experience</div>
+                </div>
+              </div>
+              <ChevronRight className="w-5 h-5 text-slate-400" />
+            </button>
+            
+            <button 
+              onClick={() => router.push('/profile/change-password')}
+              className="w-full flex items-center justify-between p-4 rounded-lg bg-slate-900/50 border border-white/5 hover:border-cyan-500/30 transition-colors text-left"
+            >
+              <div className="flex items-center gap-3">
+                <Lock className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <div className="font-medium text-white">Change Password</div>
+                  <div className="text-xs text-slate-500">Update your password</div>
+                </div>
+              </div>
+              <ChevronRight className="w-5 h-5 text-slate-400" />
+            </button>
+          </div>
+        </MagicCard>
+
+        {/* Sign Out Button */}
+        <button
           onClick={handleLogout}
+          className="w-full flex items-center justify-between p-4 rounded-xl bg-red-500/10 border border-red-500/30 hover:border-red-500/50 hover:bg-red-500/20 transition-all text-left"
         >
-          Logout
-        </Button>
+          <div className="flex items-center gap-3">
+            <LogOut className="w-5 h-5 text-red-400" />
+            <div>
+              <div className="font-medium text-red-400">Sign Out</div>
+              <div className="text-xs text-red-400/70">Sign out of your account</div>
+            </div>
+          </div>
+          <ChevronRight className="w-5 h-5 text-red-400" />
+        </button>
 
         {/* App Info */}
-        <Card variant="outlined" className="bg-gray-50">
+        <MagicCard className="p-4 bg-slate-900/30">
           <div className="text-center">
-            <p className="text-sm text-gray-600 mb-1">SABIPREP v1.0.0</p>
-            <p className="text-xs text-gray-500">
+            <p className="text-sm text-slate-500 mb-1">SABIPREP v1.0.0</p>
+            <p className="text-xs text-slate-600">
               Made with ❤️ for Nigerian students
             </p>
           </div>
-        </Card>
+        </MagicCard>
       </div>
 
       {/* Bottom Navigation */}

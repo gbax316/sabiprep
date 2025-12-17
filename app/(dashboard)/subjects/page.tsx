@@ -1,15 +1,16 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Card } from '@/components/common/Card';
-import { Badge } from '@/components/common/Badge';
+import { MagicCard } from '@/components/magic/MagicCard';
+import { MagicButton } from '@/components/magic/MagicButton';
+import { MagicBadge } from '@/components/magic/MagicBadge';
 import { BottomNav } from '@/components/common/BottomNav';
-import { SearchInput } from '@/components/common/Input';
 import { useAuth } from '@/lib/auth-context';
 import { getSubjects, getUserProgress } from '@/lib/api';
 import type { Subject, UserProgress } from '@/types/database';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, TrendingUp } from 'lucide-react';
+import { ArrowLeft, BookOpen, TrendingUp, Search } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function SubjectsPage() {
   const { userId } = useAuth();
@@ -65,111 +66,121 @@ export default function SubjectsPage() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <div className="flex items-center justify-center min-h-screen bg-slate-950">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600">Loading subjects...</p>
+          <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-slate-400">Loading subjects...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-24">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
+    <div className="min-h-screen bg-slate-950 pb-24">
+      {/* Frosted Glass Header */}
+      <header className="sticky top-0 z-30 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center gap-3 mb-4">
-            <Link
-              href="/home"
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-            >
-              <ArrowLeft className="w-6 h-6 text-gray-600" />
+            <Link href="/home">
+              <MagicButton variant="ghost" size="sm">
+                <ArrowLeft className="w-5 h-5" />
+              </MagicButton>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">All Subjects</h1>
-              <p className="text-sm text-gray-600">Choose a subject to start learning</p>
+              <h1 className="font-display text-3xl font-black text-white">All Subjects</h1>
+              <p className="text-slate-400">Choose your learning path</p>
             </div>
           </div>
 
-          {/* Search */}
-          <SearchInput
-            placeholder="Search subjects..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
+          {/* Search with Glow Effect */}
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search subjects..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-4 py-3 pl-12 bg-slate-900/50 border border-slate-700 rounded-2xl text-white placeholder-slate-500 focus:border-cyan-500 focus:shadow-lg focus:shadow-cyan-500/20 transition-all outline-none"
+            />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
+          </div>
         </div>
       </header>
 
       <div className="max-w-7xl mx-auto px-4 py-6">
-        {/* Subjects Grid */}
+        {/* Subjects Grid with Stagger Animation */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSubjects.map((subject) => {
+          {filteredSubjects.map((subject, idx) => {
             const subjectProgress = getSubjectProgress(subject.id);
 
             return (
               <Link key={subject.id} href={`/topics/${subject.id}`}>
-                <Card className="hover:shadow-xl transition-all hover:scale-[1.02] cursor-pointer h-full">
-                  <div className="space-y-4">
-                    {/* Subject Icon and Name */}
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="text-5xl">{subject.icon || '📚'}</div>
-                        <div>
-                          <h3 className="font-bold text-lg text-gray-900">{subject.name}</h3>
-                          {subject.exam_types && subject.exam_types.length > 0 && (
-                            <div className="flex gap-1 mt-1">
-                              {subject.exam_types.slice(0, 3).map((exam) => (
-                                <Badge key={exam} variant="info" size="sm">
-                                  {exam}
-                                </Badge>
-                              ))}
-                            </div>
-                          )}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: idx * 0.05 }}
+                >
+                  <MagicCard 
+                    hover 
+                    className="p-6 space-y-4 bg-slate-900/50 border border-slate-700 hover:border-violet-500/50 hover:shadow-2xl hover:shadow-violet-500/20"
+                  >
+                    {/* Gradient Overlay on Hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+
+                    <div className="relative">
+                      {/* Subject Icon with Badges */}
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center shadow-lg shadow-cyan-500/50 text-2xl">
+                          {subject.icon || '📚'}
                         </div>
-                      </div>
-                    </div>
-
-                    {/* Description */}
-                    {subject.description && (
-                      <p className="text-sm text-gray-600 line-clamp-2">
-                        {subject.description}
-                      </p>
-                    )}
-
-                    {/* Stats */}
-                    <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <BookOpen className="w-4 h-4" />
-                        <span>{subject.total_questions} questions</span>
+                        {subjectProgress && (
+                          <MagicBadge variant="success" size="sm">
+                            {subjectProgress.accuracy}% accuracy
+                          </MagicBadge>
+                        )}
                       </div>
 
-                      {subjectProgress && (
-                        <div className="flex items-center gap-2">
-                          <TrendingUp className="w-4 h-4 text-green-600" />
-                          <span className="text-sm font-medium text-green-600">
-                            {subjectProgress.accuracy}%
-                          </span>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Progress Bar */}
-                    {subjectProgress && (
-                      <div>
-                        <div className="w-full bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-indigo-600 h-2 rounded-full transition-all"
-                            style={{ width: `${subjectProgress.accuracy}%` }}
-                          />
-                        </div>
-                        <p className="text-xs text-gray-500 mt-1">
-                          {subjectProgress.topicsStarted} topics started · {subjectProgress.questionsAttempted} questions answered
+                      {/* Subject Info */}
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-semibold text-white">
+                          {subject.name}
+                        </h3>
+                        <p className="text-sm text-slate-400">
+                          {subject.total_questions} questions
                         </p>
                       </div>
-                    )}
-                  </div>
-                </Card>
+
+                      {/* Progress Bar */}
+                      {subjectProgress && (
+                        <div className="space-y-2 mt-4">
+                          <div className="flex justify-between text-xs text-slate-400">
+                            <span>Progress</span>
+                            <span>{subjectProgress.accuracy}%</span>
+                          </div>
+                          <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                            <motion.div
+                              className="h-full bg-gradient-to-r from-cyan-400 to-violet-500 shadow-lg shadow-cyan-500/50"
+                              initial={{ width: 0 }}
+                              animate={{ width: `${subjectProgress.accuracy}%` }}
+                              transition={{ duration: 1, ease: 'easeOut', delay: idx * 0.05 }}
+                            />
+                          </div>
+                          <p className="text-xs text-slate-500">
+                            {subjectProgress.topicsStarted} topics started · {subjectProgress.questionsAttempted} questions answered
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Action Button */}
+                      <MagicButton 
+                        variant="secondary" 
+                        size="sm"
+                        className="w-full mt-4"
+                      >
+                        {subjectProgress ? 'Continue' : 'Start Learning'} →
+                      </MagicButton>
+                    </div>
+                  </MagicCard>
+                </motion.div>
               </Link>
             );
           })}
@@ -179,10 +190,10 @@ export default function SubjectsPage() {
         {filteredSubjects.length === 0 && (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+            <h3 className="text-xl font-semibold text-white mb-2">
               No subjects found
             </h3>
-            <p className="text-gray-600">
+            <p className="text-slate-400">
               Try adjusting your search query
             </p>
           </div>
