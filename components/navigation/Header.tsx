@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
@@ -36,6 +36,14 @@ export function Header({
 }: HeaderProps) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const pathname = usePathname();
+
+  // Debug logging
+  console.log('[Header] Component rendered, drawerOpen:', drawerOpen);
+
+  // Track state changes
+  useEffect(() => {
+    console.log('[Header] drawerOpen state changed to:', drawerOpen);
+  }, [drawerOpen]);
 
   // Determine if we're on a page that needs a back button
   const pathSegments = pathname?.split('/').filter(Boolean) || [];
@@ -122,9 +130,19 @@ export function Header({
 
               {/* Menu button */}
               <button
-                onClick={() => setDrawerOpen(true)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  console.log('[Header] Hamburger button clicked!');
+                  console.log('[Header] Current drawerOpen state:', drawerOpen);
+                  setDrawerOpen(prev => {
+                    console.log('[Header] setDrawerOpen callback - prev:', prev, 'new:', true);
+                    return true;
+                  });
+                }}
                 className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
                 aria-label="Open menu"
+                type="button"
               >
                 <Menu className="w-5 h-5 text-slate-600" />
               </button>
@@ -136,7 +154,13 @@ export function Header({
       {/* Navigation Drawer */}
       <NavigationDrawer
         isOpen={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
+        onClose={() => {
+          console.log('[Header] onClose called');
+          setDrawerOpen(prev => {
+            console.log('[Header] Closing drawer - prev:', prev, 'new:', false);
+            return false;
+          });
+        }}
       />
     </>
   );

@@ -129,6 +129,9 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
   const { user, signOut } = useAuth();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Learning Modes']));
 
+  // Debug logging
+  console.log('[NavigationDrawer] Rendered with isOpen:', isOpen);
+
   // Close on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -172,7 +175,12 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
     return pathname === href || pathname?.startsWith(`${href}/`);
   };
 
-  if (!isOpen) return null;
+  if (!isOpen) {
+    console.log('[NavigationDrawer] Not rendering - isOpen is false');
+    return null;
+  }
+
+  console.log('[NavigationDrawer] Rendering drawer...');
 
   return (
     <>

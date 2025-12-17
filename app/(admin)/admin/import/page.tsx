@@ -211,14 +211,23 @@ export default function ImportPage() {
               <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
                 <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-2">Required Fields:</h3>
                 <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                  <li>• subject_id, topic_id, exam_type, year</li>
-                  <li>• question_text, option_a, option_b, correct_answer</li>
+                  <li>• <strong>subject</strong> (name, e.g., "Mathematics" or "English")</li>
+                  <li>• <strong>topic</strong> (name, e.g., "Algebra" or "Comprehension")</li>
+                  <li>• exam_type, year, question_text</li>
+                  <li>• option_a, option_b, correct_answer</li>
                 </ul>
                 <h3 className="font-medium text-gray-900 dark:text-gray-100 mt-3 mb-2">Optional Fields:</h3>
                 <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
                   <li>• difficulty, passage, option_c, option_d, option_e</li>
                   <li>• hint, solution, further_study_links</li>
+                  <li>• question_image_url, image_alt_text, image_width, image_height</li>
                 </ul>
+                <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded border border-blue-200 dark:border-blue-800">
+                  <p className="text-sm text-blue-800 dark:text-blue-300">
+                    <strong>Note:</strong> Use subject and topic <strong>names</strong> (not UUIDs).
+                    The system will automatically look them up in the database.
+                  </p>
+                </div>
               </div>
             </div>
 

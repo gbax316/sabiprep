@@ -2,10 +2,10 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  // CSV Template columns
+  // CSV Template columns - now using subject/topic names instead of UUIDs
   const columns = [
-    'subject_id',
-    'topic_id',
+    'subject',
+    'topic',
     'exam_type',
     'year',
     'difficulty',
@@ -27,34 +27,34 @@ export async function GET() {
     'further_study_links'
   ];
 
-  // Example rows
+  // Example rows with subject/topic names
   const exampleRows = [
     {
-      subject_id: 'example-uuid-1234-5678',
-      topic_id: 'example-uuid-abcd-efgh',
+      subject: 'Mathematics',
+      topic: 'Algebra',
       exam_type: 'WAEC',
       year: '2023',
       difficulty: 'medium',
-      question_text: 'What is the capital of Nigeria?',
+      question_text: 'Solve for x: 2x + 5 = 13',
       passage: '',
       passage_id: '',
       question_image_url: '',
       image_alt_text: '',
       image_width: '',
       image_height: '',
-      option_a: 'Lagos',
-      option_b: 'Abuja',
-      option_c: 'Kano',
-      option_d: 'Port Harcourt',
+      option_a: 'x = 3',
+      option_b: 'x = 4',
+      option_c: 'x = 5',
+      option_d: 'x = 6',
       option_e: '',
       correct_answer: 'B',
-      hint: 'It became the capital in 1991',
-      solution: 'Abuja became the capital of Nigeria on December 12, 1991, replacing Lagos.',
-      further_study_links: 'https://example.com/nigerian-history'
+      hint: 'Subtract 5 from both sides first',
+      solution: '2x + 5 = 13, subtract 5: 2x = 8, divide by 2: x = 4',
+      further_study_links: 'https://example.com/algebra-basics'
     },
     {
-      subject_id: 'example-uuid-1234-5678',
-      topic_id: 'example-uuid-english-comp',
+      subject: 'English',
+      topic: 'Comprehension',
       exam_type: 'JAMB',
       year: '2024',
       difficulty: 'hard',
@@ -76,8 +76,8 @@ export async function GET() {
       further_study_links: 'https://example.com/reading-comprehension'
     },
     {
-      subject_id: 'example-uuid-math-9876',
-      topic_id: 'example-uuid-geometry-5432',
+      subject: 'Mathematics',
+      topic: 'Geometry',
       exam_type: 'NECO',
       year: '2023',
       difficulty: 'medium',
@@ -104,19 +104,20 @@ export async function GET() {
   let csvContent = '# SabiPrep Question Import Template\n';
   csvContent += '# Instructions:\n';
   csvContent += '# 1. Fill in the rows below with your question data\n';
-  csvContent += '# 2. Required fields: subject_id, topic_id, exam_type, year, question_text, option_a, option_b, correct_answer\n';
-  csvContent += '# 3. Optional fields: difficulty, passage, passage_id, question_image_url, image_alt_text, image_width, image_height, option_c, option_d, option_e, hint, solution, further_study_links\n';
-  csvContent += '# 4. exam_type must be one of: WAEC, JAMB, NECO, GCE\n';
-  csvContent += '# 5. difficulty must be one of: easy, medium, hard (default: medium)\n';
-  csvContent += '# 6. correct_answer must be one of: A, B, C, D, E\n';
-  csvContent += '# 7. passage: Use for comprehension questions; can be shared across multiple questions using passage_id\n';
-  csvContent += '# 8. passage_id: Optional identifier to group questions that share the same passage\n';
-  csvContent += '# 9. question_image_url: URL to an image for the question (diagrams, charts, etc.)\n';
-  csvContent += '# 10. image_alt_text: Required if question_image_url is provided (for accessibility)\n';
-  csvContent += '# 11. image_width, image_height: Optional dimensions in pixels for the image\n';
-  csvContent += '# 12. For multiple study links, separate with commas\n';
-  csvContent += '# 13. Remove these comment lines (starting with #) before uploading\n';
-  csvContent += '# 14. Keep the header row below\n';
+  csvContent += '# 2. Required fields: subject, topic, exam_type, year, question_text, option_a, option_b, correct_answer\n';
+  csvContent += '# 3. Use subject/topic NAMES (e.g., "Mathematics", "English") - NOT UUIDs\n';
+  csvContent += '# 4. Optional fields: difficulty, passage, passage_id, question_image_url, image_alt_text, image_width, image_height, option_c, option_d, option_e, hint, solution, further_study_links\n';
+  csvContent += '# 5. exam_type must be one of: WAEC, JAMB, NECO, GCE\n';
+  csvContent += '# 6. difficulty must be one of: easy, medium, hard (default: medium)\n';
+  csvContent += '# 7. correct_answer must be one of: A, B, C, D, E\n';
+  csvContent += '# 8. passage: Use for comprehension questions; can be shared across multiple questions using passage_id\n';
+  csvContent += '# 9. passage_id: Optional identifier to group questions that share the same passage\n';
+  csvContent += '# 10. question_image_url: URL to an image for the question (diagrams, charts, etc.)\n';
+  csvContent += '# 11. image_alt_text: Required if question_image_url is provided (for accessibility)\n';
+  csvContent += '# 12. image_width, image_height: Optional dimensions in pixels for the image\n';
+  csvContent += '# 13. For multiple study links, separate with commas\n';
+  csvContent += '# 14. Remove these comment lines (starting with #) before uploading\n';
+  csvContent += '# 15. Keep the header row below\n';
   csvContent += '\n';
 
   // Add header row

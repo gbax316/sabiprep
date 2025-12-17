@@ -5,8 +5,8 @@ import { withAdminAuth, logAdminAction, type AdminApiUser } from '@/lib/api/admi
 import Papa from 'papaparse';
 
 interface ImportRow {
-  subject_id: string;
-  topic_id: string;
+  subject: string;
+  topic: string;
   exam_type: string;
   year: string;
   difficulty?: string;
@@ -68,6 +68,32 @@ export async function POST(request: NextRequest) {
 
       const rows = parseResult.data;
 
+      // Fetch subjects and topics for name-to-ID lookup
+      const { data: subjects } = await supabase
+        .from('subjects')
+        .select('id, name, slug');
+      
+      const { data: topics } = await supabase
+        .from('topics')
+        .select('id, name, slug, subject_id');
+
+      // Create lookup maps (case-insensitive)
+      const subjectByName = new Map<string, string>();
+      const subjectBySlug = new Map<string, string>();
+      subjects?.forEach((s: { id: string; name: string; slug: string }) => {
+        subjectByName.set(s.name.toLowerCase(), s.id);
+        subjectBySlug.set(s.slug.toLowerCase(), s.id);
+      });
+
+      const topicByName = new Map<string, string>();
+      const topicBySlug = new Map<string, string>();
+      topics?.forEach((t: { id: string; name: string; slug: string }) => {
+        topicByName.set(t.name.toLowerCase(), t.id);
+        topicBySlug.set(t.slug.toLowerCase(), t.id);
+      });
+
+      console.log('[DEBUG] Import: Loaded', subjectByName.size, 'subjects and', topicByName.size, 'topics');
+
       // Create import report entry
       const { data: importReport, error: reportError } = await supabase
         .from('import_reports')
@@ -107,6 +133,21 @@ export async function POST(request: NextRequest) {
           const rowNumber = i + batchIndex + 2; // +2 for header and 0-index
           
           try {
+            // Look up subject and topic IDs
+            const subjectKey = row.subject.trim().toLowerCase();
+            const subjectId = subjectByName.get(subjectKey) || subjectBySlug.get(subjectKey);
+            
+            if (!subjectId) {
+              throw new Error(`Subject not found: ${row.subject}`);
+            }
+
+            const topicKey = row.topic.trim().toLowerCase();
+            const topicId = topicByName.get(topicKey) || topicBySlug.get(topicKey);
+            
+            if (!topicId) {
+              throw new Error(`Topic not found: ${row.topic}`);
+            }
+
             // Process further_study_links
             let studyLinks: string[] | null = null;
             if (row.further_study_links) {
@@ -134,8 +175,8 @@ export async function POST(request: NextRequest) {
             const { error: insertError } = await supabase
               .from('questions')
               .insert({
-                subject_id: row.subject_id.trim(),
-                topic_id: row.topic_id.trim(),
+                subject_id: subjectId,
+                topic_id: topicId,
                 question_text: row.question_text.trim(),
                 passage: row.passage?.trim() || null,
                 passage_id: row.passage_id?.trim() || null,

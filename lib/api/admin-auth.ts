@@ -86,12 +86,20 @@ export async function withAdminAuth(
   allowedRoles: AdminRole[] = ['admin', 'tutor']
 ): Promise<NextResponse> {
   try {
+    console.log('[DEBUG] withAdminAuth: Starting authentication check for', request.url)
     const supabase = createServerClient();
     
     // Get current session
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
     
+    console.log('[DEBUG] withAdminAuth: Session check result:', {
+      hasSession: !!session,
+      sessionError: sessionError?.message,
+      userId: session?.user?.id
+    })
+    
     if (sessionError || !session) {
+      console.log('[DEBUG] withAdminAuth: Authentication failed - no session')
       return NextResponse.json(
         { error: 'Unauthorized', message: 'No active session' },
         { status: 401 }
@@ -105,7 +113,14 @@ export async function withAdminAuth(
       .eq('id', session.user.id)
       .single();
     
+    console.log('[DEBUG] withAdminAuth: User lookup result:', {
+      hasUser: !!user,
+      userError: userError?.message,
+      userRole: user?.role
+    })
+    
     if (userError || !user) {
+      console.log('[DEBUG] withAdminAuth: User not found in database')
       return NextResponse.json(
         { error: 'Not Found', message: 'User not found' },
         { status: 404 }
@@ -114,11 +129,14 @@ export async function withAdminAuth(
     
     // Check role
     if (!allowedRoles.includes(user.role as AdminRole)) {
+      console.log('[DEBUG] withAdminAuth: Insufficient permissions. User role:', user.role, 'Allowed:', allowedRoles)
       return NextResponse.json(
         { error: 'Forbidden', message: 'Insufficient permissions' },
         { status: 403 }
       );
     }
+    
+    console.log('[DEBUG] withAdminAuth: Authentication successful for user:', user.email)
     
     // Execute handler with admin user context
     return handler(
@@ -131,7 +149,7 @@ export async function withAdminAuth(
       request
     );
   } catch (error) {
-    console.error('Admin auth error:', error);
+    console.error('[DEBUG] withAdminAuth: Unexpected error:', error);
     return NextResponse.json(
       { error: 'Internal Server Error', message: 'An unexpected error occurred' },
       { status: 500 }

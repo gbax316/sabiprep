@@ -19,7 +19,7 @@ interface ValidationResult {
   duplicates: number[];
 }
 
-const REQUIRED_FIELDS = ['subject_id', 'topic_id', 'exam_type', 'year', 'question_text', 'option_a', 'option_b', 'correct_answer'];
+const REQUIRED_FIELDS = ['subject', 'topic', 'exam_type', 'year', 'question_text', 'option_a', 'option_b', 'correct_answer'];
 const VALID_EXAM_TYPES = ['WAEC', 'JAMB', 'NECO', 'GCE'];
 const VALID_DIFFICULTIES = ['easy', 'medium', 'hard'];
 const VALID_ANSWERS = ['A', 'B', 'C', 'D', 'E'];
@@ -57,17 +57,31 @@ export async function POST(request: NextRequest) {
       const duplicates: number[] = [];
       const questionTexts = new Set<string>();
 
-      // Fetch valid subject and topic IDs for validation
+      // Fetch subjects and topics with names for lookup
       const { data: subjects } = await supabase
         .from('subjects')
-        .select('id');
+        .select('id, name, slug');
       
       const { data: topics } = await supabase
         .from('topics')
-        .select('id');
+        .select('id, name, slug, subject_id');
 
-      const validSubjectIds = new Set(subjects?.map((s: { id: string }) => s.id) || []);
-      const validTopicIds = new Set(topics?.map((t: { id: string }) => t.id) || []);
+      // Create lookup maps for both name and slug (case-insensitive)
+      const subjectByName = new Map<string, { id: string; name: string }>();
+      const subjectBySlug = new Map<string, { id: string; name: string }>();
+      subjects?.forEach((s: { id: string; name: string; slug: string }) => {
+        subjectByName.set(s.name.toLowerCase(), { id: s.id, name: s.name });
+        subjectBySlug.set(s.slug.toLowerCase(), { id: s.id, name: s.name });
+      });
+
+      const topicByName = new Map<string, { id: string; name: string; subject_id: string }>();
+      const topicBySlug = new Map<string, { id: string; name: string; subject_id: string }>();
+      topics?.forEach((t: { id: string; name: string; slug: string; subject_id: string }) => {
+        topicByName.set(t.name.toLowerCase(), { id: t.id, name: t.name, subject_id: t.subject_id });
+        topicBySlug.set(t.slug.toLowerCase(), { id: t.id, name: t.name, subject_id: t.subject_id });
+      });
+
+      console.log('[DEBUG] Loaded subjects:', subjectByName.size, 'topics:', topicByName.size);
 
       // Validate each row
       rows.forEach((row, index) => {
@@ -87,26 +101,46 @@ export async function POST(request: NextRequest) {
           }
         });
 
-        // Validate subject_id exists
-        if (row.subject_id && !validSubjectIds.has(row.subject_id.trim())) {
-          errors.push({
-            row: rowNumber,
-            field: 'subject_id',
-            message: 'Subject ID does not exist in database',
-            value: row.subject_id
-          });
-          rowIsValid = false;
+        // Validate subject exists (by name or slug)
+        let subjectData: { id: string; name: string } | undefined;
+        if (row.subject) {
+          const subjectKey = row.subject.trim().toLowerCase();
+          subjectData = subjectByName.get(subjectKey) || subjectBySlug.get(subjectKey);
+          
+          if (!subjectData) {
+            errors.push({
+              row: rowNumber,
+              field: 'subject',
+              message: 'Subject not found. Available subjects: ' + Array.from(subjectByName.values()).map(s => s.name).join(', '),
+              value: row.subject
+            });
+            rowIsValid = false;
+          }
         }
 
-        // Validate topic_id exists
-        if (row.topic_id && !validTopicIds.has(row.topic_id.trim())) {
-          errors.push({
-            row: rowNumber,
-            field: 'topic_id',
-            message: 'Topic ID does not exist in database',
-            value: row.topic_id
-          });
-          rowIsValid = false;
+        // Validate topic exists (by name or slug) and belongs to the subject
+        let topicData: { id: string; name: string; subject_id: string } | undefined;
+        if (row.topic && subjectData) {
+          const topicKey = row.topic.trim().toLowerCase();
+          topicData = topicByName.get(topicKey) || topicBySlug.get(topicKey);
+          
+          if (!topicData) {
+            errors.push({
+              row: rowNumber,
+              field: 'topic',
+              message: 'Topic not found in database',
+              value: row.topic
+            });
+            rowIsValid = false;
+          } else if (topicData.subject_id !== subjectData.id) {
+            errors.push({
+              row: rowNumber,
+              field: 'topic',
+              message: `Topic "${topicData.name}" does not belong to subject "${subjectData.name}"`,
+              value: row.topic
+            });
+            rowIsValid = false;
+          }
         }
 
         // Validate exam_type
