@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, use } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { QuestionForm, type QuestionFormData } from '@/components/admin';
 
 /**
@@ -55,6 +56,7 @@ interface PageProps {
 export default function EditQuestionPage({ params }: PageProps) {
   const resolvedParams = use(params);
   const { questionId } = resolvedParams;
+  const router = useRouter();
   
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [question, setQuestion] = useState<QuestionDetail | null>(null);
@@ -152,19 +154,31 @@ export default function EditQuestionPage({ params }: PageProps) {
     <div className="space-y-6">
       {/* Page Header */}
       <div className="flex items-center justify-between">
-        <div>
-          <div className="flex items-center gap-2 text-sm text-gray-500 mb-1">
-            <Link href="/admin/questions" className="hover:text-gray-700">
-              Questions
-            </Link>
-            <span>/</span>
-            <Link href={`/admin/questions/${questionId}`} className="hover:text-gray-700">
-              View
-            </Link>
-            <span>/</span>
-            <span className="text-gray-900">Edit</span>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => router.back()}
+            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            aria-label="Go back"
+            title="Go back"
+          >
+            <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <div>
+            <div className="flex items-center gap-2 text-sm text-gray-500 mb-1">
+              <Link href="/admin/questions" className="hover:text-gray-700">
+                Questions
+              </Link>
+              <span>/</span>
+              <Link href={`/admin/questions/${questionId}`} className="hover:text-gray-700">
+                View
+              </Link>
+              <span>/</span>
+              <span className="text-gray-900">Edit</span>
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900">Edit Question</h1>
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">Edit Question</h1>
         </div>
       </div>
       

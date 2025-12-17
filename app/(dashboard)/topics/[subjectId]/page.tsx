@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, use } from 'react';
 import { MagicCard } from '@/components/magic/MagicCard';
 import { MagicButton } from '@/components/magic/MagicButton';
 import { MagicBadge } from '@/components/magic/MagicBadge';
@@ -14,7 +14,8 @@ import { useRouter } from 'next/navigation';
 import { ArrowLeft, CheckCircle2, Lock, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function TopicsPage({ params }: { params: { subjectId: string } }) {
+export default function TopicsPage({ params }: { params: Promise<{ subjectId: string }> }) {
+  const { subjectId } = use(params);
   const { userId, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
@@ -36,7 +37,7 @@ export default function TopicsPage({ params }: { params: { subjectId: string } }
       loadTopics();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [params.subjectId, userId]);
+  }, [subjectId, userId]);
 
   async function loadTopics() {
     if (!userId) return;
@@ -45,14 +46,14 @@ export default function TopicsPage({ params }: { params: { subjectId: string } }
       setLoading(true);
       setError(null);
       const [subjectData, topicsData, userProgress] = await Promise.all([
-        getSubject(params.subjectId),
-        getTopics(params.subjectId),
+        getSubject(subjectId),
+        getTopics(subjectId),
         getUserProgress(userId),
       ]);
 
       setSubject(subjectData);
       setTopics(topicsData);
-      setProgress(userProgress.filter(p => p.subject_id === params.subjectId));
+      setProgress(userProgress.filter(p => p.subject_id === subjectId));
     } catch (error) {
       console.error('Error loading topics:', error);
       setError('Failed to load topics. Please try again.');

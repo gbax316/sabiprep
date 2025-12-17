@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, use } from 'react';
 import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
@@ -24,7 +24,8 @@ import {
   Timer,
 } from 'lucide-react';
 
-export default function TimedModePage({ params }: { params: { sessionId: string } }) {
+export default function TimedModePage({ params }: { params: Promise<{ sessionId: string }> }) {
+  const { sessionId } = use(params);
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
@@ -49,7 +50,7 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
 
   useEffect(() => {
     loadSession();
-  }, [params.sessionId]);
+  }, [sessionId]);
 
   useEffect(() => {
     if (questions.length > 0 && !sessionComplete) {
@@ -60,7 +61,7 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
   async function loadSession() {
     try {
       setLoading(true);
-      const sessionData = await getSession(params.sessionId);
+      const sessionData = await getSession(sessionId);
       
       if (!sessionData) {
         alert('Session not found');
@@ -114,7 +115,7 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
     try {
       // Record answer
       await createSessionAnswer({
-        sessionId: params.sessionId,
+        sessionId: sessionId,
         questionId: currentQuestion.id,
         userAnswer: answer as 'A' | 'B' | 'C' | 'D',
         isCorrect,
@@ -128,7 +129,7 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
       }
 
       // Update session progress
-      await updateSession(params.sessionId, {
+      await updateSession(sessionId, {
         questions_answered: currentIndex + 1,
         correct_answers: correctAnswers + (isCorrect ? 1 : 0),
         time_spent_seconds: session ? session.time_spent_seconds + timeSpent : timeSpent,
@@ -169,8 +170,8 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
   async function finishSession() {
     setSessionComplete(true);
     const scorePercentage = (correctAnswers / questions.length) * 100;
-    await completeSession(params.sessionId, scorePercentage);
-    router.push(`/results/${params.sessionId}`);
+    await completeSession(sessionId, scorePercentage);
+    router.push(`/results/${sessionId}`);
   }
 
   if (loading) {

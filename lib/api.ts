@@ -24,28 +24,72 @@ import type {
  * Get all subjects
  */
 export async function getSubjects(): Promise<Subject[]> {
-  const { data, error } = await supabase
+  // Fetch subjects
+  const { data: subjects, error: subjectsError } = await supabase
     .from('subjects')
     .select('*')
     .eq('status', 'active')
     .order('name');
 
-  if (error) throw error;
-  return data || [];
+  if (subjectsError) throw subjectsError;
+  if (!subjects || subjects.length === 0) return [];
+
+  // Get actual question counts for each subject
+  const { data: questionCounts, error: countsError } = await supabase
+    .from('questions')
+    .select('subject_id')
+    .eq('status', 'published');
+
+  if (countsError) {
+    console.error('Error fetching question counts:', countsError);
+    // Fallback to cached total_questions if count query fails
+    return subjects;
+  }
+
+  // Calculate counts per subject
+  const countMap: Record<string, number> = {};
+  if (questionCounts) {
+    questionCounts.forEach(q => {
+      countMap[q.subject_id] = (countMap[q.subject_id] || 0) + 1;
+    });
+  }
+
+  // Update subjects with actual counts
+  return subjects.map(subject => ({
+    ...subject,
+    total_questions: countMap[subject.id] || 0,
+  }));
 }
 
 /**
  * Get a single subject by ID or slug
  */
 export async function getSubject(idOrSlug: string): Promise<Subject | null> {
-  const { data, error } = await supabase
+  const { data: subject, error } = await supabase
     .from('subjects')
     .select('*')
     .or(`id.eq.${idOrSlug},slug.eq.${idOrSlug}`)
     .single();
 
   if (error) throw error;
-  return data;
+  if (!subject) return null;
+
+  // Get actual question count
+  const { count, error: countError } = await supabase
+    .from('questions')
+    .select('*', { count: 'exact', head: true })
+    .eq('subject_id', subject.id)
+    .eq('status', 'published');
+
+  if (countError) {
+    console.error('Error fetching question count:', countError);
+    return subject; // Return with cached value if count fails
+  }
+
+  return {
+    ...subject,
+    total_questions: count || 0,
+  };
 }
 
 // ============================================
@@ -56,29 +100,73 @@ export async function getSubject(idOrSlug: string): Promise<Subject | null> {
  * Get topics for a subject
  */
 export async function getTopics(subjectId: string): Promise<Topic[]> {
-  const { data, error } = await supabase
+  // Fetch topics
+  const { data: topics, error: topicsError } = await supabase
     .from('topics')
     .select('*')
     .eq('status', 'active')
     .eq('subject_id', subjectId)
     .order('name');
 
-  if (error) throw error;
-  return data || [];
+  if (topicsError) throw topicsError;
+  if (!topics || topics.length === 0) return [];
+
+  // Get actual question counts for each topic
+  const { data: questionCounts, error: countsError } = await supabase
+    .from('questions')
+    .select('topic_id')
+    .eq('status', 'published')
+    .eq('subject_id', subjectId);
+
+  if (countsError) {
+    console.error('Error fetching question counts:', countsError);
+    return topics; // Fallback to cached values if count query fails
+  }
+
+  // Calculate counts per topic
+  const countMap: Record<string, number> = {};
+  if (questionCounts) {
+    questionCounts.forEach(q => {
+      countMap[q.topic_id] = (countMap[q.topic_id] || 0) + 1;
+    });
+  }
+
+  // Update topics with actual counts
+  return topics.map(topic => ({
+    ...topic,
+    total_questions: countMap[topic.id] || 0,
+  }));
 }
 
 /**
  * Get a single topic by ID
  */
 export async function getTopic(topicId: string): Promise<Topic | null> {
-  const { data, error } = await supabase
+  const { data: topic, error } = await supabase
     .from('topics')
     .select('*')
     .eq('id', topicId)
     .single();
 
   if (error) throw error;
-  return data;
+  if (!topic) return null;
+
+  // Get actual question count
+  const { count, error: countError } = await supabase
+    .from('questions')
+    .select('*', { count: 'exact', head: true })
+    .eq('topic_id', topicId)
+    .eq('status', 'published');
+
+  if (countError) {
+    console.error('Error fetching question count:', countError);
+    return topic; // Return with cached value if count fails
+  }
+
+  return {
+    ...topic,
+    total_questions: count || 0,
+  };
 }
 
 // ============================================
@@ -288,7 +376,15 @@ export async function createSessionAnswer(
 ): Promise<SessionAnswer> {
   const { data, error } = await supabase
     .from('session_answers')
-    .insert(params)
+    .insert({
+      session_id: params.sessionId,
+      question_id: params.questionId,
+      user_answer: params.userAnswer,
+      is_correct: params.isCorrect,
+      time_spent_seconds: params.timeSpentSeconds,
+      hint_used: params.hintUsed ?? false,
+      solution_viewed: params.solutionViewed ?? false,
+    })
     .select()
     .single();
 

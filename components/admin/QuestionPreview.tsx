@@ -196,10 +196,10 @@ export function QuestionPreview({
                         ? 'bg-green-50 border-green-500 text-green-800'
                         : isSelected
                           ? 'bg-red-50 border-red-500 text-red-800'
-                          : 'border-gray-200'
+                          : 'border-gray-200 text-gray-900'
                       : isSelected
-                        ? 'bg-emerald-50 border-emerald-500'
-                        : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                        ? 'bg-emerald-50 border-emerald-500 text-emerald-900'
+                        : 'border-gray-200 text-gray-900 hover:border-gray-300 hover:bg-gray-50'
                   }`}
                 >
                   <div className="flex items-start gap-3">
@@ -216,7 +216,7 @@ export function QuestionPreview({
                     }`}>
                       {key}
                     </span>
-                    <span className="text-sm flex-1">{value}</span>
+                    <span className="text-sm flex-1 text-gray-900">{value}</span>
                     {showCorrectness && isCorrect && (
                       <svg className="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

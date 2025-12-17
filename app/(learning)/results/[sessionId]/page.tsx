@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, use } from 'react';
 import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
@@ -35,7 +35,8 @@ import {
   ChevronUp,
 } from 'lucide-react';
 
-export default function ResultsPage({ params }: { params: { sessionId: string } }) {
+export default function ResultsPage({ params }: { params: Promise<{ sessionId: string }> }) {
+  const { sessionId } = use(params);
   const router = useRouter();
   const { userId } = useAuth();
   const [loading, setLoading] = useState(true);
@@ -49,14 +50,14 @@ export default function ResultsPage({ params }: { params: { sessionId: string } 
 
   useEffect(() => {
     loadResults();
-  }, [params.sessionId]);
+  }, [sessionId]);
 
   async function loadResults() {
     try {
       setLoading(true);
       const [sessionData, sessionAnswers] = await Promise.all([
-        getSession(params.sessionId),
-        getSessionAnswers(params.sessionId),
+        getSession(sessionId),
+        getSessionAnswers(sessionId),
       ]);
 
       if (!sessionData) {

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, use } from 'react';
 import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
@@ -24,7 +24,8 @@ import {
   ChevronRight,
 } from 'lucide-react';
 
-export default function PracticeModePage({ params }: { params: { sessionId: string } }) {
+export default function PracticeModePage({ params }: { params: Promise<{ sessionId: string }> }) {
+  const { sessionId } = use(params);
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
@@ -41,12 +42,12 @@ export default function PracticeModePage({ params }: { params: { sessionId: stri
 
   useEffect(() => {
     loadSession();
-  }, [params.sessionId]);
+  }, [sessionId]);
 
   async function loadSession() {
     try {
       setLoading(true);
-      const sessionData = await getSession(params.sessionId);
+      const sessionData = await getSession(sessionId);
       
       if (!sessionData) {
         alert('Session not found');
@@ -100,7 +101,7 @@ export default function PracticeModePage({ params }: { params: { sessionId: stri
     try {
       // Record answer
       await createSessionAnswer({
-        sessionId: params.sessionId,
+        sessionId: sessionId,
         questionId: currentQuestion.id,
         userAnswer: answer,
         isCorrect,
@@ -116,7 +117,7 @@ export default function PracticeModePage({ params }: { params: { sessionId: stri
       }
 
       // Update session progress
-      await updateSession(params.sessionId, {
+      await updateSession(sessionId, {
         questions_answered: answeredQuestions.size + 1,
         correct_answers: correctAnswers + (isCorrect ? 1 : 0),
         time_spent_seconds: session ? session.time_spent_seconds + timeSpent : timeSpent,
@@ -134,8 +135,8 @@ export default function PracticeModePage({ params }: { params: { sessionId: stri
     if (isLastQuestion) {
       // Complete session
       const scorePercentage = (correctAnswers / questions.length) * 100;
-      await completeSession(params.sessionId, scorePercentage);
-      router.push(`/results/${params.sessionId}`);
+      await completeSession(sessionId, scorePercentage);
+      router.push(`/results/${sessionId}`);
     } else {
       // Go to next question
       setCurrentIndex(prev => prev + 1);

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, use } from 'react';
 import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
@@ -20,7 +20,8 @@ import {
   ChevronRight,
 } from 'lucide-react';
 
-export default function ModeSelectPage({ params }: { params: { topicId: string } }) {
+export default function ModeSelectPage({ params }: { params: Promise<{ topicId: string }> }) {
+  const { topicId } = use(params);
   const { userId } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
@@ -32,12 +33,12 @@ export default function ModeSelectPage({ params }: { params: { topicId: string }
 
   useEffect(() => {
     loadTopicData();
-  }, [params.topicId]);
+  }, [topicId]);
 
   async function loadTopicData() {
     try {
       setLoading(true);
-      const topicData = await getTopic(params.topicId);
+      const topicData = await getTopic(topicId);
       setTopic(topicData);
 
       if (topicData) {

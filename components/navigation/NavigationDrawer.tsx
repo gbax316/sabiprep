@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
@@ -114,6 +115,11 @@ const navigationSections: NavSection[] = [
 export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
   const pathname = usePathname();
   const { user, signOut } = useAuth();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close on escape key
   useEffect(() => {
@@ -146,7 +152,7 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
     return pathname === href || pathname?.startsWith(`${href}/`);
   };
 
-  return (
+  const drawerContent = (
     <AnimatePresence>
       {isOpen && (
         <>
@@ -156,7 +162,7 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9998]"
             onClick={onClose}
             aria-hidden="true"
           />
@@ -168,7 +174,7 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
             className={cn(
-              'fixed top-0 right-0 h-full w-80 max-w-[85vw] z-50',
+              'fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[9999]',
               'flex flex-col',
               'bg-gradient-to-b from-slate-900 to-black',
               'border-l border-white/10',
@@ -321,6 +327,10 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
       )}
     </AnimatePresence>
   );
+
+  if (!mounted) return null;
+
+  return createPortal(drawerContent, document.body);
 }
 
 export default NavigationDrawer;

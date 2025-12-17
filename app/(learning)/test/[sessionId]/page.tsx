@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, use } from 'react';
 import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
@@ -25,7 +25,8 @@ import {
   Image as ImageIcon,
 } from 'lucide-react';
 
-export default function TestModePage({ params }: { params: { sessionId: string } }) {
+export default function TestModePage({ params }: { params: Promise<{ sessionId: string }> }) {
+  const { sessionId } = use(params);
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
@@ -39,12 +40,12 @@ export default function TestModePage({ params }: { params: { sessionId: string }
 
   useEffect(() => {
     loadSession();
-  }, [params.sessionId]);
+  }, [sessionId]);
 
   async function loadSession() {
     try {
       setLoading(true);
-      const sessionData = await getSession(params.sessionId);
+      const sessionData = await getSession(sessionId);
       
       if (!sessionData) {
         alert('Session not found');
@@ -108,7 +109,7 @@ export default function TestModePage({ params }: { params: { sessionId: string }
           if (isCorrect) correct++;
 
           await createSessionAnswer({
-            sessionId: params.sessionId,
+            sessionId: sessionId,
             questionId: question.id,
             userAnswer: userAnswer as 'A' | 'B' | 'C' | 'D',
             isCorrect,
@@ -121,10 +122,10 @@ export default function TestModePage({ params }: { params: { sessionId: string }
 
       // Complete session
       const scorePercentage = (correct / questions.length) * 100;
-      await completeSession(params.sessionId, scorePercentage);
+      await completeSession(sessionId, scorePercentage);
 
       // Navigate to results
-      router.push(`/results/${params.sessionId}`);
+      router.push(`/results/${sessionId}`);
     } catch (error) {
       console.error('Error submitting test:', error);
       alert('Failed to submit test. Please try again.');
