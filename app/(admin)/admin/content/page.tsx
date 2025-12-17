@@ -65,10 +65,12 @@ export default function ContentManagementPage() {
   // State
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [topics, setTopics] = useState<Topic[]>([]);
+  const [allTopics, setAllTopics] = useState<Topic[]>([]); // Store all topics for filtering
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>('subjects');
   const [filterSubjectId, setFilterSubjectId] = useState<string>('');
+  const [filterTopicId, setFilterTopicId] = useState<string>('');
   
   // Loading states
   const [isLoadingSubjects, setIsLoadingSubjects] = useState(true);
@@ -110,13 +112,17 @@ export default function ContentManagementPage() {
   const fetchTopics = useCallback(async (subjectId?: string) => {
     setIsLoadingTopics(true);
     try {
-      const url = subjectId 
+      const url = subjectId
         ? `/api/admin/topics?subjectId=${subjectId}`
         : '/api/admin/topics';
       const response = await fetch(url);
       const data = await response.json();
       if (data.success) {
         setTopics(data.topics);
+        // Store all topics if fetching without filter
+        if (!subjectId) {
+          setAllTopics(data.topics);
+        }
       }
     } catch (error) {
       console.error('Error fetching topics:', error);
@@ -131,10 +137,30 @@ export default function ContentManagementPage() {
     fetchTopics();
   }, [fetchSubjects, fetchTopics]);
 
-  // Re-fetch topics when filter changes
+  // Re-fetch topics when subject filter changes
   useEffect(() => {
     fetchTopics(filterSubjectId || undefined);
+    // Reset topic filter when subject changes
+    setFilterTopicId('');
   }, [filterSubjectId, fetchTopics]);
+
+  // Get filtered topics based on both subject and topic filters
+  const filteredTopics = React.useMemo(() => {
+    let result = topics;
+    
+    // Apply topic filter if set
+    if (filterTopicId) {
+      result = result.filter(topic => topic.id === filterTopicId);
+    }
+    
+    return result;
+  }, [topics, filterTopicId]);
+
+  // Get topics for the selected subject (for topic dropdown)
+  const subjectTopics = React.useMemo(() => {
+    if (!filterSubjectId) return [];
+    return allTopics.filter(topic => topic.subject_id === filterSubjectId);
+  }, [filterSubjectId, allTopics]);
 
   // Get icon component by name
   const getIconComponent = (iconName?: string) => {
@@ -247,12 +273,13 @@ export default function ContentManagementPage() {
   // Subject card component
   const SubjectCard = ({ subject }: { subject: Subject }) => {
     const IconComponent = getIconComponent(subject.icon);
+    const isSelected = filterSubjectId === subject.id;
     
     return (
-      <div 
-        className={`bg-white dark:bg-gray-800 rounded-lg border-l-4 p-4 shadow-sm hover:shadow-md transition-shadow cursor-pointer ${
+      <div
+        className={`bg-white dark:bg-gray-800 rounded-lg border-l-4 p-4 shadow-sm hover:shadow-md transition-all cursor-pointer ${
           subject.status === 'inactive' ? 'opacity-60' : ''
-        }`}
+        } ${isSelected ? 'ring-2 ring-blue-500 shadow-lg' : ''}`}
         style={{ borderLeftColor: subject.color || '#6B7280' }}
         onClick={() => {
           setSelectedSubject(subject);
@@ -261,17 +288,24 @@ export default function ContentManagementPage() {
         }}
       >
         <div className="flex items-start justify-between">
-          <div className="flex items-start gap-3">
-            <div 
-              className="w-10 h-10 rounded-lg flex items-center justify-center"
+          <div className="flex items-start gap-3 flex-1">
+            <div
+              className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
               style={{ backgroundColor: (subject.color || '#6B7280') + '20' }}
             >
               <IconComponent className="w-5 h-5" style={{ color: subject.color || '#6B7280' }} />
             </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white">{subject.name}</h3>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2">
+                <h3 className="font-semibold text-gray-900 dark:text-white truncate">{subject.name}</h3>
+                {isSelected && (
+                  <span className="px-2 py-0.5 text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full flex-shrink-0">
+                    Selected
+                  </span>
+                )}
+              </div>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
-                {subject.topic_count} topics · {subject.question_count} questions
+                {subject.topic_count} {subject.topic_count === 1 ? 'topic' : 'topics'} · {subject.question_count} {subject.question_count === 1 ? 'question' : 'questions'}
               </p>
               {subject.exam_types && subject.exam_types.length > 0 && (
                 <div className="flex flex-wrap gap-1 mt-2">
@@ -310,11 +344,23 @@ export default function ContentManagementPage() {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setFilterSubjectId(subject.id);
-              setViewMode('topics');
+              if (filterSubjectId === subject.id) {
+                // Deselect if already selected
+                setFilterSubjectId('');
+                setFilterTopicId('');
+              } else {
+                // Select this subject
+                setFilterSubjectId(subject.id);
+                setFilterTopicId('');
+                setViewMode('topics');
+              }
             }}
-            className="p-2 text-gray-500 hover:text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20 rounded-lg transition-colors"
-            title="View Topics"
+            className={`p-2 rounded-lg transition-colors ${
+              filterSubjectId === subject.id
+                ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20'
+                : 'text-gray-500 hover:text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20'
+            }`}
+            title={filterSubjectId === subject.id ? 'Clear Filter' : 'Filter Topics'}
           >
             <FolderOpen className="w-4 h-4" />
           </button>
@@ -546,20 +592,78 @@ export default function ContentManagementPage() {
             </div>
           </div>
 
-          {/* Subject Filter */}
-          <div className="mb-4">
-            <select
-              value={filterSubjectId}
-              onChange={(e) => setFilterSubjectId(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            >
-              <option value="">All Subjects</option>
-              {subjects.map(subject => (
-                <option key={subject.id} value={subject.id}>
-                  {subject.name}
-                </option>
-              ))}
-            </select>
+          {/* Hierarchical Filters */}
+          <div className="mb-4 space-y-2">
+            {/* Subject Filter */}
+            <div>
+              <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
+                Filter by Subject
+              </label>
+              <select
+                value={filterSubjectId}
+                onChange={(e) => {
+                  setFilterSubjectId(e.target.value);
+                  setFilterTopicId(''); // Reset topic filter when subject changes
+                }}
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm"
+              >
+                <option value="">All Subjects</option>
+                {subjects.map(subject => (
+                  <option key={subject.id} value={subject.id}>
+                    {subject.name} ({subject.topic_count} topics)
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Topic Filter - Only show when a subject is selected */}
+            {filterSubjectId && subjectTopics.length > 0 && (
+              <div>
+                <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  Filter by Topic
+                </label>
+                <select
+                  value={filterTopicId}
+                  onChange={(e) => setFilterTopicId(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm"
+                >
+                  <option value="">All Topics in {subjects.find(s => s.id === filterSubjectId)?.name}</option>
+                  {subjectTopics.map(topic => (
+                    <option key={topic.id} value={topic.id}>
+                      {topic.name} ({topic.question_count} questions)
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+
+            {/* Active Filter Display */}
+            {(filterSubjectId || filterTopicId) && (
+              <div className="flex items-center gap-2 pt-1">
+                <span className="text-xs text-gray-500 dark:text-gray-400">Active filters:</span>
+                {filterSubjectId && (
+                  <button
+                    onClick={() => {
+                      setFilterSubjectId('');
+                      setFilterTopicId('');
+                    }}
+                    className="inline-flex items-center gap-1 px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+                  >
+                    {subjects.find(s => s.id === filterSubjectId)?.name}
+                    <span className="text-blue-500 dark:text-blue-400">×</span>
+                  </button>
+                )}
+                {filterTopicId && (
+                  <button
+                    onClick={() => setFilterTopicId('')}
+                    className="inline-flex items-center gap-1 px-2 py-1 text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-full hover:bg-green-200 dark:hover:bg-green-800 transition-colors"
+                  >
+                    {subjectTopics.find(t => t.id === filterTopicId)?.name}
+                    <span className="text-green-500 dark:text-green-400">×</span>
+                  </button>
+                )}
+              </div>
+            )}
           </div>
 
           {isLoadingTopics ? (
@@ -576,11 +680,15 @@ export default function ContentManagementPage() {
           ) : (
             <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden">
               <DataTable
-                data={topics}
+                data={filteredTopics}
                 columns={topicColumns}
                 keyAccessor={(topic) => topic.id}
                 isLoading={isLoadingTopics}
-                emptyMessage="No topics found"
+                emptyMessage={
+                  filterSubjectId
+                    ? `No topics found in ${subjects.find(s => s.id === filterSubjectId)?.name || 'this subject'}`
+                    : "No topics found"
+                }
                 showSearch={false}
                 onRowClick={(topic) => {
                   setSelectedTopic(topic);
@@ -629,21 +737,41 @@ export default function ContentManagementPage() {
           </div>
         ) : (
           <div>
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex-1 mr-2">
+            {/* Mobile Filters */}
+            <div className="space-y-2 mb-4">
+              <select
+                value={filterSubjectId}
+                onChange={(e) => {
+                  setFilterSubjectId(e.target.value);
+                  setFilterTopicId('');
+                }}
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
+              >
+                <option value="">All Subjects</option>
+                {subjects.map(subject => (
+                  <option key={subject.id} value={subject.id}>
+                    {subject.name} ({subject.topic_count})
+                  </option>
+                ))}
+              </select>
+
+              {filterSubjectId && subjectTopics.length > 0 && (
                 <select
-                  value={filterSubjectId}
-                  onChange={(e) => setFilterSubjectId(e.target.value)}
+                  value={filterTopicId}
+                  onChange={(e) => setFilterTopicId(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
                 >
-                  <option value="">All Subjects</option>
-                  {subjects.map(subject => (
-                    <option key={subject.id} value={subject.id}>
-                      {subject.name}
+                  <option value="">All Topics</option>
+                  {subjectTopics.map(topic => (
+                    <option key={topic.id} value={topic.id}>
+                      {topic.name} ({topic.question_count})
                     </option>
                   ))}
                 </select>
-              </div>
+              )}
+            </div>
+
+            <div className="flex items-center justify-between mb-4">
               <AdminPrimaryButton
                 onClick={() => {
                   setSelectedTopic(null);
@@ -658,11 +786,15 @@ export default function ContentManagementPage() {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden">
               <DataTable
-                data={topics}
+                data={filteredTopics}
                 columns={topicColumns}
                 keyAccessor={(topic) => topic.id}
                 isLoading={isLoadingTopics}
-                emptyMessage="No topics found"
+                emptyMessage={
+                  filterSubjectId
+                    ? `No topics in ${subjects.find(s => s.id === filterSubjectId)?.name || 'this subject'}`
+                    : "No topics found"
+                }
                 showSearch={false}
                 onRowClick={(topic) => {
                   setSelectedTopic(topic);
