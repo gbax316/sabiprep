@@ -106,7 +106,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
       const { subjectId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const body = await req.json();
       
       // Validate subjectId
@@ -243,7 +243,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
       }
       
       const { subjectId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const { searchParams } = new URL(req.url);
       
       // Check for force delete parameter

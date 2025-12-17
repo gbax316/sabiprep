@@ -22,7 +22,7 @@ export async function GET(request: NextRequest, context: RouteParams) {
   
   return withAdminAuth(request, async (adminUser: AdminApiUser) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       
       // Fetch question with relations
       const { data: question, error: questionError } = await supabase
@@ -136,7 +136,7 @@ export async function PUT(request: NextRequest, context: RouteParams) {
   
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const body = await req.json();
       
       // First, verify the question exists
@@ -372,7 +372,7 @@ export async function DELETE(request: NextRequest, context: RouteParams) {
         return createErrorResponse(403, 'Forbidden', 'Only admins can delete questions');
       }
       
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       
       // Verify question exists and get image URL for cleanup
       const { data: existingQuestion, error: fetchError } = await supabase

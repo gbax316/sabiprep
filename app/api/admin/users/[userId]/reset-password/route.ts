@@ -27,7 +27,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       }
       
       const { userId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       
       // Fetch user to get email
       const { data: user, error: fetchError } = await supabase

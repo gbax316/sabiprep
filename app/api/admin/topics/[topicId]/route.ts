@@ -23,7 +23,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
       const { topicId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       
       // Get topic details with subject info
       const { data: topic, error: topicError } = await supabase
@@ -145,7 +145,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
       const { topicId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const body = await req.json();
       
       // Validate topicId
@@ -280,7 +280,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
       }
       
       const { topicId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const { searchParams } = new URL(req.url);
       
       // Check for force archive parameter
