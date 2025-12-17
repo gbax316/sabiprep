@@ -27,6 +27,7 @@ export async function getSubjects(): Promise<Subject[]> {
   const { data, error } = await supabase
     .from('subjects')
     .select('*')
+    .eq('status', 'active')
     .order('name');
 
   if (error) throw error;
@@ -58,6 +59,7 @@ export async function getTopics(subjectId: string): Promise<Topic[]> {
   const { data, error } = await supabase
     .from('topics')
     .select('*')
+    .eq('status', 'active')
     .eq('subject_id', subjectId)
     .order('name');
 
@@ -96,7 +98,7 @@ export interface QuestionFilters {
  * Get questions with optional filters
  */
 export async function getQuestions(filters: QuestionFilters = {}): Promise<Question[]> {
-  let query = supabase.from('questions').select('*');
+  let query = supabase.from('questions').select('*').eq('status', 'published');
 
   if (filters.subjectId) {
     query = query.eq('subject_id', filters.subjectId);
@@ -147,6 +149,7 @@ export async function getRandomQuestions(
   const { data, error } = await supabase
     .from('questions')
     .select('*')
+    .eq('status', 'published')
     .eq('topic_id', topicId)
     .limit(count);
 

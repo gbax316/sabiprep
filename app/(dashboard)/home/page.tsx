@@ -26,7 +26,6 @@ import {
   Timer,
   Sparkles,
   FileText,
-  Award,
   CheckCircle,
 } from 'lucide-react';
 
@@ -79,13 +78,13 @@ const learningModes = [
 ];
 
 export default function HomePage() {
-  const { userId, user, isLoading: authLoading } = useAuth();
+  const { userId, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<UserStats | null>(null);
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [progress, setProgress] = useState<UserProgress[]>([]);
-  const [userName, setUserName] = useState('Student');
+  const [error, setError] = useState<string | null>(null);
 
   // Redirect if not authenticated
   useEffect(() => {
@@ -98,6 +97,7 @@ export default function HomePage() {
     if (userId) {
       loadDashboard();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
 
   async function loadDashboard() {
@@ -105,26 +105,25 @@ export default function HomePage() {
 
     try {
       setLoading(true);
+      setError(null);
 
       // Update streak on page load
       await updateUserStreak(userId);
 
       // Fetch data in parallel
-      const [userProfile, userStats, allSubjects, userProgress] = await Promise.all([
+      const [, userStats, allSubjects, userProgress] = await Promise.all([
         getUserProfile(userId),
         getUserStats(userId),
         getSubjects(),
         getUserProgress(userId),
       ]);
 
-      if (userProfile) {
-        setUserName(userProfile.full_name || 'Student');
-      }
       setStats(userStats);
       setSubjects(allSubjects);
       setProgress(userProgress);
     } catch (error) {
       console.error('Error loading dashboard:', error);
+      setError('Failed to load dashboard. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -178,6 +177,19 @@ export default function HomePage() {
     <div className="min-h-screen bg-slate-950 pb-24">
       {/* Header */}
       <Header />
+
+      {/* Error Message */}
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4 mx-4 mt-4">
+          <p className="text-red-600">{error}</p>
+          <button
+            onClick={() => { setError(null); loadDashboard(); }}
+            className="mt-2 text-red-600 underline"
+          >
+            Try again
+          </button>
+        </div>
+      )}
 
       {/* Hero Section with Gradient Mesh Background */}
       <section className="relative overflow-hidden px-4 pt-8 pb-12">

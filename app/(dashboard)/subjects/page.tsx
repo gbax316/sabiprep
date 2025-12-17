@@ -9,7 +9,7 @@ import { useAuth } from '@/lib/auth-context';
 import { getSubjects, getUserProgress } from '@/lib/api';
 import type { Subject, UserProgress } from '@/types/database';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, TrendingUp, Search } from 'lucide-react';
+import { ArrowLeft, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function SubjectsPage() {
@@ -18,11 +18,13 @@ export default function SubjectsPage() {
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [progress, setProgress] = useState<UserProgress[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (userId) {
       loadSubjects();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
 
   async function loadSubjects() {
@@ -30,6 +32,7 @@ export default function SubjectsPage() {
 
     try {
       setLoading(true);
+      setError(null);
       const [allSubjects, userProgress] = await Promise.all([
         getSubjects(),
         getUserProgress(userId),
@@ -39,6 +42,7 @@ export default function SubjectsPage() {
       setProgress(userProgress);
     } catch (error) {
       console.error('Error loading subjects:', error);
+      setError('Failed to load subjects. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -77,6 +81,19 @@ export default function SubjectsPage() {
 
   return (
     <div className="min-h-screen bg-slate-950 pb-24">
+      {/* Error Message */}
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4 mx-4 mt-4">
+          <p className="text-red-600">{error}</p>
+          <button
+            onClick={() => { setError(null); loadSubjects(); }}
+            className="mt-2 text-red-600 underline"
+          >
+            Try again
+          </button>
+        </div>
+      )}
+
       {/* Frosted Glass Header */}
       <header className="sticky top-0 z-30 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-4">

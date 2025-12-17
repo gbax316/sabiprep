@@ -6,29 +6,44 @@ import { MagicButton } from '@/components/magic/MagicButton';
 import { MagicBadge } from '@/components/magic/MagicBadge';
 import { ProgressRing } from '@/components/magic/ProgressRing';
 import { BottomNav } from '@/components/common/BottomNav';
+import { useAuth } from '@/lib/auth-context';
 import { getSubject, getTopics, getUserProgress } from '@/lib/api';
 import type { Subject, Topic, UserProgress } from '@/types/database';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Lock, Search, Target, TrendingUp, Flame } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { ArrowLeft, CheckCircle2, Lock, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function TopicsPage({ params }: { params: { subjectId: string } }) {
+  const { userId, isLoading: authLoading } = useAuth();
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [subject, setSubject] = useState<Subject | null>(null);
   const [topics, setTopics] = useState<Topic[]>([]);
   const [progress, setProgress] = useState<UserProgress[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
-  // Mock user ID - Replace with actual auth user ID
-  const userId = 'mock-user-id';
+  // Redirect if not authenticated
+  useEffect(() => {
+    if (!authLoading && !userId) {
+      router.push('/login');
+    }
+  }, [userId, authLoading, router]);
 
   useEffect(() => {
-    loadTopics();
-  }, [params.subjectId]);
+    if (userId) {
+      loadTopics();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params.subjectId, userId]);
 
   async function loadTopics() {
+    if (!userId) return;
+
     try {
       setLoading(true);
+      setError(null);
       const [subjectData, topicsData, userProgress] = await Promise.all([
         getSubject(params.subjectId),
         getTopics(params.subjectId),
@@ -40,6 +55,7 @@ export default function TopicsPage({ params }: { params: { subjectId: string } }
       setProgress(userProgress.filter(p => p.subject_id === params.subjectId));
     } catch (error) {
       console.error('Error loading topics:', error);
+      setError('Failed to load topics. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -105,6 +121,19 @@ export default function TopicsPage({ params }: { params: { subjectId: string } }
 
   return (
     <div className="min-h-screen bg-slate-950 pb-24">
+      {/* Error Message */}
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4 mx-4 mt-4">
+          <p className="text-red-600">{error}</p>
+          <button
+            onClick={() => { setError(null); loadTopics(); }}
+            className="mt-2 text-red-600 underline"
+          >
+            Try again
+          </button>
+        </div>
+      )}
+
       {/* Frosted Glass Header */}
       <header className="sticky top-0 z-30 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-4">
