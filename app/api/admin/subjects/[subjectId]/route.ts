@@ -23,7 +23,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
       const { subjectId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       
       // Get subject details
       const { data: subject, error: subjectError } = await supabase
