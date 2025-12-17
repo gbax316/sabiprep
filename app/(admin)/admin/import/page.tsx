@@ -24,6 +24,7 @@ interface ValidationResult {
   invalidRows: number;
   errors: ValidationError[];
   duplicates: number[];
+  createdTopics?: Array<{ name: string; subject: string }>;
 }
 
 interface ImportResult {
@@ -226,6 +227,8 @@ export default function ImportPage() {
                   <p className="text-sm text-blue-800 dark:text-blue-300">
                     <strong>Note:</strong> Use subject and topic <strong>names</strong> (not UUIDs).
                     The system will automatically look them up in the database.
+                    <br />
+                    <strong>New:</strong> If a topic doesn't exist, it will be automatically created during validation!
                   </p>
                 </div>
               </div>
@@ -292,6 +295,26 @@ export default function ImportPage() {
                   <div className="text-sm text-gray-600 dark:text-gray-400">Invalid Rows</div>
                 </div>
               </div>
+
+              {/* Created Topics Notice */}
+              {validationResult.createdTopics && validationResult.createdTopics.length > 0 && (
+                <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+                  <h3 className="font-medium text-blue-900 dark:text-blue-100 mb-2 flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-2" />
+                    New Topics Created
+                  </h3>
+                  <p className="text-sm text-blue-800 dark:text-blue-300 mb-3">
+                    The following topics were automatically created during validation:
+                  </p>
+                  <ul className="space-y-1">
+                    {validationResult.createdTopics.map((topic, index) => (
+                      <li key={index} className="text-sm text-blue-700 dark:text-blue-400">
+                        • <strong>{topic.name}</strong> (in {topic.subject})
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Progress bar */}
               <div className="mb-6">

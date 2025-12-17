@@ -106,18 +106,19 @@ export async function GET() {
   csvContent += '# 1. Fill in the rows below with your question data\n';
   csvContent += '# 2. Required fields: subject, topic, exam_type, year, question_text, option_a, option_b, correct_answer\n';
   csvContent += '# 3. Use subject/topic NAMES (e.g., "Mathematics", "English") - NOT UUIDs\n';
-  csvContent += '# 4. Optional fields: difficulty, passage, passage_id, question_image_url, image_alt_text, image_width, image_height, option_c, option_d, option_e, hint, solution, further_study_links\n';
-  csvContent += '# 5. exam_type must be one of: WAEC, JAMB, NECO, GCE\n';
-  csvContent += '# 6. difficulty must be one of: easy, medium, hard (default: medium)\n';
-  csvContent += '# 7. correct_answer must be one of: A, B, C, D, E\n';
-  csvContent += '# 8. passage: Use for comprehension questions; can be shared across multiple questions using passage_id\n';
-  csvContent += '# 9. passage_id: Optional identifier to group questions that share the same passage\n';
-  csvContent += '# 10. question_image_url: URL to an image for the question (diagrams, charts, etc.)\n';
-  csvContent += '# 11. image_alt_text: Required if question_image_url is provided (for accessibility)\n';
-  csvContent += '# 12. image_width, image_height: Optional dimensions in pixels for the image\n';
-  csvContent += '# 13. For multiple study links, separate with commas\n';
-  csvContent += '# 14. Remove these comment lines (starting with #) before uploading\n';
-  csvContent += '# 15. Keep the header row below\n';
+  csvContent += '# 4. NEW: Topics will be automatically created if they don\'t exist!\n';
+  csvContent += '# 5. Optional fields: difficulty, passage, passage_id, question_image_url, image_alt_text, image_width, image_height, option_c, option_d, option_e, hint, solution, further_study_links\n';
+  csvContent += '# 6. exam_type must be one of: WAEC, JAMB, NECO, GCE\n';
+  csvContent += '# 7. difficulty must be one of: easy, medium, hard (default: medium)\n';
+  csvContent += '# 8. correct_answer must be one of: A, B, C, D, E\n';
+  csvContent += '# 9. passage: Use for comprehension questions; can be shared across multiple questions using passage_id\n';
+  csvContent += '# 10. passage_id: Optional identifier to group questions that share the same passage\n';
+  csvContent += '# 11. question_image_url: URL to an image for the question (diagrams, charts, etc.)\n';
+  csvContent += '# 12. image_alt_text: Required if question_image_url is provided (for accessibility)\n';
+  csvContent += '# 13. image_width, image_height: Optional dimensions in pixels for the image\n';
+  csvContent += '# 14. For multiple study links, separate with commas\n';
+  csvContent += '# 15. Remove these comment lines (starting with #) before uploading\n';
+  csvContent += '# 16. Keep the header row below\n';
   csvContent += '\n';
 
   // Add header row

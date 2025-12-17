@@ -56,6 +56,7 @@ export async function POST(request: NextRequest) {
       const validRowIndices: number[] = [];
       const duplicates: number[] = [];
       const questionTexts = new Set<string>();
+      const createdTopics: Array<{ name: string; subject: string }> = [];
 
       // Fetch subjects and topics with names for lookup
       const { data: subjects } = await supabase
@@ -77,19 +78,21 @@ export async function POST(request: NextRequest) {
       const topicByName = new Map<string, { id: string; name: string; subject_id: string }>();
       const topicBySlug = new Map<string, { id: string; name: string; subject_id: string }>();
       topics?.forEach((t: { id: string; name: string; slug: string; subject_id: string }) => {
-        topicByName.set(t.name.toLowerCase(), { id: t.id, name: t.name, subject_id: t.subject_id });
-        topicBySlug.set(t.slug.toLowerCase(), { id: t.id, name: t.name, subject_id: t.subject_id });
+        const key = `${t.subject_id}:${t.name.toLowerCase()}`;
+        topicByName.set(key, { id: t.id, name: t.name, subject_id: t.subject_id });
+        topicBySlug.set(`${t.subject_id}:${t.slug.toLowerCase()}`, { id: t.id, name: t.name, subject_id: t.subject_id });
       });
 
       console.log('[DEBUG] Loaded subjects:', subjectByName.size, 'topics:', topicByName.size);
 
       // Validate each row
-      rows.forEach((row, index) => {
+      for (let index = 0; index < rows.length; index++) {
+        const row = rows[index];
         const rowNumber = index + 2; // +2 because of header row and 0-index
         let rowIsValid = true;
 
         // Check required fields
-        REQUIRED_FIELDS.forEach(field => {
+        for (const field of REQUIRED_FIELDS) {
           if (!row[field] || row[field].trim() === '') {
             errors.push({
               row: rowNumber,
@@ -99,7 +102,7 @@ export async function POST(request: NextRequest) {
             });
             rowIsValid = false;
           }
-        });
+        }
 
         // Validate subject exists (by name or slug)
         let subjectData: { id: string; name: string } | undefined;
@@ -119,27 +122,58 @@ export async function POST(request: NextRequest) {
         }
 
         // Validate topic exists (by name or slug) and belongs to the subject
+        // If topic doesn't exist, auto-create it
         let topicData: { id: string; name: string; subject_id: string } | undefined;
         if (row.topic && subjectData) {
-          const topicKey = row.topic.trim().toLowerCase();
-          topicData = topicByName.get(topicKey) || topicBySlug.get(topicKey);
+          const topicKey = `${subjectData.id}:${row.topic.trim().toLowerCase()}`;
+          const topicSlugKey = `${subjectData.id}:${row.topic.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-')}`;
+          
+          topicData = topicByName.get(topicKey) || topicBySlug.get(topicSlugKey);
           
           if (!topicData) {
-            errors.push({
-              row: rowNumber,
-              field: 'topic',
-              message: 'Topic not found in database',
-              value: row.topic
-            });
-            rowIsValid = false;
-          } else if (topicData.subject_id !== subjectData.id) {
-            errors.push({
-              row: rowNumber,
-              field: 'topic',
-              message: `Topic "${topicData.name}" does not belong to subject "${subjectData.name}"`,
-              value: row.topic
-            });
-            rowIsValid = false;
+            // Auto-create the topic
+            const topicName = row.topic.trim();
+            const topicSlug = topicName.toLowerCase()
+              .replace(/[^a-z0-9\s-]/g, '')
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-')
+              .trim();
+            
+            console.log('[DEBUG] Auto-creating topic:', topicName, 'for subject:', subjectData.name);
+            
+            const { data: newTopic, error: createError } = await supabase
+              .from('topics')
+              .insert({
+                subject_id: subjectData.id,
+                name: topicName,
+                slug: topicSlug,
+                status: 'active',
+                display_order: 999, // Put new topics at the end
+              })
+              .select('id, name, slug, subject_id')
+              .single();
+            
+            if (createError || !newTopic) {
+              console.error('[DEBUG] Failed to create topic:', createError);
+              errors.push({
+                row: rowNumber,
+                field: 'topic',
+                message: `Failed to create topic "${topicName}": ${createError?.message || 'Unknown error'}`,
+                value: row.topic
+              });
+              rowIsValid = false;
+            } else {
+              // Add to lookup maps for subsequent rows
+              const newKey = `${newTopic.subject_id}:${newTopic.name.toLowerCase()}`;
+              topicData = { id: newTopic.id, name: newTopic.name, subject_id: newTopic.subject_id };
+              topicByName.set(newKey, topicData);
+              topicBySlug.set(`${newTopic.subject_id}:${newTopic.slug.toLowerCase()}`, topicData);
+              
+              // Track created topics for reporting
+              createdTopics.push({ name: topicName, subject: subjectData.name });
+              
+              console.log('[DEBUG] Successfully created topic:', newTopic.name, 'with ID:', newTopic.id);
+            }
           }
         }
 
@@ -296,7 +330,7 @@ export async function POST(request: NextRequest) {
         if (rowIsValid) {
           validRowIndices.push(index);
         }
-      });
+      }
 
       // Check for existing questions in database
       if (questionTexts.size > 0) {
@@ -324,12 +358,13 @@ export async function POST(request: NextRequest) {
         }
       }
 
-      const result: ValidationResult = {
+      const result: ValidationResult & { createdTopics?: Array<{ name: string; subject: string }> } = {
         totalRows: rows.length,
         validRows: validRowIndices.length,
         invalidRows: rows.length - validRowIndices.length,
         errors: errors.sort((a, b) => a.row - b.row),
-        duplicates
+        duplicates,
+        ...(createdTopics.length > 0 && { createdTopics })
       };
 
       return NextResponse.json(result);

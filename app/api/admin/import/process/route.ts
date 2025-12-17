@@ -87,9 +87,10 @@ export async function POST(request: NextRequest) {
 
       const topicByName = new Map<string, string>();
       const topicBySlug = new Map<string, string>();
-      topics?.forEach((t: { id: string; name: string; slug: string }) => {
-        topicByName.set(t.name.toLowerCase(), t.id);
-        topicBySlug.set(t.slug.toLowerCase(), t.id);
+      topics?.forEach((t: { id: string; name: string; slug: string; subject_id: string }) => {
+        const key = `${t.subject_id}:${t.name.toLowerCase()}`;
+        topicByName.set(key, t.id);
+        topicBySlug.set(`${t.subject_id}:${t.slug.toLowerCase()}`, t.id);
       });
 
       console.log('[DEBUG] Import: Loaded', subjectByName.size, 'subjects and', topicByName.size, 'topics');
@@ -141,11 +142,12 @@ export async function POST(request: NextRequest) {
               throw new Error(`Subject not found: ${row.subject}`);
             }
 
-            const topicKey = row.topic.trim().toLowerCase();
-            const topicId = topicByName.get(topicKey) || topicBySlug.get(topicKey);
+            const topicKey = `${subjectId}:${row.topic.trim().toLowerCase()}`;
+            const topicSlugKey = `${subjectId}:${row.topic.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-')}`;
+            const topicId = topicByName.get(topicKey) || topicBySlug.get(topicSlugKey);
             
             if (!topicId) {
-              throw new Error(`Topic not found: ${row.topic}`);
+              throw new Error(`Topic not found: ${row.topic}. This should have been created during validation.`);
             }
 
             // Process further_study_links
