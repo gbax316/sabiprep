@@ -12,6 +12,11 @@ interface ImportRow {
   difficulty?: string;
   question_text: string;
   passage?: string;
+  passage_id?: string;
+  question_image_url?: string;
+  image_alt_text?: string;
+  image_width?: string;
+  image_height?: string;
   option_a: string;
   option_b: string;
   option_c?: string;
@@ -112,9 +117,18 @@ export async function POST(request: NextRequest) {
             }
 
             // Normalize difficulty
-            const difficulty = row.difficulty 
+            const difficulty = row.difficulty
               ? row.difficulty.charAt(0).toUpperCase() + row.difficulty.slice(1).toLowerCase()
               : 'Medium';
+
+            // Validate image alt text if image URL is provided
+            if (row.question_image_url && !row.image_alt_text) {
+              throw new Error('Image alt text is required when question image URL is provided');
+            }
+
+            // Parse image dimensions
+            const imageWidth = row.image_width ? parseInt(row.image_width) : null;
+            const imageHeight = row.image_height ? parseInt(row.image_height) : null;
 
             // Insert question
             const { error: insertError } = await supabase
@@ -124,6 +138,11 @@ export async function POST(request: NextRequest) {
                 topic_id: row.topic_id.trim(),
                 question_text: row.question_text.trim(),
                 passage: row.passage?.trim() || null,
+                passage_id: row.passage_id?.trim() || null,
+                question_image_url: row.question_image_url?.trim() || null,
+                image_alt_text: row.image_alt_text?.trim() || null,
+                image_width: imageWidth,
+                image_height: imageHeight,
                 option_a: row.option_a.trim(),
                 option_b: row.option_b.trim(),
                 option_c: row.option_c?.trim() || null,

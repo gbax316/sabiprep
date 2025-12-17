@@ -2,12 +2,14 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Flag, Check, X, ChevronUp, ChevronDown } from 'lucide-react';
+import { Flag, Check, X, ChevronUp, ChevronDown, BookOpen, Image as ImageIcon } from 'lucide-react';
 
 interface QuestionStatus {
   id: string;
   index: number;
   status: 'unanswered' | 'answered' | 'correct' | 'incorrect' | 'flagged' | 'current';
+  hasPassage?: boolean;
+  hasImage?: boolean;
 }
 
 interface QuestionNavigatorProps {
@@ -113,6 +115,7 @@ export function QuestionNavigator({
               {questions.map((question) => {
                 const isCurrent = question.index === currentIndex;
                 const icon = getStatusIcon(question.status);
+                const hasIndicators = question.hasPassage || question.hasImage;
                 
                 return (
                   <button
@@ -125,6 +128,16 @@ export function QuestionNavigator({
                     )}
                   >
                     {icon || question.index + 1}
+                    {hasIndicators && (
+                      <div className="absolute -top-1 -right-1 flex gap-0.5">
+                        {question.hasPassage && (
+                          <BookOpen className="w-2.5 h-2.5 text-blue-600 bg-white rounded-full p-0.5" />
+                        )}
+                        {question.hasImage && (
+                          <ImageIcon className="w-2.5 h-2.5 text-indigo-600 bg-white rounded-full p-0.5" />
+                        )}
+                      </div>
+                    )}
                   </button>
                 );
               })}
@@ -181,6 +194,7 @@ export function QuestionNavigator({
           {questions.map((question) => {
             const isCurrent = question.index === currentIndex;
             const icon = getStatusIcon(question.status);
+            const hasIndicators = question.hasPassage || question.hasImage;
             
             return (
               <button
@@ -193,6 +207,16 @@ export function QuestionNavigator({
                 )}
               >
                 {icon || question.index + 1}
+                {hasIndicators && (
+                  <div className="absolute -top-1 -right-1 flex gap-0.5">
+                    {question.hasPassage && (
+                      <BookOpen className="w-2.5 h-2.5 text-blue-600 bg-white rounded-full p-0.5" />
+                    )}
+                    {question.hasImage && (
+                      <ImageIcon className="w-2.5 h-2.5 text-indigo-600 bg-white rounded-full p-0.5" />
+                    )}
+                  </div>
+                )}
               </button>
             );
           })}
@@ -223,18 +247,29 @@ export function QuestionNavigator({
       <div className="grid grid-cols-8 gap-1.5">
         {questions.map((question) => {
           const isCurrent = question.index === currentIndex;
+          const hasIndicators = question.hasPassage || question.hasImage;
           
           return (
             <button
               key={question.id}
               onClick={() => onNavigate(question.index)}
               className={cn(
-                'w-6 h-6 rounded text-[10px] font-semibold transition-all',
+                'relative w-6 h-6 rounded text-[10px] font-semibold transition-all',
                 'flex items-center justify-center',
                 getStatusStyles(question.status, isCurrent)
               )}
             >
               {question.index + 1}
+              {hasIndicators && (
+                <div className="absolute -top-0.5 -right-0.5 flex gap-0.5">
+                  {question.hasPassage && (
+                    <BookOpen className="w-2 h-2 text-blue-600 bg-white rounded-full p-0.5" />
+                  )}
+                  {question.hasImage && (
+                    <ImageIcon className="w-2 h-2 text-indigo-600 bg-white rounded-full p-0.5" />
+                  )}
+                </div>
+              )}
             </button>
           );
         })}

@@ -50,30 +50,150 @@ The CSV template includes the following columns:
 |--------|----------|------|-------------|---------|
 | `subject_id` | ✅ Yes | UUID | ID of the subject from database | `123e4567-e89b-12d3-a456-426614174000` |
 | `topic_id` | ✅ Yes | UUID | ID of the topic from database | `987fcdeb-51a2-43d7-b456-426614174111` |
+| `exam_type` | ✅ Yes | Enum | Type of exam | `WAEC`, `JAMB`, `NECO`, `GCE` |
+| `year` | ✅ Yes | Number | Exam year (4 digits) | `2023` |
+| `difficulty` | ❌ No | Enum | Question difficulty | `easy`, `medium`, `hard` |
 | `question_text` | ✅ Yes | Text | The question being asked | `What is the capital of Nigeria?` |
-| `question_image_url` | ❌ No | URL | URL to question image (optional) | `https://example.com/image.jpg` |
-| `question_type` | ✅ Yes | Enum | Type of question | `multiple_choice` |
+| `passage` | ❌ No | Text | Reading comprehension passage | `Once upon a time...` |
+| `passage_id` | ❌ No | String | Identifier to group questions sharing a passage | `PASSAGE_ENG_001` |
+| `question_image_url` | ❌ No | URL | URL to question image (diagrams, charts, etc.) | `https://example.com/triangle.png` |
+| `image_alt_text` | ⚠️ Conditional | Text | Alt text for image (required if image URL provided) | `Right triangle with angles marked` |
+| `image_width` | ❌ No | Number | Image width in pixels | `400` |
+| `image_height` | ❌ No | Number | Image height in pixels | `300` |
 | `option_a` | ✅ Yes | Text | First answer option | `Lagos` |
 | `option_b` | ✅ Yes | Text | Second answer option | `Abuja` |
 | `option_c` | ✅ Yes | Text | Third answer option | `Kano` |
 | `option_d` | ✅ Yes | Text | Fourth answer option | `Port Harcourt` |
+| `option_e` | ❌ No | Text | Fifth answer option (optional) | `Calabar` |
 | `correct_answer` | ✅ Yes | Enum | Letter of correct option | `B` |
-| `explanation` | ✅ Yes | Text | Detailed explanation of answer | `Abuja has been the capital since 1991...` |
-| `difficulty_level` | ✅ Yes | Enum | Question difficulty | `intermediate` |
-| `tags` | ❌ No | Text | Comma-separated tags | `geography, capitals, nigeria` |
+| `hint` | ❌ No | Text | Hint to help students | `It became the capital in 1991` |
+| `solution` | ❌ No | Text | Detailed solution/explanation | `Abuja became the capital...` |
+| `further_study_links` | ❌ No | Text | Comma-separated URLs for additional study | `https://example.com/topic1,https://example.com/topic2` |
 
 ### Valid Values
 
-**question_type**:
-- `multiple_choice` (currently the only supported type)
+**exam_type**:
+- `WAEC` - West African Examinations Council
+- `JAMB` - Joint Admissions and Matriculation Board
+- `NECO` - National Examinations Council
+- `GCE` - General Certificate of Education
+
+**difficulty**:
+- `easy` - Basic concepts, straightforward questions
+- `medium` - Moderate complexity, requires understanding
+- `hard` - Advanced concepts, complex problem-solving
 
 **correct_answer**:
-- `A`, `B`, `C`, or `D` (case-insensitive, but uppercase recommended)
+- `A`, `B`, `C`, `D`, or `E` (case-insensitive, but uppercase recommended)
+- Must match an option that has content
 
-**difficulty_level**:
-- `beginner`
-- `intermediate`
-- `advanced`
+### New Fields for Enhanced Questions
+
+#### Passage Field
+Use the `passage` field for reading comprehension questions where students need to read a text before answering.
+
+**When to use:**
+- English comprehension questions
+- Literature analysis questions
+- Any question requiring context from a longer text
+
+**Best practices:**
+- Keep passages between 50-500 words
+- Ensure passage is relevant to the question
+- Use proper grammar and punctuation
+- Multiple questions can share the same passage using `passage_id`
+
+**Example:**
+```csv
+passage,"The Amazon rainforest, often called the 'lungs of the Earth', produces 20% of the world's oxygen..."
+```
+
+#### Passage ID Field
+Use `passage_id` to group multiple questions that share the same passage.
+
+**When to use:**
+- When you have 2+ questions about the same passage
+- To avoid repeating long passages in your CSV
+- For better organization of comprehension questions
+
+**Format:**
+- Alphanumeric characters, underscores, and hyphens only
+- Recommended format: `PASSAGE_[SUBJECT]_[NUMBER]`
+- Examples: `PASSAGE_ENG_001`, `PASSAGE_LIT_SHAKESPEARE_01`
+
+**Example usage:**
+```csv
+question_text,passage,passage_id
+"What is the main theme?","Long passage text here...",PASSAGE_ENG_001
+"Who is the protagonist?",,,PASSAGE_ENG_001
+"What happens at the end?",,,PASSAGE_ENG_001
+```
+
+#### Question Image URL Field
+Use `question_image_url` for questions that require visual aids like diagrams, charts, graphs, or illustrations.
+
+**When to use:**
+- Mathematics: Geometric diagrams, graphs, charts
+- Sciences: Diagrams, experimental setups, molecular structures
+- Geography: Maps, topographical features
+- Any question where visual information is essential
+
+**Requirements:**
+- Must be a valid URL (http:// or https://)
+- Image must be publicly accessible
+- Recommended formats: PNG, JPG, SVG
+- Recommended size: Under 2MB for fast loading
+
+**Best practices:**
+- Host images on reliable CDN or cloud storage
+- Use descriptive filenames
+- Ensure images are clear and high-quality
+- Test URLs before importing
+
+**Example:**
+```csv
+question_image_url,https://cdn.example.com/images/triangle-abc-diagram.png
+```
+
+#### Image Alt Text Field
+**REQUIRED** when `question_image_url` is provided. This ensures accessibility for visually impaired students.
+
+**Purpose:**
+- Describes the image content for screen readers
+- Provides context if image fails to load
+- Ensures compliance with accessibility standards
+
+**Best practices:**
+- Be descriptive but concise (50-150 characters)
+- Describe what's important for answering the question
+- Include relevant measurements, labels, or features
+- Don't start with "Image of..." or "Picture of..."
+
+**Examples:**
+```csv
+image_alt_text,"Right triangle ABC with angle A = 30°, angle C = 60°, and side BC = 10cm"
+image_alt_text,"Bar graph showing rainfall in mm for each month of 2023"
+image_alt_text,"Structural formula of ethanol showing C-C-O-H bonds"
+```
+
+#### Image Dimensions Fields
+Optional fields to specify image display size.
+
+**When to use:**
+- To ensure consistent image sizing
+- To optimize page layout
+- To prevent layout shifts during loading
+
+**Format:**
+- Positive integers only
+- Values in pixels
+- Both width and height recommended (not required)
+
+**Example:**
+```csv
+image_width,image_height
+400,300
+```
 
 ### Getting Subject and Topic IDs
 
@@ -109,13 +229,46 @@ curl -H "Authorization: Bearer YOUR_TOKEN" \
 
 ### Example Rows
 
-Here are example rows showing correct formatting:
-
+#### Example 1: Simple Question (No Passage or Image)
 ```csv
-subject_id,topic_id,question_text,question_image_url,question_type,option_a,option_b,option_c,option_d,correct_answer,explanation,difficulty_level,tags
-123e4567-e89b-12d3-a456-426614174000,987fcdeb-51a2-43d7-b456-426614174111,"What is the capital of Nigeria?","",multiple_choice,Lagos,Abuja,Kano,"Port Harcourt",B,"Abuja has been the federal capital of Nigeria since 1991, replacing Lagos.",beginner,"geography, capitals, nigeria"
-123e4567-e89b-12d3-a456-426614174000,987fcdeb-51a2-43d7-b456-426614174111,"Which year did Nigeria gain independence?","",multiple_choice,1957,1960,1963,1966,B,"Nigeria gained independence from British colonial rule on October 1, 1960.",intermediate,"history, independence, nigeria"
+subject_id,topic_id,exam_type,year,difficulty,question_text,passage,passage_id,question_image_url,image_alt_text,image_width,image_height,option_a,option_b,option_c,option_d,option_e,correct_answer,hint,solution,further_study_links
+123e4567-e89b-12d3-a456-426614174000,987fcdeb-51a2-43d7-b456-426614174111,WAEC,2023,easy,"What is the capital of Nigeria?",,,,,,Lagos,Abuja,Kano,"Port Harcourt",,B,"It became the capital in 1991","Abuja has been the federal capital of Nigeria since 1991, replacing Lagos.",https://example.com/nigerian-history
 ```
+
+#### Example 2: Comprehension Question with Passage
+```csv
+subject_id,topic_id,exam_type,year,difficulty,question_text,passage,passage_id,question_image_url,image_alt_text,image_width,image_height,option_a,option_b,option_c,option_d,option_e,correct_answer,hint,solution,further_study_links
+123e4567-eng-001,987fcdeb-reading-001,JAMB,2024,medium,"What is the main theme of the passage?","In the heart of Lagos, a young entrepreneur named Amina started a small tech company. Despite facing numerous challenges including limited funding and fierce competition, she persevered.",PASSAGE_ENG_001,,,,,Perseverance,Competition,Technology,Urban development,,A,"Look for the central message","The passage emphasizes Amina's perseverance despite challenges, which is the key theme.",https://example.com/reading-comprehension
+```
+
+#### Example 3: Question with Image (Math/Science)
+```csv
+subject_id,topic_id,exam_type,year,difficulty,question_text,passage,passage_id,question_image_url,image_alt_text,image_width,image_height,option_a,option_b,option_c,option_d,option_e,correct_answer,hint,solution,further_study_links
+123e4567-math-001,987fcdeb-geometry-001,NECO,2023,medium,"What is the measure of angle ABC in the diagram?",,,"https://example.com/images/triangle-abc.png","Right triangle ABC with angle A marked as 30 degrees and angle C marked as 60 degrees",400,300,30°,60°,90°,120°,,C,"Remember that angles in a triangle sum to 180°","Using the triangle angle sum property: 30° + 60° + angle B = 180°, therefore angle B = 90°",https://example.com/triangle-properties
+```
+
+#### Example 4: Multiple Questions Sharing a Passage
+```csv
+subject_id,topic_id,exam_type,year,difficulty,question_text,passage,passage_id,question_image_url,image_alt_text,image_width,image_height,option_a,option_b,option_c,option_d,option_e,correct_answer,hint,solution,further_study_links
+123e4567-eng-001,987fcdeb-reading-001,WAEC,2023,medium,"What literary device is used?","The wind whispered secrets through the ancient trees, while the moon danced across the rippling water.",PASSAGE_LIT_001,,,,,Metaphor,Personification,Simile,Alliteration,,B,"Think about how non-human things are described","The passage uses personification by giving human qualities to non-human elements.",https://example.com/literary-devices
+123e4567-eng-001,987fcdeb-reading-001,WAEC,2023,easy,"What does the moon do?",,,PASSAGE_LIT_001,,,,,Whispers,Dances,Tells stories,Ripples,,B,"Look for the action attributed to the moon","The passage states 'the moon danced across the rippling water'.",https://example.com/reading-comprehension
+```
+
+#### Example 5: Question with Both Passage and Image
+```csv
+subject_id,topic_id,exam_type,year,difficulty,question_text,passage,passage_id,question_image_url,image_alt_text,image_width,image_height,option_a,option_b,option_c,option_d,option_e,correct_answer,hint,solution,further_study_links
+123e4567-chem-001,987fcdeb-stoich-001,JAMB,2024,hard,"How many moles of oxygen are required?","Consider the complete combustion of propane (C₃H₈). The balanced equation is shown in the image.",PASSAGE_CHEM_001,"https://example.com/images/combustion-equation.png","Chemical equation: C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",500,200,3 moles,4 moles,5 moles,8 moles,,C,"Look at the coefficient of O₂","The balanced equation shows that 1 mole of C₃H₈ requires 5 moles of O₂.",https://example.com/stoichiometry
+```
+
+### Sample CSV Files
+
+For your convenience, we've provided sample CSV files demonstrating the new features:
+
+- **`/public/samples/questions-with-passages.csv`** - Examples of comprehension questions with passages
+- **`/public/samples/questions-with-images.csv`** - Examples of questions with diagrams and images
+- **`/public/samples/questions-complete.csv`** - Examples showcasing all features (passages, images, etc.)
+
+You can download these files from the admin portal or access them directly from the repository to use as templates for your own questions.
 
 ---
 
@@ -662,13 +815,14 @@ if (valid) {
 - Options: 1-500 chars each
 - Explanation: Min 10 chars
 
-### Sample Questions
+### Sample CSV Files
 
-Download sample question sets:
-- Mathematics (100 questions)
-- English Language (100 questions)
-- Sciences (150 questions)
-(Contact administrator for sample files)
+Download ready-to-use sample CSV files:
+- **Questions with Passages** (`/public/samples/questions-with-passages.csv`) - 5 comprehension questions demonstrating passage usage
+- **Questions with Images** (`/public/samples/questions-with-images.csv`) - 5 questions with diagrams and visual aids
+- **Complete Examples** (`/public/samples/questions-complete.csv`) - 8 questions showcasing all features
+
+These files are properly formatted and can be used as templates for creating your own question imports.
 
 ### Video Tutorials
 

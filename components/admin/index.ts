@@ -90,6 +90,11 @@ export {
   QuestionPreview,
 } from './QuestionPreview';
 
+// ImageUpload - Image upload component with drag-and-drop
+export {
+  ImageUpload,
+} from './ImageUpload';
+
 // FileDropzone - Drag-and-drop file upload component
 export {
   FileDropzone,

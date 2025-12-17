@@ -74,23 +74,23 @@ const navigationSections: NavSection[] = [
         badge: 'Popular',
         badgeColor: 'bg-amber-100 text-amber-700',
       },
-      { 
-        href: '/subjects', 
-        label: 'Practice Mode', 
-        icon: BookOpenCheck, 
-        description: 'Learn at your pace with hints' 
+      {
+        href: '/practice',
+        label: 'Practice Mode',
+        icon: BookOpenCheck,
+        description: 'Learn at your pace with hints'
       },
-      { 
-        href: '/subjects', 
-        label: 'Test Mode', 
-        icon: FileText, 
-        description: 'Simulate real exam conditions' 
+      {
+        href: '/test',
+        label: 'Test Mode',
+        icon: FileText,
+        description: 'Simulate real exam conditions'
       },
-      { 
-        href: '/subjects', 
-        label: 'Timed Mode', 
-        icon: Timer, 
-        description: 'Race against the clock' 
+      {
+        href: '/timed',
+        label: 'Timed Mode',
+        icon: Timer,
+        description: 'Race against the clock'
       },
     ],
   },

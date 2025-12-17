@@ -5,6 +5,7 @@ import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
 import { ProgressBar } from '@/components/common/ProgressBar';
+import { QuestionDisplay } from '@/components/common/QuestionDisplay';
 import {
   getSession,
   getSessionAnswers,
@@ -12,8 +13,9 @@ import {
   getSubject,
   getGradeLabel,
   createSession,
+  getRandomQuestions,
 } from '@/lib/api';
-import type { LearningSession, SessionAnswer, Topic, Subject } from '@/types/database';
+import type { LearningSession, SessionAnswer, Topic, Subject, Question } from '@/types/database';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/auth-context';
@@ -29,6 +31,8 @@ import {
   Share2,
   RefreshCw,
   Zap,
+  ChevronDown,
+  ChevronUp,
 } from 'lucide-react';
 
 export default function ResultsPage({ params }: { params: { sessionId: string } }) {
@@ -37,9 +41,11 @@ export default function ResultsPage({ params }: { params: { sessionId: string } 
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
   const [answers, setAnswers] = useState<SessionAnswer[]>([]);
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [topic, setTopic] = useState<Topic | null>(null);
   const [subject, setSubject] = useState<Subject | null>(null);
   const [creatingSession, setCreatingSession] = useState(false);
+  const [showReview, setShowReview] = useState(false);
 
   useEffect(() => {
     loadResults();
@@ -63,11 +69,13 @@ export default function ResultsPage({ params }: { params: { sessionId: string } 
       setAnswers(sessionAnswers);
 
       if (sessionData.topic_id) {
-        const [topicData] = await Promise.all([
+        const [topicData, questionsData] = await Promise.all([
           getTopic(sessionData.topic_id),
+          getRandomQuestions(sessionData.topic_id, sessionData.total_questions),
         ]);
 
         setTopic(topicData);
+        setQuestions(questionsData);
 
         if (topicData) {
           const subjectData = await getSubject(topicData.subject_id);
@@ -283,6 +291,65 @@ export default function ResultsPage({ params }: { params: { sessionId: string } 
             </div>
           </div>
         </Card>
+
+        {/* Question Review Section */}
+        {questions.length > 0 && (
+          <Card>
+            <button
+              onClick={() => setShowReview(!showReview)}
+              className="w-full flex items-center justify-between text-left"
+            >
+              <h3 className="font-bold text-lg text-gray-900">Review Questions</h3>
+              {showReview ? (
+                <ChevronUp className="w-5 h-5 text-gray-600" />
+              ) : (
+                <ChevronDown className="w-5 h-5 text-gray-600" />
+              )}
+            </button>
+
+            {showReview && (
+              <div className="mt-6 space-y-8">
+                {questions.map((question, index) => {
+                  const answer = answers.find(a => a.question_id === question.id);
+                  const previousQuestion = index > 0 ? questions[index - 1] : null;
+                  
+                  // Show passage if question has one AND it's different from previous
+                  const shouldShowPassage = !!(question.passage && (
+                    !previousQuestion ||
+                    previousQuestion.passage_id !== question.passage_id
+                  ));
+
+                  return (
+                    <div key={question.id} className="border-t pt-6 first:border-t-0 first:pt-0">
+                      <QuestionDisplay
+                        question={question}
+                        showPassage={shouldShowPassage}
+                        selectedAnswer={answer?.user_answer || null}
+                        showCorrectAnswer={true}
+                        isReview={true}
+                        questionNumber={index + 1}
+                        disabled={true}
+                      />
+                      
+                      {/* Explanation */}
+                      {question.explanation && (
+                        <Card className="mt-4 bg-blue-50 border-2 border-blue-200">
+                          <div className="flex gap-3">
+                            <div className="text-2xl">💡</div>
+                            <div>
+                              <p className="font-semibold text-gray-900 mb-1">Explanation</p>
+                              <p className="text-gray-700">{question.explanation}</p>
+                            </div>
+                          </div>
+                        </Card>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </Card>
+        )}
 
         {/* Quick Retry Section */}
         {topic && (

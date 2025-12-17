@@ -90,7 +90,11 @@ export interface Question {
   topic_id: string;
   question_text: string;
   passage?: string;
+  passage_id?: string | null;
   question_image_url?: string;
+  image_alt_text?: string | null;
+  image_width?: number | null;
+  image_height?: number | null;
   option_a: string;
   option_b: string;
   option_c: string;

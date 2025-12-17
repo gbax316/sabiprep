@@ -270,7 +270,7 @@ export async function completeSession(
 export interface CreateAnswerParams {
   sessionId: string;
   questionId: string;
-  userAnswer: 'A' | 'B' | 'C' | 'D';
+  userAnswer: 'A' | 'B' | 'C' | 'D' | 'E';
   isCorrect: boolean;
   timeSpentSeconds: number;
   hintUsed?: boolean;

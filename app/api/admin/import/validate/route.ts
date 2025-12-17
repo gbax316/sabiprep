@@ -173,6 +173,75 @@ export async function POST(request: NextRequest) {
           }
         }
 
+        // Validate image fields
+        if (row.question_image_url && row.question_image_url.trim() !== '') {
+          // Validate URL format
+          try {
+            new URL(row.question_image_url.trim());
+          } catch (e) {
+            errors.push({
+              row: rowNumber,
+              field: 'question_image_url',
+              message: 'Invalid URL format for question image',
+              value: row.question_image_url
+            });
+            rowIsValid = false;
+          }
+
+          // Require alt text when image is provided
+          if (!row.image_alt_text || row.image_alt_text.trim() === '') {
+            errors.push({
+              row: rowNumber,
+              field: 'image_alt_text',
+              message: 'Alt text is required when question_image_url is provided (for accessibility)',
+              value: row.image_alt_text
+            });
+            rowIsValid = false;
+          }
+        }
+
+        // Validate image dimensions if provided
+        if (row.image_width && row.image_width.trim() !== '') {
+          const width = parseInt(row.image_width);
+          if (isNaN(width) || width <= 0) {
+            errors.push({
+              row: rowNumber,
+              field: 'image_width',
+              message: 'Image width must be a positive integer',
+              value: row.image_width
+            });
+            rowIsValid = false;
+          }
+        }
+
+        if (row.image_height && row.image_height.trim() !== '') {
+          const height = parseInt(row.image_height);
+          if (isNaN(height) || height <= 0) {
+            errors.push({
+              row: rowNumber,
+              field: 'image_height',
+              message: 'Image height must be a positive integer',
+              value: row.image_height
+            });
+            rowIsValid = false;
+          }
+        }
+
+        // Validate passage_id format if provided
+        if (row.passage_id && row.passage_id.trim() !== '') {
+          const passageId = row.passage_id.trim();
+          // Check for valid format (alphanumeric, underscores, hyphens)
+          if (!/^[A-Za-z0-9_-]+$/.test(passageId)) {
+            errors.push({
+              row: rowNumber,
+              field: 'passage_id',
+              message: 'Passage ID must contain only letters, numbers, underscores, and hyphens',
+              value: row.passage_id
+            });
+            rowIsValid = false;
+          }
+        }
+
         // Check for duplicate question text
         if (row.question_text) {
           const questionText = row.question_text.trim().toLowerCase();

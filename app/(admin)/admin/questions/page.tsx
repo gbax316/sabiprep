@@ -15,6 +15,8 @@ interface QuestionWithRelations {
   topic_id: string;
   question_text: string;
   passage?: string;
+  passage_id?: string;
+  question_image_url?: string;
   option_a: string;
   option_b: string;
   option_c: string;
@@ -155,6 +157,8 @@ export default function QuestionsPage() {
     year: searchParams?.get('year') || '',
     difficulty: searchParams?.get('difficulty') || '',
     status: searchParams?.get('status') || '',
+    hasPassage: searchParams?.get('hasPassage') || '',
+    hasImage: searchParams?.get('hasImage') || '',
   });
   
   // Fetch subjects
@@ -212,6 +216,8 @@ export default function QuestionsPage() {
       if (filters.year) params.set('year', filters.year);
       if (filters.difficulty) params.set('difficulty', filters.difficulty);
       if (filters.status) params.set('status', filters.status);
+      if (filters.hasPassage) params.set('hasPassage', filters.hasPassage);
+      if (filters.hasImage) params.set('hasImage', filters.hasImage);
       
       const response = await fetch(`/api/admin/questions?${params.toString()}`);
       if (response.ok) {
@@ -333,12 +339,37 @@ export default function QuestionsPage() {
       header: 'Question',
       render: (item) => (
         <div className="max-w-md">
-          <p className="text-sm font-medium text-gray-900 line-clamp-2">
-            {truncateText(item.question_text, 100)}
-          </p>
-          <p className="text-xs text-gray-500 mt-1">
-            {item.subject?.name} / {item.topic?.name}
-          </p>
+          <div className="flex items-start gap-2">
+            <div className="flex-1">
+              <p className="text-sm font-medium text-gray-900 line-clamp-2">
+                {truncateText(item.question_text, 100)}
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                {item.subject?.name} / {item.topic?.name}
+              </p>
+            </div>
+            <div className="flex gap-1 flex-shrink-0">
+              {item.passage && (
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded bg-blue-100 text-blue-600" title="Has passage">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </span>
+              )}
+              {item.question_image_url && (
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded bg-purple-100 text-purple-600" title="Has image">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </span>
+              )}
+              {item.passage_id && (
+                <span className="inline-flex items-center justify-center px-1.5 h-6 rounded bg-indigo-100 text-indigo-600 text-xs font-medium" title={`Passage ID: ${item.passage_id}`}>
+                  {item.passage_id.substring(0, 3)}
+                </span>
+              )}
+            </div>
+          </div>
         </div>
       ),
     },
@@ -411,6 +442,15 @@ export default function QuestionsPage() {
           <p className="text-gray-600">Manage the question bank</p>
         </div>
         <div className="flex gap-3">
+          <Link
+            href="/admin/questions/passages"
+            className="px-4 py-2 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 flex items-center gap-2"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            Passages
+          </Link>
           <Link
             href="/admin/content"
             className="px-4 py-2 text-sm border border-gray-200 rounded-lg hover:bg-gray-50"
@@ -575,6 +615,38 @@ export default function QuestionsPage() {
                   {size} per page
                 </option>
               ))}
+            </select>
+          </div>
+          
+          {/* Has Passage Filter */}
+          <div>
+            <label className="block text-xs font-medium text-gray-600 mb-1">
+              Content Type
+            </label>
+            <select
+              value={filters.hasPassage}
+              onChange={(e) => handleFilterChange('hasPassage', e.target.value)}
+              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <option value="">All Questions</option>
+              <option value="true">With Passage</option>
+              <option value="false">Without Passage</option>
+            </select>
+          </div>
+          
+          {/* Has Image Filter */}
+          <div>
+            <label className="block text-xs font-medium text-gray-600 mb-1">
+              Media
+            </label>
+            <select
+              value={filters.hasImage}
+              onChange={(e) => handleFilterChange('hasImage', e.target.value)}
+              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <option value="">All Questions</option>
+              <option value="true">With Image</option>
+              <option value="false">Without Image</option>
             </select>
           </div>
         </div>

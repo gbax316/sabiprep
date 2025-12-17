@@ -15,7 +15,11 @@ interface QuestionDetail {
   topic_id: string;
   question_text: string;
   passage?: string;
+  passage_id?: string;
   question_image_url?: string;
+  image_alt_text?: string;
+  image_width?: number;
+  image_height?: number;
   option_a: string;
   option_b: string;
   option_c: string;
@@ -324,6 +328,69 @@ export default function QuestionDetailPage({ params }: PageProps) {
                 </div>
               )}
             </div>
+            
+            {/* Passage Info */}
+            {(question.passage || question.passage_id) && (
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
+                  Passage Information
+                </h3>
+                {question.passage_id && (
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-gray-600">Passage ID</span>
+                    <Link
+                      href={`/admin/questions/passages?selected=${question.passage_id}`}
+                      className="text-sm font-medium text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
+                    >
+                      {question.passage_id}
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </Link>
+                  </div>
+                )}
+                {question.passage && (
+                  <div className="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <p className="text-xs font-medium text-blue-700 mb-1">Passage Text:</p>
+                    <p className="text-sm text-gray-700 line-clamp-3">{question.passage}</p>
+                  </div>
+                )}
+              </div>
+            )}
+            
+            {/* Image Info */}
+            {question.question_image_url && (
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
+                  Image Information
+                </h3>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600">Has Image</span>
+                    <span className="text-emerald-600 flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Yes
+                    </span>
+                  </div>
+                  {question.image_width && question.image_height && (
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-600">Dimensions</span>
+                      <span className="text-gray-900 font-medium">
+                        {question.image_width} × {question.image_height}px
+                      </span>
+                    </div>
+                  )}
+                  {question.image_alt_text && (
+                    <div className="text-sm">
+                      <span className="text-gray-600 block mb-1">Alt Text:</span>
+                      <p className="text-gray-900 italic">&quot;{question.image_alt_text}&quot;</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
           
           {/* Usage Statistics */}
@@ -411,6 +478,8 @@ export default function QuestionDetailPage({ params }: PageProps) {
           <QuestionPreview
             questionText={question.question_text}
             passage={question.passage}
+            imageUrl={question.question_image_url}
+            imageAltText={question.image_alt_text}
             options={{
               A: question.option_a,
               B: question.option_b,

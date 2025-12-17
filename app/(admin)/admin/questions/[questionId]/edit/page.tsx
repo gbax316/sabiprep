@@ -22,6 +22,11 @@ interface QuestionDetail {
   topic_id: string;
   question_text: string;
   passage?: string;
+  passage_id?: string;
+  question_image_url?: string;
+  image_alt_text?: string;
+  image_width?: number;
+  image_height?: number;
   option_a: string;
   option_b: string;
   option_c: string;
@@ -122,6 +127,11 @@ export default function EditQuestionPage({ params }: PageProps) {
     topic_id: question.topic_id,
     question_text: question.question_text,
     passage: question.passage || '',
+    passage_id: question.passage_id || '',
+    question_image_url: question.question_image_url || '',
+    image_alt_text: question.image_alt_text || '',
+    image_width: question.image_width?.toString() || '',
+    image_height: question.image_height?.toString() || '',
     option_a: question.option_a,
     option_b: question.option_b,
     option_c: question.option_c || '',

@@ -18,6 +18,11 @@ export async function POST(request: NextRequest) {
       const {
         question_text,
         passage,
+        passage_id,
+        question_image_url,
+        image_alt_text,
+        image_width,
+        image_height,
         option_a,
         option_b,
         option_c,
@@ -61,7 +66,14 @@ export async function POST(request: NextRequest) {
         // Question view (what student sees initially)
         question_view: {
           passage: passage?.trim() || null,
+          passage_id: passage_id?.trim() || null,
           question_text: question_text.trim(),
+          question_image: question_image_url ? {
+            url: question_image_url,
+            alt_text: image_alt_text?.trim() || '',
+            width: image_width || null,
+            height: image_height || null,
+          } : null,
           options,
           metadata: {
             difficulty: difficulty || null,
@@ -80,6 +92,14 @@ export async function POST(request: NextRequest) {
         // Validation info
         validation: {
           has_passage: !!passage?.trim(),
+          has_passage_id: !!passage_id?.trim(),
+          has_image: !!question_image_url,
+          has_image_alt_text: !!image_alt_text?.trim(),
+          image_validation: question_image_url ? {
+            has_alt_text: !!image_alt_text?.trim(),
+            has_dimensions: !!(image_width && image_height),
+            is_valid: !!image_alt_text?.trim(), // Alt text is required when image exists
+          } : null,
           options_count: options.length,
           has_explanation: !!explanation?.trim(),
           has_hint: !!hint?.trim(),
@@ -88,7 +108,8 @@ export async function POST(request: NextRequest) {
             question_text?.trim() &&
             options.length >= 2 &&
             correct_answer &&
-            options.some(o => o.isCorrect)
+            options.some(o => o.isCorrect) &&
+            (!question_image_url || !!image_alt_text?.trim()) // If image exists, alt text must exist
           ),
         },
       };

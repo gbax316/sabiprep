@@ -33,7 +33,11 @@ export async function GET(request: NextRequest, context: RouteParams) {
           topic_id,
           question_text,
           passage,
+          passage_id,
           question_image_url,
+          image_alt_text,
+          image_width,
+          image_height,
           option_a,
           option_b,
           option_c,
@@ -83,7 +87,11 @@ export async function GET(request: NextRequest, context: RouteParams) {
         topic_id: question.topic_id,
         question_text: question.question_text,
         passage: question.passage,
+        passage_id: question.passage_id,
         question_image_url: question.question_image_url,
+        image_alt_text: question.image_alt_text,
+        image_width: question.image_width,
+        image_height: question.image_height,
         option_a: question.option_a,
         option_b: question.option_b,
         option_c: question.option_c,
@@ -149,7 +157,11 @@ export async function PUT(request: NextRequest, context: RouteParams) {
         'topic_id',
         'question_text',
         'passage',
+        'passage_id',
         'question_image_url',
+        'image_alt_text',
+        'image_width',
+        'image_height',
         'option_a',
         'option_b',
         'option_c',
@@ -177,6 +189,10 @@ export async function PUT(request: NextRequest, context: RouteParams) {
             }
           } else if (field === 'exam_year' && body[field]) {
             updateData[field] = parseInt(body[field], 10);
+          } else if (field === 'image_width' || field === 'image_height') {
+            // Handle image dimensions
+            const value = typeof body[field] === 'string' ? parseInt(body[field], 10) : body[field];
+            updateData[field] = value || null;
           } else if (typeof body[field] === 'string') {
             updateData[field] = body[field].trim() || null;
           } else {
@@ -208,6 +224,31 @@ export async function PUT(request: NextRequest, context: RouteParams) {
       
       if (updateData.status !== undefined && !['draft', 'published', 'archived'].includes(updateData.status as string)) {
         return createErrorResponse(400, 'Bad Request', 'Invalid status');
+      }
+      
+      // Validate image alt text if image URL is being updated
+      if (updateData.question_image_url !== undefined) {
+        const imageUrl = updateData.question_image_url as string | null;
+        const altText = (updateData.image_alt_text !== undefined ? updateData.image_alt_text : existingQuestion.image_alt_text) as string | null;
+        
+        if (imageUrl && (!altText || altText.trim().length === 0)) {
+          return createErrorResponse(400, 'Bad Request', 'Image alt text is required when question image is provided');
+        }
+      }
+      
+      // Validate image dimensions if being updated
+      if (updateData.image_width !== undefined && updateData.image_width !== null) {
+        const width = typeof updateData.image_width === 'string' ? parseInt(updateData.image_width, 10) : updateData.image_width as number;
+        if (isNaN(width) || width <= 0) {
+          return createErrorResponse(400, 'Bad Request', 'Image width must be a positive integer');
+        }
+      }
+      
+      if (updateData.image_height !== undefined && updateData.image_height !== null) {
+        const height = typeof updateData.image_height === 'string' ? parseInt(updateData.image_height, 10) : updateData.image_height as number;
+        if (isNaN(height) || height <= 0) {
+          return createErrorResponse(400, 'Bad Request', 'Image height must be a positive integer');
+        }
       }
       
       // Verify subject if being updated
@@ -252,7 +293,11 @@ export async function PUT(request: NextRequest, context: RouteParams) {
           topic_id,
           question_text,
           passage,
+          passage_id,
           question_image_url,
+          image_alt_text,
+          image_width,
+          image_height,
           option_a,
           option_b,
           option_c,
@@ -329,10 +374,10 @@ export async function DELETE(request: NextRequest, context: RouteParams) {
       
       const supabase = createServerClient();
       
-      // Verify question exists
+      // Verify question exists and get image URL for cleanup
       const { data: existingQuestion, error: fetchError } = await supabase
         .from('questions')
-        .select('id, subject_id, topic_id, status')
+        .select('id, subject_id, topic_id, status, question_image_url')
         .eq('id', questionId)
         .single();
       
@@ -352,6 +397,25 @@ export async function DELETE(request: NextRequest, context: RouteParams) {
       if (updateError) {
         console.error('Error archiving question:', updateError);
         return createErrorResponse(500, 'Database Error', 'Failed to archive question');
+      }
+      
+      // Delete associated image from storage if exists
+      if (existingQuestion.question_image_url) {
+        try {
+          // Extract file path from URL
+          const url = new URL(existingQuestion.question_image_url);
+          const pathParts = url.pathname.split('/');
+          const filePath = pathParts.slice(pathParts.indexOf('questions')).join('/');
+          
+          if (filePath) {
+            await supabase.storage
+              .from('question-images')
+              .remove([filePath]);
+          }
+        } catch (error) {
+          // Log but don't fail the deletion if image cleanup fails
+          console.error('Error deleting question image:', error);
+        }
       }
       
       // Log the action

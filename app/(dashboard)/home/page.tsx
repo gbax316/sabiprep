@@ -20,6 +20,7 @@ import {
   BookOpen,
   Timer,
   Sparkles,
+  FileText,
 } from 'lucide-react';
 
 const quickActions = [
@@ -35,7 +36,7 @@ const quickActions = [
     icon: Timer,
     label: '5-min Sprint',
     description: 'Quick challenge',
-    href: '/sprint',
+    href: '/timed',
     color: 'bg-emerald-500',
     lightColor: 'bg-emerald-50',
   },
@@ -46,6 +47,39 @@ const quickActions = [
     href: '/daily-challenge',
     color: 'bg-purple-500',
     lightColor: 'bg-purple-50',
+  },
+];
+
+const learningModes = [
+  {
+    icon: BookOpen,
+    title: 'Practice Mode',
+    description: 'Learn at your own pace with instant feedback',
+    href: '/practice',
+    gradient: 'from-blue-500 to-blue-600',
+    bgColor: 'bg-blue-50',
+    iconColor: 'text-blue-600',
+    borderColor: 'border-blue-200',
+  },
+  {
+    icon: FileText,
+    title: 'Test Mode',
+    description: 'Simulate exam conditions',
+    href: '/test',
+    gradient: 'from-amber-500 to-amber-600',
+    bgColor: 'bg-amber-50',
+    iconColor: 'text-amber-600',
+    borderColor: 'border-amber-200',
+  },
+  {
+    icon: Clock,
+    title: 'Timed Mode',
+    description: 'Challenge yourself with time limits',
+    href: '/timed',
+    gradient: 'from-orange-500 to-orange-600',
+    bgColor: 'bg-orange-50',
+    iconColor: 'text-orange-600',
+    borderColor: 'border-orange-200',
   },
 ];
 
@@ -197,6 +231,38 @@ export default function HomePage() {
                     </div>
                     <p className="font-medium text-sm text-slate-900">{action.label}</p>
                     <p className="text-xs text-slate-500 mt-0.5">{action.description}</p>
+                  </Card>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Learning Modes */}
+        <div>
+          <h2 className="font-display text-lg font-bold text-slate-900 mb-3">Choose Your Mode</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {learningModes.map((mode) => {
+              const Icon = mode.icon;
+              return (
+                <Link
+                  key={mode.href}
+                  href={mode.href}
+                  className="block"
+                >
+                  <Card className={`card-hover h-full border-2 ${mode.borderColor} hover:shadow-lg transition-all duration-200`}>
+                    <div className="p-5">
+                      <div className={`w-14 h-14 ${mode.bgColor} rounded-2xl flex items-center justify-center mb-4`}>
+                        <Icon className={`w-7 h-7 ${mode.iconColor}`} />
+                      </div>
+                      <h3 className="font-display text-lg font-bold text-slate-900 mb-2">
+                        {mode.title}
+                      </h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        {mode.description}
+                      </p>
+                      <div className={`mt-4 h-1 rounded-full bg-gradient-to-r ${mode.gradient}`} />
+                    </div>
                   </Card>
                 </Link>
               );

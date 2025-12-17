@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
+import { QuestionDisplay } from '@/components/common/QuestionDisplay';
 import {
   getSession,
   getRandomQuestions,
@@ -21,8 +22,6 @@ import {
   BookOpen,
   ChevronLeft,
   ChevronRight,
-  Check,
-  X,
 } from 'lucide-react';
 
 export default function PracticeModePage({ params }: { params: { sessionId: string } }) {
@@ -33,7 +32,7 @@ export default function PracticeModePage({ params }: { params: { sessionId: stri
   const [subject, setSubject] = useState<Subject | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<'A' | 'B' | 'C' | 'D' | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<'A' | 'B' | 'C' | 'D' | 'E' | null>(null);
   const [showHint, setShowHint] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const [answeredQuestions, setAnsweredQuestions] = useState<Set<string>>(new Set());
@@ -80,10 +79,18 @@ export default function PracticeModePage({ params }: { params: { sessionId: stri
   }
 
   const currentQuestion = questions[currentIndex];
+  const previousQuestion = currentIndex > 0 ? questions[currentIndex - 1] : null;
   const isLastQuestion = currentIndex === questions.length - 1;
   const isAnswered = answeredQuestions.has(currentQuestion?.id || '');
+  
+  // Determine if we should show the passage
+  // Show passage if: question has passage AND (it's first question OR different passage from previous)
+  const shouldShowPassage = !!(currentQuestion?.passage && (
+    !previousQuestion ||
+    previousQuestion.passage_id !== currentQuestion.passage_id
+  ));
 
-  async function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D') {
+  async function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D' | 'E') {
     if (!currentQuestion || isAnswered) return;
 
     setSelectedAnswer(answer);
@@ -201,80 +208,16 @@ export default function PracticeModePage({ params }: { params: { sessionId: stri
       </header>
 
       <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
-        {/* Question Card */}
-        <Card variant="elevated">
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <Badge variant="neutral">Question {currentIndex + 1}</Badge>
-              {currentQuestion.difficulty && (
-                <Badge variant={
-                  currentQuestion.difficulty === 'Easy' ? 'success' :
-                  currentQuestion.difficulty === 'Medium' ? 'warning' :
-                  'error'
-                }>
-                  {currentQuestion.difficulty}
-                </Badge>
-              )}
-            </div>
-
-            <div className="prose max-w-none">
-              <p className="text-lg text-gray-900 font-medium leading-relaxed">
-                {currentQuestion.question_text}
-              </p>
-            </div>
-
-            {currentQuestion.question_image_url && (
-              <img
-                src={currentQuestion.question_image_url}
-                alt="Question"
-                className="max-w-full rounded-lg"
-              />
-            )}
-          </div>
-        </Card>
-
-        {/* Options */}
-        <div className="grid grid-cols-1 gap-3">
-          {(['A', 'B', 'C', 'D'] as const).map((key) => {
-            const optionText = currentQuestion[`option_${key.toLowerCase()}` as keyof Question] as string;
-            const isSelected = selectedAnswer === key;
-            const isCorrect = key === currentQuestion.correct_answer;
-            const showResult = isAnswered;
-
-            return (
-              <button
-                key={key}
-                onClick={() => !isAnswered && handleAnswerSelect(key)}
-                disabled={isAnswered}
-                className={`
-                  w-full p-4 rounded-xl text-left transition-all
-                  ${!showResult && !isSelected && 'bg-white border-2 border-gray-200 hover:border-indigo-600 hover:shadow-md'}
-                  ${!showResult && isSelected && 'bg-indigo-50 border-2 border-indigo-600'}
-                  ${showResult && isCorrect && 'bg-green-50 border-2 border-green-600'}
-                  ${showResult && isSelected && !isCorrect && 'bg-red-50 border-2 border-red-600'}
-                  ${showResult && !isSelected && !isCorrect && 'bg-gray-50 border-2 border-gray-200'}
-                  ${isAnswered && 'cursor-not-allowed'}
-                `}
-              >
-                <div className="flex items-start gap-3">
-                  <div className={`
-                    w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0
-                    ${!showResult && isSelected && 'bg-indigo-600 text-white'}
-                    ${!showResult && !isSelected && 'bg-gray-200 text-gray-700'}
-                    ${showResult && isCorrect && 'bg-green-600 text-white'}
-                    ${showResult && isSelected && !isCorrect && 'bg-red-600 text-white'}
-                    ${showResult && !isSelected && !isCorrect && 'bg-gray-300 text-gray-600'}
-                  `}>
-                    {showResult && isCorrect ? <Check className="w-5 h-5" /> : 
-                     showResult && isSelected && !isCorrect ? <X className="w-5 h-5" /> :
-                     key}
-                  </div>
-                  <span className="flex-1 text-gray-900">{optionText}</span>
-                </div>
-              </button>
-            );
-          })}
-        </div>
+        {/* Question Display Component */}
+        <QuestionDisplay
+          question={currentQuestion}
+          showPassage={shouldShowPassage}
+          selectedAnswer={selectedAnswer}
+          onAnswerSelect={handleAnswerSelect}
+          showCorrectAnswer={isAnswered}
+          questionNumber={currentIndex + 1}
+          disabled={isAnswered}
+        />
 
         {/* Hint Button */}
         {!isAnswered && currentQuestion.hint && (

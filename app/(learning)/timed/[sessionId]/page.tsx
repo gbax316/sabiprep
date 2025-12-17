@@ -5,6 +5,7 @@ import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
 import { ProgressBar } from '@/components/common/ProgressBar';
+import { QuestionDisplay } from '@/components/common/QuestionDisplay';
 import { useTimer } from '@/hooks/useTimer';
 import {
   getSession,
@@ -31,7 +32,7 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
   const [subject, setSubject] = useState<Subject | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<'A' | 'B' | 'C' | 'D' | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<'A' | 'B' | 'C' | 'D' | 'E' | null>(null);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [sessionComplete, setSessionComplete] = useState(false);
   const [timePerQuestion, setTimePerQuestion] = useState(30); // Default to 30 seconds
@@ -95,8 +96,15 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
   }
 
   const currentQuestion = questions[currentIndex];
+  const previousQuestion = currentIndex > 0 ? questions[currentIndex - 1] : null;
+  
+  // Determine if we should show the passage
+  const shouldShowPassage = !!(currentQuestion?.passage && (
+    !previousQuestion ||
+    previousQuestion.passage_id !== currentQuestion.passage_id
+  ));
 
-  async function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D') {
+  async function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D' | 'E') {
     if (sessionComplete || selectedAnswer) return;
 
     setSelectedAnswer(answer);
@@ -108,7 +116,7 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
       await createSessionAnswer({
         sessionId: params.sessionId,
         questionId: currentQuestion.id,
-        userAnswer: answer,
+        userAnswer: answer as 'A' | 'B' | 'C' | 'D',
         isCorrect,
         timeSpentSeconds: timeSpent,
         hintUsed: false,
@@ -251,78 +259,16 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
           </div>
         </Card>
 
-        {/* Question Card */}
-        <Card variant="elevated">
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <Badge variant="neutral">Question {currentIndex + 1}</Badge>
-              {currentQuestion.difficulty && (
-                <Badge variant={
-                  currentQuestion.difficulty === 'Easy' ? 'success' :
-                  currentQuestion.difficulty === 'Medium' ? 'warning' :
-                  'error'
-                }>
-                  {currentQuestion.difficulty}
-                </Badge>
-              )}
-            </div>
-
-            <div className="prose max-w-none">
-              <p className="text-lg text-gray-900 font-medium leading-relaxed">
-                {currentQuestion.question_text}
-              </p>
-            </div>
-
-            {currentQuestion.question_image_url && (
-              <img
-                src={currentQuestion.question_image_url}
-                alt="Question"
-                className="max-w-full rounded-lg"
-              />
-            )}
-          </div>
-        </Card>
-
-        {/* Options */}
-        <div className="grid grid-cols-1 gap-3">
-          {(['A', 'B', 'C', 'D'] as const).map((key) => {
-            const optionText = currentQuestion[`option_${key.toLowerCase()}` as keyof Question] as string;
-            const isSelected = selectedAnswer === key;
-            const isCorrect = key === currentQuestion.correct_answer;
-            const showResult = selectedAnswer !== null;
-
-            return (
-              <button
-                key={key}
-                onClick={() => !selectedAnswer && handleAnswerSelect(key)}
-                disabled={selectedAnswer !== null}
-                className={`
-                  w-full p-4 rounded-xl text-left transition-all
-                  ${!showResult && !isSelected && 'bg-white border-2 border-gray-200 hover:border-orange-600 hover:shadow-md'}
-                  ${!showResult && isSelected && 'bg-orange-50 border-2 border-orange-600'}
-                  ${showResult && isCorrect && 'bg-green-50 border-2 border-green-600'}
-                  ${showResult && isSelected && !isCorrect && 'bg-red-50 border-2 border-red-600'}
-                  ${showResult && !isSelected && !isCorrect && 'bg-gray-50 border-2 border-gray-200'}
-                  ${selectedAnswer && 'cursor-not-allowed'}
-                `}
-              >
-                <div className="flex items-start gap-3">
-                  <div className={`
-                    w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0
-                    ${!showResult && isSelected && 'bg-orange-600 text-white'}
-                    ${!showResult && !isSelected && 'bg-gray-200 text-gray-700'}
-                    ${showResult && isCorrect && 'bg-green-600 text-white'}
-                    ${showResult && isSelected && !isCorrect && 'bg-red-600 text-white'}
-                    ${showResult && !isSelected && !isCorrect && 'bg-gray-300 text-gray-600'}
-                  `}>
-                    {key}
-                  </div>
-                  <span className="flex-1 text-gray-900">{optionText}</span>
-                </div>
-              </button>
-            );
-          })}
-        </div>
+        {/* Question Display Component */}
+        <QuestionDisplay
+          question={currentQuestion}
+          showPassage={shouldShowPassage}
+          selectedAnswer={selectedAnswer}
+          onAnswerSelect={handleAnswerSelect}
+          showCorrectAnswer={selectedAnswer !== null}
+          questionNumber={currentIndex + 1}
+          disabled={selectedAnswer !== null}
+        />
 
         {/* Info Banner */}
         <Card variant="outlined" className="border-orange-200 bg-orange-50">

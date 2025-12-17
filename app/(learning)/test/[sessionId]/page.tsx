@@ -5,6 +5,7 @@ import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
 import { Modal } from '@/components/common/Modal';
+import { QuestionDisplay } from '@/components/common/QuestionDisplay';
 import {
   getSession,
   getRandomQuestions,
@@ -20,6 +21,8 @@ import {
   ArrowLeft,
   CheckCircle2,
   XCircle,
+  BookOpen,
+  Image as ImageIcon,
 } from 'lucide-react';
 
 export default function TestModePage({ params }: { params: { sessionId: string } }) {
@@ -30,7 +33,7 @@ export default function TestModePage({ params }: { params: { sessionId: string }
   const [subject, setSubject] = useState<Subject | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState<Map<string, 'A' | 'B' | 'C' | 'D'>>(new Map());
+  const [answers, setAnswers] = useState<Map<string, 'A' | 'B' | 'C' | 'D' | 'E'>>(new Map());
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [startTime] = useState(Date.now());
 
@@ -73,8 +76,15 @@ export default function TestModePage({ params }: { params: { sessionId: string }
   }
 
   const currentQuestion = questions[currentIndex];
+  const previousQuestion = currentIndex > 0 ? questions[currentIndex - 1] : null;
+  
+  // Determine if we should show the passage
+  const shouldShowPassage = !!(currentQuestion?.passage && (
+    !previousQuestion ||
+    previousQuestion.passage_id !== currentQuestion.passage_id
+  ));
 
-  function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D') {
+  function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D' | 'E') {
     const newAnswers = new Map(answers);
     newAnswers.set(currentQuestion.id, answer);
     setAnswers(newAnswers);
@@ -100,7 +110,7 @@ export default function TestModePage({ params }: { params: { sessionId: string }
           await createSessionAnswer({
             sessionId: params.sessionId,
             questionId: question.id,
-            userAnswer,
+            userAnswer: userAnswer as 'A' | 'B' | 'C' | 'D',
             isCorrect,
             timeSpentSeconds: Math.floor(timeSpent / questions.length),
             hintUsed: false,
@@ -181,88 +191,50 @@ export default function TestModePage({ params }: { params: { sessionId: string }
         <Card>
           <p className="text-sm font-medium text-gray-700 mb-3">Question Navigator</p>
           <div className="grid grid-cols-10 gap-2">
-            {questions.map((question, idx) => (
-              <button
-                key={question.id}
-                onClick={() => handleNavigateToQuestion(idx)}
-                className={`
-                  aspect-square rounded-lg font-semibold text-sm transition-all
-                  ${currentIndex === idx && 'ring-2 ring-purple-600 ring-offset-2'}
-                  ${answers.has(question.id)
-                    ? 'bg-purple-600 text-white hover:bg-purple-700'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }
-                `}
-              >
-                {idx + 1}
-              </button>
-            ))}
+            {questions.map((question, idx) => {
+              const hasPassage = !!question.passage_id;
+              const hasImage = !!question.question_image_url;
+              
+              return (
+                <button
+                  key={question.id}
+                  onClick={() => handleNavigateToQuestion(idx)}
+                  className={`
+                    relative aspect-square rounded-lg font-semibold text-sm transition-all
+                    ${currentIndex === idx && 'ring-2 ring-purple-600 ring-offset-2'}
+                    ${answers.has(question.id)
+                      ? 'bg-purple-600 text-white hover:bg-purple-700'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }
+                  `}
+                >
+                  {idx + 1}
+                  {(hasPassage || hasImage) && (
+                    <div className="absolute -top-1 -right-1 flex gap-0.5">
+                      {hasPassage && (
+                        <BookOpen className="w-3 h-3 text-blue-600 bg-white rounded-full p-0.5" />
+                      )}
+                      {hasImage && (
+                        <ImageIcon className="w-3 h-3 text-indigo-600 bg-white rounded-full p-0.5" />
+                      )}
+                    </div>
+                  )}
+                </button>
+              );
+            })}
           </div>
         </Card>
 
-        {/* Question Card */}
-        <Card variant="elevated">
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <Badge variant="neutral">Question {currentIndex + 1}</Badge>
-              {currentQuestion.difficulty && (
-                <Badge variant={
-                  currentQuestion.difficulty === 'Easy' ? 'success' :
-                  currentQuestion.difficulty === 'Medium' ? 'warning' :
-                  'error'
-                }>
-                  {currentQuestion.difficulty}
-                </Badge>
-              )}
-            </div>
-
-            <div className="prose max-w-none">
-              <p className="text-lg text-gray-900 font-medium leading-relaxed">
-                {currentQuestion.question_text}
-              </p>
-            </div>
-
-            {currentQuestion.question_image_url && (
-              <img
-                src={currentQuestion.question_image_url}
-                alt="Question"
-                className="max-w-full rounded-lg"
-              />
-            )}
-          </div>
-        </Card>
-
-        {/* Options */}
-        <div className="grid grid-cols-1 gap-3">
-          {(['A', 'B', 'C', 'D'] as const).map((key) => {
-            const optionText = currentQuestion[`option_${key.toLowerCase()}` as keyof Question] as string;
-            const isSelected = answers.get(currentQuestion.id) === key;
-
-            return (
-              <button
-                key={key}
-                onClick={() => handleAnswerSelect(key)}
-                className={`
-                  w-full p-4 rounded-xl text-left transition-all
-                  ${isSelected
-                    ? 'bg-purple-50 border-2 border-purple-600'
-                    : 'bg-white border-2 border-gray-200 hover:border-purple-600 hover:shadow-md'
-                  }
-                `}
-              >
-                <div className="flex items-start gap-3">
-                  <div className={`
-                    w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0
-                    ${isSelected ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-700'}
-                  `}>
-                    {key}
-                  </div>
-                  <span className="flex-1 text-gray-900">{optionText}</span>
-                </div>
-              </button>
-            );
-          })}
-        </div>
+        {/* Question Display Component */}
+        <QuestionDisplay
+          question={currentQuestion}
+          showPassage={shouldShowPassage}
+          selectedAnswer={answers.get(currentQuestion.id) || null}
+          onAnswerSelect={handleAnswerSelect}
+          showCorrectAnswer={false}
+          questionNumber={currentIndex + 1}
+          disabled={false}
+        />
 
         {/* Submit Button */}
         <Button

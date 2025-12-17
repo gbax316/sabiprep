@@ -43,7 +43,11 @@ export async function GET(request: NextRequest) {
           topic_id,
           question_text,
           passage,
+          passage_id,
           question_image_url,
+          image_alt_text,
+          image_width,
+          image_height,
           option_a,
           option_b,
           option_c,
@@ -119,7 +123,11 @@ export async function GET(request: NextRequest) {
         topic_id: q.topic_id,
         question_text: q.question_text,
         passage: q.passage,
+        passage_id: q.passage_id,
         question_image_url: q.question_image_url,
+        image_alt_text: q.image_alt_text,
+        image_width: q.image_width,
+        image_height: q.image_height,
         option_a: q.option_a,
         option_b: q.option_b,
         option_c: q.option_c,
@@ -177,6 +185,11 @@ export async function POST(request: NextRequest) {
         topic_id,
         question_text,
         passage,
+        passage_id,
+        question_image_url,
+        image_alt_text,
+        image_width,
+        image_height,
         option_a,
         option_b,
         option_c,
@@ -239,6 +252,26 @@ export async function POST(request: NextRequest) {
         return createErrorResponse(400, 'Bad Request', 'Exam type is required');
       }
       
+      // Validate image alt text if image URL is provided
+      if (question_image_url && (!image_alt_text || typeof image_alt_text !== 'string' || image_alt_text.trim().length === 0)) {
+        return createErrorResponse(400, 'Bad Request', 'Image alt text is required when question image is provided');
+      }
+      
+      // Validate image dimensions if provided
+      if (image_width !== undefined && image_width !== null) {
+        const width = typeof image_width === 'string' ? parseInt(image_width, 10) : image_width;
+        if (isNaN(width) || width <= 0) {
+          return createErrorResponse(400, 'Bad Request', 'Image width must be a positive integer');
+        }
+      }
+      
+      if (image_height !== undefined && image_height !== null) {
+        const height = typeof image_height === 'string' ? parseInt(image_height, 10) : image_height;
+        if (isNaN(height) || height <= 0) {
+          return createErrorResponse(400, 'Bad Request', 'Image height must be a positive integer');
+        }
+      }
+      
       // Verify subject exists
       const { data: subject, error: subjectError } = await supabase
         .from('subjects')
@@ -285,6 +318,11 @@ export async function POST(request: NextRequest) {
           topic_id,
           question_text: question_text.trim(),
           passage: passage?.trim() || null,
+          passage_id: passage_id?.trim() || null,
+          question_image_url: question_image_url?.trim() || null,
+          image_alt_text: image_alt_text?.trim() || null,
+          image_width: image_width ? (typeof image_width === 'string' ? parseInt(image_width, 10) : image_width) : null,
+          image_height: image_height ? (typeof image_height === 'string' ? parseInt(image_height, 10) : image_height) : null,
           option_a: option_a.trim(),
           option_b: option_b.trim(),
           option_c: option_c?.trim() || null,
@@ -307,6 +345,11 @@ export async function POST(request: NextRequest) {
           topic_id,
           question_text,
           passage,
+          passage_id,
+          question_image_url,
+          image_alt_text,
+          image_width,
+          image_height,
           option_a,
           option_b,
           option_c,

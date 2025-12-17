@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import QuestionPreview from './QuestionPreview';
+import ImageUpload from './ImageUpload';
 
 /**
  * Subject type for dropdown
@@ -31,6 +32,11 @@ export interface QuestionFormData {
   topic_id: string;
   question_text: string;
   passage: string;
+  passage_id: string;
+  question_image_url: string;
+  image_alt_text: string;
+  image_width: string;
+  image_height: string;
   option_a: string;
   option_b: string;
   option_c: string;
@@ -79,6 +85,11 @@ export function QuestionForm({
     topic_id: initialData?.topic_id || '',
     question_text: initialData?.question_text || '',
     passage: initialData?.passage || '',
+    passage_id: initialData?.passage_id || '',
+    question_image_url: initialData?.question_image_url || '',
+    image_alt_text: initialData?.image_alt_text || '',
+    image_width: initialData?.image_width || '',
+    image_height: initialData?.image_height || '',
     option_a: initialData?.option_a || '',
     option_b: initialData?.option_b || '',
     option_c: initialData?.option_c || '',
@@ -101,6 +112,7 @@ export function QuestionForm({
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [showPreview, setShowPreview] = useState(false);
   const [showPassageSection, setShowPassageSection] = useState(!!initialData?.passage);
+  const [showImageSection, setShowImageSection] = useState(!!initialData?.question_image_url);
   const [showExplanationSection, setShowExplanationSection] = useState(
     !!(initialData?.hint || initialData?.solution || initialData?.further_study_links)
   );
@@ -202,6 +214,11 @@ export function QuestionForm({
       newErrors.exam_type = 'Exam type is required';
     }
     
+    // Validate image alt text if image exists
+    if (formData.question_image_url && !formData.image_alt_text.trim()) {
+      newErrors.image_alt_text = 'Alt text is required when an image is uploaded';
+    }
+    
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -222,6 +239,9 @@ export function QuestionForm({
           ? formData.further_study_links.split(',').map(l => l.trim()).filter(l => l)
           : [],
         exam_year: formData.exam_year ? parseInt(formData.exam_year, 10) : null,
+        image_width: formData.image_width ? parseInt(formData.image_width, 10) : null,
+        image_height: formData.image_height ? parseInt(formData.image_height, 10) : null,
+        passage_id: formData.passage_id || null,
       };
       
       const url = isEditing 
@@ -435,22 +455,118 @@ export function QuestionForm({
                 </button>
                 
                 {showPassageSection && (
-                  <div>
-                    <label htmlFor="passage" className="block text-sm font-medium text-gray-700 mb-1">
-                      Passage
-                    </label>
-                    <textarea
-                      id="passage"
-                      name="passage"
-                      value={formData.passage}
-                      onChange={handleChange}
-                      rows={4}
-                      placeholder="Enter passage or context for comprehension questions..."
-                      className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  <div className="space-y-4">
+                    <div>
+                      <label htmlFor="passage" className="block text-sm font-medium text-gray-700 mb-1">
+                        Passage Text
+                      </label>
+                      <textarea
+                        id="passage"
+                        name="passage"
+                        value={formData.passage}
+                        onChange={handleChange}
+                        rows={4}
+                        placeholder="Enter passage or context for comprehension questions..."
+                        className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      />
+                      <p className="mt-1 text-xs text-gray-500">
+                        For comprehension-style questions. Multiple questions can share the same passage.
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="passage_id" className="block text-sm font-medium text-gray-700 mb-1">
+                        Passage ID (Optional)
+                      </label>
+                      <input
+                        type="text"
+                        id="passage_id"
+                        name="passage_id"
+                        value={formData.passage_id}
+                        onChange={handleChange}
+                        placeholder="e.g., passage-001"
+                        className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      />
+                      <p className="mt-1 text-xs text-gray-500">
+                        Use the same ID for questions that share this passage. This helps group related questions together.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+              {/* Section 2.5: Image (Collapsible) */}
+              <div className="space-y-4">
+                <button
+                  type="button"
+                  onClick={() => setShowImageSection(!showImageSection)}
+                  className="flex items-center gap-2 text-sm font-semibold text-gray-700 uppercase tracking-wider"
+                >
+                  <svg
+                    className={`w-4 h-4 transition-transform ${showImageSection ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                  Question Image (Optional)
+                </button>
+                
+                {showImageSection && (
+                  <div className="space-y-4">
+                    <ImageUpload
+                      value={formData.question_image_url}
+                      onChange={(data) => {
+                        if (data) {
+                          setFormData(prev => ({
+                            ...prev,
+                            question_image_url: data.url,
+                            image_width: String(data.width),
+                            image_height: String(data.height),
+                          }));
+                        } else {
+                          setFormData(prev => ({
+                            ...prev,
+                            question_image_url: '',
+                            image_alt_text: '',
+                            image_width: '',
+                            image_height: '',
+                          }));
+                        }
+                        // Clear error when image changes
+                        if (errors.image_alt_text) {
+                          setErrors(prev => {
+                            const newErrors = { ...prev };
+                            delete newErrors.image_alt_text;
+                            return newErrors;
+                          });
+                        }
+                      }}
+                      onAltTextChange={(altText) => {
+                        setFormData(prev => ({ ...prev, image_alt_text: altText }));
+                        // Clear error when alt text is edited
+                        if (errors.image_alt_text) {
+                          setErrors(prev => {
+                            const newErrors = { ...prev };
+                            delete newErrors.image_alt_text;
+                            return newErrors;
+                          });
+                        }
+                      }}
+                      altText={formData.image_alt_text}
+                      error={errors.image_alt_text}
                     />
-                    <p className="mt-1 text-xs text-gray-500">
-                      For comprehension-style questions. Multiple questions can share the same passage.
-                    </p>
+                    
+                    {/* Image Dimensions (Read-only, auto-filled) */}
+                    {formData.question_image_url && formData.image_width && formData.image_height && (
+                      <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
+                        <p className="text-xs font-medium text-gray-700 mb-1">Image Dimensions</p>
+                        <p className="text-sm text-gray-600">
+                          {formData.image_width} × {formData.image_height} pixels
+                        </p>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
@@ -682,6 +798,8 @@ export function QuestionForm({
             <QuestionPreview
               questionText={formData.question_text}
               passage={formData.passage}
+              imageUrl={formData.question_image_url}
+              imageAltText={formData.image_alt_text}
               options={{
                 A: formData.option_a,
                 B: formData.option_b,
