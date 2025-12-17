@@ -34,7 +34,7 @@ interface DashboardStatsResponse {
 export async function GET(request: NextRequest): Promise<NextResponse> {
   return withAdminAuth(request, async (user: AdminApiUser) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       
       // Get current date info for calculations
       const now = new Date();

@@ -39,7 +39,7 @@ interface ProcessResult {
 export async function POST(request: NextRequest) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       
       // Get request data
       const body = await req.json();

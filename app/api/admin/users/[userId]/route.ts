@@ -24,7 +24,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
       const { userId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       
       // Fetch user
       const { data: user, error: userError } = await supabase
@@ -115,7 +115,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
       const { userId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const body = await req.json();
       
       const { full_name, role, status, grade, phone, institution, avatar_url } = body;
@@ -237,7 +237,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
       }
       
       const { userId } = await params;
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       
       // Prevent self-deletion
       if (userId === adminUser.id) {

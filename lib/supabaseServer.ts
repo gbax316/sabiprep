@@ -13,14 +13,14 @@ import { cookies } from 'next/headers'
  * import { createServerClient } from '@/lib/supabaseServer'
  *
  * export async function GET() {
- *   const supabase = createServerClient()
+ *   const supabase = await createServerClient()
  *   const { data: { session } } = await supabase.auth.getSession()
  *   // Session will be properly retrieved from cookies
  * }
  * ```
  */
-export function createServerClient() {
-  const cookieStore = cookies()
+export async function createServerClient() {
+  const cookieStore = await cookies()
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
   

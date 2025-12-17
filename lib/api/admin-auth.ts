@@ -36,7 +36,7 @@ export async function verifyAdminRole(): Promise<{
   error?: string;
 }> {
   try {
-    const supabase = createServerClient();
+    const supabase = await createServerClient();
     
     // Get current session
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
@@ -87,7 +87,7 @@ export async function withAdminAuth(
 ): Promise<NextResponse> {
   try {
     console.log('[DEBUG] withAdminAuth: Starting authentication check for', request.url)
-    const supabase = createServerClient();
+    const supabase = await createServerClient();
     
     // Get current session
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
@@ -179,7 +179,7 @@ export async function logAdminAction(
   request?: NextRequest
 ): Promise<void> {
   try {
-    const supabase = createServerClient();
+    const supabase = await createServerClient();
     
     // If admin_id is not provided, try to get it from the current session
     let adminId = entry.admin_id;

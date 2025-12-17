@@ -19,7 +19,7 @@ interface ReorderItem {
 export async function PUT(request: NextRequest) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const body = await req.json();
       const { items, subject_id } = body;
       

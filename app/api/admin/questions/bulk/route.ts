@@ -16,7 +16,7 @@ import {
 export async function PUT(request: NextRequest) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const body = await req.json();
       
       const { question_ids, action } = body;
@@ -113,7 +113,7 @@ export async function DELETE(request: NextRequest) {
         return createErrorResponse(403, 'Forbidden', 'Only admins can bulk delete questions');
       }
       
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const body = await req.json();
       
       const { question_ids } = body;

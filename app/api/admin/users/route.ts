@@ -19,7 +19,7 @@ import type { UserListParams } from '@/types/admin';
 export async function GET(request: NextRequest) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const { searchParams } = new URL(req.url);
       
       // Parse query parameters

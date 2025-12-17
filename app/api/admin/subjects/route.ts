@@ -15,7 +15,7 @@ import {
 export async function GET(request: NextRequest) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const { searchParams } = new URL(req.url);
       
       // Parse query parameters
@@ -120,7 +120,7 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const body = await req.json();
       const { name, icon, color, description, exam_types } = body;
       

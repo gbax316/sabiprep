@@ -15,7 +15,7 @@ import { randomUUID } from 'crypto';
 export async function POST(request: NextRequest) {
   return withAdminAuth(request, async (adminUser: AdminApiUser) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const formData = await request.formData();
       const file = formData.get('image') as File;
       

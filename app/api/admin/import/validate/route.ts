@@ -27,7 +27,7 @@ const VALID_ANSWERS = ['A', 'B', 'C', 'D', 'E'];
 export async function POST(request: NextRequest) {
   return withAdminAuth(request, async (adminUser: AdminApiUser, req: NextRequest) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
 
       // Get CSV content from request
       const body = await req.json();
