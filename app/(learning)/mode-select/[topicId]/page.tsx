@@ -27,6 +27,7 @@ export default function ModeSelectPage({ params }: { params: { topicId: string }
   const [topic, setTopic] = useState<Topic | null>(null);
   const [subject, setSubject] = useState<Subject | null>(null);
   const [questionCount, setQuestionCount] = useState(20);
+  const [timeLimit, setTimeLimit] = useState(30);
   const [creatingSession, setCreatingSession] = useState(false);
 
   useEffect(() => {
@@ -63,6 +64,7 @@ export default function ModeSelectPage({ params }: { params: { topicId: string }
         topicId: topic.id,
         mode,
         totalQuestions: questionCount,
+        timeLimit: mode === 'timed' ? timeLimit : undefined,
       });
 
       // Navigate to the appropriate mode page
@@ -121,10 +123,10 @@ export default function ModeSelectPage({ params }: { params: { topicId: string }
     {
       id: 'timed',
       name: 'Timed Challenge',
-      description: '30 seconds per question - test your speed and accuracy',
+      description: 'Configurable time limit per question - test your speed and accuracy',
       icon: <Zap className="w-8 h-8" />,
       color: 'bg-orange-500',
-      features: ['⚡ 30s per question', '🚀 Auto-advance', '⏱️ Beat the clock', '💯 Instant scoring'],
+      features: ['⚡ Choose your time limit', '🚀 Auto-advance', '⏱️ Beat the clock', '💯 Instant scoring'],
       recommended: false,
     },
   ];
@@ -200,6 +202,36 @@ export default function ModeSelectPage({ params }: { params: { topicId: string }
               </button>
             ))}
           </div>
+        </div>
+
+        {/* Time Limit Selector (for Timed Mode only) */}
+        <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-4">
+          <div className="flex items-center gap-2 mb-3">
+            <Zap className="w-5 h-5 text-orange-600" />
+            <label className="text-sm font-medium text-gray-900">
+              Time Limit per Question (for Timed Mode)
+            </label>
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            {[15, 30, 45, 60].map((seconds) => (
+              <button
+                key={seconds}
+                onClick={() => setTimeLimit(seconds)}
+                className={`
+                  py-3 rounded-xl font-semibold transition-all
+                  ${timeLimit === seconds
+                    ? 'bg-orange-600 text-white'
+                    : 'bg-white border-2 border-orange-200 text-gray-700 hover:border-orange-600'
+                  }
+                `}
+              >
+                {seconds}s
+              </button>
+            ))}
+          </div>
+          <p className="text-xs text-gray-600 mt-2">
+            This setting only applies to Timed Challenge mode
+          </p>
         </div>
 
         {/* Mode Selection */}

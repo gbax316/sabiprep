@@ -6,8 +6,11 @@ SabiPrep is a comprehensive exam preparation platform designed to help students 
 
 SabiPrep provides:
 - 📚 **Structured Learning**: Organized by subjects and topics
-- 🎯 **Multiple Practice Modes**: Practice, Timed, and Test modes
+- 🎯 **Three Learning Modes**: Practice, Test, and Timed Challenge with configurable time limits
+- ⚡ **Configurable Time Limits**: Choose 15s, 30s, 45s, or 60s per question in Timed mode
+- 🔄 **Quick Retry**: Instantly retry topics with preserved settings
 - 📊 **Progress Analytics**: Track performance and improvement
+- 🧭 **Comprehensive Navigation**: Header, drawer, and bottom navigation
 - 🏆 **Achievements System**: Gamified learning experience
 - 👨‍🏫 **Admin Portal**: Comprehensive content management system
 
@@ -83,14 +86,56 @@ sabiprep/
 
 ### For Students
 
+#### 🎓 Learning Modes
+
+SabiPrep offers three powerful learning modes, each tailored to different learning objectives:
+
+1. **📚 Practice Mode** - *Learn at Your Own Pace*
+   - 💡 Hints available when you're stuck
+   - 📖 Detailed solutions with step-by-step explanations
+   - ⏮️ Navigate back to previous questions
+   - ⏱️ No time pressure - take as long as you need
+   - 📊 Real-time progress tracking
+   - **Best for:** First-time learning, understanding concepts, building confidence
+
+2. **🎯 Test Mode** - *Simulate Exam Conditions*
+   - 🎯 No hints available - test your knowledge
+   - 📝 Answer all questions before viewing results
+   - 🔍 Comprehensive review at the end
+   - 🏆 Detailed performance analysis
+   - ⏱️ Untimed focus on accuracy
+   - **Best for:** Self-assessment, exam preparation, measuring progress
+
+3. **⚡ Timed Challenge** - *Test Your Speed* 🆕
+   - ⚡ **Configurable time limits**: Choose 15s, 30s, 45s, or 60s per question
+   - 🚀 Auto-advance after answering
+   - ⏱️ Visual countdown timer
+   - 💯 Instant scoring and accuracy tracking
+   - 🔥 High-pressure practice
+   - **Best for:** Speed improvement, timed exam practice, challenging yourself
+
+#### 🔄 Quick Retry Functionality 🆕
+
+After completing a session, instantly:
+- ↩️ Retry the same topic with identical settings
+- 🔀 Switch to a different learning mode with one click
+- ⚙️ Settings preserved (question count, time limits)
+- 🚀 No reconfiguration needed - start immediately
+
+#### 🧭 Navigation System
+
+- **Header**: Back button and hamburger menu on all pages
+- **Navigation Drawer**: Organized sections for quick access to all features
+- **Bottom Navigation**: Quick access to Home, Subjects, Analytics, Profile
+- **Breadcrumbs**: Always know where you are in the app
+
+#### 📊 Other Features
+
 - **Subject Selection**: Browse and select from available subjects
 - **Topic Navigation**: Explore topics within each subject
-- **Practice Modes**:
-  - **Practice Mode**: Untimed, see explanations immediately
-  - **Timed Mode**: Race against the clock
-  - **Test Mode**: Simulate real exam conditions
 - **Progress Tracking**: View scores, completion rates, and improvement
 - **Achievements**: Earn badges and unlock milestones
+- **Analytics Dashboard**: Detailed performance insights
 
 ### For Tutors
 
@@ -139,12 +184,19 @@ The Admin Portal provides comprehensive content management capabilities for admi
 
 ## Documentation
 
+### User Documentation
+
+- [**LEARNING_MODES.md**](./LEARNING_MODES.md) - 🆕 **Detailed guide to all learning modes**
+- [**USER_GUIDE.md**](./USER_GUIDE.md) - 🆕 **Step-by-step usage instructions**
+- [README.md](./README.md) - This file - project overview
+
 ### General Documentation
 
 - [DESIGN.md](./DESIGN.md) - UI/UX design guidelines
 - [ARCHITECTURE.md](./ARCHITECTURE.md) - System architecture overview
 - [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) - Production deployment guide
 - [DATABASE_SETUP.md](./DATABASE_SETUP.md) - Database configuration
+- [FINAL_IMPLEMENTATION_STATUS.md](./FINAL_IMPLEMENTATION_STATUS.md) - Current implementation status
 
 ### Admin Portal Documentation
 
@@ -291,7 +343,36 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Version**: 1.0.0  
-**Last Updated**: December 2024
+## 🆕 Recent Updates
 
-For more information about the Admin Portal, see [ADMIN_PORTAL_README.md](./ADMIN_PORTAL_README.md).
+### Version 2.0 - December 2024
+
+**New Features:**
+- ⚡ **Configurable Time Limits**: Choose from 15s, 30s, 45s, or 60s per question in Timed mode
+- 🔄 **Quick Retry**: Instant retry with preserved settings on results page
+- 🧭 **Complete Navigation System**: Header, drawer, and bottom navigation fully implemented
+- 📚 **Enhanced Documentation**: New comprehensive guides for users and developers
+
+**Implementation Status:**
+- ✅ All three learning modes fully functional
+- ✅ Authentication system integrated across all pages
+- ✅ Comprehensive navigation system
+- ✅ Quick access features and optimizations
+- ✅ 100% feature completion
+
+### Quick Links
+
+- 📚 [**Learning Modes Guide**](./LEARNING_MODES.md) - Learn about Practice, Test, and Timed modes
+- 📖 [**User Guide**](./USER_GUIDE.md) - Complete step-by-step instructions
+- 📊 [**Implementation Status**](./FINAL_IMPLEMENTATION_STATUS.md) - See what's complete
+
+---
+
+**Version**: 2.0.0
+**Last Updated**: December 17, 2024
+**Status**: ✅ Production Ready
+
+For more information:
+- Admin Portal: [ADMIN_PORTAL_README.md](./ADMIN_PORTAL_README.md)
+- Learning Modes: [LEARNING_MODES.md](./LEARNING_MODES.md)
+- User Guide: [USER_GUIDE.md](./USER_GUIDE.md)

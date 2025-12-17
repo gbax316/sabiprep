@@ -125,6 +125,7 @@ export interface LearningSession {
   correct_answers: number;
   score_percentage?: number;
   time_spent_seconds: number;
+  time_limit_seconds?: number;
   status: 'in_progress' | 'completed' | 'abandoned';
   started_at: string;
   completed_at?: string;

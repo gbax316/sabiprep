@@ -11,10 +11,12 @@ import {
   getTopic,
   getSubject,
   getGradeLabel,
+  createSession,
 } from '@/lib/api';
 import type { LearningSession, SessionAnswer, Topic, Subject } from '@/types/database';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/lib/auth-context';
 import {
   Home,
   RotateCcw,
@@ -25,15 +27,19 @@ import {
   CheckCircle2,
   XCircle,
   Share2,
+  RefreshCw,
+  Zap,
 } from 'lucide-react';
 
 export default function ResultsPage({ params }: { params: { sessionId: string } }) {
   const router = useRouter();
+  const { userId } = useAuth();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
   const [answers, setAnswers] = useState<SessionAnswer[]>([]);
   const [topic, setTopic] = useState<Topic | null>(null);
   const [subject, setSubject] = useState<Subject | null>(null);
+  const [creatingSession, setCreatingSession] = useState(false);
 
   useEffect(() => {
     loadResults();
@@ -75,6 +81,60 @@ export default function ResultsPage({ params }: { params: { sessionId: string } 
     } finally {
       setLoading(false);
     }
+  }
+
+  async function handleRetry(mode: 'practice' | 'test' | 'timed', isSameMode: boolean) {
+    if (!session || !topic || !subject || !userId) return;
+
+    try {
+      setCreatingSession(true);
+
+      // Create a new session with the same topic and question count
+      const newSession = await createSession({
+        userId,
+        subjectId: session.subject_id,
+        topicId: session.topic_id!,
+        mode,
+        totalQuestions: session.total_questions,
+        timeLimit: mode === 'timed' ? (session.time_limit_seconds || 30) : undefined,
+      });
+
+      // Navigate to the appropriate mode page
+      router.push(`/${mode}/${newSession.id}`);
+    } catch (error) {
+      console.error('Error creating retry session:', error);
+      alert('Failed to start new session. Please try again.');
+      setCreatingSession(false);
+    }
+  }
+
+  function getModeConfig(mode: 'practice' | 'test' | 'timed') {
+    const configs = {
+      practice: {
+        name: 'Practice Mode',
+        color: 'bg-blue-600',
+        hoverColor: 'hover:bg-blue-700',
+        icon: <Target className="w-5 h-5" />,
+      },
+      test: {
+        name: 'Test Mode',
+        color: 'bg-purple-600',
+        hoverColor: 'hover:bg-purple-700',
+        icon: <Award className="w-5 h-5" />,
+      },
+      timed: {
+        name: 'Timed Challenge',
+        color: 'bg-orange-600',
+        hoverColor: 'hover:bg-orange-700',
+        icon: <Zap className="w-5 h-5" />,
+      },
+    };
+    return configs[mode];
+  }
+
+  function getAlternativeModes() {
+    const allModes: ('practice' | 'test' | 'timed')[] = ['practice', 'test', 'timed'];
+    return allModes.filter(mode => mode !== session?.mode);
   }
 
   if (loading) {
@@ -224,7 +284,83 @@ export default function ResultsPage({ params }: { params: { sessionId: string } 
           </div>
         </Card>
 
-        {/* Action Buttons */}
+        {/* Quick Retry Section */}
+        {topic && (
+          <Card className="border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 to-purple-50">
+            <div className="mb-4">
+              <h3 className="font-bold text-xl text-gray-900 mb-1">Ready for More? 🚀</h3>
+              <p className="text-sm text-gray-600">
+                Practice the same topic again or try a different learning mode
+              </p>
+            </div>
+
+            {/* Primary Retry Button - Same Mode */}
+            <div className="space-y-3">
+              <button
+                onClick={() => handleRetry(session!.mode, true)}
+                disabled={creatingSession}
+                className={`
+                  w-full flex items-center justify-center gap-2
+                  ${getModeConfig(session!.mode).color}
+                  ${getModeConfig(session!.mode).hoverColor}
+                  text-white font-semibold py-4 text-lg
+                  rounded-xl
+                  transform transition-all hover:scale-[1.02] active:scale-[0.98]
+                  disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
+                  shadow-lg
+                `}
+              >
+                <RefreshCw className="w-5 h-5" />
+                {creatingSession ? (
+                  <span className="flex items-center gap-2">
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    Starting...
+                  </span>
+                ) : (
+                  `Practice This Topic Again (${getModeConfig(session!.mode).name})`
+                )}
+              </button>
+
+              {/* Alternative Mode Buttons */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {getAlternativeModes().map(mode => {
+                  const config = getModeConfig(mode);
+                  return (
+                    <Button
+                      key={mode}
+                      variant="outline"
+                      size="full"
+                      leftIcon={config.icon}
+                      onClick={() => handleRetry(mode, false)}
+                      disabled={creatingSession}
+                      className={`
+                        border-2 font-semibold
+                        hover:${config.color.replace('bg-', 'border-')}
+                        hover:text-white
+                        transition-all
+                        disabled:opacity-50 disabled:cursor-not-allowed
+                      `}
+                      style={{
+                        borderColor: config.color.includes('blue') ? '#2563eb' :
+                                    config.color.includes('purple') ? '#9333ea' : '#ea580c'
+                      }}
+                    >
+                      Try {config.name}
+                    </Button>
+                  );
+                })}
+              </div>
+
+              <p className="text-xs text-gray-500 text-center mt-2">
+                Each session will have {session!.total_questions} questions
+                {session!.mode === 'timed' && session!.time_limit_seconds &&
+                  ` with ${session!.time_limit_seconds}s per question`}
+              </p>
+            </div>
+          </Card>
+        )}
+
+        {/* Navigation Buttons */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Button
             variant="primary"
@@ -241,7 +377,7 @@ export default function ResultsPage({ params }: { params: { sessionId: string } 
               size="full"
               leftIcon={<RotateCcw className="w-5 h-5" />}
             >
-              Try Another Topic
+              View All Topics
             </Button>
           </Link>
         </div>

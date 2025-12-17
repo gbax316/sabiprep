@@ -166,6 +166,7 @@ export interface CreateSessionParams {
   topicId: string;
   mode: 'practice' | 'test' | 'timed';
   totalQuestions: number;
+  timeLimit?: number;
 }
 
 /**
@@ -180,6 +181,7 @@ export async function createSession(params: CreateSessionParams): Promise<Learni
       topic_id: params.topicId,
       mode: params.mode,
       total_questions: params.totalQuestions,
+      time_limit_seconds: params.timeLimit,
       status: 'in_progress',
     })
     .select()

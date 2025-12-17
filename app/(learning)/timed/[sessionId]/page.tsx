@@ -34,10 +34,10 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
   const [selectedAnswer, setSelectedAnswer] = useState<'A' | 'B' | 'C' | 'D' | null>(null);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [sessionComplete, setSessionComplete] = useState(false);
+  const [timePerQuestion, setTimePerQuestion] = useState(30); // Default to 30 seconds
 
-  const TIME_PER_QUESTION = 30; // 30 seconds
   const { time: timeLeft, isRunning, start, reset } = useTimer({
-    initialTime: TIME_PER_QUESTION,
+    initialTime: timePerQuestion,
     countDown: true,
     onTimeUp: () => {
       if (!sessionComplete) {
@@ -69,6 +69,10 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
 
       setSession(sessionData);
 
+      // Set time limit from session data, default to 30 seconds if not specified
+      const timeLimitFromSession = sessionData.time_limit_seconds || 30;
+      setTimePerQuestion(timeLimitFromSession);
+
       const [topicData, questionsData] = await Promise.all([
         getTopic(sessionData.topic_id!),
         getRandomQuestions(sessionData.topic_id!, sessionData.total_questions),
@@ -97,7 +101,7 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
 
     setSelectedAnswer(answer);
     const isCorrect = answer === currentQuestion.correct_answer;
-    const timeSpent = TIME_PER_QUESTION - timeLeft;
+    const timeSpent = timePerQuestion - timeLeft;
 
     try {
       // Record answer
@@ -180,7 +184,7 @@ export default function TimedModePage({ params }: { params: { sessionId: string 
     );
   }
 
-  const timePercentage = (timeLeft / TIME_PER_QUESTION) * 100;
+  const timePercentage = (timeLeft / timePerQuestion) * 100;
   const isLowTime = timeLeft <= 10;
 
   return (
