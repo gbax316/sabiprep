@@ -9,7 +9,7 @@ export async function GET(
 ) {
   return withAdminAuth(request, async (adminUser: AdminApiUser) => {
     try {
-      const supabase = createServerClient();
+      const supabase = await createServerClient();
       const { reportId } = await context.params;
       
       // Fetch report with admin details
