@@ -10,7 +10,7 @@ import { createServerClient } from '@/lib/supabaseServer'
  * - Efficient (no additional client bundle)
  */
 export default async function ServerExample() {
-  const supabase = createServerClient()
+  const supabase = await createServerClient()
   const { data: todos, error } = await supabase.from('todos').select('*')
 
   if (error) {
