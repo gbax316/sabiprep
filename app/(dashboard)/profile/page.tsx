@@ -9,7 +9,7 @@ import { StatCard } from '@/components/magic/StatCard';
 import { BentoGrid } from '@/components/magic/BentoGrid';
 import { useAuth } from '@/lib/auth-context';
 import { getUserProfile, getUserStats, getUserAchievements, getUserGoals, setUserGoal } from '@/lib/api';
-import type { User, UserStats, UserAchievement } from '@/types/database';
+import type { User, UserStats, UserAchievement, UserGoal } from '@/types/database';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
