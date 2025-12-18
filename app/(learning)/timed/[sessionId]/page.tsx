@@ -42,6 +42,7 @@ interface QuestionTimeData {
 export default function TimedModePage({ params }: { params: Promise<{ sessionId: string }> }) {
   const { sessionId } = use(params);
   const router = useRouter();
+  const { userId } = useAuth();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
   const [topics, setTopics] = useState<Topic[]>([]);
