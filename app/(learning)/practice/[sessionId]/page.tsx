@@ -160,53 +160,55 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     previousQuestion.passage_id !== currentQuestion.passage_id
   ));
 
-  // Parse hint into progressive levels
-  // Supports format: "Level 1|||Level 2|||Level 3" or generates progressive hints from single hint
-  function parseHintLevels(hint: string): { level1: string; level2: string; level3: string } {
-    if (hint.includes('|||')) {
-      const parts = hint.split('|||');
-      return {
-        level1: parts[0]?.trim() || hint,
-        level2: parts[1]?.trim() || parts[0]?.trim() || hint,
-        level3: parts[2]?.trim() || parts[1]?.trim() || parts[0]?.trim() || hint,
-      };
-    }
-    // Generate progressive hints from single hint
-    const hintWords = hint.split(' ');
-    const thirdPoint = Math.ceil(hintWords.length / 3);
-    const twoThirdsPoint = Math.ceil((hintWords.length * 2) / 3);
-    
-    return {
-      level1: hintWords.slice(0, thirdPoint).join(' ') + '...', // First third - broad guidance
-      level2: hintWords.slice(0, twoThirdsPoint).join(' ') + '...', // First two-thirds - more specific
-      level3: hint, // Full hint - near-complete
-    };
-  }
-
   function getCurrentHintText(): string {
-    if (!currentQuestion?.hint) return '';
-    const levels = parseHintLevels(currentQuestion.hint);
-    if (currentHintLevel === 1) return levels.level1;
-    if (currentHintLevel === 2) return levels.level2;
-    if (currentHintLevel === 3) return levels.level3;
+    if (!currentQuestion) return '';
+    
+    // Use hint1, hint2, hint3 if available, otherwise fall back to legacy hint field
+    if (currentHintLevel === 1) {
+      return currentQuestion.hint1 || currentQuestion.hint || '';
+    }
+    if (currentHintLevel === 2) {
+      return currentQuestion.hint2 || '';
+    }
+    if (currentHintLevel === 3) {
+      return currentQuestion.hint3 || '';
+    }
     return '';
   }
 
-  function handleShowHint() {
-    if (!currentQuestion?.hint || isAnswered) return;
+  function hasAnyHint(): boolean {
+    if (!currentQuestion) return false;
+    return !!(currentQuestion.hint1 || currentQuestion.hint2 || currentQuestion.hint3 || currentQuestion.hint);
+  }
+
+  function hasHintLevel(level: 1 | 2 | 3): boolean {
+    if (!currentQuestion) return false;
+    if (level === 1) return !!(currentQuestion.hint1 || currentQuestion.hint);
+    if (level === 2) return !!currentQuestion.hint2;
+    if (level === 3) return !!currentQuestion.hint3;
+    return false;
+  }
+
+  function handleShowHint(level: 1 | 2 | 3) {
+    if (!currentQuestion || isAnswered) return;
     
-    const nextLevel = currentHintLevel === null ? 1 : 
-                     currentHintLevel === 1 ? 2 : 
-                     currentHintLevel === 2 ? 3 : null;
+    // Check if the requested hint level is available
+    if (!hasHintLevel(level)) return;
     
-    if (nextLevel) {
-      setHintLevel(nextLevel);
-      setHintUsage(prev => {
-        const next = new Map(prev);
-        next.set(currentQuestion.id, nextLevel);
-        return next;
-      });
-    }
+    // Ensure hints are accessed in order (1, then 2, then 3)
+    if (level === 2 && !hasHintLevel(1)) return;
+    if (level === 3 && (!hasHintLevel(1) || !hasHintLevel(2))) return;
+    
+    setHintLevel(level);
+    setHintUsage(prev => {
+      const next = new Map(prev);
+      const currentMaxLevel = prev.get(currentQuestion.id) || 0;
+      // Track the maximum hint level used
+      if (level > currentMaxLevel) {
+        next.set(currentQuestion.id, level);
+      }
+      return next;
+    });
   }
 
   async function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D' | 'E') {
@@ -509,33 +511,35 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         />
 
         {/* Progressive Hint System */}
-        {!isAnswered && currentQuestion.hint && (
+        {!isAnswered && hasAnyHint() && (
           <div className="space-y-3">
             {/* Hint Level Buttons */}
             <div className="flex gap-2 flex-wrap">
               {[1, 2, 3].map((level) => {
-                const isUnlocked = currentHintLevel === null ? level === 1 : currentHintLevel >= level;
-                const isActive = currentHintLevel === level;
-                const isUsed = currentHintLevel !== null && currentHintLevel >= level;
-                const isNext = currentHintLevel === null ? level === 1 : currentHintLevel === level - 1;
+                const levelNum = level as 1 | 2 | 3;
+                const hasHint = hasHintLevel(levelNum);
+                const isUnlocked = currentHintLevel === null 
+                  ? levelNum === 1 
+                  : currentHintLevel >= levelNum;
+                const isActive = currentHintLevel === levelNum;
+                const isUsed = currentHintLevel !== null && currentHintLevel >= levelNum;
+                const canClick = hasHint && (isUnlocked || (currentHintLevel === null && levelNum === 1));
+
+                if (!hasHint) return null;
 
                 return (
                   <Button
-                    key={level}
+                    key={levelNum}
                     variant={isActive ? "primary" : "outline"}
                     size="sm"
                     leftIcon={<Lightbulb className={`w-4 h-4 ${isActive ? 'text-white' : ''}`} />}
-                    onClick={() => {
-                      if (isNext || (currentHintLevel === null && level === 1)) {
-                        handleShowHint();
-                      }
-                    }}
-                    disabled={!isUnlocked || isActive}
+                    onClick={() => handleShowHint(levelNum)}
+                    disabled={!canClick || isActive}
                     className={`
                       ${isUsed && !isActive ? 'bg-amber-50 border-amber-300' : ''}
                     `}
                   >
-                    Hint {level}
+                    Hint {levelNum}
                     {isUsed && !isActive && <span className="ml-1">✓</span>}
                   </Button>
                 );

@@ -23,7 +23,10 @@ interface ImportRow {
   option_d?: string;
   option_e?: string;
   correct_answer: string;
-  hint?: string;
+  hint1?: string;
+  hint2?: string;
+  hint3?: string;
+  hint?: string; // Legacy field
   solution?: string;
   further_study_links?: string;
 }
@@ -193,7 +196,10 @@ export async function POST(request: NextRequest) {
                 option_e: row.option_e?.trim() || null,
                 correct_answer: row.correct_answer.trim().toUpperCase(),
                 explanation: null, // Can be added later
-                hint: row.hint?.trim() || null,
+                hint1: row.hint1?.trim() || null,
+                hint2: row.hint2?.trim() || null,
+                hint3: row.hint3?.trim() || null,
+                hint: row.hint?.trim() || null, // Legacy field - kept for backward compatibility
                 solution: row.solution?.trim() || null,
                 further_study_links: studyLinks,
                 difficulty,

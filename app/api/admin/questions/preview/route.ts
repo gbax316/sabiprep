@@ -31,6 +31,9 @@ export async function POST(request: NextRequest) {
         correct_answer,
         explanation,
         hint,
+        hint1,
+        hint2,
+        hint3,
         solution,
         difficulty,
         exam_type,
@@ -102,7 +105,10 @@ export async function POST(request: NextRequest) {
           } : null,
           options_count: options.length,
           has_explanation: !!explanation?.trim(),
-          has_hint: !!hint?.trim(),
+          has_hint: !!(hint?.trim() || hint1?.trim() || hint2?.trim() || hint3?.trim()),
+          has_hint1: !!hint1?.trim(),
+          has_hint2: !!hint2?.trim(),
+          has_hint3: !!hint3?.trim(),
           has_solution: !!solution?.trim(),
           is_complete: (
             question_text?.trim() &&

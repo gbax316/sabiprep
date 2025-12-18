@@ -44,7 +44,10 @@ export interface QuestionFormData {
   option_e: string;
   correct_answer: 'A' | 'B' | 'C' | 'D' | 'E' | '';
   explanation: string;
-  hint: string;
+  hint: string; // Legacy field - kept for backward compatibility
+  hint1: string; // First level hint
+  hint2: string; // Second level hint
+  hint3: string; // Third level hint
   solution: string;
   further_study_links: string;
   difficulty: 'Easy' | 'Medium' | 'Hard' | '';
@@ -98,6 +101,9 @@ export function QuestionForm({
     correct_answer: initialData?.correct_answer || '',
     explanation: initialData?.explanation || '',
     hint: initialData?.hint || '',
+    hint1: initialData?.hint1 || '',
+    hint2: initialData?.hint2 || '',
+    hint3: initialData?.hint3 || '',
     solution: initialData?.solution || '',
     further_study_links: initialData?.further_study_links || '',
     difficulty: initialData?.difficulty || '',
@@ -690,20 +696,76 @@ export function QuestionForm({
                 
                 {showExplanationSection && (
                   <div className="space-y-4">
-                    {/* Hint */}
-                    <div>
-                      <label htmlFor="hint" className="block text-sm font-medium text-gray-700 mb-1">
-                        Hint
-                      </label>
-                      <input
-                        type="text"
-                        id="hint"
-                        name="hint"
-                        value={formData.hint}
-                        onChange={handleChange}
-                        placeholder="Brief pointer to help the student..."
-                        className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                      />
+                    {/* Progressive Hints */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-sm font-semibold text-gray-700">Progressive Hints</span>
+                        <span className="text-xs text-gray-500">(Students access hints in order: 1 → 2 → 3)</span>
+                      </div>
+                      
+                      {/* Hint 1 */}
+                      <div>
+                        <label htmlFor="hint1" className="block text-sm font-medium text-gray-700 mb-1">
+                          Hint 1 (Broad Guidance) <span className="text-gray-400 font-normal">- First level, least specific</span>
+                        </label>
+                        <textarea
+                          id="hint1"
+                          name="hint1"
+                          value={formData.hint1}
+                          onChange={handleChange}
+                          rows={2}
+                          placeholder="Provide broad guidance to help students get started..."
+                          className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        />
+                      </div>
+                      
+                      {/* Hint 2 */}
+                      <div>
+                        <label htmlFor="hint2" className="block text-sm font-medium text-gray-700 mb-1">
+                          Hint 2 (More Specific) <span className="text-gray-400 font-normal">- Second level, more detailed</span>
+                        </label>
+                        <textarea
+                          id="hint2"
+                          name="hint2"
+                          value={formData.hint2}
+                          onChange={handleChange}
+                          rows={2}
+                          placeholder="Provide more specific guidance after hint 1..."
+                          className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        />
+                      </div>
+                      
+                      {/* Hint 3 */}
+                      <div>
+                        <label htmlFor="hint3" className="block text-sm font-medium text-gray-700 mb-1">
+                          Hint 3 (Near Complete) <span className="text-gray-400 font-normal">- Third level, almost complete answer</span>
+                        </label>
+                        <textarea
+                          id="hint3"
+                          name="hint3"
+                          value={formData.hint3}
+                          onChange={handleChange}
+                          rows={2}
+                          placeholder="Provide near-complete guidance after hints 1 and 2..."
+                          className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        />
+                      </div>
+                      
+                      {/* Legacy Hint Field (for backward compatibility) */}
+                      <div className="pt-2 border-t border-gray-200">
+                        <label htmlFor="hint" className="block text-sm font-medium text-gray-500 mb-1">
+                          Legacy Hint <span className="text-xs text-gray-400">(Optional - for backward compatibility)</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="hint"
+                          name="hint"
+                          value={formData.hint}
+                          onChange={handleChange}
+                          placeholder="Legacy single hint field..."
+                          className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        />
+                      </div>
                     </div>
                     
                     {/* Explanation */}
@@ -809,6 +871,9 @@ export function QuestionForm({
               }}
               correctAnswer={formData.correct_answer}
               hint={formData.hint}
+              hint1={formData.hint1}
+              hint2={formData.hint2}
+              hint3={formData.hint3}
               explanation={formData.explanation}
               solution={formData.solution}
               difficulty={formData.difficulty}

@@ -220,7 +220,8 @@ export default function ImportPage() {
                 <h3 className="font-medium text-gray-900 dark:text-gray-100 mt-3 mb-2">Optional Fields:</h3>
                 <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
                   <li>• difficulty, passage, option_c, option_d, option_e</li>
-                  <li>• hint, solution, further_study_links</li>
+                  <li>• hint1, hint2, hint3 (progressive hints), solution, further_study_links</li>
+                  <li>• hint (legacy field - optional, for backward compatibility)</li>
                   <li>• question_image_url, image_alt_text, image_width, image_height</li>
                 </ul>
                 <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded border border-blue-200 dark:border-blue-800">

@@ -18,7 +18,10 @@ interface QuestionPreviewProps {
     E: string;
   };
   correctAnswer: string;
-  hint?: string;
+  hint?: string; // Legacy field
+  hint1?: string;
+  hint2?: string;
+  hint3?: string;
   explanation?: string;
   solution?: string;
   difficulty?: string;
@@ -72,6 +75,9 @@ export function QuestionPreview({
   options,
   correctAnswer,
   hint,
+  hint1,
+  hint2,
+  hint3,
   explanation,
   solution,
   difficulty,
@@ -80,11 +86,26 @@ export function QuestionPreview({
 }: QuestionPreviewProps) {
   const [viewMode, setViewMode] = useState<'question' | 'solution'>('question');
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [showHint, setShowHint] = useState(false);
+  const [currentHintLevel, setCurrentHintLevel] = useState<1 | 2 | 3 | null>(null);
   
   const optionEntries = Object.entries(options).filter(([, value]) => value?.trim());
   
   const hasExplanation = explanation?.trim() || solution?.trim();
+  const hasAnyHint = !!(hint1 || hint2 || hint3 || hint);
+  
+  const getCurrentHint = (): string => {
+    if (currentHintLevel === 1) return hint1 || hint || '';
+    if (currentHintLevel === 2) return hint2 || '';
+    if (currentHintLevel === 3) return hint3 || '';
+    return '';
+  };
+  
+  const hasHintLevel = (level: 1 | 2 | 3): boolean => {
+    if (level === 1) return !!(hint1 || hint);
+    if (level === 2) return !!hint2;
+    if (level === 3) return !!hint3;
+    return false;
+  };
   
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden sticky top-6">
@@ -238,24 +259,67 @@ export function QuestionPreview({
           </div>
         )}
         
-        {/* Hint Button */}
-        {hint?.trim() && viewMode === 'question' && !showHint && (
-          <button
-            onClick={() => setShowHint(true)}
-            className="mb-4 text-sm text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-            </svg>
-            Show Hint
-          </button>
-        )}
-        
-        {/* Hint Display */}
-        {hint?.trim() && showHint && viewMode === 'question' && (
-          <div className="mb-4 p-3 bg-amber-50 rounded-lg border border-amber-200">
-            <p className="text-sm font-medium text-amber-700 mb-1">Hint:</p>
-            <p className="text-sm text-amber-800">{hint}</p>
+        {/* Progressive Hints */}
+        {hasAnyHint && viewMode === 'question' && (
+          <div className="mb-4 space-y-3">
+            {/* Hint Level Buttons */}
+            <div className="flex gap-2 flex-wrap">
+              {[1, 2, 3].map((level) => {
+                const levelNum = level as 1 | 2 | 3;
+                const hasHint = hasHintLevel(levelNum);
+                if (!hasHint) return null;
+                
+                const isUnlocked = currentHintLevel === null 
+                  ? levelNum === 1 
+                  : currentHintLevel >= levelNum;
+                const isActive = currentHintLevel === levelNum;
+                
+                return (
+                  <button
+                    key={levelNum}
+                    onClick={() => {
+                      if (isUnlocked) {
+                        setCurrentHintLevel(levelNum);
+                      }
+                    }}
+                    disabled={!isUnlocked || isActive}
+                    className={`px-3 py-1.5 text-xs rounded-lg border transition-colors ${
+                      isActive
+                        ? 'bg-emerald-600 text-white border-emerald-600'
+                        : isUnlocked
+                          ? 'bg-white text-emerald-600 border-emerald-300 hover:bg-emerald-50'
+                          : 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                    }`}
+                  >
+                    Hint {levelNum}
+                  </button>
+                );
+              })}
+            </div>
+            
+            {/* Hint Display */}
+            {currentHintLevel && getCurrentHint() && (
+              <div className={`p-3 rounded-lg border ${
+                currentHintLevel === 1 ? 'bg-yellow-50 border-yellow-200' :
+                currentHintLevel === 2 ? 'bg-orange-50 border-orange-200' :
+                'bg-red-50 border-red-200'
+              }`}>
+                <p className={`text-sm font-medium mb-1 ${
+                  currentHintLevel === 1 ? 'text-yellow-700' :
+                  currentHintLevel === 2 ? 'text-orange-700' :
+                  'text-red-700'
+                }`}>
+                  Hint Level {currentHintLevel}
+                </p>
+                <p className={`text-sm ${
+                  currentHintLevel === 1 ? 'text-yellow-800' :
+                  currentHintLevel === 2 ? 'text-orange-800' :
+                  'text-red-800'
+                }`}>
+                  {getCurrentHint()}
+                </p>
+              </div>
+            )}
           </div>
         )}
         

@@ -22,6 +22,9 @@ export async function GET() {
     'option_d',
     'option_e',
     'correct_answer',
+    'hint1',
+    'hint2',
+    'hint3',
     'hint',
     'solution',
     'further_study_links'
@@ -48,7 +51,10 @@ export async function GET() {
       option_d: 'x = 6',
       option_e: '',
       correct_answer: 'B',
-      hint: 'Subtract 5 from both sides first',
+      hint1: 'Start by isolating the variable term',
+      hint2: 'Subtract 5 from both sides of the equation',
+      hint3: 'After subtracting 5, divide both sides by 2',
+      hint: '',
       solution: '2x + 5 = 13, subtract 5: 2x = 8, divide by 2: x = 4',
       further_study_links: 'https://example.com/algebra-basics'
     },
@@ -71,7 +77,10 @@ export async function GET() {
       option_d: 'He was angry',
       option_e: '',
       correct_answer: 'A',
-      hint: 'Look for emotional descriptors in the text',
+      hint1: 'Focus on descriptive words that convey emotion',
+      hint2: 'Look for phrases that describe the character\'s feelings',
+      hint3: 'The phrase "heart pounding with fear" directly indicates the emotion',
+      hint: '',
       solution: 'The passage explicitly states "his heart pounding with fear", indicating the boy was afraid.',
       further_study_links: 'https://example.com/reading-comprehension'
     },
@@ -94,7 +103,10 @@ export async function GET() {
       option_d: '120°',
       option_e: '',
       correct_answer: 'C',
-      hint: 'Remember that angles in a triangle sum to 180°',
+      hint1: 'Recall the property of triangle angles',
+      hint2: 'The sum of all angles in a triangle equals 180°',
+      hint3: 'Add the known angles (30° + 60°) and subtract from 180°',
+      hint: '',
       solution: 'Using the triangle angle sum property: 30° + 60° + angle B = 180°, therefore angle B = 90°',
       further_study_links: 'https://example.com/triangle-properties'
     }
@@ -107,7 +119,8 @@ export async function GET() {
   csvContent += '# 2. Required fields: subject, topic, exam_type, year, question_text, option_a, option_b, correct_answer\n';
   csvContent += '# 3. Use subject/topic NAMES (e.g., "Mathematics", "English") - NOT UUIDs\n';
   csvContent += '# 4. NEW: Topics will be automatically created if they don\'t exist!\n';
-  csvContent += '# 5. Optional fields: difficulty, passage, passage_id, question_image_url, image_alt_text, image_width, image_height, option_c, option_d, option_e, hint, solution, further_study_links\n';
+  csvContent += '# 5. Optional fields: difficulty, passage, passage_id, question_image_url, image_alt_text, image_width, image_height, option_c, option_d, option_e, hint1, hint2, hint3, hint (legacy), solution, further_study_links\n';
+  csvContent += '# 6. Progressive hints: hint1 (broad guidance), hint2 (more specific), hint3 (near complete). Students access them in order.\n';
   csvContent += '# 6. exam_type must be one of: WAEC, JAMB, NECO, GCE\n';
   csvContent += '# 7. difficulty must be one of: easy, medium, hard (default: medium)\n';
   csvContent += '# 8. correct_answer must be one of: A, B, C, D, E\n';

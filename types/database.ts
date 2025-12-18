@@ -102,7 +102,10 @@ export interface Question {
   option_e?: string;
   correct_answer: 'A' | 'B' | 'C' | 'D' | 'E';
   explanation?: string;
-  hint?: string;
+  hint?: string; // Legacy field - kept for backward compatibility
+  hint1?: string; // First level hint - broad guidance
+  hint2?: string; // Second level hint - more specific
+  hint3?: string; // Third level hint - near complete guidance
   solution?: string;
   further_study_links?: string[];
   difficulty?: 'Easy' | 'Medium' | 'Hard';
