@@ -4,49 +4,15 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Home, BookOpen, Brain, TrendingUp, User } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-export interface NavItem {
-  href: string;
-  label: string;
-  icon: React.ReactNode;
-}
-
-const defaultNavItems: NavItem[] = [
-  {
-    href: '/home',
-    label: 'Home',
-    icon: <Home className="w-6 h-6" />,
-  },
-  {
-    href: '/subjects',
-    label: 'Explore',
-    icon: <BookOpen className="w-6 h-6" />,
-  },
-  {
-    href: '/quick-practice',
-    label: 'Learn',
-    icon: <Brain className="w-6 h-6" />,
-  },
-  {
-    href: '/analytics',
-    label: 'Progress',
-    icon: <TrendingUp className="w-6 h-6" />,
-  },
-  {
-    href: '/profile',
-    label: 'Profile',
-    icon: <User className="w-6 h-6" />,
-  },
-];
+import { bottomNavItems, type NavItem } from '@/lib/navigation-config';
 
 export interface BottomNavProps {
   items?: NavItem[];
   className?: string;
 }
 
-export function BottomNav({ items = defaultNavItems, className }: BottomNavProps) {
+export function BottomNav({ items = bottomNavItems, className }: BottomNavProps) {
   const pathname = usePathname();
 
   const isActive = (href: string) => {
@@ -101,7 +67,7 @@ export function BottomNav({ items = defaultNavItems, className }: BottomNavProps
                 'transition-all duration-300',
                 active && 'scale-110 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]'
               )}>
-                {item.icon}
+                <item.icon className="w-6 h-6" />
               </span>
               
               {/* Label */}

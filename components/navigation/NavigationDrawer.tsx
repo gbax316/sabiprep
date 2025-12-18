@@ -9,108 +9,16 @@ import { useAuth } from '@/lib/auth-context';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   X,
-  Home,
-  BookOpen,
-  TrendingUp,
-  User,
-  Trophy,
-  Settings,
-  HelpCircle,
   LogOut,
-  Brain,
   GraduationCap,
   ChevronRight,
-  ChevronDown,
-  FileText,
-  Sparkles,
-  Star,
-  Bell,
-  Shield,
-  Info,
-  Timer,
-  BookOpenCheck,
 } from 'lucide-react';
+import { navigationSections } from '@/lib/navigation-config';
 
 interface NavigationDrawerProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
-interface NavSection {
-  title: string;
-  items: NavItem[];
-  collapsible?: boolean;
-}
-
-interface NavItem {
-  href: string;
-  label: string;
-  icon: React.ElementType;
-  description?: string;
-  badge?: string;
-  badgeColor?: string;
-}
-
-// Main navigation sections with all pages
-const navigationSections: NavSection[] = [
-  {
-    title: 'Learning',
-    items: [
-      { href: '/home', label: 'Dashboard', icon: Home, description: 'Your learning hub' },
-      { href: '/subjects', label: 'All Subjects', icon: BookOpen, description: 'Browse & select subjects' },
-      {
-        href: '/quick-practice',
-        label: 'Quick Practice',
-        icon: Brain,
-        description: 'Random questions, instant start',
-        badge: 'Popular',
-        badgeColor: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
-      },
-      {
-        href: '/practice',
-        label: 'Practice Mode',
-        icon: BookOpenCheck,
-        description: 'Learn at your pace with hints'
-      },
-      {
-        href: '/test',
-        label: 'Test Mode',
-        icon: FileText,
-        description: 'Simulate real exam conditions'
-      },
-      {
-        href: '/timed',
-        label: 'Timed Mode',
-        icon: Timer,
-        description: 'Race against the clock'
-      },
-    ],
-  },
-  {
-    title: 'Progress',
-    items: [
-      { href: '/analytics', label: 'Analytics', icon: TrendingUp, description: 'Track your performance' },
-      {
-        href: '/daily-challenge',
-        label: 'Daily Challenge',
-        icon: Sparkles,
-        description: 'Earn bonus XP today',
-        badge: 'New',
-        badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
-      },
-      { href: '/achievements', label: 'Achievements', icon: Trophy, description: 'Badges & milestones' },
-    ],
-  },
-  {
-    title: 'Settings',
-    items: [
-      { href: '/profile', label: 'Profile', icon: User, description: 'Manage your account' },
-      { href: '/settings', label: 'Settings', icon: Settings, description: 'Preferences & notifications' },
-      { href: '/notifications', label: 'Notifications', icon: Bell, description: 'Alerts & updates' },
-      { href: '/help', label: 'Help Center', icon: HelpCircle, description: 'FAQs & tutorials' },
-    ],
-  },
-];
 
 export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
   const pathname = usePathname();
