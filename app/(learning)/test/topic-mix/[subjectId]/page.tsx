@@ -147,8 +147,10 @@ export default function TopicMixPage({ params }: { params: Promise<{ subjectId: 
     } else if (remainder < 0) {
       // Need to reduce - remove from topics with lowest remainder
       const sorted = [...distribution].sort((a, b) => {
-        if (Math.abs(a.remainder - b.remainder) > 0.001) {
-          return a.remainder - b.remainder;
+        const aRemainder = a.remainder ?? 0;
+        const bRemainder = b.remainder ?? 0;
+        if (Math.abs(aRemainder - bRemainder) > 0.001) {
+          return aRemainder - bRemainder;
         }
         return a.count - b.count;
       });
