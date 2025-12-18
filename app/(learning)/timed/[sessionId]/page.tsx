@@ -685,7 +685,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
                     ? 'answered' 
                     : 'unanswered',
                 hasPassage: !!q.passage_id,
-                hasImage: !!q.image_url,
+                hasImage: !!q.question_image_url,
               }))}
               currentIndex={currentIndex}
               onNavigate={handleJumpToQuestion}
