@@ -1,0 +1,281 @@
+'use client';
+
+import React, { useEffect, useState, use } from 'react';
+import { Card } from '@/components/common/Card';
+import { Button } from '@/components/common/Button';
+import { useAuth } from '@/lib/auth-context';
+import { getSubject, getTopics } from '@/lib/api';
+import type { Subject, Topic } from '@/types/database';
+import { useRouter } from 'next/navigation';
+import { ArrowLeft, Zap, Clock, GraduationCap, BookOpen, Settings } from 'lucide-react';
+
+type TimedExamFormat = 'speed-drill' | 'waec' | 'jamb' | 'custom';
+
+export default function TimedExamStylePage({ params }: { params: Promise<{ subjectId: string }> }) {
+  const { subjectId } = use(params);
+  const { userId } = useAuth();
+  const router = useRouter();
+  const [loading, setLoading] = useState(true);
+  const [subject, setSubject] = useState<Subject | null>(null);
+  const [topics, setTopics] = useState<Topic[]>([]);
+  const [selectedFormat, setSelectedFormat] = useState<TimedExamFormat | null>(null);
+  const [customCount, setCustomCount] = useState<number | null>(null);
+  const [customTime, setCustomTime] = useState<number | null>(null);
+  const [showCustomOptions, setShowCustomOptions] = useState(false);
+
+  useEffect(() => {
+    loadSubjectData();
+  }, [subjectId]);
+
+  async function loadSubjectData() {
+    try {
+      setLoading(true);
+      const [subjectData, topicsData] = await Promise.all([
+        getSubject(subjectId),
+        getTopics(subjectId),
+      ]);
+      setSubject(subjectData);
+      setTopics(topicsData);
+    } catch (error) {
+      console.error('Error loading subject:', error);
+      alert('Failed to load subject');
+      router.push('/timed');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function handleFormatSelect(format: TimedExamFormat) {
+    if (format === 'custom') {
+      setShowCustomOptions(true);
+      setSelectedFormat(format);
+    } else {
+      setSelectedFormat(format);
+      // Navigate to topic mix preview with exam format
+      router.push(`/timed/topic-mix/${subjectId}?format=${format}`);
+    }
+  }
+
+  function handleCustomStart() {
+    if (customCount && customTime) {
+      router.push(`/timed/topic-mix/${subjectId}?format=custom&count=${customCount}&time=${customTime}`);
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-orange-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!subject) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <p>Subject not found</p>
+      </div>
+    );
+  }
+
+  const examFormats = [
+    {
+      id: 'speed-drill' as TimedExamFormat,
+      name: 'Speed Drill',
+      description: '20 questions, 20 minutes (1 min/question)',
+      icon: <Zap className="w-8 h-8" />,
+      color: 'bg-orange-600',
+      questionCount: 20,
+      timeMinutes: 20,
+    },
+    {
+      id: 'waec' as TimedExamFormat,
+      name: 'WAEC Simulation',
+      description: '50 questions, 60 minutes (1.2 min/question)',
+      icon: <GraduationCap className="w-8 h-8" />,
+      color: 'bg-blue-600',
+      questionCount: 50,
+      timeMinutes: 60,
+    },
+    {
+      id: 'jamb' as TimedExamFormat,
+      name: 'JAMB Simulation',
+      description: '60 questions, 60 minutes (1 min/question)',
+      icon: <BookOpen className="w-8 h-8" />,
+      color: 'bg-purple-600',
+      questionCount: 60,
+      timeMinutes: 60,
+    },
+    {
+      id: 'custom' as TimedExamFormat,
+      name: 'Custom Timed',
+      description: 'Choose question count + time allocation',
+      icon: <Settings className="w-8 h-8" />,
+      color: 'bg-indigo-600',
+      questionCount: null,
+      timeMinutes: null,
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50 pb-8">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <div className="flex items-center gap-3 mb-4">
+            <button
+              onClick={() => router.push('/timed')}
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <ArrowLeft className="w-6 h-6 text-gray-600" />
+            </button>
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">Timed Mode</h1>
+              <p className="text-sm text-gray-600">{subject.name} - Choose Exam Format</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+        {/* Info Banner */}
+        <Card variant="outlined" className="bg-orange-50 border-orange-200">
+          <div className="flex gap-3">
+            <Clock className="w-6 h-6 text-orange-600 flex-shrink-0" />
+            <div>
+              <p className="font-semibold text-gray-900 mb-1">Exam Format Selection</p>
+              <p className="text-sm text-gray-700">
+                Choose the timed exam format that matches your preparation needs. The timer starts immediately when you begin and cannot be paused.
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        {/* Exam Format Cards */}
+        <div className="space-y-4">
+          {examFormats.map((format) => (
+            <Card
+              key={format.id}
+              className={`
+                cursor-pointer transition-all hover:shadow-xl hover:scale-[1.02]
+                ${selectedFormat === format.id ? 'ring-2 ring-orange-600 ring-offset-2' : ''}
+              `}
+              onClick={() => handleFormatSelect(format.id)}
+            >
+              <div className="flex items-start gap-4">
+                {/* Icon */}
+                <div className={`${format.color} text-white p-4 rounded-2xl flex-shrink-0`}>
+                  {format.icon}
+                </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-bold text-lg text-gray-900">{format.name}</h3>
+                    {format.questionCount && (
+                      <div className="flex gap-2">
+                        <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-sm font-medium">
+                          {format.questionCount} questions
+                        </span>
+                        <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded-md text-sm font-medium">
+                          {format.timeMinutes} minutes
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-sm text-gray-600 mb-3">{format.description}</p>
+                  
+                  {format.id === 'custom' && showCustomOptions && (
+                    <div className="mt-4 pt-4 border-t border-gray-200 space-y-4">
+                      <div>
+                        <p className="text-sm font-medium text-gray-700 mb-3">Select number of questions:</p>
+                        <div className="grid grid-cols-4 gap-2">
+                          {[20, 30, 40, 50].map((count) => (
+                            <button
+                              key={count}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCustomCount(count);
+                              }}
+                              className={`
+                                py-2 px-3 rounded-lg font-semibold text-sm transition-all
+                                ${customCount === count
+                                  ? 'bg-indigo-600 text-white'
+                                  : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
+                                }
+                              `}
+                            >
+                              {count}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {customCount && (
+                        <div>
+                          <p className="text-sm font-medium text-gray-700 mb-3">Select time allocation (minutes):</p>
+                          <div className="grid grid-cols-4 gap-2">
+                            {[15, 30, 45, 60].map((minutes) => (
+                              <button
+                                key={minutes}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setCustomTime(minutes);
+                                }}
+                                className={`
+                                  py-2 px-3 rounded-lg font-semibold text-sm transition-all
+                                  ${customTime === minutes
+                                    ? 'bg-orange-600 text-white'
+                                    : 'bg-orange-50 text-orange-700 hover:bg-orange-100'
+                                  }
+                                `}
+                              >
+                                {minutes}m
+                              </button>
+                            ))}
+                          </div>
+                          {customCount && customTime && (
+                            <div className="mt-3 p-3 bg-indigo-50 rounded-lg">
+                              <p className="text-sm text-indigo-900">
+                                <strong>Average:</strong> {Math.round((customTime * 60) / customCount)} seconds per question
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {customCount && customTime && (
+                        <Button
+                          variant="primary"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleCustomStart();
+                          }}
+                          className="w-full"
+                        >
+                          Continue with Custom Format
+                        </Button>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Arrow */}
+                {format.id !== 'custom' || !showCustomOptions ? (
+                  <div className="flex-shrink-0 text-gray-400">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                ) : null}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

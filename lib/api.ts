@@ -247,6 +247,100 @@ export async function getRandomQuestions(
   return (data || []).sort(() => Math.random() - 0.5);
 }
 
+/**
+ * Get random questions from multiple topics (balanced distribution)
+ */
+export async function getRandomQuestionsFromTopics(
+  topicIds: string[],
+  totalCount: number = 20
+): Promise<Question[]> {
+  if (topicIds.length === 0) return [];
+  if (topicIds.length === 1) return getRandomQuestions(topicIds[0], totalCount);
+
+  // Calculate questions per topic (balanced distribution)
+  const questionsPerTopic = Math.ceil(totalCount / topicIds.length);
+  const allQuestions: Question[] = [];
+
+  // Fetch questions from each topic
+  for (const topicId of topicIds) {
+    const { data, error } = await supabase
+      .from('questions')
+      .select('*')
+      .eq('status', 'published')
+      .eq('topic_id', topicId)
+      .limit(questionsPerTopic);
+
+    if (!error && data) {
+      allQuestions.push(...data);
+    }
+  }
+
+  // Shuffle and limit to totalCount
+  const shuffled = allQuestions.sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, totalCount);
+}
+
+/**
+ * Get questions from multiple topics with specific distribution
+ * @param distribution Map of topicId -> question count
+ */
+export async function getQuestionsWithDistribution(
+  distribution: Record<string, number>
+): Promise<Question[]> {
+  // Fetch questions from all topics in parallel for better performance
+  const fetchPromises = Object.entries(distribution)
+    .filter(([_, count]) => count > 0)
+    .map(async ([topicId, count]) => {
+      const { data, error } = await supabase
+        .from('questions')
+        .select('*')
+        .eq('status', 'published')
+        .eq('topic_id', topicId)
+        .limit(count);
+      
+      if (error) {
+        console.error(`Error fetching questions for topic ${topicId}:`, error);
+        return { topicId, questions: [], requested: count };
+      }
+      
+      return { 
+        topicId, 
+        questions: data || [], 
+        requested: count,
+        received: (data || []).length 
+      };
+    });
+
+  const results = await Promise.all(fetchPromises);
+  const allQuestions: Question[] = [];
+  let totalRequested = 0;
+  let totalReceived = 0;
+
+  // Collect all questions from parallel fetches
+  results.forEach((result) => {
+    allQuestions.push(...result.questions);
+    totalRequested += result.requested;
+    totalReceived += result.received;
+    
+    // Warn if we didn't get enough questions from a topic
+    if (result.received < result.requested) {
+      console.warn(
+        `Topic ${result.topicId}: requested ${result.requested}, got ${result.received}`
+      );
+    }
+  });
+
+  // Log summary
+  if (totalReceived < totalRequested) {
+    console.warn(
+      `Question distribution: requested ${totalRequested}, received ${totalReceived} (${totalRequested - totalReceived} missing)`
+    );
+  }
+
+  // Shuffle all questions to mix topics
+  return allQuestions.sort(() => Math.random() - 0.5);
+}
+
 // ============================================
 // SESSIONS
 // ============================================
@@ -254,7 +348,8 @@ export async function getRandomQuestions(
 export interface CreateSessionParams {
   userId: string;
   subjectId: string;
-  topicId: string;
+  topicId?: string; // For single topic (backward compatibility)
+  topicIds?: string[]; // For multi-topic sessions
   mode: 'practice' | 'test' | 'timed';
   totalQuestions: number;
   timeLimit?: number;
@@ -264,21 +359,48 @@ export interface CreateSessionParams {
  * Create a new learning session
  */
 export async function createSession(params: CreateSessionParams): Promise<LearningSession> {
+  // Support both single topic (backward compatible) and multi-topic
+  const topicIds = params.topicIds || (params.topicId ? [params.topicId] : []);
+  
   const { data, error } = await supabase
     .from('sessions')
     .insert({
       user_id: params.userId,
       subject_id: params.subjectId,
-      topic_id: params.topicId,
+      topic_id: params.topicId || (topicIds.length === 1 ? topicIds[0] : null), // Keep for backward compatibility
+      topic_ids: topicIds.length > 1 ? topicIds : null, // Store as JSONB for multi-topic
       mode: params.mode,
       total_questions: params.totalQuestions,
       time_limit_seconds: params.timeLimit,
       status: 'in_progress',
+      last_question_index: 0,
     })
     .select()
     .single();
 
   if (error) throw error;
+  if (!data) throw new Error('Failed to create session');
+
+  // Ensure topic_ids is parsed correctly from JSONB
+  if (data.topic_ids && typeof data.topic_ids === 'string') {
+    try {
+      data.topic_ids = JSON.parse(data.topic_ids);
+    } catch (e) {
+      console.error('Error parsing topic_ids:', e);
+      data.topic_ids = null;
+    }
+  }
+
+  // Ensure topic_ids is an array or null
+  if (data.topic_ids && !Array.isArray(data.topic_ids)) {
+    data.topic_ids = null;
+  }
+
+  // For backward compatibility: if topic_id exists but topic_ids doesn't, populate topic_ids
+  if (!data.topic_ids && data.topic_id) {
+    data.topic_ids = [data.topic_id];
+  }
+
   return data;
 }
 
@@ -293,6 +415,29 @@ export async function getSession(sessionId: string): Promise<LearningSession | n
     .single();
 
   if (error) throw error;
+  if (!data) return null;
+
+  // Ensure topic_ids is parsed correctly from JSONB
+  // Supabase should auto-parse JSONB, but ensure it's an array
+  if (data.topic_ids && typeof data.topic_ids === 'string') {
+    try {
+      data.topic_ids = JSON.parse(data.topic_ids);
+    } catch (e) {
+      console.error('Error parsing topic_ids:', e);
+      data.topic_ids = null;
+    }
+  }
+
+  // Ensure topic_ids is an array or null
+  if (data.topic_ids && !Array.isArray(data.topic_ids)) {
+    data.topic_ids = null;
+  }
+
+  // For backward compatibility: if topic_id exists but topic_ids doesn't, populate topic_ids
+  if (!data.topic_ids && data.topic_id) {
+    data.topic_ids = [data.topic_id];
+  }
+
   return data;
 }
 
@@ -311,7 +456,27 @@ export async function getUserSessions(
     .limit(limit);
 
   if (error) throw error;
-  return data || [];
+  if (!data) return [];
+
+  // Parse topic_ids from JSONB for all sessions
+  return data.map(session => {
+    if (session.topic_ids && typeof session.topic_ids === 'string') {
+      try {
+        session.topic_ids = JSON.parse(session.topic_ids);
+      } catch (e) {
+        console.error('Error parsing topic_ids:', e);
+        session.topic_ids = null;
+      }
+    }
+    if (session.topic_ids && !Array.isArray(session.topic_ids)) {
+      session.topic_ids = null;
+    }
+    // For backward compatibility: if topic_id exists but topic_ids doesn't, populate topic_ids
+    if (!session.topic_ids && session.topic_id) {
+      session.topic_ids = [session.topic_id];
+    }
+    return session;
+  });
 }
 
 /**
@@ -329,6 +494,28 @@ export async function updateSession(
     .single();
 
   if (error) throw error;
+  if (!data) throw new Error('Failed to update session');
+
+  // Ensure topic_ids is parsed correctly from JSONB
+  if (data.topic_ids && typeof data.topic_ids === 'string') {
+    try {
+      data.topic_ids = JSON.parse(data.topic_ids);
+    } catch (e) {
+      console.error('Error parsing topic_ids:', e);
+      data.topic_ids = null;
+    }
+  }
+
+  // Ensure topic_ids is an array or null
+  if (data.topic_ids && !Array.isArray(data.topic_ids)) {
+    data.topic_ids = null;
+  }
+
+  // For backward compatibility: if topic_id exists but topic_ids doesn't, populate topic_ids
+  if (!data.topic_ids && data.topic_id) {
+    data.topic_ids = [data.topic_id];
+  }
+
   return data;
 }
 
@@ -337,20 +524,62 @@ export async function updateSession(
  */
 export async function completeSession(
   sessionId: string,
-  scorePercentage: number
+  scorePercentage: number,
+  timeSpentSeconds?: number,
+  correctAnswers?: number,
+  totalQuestions?: number
 ): Promise<LearningSession> {
+  const updateData: any = {
+    status: 'completed',
+    completed_at: new Date().toISOString(),
+    score_percentage: scorePercentage,
+  };
+  
+  // Update time if provided
+  if (timeSpentSeconds !== undefined) {
+    updateData.time_spent_seconds = timeSpentSeconds;
+  }
+  
+  // Update correct answers if provided
+  if (correctAnswers !== undefined) {
+    updateData.correct_answers = correctAnswers;
+  }
+  
+  // Update questions answered if provided
+  if (totalQuestions !== undefined) {
+    updateData.questions_answered = totalQuestions;
+  }
+  
   const { data, error } = await supabase
     .from('sessions')
-    .update({
-      status: 'completed',
-      completed_at: new Date().toISOString(),
-      score_percentage: scorePercentage,
-    })
+    .update(updateData)
     .eq('id', sessionId)
     .select()
     .single();
 
   if (error) throw error;
+  if (!data) throw new Error('Failed to complete session');
+
+  // Ensure topic_ids is parsed correctly from JSONB
+  if (data.topic_ids && typeof data.topic_ids === 'string') {
+    try {
+      data.topic_ids = JSON.parse(data.topic_ids);
+    } catch (e) {
+      console.error('Error parsing topic_ids:', e);
+      data.topic_ids = null;
+    }
+  }
+
+  // Ensure topic_ids is an array or null
+  if (data.topic_ids && !Array.isArray(data.topic_ids)) {
+    data.topic_ids = null;
+  }
+
+  // For backward compatibility: if topic_id exists but topic_ids doesn't, populate topic_ids
+  if (!data.topic_ids && data.topic_id) {
+    data.topic_ids = [data.topic_id];
+  }
+
   return data;
 }
 
@@ -361,11 +590,16 @@ export async function completeSession(
 export interface CreateAnswerParams {
   sessionId: string;
   questionId: string;
+  topicId?: string; // For topic-specific analytics
   userAnswer: 'A' | 'B' | 'C' | 'D' | 'E';
   isCorrect: boolean;
   timeSpentSeconds: number;
   hintUsed?: boolean;
+  hintLevel?: 1 | 2 | 3; // Progressive hint level used
   solutionViewed?: boolean;
+  solutionViewedBeforeAttempt?: boolean;
+  attemptCount?: number;
+  firstAttemptCorrect?: boolean;
 }
 
 /**
@@ -379,11 +613,16 @@ export async function createSessionAnswer(
     .insert({
       session_id: params.sessionId,
       question_id: params.questionId,
+      topic_id: params.topicId,
       user_answer: params.userAnswer,
       is_correct: params.isCorrect,
       time_spent_seconds: params.timeSpentSeconds,
       hint_used: params.hintUsed ?? false,
+      hint_level: params.hintLevel,
       solution_viewed: params.solutionViewed ?? false,
+      solution_viewed_before_attempt: params.solutionViewedBeforeAttempt ?? false,
+      attempt_count: params.attemptCount ?? 1,
+      first_attempt_correct: params.firstAttemptCorrect,
     })
     .select()
     .single();
@@ -404,6 +643,24 @@ export async function getSessionAnswers(sessionId: string): Promise<SessionAnswe
 
   if (error) throw error;
   return data || [];
+}
+
+/**
+ * Get questions by their IDs (optimized for results page)
+ */
+export async function getQuestionsByIds(questionIds: string[]): Promise<Question[]> {
+  if (questionIds.length === 0) return [];
+  
+  const { data, error } = await supabase
+    .from('questions')
+    .select('*')
+    .in('id', questionIds);
+
+  if (error) throw error;
+  
+  // Preserve the order of questionIds
+  const questionMap = new Map((data || []).map(q => [q.id, q]));
+  return questionIds.map(id => questionMap.get(id)).filter(Boolean) as Question[];
 }
 
 // ============================================

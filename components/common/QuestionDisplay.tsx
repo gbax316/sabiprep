@@ -126,11 +126,11 @@ export function QuestionDisplay({
               disabled={disabled}
               className={`
                 w-full p-4 rounded-xl text-left transition-all
-                ${!showResult && !isSelected && 'bg-white border-2 border-gray-200 hover:border-indigo-600 hover:shadow-md'}
-                ${!showResult && isSelected && 'bg-indigo-50 border-2 border-indigo-600'}
-                ${showResult && isCorrect && 'bg-green-50 border-2 border-green-600'}
-                ${showResult && isSelected && !isCorrect && 'bg-red-50 border-2 border-red-600'}
-                ${showResult && !isSelected && !isCorrect && 'bg-gray-50 border-2 border-gray-200'}
+                ${!showResult && !isSelected && 'bg-white border border-gray-300 hover:border-indigo-500 hover:shadow-sm'}
+                ${!showResult && isSelected && 'bg-white border-2 border-indigo-600 shadow-sm'}
+                ${showResult && isCorrect && 'bg-emerald-500 border-2 border-emerald-600'}
+                ${showResult && isSelected && !isCorrect && 'bg-red-500 border-2 border-red-600'}
+                ${showResult && !isSelected && !isCorrect && 'bg-white border border-gray-200'}
                 ${disabled && 'cursor-not-allowed'}
                 ${!disabled && !showResult && 'cursor-pointer'}
               `}
@@ -141,8 +141,8 @@ export function QuestionDisplay({
                     w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0
                     ${!showResult && isSelected && 'bg-indigo-600 text-white'}
                     ${!showResult && !isSelected && 'bg-gray-200 text-gray-700'}
-                    ${showResult && isCorrect && 'bg-green-600 text-white'}
-                    ${showResult && isSelected && !isCorrect && 'bg-red-600 text-white'}
+                    ${showResult && isCorrect && 'bg-white text-emerald-600'}
+                    ${showResult && isSelected && !isCorrect && 'bg-white text-red-600'}
                     ${showResult && !isSelected && !isCorrect && 'bg-gray-300 text-gray-600'}
                   `}
                 >
@@ -154,7 +154,11 @@ export function QuestionDisplay({
                     key
                   )}
                 </div>
-                <span className="flex-1 text-gray-900">{optionText}</span>
+                <span className={`flex-1 ${
+                  showResult && isCorrect ? 'text-white font-medium' :
+                  showResult && isSelected && !isCorrect ? 'text-white font-medium' :
+                  'text-gray-900'
+                }`}>{optionText}</span>
               </div>
             </button>
           );

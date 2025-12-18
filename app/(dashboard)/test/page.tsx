@@ -94,8 +94,9 @@ export default function TestModePage() {
     return progress.find(p => p.topic_id === topicId);
   };
 
-  const handleTopicClick = (topicId: string) => {
-    router.push(`/mode-select/${topicId}?mode=test`);
+  const handleSubjectClick = (subjectId: string) => {
+    // Navigate to exam style selection for test mode
+    router.push(`/test/exam-style/${subjectId}`);
   };
 
   const handleBackClick = () => {
@@ -177,7 +178,7 @@ export default function TestModePage() {
               return (
                 <div
                   key={subject.id}
-                  onClick={() => setSelectedSubject(subject)}
+                  onClick={() => handleSubjectClick(subject.id)}
                   className="cursor-pointer"
                 >
                   <Card className="hover:shadow-xl transition-all hover:scale-[1.02] h-full">
@@ -248,16 +249,29 @@ export default function TestModePage() {
           </div>
         )}
 
-        {/* Topics List */}
+        {/* Topics List - Not used in test mode, redirects to exam style */}
         {selectedSubject && (
           <div className="space-y-4">
+            <Card variant="outlined" className="bg-amber-50 border-amber-200">
+              <div className="text-center py-8">
+                <p className="text-gray-700 mb-4">
+                  Test Mode uses comprehensive assessment across all topics. Click below to continue.
+                </p>
+                <Button
+                  variant="primary"
+                  onClick={() => handleSubjectClick(selectedSubject.id)}
+                >
+                  Continue to Exam Style Selection
+                </Button>
+              </div>
+            </Card>
             {filteredTopics.map((topic) => {
               const topicProgress = getTopicProgress(topic.id);
 
               return (
                 <div
                   key={topic.id}
-                  onClick={() => handleTopicClick(topic.id)}
+                  onClick={() => handleSubjectClick(selectedSubject.id)}
                   className="cursor-pointer"
                 >
                   <Card className="hover:shadow-lg transition-all">

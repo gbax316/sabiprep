@@ -95,7 +95,8 @@ export default function PracticeModePage() {
   };
 
   const handleTopicClick = (topicId: string) => {
-    router.push(`/mode-select/${topicId}?mode=practice`);
+    // For practice mode, go to topic selection screen (supports multi-topic)
+    router.push(`/practice/topic-select/${selectedSubject?.id}`);
   };
 
   const handleBackClick = () => {

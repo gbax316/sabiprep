@@ -184,7 +184,7 @@ export default function ModeSelectPage({ params }: { params: Promise<{ topicId: 
             How many questions do you want to answer?
           </label>
           <div className="flex gap-2">
-            {[10, 20, 30, 40].map((count) => (
+            {[10, 20, 30, 50].map((count) => (
               <button
                 key={count}
                 onClick={() => setQuestionCount(count)}

@@ -123,6 +123,7 @@ export interface LearningSession {
   user_id: string;
   subject_id: string;
   topic_id?: string;
+  topic_ids?: string[]; // For multi-topic sessions
   mode: 'practice' | 'test' | 'timed';
   total_questions: number;
   questions_answered: number;
@@ -130,7 +131,9 @@ export interface LearningSession {
   score_percentage?: number;
   time_spent_seconds: number;
   time_limit_seconds?: number;
-  status: 'in_progress' | 'completed' | 'abandoned';
+  status: 'in_progress' | 'paused' | 'completed' | 'abandoned';
+  paused_at?: string;
+  last_question_index?: number;
   started_at: string;
   completed_at?: string;
   created_at: string;
@@ -144,11 +147,16 @@ export interface SessionAnswer {
   id: string;
   session_id: string;
   question_id: string;
+  topic_id?: string; // For topic-specific analytics
   user_answer?: 'A' | 'B' | 'C' | 'D' | 'E';
   is_correct?: boolean;
   time_spent_seconds: number;
   hint_used: boolean;
+  hint_level?: 1 | 2 | 3; // Progressive hint level used
   solution_viewed: boolean;
+  solution_viewed_before_attempt?: boolean;
+  attempt_count?: number;
+  first_attempt_correct?: boolean;
   answered_at: string;
   created_at: string;
 }

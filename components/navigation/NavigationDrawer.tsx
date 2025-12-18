@@ -121,19 +121,31 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
     setMounted(true);
   }, []);
 
-  // Close on escape key
+  // Close on escape key and lock body scroll
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape' && isOpen) onClose();
     };
+    
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
+      // Lock body scroll
+      const originalOverflow = document.body.style.overflow;
+      const originalPaddingRight = document.body.style.paddingRight;
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      
       document.body.style.overflow = 'hidden';
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
+      
+      document.addEventListener('keydown', handleEscape);
+      
+      return () => {
+        document.removeEventListener('keydown', handleEscape);
+        document.body.style.overflow = originalOverflow;
+        document.body.style.paddingRight = originalPaddingRight;
+      };
     }
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = '';
-    };
   }, [isOpen, onClose]);
 
   // Close on route change
@@ -158,28 +170,54 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
         <>
           {/* Backdrop with blur effect */}
           <motion.div
+            key="backdrop"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9998]"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+            style={{ 
+              zIndex: 99998,
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0
+            }}
             onClick={onClose}
             aria-hidden="true"
           />
 
           {/* Drawer */}
           <motion.aside
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+            key="drawer"
+            initial={{ x: '100%', opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: '100%', opacity: 0 }}
+            transition={{ 
+              type: 'spring', 
+              damping: 25, 
+              stiffness: 300,
+              mass: 0.5,
+              opacity: { duration: 0.2 }
+            }}
             className={cn(
-              'fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[9999]',
+              'fixed top-0 right-0 h-full w-80 max-w-[85vw]',
               'flex flex-col',
               'bg-gradient-to-b from-slate-900 to-black',
               'border-l border-white/10',
               'shadow-2xl'
             )}
+            style={{ 
+              zIndex: 99999,
+              position: 'fixed',
+              top: 0,
+              right: 0,
+              height: '100vh',
+              width: '20rem',
+              maxWidth: '85vw',
+              willChange: 'transform, opacity'
+            }}
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"

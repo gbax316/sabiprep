@@ -94,7 +94,12 @@ export default function TimedModePage() {
     return progress.find(p => p.topic_id === topicId);
   };
 
+  const handleSubjectClick = (subjectId: string) => {
+    router.push(`/timed/exam-style/${subjectId}`);
+  };
+
   const handleTopicClick = (topicId: string) => {
+    // For backward compatibility, still support direct topic selection
     router.push(`/mode-select/${topicId}?mode=timed`);
   };
 
@@ -180,7 +185,7 @@ export default function TimedModePage() {
               return (
                 <div
                   key={subject.id}
-                  onClick={() => setSelectedSubject(subject)}
+                  onClick={() => handleSubjectClick(subject.id)}
                   className="cursor-pointer"
                 >
                   <Card className="hover:shadow-xl transition-all hover:scale-[1.02] h-full">
