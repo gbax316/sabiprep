@@ -523,50 +523,50 @@ export default function ContentManagementPage() {
                   <LayoutGrid className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Subjects</h2>
+              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Subjects</h2>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     {subjects.length} {subjects.length === 1 ? 'subject' : 'subjects'}
                   </p>
                 </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => fetchSubjects()}
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => fetchSubjects()}
                   className="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200"
-                  title="Refresh"
-                >
-                  <RefreshCcw className={`w-4 h-4 ${isLoadingSubjects ? 'animate-spin' : ''}`} />
-                </button>
-                <AdminPrimaryButton
-                  onClick={() => {
-                    setSelectedSubject(null);
-                    setSubjectModalMode('create');
-                    setIsSubjectModalOpen(true);
-                  }}
-                >
-                  <Plus className="w-4 h-4" />
-                  Add Subject
-                </AdminPrimaryButton>
+                title="Refresh"
+              >
+                <RefreshCcw className={`w-4 h-4 ${isLoadingSubjects ? 'animate-spin' : ''}`} />
+              </button>
+              <AdminPrimaryButton
+                onClick={() => {
+                  setSelectedSubject(null);
+                  setSubjectModalMode('create');
+                  setIsSubjectModalOpen(true);
+                }}
+              >
+                <Plus className="w-4 h-4" />
+                Add Subject
+              </AdminPrimaryButton>
               </div>
             </div>
           </div>
 
           <div className="p-6">
-            {isLoadingSubjects ? (
+          {isLoadingSubjects ? (
               <div className="space-y-4">
-                {[1, 2, 3].map(i => (
+              {[1, 2, 3].map(i => (
                   <div key={i} className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-5 animate-pulse">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-xl" />
                       <div className="flex-1 space-y-2">
                         <div className="h-5 bg-gray-200 dark:bg-gray-600 rounded w-32" />
                         <div className="h-4 bg-gray-200 dark:bg-gray-600 rounded w-48" />
-                      </div>
                     </div>
                   </div>
-                ))}
-              </div>
-            ) : subjects.length === 0 ? (
+                </div>
+              ))}
+            </div>
+          ) : subjects.length === 0 ? (
               <div className="text-center py-16">
                 <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center mx-auto mb-4">
                   <BookOpen className="w-8 h-8 text-gray-400" />
@@ -578,177 +578,177 @@ export default function ContentManagementPage() {
                   Get started by creating your first subject. Subjects help organize your topics and questions.
                 </p>
                 <AdminPrimaryButton
-                  onClick={() => {
-                    setSelectedSubject(null);
-                    setSubjectModalMode('create');
-                    setIsSubjectModalOpen(true);
-                  }}
-                >
+                onClick={() => {
+                  setSelectedSubject(null);
+                  setSubjectModalMode('create');
+                  setIsSubjectModalOpen(true);
+                }}
+              >
                   <Plus className="w-4 h-4" />
                   Create Your First Subject
                 </AdminPrimaryButton>
-              </div>
-            ) : (
+            </div>
+          ) : (
               <div className="space-y-4 max-h-[calc(100vh-350px)] overflow-y-auto pr-2">
-                {subjects.map(subject => (
-                  <SubjectCard key={subject.id} subject={subject} />
-                ))}
-              </div>
-            )}
+              {subjects.map(subject => (
+                <SubjectCard key={subject.id} subject={subject} />
+              ))}
+            </div>
+          )}
           </div>
         </div>
 
         {/* Topics Column */}
         <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
           <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-            <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center">
                   <List className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Topics</h2>
+              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Topics</h2>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     {filteredTopics.length} {filteredTopics.length === 1 ? 'topic' : 'topics'}
                     {filterSubjectId && ` in ${subjects.find(s => s.id === filterSubjectId)?.name}`}
                   </p>
                 </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => fetchTopics(filterSubjectId || undefined)}
-                  className="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200"
-                  title="Refresh"
-                >
-                  <RefreshCcw className={`w-4 h-4 ${isLoadingTopics ? 'animate-spin' : ''}`} />
-                </button>
-                <AdminPrimaryButton
-                  onClick={() => {
-                    setSelectedTopic(null);
-                    setTopicModalMode('create');
-                    setIsTopicModalOpen(true);
-                  }}
-                >
-                  <Plus className="w-4 h-4" />
-                  Add Topic
-                </AdminPrimaryButton>
-              </div>
             </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => fetchTopics(filterSubjectId || undefined)}
+                  className="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200"
+                title="Refresh"
+              >
+                <RefreshCcw className={`w-4 h-4 ${isLoadingTopics ? 'animate-spin' : ''}`} />
+              </button>
+              <AdminPrimaryButton
+                onClick={() => {
+                  setSelectedTopic(null);
+                  setTopicModalMode('create');
+                  setIsTopicModalOpen(true);
+                }}
+              >
+                <Plus className="w-4 h-4" />
+                Add Topic
+              </AdminPrimaryButton>
+            </div>
+          </div>
 
-            {/* Hierarchical Filters */}
+          {/* Hierarchical Filters */}
             <div className="space-y-3">
-              {/* Subject Filter */}
-              <div>
+            {/* Subject Filter */}
+            <div>
                 <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  Filter by Subject
-                </label>
+                Filter by Subject
+              </label>
                 <div className="relative">
                   <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                  <select
-                    value={filterSubjectId}
-                    onChange={(e) => {
-                      setFilterSubjectId(e.target.value);
+              <select
+                value={filterSubjectId}
+                onChange={(e) => {
+                  setFilterSubjectId(e.target.value);
                       setFilterTopicId('');
-                    }}
+                }}
                     className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-sm transition-all"
-                  >
-                    <option value="">All Subjects</option>
-                    {subjects.map(subject => (
-                      <option key={subject.id} value={subject.id}>
-                        {subject.name} ({subject.topic_count} topics)
-                      </option>
-                    ))}
-                  </select>
+              >
+                <option value="">All Subjects</option>
+                {subjects.map(subject => (
+                  <option key={subject.id} value={subject.id}>
+                    {subject.name} ({subject.topic_count} topics)
+                  </option>
+                ))}
+              </select>
                 </div>
-              </div>
+            </div>
 
-              {/* Topic Filter - Only show when a subject is selected */}
-              {filterSubjectId && subjectTopics.length > 0 && (
-                <div>
+            {/* Topic Filter - Only show when a subject is selected */}
+            {filterSubjectId && subjectTopics.length > 0 && (
+              <div>
                   <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Filter by Topic
-                  </label>
+                  Filter by Topic
+                </label>
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                    <select
-                      value={filterTopicId}
-                      onChange={(e) => setFilterTopicId(e.target.value)}
+                <select
+                  value={filterTopicId}
+                  onChange={(e) => setFilterTopicId(e.target.value)}
                       className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-sm transition-all"
-                    >
-                      <option value="">All Topics in {subjects.find(s => s.id === filterSubjectId)?.name}</option>
-                      {subjectTopics.map(topic => (
-                        <option key={topic.id} value={topic.id}>
-                          {topic.name} ({topic.question_count} questions)
-                        </option>
-                      ))}
-                    </select>
+                >
+                  <option value="">All Topics in {subjects.find(s => s.id === filterSubjectId)?.name}</option>
+                  {subjectTopics.map(topic => (
+                    <option key={topic.id} value={topic.id}>
+                      {topic.name} ({topic.question_count} questions)
+                    </option>
+                  ))}
+                </select>
                   </div>
-                </div>
-              )}
+              </div>
+            )}
 
-              {/* Active Filter Display */}
-              {(filterSubjectId || filterTopicId) && (
+            {/* Active Filter Display */}
+            {(filterSubjectId || filterTopicId) && (
                 <div className="flex items-center flex-wrap gap-2 pt-2">
                   <span className="text-xs font-medium text-gray-600 dark:text-gray-400">Active filters:</span>
-                  {filterSubjectId && (
-                    <button
-                      onClick={() => {
-                        setFilterSubjectId('');
-                        setFilterTopicId('');
-                      }}
+                {filterSubjectId && (
+                  <button
+                    onClick={() => {
+                      setFilterSubjectId('');
+                      setFilterTopicId('');
+                    }}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-lg hover:bg-emerald-200 dark:hover:bg-emerald-900/50 transition-all duration-200"
-                    >
+                  >
                       <span>{subjects.find(s => s.id === filterSubjectId)?.name}</span>
                       <X className="w-3 h-3" />
-                    </button>
-                  )}
-                  {filterTopicId && (
-                    <button
-                      onClick={() => setFilterTopicId('')}
+                  </button>
+                )}
+                {filterTopicId && (
+                  <button
+                    onClick={() => setFilterTopicId('')}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-all duration-200"
-                    >
+                  >
                       <span>{subjectTopics.find(t => t.id === filterTopicId)?.name}</span>
                       <X className="w-3 h-3" />
-                    </button>
-                  )}
-                </div>
-              )}
+                  </button>
+                )}
+              </div>
+            )}
             </div>
           </div>
 
           <div className="p-6">
-            {isLoadingTopics ? (
+          {isLoadingTopics ? (
               <div className="space-y-3">
-                {[1, 2, 3, 4, 5].map(i => (
+              {[1, 2, 3, 4, 5].map(i => (
                   <div key={i} className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4 animate-pulse">
-                    <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3">
                       <div className="w-3 h-3 bg-gray-200 dark:bg-gray-600 rounded-full" />
                       <div className="h-4 bg-gray-200 dark:bg-gray-600 rounded w-48" />
-                    </div>
                   </div>
-                ))}
-              </div>
-            ) : (
+                </div>
+              ))}
+            </div>
+          ) : (
               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
-                <DataTable
-                  data={filteredTopics}
-                  columns={topicColumns}
-                  keyAccessor={(topic) => topic.id}
-                  isLoading={isLoadingTopics}
-                  emptyMessage={
-                    filterSubjectId
+              <DataTable
+                data={filteredTopics}
+                columns={topicColumns}
+                keyAccessor={(topic) => topic.id}
+                isLoading={isLoadingTopics}
+                emptyMessage={
+                  filterSubjectId
                       ? `No topics found in ${subjects.find(s => s.id === filterSubjectId)?.name || 'this subject'}. Create your first topic to get started.`
                       : "No topics found. Create your first topic to get started."
-                  }
-                  showSearch={false}
-                  onRowClick={(topic) => {
-                    setSelectedTopic(topic);
-                    setTopicModalMode('edit');
-                    setIsTopicModalOpen(true);
-                  }}
-                />
-              </div>
-            )}
+                }
+                showSearch={false}
+                onRowClick={(topic) => {
+                  setSelectedTopic(topic);
+                  setTopicModalMode('edit');
+                  setIsTopicModalOpen(true);
+                }}
+              />
+            </div>
+          )}
           </div>
         </div>
       </div>
@@ -759,29 +759,29 @@ export default function ContentManagementPage() {
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
             <div className="p-4 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between">
-                <div>
+          <div>
                   <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Subjects</h2>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
                     {subjects.length} {subjects.length === 1 ? 'subject' : 'subjects'}
                   </p>
                 </div>
-                <AdminPrimaryButton
-                  onClick={() => {
-                    setSelectedSubject(null);
-                    setSubjectModalMode('create');
-                    setIsSubjectModalOpen(true);
-                  }}
-                >
-                  <Plus className="w-4 h-4" />
+              <AdminPrimaryButton
+                onClick={() => {
+                  setSelectedSubject(null);
+                  setSubjectModalMode('create');
+                  setIsSubjectModalOpen(true);
+                }}
+              >
+                <Plus className="w-4 h-4" />
                   Add
-                </AdminPrimaryButton>
+              </AdminPrimaryButton>
               </div>
             </div>
 
             <div className="p-4">
-              {isLoadingSubjects ? (
+            {isLoadingSubjects ? (
                 <div className="space-y-4">
-                  {[1, 2, 3].map(i => (
+                {[1, 2, 3].map(i => (
                     <div key={i} className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-5 animate-pulse">
                       <div className="flex items-start gap-4">
                         <div className="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-xl" />
@@ -790,9 +790,9 @@ export default function ContentManagementPage() {
                           <div className="h-4 bg-gray-200 dark:bg-gray-600 rounded w-48" />
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
+              </div>
               ) : subjects.length === 0 ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center mx-auto mb-4">
@@ -817,18 +817,18 @@ export default function ContentManagementPage() {
                 </div>
               ) : (
                 <div className="space-y-4">
-                  {subjects.map(subject => (
-                    <SubjectCard key={subject.id} subject={subject} />
-                  ))}
-                </div>
-              )}
+                {subjects.map(subject => (
+                  <SubjectCard key={subject.id} subject={subject} />
+                ))}
+              </div>
+            )}
             </div>
           </div>
         ) : (
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
             <div className="p-4 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-4">
-                <div>
+          <div>
                   <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Topics</h2>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
                     {filteredTopics.length} {filteredTopics.length === 1 ? 'topic' : 'topics'}
@@ -846,47 +846,47 @@ export default function ContentManagementPage() {
                 </AdminPrimaryButton>
               </div>
 
-              {/* Mobile Filters */}
+            {/* Mobile Filters */}
               <div className="space-y-3">
                 <div>
                   <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Filter by Subject
                   </label>
-                  <select
-                    value={filterSubjectId}
-                    onChange={(e) => {
-                      setFilterSubjectId(e.target.value);
-                      setFilterTopicId('');
-                    }}
+              <select
+                value={filterSubjectId}
+                onChange={(e) => {
+                  setFilterSubjectId(e.target.value);
+                  setFilterTopicId('');
+                }}
                     className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-sm"
-                  >
-                    <option value="">All Subjects</option>
-                    {subjects.map(subject => (
-                      <option key={subject.id} value={subject.id}>
-                        {subject.name} ({subject.topic_count})
-                      </option>
-                    ))}
-                  </select>
+              >
+                <option value="">All Subjects</option>
+                {subjects.map(subject => (
+                  <option key={subject.id} value={subject.id}>
+                    {subject.name} ({subject.topic_count})
+                  </option>
+                ))}
+              </select>
                 </div>
 
-                {filterSubjectId && subjectTopics.length > 0 && (
+              {filterSubjectId && subjectTopics.length > 0 && (
                   <div>
                     <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
                       Filter by Topic
                     </label>
-                    <select
-                      value={filterTopicId}
-                      onChange={(e) => setFilterTopicId(e.target.value)}
+                <select
+                  value={filterTopicId}
+                  onChange={(e) => setFilterTopicId(e.target.value)}
                       className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-sm"
-                    >
-                      <option value="">All Topics</option>
-                      {subjectTopics.map(topic => (
-                        <option key={topic.id} value={topic.id}>
-                          {topic.name} ({topic.question_count})
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+                >
+                  <option value="">All Topics</option>
+                  {subjectTopics.map(topic => (
+                    <option key={topic.id} value={topic.id}>
+                      {topic.name} ({topic.question_count})
+                    </option>
+                  ))}
+                </select>
+            </div>
                 )}
 
                 {/* Active Filters */}
@@ -895,7 +895,7 @@ export default function ContentManagementPage() {
                     <span className="text-xs font-medium text-gray-600 dark:text-gray-400">Active:</span>
                     {filterSubjectId && (
                       <button
-                        onClick={() => {
+                onClick={() => {
                           setFilterSubjectId('');
                           setFilterTopicId('');
                         }}
@@ -933,23 +933,23 @@ export default function ContentManagementPage() {
                 </div>
               ) : (
                 <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
-                  <DataTable
-                    data={filteredTopics}
-                    columns={topicColumns}
-                    keyAccessor={(topic) => topic.id}
-                    isLoading={isLoadingTopics}
-                    emptyMessage={
-                      filterSubjectId
+              <DataTable
+                data={filteredTopics}
+                columns={topicColumns}
+                keyAccessor={(topic) => topic.id}
+                isLoading={isLoadingTopics}
+                emptyMessage={
+                  filterSubjectId
                         ? `No topics in ${subjects.find(s => s.id === filterSubjectId)?.name || 'this subject'}. Create your first topic.`
                         : "No topics found. Create your first topic to get started."
-                    }
-                    showSearch={false}
-                    onRowClick={(topic) => {
-                      setSelectedTopic(topic);
-                      setTopicModalMode('edit');
-                      setIsTopicModalOpen(true);
-                    }}
-                  />
+                }
+                showSearch={false}
+                onRowClick={(topic) => {
+                  setSelectedTopic(topic);
+                  setTopicModalMode('edit');
+                  setIsTopicModalOpen(true);
+                }}
+              />
                 </div>
               )}
             </div>

@@ -275,7 +275,7 @@ export function QuestionPreview({
                 const isActive = currentHintLevel === levelNum;
                 
                 return (
-                  <button
+          <button
                     key={levelNum}
                     onClick={() => {
                       if (isUnlocked) {
@@ -292,12 +292,12 @@ export function QuestionPreview({
                     }`}
                   >
                     Hint {levelNum}
-                  </button>
+          </button>
                 );
               })}
             </div>
-            
-            {/* Hint Display */}
+        
+        {/* Hint Display */}
             {currentHintLevel && getCurrentHint() && (
               <div className={`p-3 rounded-lg border ${
                 currentHintLevel === 1 ? 'bg-yellow-50 border-yellow-200' :

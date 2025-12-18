@@ -112,27 +112,35 @@ export function MultiSelectDropdown({
                     type="button"
                     onClick={() => toggleOption(option.id)}
                     className={`
-                      w-full text-left p-3 rounded-lg transition-colors mb-1
+                      w-full text-left p-3 rounded-lg transition-colors mb-1 group
                       ${isSelected
-                        ? 'bg-indigo-50 border-2 border-indigo-600'
-                        : 'hover:bg-gray-50 border-2 border-transparent'
+                        ? 'bg-indigo-600 dark:bg-indigo-700 border-2 border-indigo-700 dark:border-indigo-800'
+                        : 'bg-white dark:bg-gray-800 border-2 border-transparent hover:bg-indigo-600 dark:hover:bg-indigo-700'
                       }
                     `}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3 flex-1">
                         <div className={`
-                          w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0
+                          w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 transition-colors
                           ${isSelected
-                            ? 'border-indigo-600 bg-indigo-600'
-                            : 'border-gray-300'
+                            ? 'border-white bg-white'
+                            : 'border-gray-300 dark:border-gray-600 group-hover:border-white group-hover:bg-white'
                           }
                         `}>
-                          {isSelected && <Check className="w-3 h-3 text-white" />}
+                          {isSelected && <Check className="w-3 h-3 text-indigo-600 dark:text-indigo-700" />}
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2">
-                            <span className="font-medium text-gray-900">{option.label}</span>
+                            <span className={`
+                              font-medium transition-colors
+                              ${isSelected 
+                                ? 'text-white' 
+                                : 'text-gray-900 dark:text-gray-100 group-hover:text-white'
+                              }
+                            `}>
+                              {option.label}
+                            </span>
                             {option.difficulty && (
                               <Badge variant={
                                 option.difficulty === 'Easy' ? 'success' :
@@ -144,7 +152,13 @@ export function MultiSelectDropdown({
                             )}
                           </div>
                           {option.count !== undefined && (
-                            <p className="text-xs text-gray-600 mt-0.5">
+                            <p className={`
+                              text-xs mt-0.5 transition-colors
+                              ${isSelected 
+                                ? 'text-indigo-100' 
+                                : 'text-gray-600 dark:text-gray-400 group-hover:text-indigo-100'
+                              }
+                            `}>
                               {option.count} questions available
                             </p>
                           )}

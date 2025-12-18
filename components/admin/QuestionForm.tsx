@@ -704,7 +704,7 @@ export function QuestionForm({
                       </div>
                       
                       {/* Hint 1 */}
-                      <div>
+                    <div>
                         <label htmlFor="hint1" className="block text-sm font-medium text-gray-700 mb-1">
                           Hint 1 (Broad Guidance) <span className="text-gray-400 font-normal">- First level, least specific</span>
                         </label>
@@ -755,16 +755,16 @@ export function QuestionForm({
                       <div className="pt-2 border-t border-gray-200">
                         <label htmlFor="hint" className="block text-sm font-medium text-gray-500 mb-1">
                           Legacy Hint <span className="text-xs text-gray-400">(Optional - for backward compatibility)</span>
-                        </label>
-                        <input
-                          type="text"
-                          id="hint"
-                          name="hint"
-                          value={formData.hint}
-                          onChange={handleChange}
+                      </label>
+                      <input
+                        type="text"
+                        id="hint"
+                        name="hint"
+                        value={formData.hint}
+                        onChange={handleChange}
                           placeholder="Legacy single hint field..."
-                          className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                        />
+                        className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      />
                       </div>
                     </div>
                     

@@ -200,15 +200,15 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     if (level === 3 && (!hasHintLevel(1) || !hasHintLevel(2))) return;
     
     setHintLevel(level);
-    setHintUsage(prev => {
-      const next = new Map(prev);
+      setHintUsage(prev => {
+        const next = new Map(prev);
       const currentMaxLevel = prev.get(currentQuestion.id) || 0;
       // Track the maximum hint level used
       if (level > currentMaxLevel) {
         next.set(currentQuestion.id, level);
       }
-      return next;
-    });
+        return next;
+      });
   }
 
   async function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D' | 'E') {
@@ -282,7 +282,7 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
 
         // Auto-show solution after answering (if not already shown)
         if (!showSolution) {
-          setShowSolution(true);
+        setShowSolution(true);
         }
       } catch (error) {
         console.error('Error recording answer:', error);
@@ -337,7 +337,7 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     
     // Track when solution is viewed (only on first view)
     if (newShowSolution && !solutionViewed.has(currentQuestion.id)) {
-      setSolutionViewed(prev => new Set(prev).add(currentQuestion.id));
+    setSolutionViewed(prev => new Set(prev).add(currentQuestion.id));
       
       // If viewing solution before answering, record it
       if (!isAnswered) {
@@ -588,14 +588,14 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         {/* Solution Button - Available anytime in practice mode */}
         {(currentQuestion.explanation || currentQuestion.solution) && (
           <div className="flex items-center gap-3">
-            <Button
+          <Button
               variant={showSolution ? "outline" : "tertiary"}
-              size="md"
-              leftIcon={<BookOpen className="w-5 h-5" />}
+            size="md"
+            leftIcon={<BookOpen className="w-5 h-5" />}
               onClick={handleToggleSolution}
-            >
+          >
               {showSolution ? 'Hide Solution' : 'Show Solution'}
-            </Button>
+          </Button>
             {solutionViewed.has(currentQuestion.id) && !isAnswered && (
               <Badge variant="warning" size="sm">
                 ⚠️ Viewed before answering
@@ -624,12 +624,12 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold text-gray-900">
-                    {isAnswered && selectedAnswer === currentQuestion.correct_answer 
-                      ? '✅ Correct!' 
+                  {isAnswered && selectedAnswer === currentQuestion.correct_answer 
+                    ? '✅ Correct!' 
                       : solutionViewed.has(currentQuestion.id) && !isAnswered
                       ? '📖 Solution (Viewed Before Answering)'
-                      : '📖 Step-by-Step Solution'}
-                  </p>
+                    : '📖 Step-by-Step Solution'}
+                </p>
                   <button
                     onClick={handleToggleSolution}
                     className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -653,8 +653,8 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
                   <div className="mb-3">
                     <p className="text-sm font-semibold text-gray-700 mb-1">Explanation:</p>
                     <div className="text-gray-700 whitespace-pre-line leading-relaxed">
-                      {currentQuestion.explanation}
-                    </div>
+                  {currentQuestion.explanation}
+                </div>
                   </div>
                 )}
 
@@ -740,14 +740,14 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
               if (questionId) {
                 const prevHintLevel = hintUsage.get(questionId);
                 setHintLevel(prevHintLevel || null);
-              const prevSolutionViewed = solutionViewed.has(questionId);
+                const prevSolutionViewed = solutionViewed.has(questionId);
               const prevQuestion = questions[index];
               // Restore solution view state if it was previously viewed
               if (prevSolutionViewed && (prevQuestion?.explanation || prevQuestion?.solution)) {
-                setShowSolution(true);
+                  setShowSolution(true);
               } else {
                 setShowSolution(false);
-              }
+                }
               }
               setStartTime(Date.now());
             }}

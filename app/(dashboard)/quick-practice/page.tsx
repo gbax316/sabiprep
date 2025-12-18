@@ -158,12 +158,12 @@ export default function QuickPracticePage() {
             <div className="p-6 text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-violet-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-cyan-500/50">
                 <Zap className="w-10 h-10 text-white" />
-              </div>
+            </div>
               <h1 className="font-display text-3xl font-black text-white mb-2">Quick Practice</h1>
               <p className="text-slate-300 text-lg">
-                Jump into a random practice session instantly
-              </p>
-            </div>
+              Jump into a random practice session instantly
+            </p>
+          </div>
           </MagicCard>
         </motion.div>
 
@@ -222,8 +222,8 @@ export default function QuickPracticePage() {
         >
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-display text-xl font-bold text-white">
-              Number of Questions
-            </h2>
+            Number of Questions
+          </h2>
             {selectedSubjectData && (
               <MagicBadge variant={canStart ? 'success' : 'warning'} size="sm">
                 {availableQuestions} available
@@ -237,7 +237,7 @@ export default function QuickPracticePage() {
               
               return (
                 <motion.button
-                  key={count}
+                key={count}
                   onClick={() => {
                     if (isAvailable) {
                       setQuestionCount(count);
@@ -253,9 +253,9 @@ export default function QuickPracticePage() {
                       : isAvailable
                       ? 'bg-slate-900/50 border-2 border-slate-700 text-slate-300 hover:border-cyan-500/50 hover:bg-slate-800/50'
                       : 'bg-slate-900/30 border-2 border-slate-800 text-slate-600 cursor-not-allowed opacity-50'
-                  }`}
-                >
-                  {count}
+                }`}
+              >
+                {count}
                   {isSelected && isAvailable && (
                     <motion.div
                       initial={{ scale: 0 }}
@@ -316,22 +316,22 @@ export default function QuickPracticePage() {
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-xl flex items-center justify-center flex-shrink-0 border border-purple-500/30">
                   <Clock className="w-5 h-5 text-purple-400" />
-                </div>
+              </div>
                 <div className="flex-1">
                   <p className="font-medium text-white mb-1">Learn at Your Pace</p>
                   <p className="text-sm text-slate-400">No time limits - take as long as you need to understand each concept</p>
-                </div>
+            </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-cyan-500/20 to-violet-500/20 rounded-xl flex items-center justify-center flex-shrink-0 border border-cyan-500/30">
                   <TrendingUp className="w-5 h-5 text-cyan-400" />
-                </div>
+            </div>
                 <div className="flex-1">
                   <p className="font-medium text-white mb-1">Track Your Progress</p>
                   <p className="text-sm text-slate-400">Your performance is automatically saved and tracked</p>
-                </div>
               </div>
             </div>
+          </div>
           </MagicCard>
         </motion.div>
 
@@ -342,12 +342,12 @@ export default function QuickPracticePage() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <MagicButton
-            variant="primary"
+          variant="primary"
             size="lg"
-            onClick={startQuickPractice}
+          onClick={startQuickPractice}
             disabled={!canStart || starting}
             className="w-full shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
+        >
             <Play className="w-6 h-6" />
             {starting ? 'Starting...' : canStart ? `Start ${questionCount} Question${questionCount > 1 ? 's' : ''}` : 'Not Enough Questions'}
           </MagicButton>

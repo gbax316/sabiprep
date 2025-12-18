@@ -7,7 +7,7 @@ import { Button } from '@/components/common/Button';
 import { useAuth } from '@/lib/auth-context';
 import { getSubject, getTopics } from '@/lib/api';
 import type { Subject, Topic } from '@/types/database';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {
   ArrowLeft,
   BookOpen,
@@ -27,12 +27,17 @@ export default function PracticeTopicSelectPage({
   const { subjectId } = use(params);
   const { userId } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [loading, setLoading] = useState(true);
   const [subject, setSubject] = useState<Subject | null>(null);
   const [topics, setTopics] = useState<Topic[]>([]);
   const [selectedMode, setSelectedMode] = useState<TopicSelectionMode>('mix'); // Default to mix
   const [selectedTopicIds, setSelectedTopicIds] = useState<Set<string>>(new Set());
-  const [questionCount, setQuestionCount] = useState(20);
+  // Read question count from URL params if available, otherwise default to 20
+  const [questionCount, setQuestionCount] = useState(() => {
+    const countParam = searchParams?.get('count');
+    return countParam ? parseInt(countParam, 10) : 20;
+  });
 
   useEffect(() => {
     loadData();

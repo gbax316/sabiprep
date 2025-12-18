@@ -1745,21 +1745,60 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
         <Card variant="outlined" className="bg-gray-50">
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div>
-              <p className="text-gray-600">Subject</p>
-              <p className="font-semibold text-gray-900">{subject?.name}</p>
+              <p className="text-gray-600 mb-1">Subject</p>
+              <p className="font-semibold text-gray-900">{subject?.name || '-'}</p>
             </div>
             <div>
-              <p className="text-gray-600">Topic</p>
-              <p className="font-semibold text-gray-900">{topic?.name}</p>
+              <p className="text-gray-600 mb-1">Topic{topics.length > 1 ? 's' : ''}</p>
+              {topics.length === 0 ? (
+                <p className="font-semibold text-gray-900">{topic?.name || '-'}</p>
+              ) : topics.length === 1 ? (
+                <p className="font-semibold text-gray-900">{topics[0].name}</p>
+              ) : topics.length <= 3 ? (
+                <div className="flex flex-wrap gap-1">
+                  {topics.map((t, idx) => (
+                    <span key={t.id} className="font-semibold text-gray-900">
+                      {t.name}{idx < topics.length - 1 ? ',' : ''}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <div>
+                  <p className="font-semibold text-gray-900 mb-1">
+                    {topics.length} topics covered
+                  </p>
+                  <details className="group">
+                    <summary className="cursor-pointer text-xs text-indigo-600 hover:text-indigo-700 font-medium">
+                      View all topics
+                    </summary>
+                    <div className="mt-2 pl-2 border-l-2 border-indigo-200 space-y-1">
+                      {topics.map((t) => (
+                        <p key={t.id} className="text-xs text-gray-700">
+                          • {t.name}
+                        </p>
+                      ))}
+                    </div>
+                  </details>
+                </div>
+              )}
             </div>
             <div>
-              <p className="text-gray-600">Mode</p>
+              <p className="text-gray-600 mb-1">Mode</p>
               <p className="font-semibold text-gray-900 capitalize">{session.mode}</p>
             </div>
             <div>
-              <p className="text-gray-600">Completed</p>
+              <p className="text-gray-600 mb-1">Completed</p>
               <p className="font-semibold text-gray-900">
-                {new Date(session.completed_at || '').toLocaleString()}
+                {session.completed_at 
+                  ? new Date(session.completed_at).toLocaleString('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric',
+                      hour: 'numeric',
+                      minute: '2-digit',
+                      hour12: true
+                    })
+                  : '-'}
               </p>
             </div>
           </div>

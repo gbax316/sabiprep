@@ -71,7 +71,7 @@ export default function PracticeModePage() {
   };
 
   const handleBackClick = () => {
-    router.push('/home');
+      router.push('/home');
   };
 
   if (loading && subjects.length === 0) {
@@ -118,7 +118,7 @@ export default function PracticeModePage() {
 
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Subjects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSubjects.map((subject) => {
               const subjectProgress = getSubjectProgress(subject.id);
 
@@ -193,7 +193,7 @@ export default function PracticeModePage() {
                 </div>
               );
             })}
-        </div>
+          </div>
 
         {/* Empty State for Subjects */}
         {filteredSubjects.length === 0 && (
