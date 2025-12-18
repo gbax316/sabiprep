@@ -1100,23 +1100,32 @@ export async function getNotifications(
     const { data, error } = await query;
 
     if (error) {
+      // Safely extract error properties
+      const errorMessage = error?.message || 'Unknown error';
+      const errorCode = error?.code || 'UNKNOWN';
+      const errorDetails = error?.details || null;
+      const errorHint = error?.hint || null;
+      
       // Log detailed error information
       console.error('Error fetching notifications:', {
-        message: error.message,
-        details: error.details,
-        hint: error.hint,
-        code: error.code,
+        message: errorMessage,
+        details: errorDetails,
+        hint: errorHint,
+        code: errorCode,
         userId,
         hasSession: !!session,
+        rawError: error,
       });
       
       // If it's a permissions/RLS error, return empty array instead of throwing
-      if (error.code === 'PGRST116' || error.message?.includes('permission') || error.message?.includes('policy')) {
+      if (errorCode === 'PGRST116' || errorMessage?.includes('permission') || errorMessage?.includes('policy')) {
         console.warn('RLS policy blocked notification access, returning empty array');
         return [];
       }
       
-      throw error;
+      // For other errors, return empty array instead of throwing to prevent UI crashes
+      console.warn('Non-permission error in getNotifications, returning empty array');
+      return [];
     }
     
     return (data || []).map((n: any) => ({
@@ -1149,21 +1158,30 @@ export async function getUnreadNotificationCount(userId: string): Promise<number
       .eq('read', false);
 
     if (error) {
+      // Safely extract error properties
+      const errorMessage = error?.message || 'Unknown error';
+      const errorCode = error?.code || 'UNKNOWN';
+      const errorDetails = error?.details || null;
+      const errorHint = error?.hint || null;
+      
       console.error('Error fetching unread notification count:', {
-        message: error.message,
-        details: error.details,
-        hint: error.hint,
-        code: error.code,
+        message: errorMessage,
+        details: errorDetails,
+        hint: errorHint,
+        code: errorCode,
         userId,
+        rawError: error,
       });
       
       // If it's a permissions/RLS error, return 0 instead of throwing
-      if (error.code === 'PGRST116' || error.message?.includes('permission') || error.message?.includes('policy')) {
+      if (errorCode === 'PGRST116' || errorMessage?.includes('permission') || errorMessage?.includes('policy')) {
         console.warn('RLS policy blocked unread count access, returning 0');
         return 0;
       }
       
-      throw error;
+      // For other errors, return 0 instead of throwing to prevent UI crashes
+      console.warn('Non-permission error in getUnreadNotificationCount, returning 0');
+      return 0;
     }
     
     return count || 0;
