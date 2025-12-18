@@ -300,7 +300,7 @@ export async function getQuestionsWithDistribution(
       
       if (error) {
         console.error(`Error fetching questions for topic ${topicId}:`, error);
-        return { topicId, questions: [], requested: count };
+        return { topicId, questions: [], requested: count, received: 0 };
       }
       
       return { 
