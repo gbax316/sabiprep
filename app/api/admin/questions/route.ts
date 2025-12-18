@@ -19,8 +19,8 @@ export async function GET(request: NextRequest) {
       const { searchParams } = new URL(req.url);
       
       // Parse query parameters
-      const page = parseInt(searchParams.get('page') || '1', 10);
-      const limit = parseInt(searchParams.get('limit') || '20', 10);
+      const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10));
+      const limit = Math.min(200, Math.max(1, parseInt(searchParams.get('limit') || '25', 10)));
       const search = searchParams.get('search') || '';
       const subjectId = searchParams.get('subjectId');
       const topicId = searchParams.get('topicId');

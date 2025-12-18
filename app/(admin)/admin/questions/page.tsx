@@ -3,8 +3,24 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { DataTable, type ColumnDef, type PaginationInfo } from '@/components/admin';
+import { DataTable, type ColumnDef, type PaginationInfo, AdminHeader, AdminPrimaryButton, AdminSecondaryButton } from '@/components/admin';
 import { Modal } from '@/components/common';
+import {
+  Plus,
+  Search,
+  Filter,
+  Eye,
+  Pencil,
+  Trash2,
+  BookOpen,
+  Image,
+  FileText,
+  RefreshCcw,
+  X,
+  ChevronDown,
+  Archive,
+  CheckCircle,
+} from 'lucide-react';
 
 /**
  * Question with relations type
@@ -61,7 +77,6 @@ interface Topic {
 const EXAM_TYPES = ['WAEC', 'JAMB', 'NECO', 'GCE'];
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard'];
 const STATUSES = ['draft', 'published', 'archived'];
-const PAGE_SIZES = [10, 25, 50, 100];
 const CURRENT_YEAR = new Date().getFullYear();
 const YEARS = Array.from({ length: CURRENT_YEAR - 1990 + 1 }, (_, i) => CURRENT_YEAR - i);
 
@@ -71,13 +86,13 @@ const YEARS = Array.from({ length: CURRENT_YEAR - 1990 + 1 }, (_, i) => CURRENT_
 function getDifficultyBadge(difficulty: string): string {
   switch (difficulty) {
     case 'Easy':
-      return 'bg-green-100 text-green-700';
+      return 'bg-emerald-600 dark:bg-emerald-700 text-white';
     case 'Medium':
-      return 'bg-yellow-100 text-yellow-700';
+      return 'bg-amber-600 dark:bg-amber-700 text-white';
     case 'Hard':
-      return 'bg-red-100 text-red-700';
+      return 'bg-red-600 dark:bg-red-700 text-white';
     default:
-      return 'bg-gray-100 text-gray-700';
+      return 'bg-gray-600 dark:bg-gray-700 text-white';
   }
 }
 
@@ -87,13 +102,13 @@ function getDifficultyBadge(difficulty: string): string {
 function getStatusBadge(status: string): string {
   switch (status) {
     case 'draft':
-      return 'bg-gray-100 text-gray-700';
+      return 'bg-gray-600 dark:bg-gray-700 text-white';
     case 'published':
-      return 'bg-green-100 text-green-700';
+      return 'bg-emerald-600 dark:bg-emerald-700 text-white';
     case 'archived':
-      return 'bg-yellow-100 text-yellow-700';
+      return 'bg-amber-600 dark:bg-amber-700 text-white';
     default:
-      return 'bg-gray-100 text-gray-700';
+      return 'bg-gray-600 dark:bg-gray-700 text-white';
   }
 }
 
@@ -103,15 +118,15 @@ function getStatusBadge(status: string): string {
 function getExamTypeBadge(examType: string): string {
   switch (examType) {
     case 'WAEC':
-      return 'bg-blue-100 text-blue-700';
+      return 'bg-blue-600 dark:bg-blue-700 text-white';
     case 'JAMB':
-      return 'bg-purple-100 text-purple-700';
+      return 'bg-purple-600 dark:bg-purple-700 text-white';
     case 'NECO':
-      return 'bg-orange-100 text-orange-700';
+      return 'bg-orange-600 dark:bg-orange-700 text-white';
     case 'GCE':
-      return 'bg-teal-100 text-teal-700';
+      return 'bg-teal-600 dark:bg-teal-700 text-white';
     default:
-      return 'bg-gray-100 text-gray-700';
+      return 'bg-gray-600 dark:bg-gray-700 text-white';
   }
 }
 
@@ -341,30 +356,26 @@ export default function QuestionsPage() {
         <div className="max-w-md">
           <div className="flex items-start gap-2">
             <div className="flex-1">
-              <p className="text-sm font-medium text-gray-900 line-clamp-2">
+              <p className="text-sm font-semibold text-gray-900 dark:text-white line-clamp-2">
                 {truncateText(item.question_text, 100)}
               </p>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                 {item.subject?.name} / {item.topic?.name}
               </p>
             </div>
             <div className="flex gap-1 flex-shrink-0">
               {item.passage && (
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded bg-blue-100 text-blue-600" title="Has passage">
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-blue-600 dark:bg-blue-700 text-white shadow-sm" title="Has passage">
+                  <FileText className="w-3.5 h-3.5" />
                 </span>
               )}
               {item.question_image_url && (
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded bg-purple-100 text-purple-600" title="Has image">
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-purple-600 dark:bg-purple-700 text-white shadow-sm" title="Has image">
+                  <Image className="w-3.5 h-3.5" />
                 </span>
               )}
               {item.passage_id && (
-                <span className="inline-flex items-center justify-center px-1.5 h-6 rounded bg-indigo-100 text-indigo-600 text-xs font-medium" title={`Passage ID: ${item.passage_id}`}>
+                <span className="inline-flex items-center justify-center px-1.5 h-6 rounded-lg bg-indigo-600 dark:bg-indigo-700 text-white text-xs font-semibold shadow-sm" title={`Passage ID: ${item.passage_id}`}>
                   {item.passage_id.substring(0, 3)}
                 </span>
               )}
@@ -379,12 +390,12 @@ export default function QuestionsPage() {
       render: (item) => (
         <div className="flex flex-col gap-1">
           {item.exam_type && (
-            <span className={`inline-flex px-2 py-0.5 text-xs font-medium rounded-full ${getExamTypeBadge(item.exam_type)}`}>
+            <span className={`inline-flex px-3 py-1.5 text-xs font-semibold rounded-lg shadow-sm ${getExamTypeBadge(item.exam_type)}`}>
               {item.exam_type}
             </span>
           )}
           {item.exam_year && (
-            <span className="text-xs text-gray-500">{item.exam_year}</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{item.exam_year}</span>
           )}
         </div>
       ),
@@ -394,11 +405,11 @@ export default function QuestionsPage() {
       header: 'Difficulty',
       render: (item) => (
         item.difficulty ? (
-          <span className={`inline-flex px-2 py-0.5 text-xs font-medium rounded-full ${getDifficultyBadge(item.difficulty)}`}>
+          <span className={`inline-flex px-3 py-1.5 text-xs font-semibold rounded-lg shadow-sm ${getDifficultyBadge(item.difficulty)}`}>
             {item.difficulty}
           </span>
         ) : (
-          <span className="text-gray-400">-</span>
+          <span className="text-gray-400 dark:text-gray-500">-</span>
         )
       ),
     },
@@ -406,7 +417,8 @@ export default function QuestionsPage() {
       key: 'status',
       header: 'Status',
       render: (item) => (
-        <span className={`inline-flex px-2 py-0.5 text-xs font-medium rounded-full capitalize ${getStatusBadge(item.status)}`}>
+        <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg capitalize shadow-sm ${getStatusBadge(item.status)}`}>
+          <span className="w-2 h-2 rounded-full bg-white" />
           {item.status}
         </span>
       ),
@@ -415,7 +427,7 @@ export default function QuestionsPage() {
       key: 'creator',
       header: 'Created By',
       render: (item) => (
-        <span className="text-sm text-gray-600">
+        <span className="text-sm text-gray-600 dark:text-gray-400">
           {item.creator?.full_name || '-'}
         </span>
       ),
@@ -426,324 +438,353 @@ export default function QuestionsPage() {
       sortable: true,
       accessor: (item) => item.created_at,
       render: (item) => (
-        <span className="text-sm text-gray-600">
+        <span className="text-sm text-gray-600 dark:text-gray-400">
           {new Date(item.created_at).toLocaleDateString()}
         </span>
       ),
     },
   ];
   
+  // Check if filters are active
+  const hasActiveFilters = filters.search || filters.subjectId || filters.topicId || 
+    filters.examType || filters.year || filters.difficulty || filters.status || 
+    filters.hasPassage || filters.hasImage;
+
+  // Clear all filters
+  const clearAllFilters = () => {
+    setFilters({
+      search: '',
+      subjectId: '',
+      topicId: '',
+      examType: '',
+      year: '',
+      difficulty: '',
+      status: '',
+      hasPassage: '',
+      hasImage: '',
+    });
+    setPagination(prev => ({ ...prev, page: 1 }));
+  };
+
   return (
     <div className="space-y-6">
       {/* Page Header */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <button
-            onClick={() => router.back()}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-            aria-label="Go back"
-            title="Go back"
-          >
-            <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <div>
-            <h1 className="text-2xl font-bold text-gray-900">Questions</h1>
-            <p className="text-gray-600">Manage the question bank</p>
+      <AdminHeader
+        title="Questions"
+        subtitle={`Manage your question bank (${pagination.total.toLocaleString()} total)`}
+        breadcrumbs={[
+          { label: 'Dashboard', href: '/admin/dashboard' },
+          { label: 'Questions' },
+        ]}
+        actions={
+          <div className="flex items-center gap-2">
+            <AdminSecondaryButton href="/admin/questions/passages">
+              <BookOpen className="w-4 h-4" />
+              Passages
+            </AdminSecondaryButton>
+            <AdminSecondaryButton href="/admin/import">
+              Import CSV
+            </AdminSecondaryButton>
+            <AdminPrimaryButton href="/admin/questions/new">
+              <Plus className="w-4 h-4" />
+              Add Question
+            </AdminPrimaryButton>
           </div>
-        </div>
-        <div className="flex gap-3">
-          <Link
-            href="/admin/questions/passages"
-            className="px-4 py-2 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 flex items-center gap-2"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-            Passages
-          </Link>
-          <Link
-            href="/admin/content"
-            className="px-4 py-2 text-sm border border-gray-200 rounded-lg hover:bg-gray-50"
-          >
-            Import CSV
-          </Link>
-          <Link
-            href="/admin/questions/new"
-            className="px-4 py-2 text-sm bg-emerald-600 text-white rounded-lg hover:bg-emerald-700"
-          >
-            Add Question
-          </Link>
-        </div>
-      </div>
+        }
+      />
       
-      {/* Filters */}
-      <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {/* Search */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Search
-            </label>
-            <input
-              type="text"
-              value={filters.search}
-              onChange={(e) => handleFilterChange('search', e.target.value)}
-              placeholder="Search questions..."
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            />
+      {/* Filters Card */}
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+        <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-blue-600 dark:bg-blue-700 flex items-center justify-center shadow-sm">
+                <Filter className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Filters</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Refine your question search</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              {hasActiveFilters && (
+                <button
+                  onClick={clearAllFilters}
+                  className="flex items-center gap-1 px-3 py-1.5 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors shadow-sm"
+                >
+                  <X className="w-4 h-4" />
+                  Clear All
+                </button>
+              )}
+              <button
+                onClick={fetchQuestions}
+                className="flex items-center gap-1 px-3 py-1.5 text-sm bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg font-medium transition-colors shadow-sm"
+              >
+                <RefreshCcw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+                Refresh
+              </button>
+            </div>
           </div>
-          
-          {/* Subject */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Subject
-            </label>
-            <select
-              value={filters.subjectId}
-              onChange={(e) => handleFilterChange('subjectId', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">All Subjects</option>
-              {subjects.map(subject => (
-                <option key={subject.id} value={subject.id}>
-                  {subject.name}
+        </div>
+
+        <div className="p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {/* Search */}
+            <div className="lg:col-span-2 xl:col-span-1">
+              <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                Search
+              </label>
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <input
+                  type="text"
+                  value={filters.search}
+                  onChange={(e) => handleFilterChange('search', e.target.value)}
+                  placeholder="Search questions..."
+                  className="w-full pl-10 pr-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+                />
+              </div>
+            </div>
+            
+            {/* Subject */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                Subject
+              </label>
+              <select
+                value={filters.subjectId}
+                onChange={(e) => handleFilterChange('subjectId', e.target.value)}
+                className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+              >
+                <option value="">All Subjects</option>
+                {subjects.map(subject => (
+                  <option key={subject.id} value={subject.id}>
+                    {subject.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            {/* Topic */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                Topic
+              </label>
+              <select
+                value={filters.topicId}
+                onChange={(e) => handleFilterChange('topicId', e.target.value)}
+                disabled={!filters.subjectId || isLoadingTopics}
+                className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all disabled:bg-gray-50 dark:disabled:bg-gray-900 disabled:text-gray-400"
+              >
+                <option value="">
+                  {isLoadingTopics ? 'Loading...' : 'All Topics'}
                 </option>
-              ))}
-            </select>
-          </div>
-          
-          {/* Topic */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Topic
-            </label>
-            <select
-              value={filters.topicId}
-              onChange={(e) => handleFilterChange('topicId', e.target.value)}
-              disabled={!filters.subjectId || isLoadingTopics}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50"
-            >
-              <option value="">
-                {isLoadingTopics ? 'Loading...' : 'All Topics'}
-              </option>
-              {topics.map(topic => (
-                <option key={topic.id} value={topic.id}>
-                  {topic.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          {/* Exam Type */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Exam Type
-            </label>
-            <select
-              value={filters.examType}
-              onChange={(e) => handleFilterChange('examType', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">All Exams</option>
-              {EXAM_TYPES.map(type => (
-                <option key={type} value={type}>
-                  {type}
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          {/* Year */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Year
-            </label>
-            <select
-              value={filters.year}
-              onChange={(e) => handleFilterChange('year', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">All Years</option>
-              {YEARS.map(year => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          {/* Difficulty */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Difficulty
-            </label>
-            <select
-              value={filters.difficulty}
-              onChange={(e) => handleFilterChange('difficulty', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">All Difficulties</option>
-              {DIFFICULTIES.map(diff => (
-                <option key={diff} value={diff}>
-                  {diff}
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          {/* Status */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Status
-            </label>
-            <select
-              value={filters.status}
-              onChange={(e) => handleFilterChange('status', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">All Statuses</option>
-              {STATUSES.map(status => (
-                <option key={status} value={status} className="capitalize">
-                  {status.charAt(0).toUpperCase() + status.slice(1)}
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          {/* Page Size */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Per Page
-            </label>
-            <select
-              value={pagination.limit}
-              onChange={(e) => handlePageSizeChange(Number(e.target.value))}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
-              {PAGE_SIZES.map(size => (
-                <option key={size} value={size}>
-                  {size} per page
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          {/* Has Passage Filter */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Content Type
-            </label>
-            <select
-              value={filters.hasPassage}
-              onChange={(e) => handleFilterChange('hasPassage', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">All Questions</option>
-              <option value="true">With Passage</option>
-              <option value="false">Without Passage</option>
-            </select>
-          </div>
-          
-          {/* Has Image Filter */}
-          <div>
-            <label className="block text-xs font-medium text-gray-600 mb-1">
-              Media
-            </label>
-            <select
-              value={filters.hasImage}
-              onChange={(e) => handleFilterChange('hasImage', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">All Questions</option>
-              <option value="true">With Image</option>
-              <option value="false">Without Image</option>
-            </select>
+                {topics.map(topic => (
+                  <option key={topic.id} value={topic.id}>
+                    {topic.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            {/* Exam Type */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                Exam Type
+              </label>
+              <select
+                value={filters.examType}
+                onChange={(e) => handleFilterChange('examType', e.target.value)}
+                className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+              >
+                <option value="">All Exams</option>
+                {EXAM_TYPES.map(type => (
+                  <option key={type} value={type}>
+                    {type}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            {/* Year */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                Year
+              </label>
+              <select
+                value={filters.year}
+                onChange={(e) => handleFilterChange('year', e.target.value)}
+                className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+              >
+                <option value="">All Years</option>
+                {YEARS.map(year => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            {/* Difficulty */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                Difficulty
+              </label>
+              <select
+                value={filters.difficulty}
+                onChange={(e) => handleFilterChange('difficulty', e.target.value)}
+                className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+              >
+                <option value="">All Difficulties</option>
+                {DIFFICULTIES.map(diff => (
+                  <option key={diff} value={diff}>
+                    {diff}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            {/* Status */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                Status
+              </label>
+              <select
+                value={filters.status}
+                onChange={(e) => handleFilterChange('status', e.target.value)}
+                className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+              >
+                <option value="">All Statuses</option>
+                {STATUSES.map(status => (
+                  <option key={status} value={status} className="capitalize">
+                    {status.charAt(0).toUpperCase() + status.slice(1)}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            {/* Has Passage Filter */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                Content Type
+              </label>
+              <select
+                value={filters.hasPassage}
+                onChange={(e) => handleFilterChange('hasPassage', e.target.value)}
+                className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+              >
+                <option value="">All Questions</option>
+                <option value="true">With Passage</option>
+                <option value="false">Without Passage</option>
+              </select>
+            </div>
+            
+            {/* Has Image Filter */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                Media
+              </label>
+              <select
+                value={filters.hasImage}
+                onChange={(e) => handleFilterChange('hasImage', e.target.value)}
+                className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+              >
+                <option value="">All Questions</option>
+                <option value="true">With Image</option>
+                <option value="false">Without Image</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
       
       {/* Bulk Actions Bar */}
       {selectedQuestions.length > 0 && (
-        <div className="bg-emerald-50 p-4 rounded-xl border border-emerald-200 flex items-center justify-between">
-          <span className="text-sm text-emerald-700">
-            {selectedQuestions.length} question{selectedQuestions.length !== 1 ? 's' : ''} selected
-          </span>
-          <div className="flex gap-2">
+        <div className="bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-900/20 dark:to-green-900/20 p-4 rounded-xl border border-emerald-200 dark:border-emerald-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-emerald-600 dark:bg-emerald-700 flex items-center justify-center shadow-sm">
+              <CheckCircle className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">
+              {selectedQuestions.length} question{selectedQuestions.length !== 1 ? 's' : ''} selected
+            </span>
+          </div>
+            <div className="flex flex-wrap gap-2">
             <button
               onClick={() => handleBulkAction('publish')}
               disabled={isBulkActionLoading}
-              className="px-3 py-1.5 text-sm bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-600 text-white rounded-lg disabled:opacity-50 font-medium transition-colors shadow-sm"
             >
-              Publish Selected
+              <CheckCircle className="w-4 h-4" />
+              Publish
             </button>
             <button
               onClick={() => handleBulkAction('archive')}
               disabled={isBulkActionLoading}
-              className="px-3 py-1.5 text-sm bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 text-sm bg-amber-600 hover:bg-amber-700 dark:bg-amber-700 dark:hover:bg-amber-600 text-white rounded-lg disabled:opacity-50 font-medium transition-colors shadow-sm"
             >
-              Archive Selected
+              <Archive className="w-4 h-4" />
+              Archive
             </button>
             <button
               onClick={() => handleBulkAction('delete')}
               disabled={isBulkActionLoading}
-              className="px-3 py-1.5 text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 text-sm bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600 text-white rounded-lg disabled:opacity-50 font-medium transition-colors shadow-sm"
             >
-              Delete Selected
+              <Trash2 className="w-4 h-4" />
+              Delete
             </button>
           </div>
         </div>
       )}
       
       {/* Questions Table */}
-      <DataTable
-        data={questions}
-        columns={columns}
-        isLoading={isLoading}
-        selectable
-        onSelectionChange={handleSelectionChange}
-        keyAccessor={(item) => item.id}
-        pagination={pagination}
-        onPageChange={handlePageChange}
-        emptyMessage="No questions found"
-        showSearch={false}
-        onRowClick={(item) => router.push(`/admin/questions/${item.id}`)}
-        rowActions={(item) => (
-          <div className="flex gap-2">
-            <Link
-              href={`/admin/questions/${item.id}`}
-              className="p-1.5 text-gray-400 hover:text-gray-600 rounded"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-            </Link>
-            <Link
-              href={`/admin/questions/${item.id}/edit`}
-              className="p-1.5 text-gray-400 hover:text-emerald-600 rounded"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-              </svg>
-            </Link>
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                handleDeleteClick(item);
-              }}
-              className="p-1.5 text-gray-400 hover:text-red-600 rounded"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-              </svg>
-            </button>
-          </div>
-        )}
-      />
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+        <DataTable
+          data={questions}
+          columns={columns}
+          isLoading={isLoading}
+          selectable
+          onSelectionChange={handleSelectionChange}
+          keyAccessor={(item) => item.id}
+          pagination={pagination}
+          onPageChange={handlePageChange}
+          onPageSizeChange={handlePageSizeChange}
+          emptyMessage="No questions found"
+          showSearch={false}
+          onRowClick={(item) => router.push(`/admin/questions/${item.id}`)}
+          rowActions={(item) => (
+            <div className="flex gap-1">
+              <Link
+                href={`/admin/questions/${item.id}`}
+                className="p-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg transition-all duration-200 shadow-sm"
+                onClick={(e) => e.stopPropagation()}
+                title="View"
+              >
+                <Eye className="w-4 h-4" />
+              </Link>
+              <Link
+                href={`/admin/questions/${item.id}/edit`}
+                className="p-2 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-600 text-white rounded-lg transition-all duration-200 shadow-sm"
+                onClick={(e) => e.stopPropagation()}
+                title="Edit"
+              >
+                <Pencil className="w-4 h-4" />
+              </Link>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleDeleteClick(item);
+                }}
+                className="p-2 bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600 text-white rounded-lg transition-all duration-200 shadow-sm"
+                title="Delete"
+              >
+                <Trash2 className="w-4 h-4" />
+              </button>
+            </div>
+          )}
+        />
+      </div>
       
       {/* Delete Confirmation Modal */}
       <Modal
@@ -754,24 +795,31 @@ export default function QuestionsPage() {
         }}
         title="Archive Question"
       >
-        <div className="space-y-4">
-          <p className="text-gray-600">
-            Are you sure you want to archive this question? The question will be moved to archived status and won&apos;t be shown to students.
-          </p>
+        <div className="space-y-6">
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl bg-red-600 dark:bg-red-700 flex items-center justify-center flex-shrink-0 shadow-sm">
+              <Archive className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <p className="text-gray-700 dark:text-gray-300">
+                Are you sure you want to archive this question? The question will be moved to archived status and won&apos;t be shown to students.
+              </p>
+            </div>
+          </div>
           {questionToDelete && (
-            <div className="p-3 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-700 line-clamp-2">
+            <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl border border-gray-200 dark:border-gray-600">
+              <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-3">
                 {truncateText(questionToDelete.question_text, 150)}
               </p>
             </div>
           )}
-          <div className="flex justify-end gap-3">
+          <div className="flex justify-end gap-3 pt-2">
             <button
               onClick={() => {
                 setShowDeleteModal(false);
                 setQuestionToDelete(null);
               }}
-              className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800"
+              className="px-4 py-2.5 text-sm font-medium bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg transition-colors shadow-sm"
               disabled={isDeleting}
             >
               Cancel
@@ -779,9 +827,19 @@ export default function QuestionsPage() {
             <button
               onClick={handleDeleteConfirm}
               disabled={isDeleting}
-              className="px-4 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600 text-white rounded-lg disabled:opacity-50 transition-colors shadow-sm"
             >
-              {isDeleting ? 'Archiving...' : 'Archive Question'}
+              {isDeleting ? (
+                <>
+                  <RefreshCcw className="w-4 h-4 animate-spin" />
+                  Archiving...
+                </>
+              ) : (
+                <>
+                  <Archive className="w-4 h-4" />
+                  Archive Question
+                </>
+              )}
             </button>
           </div>
         </div>

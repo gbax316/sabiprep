@@ -10,19 +10,19 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 }
 
 const variantStyles = {
-  primary: 'bg-indigo-100 text-indigo-600',
-  secondary: 'bg-purple-100 text-purple-600',
-  success: 'bg-emerald-100 text-emerald-600',
-  warning: 'bg-amber-100 text-amber-600',
-  error: 'bg-red-100 text-red-600',
-  info: 'bg-blue-100 text-blue-600',
-  neutral: 'bg-gray-100 text-gray-600',
+  primary: 'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300',
+  secondary: 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300',
+  success: 'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300',
+  warning: 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300',
+  error: 'bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300',
+  info: 'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
+  neutral: 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300',
 };
 
 const sizeStyles = {
   sm: 'text-xs px-2 py-0.5',
-  md: 'text-xs px-2 py-1',
-  lg: 'text-sm px-3 py-1',
+  md: 'text-xs px-2.5 py-1',
+  lg: 'text-sm px-3 py-1.5',
 };
 
 export function Badge({
@@ -35,7 +35,7 @@ export function Badge({
   return (
     <span
       className={cn(
-        'inline-flex items-center font-medium rounded-full',
+        'inline-flex items-center font-semibold rounded-lg',
         variantStyles[variant],
         sizeStyles[size],
         className
@@ -66,6 +66,16 @@ const iconBadgeIconSizeStyles = {
   lg: 'w-6 h-6',
 };
 
+const iconBadgeVariantStyles = {
+  primary: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400',
+  secondary: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400',
+  success: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400',
+  warning: 'bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400',
+  error: 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400',
+  info: 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400',
+  neutral: 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400',
+};
+
 export function IconBadge({
   icon,
   variant = 'primary',
@@ -76,7 +86,7 @@ export function IconBadge({
     <div
       className={cn(
         'flex items-center justify-center rounded-xl',
-        variantStyles[variant],
+        iconBadgeVariantStyles[variant],
         iconBadgeSizeStyles[size],
         className
       )}

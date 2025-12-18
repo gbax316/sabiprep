@@ -6,21 +6,34 @@ import { AdminHeader, AdminPrimaryButton, AdminSecondaryButton } from '@/compone
 import { DataTable, type ColumnDef, type PaginationInfo } from '@/components/admin/DataTable';
 import { UserFormModal } from '@/components/admin/UserFormModal';
 import type { User, UserRole, UserStatus } from '@/types/database';
+import {
+  Plus,
+  Search,
+  Filter,
+  Eye,
+  Pencil,
+  Key,
+  Ban,
+  CheckCircle,
+  Users,
+  RefreshCcw,
+  X,
+} from 'lucide-react';
 
 /**
  * Role badge component with colors
  */
 function RoleBadge({ role }: { role: UserRole }) {
-  const config: Record<UserRole, { bg: string; text: string; label: string }> = {
-    admin: { bg: 'bg-purple-100', text: 'text-purple-700', label: 'Admin' },
-    tutor: { bg: 'bg-blue-100', text: 'text-blue-700', label: 'Tutor' },
-    student: { bg: 'bg-gray-100', text: 'text-gray-700', label: 'Student' },
+  const config: Record<UserRole, { bg: string; text: string; label: string; icon: string }> = {
+    admin: { bg: 'bg-purple-600 dark:bg-purple-700', text: 'text-white', label: 'Admin', icon: '👑' },
+    tutor: { bg: 'bg-blue-600 dark:bg-blue-700', text: 'text-white', label: 'Tutor', icon: '📚' },
+    student: { bg: 'bg-gray-600 dark:bg-gray-700', text: 'text-white', label: 'Student', icon: '🎓' },
   };
   
   const { bg, text, label } = config[role] || config.student;
   
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${bg} ${text}`}>
+    <span className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold shadow-sm ${bg} ${text}`}>
       {label}
     </span>
   );
@@ -30,16 +43,17 @@ function RoleBadge({ role }: { role: UserRole }) {
  * Status badge component with colors
  */
 function StatusBadge({ status }: { status: UserStatus }) {
-  const config: Record<UserStatus, { bg: string; text: string; label: string }> = {
-    active: { bg: 'bg-green-100', text: 'text-green-700', label: 'Active' },
-    suspended: { bg: 'bg-red-100', text: 'text-red-700', label: 'Suspended' },
-    deleted: { bg: 'bg-yellow-100', text: 'text-yellow-700', label: 'Inactive' },
+  const config: Record<UserStatus, { bg: string; text: string; label: string; dot: string }> = {
+    active: { bg: 'bg-emerald-600 dark:bg-emerald-700', text: 'text-white', label: 'Active', dot: 'bg-white' },
+    suspended: { bg: 'bg-red-600 dark:bg-red-700', text: 'text-white', label: 'Suspended', dot: 'bg-white' },
+    deleted: { bg: 'bg-amber-600 dark:bg-amber-700', text: 'text-white', label: 'Inactive', dot: 'bg-white' },
   };
   
-  const { bg, text, label } = config[status] || config.active;
+  const { bg, text, label, dot } = config[status] || config.active;
   
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${bg} ${text}`}>
+    <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold shadow-sm ${bg} ${text}`}>
+      <span className={`w-2 h-2 rounded-full ${dot}`} />
       {label}
     </span>
   );
@@ -61,14 +75,14 @@ function UserAvatar({ user }: { user: User }) {
       <img
         src={user.avatar_url}
         alt={user.full_name}
-        className="w-8 h-8 rounded-full object-cover"
+        className="w-10 h-10 rounded-xl object-cover ring-2 ring-white dark:ring-gray-800 shadow-sm"
       />
     );
   }
   
   return (
-    <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center">
-      <span className="text-xs font-medium text-emerald-700">{initials}</span>
+    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center ring-2 ring-white dark:ring-gray-800 shadow-sm">
+      <span className="text-sm font-bold text-white">{initials}</span>
     </div>
   );
 }
@@ -100,33 +114,41 @@ function ConfirmModal({
   if (!isOpen) return null;
   
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="absolute inset-0 bg-black/50" onClick={onCancel} />
-      <div className="relative w-full max-w-sm mx-4 bg-white rounded-xl shadow-xl p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-sm text-gray-600 mb-6">{message}</p>
-        <div className="flex justify-end gap-3">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onCancel} />
+      <div className="relative w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-2xl">
+        <div className="p-6">
+          <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
+            isDestructive ? 'bg-red-100 dark:bg-red-900/30' : 'bg-emerald-100 dark:bg-emerald-900/30'
+          }`}>
+            {isDestructive ? (
+              <Ban className="w-6 h-6 text-red-600 dark:text-red-400" />
+            ) : (
+              <CheckCircle className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+            )}
+          </div>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{title}</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">{message}</p>
+        </div>
+        <div className="flex justify-end gap-3 px-6 py-4 bg-gray-50 dark:bg-gray-900/50 rounded-b-2xl border-t border-gray-200 dark:border-gray-700">
           <button
             onClick={onCancel}
             disabled={isLoading}
-            className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 disabled:opacity-50"
+            className="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 transition-colors"
           >
             {cancelLabel}
           </button>
           <button
             onClick={onConfirm}
             disabled={isLoading}
-            className={`px-4 py-2 text-sm font-medium text-white rounded-lg disabled:opacity-50 flex items-center gap-2 ${
+            className={`px-4 py-2.5 text-sm font-medium text-white rounded-lg disabled:opacity-50 flex items-center gap-2 transition-colors ${
               isDestructive
                 ? 'bg-red-600 hover:bg-red-700'
                 : 'bg-emerald-600 hover:bg-emerald-700'
             }`}
           >
             {isLoading && (
-              <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-              </svg>
+              <RefreshCcw className="w-4 h-4 animate-spin" />
             )}
             {confirmLabel}
           </button>
@@ -337,8 +359,8 @@ export default function UsersPage() {
         <div className="flex items-center gap-3">
           <UserAvatar user={user} />
           <div>
-            <p className="font-medium text-gray-900">{user.full_name}</p>
-            <p className="text-xs text-gray-500">{user.email}</p>
+            <p className="font-semibold text-gray-900 dark:text-white">{user.full_name}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{user.email}</p>
           </div>
         </div>
       ),
@@ -363,7 +385,7 @@ export default function UsersPage() {
       sortable: true,
       accessor: (user) => user.created_at,
       render: (user) => (
-        <span className="text-sm text-gray-500">{formatDate(user.created_at)}</span>
+        <span className="text-sm text-gray-600 dark:text-gray-400">{formatDate(user.created_at)}</span>
       ),
     },
     {
@@ -372,7 +394,7 @@ export default function UsersPage() {
       sortable: true,
       accessor: (user) => user.last_active_date || '',
       render: (user) => (
-        <span className="text-sm text-gray-500">
+        <span className={`text-sm ${user.last_active_date ? 'text-gray-600 dark:text-gray-400' : 'text-gray-400 dark:text-gray-500 italic'}`}>
           {user.last_active_date ? formatDate(user.last_active_date) : 'Never'}
         </span>
       ),
@@ -385,62 +407,54 @@ export default function UsersPage() {
       {/* View */}
       <button
         onClick={() => handleViewUser(user)}
-        className="p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded transition-colors"
+        className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200"
         title="View details"
       >
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
+        <Eye className="w-4 h-4" />
       </button>
       
       {/* Edit */}
       <button
         onClick={() => handleEditUser(user)}
-        className="p-1.5 text-gray-400 hover:text-emerald-600 hover:bg-emerald-50 rounded transition-colors"
+        className="p-2 text-gray-400 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 rounded-lg transition-all duration-200"
         title="Edit user"
       >
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-        </svg>
+        <Pencil className="w-4 h-4" />
       </button>
       
       {/* Reset Password */}
       <button
         onClick={() => handleResetPassword(user)}
-        className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
+        className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-all duration-200"
         title="Reset password"
       >
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-        </svg>
+        <Key className="w-4 h-4" />
       </button>
       
       {/* Disable/Enable */}
       <button
         onClick={() => handleDisableUser(user)}
-        className={`p-1.5 rounded transition-colors ${
+        className={`p-2 rounded-lg transition-all duration-200 ${
           user.status === 'active'
-            ? 'text-gray-400 hover:text-red-600 hover:bg-red-50'
-            : 'text-gray-400 hover:text-green-600 hover:bg-green-50'
+            ? 'text-gray-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20'
+            : 'text-gray-400 hover:text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20'
         }`}
         title={user.status === 'active' ? 'Disable account' : 'Enable account'}
       >
         {user.status === 'active' ? (
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
-          </svg>
+          <Ban className="w-4 h-4" />
         ) : (
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+          <CheckCircle className="w-4 h-4" />
         )}
       </button>
     </div>
   );
   
+  // Check if filters are active
+  const hasActiveFilters = roleFilter !== '' || statusFilter !== '' || searchInput !== '';
+
   return (
-    <div>
+    <div className="space-y-6">
       <AdminHeader
         title="Users"
         subtitle="Manage all users in the system"
@@ -449,73 +463,116 @@ export default function UsersPage() {
           { label: 'Users' },
         ]}
         actions={
-          <AdminPrimaryButton onClick={handleAddUser}>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-            </svg>
-            Add User
-          </AdminPrimaryButton>
+          <div className="flex items-center gap-2">
+            <AdminSecondaryButton onClick={fetchUsers}>
+              <RefreshCcw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+              Refresh
+            </AdminSecondaryButton>
+            <AdminPrimaryButton onClick={handleAddUser}>
+              <Plus className="w-4 h-4" />
+              Add User
+            </AdminPrimaryButton>
+          </div>
         }
       />
-      
-      {/* Filters */}
-      <div className="mb-6 flex flex-col sm:flex-row gap-4">
-        {/* Search */}
-        <div className="relative flex-1 max-w-sm">
-          <svg
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-          <input
-            type="text"
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-            placeholder="Search by name or email..."
-            className="w-full pl-10 pr-4 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-          />
+
+      {/* Filters Card */}
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-10 h-10 rounded-lg bg-blue-600 dark:bg-blue-700 flex items-center justify-center shadow-sm">
+            <Filter className="w-5 h-5 text-white" />
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Filters</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Search and filter users</p>
+          </div>
+          {hasActiveFilters && (
+            <button
+              onClick={() => {
+                setSearchInput('');
+                setSearch('');
+                setRoleFilter('');
+                setStatusFilter('');
+              }}
+              className="ml-auto flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium"
+            >
+              <X className="w-4 h-4" />
+              Clear All
+            </button>
+          )}
         </div>
         
-        {/* Role filter */}
-        <select
-          value={roleFilter}
-          onChange={(e) => {
-            setRoleFilter(e.target.value as UserRole | '');
-            setPagination((prev) => ({ ...prev, page: 1 }));
-          }}
-          className="px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-        >
-          <option value="">All Roles</option>
-          <option value="student">Students</option>
-          <option value="tutor">Tutors</option>
-          <option value="admin">Admins</option>
-        </select>
-        
-        {/* Status filter */}
-        <select
-          value={statusFilter}
-          onChange={(e) => {
-            setStatusFilter(e.target.value as UserStatus | '');
-            setPagination((prev) => ({ ...prev, page: 1 }));
-          }}
-          className="px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-        >
-          <option value="">All Status</option>
-          <option value="active">Active</option>
-          <option value="suspended">Suspended</option>
-        </select>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {/* Search */}
+          <div className="sm:col-span-1">
+            <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              Search
+            </label>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <input
+                type="text"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                placeholder="Name or email..."
+                className="w-full pl-10 pr-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+              />
+            </div>
+          </div>
+          
+          {/* Role filter */}
+          <div>
+            <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              Role
+            </label>
+            <select
+              value={roleFilter}
+              onChange={(e) => {
+                setRoleFilter(e.target.value as UserRole | '');
+                setPagination((prev) => ({ ...prev, page: 1 }));
+              }}
+              className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+            >
+              <option value="">All Roles</option>
+              <option value="student">Students</option>
+              <option value="tutor">Tutors</option>
+              <option value="admin">Admins</option>
+            </select>
+          </div>
+          
+          {/* Status filter */}
+          <div>
+            <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              Status
+            </label>
+            <select
+              value={statusFilter}
+              onChange={(e) => {
+                setStatusFilter(e.target.value as UserStatus | '');
+                setPagination((prev) => ({ ...prev, page: 1 }));
+              }}
+              className="w-full px-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+            >
+              <option value="">All Status</option>
+              <option value="active">Active</option>
+              <option value="suspended">Suspended</option>
+            </select>
+          </div>
+        </div>
       </div>
       
       {/* Error state */}
       {error && (
-        <div className="mb-6 p-4 rounded-lg bg-red-50 border border-red-200">
-          <p className="text-sm text-red-700">{error}</p>
+        <div className="p-4 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+              <X className="w-5 h-5 text-red-600" />
+            </div>
+            <p className="text-sm font-medium text-red-700 dark:text-red-300">{error}</p>
+          </div>
           <button
             onClick={fetchUsers}
-            className="mt-2 text-sm text-red-600 hover:text-red-800 font-medium"
+            className="px-4 py-2 text-sm font-medium text-red-700 hover:text-red-800 bg-red-100 hover:bg-red-200 rounded-lg transition-colors"
           >
             Try again
           </button>
@@ -523,23 +580,26 @@ export default function UsersPage() {
       )}
       
       {/* Data table */}
-      <DataTable<User>
-        data={users}
-        columns={columns}
-        isLoading={isLoading}
-        keyAccessor={(user) => user.id}
-        pagination={pagination}
-        onPageChange={handlePageChange}
-        rowActions={rowActions}
-        onRowClick={handleViewUser}
-        showSearch={false}
-        emptyMessage="No users found"
-        emptyIcon={
-          <svg className="w-12 h-12 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-        }
-      />
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+        <DataTable<User>
+          data={users}
+          columns={columns}
+          isLoading={isLoading}
+          keyAccessor={(user) => user.id}
+          pagination={pagination}
+          onPageChange={handlePageChange}
+          onPageSizeChange={(newLimit) => {
+            setPagination((prev) => ({ ...prev, limit: newLimit, page: 1 }));
+          }}
+          rowActions={rowActions}
+          onRowClick={handleViewUser}
+          showSearch={false}
+          emptyMessage="No users found"
+          emptyIcon={
+            <Users className="w-12 h-12 text-gray-300 dark:text-gray-600" />
+          }
+        />
+      </div>
       
       {/* User form modal */}
       <UserFormModal

@@ -41,29 +41,29 @@ function getVariantClasses(variant: StatCardVariant): {
 } {
   const variants: Record<StatCardVariant, { bg: string; icon: string; text: string }> = {
     primary: {
-      bg: 'bg-blue-100',
-      icon: 'text-blue-600',
-      text: 'text-blue-600',
+      bg: 'bg-blue-100 dark:bg-blue-900/30',
+      icon: 'text-blue-600 dark:text-blue-400',
+      text: 'text-blue-600 dark:text-blue-400',
     },
     success: {
-      bg: 'bg-emerald-100',
-      icon: 'text-emerald-600',
-      text: 'text-emerald-600',
+      bg: 'bg-emerald-100 dark:bg-emerald-900/30',
+      icon: 'text-emerald-600 dark:text-emerald-400',
+      text: 'text-emerald-600 dark:text-emerald-400',
     },
     warning: {
-      bg: 'bg-amber-100',
-      icon: 'text-amber-600',
-      text: 'text-amber-600',
+      bg: 'bg-amber-100 dark:bg-amber-900/30',
+      icon: 'text-amber-600 dark:text-amber-400',
+      text: 'text-amber-600 dark:text-amber-400',
     },
     danger: {
-      bg: 'bg-red-100',
-      icon: 'text-red-600',
-      text: 'text-red-600',
+      bg: 'bg-red-100 dark:bg-red-900/30',
+      icon: 'text-red-600 dark:text-red-400',
+      text: 'text-red-600 dark:text-red-400',
     },
     info: {
-      bg: 'bg-purple-100',
-      icon: 'text-purple-600',
-      text: 'text-purple-600',
+      bg: 'bg-purple-100 dark:bg-purple-900/30',
+      icon: 'text-purple-600 dark:text-purple-400',
+      text: 'text-purple-600 dark:text-purple-400',
     },
   };
   

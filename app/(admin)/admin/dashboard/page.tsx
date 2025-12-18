@@ -13,6 +13,18 @@ import {
 } from '@/components/admin';
 import type { AdminDashboardStats, SystemAlert } from '@/types/admin';
 import type { UserRole } from '@/types/database';
+import {
+  Plus,
+  Upload,
+  Users,
+  FolderOpen,
+  ArrowRight,
+  RefreshCcw,
+  TrendingUp,
+  Activity,
+  BookOpen,
+  ClipboardList,
+} from 'lucide-react';
 
 /**
  * Recent import type for the table
@@ -271,28 +283,52 @@ export default function AdminDashboardPage() {
   return (
     <div className="space-y-6">
       {/* Welcome Section */}
-      <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-6 text-white">
-        <h1 className="text-2xl font-bold mb-2">
-          Welcome back, {adminUser?.full_name?.split(' ')[0] || 'Admin'}!
-        </h1>
-        <p className="text-emerald-100">
-          You have {isAdmin ? 'full admin' : 'tutor'} access to the SabiPrep admin portal.
-          {stats && stats.activity.sessionsToday > 0 && (
-            <> There {stats.activity.sessionsToday === 1 ? 'has been' : 'have been'} <strong>{stats.activity.sessionsToday}</strong> learning session{stats.activity.sessionsToday !== 1 ? 's' : ''} today.</>
-          )}
-        </p>
-      </div>
-
-      {/* Error message */}
-      {error && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
-          {error}
+      <div className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 rounded-2xl p-6 lg:p-8 text-white">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+        
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h1 className="text-2xl lg:text-3xl font-bold mb-2">
+              Welcome back, {adminUser?.full_name?.split(' ')[0] || 'Admin'}! 👋
+            </h1>
+            <p className="text-emerald-100 text-sm lg:text-base max-w-xl">
+              You have {isAdmin ? 'full admin' : 'tutor'} access to the SabiPrep admin portal.
+              {stats && stats.activity.sessionsToday > 0 && (
+                <> There {stats.activity.sessionsToday === 1 ? 'has been' : 'have been'} <strong className="text-white">{stats.activity.sessionsToday}</strong> learning session{stats.activity.sessionsToday !== 1 ? 's' : ''} today.</>
+              )}
+            </p>
+          </div>
           <button
             onClick={() => {
               fetchDashboardData();
               fetchAlerts();
             }}
-            className="ml-2 text-red-800 underline hover:no-underline"
+            className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-200 text-sm font-medium self-start"
+          >
+            <RefreshCcw className={`w-4 h-4 ${isStatsLoading ? 'animate-spin' : ''}`} />
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      {/* Error message */}
+      {error && (
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+              <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <span className="text-red-700 dark:text-red-300 font-medium">{error}</span>
+          </div>
+          <button
+            onClick={() => {
+              fetchDashboardData();
+              fetchAlerts();
+            }}
+            className="px-4 py-2 text-sm font-medium text-red-700 hover:text-red-800 bg-red-100 hover:bg-red-200 rounded-lg transition-colors"
           >
             Retry
           </button>
@@ -300,7 +336,7 @@ export default function AdminDashboardPage() {
       )}
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           label="Total Users"
           value={stats?.users.total ?? '-'}
@@ -339,7 +375,7 @@ export default function AdminDashboardPage() {
       </div>
 
       {/* Second Row Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <StatCard
           label="Subjects"
           value={stats?.content.totalSubjects ?? '-'}
@@ -368,190 +404,260 @@ export default function AdminDashboardPage() {
 
       {/* Alerts Section */}
       {(isAlertsLoading || alerts.length > 0) && (
-        <Card className="p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">System Alerts</h3>
-          <AlertList
-            alerts={alerts}
-            isLoading={isAlertsLoading}
-            onDismiss={handleAlertDismiss}
-          />
-        </Card>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-amber-600 dark:bg-amber-700 flex items-center justify-center shadow-sm">
+                <Activity className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">System Alerts</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {alerts.length} active {alerts.length === 1 ? 'alert' : 'alerts'}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="p-6">
+            <AlertList
+              alerts={alerts}
+              isLoading={isAlertsLoading}
+              onDismiss={handleAlertDismiss}
+            />
+          </div>
+        </div>
       )}
 
       {/* Quick Actions & Recent Activity */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Quick Actions Card */}
-        <Card className="p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-          <div className="grid grid-cols-2 gap-3">
-            <Link 
-              href="/admin/questions/new"
-              className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
-            >
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                </svg>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-emerald-600 dark:bg-emerald-700 flex items-center justify-center shadow-sm">
+                <ClipboardList className="w-5 h-5 text-white" />
               </div>
-              <span className="text-sm font-medium text-gray-700">Add Question</span>
-            </Link>
-            <Link 
-              href="/admin/import"
-              className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
-            >
-              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
-                </svg>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Quick Actions</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">Common tasks</p>
               </div>
-              <span className="text-sm font-medium text-gray-700">Import CSV</span>
-            </Link>
-            <Link 
-              href="/admin/users"
-              className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
-            >
-              <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-gray-700">Manage Users</span>
-            </Link>
-            <Link 
-              href="/admin/content"
-              className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
-            >
-              <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-gray-700">Edit Content</span>
-            </Link>
+            </div>
           </div>
-        </Card>
+          <div className="p-6">
+            <div className="grid grid-cols-2 gap-3">
+              <Link 
+                href="/admin/questions/new"
+                className="group flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/20 border border-transparent hover:border-emerald-200 dark:hover:border-emerald-800 transition-all duration-200"
+              >
+                <div className="w-10 h-10 bg-emerald-600 dark:bg-emerald-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                  <Plus className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Add Question</span>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Create new</p>
+                </div>
+              </Link>
+              <Link 
+                href="/admin/import"
+                className="group flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 border border-transparent hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200"
+              >
+                <div className="w-10 h-10 bg-blue-600 dark:bg-blue-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                  <Upload className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Import CSV</span>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Bulk import</p>
+                </div>
+              </Link>
+              <Link 
+                href="/admin/users"
+                className="group flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-purple-50 dark:hover:bg-purple-900/20 border border-transparent hover:border-purple-200 dark:hover:border-purple-800 transition-all duration-200"
+              >
+                <div className="w-10 h-10 bg-purple-600 dark:bg-purple-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Manage Users</span>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">View all users</p>
+                </div>
+              </Link>
+              <Link 
+                href="/admin/content"
+                className="group flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-amber-50 dark:hover:bg-amber-900/20 border border-transparent hover:border-amber-200 dark:hover:border-amber-800 transition-all duration-200"
+              >
+                <div className="w-10 h-10 bg-amber-600 dark:bg-amber-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                  <FolderOpen className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Edit Content</span>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Subjects & topics</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
 
         {/* User Statistics Breakdown */}
-        <Card className="p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">User Breakdown</h3>
-          {isStatsLoading ? (
-            <div className="space-y-4">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="flex items-center justify-between">
-                  <div className="h-4 w-24 bg-gray-200 rounded animate-pulse" />
-                  <div className="h-4 w-12 bg-gray-200 rounded animate-pulse" />
-                </div>
-              ))}
-            </div>
-          ) : stats ? (
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-gray-400 rounded-full" />
-                  <span className="text-sm text-gray-600">Students</span>
-                </div>
-                <span className="font-semibold text-gray-900">{stats.users.byRole.student}</span>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-blue-600 dark:bg-blue-700 flex items-center justify-center shadow-sm">
+                <TrendingUp className="w-5 h-5 text-white" />
               </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full" />
-                  <span className="text-sm text-gray-600">Tutors</span>
-                </div>
-                <span className="font-semibold text-gray-900">{stats.users.byRole.tutor}</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full" />
-                  <span className="text-sm text-gray-600">Admins</span>
-                </div>
-                <span className="font-semibold text-gray-900">{stats.users.byRole.admin}</span>
-              </div>
-              <div className="border-t border-gray-100 pt-4 mt-4">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-500">New this month</span>
-                  <span className="font-medium text-emerald-600">+{stats.users.newThisMonth}</span>
-                </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">User Breakdown</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">By role</p>
               </div>
             </div>
-          ) : (
-            <p className="text-gray-500 text-center py-4">Unable to load user breakdown</p>
-          )}
-        </Card>
+          </div>
+          <div className="p-6">
+            {isStatsLoading ? (
+              <div className="space-y-4">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="flex items-center justify-between">
+                    <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                    <div className="h-4 w-12 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                  </div>
+                ))}
+              </div>
+            ) : stats ? (
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-gray-400 rounded-full" />
+                    <span className="text-sm text-gray-600 dark:text-gray-300 font-medium">Students</span>
+                  </div>
+                  <span className="font-bold text-gray-900 dark:text-white text-lg">{stats.users.byRole.student}</span>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full" />
+                    <span className="text-sm text-blue-700 dark:text-blue-300 font-medium">Tutors</span>
+                  </div>
+                  <span className="font-bold text-blue-900 dark:text-blue-100 text-lg">{stats.users.byRole.tutor}</span>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full" />
+                    <span className="text-sm text-purple-700 dark:text-purple-300 font-medium">Admins</span>
+                  </div>
+                  <span className="font-bold text-purple-900 dark:text-purple-100 text-lg">{stats.users.byRole.admin}</span>
+                </div>
+                <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">
+                  <div className="flex items-center justify-between bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-lg">
+                    <span className="text-sm text-emerald-700 dark:text-emerald-300 font-medium">New this month</span>
+                    <span className="font-bold text-emerald-600 dark:text-emerald-400 text-lg">+{stats.users.newThisMonth}</span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <p className="text-gray-500 dark:text-gray-400 text-center py-4">Unable to load user breakdown</p>
+            )}
+          </div>
+        </div>
       </div>
 
       {/* Recent Activity Tables */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Recent Users */}
-        <Card className="p-6">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">Recent Registrations</h3>
-            <Link 
-              href="/admin/users"
-              className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
-            >
-              View All →
-            </Link>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-purple-600 dark:bg-purple-700 flex items-center justify-center shadow-sm">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Recent Registrations</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">New users</p>
+                </div>
+              </div>
+              <Link 
+                href="/admin/users"
+                className="flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium transition-colors"
+              >
+                View All
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
-          <DataTable
-            data={recentUsers}
-            columns={userColumns}
-            keyAccessor={(u) => u.id}
-            isLoading={isStatsLoading}
-            emptyMessage="No recent registrations"
-            showSearch={false}
-            skeletonRows={3}
-          />
-        </Card>
-
-        {/* Recent Imports */}
-        <Card className="p-6">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">Recent Imports</h3>
-            <Link 
-              href="/admin/import/history"
-              className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
-            >
-              View All →
-            </Link>
-          </div>
-          {recentImports.length > 0 || isStatsLoading ? (
+          <div className="p-6">
             <DataTable
-              data={recentImports}
-              columns={importColumns}
-              keyAccessor={(i) => i.id}
+              data={recentUsers}
+              columns={userColumns}
+              keyAccessor={(u) => u.id}
               isLoading={isStatsLoading}
-              emptyMessage="No imports yet"
+              emptyMessage="No recent registrations"
               showSearch={false}
               skeletonRows={3}
             />
-          ) : (
-            <div className="flex flex-col items-center justify-center py-8 text-center">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-3">
-                <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
-                </svg>
+          </div>
+        </div>
+
+        {/* Recent Imports */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-blue-600 dark:bg-blue-700 flex items-center justify-center shadow-sm">
+                  <Upload className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Recent Imports</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">CSV uploads</p>
+                </div>
               </div>
-              <p className="text-sm text-gray-500 mb-3">No imports yet</p>
-              <Link
-                href="/admin/import"
-                className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
+              <Link 
+                href="/admin/import/history"
+                className="flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium transition-colors"
               >
-                Import your first CSV →
+                View All
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-          )}
-        </Card>
+          </div>
+          <div className="p-6">
+            {recentImports.length > 0 || isStatsLoading ? (
+              <DataTable
+                data={recentImports}
+                columns={importColumns}
+                keyAccessor={(i) => i.id}
+                isLoading={isStatsLoading}
+                emptyMessage="No imports yet"
+                showSearch={false}
+                skeletonRows={3}
+              />
+            ) : (
+              <div className="flex flex-col items-center justify-center py-12 text-center">
+                <div className="w-16 h-16 bg-gray-500 dark:bg-gray-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
+                  <Upload className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">No imports yet</h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 max-w-xs">
+                  Upload your first CSV file to bulk import questions into the system.
+                </p>
+                <Link
+                  href="/admin/import"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg transition-colors"
+                >
+                  <Upload className="w-4 h-4" />
+                  Import CSV
+                </Link>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
 
       {/* Info Banner */}
-      <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
-        <div className="flex items-start gap-3">
-          <svg className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 shadow-sm">
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 rounded-lg bg-blue-600 dark:bg-blue-700 flex items-center justify-center flex-shrink-0 shadow-sm">
+            <BookOpen className="w-5 h-5 text-white" />
+          </div>
           <div>
-            <h4 className="text-sm font-medium text-blue-800">Admin Dashboard</h4>
-            <p className="text-sm text-blue-600 mt-1">
+            <h4 className="text-sm font-semibold text-gray-900 dark:text-white">Admin Dashboard Guide</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               This dashboard provides an overview of your SabiPrep platform. Use the navigation menu to manage users, 
               content, questions, and imports. System alerts will appear above when there are issues requiring attention.
             </p>
