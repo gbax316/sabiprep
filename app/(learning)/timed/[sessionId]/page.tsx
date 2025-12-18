@@ -415,7 +415,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
   ));
 
   // Calculate pace indicator
-  const expectedProgress = session.time_limit_seconds > 0 
+  const expectedProgress = session.time_limit_seconds && session.time_limit_seconds > 0 
     ? (1 - (timeRemaining / session.time_limit_seconds)) * 100 
     : 0;
   const actualProgress = (currentIndex / questions.length) * 100;
