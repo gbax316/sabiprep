@@ -19,7 +19,8 @@ export { Modal, ConfirmModal, AlertModal } from './Modal';
 export type { ModalProps, ConfirmModalProps, AlertModalProps } from './Modal';
 
 export { BottomNav, NavButton } from './BottomNav';
-export type { BottomNavProps, NavItem, NavButtonProps } from './BottomNav';
+export type { BottomNavProps, NavButtonProps } from './BottomNav';
+export type { NavItem } from '@/lib/navigation-config';
 
 export { SplashScreen } from './SplashScreen';
 export { CircularTimer } from './CircularTimer';
