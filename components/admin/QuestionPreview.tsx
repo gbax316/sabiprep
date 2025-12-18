@@ -367,7 +367,7 @@ export function QuestionPreview({
           <button
             onClick={() => {
               setSelectedAnswer(null);
-              setShowHint(false);
+              setCurrentHintLevel(null);
             }}
             className="text-sm text-gray-500 hover:text-gray-700"
           >
