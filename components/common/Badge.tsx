@@ -12,10 +12,10 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 const variantStyles = {
   primary: 'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300',
   secondary: 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300',
-  success: 'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300',
-  warning: 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300',
+  success: 'bg-indigo-600 dark:bg-indigo-600 text-white dark:text-white',
+  warning: 'bg-indigo-100 dark:bg-indigo-900/40 text-white dark:text-white',
   error: 'bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300',
-  info: 'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
+  info: 'bg-blue-600 dark:bg-blue-700 text-white dark:text-blue-100',
   neutral: 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300',
 };
 

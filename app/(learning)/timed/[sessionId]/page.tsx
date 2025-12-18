@@ -30,6 +30,7 @@ import {
   Send,
   ChevronUp,
   ChevronDown,
+  X,
 } from 'lucide-react';
 
 interface QuestionTimeData {
@@ -54,6 +55,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
   const [sessionComplete, setSessionComplete] = useState(false);
   const [showPalette, setShowPalette] = useState(false);
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
+  const [showCancelConfirm, setShowCancelConfirm] = useState(false);
   const [showPreviousWarning, setShowPreviousWarning] = useState(false);
   const [questionTimes, setQuestionTimes] = useState<Map<string, QuestionTimeData>>(new Map());
   const [examStarted, setExamStarted] = useState(false);
@@ -402,6 +404,31 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
     router.push(`/results/${sessionId}`);
   }
 
+  async function handleCancel() {
+    // Save current progress before canceling
+    const finalCorrect = Array.from(answers.entries()).reduce((count, [questionId, answer]) => {
+      const question = questions.find(q => q.id === questionId);
+      return count + (question && answer === question.correct_answer ? 1 : 0);
+    }, 0);
+
+    const totalTimeSpent = session?.time_limit_seconds ? session.time_limit_seconds - timeRemaining : 0;
+    
+    try {
+      // Update session with current progress
+      await updateSession(sessionId, {
+        questions_answered: answers.size,
+        correct_answers: finalCorrect,
+        time_spent_seconds: totalTimeSpent,
+      });
+    } catch (error) {
+      console.error('Error saving progress:', error);
+    }
+
+    // Stop timer and navigate away
+    stop();
+    router.push('/timed');
+  }
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
@@ -499,6 +526,15 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
                 <Timer className="w-5 h-5" />
                 <span className="text-xl">{formattedTime}</span>
               </div>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setShowCancelConfirm(true)}
+                className="text-gray-600 border-gray-300 hover:bg-gray-50"
+              >
+                <X className="w-4 h-4 mr-1" />
+                Cancel
+              </Button>
               <Button
                 variant="outline"
                 size="sm"
@@ -710,6 +746,38 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
           </Card>
         )}
       </div>
+
+      {/* Cancel Confirmation Modal */}
+      <Modal
+        isOpen={showCancelConfirm}
+        onClose={() => setShowCancelConfirm(false)}
+        title="Cancel Exam?"
+      >
+        <div className="p-4">
+          <p className="text-gray-700 mb-2">
+            Are you sure you want to cancel this exam? Your progress will be saved.
+          </p>
+          <p className="text-sm text-gray-600 mb-4">
+            You've answered {answeredCount} of {questions.length} questions. This session will be marked as incomplete.
+          </p>
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              onClick={() => setShowCancelConfirm(false)}
+              className="flex-1"
+            >
+              Continue Exam
+            </Button>
+            <Button
+              variant="primary"
+              onClick={handleCancel}
+              className="flex-1 bg-red-600 hover:bg-red-700"
+            >
+              Cancel Exam
+            </Button>
+          </div>
+        </div>
+      </Modal>
 
       {/* Submit Confirmation Modal */}
       <Modal

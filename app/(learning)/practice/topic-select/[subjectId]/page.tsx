@@ -154,39 +154,39 @@ export default function PracticeTopicSelectPage({
     <div className="min-h-screen bg-gray-50 pb-8">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center gap-3 mb-4">
             <button
               onClick={() => router.push('/practice')}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
             >
-              <ArrowLeft className="w-6 h-6 text-gray-600" />
+              <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
             </button>
-            <div className="flex items-center gap-3 flex-1">
-              <div className="text-3xl">{subject.icon || '📚'}</div>
-              <div>
-                <p className="text-sm text-gray-600">{subject.name}</p>
-                <h1 className="text-xl font-bold text-gray-900">Practice Mode - Select Topics</h1>
+            <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+              <div className="text-2xl sm:text-3xl flex-shrink-0">{subject.icon || '📚'}</div>
+              <div className="min-w-0 flex-1">
+                <p className="text-xs sm:text-sm text-gray-600 truncate">{subject.name}</p>
+                <h1 className="text-base sm:text-xl font-bold text-gray-900 truncate">Practice Mode - Select Topics</h1>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 space-y-4 sm:space-y-6">
         {/* Question Count Selector */}
-        <Card>
+        <Card padding="none" className="p-4 sm:p-6">
           <label className="block text-sm font-medium text-gray-700 mb-3">
             How many questions do you want to answer?
           </label>
-          <div className="flex gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
             {[10, 20, 30, 50].map((count) => (
               <button
                 key={count}
                 onClick={() => setQuestionCount(count)}
                 disabled={count > totalAvailableQuestions}
                 className={`
-                  flex-1 py-3 rounded-xl font-semibold transition-all
+                  py-3 rounded-xl font-semibold transition-all text-sm sm:text-base
                   ${questionCount === count
                     ? 'bg-indigo-600 text-white'
                     : count > totalAvailableQuestions
@@ -202,7 +202,7 @@ export default function PracticeTopicSelectPage({
         </Card>
 
         {/* Selection Mode Toggle */}
-        <Card>
+        <Card padding="none" className="p-4 sm:p-6">
           <h2 className="text-lg font-bold text-gray-900 mb-4">Choose Your Practice Style</h2>
           
           <div className="space-y-4">
@@ -213,56 +213,58 @@ export default function PracticeTopicSelectPage({
                 setSelectedTopicIds(new Set());
               }}
               className={`
-                w-full text-left p-4 rounded-xl border-2 transition-all
+                w-full text-left p-4 sm:p-5 rounded-xl border-2 transition-all
                 ${selectedMode === 'mix'
                   ? 'border-indigo-600 bg-indigo-50'
                   : 'border-gray-200 hover:border-gray-300'
                 }
               `}
             >
-              <div className="flex items-start gap-4">
-                <div className={`
-                  w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5
-                  ${selectedMode === 'mix'
-                    ? 'border-indigo-600 bg-indigo-600'
-                    : 'border-gray-300'
-                  }
-                `}>
-                  {selectedMode === 'mix' && <Check className="w-4 h-4 text-white" />}
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-bold text-gray-900">Mix of Topics</h3>
-                    <Badge variant="success" size="sm">Default</Badge>
+              <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+                <div className="flex items-start gap-3 sm:gap-4 w-full sm:w-auto">
+                  <div className={`
+                    w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5
+                    ${selectedMode === 'mix'
+                      ? 'border-indigo-600 bg-indigo-600'
+                      : 'border-gray-300'
+                    }
+                  `}>
+                    {selectedMode === 'mix' && <Check className="w-4 h-4 text-white" />}
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">
-                    System generates a balanced mix from all available topics
-                  </p>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <h3 className="font-bold text-gray-900">Mix of Topics</h3>
+                      <Badge variant="success" size="sm">Default</Badge>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-3">
+                      System generates a balanced mix from all available topics
+                    </p>
+                  </div>
+                  <Sparkles className="w-5 h-5 text-indigo-600 flex-shrink-0 hidden sm:block" />
+                </div>
                   {selectedMode === 'mix' && mixDistribution.length > 0 && (
-                    <div className="mt-3 p-3 bg-white rounded-lg border border-indigo-200">
-                      <p className="text-xs font-medium text-gray-700 mb-2">
+                    <div className="w-full mt-3 sm:mt-0 sm:ml-10 p-3 sm:p-4 bg-white rounded-lg border border-indigo-200 overflow-hidden">
+                      <p className="text-xs font-medium text-gray-700 mb-2.5">
                         Topic Distribution Preview:
                       </p>
-                      <div className="space-y-1 max-h-32 overflow-y-auto">
+                      <div className="space-y-1.5 max-h-32 overflow-y-auto pr-1 -mr-1">
                         {mixDistribution.slice(0, 5).map(({ topic, count }) => (
-                          <div key={topic.id} className="flex items-center justify-between text-xs">
-                            <span className="text-gray-600">{topic.name}</span>
-                            <span className="font-semibold text-indigo-600">{count} questions</span>
+                          <div key={topic.id} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 text-xs">
+                            <span className="text-gray-600 break-words sm:truncate sm:flex-1 min-w-0 pr-1">{topic.name}</span>
+                            <span className="font-semibold text-indigo-600 whitespace-nowrap flex-shrink-0">{count} questions</span>
                           </div>
                         ))}
                         {mixDistribution.length > 5 && (
-                          <p className="text-xs text-gray-500 mt-1">
+                          <p className="text-xs text-gray-500 mt-1.5 pt-1.5 border-t border-gray-100">
                             ... and {mixDistribution.length - 5} more topics
                           </p>
                         )}
                       </div>
-                      <p className="text-xs text-gray-500 mt-2">
+                      <p className="text-xs text-gray-500 mt-2.5 pt-2 border-t border-gray-100">
                         Total: {questionCount} questions from {mixDistribution.length} topics
                       </p>
                     </div>
                   )}
-                </div>
-                <Sparkles className="w-5 h-5 text-indigo-600 flex-shrink-0" />
               </div>
             </button>
 
@@ -270,14 +272,14 @@ export default function PracticeTopicSelectPage({
             <button
               onClick={() => setSelectedMode('specific')}
               className={`
-                w-full text-left p-4 rounded-xl border-2 transition-all
+                w-full text-left p-4 sm:p-5 rounded-xl border-2 transition-all
                 ${selectedMode === 'specific'
                   ? 'border-indigo-600 bg-indigo-50'
                   : 'border-gray-200 hover:border-gray-300'
                 }
               `}
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-3 sm:gap-4">
                 <div className={`
                   w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5
                   ${selectedMode === 'specific'
@@ -287,7 +289,7 @@ export default function PracticeTopicSelectPage({
                 `}>
                   {selectedMode === 'specific' && <Check className="w-4 h-4 text-white" />}
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     <h3 className="font-bold text-gray-900">Select Specific Topics</h3>
                   </div>
@@ -295,7 +297,7 @@ export default function PracticeTopicSelectPage({
                     Choose one or multiple topics to focus on
                   </p>
                 </div>
-                <BookOpen className="w-5 h-5 text-indigo-600 flex-shrink-0" />
+                <BookOpen className="w-5 h-5 text-indigo-600 flex-shrink-0 hidden sm:block" />
               </div>
             </button>
           </div>
@@ -303,29 +305,31 @@ export default function PracticeTopicSelectPage({
 
         {/* Topic Selection (only shown for specific mode) */}
         {selectedMode === 'specific' && (
-          <Card>
+          <Card padding="none" className="p-4 sm:p-6">
             <h3 className="text-lg font-bold text-gray-900 mb-4">
               Select Specific Topics
             </h3>
-            <MultiSelectDropdown
-              options={topicsWithQuestions.map(topic => ({
-                id: topic.id,
-                label: topic.name,
-                count: topic.total_questions,
-                difficulty: topic.difficulty || undefined,
-              }))}
-              selectedIds={selectedTopicIds}
-              onSelectionChange={setSelectedTopicIds}
-              placeholder="Select one or more topics..."
-            />
+            <div className="w-full">
+              <MultiSelectDropdown
+                options={topicsWithQuestions.map(topic => ({
+                  id: topic.id,
+                  label: topic.name,
+                  count: topic.total_questions,
+                  difficulty: topic.difficulty || undefined,
+                }))}
+                selectedIds={selectedTopicIds}
+                onSelectionChange={setSelectedTopicIds}
+                placeholder="Select one or more topics..."
+              />
+            </div>
             {selectedTopicIds.size > 0 && (
-              <div className="mt-4 p-3 bg-indigo-50 rounded-lg border border-indigo-200">
-                <p className="text-sm text-gray-700">
+              <div className="mt-4 p-3 sm:p-4 bg-indigo-50 rounded-lg border border-indigo-200">
+                <p className="text-sm text-gray-700 break-words">
                   <span className="font-semibold">{selectedTopicIds.size}</span> topic(s) selected ·{' '}
                   <span className="font-semibold">{selectedTopicsTotalQuestions}</span> total questions available
                 </p>
                 {selectedTopicsTotalQuestions < questionCount && (
-                  <p className="text-xs text-amber-600 mt-1">
+                  <p className="text-xs text-amber-600 mt-1.5 break-words">
                     ⚠️ Selected topics have fewer questions than requested. Some questions may be repeated.
                   </p>
                 )}
@@ -335,11 +339,12 @@ export default function PracticeTopicSelectPage({
         )}
 
         {/* Continue Button */}
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-3 pt-2">
           <Button
             variant="outline"
             size="full"
             onClick={() => router.push('/practice')}
+            className="w-full sm:w-auto"
           >
             Cancel
           </Button>
@@ -349,6 +354,7 @@ export default function PracticeTopicSelectPage({
             onClick={handleContinue}
             disabled={!canProceed || questionCount > totalAvailableQuestions}
             rightIcon={<ChevronRight className="w-5 h-5" />}
+            className="w-full sm:flex-1"
           >
             Continue
           </Button>
