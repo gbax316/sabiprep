@@ -432,7 +432,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
   }
 
   // Timer color coding
-  const timePercentage = session.time_limit_seconds > 0 
+  const timePercentage = session.time_limit_seconds && session.time_limit_seconds > 0 
     ? (timeRemaining / session.time_limit_seconds) * 100 
     : 100;
   
