@@ -518,7 +518,7 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
                 Question {currentIndex + 1} of {questions.length}
               </Badge>
               <Button
-                variant="outlined"
+                variant="outline"
                 size="sm"
                 onClick={handleShowReview}
                 className="ml-2"
