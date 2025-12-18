@@ -676,12 +676,20 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         {showPalette && (
           <Card>
             <QuestionNavigator
-              totalQuestions={questions.length}
+              questions={questions.map((q, index) => ({
+                id: q.id,
+                index: index,
+                status: index === currentIndex 
+                  ? 'current' 
+                  : answers.has(q.id) 
+                    ? 'answered' 
+                    : 'unanswered',
+                hasPassage: !!q.passage_id,
+                hasImage: !!q.image_url,
+              }))}
               currentIndex={currentIndex}
-              answeredIndices={Array.from(answers.keys()).map(qId => 
-                questions.findIndex(q => q.id === qId)
-              ).filter(idx => idx >= 0)}
-              onJumpToQuestion={handleJumpToQuestion}
+              onNavigate={handleJumpToQuestion}
+              variant="sidebar"
             />
           </Card>
         )}
