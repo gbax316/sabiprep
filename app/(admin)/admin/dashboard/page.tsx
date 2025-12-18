@@ -107,15 +107,15 @@ function formatRelativeTime(dateString: string): string {
 function getStatusBadgeClasses(status: string): string {
   switch (status) {
     case 'completed':
-      return 'bg-emerald-100 text-emerald-700';
+      return 'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300';
     case 'processing':
-      return 'bg-blue-100 text-blue-700';
+      return 'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300';
     case 'failed':
-      return 'bg-red-100 text-red-700';
+      return 'bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300';
     case 'pending':
-      return 'bg-amber-100 text-amber-700';
+      return 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300';
     default:
-      return 'bg-gray-100 text-gray-700';
+      return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
   }
 }
 
@@ -125,12 +125,12 @@ function getStatusBadgeClasses(status: string): string {
 function getRoleBadgeClasses(role: UserRole): string {
   switch (role) {
     case 'admin':
-      return 'bg-purple-100 text-purple-700';
+      return 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300';
     case 'tutor':
-      return 'bg-blue-100 text-blue-700';
+      return 'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300';
     case 'student':
     default:
-      return 'bg-gray-100 text-gray-700';
+      return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
   }
 }
 
@@ -209,7 +209,7 @@ export default function AdminDashboardPage() {
       key: 'filename',
       header: 'File',
       render: (item) => (
-        <span className="font-medium text-gray-900">{item.filename}</span>
+        <span className="font-medium text-gray-900 dark:text-gray-100">{item.filename}</span>
       ),
     },
     {
@@ -225,7 +225,7 @@ export default function AdminDashboardPage() {
       key: 'rows',
       header: 'Rows',
       render: (item) => (
-        <span className="text-gray-600">
+        <span className="text-gray-600 dark:text-gray-300">
           {item.successful_rows}/{item.total_rows}
         </span>
       ),
@@ -234,7 +234,7 @@ export default function AdminDashboardPage() {
       key: 'created_at',
       header: 'Date',
       render: (item) => (
-        <span className="text-gray-500">{formatRelativeTime(item.created_at)}</span>
+        <span className="text-gray-500 dark:text-gray-400">{formatRelativeTime(item.created_at)}</span>
       ),
     },
   ];
@@ -246,12 +246,12 @@ export default function AdminDashboardPage() {
       header: 'Name',
       render: (item) => (
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-            <span className="text-sm font-medium text-gray-600">
+          <div className="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
+            <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
               {item.full_name.charAt(0).toUpperCase()}
             </span>
           </div>
-          <span className="font-medium text-gray-900">{item.full_name}</span>
+          <span className="font-medium text-gray-900 dark:text-gray-100">{item.full_name}</span>
         </div>
       ),
     },
@@ -259,7 +259,7 @@ export default function AdminDashboardPage() {
       key: 'email',
       header: 'Email',
       render: (item) => (
-        <span className="text-gray-600">{item.email}</span>
+        <span className="text-gray-600 dark:text-gray-300">{item.email}</span>
       ),
     },
     {
@@ -275,7 +275,7 @@ export default function AdminDashboardPage() {
       key: 'created_at',
       header: 'Joined',
       render: (item) => (
-        <span className="text-gray-500">{formatRelativeTime(item.created_at)}</span>
+        <span className="text-gray-500 dark:text-gray-400">{formatRelativeTime(item.created_at)}</span>
       ),
     },
   ];
