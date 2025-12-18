@@ -1091,8 +1091,14 @@ export async function getNotifications(
 
   const { data, error } = await query;
 
-  if (error) throw error;
-  return data || [];
+  if (error) {
+    console.error('Error fetching notifications:', error);
+    throw error;
+  }
+  return (data || []).map((n: any) => ({
+    ...n,
+    read_at: n.read_at || null,
+  }));
 }
 
 /**

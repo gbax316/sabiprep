@@ -74,17 +74,24 @@ export function NotificationDropdown({ userId, className }: NotificationDropdown
   }, [isOpen]);
 
   async function loadNotifications() {
-    if (!userId) return;
+    if (!userId) {
+      setLoading(false);
+      return;
+    }
 
     try {
+      setLoading(true);
       const [notifs, count] = await Promise.all([
         getNotifications(userId, 20),
         getUnreadNotificationCount(userId),
       ]);
-      setNotifications(notifs);
-      setUnreadCount(count);
+      setNotifications(notifs || []);
+      setUnreadCount(count || 0);
     } catch (error) {
       console.error('Error loading notifications:', error);
+      // Set empty state on error to prevent UI issues
+      setNotifications([]);
+      setUnreadCount(0);
     } finally {
       setLoading(false);
     }
@@ -94,11 +101,17 @@ export function NotificationDropdown({ userId, className }: NotificationDropdown
     try {
       await markNotificationAsRead(notificationId);
       setNotifications(prev =>
-        prev.map(n => n.id === notificationId ? { ...n, read: true, read_at: new Date().toISOString() } : n)
+        prev.map(n => 
+          n.id === notificationId 
+            ? { ...n, read: true, read_at: new Date().toISOString() } 
+            : n
+        )
       );
       setUnreadCount(prev => Math.max(0, prev - 1));
     } catch (error) {
       console.error('Error marking notification as read:', error);
+      // Revert optimistic update on error
+      await loadNotifications();
     }
   }
 
@@ -111,6 +124,8 @@ export function NotificationDropdown({ userId, className }: NotificationDropdown
       setUnreadCount(0);
     } catch (error) {
       console.error('Error marking all as read:', error);
+      // Reload notifications on error
+      await loadNotifications();
     }
   }
 
