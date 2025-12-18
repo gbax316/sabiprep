@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from '@/components/common/Card';
 import { Badge } from '@/components/common/Badge';
+import { Button } from '@/components/common/Button';
 import { BottomNav } from '@/components/common/BottomNav';
 import { SearchInput } from '@/components/common/Input';
 import { useAuth } from '@/lib/auth-context';
