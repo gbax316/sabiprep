@@ -408,7 +408,7 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
             <div className="flex gap-2">
               {unansweredQuestions.length > 0 && (
                 <Button
-                  variant="outlined"
+                  variant="outline"
                   size="sm"
                   onClick={() => {
                     setCurrentIndex(unansweredQuestions[0].index);
@@ -420,7 +420,7 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
               )}
               {flaggedQuestionsList.length > 0 && (
                 <Button
-                  variant="outlined"
+                  variant="outline"
                   size="sm"
                   onClick={() => {
                     setCurrentIndex(flaggedQuestionsList[0].index);
