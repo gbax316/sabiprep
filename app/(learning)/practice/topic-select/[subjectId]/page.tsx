@@ -338,23 +338,23 @@ export default function PracticeTopicSelectPage({
           </Card>
         )}
 
-        {/* Continue Button */}
-        <div className="flex flex-col sm:flex-row gap-3 pt-2">
+        {/* Action Buttons */}
+        <div className="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 sm:gap-4 pt-2 sm:pt-4">
           <Button
             variant="outline"
-            size="full"
+            size="md"
             onClick={() => router.push('/practice')}
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto sm:min-w-[140px] md:min-w-[160px] hover:bg-red-600 hover:text-white hover:border-red-600"
           >
             Cancel
           </Button>
           <Button
             variant="primary"
-            size="full"
+            size="md"
             onClick={handleContinue}
             disabled={!canProceed || questionCount > totalAvailableQuestions}
             rightIcon={<ChevronRight className="w-5 h-5" />}
-            className="w-full sm:flex-1"
+            className="w-full sm:w-auto sm:min-w-[180px] md:min-w-[200px]"
           >
             Continue
           </Button>
