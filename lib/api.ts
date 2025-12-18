@@ -1078,41 +1078,100 @@ export async function getNotifications(
   limit: number = 50,
   unreadOnly: boolean = false
 ): Promise<Notification[]> {
-  let query = supabase
-    .from('notifications')
-    .select('*')
-    .eq('user_id', userId)
-    .order('created_at', { ascending: false })
-    .limit(limit);
+  try {
+    // Check if user is authenticated
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session) {
+      console.warn('No session found when fetching notifications for userId:', userId);
+      return [];
+    }
 
-  if (unreadOnly) {
-    query = query.eq('read', false);
+    let query = supabase
+      .from('notifications')
+      .select('*')
+      .eq('user_id', userId)
+      .order('created_at', { ascending: false })
+      .limit(limit);
+
+    if (unreadOnly) {
+      query = query.eq('read', false);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      // Log detailed error information
+      console.error('Error fetching notifications:', {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code,
+        userId,
+        hasSession: !!session,
+      });
+      
+      // If it's a permissions/RLS error, return empty array instead of throwing
+      if (error.code === 'PGRST116' || error.message?.includes('permission') || error.message?.includes('policy')) {
+        console.warn('RLS policy blocked notification access, returning empty array');
+        return [];
+      }
+      
+      throw error;
+    }
+    
+    return (data || []).map((n: any) => ({
+      ...n,
+      read_at: n.read_at || null,
+    }));
+  } catch (error) {
+    // Catch any unexpected errors and return empty array
+    console.error('Unexpected error in getNotifications:', error);
+    return [];
   }
-
-  const { data, error } = await query;
-
-  if (error) {
-    console.error('Error fetching notifications:', error);
-    throw error;
-  }
-  return (data || []).map((n: any) => ({
-    ...n,
-    read_at: n.read_at || null,
-  }));
 }
 
 /**
  * Get unread notification count
  */
 export async function getUnreadNotificationCount(userId: string): Promise<number> {
-  const { count, error } = await supabase
-    .from('notifications')
-    .select('*', { count: 'exact', head: true })
-    .eq('user_id', userId)
-    .eq('read', false);
+  try {
+    // Check if user is authenticated
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session) {
+      console.warn('No session found when fetching unread count for userId:', userId);
+      return 0;
+    }
 
-  if (error) throw error;
-  return count || 0;
+    const { count, error } = await supabase
+      .from('notifications')
+      .select('*', { count: 'exact', head: true })
+      .eq('user_id', userId)
+      .eq('read', false);
+
+    if (error) {
+      console.error('Error fetching unread notification count:', {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code,
+        userId,
+      });
+      
+      // If it's a permissions/RLS error, return 0 instead of throwing
+      if (error.code === 'PGRST116' || error.message?.includes('permission') || error.message?.includes('policy')) {
+        console.warn('RLS policy blocked unread count access, returning 0');
+        return 0;
+      }
+      
+      throw error;
+    }
+    
+    return count || 0;
+  } catch (error) {
+    // Catch any unexpected errors and return 0
+    console.error('Unexpected error in getUnreadNotificationCount:', error);
+    return 0;
+  }
 }
 
 /**
