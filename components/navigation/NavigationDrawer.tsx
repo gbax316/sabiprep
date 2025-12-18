@@ -164,6 +164,8 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
     return pathname === href || pathname?.startsWith(`${href}/`);
   };
 
+  if (!mounted) return null;
+
   const drawerContent = (
     <AnimatePresence>
       {isOpen && (
@@ -175,17 +177,10 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm"
-            style={{ 
-              zIndex: 99998,
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0
-            }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[99998]"
             onClick={onClose}
             aria-hidden="true"
+            style={{ pointerEvents: 'auto' }}
           />
 
           {/* Drawer */}
@@ -202,25 +197,17 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
               opacity: { duration: 0.2 }
             }}
             className={cn(
-              'fixed top-0 right-0 h-full w-80 max-w-[85vw]',
+              'fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[99999]',
               'flex flex-col',
               'bg-gradient-to-b from-slate-900 to-black',
               'border-l border-white/10',
               'shadow-2xl'
             )}
-            style={{ 
-              zIndex: 99999,
-              position: 'fixed',
-              top: 0,
-              right: 0,
-              height: '100vh',
-              width: '20rem',
-              maxWidth: '85vw',
-              willChange: 'transform, opacity'
-            }}
+            style={{ pointerEvents: 'auto' }}
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-white/10">
@@ -365,8 +352,6 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
       )}
     </AnimatePresence>
   );
-
-  if (!mounted) return null;
 
   return createPortal(drawerContent, document.body);
 }
