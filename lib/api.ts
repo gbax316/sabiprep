@@ -320,12 +320,13 @@ export async function getQuestionsWithDistribution(
   results.forEach((result) => {
     allQuestions.push(...result.questions);
     totalRequested += result.requested;
-    totalReceived += result.received;
+    totalReceived += result.received ?? 0;
     
     // Warn if we didn't get enough questions from a topic
-    if (result.received < result.requested) {
+    const received = result.received ?? 0;
+    if (received < result.requested) {
       console.warn(
-        `Topic ${result.topicId}: requested ${result.requested}, got ${result.received}`
+        `Topic ${result.topicId}: requested ${result.requested}, got ${received}`
       );
     }
   });
