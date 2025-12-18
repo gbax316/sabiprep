@@ -63,7 +63,7 @@ export function Modal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4">
       {/* Overlay */}
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -75,25 +75,27 @@ export function Modal({
         className={cn(
           'relative w-full bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border dark:border-slate-700',
           'animate-in fade-in zoom-in-95 duration-200',
+          'max-h-[90vh] flex flex-col',
+          'mx-4 my-4', // Add margin for mobile
           sizeStyles[size],
           className
         )}
       >
-        {/* Header */}
+        {/* Header - Fixed */}
         {(title || showCloseButton) && (
-          <div className="flex items-start justify-between p-6 pb-0">
-            <div>
+          <div className="flex items-start justify-between p-4 sm:p-6 pb-0 flex-shrink-0">
+            <div className="flex-1 min-w-0 pr-2">
               {title && (
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white">{title}</h2>
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white break-words">{title}</h2>
               )}
               {description && (
-                <p className="mt-1 text-sm text-gray-500 dark:text-slate-400">{description}</p>
+                <p className="mt-1 text-xs sm:text-sm text-gray-500 dark:text-slate-400 break-words">{description}</p>
               )}
             </div>
             {showCloseButton && (
               <button
                 onClick={onClose}
-                className="p-2 -mr-2 text-gray-400 hover:text-gray-600 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                className="p-2 -mr-2 text-gray-400 hover:text-gray-600 dark:text-slate-400 dark:hover:text-slate-200 transition-colors flex-shrink-0"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -101,12 +103,14 @@ export function Modal({
           </div>
         )}
 
-        {/* Content */}
-        <div className="p-6">{children}</div>
+        {/* Content - Scrollable */}
+        <div className="p-4 sm:p-6 overflow-y-auto flex-1 min-h-0">
+          {children}
+        </div>
 
-        {/* Footer */}
+        {/* Footer - Fixed */}
         {footer && (
-          <div className="p-6 pt-0 flex justify-end space-x-3">{footer}</div>
+          <div className="p-4 sm:p-6 pt-0 flex justify-end space-x-3 flex-shrink-0 border-t dark:border-slate-700">{footer}</div>
         )}
       </div>
     </div>
