@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 
 interface MagicBadgeProps {
   children: ReactNode;
-  variant?: 'default' | 'primary' | 'accent' | 'success' | 'warning';
+  variant?: 'default' | 'primary' | 'accent' | 'success' | 'warning' | 'error' | 'info';
   size?: 'sm' | 'md';
   className?: string;
 }
@@ -36,6 +36,8 @@ export function MagicBadge({
     accent: 'bg-violet-500/20 text-violet-300 border-violet-500/30',
     success: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
     warning: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
+    error: 'bg-red-500/20 text-red-300 border-red-500/30',
+    info: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
   };
 
   const sizes = {

@@ -14,10 +14,11 @@ import {
   getSubject,
   createSessionAnswer,
   updateSession,
-  completeSession,
+  completeSessionWithGoals,
 } from '@/lib/api';
 import type { LearningSession, Question, Topic, Subject } from '@/types/database';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/lib/auth-context';
 import {
   ArrowLeft,
   Lightbulb,
@@ -33,6 +34,7 @@ import { QuestionNavigator } from '@/components/common/QuestionNavigator';
 export default function PracticeModePage({ params }: { params: Promise<{ sessionId: string }> }) {
   const { sessionId } = use(params);
   const router = useRouter();
+  const { userId } = useAuth();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
   const [topic, setTopic] = useState<Topic | null>(null);
@@ -291,7 +293,15 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     if (isLastQuestion) {
       // Complete session
       const scorePercentage = (correctAnswers / questions.length) * 100;
-      await completeSession(sessionId, scorePercentage);
+      const totalTimeSpent = session ? session.time_spent_seconds : 0;
+      await completeSessionWithGoals(
+        sessionId,
+        scorePercentage,
+        totalTimeSpent,
+        correctAnswers,
+        questions.length,
+        userId || undefined
+      );
       router.push(`/results/${sessionId}`);
     } else {
       // Go to next question
@@ -362,8 +372,16 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       const scorePercentage = answeredQuestions.size > 0
         ? (correctAnswers / answeredQuestions.size) * 100
         : 0;
+      const totalTimeSpent = session ? session.time_spent_seconds : 0;
       
-      await completeSession(sessionId, scorePercentage);
+      await completeSessionWithGoals(
+        sessionId,
+        scorePercentage,
+        totalTimeSpent,
+        correctAnswers,
+        answeredQuestions.size,
+        userId || undefined
+      );
       router.push(`/results/${sessionId}`);
     } catch (error) {
       console.error('Error ending session:', error);

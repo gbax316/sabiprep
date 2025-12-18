@@ -26,3 +26,4 @@ export { CircularTimer } from './CircularTimer';
 export { QuestionNavigator } from './QuestionNavigator';
 export { QuestionDisplay } from './QuestionDisplay';
 export type { QuestionDisplayProps } from './QuestionDisplay';
+export { NotificationDropdown } from './NotificationDropdown';

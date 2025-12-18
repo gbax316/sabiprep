@@ -14,6 +14,11 @@ import type {
   Achievement,
   UserAchievement,
   AnalyticsData,
+  Notification,
+  NotificationType,
+  UserRole,
+  UserGoal,
+  UserGoalType,
 } from '@/types/database';
 
 // ============================================
@@ -584,6 +589,52 @@ export async function completeSession(
   return data;
 }
 
+/**
+ * Complete a session and update goals
+ */
+export async function completeSessionWithGoals(
+  sessionId: string,
+  scorePercentage: number,
+  timeSpentSeconds?: number,
+  correctAnswers?: number,
+  totalQuestions?: number,
+  userId?: string
+): Promise<LearningSession> {
+  // Complete the session first
+  const session = await completeSession(
+    sessionId,
+    scorePercentage,
+    timeSpentSeconds,
+    correctAnswers,
+    totalQuestions
+  );
+
+  // Update goals if userId is provided
+  if (userId) {
+    try {
+      // Update weekly study time goal
+      if (timeSpentSeconds && timeSpentSeconds > 0) {
+        const studyTimeMinutes = Math.floor(timeSpentSeconds / 60);
+        await updateGoalProgress(userId, 'weekly_study_time', studyTimeMinutes);
+      }
+
+      // Update questions answered goals
+      if (totalQuestions && totalQuestions > 0) {
+        await updateGoalProgress(userId, 'weekly_questions', totalQuestions);
+        await updateGoalProgress(userId, 'daily_questions', totalQuestions);
+      }
+
+      // Check for goal achievements
+      await checkGoalAchievements(userId);
+    } catch (error) {
+      // Don't fail if goal update fails
+      console.error('Error updating goals:', error);
+    }
+  }
+
+  return session;
+}
+
 // ============================================
 // SESSION ANSWERS
 // ============================================
@@ -798,6 +849,18 @@ export async function updateUserStreak(userId: string): Promise<void> {
   });
 
   if (error) throw error;
+
+  // Check for streak milestones and create notifications
+  try {
+    const user = await getUserProfile(userId);
+    if (user && user.streak_count > 0) {
+      const { notifyStreakMilestone } = await import('./notifications');
+      await notifyStreakMilestone(userId, user.streak_count);
+    }
+  } catch (notifError) {
+    // Don't fail if notification creation fails
+    console.error('Error creating streak notification:', notifError);
+  }
 }
 
 /**
@@ -870,6 +933,29 @@ export async function awardAchievement(
     .single();
 
   if (error) throw error;
+
+  // Create notification for achievement unlock
+  try {
+    const { data: achievement } = await supabase
+      .from('achievements')
+      .select('*')
+      .eq('id', achievementId)
+      .single();
+    
+    if (achievement) {
+      // Import notification function dynamically to avoid circular dependency
+      const { notifyAchievementUnlocked } = await import('./notifications');
+      await notifyAchievementUnlocked(userId, {
+        id: achievement.id,
+        name: achievement.name,
+        description: achievement.description || '',
+      });
+    }
+  } catch (notifError) {
+    // Don't fail if notification creation fails
+    console.error('Error creating achievement notification:', notifError);
+  }
+
   return data;
 }
 
@@ -978,6 +1064,282 @@ export async function getAnalytics(userId: string): Promise<AnalyticsData> {
     strengths: sortedByAccuracy.slice(0, 3).map((p) => p.topic_id),
     weaknesses: sortedByAccuracy.slice(-3).reverse().map((p) => p.topic_id),
   };
+}
+
+// ============================================
+// NOTIFICATIONS
+// ============================================
+
+/**
+ * Get user notifications
+ */
+export async function getNotifications(
+  userId: string,
+  limit: number = 50,
+  unreadOnly: boolean = false
+): Promise<Notification[]> {
+  let query = supabase
+    .from('notifications')
+    .select('*')
+    .eq('user_id', userId)
+    .order('created_at', { ascending: false })
+    .limit(limit);
+
+  if (unreadOnly) {
+    query = query.eq('read', false);
+  }
+
+  const { data, error } = await query;
+
+  if (error) throw error;
+  return data || [];
+}
+
+/**
+ * Get unread notification count
+ */
+export async function getUnreadNotificationCount(userId: string): Promise<number> {
+  const { count, error } = await supabase
+    .from('notifications')
+    .select('*', { count: 'exact', head: true })
+    .eq('user_id', userId)
+    .eq('read', false);
+
+  if (error) throw error;
+  return count || 0;
+}
+
+/**
+ * Mark notification as read
+ */
+export async function markNotificationAsRead(notificationId: string): Promise<void> {
+  const { error } = await supabase.rpc('mark_notification_read', {
+    notification_uuid: notificationId,
+  });
+
+  if (error) throw error;
+}
+
+/**
+ * Mark all notifications as read
+ */
+export async function markAllNotificationsAsRead(userId: string): Promise<void> {
+  const { error } = await supabase.rpc('mark_all_notifications_read', {
+    user_uuid: userId,
+  });
+
+  if (error) throw error;
+}
+
+/**
+ * Create a notification
+ */
+export async function createNotification(
+  userId: string,
+  type: NotificationType,
+  title: string,
+  message: string,
+  data?: Record<string, unknown>
+): Promise<Notification> {
+  const { data: notification, error } = await supabase
+    .from('notifications')
+    .insert({
+      user_id: userId,
+      type,
+      title,
+      message,
+      data: data || null,
+    })
+    .select()
+    .single();
+
+  if (error) throw error;
+  if (!notification) throw new Error('Failed to create notification');
+  return notification;
+}
+
+/**
+ * Create notifications for specific user roles
+ */
+export async function createNotificationForRole(
+  role: UserRole,
+  type: NotificationType,
+  title: string,
+  message: string,
+  data?: Record<string, unknown>
+): Promise<void> {
+  // Get all users with the specified role
+  const { data: users, error } = await supabase
+    .from('users')
+    .select('id')
+    .eq('role', role)
+    .eq('status', 'active');
+
+  if (error) throw error;
+  if (!users || users.length === 0) return;
+
+  // Create notifications for all users
+  const notifications = users.map(user => ({
+    user_id: user.id,
+    type,
+    title,
+    message,
+    data: data || null,
+  }));
+
+  const { error: insertError } = await supabase
+    .from('notifications')
+    .insert(notifications);
+
+  if (insertError) throw insertError;
+}
+
+// ============================================
+// USER GOALS
+// ============================================
+
+/**
+ * Get user goals
+ */
+export async function getUserGoals(userId: string): Promise<UserGoal[]> {
+  const { data, error } = await supabase
+    .from('user_goals')
+    .select('*')
+    .eq('user_id', userId)
+    .order('created_at', { ascending: false });
+
+  if (error) throw error;
+  return data || [];
+}
+
+/**
+ * Get a specific user goal by type
+ */
+export async function getUserGoal(
+  userId: string,
+  goalType: UserGoalType
+): Promise<UserGoal | null> {
+  const { data, error } = await supabase
+    .from('user_goals')
+    .select('*')
+    .eq('user_id', userId)
+    .eq('goal_type', goalType)
+    .single();
+
+  if (error) {
+    if (error.code === 'PGRST116') return null; // Not found
+    throw error;
+  }
+  return data;
+}
+
+/**
+ * Set or update a user goal
+ */
+export async function setUserGoal(
+  userId: string,
+  goalType: UserGoalType,
+  targetValue: number
+): Promise<UserGoal> {
+  // Check if goal exists
+  const existing = await getUserGoal(userId, goalType);
+
+  if (existing) {
+    // Update existing goal
+    const { data, error } = await supabase
+      .from('user_goals')
+      .update({
+        target_value: targetValue,
+        current_value: 0, // Reset progress when changing target
+        achieved: false,
+        achieved_at: null,
+        updated_at: new Date().toISOString(),
+      })
+      .eq('id', existing.id)
+      .select()
+      .single();
+
+    if (error) throw error;
+    if (!data) throw new Error('Failed to update goal');
+    return data;
+  } else {
+    // Create new goal
+    const periodEnd = goalType === 'weekly_study_time' || goalType === 'weekly_questions'
+      ? new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
+      : goalType === 'daily_questions'
+      ? new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
+      : null;
+
+    const { data, error } = await supabase
+      .from('user_goals')
+      .insert({
+        user_id: userId,
+        goal_type: goalType,
+        target_value: targetValue,
+        current_value: 0,
+        period_start: new Date().toISOString(),
+        period_end: periodEnd,
+      })
+      .select()
+      .single();
+
+    if (error) throw error;
+    if (!data) throw new Error('Failed to create goal');
+    return data;
+  }
+}
+
+/**
+ * Update goal progress (called automatically when user activity occurs)
+ */
+export async function updateGoalProgress(
+  userId: string,
+  goalType: UserGoalType,
+  incrementValue: number = 1
+): Promise<void> {
+  const { error } = await supabase.rpc('update_goal_progress', {
+    user_uuid: userId,
+    goal_type_param: goalType,
+    increment_value: incrementValue,
+  });
+
+  if (error) throw error;
+}
+
+/**
+ * Check if goals are achieved and create notifications
+ */
+export async function checkGoalAchievements(userId: string): Promise<void> {
+  const goals = await getUserGoals(userId);
+  const newlyAchieved = goals.filter(g => g.achieved && g.achieved_at && 
+    new Date(g.achieved_at).getTime() > Date.now() - 60000); // Achieved in last minute
+
+  for (const goal of newlyAchieved) {
+    try {
+      const { notifyGoalAchieved } = await import('./notifications');
+      let goalType: 'weekly_study_time' | 'questions_answered' | 'accuracy';
+      let value = goal.current_value;
+
+      switch (goal.goal_type) {
+        case 'weekly_study_time':
+          goalType = 'weekly_study_time';
+          break;
+        case 'daily_questions':
+        case 'weekly_questions':
+          goalType = 'questions_answered';
+          break;
+        case 'accuracy_target':
+          goalType = 'accuracy';
+          break;
+        default:
+          continue;
+      }
+
+      await notifyGoalAchieved(userId, goalType, value);
+    } catch (error) {
+      console.error('Error creating goal achievement notification:', error);
+    }
+  }
 }
 
 // ============================================

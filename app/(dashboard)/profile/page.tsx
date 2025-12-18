@@ -8,7 +8,7 @@ import { MagicBadge } from '@/components/magic/MagicBadge';
 import { StatCard } from '@/components/magic/StatCard';
 import { BentoGrid } from '@/components/magic/BentoGrid';
 import { useAuth } from '@/lib/auth-context';
-import { getUserProfile, getUserStats, getUserAchievements } from '@/lib/api';
+import { getUserProfile, getUserStats, getUserAchievements, getUserGoals, setUserGoal } from '@/lib/api';
 import type { User, UserStats, UserAchievement } from '@/types/database';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -40,8 +40,12 @@ export default function ProfilePage() {
   const [user, setUser] = useState<User | null>(null);
   const [stats, setStats] = useState<UserStats | null>(null);
   const [achievements, setAchievements] = useState<UserAchievement[]>([]);
+  const [userGoals, setUserGoals] = useState<UserGoal[]>([]);
   const [dailyGoal, setDailyGoal] = useState(20);
+  const [weeklyStudyGoal, setWeeklyStudyGoal] = useState(600); // minutes
+  const [weeklyQuestionsGoal, setWeeklyQuestionsGoal] = useState(50);
   const [notifications, setNotifications] = useState(true);
+  const [savingGoals, setSavingGoals] = useState(false);
 
   useEffect(() => {
     if (userId) {
@@ -55,15 +59,26 @@ export default function ProfilePage() {
     try {
       setLoading(true);
       
-      const [userData, userStats, userAchievements] = await Promise.all([
+      const [userData, userStats, userAchievements, goals] = await Promise.all([
         getUserProfile(userId),
         getUserStats(userId),
         getUserAchievements(userId),
+        getUserGoals(userId),
       ]);
 
       setUser(userData);
       setStats(userStats);
       setAchievements(userAchievements);
+      setUserGoals(goals);
+
+      // Set goal values from existing goals
+      const studyGoal = goals.find(g => g.goal_type === 'weekly_study_time');
+      const questionsGoal = goals.find(g => g.goal_type === 'weekly_questions');
+      const dailyQuestionsGoal = goals.find(g => g.goal_type === 'daily_questions');
+      
+      if (studyGoal) setWeeklyStudyGoal(studyGoal.target_value);
+      if (questionsGoal) setWeeklyQuestionsGoal(questionsGoal.target_value);
+      if (dailyQuestionsGoal) setDailyGoal(dailyQuestionsGoal.target_value);
     } catch (error) {
       console.error('Error loading profile:', error);
     } finally {
@@ -75,6 +90,29 @@ export default function ProfilePage() {
     const confirmed = window.confirm('Are you sure you want to logout?');
     if (confirmed) {
       await signOut();
+    }
+  }
+
+  async function handleSaveGoals() {
+    if (!userId) return;
+
+    try {
+      setSavingGoals(true);
+      await Promise.all([
+        setUserGoal(userId, 'weekly_study_time', weeklyStudyGoal),
+        setUserGoal(userId, 'weekly_questions', weeklyQuestionsGoal),
+        setUserGoal(userId, 'daily_questions', dailyGoal),
+      ]);
+      
+      // Reload goals
+      const goals = await getUserGoals(userId);
+      setUserGoals(goals);
+      alert('Goals saved successfully!');
+    } catch (error) {
+      console.error('Error saving goals:', error);
+      alert('Failed to save goals. Please try again.');
+    } finally {
+      setSavingGoals(false);
     }
   }
 
@@ -274,6 +312,99 @@ export default function ProfilePage() {
                 />
               </button>
             </div>
+          </div>
+        </MagicCard>
+
+        {/* Goals Settings */}
+        <MagicCard className="p-6 space-y-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold flex items-center gap-2 text-white">
+              <Target className="w-5 h-5" />
+              Learning Goals
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {/* Weekly Study Time Goal */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-slate-300 flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                Weekly Study Time (hours)
+              </label>
+              <div className="flex items-center gap-3">
+                <input
+                  type="number"
+                  min="1"
+                  max="40"
+                  value={Math.floor(weeklyStudyGoal / 60)}
+                  onChange={(e) => setWeeklyStudyGoal(parseInt(e.target.value) * 60 || 600)}
+                  className="flex-1 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                />
+                <span className="text-slate-400">hours/week</span>
+              </div>
+              {userGoals.find(g => g.goal_type === 'weekly_study_time') && (
+                <p className="text-xs text-slate-500">
+                  Current progress: {Math.floor((userGoals.find(g => g.goal_type === 'weekly_study_time')?.current_value || 0) / 60)}h / {Math.floor(weeklyStudyGoal / 60)}h
+                </p>
+              )}
+            </div>
+
+            {/* Weekly Questions Goal */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-slate-300 flex items-center gap-2">
+                <BookOpen className="w-4 h-4" />
+                Weekly Questions
+              </label>
+              <div className="flex items-center gap-3">
+                <input
+                  type="number"
+                  min="10"
+                  max="500"
+                  value={weeklyQuestionsGoal}
+                  onChange={(e) => setWeeklyQuestionsGoal(parseInt(e.target.value) || 50)}
+                  className="flex-1 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                />
+                <span className="text-slate-400">questions/week</span>
+              </div>
+              {userGoals.find(g => g.goal_type === 'weekly_questions') && (
+                <p className="text-xs text-slate-500">
+                  Current progress: {userGoals.find(g => g.goal_type === 'weekly_questions')?.current_value || 0} / {weeklyQuestionsGoal}
+                </p>
+              )}
+            </div>
+
+            {/* Daily Questions Goal */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-slate-300 flex items-center gap-2">
+                <Zap className="w-4 h-4" />
+                Daily Questions
+              </label>
+              <div className="flex items-center gap-3">
+                <input
+                  type="number"
+                  min="5"
+                  max="100"
+                  value={dailyGoal}
+                  onChange={(e) => setDailyGoal(parseInt(e.target.value) || 20)}
+                  className="flex-1 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                />
+                <span className="text-slate-400">questions/day</span>
+              </div>
+              {userGoals.find(g => g.goal_type === 'daily_questions') && (
+                <p className="text-xs text-slate-500">
+                  Today's progress: {userGoals.find(g => g.goal_type === 'daily_questions')?.current_value || 0} / {dailyGoal}
+                </p>
+              )}
+            </div>
+
+            <MagicButton
+              variant="primary"
+              onClick={handleSaveGoals}
+              disabled={savingGoals}
+              className="w-full"
+            >
+              {savingGoals ? 'Saving...' : 'Save Goals'}
+            </MagicButton>
           </div>
         </MagicCard>
 

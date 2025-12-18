@@ -18,10 +18,11 @@ import {
   getTopics,
   createSessionAnswer,
   updateSession,
-  completeSession,
+  completeSessionWithGoals,
 } from '@/lib/api';
 import type { LearningSession, Question, Topic, Subject } from '@/types/database';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/lib/auth-context';
 import {
   ArrowLeft,
   ArrowRight,
@@ -354,7 +355,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       time_spent_seconds: totalTimeSpent,
     });
 
-    await completeSession(sessionId, scorePercentage);
+    await completeSessionWithGoals(
+      sessionId,
+      scorePercentage,
+      totalTimeSpent,
+      finalCorrect,
+      questions.length,
+      userId || undefined
+    );
     
     // Show brief overlay before redirect
     setTimeout(() => {
@@ -382,7 +390,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       time_spent_seconds: totalTimeSpent,
     });
 
-    await completeSession(sessionId, scorePercentage);
+    await completeSessionWithGoals(
+      sessionId,
+      scorePercentage,
+      totalTimeSpent,
+      finalCorrect,
+      questions.length,
+      userId || undefined
+    );
     router.push(`/results/${sessionId}`);
   }
 

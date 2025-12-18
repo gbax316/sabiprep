@@ -73,7 +73,7 @@ export function Modal({
       {/* Modal */}
       <div
         className={cn(
-          'relative w-full bg-white rounded-3xl shadow-2xl',
+          'relative w-full bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border dark:border-slate-700',
           'animate-in fade-in zoom-in-95 duration-200',
           sizeStyles[size],
           className
@@ -84,16 +84,16 @@ export function Modal({
           <div className="flex items-start justify-between p-6 pb-0">
             <div>
               {title && (
-                <h2 className="text-xl font-bold text-gray-900">{title}</h2>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white">{title}</h2>
               )}
               {description && (
-                <p className="mt-1 text-sm text-gray-500">{description}</p>
+                <p className="mt-1 text-sm text-gray-500 dark:text-slate-400">{description}</p>
               )}
             </div>
             {showCloseButton && (
               <button
                 onClick={onClose}
-                className="p-2 -mr-2 text-gray-400 hover:text-gray-600 transition-colors"
+                className="p-2 -mr-2 text-gray-400 hover:text-gray-600 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -159,7 +159,7 @@ export function ConfirmModal({
         </>
       }
     >
-      <p className="text-gray-600">{message}</p>
+      <p className="text-gray-600 dark:text-slate-300">{message}</p>
     </Modal>
   );
 }
@@ -217,8 +217,8 @@ export function AlertModal({
             {variant === 'info' && 'i'}
           </span>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600">{message}</p>
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{title}</h3>
+        <p className="text-gray-600 dark:text-slate-300">{message}</p>
       </div>
     </Modal>
   );

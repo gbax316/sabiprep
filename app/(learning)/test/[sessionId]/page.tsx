@@ -17,11 +17,12 @@ import {
   getTopics,
   createSessionAnswer,
   updateSession,
-  completeSession,
+  completeSessionWithGoals,
 } from '@/lib/api';
 import { supabase } from '@/lib/supabaseClient';
 import type { LearningSession, Question, Topic, Subject } from '@/types/database';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/lib/auth-context';
 import {
   ArrowLeft,
   ArrowRight,
@@ -38,6 +39,7 @@ import {
 export default function TestModePage({ params }: { params: Promise<{ sessionId: string }> }) {
   const { sessionId } = use(params);
   const router = useRouter();
+  const { userId } = useAuth();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
   const [topics, setTopics] = useState<Topic[]>([]);
@@ -269,12 +271,13 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
 
       // Complete session with correct time and score
       const scorePercentage = (correct / questions.length) * 100;
-      await completeSession(
+      await completeSessionWithGoals(
         sessionId, 
         scorePercentage, 
         totalTimeSpent,
         correct,
-        questions.length
+        questions.length,
+        userId || undefined
       );
 
       // Navigate to results

@@ -35,6 +35,7 @@ import {
   Zap,
   ChevronDown,
   ChevronUp,
+  ArrowLeft,
 } from 'lucide-react';
 
 export default function ResultsPage({ params }: { params: Promise<{ sessionId: string }> }) {
@@ -353,6 +354,20 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 pb-8">
       <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
+        {/* Back to Home Button */}
+        <div className="flex items-center justify-start">
+          <Link href="/home">
+            <Button
+              variant="outline"
+              size="sm"
+              leftIcon={<ArrowLeft className="w-4 h-4" />}
+              className="text-gray-700 hover:text-gray-900"
+            >
+              Back to Home
+            </Button>
+          </Link>
+        </div>
+
         {/* Celebration Header */}
         <div className="text-center py-8">
           {isTimedMode ? (

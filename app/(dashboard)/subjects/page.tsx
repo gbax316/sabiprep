@@ -4,21 +4,26 @@ import React, { useEffect, useState } from 'react';
 import { MagicCard } from '@/components/magic/MagicCard';
 import { MagicButton } from '@/components/magic/MagicButton';
 import { MagicBadge } from '@/components/magic/MagicBadge';
+import { Modal } from '@/components/common/Modal';
 import { BottomNav } from '@/components/common/BottomNav';
 import { useAuth } from '@/lib/auth-context';
 import { getSubjects, getUserProgress } from '@/lib/api';
 import type { Subject, UserProgress } from '@/types/database';
 import Link from 'next/link';
-import { ArrowLeft, Search } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { ArrowLeft, Search, BookOpen, FileText, Timer, Layers, TrendingUp, Target, Clock, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function SubjectsPage() {
   const { userId } = useAuth();
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [progress, setProgress] = useState<UserProgress[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [error, setError] = useState<string | null>(null);
+  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
+  const [showModeModal, setShowModeModal] = useState(false);
 
   useEffect(() => {
     if (userId) {
@@ -66,6 +71,25 @@ export default function SubjectsPage() {
       questionsAttempted: totalQuestions,
       topicsStarted: subjectProgress.length,
     };
+  };
+
+  const handleStartLearning = (subject: Subject, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setSelectedSubject(subject);
+    setShowModeModal(true);
+  };
+
+  const handleModeSelect = (mode: 'practice' | 'test' | 'timed' | 'topics') => {
+    if (!selectedSubject) return;
+    
+    setShowModeModal(false);
+    
+    if (mode === 'topics') {
+      router.push(`/topics/${selectedSubject.id}`);
+    } else {
+      router.push(`/${mode}/exam-style/${selectedSubject.id}`);
+    }
   };
 
   if (loading) {
@@ -130,75 +154,99 @@ export default function SubjectsPage() {
             const subjectProgress = getSubjectProgress(subject.id);
 
             return (
-              <Link key={subject.id} href={`/topics/${subject.id}`}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: idx * 0.05 }}
+              <motion.div
+                key={subject.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: idx * 0.05 }}
+              >
+                <MagicCard 
+                  hover 
+                  className="p-6 space-y-4 bg-slate-900/50 border border-slate-700 hover:border-violet-500/50 hover:shadow-2xl hover:shadow-violet-500/20 relative overflow-hidden group"
                 >
-                  <MagicCard 
-                    hover 
-                    className="p-6 space-y-4 bg-slate-900/50 border border-slate-700 hover:border-violet-500/50 hover:shadow-2xl hover:shadow-violet-500/20"
-                  >
-                    {/* Gradient Overlay on Hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+                  {/* Gradient Overlay on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
 
-                    <div className="relative">
-                      {/* Subject Icon with Badges */}
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center shadow-lg shadow-cyan-500/50 text-2xl">
-                          {subject.icon || '📚'}
-                        </div>
-                        {subjectProgress && (
+                  <div className="relative">
+                    {/* Subject Icon with Badges */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center shadow-lg shadow-cyan-500/50 text-3xl group-hover:scale-110 transition-transform">
+                        {subject.icon || '📚'}
+                      </div>
+                      {subjectProgress && (
+                        <div className="flex flex-col items-end gap-2">
                           <MagicBadge variant="success" size="sm">
                             {subjectProgress.accuracy}% accuracy
                           </MagicBadge>
-                        )}
-                      </div>
-
-                      {/* Subject Info */}
-                      <div className="space-y-2">
-                        <h3 className="text-xl font-semibold text-white">
-                          {subject.name}
-                        </h3>
-                        <p className="text-sm text-slate-400">
-                          {subject.total_questions} questions
-                        </p>
-                      </div>
-
-                      {/* Progress Bar */}
-                      {subjectProgress && (
-                        <div className="space-y-2 mt-4">
-                          <div className="flex justify-between text-xs text-slate-400">
-                            <span>Progress</span>
-                            <span>{subjectProgress.accuracy}%</span>
-                          </div>
-                          <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-                            <motion.div
-                              className="h-full bg-gradient-to-r from-cyan-400 to-violet-500 shadow-lg shadow-cyan-500/50"
-                              initial={{ width: 0 }}
-                              animate={{ width: `${subjectProgress.accuracy}%` }}
-                              transition={{ duration: 1, ease: 'easeOut', delay: idx * 0.05 }}
-                            />
-                          </div>
-                          <p className="text-xs text-slate-500">
-                            {subjectProgress.topicsStarted} topics started · {subjectProgress.questionsAttempted} questions answered
-                          </p>
+                          {subjectProgress.topicsStarted > 0 && (
+                            <MagicBadge variant="info" size="sm">
+                              {subjectProgress.topicsStarted} topics
+                            </MagicBadge>
+                          )}
                         </div>
                       )}
-
-                      {/* Action Button */}
-                      <MagicButton 
-                        variant="secondary" 
-                        size="sm"
-                        className="w-full mt-4"
-                      >
-                        {subjectProgress ? 'Continue' : 'Start Learning'} →
-                      </MagicButton>
                     </div>
-                  </MagicCard>
-                </motion.div>
-              </Link>
+
+                    {/* Subject Info */}
+                    <div className="space-y-2 mb-4">
+                      <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                        {subject.name}
+                      </h3>
+                      {subject.description && (
+                        <p className="text-sm text-slate-400 line-clamp-2">
+                          {subject.description}
+                        </p>
+                      )}
+                      <div className="flex items-center gap-4 text-xs text-slate-500">
+                        <span className="flex items-center gap-1">
+                          <Target className="w-3 h-3" />
+                          {subject.total_questions} questions
+                        </span>
+                        {subject.exam_types && subject.exam_types.length > 0 && (
+                          <span className="flex items-center gap-1">
+                            <FileText className="w-3 h-3" />
+                            {subject.exam_types.slice(0, 2).join(', ')}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Progress Bar */}
+                    {subjectProgress && subjectProgress.accuracy > 0 && (
+                      <div className="space-y-2 mb-4">
+                        <div className="flex justify-between text-xs text-slate-400">
+                          <span className="flex items-center gap-1">
+                            <TrendingUp className="w-3 h-3" />
+                            Your Progress
+                          </span>
+                          <span className="font-semibold text-cyan-400">{subjectProgress.accuracy}%</span>
+                        </div>
+                        <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                          <motion.div
+                            className="h-full bg-gradient-to-r from-cyan-400 to-violet-500 shadow-lg shadow-cyan-500/50"
+                            initial={{ width: 0 }}
+                            animate={{ width: `${subjectProgress.accuracy}%` }}
+                            transition={{ duration: 1, ease: 'easeOut', delay: idx * 0.05 }}
+                          />
+                        </div>
+                        <p className="text-xs text-slate-500">
+                          {subjectProgress.questionsAttempted} questions answered across {subjectProgress.topicsStarted} topics
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Action Button */}
+                    <MagicButton 
+                      variant="primary" 
+                      size="md"
+                      className="w-full mt-4 group-hover:scale-105 transition-transform"
+                      onClick={(e) => handleStartLearning(subject, e)}
+                    >
+                      {subjectProgress ? 'Continue Learning' : 'Start Learning'} →
+                    </MagicButton>
+                  </div>
+                </MagicCard>
+              </motion.div>
             );
           })}
         </div>
@@ -216,6 +264,118 @@ export default function SubjectsPage() {
           </div>
         )}
       </div>
+
+      {/* Mode Selection Modal */}
+      <Modal
+        isOpen={showModeModal}
+        onClose={() => {
+          setShowModeModal(false);
+          setSelectedSubject(null);
+        }}
+        title={`Choose How to Learn ${selectedSubject?.name}`}
+        description="Select your preferred learning mode or browse topics"
+        size="lg"
+        className="bg-slate-900 border-slate-700"
+      >
+        <div className="space-y-4">
+          {/* Learning Modes */}
+          <div>
+            <h3 className="text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wide">Learning Modes</h3>
+            <div className="grid grid-cols-1 gap-3">
+              {/* Practice Mode */}
+              <button
+                onClick={() => handleModeSelect('practice')}
+                className="group p-4 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-800 transition-all text-left"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                    <BookOpen className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-white mb-1">Practice Mode</h4>
+                    <p className="text-sm text-slate-400 mb-2">Learn at your own pace with hints and explanations</p>
+                    <div className="flex flex-wrap gap-2">
+                      <MagicBadge variant="info" size="sm">💡 Hints Available</MagicBadge>
+                      <MagicBadge variant="info" size="sm">📖 Solutions</MagicBadge>
+                    </div>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-blue-400 transition-colors" />
+                </div>
+              </button>
+
+              {/* Test Mode */}
+              <button
+                onClick={() => handleModeSelect('test')}
+                className="group p-4 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 transition-all text-left"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                    <FileText className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-white mb-1">Test Mode</h4>
+                    <p className="text-sm text-slate-400 mb-2">Simulate exam conditions - no hints until the end</p>
+                    <div className="flex flex-wrap gap-2">
+                      <MagicBadge variant="warning" size="sm">🎯 Exam Simulation</MagicBadge>
+                      <MagicBadge variant="warning" size="sm">📊 Full Review</MagicBadge>
+                    </div>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-amber-400 transition-colors" />
+                </div>
+              </button>
+
+              {/* Timed Mode */}
+              <button
+                onClick={() => handleModeSelect('timed')}
+                className="group p-4 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-orange-500/50 hover:bg-slate-800 transition-all text-left"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                    <Timer className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-white mb-1">Timed Mode</h4>
+                    <p className="text-sm text-slate-400 mb-2">Challenge yourself with time limits to build speed</p>
+                    <div className="flex flex-wrap gap-2">
+                      <MagicBadge variant="error" size="sm">⚡ Speed Challenge</MagicBadge>
+                      <MagicBadge variant="error" size="sm">⏱️ Time Limits</MagicBadge>
+                    </div>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-orange-400 transition-colors" />
+                </div>
+              </button>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="relative my-6">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-slate-700"></div>
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-4 bg-slate-900 text-slate-500">OR</span>
+            </div>
+          </div>
+
+          {/* Learn by Topic */}
+          <button
+            onClick={() => handleModeSelect('topics')}
+            className="group p-4 rounded-xl bg-gradient-to-br from-violet-500/20 to-cyan-500/20 border border-violet-500/30 hover:border-violet-500/50 hover:from-violet-500/30 hover:to-cyan-500/30 transition-all text-left w-full"
+          >
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                <Layers className="w-6 h-6 text-white" />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-semibold text-white mb-1">Learn by Topic</h4>
+                <p className="text-sm text-slate-300 mb-2">Browse and select specific topics to focus on</p>
+                <MagicBadge variant="accent" size="sm">🎯 Topic-Focused</MagicBadge>
+              </div>
+              <ChevronRight className="w-5 h-5 text-violet-400 group-hover:text-cyan-400 transition-colors" />
+            </div>
+          </button>
+        </div>
+      </Modal>
 
       {/* Bottom Navigation */}
       <BottomNav />

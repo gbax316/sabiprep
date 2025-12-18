@@ -275,3 +275,63 @@ export interface AnalyticsData {
   strengths: string[]; // topic IDs
   weaknesses: string[]; // topic IDs
 }
+
+/**
+ * Notification type
+ */
+export type NotificationType = 
+  | 'achievement_unlocked'
+  | 'streak_milestone'
+  | 'session_completed'
+  | 'goal_achieved'
+  | 'daily_reminder'
+  | 'new_content'
+  | 'student_progress'
+  | 'student_achievement'
+  | 'new_signup'
+  | 'import_completed'
+  | 'system_alert'
+  | 'content_review';
+
+/**
+ * Database Notification type (matches notifications table)
+ */
+export interface Notification {
+  id: string;
+  user_id: string;
+  type: NotificationType;
+  title: string;
+  message: string;
+  data?: Record<string, unknown>; // JSONB data (session_id, achievement_id, etc.)
+  read: boolean;
+  read_at?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+/**
+ * User goal type
+ */
+export type UserGoalType = 
+  | 'weekly_study_time'
+  | 'daily_questions'
+  | 'weekly_questions'
+  | 'accuracy_target'
+  | 'streak_target';
+
+/**
+ * Database UserGoal type (matches user_goals table)
+ */
+export interface UserGoal {
+  id: string;
+  user_id: string;
+  goal_type: UserGoalType;
+  target_value: number;
+  current_value: number;
+  period_start: string;
+  period_end?: string;
+  achieved: boolean;
+  achieved_at?: string;
+  created_at: string;
+  updated_at: string;
+}
