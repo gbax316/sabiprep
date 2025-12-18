@@ -123,8 +123,10 @@ export default function TopicMixPage({ params }: { params: Promise<{ subjectId: 
     if (remainder > 0) {
       // Sort by remainder (descending), then by available capacity
       const sorted = [...distribution].sort((a, b) => {
-        if (Math.abs(b.remainder - a.remainder) > 0.001) {
-          return b.remainder - a.remainder;
+        const aRemainder = a.remainder ?? 0;
+        const bRemainder = b.remainder ?? 0;
+        if (Math.abs(bRemainder - aRemainder) > 0.001) {
+          return bRemainder - aRemainder;
         }
         const aCapacity = a.topic.total_questions - a.count;
         const bCapacity = b.topic.total_questions - b.count;
