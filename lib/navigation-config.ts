@@ -14,12 +14,12 @@ import {
   Bell,
   HelpCircle,
 } from 'lucide-react';
-import type { React.ComponentType } from 'react';
+import type { ComponentType } from 'react';
 
 export interface NavItem {
   href: string;
   label: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: ComponentType<{ className?: string }>;
   description?: string;
   badge?: string;
   badgeColor?: string;
