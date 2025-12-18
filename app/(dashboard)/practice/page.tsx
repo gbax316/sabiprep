@@ -6,8 +6,8 @@ import { Badge } from '@/components/common/Badge';
 import { BottomNav } from '@/components/common/BottomNav';
 import { SearchInput } from '@/components/common/Input';
 import { useAuth } from '@/lib/auth-context';
-import { getSubjects, getTopics, getUserProgress } from '@/lib/api';
-import type { Subject, Topic, UserProgress } from '@/types/database';
+import { getSubjects, getUserProgress } from '@/lib/api';
+import type { Subject, UserProgress } from '@/types/database';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, TrendingUp, Play, ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -17,8 +17,6 @@ export default function PracticeModePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [subjects, setSubjects] = useState<Subject[]>([]);
-  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
-  const [topics, setTopics] = useState<Topic[]>([]);
   const [progress, setProgress] = useState<UserProgress[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -27,12 +25,6 @@ export default function PracticeModePage() {
       loadSubjects();
     }
   }, [userId]);
-
-  useEffect(() => {
-    if (selectedSubject) {
-      loadTopics(selectedSubject.id);
-    }
-  }, [selectedSubject]);
 
   async function loadSubjects() {
     if (!userId) return;
@@ -53,24 +45,8 @@ export default function PracticeModePage() {
     }
   }
 
-  async function loadTopics(subjectId: string) {
-    try {
-      setLoading(true);
-      const topicsData = await getTopics(subjectId);
-      setTopics(topicsData);
-    } catch (error) {
-      console.error('Error loading topics:', error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
   const filteredSubjects = subjects.filter((subject) =>
     subject.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  const filteredTopics = topics.filter((topic) =>
-    topic.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   // Get progress for a subject
@@ -89,24 +65,13 @@ export default function PracticeModePage() {
     };
   };
 
-  // Get progress for a topic
-  const getTopicProgress = (topicId: string) => {
-    return progress.find(p => p.topic_id === topicId);
-  };
-
-  const handleTopicClick = (topicId: string) => {
-    // For practice mode, go to topic selection screen (supports multi-topic)
-    router.push(`/practice/topic-select/${selectedSubject?.id}`);
+  const handleSubjectClick = (subjectId: string) => {
+    // Navigate to exam style selection for practice mode
+    router.push(`/practice/exam-style/${subjectId}`);
   };
 
   const handleBackClick = () => {
-    if (selectedSubject) {
-      setSelectedSubject(null);
-      setTopics([]);
-      setSearchQuery('');
-    } else {
-      router.push('/home');
-    }
+    router.push('/home');
   };
 
   if (loading && subjects.length === 0) {
@@ -134,19 +99,17 @@ export default function PracticeModePage() {
             </button>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">
-                {selectedSubject ? selectedSubject.name : 'Practice Mode'}
+                Practice Mode
               </h1>
               <p className="text-sm text-gray-600">
-                {selectedSubject 
-                  ? 'Select a topic to start practicing'
-                  : 'Learn at your own pace with instant feedback and explanations'}
+                Learn at your own pace with instant feedback and explanations
               </p>
             </div>
           </div>
 
           {/* Search */}
           <SearchInput
-            placeholder={selectedSubject ? "Search topics..." : "Search subjects..."}
+            placeholder="Search subjects..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -155,15 +118,14 @@ export default function PracticeModePage() {
 
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Subjects Grid */}
-        {!selectedSubject && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSubjects.map((subject) => {
               const subjectProgress = getSubjectProgress(subject.id);
 
               return (
                 <div
                   key={subject.id}
-                  onClick={() => setSelectedSubject(subject)}
+                  onClick={() => handleSubjectClick(subject.id)}
                   className="cursor-pointer"
                 >
                   <Card className="hover:shadow-xl transition-all hover:scale-[1.02] h-full">
@@ -231,105 +193,10 @@ export default function PracticeModePage() {
                 </div>
               );
             })}
-          </div>
-        )}
-
-        {/* Topics List */}
-        {selectedSubject && (
-          <div className="space-y-4">
-            {filteredTopics.map((topic) => {
-              const topicProgress = getTopicProgress(topic.id);
-
-              return (
-                <div
-                  key={topic.id}
-                  onClick={() => handleTopicClick(topic.id)}
-                  className="cursor-pointer"
-                >
-                  <Card className="hover:shadow-lg transition-all">
-                    <div className="flex items-center gap-4">
-                      {/* Topic Info */}
-                      <div className="flex-1">
-                        <div className="flex items-start justify-between mb-2">
-                          <div>
-                            <h3 className="font-bold text-lg text-gray-900 mb-1">{topic.name}</h3>
-                            {topic.description && (
-                              <p className="text-sm text-gray-600 line-clamp-2">{topic.description}</p>
-                            )}
-                          </div>
-                          {topic.difficulty && (
-                            <Badge variant={
-                              topic.difficulty === 'Easy' ? 'success' :
-                              topic.difficulty === 'Medium' ? 'warning' :
-                              'error'
-                            } size="sm">
-                              {topic.difficulty}
-                            </Badge>
-                          )}
-                        </div>
-
-                        {/* Stats Row */}
-                        <div className="flex items-center gap-4 text-sm text-gray-600 mt-3">
-                          <div className="flex items-center gap-1">
-                            <BookOpen className="w-4 h-4" />
-                            <span>{topic.total_questions} questions</span>
-                          </div>
-                          
-                          {topicProgress && (
-                            <div className="flex items-center gap-1">
-                              <TrendingUp className="w-4 h-4 text-green-600" />
-                              <span className="text-green-600 font-medium">
-                                {Math.round(topicProgress.accuracy_percentage)}% accuracy
-                              </span>
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Progress Bar */}
-                        {topicProgress && (
-                          <div className="mt-3">
-                            <div className="w-full bg-gray-200 rounded-full h-2">
-                              <div
-                                className="bg-indigo-600 h-2 rounded-full transition-all"
-                                style={{ width: `${topicProgress.accuracy_percentage}%` }}
-                              />
-                            </div>
-                            <p className="text-xs text-gray-500 mt-1">
-                              {topicProgress.questions_correct} / {topicProgress.questions_attempted} correct
-                            </p>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Start Button */}
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-indigo-600 hover:bg-indigo-700 rounded-full flex items-center justify-center transition-colors">
-                          <Play className="w-6 h-6 text-white ml-0.5" fill="currentColor" />
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-                </div>
-              );
-            })}
-
-            {/* Empty State */}
-            {filteredTopics.length === 0 && (
-              <div className="text-center py-12">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  No topics found
-                </h3>
-                <p className="text-gray-600">
-                  Try adjusting your search query
-                </p>
-              </div>
-            )}
-          </div>
-        )}
+        </div>
 
         {/* Empty State for Subjects */}
-        {!selectedSubject && filteredSubjects.length === 0 && (
+        {filteredSubjects.length === 0 && (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">

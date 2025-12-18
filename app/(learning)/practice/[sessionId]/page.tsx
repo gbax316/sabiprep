@@ -217,7 +217,6 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     const timeSpent = Math.floor((Date.now() - startTime) / 1000);
     const usedHint = currentHintLevel !== null;
     const viewedSolution = solutionViewed.has(questionId);
-    const wasSolutionViewedBeforeAttempt = viewedSolution && !isAnswered;
 
     // Track first attempt correctness
     if (isFirstAttempt) {
@@ -244,6 +243,9 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     // Mark as answered if correct or if user wants to move on
     if (isCorrect || isAnswered) {
       try {
+        // Check if solution was viewed before this attempt
+        const solutionViewedBeforeThisAttempt = solutionViewed.has(questionId) && !isAnswered;
+        
         // Record answer
         await createSessionAnswer({
           sessionId: sessionId,
@@ -254,8 +256,8 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
           timeSpentSeconds: timeSpent,
           hintUsed: usedHint,
           hintLevel: currentHintLevel || undefined,
-          solutionViewed: viewedSolution,
-          solutionViewedBeforeAttempt: wasSolutionViewedBeforeAttempt,
+          solutionViewed: solutionViewed.has(questionId),
+          solutionViewedBeforeAttempt: solutionViewedBeforeThisAttempt,
           attemptCount,
           firstAttemptCorrect: firstAttemptCorrect.get(questionId) ?? (isFirstAttempt ? isCorrect : undefined),
         });
@@ -274,8 +276,10 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
           last_question_index: currentIndex,
         });
 
-        // Show solution automatically
-        setShowSolution(true);
+        // Auto-show solution after answering (if not already shown)
+        if (!showSolution) {
+          setShowSolution(true);
+        }
       } catch (error) {
         console.error('Error recording answer:', error);
         alert('Failed to save answer. Please try again.');
@@ -314,10 +318,20 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     }
   }
 
-  function handleShowSolution() {
+  function handleToggleSolution() {
     if (!currentQuestion) return;
-    setShowSolution(true);
-    setSolutionViewed(prev => new Set(prev).add(currentQuestion.id));
+    const newShowSolution = !showSolution;
+    setShowSolution(newShowSolution);
+    
+    // Track when solution is viewed (only on first view)
+    if (newShowSolution && !solutionViewed.has(currentQuestion.id)) {
+      setSolutionViewed(prev => new Set(prev).add(currentQuestion.id));
+      
+      // If viewing solution before answering, record it
+      if (!isAnswered) {
+        // This will be tracked when answer is submitted
+      }
+    }
   }
 
   async function handlePauseSession() {
@@ -549,50 +563,95 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
           </div>
         )}
 
-        {/* Solution Button (can view before attempting) */}
-        {!isAnswered && currentQuestion.explanation && (
-          <Button
-            variant="tertiary"
-            size="md"
-            leftIcon={<BookOpen className="w-5 h-5" />}
-            onClick={handleShowSolution}
-            disabled={showSolution}
-          >
-            {showSolution ? 'Solution Shown' : 'Show Solution'}
-          </Button>
+        {/* Solution Button - Available anytime in practice mode */}
+        {(currentQuestion.explanation || currentQuestion.solution) && (
+          <div className="flex items-center gap-3">
+            <Button
+              variant={showSolution ? "outline" : "tertiary"}
+              size="md"
+              leftIcon={<BookOpen className="w-5 h-5" />}
+              onClick={handleToggleSolution}
+            >
+              {showSolution ? 'Hide Solution' : 'Show Solution'}
+            </Button>
+            {solutionViewed.has(currentQuestion.id) && !isAnswered && (
+              <Badge variant="warning" size="sm">
+                ⚠️ Viewed before answering
+              </Badge>
+            )}
+          </div>
         )}
 
-        {/* Solution Box */}
-        {showSolution && currentQuestion.explanation && (
+        {/* Solution Box - Show explanation and/or solution */}
+        {showSolution && (currentQuestion.explanation || currentQuestion.solution) && (
           <Card className={
             isAnswered && selectedAnswer === currentQuestion.correct_answer
               ? 'bg-green-50 border-2 border-green-200'
+              : solutionViewed.has(currentQuestion.id) && !isAnswered
+              ? 'bg-amber-50 border-2 border-amber-200'
               : 'bg-blue-50 border-2 border-blue-200'
           }>
             <div className="flex gap-3">
               <BookOpen className={`w-6 h-6 flex-shrink-0 ${
                 isAnswered && selectedAnswer === currentQuestion.correct_answer 
                   ? 'text-green-600' 
+                  : solutionViewed.has(currentQuestion.id) && !isAnswered
+                  ? 'text-amber-600'
                   : 'text-blue-600'
               }`} />
               <div className="flex-1">
-                <p className="font-semibold text-gray-900 mb-1">
-                  {isAnswered && selectedAnswer === currentQuestion.correct_answer 
-                    ? '✅ Correct!' 
-                    : '📖 Step-by-Step Solution'}
-                </p>
-                <div className="text-gray-700 mb-2 whitespace-pre-line">
-                  {currentQuestion.explanation}
+                <div className="flex items-center justify-between mb-2">
+                  <p className="font-semibold text-gray-900">
+                    {isAnswered && selectedAnswer === currentQuestion.correct_answer 
+                      ? '✅ Correct!' 
+                      : solutionViewed.has(currentQuestion.id) && !isAnswered
+                      ? '📖 Solution (Viewed Before Answering)'
+                      : '📖 Step-by-Step Solution'}
+                  </p>
+                  <button
+                    onClick={handleToggleSolution}
+                    className="text-gray-400 hover:text-gray-600 transition-colors"
+                    title="Hide solution"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
-                {currentQuestion.solution && (
-                  <div className="mt-3 p-3 bg-white rounded-lg border border-blue-200">
-                    <p className="text-sm font-semibold text-gray-900 mb-2">Full Solution:</p>
-                    <p className="text-sm text-gray-700 whitespace-pre-line">{currentQuestion.solution}</p>
+                
+                {/* Correct Answer Badge */}
+                <div className="mb-3">
+                  <Badge variant={isAnswered && selectedAnswer === currentQuestion.correct_answer ? "success" : "info"} size="md">
+                    Correct Answer: {currentQuestion.correct_answer}
+                  </Badge>
+                </div>
+
+                {/* Explanation */}
+                {currentQuestion.explanation && (
+                  <div className="mb-3">
+                    <p className="text-sm font-semibold text-gray-700 mb-1">Explanation:</p>
+                    <div className="text-gray-700 whitespace-pre-line leading-relaxed">
+                      {currentQuestion.explanation}
+                    </div>
                   </div>
                 )}
-                <p className="text-sm text-gray-600 mt-3">
-                  Correct answer: <span className="font-semibold">{currentQuestion.correct_answer}</span>
-                </p>
+
+                {/* Detailed Solution */}
+                {currentQuestion.solution && (
+                  <div className="mt-3 p-3 bg-white rounded-lg border border-blue-200">
+                    <p className="text-sm font-semibold text-gray-900 mb-2">Detailed Solution:</p>
+                    <p className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">{currentQuestion.solution}</p>
+                  </div>
+                )}
+
+                {/* Learning Tip */}
+                {solutionViewed.has(currentQuestion.id) && !isAnswered && (
+                  <div className="mt-3 p-2 bg-amber-100 rounded-lg border border-amber-300">
+                    <p className="text-xs text-amber-800">
+                      💡 <strong>Tip:</strong> Try answering the question yourself first to maximize learning. Viewing solutions before attempting reduces the learning benefit.
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </Card>
@@ -659,10 +718,14 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
               if (questionId) {
                 const prevHintLevel = hintUsage.get(questionId);
                 setHintLevel(prevHintLevel || null);
-                const prevSolutionViewed = solutionViewed.has(questionId);
-                if (prevSolutionViewed) {
-                  setShowSolution(true);
-                }
+              const prevSolutionViewed = solutionViewed.has(questionId);
+              const prevQuestion = questions[index];
+              // Restore solution view state if it was previously viewed
+              if (prevSolutionViewed && (prevQuestion?.explanation || prevQuestion?.solution)) {
+                setShowSolution(true);
+              } else {
+                setShowSolution(false);
+              }
               }
               setStartTime(Date.now());
             }}
