@@ -344,11 +344,11 @@ export default function QuickPracticePage() {
           <MagicButton
             variant="primary"
             size="lg"
-            leftIcon={<Play className="w-6 h-6" />}
             onClick={startQuickPractice}
             disabled={!canStart || starting}
             className="w-full shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
           >
+            <Play className="w-6 h-6" />
             {starting ? 'Starting...' : canStart ? `Start ${questionCount} Question${questionCount > 1 ? 's' : ''}` : 'Not Enough Questions'}
           </MagicButton>
         </motion.div>
