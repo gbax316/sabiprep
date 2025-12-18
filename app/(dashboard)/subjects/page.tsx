@@ -73,9 +73,7 @@ export default function SubjectsPage() {
     };
   };
 
-  const handleStartLearning = (subject: Subject, e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleStartLearning = (subject: Subject) => {
     setSelectedSubject(subject);
     setShowModeModal(true);
   };
@@ -240,7 +238,7 @@ export default function SubjectsPage() {
                       variant="primary" 
                       size="md"
                       className="w-full mt-4 group-hover:scale-105 transition-transform"
-                      onClick={(e) => handleStartLearning(subject, e)}
+                      onClick={() => handleStartLearning(subject)}
                     >
                       {subjectProgress ? 'Continue Learning' : 'Start Learning'} →
                     </MagicButton>
