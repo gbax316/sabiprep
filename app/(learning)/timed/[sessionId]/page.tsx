@@ -484,7 +484,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
                 <span className="text-xl">{formattedTime}</span>
               </div>
               <Button
-                variant="outlined"
+                variant="outline"
                 size="sm"
                 onClick={() => setShowSubmitConfirm(true)}
                 className="text-orange-600 border-orange-600"
@@ -702,7 +702,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
           </p>
           <div className="flex gap-2">
             <Button
-              variant="outlined"
+              variant="outline"
               onClick={() => setShowSubmitConfirm(false)}
               className="flex-1"
             >
