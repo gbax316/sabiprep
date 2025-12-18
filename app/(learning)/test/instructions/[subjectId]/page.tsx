@@ -14,7 +14,7 @@ export default function TestInstructionsPage({ params }: { params: Promise<{ sub
   const { userId } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const examStyle = searchParams.get('style') || 'waec';
+  const examStyle = searchParams?.get('style') || 'waec';
   
   const [loading, setLoading] = useState(true);
   const [subject, setSubject] = useState<Subject | null>(null);

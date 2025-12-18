@@ -14,8 +14,8 @@ export default function TimedInstructionsPage({ params }: { params: Promise<{ su
   const { userId } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const totalQuestions = parseInt(searchParams.get('total') || '20');
-  const totalTimeMinutes = parseInt(searchParams.get('time') || '20');
+  const totalQuestions = parseInt(searchParams?.get('total') || '20');
+  const totalTimeMinutes = parseInt(searchParams?.get('time') || '20');
   
   const [loading, setLoading] = useState(true);
   const [subject, setSubject] = useState<Subject | null>(null);

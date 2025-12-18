@@ -23,8 +23,8 @@ export default function TopicMixPage({ params }: { params: Promise<{ subjectId: 
   const { userId } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const examStyle = (searchParams.get('style') || 'waec') as ExamStyle;
-  const customCount = searchParams.get('count') ? parseInt(searchParams.get('count')!) : null;
+  const examStyle = (searchParams?.get('style') || 'waec') as ExamStyle;
+  const customCount = searchParams?.get('count') ? parseInt(searchParams.get('count')!) : null;
   
   const [loading, setLoading] = useState(true);
   const [subject, setSubject] = useState<Subject | null>(null);

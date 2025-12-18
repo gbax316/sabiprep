@@ -23,9 +23,9 @@ export default function TimedTopicMixPage({ params }: { params: Promise<{ subjec
   const { userId } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const examFormat = (searchParams.get('format') || 'speed-drill') as TimedExamFormat;
-  const customCount = searchParams.get('count') ? parseInt(searchParams.get('count')!) : null;
-  const customTime = searchParams.get('time') ? parseInt(searchParams.get('time')!) : null;
+  const examFormat = (searchParams?.get('format') || 'speed-drill') as TimedExamFormat;
+  const customCount = searchParams?.get('count') ? parseInt(searchParams.get('count')!) : null;
+  const customTime = searchParams?.get('time') ? parseInt(searchParams.get('time')!) : null;
   
   const [loading, setLoading] = useState(true);
   const [subject, setSubject] = useState<Subject | null>(null);
