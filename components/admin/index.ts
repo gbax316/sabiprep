@@ -114,3 +114,26 @@ export {
 export {
   ImportReportCard,
 } from './ImportReportCard';
+
+// BatchEditModal - Modal for editing import batch
+export {
+  BatchEditModal,
+  type BatchEditModalProps,
+} from './BatchEditModal';
+
+// BatchDeleteModal - Modal for confirming batch deletion
+export {
+  BatchDeleteModal,
+  type BatchDeleteModalProps,
+} from './BatchDeleteModal';
+
+// QuickEditModal - Quick edit modal for questions
+export {
+  QuickEditModal,
+  type QuickEditModalProps,
+} from './QuickEditModal';
+
+// BulkActionBar - Bulk action bar for selected items
+export {
+  BulkActionBar,
+} from './BulkActionBar';

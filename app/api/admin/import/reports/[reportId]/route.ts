@@ -167,6 +167,8 @@ export async function DELETE(
       // Check if user wants to delete questions too
       const deleteQuestions = searchParams.get('delete_questions') === 'true';
       
+      console.log(`[DELETE] Starting batch delete for reportId: ${reportId}, deleteQuestions: ${deleteQuestions}`);
+      
       // Validate report exists
       const { data: existingReport, error: fetchError } = await supabase
         .from('import_reports')
@@ -175,36 +177,80 @@ export async function DELETE(
         .single();
       
       if (fetchError || !existingReport) {
+        console.error('[DELETE] Report not found:', fetchError);
         return NextResponse.json({
           error: 'Import report not found'
         }, { status: 404 });
       }
       
-      // If deleting questions, delete them first
-      if (deleteQuestions) {
-        const { error: deleteQuestionsError } = await supabase
+      console.log(`[DELETE] Found report: ${existingReport.filename}`);
+      
+      // First check if import_report_id column exists by trying to count linked questions
+      let linkedQuestionsCount = 0;
+      let columnExists = true;
+      
+      try {
+        const { count, error: countError } = await supabase
           .from('questions')
-          .delete()
+          .select('id', { count: 'exact', head: true })
           .eq('import_report_id', reportId);
         
-        if (deleteQuestionsError) {
-          console.error('Error deleting questions:', deleteQuestionsError);
-          return NextResponse.json({
-            error: 'Failed to delete questions'
-          }, { status: 500 });
+        if (countError) {
+          // Column might not exist
+          if (countError.message?.includes('column') || countError.code === '42703') {
+            console.warn('[DELETE] import_report_id column does not exist');
+            columnExists = false;
+          } else {
+            throw countError;
+          }
+        } else {
+          linkedQuestionsCount = count || 0;
+          console.log(`[DELETE] Found ${linkedQuestionsCount} linked questions`);
         }
-      } else {
-        // Unlink questions from batch (set import_report_id to NULL)
-        const { error: unlinkError } = await supabase
-          .from('questions')
-          .update({ import_report_id: null })
-          .eq('import_report_id', reportId);
-        
-        if (unlinkError) {
-          console.error('Error unlinking questions:', unlinkError);
-          return NextResponse.json({
-            error: 'Failed to unlink questions'
-          }, { status: 500 });
+      } catch (err) {
+        console.warn('[DELETE] Could not check linked questions:', err);
+        columnExists = false;
+      }
+      
+      let questionsDeleted = 0;
+      let questionsUnlinked = 0;
+      
+      // If column exists and there are linked questions, handle them
+      if (columnExists && linkedQuestionsCount > 0) {
+        if (deleteQuestions) {
+          // Delete questions linked to this batch
+          const { error: deleteQuestionsError } = await supabase
+            .from('questions')
+            .delete()
+            .eq('import_report_id', reportId);
+          
+          if (deleteQuestionsError) {
+            console.error('[DELETE] Error deleting questions:', deleteQuestionsError);
+            return NextResponse.json({
+              error: 'Failed to delete questions',
+              details: deleteQuestionsError.message
+            }, { status: 500 });
+          }
+          
+          questionsDeleted = linkedQuestionsCount;
+          console.log(`[DELETE] Deleted ${questionsDeleted} questions`);
+        } else {
+          // Unlink questions from batch (set import_report_id to NULL)
+          const { error: unlinkError } = await supabase
+            .from('questions')
+            .update({ import_report_id: null })
+            .eq('import_report_id', reportId);
+          
+          if (unlinkError) {
+            console.error('[DELETE] Error unlinking questions:', unlinkError);
+            return NextResponse.json({
+              error: 'Failed to unlink questions',
+              details: unlinkError.message
+            }, { status: 500 });
+          }
+          
+          questionsUnlinked = linkedQuestionsCount;
+          console.log(`[DELETE] Unlinked ${questionsUnlinked} questions`);
         }
       }
       
@@ -215,11 +261,14 @@ export async function DELETE(
         .eq('id', reportId);
       
       if (deleteError) {
-        console.error('Error deleting import report:', deleteError);
+        console.error('[DELETE] Error deleting import report:', deleteError);
         return NextResponse.json({
-          error: 'Failed to delete import report'
+          error: 'Failed to delete import report',
+          details: deleteError.message
         }, { status: 500 });
       }
+      
+      console.log(`[DELETE] Successfully deleted report: ${reportId}`);
       
       // Log admin action
       await logAdminAction({
@@ -230,18 +279,33 @@ export async function DELETE(
         details: {
           filename: existingReport.filename,
           successful_rows: existingReport.successful_rows,
-          delete_questions: deleteQuestions
+          delete_questions: deleteQuestions,
+          questions_deleted: questionsDeleted,
+          questions_unlinked: questionsUnlinked,
+          column_exists: columnExists
         }
       }, req);
       
+      let message = 'Import batch deleted successfully.';
+      if (questionsDeleted > 0) {
+        message = `Import batch and ${questionsDeleted} questions deleted successfully.`;
+      } else if (questionsUnlinked > 0) {
+        message = `Import batch deleted. ${questionsUnlinked} questions have been unlinked.`;
+      } else if (!columnExists) {
+        message = 'Import batch deleted. Note: Question linking not available (migration required).';
+      }
+      
       return NextResponse.json({
         success: true,
-        message: deleteQuestions 
-          ? 'Import batch and all questions deleted successfully'
-          : 'Import batch deleted. Questions have been unlinked.'
+        message,
+        details: {
+          questionsDeleted,
+          questionsUnlinked,
+          columnExists
+        }
       });
     } catch (error) {
-      console.error('Error in DELETE /api/admin/import/reports/:reportId:', error);
+      console.error('[DELETE] Error in DELETE /api/admin/import/reports/:reportId:', error);
       return NextResponse.json({
         error: 'Internal server error',
         details: error instanceof Error ? error.message : 'Unknown error'

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Plus } from 'lucide-react';
+import { Plus, CheckCircle, RefreshCcw } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { AdminHeader, ImportReportCard } from '@/components/admin';
@@ -28,15 +28,32 @@ export default function ImportHistoryPage() {
   const [reports, setReports] = useState<ImportReport[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [editingReport, setEditingReport] = useState<ImportReport | null>(null);
   const [deletingReport, setDeletingReport] = useState<ImportReport | null>(null);
 
   useEffect(() => {
+    // Check for success message from batch deletion
+    if (typeof window !== 'undefined') {
+      const batchDeleted = sessionStorage.getItem('batch_deleted');
+      if (batchDeleted) {
+        setSuccessMessage(batchDeleted);
+        sessionStorage.removeItem('batch_deleted');
+      }
+    }
     fetchReports();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
+
+  // Auto-hide success message
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => setSuccessMessage(null), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
 
   const fetchReports = async () => {
     setIsLoading(true);
@@ -90,6 +107,7 @@ export default function ImportHistoryPage() {
       // Success - refresh the reports list
       await fetchReports();
       setEditingReport(null);
+      setSuccessMessage('Batch updated successfully');
       
       // Set flag to refresh dashboard
       if (typeof window !== 'undefined') {
@@ -119,9 +137,12 @@ export default function ImportHistoryPage() {
         throw new Error(errorData.error || errorData.message || 'Failed to delete batch');
       }
 
+      const data = await response.json();
+      
       // Success - refresh the reports list
       await fetchReports();
       setDeletingReport(null);
+      setSuccessMessage(data.message || 'Batch deleted successfully');
       
       // Set flag to refresh dashboard
       if (typeof window !== 'undefined') {
@@ -143,17 +164,34 @@ export default function ImportHistoryPage() {
           { label: 'History', href: '/admin/import/history' }
         ]}
         actions={
-          <Link
-            href="/admin/import"
-            className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-          >
-            <Plus className="w-4 h-4 mr-2" />
-            New Import
-          </Link>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => fetchReports()}
+              className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
+            >
+              <RefreshCcw className="w-4 h-4 mr-2" />
+              Refresh
+            </button>
+            <Link
+              href="/admin/import"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+            >
+              <Plus className="w-4 h-4 mr-2" />
+              New Import
+            </Link>
+          </div>
         }
       />
 
       <div className="p-6">
+        {/* Success Message */}
+        {successMessage && (
+          <div className="mb-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 flex items-center gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
+            <p className="text-green-800 dark:text-green-300">{successMessage}</p>
+          </div>
+        )}
+
         {error && (
           <div className="mb-6 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
             <p className="text-red-800 dark:text-red-300">{error}</p>

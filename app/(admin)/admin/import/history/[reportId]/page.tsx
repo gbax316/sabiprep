@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { AdminHeader, AdminPrimaryButton, AdminSecondaryButton, DataTable, type ColumnDef } from '@/components/admin';
 import { BatchEditModal } from '@/components/admin/BatchEditModal';
 import { BatchDeleteModal } from '@/components/admin/BatchDeleteModal';
+import { QuickEditModal } from '@/components/admin/QuickEditModal';
+import { BulkActionBar } from '@/components/admin/BulkActionBar';
 import {
   ArrowLeft,
   Edit,
@@ -15,10 +17,13 @@ import {
   XCircle,
   Clock,
   Search,
-  Filter,
   Eye,
   Pencil,
   RefreshCcw,
+  AlertTriangle,
+  CheckSquare,
+  Square,
+  Database,
 } from 'lucide-react';
 
 interface ImportReport {
@@ -53,6 +58,12 @@ interface BatchQuestion {
   option_d?: string;
   option_e?: string;
   correct_answer: string;
+  hint?: string;
+  hint1?: string;
+  hint2?: string;
+  hint3?: string;
+  solution?: string;
+  explanation?: string;
   difficulty?: string;
   exam_type?: string;
   exam_year?: number;
@@ -60,6 +71,15 @@ interface BatchQuestion {
   created_at: string;
   subject?: string;
   topic?: string;
+}
+
+interface MigrationStatus {
+  migrationApplied: boolean;
+  stats?: {
+    totalQuestions: number;
+    linkedQuestions: number;
+    unlinkedQuestions: number;
+  };
 }
 
 interface PageProps {
@@ -78,24 +98,38 @@ export default function BatchDetailPage({ params }: PageProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingQuestions, setIsLoadingQuestions] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [showEditModal, setShowEditModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showQuestionEditModal, setShowQuestionEditModal] = useState(false);
+  const [editingQuestion, setEditingQuestion] = useState<BatchQuestion | null>(null);
   const [statusFilter, setStatusFilter] = useState<string>('');
   const [searchQuery, setSearchQuery] = useState('');
   const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  
+  // Selection state
+  const [selectedQuestions, setSelectedQuestions] = useState<Set<string>>(new Set());
+  
+  // Quick edit state
+  const [quickEditQuestion, setQuickEditQuestion] = useState<BatchQuestion | null>(null);
+  
+  // Migration status
+  const [migrationStatus, setMigrationStatus] = useState<MigrationStatus | null>(null);
 
   useEffect(() => {
-    fetchReport(true); // Show loading on initial fetch
+    fetchReport(true);
+    checkMigrationStatus();
   }, [reportId]);
 
-  // Debounce search query to prevent infinite loops
+  // Debounce search query
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedSearchQuery(searchQuery);
-      setPage(1); // Reset to first page on search
+      setPage(1);
     }, 500);
 
     return () => clearTimeout(timer);
@@ -105,8 +139,30 @@ export default function BatchDetailPage({ params }: PageProps) {
     if (reportId) {
       fetchQuestions();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reportId, page, statusFilter, debouncedSearchQuery]);
+
+  // Auto-hide success message
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => setSuccessMessage(null), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
+
+  const checkMigrationStatus = async () => {
+    try {
+      const response = await fetch('/api/admin/import/check-migration');
+      if (response.ok) {
+        const data = await response.json();
+        setMigrationStatus({
+          migrationApplied: data.migrationApplied,
+          stats: data.stats
+        });
+      }
+    } catch (err) {
+      console.error('Error checking migration status:', err);
+    }
+  };
 
   const fetchReport = async (showLoading = false) => {
     try {
@@ -148,11 +204,13 @@ export default function BatchDetailPage({ params }: PageProps) {
         throw new Error('Failed to fetch questions');
       }
       const data = await response.json();
-      setQuestions(data.questions);
-      setTotalPages(data.pagination.totalPages);
-      setTotalQuestions(data.pagination.total);
+      setQuestions(data.questions || []);
+      setTotalPages(data.pagination?.totalPages || 1);
+      setTotalQuestions(data.pagination?.total || 0);
     } catch (err) {
       console.error('Error fetching questions:', err);
+      setQuestions([]);
+      setTotalQuestions(0);
     } finally {
       setIsLoadingQuestions(false);
     }
@@ -171,16 +229,15 @@ export default function BatchDetailPage({ params }: PageProps) {
         throw new Error(errorData.error || errorData.message || 'Failed to update batch');
       }
 
-      // Success - refresh the report data (don't show loading spinner)
       await fetchReport(false);
+      setSuccessMessage('Batch updated successfully');
       
-      // Set flag to refresh dashboard
       if (typeof window !== 'undefined') {
         sessionStorage.setItem('refresh_dashboard', 'true');
       }
     } catch (error) {
       console.error('Error updating batch:', error);
-      throw error; // Re-throw to be handled by modal
+      throw error;
     }
   };
 
@@ -195,17 +252,113 @@ export default function BatchDetailPage({ params }: PageProps) {
         method: 'DELETE',
       });
 
+      const responseData = await response.json().catch(() => ({}));
+
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || errorData.message || 'Failed to delete batch');
+        throw new Error(responseData.error || responseData.message || 'Failed to delete batch');
       }
 
-      // Success - navigate back to history
-      router.push('/admin/import/history');
+      // Set success message and refresh flags before navigation
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('refresh_dashboard', 'true');
+        sessionStorage.setItem('refresh_import_history', 'true');
+        sessionStorage.setItem('batch_deleted', responseData.message || 'Batch deleted successfully');
+      }
+
+      // Show success message briefly before navigating
+      setSuccessMessage(responseData.message || 'Batch deleted successfully');
+      
+      // Navigate back to history after a brief delay
+      setTimeout(() => {
+        router.push('/admin/import/history');
+      }, 1000);
     } catch (error) {
       console.error('Error deleting batch:', error);
       throw error; // Re-throw to be handled by modal
     }
+  };
+
+  const handleQuickSave = async (questionId: string, updates: Partial<BatchQuestion>) => {
+    try {
+      const response = await fetch(`/api/admin/questions/${questionId}/quick-update`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updates),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Failed to update question');
+      }
+
+      await fetchQuestions();
+      setSuccessMessage('Question updated successfully');
+    } catch (error) {
+      console.error('Error updating question:', error);
+      throw error;
+    }
+  };
+
+  const handleBulkAction = async (action: 'publish' | 'archive' | 'draft' | 'delete') => {
+    try {
+      const questionIds = Array.from(selectedQuestions);
+      
+      const response = await fetch(`/api/admin/import/reports/${reportId}/bulk-action`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action, questionIds }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Bulk action failed');
+      }
+
+      const data = await response.json();
+      setSuccessMessage(data.message);
+      setSelectedQuestions(new Set());
+      await fetchQuestions();
+      await fetchReport(false);
+    } catch (error) {
+      console.error('Error performing bulk action:', error);
+      throw error;
+    }
+  };
+
+  const handleDeleteQuestion = async (questionId: string) => {
+    try {
+      const response = await fetch(`/api/admin/questions/${questionId}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to delete question');
+      }
+
+      await fetchQuestions();
+      setSuccessMessage('Question archived successfully');
+    } catch (error) {
+      console.error('Error deleting question:', error);
+      throw error;
+    }
+  };
+
+  const toggleSelectAll = () => {
+    if (selectedQuestions.size === questions.length) {
+      setSelectedQuestions(new Set());
+    } else {
+      setSelectedQuestions(new Set(questions.map(q => q.id)));
+    }
+  };
+
+  const toggleSelect = (id: string) => {
+    const newSelected = new Set(selectedQuestions);
+    if (newSelected.has(id)) {
+      newSelected.delete(id);
+    } else {
+      newSelected.add(id);
+    }
+    setSelectedQuestions(newSelected);
   };
 
   const getStatusConfig = (status: string) => {
@@ -240,6 +393,25 @@ export default function BatchDetailPage({ params }: PageProps) {
 
   const columns: ColumnDef<BatchQuestion>[] = [
     {
+      key: 'select',
+      header: '',
+      render: (q) => (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleSelect(q.id);
+          }}
+          className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+        >
+          {selectedQuestions.has(q.id) ? (
+            <CheckSquare className="w-4 h-4 text-blue-600" />
+          ) : (
+            <Square className="w-4 h-4 text-gray-400" />
+          )}
+        </button>
+      ),
+    },
+    {
       key: 'question_text',
       header: 'Question',
       render: (q) => (
@@ -257,17 +429,19 @@ export default function BatchDetailPage({ params }: PageProps) {
       ),
     },
     {
+      key: 'correct_answer',
+      header: 'Answer',
+      render: (q) => (
+        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-bold text-sm">
+          {q.correct_answer}
+        </span>
+      ),
+    },
+    {
       key: 'subject',
       header: 'Subject',
       render: (q) => (
         <span className="text-sm text-gray-700 dark:text-gray-300">{q.subject || 'N/A'}</span>
-      ),
-    },
-    {
-      key: 'topic',
-      header: 'Topic',
-      render: (q) => (
-        <span className="text-sm text-gray-700 dark:text-gray-300">{q.topic || 'N/A'}</span>
       ),
     },
     {
@@ -306,7 +480,7 @@ export default function BatchDetailPage({ params }: PageProps) {
       key: 'actions',
       header: 'Actions',
       render: (q) => (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           <Link
             href={`/admin/questions/${q.id}`}
             className="p-1.5 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -314,35 +488,28 @@ export default function BatchDetailPage({ params }: PageProps) {
           >
             <Eye className="w-4 h-4" />
           </Link>
-          <Link
-            href={`/admin/questions/${q.id}/edit`}
+          <button
+            onClick={() => setQuickEditQuestion(q)}
             className="p-1.5 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            title="Edit"
+            title="Quick Edit"
           >
             <Pencil className="w-4 h-4" />
+          </button>
+          <Link
+            href={`/admin/questions/${q.id}/edit`}
+            className="p-1.5 text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+            title="Full Edit"
+          >
+            <Edit className="w-4 h-4" />
           </Link>
           <button
-            onClick={async (e) => {
-              e.preventDefault();
-              if (confirm(`Are you sure you want to archive question "${q.question_text.substring(0, 50)}..."?`)) {
-                try {
-                  const response = await fetch(`/api/admin/questions/${q.id}`, {
-                    method: 'DELETE',
-                  });
-                  if (response.ok) {
-                    // Refresh questions list
-                    await fetchQuestions();
-                  } else {
-                    alert('Failed to delete question');
-                  }
-                } catch (err) {
-                  console.error('Error deleting question:', err);
-                  alert('Failed to delete question');
-                }
+            onClick={async () => {
+              if (confirm(`Archive question "${q.question_text.substring(0, 50)}..."?`)) {
+                await handleDeleteQuestion(q.id);
               }
             }}
             className="p-1.5 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"
-            title="Delete"
+            title="Archive"
           >
             <Trash2 className="w-4 h-4" />
           </button>
@@ -365,6 +532,32 @@ export default function BatchDetailPage({ params }: PageProps) {
   if (error || !report) {
     return (
       <div>
+        {/* Success Message */}
+        {successMessage && (
+          <div className="mb-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 flex items-center justify-between">
+            <p className="text-green-800 dark:text-green-300 text-sm">{successMessage}</p>
+            <button
+              onClick={() => setSuccessMessage(null)}
+              className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        )}
+
+        {/* Error Message */}
+        {error && (
+          <div className="mb-6 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 flex items-center justify-between">
+            <p className="text-red-800 dark:text-red-300 text-sm">{error}</p>
+            <button
+              onClick={() => setError(null)}
+              className="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        )}
+
         <AdminHeader
           title="Import Batch"
           breadcrumbs={[
@@ -405,8 +598,9 @@ export default function BatchDetailPage({ params }: PageProps) {
             </Link>
             <button
               onClick={async () => {
-                await fetchReport(false); // Don't show loading spinner on refresh
+                await fetchReport(false);
                 await fetchQuestions();
+                setSuccessMessage('Data refreshed');
               }}
               className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
               title="Refresh"
@@ -433,6 +627,29 @@ export default function BatchDetailPage({ params }: PageProps) {
       />
 
       <div className="p-6 space-y-6">
+        {/* Success Message */}
+        {successMessage && (
+          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 flex items-center gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
+            <p className="text-green-800 dark:text-green-300">{successMessage}</p>
+          </div>
+        )}
+
+        {/* Migration Warning */}
+        {migrationStatus && !migrationStatus.migrationApplied && (
+          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+            <div>
+              <h4 className="font-medium text-amber-800 dark:text-amber-300">Migration Required</h4>
+              <p className="text-sm text-amber-700 dark:text-amber-400 mt-1">
+                The import_report_id column is missing from the questions table. 
+                Questions imported before the migration won&apos;t be linked to this batch.
+                Please run the migration to enable batch-question linking.
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Batch Info Card */}
         <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -482,11 +699,10 @@ export default function BatchDetailPage({ params }: PageProps) {
                   </div>
                 )}
                 <div>
-                  <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Success Rate</dt>
-                  <dd className="mt-1 text-2xl font-bold text-gray-900 dark:text-gray-100">
-                    {report.total_rows > 0
-                      ? Math.round((report.successful_rows / report.total_rows) * 100)
-                      : 0}%
+                  <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Questions in Batch</dt>
+                  <dd className="mt-1 text-2xl font-bold text-blue-600 dark:text-blue-400 flex items-center gap-2">
+                    {totalQuestions}
+                    <Database className="w-5 h-5" />
                   </dd>
                 </div>
               </dl>
@@ -516,11 +732,28 @@ export default function BatchDetailPage({ params }: PageProps) {
         <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
           <div className="p-6 border-b border-gray-200 dark:border-gray-700">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Questions ({totalQuestions})</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                  Questions imported in this batch
-                </p>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={toggleSelectAll}
+                  className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-700 rounded transition-colors"
+                  title={selectedQuestions.size === questions.length && questions.length > 0 ? 'Deselect all' : 'Select all'}
+                >
+                  {selectedQuestions.size === questions.length && questions.length > 0 ? (
+                    <CheckSquare className="w-5 h-5 text-blue-600" />
+                  ) : (
+                    <Square className="w-5 h-5 text-gray-400" />
+                  )}
+                </button>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    Questions ({totalQuestions})
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    {migrationStatus?.migrationApplied 
+                      ? 'Questions linked to this batch' 
+                      : 'Showing questions from this batch'}
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <div className="relative">
@@ -529,9 +762,7 @@ export default function BatchDetailPage({ params }: PageProps) {
                     type="text"
                     placeholder="Search questions..."
                     value={searchQuery}
-                    onChange={(e) => {
-                      setSearchQuery(e.target.value);
-                    }}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     className="pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
@@ -552,21 +783,35 @@ export default function BatchDetailPage({ params }: PageProps) {
             </div>
           </div>
           <div className="p-6">
-            <DataTable
-              data={questions}
-              columns={columns}
-              isLoading={isLoadingQuestions}
-              keyAccessor={(q) => q.id}
-              emptyMessage="No questions found in this batch"
-              pagination={{
-                page,
-                limit: 20,
-                total: totalQuestions,
-                totalPages,
-              }}
-              onPageChange={setPage}
-              skeletonRows={5}
-            />
+            {questions.length === 0 && !isLoadingQuestions ? (
+              <div className="text-center py-12">
+                <Database className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                <h4 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
+                  No questions found
+                </h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {migrationStatus?.migrationApplied 
+                    ? 'No questions are linked to this batch. Questions imported before the migration won\'t appear here.'
+                    : 'The migration needs to be applied to link questions to batches.'}
+                </p>
+              </div>
+            ) : (
+              <DataTable
+                data={questions}
+                columns={columns}
+                isLoading={isLoadingQuestions}
+                keyAccessor={(q) => q.id}
+                emptyMessage="No questions found in this batch"
+                pagination={{
+                  page,
+                  limit: 20,
+                  total: totalQuestions,
+                  totalPages,
+                }}
+                onPageChange={setPage}
+                skeletonRows={5}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -576,33 +821,36 @@ export default function BatchDetailPage({ params }: PageProps) {
         <>
           <BatchEditModal
             isOpen={showEditModal}
-            onClose={() => {
-              setShowEditModal(false);
-              setError(null);
-            }}
+            onClose={() => setShowEditModal(false)}
             batch={report}
             onSave={async (data) => {
-              try {
-                await handleEdit(data);
-                setShowEditModal(false);
-                setError(null);
-              } catch (err) {
-                setError(err instanceof Error ? err.message : 'Failed to update batch');
-                throw err; // Re-throw to show error in modal
-              }
+              await handleEdit(data);
+              setShowEditModal(false);
             }}
           />
           <BatchDeleteModal
             isOpen={showDeleteModal}
-            onClose={() => {
-              setShowDeleteModal(false);
-              setError(null);
-            }}
+            onClose={() => setShowDeleteModal(false)}
             batch={report}
             onDelete={handleDelete}
           />
         </>
       )}
+
+      {/* Quick Edit Modal */}
+      <QuickEditModal
+        isOpen={!!quickEditQuestion}
+        onClose={() => setQuickEditQuestion(null)}
+        question={quickEditQuestion}
+        onSave={handleQuickSave}
+      />
+
+      {/* Bulk Action Bar */}
+      <BulkActionBar
+        selectedCount={selectedQuestions.size}
+        onAction={handleBulkAction}
+        onClear={() => setSelectedQuestions(new Set())}
+      />
     </div>
   );
 }

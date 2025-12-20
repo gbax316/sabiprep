@@ -212,9 +212,23 @@ export default function AdminDashboardPage() {
       }
     };
 
+    // Also check on mount
+    if (typeof window !== 'undefined') {
+      const shouldRefresh = sessionStorage.getItem('refresh_dashboard');
+      if (shouldRefresh === 'true') {
+        sessionStorage.removeItem('refresh_dashboard');
+        // Small delay to ensure navigation is complete
+        setTimeout(() => {
+          fetchDashboardData();
+          fetchAlerts();
+        }, 500);
+      }
+    }
+
     window.addEventListener('focus', handleFocus);
     return () => window.removeEventListener('focus', handleFocus);
-  }, [fetchDashboardData, fetchAlerts]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Handle alert dismiss
   const handleAlertDismiss = (alertId: string) => {
