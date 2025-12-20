@@ -1497,10 +1497,15 @@ export async function getNotifications(
  */
 export async function getUnreadNotificationCount(userId: string): Promise<number> {
   try {
+    // Skip if no userId provided
+    if (!userId) {
+      return 0;
+    }
+
     // Check if user is authenticated
     const { data: { session } } = await supabase.auth.getSession();
     if (!session) {
-      console.warn('No session found when fetching unread count for userId:', userId);
+      // Silently return 0 for unauthenticated users - this is expected for guest mode
       return 0;
     }
 
@@ -1514,33 +1519,31 @@ export async function getUnreadNotificationCount(userId: string): Promise<number
       // Safely extract error properties
       const errorMessage = error?.message || 'Unknown error';
       const errorCode = error?.code || 'UNKNOWN';
-      const errorDetails = error?.details || null;
-      const errorHint = error?.hint || null;
       
-      console.error('Error fetching unread notification count:', {
-        message: errorMessage,
-        details: errorDetails,
-        hint: errorHint,
-        code: errorCode,
-        userId,
-        rawError: error,
-      });
+      // Common expected errors - silently return 0
+      const isExpectedError = 
+        errorCode === 'PGRST116' || // RLS policy error
+        errorCode === '42P01' || // Table doesn't exist
+        errorMessage?.includes('permission') || 
+        errorMessage?.includes('policy') ||
+        errorMessage?.includes('does not exist');
       
-      // If it's a permissions/RLS error, return 0 instead of throwing
-      if (errorCode === 'PGRST116' || errorMessage?.includes('permission') || errorMessage?.includes('policy')) {
-        console.warn('RLS policy blocked unread count access, returning 0');
+      if (isExpectedError) {
+        // Silently handle expected errors
         return 0;
       }
       
-      // For other errors, return 0 instead of throwing to prevent UI crashes
-      console.warn('Non-permission error in getUnreadNotificationCount, returning 0');
+      // Only log unexpected errors in development
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Notification count fetch failed:', errorMessage);
+      }
+      
       return 0;
     }
     
     return count || 0;
-  } catch (error) {
-    // Catch any unexpected errors and return 0
-    console.error('Unexpected error in getUnreadNotificationCount:', error);
+  } catch {
+    // Silently catch any unexpected errors and return 0
     return 0;
   }
 }

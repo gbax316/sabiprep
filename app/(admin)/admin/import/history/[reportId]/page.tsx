@@ -24,6 +24,7 @@ import {
   CheckSquare,
   Square,
   Database,
+  X,
 } from 'lucide-react';
 
 interface ImportReport {
