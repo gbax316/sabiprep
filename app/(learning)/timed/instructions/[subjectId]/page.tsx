@@ -11,7 +11,7 @@ import { ArrowLeft, AlertCircle, Clock, CheckCircle2, Zap } from 'lucide-react';
 
 export default function TimedInstructionsPage({ params }: { params: Promise<{ subjectId: string }> }) {
   const { subjectId } = use(params);
-  const { userId } = useAuth();
+  const { userId, isGuest } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
   const totalQuestions = parseInt(searchParams?.get('total') || '20');
