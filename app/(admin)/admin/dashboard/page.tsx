@@ -196,6 +196,24 @@ export default function AdminDashboardPage() {
   useEffect(() => {
     fetchDashboardData();
     fetchAlerts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run on mount
+
+  // Refresh on window focus if flag is set
+  useEffect(() => {
+    const handleFocus = () => {
+      if (typeof window !== 'undefined') {
+        const shouldRefresh = sessionStorage.getItem('refresh_dashboard');
+        if (shouldRefresh === 'true') {
+          sessionStorage.removeItem('refresh_dashboard');
+          fetchDashboardData();
+          fetchAlerts();
+        }
+      }
+    };
+
+    window.addEventListener('focus', handleFocus);
+    return () => window.removeEventListener('focus', handleFocus);
   }, [fetchDashboardData, fetchAlerts]);
 
   // Handle alert dismiss

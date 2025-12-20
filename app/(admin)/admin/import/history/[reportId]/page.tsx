@@ -18,6 +18,7 @@ import {
   Filter,
   Eye,
   Pencil,
+  RefreshCcw,
 } from 'lucide-react';
 
 interface ImportReport {
@@ -84,28 +85,47 @@ export default function BatchDetailPage({ params }: PageProps) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [statusFilter, setStatusFilter] = useState<string>('');
   const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
 
   useEffect(() => {
-    fetchReport();
+    fetchReport(true); // Show loading on initial fetch
   }, [reportId]);
 
+  // Debounce search query to prevent infinite loops
   useEffect(() => {
-    fetchQuestions();
-  }, [reportId, page, statusFilter, searchQuery]);
+    const timer = setTimeout(() => {
+      setDebouncedSearchQuery(searchQuery);
+      setPage(1); // Reset to first page on search
+    }, 500);
 
-  const fetchReport = async () => {
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    if (reportId) {
+      fetchQuestions();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [reportId, page, statusFilter, debouncedSearchQuery]);
+
+  const fetchReport = async (showLoading = false) => {
     try {
-      setIsLoading(true);
+      if (showLoading) {
+        setIsLoading(true);
+      }
       const response = await fetch(`/api/admin/import/reports/${reportId}`);
       if (!response.ok) {
         throw new Error('Failed to fetch import report');
       }
       const data = await response.json();
       setReport(data.report);
+      setError(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load batch');
     } finally {
-      setIsLoading(false);
+      if (showLoading) {
+        setIsLoading(false);
+      }
     }
   };
 
@@ -119,8 +139,8 @@ export default function BatchDetailPage({ params }: PageProps) {
       if (statusFilter) {
         params.append('status', statusFilter);
       }
-      if (searchQuery) {
-        params.append('search', searchQuery);
+      if (debouncedSearchQuery) {
+        params.append('search', debouncedSearchQuery);
       }
 
       const response = await fetch(`/api/admin/import/reports/${reportId}/questions?${params}`);
@@ -139,34 +159,53 @@ export default function BatchDetailPage({ params }: PageProps) {
   };
 
   const handleEdit = async (data: { filename: string; status?: string }) => {
-    const response = await fetch(`/api/admin/import/reports/${reportId}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
+    try {
+      const response = await fetch(`/api/admin/import/reports/${reportId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-    if (!response.ok) {
-      throw new Error('Failed to update batch');
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || errorData.message || 'Failed to update batch');
+      }
+
+      // Success - refresh the report data (don't show loading spinner)
+      await fetchReport(false);
+      
+      // Set flag to refresh dashboard
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('refresh_dashboard', 'true');
+      }
+    } catch (error) {
+      console.error('Error updating batch:', error);
+      throw error; // Re-throw to be handled by modal
     }
-
-    await fetchReport();
   };
 
   const handleDelete = async (deleteQuestions: boolean) => {
-    const params = new URLSearchParams();
-    if (deleteQuestions) {
-      params.append('delete_questions', 'true');
+    try {
+      const params = new URLSearchParams();
+      if (deleteQuestions) {
+        params.append('delete_questions', 'true');
+      }
+
+      const response = await fetch(`/api/admin/import/reports/${reportId}?${params}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || errorData.message || 'Failed to delete batch');
+      }
+
+      // Success - navigate back to history
+      router.push('/admin/import/history');
+    } catch (error) {
+      console.error('Error deleting batch:', error);
+      throw error; // Re-throw to be handled by modal
     }
-
-    const response = await fetch(`/api/admin/import/reports/${reportId}?${params}`, {
-      method: 'DELETE',
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to delete batch');
-    }
-
-    router.push('/admin/import/history');
   };
 
   const getStatusConfig = (status: string) => {
@@ -282,6 +321,31 @@ export default function BatchDetailPage({ params }: PageProps) {
           >
             <Pencil className="w-4 h-4" />
           </Link>
+          <button
+            onClick={async (e) => {
+              e.preventDefault();
+              if (confirm(`Are you sure you want to archive question "${q.question_text.substring(0, 50)}..."?`)) {
+                try {
+                  const response = await fetch(`/api/admin/questions/${q.id}`, {
+                    method: 'DELETE',
+                  });
+                  if (response.ok) {
+                    // Refresh questions list
+                    await fetchQuestions();
+                  } else {
+                    alert('Failed to delete question');
+                  }
+                } catch (err) {
+                  console.error('Error deleting question:', err);
+                  alert('Failed to delete question');
+                }
+              }
+            }}
+            className="p-1.5 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+            title="Delete"
+          >
+            <Trash2 className="w-4 h-4" />
+          </button>
         </div>
       ),
     },
@@ -339,6 +403,17 @@ export default function BatchDetailPage({ params }: PageProps) {
                 Back
               </AdminSecondaryButton>
             </Link>
+            <button
+              onClick={async () => {
+                await fetchReport(false); // Don't show loading spinner on refresh
+                await fetchQuestions();
+              }}
+              className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
+              title="Refresh"
+            >
+              <RefreshCcw className="w-4 h-4 mr-2" />
+              Refresh
+            </button>
             <button
               onClick={() => setShowEditModal(true)}
               className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
@@ -456,12 +531,6 @@ export default function BatchDetailPage({ params }: PageProps) {
                     value={searchQuery}
                     onChange={(e) => {
                       setSearchQuery(e.target.value);
-                      setPage(1);
-                    }}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter') {
-                        fetchQuestions();
-                      }
                     }}
                     className="pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
@@ -507,13 +576,28 @@ export default function BatchDetailPage({ params }: PageProps) {
         <>
           <BatchEditModal
             isOpen={showEditModal}
-            onClose={() => setShowEditModal(false)}
+            onClose={() => {
+              setShowEditModal(false);
+              setError(null);
+            }}
             batch={report}
-            onSave={handleEdit}
+            onSave={async (data) => {
+              try {
+                await handleEdit(data);
+                setShowEditModal(false);
+                setError(null);
+              } catch (err) {
+                setError(err instanceof Error ? err.message : 'Failed to update batch');
+                throw err; // Re-throw to show error in modal
+              }
+            }}
           />
           <BatchDeleteModal
             isOpen={showDeleteModal}
-            onClose={() => setShowDeleteModal(false)}
+            onClose={() => {
+              setShowDeleteModal(false);
+              setError(null);
+            }}
             batch={report}
             onDelete={handleDelete}
           />

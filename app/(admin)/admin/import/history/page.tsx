@@ -35,6 +35,7 @@ export default function ImportHistoryPage() {
 
   useEffect(() => {
     fetchReports();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const fetchReports = async () => {
@@ -74,38 +75,62 @@ export default function ImportHistoryPage() {
   const handleSaveEdit = async (data: { filename: string; status?: string }) => {
     if (!editingReport) return;
 
-    const response = await fetch(`/api/admin/import/reports/${editingReport.id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
+    try {
+      const response = await fetch(`/api/admin/import/reports/${editingReport.id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-    if (!response.ok) {
-      throw new Error('Failed to update batch');
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || errorData.message || 'Failed to update batch');
+      }
+
+      // Success - refresh the reports list
+      await fetchReports();
+      setEditingReport(null);
+      
+      // Set flag to refresh dashboard
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('refresh_dashboard', 'true');
+      }
+    } catch (error) {
+      console.error('Error updating batch:', error);
+      throw error; // Re-throw to be handled by modal
     }
-
-    await fetchReports();
-    setEditingReport(null);
   };
 
   const handleConfirmDelete = async (deleteQuestions: boolean) => {
     if (!deletingReport) return;
 
-    const params = new URLSearchParams();
-    if (deleteQuestions) {
-      params.append('delete_questions', 'true');
+    try {
+      const params = new URLSearchParams();
+      if (deleteQuestions) {
+        params.append('delete_questions', 'true');
+      }
+
+      const response = await fetch(`/api/admin/import/reports/${deletingReport.id}?${params}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || errorData.message || 'Failed to delete batch');
+      }
+
+      // Success - refresh the reports list
+      await fetchReports();
+      setDeletingReport(null);
+      
+      // Set flag to refresh dashboard
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('refresh_dashboard', 'true');
+      }
+    } catch (error) {
+      console.error('Error deleting batch:', error);
+      throw error; // Re-throw to be handled by modal
     }
-
-    const response = await fetch(`/api/admin/import/reports/${deletingReport.id}?${params}`, {
-      method: 'DELETE',
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to delete batch');
-    }
-
-    await fetchReports();
-    setDeletingReport(null);
   };
 
   return (
