@@ -23,7 +23,7 @@ interface ImportReportCardProps {
   onDelete?: (reportId: string) => void;
 }
 
-export function ImportReportCard({ report, className = '' }: ImportReportCardProps) {
+export function ImportReportCard({ report, className = '', onEdit, onDelete }: ImportReportCardProps) {
   const statusConfig = {
     pending: { color: 'yellow', icon: Clock, text: 'Pending' },
     processing: { color: 'blue', icon: Clock, text: 'Processing' },
