@@ -649,14 +649,16 @@ export async function createSession(params: CreateSessionParams): Promise<Learni
       topic_ids: topicIds.length > 1 ? topicIds : (topicIds.length === 1 ? topicIds : undefined),
       mode: params.mode,
       total_questions: params.totalQuestions,
+      questions_answered: 0,
+      correct_answers: 0,
+      time_spent_seconds: 0,
       time_limit_seconds: params.timeLimit || undefined,
       status: 'in_progress',
       last_question_index: 0,
+      started_at: new Date().toISOString(),
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
       completed_at: undefined,
-      score: undefined,
-      accuracy: undefined,
     };
     
     // Store guest session in sessionStorage
