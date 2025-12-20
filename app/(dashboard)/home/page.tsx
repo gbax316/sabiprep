@@ -458,7 +458,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 pb-24">
+    <div className="min-h-screen bg-slate-950 pb-20 sm:pb-24 overflow-x-hidden">
       {/* Header */}
       <Header />
 
@@ -868,12 +868,16 @@ export default function HomePage() {
                       e.preventDefault();
                       router.push(`/subjects`);
                     }}>
-                      <MagicCard hover className="p-3 sm:p-4 text-center bg-slate-900/60 border-2 border-slate-700 hover:border-violet-500/70 h-full relative overflow-hidden group active:scale-95 transition-all">
-                        <div className="text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                      <MagicCard hover className="p-3 sm:p-4 text-center bg-slate-900/60 border-2 border-slate-700 hover:border-violet-500/70 h-full relative overflow-hidden group active:scale-95 transition-all rounded-lg sm:rounded-xl">
+                        <motion.div 
+                          className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
                           {subject.icon || '📚'}
-                        </div>
+                        </motion.div>
                         <h3 className="font-semibold text-xs sm:text-sm text-white mb-1 line-clamp-2 leading-tight">{subject.name}</h3>
-                        <p className="text-[10px] sm:text-xs text-slate-400 mb-2 font-medium">{subject.total_questions} questions</p>
+                        <p className="text-[10px] sm:text-xs text-slate-400 mb-1.5 sm:mb-2 font-medium">{subject.total_questions} questions</p>
                         {subjectProgress && (
                           <div className="mt-1.5 sm:mt-2">
                             <MagicBadge variant="success" size="sm" className="text-[10px] sm:text-xs">
