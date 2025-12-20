@@ -26,6 +26,7 @@ import {
   Award,
   Lightbulb,
   Rocket,
+  X,
 } from 'lucide-react';
 
 // Stats data
@@ -122,28 +123,43 @@ const howItWorks = [
   },
 ];
 
-// Testimonials
-const testimonials = [
+// Why SabiPrep Works - Key Differentiators
+const differentiators = [
   {
-    name: 'Adaeze O.',
-    role: 'JAMB Candidate, 2024',
-    content: 'I scored 312 in JAMB after practicing on SabiPrep for just 3 months. The explanations helped me understand concepts I struggled with in class.',
-    score: '312/400',
-    avatar: 'AO',
+    icon: Brain,
+    title: 'Smart Learning System',
+    description: 'Our intelligent algorithm selects questions based on your weak areas, ensuring you focus on what matters most for improvement.',
+    highlight: 'Adaptive',
   },
   {
-    name: 'Chukwuemeka I.',
-    role: 'WAEC Student',
-    content: 'The timed mode really helped me manage my time during the actual exam. I finished all sections without rushing.',
-    score: 'A1 in 7 subjects',
-    avatar: 'CI',
+    icon: Target,
+    title: 'Real Exam Questions',
+    description: 'Every question is sourced from actual past papers, matching the exact difficulty and format you\'ll face on exam day.',
+    highlight: 'Authentic',
   },
   {
-    name: 'Fatima A.',
-    role: 'NECO Candidate',
-    content: 'SabiPrep made studying fun with the achievements and streaks. I actually looked forward to practicing every day!',
-    score: '8 Distinctions',
-    avatar: 'FA',
+    icon: Zap,
+    title: 'Instant Feedback',
+    description: 'Know immediately if you\'re right or wrong with detailed explanations. Learn from mistakes in real-time, not days later.',
+    highlight: 'Immediate',
+  },
+  {
+    icon: BarChart3,
+    title: 'Progress Tracking',
+    description: 'Visual analytics show exactly where you\'re improving and where you need more practice. Data-driven learning.',
+    highlight: 'Insightful',
+  },
+  {
+    icon: Trophy,
+    title: 'Gamified Learning',
+    description: 'Earn XP, maintain streaks, and unlock achievements. Turn studying from a chore into an engaging challenge.',
+    highlight: 'Motivating',
+  },
+  {
+    icon: Clock,
+    title: 'Flexible Practice',
+    description: 'Practice at your pace, test under exam conditions, or race against time. Three modes adapt to your learning style.',
+    highlight: 'Adaptive',
   },
 ];
 
@@ -200,13 +216,13 @@ export default function LandingPage() {
                 Log in
               </Link>
               <Link
-                href="/signup"
+                href="/subjects"
                 className="group px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full 
                            shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 transition-all duration-300 
                            hover:scale-105 active:scale-100"
               >
                 <span className="flex items-center gap-1.5">
-                  Get Started
+                  Try for Free
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </Link>
@@ -262,13 +278,13 @@ export default function LandingPage() {
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-enter stagger-3">
               <Link
-                href="/signup"
+                href="/subjects"
                 className="group w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white 
                            bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full shadow-xl shadow-indigo-500/25 
                            hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300 hover:scale-105"
               >
                 <Play className="w-5 h-5" />
-                Start Practicing Free
+                Try for Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -487,13 +503,13 @@ export default function LandingPage() {
           {/* Single gateway CTA */}
           <div className="text-center mt-12">
             <Link
-              href="/signup"
+              href="/subjects"
               className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white 
                          bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full shadow-xl shadow-indigo-500/25 
                          hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300 hover:scale-105"
             >
               <Rocket className="w-5 h-5" />
-              Enter the Learning Gateway
+              Try for Free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -564,12 +580,12 @@ export default function LandingPage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/signup"
+                  href="/subjects"
                   className="group inline-flex items-center justify-center gap-2 px-6 py-3 
                              text-base font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 
                              rounded-full shadow-lg shadow-indigo-500/25 hover:shadow-xl transition-all"
                 >
-                  Start Free Today
+                  Try for Free
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
                 <div className="flex items-center gap-2 text-sm text-slate-500">
@@ -606,61 +622,160 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ========== TESTIMONIALS SECTION ========== */}
-      <section className="py-20 sm:py-28 bg-slate-50">
+      {/* ========== WHY SABIPREP WORKS SECTION ========== */}
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-indigo-600 text-sm font-semibold uppercase tracking-wide mb-3">
-              Student Success Stories
-            </p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Real Results from Real Students
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-700 
+                            rounded-full text-sm font-medium mb-4">
+              <Sparkles className="w-4 h-4" />
+              <span>Proven Methodology</span>
+            </div>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+              Why SabiPrep Works
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Hear from students who transformed their exam preparation with SabiPrep.
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
+              We've built SabiPrep based on proven learning science and real exam patterns. 
+              Here's what makes us different from traditional study methods.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={testimonial.name}
-                className="relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 
-                           hover:shadow-xl transition-all duration-300"
-              >
-                {/* Quote decoration */}
-                <div className="absolute top-6 right-6 text-4xl text-indigo-100 font-serif">"</div>
-                
-                <div className="relative">
-                  {/* Stars */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+            {differentiators.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="group relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 
+                             hover:shadow-2xl hover:border-indigo-300 transition-all duration-500
+                             hover:-translate-y-1"
+                >
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-violet-50 
+                                  opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
                   
-                  <p className="text-slate-700 leading-relaxed mb-6">
-                    "{testimonial.content}"
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 
-                                      flex items-center justify-center text-white font-bold shadow-lg">
-                        {testimonial.avatar}
+                  <div className="relative">
+                    {/* Icon with badge */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 
+                                      flex items-center justify-center shadow-lg shadow-indigo-500/25
+                                      group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+                        <Icon className="w-7 h-7 text-white" />
                       </div>
-                      <div>
-                        <div className="font-semibold text-slate-900">{testimonial.name}</div>
-                        <div className="text-sm text-slate-500">{testimonial.role}</div>
-                      </div>
+                      <span className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold">
+                        {item.highlight}
+                      </span>
                     </div>
-                    <div className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-xs font-semibold">
-                      {testimonial.score}
-                    </div>
+                    
+                    <h3 className="font-display text-xl font-bold text-slate-900 mb-3">
+                      {item.title}
+                    </h3>
+                    
+                    <p className="text-slate-600 leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
+              );
+            })}
+          </div>
+
+          {/* Comparison Section */}
+          <div className="mt-16 bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-700 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-3xl" />
+            
+            <div className="relative">
+              <div className="text-center mb-8">
+                <h3 className="font-display text-2xl sm:text-3xl font-bold mb-3">
+                  Study Smarter, Not Harder
+                </h3>
+                <p className="text-indigo-100 text-lg max-w-2xl mx-auto">
+                  Traditional studying vs. SabiPrep's intelligent approach
+                </p>
               </div>
-            ))}
+
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                {/* Traditional Studying */}
+                <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-red-500/20 flex items-center justify-center">
+                      <X className="w-5 h-5 text-red-300" />
+                    </div>
+                    <h4 className="font-semibold text-lg">Traditional Studying</h4>
+                  </div>
+                  <ul className="space-y-3 text-sm text-indigo-100">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-300 mt-0.5">✗</span>
+                      <span>No feedback until exam day</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-300 mt-0.5">✗</span>
+                      <span>Don't know your weak areas</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-300 mt-0.5">✗</span>
+                      <span>Time-consuming manual tracking</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-300 mt-0.5">✗</span>
+                      <span>Limited practice questions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-300 mt-0.5">✗</span>
+                      <span>No motivation or gamification</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* SabiPrep */}
+                <div className="bg-white/10 backdrop-blur border border-white/30 rounded-2xl p-6 shadow-lg">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+                      <CheckCircle className="w-5 h-5 text-emerald-300" />
+                    </div>
+                    <h4 className="font-semibold text-lg">With SabiPrep</h4>
+                  </div>
+                  <ul className="space-y-3 text-sm text-indigo-100">
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-300 mt-0.5">✓</span>
+                      <span>Instant feedback on every question</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-300 mt-0.5">✓</span>
+                      <span>AI-powered weak area identification</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-300 mt-0.5">✓</span>
+                      <span>Automatic progress tracking</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-300 mt-0.5">✓</span>
+                      <span>10,000+ curated past questions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-300 mt-0.5">✓</span>
+                      <span>Streaks, XP, and achievements</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="text-center mt-8">
+                <Link
+                  href="/subjects"
+                  className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold 
+                             text-indigo-700 bg-white rounded-full shadow-xl shadow-black/20 
+                             hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                >
+                  <Rocket className="w-5 h-5" />
+                  Start Your Smart Learning Journey
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -692,13 +807,13 @@ export default function LandingPage() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/signup"
+              href="/subjects"
               className="group w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 
                          text-base font-semibold text-indigo-700 bg-white rounded-full 
                          shadow-xl shadow-black/20 hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <Play className="w-5 h-5" />
-              Create Free Account
+              Try for Free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -756,7 +871,7 @@ export default function LandingPage() {
               <ul className="space-y-2">
                 {['Practice Mode', 'Test Mode', 'Timed Mode', 'Progress Tracking'].map((item) => (
                   <li key={item}>
-                    <Link href="/signup" className="text-slate-400 hover:text-white text-sm transition-colors">
+                    <Link href="/subjects" className="text-slate-400 hover:text-white text-sm transition-colors">
                       {item}
                     </Link>
                   </li>
@@ -770,7 +885,7 @@ export default function LandingPage() {
               <ul className="space-y-2">
                 {['WAEC Questions', 'JAMB Questions', 'NECO Questions', 'GCE Questions'].map((item) => (
                   <li key={item}>
-                    <Link href="/signup" className="text-slate-400 hover:text-white text-sm transition-colors">
+                    <Link href="/subjects" className="text-slate-400 hover:text-white text-sm transition-colors">
                       {item}
                     </Link>
                   </li>

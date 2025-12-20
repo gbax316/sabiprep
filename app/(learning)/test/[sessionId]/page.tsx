@@ -35,11 +35,17 @@ import {
   ChevronDown,
   Send,
 } from 'lucide-react';
+import { SignupPromptModal } from '@/components/common/SignupPromptModal';
+import {
+  hasReachedQuestionLimit,
+  incrementGuestQuestionCount,
+  getSystemWideQuestionCount,
+} from '@/lib/guest-session';
 
 export default function TestModePage({ params }: { params: Promise<{ sessionId: string }> }) {
   const { sessionId } = use(params);
   const router = useRouter();
-  const { userId } = useAuth();
+  const { userId, isGuest } = useAuth();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
   const [topics, setTopics] = useState<Topic[]>([]);
@@ -48,6 +54,7 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Map<string, 'A' | 'B' | 'C' | 'D' | 'E'>>(new Map());
   const [flaggedQuestions, setFlaggedQuestions] = useState<Set<string>>(new Set());
+  const [showSignupModal, setShowSignupModal] = useState(false);
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [showReviewScreen, setShowReviewScreen] = useState(false);
   const [showPalette, setShowPalette] = useState(false);
@@ -80,6 +87,11 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
       }
 
       setSession(sessionData);
+
+      // Check if guest has reached question limit
+      if (isGuest && hasReachedQuestionLimit()) {
+        setShowSignupModal(true);
+      }
 
       // Load subject and questions/topics in parallel
       const loadPromises: Promise<any>[] = [getSubject(sessionData.subject_id)];
@@ -201,6 +213,23 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
   ));
 
   function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D' | 'E') {
+    // Check guest question limit before allowing answer
+    if (isGuest) {
+      if (hasReachedQuestionLimit()) {
+        setShowSignupModal(true);
+        return; // Block answering
+      }
+      
+      // Track question if this is the first time answering it
+      const wasAlreadyAnswered = answers.has(currentQuestion.id);
+      if (!wasAlreadyAnswered) {
+        const newSystemCount = incrementGuestQuestionCount();
+        if (newSystemCount >= 5) {
+          setShowSignupModal(true);
+        }
+      }
+    }
+    
     const newAnswers = new Map(answers);
     newAnswers.set(currentQuestion.id, answer);
     setAnswers(newAnswers);
@@ -246,39 +275,51 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
       const totalTimeSpent = Math.floor((Date.now() - startTime) / 1000);
       let correct = 0;
 
-      // Record all answers
-      for (const question of questions) {
-        const userAnswer = answers.get(question.id);
-        
-        if (userAnswer) {
-          const isCorrect = userAnswer === question.correct_answer;
-          if (isCorrect) correct++;
+      // Record all answers (skip for guests)
+      if (!isGuest && userId) {
+        for (const question of questions) {
+          const userAnswer = answers.get(question.id);
+          
+          if (userAnswer) {
+            const isCorrect = userAnswer === question.correct_answer;
+            if (isCorrect) correct++;
 
-          await createSessionAnswer({
-            sessionId: sessionId,
-            questionId: question.id,
-            topicId: question.topic_id, // Store topic_id for analytics
-            userAnswer: userAnswer as 'A' | 'B' | 'C' | 'D',
-            isCorrect,
-            timeSpentSeconds: Math.floor(totalTimeSpent / questions.length), // Average time per question
-            hintUsed: false,
-            solutionViewed: false,
-            firstAttemptCorrect: isCorrect, // In test mode, first attempt is the only attempt
-            attemptCount: 1,
-          });
+            await createSessionAnswer({
+              sessionId: sessionId,
+              questionId: question.id,
+              topicId: question.topic_id, // Store topic_id for analytics
+              userAnswer: userAnswer as 'A' | 'B' | 'C' | 'D',
+              isCorrect,
+              timeSpentSeconds: Math.floor(totalTimeSpent / questions.length), // Average time per question
+              hintUsed: false,
+              solutionViewed: false,
+              firstAttemptCorrect: isCorrect, // In test mode, first attempt is the only attempt
+              attemptCount: 1,
+            });
+          }
+        }
+      } else {
+        // For guests, just count correct answers
+        for (const question of questions) {
+          const userAnswer = answers.get(question.id);
+          if (userAnswer && userAnswer === question.correct_answer) {
+            correct++;
+          }
         }
       }
 
-      // Complete session with correct time and score
-      const scorePercentage = (correct / questions.length) * 100;
-      await completeSessionWithGoals(
-        sessionId, 
-        scorePercentage, 
-        totalTimeSpent,
-        correct,
-        questions.length,
-        userId || undefined
-      );
+      // Complete session with correct time and score (skip for guests)
+      if (!isGuest && userId) {
+        const scorePercentage = (correct / questions.length) * 100;
+        await completeSessionWithGoals(
+          sessionId, 
+          scorePercentage, 
+          totalTimeSpent,
+          correct,
+          questions.length,
+          userId
+        );
+      }
 
       // Navigate to results
       router.push(`/results/${sessionId}`);
@@ -493,6 +534,15 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
             </div>
           </Modal>
         )}
+
+        {/* Signup Prompt Modal for Guests */}
+        {isGuest && (
+          <SignupPromptModal
+            isOpen={showSignupModal}
+            onClose={() => setShowSignupModal(false)}
+            questionCount={getSystemWideQuestionCount()}
+          />
+        )}
       </div>
     );
   }
@@ -506,7 +556,14 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-3">
               <button
-                onClick={() => router.back()}
+                onClick={() => {
+                  // For guests, navigate to home; for authenticated users, go home
+                  if (isGuest || sessionId.startsWith('guest_')) {
+                    router.replace('/home');
+                  } else {
+                    router.push('/home');
+                  }
+                }}
                 className="p-2 hover:bg-gray-100 rounded-full transition-colors"
               >
                 <ArrowLeft className="w-6 h-6 text-gray-600" />

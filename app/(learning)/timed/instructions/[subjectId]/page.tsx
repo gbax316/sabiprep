@@ -41,7 +41,7 @@ export default function TimedInstructionsPage({ params }: { params: Promise<{ su
   }
 
   async function handleStartExam() {
-    if (!userId || !subject) return;
+    if ((!userId && !isGuest) || !subject) return;
 
     try {
       setCreatingSession(true);
@@ -56,14 +56,15 @@ export default function TimedInstructionsPage({ params }: { params: Promise<{ su
 
       const { topicIds, distribution, examFormat, totalQuestions: expectedTotal, totalTimeMinutes: expectedTime } = JSON.parse(distributionStr);
 
-      // Create session with multi-topic support
+      // Create session with multi-topic support (guest or authenticated)
       const session = await createSession({
-        userId,
+        userId: userId || '',
         subjectId: subject.id,
         topicIds: topicIds,
         mode: 'timed',
         totalQuestions: expectedTotal,
         timeLimit: expectedTime * 60, // Convert minutes to seconds
+        isGuest: isGuest,
       });
 
       // Store distribution for use in timed session

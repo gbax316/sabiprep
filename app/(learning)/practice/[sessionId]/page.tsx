@@ -30,11 +30,17 @@ import {
   LogOut,
 } from 'lucide-react';
 import { QuestionNavigator } from '@/components/common/QuestionNavigator';
+import { SignupPromptModal } from '@/components/common/SignupPromptModal';
+import {
+  hasReachedQuestionLimit,
+  incrementGuestQuestionCount,
+  getSystemWideQuestionCount,
+} from '@/lib/guest-session';
 
 export default function PracticeModePage({ params }: { params: Promise<{ sessionId: string }> }) {
   const { sessionId } = use(params);
   const router = useRouter();
-  const { userId } = useAuth();
+  const { userId, isGuest } = useAuth();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
   const [topic, setTopic] = useState<Topic | null>(null);
@@ -54,29 +60,39 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
   const [startTime, setStartTime] = useState(Date.now());
   const [showPauseModal, setShowPauseModal] = useState(false);
   const [isPausing, setIsPausing] = useState(false);
+  const [showSignupModal, setShowSignupModal] = useState(false);
 
   useEffect(() => {
     loadSession();
   }, [sessionId]);
 
-  // Auto-save progress every 30 seconds
+  // Auto-save progress every 30 seconds (skip for guests)
   useEffect(() => {
-    if (!session || session.status !== 'in_progress') return;
+    // Skip auto-save for guests or if session is not in progress
+    // Also check if sessionId starts with 'guest_' to catch guest sessions
+    if (!session || session.status !== 'in_progress' || isGuest || sessionId.startsWith('guest_')) return;
 
     const autoSaveInterval = setInterval(async () => {
       try {
+        // Double-check we're not trying to update a guest session
+        if (sessionId.startsWith('guest_')) return;
+        
         await updateSession(sessionId, {
           questions_answered: answeredQuestions.size,
           correct_answers: correctAnswers,
           last_question_index: currentIndex,
         });
       } catch (error) {
-        console.error('Auto-save failed:', error);
+        // Silently fail for guest sessions, log others
+        if (!sessionId.startsWith('guest_')) {
+          console.error('Auto-save failed:', error);
+        }
       }
     }, 30000); // 30 seconds
 
     return () => clearInterval(autoSaveInterval);
-  }, [sessionId, session, answeredQuestions.size, correctAnswers, currentIndex]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sessionId, session?.status, answeredQuestions.size, correctAnswers, currentIndex, isGuest]);
 
   async function loadSession() {
     try {
@@ -90,6 +106,11 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       }
 
       setSession(sessionData);
+
+      // Check if guest has reached question limit
+      if (isGuest && hasReachedQuestionLimit()) {
+        setShowSignupModal(true);
+      }
 
       // Resume from last question if session was paused
       if (sessionData.status === 'paused' && sessionData.last_question_index !== undefined) {
@@ -224,6 +245,14 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
   async function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D' | 'E') {
     if (!currentQuestion) return;
 
+    // Check guest question limit before allowing answer
+    if (isGuest) {
+      if (hasReachedQuestionLimit()) {
+        setShowSignupModal(true);
+        return; // Block answering
+      }
+    }
+
     const questionId = currentQuestion.id;
     const attemptCount = (attemptCounts.get(questionId) || 0) + 1;
     const isFirstAttempt = attemptCount === 1;
@@ -257,24 +286,35 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     // Mark as answered if correct or if user wants to move on
     if (isCorrect || isAnswered) {
       try {
+        // For guests: increment question count before recording
+        if (isGuest) {
+          const newSystemCount = incrementGuestQuestionCount();
+          if (newSystemCount >= 5) {
+            // Show signup modal after 5th question
+            setShowSignupModal(true);
+          }
+        }
+
         // Check if solution was viewed before this attempt
         const solutionViewedBeforeThisAttempt = solutionViewed.has(questionId) && !isAnswered;
         
-        // Record answer
-        await createSessionAnswer({
-          sessionId: sessionId,
-          questionId: currentQuestion.id,
-          topicId: currentQuestion.topic_id,
-          userAnswer: answer,
-          isCorrect,
-          timeSpentSeconds: timeSpent,
-          hintUsed: usedHint,
-          hintLevel: currentHintLevel || undefined,
-          solutionViewed: solutionViewed.has(questionId),
-          solutionViewedBeforeAttempt: solutionViewedBeforeThisAttempt,
-          attemptCount,
-          firstAttemptCorrect: firstAttemptCorrect.get(questionId) ?? (isFirstAttempt ? isCorrect : undefined),
-        });
+        // Record answer (skip for guests as they don't have database access)
+        if (!isGuest && userId) {
+          await createSessionAnswer({
+            sessionId: sessionId,
+            questionId: currentQuestion.id,
+            topicId: currentQuestion.topic_id,
+            userAnswer: answer,
+            isCorrect,
+            timeSpentSeconds: timeSpent,
+            hintUsed: usedHint,
+            hintLevel: currentHintLevel || undefined,
+            solutionViewed: solutionViewed.has(questionId),
+            solutionViewedBeforeAttempt: solutionViewedBeforeThisAttempt,
+            attemptCount,
+            firstAttemptCorrect: firstAttemptCorrect.get(questionId) ?? (isFirstAttempt ? isCorrect : undefined),
+          });
+        }
 
         // Update local state
         setAnsweredQuestions(prev => new Set(prev).add(questionId));
@@ -282,13 +322,15 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
           setCorrectAnswers(prev => prev + 1);
         }
 
-        // Update session progress
-        await updateSession(sessionId, {
-          questions_answered: answeredQuestions.size + 1,
-          correct_answers: correctAnswers + (isCorrect ? 1 : 0),
-          time_spent_seconds: session ? session.time_spent_seconds + timeSpent : timeSpent,
-          last_question_index: currentIndex,
-        });
+        // Update session progress (skip for guests)
+        if (!isGuest && userId) {
+          await updateSession(sessionId, {
+            questions_answered: answeredQuestions.size + 1,
+            correct_answers: correctAnswers + (isCorrect ? 1 : 0),
+            time_spent_seconds: session ? session.time_spent_seconds + timeSpent : timeSpent,
+            last_question_index: currentIndex,
+          });
+        }
 
         // Auto-show solution after answering (if not already shown)
         if (!showSolution) {
@@ -359,6 +401,13 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
   async function handlePauseSession() {
     if (!session) return;
 
+    // For guest sessions, just navigate away (no database update needed)
+    if (isGuest || sessionId.startsWith('guest_')) {
+      setShowPauseModal(false);
+      router.push('/subjects');
+      return;
+    }
+
     try {
       setIsPausing(true);
       await updateSession(sessionId, {
@@ -379,13 +428,19 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
   async function handleEndSession() {
     if (!session) return;
 
+    // For guest sessions, just navigate to results (no database update needed)
+    if (isGuest || sessionId.startsWith('guest_')) {
+      router.push(`/results/${sessionId}`);
+      return;
+    }
+
     try {
       setIsPausing(true);
       const scorePercentage = answeredQuestions.size > 0
         ? (correctAnswers / answeredQuestions.size) * 100
         : 0;
       const totalTimeSpent = session ? session.time_spent_seconds : 0;
-      
+
       await completeSessionWithGoals(
         sessionId,
         scorePercentage,
@@ -430,7 +485,14 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-3">
               <button
-                onClick={() => router.back()}
+                onClick={() => {
+                  // For guests, navigate to home; for authenticated users, go home
+                  if (isGuest || sessionId.startsWith('guest_')) {
+                    router.replace('/home');
+                  } else {
+                    router.push('/home');
+                  }
+                }}
                 className="p-2 hover:bg-gray-100 rounded-full transition-colors"
                 aria-label="Go back"
               >
@@ -834,6 +896,15 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
             </div>
           </Card>
         </div>
+      )}
+
+      {/* Signup Prompt Modal for Guests */}
+      {isGuest && (
+        <SignupPromptModal
+          isOpen={showSignupModal}
+          onClose={() => setShowSignupModal(false)}
+          questionCount={getSystemWideQuestionCount()}
+        />
       )}
     </div>
   );

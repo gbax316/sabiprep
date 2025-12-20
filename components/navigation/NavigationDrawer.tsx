@@ -22,7 +22,7 @@ interface NavigationDrawerProps {
 export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
   const pathname = usePathname();
   const router = useRouter();
-  const { user, signOut } = useAuth();
+  const { user, isGuest, signOut } = useAuth();
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -167,7 +167,7 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
         </div>
 
         {/* User info */}
-        {user && (
+        {user ? (
           <div className="p-5 border-b border-white/10">
             <div className="flex items-center gap-3">
               <div className="relative">
@@ -186,23 +186,70 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
               </div>
             </div>
           </div>
-        )}
+        ) : isGuest ? (
+          <div className="p-5 border-b border-white/10">
+            <div className="flex items-center gap-3">
+              <div className="relative">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-amber-500/40">
+                  G
+                </div>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="font-semibold text-white truncate text-sm">Guest Mode</p>
+                <p className="text-xs text-amber-400 truncate">Try for Free</p>
+              </div>
+            </div>
+            <Link
+              href="/signup"
+              onClick={onClose}
+              className="mt-3 w-full px-4 py-2.5 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-xl text-white font-semibold text-sm text-center hover:shadow-lg hover:shadow-indigo-500/30 transition-all"
+            >
+              Sign Up for Full Access
+            </Link>
+          </div>
+        ) : null}
 
         {/* Navigation */}
         <nav className="flex-1 overflow-y-auto py-4">
-          {navigationSections.map((section) => (
-            <div key={section.title} className="mb-6">
-              <p className="px-5 mb-2 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-                {section.title}
-              </p>
+          {navigationSections.map((section) => {
+            // Filter out auth-only sections for guests
+            if (isGuest && (section.title === 'Progress' || section.title === 'Settings')) {
+              return null;
+            }
 
-              <ul className="space-y-1 px-3">
-                {section.items.map((item) => {
-                  const Icon = item.icon;
-                  const active = isActive(item.href);
-                  const hasChildren = item.children && item.children.length > 0;
-                  const childActive = hasActiveChild(item.children);
-                  const expanded = isExpanded(item.label);
+            return (
+              <div key={section.title} className="mb-6">
+                <p className="px-5 mb-2 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                  {section.title}
+                </p>
+
+                <ul className="space-y-1 px-3">
+                  {section.items.map((item) => {
+                    // Filter out auth-only items for guests
+                    if (isGuest) {
+                      const authOnlyItems = ['/analytics', '/profile', '/achievements', '/daily-challenge', '/settings', '/notifications'];
+                      if (item.href && authOnlyItems.includes(item.href)) {
+                        return null;
+                      }
+                    }
+                    
+                    // Create filtered item for guests (don't mutate original)
+                    const filteredItem = isGuest && item.children
+                      ? {
+                          ...item,
+                          children: item.children.filter(child => {
+                            if (!child.href) return true;
+                            const authOnlyItems = ['/analytics', '/profile', '/achievements', '/daily-challenge', '/settings', '/notifications'];
+                            return !authOnlyItems.includes(child.href);
+                          })
+                        }
+                      : item;
+                    
+                    const Icon = filteredItem.icon;
+                    const active = isActive(filteredItem.href);
+                    const hasChildren = filteredItem.children && filteredItem.children.length > 0;
+                    const childActive = hasActiveChild(filteredItem.children);
+                    const expanded = isExpanded(filteredItem.label);
 
                   if (hasChildren) {
                     return (
@@ -227,28 +274,28 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
                               childActive ? 'text-white' : 'text-slate-400'
                             )} />
                           </div>
-                          <div className="flex-1 min-w-0 text-left">
-                            <p className="font-medium text-sm">{item.label}</p>
-                            {item.description && (
-                              <p className="text-[10px] text-slate-500 truncate">
-                                {item.description}
-                              </p>
-                            )}
-                          </div>
-                          <ChevronDown className={cn(
-                            'w-4 h-4 transition-transform duration-200',
-                            expanded ? 'rotate-180' : '',
-                            childActive ? 'text-cyan-400' : 'text-slate-600'
-                          )} />
-                        </button>
+                            <div className="flex-1 min-w-0 text-left">
+                              <p className="font-medium text-sm">{filteredItem.label}</p>
+                              {filteredItem.description && (
+                                <p className="text-[10px] text-slate-500 truncate">
+                                  {filteredItem.description}
+                                </p>
+                              )}
+                            </div>
+                            <ChevronDown className={cn(
+                              'w-4 h-4 transition-transform duration-200',
+                              expanded ? 'rotate-180' : '',
+                              childActive ? 'text-cyan-400' : 'text-slate-600'
+                            )} />
+                          </button>
 
-                        {/* Children */}
-                        <div className={cn(
-                          'overflow-hidden transition-all duration-200',
-                          expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                        )}>
-                          <ul className="ml-4 mt-1 space-y-1 border-l border-white/10 pl-3">
-                            {item.children?.map((child) => {
+                          {/* Children */}
+                          <div className={cn(
+                            'overflow-hidden transition-all duration-200',
+                            expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                          )}>
+                            <ul className="ml-4 mt-1 space-y-1 border-l border-white/10 pl-3">
+                              {filteredItem.children?.map((child) => {
                               const ChildIcon = child.icon;
                               const childIsActive = isActive(child.href);
 
@@ -286,73 +333,75 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
                                   </Link>
                                 </li>
                               );
-                            })}
-                          </ul>
-                        </div>
-                      </li>
-                    );
-                  }
+                              })}
+                            </ul>
+                          </div>
+                        </li>
+                      );
+                    }
 
-                  // Regular item (no children)
-                  return (
-                    <li key={item.href || item.label}>
-                      <Link
-                        href={item.href || '#'}
-                        onClick={() => handleNavClick(item.href)}
-                        className={cn(
-                          'flex items-center gap-3 px-3 py-3 rounded-xl transition-all',
-                          active
-                            ? 'bg-white/10 text-white'
-                            : 'text-slate-400 hover:bg-white/5 hover:text-white active:bg-white/10'
-                        )}
-                      >
-                        <div className={cn(
-                          'w-9 h-9 rounded-lg flex items-center justify-center transition-all',
-                          active
-                            ? 'bg-gradient-to-br from-cyan-500 to-violet-500 shadow-lg shadow-cyan-500/30'
-                            : 'bg-white/5'
-                        )}>
-                          <Icon className={cn(
-                            'w-4 h-4',
-                            active ? 'text-white' : 'text-slate-400'
-                          )} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2">
-                            <p className="font-medium text-sm">{item.label}</p>
-                            {item.badge && (
-                              <span className={cn(
-                                'text-[10px] px-1.5 py-0.5 rounded-full font-medium border',
-                                item.badgeColor || 'bg-slate-800 text-slate-300 border-slate-700'
-                              )}>
-                                {item.badge}
-                              </span>
+                    // Regular item (no children)
+                    return (
+                      <li key={filteredItem.href || filteredItem.label}>
+                        <Link
+                          href={filteredItem.href || '#'}
+                          onClick={() => handleNavClick(filteredItem.href)}
+                          className={cn(
+                            'flex items-center gap-3 px-3 py-3 rounded-xl transition-all',
+                            active
+                              ? 'bg-white/10 text-white'
+                              : 'text-slate-400 hover:bg-white/5 hover:text-white active:bg-white/10'
+                          )}
+                        >
+                          <div className={cn(
+                            'w-9 h-9 rounded-lg flex items-center justify-center transition-all',
+                            active
+                              ? 'bg-gradient-to-br from-cyan-500 to-violet-500 shadow-lg shadow-cyan-500/30'
+                              : 'bg-white/5'
+                          )}>
+                            <Icon className={cn(
+                              'w-4 h-4',
+                              active ? 'text-white' : 'text-slate-400'
+                            )} />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2">
+                              <p className="font-medium text-sm">{filteredItem.label}</p>
+                              {filteredItem.badge && (
+                                <span className={cn(
+                                  'text-[10px] px-1.5 py-0.5 rounded-full font-medium border',
+                                  filteredItem.badgeColor || 'bg-slate-800 text-slate-300 border-slate-700'
+                                )}>
+                                  {filteredItem.badge}
+                                </span>
+                              )}
+                            </div>
+                            {filteredItem.description && (
+                              <p className="text-[10px] text-slate-500 truncate">
+                                {filteredItem.description}
+                              </p>
                             )}
                           </div>
-                          {item.description && (
-                            <p className="text-[10px] text-slate-500 truncate">
-                              {item.description}
-                            </p>
-                          )}
-                        </div>
-                        <ChevronRight className={cn(
-                          'w-4 h-4',
-                          active ? 'text-cyan-400' : 'text-slate-600'
-                        )} />
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
+                          <ChevronRight className={cn(
+                            'w-4 h-4',
+                            active ? 'text-cyan-400' : 'text-slate-600'
+                          )} />
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
         </nav>
 
-        {/* Sign out button */}
-        <div className="p-5 border-t border-white/10">
-          <button
-            onClick={handleSignOut}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl
+        {/* Sign out button - only show for authenticated users */}
+        {user && !isGuest && (
+          <div className="p-5 border-t border-white/10">
+            <button
+              onClick={handleSignOut}
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl
                        bg-red-500/10 border border-red-500/30 text-red-400
                        hover:bg-red-500/20 hover:border-red-500/50
                        transition-all font-medium active:scale-[0.98]"
@@ -360,7 +409,10 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
             <LogOut className="w-5 h-5" />
             Sign Out
           </button>
-          <p className="text-center text-[10px] text-slate-500 mt-3">
+          </div>
+        )}
+        <div className="p-5 border-t border-white/10">
+          <p className="text-center text-[10px] text-slate-500">
             SabiPrep v1.0 • Made for Nigerian Students 🇳🇬
           </p>
         </div>

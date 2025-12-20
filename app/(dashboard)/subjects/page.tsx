@@ -15,7 +15,7 @@ import { ArrowLeft, Search, BookOpen, FileText, Timer, Layers, TrendingUp, Targe
 import { motion } from 'framer-motion';
 
 export default function SubjectsPage() {
-  const { userId } = useAuth();
+  const { userId, isGuest, enableGuestMode, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [subjects, setSubjects] = useState<Subject[]>([]);
@@ -25,26 +25,42 @@ export default function SubjectsPage() {
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [showModeModal, setShowModeModal] = useState(false);
 
+  // Enable guest mode if not authenticated
   useEffect(() => {
-    if (userId) {
+    if (!authLoading && !userId && !isGuest) {
+      enableGuestMode();
+    }
+  }, [authLoading, userId, isGuest, enableGuestMode]);
+
+  useEffect(() => {
+    if (!authLoading) {
       loadSubjects();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userId]);
+  }, [userId, authLoading]);
 
   async function loadSubjects() {
-    if (!userId) return;
-
     try {
       setLoading(true);
       setError(null);
-      const [allSubjects, userProgress] = await Promise.all([
-        getSubjects(),
-        getUserProgress(userId),
-      ]);
-
+      
+      // Always load subjects (no auth required)
+      const allSubjects = await getSubjects();
       setSubjects(allSubjects);
-      setProgress(userProgress);
+      
+      // Only load progress if user is authenticated (not guest)
+      if (userId && !isGuest) {
+        try {
+          const userProgress = await getUserProgress(userId);
+          setProgress(userProgress);
+        } catch (progressError) {
+          // If progress loading fails, just continue without it
+          console.warn('Could not load user progress:', progressError);
+          setProgress([]);
+        }
+      } else {
+        setProgress([]);
+      }
     } catch (error) {
       console.error('Error loading subjects:', error);
       setError('Failed to load subjects. Please try again.');
@@ -125,8 +141,15 @@ export default function SubjectsPage() {
                 <ArrowLeft className="w-5 h-5" />
               </MagicButton>
             </Link>
-            <div>
-              <h1 className="font-display text-3xl font-black text-white">Learning Gateway</h1>
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-1">
+                <h1 className="font-display text-3xl font-black text-white">Learning Gateway</h1>
+                {isGuest && (
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-medium border border-amber-500/30">
+                    Guest Mode
+                  </span>
+                )}
+              </div>
               <p className="text-slate-400">Select a subject, then choose your learning mode</p>
             </div>
           </div>

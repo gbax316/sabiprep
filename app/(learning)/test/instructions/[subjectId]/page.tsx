@@ -11,7 +11,7 @@ import { ArrowLeft, CheckCircle2, XCircle, Clock, Flag, RotateCcw } from 'lucide
 
 export default function TestInstructionsPage({ params }: { params: Promise<{ subjectId: string }> }) {
   const { subjectId } = use(params);
-  const { userId } = useAuth();
+  const { userId, isGuest } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
   const examStyle = searchParams?.get('style') || 'waec';
@@ -55,7 +55,7 @@ export default function TestInstructionsPage({ params }: { params: Promise<{ sub
   }, []);
 
   async function handleBeginTest() {
-    if (!userId || !subject) return;
+    if ((!userId && !isGuest) || !subject) return;
 
     try {
       setCreatingSession(true);
@@ -72,14 +72,14 @@ export default function TestInstructionsPage({ params }: { params: Promise<{ sub
       // Use the stored total questions (which matches the actual distribution)
       const actualTotalQuestions = storedTotal || totalQuestions;
 
-      // Create session with multi-topic support
+      // Create session with multi-topic support (guest or authenticated)
       const session = await createSession({
-        userId,
+        userId: userId || '',
         subjectId: subject.id,
         topicIds,
         mode: 'test',
         totalQuestions: actualTotalQuestions, // Use actual total from distribution
-        // Store exam style in metadata (we'll add this field to sessions table)
+        isGuest: isGuest,
       });
 
       // Store exam style and distribution in sessionStorage for the test page

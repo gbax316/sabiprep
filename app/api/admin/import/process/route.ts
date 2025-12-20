@@ -206,6 +206,7 @@ export async function POST(request: NextRequest) {
                 exam_type: row.exam_type.trim().toUpperCase(),
                 exam_year: parseInt(row.year),
                 status: 'published', // Default to published for imported questions
+                import_report_id: importReport.id, // Link question to import batch
                 created_by: adminUser.id
               });
 

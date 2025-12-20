@@ -606,15 +606,66 @@ export interface CreateSessionParams {
   mode: 'practice' | 'test' | 'timed';
   totalQuestions: number;
   timeLimit?: number;
+  isGuest?: boolean; // If true, create in-memory guest session
 }
 
 /**
  * Create a new learning session
+ * Supports both authenticated users (database) and guests (in-memory)
  */
 export async function createSession(params: CreateSessionParams): Promise<LearningSession> {
   // Support both single topic (backward compatible) and multi-topic
   const topicIds = params.topicIds || (params.topicId ? [params.topicId] : []);
   
+  // Guest session: create in-memory session stored in sessionStorage
+  if (params.isGuest) {
+    if (typeof window === 'undefined') {
+      throw new Error('Guest sessions can only be created on the client');
+    }
+    
+    // Get guest ID from sessionStorage if userId is empty
+    const guestId = params.userId || (() => {
+      const guestSessionStr = sessionStorage.getItem('sabiprep_guest_session');
+      if (guestSessionStr) {
+        try {
+          const session = JSON.parse(guestSessionStr);
+          return session.guestId;
+        } catch (e) {
+          console.error('Error parsing guest session:', e);
+        }
+      }
+      // Fallback: generate new guest ID
+      return `guest_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
+    })();
+    
+    // Generate session ID (UUID-like)
+    const sessionId = `guest_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
+    
+    const guestSession: LearningSession = {
+      id: sessionId,
+      user_id: guestId,
+      subject_id: params.subjectId,
+      topic_id: params.topicId || (topicIds.length === 1 ? topicIds[0] : null),
+      topic_ids: topicIds.length > 1 ? topicIds : (topicIds.length === 1 ? topicIds : null),
+      mode: params.mode,
+      total_questions: params.totalQuestions,
+      time_limit_seconds: params.timeLimit || null,
+      status: 'in_progress',
+      last_question_index: 0,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      completed_at: null,
+      score: null,
+      accuracy: null,
+    };
+    
+    // Store guest session in sessionStorage
+    sessionStorage.setItem(`guest_session_${sessionId}`, JSON.stringify(guestSession));
+    
+    return guestSession;
+  }
+  
+  // Authenticated user session: create in database
   const { data, error } = await supabase
     .from('sessions')
     .insert({
@@ -659,8 +710,29 @@ export async function createSession(params: CreateSessionParams): Promise<Learni
 
 /**
  * Get a session by ID
+ * Supports both database sessions and guest sessions (from sessionStorage)
  */
 export async function getSession(sessionId: string): Promise<LearningSession | null> {
+  // Check if it's a guest session
+  if (sessionId.startsWith('guest_') && typeof window !== 'undefined') {
+    const guestSessionStr = sessionStorage.getItem(`guest_session_${sessionId}`);
+    if (guestSessionStr) {
+      try {
+        const guestSession = JSON.parse(guestSessionStr) as LearningSession;
+        // Ensure topic_ids is an array
+        if (guestSession.topic_ids && !Array.isArray(guestSession.topic_ids)) {
+          guestSession.topic_ids = [guestSession.topic_ids];
+        }
+        return guestSession;
+      } catch (e) {
+        console.error('Error parsing guest session:', e);
+        return null;
+      }
+    }
+    return null;
+  }
+  
+  // Database session
   const { data, error } = await supabase
     .from('sessions')
     .select('*')

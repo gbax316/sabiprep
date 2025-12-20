@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckCircle, XCircle, Clock, FileText } from 'lucide-react';
+import { CheckCircle, XCircle, Clock, FileText, Edit, Trash2, Eye } from 'lucide-react';
 import Link from 'next/link';
 
 interface ImportReportCardProps {
@@ -19,6 +19,8 @@ interface ImportReportCardProps {
     };
   };
   className?: string;
+  onEdit?: (reportId: string) => void;
+  onDelete?: (reportId: string) => void;
 }
 
 export function ImportReportCard({ report, className = '' }: ImportReportCardProps) {
@@ -57,13 +59,18 @@ export function ImportReportCard({ report, className = '' }: ImportReportCardPro
     return `${minutes}m ${seconds % 60}s`;
   };
 
+  const handleActionClick = (e: React.MouseEvent, action: () => void) => {
+    e.preventDefault();
+    e.stopPropagation();
+    action();
+  };
+
   return (
-    <Link href={`/admin/import/history/${report.id}`}>
-      <div className={`
-        bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700
-        hover:shadow-lg transition-shadow duration-200 cursor-pointer p-6
-        ${className}
-      `}>
+    <div className={`
+      bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700
+      hover:shadow-lg transition-shadow duration-200 p-6 relative
+      ${className}
+    `}>
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center space-x-3">
@@ -157,7 +164,35 @@ export function ImportReportCard({ report, className = '' }: ImportReportCardPro
             <span>Duration: {formatDuration()}</span>
           )}
         </div>
+
+        {/* Actions */}
+        <div className="flex items-center justify-end gap-2 mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+          <Link
+            href={`/admin/import/history/${report.id}`}
+            className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-colors"
+            title="View Details"
+          >
+            <Eye className="w-4 h-4" />
+          </Link>
+          {onEdit && (
+            <button
+              onClick={(e) => handleActionClick(e, () => onEdit(report.id))}
+              className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-colors"
+              title="Edit Batch"
+            >
+              <Edit className="w-4 h-4" />
+            </button>
+          )}
+          {onDelete && (
+            <button
+              onClick={(e) => handleActionClick(e, () => onDelete(report.id))}
+              className="p-2 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors"
+              title="Delete Batch"
+            >
+              <Trash2 className="w-4 h-4" />
+            </button>
+          )}
+        </div>
       </div>
-    </Link>
   );
 }

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { bottomNavItems, type NavItem } from '@/lib/navigation-config';
+import { useAuth } from '@/lib/auth-context';
 
 export interface BottomNavProps {
   items?: NavItem[];
@@ -14,6 +15,7 @@ export interface BottomNavProps {
 
 export function BottomNav({ items = bottomNavItems, className }: BottomNavProps) {
   const pathname = usePathname();
+  const { isGuest } = useAuth();
 
   const isActive = (href: string) => {
     if (!pathname) return false;
@@ -22,6 +24,15 @@ export function BottomNav({ items = bottomNavItems, className }: BottomNavProps)
     }
     return pathname === href || pathname.startsWith(`${href}/`);
   };
+
+  // Filter out auth-only items for guests
+  const filteredItems = isGuest 
+    ? items.filter(item => {
+        if (!item.href) return false;
+        const authOnlyItems = ['/analytics', '/profile'];
+        return !authOnlyItems.includes(item.href);
+      })
+    : items;
 
   return (
     <nav
@@ -35,7 +46,7 @@ export function BottomNav({ items = bottomNavItems, className }: BottomNavProps)
       )}
     >
       <div className="h-16 px-4 flex items-center justify-around max-w-lg mx-auto safe-area-inset-bottom">
-        {items.map((item, index) => {
+        {filteredItems.map((item, index) => {
           if (!item.href) return null; // Skip items without href
           const active = isActive(item.href);
           return (

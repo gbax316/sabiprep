@@ -3,7 +3,10 @@
 import { useState, useEffect } from 'react';
 import { Plus } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { AdminHeader, ImportReportCard } from '@/components/admin';
+import { BatchEditModal } from '@/components/admin/BatchEditModal';
+import { BatchDeleteModal } from '@/components/admin/BatchDeleteModal';
 
 interface ImportReport {
   id: string;
@@ -21,11 +24,14 @@ interface ImportReport {
 }
 
 export default function ImportHistoryPage() {
+  const router = useRouter();
   const [reports, setReports] = useState<ImportReport[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [editingReport, setEditingReport] = useState<ImportReport | null>(null);
+  const [deletingReport, setDeletingReport] = useState<ImportReport | null>(null);
 
   useEffect(() => {
     fetchReports();
@@ -104,7 +110,12 @@ export default function ImportHistoryPage() {
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
               {reports.map((report) => (
-                <ImportReportCard key={report.id} report={report} />
+                <ImportReportCard
+                  key={report.id}
+                  report={report}
+                  onEdit={handleEdit}
+                  onDelete={handleDelete}
+                />
               ))}
             </div>
 
@@ -133,6 +144,25 @@ export default function ImportHistoryPage() {
           </>
         )}
       </div>
+
+      {/* Modals */}
+      {editingReport && (
+        <BatchEditModal
+          isOpen={!!editingReport}
+          onClose={() => setEditingReport(null)}
+          batch={editingReport}
+          onSave={handleSaveEdit}
+        />
+      )}
+
+      {deletingReport && (
+        <BatchDeleteModal
+          isOpen={!!deletingReport}
+          onClose={() => setDeletingReport(null)}
+          batch={deletingReport}
+          onDelete={handleConfirmDelete}
+        />
+      )}
     </div>
   );
 }

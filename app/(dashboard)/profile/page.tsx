@@ -32,6 +32,8 @@ import {
   Star,
   ArrowLeft,
 } from 'lucide-react';
+import { SignupPromptModal } from '@/components/common/SignupPromptModal';
+import { getSystemWideQuestionCount } from '@/lib/guest-session';
 
 export default function ProfilePage() {
   const { userId, signOut } = useAuth();
@@ -559,6 +561,18 @@ export default function ProfilePage() {
 
       {/* Bottom Navigation */}
       <BottomNav />
+
+      {/* Signup Prompt Modal for Guests */}
+      {isGuest && (
+        <SignupPromptModal
+          isOpen={showSignupModal}
+          onClose={() => {
+            setShowSignupModal(false);
+            router.push('/subjects');
+          }}
+          questionCount={getSystemWideQuestionCount()}
+        />
+      )}
     </div>
   );
 }

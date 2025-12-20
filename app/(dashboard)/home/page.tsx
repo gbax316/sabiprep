@@ -13,6 +13,8 @@ import { getSubjects, getUserStats, getUserProgress, updateUserStreak, getUserPr
 import type { Subject, UserStats, UserProgress, LearningSession, UserGoal, User } from '@/types/database';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { getSystemWideQuestionCount, getQuestionLimit } from '@/lib/guest-session';
+import { SignupPromptModal } from '@/components/common/SignupPromptModal';
 import {
   Flame,
   Target,
@@ -41,7 +43,7 @@ import {
  * - Gamified and stimulating
  */
 export default function HomePage() {
-  const { userId, isLoading: authLoading, user: authUser } = useAuth();
+  const { userId, isGuest, isLoading: authLoading, user: authUser, enableGuestMode } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<UserStats | null>(null);
@@ -51,20 +53,27 @@ export default function HomePage() {
   const [recentSessions, setRecentSessions] = useState<LearningSession[]>([]);
   const [userGoals, setUserGoals] = useState<UserGoal[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [showSignupModal, setShowSignupModal] = useState(false);
 
-  // Redirect if not authenticated
+  // Redirect if not authenticated and not guest
   useEffect(() => {
-    if (!authLoading && !userId) {
-      router.push('/login');
+    if (!authLoading) {
+      if (!userId && !isGuest) {
+        router.push('/login');
+      }
     }
-  }, [userId, authLoading, router]);
+  }, [userId, isGuest, authLoading, router]);
 
   useEffect(() => {
-    if (userId) {
+    if (isGuest) {
+      // Load subjects for guests
+      loadSubjectsForGuest();
+      setLoading(false);
+    } else if (userId) {
       loadDashboard();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userId]);
+  }, [userId, isGuest]);
 
   async function loadDashboard() {
     if (!userId) return;
@@ -95,6 +104,20 @@ export default function HomePage() {
     } catch (error) {
       console.error('Error loading dashboard:', error);
       setError('Failed to load dashboard. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function loadSubjectsForGuest() {
+    try {
+      setLoading(true);
+      setError(null);
+      const allSubjects = await getSubjects();
+      setSubjects(allSubjects);
+    } catch (error) {
+      console.error('Error loading subjects:', error);
+      setError('Failed to load subjects. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -297,6 +320,139 @@ export default function HomePage() {
           <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
           <p className="text-slate-400">Loading your dashboard...</p>
         </div>
+      </div>
+    );
+  }
+
+  // Guest-specific UI
+  if (isGuest) {
+    const questionCount = getSystemWideQuestionCount();
+    const questionLimit = getQuestionLimit();
+    const questionsRemaining = Math.max(0, questionLimit - questionCount);
+
+    return (
+      <div className="min-h-screen bg-slate-950 pb-24">
+        <Header />
+
+        <div className="container-app space-y-4 pt-6">
+          {/* Signup Banner */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 border border-violet-500/50 p-6 sm:p-8"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-transparent to-purple-500/20" />
+            <div className="relative z-10">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="flex-1">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                    Try SabiPrep for Free! 🎉
+                  </h2>
+                  <p className="text-indigo-100 mb-4">
+                    You've answered {questionCount} of {questionLimit} free questions. {questionsRemaining > 0 ? `${questionsRemaining} remaining!` : 'Sign up for unlimited access!'}
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <MagicButton
+                      variant="primary"
+                      onClick={() => {
+                        const returnUrl = typeof window !== 'undefined' ? window.location.pathname : '/home';
+                        router.push(`/signup?returnUrl=${encodeURIComponent(returnUrl)}`);
+                      }}
+                      className="bg-white text-indigo-600 hover:bg-indigo-50"
+                    >
+                      <Sparkles className="w-4 h-4 mr-2" />
+                      Sign Up for Full Access
+                    </MagicButton>
+                    <Link href="/subjects">
+                      <MagicButton variant="secondary" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        Continue Learning
+                      </MagicButton>
+                    </Link>
+                  </div>
+                </div>
+                <div className="w-20 h-20 rounded-2xl bg-white/10 flex items-center justify-center">
+                  <Sparkles className="w-10 h-10 text-white" />
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Trial Progress Card */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <MagicCard className="p-6 bg-slate-900/50 border-slate-700">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-white">Your Trial Progress</h3>
+                <MagicBadge variant="info">{questionCount} / {questionLimit}</MagicBadge>
+              </div>
+              <div className="w-full bg-slate-800 rounded-full h-3 mb-4">
+                <motion.div
+                  className="bg-gradient-to-r from-indigo-500 to-violet-500 h-3 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${(questionCount / questionLimit) * 100}%` }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                />
+              </div>
+              <p className="text-sm text-slate-400">
+                {questionsRemaining > 0 
+                  ? `Answer ${questionsRemaining} more question${questionsRemaining > 1 ? 's' : ''} to unlock full access!`
+                  : 'You\'ve reached the trial limit. Sign up to continue learning!'}
+              </p>
+            </MagicCard>
+          </motion.section>
+
+          {/* Subjects Grid */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-2xl font-bold text-white">Explore Subjects</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {subjects.map((subject, index) => (
+                <motion.div
+                  key={subject.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                >
+                  <Link href="/subjects">
+                    <MagicCard className="p-6 bg-slate-900/50 border-slate-700 hover:border-cyan-500/50 transition-colors cursor-pointer h-full">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-2xl shadow-lg flex-shrink-0">
+                          {subject.icon || '📚'}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-semibold text-white mb-1 truncate">{subject.name}</h3>
+                          <p className="text-sm text-slate-400 line-clamp-2">{subject.description || 'Start practicing now'}</p>
+                        </div>
+                        <ChevronRight className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                      </div>
+                    </MagicCard>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        </div>
+
+        <BottomNav />
+
+        {/* Signup Modal */}
+        {showSignupModal && (
+          <SignupPromptModal
+            isOpen={showSignupModal}
+            onClose={() => setShowSignupModal(false)}
+            questionCount={questionCount}
+          />
+        )}
       </div>
     );
   }

@@ -33,6 +33,12 @@ import {
   ChevronDown,
   X,
 } from 'lucide-react';
+import { SignupPromptModal } from '@/components/common/SignupPromptModal';
+import {
+  hasReachedQuestionLimit,
+  incrementGuestQuestionCount,
+  getSystemWideQuestionCount,
+} from '@/lib/guest-session';
 
 interface QuestionTimeData {
   questionId: string;
@@ -44,10 +50,11 @@ interface QuestionTimeData {
 export default function TimedModePage({ params }: { params: Promise<{ sessionId: string }> }) {
   const { sessionId } = use(params);
   const router = useRouter();
-  const { userId } = useAuth();
+  const { userId, isGuest } = useAuth();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState<LearningSession | null>(null);
   const [topics, setTopics] = useState<Topic[]>([]);
+  const [showSignupModal, setShowSignupModal] = useState(false);
   const [subject, setSubject] = useState<Subject | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -284,25 +291,27 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       setCorrectAnswers(prev => Math.max(0, prev - 1));
     }
 
-    // Record answer immediately (don't wait)
-    try {
-      await createSessionAnswer({
-        sessionId: sessionId,
-        questionId: currentQ.id,
-        userAnswer: answer as 'A' | 'B' | 'C' | 'D',
-        isCorrect,
-        timeSpentSeconds: timeSpent,
-        hintUsed: false,
-        solutionViewed: false,
-      });
+    // Record answer immediately (don't wait) - skip for guests
+    if (!isGuest && userId) {
+      try {
+        await createSessionAnswer({
+          sessionId: sessionId,
+          questionId: currentQ.id,
+          userAnswer: answer as 'A' | 'B' | 'C' | 'D',
+          isCorrect,
+          timeSpentSeconds: timeSpent,
+          hintUsed: false,
+          solutionViewed: false,
+        });
 
-      // Update session progress
-      await updateSession(sessionId, {
-        questions_answered: answers.size + (previousAnswer ? 0 : 1),
-        correct_answers: correctAnswers + (isCorrect && !previousAnswer ? 1 : 0) - (!isCorrect && previousAnswer === currentQ.correct_answer ? 1 : 0),
-      });
-    } catch (error) {
-      console.error('Error recording answer:', error);
+        // Update session progress
+        await updateSession(sessionId, {
+          questions_answered: answers.size + (previousAnswer ? 0 : 1),
+          correct_answers: correctAnswers + (isCorrect && !previousAnswer ? 1 : 0) - (!isCorrect && previousAnswer === currentQ.correct_answer ? 1 : 0),
+        });
+      } catch (error) {
+        console.error('Error recording answer:', error);
+      }
     }
   }
 
@@ -349,22 +358,24 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
     const scorePercentage = (finalCorrect / questions.length) * 100;
     
-    // Update session with final time
+    // Update session with final time (skip for guests)
     const totalTimeSpent = session?.time_limit_seconds ? session.time_limit_seconds - timeRemaining : 0;
-    await updateSession(sessionId, {
-      questions_answered: answers.size,
-      correct_answers: finalCorrect,
-      time_spent_seconds: totalTimeSpent,
-    });
+    if (!isGuest && userId) {
+      await updateSession(sessionId, {
+        questions_answered: answers.size,
+        correct_answers: finalCorrect,
+        time_spent_seconds: totalTimeSpent,
+      });
 
-    await completeSessionWithGoals(
-      sessionId,
-      scorePercentage,
-      totalTimeSpent,
-      finalCorrect,
-      questions.length,
-      userId || undefined
-    );
+      await completeSessionWithGoals(
+        sessionId,
+        scorePercentage,
+        totalTimeSpent,
+        finalCorrect,
+        questions.length,
+        userId
+      );
+    }
     
     // Show brief overlay before redirect
     setTimeout(() => {
@@ -384,22 +395,24 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
     const scorePercentage = (finalCorrect / questions.length) * 100;
     
-    // Update session with final time
+    // Update session with final time (skip for guests)
     const totalTimeSpent = session?.time_limit_seconds ? session.time_limit_seconds - timeRemaining : 0;
-    await updateSession(sessionId, {
-      questions_answered: answers.size,
-      correct_answers: finalCorrect,
-      time_spent_seconds: totalTimeSpent,
-    });
+    if (!isGuest && userId) {
+      await updateSession(sessionId, {
+        questions_answered: answers.size,
+        correct_answers: finalCorrect,
+        time_spent_seconds: totalTimeSpent,
+      });
 
-    await completeSessionWithGoals(
-      sessionId,
-      scorePercentage,
-      totalTimeSpent,
-      finalCorrect,
-      questions.length,
-      userId || undefined
-    );
+      await completeSessionWithGoals(
+        sessionId,
+        scorePercentage,
+        totalTimeSpent,
+        finalCorrect,
+        questions.length,
+        userId
+      );
+    }
     router.push(`/results/${sessionId}`);
   }
 
@@ -412,15 +425,17 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
     const totalTimeSpent = session?.time_limit_seconds ? session.time_limit_seconds - timeRemaining : 0;
     
-    try {
-      // Update session with current progress
-      await updateSession(sessionId, {
-        questions_answered: answers.size,
-        correct_answers: finalCorrect,
-        time_spent_seconds: totalTimeSpent,
-      });
-    } catch (error) {
-      console.error('Error saving progress:', error);
+    // Update session with current progress (skip for guests)
+    if (!isGuest && userId) {
+      try {
+        await updateSession(sessionId, {
+          questions_answered: answers.size,
+          correct_answers: finalCorrect,
+          time_spent_seconds: totalTimeSpent,
+        });
+      } catch (error) {
+        console.error('Error saving progress:', error);
+      }
     }
 
     // Stop timer and navigate away
@@ -513,7 +528,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 flex-1 min-w-0">
                 <button
-                  onClick={() => router.back()}
+                  onClick={() => {
+                    // For guests, navigate to home; for authenticated users, go home
+                    if (isGuest || sessionId.startsWith('guest_')) {
+                      router.replace('/home');
+                    } else {
+                      router.push('/home');
+                    }
+                  }}
                   className="p-2 -ml-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0"
                   aria-label="Go back"
                 >
@@ -586,7 +608,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <button
-                  onClick={() => router.back()}
+                  onClick={() => {
+                    // For guests, navigate to home; for authenticated users, go home
+                    if (isGuest || sessionId.startsWith('guest_')) {
+                      router.replace('/home');
+                    } else {
+                      router.push('/home');
+                    }
+                  }}
                   className="p-2 -ml-2 hover:bg-gray-100 rounded-lg transition-colors"
                   aria-label="Go back"
                 >
@@ -914,6 +943,15 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
             <div className="w-16 h-16 border-4 border-orange-600 border-t-transparent rounded-full animate-spin mx-auto" />
           </Card>
         </div>
+      )}
+
+      {/* Signup Prompt Modal for Guests */}
+      {isGuest && (
+        <SignupPromptModal
+          isOpen={showSignupModal}
+          onClose={() => setShowSignupModal(false)}
+          questionCount={getSystemWideQuestionCount()}
+        />
       )}
     </div>
   );

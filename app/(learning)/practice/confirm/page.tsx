@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 
 function PracticeConfirmContent() {
-  const { userId } = useAuth();
+  const { userId, isGuest } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
   const [loading, setLoading] = useState(true);
@@ -55,19 +55,20 @@ function PracticeConfirmContent() {
   }
 
   async function handleStartPractice() {
-    if (!userId || !subject) return;
+    if ((!userId && !isGuest) || !subject) return;
 
     try {
       setCreatingSession(true);
 
-      // Create session with multi-topic support
+      // Create session with multi-topic support (guest or authenticated)
       const session = await createSession({
-        userId,
+        userId: userId || '',
         subjectId: subject.id,
         topicIds: topicIds.length > 1 ? topicIds : undefined,
         topicId: topicIds.length === 1 ? topicIds[0] : undefined,
         mode: 'practice',
         totalQuestions: questionCount,
+        isGuest: isGuest,
       });
 
       // Navigate to practice session

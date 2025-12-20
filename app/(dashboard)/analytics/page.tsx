@@ -29,11 +29,13 @@ import {
   Sparkles,
   ArrowLeft,
 } from 'lucide-react';
+import { SignupPromptModal } from '@/components/common/SignupPromptModal';
+import { getSystemWideQuestionCount } from '@/lib/guest-session';
 
 type Period = '7D' | '30D' | '90D' | 'All';
 
 export default function AnalyticsPage() {
-  const { userId } = useAuth();
+  const { userId, isGuest } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
@@ -44,12 +46,16 @@ export default function AnalyticsPage() {
   const [goals, setGoals] = useState<UserGoal[]>([]);
   const [progress, setProgress] = useState<UserProgress[]>([]);
   const [loadingHeavy, setLoadingHeavy] = useState(true);
+  const [showSignupModal, setShowSignupModal] = useState(false);
 
   useEffect(() => {
-    if (userId) {
+    if (isGuest) {
+      setShowSignupModal(true);
+      setLoading(false);
+    } else if (userId) {
       loadAnalytics();
     }
-  }, [userId, selectedPeriod]);
+  }, [userId, isGuest, selectedPeriod]);
 
   async function loadAnalytics() {
     if (!userId) return;
@@ -771,6 +777,18 @@ export default function AnalyticsPage() {
 
       {/* Bottom Navigation */}
       <BottomNav />
+
+      {/* Signup Prompt Modal for Guests */}
+      {isGuest && (
+        <SignupPromptModal
+          isOpen={showSignupModal}
+          onClose={() => {
+            setShowSignupModal(false);
+            router.push('/subjects');
+          }}
+          questionCount={getSystemWideQuestionCount()}
+        />
+      )}
     </div>
   );
 }
