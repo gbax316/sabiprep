@@ -36,7 +36,7 @@ import { SignupPromptModal } from '@/components/common/SignupPromptModal';
 import { getSystemWideQuestionCount } from '@/lib/guest-session';
 
 export default function ProfilePage() {
-  const { userId, signOut } = useAuth();
+  const { userId, isGuest, signOut } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<User | null>(null);
@@ -48,12 +48,16 @@ export default function ProfilePage() {
   const [weeklyQuestionsGoal, setWeeklyQuestionsGoal] = useState(50);
   const [notifications, setNotifications] = useState(true);
   const [savingGoals, setSavingGoals] = useState(false);
+  const [showSignupModal, setShowSignupModal] = useState(false);
 
   useEffect(() => {
-    if (userId) {
+    if (isGuest) {
+      setShowSignupModal(true);
+      setLoading(false);
+    } else if (userId) {
       loadProfile();
     }
-  }, [userId]);
+  }, [userId, isGuest]);
 
   async function loadProfile() {
     if (!userId) return;
