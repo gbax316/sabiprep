@@ -94,28 +94,60 @@ export default function HomePage() {
       setLoading(true);
       setError(null);
 
-      // Update streak on page load
-      await updateUserStreak(userId);
+      // Update streak on page load (don't fail if this errors)
+      try {
+        await updateUserStreak(userId);
+      } catch (streakError) {
+        console.warn('Error updating streak:', streakError);
+        // Continue loading even if streak update fails
+      }
 
-      // Fetch data in parallel
-      const [profile, userStats, allSubjects, userProgress, sessions, goals] = await Promise.all([
-        getUserProfile(userId),
-        getUserStats(userId),
-        getSubjects(),
-        getUserProgress(userId),
-        getUserSessions(userId, 50),
-        getUserGoals(userId),
+      // Fetch data in parallel with individual error handling
+      const [profile, userStats, allSubjects, userProgress, sessions, goals] = await Promise.allSettled([
+        getUserProfile(userId).catch(() => null),
+        getUserStats(userId).catch(() => ({
+          questionsAnswered: 0,
+          correctAnswers: 0,
+          accuracy: 0,
+          studyTimeMinutes: 0,
+          currentStreak: 0,
+          lastActiveDate: undefined,
+        })),
+        getSubjects().catch(() => []),
+        getUserProgress(userId).catch(() => []),
+        getUserSessions(userId, 50).catch(() => []),
+        getUserGoals(userId).catch(() => []),
       ]);
 
-      setUserProfile(profile);
-      setStats(userStats);
-      setSubjects(allSubjects);
-      setProgress(userProgress);
-      setRecentSessions(sessions);
-      setUserGoals(goals);
+      setUserProfile(profile.status === 'fulfilled' ? profile.value : null);
+      setStats(userStats.status === 'fulfilled' ? userStats.value : {
+        questionsAnswered: 0,
+        correctAnswers: 0,
+        accuracy: 0,
+        studyTimeMinutes: 0,
+        currentStreak: 0,
+        lastActiveDate: undefined,
+      });
+      setSubjects(allSubjects.status === 'fulfilled' ? allSubjects.value : []);
+      setProgress(userProgress.status === 'fulfilled' ? userProgress.value : []);
+      setRecentSessions(sessions.status === 'fulfilled' ? sessions.value : []);
+      setUserGoals(goals.status === 'fulfilled' ? goals.value : []);
     } catch (error) {
       console.error('Error loading dashboard:', error);
       setError('Failed to load dashboard. Please try again.');
+      // Set safe defaults on error
+      setStats({
+        questionsAnswered: 0,
+        correctAnswers: 0,
+        accuracy: 0,
+        studyTimeMinutes: 0,
+        currentStreak: 0,
+        lastActiveDate: undefined,
+      });
+      setSubjects([]);
+      setProgress([]);
+      setRecentSessions([]);
+      setUserGoals([]);
     } finally {
       setLoading(false);
     }
@@ -160,30 +192,65 @@ export default function HomePage() {
   };
 
   // Get incomplete session (in_progress or paused)
+  // Prioritizes in_progress over paused, and most recent session if multiple exist
   const getIncompleteSession = (): LearningSession | null => {
-    return recentSessions.find(s => s.status === 'in_progress' || s.status === 'paused') || null;
+    if (!recentSessions || recentSessions.length === 0) return null;
+    
+    // First try to find in_progress session (most recent)
+    const inProgress = recentSessions.find(s => s.status === 'in_progress');
+    if (inProgress) return inProgress;
+    
+    // Then try paused session (most recent)
+    const paused = recentSessions.find(s => s.status === 'paused');
+    if (paused) return paused;
+    
+    return null;
   };
 
   // Check if streak is at risk (no activity today)
+  // Uses local timezone for date comparison
   const isStreakAtRisk = () => {
     if (!stats?.currentStreak || stats.currentStreak === 0) return false;
-    const today = new Date().toDateString();
-    const lastActive = stats.lastActiveDate 
-      ? (stats.lastActiveDate instanceof Date ? stats.lastActiveDate : new Date(stats.lastActiveDate)).toDateString()
-      : null;
-    return lastActive !== today;
+    if (!stats.lastActiveDate) return true; // No activity date means streak is at risk
+    
+    try {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      
+      const lastActive = stats.lastActiveDate instanceof Date 
+        ? stats.lastActiveDate 
+        : new Date(stats.lastActiveDate);
+      lastActive.setHours(0, 0, 0, 0);
+      
+      // Compare dates (not times) - if last active is before today, streak is at risk
+      return lastActive.getTime() < today.getTime();
+    } catch (e) {
+      console.warn('Error comparing dates for streak at risk:', e);
+      return false; // Don't show streak warning if date parsing fails
+    }
   };
 
   // Get daily questions answered today
+  // Uses local timezone for "today" calculation
   const getDailyQuestionsAnswered = () => {
+    if (!recentSessions || recentSessions.length === 0) return 0;
+    
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     
     return recentSessions
       .filter(s => {
-        if (s.status !== 'completed') return false;
-        const completedAt = s.completed_at ? new Date(s.completed_at) : null;
-        return completedAt && completedAt >= today;
+        if (!s || s.status !== 'completed') return false;
+        if (!s.completed_at) return false;
+        
+        try {
+          const completedAt = new Date(s.completed_at);
+          // Check if completed today (local timezone)
+          return completedAt >= today && completedAt < new Date(today.getTime() + 24 * 60 * 60 * 1000);
+        } catch (e) {
+          console.warn('Error parsing completed_at date:', s.completed_at, e);
+          return false;
+        }
       })
       .reduce((sum, s) => sum + (s.questions_answered || 0), 0);
   };
@@ -196,15 +263,18 @@ export default function HomePage() {
 
   // Get weak areas (topics with accuracy < 70%)
   const getWeakAreas = () => {
+    if (!progress || progress.length === 0) return [];
+    if (!subjects || subjects.length === 0) return [];
+    
     return progress
-      .filter(p => (p.accuracy_percentage || 0) < 70)
+      .filter(p => p && (p.accuracy_percentage || 0) < 70)
       .sort((a, b) => (a.accuracy_percentage || 0) - (b.accuracy_percentage || 0))
       .slice(0, 3)
       .map(p => {
-        const subject = subjects.find(s => s.id === p.subject_id);
+        const subject = subjects.find(s => s && s.id === p.subject_id);
         return { ...p, subject };
       })
-      .filter(p => p.subject); // Remove if subject not found
+      .filter(p => p && p.subject); // Remove if subject not found
   };
 
   // Calculate weekly study time
@@ -228,12 +298,14 @@ export default function HomePage() {
 
   // Get subject progress
   const getSubjectProgress = (subjectId: string) => {
-    const subjectProgress = progress.filter(p => p.subject_id === subjectId);
+    if (!progress || progress.length === 0 || !subjectId) return null;
+    
+    const subjectProgress = progress.filter(p => p && p.subject_id === subjectId);
     if (subjectProgress.length === 0) return null;
 
     const totalAccuracy = subjectProgress.reduce((sum, p) => sum + (p.accuracy_percentage || 0), 0);
     const avgAccuracy = totalAccuracy / subjectProgress.length;
-    const totalQuestions = subjectProgress.reduce((sum, p) => sum + p.questions_attempted, 0);
+    const totalQuestions = subjectProgress.reduce((sum, p) => sum + (p.questions_attempted || 0), 0);
 
     return {
       accuracy: Math.round(avgAccuracy),
@@ -293,24 +365,37 @@ export default function HomePage() {
     const dailyGoal = getDailyGoal();
     const accuracy = Math.round(stats?.accuracy || 0);
 
+    // Priority 1: Long streak
     if (streak >= 7) {
       return `🔥 Amazing ${streak}-day streak! You're on fire!`;
     }
+    
+    // Priority 2: Good streak
     if (streak >= 3) {
       return `🔥 ${streak} days strong! Keep it going!`;
     }
-    if (dailyQuestions >= dailyGoal) {
+    
+    // Priority 3: Daily goal achieved
+    if (dailyGoal > 0 && dailyQuestions >= dailyGoal) {
       return `🎉 Daily goal achieved! You're crushing it!`;
     }
-    if (accuracy >= 80) {
+    
+    // Priority 4: High accuracy
+    if (accuracy >= 80 && stats?.questionsAnswered && stats.questionsAnswered > 0) {
       return `⭐ ${accuracy}% accuracy! Excellent work!`;
     }
-    if (accuracy >= 70) {
+    
+    // Priority 5: Good accuracy
+    if (accuracy >= 70 && stats?.questionsAnswered && stats.questionsAnswered > 0) {
       return `📈 ${accuracy}% accuracy! Keep improving!`;
     }
-    if (progress.length > 0) {
+    
+    // Priority 6: Has progress
+    if (progress && progress.length > 0) {
       return `Ready to continue your learning journey?`;
     }
+    
+    // Default: New student
     return `Start preparing the smart way today`;
   };
 
@@ -321,7 +406,9 @@ export default function HomePage() {
   const weeklyStudyTimeMinutes = calculateWeeklyStudyTime();
   const dailyQuestionsAnswered = getDailyQuestionsAnswered();
   const dailyGoal = getDailyGoal();
-  const dailyProgress = Math.min((dailyQuestionsAnswered / dailyGoal) * 100, 100);
+  const dailyProgress = dailyGoal > 0 
+    ? Math.min((dailyQuestionsAnswered / dailyGoal) * 100, 100)
+    : 0;
   const primaryCTA = getPrimaryCTA();
   const PrimaryIcon = primaryCTA.icon;
 
@@ -789,7 +876,7 @@ export default function HomePage() {
                     </MagicButton>
                   </motion.div>
                 </Link>
-                {incompleteSession ? (
+                {incompleteSession && incompleteSession.mode && incompleteSession.id ? (
                   <Link href={`/${incompleteSession.mode}/${incompleteSession.id}`}>
                     <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                       <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-500/30 hover:border-blue-400/50">
@@ -1079,12 +1166,14 @@ export default function HomePage() {
                 </div>
                 
                 {(() => {
-                  const subject = subjects.find(s => s.id === incompleteSession.subject_id);
+                  if (!incompleteSession) return null;
+                  
+                  const subject = subjects?.find(s => s && s.id === incompleteSession.subject_id);
                   const questionsAnswered = incompleteSession.questions_answered || 0;
                   const totalQuestions = incompleteSession.total_questions || 0;
                   const correctAnswers = incompleteSession.correct_answers || 0;
                   const accuracy = questionsAnswered > 0 ? Math.round((correctAnswers / questionsAnswered) * 100) : 0;
-                  const progressPercent = totalQuestions > 0 ? (questionsAnswered / totalQuestions) * 100 : 0;
+                  const progressPercent = totalQuestions > 0 ? Math.min((questionsAnswered / totalQuestions) * 100, 100) : 0;
 
                   return (
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
@@ -1118,15 +1207,25 @@ export default function HomePage() {
                           </div>
                         </div>
                       </div>
-                      <Link href={`/${incompleteSession.mode}/${incompleteSession.id}`} className="w-full sm:w-auto flex-shrink-0">
-                        <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                          <MagicButton variant="primary" size="sm" className="w-full sm:w-auto text-sm sm:text-base py-2.5 sm:py-3 px-5 sm:px-6 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 shadow-lg shadow-cyan-500/40">
+                      {incompleteSession.mode && incompleteSession.id ? (
+                        <Link href={`/${incompleteSession.mode}/${incompleteSession.id}`} className="w-full sm:w-auto flex-shrink-0">
+                          <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                            <MagicButton variant="primary" size="sm" className="w-full sm:w-auto text-sm sm:text-base py-2.5 sm:py-3 px-5 sm:px-6 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 shadow-lg shadow-cyan-500/40">
+                              <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5" />
+                              Resume
+                              <ArrowRight className="w-4 h-4 ml-1" />
+                            </MagicButton>
+                          </motion.div>
+                        </Link>
+                      ) : (
+                        <div className="w-full sm:w-auto flex-shrink-0">
+                          <MagicButton variant="primary" size="sm" className="w-full sm:w-auto text-sm sm:text-base py-2.5 sm:py-3 px-5 sm:px-6 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 shadow-lg shadow-cyan-500/40 opacity-50 cursor-not-allowed" disabled>
                             <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5" />
                             Resume
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </MagicButton>
-                        </motion.div>
-                      </Link>
+                        </div>
+                      )}
                     </div>
                   );
                 })()}
@@ -1258,7 +1357,9 @@ export default function HomePage() {
             
             <div className="space-y-2 sm:space-y-2.5">
               {recentSessions.slice(0, 3).map((session, index) => {
-                const subject = subjects.find(s => s.id === session.subject_id);
+                if (!session || !session.subject_id) return null;
+                
+                const subject = subjects?.find(s => s && s.id === session.subject_id);
                 if (!subject) return null;
                 
                 const modeColors = {
@@ -1291,23 +1392,40 @@ export default function HomePage() {
                   timed: 'Timed',
                 };
                 
-                const ModeIcon = modeIcons[session.mode];
+                const ModeIcon = modeIcons[session.mode] || BookOpen;
                 const isCompleted = session.status === 'completed';
-                const score = session.score_percentage || (session.questions_answered > 0 
-                  ? Math.round((session.correct_answers / session.questions_answered) * 100) 
-                  : 0);
+                const score = session.score_percentage !== undefined && session.score_percentage !== null
+                  ? session.score_percentage
+                  : (session.questions_answered > 0 && session.correct_answers !== undefined
+                    ? Math.round((session.correct_answers / session.questions_answered) * 100)
+                    : 0);
                 
                 // Format date
                 const getDateLabel = () => {
-                  if (!session.completed_at && !session.started_at) return 'Recently';
-                  const date = session.completed_at ? new Date(session.completed_at) : new Date(session.started_at!);
-                  const today = new Date();
-                  const yesterday = new Date(today);
-                  yesterday.setDate(yesterday.getDate() - 1);
-                  
-                  if (date.toDateString() === today.toDateString()) return 'Today';
-                  if (date.toDateString() === yesterday.toDateString()) return 'Yesterday';
-                  return date.toLocaleDateString();
+                  try {
+                    if (!session.completed_at && !session.started_at) return 'Recently';
+                    
+                    const dateStr = session.completed_at || session.started_at;
+                    if (!dateStr) return 'Recently';
+                    
+                    const date = new Date(dateStr);
+                    if (isNaN(date.getTime())) return 'Recently';
+                    
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+                    
+                    const yesterday = new Date(today);
+                    yesterday.setDate(yesterday.getDate() - 1);
+                    
+                    date.setHours(0, 0, 0, 0);
+                    
+                    if (date.getTime() === today.getTime()) return 'Today';
+                    if (date.getTime() === yesterday.getTime()) return 'Yesterday';
+                    return date.toLocaleDateString();
+                  } catch (e) {
+                    console.warn('Error formatting date:', e);
+                    return 'Recently';
+                  }
                 };
                 
                 return (
