@@ -109,7 +109,6 @@ export default function BatchDetailPage({ params }: PageProps) {
   const [statusFilter, setStatusFilter] = useState<string>('');
   const [searchQuery, setSearchQuery] = useState('');
   const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
   
   // Selection state
   const [selectedQuestions, setSelectedQuestions] = useState<Set<string>>(new Set());
