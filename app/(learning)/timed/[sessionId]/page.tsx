@@ -12,6 +12,7 @@ import { useTimer } from '@/hooks/useTimer';
 import {
   getSession,
   getRandomQuestions,
+  getRandomQuestionsFromTopics,
   getQuestionsWithDistribution,
   getTopic,
   getSubject,
