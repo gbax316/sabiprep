@@ -141,18 +141,14 @@ export function Header({
                 </Link>
               )}
 
-              {/* Menu button */}
+              {/* Menu button - Always visible */}
               <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setDrawerOpen(true);
-                }}
-                className="p-2 hover:bg-white/10 rounded-lg transition-all hover:scale-105 active:scale-95"
+                onClick={() => setDrawerOpen(true)}
+                className="p-2.5 hover:bg-white/10 rounded-xl transition-all hover:scale-105 active:scale-95 bg-white/5"
                 aria-label="Open menu"
                 type="button"
               >
-                <Menu className="w-5 h-5 text-slate-300" />
+                <Menu className="w-5 h-5 text-white" />
               </button>
             </div>
           </div>

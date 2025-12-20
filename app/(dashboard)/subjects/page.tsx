@@ -126,8 +126,8 @@ export default function SubjectsPage() {
               </MagicButton>
             </Link>
             <div>
-              <h1 className="font-display text-3xl font-black text-white">All Subjects</h1>
-              <p className="text-slate-400">Choose your learning path</p>
+              <h1 className="font-display text-3xl font-black text-white">Learning Gateway</h1>
+              <p className="text-slate-400">Select a subject, then choose your learning mode</p>
             </div>
           </div>
 
@@ -146,6 +146,28 @@ export default function SubjectsPage() {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 py-6">
+        {/* Info Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mb-6"
+        >
+          <MagicCard className="p-4 bg-gradient-to-r from-cyan-500/10 via-violet-500/10 to-purple-500/10 border-cyan-500/30">
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <BookOpen className="w-5 h-5 text-white" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-white mb-1">How to Start Learning</h3>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                  Click on any subject below to choose your learning mode: <span className="text-cyan-400">Practice</span> (with hints), <span className="text-amber-400">Test</span> (exam simulation), or <span className="text-orange-400">Timed</span> (speed challenge). You can also browse topics directly.
+                </p>
+              </div>
+            </div>
+          </MagicCard>
+        </motion.div>
+
         {/* Subjects Grid with Stagger Animation */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSubjects.map((subject, idx) => {
@@ -271,7 +293,7 @@ export default function SubjectsPage() {
           setSelectedSubject(null);
         }}
         title={`Choose How to Learn ${selectedSubject?.name}`}
-        description="Select your preferred learning mode or browse topics"
+        description="Select your preferred learning mode. You can switch modes anytime."
         size="lg"
         className="bg-slate-900 border-slate-700"
       >

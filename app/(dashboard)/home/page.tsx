@@ -1,18 +1,16 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MagicCard } from '@/components/magic/MagicCard';
 import { MagicButton } from '@/components/magic/MagicButton';
 import { MagicBadge } from '@/components/magic/MagicBadge';
-import { StatCard } from '@/components/magic/StatCard';
 import { ProgressRing } from '@/components/magic/ProgressRing';
-import { BentoGrid } from '@/components/magic/BentoGrid';
 import { BottomNav } from '@/components/common/BottomNav';
 import { Header } from '@/components/navigation/Header';
 import { useAuth } from '@/lib/auth-context';
-import { getSubjects, getUserStats, getUserProgress, updateUserStreak, getUserProfile, getUserSessions, getSubject, getTopic, getUserGoals, setUserGoal } from '@/lib/api';
-import type { Subject, UserStats, UserProgress, LearningSession, UserGoal } from '@/types/database';
+import { getSubjects, getUserStats, getUserProgress, updateUserStreak, getUserProfile, getUserSessions, getUserGoals } from '@/lib/api';
+import type { Subject, UserStats, UserProgress, LearningSession, UserGoal, User } from '@/types/database';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -27,72 +25,27 @@ import {
   Sparkles,
   FileText,
   CheckCircle,
+  AlertCircle,
+  Trophy,
+  Star,
+  Play,
 } from 'lucide-react';
 
-const quickActions = [
-  {
-    icon: Zap,
-    label: 'Quick Practice',
-    description: 'Random questions',
-    href: '/quick-practice',
-  },
-  {
-    icon: Timer,
-    label: '5-min Sprint',
-    description: 'Quick challenge',
-    href: '/timed',
-  },
-  {
-    icon: Sparkles,
-    label: 'Daily Challenge',
-    description: 'Earn bonus XP',
-    href: '/daily-challenge',
-  },
-];
-
-const learningModes = [
-  {
-    id: 'practice',
-    icon: BookOpen,
-    title: 'Practice Mode',
-    description: 'Learn at your own pace with instant feedback',
-    href: '/practice',
-    gradient: 'from-blue-500 to-blue-600',
-  },
-  {
-    id: 'test',
-    icon: FileText,
-    title: 'Test Mode',
-    description: 'Simulate exam conditions',
-    href: '/test',
-    gradient: 'from-amber-500 to-amber-600',
-  },
-  {
-    id: 'timed',
-    icon: Clock,
-    title: 'Timed Mode',
-    description: 'Challenge yourself with time limits',
-    href: '/timed',
-    gradient: 'from-orange-500 to-orange-600',
-  },
-];
-
 /**
- * Home Page - Student Dashboard
+ * Home Page - Student Dashboard (Overhauled)
  * 
- * Data Sources:
- * - Stats (streak, questions answered, accuracy): Pulled from user table (aggregated lifetime stats)
- * - Weekly Activity: Calculated from actual completed sessions in the last 7 days
- * - Study Time: Calculated from time_spent_seconds in completed sessions this week
- * - Study Time Goal: Default 10 hours/week (600 minutes), can be customized per user/grade
- * 
- * All stats reflect actual student activity across practice, test, and timed modes.
+ * Design Philosophy:
+ * - Answer questions before they're asked
+ * - Single clear action per section
+ * - Mobile-first, above-the-fold critical info
+ * - Gamified and stimulating
  */
 export default function HomePage() {
-  const { userId, isLoading: authLoading } = useAuth();
+  const { userId, isLoading: authLoading, user: authUser } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<UserStats | null>(null);
+  const [userProfile, setUserProfile] = useState<User | null>(null);
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [progress, setProgress] = useState<UserProgress[]>([]);
   const [recentSessions, setRecentSessions] = useState<LearningSession[]>([]);
@@ -124,15 +77,16 @@ export default function HomePage() {
       await updateUserStreak(userId);
 
       // Fetch data in parallel
-      const [, userStats, allSubjects, userProgress, sessions, goals] = await Promise.all([
+      const [profile, userStats, allSubjects, userProgress, sessions, goals] = await Promise.all([
         getUserProfile(userId),
         getUserStats(userId),
         getSubjects(),
         getUserProgress(userId),
-        getUserSessions(userId, 50), // Get more sessions to calculate weekly stats
+        getUserSessions(userId, 50),
         getUserGoals(userId),
       ]);
 
+      setUserProfile(profile);
       setStats(userStats);
       setSubjects(allSubjects);
       setProgress(userProgress);
@@ -146,40 +100,79 @@ export default function HomePage() {
     }
   }
 
-  // Get personalized message based on progress
-  const getPersonalizedMessage = () => {
-    const currentStreak = stats?.currentStreak || 0;
-    const questionsAnswered = stats?.questionsAnswered || 0;
-    
-    if (currentStreak >= 7) {
-      return `🔥 Amazing ${currentStreak}-day streak! Keep the momentum going!`;
-    } else if (questionsAnswered > 100) {
-      return `You've answered ${questionsAnswered} questions. You're making great progress!`;
-    } else if (questionsAnswered > 0) {
-      return 'Ready to continue your learning journey?';
-    } else {
-      return 'Start preparing the smart way today';
+  // ========== HELPER FUNCTIONS ==========
+
+  // Time-based greeting
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return 'Good morning';
+    if (hour < 17) return 'Good afternoon';
+    return 'Good evening';
+  };
+
+  // Get user's display name
+  const getUserDisplayName = () => {
+    if (userProfile?.full_name) {
+      return userProfile.full_name.split(' ')[0]; // First name only
     }
+    if (authUser?.user_metadata?.full_name) {
+      return authUser.user_metadata.full_name.split(' ')[0];
+    }
+    if (authUser?.email) {
+      return authUser.email.split('@')[0];
+    }
+    return 'Student';
   };
 
-  // Get current learning progress for spotlight
-  const getCurrentProgress = () => {
-    if (progress.length === 0) return null;
-    
-    // Sort by last practiced date
-    const sortedProgress = [...progress].sort((a, b) => 
-      new Date(b.last_practiced_at || 0).getTime() - new Date(a.last_practiced_at || 0).getTime()
-    );
-    
-    return sortedProgress[0];
+  // Get incomplete session (in_progress or paused)
+  const getIncompleteSession = (): LearningSession | null => {
+    return recentSessions.find(s => s.status === 'in_progress' || s.status === 'paused') || null;
   };
 
-  const currentProgress = getCurrentProgress();
-  const currentSubject = currentProgress 
-    ? subjects.find(s => s.id === currentProgress.subject_id) 
-    : null;
+  // Check if streak is at risk (no activity today)
+  const isStreakAtRisk = () => {
+    if (!stats?.currentStreak || stats.currentStreak === 0) return false;
+    const today = new Date().toDateString();
+    const lastActive = stats.lastActiveDate 
+      ? (stats.lastActiveDate instanceof Date ? stats.lastActiveDate : new Date(stats.lastActiveDate)).toDateString()
+      : null;
+    return lastActive !== today;
+  };
 
-  // Calculate weekly study time from actual completed sessions
+  // Get daily questions answered today
+  const getDailyQuestionsAnswered = () => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    return recentSessions
+      .filter(s => {
+        if (s.status !== 'completed') return false;
+        const completedAt = s.completed_at ? new Date(s.completed_at) : null;
+        return completedAt && completedAt >= today;
+      })
+      .reduce((sum, s) => sum + (s.questions_answered || 0), 0);
+  };
+
+  // Get daily goal (default 10 questions)
+  const getDailyGoal = () => {
+    const dailyGoal = userGoals.find(g => g.goal_type === 'daily_questions');
+    return dailyGoal?.target_value || 10;
+  };
+
+  // Get weak areas (topics with accuracy < 70%)
+  const getWeakAreas = () => {
+    return progress
+      .filter(p => (p.accuracy_percentage || 0) < 70)
+      .sort((a, b) => (a.accuracy_percentage || 0) - (b.accuracy_percentage || 0))
+      .slice(0, 3)
+      .map(p => {
+        const subject = subjects.find(s => s.id === p.subject_id);
+        return { ...p, subject };
+      })
+      .filter(p => p.subject); // Remove if subject not found
+  };
+
+  // Calculate weekly study time
   const calculateWeeklyStudyTime = () => {
     const now = new Date();
     const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
@@ -191,30 +184,111 @@ export default function HomePage() {
       return completedAt >= weekAgo;
     });
 
-    // Sum up time_spent_seconds from completed sessions this week
     const totalSeconds = weeklySessions.reduce((sum, session) => {
       return sum + (session.time_spent_seconds || 0);
     }, 0);
 
-    return Math.floor(totalSeconds / 60); // Convert to minutes
+    return Math.floor(totalSeconds / 60);
   };
 
-  // Get study time goal from user goals or use default
-  const getStudyTimeGoal = () => {
-    const studyTimeGoal = userGoals.find(g => g.goal_type === 'weekly_study_time');
-    if (studyTimeGoal) {
-      return studyTimeGoal.target_value;
+  // Get subject progress
+  const getSubjectProgress = (subjectId: string) => {
+    const subjectProgress = progress.filter(p => p.subject_id === subjectId);
+    if (subjectProgress.length === 0) return null;
+
+    const totalAccuracy = subjectProgress.reduce((sum, p) => sum + (p.accuracy_percentage || 0), 0);
+    const avgAccuracy = totalAccuracy / subjectProgress.length;
+    const totalQuestions = subjectProgress.reduce((sum, p) => sum + p.questions_attempted, 0);
+
+    return {
+      accuracy: Math.round(avgAccuracy),
+      questionsAttempted: totalQuestions,
+      topicsStarted: subjectProgress.length,
+    };
+  };
+
+  // Smart CTA logic
+  const getPrimaryCTA = () => {
+    const incompleteSession = getIncompleteSession();
+    const streakAtRisk = isStreakAtRisk();
+    const dailyQuestions = getDailyQuestionsAnswered();
+    const dailyGoal = getDailyGoal();
+
+    if (incompleteSession) {
+      const subject = subjects.find(s => s.id === incompleteSession.subject_id);
+      return {
+        text: `Resume ${subject?.name || 'Session'}`,
+        href: `/${incompleteSession.mode}/${incompleteSession.id}`,
+        variant: 'primary' as const,
+        icon: Play,
+      };
     }
-    // Default: 10 hours per week (600 minutes) or based on grade
-    const user = subjects.length > 0 ? null : null; // Could get user profile here
-    return 600; // 10 hours = 600 minutes
+
+    if (streakAtRisk && stats?.currentStreak) {
+      return {
+        text: `Keep Your ${stats.currentStreak}-Day Streak!`,
+        href: '/quick-practice',
+        variant: 'primary' as const,
+        icon: Flame,
+      };
+    }
+
+    if (dailyQuestions < dailyGoal) {
+      const remaining = dailyGoal - dailyQuestions;
+      return {
+        text: `Complete ${remaining} More Question${remaining > 1 ? 's' : ''} Today`,
+        href: '/subjects',
+        variant: 'primary' as const,
+        icon: Target,
+      };
+    }
+
+    return {
+      text: 'Start Learning',
+      href: '/subjects',
+      variant: 'primary' as const,
+      icon: BookOpen,
+    };
   };
 
+  // Get motivational message
+  const getMotivationalMessage = () => {
+    const streak = stats?.currentStreak || 0;
+    const dailyQuestions = getDailyQuestionsAnswered();
+    const dailyGoal = getDailyGoal();
+    const accuracy = Math.round(stats?.accuracy || 0);
+
+    if (streak >= 7) {
+      return `🔥 Amazing ${streak}-day streak! You're on fire!`;
+    }
+    if (streak >= 3) {
+      return `🔥 ${streak} days strong! Keep it going!`;
+    }
+    if (dailyQuestions >= dailyGoal) {
+      return `🎉 Daily goal achieved! You're crushing it!`;
+    }
+    if (accuracy >= 80) {
+      return `⭐ ${accuracy}% accuracy! Excellent work!`;
+    }
+    if (accuracy >= 70) {
+      return `📈 ${accuracy}% accuracy! Keep improving!`;
+    }
+    if (progress.length > 0) {
+      return `Ready to continue your learning journey?`;
+    }
+    return `Start preparing the smart way today`;
+  };
+
+  // ========== DATA CALCULATIONS ==========
+
+  const incompleteSession = getIncompleteSession();
+  const weakAreas = getWeakAreas();
   const weeklyStudyTimeMinutes = calculateWeeklyStudyTime();
-  const studyTimeGoalMinutes = getStudyTimeGoal();
-  const studyTimeGoal = userGoals.find(g => g.goal_type === 'weekly_study_time');
-  const weeklyQuestionsGoal = userGoals.find(g => g.goal_type === 'weekly_questions');
-  const dailyQuestionsGoal = userGoals.find(g => g.goal_type === 'daily_questions');
+  const dailyQuestionsAnswered = getDailyQuestionsAnswered();
+  const dailyGoal = getDailyGoal();
+  const dailyProgress = Math.min((dailyQuestionsAnswered / dailyGoal) * 100, 100);
+  const primaryCTA = getPrimaryCTA();
+  const PrimaryIcon = primaryCTA.icon;
 
   if (loading) {
     return (
@@ -245,222 +319,307 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* Hero Section with Gradient Mesh Background */}
-      <section className="relative overflow-hidden px-4 pt-8 pb-12">
-        {/* Gradient Mesh Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-cyan-500/10" />
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(34, 211, 238, 0.15) 0%, transparent 50%)',
-          }}
-        />
-        
-        {/* Hero Content */}
-        <div className="relative z-10 container-app space-y-4">
-          <motion.h1 
-            className="text-4xl md:text-5xl font-black"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="text-white">Own Your Learning. </span>
-            <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
-              Ace Your Future.
-            </span>
-          </motion.h1>
-          
-          <motion.p 
-            className="text-lg text-slate-300 max-w-2xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            {getPersonalizedMessage()}
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Link href={currentProgress ? `/topics/${currentProgress.subject_id}` : '/subjects'}>
-              <MagicButton variant="primary" size="lg">
-                {currentProgress ? 'Continue Learning' : 'Start First Lesson'} →
-              </MagicButton>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      <div className="container-app space-y-4 pt-6">
+        {/* ========== SECTION 1: HERO - PERSONAL GREETING ========== */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-violet-500/20 via-cyan-500/20 to-purple-500/20 border border-cyan-500/30 p-6 sm:p-8"
+        >
+          {/* Animated background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-cyan-500/10" />
+          <div 
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(34, 211, 238, 0.15) 0%, transparent 50%)',
+            }}
+          />
 
-      <div className="container-app space-y-6 -mt-6">
-        {/* Learning Spotlight Card */}
-        {currentProgress && currentSubject && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <MagicCard glow className="p-6 bg-gradient-to-br from-slate-900/90 to-slate-800/90 border-slate-700">
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-1">Current Progress</h3>
-                  <p className="text-sm text-slate-400 mb-4">{currentSubject.name}</p>
-                  
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-400">Questions Attempted</span>
-                      <span className="font-semibold text-white">{currentProgress.questions_attempted}</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-400">Correct Answers</span>
-                      <span className="font-semibold text-emerald-400">{currentProgress.questions_correct}</span>
-                    </div>
-                  </div>
-                  
-                  <Link href={`/topics/${currentProgress.subject_id}`}>
-                    <MagicButton variant="primary" className="w-full">
-                      Continue →
-                    </MagicButton>
-                  </Link>
-                </div>
-                
-                <div className="flex-shrink-0">
-                  <ProgressRing 
-                    progress={currentProgress.accuracy_percentage || 0} 
-                    size="lg" 
-                    showLabel 
-                  />
-                </div>
+          <div className="relative z-10">
+            {/* Greeting and Stats Row */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+              <div className="flex-1">
+                <motion.h1 
+                  className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 }}
+                >
+                  {getGreeting()}, <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">{getUserDisplayName()}!</span>
+                </motion.h1>
+                <motion.p 
+                  className="text-base sm:text-lg text-slate-300"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  {getMotivationalMessage()}
+                </motion.p>
               </div>
-            </MagicCard>
-          </motion.div>
-        )}
 
-        {/* Stats Bento Grid - Pulling from actual student activity records */}
+              {/* Streak and XP Badge */}
+              <div className="flex items-center gap-3">
+                {stats?.currentStreak && stats.currentStreak > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.3 }}
+                    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-500/30"
+                  >
+                    <Flame className="w-5 h-5 text-orange-400 animate-pulse" />
+                    <div>
+                      <p className="text-xs text-slate-400">Streak</p>
+                      <p className="text-lg font-bold text-white">{stats.currentStreak} days</p>
+                    </div>
+                  </motion.div>
+                )}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30"
+                >
+                  <Star className="w-5 h-5 text-purple-400" />
+                  <div>
+                    <p className="text-xs text-slate-400">XP</p>
+                    <p className="text-lg font-bold text-white">{stats?.questionsAnswered || 0}</p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Primary CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <Link href={primaryCTA.href}>
+                <MagicButton 
+                  variant={primaryCTA.variant} 
+                  size="lg"
+                  className="w-full sm:w-auto shadow-lg shadow-cyan-500/25 hover:scale-105 transition-transform"
+                >
+                  <PrimaryIcon className="w-5 h-5 mr-2" />
+                  {primaryCTA.text} →
+                </MagicButton>
+              </Link>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        {/* ========== SECTION 2: TODAY'S MISSION CARD ========== */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <BentoGrid columns={3} gap="md">
-            {/* Current Streak Card - Shows daily login streak */}
-            <StatCard
-              title="Current Streak"
-              value={stats?.currentStreak ?? 0}
-              icon={<Flame className="w-6 h-6" />}
-              trend={stats?.currentStreak && stats.currentStreak > 0 ? 'up' : undefined}
-              trendValue={stats?.currentStreak && stats.currentStreak > 0 ? `${stats.currentStreak} day${stats.currentStreak !== 1 ? 's' : ''}` : undefined}
-            />
-            
-            {/* Questions Answered Card - Shows lifetime total with weekly activity trend */}
-            <StatCard
-              title="Questions Answered"
-              value={stats?.questionsAnswered ?? 0}
-              icon={<Target className="w-6 h-6" />}
-              trend={(() => {
-                // Only show trend if there's weekly activity
-                const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-                const weeklyQuestions = recentSessions
-                  .filter(s => s.status === 'completed' && s.completed_at && new Date(s.completed_at) >= weekAgo)
-                  .reduce((sum, s) => sum + (s.questions_answered || 0), 0);
-                return weeklyQuestions > 0 ? 'up' : undefined;
-              })()}
-              trendValue={(() => {
-                // Calculate from actual completed sessions this week
-                const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-                const weeklyQuestions = recentSessions
-                  .filter(s => s.status === 'completed' && s.completed_at && new Date(s.completed_at) >= weekAgo)
-                  .reduce((sum, s) => sum + (s.questions_answered || 0), 0);
-                return weeklyQuestions > 0 ? `${weeklyQuestions} this week` : undefined;
-              })()}
-            />
-            
-            {/* Accuracy Rate Card - Shows lifetime accuracy with recent performance comparison */}
-            <StatCard
-              title="Accuracy Rate"
-              value={`${Math.round(stats?.accuracy ?? 0)}%`}
-              icon={<TrendingUp className="w-6 h-6" />}
-              trend={(() => {
-                // Compare recent accuracy vs lifetime accuracy
-                const completedSessions = recentSessions.filter(s => s.status === 'completed');
-                if (completedSessions.length === 0) {
-                  // If no recent sessions, use lifetime accuracy threshold (70% is good)
-                  const lifetimeAccuracy = stats?.accuracy ?? 0;
-                  return lifetimeAccuracy >= 70 ? 'up' : (lifetimeAccuracy > 0 ? 'down' : undefined);
-                }
-                const totalAnswered = completedSessions.reduce((sum, s) => sum + (s.questions_answered || 0), 0);
-                const totalCorrect = completedSessions.reduce((sum, s) => sum + (s.correct_answers || 0), 0);
-                if (totalAnswered === 0) {
-                  // No questions answered in recent sessions
-                  const lifetimeAccuracy = stats?.accuracy ?? 0;
-                  return lifetimeAccuracy >= 70 ? 'up' : (lifetimeAccuracy > 0 ? 'down' : undefined);
-                }
-                const recentAccuracy = (totalCorrect / totalAnswered) * 100;
-                const lifetimeAccuracy = stats?.accuracy ?? 0;
-                // Show up if recent accuracy is better than or equal to lifetime, down if worse
-                return recentAccuracy >= lifetimeAccuracy ? 'up' : 'down';
-              })()}
-              trendValue={(() => {
-                // Calculate accuracy from actual completed sessions
-                const completedSessions = recentSessions.filter(s => s.status === 'completed');
-                if (completedSessions.length === 0) {
-                  return stats?.accuracy ? `${Math.round(stats.accuracy)}% lifetime` : '0%';
-                }
-                const totalAnswered = completedSessions.reduce((sum, s) => sum + (s.questions_answered || 0), 0);
-                const totalCorrect = completedSessions.reduce((sum, s) => sum + (s.correct_answers || 0), 0);
-                if (totalAnswered === 0) {
-                  return stats?.accuracy ? `${Math.round(stats.accuracy)}% lifetime` : '0%';
-                }
-                const recentAccuracy = Math.round((totalCorrect / totalAnswered) * 100);
-                return `${recentAccuracy}% recent`;
-              })()}
-            />
-          </BentoGrid>
+          <MagicCard glow className="p-6 bg-gradient-to-br from-slate-900/90 to-slate-800/90 border-slate-700">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-white">Today's Mission</h2>
+              {dailyQuestionsAnswered >= dailyGoal && (
+                <MagicBadge variant="success" size="sm">
+                  <Trophy className="w-3 h-3 mr-1" />
+                  Completed!
+                </MagicBadge>
+              )}
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-6">
+              {/* Progress Ring */}
+              <div className="flex-shrink-0">
+                <ProgressRing 
+                  progress={dailyProgress} 
+                  size="lg" 
+                  showLabel 
+                />
+              </div>
+
+              {/* Mission Details */}
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Complete {dailyGoal} questions today
+                </h3>
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Progress</span>
+                    <span className="font-semibold text-white">
+                      {dailyQuestionsAnswered} / {dailyGoal} completed
+                    </span>
+                  </div>
+                  <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                    <motion.div
+                      className="h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${dailyProgress}%` }}
+                      transition={{ duration: 1, delay: 0.5 }}
+                    />
+                  </div>
+                </div>
+
+                {/* Gamification Row */}
+                <div className="flex flex-wrap items-center gap-4 text-sm">
+                  <div className="flex items-center gap-2">
+                    <Flame className="w-4 h-4 text-orange-400" />
+                    <span className="text-slate-300">{stats?.currentStreak || 0} day streak</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Star className="w-4 h-4 text-purple-400" />
+                    <span className="text-slate-300">{stats?.questionsAnswered || 0} XP</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4 text-emerald-400" />
+                    <span className="text-slate-300">Rising</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Action Buttons */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-700">
+              <Link href="/quick-practice">
+                <MagicButton variant="secondary" size="sm" className="w-full">
+                  <Zap className="w-4 h-4 mr-2" />
+                  Quick 5 Questions
+                </MagicButton>
+              </Link>
+              {incompleteSession && (
+                <Link href={`/${incompleteSession.mode}/${incompleteSession.id}`}>
+                  <MagicButton variant="secondary" size="sm" className="w-full">
+                    <Play className="w-4 h-4 mr-2" />
+                    Continue Session
+                  </MagicButton>
+                </Link>
+              )}
+              <Link href="/daily-challenge">
+                <MagicButton variant="secondary" size="sm" className="w-full">
+                  <Sparkles className="w-4 h-4 mr-2" />
+                  Daily Challenge
+                </MagicButton>
+              </Link>
+            </div>
+          </MagicCard>
         </motion.div>
 
-        {/* Mode Breakdown */}
-        {recentSessions.length > 0 && (
+        {/* ========== SECTION 3: QUICK STATS ROW ========== */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="grid grid-cols-2 sm:grid-cols-4 gap-3"
+        >
+          {/* Streak Stat */}
+          <MagicCard className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-orange-500/50 transition-colors">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.4, type: 'spring' }}
+              className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mx-auto mb-2 shadow-lg"
+            >
+              <Flame className="w-5 h-5 text-white" />
+            </motion.div>
+            <p className="text-2xl font-bold text-white">{stats?.currentStreak || 0}</p>
+            <p className="text-xs text-slate-400">Streak</p>
+          </MagicCard>
+
+          {/* Questions Stat */}
+          <MagicCard className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-cyan-500/50 transition-colors">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.5, type: 'spring' }}
+              className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mx-auto mb-2 shadow-lg"
+            >
+              <Target className="w-5 h-5 text-white" />
+            </motion.div>
+            <p className="text-2xl font-bold text-white">{stats?.questionsAnswered || 0}</p>
+            <p className="text-xs text-slate-400">Questions</p>
+          </MagicCard>
+
+          {/* Accuracy Stat */}
+          <MagicCard className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-emerald-500/50 transition-colors">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.6, type: 'spring' }}
+              className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center mx-auto mb-2 shadow-lg"
+            >
+              <TrendingUp className="w-5 h-5 text-white" />
+            </motion.div>
+            <p className="text-2xl font-bold text-white">{Math.round(stats?.accuracy || 0)}%</p>
+            <p className="text-xs text-slate-400">Accuracy</p>
+          </MagicCard>
+
+          {/* Study Time Stat */}
+          <MagicCard className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-violet-500/50 transition-colors">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.7, type: 'spring' }}
+              className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center mx-auto mb-2 shadow-lg"
+            >
+              <Clock className="w-5 h-5 text-white" />
+            </motion.div>
+            <p className="text-2xl font-bold text-white">
+              {Math.floor(weeklyStudyTimeMinutes / 60)}h {weeklyStudyTimeMinutes % 60}m
+            </p>
+            <p className="text-xs text-slate-400">This Week</p>
+          </MagicCard>
+        </motion.div>
+
+        {/* ========== SECTION 4: SMART RECOMMENDATIONS (Weak Areas) ========== */}
+        {weakAreas.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.45 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <MagicCard className="p-6 bg-gradient-to-br from-slate-900/90 to-slate-800/90 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">Activity by Mode</h3>
-              <div className="grid grid-cols-3 gap-4">
-                {['practice', 'test', 'timed'].map((mode) => {
-                  const modeSessions = recentSessions.filter(s => s.mode === mode);
-                  const completedSessions = modeSessions.filter(s => s.status === 'completed');
-                  const totalQuestions = completedSessions.reduce((sum, s) => sum + s.questions_answered, 0);
-                  const totalCorrect = completedSessions.reduce((sum, s) => sum + s.correct_answers, 0);
-                  const avgScore = completedSessions.length > 0
-                    ? Math.round(completedSessions.reduce((sum, s) => sum + (s.score_percentage || 0), 0) / completedSessions.length)
-                    : 0;
-                  
-                  const modeConfig = {
-                    practice: { icon: BookOpen, color: 'from-blue-500 to-blue-600', label: 'Practice' },
-                    test: { icon: FileText, color: 'from-amber-500 to-amber-600', label: 'Test' },
-                    timed: { icon: Timer, color: 'from-orange-500 to-orange-600', label: 'Timed' },
+            <MagicCard className="p-6 bg-gradient-to-br from-red-500/10 to-orange-500/10 border-red-500/30">
+              <div className="flex items-center gap-2 mb-4">
+                <AlertCircle className="w-5 h-5 text-red-400" />
+                <h2 className="text-xl font-bold text-white">Focus Areas</h2>
+                <MagicBadge variant="error" size="sm">Needs Practice</MagicBadge>
+              </div>
+              <p className="text-sm text-slate-300 mb-4">Based on your performance, these topics need more attention:</p>
+              
+              <div className="space-y-3">
+                {weakAreas.map((area, index) => {
+                  const accuracy = Math.round(area.accuracy_percentage || 0);
+                  const getUrgencyColor = () => {
+                    if (accuracy < 50) return 'text-red-400 border-red-500/50 bg-red-500/10';
+                    if (accuracy < 60) return 'text-orange-400 border-orange-500/50 bg-orange-500/10';
+                    return 'text-amber-400 border-amber-500/50 bg-amber-500/10';
                   };
-                  
-                  const config = modeConfig[mode as keyof typeof modeConfig];
-                  const Icon = config.icon;
-                  
+
                   return (
-                    <div key={mode} className="text-center">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${config.color} flex items-center justify-center mx-auto mb-2 shadow-lg`}>
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      <p className="text-sm text-slate-400 mb-1">{config.label}</p>
-                      <p className="text-2xl font-bold text-white">{completedSessions.length}</p>
-                      <p className="text-xs text-slate-500">sessions</p>
-                      {totalQuestions > 0 && (
-                        <p className="text-xs text-slate-400 mt-1">
-                          {totalCorrect}/{totalQuestions} correct ({avgScore}% avg)
-                        </p>
-                      )}
-                    </div>
+                    <motion.div
+                      key={area.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.5 + index * 0.1 }}
+                    >
+                      <Link href={`/topics/${area.subject_id}`}>
+                        <MagicCard hover className={`p-4 border-2 ${getUrgencyColor()}`}>
+                          <div className="flex items-center justify-between">
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-1">
+                                <h3 className="font-semibold text-white">{area.subject?.name}</h3>
+                                <span className="text-xs px-2 py-0.5 rounded-full bg-red-500/20 text-red-300 border border-red-500/30">
+                                  {accuracy}% accuracy
+                                </span>
+                              </div>
+                              <p className="text-sm text-slate-400">
+                                {area.questions_attempted} questions attempted
+                              </p>
+                            </div>
+                            <MagicButton variant="primary" size="sm">
+                              Practice Now →
+                            </MagicButton>
+                          </div>
+                        </MagicCard>
+                      </Link>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -468,185 +627,133 @@ export default function HomePage() {
           </motion.div>
         )}
 
-        {/* Study Time Goal Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <MagicCard className="p-6 bg-gradient-to-br from-violet-500/10 to-cyan-500/10 border-violet-500/30">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-violet-500/50">
-                  <Clock className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <p className="text-3xl font-black text-white">
-                    {Math.floor(weeklyStudyTimeMinutes / 60)}h {weeklyStudyTimeMinutes % 60}m
-                  </p>
-                  <p className="text-sm text-slate-400">Study Time This Week</p>
-                  <p className="text-xs text-slate-500 mt-1">
-                    {recentSessions.filter(s => s.status === 'completed' && s.completed_at && new Date(s.completed_at) >= new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)).length} completed sessions
-                  </p>
-                </div>
+        {/* ========== SECTION 5: RESUME LEARNING (Conditional) ========== */}
+        {incompleteSession && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <MagicCard glow className="p-6 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border-blue-500/30">
+              <div className="flex items-center gap-2 mb-4">
+                <Play className="w-5 h-5 text-blue-400" />
+                <h2 className="text-xl font-bold text-white">Pick up where you left off</h2>
               </div>
-              <div className="text-right">
-                <p className="text-sm text-slate-400">Weekly Goal</p>
-                <p className="text-2xl font-bold text-white">{Math.floor(studyTimeGoalMinutes / 60)}h</p>
-                <p className="text-xs text-slate-500 mt-1">
-                  {Math.round((weeklyStudyTimeMinutes / studyTimeGoalMinutes) * 100)}% complete
-                </p>
-                {studyTimeGoal && (
-                  <Link href="/profile" className="text-xs text-cyan-400 hover:text-cyan-300 mt-1 block">
-                    Edit goal →
-                  </Link>
-                )}
-              </div>
-            </div>
-            
-            {/* Progress Bar */}
-            <div className="w-full bg-slate-800 rounded-full h-3 overflow-hidden">
-              <motion.div
-                className="h-3 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 shadow-lg shadow-violet-500/50"
-                initial={{ width: 0 }}
-                animate={{ width: `${Math.min((weeklyStudyTimeMinutes / studyTimeGoalMinutes) * 100, 100)}%` }}
-                transition={{ duration: 1, delay: 0.5 }}
-              />
-            </div>
-            <div className="flex items-center justify-between mt-2 text-xs text-slate-400">
-              <span>0h</span>
-              <span className="font-semibold text-slate-300">
-                {weeklyStudyTimeMinutes >= studyTimeGoalMinutes ? '🎉 Goal Achieved!' : `${Math.floor((studyTimeGoalMinutes - weeklyStudyTimeMinutes) / 60)}h ${(studyTimeGoalMinutes - weeklyStudyTimeMinutes) % 60}m remaining`}
-              </span>
-              <span>{Math.floor(studyTimeGoalMinutes / 60)}h</span>
-            </div>
-          </MagicCard>
-        </motion.div>
+              
+              {(() => {
+                const subject = subjects.find(s => s.id === incompleteSession.subject_id);
+                const questionsAnswered = incompleteSession.questions_answered || 0;
+                const totalQuestions = incompleteSession.total_questions || 0;
+                const correctAnswers = incompleteSession.correct_answers || 0;
+                const accuracy = questionsAnswered > 0 ? Math.round((correctAnswers / questionsAnswered) * 100) : 0;
 
-        {/* Additional Goals Section */}
-        {(weeklyQuestionsGoal || dailyQuestionsGoal) && (
+                return (
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <div className="flex items-center gap-4 flex-1">
+                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-3xl shadow-lg">
+                        {subject?.icon || '📚'}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-bold text-white text-lg mb-1">{subject?.name || 'Subject'}</h3>
+                        <p className="text-sm text-slate-300 mb-2">
+                          Question {questionsAnswered + 1} / {totalQuestions} • {accuracy}% accuracy so far
+                        </p>
+                        <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                          <div 
+                            className="h-2 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500"
+                            style={{ width: `${(questionsAnswered / totalQuestions) * 100}%` }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <Link href={`/${incompleteSession.mode}/${incompleteSession.id}`}>
+                      <MagicButton variant="primary" size="lg" className="w-full sm:w-auto">
+                        <Play className="w-5 h-5 mr-2" />
+                        Resume Now →
+                      </MagicButton>
+                    </Link>
+                  </div>
+                );
+              })()}
+            </MagicCard>
+          </motion.div>
+        )}
+
+        {/* ========== SECTION 6: EXPLORE SUBJECTS (Compact Grid) ========== */}
+        {subjects.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <MagicCard className="p-6 bg-gradient-to-br from-slate-900/90 to-slate-800/90 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">Your Goals</h3>
-              <div className="space-y-4">
-                {weeklyQuestionsGoal && (
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-slate-400">Weekly Questions</span>
-                      <span className="text-sm font-semibold text-white">
-                        {weeklyQuestionsGoal.current_value} / {weeklyQuestionsGoal.target_value}
-                      </span>
-                    </div>
-                    <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                      <div
-                        className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"
-                        style={{ width: `${Math.min((weeklyQuestionsGoal.current_value / weeklyQuestionsGoal.target_value) * 100, 100)}%` }}
-                      />
-                    </div>
-                  </div>
-                )}
-                {dailyQuestionsGoal && (
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-slate-400">Daily Questions</span>
-                      <span className="text-sm font-semibold text-white">
-                        {dailyQuestionsGoal.current_value} / {dailyQuestionsGoal.target_value}
-                      </span>
-                    </div>
-                    <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                      <div
-                        className="h-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500"
-                        style={{ width: `${Math.min((dailyQuestionsGoal.current_value / dailyQuestionsGoal.target_value) * 100, 100)}%` }}
-                      />
-                    </div>
-                  </div>
-                )}
-                <Link href="/profile" className="text-sm text-cyan-400 hover:text-cyan-300 flex items-center gap-1 mt-4">
-                  Manage goals →
-                </Link>
-              </div>
-            </MagicCard>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-white">Explore Subjects</h2>
+              <Link href="/subjects">
+                <MagicButton variant="ghost" size="sm">
+                  See All <ChevronRight className="w-4 h-4" />
+                </MagicButton>
+              </Link>
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {subjects.slice(0, 4).map((subject, index) => {
+                const subjectProgress = getSubjectProgress(subject.id);
+                return (
+                  <motion.div
+                    key={subject.id}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.7 + index * 0.1 }}
+                  >
+                    <Link href={`/subjects`} onClick={(e) => {
+                      e.preventDefault();
+                      router.push(`/subjects`);
+                    }}>
+                      <MagicCard hover className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-violet-500/50 h-full relative overflow-hidden group">
+                        <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+                          {subject.icon || '📚'}
+                        </div>
+                        <h3 className="font-semibold text-sm text-white mb-1 line-clamp-2">{subject.name}</h3>
+                        <p className="text-xs text-slate-500 mb-2">{subject.total_questions} questions</p>
+                        {subjectProgress && (
+                          <div className="mt-2">
+                            <MagicBadge variant="success" size="sm">
+                              {subjectProgress.accuracy}%
+                            </MagicBadge>
+                          </div>
+                        )}
+                        {!subjectProgress && (
+                          <MagicBadge variant="default" size="sm">
+                            New
+                          </MagicBadge>
+                        )}
+                      </MagicCard>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
           </motion.div>
         )}
 
-        {/* Quick Action Cards */}
-        <div>
-          <h2 className="text-2xl font-bold text-white mb-4">Quick Start</h2>
-          <div className="grid grid-cols-3 gap-3">
-            {quickActions.map((action, index) => {
-              const Icon = action.icon;
-              return (
-                <motion.div
-                  key={action.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                >
-                  <Link href={action.href}>
-                    <MagicCard hover className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-cyan-500/50">
-                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-violet-500 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg shadow-cyan-500/50">
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      <p className="font-semibold text-sm text-white mb-1">{action.label}</p>
-                      <p className="text-xs text-slate-400">{action.description}</p>
-                    </MagicCard>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Learning Modes */}
-        <div>
-          <h2 className="text-2xl font-bold text-white mb-4">Choose Your Mode</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {learningModes.map((mode, index) => {
-              const Icon = mode.icon;
-              return (
-                <motion.div
-                  key={mode.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
-                >
-                  <Link href={mode.href}>
-                    <MagicCard hover className="group p-6 bg-slate-900/50 border-slate-700 hover:border-cyan-500/50 h-full">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${mode.gradient} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
-                        <Icon className="w-7 h-7 text-white" />
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-2">{mode.title}</h3>
-                      <p className="text-sm text-slate-400 leading-relaxed mb-4">{mode.description}</p>
-                      <div className={`h-1 rounded-full bg-gradient-to-r ${mode.gradient} opacity-50 group-hover:opacity-100 transition-opacity`} />
-                    </MagicCard>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Recent Sessions Activity - All Modes */}
-        <div>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold text-white">Recent Sessions</h2>
-            {recentSessions.length > 0 && (
+        {/* ========== SECTION 7: RECENT ACTIVITY (Minimal - 3 items max) ========== */}
+        {recentSessions.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-white">Recent Activity</h2>
               <Link href="/analytics">
                 <MagicButton variant="ghost" size="sm">
                   View All <ChevronRight className="w-4 h-4" />
                 </MagicButton>
               </Link>
-            )}
-          </div>
-          
-          {recentSessions.length > 0 ? (
+            </div>
             
-            <div className="space-y-3">
-              {recentSessions.slice(0, 5).map((session, index) => {
+            <div className="space-y-2">
+              {recentSessions.slice(0, 3).map((session, index) => {
                 const subject = subjects.find(s => s.id === session.subject_id);
                 if (!subject) return null;
                 
@@ -668,31 +775,36 @@ export default function HomePage() {
                   ? Math.round((session.correct_answers / session.questions_answered) * 100) 
                   : 0);
                 
+                // Format date
+                const getDateLabel = () => {
+                  if (!session.completed_at && !session.started_at) return 'Recently';
+                  const date = session.completed_at ? new Date(session.completed_at) : new Date(session.started_at!);
+                  const today = new Date();
+                  const yesterday = new Date(today);
+                  yesterday.setDate(yesterday.getDate() - 1);
+                  
+                  if (date.toDateString() === today.toDateString()) return 'Today';
+                  if (date.toDateString() === yesterday.toDateString()) return 'Yesterday';
+                  return date.toLocaleDateString();
+                };
+                
                 return (
                   <motion.div
                     key={session.id}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 1.0 + index * 0.1 }}
+                    transition={{ delay: 0.9 + index * 0.1 }}
                   >
                     <Link href={isCompleted ? `/results/${session.id}` : `/${session.mode}/${session.id}`}>
-                      <MagicCard hover className="p-4 bg-slate-900/50 border-slate-700 hover:border-violet-500/50">
-                        <div className="flex items-center gap-4">
-                          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${modeColors[session.mode]} flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                            <ModeIcon className="w-6 h-6 text-white" />
+                      <MagicCard hover className="p-3 bg-slate-900/50 border-slate-700 hover:border-violet-500/50">
+                        <div className="flex items-center gap-3">
+                          <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${modeColors[session.mode]} flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                            <ModeIcon className="w-5 h-5 text-white" />
                           </div>
                           
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between mb-2">
-                              <div className="flex items-center gap-2">
-                                <h3 className="font-semibold text-white truncate">{subject.name}</h3>
-                                <MagicBadge 
-                                  variant={session.mode === 'practice' ? 'info' : session.mode === 'test' ? 'warning' : 'error'} 
-                                  size="sm"
-                                >
-                                  {session.mode.charAt(0).toUpperCase() + session.mode.slice(1)}
-                                </MagicBadge>
-                              </div>
+                            <div className="flex items-center justify-between mb-1">
+                              <h3 className="font-semibold text-sm text-white truncate">{subject.name}</h3>
                               {isCompleted && (
                                 <MagicBadge 
                                   variant={score >= 70 ? 'success' : score >= 50 ? 'warning' : 'error'} 
@@ -703,43 +815,14 @@ export default function HomePage() {
                               )}
                             </div>
                             
-                            <div className="flex items-center gap-4 text-xs text-slate-400">
-                              <span className="flex items-center gap-1">
-                                <CheckCircle className="w-3 h-3" />
-                                {session.correct_answers} / {session.questions_answered} correct
-                              </span>
-                              {session.time_spent_seconds > 0 && (
-                                <span className="flex items-center gap-1">
-                                  <Clock className="w-3 h-3" />
-                                  {Math.floor(session.time_spent_seconds / 60)}m {session.time_spent_seconds % 60}s
-                                </span>
-                              )}
-                              <span>
-                                {session.completed_at 
-                                  ? new Date(session.completed_at).toLocaleDateString() 
-                                  : session.started_at 
-                                  ? new Date(session.started_at).toLocaleDateString() 
-                                  : 'Recently'}
-                              </span>
+                            <div className="flex items-center gap-3 text-xs text-slate-400">
+                              <span>{session.correct_answers} / {session.questions_answered} correct</span>
+                              <span>•</span>
+                              <span>{getDateLabel()}</span>
                             </div>
-                            
-                            {session.status === 'in_progress' && (
-                              <div className="mt-2">
-                                <MagicBadge variant="info" size="sm">
-                                  In Progress
-                                </MagicBadge>
-                              </div>
-                            )}
-                            {session.status === 'paused' && (
-                              <div className="mt-2">
-                                <MagicBadge variant="warning" size="sm">
-                                  Paused
-                                </MagicBadge>
-                              </div>
-                            )}
                           </div>
                           
-                          <ChevronRight className="w-5 h-5 text-slate-600 flex-shrink-0" />
+                          <ChevronRight className="w-4 h-4 text-slate-600 flex-shrink-0" />
                         </div>
                       </MagicCard>
                     </Link>
@@ -747,121 +830,28 @@ export default function HomePage() {
                 );
               })}
             </div>
-          ) : (
+          </motion.div>
+        )}
+
+        {/* Empty State for Recent Activity */}
+        {recentSessions.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
             <MagicCard className="p-6 bg-slate-900/50 border-slate-700 text-center">
               <div className="text-4xl mb-3">📚</div>
               <p className="text-slate-400 mb-2">No sessions yet</p>
-              <p className="text-sm text-slate-500 mb-4">Start practicing to see your activity here</p>
-              <Link href="/practice">
+              <p className="text-sm text-slate-500 mb-4">Start learning to see your activity here</p>
+              <Link href="/subjects">
                 <MagicButton variant="primary" size="sm">
-                  Start Practice
+                  Start Learning
                 </MagicButton>
               </Link>
             </MagicCard>
-          )}
-        </div>
-
-        {/* Topic Progress Activity */}
-        {progress.length > 0 && (
-          <div>
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-bold text-white">Topic Progress</h2>
-              <Link href="/analytics">
-                <MagicButton variant="ghost" size="sm">
-                  View All <ChevronRight className="w-4 h-4" />
-                </MagicButton>
-              </Link>
-            </div>
-            
-            <div className="space-y-3">
-              {progress.slice(0, 3).map((prog, index) => {
-                const subject = subjects.find(s => s.id === prog.subject_id);
-                if (!subject) return null;
-                
-                return (
-                  <motion.div
-                    key={prog.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 1.2 + index * 0.1 }}
-                  >
-                    <Link href={`/topics/${prog.subject_id}`}>
-                      <MagicCard hover className="p-4 bg-slate-900/50 border-slate-700 hover:border-violet-500/50">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <BookOpen className="w-6 h-6 text-slate-400" />
-                          </div>
-                          
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between mb-2">
-                              <h3 className="font-semibold text-white truncate">{subject.name}</h3>
-                              <MagicBadge variant="success" size="sm">
-                                {Math.round(prog.accuracy_percentage || 0)}%
-                              </MagicBadge>
-                            </div>
-                            
-                            <div className="flex items-center gap-4 text-xs text-slate-400">
-                              <span className="flex items-center gap-1">
-                                <CheckCircle className="w-3 h-3" />
-                                {prog.questions_correct} / {prog.questions_attempted}
-                              </span>
-                              <span>
-                                {prog.last_practiced_at 
-                                  ? new Date(prog.last_practiced_at).toLocaleDateString() 
-                                  : 'Recently'}
-                              </span>
-                            </div>
-                          </div>
-                          
-                          <ChevronRight className="w-5 h-5 text-slate-600 flex-shrink-0" />
-                        </div>
-                      </MagicCard>
-                    </Link>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
+          </motion.div>
         )}
-
-        {/* Recommended Subjects */}
-        <div>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold text-white">Explore Subjects</h2>
-            <Link href="/subjects">
-              <MagicButton variant="ghost" size="sm">
-                See All <ChevronRight className="w-4 h-4" />
-              </MagicButton>
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {subjects.slice(0, 4).map((subject, index) => {
-              const subjectProgress = progress.find(p => p.subject_id === subject.id);
-              return (
-                <motion.div
-                  key={subject.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: 1.2 + index * 0.1 }}
-                >
-                  <Link href={`/topics/${subject.id}`}>
-                    <MagicCard hover className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-violet-500/50 h-full">
-                      <div className="text-4xl mb-3">📚</div>
-                      <h3 className="font-semibold text-sm text-white mb-1 line-clamp-2">{subject.name}</h3>
-                      <p className="text-xs text-slate-500 mb-2">{subject.total_questions} questions</p>
-                      {subjectProgress && (
-                        <MagicBadge variant="success" size="sm">
-                          {Math.round(subjectProgress.accuracy_percentage || 0)}%
-                        </MagicBadge>
-                      )}
-                    </MagicCard>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
       </div>
 
       {/* Bottom Navigation */}

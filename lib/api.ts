@@ -146,6 +146,48 @@ export async function getTopics(subjectId: string): Promise<Topic[]> {
 /**
  * Get a single topic by ID
  */
+/**
+ * Get topics by their IDs (batch query for performance)
+ */
+export async function getTopicsByIds(topicIds: string[]): Promise<Topic[]> {
+  if (topicIds.length === 0) return [];
+
+  const { data: topics, error } = await supabase
+    .from('topics')
+    .select('*')
+    .in('id', topicIds)
+    .eq('status', 'active');
+
+  if (error) throw error;
+  if (!topics || topics.length === 0) return [];
+
+  // Get question counts for all topics in parallel
+  const { data: questionCounts, error: countsError } = await supabase
+    .from('questions')
+    .select('topic_id')
+    .in('topic_id', topicIds)
+    .eq('status', 'published');
+
+  if (countsError) {
+    console.error('Error fetching question counts:', countsError);
+    return topics; // Fallback to cached values
+  }
+
+  // Calculate counts per topic
+  const countMap: Record<string, number> = {};
+  if (questionCounts) {
+    questionCounts.forEach(q => {
+      countMap[q.topic_id] = (countMap[q.topic_id] || 0) + 1;
+    });
+  }
+
+  // Update topics with actual counts
+  return topics.map(topic => ({
+    ...topic,
+    total_questions: countMap[topic.id] || 0,
+  }));
+}
+
 export async function getTopic(topicId: string): Promise<Topic | null> {
   const { data: topic, error } = await supabase
     .from('topics')
@@ -1003,30 +1045,59 @@ export async function checkAndAwardAchievements(userId: string): Promise<void> {
 // ============================================
 
 /**
- * Get user analytics data
+ * Get user analytics data with period filtering
  */
-export async function getAnalytics(userId: string): Promise<AnalyticsData> {
-  const [stats, recentSessions, progress] = await Promise.all([
+export async function getAnalytics(
+  userId: string,
+  period: '7D' | '30D' | '90D' | 'All' = '7D'
+): Promise<AnalyticsData> {
+  // Calculate date range based on period
+  const now = new Date();
+  let startDate: Date;
+  
+  switch (period) {
+    case '7D':
+      startDate = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+      break;
+    case '30D':
+      startDate = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+      break;
+    case '90D':
+      startDate = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
+      break;
+    case 'All':
+      startDate = new Date(0); // Beginning of time
+      break;
+  }
+
+  const [stats, allSessions, progress] = await Promise.all([
     getUserStats(userId),
-    getUserSessions(userId, 10),
+    getUserSessions(userId, period === 'All' ? 1000 : 500), // Get more sessions for longer periods
     getUserProgress(userId),
   ]);
 
-  // Calculate weekly activity
-  const last7Days = Array.from({ length: 7 }, (_, i) => {
-    const date = new Date();
-    date.setDate(date.getDate() - (6 - i));
+  // Filter sessions by period
+  const recentSessions = allSessions.filter((s) => {
+    const sessionDate = s.started_at ? new Date(s.started_at) : null;
+    return sessionDate && sessionDate >= startDate;
+  });
+
+  // Calculate activity for the period
+  const daysInPeriod = period === '7D' ? 7 : period === '30D' ? 30 : period === '90D' ? 90 : 90; // Default to 90 for All
+  const activityDates = Array.from({ length: daysInPeriod }, (_, i) => {
+    const date = new Date(now);
+    date.setDate(date.getDate() - (daysInPeriod - 1 - i));
     return date.toISOString().split('T')[0];
   });
 
-  const weeklyActivity = last7Days.map((date) => {
+  const weeklyActivity = activityDates.map((date) => {
     const sessionsOnDate = recentSessions.filter((s) =>
-      s.started_at.startsWith(date)
+      s.started_at && s.started_at.startsWith(date)
     );
     return {
       date,
       questionsAnswered: sessionsOnDate.reduce(
-        (sum, s) => sum + s.questions_answered,
+        (sum, s) => sum + (s.questions_answered || 0),
         0
       ),
     };
@@ -1052,17 +1123,20 @@ export async function getAnalytics(userId: string): Promise<AnalyticsData> {
     return acc;
   }, [] as AnalyticsData['subjectPerformance']);
 
-  // Identify strengths and weaknesses
+  // Identify strengths and weaknesses (top 5 each)
   const sortedByAccuracy = [...progress].sort(
-    (a, b) => b.accuracy_percentage - a.accuracy_percentage
+    (a, b) => (b.accuracy_percentage || 0) - (a.accuracy_percentage || 0)
   );
+
+  // Filter out topics with no accuracy data
+  const validProgress = sortedByAccuracy.filter(p => p.accuracy_percentage !== null && p.accuracy_percentage !== undefined);
 
   return {
     totalStats: stats,
     weeklyActivity,
     subjectPerformance,
-    strengths: sortedByAccuracy.slice(0, 3).map((p) => p.topic_id),
-    weaknesses: sortedByAccuracy.slice(-3).reverse().map((p) => p.topic_id),
+    strengths: validProgress.slice(0, 5).map((p) => p.topic_id),
+    weaknesses: validProgress.slice(-5).reverse().map((p) => p.topic_id),
   };
 }
 

@@ -13,16 +13,18 @@ import {
   Settings,
   Bell,
   HelpCircle,
+  GraduationCap,
 } from 'lucide-react';
 import type { ComponentType } from 'react';
 
 export interface NavItem {
-  href: string;
+  href?: string;
   label: string;
   icon: ComponentType<{ className?: string }>;
   description?: string;
   badge?: string;
   badgeColor?: string;
+  children?: NavItem[]; // For collapsible submenus
 }
 
 export interface NavSection {
@@ -36,7 +38,7 @@ export const navigationSections: NavSection[] = [
     title: 'Learning',
     items: [
       { href: '/home', label: 'Dashboard', icon: Home, description: 'Your learning hub' },
-      { href: '/subjects', label: 'All Subjects', icon: BookOpen, description: 'Browse & select subjects' },
+      { href: '/subjects', label: 'All Subjects', icon: BookOpen, description: 'Browse & select subjects - Start here!' },
       {
         href: '/quick-practice',
         label: 'Quick Practice',
@@ -46,22 +48,29 @@ export const navigationSections: NavSection[] = [
         badgeColor: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
       },
       {
-        href: '/practice',
-        label: 'Practice Mode',
-        icon: BookOpenCheck,
-        description: 'Learn at your pace with hints'
-      },
-      {
-        href: '/test',
-        label: 'Test Mode',
-        icon: FileText,
-        description: 'Simulate real exam conditions'
-      },
-      {
-        href: '/timed',
-        label: 'Timed Mode',
-        icon: Timer,
-        description: 'Race against the clock'
+        label: 'Learning Modes',
+        icon: GraduationCap,
+        description: 'Practice, Test, or Timed modes',
+        children: [
+          {
+            href: '/practice',
+            label: 'Practice Mode',
+            icon: BookOpenCheck,
+            description: 'Learn at your pace with hints'
+          },
+          {
+            href: '/test',
+            label: 'Test Mode',
+            icon: FileText,
+            description: 'Simulate real exam conditions'
+          },
+          {
+            href: '/timed',
+            label: 'Timed Mode',
+            icon: Timer,
+            description: 'Race against the clock'
+          },
+        ],
       },
     ],
   },
@@ -95,8 +104,7 @@ export const navigationSections: NavSection[] = [
 // These are the primary quick-access items
 export const bottomNavItems: NavItem[] = [
   { href: '/home', label: 'Home', icon: Home },
-  { href: '/subjects', label: 'Explore', icon: BookOpen },
-  { href: '/quick-practice', label: 'Learn', icon: Brain },
+  { href: '/subjects', label: 'Learn', icon: Brain }, // Unified learning gateway
   { href: '/analytics', label: 'Progress', icon: TrendingUp },
   { href: '/profile', label: 'Profile', icon: User },
 ];

@@ -420,6 +420,13 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-3">
               <button
+                onClick={() => router.back()}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                aria-label="Go back"
+              >
+                <ArrowLeft className="w-5 h-5 text-gray-600" />
+              </button>
+              <button
                 onClick={() => setShowPauseModal(true)}
                 className="p-2 hover:bg-gray-100 rounded-full transition-colors"
                 title="Pause & Resume Later"

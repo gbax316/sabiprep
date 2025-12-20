@@ -510,11 +510,20 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
           {/* Mobile Layout */}
           <div className="block sm:hidden space-y-3">
-            {/* Top Row: Subject & Timer */}
+            {/* Top Row: Back, Subject & Timer */}
             <div className="flex items-center justify-between">
-              <div className="flex-1 min-w-0">
-                <p className="text-xs text-gray-600 truncate">{subject?.name}</p>
-                <h1 className="text-base font-bold text-gray-900 truncate">Timed Mode ⚡</h1>
+              <div className="flex items-center gap-2 flex-1 min-w-0">
+                <button
+                  onClick={() => router.back()}
+                  className="p-2 -ml-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0"
+                  aria-label="Go back"
+                >
+                  <ArrowLeft className="w-5 h-5 text-gray-600" />
+                </button>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs text-gray-600 truncate">{subject?.name}</p>
+                  <h1 className="text-base font-bold text-gray-900 truncate">Timed Mode ⚡</h1>
+                </div>
               </div>
               <div className={`
                 px-3 py-1.5 rounded-full font-bold flex items-center gap-1.5 transition-all flex-shrink-0
@@ -577,6 +586,13 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
           <div className="hidden sm:block space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
+                <button
+                  onClick={() => router.back()}
+                  className="p-2 -ml-2 hover:bg-gray-100 rounded-lg transition-colors"
+                  aria-label="Go back"
+                >
+                  <ArrowLeft className="w-5 h-5 text-gray-600" />
+                </button>
                 <div>
                   <p className="text-sm text-gray-600">{subject?.name}</p>
                   <h1 className="text-lg font-bold text-gray-900">Timed Mode ⚡</h1>
