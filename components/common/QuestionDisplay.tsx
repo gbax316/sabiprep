@@ -36,9 +36,12 @@ export function QuestionDisplay({
     <div className="space-y-6">
       {/* Passage Display */}
       {showPassage && question.passage && (
-        <Card className="bg-blue-50 border-2 border-blue-200">
+        <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200/80 shadow-lg hover:shadow-xl transition-shadow duration-300">
           <article className="prose max-w-none">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Reading Passage</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+              <span className="text-blue-600">📖</span>
+              Reading Passage
+            </h3>
             <div className="text-gray-800 leading-relaxed whitespace-pre-wrap">
               {question.passage}
             </div>
@@ -47,7 +50,7 @@ export function QuestionDisplay({
       )}
 
       {/* Question Card */}
-      <Card variant="elevated">
+      <Card variant="elevated" className="shadow-lg border-gray-200/80 hover:shadow-xl transition-shadow duration-300">
         <div className="space-y-4">
           {/* Question Header */}
           <div className="flex items-center justify-between flex-wrap gap-2">
@@ -125,24 +128,24 @@ export function QuestionDisplay({
               onClick={() => !disabled && onAnswerSelect && onAnswerSelect(key)}
               disabled={disabled}
               className={`
-                w-full p-4 rounded-xl text-left transition-all
-                ${!showResult && !isSelected && 'bg-white border border-gray-300 hover:border-indigo-500 hover:shadow-sm'}
-                ${!showResult && isSelected && 'bg-white border-2 border-indigo-600 shadow-sm'}
-                ${showResult && isCorrect && 'bg-emerald-500 border-2 border-emerald-600'}
-                ${showResult && isSelected && !isCorrect && 'bg-red-500 border-2 border-red-600'}
-                ${showResult && !isSelected && !isCorrect && 'bg-white border border-gray-200'}
-                ${disabled && 'cursor-not-allowed'}
-                ${!disabled && !showResult && 'cursor-pointer'}
+                w-full p-4 rounded-xl text-left transition-all duration-200
+                ${!showResult && !isSelected && 'bg-white border-2 border-gray-200 hover:border-indigo-400 hover:bg-indigo-50/30 hover:shadow-md'}
+                ${!showResult && isSelected && 'bg-gradient-to-r from-indigo-50 to-indigo-100 border-2 border-indigo-500 shadow-md ring-2 ring-indigo-200'}
+                ${showResult && isCorrect && 'bg-gradient-to-r from-emerald-500 to-emerald-600 border-2 border-emerald-600 shadow-lg'}
+                ${showResult && isSelected && !isCorrect && 'bg-gradient-to-r from-red-500 to-red-600 border-2 border-red-600 shadow-lg'}
+                ${showResult && !isSelected && !isCorrect && 'bg-white border-2 border-gray-200'}
+                ${disabled && 'cursor-not-allowed opacity-60'}
+                ${!disabled && !showResult && 'cursor-pointer active:scale-[0.98]'}
               `}
             >
               <div className="flex items-start gap-3">
                 <div
                   className={`
-                    w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0
-                    ${!showResult && isSelected && 'bg-indigo-600 text-white'}
+                    w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 transition-all
+                    ${!showResult && isSelected && 'bg-indigo-600 text-white shadow-md'}
                     ${!showResult && !isSelected && 'bg-gray-200 text-gray-700'}
-                    ${showResult && isCorrect && 'bg-white text-emerald-600'}
-                    ${showResult && isSelected && !isCorrect && 'bg-white text-red-600'}
+                    ${showResult && isCorrect && 'bg-white text-emerald-600 shadow-md'}
+                    ${showResult && isSelected && !isCorrect && 'bg-white text-red-600 shadow-md'}
                     ${showResult && !isSelected && !isCorrect && 'bg-gray-300 text-gray-600'}
                   `}
                 >

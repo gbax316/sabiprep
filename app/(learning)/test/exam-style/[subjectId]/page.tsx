@@ -62,10 +62,10 @@ export default function ExamStylePage({ params }: { params: Promise<{ subjectId:
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600">Loading...</p>
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <div className="text-center px-4">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-sm sm:text-base text-gray-600">Loading exam formats...</p>
         </div>
       </div>
     );
@@ -73,8 +73,10 @@ export default function ExamStylePage({ params }: { params: Promise<{ subjectId:
 
   if (!subject) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <p>Subject not found</p>
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <div className="text-center px-4">
+          <p className="text-sm sm:text-base text-gray-600">Subject not found</p>
+        </div>
       </div>
     );
   }
@@ -107,33 +109,33 @@ export default function ExamStylePage({ params }: { params: Promise<{ subjectId:
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-8">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center gap-3 mb-4">
+      <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200/80 sticky top-0 z-10 shadow-md">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={() => router.push('/test')}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
             >
-              <ArrowLeft className="w-6 h-6 text-gray-600" />
+              <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
             </button>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">Test Mode</h1>
-              <p className="text-sm text-gray-600">{subject.name} - Choose Exam Style</p>
+            <div className="flex-1 min-w-0">
+              <h1 className="text-lg sm:text-2xl font-bold text-gray-900 truncate">Test Mode</h1>
+              <p className="text-xs sm:text-sm text-gray-600 truncate">{subject.name} - Choose Style</p>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6">
         {/* Info Banner */}
-        <Card variant="outlined" className="bg-amber-50 border-amber-200">
+        <Card variant="outlined" className="bg-gradient-to-r from-amber-50 to-yellow-50 border-amber-200/80 shadow-sm">
           <div className="flex gap-3">
-            <div className="text-2xl">📋</div>
-            <div>
-              <p className="font-semibold text-gray-900 mb-1">Exam Style Selection</p>
-              <p className="text-sm text-gray-700">
+            <div className="text-xl sm:text-2xl flex-shrink-0">📋</div>
+            <div className="flex-1 min-w-0">
+              <p className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Exam Style Selection</p>
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 Choose the exam format that matches your preparation needs. The system will automatically distribute questions across all topics based on the selected style.
               </p>
             </div>
@@ -141,47 +143,54 @@ export default function ExamStylePage({ params }: { params: Promise<{ subjectId:
         </Card>
 
         {/* Exam Style Cards */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {examStyles.map((style) => (
             <Card
               key={style.id}
               className={`
-                cursor-pointer transition-all hover:shadow-xl hover:scale-[1.02]
-                ${selectedStyle === style.id ? 'ring-2 ring-indigo-600 ring-offset-2' : ''}
+                cursor-pointer transition-all duration-200 shadow-md hover:shadow-xl active:scale-[0.98]
+                ${selectedStyle === style.id ? 'ring-2 ring-indigo-500 ring-offset-2 bg-indigo-50/50' : 'bg-white'}
+                border-gray-200/80
               `}
               onClick={() => handleStyleSelect(style.id)}
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-3 sm:gap-4">
                 {/* Icon */}
-                <div className={`${style.color} text-white p-4 rounded-2xl flex-shrink-0`}>
-                  {style.icon}
+                <div className={`${style.color} text-white p-3 sm:p-4 rounded-xl sm:rounded-2xl flex-shrink-0 shadow-md`}>
+                  <div className="w-5 h-5 sm:w-8 sm:h-8">
+                    {style.icon}
+                  </div>
                 </div>
 
                 {/* Content */}
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-bold text-lg text-gray-900">{style.name}</h3>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-1.5 sm:mb-1">
+                    <h3 className="font-bold text-base sm:text-lg text-gray-900">{style.name}</h3>
                     {style.questionCount && (
-                      <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-sm font-medium">
-                        {style.questionCount} questions
+                      <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs sm:text-sm font-medium whitespace-nowrap">
+                        {style.questionCount} Q
                       </span>
                     )}
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">{style.description}</p>
+                  <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3 leading-relaxed">{style.description}</p>
                   
                   {style.id === 'custom' && showCustomOptions && (
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <p className="text-sm font-medium text-gray-700 mb-3">Select number of questions:</p>
+                    <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200/60">
+                      <p className="text-xs sm:text-sm font-medium text-gray-700 mb-2 sm:mb-3">Select number of questions:</p>
                       <div className="grid grid-cols-4 gap-2">
                         {[20, 30, 40, 50].map((count) => (
                           <button
                             key={count}
-                            onClick={() => handleCustomCountSelect(count)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleCustomCountSelect(count);
+                            }}
                             className={`
-                              py-2 px-3 rounded-lg font-semibold text-sm transition-all
+                              py-2.5 sm:py-2 px-2 sm:px-3 rounded-lg font-semibold text-xs sm:text-sm transition-all
+                              shadow-sm hover:shadow-md active:scale-95
                               ${customCount === count
-                                ? 'bg-indigo-600 text-white'
-                                : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
+                                ? 'bg-indigo-600 text-white shadow-md'
+                                : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200'
                               }
                             `}
                           >
@@ -192,7 +201,7 @@ export default function ExamStylePage({ params }: { params: Promise<{ subjectId:
                     </div>
                   )}
                   {style.id === 'custom' && !showCustomOptions && (
-                    <div className="flex gap-2 mt-2">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2">
                       {[20, 30, 40, 50].map((count) => (
                         <span
                           key={count}
@@ -206,11 +215,13 @@ export default function ExamStylePage({ params }: { params: Promise<{ subjectId:
                 </div>
 
                 {/* Arrow */}
-                <div className="flex-shrink-0 text-gray-400">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
+                {style.id !== 'custom' || !showCustomOptions ? (
+                  <div className="flex-shrink-0 text-gray-400 hidden sm:block">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                ) : null}
               </div>
             </Card>
           ))}

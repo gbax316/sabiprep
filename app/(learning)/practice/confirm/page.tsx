@@ -85,10 +85,10 @@ function PracticeConfirmContent() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600">Loading...</p>
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <div className="text-center px-4">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-sm sm:text-base text-gray-600">Loading session details...</p>
         </div>
       </div>
     );
@@ -96,8 +96,10 @@ function PracticeConfirmContent() {
 
   if (!subject) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <p>Subject not found</p>
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <div className="text-center px-4">
+          <p className="text-sm sm:text-base text-gray-600">Subject not found</p>
+        </div>
       </div>
     );
   }
@@ -124,38 +126,38 @@ function PracticeConfirmContent() {
   const totalDistributed = topicDistribution.reduce((sum, item) => sum + item.count, 0);
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-8">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center gap-3">
+      <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200/80 sticky top-0 z-10 shadow-md">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={handleGoBack}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
             >
-              <ArrowLeft className="w-6 h-6 text-gray-600" />
+              <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
             </button>
-            <div className="flex items-center gap-3 flex-1">
-              <div className="text-3xl">{subject.icon || '📚'}</div>
-              <div>
-                <p className="text-sm text-gray-600">{subject.name}</p>
-                <h1 className="text-xl font-bold text-gray-900">Confirm Practice Session</h1>
+            <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+              <div className="text-2xl sm:text-3xl flex-shrink-0">{subject.icon || '📚'}</div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs sm:text-sm text-gray-600 truncate">{subject.name}</p>
+                <h1 className="text-base sm:text-xl font-bold text-gray-900 truncate">Confirm Practice Session</h1>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6">
         {/* Confirmation Card */}
-        <Card className="bg-gradient-to-br from-indigo-50 to-purple-50 border-2 border-indigo-200">
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center flex-shrink-0">
-              <CheckCircle2 className="w-6 h-6 text-white" />
+        <Card className="bg-gradient-to-br from-indigo-50 to-purple-50 border-2 border-indigo-200/80 shadow-lg">
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-indigo-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+              <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
-            <div className="flex-1">
-              <h2 className="text-xl font-bold text-gray-900 mb-2">Your Practice Set</h2>
-              <p className="text-gray-700 mb-4">
+            <div className="flex-1 min-w-0">
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Your Practice Set</h2>
+              <p className="text-sm sm:text-base text-gray-700 mb-4">
                 {mode === 'mix' 
                   ? `${questionCount} questions from ${topics.length} topics`
                   : `${questionCount} questions from ${topics.length} selected topic${topics.length > 1 ? 's' : ''}`
@@ -167,22 +169,28 @@ function PracticeConfirmContent() {
                 {topicDistribution.map(({ topic, count }) => (
                   <div
                     key={topic.id}
-                    className="flex items-center justify-between p-3 bg-white rounded-lg border border-indigo-100"
+                    className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 p-3 bg-white rounded-lg border border-indigo-100/80 shadow-sm"
                   >
-                    <div className="flex items-center gap-3">
-                      <BookOpen className="w-5 h-5 text-indigo-600" />
-                      <span className="font-medium text-gray-900">{topic.name}</span>
-                      {topic.difficulty && (
-                        <Badge variant={
-                          topic.difficulty === 'Easy' ? 'success' :
-                          topic.difficulty === 'Medium' ? 'warning' :
-                          'error'
-                        } size="sm">
-                          {topic.difficulty}
-                        </Badge>
-                      )}
+                    <div className="flex items-start sm:items-center gap-2 sm:gap-3 flex-1 min-w-0">
+                      <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600 flex-shrink-0 mt-0.5 sm:mt-0" />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                          <span className="font-medium text-gray-900 text-sm sm:text-base break-words">{topic.name}</span>
+                          {topic.difficulty && (
+                            <Badge variant={
+                              topic.difficulty === 'Easy' ? 'success' :
+                              topic.difficulty === 'Medium' ? 'warning' :
+                              'error'
+                            } size="sm" className="flex-shrink-0">
+                              {topic.difficulty}
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
                     </div>
-                    <span className="font-semibold text-indigo-600">{count} questions</span>
+                    <span className="font-semibold text-indigo-600 text-sm sm:text-base whitespace-nowrap flex-shrink-0 sm:ml-auto">
+                      {count} questions
+                    </span>
                   </div>
                 ))}
               </div>
@@ -197,35 +205,35 @@ function PracticeConfirmContent() {
         </Card>
 
         {/* Session Details */}
-        <Card>
-          <h3 className="font-bold text-lg text-gray-900 mb-4">Session Details</h3>
-          <div className="space-y-3">
+        <Card className="shadow-md border-gray-200/80">
+          <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-3 sm:mb-4">Session Details</h3>
+          <div className="space-y-2 sm:space-y-3">
             <div className="flex items-center justify-between py-2 border-b border-gray-100">
-              <span className="text-gray-600">Mode</span>
-              <Badge variant="info">Practice Mode</Badge>
+              <span className="text-sm sm:text-base text-gray-600">Mode</span>
+              <Badge variant="info" size="sm">Practice Mode</Badge>
             </div>
             <div className="flex items-center justify-between py-2 border-b border-gray-100">
-              <span className="text-gray-600">Total Questions</span>
-              <span className="font-semibold text-gray-900">{questionCount}</span>
+              <span className="text-sm sm:text-base text-gray-600">Total Questions</span>
+              <span className="font-semibold text-sm sm:text-base text-gray-900">{questionCount}</span>
             </div>
             <div className="flex items-center justify-between py-2 border-b border-gray-100">
-              <span className="text-gray-600">Topics</span>
-              <span className="font-semibold text-gray-900">{topics.length}</span>
+              <span className="text-sm sm:text-base text-gray-600">Topics</span>
+              <span className="font-semibold text-sm sm:text-base text-gray-900">{topics.length}</span>
             </div>
             <div className="flex items-center justify-between py-2">
-              <span className="text-gray-600">Subject</span>
-              <span className="font-semibold text-gray-900">{subject.name}</span>
+              <span className="text-sm sm:text-base text-gray-600">Subject</span>
+              <span className="font-semibold text-sm sm:text-base text-gray-900 truncate ml-2">{subject.name}</span>
             </div>
           </div>
         </Card>
 
         {/* Features Reminder */}
-        <Card variant="outlined" className="border-blue-200 bg-blue-50">
+        <Card variant="outlined" className="border-blue-200/80 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm">
           <div className="flex gap-3">
-            <div className="text-2xl">💡</div>
-            <div>
-              <p className="font-semibold text-gray-900 mb-2">Practice Mode Features</p>
-              <ul className="space-y-1 text-sm text-gray-700">
+            <div className="text-xl sm:text-2xl flex-shrink-0">💡</div>
+            <div className="flex-1 min-w-0">
+              <p className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Practice Mode Features</p>
+              <ul className="space-y-1 text-xs sm:text-sm text-gray-700">
                 <li>✅ Hints available when you're stuck</li>
                 <li>✅ Detailed solutions with explanations</li>
                 <li>✅ Navigate freely between questions</li>
@@ -237,21 +245,23 @@ function PracticeConfirmContent() {
         </Card>
 
         {/* Action Buttons */}
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <Button
             variant="outline"
-            size="full"
+            size="md"
             onClick={handleGoBack}
             disabled={creatingSession}
+            className="w-full sm:w-auto sm:min-w-[140px] md:min-w-[160px] order-2 sm:order-1"
           >
             Go Back
           </Button>
           <Button
             variant="primary"
-            size="full"
+            size="md"
             onClick={handleStartPractice}
             disabled={creatingSession}
-            leftIcon={<Play className="w-5 h-5" />}
+            leftIcon={<Play className="w-4 h-4 sm:w-5 sm:h-5" />}
+            className="w-full sm:w-auto sm:min-w-[180px] md:min-w-[200px] order-1 sm:order-2 bg-indigo-600 hover:bg-indigo-700 shadow-md hover:shadow-lg transition-all"
           >
             {creatingSession ? 'Starting Session...' : 'Begin Practice'}
           </Button>

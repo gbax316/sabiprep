@@ -504,66 +504,135 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
   const showOneMinuteWarning = warningsShown.oneMinute && timeRemaining <= 60 && timeRemaining > 0;
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-8">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-3">
-              <div>
-                <p className="text-sm text-gray-600">{subject?.name}</p>
-                <h1 className="text-lg font-bold text-gray-900">Timed Mode ⚡</h1>
+      <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200/80 sticky top-0 z-10 shadow-md">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          {/* Mobile Layout */}
+          <div className="block sm:hidden space-y-3">
+            {/* Top Row: Subject & Timer */}
+            <div className="flex items-center justify-between">
+              <div className="flex-1 min-w-0">
+                <p className="text-xs text-gray-600 truncate">{subject?.name}</p>
+                <h1 className="text-base font-bold text-gray-900 truncate">Timed Mode ⚡</h1>
+              </div>
+              <div className={`
+                px-3 py-1.5 rounded-full font-bold flex items-center gap-1.5 transition-all flex-shrink-0
+                ${timerColor} ${timerBg} ${timerPulse ? 'animate-pulse' : ''}
+                shadow-sm hover:shadow-md
+              `}>
+                <Timer className="w-4 h-4" />
+                <span className="text-base">{formattedTime}</span>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <Badge variant="warning">
-                Question {currentIndex + 1} / {questions.length}
+            
+            {/* Question Badge & Action Buttons */}
+            <div className="flex items-center gap-2">
+              <Badge variant="warning" size="sm" className="flex-shrink-0">
+                Q{currentIndex + 1}/{questions.length}
               </Badge>
-              <div className={`
-                px-4 py-2 rounded-full font-bold flex items-center gap-2 transition-all
-                ${timerColor} ${timerBg} ${timerPulse ? 'animate-pulse' : ''}
-              `}>
-                <Timer className="w-5 h-5" />
-                <span className="text-xl">{formattedTime}</span>
+              <div className="flex-1 flex gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowCancelConfirm(true)}
+                  className="flex-1 text-gray-600 border-gray-300 hover:bg-gray-50 text-xs px-2"
+                >
+                  <X className="w-3 h-3 mr-1" />
+                  Cancel
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowSubmitConfirm(true)}
+                  className="flex-1 text-orange-600 border-orange-600 text-xs px-2"
+                >
+                  <Send className="w-3 h-3 mr-1" />
+                  Submit
+                </Button>
               </div>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setShowCancelConfirm(true)}
-                className="text-gray-600 border-gray-300 hover:bg-gray-50"
-              >
-                <X className="w-4 h-4 mr-1" />
-                Cancel
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setShowSubmitConfirm(true)}
-                className="text-orange-600 border-orange-600"
-              >
-                <Send className="w-4 h-4 mr-1" />
-                Submit
-              </Button>
+            </div>
+
+            {/* Progress Bar - Mobile */}
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-gray-600">
+                  {answeredCount} answered | {unansweredCount} remaining
+                </span>
+                <span className={paceColor + ' text-xs'}>
+                  {paceStatus === 'on-track' && '✓ On track'}
+                  {paceStatus === 'behind' && '⚠️ Behind'}
+                  {paceStatus === 'ahead' && '⚡ Ahead'}
+                </span>
+              </div>
+              <ProgressBar
+                value={actualProgress}
+                color="primary"
+                showLabel={false}
+              />
             </div>
           </div>
 
-          {/* Progress and Pace Indicator */}
-          <div className="space-y-2">
-            <div className="flex items-center justify-between text-sm">
-              <span className="text-gray-600">
-                {answeredCount} answered | {unansweredCount} remaining
-              </span>
-              <span className={paceColor}>
-                {paceStatus === 'on-track' && '✓ On track'}
-                {paceStatus === 'behind' && '⚠️ Behind pace'}
-                {paceStatus === 'ahead' && '⚡ Ahead of pace'}
-              </span>
+          {/* Desktop Layout */}
+          <div className="hidden sm:block space-y-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div>
+                  <p className="text-sm text-gray-600">{subject?.name}</p>
+                  <h1 className="text-lg font-bold text-gray-900">Timed Mode ⚡</h1>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Badge variant="warning" size="sm">
+                  Question {currentIndex + 1} / {questions.length}
+                </Badge>
+                <div className={`
+                  px-4 py-2 rounded-full font-bold flex items-center gap-2 transition-all
+                  ${timerColor} ${timerBg} ${timerPulse ? 'animate-pulse' : ''}
+                  shadow-sm hover:shadow-md
+                `}>
+                  <Timer className="w-5 h-5" />
+                  <span className="text-xl">{formattedTime}</span>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowCancelConfirm(true)}
+                  className="text-gray-600 border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-all shadow-sm hover:shadow"
+                >
+                  <X className="w-4 h-4 mr-1" />
+                  Cancel
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowSubmitConfirm(true)}
+                  className="text-orange-600 border-orange-600 hover:bg-orange-50 hover:border-orange-700 transition-all shadow-sm hover:shadow"
+                >
+                  <Send className="w-4 h-4 mr-1" />
+                  Submit
+                </Button>
+              </div>
             </div>
-            <ProgressBar
-              value={actualProgress}
-              color="primary"
-              showLabel={false}
-            />
+
+            {/* Progress and Pace Indicator - Desktop */}
+            <div className="space-y-2">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-600">
+                  {answeredCount} answered | {unansweredCount} remaining
+                </span>
+                <span className={paceColor}>
+                  {paceStatus === 'on-track' && '✓ On track'}
+                  {paceStatus === 'behind' && '⚠️ Behind pace'}
+                  {paceStatus === 'ahead' && '⚡ Ahead of pace'}
+                </span>
+              </div>
+              <ProgressBar
+                value={actualProgress}
+                color="primary"
+                showLabel={false}
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -623,9 +692,9 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
       {/* Halfway Banner */}
       {warningsShown.halfTime && timeRemaining <= (session.time_limit_seconds || 0) / 2 && timeRemaining > (session.time_limit_seconds || 0) / 2 - 60 && (
-        <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center">
-          <p className="text-sm text-amber-800">
-            Halfway mark! You should be near question {Math.ceil(questions.length / 2)}
+        <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border-b border-amber-200/60 px-4 py-3 text-center shadow-sm">
+          <p className="text-sm font-medium text-amber-800">
+            ⏱️ Halfway mark! You should be near question {Math.ceil(questions.length / 2)}
           </p>
         </div>
       )}
@@ -641,14 +710,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
       {/* Previous Button Warning */}
       {showPreviousWarning && (
-        <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center">
-          <p className="text-sm text-amber-800">
+        <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border-b border-amber-200/60 px-4 py-3 text-center shadow-sm">
+          <p className="text-sm font-medium text-amber-800">
             ⏰ Every second counts! Make sure you're using your time wisely.
           </p>
         </div>
       )}
 
-      <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6">
         {/* Question Display */}
         <QuestionDisplay
           question={currentQuestion}
@@ -661,46 +730,53 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         />
 
         {/* Navigation */}
-        <Card>
-          <div className="space-y-4">
-            {/* Main Navigation Buttons */}
-            <div className="flex items-center gap-3">
+        <Card className="shadow-lg border-gray-200/80 hover:shadow-xl transition-shadow duration-300">
+          <div className="space-y-3">
+            {/* Navigator Toggle Button */}
+            <div className="flex justify-center">
               <Button
                 variant="outline"
-                size="md"
-                leftIcon={<ArrowLeft className="w-5 h-5" />}
-                onClick={handlePrevious}
-                disabled={currentIndex === 0 || sessionComplete}
-                className="flex-1"
-              >
-                Previous
-              </Button>
-
-              <Button
-                variant="outline"
-                size="md"
+                size="sm"
                 onClick={() => setShowPalette(!showPalette)}
+                className="w-full sm:w-auto border-indigo-200 text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 transition-all shadow-sm hover:shadow"
               >
                 {showPalette ? (
                   <>
-                    <ChevronDown className="w-5 h-5 mr-2" />
-                    Hide Navigator
+                    <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 sm:mr-2" />
+                    <span className="hidden sm:inline">Hide Navigator</span>
+                    <span className="sm:hidden text-xs">Hide Navigator</span>
                   </>
                 ) : (
                   <>
-                    <ChevronUp className="w-5 h-5 mr-2" />
-                    Show Navigator
+                    <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 sm:mr-2" />
+                    <span className="hidden sm:inline">Show Navigator</span>
+                    <span className="sm:hidden text-xs">Show Navigator</span>
                   </>
                 )}
+              </Button>
+            </div>
+
+            {/* Previous and Next Buttons - Always Side by Side */}
+            <div className="flex items-center gap-2 sm:gap-3">
+              <Button
+                variant="outline"
+                size="sm"
+                leftIcon={<ArrowLeft className="w-4 h-4" />}
+                onClick={handlePrevious}
+                disabled={currentIndex === 0 || sessionComplete}
+                className="flex-1 border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-all shadow-sm hover:shadow disabled:opacity-50"
+              >
+                <span className="hidden sm:inline">Previous</span>
+                <span className="sm:hidden">Prev</span>
               </Button>
 
               <Button
                 variant="primary"
-                size="full"
-                rightIcon={<ArrowRight className="w-5 h-5" />}
+                size="sm"
+                rightIcon={<ArrowRight className="w-4 h-4" />}
                 onClick={handleNext}
                 disabled={currentIndex === questions.length - 1 || sessionComplete}
-                className="flex-1"
+                className="flex-1 bg-indigo-600 hover:bg-indigo-700 shadow-md hover:shadow-lg transition-all disabled:opacity-50"
               >
                 {currentIndex === questions.length - 1 ? 'Review' : 'Next'}
               </Button>
@@ -708,14 +784,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
             {/* Submit Button - Only show when on last question */}
             {currentIndex === questions.length - 1 && (
-              <div className="flex justify-center pt-2 border-t border-gray-200">
+              <div className="flex justify-center pt-3 border-t border-gray-200/60">
                 <Button
                   variant="primary"
-                  size="md"
-                  leftIcon={<Send className="w-5 h-5" />}
+                  size="sm"
+                  leftIcon={<Send className="w-4 h-4 sm:w-5 sm:h-5" />}
                   onClick={() => setShowSubmitConfirm(true)}
                   disabled={sessionComplete}
-                  className="bg-red-600 hover:bg-red-700 text-white"
+                  className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white w-full sm:w-auto shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
                 >
                   Submit Exam
                 </Button>
@@ -726,7 +802,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
         {/* Question Navigator */}
         {showPalette && (
-          <Card>
+          <Card className="p-3 sm:p-4 shadow-lg border-gray-200/80 bg-white/95 backdrop-blur-sm">
             <QuestionNavigator
               questions={questions.map((q, index) => ({
                 id: q.id,
@@ -753,25 +829,27 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         onClose={() => setShowCancelConfirm(false)}
         title="Cancel Exam?"
       >
-        <div className="p-4">
-          <p className="text-gray-700 mb-2">
+        <div className="p-4 sm:p-6">
+          <p className="text-gray-700 mb-2 text-sm sm:text-base">
             Are you sure you want to cancel this exam? Your progress will be saved.
           </p>
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-xs sm:text-sm text-gray-600 mb-4">
             You've answered {answeredCount} of {questions.length} questions. This session will be marked as incomplete.
           </p>
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             <Button
               variant="outline"
+              size="sm"
               onClick={() => setShowCancelConfirm(false)}
-              className="flex-1"
+              className="w-full sm:flex-1 order-2 sm:order-1"
             >
               Continue Exam
             </Button>
             <Button
               variant="primary"
+              size="sm"
               onClick={handleCancel}
-              className="flex-1 bg-red-600 hover:bg-red-700"
+              className="w-full sm:flex-1 bg-red-600 hover:bg-red-700 order-1 sm:order-2"
             >
               Cancel Exam
             </Button>
