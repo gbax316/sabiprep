@@ -57,6 +57,57 @@ export default function ImportHistoryPage() {
     }
   };
 
+  const handleEdit = (reportId: string) => {
+    const report = reports.find(r => r.id === reportId);
+    if (report) {
+      setEditingReport(report);
+    }
+  };
+
+  const handleDelete = (reportId: string) => {
+    const report = reports.find(r => r.id === reportId);
+    if (report) {
+      setDeletingReport(report);
+    }
+  };
+
+  const handleSaveEdit = async (data: { filename: string; status?: string }) => {
+    if (!editingReport) return;
+
+    const response = await fetch(`/api/admin/import/reports/${editingReport.id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to update batch');
+    }
+
+    await fetchReports();
+    setEditingReport(null);
+  };
+
+  const handleConfirmDelete = async (deleteQuestions: boolean) => {
+    if (!deletingReport) return;
+
+    const params = new URLSearchParams();
+    if (deleteQuestions) {
+      params.append('delete_questions', 'true');
+    }
+
+    const response = await fetch(`/api/admin/import/reports/${deletingReport.id}?${params}`, {
+      method: 'DELETE',
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to delete batch');
+    }
+
+    await fetchReports();
+    setDeletingReport(null);
+  };
+
   return (
     <div>
       <AdminHeader
