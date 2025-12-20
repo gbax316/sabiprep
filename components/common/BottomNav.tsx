@@ -36,6 +36,7 @@ export function BottomNav({ items = bottomNavItems, className }: BottomNavProps)
     >
       <div className="h-16 px-4 flex items-center justify-around max-w-lg mx-auto safe-area-inset-bottom">
         {items.map((item, index) => {
+          if (!item.href) return null; // Skip items without href
           const active = isActive(item.href);
           return (
             <Link
