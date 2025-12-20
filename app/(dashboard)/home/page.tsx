@@ -515,18 +515,18 @@ export default function HomePage() {
               </div>
 
               {/* Streak and XP Badge */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
                 {stats?.currentStreak && stats.currentStreak > 0 && (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-500/30"
+                    className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-gradient-to-br from-orange-500/30 to-red-500/30 border border-orange-500/50 shadow-lg shadow-orange-500/20"
                   >
-                    <Flame className="w-5 h-5 text-orange-400 animate-pulse" />
-                    <div>
-                      <p className="text-xs text-slate-400">Streak</p>
-                      <p className="text-lg font-bold text-white">{stats.currentStreak} days</p>
+                    <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-orange-300 animate-pulse flex-shrink-0" />
+                    <div className="min-w-0">
+                      <p className="text-[10px] sm:text-xs text-orange-200 leading-tight">Streak</p>
+                      <p className="text-sm sm:text-lg font-bold text-white leading-tight">{stats.currentStreak}d</p>
                     </div>
                   </motion.div>
                 )}
@@ -534,12 +534,12 @@ export default function HomePage() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.4 }}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30"
+                  className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-gradient-to-br from-purple-500/30 to-pink-500/30 border border-purple-500/50 shadow-lg shadow-purple-500/20"
                 >
-                  <Star className="w-5 h-5 text-purple-400" />
-                  <div>
-                    <p className="text-xs text-slate-400">XP</p>
-                    <p className="text-lg font-bold text-white">{stats?.questionsAnswered || 0}</p>
+                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-purple-300 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="text-[10px] sm:text-xs text-purple-200 leading-tight">XP</p>
+                    <p className="text-sm sm:text-lg font-bold text-white leading-tight">{stats?.questionsAnswered || 0}</p>
                   </div>
                 </motion.div>
               </div>
@@ -571,18 +571,19 @@ export default function HomePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <MagicCard glow className="p-6 bg-gradient-to-br from-slate-900/90 to-slate-800/90 border-slate-700">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-bold text-white">Today's Mission</h2>
+          <MagicCard glow className="p-4 sm:p-6 bg-gradient-to-br from-slate-900/90 to-slate-800/90 border-slate-700">
+            <div className="flex items-center justify-between mb-3 sm:mb-4">
+              <h2 className="text-lg sm:text-xl font-bold text-white">Today's Mission</h2>
               {dailyQuestionsAnswered >= dailyGoal && (
                 <MagicBadge variant="success" size="sm">
                   <Trophy className="w-3 h-3 mr-1" />
-                  Completed!
+                  <span className="hidden xs:inline">Completed!</span>
+                  <span className="xs:hidden">Done!</span>
                 </MagicBadge>
               )}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-6">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
               {/* Progress Ring */}
               <div className="flex-shrink-0">
                 <ProgressRing 
@@ -633,24 +634,24 @@ export default function HomePage() {
             </div>
 
             {/* Quick Action Buttons */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-700">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-3 sm:pt-4 border-t border-slate-700">
               <Link href="/quick-practice">
-                <MagicButton variant="secondary" size="sm" className="w-full">
-                  <Zap className="w-4 h-4 mr-2" />
+                <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2 sm:py-2.5">
+                  <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                   Quick 5 Questions
                 </MagicButton>
               </Link>
               {incompleteSession && (
                 <Link href={`/${incompleteSession.mode}/${incompleteSession.id}`}>
-                  <MagicButton variant="secondary" size="sm" className="w-full">
-                    <Play className="w-4 h-4 mr-2" />
+                  <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2 sm:py-2.5">
+                    <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                     Continue Session
                   </MagicButton>
                 </Link>
               )}
               <Link href="/daily-challenge">
-                <MagicButton variant="secondary" size="sm" className="w-full">
-                  <Sparkles className="w-4 h-4 mr-2" />
+                <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2 sm:py-2.5">
+                  <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                   Daily Challenge
                 </MagicButton>
               </Link>
@@ -663,64 +664,64 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-3"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3"
         >
           {/* Streak Stat */}
-          <MagicCard className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-orange-500/50 transition-colors">
+          <MagicCard className="p-3 sm:p-4 text-center bg-slate-900/60 border-2 border-slate-700 hover:border-orange-500/70 transition-colors active:scale-95">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.4, type: 'spring' }}
-              className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mx-auto mb-2 shadow-lg"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mx-auto mb-1.5 sm:mb-2 shadow-lg shadow-orange-500/30"
             >
-              <Flame className="w-5 h-5 text-white" />
+              <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </motion.div>
-            <p className="text-2xl font-bold text-white">{stats?.currentStreak || 0}</p>
-            <p className="text-xs text-slate-400">Streak</p>
+            <p className="text-xl sm:text-2xl font-bold text-white">{stats?.currentStreak || 0}</p>
+            <p className="text-[10px] sm:text-xs text-slate-400 font-medium">Streak</p>
           </MagicCard>
 
           {/* Questions Stat */}
-          <MagicCard className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-cyan-500/50 transition-colors">
+          <MagicCard className="p-3 sm:p-4 text-center bg-slate-900/60 border-2 border-slate-700 hover:border-cyan-500/70 transition-colors active:scale-95">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.5, type: 'spring' }}
-              className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mx-auto mb-2 shadow-lg"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mx-auto mb-1.5 sm:mb-2 shadow-lg shadow-cyan-500/30"
             >
-              <Target className="w-5 h-5 text-white" />
+              <Target className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </motion.div>
-            <p className="text-2xl font-bold text-white">{stats?.questionsAnswered || 0}</p>
-            <p className="text-xs text-slate-400">Questions</p>
+            <p className="text-xl sm:text-2xl font-bold text-white">{stats?.questionsAnswered || 0}</p>
+            <p className="text-[10px] sm:text-xs text-slate-400 font-medium">Questions</p>
           </MagicCard>
 
           {/* Accuracy Stat */}
-          <MagicCard className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-emerald-500/50 transition-colors">
+          <MagicCard className="p-3 sm:p-4 text-center bg-slate-900/60 border-2 border-slate-700 hover:border-emerald-500/70 transition-colors active:scale-95">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.6, type: 'spring' }}
-              className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center mx-auto mb-2 shadow-lg"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center mx-auto mb-1.5 sm:mb-2 shadow-lg shadow-emerald-500/30"
             >
-              <TrendingUp className="w-5 h-5 text-white" />
+              <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </motion.div>
-            <p className="text-2xl font-bold text-white">{Math.round(stats?.accuracy || 0)}%</p>
-            <p className="text-xs text-slate-400">Accuracy</p>
+            <p className="text-xl sm:text-2xl font-bold text-white">{Math.round(stats?.accuracy || 0)}%</p>
+            <p className="text-[10px] sm:text-xs text-slate-400 font-medium">Accuracy</p>
           </MagicCard>
 
           {/* Study Time Stat */}
-          <MagicCard className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-violet-500/50 transition-colors">
+          <MagicCard className="p-3 sm:p-4 text-center bg-slate-900/60 border-2 border-slate-700 hover:border-violet-500/70 transition-colors active:scale-95">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.7, type: 'spring' }}
-              className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center mx-auto mb-2 shadow-lg"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center mx-auto mb-1.5 sm:mb-2 shadow-lg shadow-violet-500/30"
             >
-              <Clock className="w-5 h-5 text-white" />
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </motion.div>
-            <p className="text-2xl font-bold text-white">
+            <p className="text-lg sm:text-2xl font-bold text-white leading-tight">
               {Math.floor(weeklyStudyTimeMinutes / 60)}h {weeklyStudyTimeMinutes % 60}m
             </p>
-            <p className="text-xs text-slate-400">This Week</p>
+            <p className="text-[10px] sm:text-xs text-slate-400 font-medium">This Week</p>
           </MagicCard>
         </motion.div>
 
@@ -851,7 +852,7 @@ export default function HomePage() {
               </Link>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
               {subjects.slice(0, 4).map((subject, index) => {
                 const subjectProgress = getSubjectProgress(subject.id);
                 return (
@@ -865,21 +866,21 @@ export default function HomePage() {
                       e.preventDefault();
                       router.push(`/subjects`);
                     }}>
-                      <MagicCard hover className="p-4 text-center bg-slate-900/50 border-slate-700 hover:border-violet-500/50 h-full relative overflow-hidden group">
-                        <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+                      <MagicCard hover className="p-3 sm:p-4 text-center bg-slate-900/60 border-2 border-slate-700 hover:border-violet-500/70 h-full relative overflow-hidden group active:scale-95 transition-all">
+                        <div className="text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
                           {subject.icon || '📚'}
                         </div>
-                        <h3 className="font-semibold text-sm text-white mb-1 line-clamp-2">{subject.name}</h3>
-                        <p className="text-xs text-slate-500 mb-2">{subject.total_questions} questions</p>
+                        <h3 className="font-semibold text-xs sm:text-sm text-white mb-1 line-clamp-2 leading-tight">{subject.name}</h3>
+                        <p className="text-[10px] sm:text-xs text-slate-400 mb-2 font-medium">{subject.total_questions} questions</p>
                         {subjectProgress && (
-                          <div className="mt-2">
-                            <MagicBadge variant="success" size="sm">
+                          <div className="mt-1.5 sm:mt-2">
+                            <MagicBadge variant="success" size="sm" className="text-[10px] sm:text-xs">
                               {subjectProgress.accuracy}%
                             </MagicBadge>
                           </div>
                         )}
                         {!subjectProgress && (
-                          <MagicBadge variant="default" size="sm">
+                          <MagicBadge variant="default" size="sm" className="text-[10px] sm:text-xs">
                             New
                           </MagicBadge>
                         )}

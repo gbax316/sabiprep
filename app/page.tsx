@@ -196,34 +196,35 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* ========== HEADER ========== */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center justify-between h-16 md:h-20">
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:shadow-xl group-hover:shadow-indigo-500/30 transition-all duration-300 group-hover:scale-105">
-                <GraduationCap className="w-5 h-5 text-white" />
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-sm">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+          <nav className="flex items-center justify-between h-14 sm:h-16 md:h-20">
+            <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group flex-shrink-0">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:shadow-xl group-hover:shadow-indigo-500/30 transition-all duration-300 group-hover:scale-105">
+                <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </div>
-              <span className="font-display font-bold text-xl text-slate-900">
+              <span className="font-display font-bold text-lg sm:text-xl text-slate-900 whitespace-nowrap">
                 SabiPrep
               </span>
             </Link>
 
-            <div className="flex items-center gap-2 sm:gap-4">
+            <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-shrink-0">
               <Link
                 href="/login"
-                className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+                className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors whitespace-nowrap"
               >
                 Log in
               </Link>
               <Link
                 href="/subjects"
-                className="group px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full 
-                           shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 transition-all duration-300 
-                           hover:scale-105 active:scale-100"
+                className="group px-3.5 py-1.5 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full 
+                           shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 transition-all duration-300 
+                           hover:scale-105 active:scale-100 whitespace-nowrap"
               >
-                <span className="flex items-center gap-1.5">
-                  Try for Free
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                <span className="flex items-center gap-1 sm:gap-1.5">
+                  <span className="hidden xs:inline">Try for Free</span>
+                  <span className="xs:hidden">Try Free</span>
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </Link>
             </div>
@@ -276,35 +277,36 @@ export default function LandingPage() {
             </p>
 
             {/* CTA buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-enter stagger-3">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-enter stagger-3">
               <Link
                 href="/subjects"
-                className="group w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white 
-                           bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full shadow-xl shadow-indigo-500/25 
-                           hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300 hover:scale-105"
+                className="group w-full sm:w-auto flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white 
+                           bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full shadow-xl shadow-indigo-500/30 
+                           hover:shadow-2xl hover:shadow-indigo-500/40 transition-all duration-300 hover:scale-105 active:scale-100"
               >
-                <Play className="w-5 h-5" />
+                <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                 Try for Free
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="#how-it-works"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-slate-700 
-                           bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 rounded-full 
-                           transition-all duration-300 shadow-sm hover:shadow-md"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-slate-700 
+                           bg-white border-2 border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 rounded-full 
+                           transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
               >
                 See How It Works
               </Link>
             </div>
 
             {/* Quick stats */}
-            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-slate-200/60 animate-enter stagger-4">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-10 mt-10 sm:mt-12 md:mt-16 pt-6 sm:pt-8 md:pt-10 border-t border-slate-200/60 animate-enter stagger-4">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center px-2">
-                  <p className="font-display text-2xl sm:text-3xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+                  <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
                     {stat.value}
                   </p>
-                  <p className="text-sm text-slate-500 mt-0.5">{stat.label}</p>
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">{stat.label}</p>
+                  <p className="text-xs text-slate-400 hidden sm:block">{stat.sublabel}</p>
                 </div>
               ))}
             </div>
@@ -413,27 +415,27 @@ export default function LandingPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {examBoards.map((board, index) => (
               <div
                 key={board.name}
-                className="group relative p-6 sm:p-8 bg-white border border-slate-200 rounded-2xl 
+                className="group relative p-4 sm:p-6 md:p-8 bg-white border-2 border-slate-200 rounded-xl sm:rounded-2xl 
                            hover:border-transparent hover:shadow-xl transition-all duration-300
-                           overflow-hidden"
+                           overflow-hidden active:scale-95"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${board.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${board.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 
                 <div className="relative">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${board.color} flex items-center justify-center mb-4 
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${board.color} flex items-center justify-center mb-3 sm:mb-4 
                                   shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="text-white font-bold text-lg">{board.name.charAt(0)}</span>
+                    <span className="text-white font-bold text-base sm:text-lg">{board.name.charAt(0)}</span>
                   </div>
-                  <h3 className="font-display font-bold text-xl text-slate-900 mb-1">
+                  <h3 className="font-display font-bold text-base sm:text-lg md:text-xl text-slate-900 mb-1">
                     {board.name}
                   </h3>
-                  <p className="text-sm text-slate-500 hidden sm:block">
+                  <p className="text-xs sm:text-sm text-slate-600 hidden sm:block">
                     {board.description}
                   </p>
                 </div>
@@ -460,39 +462,39 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {learningModes.map((mode, index) => {
               const Icon = mode.icon;
               return (
                 <div
                   key={mode.title}
-                  className="group relative bg-white border border-slate-200 rounded-2xl p-8 
+                  className="group relative bg-white border-2 border-slate-200 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 
                              hover:shadow-2xl hover:border-transparent transition-all duration-500
-                             hover:-translate-y-2"
+                             hover:-translate-y-1 active:scale-95"
                 >
                   {/* Glossy gradient overlay */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${mode.gradient} opacity-0 
-                                  group-hover:opacity-[0.03] transition-opacity duration-500 rounded-2xl`} />
+                                  group-hover:opacity-[0.05] transition-opacity duration-500 rounded-xl sm:rounded-2xl`} />
                   
                   <div className="relative">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${mode.gradient} 
-                                    flex items-center justify-center mb-6 shadow-lg 
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br ${mode.gradient} 
+                                    flex items-center justify-center mb-4 sm:mb-6 shadow-lg 
                                     group-hover:scale-110 group-hover:shadow-xl transition-all duration-300`}>
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                     </div>
                     
-                    <h3 className="font-display text-2xl font-bold text-slate-900 mb-3">
+                    <h3 className="font-display text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-2 sm:mb-3">
                       {mode.title} Mode
                     </h3>
                     
-                    <p className="text-slate-600 leading-relaxed mb-6">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4 sm:mb-6">
                       {mode.description}
                     </p>
                     
-                    <div className={`inline-flex items-center gap-2 text-sm font-medium 
+                    <div className={`inline-flex items-center gap-2 text-xs sm:text-sm font-semibold 
                                     text-${mode.color}-600 group-hover:gap-3 transition-all`}>
                       <span>Get started</span>
-                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>

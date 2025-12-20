@@ -78,23 +78,23 @@ export function Header({
         )}
       >
         <div className="container-app">
-          <div className="flex items-center justify-between h-16 px-4">
+          <div className="flex items-center justify-between h-14 sm:h-16 px-3 sm:px-4">
             {/* Left section */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
               {shouldShowBack ? (
                 <button
                   onClick={handleBack}
-                  className="p-2 -ml-2 hover:bg-white/10 rounded-lg transition-all hover:scale-105 active:scale-95"
+                  className="p-1.5 sm:p-2 -ml-1 sm:-ml-2 hover:bg-white/10 rounded-lg transition-all hover:scale-105 active:scale-95 flex-shrink-0"
                   aria-label="Go back"
                 >
-                  <ArrowLeft className="w-5 h-5 text-slate-300" />
+                  <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 text-slate-300" />
                 </button>
               ) : (
-                <Link href="/home" className="flex items-center gap-2 group">
-                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center shadow-lg shadow-cyan-500/30 group-hover:shadow-cyan-500/50 transition-all group-hover:scale-110">
-                    <GraduationCap className="w-5 h-5 text-white" />
+                <Link href="/home" className="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center shadow-lg shadow-cyan-500/30 group-hover:shadow-cyan-500/50 transition-all group-hover:scale-110">
+                    <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
-                  <span className="font-display font-bold text-lg bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent hidden sm:block">
+                  <span className="font-display font-bold text-base sm:text-lg bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent hidden sm:block">
                     SabiPrep
                   </span>
                 </Link>
@@ -102,19 +102,19 @@ export function Header({
 
               {/* Title */}
               {title && (
-                <div className="flex flex-col">
-                  <h1 className="font-display font-bold text-lg text-white leading-tight">
+                <div className="flex flex-col min-w-0 flex-1">
+                  <h1 className="font-display font-bold text-base sm:text-lg text-white leading-tight truncate">
                     {title}
                   </h1>
                   {subtitle && (
-                    <p className="text-xs text-slate-400">{subtitle}</p>
+                    <p className="text-xs text-slate-400 truncate">{subtitle}</p>
                   )}
                 </div>
               )}
             </div>
 
             {/* Right section */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
               {actions}
 
               {/* Search button (visible on larger screens) */}
@@ -127,14 +127,16 @@ export function Header({
 
               {/* Notifications */}
               {userId && (
-                <NotificationDropdown userId={userId} />
+                <div className="flex-shrink-0">
+                  <NotificationDropdown userId={userId} />
+                </div>
               )}
 
               {/* Profile Avatar */}
               {user && (
                 <Link
                   href="/profile"
-                  className="hidden sm:flex w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-violet-500 items-center justify-center text-white text-sm font-bold border-2 border-primary/20 hover:border-cyan-500/50 transition-all hover:scale-110 shadow-lg shadow-cyan-500/30"
+                  className="hidden sm:flex w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-violet-500 items-center justify-center text-white text-sm font-bold border-2 border-primary/20 hover:border-cyan-500/50 transition-all hover:scale-110 shadow-lg shadow-cyan-500/30 flex-shrink-0"
                   aria-label="Profile"
                 >
                   {user.email?.charAt(0).toUpperCase() || 'U'}
@@ -144,11 +146,11 @@ export function Header({
               {/* Menu button - Always visible */}
               <button
                 onClick={() => setDrawerOpen(true)}
-                className="p-2.5 hover:bg-white/10 rounded-xl transition-all hover:scale-105 active:scale-95 bg-white/5"
+                className="p-2 sm:p-2.5 hover:bg-white/10 rounded-xl transition-all hover:scale-105 active:scale-95 bg-white/5 flex-shrink-0"
                 aria-label="Open menu"
                 type="button"
               >
-                <Menu className="w-5 h-5 text-white" />
+                <Menu className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </button>
             </div>
           </div>
