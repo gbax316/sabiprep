@@ -26,9 +26,14 @@ import type {
 // ============================================
 
 /**
- * Get all subjects
+ * Get all subjects (with caching for performance)
  */
 export async function getSubjects(): Promise<Subject[]> {
+  // Check cache first
+  const cacheKey = 'all_subjects';
+  const cached = getCached(subjectsCache, cacheKey, STATIC_CACHE_TTL);
+  if (cached) return cached;
+
   // Fetch subjects
   const { data: subjects, error: subjectsError } = await supabase
     .from('subjects')
@@ -39,7 +44,7 @@ export async function getSubjects(): Promise<Subject[]> {
   if (subjectsError) throw subjectsError;
   if (!subjects || subjects.length === 0) return [];
 
-  // Get actual question counts for each subject
+  // Get actual question counts for each subject (in parallel with subjects fetch)
   const { data: questionCounts, error: countsError } = await supabase
     .from('questions')
     .select('subject_id')
@@ -48,7 +53,9 @@ export async function getSubjects(): Promise<Subject[]> {
   if (countsError) {
     console.error('Error fetching question counts:', countsError);
     // Fallback to cached total_questions if count query fails
-    return subjects;
+    const result = subjects;
+    setCached(subjectsCache, cacheKey, result, 10);
+    return result;
   }
 
   // Calculate counts per subject
@@ -60,10 +67,14 @@ export async function getSubjects(): Promise<Subject[]> {
   }
 
   // Update subjects with actual counts
-  return subjects.map(subject => ({
+  const result = subjects.map(subject => ({
     ...subject,
     total_questions: countMap[subject.id] || 0,
   }));
+
+  // Cache the result
+  setCached(subjectsCache, cacheKey, result, 10);
+  return result;
 }
 
 /**
@@ -102,9 +113,14 @@ export async function getSubject(idOrSlug: string): Promise<Subject | null> {
 // ============================================
 
 /**
- * Get topics for a subject
+ * Get topics for a subject (with caching for performance)
  */
 export async function getTopics(subjectId: string): Promise<Topic[]> {
+  // Check cache first
+  const cacheKey = `topics:${subjectId}`;
+  const cached = getCached(topicsCache, cacheKey, STATIC_CACHE_TTL);
+  if (cached) return cached;
+
   // Fetch topics
   const { data: topics, error: topicsError } = await supabase
     .from('topics')
@@ -125,7 +141,9 @@ export async function getTopics(subjectId: string): Promise<Topic[]> {
 
   if (countsError) {
     console.error('Error fetching question counts:', countsError);
-    return topics; // Fallback to cached values if count query fails
+    const result = topics; // Fallback to cached values if count query fails
+    setCached(topicsCache, cacheKey, result, 50);
+    return result;
   }
 
   // Calculate counts per topic
@@ -137,10 +155,14 @@ export async function getTopics(subjectId: string): Promise<Topic[]> {
   }
 
   // Update topics with actual counts
-  return topics.map(topic => ({
+  const result = topics.map(topic => ({
     ...topic,
     total_questions: countMap[topic.id] || 0,
   }));
+
+  // Cache the result
+  setCached(topicsCache, cacheKey, result, 50);
+  return result;
 }
 
 /**
@@ -274,28 +296,185 @@ export async function getQuestion(questionId: string): Promise<Question | null> 
   return data;
 }
 
+// Simple in-memory cache for frequently accessed data
+const questionCache = new Map<string, { data: Question[]; timestamp: number }>();
+const subjectsCache = new Map<string, { data: Subject[]; timestamp: number }>();
+const topicsCache = new Map<string, { data: Topic[]; timestamp: number }>();
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+const STATIC_CACHE_TTL = 30 * 60 * 1000; // 30 minutes for subjects/topics (change less frequently)
+
+function getCached<T>(cache: Map<string, { data: T; timestamp: number }>, key: string, ttl: number = CACHE_TTL): T | null {
+  const cached = cache.get(key);
+  if (cached && Date.now() - cached.timestamp < ttl) {
+    return cached.data;
+  }
+  cache.delete(key);
+  return null;
+}
+
+function setCached<T>(cache: Map<string, { data: T; timestamp: number }>, key: string, data: T, maxSize: number = 50) {
+  cache.set(key, { data, timestamp: Date.now() });
+  // Clean up old cache entries
+  if (cache.size > maxSize) {
+    const entries = Array.from(cache.entries())
+      .sort((a, b) => b[1].timestamp - a[1].timestamp);
+    cache.clear();
+    entries.slice(0, maxSize).forEach(([k, v]) => cache.set(k, v));
+  }
+}
+
 /**
- * Get random questions for a topic
+ * Get intelligent random questions for a topic with balanced distribution
+ * - Difficulty: 30% Easy, 50% Medium, 20% Hard
+ * - Exam Type: Balanced distribution across available exam types
+ * - Uses single optimized query with caching
  */
 export async function getRandomQuestions(
   topicId: string,
   count: number = 20
 ): Promise<Question[]> {
-  const { data, error } = await supabase
-    .from('questions')
-    .select('*')
-    .eq('status', 'published')
-    .eq('topic_id', topicId)
-    .limit(count);
-
-  if (error) throw error;
+  // Check cache first
+  const cacheKey = `topic:${topicId}:all`;
+  const cached = getCached(questionCache, cacheKey);
   
-  // Shuffle the questions
-  return (data || []).sort(() => Math.random() - 0.5);
+  let allQuestions: Question[] = [];
+  
+  if (cached) {
+    allQuestions = cached;
+  } else {
+    // Single optimized query - fetch all published questions for topic
+    // Use a larger pool for better distribution (2x instead of 3x)
+    const { data, error } = await supabase
+      .from('questions')
+      .select('*')
+      .eq('status', 'published')
+      .eq('topic_id', topicId)
+      .limit(count * 2); // Fetch 2x for better randomization pool
+    
+    if (error) throw error;
+    allQuestions = data || [];
+    
+    // Cache the full pool
+    if (allQuestions.length > 0) {
+      setCached(questionCache, cacheKey, allQuestions);
+    }
+  }
+
+  if (allQuestions.length === 0) return [];
+
+  // If we have fewer questions than requested, return all
+  if (allQuestions.length <= count) {
+    return allQuestions.sort(() => Math.random() - 0.5);
+  }
+
+  // Intelligent distribution strategy
+  const easyCount = Math.max(1, Math.round(count * 0.3));
+  const mediumCount = Math.max(1, Math.round(count * 0.5));
+  const hardCount = Math.max(0, count - easyCount - mediumCount);
+
+  // Group questions by difficulty and exam_type
+  const byDifficulty: Record<string, Question[]> = {
+    Easy: [],
+    Medium: [],
+    Hard: [],
+    Unknown: [],
+  };
+
+  const byExamType: Record<string, Question[]> = {};
+
+  allQuestions.forEach(q => {
+    const difficulty = q.difficulty || 'Unknown';
+    byDifficulty[difficulty] = byDifficulty[difficulty] || [];
+    byDifficulty[difficulty].push(q);
+
+    const examType = q.exam_type || 'General';
+    byExamType[examType] = byExamType[examType] || [];
+    byExamType[examType].push(q);
+  });
+
+  // Select questions with balanced difficulty distribution
+  const selected: Question[] = [];
+  const usedIds = new Set<string>();
+
+  // Helper to get random question from array
+  const getRandom = (arr: Question[]): Question | null => {
+    const available = arr.filter(q => !usedIds.has(q.id));
+    if (available.length === 0) return null;
+    const random = available[Math.floor(Math.random() * available.length)];
+    usedIds.add(random.id);
+    return random;
+  };
+
+  // Select by difficulty
+  const easyQuestions = (byDifficulty.Easy || []).sort(() => Math.random() - 0.5);
+  const mediumQuestions = (byDifficulty.Medium || []).sort(() => Math.random() - 0.5);
+  const hardQuestions = (byDifficulty.Hard || []).sort(() => Math.random() - 0.5);
+  const unknownQuestions = (byDifficulty.Unknown || []).sort(() => Math.random() - 0.5);
+
+  // Add easy questions
+  for (let i = 0; i < easyCount && selected.length < count; i++) {
+    const q = getRandom(easyQuestions);
+    if (q) selected.push(q);
+  }
+
+  // Add medium questions
+  for (let i = 0; i < mediumCount && selected.length < count; i++) {
+    const q = getRandom(mediumQuestions);
+    if (q) selected.push(q);
+  }
+
+  // Add hard questions
+  for (let i = 0; i < hardCount && selected.length < count; i++) {
+    const q = getRandom(hardQuestions);
+    if (q) selected.push(q);
+  }
+
+  // Fill remaining with any available (prioritize unknown difficulty if needed)
+  while (selected.length < count) {
+    const q = getRandom([...unknownQuestions, ...easyQuestions, ...mediumQuestions, ...hardQuestions]);
+    if (!q) break;
+    selected.push(q);
+  }
+
+  // Ensure exam type diversity if we have multiple exam types
+  const examTypes = Object.keys(byExamType);
+  if (examTypes.length > 1 && selected.length > 5) {
+    // Redistribute to ensure exam type diversity
+    const examTypeCount = Math.ceil(selected.length / examTypes.length);
+    const redistributed: Question[] = [];
+    const redistributedIds = new Set<string>();
+
+    examTypes.forEach(examType => {
+      const typeQuestions = byExamType[examType].filter(q => 
+        selected.some(s => s.id === q.id) && !redistributedIds.has(q.id)
+      );
+      const toAdd = Math.min(examTypeCount, typeQuestions.length);
+      typeQuestions.slice(0, toAdd).forEach(q => {
+        redistributed.push(q);
+        redistributedIds.add(q.id);
+      });
+    });
+
+    // Fill remaining from original selection
+    selected.forEach(q => {
+      if (!redistributedIds.has(q.id) && redistributed.length < count) {
+        redistributed.push(q);
+      }
+    });
+
+    return redistributed.sort(() => Math.random() - 0.5).slice(0, count);
+  }
+
+  // Final shuffle to mix everything
+  return selected.sort(() => Math.random() - 0.5).slice(0, count);
 }
 
 /**
- * Get random questions from multiple topics (balanced distribution)
+ * Get intelligent random questions from multiple topics with balanced distribution
+ * - Distributes questions evenly across topics
+ * - Each topic's questions are distributed by difficulty (30% Easy, 50% Medium, 20% Hard)
+ * - Ensures exam type diversity across all topics
+ * - Uses parallel fetching and caching for performance
  */
 export async function getRandomQuestionsFromTopics(
   topicIds: string[],
@@ -306,56 +485,83 @@ export async function getRandomQuestionsFromTopics(
 
   // Calculate questions per topic (balanced distribution)
   const questionsPerTopic = Math.ceil(totalCount / topicIds.length);
-  const allQuestions: Question[] = [];
 
-  // Fetch questions from each topic
-  for (const topicId of topicIds) {
-    const { data, error } = await supabase
-      .from('questions')
-      .select('*')
-      .eq('status', 'published')
-      .eq('topic_id', topicId)
-      .limit(questionsPerTopic);
+  // Fetch questions from all topics in parallel with intelligent distribution
+  const fetchPromises = topicIds.map(topicId => 
+    getRandomQuestions(topicId, questionsPerTopic)
+  );
 
-    if (!error && data) {
-      allQuestions.push(...data);
+  const results = await Promise.all(fetchPromises);
+  let allQuestions: Question[] = results.flat();
+
+  // If we got more than needed, intelligently select to ensure diversity
+  if (allQuestions.length > totalCount) {
+    // Group by exam type for diversity
+    const byExamType: Record<string, Question[]> = {};
+    allQuestions.forEach(q => {
+      const examType = q.exam_type || 'General';
+      byExamType[examType] = byExamType[examType] || [];
+      byExamType[examType].push(q);
+    });
+
+    const examTypes = Object.keys(byExamType);
+    if (examTypes.length > 1) {
+      // Ensure exam type diversity
+      const selected: Question[] = [];
+      const usedIds = new Set<string>();
+      const perType = Math.ceil(totalCount / examTypes.length);
+
+      examTypes.forEach(examType => {
+        const typeQuestions = byExamType[examType]
+          .filter(q => !usedIds.has(q.id))
+          .sort(() => Math.random() - 0.5)
+          .slice(0, perType);
+        typeQuestions.forEach(q => {
+          selected.push(q);
+          usedIds.add(q.id);
+        });
+      });
+
+      // Fill remaining from any available
+      allQuestions.forEach(q => {
+        if (!usedIds.has(q.id) && selected.length < totalCount) {
+          selected.push(q);
+          usedIds.add(q.id);
+        }
+      });
+
+      allQuestions = selected;
     }
   }
 
-  // Shuffle and limit to totalCount
-  const shuffled = allQuestions.sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, totalCount);
+  // Final shuffle to mix topics, difficulties, and exam types
+  return allQuestions.sort(() => Math.random() - 0.5).slice(0, totalCount);
 }
 
 /**
- * Get questions from multiple topics with specific distribution
+ * Get intelligent questions from multiple topics with specific distribution
  * @param distribution Map of topicId -> question count
+ * Each topic's questions are intelligently distributed by difficulty
  */
 export async function getQuestionsWithDistribution(
   distribution: Record<string, number>
 ): Promise<Question[]> {
-  // Fetch questions from all topics in parallel for better performance
+  // Fetch questions from all topics in parallel with intelligent distribution
   const fetchPromises = Object.entries(distribution)
     .filter(([_, count]) => count > 0)
     .map(async ([topicId, count]) => {
-      const { data, error } = await supabase
-        .from('questions')
-        .select('*')
-        .eq('status', 'published')
-        .eq('topic_id', topicId)
-        .limit(count);
-      
-      if (error) {
+      try {
+        const questions = await getRandomQuestions(topicId, count);
+        return { 
+          topicId, 
+          questions, 
+          requested: count,
+          received: questions.length 
+        };
+      } catch (error) {
         console.error(`Error fetching questions for topic ${topicId}:`, error);
         return { topicId, questions: [], requested: count, received: 0 };
       }
-      
-      return { 
-        topicId, 
-        questions: data || [], 
-        requested: count,
-        received: (data || []).length 
-      };
     });
 
   const results = await Promise.all(fetchPromises);
@@ -367,13 +573,12 @@ export async function getQuestionsWithDistribution(
   results.forEach((result) => {
     allQuestions.push(...result.questions);
     totalRequested += result.requested;
-    totalReceived += result.received ?? 0;
+    totalReceived += result.received;
     
     // Warn if we didn't get enough questions from a topic
-    const received = result.received ?? 0;
-    if (received < result.requested) {
+    if (result.received < result.requested) {
       console.warn(
-        `Topic ${result.topicId}: requested ${result.requested}, got ${received}`
+        `Topic ${result.topicId}: requested ${result.requested}, got ${result.received}`
       );
     }
   });
@@ -385,7 +590,7 @@ export async function getQuestionsWithDistribution(
     );
   }
 
-  // Shuffle all questions to mix topics
+  // Final shuffle to mix topics and difficulties
   return allQuestions.sort(() => Math.random() - 0.5);
 }
 

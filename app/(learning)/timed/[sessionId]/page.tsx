@@ -128,53 +128,51 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
       setSession(sessionData);
 
-      // Load subject and questions/topics in parallel
-      const loadPromises: Promise<any>[] = [getSubject(sessionData.subject_id)];
-
-      // Load questions - support both single and multi-topic
-      let questionsData: Question[] = [];
-      let topicsData: Topic[] = [];
+      // Load all data in parallel for maximum performance
+      let questionsPromise: Promise<Question[]>;
+      let topicsPromise: Promise<Topic[]>;
 
       if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
         // Multi-topic session - check for distribution in sessionStorage
         const timedConfigStr = sessionStorage.getItem(`timedConfig_${sessionId}`);
         if (timedConfigStr) {
           const { distribution } = JSON.parse(timedConfigStr);
-          questionsData = await getQuestionsWithDistribution(distribution);
+          questionsPromise = getQuestionsWithDistribution(distribution);
         } else {
           // Fallback to balanced distribution
-          const { getRandomQuestionsFromTopics } = await import('@/lib/api');
-          questionsData = await getRandomQuestionsFromTopics(
+          questionsPromise = getRandomQuestionsFromTopics(
             sessionData.topic_ids,
             sessionData.total_questions
           );
         }
-        
-        // Load topics
-        const allTopics = await getTopics(sessionData.subject_id);
-        topicsData = allTopics.filter(t => sessionData.topic_ids!.includes(t.id));
-        setTopics(topicsData);
+        topicsPromise = getTopics(sessionData.subject_id).then(allTopics =>
+          allTopics.filter(t => sessionData.topic_ids!.includes(t.id))
+        );
       } else {
         // Single topic session (backward compatible)
         const topicId = sessionData.topic_id || sessionData.topic_ids?.[0];
         if (topicId) {
-          const [topicData, questionsResult] = await Promise.all([
-            getTopic(topicId),
-            getRandomQuestions(topicId, sessionData.total_questions),
-          ]);
-          questionsData = questionsResult;
-          if (topicData) {
-            topicsData = [topicData];
-            setTopics([topicData]);
-          }
+          questionsPromise = getRandomQuestions(topicId, sessionData.total_questions);
+          topicsPromise = getTopic(topicId).then(t => t ? [t] : []);
+        } else {
+          questionsPromise = Promise.resolve([]);
+          topicsPromise = Promise.resolve([]);
         }
       }
 
-      setQuestions(questionsData);
+      // Load everything in parallel
+      const [subjectData, questionsData, topicsData] = await Promise.all([
+        getSubject(sessionData.subject_id),
+        questionsPromise,
+        topicsPromise,
+      ]);
 
-      // Load subject
-      const subjectData = await getSubject(sessionData.subject_id);
       setSubject(subjectData);
+      setQuestions(questionsData);
+      setTopics(topicsData);
+      if (topicsData.length > 0) {
+        // Set first topic for display
+      }
 
       // Reset timer first, then start exam after a brief delay
       // This ensures the timer is properly initialized before starting

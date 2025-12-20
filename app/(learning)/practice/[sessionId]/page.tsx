@@ -96,47 +96,57 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         setCurrentIndex(sessionData.last_question_index);
       }
 
-      // Load questions - support both single and multi-topic sessions
-      let questionsData: Question[] = [];
-      let topicData: Topic | null = null;
+      // Load all data in parallel for maximum performance
+      const loadPromises: Promise<any>[] = [
+        getSubject(sessionData.subject_id), // Always load subject in parallel
+      ];
+
+      let questionsPromise: Promise<Question[]>;
+      let topicsPromise: Promise<Topic[]>;
 
       if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
         // Multi-topic session - load questions and topics in parallel
-        const [questionsResult, allTopics] = await Promise.all([
-          getRandomQuestionsFromTopics(
-            sessionData.topic_ids,
-            sessionData.total_questions
-          ),
-          getTopics(sessionData.subject_id),
-        ]);
-        questionsData = questionsResult;
-        const selectedTopics = allTopics.filter(t => sessionData.topic_ids!.includes(t.id));
-        setTopics(selectedTopics);
-        if (selectedTopics.length > 0) {
-          topicData = selectedTopics[0];
-          setTopic(topicData);
-        }
+        questionsPromise = getRandomQuestionsFromTopics(
+          sessionData.topic_ids,
+          sessionData.total_questions
+        );
+        topicsPromise = getTopics(sessionData.subject_id);
+        loadPromises.push(questionsPromise, topicsPromise);
       } else {
         // Single topic session (backward compatible)
         const topicId = sessionData.topic_id || sessionData.topic_ids?.[0];
         if (topicId) {
-          [topicData, questionsData] = await Promise.all([
-            getTopic(topicId),
-            getRandomQuestions(topicId, sessionData.total_questions),
-          ]);
-          setTopic(topicData);
-          if (topicData) {
-            setTopics([topicData]);
-          }
+          questionsPromise = getRandomQuestions(topicId, sessionData.total_questions);
+          topicsPromise = getTopic(topicId).then(t => t ? [t] : []);
+          loadPromises.push(questionsPromise, topicsPromise);
+        } else {
+          questionsPromise = Promise.resolve([]);
+          topicsPromise = Promise.resolve([]);
         }
       }
 
-      setQuestions(questionsData);
+      // Wait for all data in parallel
+      const [subjectData, questionsData, topicsResult] = await Promise.all(loadPromises);
+      
+      setSubject(subjectData);
+      setQuestions(questionsData || []);
 
-      // Load subject (only if not already loaded)
-      if (sessionData.subject_id && !subject) {
-        const subjectData = await getSubject(sessionData.subject_id);
-        setSubject(subjectData);
+      if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
+        // Multi-topic: filter to selected topics
+        const selectedTopics = (topicsResult || []).filter((t: Topic) => 
+          sessionData.topic_ids!.includes(t.id)
+        );
+        setTopics(selectedTopics);
+        if (selectedTopics.length > 0) {
+          setTopic(selectedTopics[0]);
+        }
+      } else {
+        // Single topic
+        const topics = topicsResult || [];
+        if (topics.length > 0) {
+          setTopic(topics[0]);
+          setTopics(topics);
+        }
       }
     } catch (error) {
       console.error('Error loading session:', error);
