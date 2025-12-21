@@ -196,17 +196,20 @@ export default function ProfileSettingsPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
               >
-                <MagicCard
-                  hover
-                  className={`
-                    p-4 cursor-pointer transition-all
-                    ${isSelected 
-                      ? 'bg-gradient-to-br from-violet-500/20 to-cyan-500/20 border-violet-500/50 shadow-lg shadow-violet-500/20' 
-                      : 'bg-slate-900/50 border-slate-700 hover:border-slate-600'
-                    }
-                  `}
+                <div
                   onClick={() => handleSubjectToggle(subject.id)}
+                  className="cursor-pointer"
                 >
+                  <MagicCard
+                    hover
+                    className={`
+                      p-4 transition-all
+                      ${isSelected 
+                        ? 'bg-gradient-to-br from-violet-500/20 to-cyan-500/20 border-violet-500/50 shadow-lg shadow-violet-500/20' 
+                        : 'bg-slate-900/50 border-slate-700 hover:border-slate-600'
+                      }
+                    `}
+                  >
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-start gap-3 flex-1">
                       <div className={`
@@ -247,6 +250,7 @@ export default function ProfileSettingsPage() {
                     </div>
                   </div>
                 </MagicCard>
+                </div>
               </motion.div>
             );
           })}
