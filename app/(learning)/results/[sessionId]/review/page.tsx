@@ -44,8 +44,14 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
     try {
       setLoading(true);
       const [sessionData, sessionAnswers] = await Promise.all([
-        getSession(sessionId),
-        getSessionAnswers(sessionId),
+        getSession(sessionId).catch(err => {
+          console.error('Error fetching session:', err);
+          return null;
+        }),
+        getSessionAnswers(sessionId).catch(err => {
+          console.error('Error fetching session answers:', err);
+          return [];
+        }),
       ]);
 
       if (!sessionData) {
@@ -55,16 +61,34 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
       }
 
       setSession(sessionData);
-      setAnswers(sessionAnswers);
+      setAnswers(sessionAnswers || []);
 
       // Get questions from session answers
-      const questionIds = sessionAnswers.map(a => a.question_id);
-      const questionsData = await getQuestionsByIds(questionIds);
-      setQuestions(questionsData);
+      const questionIds = (sessionAnswers || []).map(a => a.question_id).filter(Boolean);
+      
+      if (questionIds.length === 0) {
+        // No answers found - might be a guest session without stored answers
+        console.warn('No answers found for session. This might be a guest session without stored answers.');
+        setQuestions([]);
+        return;
+      }
+
+      const questionsData = await getQuestionsByIds(questionIds).catch(err => {
+        console.error('Error fetching questions:', err);
+        return [];
+      });
+      
+      setQuestions(questionsData || []);
     } catch (error) {
       console.error('Error loading review data:', error);
-      alert('Failed to load review data');
-      router.push(`/results/${sessionId}`);
+      // Don't show alert for network errors - they're handled above
+      if (error instanceof TypeError && error.message.includes('fetch')) {
+        console.error('Network error - this might be a guest session or connectivity issue');
+      }
+      // Only redirect if it's not a guest session
+      if (!sessionId.startsWith('guest_')) {
+        router.push(`/results/${sessionId}`);
+      }
     } finally {
       setLoading(false);
     }
@@ -113,14 +137,38 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
     );
   }
 
-  if (!session || questions.length === 0) {
+  if (!session) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-slate-950">
         <div className="text-center">
-          <p className="text-slate-400 mb-4">No questions found</p>
-          <Link href={`/results/${sessionId}`}>
-            <Button variant="primary">Back to Results</Button>
+          <p className="text-slate-400 mb-4">Session not found</p>
+          <Link href="/home">
+            <Button variant="primary">Back to Home</Button>
           </Link>
+        </div>
+      </div>
+    );
+  }
+
+  if (questions.length === 0 || answers.length === 0) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-slate-950">
+        <div className="text-center max-w-md px-4">
+          <p className="text-slate-400 mb-2">
+            {sessionId.startsWith('guest_') 
+              ? 'Review is not available for guest sessions. Please sign up to save and review your answers.'
+              : 'No questions or answers found for this session.'}
+          </p>
+          <div className="flex gap-3 justify-center mt-4">
+            <Link href={`/results/${sessionId}`}>
+              <Button variant="outline">Back to Results</Button>
+            </Link>
+            {sessionId.startsWith('guest_') && (
+              <Link href="/home">
+                <Button variant="primary">Sign Up</Button>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     );

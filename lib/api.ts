@@ -1008,6 +1008,21 @@ export async function createSessionAnswer(
  * Get all answers for a session
  */
 export async function getSessionAnswers(sessionId: string): Promise<SessionAnswer[]> {
+  // Check if it's a guest session
+  if (sessionId.startsWith('guest_') && typeof window !== 'undefined') {
+    const guestAnswersStr = sessionStorage.getItem(`guest_answers_${sessionId}`);
+    if (guestAnswersStr) {
+      try {
+        return JSON.parse(guestAnswersStr) as SessionAnswer[];
+      } catch (e) {
+        console.error('Error parsing guest answers:', e);
+        return [];
+      }
+    }
+    return [];
+  }
+  
+  // Database session
   const { data, error } = await supabase
     .from('session_answers')
     .select('*')
@@ -1024,16 +1039,35 @@ export async function getSessionAnswers(sessionId: string): Promise<SessionAnswe
 export async function getQuestionsByIds(questionIds: string[]): Promise<Question[]> {
   if (questionIds.length === 0) return [];
   
-  const { data, error } = await supabase
-    .from('questions')
-    .select('*')
-    .in('id', questionIds);
+  // Check if any question IDs are from guest sessions - guest questions might be stored differently
+  // For now, we'll try to fetch from database (guest questions should still be in the database)
+  // If it fails, we'll return empty array
+  try {
+    const { data, error } = await supabase
+      .from('questions')
+      .select('*')
+      .in('id', questionIds);
 
-  if (error) throw error;
-  
-  // Preserve the order of questionIds
-  const questionMap = new Map((data || []).map(q => [q.id, q]));
-  return questionIds.map(id => questionMap.get(id)).filter(Boolean) as Question[];
+    if (error) {
+      // For guest sessions, this might fail - return empty array instead of throwing
+      if (typeof window !== 'undefined') {
+        console.warn('Error fetching questions (might be guest session):', error);
+        return [];
+      }
+      throw error;
+    }
+    
+    // Preserve the order of questionIds
+    const questionMap = new Map((data || []).map(q => [q.id, q]));
+    return questionIds.map(id => questionMap.get(id)).filter(Boolean) as Question[];
+  } catch (error) {
+    // Handle network errors gracefully for guest sessions
+    if (error instanceof TypeError && error.message.includes('fetch')) {
+      console.warn('Network error fetching questions (might be guest session):', error);
+      return [];
+    }
+    throw error;
+  }
 }
 
 // ============================================
