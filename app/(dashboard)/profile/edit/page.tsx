@@ -207,9 +207,9 @@ export default function EditProfilePage() {
               size="lg"
               onClick={handleSave}
               disabled={saving || !fullName.trim()}
-              leftIcon={<Save className="w-5 h-5" />}
               className="w-full"
             >
+              <Save className="w-5 h-5" />
               {saving ? 'Saving...' : 'Save Changes'}
             </MagicButton>
           </div>

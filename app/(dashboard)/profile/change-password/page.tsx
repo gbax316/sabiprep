@@ -297,9 +297,9 @@ export default function ChangePasswordPage() {
               size="lg"
               onClick={handleSave}
               disabled={saving || !currentPassword || !newPassword || !confirmPassword}
-              leftIcon={<Lock className="w-5 h-5" />}
               className="w-full"
             >
+              <Lock className="w-5 h-5" />
               {saving ? 'Updating Password...' : 'Update Password'}
             </MagicButton>
           </div>

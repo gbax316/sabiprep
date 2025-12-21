@@ -259,9 +259,9 @@ export default function ProfileSettingsPage() {
             size="lg"
             onClick={handleSave}
             disabled={saving}
-            leftIcon={<Save className="w-5 h-5" />}
             className="w-full"
           >
+            <Save className="w-5 h-5" />
             {saving ? 'Saving...' : 'Save Preferences'}
           </MagicButton>
         </div>
