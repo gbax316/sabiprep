@@ -7,8 +7,10 @@ import { Button } from '@/components/common/Button';
 import { QuestionDisplay } from '@/components/common/QuestionDisplay';
 import {
   getSession,
+  getSessionAnswers,
   getRandomQuestions,
   getRandomQuestionsFromTopics,
+  getQuestionsByIds,
   getTopic,
   getTopics,
   getSubject,
@@ -100,8 +102,8 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       const sessionData = await getSession(sessionId);
       
       if (!sessionData) {
-        alert('Session not found');
-        router.push('/home');
+        console.error('Session not found:', sessionId);
+        router.replace('/home');
         return;
       }
 
@@ -112,12 +114,97 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         setShowSignupModal(true);
       }
 
-      // Resume from last question if session was paused
-      if (sessionData.status === 'paused' && sessionData.last_question_index !== undefined) {
-        setCurrentIndex(sessionData.last_question_index);
+      // FIRST: Try to restore original questions from session_answers
+      const sessionAnswers = await getSessionAnswers(sessionId);
+      let questionsData: Question[] = [];
+      
+      if (sessionAnswers.length > 0) {
+        // Restore original questions
+        const questionIds = sessionAnswers.map(a => a.question_id);
+        questionsData = await getQuestionsByIds(questionIds);
+        
+        // If we got questions, use them
+        if (questionsData.length > 0) {
+          setQuestions(questionsData);
+          
+          // Restore answered state
+          const answeredSet = new Set(sessionAnswers
+            .filter(a => a.user_answer !== null)
+            .map(a => a.question_id));
+          setAnsweredQuestions(answeredSet);
+          
+          // Restore correct answers count
+          const correctCount = sessionAnswers.filter(a => a.is_correct === true).length;
+          setCorrectAnswers(correctCount);
+          
+          // Restore hint usage
+          const hintMap = new Map<string, 1 | 2 | 3>();
+          sessionAnswers.forEach(answer => {
+            if (answer.hint_level && (answer.hint_level === 1 || answer.hint_level === 2 || answer.hint_level === 3)) {
+              hintMap.set(answer.question_id, answer.hint_level);
+            }
+          });
+          setHintUsage(hintMap);
+          
+          // Restore solution viewed state
+          const solutionSet = new Set(sessionAnswers
+            .filter(a => a.solution_viewed === true)
+            .map(a => a.question_id));
+          setSolutionViewed(solutionSet);
+          
+          // Restore attempt counts
+          const attemptMap = new Map<string, number>();
+          sessionAnswers.forEach(answer => {
+            if (answer.attempt_count) {
+              attemptMap.set(answer.question_id, answer.attempt_count);
+            }
+          });
+          setAttemptCounts(attemptMap);
+          
+          // Restore first attempt correct state
+          const firstAttemptMap = new Map<string, boolean>();
+          sessionAnswers.forEach(answer => {
+            if (answer.first_attempt_correct !== null && answer.first_attempt_correct !== undefined) {
+              firstAttemptMap.set(answer.question_id, answer.first_attempt_correct);
+            }
+          });
+          setFirstAttemptCorrect(firstAttemptMap);
+          
+          // Load subject and topics
+          const [subjectData, topicsData] = await Promise.all([
+            getSubject(sessionData.subject_id),
+            sessionData.topic_ids && sessionData.topic_ids.length > 1
+              ? getTopics(sessionData.subject_id).then(allTopics => 
+                  allTopics.filter(t => sessionData.topic_ids!.includes(t.id))
+                )
+              : getTopic(sessionData.topic_id || sessionData.topic_ids?.[0] || '').then(t => t ? [t] : [])
+          ]);
+          
+          setSubject(subjectData);
+          
+          if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
+            setTopics(topicsData);
+            if (topicsData.length > 0) {
+              setTopic(topicsData[0]);
+            }
+          } else {
+            if (topicsData.length > 0) {
+              setTopic(topicsData[0]);
+              setTopics(topicsData);
+            }
+          }
+          
+          // Resume from last question if paused
+          if (sessionData.status === 'paused' && sessionData.last_question_index !== undefined) {
+            setCurrentIndex(sessionData.last_question_index);
+          }
+          
+          return; // Successfully restored
+        }
       }
-
-      // Load all data in parallel for maximum performance
+      
+      // FALLBACK: If no session_answers, fetch new questions
+      // This handles brand new sessions that haven't been started yet
       const loadPromises: Promise<any>[] = [
         getSubject(sessionData.subject_id), // Always load subject in parallel
       ];
@@ -147,10 +234,16 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       }
 
       // Wait for all data in parallel
-      const [subjectData, questionsData, topicsResult] = await Promise.all(loadPromises);
+      const [subjectData, newQuestionsData, topicsResult] = await Promise.all(loadPromises);
       
       setSubject(subjectData);
-      setQuestions(questionsData || []);
+      
+      if (!newQuestionsData || newQuestionsData.length === 0) {
+        // No questions available - this will be handled in the render section
+        setQuestions([]);
+      } else {
+        setQuestions(newQuestionsData);
+      }
 
       if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
         // Multi-topic: filter to selected topics
@@ -169,10 +262,17 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
           setTopics(topics);
         }
       }
+      
+      // Resume from last question if paused
+      if (sessionData.status === 'paused' && sessionData.last_question_index !== undefined) {
+        setCurrentIndex(sessionData.last_question_index);
+      }
     } catch (error) {
       console.error('Error loading session:', error);
-      alert('Failed to load session');
-      router.push('/home');
+      // Ensure loading is set to false before redirecting
+      setLoading(false);
+      // Use replace to avoid back button issues
+      router.replace('/home');
     } finally {
       setLoading(false);
     }
@@ -469,10 +569,78 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     );
   }
 
+  if (!session) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <div className="text-center max-w-md p-6">
+          <p className="text-gray-600 mb-4">Session not found</p>
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => router.push('/home')}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            >
+              Go to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (questions.length === 0) {
+    // Get subject info for recovery
+    const subjectId = session.subject_id;
+    const topicId = session.topic_id || session.topic_ids?.[0];
+    
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <div className="text-center max-w-md p-6">
+          <p className="text-gray-600 mb-2">No questions available for this session</p>
+          <p className="text-sm text-gray-500 mb-4">
+            The questions for this session are no longer available.
+          </p>
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => router.push('/subjects')}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            >
+              Start New Session
+            </button>
+            <button
+              onClick={() => router.push('/home')}
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+            >
+              Go to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (!currentQuestion) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <p>No questions available</p>
+        <div className="text-center max-w-md p-6">
+          <p className="text-gray-600 mb-2">Unable to load current question</p>
+          <p className="text-sm text-gray-500 mb-4">
+            There was an error loading the question for this session.
+          </p>
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => router.push('/subjects')}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            >
+              Start New Session
+            </button>
+            <button
+              onClick={() => router.push('/home')}
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+            >
+              Go to Home
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
@@ -481,9 +649,9 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     <div className="min-h-screen bg-gray-50 pb-8">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-3">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          <div className="flex items-center justify-between mb-2 sm:mb-3">
+            <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
               <button
                 onClick={() => {
                   // For guests, navigate to home; for authenticated users, go home
@@ -493,43 +661,38 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
                     router.push('/home');
                   }
                 }}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-1.5 sm:p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
                 aria-label="Go back"
               >
-                <ArrowLeft className="w-5 h-5 text-gray-600" />
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
               </button>
               <button
                 onClick={() => setShowPauseModal(true)}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-1.5 sm:p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
                 title="Pause & Resume Later"
               >
-                <Pause className="w-6 h-6 text-gray-600" />
+                <Pause className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
               </button>
-              <div>
-                <div className="flex items-center gap-2 flex-wrap">
-                  <p className="text-sm text-gray-600">{subject?.name}</p>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
+                  <p className="text-xs sm:text-sm text-gray-600 truncate">{subject?.name}</p>
                   {session?.topic_ids && session.topic_ids.length > 1 ? (
-                    <Badge variant="info" size="sm">
+                    <Badge variant="info" size="sm" className="text-[10px] sm:text-xs">
                       {session.topic_ids.length} Topics
                     </Badge>
                   ) : topic ? (
-                    <Badge variant="info" size="sm">
+                    <Badge variant="info" size="sm" className="text-[10px] sm:text-xs hidden sm:inline-flex">
                       {topic.name}
                     </Badge>
                   ) : null}
                 </div>
-                <h1 className="text-lg font-bold text-gray-900">Practice Mode</h1>
+                <h1 className="text-sm sm:text-lg font-bold text-gray-900">Practice Mode</h1>
               </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Badge variant="info">
-                Question {currentIndex + 1} of {questions.length}
+            <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+              <Badge variant="info" className="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 sm:py-1">
+                {currentIndex + 1}/{questions.length}
               </Badge>
-              {currentQuestion && (
-                <Badge variant="neutral" size="sm">
-                  {currentQuestion.topic_id && topics.find(t => t.id === currentQuestion.topic_id)?.name || 'Practice Mode'}
-                </Badge>
-              )}
             </div>
           </div>
 
@@ -577,7 +740,7 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6">
         {/* Question Display Component */}
         <QuestionDisplay
           question={currentQuestion}
@@ -759,24 +922,37 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         )}
 
         {/* Navigation Buttons */}
-        <div className="flex gap-3">
+        <div className="flex gap-2 sm:gap-3">
           <Button
             variant="outline"
             size="md"
-            leftIcon={<ChevronLeft className="w-5 h-5" />}
+            leftIcon={<ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />}
             onClick={handlePrevious}
             disabled={currentIndex === 0}
+            className="px-2 sm:px-4 text-xs sm:text-sm"
           >
-            Previous
+            <span className="hidden sm:inline">Previous</span>
+            <span className="sm:hidden">Prev</span>
           </Button>
           <Button
             variant="primary"
             size="full"
-            rightIcon={<ChevronRight className="w-5 h-5" />}
+            rightIcon={<ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />}
             onClick={handleNext}
             disabled={!isAnswered}
+            className="text-xs sm:text-sm"
           >
-            {isLastQuestion ? 'Complete Session' : 'Next Question'}
+            {isLastQuestion ? (
+              <>
+                <span className="hidden sm:inline">Complete Session</span>
+                <span className="sm:hidden">Complete</span>
+              </>
+            ) : (
+              <>
+                <span className="hidden sm:inline">Next Question</span>
+                <span className="sm:hidden">Next</span>
+              </>
+            )}
           </Button>
         </div>
 

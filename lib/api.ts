@@ -19,6 +19,7 @@ import type {
   UserRole,
   UserGoal,
   UserGoalType,
+  UserSubjectPreference,
 } from '@/types/database';
 
 // ============================================
@@ -911,6 +912,27 @@ export async function completeSession(
 }
 
 /**
+ * Cleanup invalid sessions (sessions with no questions available)
+ */
+export async function cleanupInvalidSessions(userId: string): Promise<void> {
+  const sessions = await getUserSessions(userId, 100);
+  
+  for (const session of sessions) {
+    if (session.status === 'in_progress' || session.status === 'paused') {
+      try {
+        const validation = await canResumeSession(session.id);
+        if (!validation.canResume) {
+          await updateSession(session.id, { status: 'abandoned' });
+        }
+      } catch (error) {
+        // Don't fail if cleanup fails for one session
+        console.error(`Error cleaning up session ${session.id}:`, error);
+      }
+    }
+  }
+}
+
+/**
  * Complete a session and update goals
  */
 export async function completeSessionWithGoals(
@@ -1031,6 +1053,45 @@ export async function getSessionAnswers(sessionId: string): Promise<SessionAnswe
 
   if (error) throw error;
   return data || [];
+}
+
+/**
+ * Validate if a session can be resumed
+ * Returns true if session has questions available (either from answers or topic)
+ */
+export async function canResumeSession(sessionId: string): Promise<{
+  canResume: boolean;
+  hasAnswers: boolean;
+  questionCount: number;
+  reason?: string;
+}> {
+  // Check if session exists
+  const session = await getSession(sessionId);
+  if (!session) {
+    return { canResume: false, hasAnswers: false, questionCount: 0, reason: 'Session not found' };
+  }
+
+  // Check if session has answers (original questions)
+  const answers = await getSessionAnswers(sessionId);
+  if (answers.length > 0) {
+    return { canResume: true, hasAnswers: true, questionCount: answers.length };
+  }
+
+  // If no answers, check if topic/subject has questions available
+  const topicId = session.topic_id || session.topic_ids?.[0];
+  if (topicId) {
+    try {
+      const questions = await getRandomQuestions(topicId, 1); // Just check if any exist
+      if (questions.length > 0) {
+        return { canResume: true, hasAnswers: false, questionCount: 0 };
+      }
+    } catch (error) {
+      console.error('Error checking questions availability:', error);
+      return { canResume: false, hasAnswers: false, questionCount: 0, reason: 'Error checking questions' };
+    }
+  }
+
+  return { canResume: false, hasAnswers: false, questionCount: 0, reason: 'No questions available' };
 }
 
 /**
@@ -1864,4 +1925,99 @@ export function getGradeLabel(percentage: number): { label: string; emoji: strin
   if (percentage >= 60) return { label: 'Fair', emoji: '👌' };
   if (percentage >= 50) return { label: 'Pass', emoji: '✅' };
   return { label: 'Needs Improvement', emoji: '📚' };
+}
+
+// ============================================
+// USER SUBJECT PREFERENCES
+// ============================================
+
+/**
+ * Get user's preferred subject IDs
+ */
+export async function getUserSubjectPreferences(userId: string): Promise<string[]> {
+  const { data, error } = await supabase
+    .from('user_subject_preferences')
+    .select('subject_id')
+    .eq('user_id', userId);
+
+  if (error) throw error;
+  if (!data) return [];
+
+  return data.map(pref => pref.subject_id);
+}
+
+/**
+ * Set user's subject preferences (replaces all existing preferences)
+ */
+export async function setUserSubjectPreferences(
+  userId: string,
+  subjectIds: string[]
+): Promise<void> {
+  // Delete all existing preferences
+  const { error: deleteError } = await supabase
+    .from('user_subject_preferences')
+    .delete()
+    .eq('user_id', userId);
+
+  if (deleteError) throw deleteError;
+
+  // If no subjects selected, we're done
+  if (subjectIds.length === 0) return;
+
+  // Insert new preferences
+  const preferences = subjectIds.map(subjectId => ({
+    user_id: userId,
+    subject_id: subjectId,
+  }));
+
+  const { error: insertError } = await supabase
+    .from('user_subject_preferences')
+    .insert(preferences);
+
+  if (insertError) throw insertError;
+}
+
+/**
+ * Get full Subject objects for user's preferred subjects
+ */
+export async function getPreferredSubjects(userId: string): Promise<Subject[]> {
+  const preferredIds = await getUserSubjectPreferences(userId);
+  
+  if (preferredIds.length === 0) return [];
+
+  const { data, error } = await supabase
+    .from('subjects')
+    .select('*')
+    .in('id', preferredIds)
+    .eq('status', 'active')
+    .order('name');
+
+  if (error) throw error;
+  if (!data) return [];
+
+  // Get actual question counts for each subject
+  const { data: questionCounts, error: countsError } = await supabase
+    .from('questions')
+    .select('subject_id')
+    .eq('status', 'published')
+    .in('subject_id', preferredIds);
+
+  if (countsError) {
+    console.error('Error fetching question counts:', countsError);
+    return data;
+  }
+
+  // Calculate counts per subject
+  const countMap: Record<string, number> = {};
+  if (questionCounts) {
+    questionCounts.forEach(q => {
+      countMap[q.subject_id] = (countMap[q.subject_id] || 0) + 1;
+    });
+  }
+
+  // Update subjects with actual counts
+  return data.map(subject => ({
+    ...subject,
+    total_questions: countMap[subject.id] || 0,
+  }));
 }

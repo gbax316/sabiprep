@@ -9,9 +9,11 @@ import { QuestionDisplay } from '@/components/common/QuestionDisplay';
 import { QuestionNavigator } from '@/components/common/QuestionNavigator';
 import {
   getSession,
+  getSessionAnswers,
   getRandomQuestions,
   getRandomQuestionsFromTopics,
   getQuestionsWithDistribution,
+  getQuestionsByIds,
   getTopic,
   getSubject,
   getTopics,
@@ -74,15 +76,12 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
     try {
       setLoading(true);
       
-      // Load session and subject in parallel
-      const [sessionData, testConfigStr] = await Promise.all([
-        getSession(sessionId),
-        Promise.resolve(sessionStorage.getItem(`testConfig_${sessionId}`)),
-      ]);
+      // Load session
+      const sessionData = await getSession(sessionId);
       
       if (!sessionData) {
-        alert('Session not found');
-        router.push('/home');
+        console.error('Session not found:', sessionId);
+        router.replace('/home');
         return;
       }
 
@@ -93,12 +92,53 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
         setShowSignupModal(true);
       }
 
-      // Load subject and questions/topics in parallel
-      const loadPromises: Promise<any>[] = [getSubject(sessionData.subject_id)];
-
-      // Load questions - support both single and multi-topic
+      // FIRST: Try to restore original questions from session_answers
+      const sessionAnswers = await getSessionAnswers(sessionId);
       let questionsData: Question[] = [];
       let topicsData: Topic[] = [];
+      
+      if (sessionAnswers.length > 0) {
+        // Restore original questions
+        const questionIds = sessionAnswers.map(a => a.question_id);
+        questionsData = await getQuestionsByIds(questionIds);
+        
+        // If we got questions, use them
+        if (questionsData.length > 0) {
+          setQuestions(questionsData);
+          
+          // Restore answered state
+          const answersMap = new Map<string, 'A' | 'B' | 'C' | 'D' | 'E'>();
+          sessionAnswers.forEach(answer => {
+            if (answer.user_answer) {
+              answersMap.set(answer.question_id, answer.user_answer as 'A' | 'B' | 'C' | 'D' | 'E');
+            }
+          });
+          setAnswers(answersMap);
+          
+          // Restore flagged questions
+          // Note: Flagged state might not be stored in session_answers, so we'll keep current state
+          
+          // Load subject and topics
+          const [subjectData, topicsResult] = await Promise.all([
+            getSubject(sessionData.subject_id),
+            sessionData.topic_ids && sessionData.topic_ids.length > 1
+              ? getTopics(sessionData.subject_id).then(allTopics => 
+                  allTopics.filter(t => sessionData.topic_ids!.includes(t.id))
+                )
+              : getTopic(sessionData.topic_id || sessionData.topic_ids?.[0] || '').then(t => t ? [t] : [])
+          ]);
+          
+          setSubject(subjectData);
+          setTopics(topicsResult);
+          
+          return; // Successfully restored
+        }
+      }
+      
+      // FALLBACK: If no session_answers, fetch new questions
+      // This handles brand new sessions that haven't been started yet
+      const testConfigStr = sessionStorage.getItem(`testConfig_${sessionId}`);
+      const loadPromises: Promise<any>[] = [getSubject(sessionData.subject_id)];
 
       if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
         // Multi-topic session - check for distribution in sessionStorage
@@ -193,11 +233,16 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
         }
       }
 
-      setQuestions(questionsData);
+      if (!questionsData || questionsData.length === 0) {
+        // No questions available - this will be handled in the render section
+        setQuestions([]);
+      } else {
+        setQuestions(questionsData);
+      }
     } catch (error) {
       console.error('Error loading session:', error);
-      alert('Failed to load session');
-      router.push('/home');
+      setLoading(false);
+      router.replace('/home');
     } finally {
       setLoading(false);
     }
@@ -340,10 +385,78 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
     );
   }
 
+  if (!session) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <div className="text-center max-w-md p-6">
+          <p className="text-gray-600 mb-4">Session not found</p>
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => router.push('/home')}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            >
+              Go to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (questions.length === 0) {
+    // Get subject info for recovery
+    const subjectId = session.subject_id;
+    const topicId = session.topic_id || session.topic_ids?.[0];
+    
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <div className="text-center max-w-md p-6">
+          <p className="text-gray-600 mb-2">No questions available for this session</p>
+          <p className="text-sm text-gray-500 mb-4">
+            The questions for this session are no longer available.
+          </p>
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => router.push('/subjects')}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            >
+              Start New Session
+            </button>
+            <button
+              onClick={() => router.push('/home')}
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+            >
+              Go to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (!currentQuestion) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <p>No questions available</p>
+        <div className="text-center max-w-md p-6">
+          <p className="text-gray-600 mb-2">Unable to load current question</p>
+          <p className="text-sm text-gray-500 mb-4">
+            There was an error loading the question for this session.
+          </p>
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => router.push('/subjects')}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            >
+              Start New Session
+            </button>
+            <button
+              onClick={() => router.push('/home')}
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+            >
+              Go to Home
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
@@ -380,7 +493,7 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
           </div>
         </header>
 
-        <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6">
           {/* Statistics */}
           <Card>
             <div className="grid grid-cols-3 gap-4 text-center">
@@ -552,9 +665,9 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
     <div className="min-h-screen bg-gray-50 pb-32">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-3">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          <div className="flex items-center justify-between mb-2 sm:mb-3">
+            <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
               <button
                 onClick={() => {
                   // For guests, navigate to home; for authenticated users, go home
@@ -564,26 +677,26 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
                     router.push('/home');
                   }
                 }}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-1.5 sm:p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
               >
-                <ArrowLeft className="w-6 h-6 text-gray-600" />
+                <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
               </button>
-              <div>
-                <p className="text-sm text-gray-600">{subject?.name}</p>
-                <h1 className="text-lg font-bold text-gray-900">Test Mode</h1>
+              <div className="min-w-0">
+                <p className="text-xs sm:text-sm text-gray-600 truncate">{subject?.name}</p>
+                <h1 className="text-sm sm:text-lg font-bold text-gray-900">Test Mode</h1>
               </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Badge variant={answeredCount === questions.length ? 'success' : 'warning'}>
-                Question {currentIndex + 1} of {questions.length}
+            <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+              <Badge variant={answeredCount === questions.length ? 'success' : 'warning'} className="text-[10px] sm:text-xs px-1.5 sm:px-2">
+                {currentIndex + 1}/{questions.length}
               </Badge>
               <Button
                 variant="outline"
                 size="sm"
                 onClick={handleShowReview}
-                className="ml-2"
+                className="ml-1 sm:ml-2 text-xs sm:text-sm px-2 sm:px-3"
               >
-                <Send className="w-4 h-4 mr-1" />
+                <Send className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                 Review
               </Button>
             </div>
@@ -610,7 +723,7 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6">
         {/* Question Display */}
         <Card>
           <div className="flex items-start justify-between mb-4">
@@ -748,32 +861,32 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
       </div>
 
       {/* Fixed Bottom Navigation Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-indigo-200 shadow-2xl z-20">
-        <div className="max-w-4xl mx-auto px-4 py-4">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-indigo-200 shadow-2xl z-20 pb-safe">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
           {answeredCount === questions.length ? (
             // Show Submit button when all questions are answered
-            <div className="flex items-center justify-center gap-4">
-              <div className="text-center px-4 bg-green-50 rounded-lg py-2 border border-green-200">
-                <p className="text-sm font-bold text-green-700">
-                  All {questions.length} questions answered
+            <div className="flex items-center justify-center gap-2 sm:gap-4">
+              <div className="text-center px-2 sm:px-4 bg-green-50 rounded-lg py-1.5 sm:py-2 border border-green-200 hidden sm:block">
+                <p className="text-xs sm:text-sm font-bold text-green-700">
+                  All {questions.length} answered
                 </p>
               </div>
               <button
                 onClick={() => setShowSubmitConfirm(true)}
-                className="flex-1 py-3 px-6 rounded-lg font-bold text-base bg-green-600 border-2 border-green-600 text-white hover:bg-green-700 hover:border-green-700 active:bg-green-800 shadow-lg transition-all flex items-center justify-center"
+                className="flex-1 py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg font-bold text-sm sm:text-base bg-green-600 border-2 border-green-600 text-white hover:bg-green-700 hover:border-green-700 active:bg-green-800 shadow-lg transition-all flex items-center justify-center"
               >
-                <Send className="w-5 h-5 mr-2" />
+                <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Submit Test
               </button>
             </div>
           ) : (
             // Show navigation buttons when not all answered
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center justify-between gap-2 sm:gap-4">
               <button
                 onClick={handlePrevious}
                 disabled={currentIndex === 0}
                 className={`
-                  flex-1 py-3 px-4 rounded-lg font-semibold text-base border-2 transition-all
+                  py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg font-semibold text-xs sm:text-sm border-2 transition-all
                   flex items-center justify-center
                   ${currentIndex === 0 
                     ? 'opacity-50 cursor-not-allowed bg-gray-100 border-gray-300 text-gray-500' 
@@ -781,16 +894,16 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
                   }
                 `}
               >
-                <ArrowLeft className="w-5 h-5 mr-2" />
-                Previous
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 sm:mr-2" />
+                <span className="hidden sm:inline">Previous</span>
               </button>
               
-              <div className="text-center px-4 bg-indigo-50 rounded-lg py-2 border border-indigo-200">
-                <p className="text-sm font-bold text-indigo-700">
-                  {currentIndex + 1} / {questions.length}
+              <div className="text-center px-2 sm:px-4 bg-indigo-50 rounded-lg py-1.5 sm:py-2 border border-indigo-200">
+                <p className="text-xs sm:text-sm font-bold text-indigo-700">
+                  {currentIndex + 1}/{questions.length}
                 </p>
-                <p className="text-xs text-gray-600 mt-0.5">
-                  {answeredCount} answered
+                <p className="text-[10px] sm:text-xs text-gray-600">
+                  {answeredCount} done
                 </p>
               </div>
 
@@ -798,19 +911,20 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
                 // On last question but not all answered - show Review button
                 <button
                   onClick={handleShowReview}
-                  className="flex-1 py-3 px-4 rounded-lg font-semibold text-base bg-amber-600 border-2 border-amber-600 text-white hover:bg-amber-700 hover:border-amber-700 active:bg-amber-800 shadow-md transition-all flex items-center justify-center"
+                  className="flex-1 py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg font-semibold text-xs sm:text-sm bg-amber-600 border-2 border-amber-600 text-white hover:bg-amber-700 hover:border-amber-700 active:bg-amber-800 shadow-md transition-all flex items-center justify-center"
                 >
-                  <Send className="w-5 h-5 mr-2" />
-                  Review & Submit
+                  <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
+                  <span className="hidden sm:inline">Review & Submit</span>
+                  <span className="sm:hidden">Review</span>
                 </button>
               ) : (
                 // Show Next button
                 <button
                   onClick={handleNext}
-                  className="flex-1 py-3 px-4 rounded-lg font-semibold text-base border-2 bg-indigo-600 border-indigo-600 text-white hover:bg-indigo-700 hover:border-indigo-700 active:bg-indigo-800 shadow-md transition-all flex items-center justify-center"
+                  className="py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg font-semibold text-xs sm:text-sm border-2 bg-indigo-600 border-indigo-600 text-white hover:bg-indigo-700 hover:border-indigo-700 active:bg-indigo-800 shadow-md transition-all flex items-center justify-center"
                 >
-                  Next
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <span className="hidden sm:inline">Next</span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 sm:ml-2" />
                 </button>
               )}
             </div>

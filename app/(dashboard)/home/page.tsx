@@ -9,11 +9,12 @@ import { ProgressRing } from '@/components/magic/ProgressRing';
 import { BottomNav } from '@/components/common/BottomNav';
 import { Header } from '@/components/navigation/Header';
 import { useAuth } from '@/lib/auth-context';
-import { getSubjects, getUserStats, getUserProgress, updateUserStreak, getUserProfile, getUserSessions, getUserGoals } from '@/lib/api';
+import { getSubjects, getUserStats, getUserProgress, updateUserStreak, getUserProfile, getUserSessions, getUserGoals, canResumeSession, updateSession, getPreferredSubjects } from '@/lib/api';
 import type { Subject, UserStats, UserProgress, LearningSession, UserGoal, User } from '@/types/database';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { getSystemWideQuestionCount, getQuestionLimit } from '@/lib/guest-session';
+import { shuffleArray } from '@/lib/utils';
 import { SignupPromptModal } from '@/components/common/SignupPromptModal';
 import {
   Flame,
@@ -66,6 +67,8 @@ export default function HomePage() {
   const [userGoals, setUserGoals] = useState<UserGoal[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [showSignupModal, setShowSignupModal] = useState(false);
+  const [validatedSessions, setValidatedSessions] = useState<Set<string>>(new Set());
+  const [invalidSessions, setInvalidSessions] = useState<Set<string>>(new Set());
 
   // Redirect if not authenticated and not guest
   useEffect(() => {
@@ -103,7 +106,7 @@ export default function HomePage() {
       }
 
       // Fetch data in parallel with individual error handling
-      const [profile, userStats, allSubjects, userProgress, sessions, goals] = await Promise.allSettled([
+      const [profile, userStats, allSubjects, preferredSubjects, userProgress, sessions, goals] = await Promise.allSettled([
         getUserProfile(userId).catch(() => null),
         getUserStats(userId).catch(() => ({
           questionsAnswered: 0,
@@ -114,6 +117,7 @@ export default function HomePage() {
           lastActiveDate: undefined,
         })),
         getSubjects().catch(() => []),
+        getPreferredSubjects(userId).catch(() => []),
         getUserProgress(userId).catch(() => []),
         getUserSessions(userId, 50).catch(() => []),
         getUserGoals(userId).catch(() => []),
@@ -128,10 +132,26 @@ export default function HomePage() {
         currentStreak: 0,
         lastActiveDate: undefined,
       });
-      setSubjects(allSubjects.status === 'fulfilled' ? allSubjects.value : []);
+      // Use preferred subjects if available, otherwise use all subjects
+      const preferred = preferredSubjects.status === 'fulfilled' ? preferredSubjects.value : [];
+      const all = allSubjects.status === 'fulfilled' ? allSubjects.value : [];
+      const subjectsToUse = preferred.length > 0 ? preferred : all;
+      
+      // Randomize and take first 4
+      const shuffled = shuffleArray(subjectsToUse);
+      setSubjects(shuffled.slice(0, 4));
       setProgress(userProgress.status === 'fulfilled' ? userProgress.value : []);
-      setRecentSessions(sessions.status === 'fulfilled' ? sessions.value : []);
+      const loadedSessions = sessions.status === 'fulfilled' ? sessions.value : [];
+      setRecentSessions(loadedSessions);
       setUserGoals(goals.status === 'fulfilled' ? goals.value : []);
+      
+      // Validate incomplete sessions in the background (non-blocking)
+      // Only validate for authenticated users, not guests
+      if (loadedSessions.length > 0 && userId && !isGuest) {
+        validateIncompleteSessions(loadedSessions).catch(error => {
+          console.error('Error validating sessions:', error);
+        });
+      }
     } catch (error) {
       console.error('Error loading dashboard:', error);
       setError('Failed to load dashboard. Please try again.');
@@ -158,7 +178,9 @@ export default function HomePage() {
       setLoading(true);
       setError(null);
       const allSubjects = await getSubjects();
-      setSubjects(allSubjects);
+      // Randomize and take first 4 for guests too
+      const shuffled = shuffleArray(allSubjects);
+      setSubjects(shuffled.slice(0, 4));
     } catch (error) {
       console.error('Error loading subjects:', error);
       setError('Failed to load subjects. Please try again.');
@@ -191,17 +213,75 @@ export default function HomePage() {
     return 'Student';
   };
 
+  // Validate incomplete sessions (runs in background, non-blocking)
+  async function validateIncompleteSessions(sessions: LearningSession[]) {
+    const incompleteSessions = sessions.filter(s => 
+      s.status === 'in_progress' || s.status === 'paused'
+    );
+    
+    // Validate all incomplete sessions in parallel
+    const validationPromises = incompleteSessions.map(async (session) => {
+      try {
+        const validation = await canResumeSession(session.id);
+        if (validation.canResume) {
+          setValidatedSessions(prev => {
+            // Use functional update to avoid duplicates
+            if (prev.has(session.id)) return prev;
+            return new Set(prev).add(session.id);
+          });
+        } else {
+          setInvalidSessions(prev => {
+            // Use functional update to avoid duplicates
+            if (prev.has(session.id)) return prev;
+            return new Set(prev).add(session.id);
+          });
+          // Auto-cleanup invalid session
+          if (validation.reason === 'No questions available') {
+            try {
+              await updateSession(session.id, { status: 'abandoned' });
+              // Update local state to reflect the change
+              setRecentSessions(prev => prev.map(s => 
+                s.id === session.id ? { ...s, status: 'abandoned' as const } : s
+              ));
+            } catch (error) {
+              console.error('Error cleaning up invalid session:', error);
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error validating session:', error);
+        // Mark as invalid on error
+        setInvalidSessions(prev => {
+          if (prev.has(session.id)) return prev;
+          return new Set(prev).add(session.id);
+        });
+      }
+    });
+    
+    // Wait for all validations to complete (but don't block UI)
+    await Promise.allSettled(validationPromises);
+  }
+
   // Get incomplete session (in_progress or paused)
   // Prioritizes in_progress over paused, and most recent session if multiple exist
+  // Only returns sessions that have been validated as resumable
   const getIncompleteSession = (): LearningSession | null => {
     if (!recentSessions || recentSessions.length === 0) return null;
     
     // First try to find in_progress session (most recent)
-    const inProgress = recentSessions.find(s => s.status === 'in_progress');
+    const inProgress = recentSessions.find(s => 
+      s.status === 'in_progress' && 
+      !invalidSessions.has(s.id) &&
+      (validatedSessions.has(s.id) || validatedSessions.size === 0) // Allow if validated or validation hasn't started
+    );
     if (inProgress) return inProgress;
     
     // Then try paused session (most recent)
-    const paused = recentSessions.find(s => s.status === 'paused');
+    const paused = recentSessions.find(s => 
+      s.status === 'paused' && 
+      !invalidSessions.has(s.id) &&
+      (validatedSessions.has(s.id) || validatedSessions.size === 0) // Allow if validated or validation hasn't started
+    );
     if (paused) return paused;
     
     return null;
@@ -1286,9 +1366,8 @@ export default function HomePage() {
                     whileHover={{ scale: 1.03, y: -3 }}
                     whileTap={{ scale: 0.97 }}
                   >
-                    <Link href={`/subjects`} onClick={(e) => {
-                      e.preventDefault();
-                      router.push(`/subjects`);
+                    <div onClick={() => {
+                      router.push(`/learn/configure/${subject.id}`);
                     }}>
                       <MagicCard hover className={`p-3 sm:p-4 text-center bg-gradient-to-br ${subjectColors[index % 4]} border-2 h-full relative overflow-hidden group transition-all rounded-xl sm:rounded-2xl shadow-lg ${shadowColors[index % 4]}`}>
                         {/* Subtle glow effect */}
@@ -1320,7 +1399,7 @@ export default function HomePage() {
                           )}
                         </div>
                       </MagicCard>
-                    </Link>
+                    </div>
                   </motion.div>
                 );
               })}

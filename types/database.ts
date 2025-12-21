@@ -249,6 +249,16 @@ export interface ImportError {
 }
 
 /**
+ * Database UserSubjectPreference type (matches user_subject_preferences table)
+ */
+export interface UserSubjectPreference {
+  id: string;
+  user_id: string;
+  subject_id: string;
+  created_at: string;
+}
+
+/**
  * User statistics (calculated from user data)
  */
 export interface UserStats {

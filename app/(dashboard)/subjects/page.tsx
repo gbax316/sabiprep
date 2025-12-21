@@ -4,14 +4,13 @@ import React, { useEffect, useState } from 'react';
 import { MagicCard } from '@/components/magic/MagicCard';
 import { MagicButton } from '@/components/magic/MagicButton';
 import { MagicBadge } from '@/components/magic/MagicBadge';
-import { Modal } from '@/components/common/Modal';
 import { BottomNav } from '@/components/common/BottomNav';
 import { useAuth } from '@/lib/auth-context';
 import { getSubjects, getUserProgress } from '@/lib/api';
 import type { Subject, UserProgress } from '@/types/database';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, Search, BookOpen, FileText, Timer, Layers, TrendingUp, Target, Clock, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Search, TrendingUp, Target, BookOpen, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function SubjectsPage() {
@@ -22,8 +21,6 @@ export default function SubjectsPage() {
   const [progress, setProgress] = useState<UserProgress[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [error, setError] = useState<string | null>(null);
-  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
-  const [showModeModal, setShowModeModal] = useState(false);
 
   // Enable guest mode if not authenticated
   useEffect(() => {
@@ -90,20 +87,12 @@ export default function SubjectsPage() {
   };
 
   const handleStartLearning = (subject: Subject) => {
-    setSelectedSubject(subject);
-    setShowModeModal(true);
+    // Navigate directly to the unified configure page
+    router.push(`/learn/configure/${subject.id}`);
   };
 
-  const handleModeSelect = (mode: 'practice' | 'test' | 'timed' | 'topics') => {
-    if (!selectedSubject) return;
-    
-    setShowModeModal(false);
-    
-    if (mode === 'topics') {
-      router.push(`/topics/${selectedSubject.id}`);
-    } else {
-      router.push(`/${mode}/exam-style/${selectedSubject.id}`);
-    }
+  const handleBrowseTopics = (subject: Subject) => {
+    router.push(`/topics/${subject.id}`);
   };
 
   if (loading) {
@@ -307,118 +296,6 @@ export default function SubjectsPage() {
           </div>
         )}
       </div>
-
-      {/* Mode Selection Modal */}
-      <Modal
-        isOpen={showModeModal}
-        onClose={() => {
-          setShowModeModal(false);
-          setSelectedSubject(null);
-        }}
-        title={`Choose How to Learn ${selectedSubject?.name}`}
-        description="Select your preferred learning mode. You can switch modes anytime."
-        size="lg"
-        className="bg-slate-900 border-slate-700"
-      >
-        <div className="space-y-4">
-          {/* Learning Modes */}
-          <div>
-            <h3 className="text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wide">Learning Modes</h3>
-            <div className="grid grid-cols-1 gap-3">
-              {/* Practice Mode */}
-              <button
-                onClick={() => handleModeSelect('practice')}
-                className="group p-4 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-800 transition-all text-left"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                    <BookOpen className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-white mb-1">Practice Mode</h4>
-                    <p className="text-sm text-slate-400 mb-2">Learn at your own pace with hints and explanations</p>
-                    <div className="flex flex-wrap gap-2">
-                      <MagicBadge variant="info" size="sm">💡 Hints Available</MagicBadge>
-                      <MagicBadge variant="info" size="sm">📖 Solutions</MagicBadge>
-                    </div>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-blue-400 transition-colors" />
-                </div>
-              </button>
-
-              {/* Test Mode */}
-              <button
-                onClick={() => handleModeSelect('test')}
-                className="group p-4 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 transition-all text-left"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                    <FileText className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-white mb-1">Test Mode</h4>
-                    <p className="text-sm text-slate-400 mb-2">Simulate exam conditions - no hints until the end</p>
-                    <div className="flex flex-wrap gap-2">
-                      <MagicBadge variant="warning" size="sm">🎯 Exam Simulation</MagicBadge>
-                      <MagicBadge variant="warning" size="sm">📊 Full Review</MagicBadge>
-                    </div>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-amber-400 transition-colors" />
-                </div>
-              </button>
-
-              {/* Timed Mode */}
-              <button
-                onClick={() => handleModeSelect('timed')}
-                className="group p-4 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-orange-500/50 hover:bg-slate-800 transition-all text-left"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                    <Timer className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-white mb-1">Timed Mode</h4>
-                    <p className="text-sm text-slate-400 mb-2">Challenge yourself with time limits to build speed</p>
-                    <div className="flex flex-wrap gap-2">
-                      <MagicBadge variant="error" size="sm">⚡ Speed Challenge</MagicBadge>
-                      <MagicBadge variant="error" size="sm">⏱️ Time Limits</MagicBadge>
-                    </div>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-orange-400 transition-colors" />
-                </div>
-              </button>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-slate-700"></div>
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-slate-900 text-slate-500">OR</span>
-            </div>
-          </div>
-
-          {/* Learn by Topic */}
-          <button
-            onClick={() => handleModeSelect('topics')}
-            className="group p-4 rounded-xl bg-gradient-to-br from-violet-500/20 to-cyan-500/20 border border-violet-500/30 hover:border-violet-500/50 hover:from-violet-500/30 hover:to-cyan-500/30 transition-all text-left w-full"
-          >
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                <Layers className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex-1">
-                <h4 className="font-semibold text-white mb-1">Learn by Topic</h4>
-                <p className="text-sm text-slate-300 mb-2">Browse and select specific topics to focus on</p>
-                <MagicBadge variant="accent" size="sm">🎯 Topic-Focused</MagicBadge>
-              </div>
-              <ChevronRight className="w-5 h-5 text-violet-400 group-hover:text-cyan-400 transition-colors" />
-            </div>
-          </button>
-        </div>
-      </Modal>
 
       {/* Bottom Navigation */}
       <BottomNav />

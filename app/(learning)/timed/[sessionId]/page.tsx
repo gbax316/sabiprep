@@ -11,9 +11,11 @@ import { QuestionNavigator } from '@/components/common/QuestionNavigator';
 import { useTimer } from '@/hooks/useTimer';
 import {
   getSession,
+  getSessionAnswers,
   getRandomQuestions,
   getRandomQuestionsFromTopics,
   getQuestionsWithDistribution,
+  getQuestionsByIds,
   getTopic,
   getSubject,
   getTopics,
@@ -129,14 +131,68 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       const sessionData = await getSession(sessionId);
       
       if (!sessionData) {
-        alert('Session not found');
-        router.push('/home');
+        console.error('Session not found:', sessionId);
+        router.replace('/home');
         return;
       }
 
       setSession(sessionData);
 
-      // Load all data in parallel for maximum performance
+      // FIRST: Try to restore original questions from session_answers
+      const sessionAnswers = await getSessionAnswers(sessionId);
+      let questionsData: Question[] = [];
+      let topicsData: Topic[] = [];
+      
+      if (sessionAnswers.length > 0) {
+        // Restore original questions
+        const questionIds = sessionAnswers.map(a => a.question_id);
+        questionsData = await getQuestionsByIds(questionIds);
+        
+        // If we got questions, use them
+        if (questionsData.length > 0) {
+          setQuestions(questionsData);
+          
+          // Restore answered state
+          const answersMap = new Map<string, 'A' | 'B' | 'C' | 'D' | 'E'>();
+          sessionAnswers.forEach(answer => {
+            if (answer.user_answer) {
+              answersMap.set(answer.question_id, answer.user_answer as 'A' | 'B' | 'C' | 'D' | 'E');
+            }
+          });
+          setAnswers(answersMap);
+          
+          // Load subject and topics
+          const [subjectData, topicsResult] = await Promise.all([
+            getSubject(sessionData.subject_id),
+            sessionData.topic_ids && sessionData.topic_ids.length > 1
+              ? getTopics(sessionData.subject_id).then(allTopics =>
+                  allTopics.filter(t => sessionData.topic_ids!.includes(t.id))
+                )
+              : getTopic(sessionData.topic_id || sessionData.topic_ids?.[0] || '').then(t => t ? [t] : [])
+          ]);
+          
+          setSubject(subjectData);
+          setTopics(topicsResult);
+          
+          // Reset timer first, then start exam after a brief delay
+          // This ensures the timer is properly initialized before starting
+          if (sessionData.time_limit_seconds && sessionData.time_limit_seconds > 0) {
+            reset(sessionData.time_limit_seconds);
+            // Small delay to ensure timer state is updated
+            setTimeout(() => {
+              setExamStarted(true);
+            }, 50);
+          } else {
+            // No time limit set, start immediately (backward compatibility)
+            setExamStarted(true);
+          }
+          
+          return; // Successfully restored
+        }
+      }
+      
+      // FALLBACK: If no session_answers, fetch new questions
+      // This handles brand new sessions that haven't been started yet
       let questionsPromise: Promise<Question[]>;
       let topicsPromise: Promise<Topic[]>;
 
@@ -169,18 +225,22 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       }
 
       // Load everything in parallel
-      const [subjectData, questionsData, topicsData] = await Promise.all([
+      const [subjectData, newQuestionsData, newTopicsData] = await Promise.all([
         getSubject(sessionData.subject_id),
         questionsPromise,
         topicsPromise,
       ]);
 
       setSubject(subjectData);
-      setQuestions(questionsData);
-      setTopics(topicsData);
-      if (topicsData.length > 0) {
-        // Set first topic for display
+      
+      if (!newQuestionsData || newQuestionsData.length === 0) {
+        // No questions available - this will be handled in the render section
+        setQuestions([]);
+      } else {
+        setQuestions(newQuestionsData);
       }
+      
+      setTopics(newTopicsData);
 
       // Reset timer first, then start exam after a brief delay
       // This ensures the timer is properly initialized before starting
@@ -196,8 +256,8 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       }
     } catch (error) {
       console.error('Error loading session:', error);
-      alert('Failed to load session');
-      router.push('/home');
+      setLoading(false);
+      router.replace('/home');
     } finally {
       setLoading(false);
     }
@@ -454,10 +514,51 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
     );
   }
 
-  if (!session || questions.length === 0) {
+  if (!session) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <p>No questions available</p>
+        <div className="text-center max-w-md p-6">
+          <p className="text-gray-600 mb-4">Session not found</p>
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => router.push('/home')}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            >
+              Go to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (questions.length === 0) {
+    // Get subject info for recovery
+    const subjectId = session.subject_id;
+    const topicId = session.topic_id || session.topic_ids?.[0];
+    
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <div className="text-center max-w-md p-6">
+          <p className="text-gray-600 mb-2">No questions available for this session</p>
+          <p className="text-sm text-gray-500 mb-4">
+            The questions for this session are no longer available.
+          </p>
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => router.push('/subjects')}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            >
+              Start New Session
+            </button>
+            <button
+              onClick={() => router.push('/home')}
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+            >
+              Go to Home
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
