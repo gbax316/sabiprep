@@ -1419,7 +1419,7 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
             )}
           </Card>
           );
-        })()}
+        })())}
 
         {/* Topic Breakdown (for practice/timed modes - existing) */}
         {session.mode !== 'test' && topics.length > 1 && topicAnalytics.size > 0 && (
