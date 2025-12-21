@@ -209,189 +209,57 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
     return allModes.filter(mode => mode !== session?.mode);
   }
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600">Loading your results...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!session) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <p>Session not found</p>
-      </div>
-    );
-  }
-
-  const score = session.score_percentage || 0;
-  const gradeInfo = getGradeLabel(score);
-  
-  // For test mode, calculate from actual answers (all questions should be answered)
-  // For practice mode, use session data
-  const isTestMode = session.mode === 'test';
-  const isTimedMode = session.mode === 'timed';
-  
-  let correctCount: number;
-  let incorrectCount: number;
-  let totalAnswered: number;
-  let calculatedAccuracy: number;
-  
-  if (isTestMode) {
-    // Test mode: calculate from answers (all questions should have answers)
-    correctCount = answers.filter(a => a.is_correct === true).length;
-    totalAnswered = answers.length;
-    incorrectCount = totalAnswered - correctCount;
-    calculatedAccuracy = totalAnswered > 0 
-      ? Math.round((correctCount / totalAnswered) * 100)
-      : 0;
-  } else if (isTimedMode) {
-    // Timed mode: calculate from actual answers only (may have unanswered questions)
-    // Only count questions that were actually answered
-    totalAnswered = answers.length; // Actual number of questions answered
-    correctCount = answers.filter(a => a.is_correct === true).length; // Actual correct answers
-    incorrectCount = answers.filter(a => a.is_correct === false).length; // Actual incorrect answers
-    // Accuracy is based on answered questions only
-    calculatedAccuracy = totalAnswered > 0 
-      ? Math.round((correctCount / totalAnswered) * 100)
-      : 0;
-  } else {
-    // Practice mode: use session data
-    correctCount = session.correct_answers;
-    totalAnswered = session.questions_answered || answers.length;
-    incorrectCount = totalAnswered - correctCount;
-    calculatedAccuracy = Math.round(score);
-  }
-  
-  // Time calculation - use actual session time
-  const totalTimeSeconds = session.time_spent_seconds || 0;
-  const timeInMinutes = Math.floor(totalTimeSeconds / 60);
-  const timeInSeconds = totalTimeSeconds % 60;
-  
-  // Calculate enhanced metrics (only for practice mode)
-  const firstAttemptCorrect = answers.filter(a => a.first_attempt_correct === true).length;
-  const firstAttemptAccuracy = answers.length > 0 
-    ? Math.round((firstAttemptCorrect / answers.length) * 100) 
-    : 0;
-  const hintsUsed = isTestMode ? 0 : answers.filter(a => a.hint_used).length;
-  const solutionsViewed = isTestMode ? 0 : answers.filter(a => a.solution_viewed).length;
-  const finalAccuracy = calculatedAccuracy;
-
-  // Calculate speed vs accuracy data for timed mode (needed for Strengths & Weaknesses section)
-  const timedSpeedAccuracyData = (() => {
-    if (session.mode !== 'timed' || !session.time_limit_seconds || answers.length === 0) {
-      return null;
-    }
-
-    const expectedTimePerQuestion = session.time_limit_seconds / session.total_questions;
-    
-    // Calculate topic-wise performance with time
-    const topicTimeStats = new Map<string, {
-      topic: Topic;
-      total: number;
-      correct: number;
-      totalTime: number;
-      avgTime: number;
-    }>();
-    
-    answers.forEach(answer => {
-      const question = questions.find(q => q.id === answer.question_id);
-      if (!question) return;
-      
-      const topicId = answer.topic_id || question.topic_id || session.topic_id || session.topic_ids?.[0];
-      if (!topicId) return;
-      
-      const topic = topics.find(t => t.id === topicId);
-      if (!topic) return;
-      
-      const current = topicTimeStats.get(topicId) || {
-        topic,
-        total: 0,
-        correct: 0,
-        totalTime: 0,
-        avgTime: 0,
-      };
-      
-      current.total++;
-      if (answer.is_correct) current.correct++;
-      current.totalTime += answer.time_spent_seconds || 0;
-      
-      topicTimeStats.set(topicId, current);
-    });
-    
-    // Calculate averages
-    topicTimeStats.forEach((stats, _) => {
-      stats.avgTime = stats.total > 0 ? stats.totalTime / stats.total : 0;
-    });
-    
-    // Speed vs Accuracy analysis
-    const speedAccuracyData = Array.from(topicTimeStats.values()).map(stats => ({
-      topic: stats.topic,
-      speed: stats.avgTime < expectedTimePerQuestion ? 'fast' : 'slow',
-      accuracy: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0,
-      avgTime: stats.avgTime,
-      correct: stats.correct,
-      total: stats.total,
-    }));
-    
-    const fastAccurate = speedAccuracyData.filter(d => d.speed === 'fast' && d.accuracy >= 70);
-    const fastInaccurate = speedAccuracyData.filter(d => d.speed === 'fast' && d.accuracy < 70);
-    const slowAccurate = speedAccuracyData.filter(d => d.speed === 'slow' && d.accuracy >= 70);
-    const slowInaccurate = speedAccuracyData.filter(d => d.speed === 'slow' && d.accuracy < 70);
-    
-    return {
-      speedAccuracyData,
-      fastAccurate,
-      fastInaccurate,
-      slowAccurate,
-      slowInaccurate,
-    };
-  })();
-
   // Compute topic breakdown component for test/timed modes
+  // This must be called before any early returns to follow Rules of Hooks
   const topicBreakdownComponent = useMemo(() => {
-    if (!(session.mode === 'test' || session.mode === 'timed') || topics.length === 0 || topicAnalytics.size === 0) {
+    if (!session || !(session.mode === 'test' || session.mode === 'timed') || topics.length === 0 || topicAnalytics.size === 0) {
       return null;
     }
 
     // For timed mode, get time data from the already calculated topicTimeStats
-    const timedTopicTimeStats = isTimedMode && session.mode === 'timed' && session.time_limit_seconds && answers.length > 0 ? (() => {
+    const timedTopicTimeStats = session.mode === 'timed' && session.time_limit_seconds && answers.length > 0 ? (() => {
       // Reuse the topicTimeStats from the timed mode analytics section
       const topicTimeMap = new Map<string, { totalTime: number; avgTime: number; count: number; topic: Topic }>();
+      
       answers.forEach(answer => {
         const question = questions.find(q => q.id === answer.question_id);
         if (!question) return;
+        
         const topicId = answer.topic_id || question.topic_id || session.topic_id || session.topic_ids?.[0];
         if (!topicId) return;
+        
         const topic = topics.find(t => t.id === topicId);
         if (!topic) return;
         
-        const current = topicTimeMap.get(topicId) || { totalTime: 0, avgTime: 0, count: 0, topic };
+        const current = topicTimeMap.get(topicId) || {
+          topic,
+          totalTime: 0,
+          avgTime: 0,
+          count: 0,
+        };
+        
+        current.count++;
         current.totalTime += answer.time_spent_seconds || 0;
-        current.count = current.count + 1;
-        current.avgTime = current.totalTime / current.count;
+        current.avgTime = current.count > 0 ? current.totalTime / current.count : 0;
+        
         topicTimeMap.set(topicId, current);
       });
+      
       return topicTimeMap;
     })() : null;
+
+    const isTimedMode = session.mode === 'timed';
 
     const formatTimeForTable = (seconds: number) => {
       const mins = Math.floor(seconds / 60);
       const secs = Math.floor(seconds % 60);
-      if (mins > 0) return `${mins}:${secs.toString().padStart(2, '0')}`;
-      return `${secs}s`;
+      return `${mins}:${secs.toString().padStart(2, '0')}`;
     };
 
     return (
       <Card>
-        <h3 className="font-bold text-lg text-gray-900 mb-4">
-          {isTimedMode ? '📊 Topic Performance Breakdown (with Time)' : 'Topic-Wise Performance Breakdown'}
-        </h3>
-      
+        <h3 className="font-bold text-lg text-gray-900 mb-4">Topic Performance Breakdown</h3>
+        
         {/* Summary Stats */}
         <div className="mb-4 p-3 bg-indigo-50 rounded-lg">
           <div className={`grid ${isTimedMode && timedTopicTimeStats ? 'grid-cols-4' : 'grid-cols-3'} gap-4 text-center`}>
@@ -570,7 +438,151 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
       )}
     </Card>
     );
-  }, [session.mode, topics, topicAnalytics, isTimedMode, session.time_limit_seconds, answers, questions, session.topic_id, session.topic_ids]);
+  }, [session, topics, topicAnalytics, answers, questions]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-gray-600">Loading your results...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!session) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <p>Session not found</p>
+      </div>
+    );
+  }
+
+  const score = session.score_percentage || 0;
+  const gradeInfo = getGradeLabel(score);
+  
+  // For test mode, calculate from actual answers (all questions should be answered)
+  // For practice mode, use session data
+  const isTestMode = session.mode === 'test';
+  const isTimedMode = session.mode === 'timed';
+  
+  let correctCount: number;
+  let incorrectCount: number;
+  let totalAnswered: number;
+  let calculatedAccuracy: number;
+  
+  if (isTestMode) {
+    // Test mode: calculate from answers (all questions should have answers)
+    correctCount = answers.filter(a => a.is_correct === true).length;
+    totalAnswered = answers.length;
+    incorrectCount = totalAnswered - correctCount;
+    calculatedAccuracy = totalAnswered > 0 
+      ? Math.round((correctCount / totalAnswered) * 100)
+      : 0;
+  } else if (isTimedMode) {
+    // Timed mode: calculate from actual answers only (may have unanswered questions)
+    // Only count questions that were actually answered
+    totalAnswered = answers.length; // Actual number of questions answered
+    correctCount = answers.filter(a => a.is_correct === true).length; // Actual correct answers
+    incorrectCount = answers.filter(a => a.is_correct === false).length; // Actual incorrect answers
+    // Accuracy is based on answered questions only
+    calculatedAccuracy = totalAnswered > 0 
+      ? Math.round((correctCount / totalAnswered) * 100)
+      : 0;
+  } else {
+    // Practice mode: use session data
+    correctCount = session.correct_answers;
+    totalAnswered = session.questions_answered || answers.length;
+    incorrectCount = totalAnswered - correctCount;
+    calculatedAccuracy = Math.round(score);
+  }
+  
+  // Time calculation - use actual session time
+  const totalTimeSeconds = session.time_spent_seconds || 0;
+  const timeInMinutes = Math.floor(totalTimeSeconds / 60);
+  const timeInSeconds = totalTimeSeconds % 60;
+  
+  // Calculate enhanced metrics (only for practice mode)
+  const firstAttemptCorrect = answers.filter(a => a.first_attempt_correct === true).length;
+  const firstAttemptAccuracy = answers.length > 0 
+    ? Math.round((firstAttemptCorrect / answers.length) * 100) 
+    : 0;
+  const hintsUsed = isTestMode ? 0 : answers.filter(a => a.hint_used).length;
+  const solutionsViewed = isTestMode ? 0 : answers.filter(a => a.solution_viewed).length;
+  const finalAccuracy = calculatedAccuracy;
+
+  // Calculate speed vs accuracy data for timed mode (needed for Strengths & Weaknesses section)
+  const timedSpeedAccuracyData = (() => {
+    if (session.mode !== 'timed' || !session.time_limit_seconds || answers.length === 0) {
+      return null;
+    }
+
+    const expectedTimePerQuestion = session.time_limit_seconds / session.total_questions;
+    
+    // Calculate topic-wise performance with time
+    const topicTimeStats = new Map<string, {
+      topic: Topic;
+      total: number;
+      correct: number;
+      totalTime: number;
+      avgTime: number;
+    }>();
+    
+    answers.forEach(answer => {
+      const question = questions.find(q => q.id === answer.question_id);
+      if (!question) return;
+      
+      const topicId = answer.topic_id || question.topic_id || session.topic_id || session.topic_ids?.[0];
+      if (!topicId) return;
+      
+      const topic = topics.find(t => t.id === topicId);
+      if (!topic) return;
+      
+      const current = topicTimeStats.get(topicId) || {
+        topic,
+        total: 0,
+        correct: 0,
+        totalTime: 0,
+        avgTime: 0,
+      };
+      
+      current.total++;
+      if (answer.is_correct) current.correct++;
+      current.totalTime += answer.time_spent_seconds || 0;
+      
+      topicTimeStats.set(topicId, current);
+    });
+    
+    // Calculate averages
+    topicTimeStats.forEach((stats, _) => {
+      stats.avgTime = stats.total > 0 ? stats.totalTime / stats.total : 0;
+    });
+    
+    // Speed vs Accuracy analysis
+    const speedAccuracyData = Array.from(topicTimeStats.values()).map(stats => ({
+      topic: stats.topic,
+      speed: stats.avgTime < expectedTimePerQuestion ? 'fast' : 'slow',
+      accuracy: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0,
+      avgTime: stats.avgTime,
+      correct: stats.correct,
+      total: stats.total,
+    }));
+    
+    const fastAccurate = speedAccuracyData.filter(d => d.speed === 'fast' && d.accuracy >= 70);
+    const fastInaccurate = speedAccuracyData.filter(d => d.speed === 'fast' && d.accuracy < 70);
+    const slowAccurate = speedAccuracyData.filter(d => d.speed === 'slow' && d.accuracy >= 70);
+    const slowInaccurate = speedAccuracyData.filter(d => d.speed === 'slow' && d.accuracy < 70);
+    
+    return {
+      speedAccuracyData,
+      fastAccurate,
+      fastInaccurate,
+      slowAccurate,
+      slowInaccurate,
+    };
+  })();
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 pb-8 sm:pb-12">
@@ -1429,137 +1441,6 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
         {/* Topic Breakdown - Enhanced for Test Mode and Timed Mode */}
         {topicBreakdownComponent}
 
-        {/* Topic Breakdown (for practice/timed modes - existing) */}
-                    const totalCount = Array.from(timedTopicTimeStats.values()).reduce((sum, t) => sum + t.count, 0);
-                    const avgTime = totalCount > 0 ? totalTime / totalCount : 0;
-                    return (
-                      <div>
-                        <div className="text-2xl font-bold text-orange-600">
-                          {formatTimeForTable(avgTime)}
-                        </div>
-                        <div className="text-xs text-gray-600">Avg Time/Q</div>
-                      </div>
-                    );
-                  })()}
-                  <div>
-                    <div className="text-2xl font-bold text-purple-600">
-                      {Math.round(
-                        (Array.from(topicAnalytics.values()).reduce((sum, a) => sum + a.correct, 0) /
-                         Array.from(topicAnalytics.values()).reduce((sum, a) => sum + a.total, 0)) * 100
-                      )}%
-                    </div>
-                    <div className="text-xs text-gray-600">Overall Score</div>
-                  </div>
-                </div>
-              </div>
-
-            {/* Topic Breakdown Table */}
-            <div className="overflow-x-auto -mx-3 sm:mx-0">
-              <div className="inline-block min-w-full align-middle">
-                <table className="w-full min-w-[600px]">
-                  <thead>
-                    <tr className="border-b border-gray-200">
-                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold text-gray-700">Topic</th>
-                      <th className="text-center py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold text-gray-700">Questions</th>
-                      <th className="text-center py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold text-gray-700">Correct</th>
-                      {isTimedMode && timedTopicTimeStats && (
-                        <th className="text-center py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold text-gray-700">Avg Time</th>
-                      )}
-                      <th className="text-center py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold text-gray-700">Score</th>
-                      <th className="text-center py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold text-gray-700">Rating</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {topics
-                      .map(topic => {
-                        const analytics = topicAnalytics.get(topic.id);
-                        if (!analytics || analytics.total === 0) return null;
-                        
-                        const score = Math.round((analytics.correct / analytics.total) * 100);
-                        let rating: string;
-                        let ratingColor: string;
-                        
-                        if (score >= 85) {
-                          rating = 'Excellent';
-                          ratingColor = 'text-emerald-600';
-                        } else if (score >= 70) {
-                          rating = 'Good';
-                          ratingColor = 'text-blue-600';
-                        } else if (score >= 60) {
-                          rating = 'Fair';
-                          ratingColor = 'text-amber-600';
-                        } else {
-                          rating = 'Needs Improvement';
-                          ratingColor = 'text-red-600';
-                        }
-                        
-                        return { topic, analytics, score, rating, ratingColor };
-                      })
-                      .filter(Boolean)
-                      .sort((a, b) => b!.score - a!.score)
-                      .map((item) => (
-                        <tr key={item!.topic.id} className="border-b border-gray-100 hover:bg-gray-50">
-                          <td className="py-2 sm:py-3 px-2 sm:px-4 min-h-[48px]">
-                          <div className="flex items-center gap-2">
-                            <span className="text-lg">
-                              {topics.indexOf(item!.topic) === 0 && '📊'}
-                              {topics.indexOf(item!.topic) === 1 && '📐'}
-                              {topics.indexOf(item!.topic) === 2 && '📈'}
-                              {topics.indexOf(item!.topic) === 3 && '🔢'}
-                              {topics.indexOf(item!.topic) === 4 && '📉'}
-                              {topics.indexOf(item!.topic) > 4 && '📚'}
-                            </span>
-                            <span className="font-medium text-xs sm:text-sm text-gray-900">{item!.topic.name}</span>
-                          </div>
-                        </td>
-                        <td className="text-center py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm text-gray-700">{item!.analytics.total}</td>
-                        <td className="text-center py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm text-gray-700">{item!.analytics.correct}</td>
-                        {isTimedMode && timedTopicTimeStats && (() => {
-                          const timeData = timedTopicTimeStats.get(item!.topic.id);
-                          const avgTime = timeData?.avgTime || 0;
-                          const expectedTime = session.time_limit_seconds ? session.time_limit_seconds / session.total_questions : 0;
-                          const timeStatus = avgTime > 0 ? (avgTime < expectedTime ? 'fast' : avgTime > expectedTime * 1.5 ? 'slow' : 'good') : null;
-                          
-                          return (
-                            <td className="text-center py-2 sm:py-3 px-2 sm:px-4">
-                              {avgTime > 0 ? (
-                                <>
-                                  <span className={`font-semibold text-xs sm:text-sm ${
-                                    timeStatus === 'fast' ? 'text-green-600' : 
-                                    timeStatus === 'good' ? 'text-blue-600' : 
-                                    'text-amber-600'
-                                  }`}>
-                                    {formatTimeForTable(avgTime)}
-                                  </span>
-                                  <div className="text-[10px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">
-                                    {timeStatus === 'fast' ? '⚡ Fast' : timeStatus === 'good' ? '✓ Good' : '⚠️ Slow'}
-                                  </div>
-                                </>
-                              ) : (
-                                <span className="text-gray-400 text-xs sm:text-sm">N/A</span>
-                              )}
-                            </td>
-                          );
-                        })()}
-                        <td className="text-center py-2 sm:py-3 px-2 sm:px-4">
-                          <span className="font-bold text-xs sm:text-sm text-gray-900">{item!.score}%</span>
-                        </td>
-                        <td className="text-center py-2 sm:py-3 px-2 sm:px-4">
-                          <span className={`font-semibold text-xs sm:text-sm ${item!.ratingColor}`}>
-                            {item!.rating}
-                            {item!.score < 75 && ' ⚠️'}
-                          </span>
-                        </td>
-                      </tr>
-                    ))}
-                </tbody>
-              </table>
-            </div>
-
-            {/* Weak Areas Identified */}
-            {topics.some(t => {
-              const analytics = topicAnalytics.get(t.id);
-              if (!analytics || analytics.total === 0) return false;
         {/* Topic Breakdown (for practice/timed modes - existing) */}
         {session.mode !== 'test' && topics.length > 1 && topicAnalytics.size > 0 && (
           <Card>
