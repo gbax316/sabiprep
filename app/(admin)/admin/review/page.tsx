@@ -174,13 +174,30 @@ export default function ReviewDashboardPage() {
       const response = await fetch(`/api/admin/questions/review/history?${params.toString()}`);
       
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error('API Error:', errorText);
         throw new Error(`Failed to load reviews: ${response.statusText}`);
       }
 
       const data = await response.json();
 
       // Handle both success response format and direct data format
-      const reviewsData = data.success ? (data.data?.reviews || data.reviews || []) : (data.reviews || []);
+      const reviewsData = data.success 
+        ? (data.data?.reviews || data.reviews || []) 
+        : (data.reviews || data.data?.reviews || []);
+      
+      if (!Array.isArray(reviewsData)) {
+        console.error('Invalid reviews data format:', reviewsData);
+        setReviews([]);
+        setStats({
+          total: 0,
+          pending: 0,
+          approved: 0,
+          rejected: 0,
+          failed: 0,
+        });
+        return;
+      }
       
       setReviews(reviewsData);
       
@@ -386,7 +403,7 @@ export default function ReviewDashboardPage() {
 
   useEffect(() => {
     loadReviews();
-  }, [loadReviews]);
+  }, [filterStatus]);
 
   useEffect(() => {
     loadSubjects();
@@ -396,7 +413,7 @@ export default function ReviewDashboardPage() {
     if (showQuestionBrowser) {
       loadQuestions(questionPage, questionSearchQuery, questionSubjectFilter);
     }
-  }, [showQuestionBrowser, questionPage, questionSearchQuery, questionSubjectFilter]);
+  }, [showQuestionBrowser, questionPage, questionSearchQuery, questionSubjectFilter, loadQuestions]);
 
   // Filter reviews by search query
   const filteredReviews = reviews.filter(review => {
