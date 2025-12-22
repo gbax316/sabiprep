@@ -3,7 +3,7 @@
 import React, { useState, useEffect, use } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { AdminHeader, AdminPrimaryButton, AdminSecondaryButton } from '@/components/admin/AdminHeader';
+import { AdminHeader, AdminPrimaryButton, AdminSecondaryButton } from '@/components/admin';
 import { UserFormModal } from '@/components/admin/UserFormModal';
 import type { User, UserRole, UserStatus, AdminAuditLog } from '@/types/database';
 
