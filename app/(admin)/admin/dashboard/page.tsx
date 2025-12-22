@@ -501,10 +501,10 @@ export default function AdminDashboardPage() {
           {alerts.map((alert) => (
             <Alert 
               key={alert.id} 
-              variant={alert.severity === 'error' ? 'destructive' : 'default'}
+              variant={alert.type === 'error' ? 'destructive' : alert.type === 'warning' ? 'default' : 'default'}
               className="border-l-4"
             >
-              <AlertTitle>{alert.title}</AlertTitle>
+              <AlertTitle>{alert.type.charAt(0).toUpperCase() + alert.type.slice(1)}</AlertTitle>
               <AlertDescription>{alert.message}</AlertDescription>
             </Alert>
           ))}
