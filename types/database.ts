@@ -27,6 +27,16 @@ export type ContentStatus = 'active' | 'inactive';
 export type ImportStatus = 'pending' | 'processing' | 'completed' | 'failed';
 
 /**
+ * Review status type
+ */
+export type ReviewStatus = 'pending' | 'approved' | 'rejected' | 'failed';
+
+/**
+ * Review type
+ */
+export type ReviewType = 'single' | 'batch';
+
+/**
  * Database User type (matches users table)
  */
 export interface User {
@@ -345,6 +355,31 @@ export interface UserGoal {
   period_end?: string;
   achieved: boolean;
   achieved_at?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+/**
+ * Database QuestionReview type (matches question_reviews table)
+ */
+export interface QuestionReview {
+  id: string;
+  question_id: string;
+  reviewed_by: string;
+  review_type: ReviewType;
+  status: ReviewStatus;
+  proposed_hint1?: string;
+  proposed_hint2?: string;
+  proposed_hint3?: string;
+  proposed_solution?: string;
+  proposed_explanation?: string;
+  approved_by?: string;
+  approved_at?: string;
+  rejection_reason?: string;
+  model_used?: string;
+  tokens_used?: number;
+  review_duration_ms?: number;
+  error_message?: string;
   created_at: string;
   updated_at: string;
 }

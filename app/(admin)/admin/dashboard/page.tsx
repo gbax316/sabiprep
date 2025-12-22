@@ -3,14 +3,18 @@
 import { useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useAdminAuth } from '@/lib/admin-auth-context';
-import { Card } from '@/components/common';
 import { 
-  StatCard, 
-  StatIcons, 
-  AlertList, 
-  DataTable,
+  AdminCard,
+  AdminCardHeader,
+  AdminCardTitle,
+  AdminCardContent,
+  AdminBadge,
+  AdminTable,
+  AdminButton,
+  AdminPrimaryButton,
   type ColumnDef,
 } from '@/components/admin';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import type { AdminDashboardStats, SystemAlert } from '@/types/admin';
 import type { UserRole } from '@/types/database';
 import {
@@ -107,15 +111,15 @@ function formatRelativeTime(dateString: string): string {
 function getStatusBadgeClasses(status: string): string {
   switch (status) {
     case 'completed':
-      return 'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300';
+      return 'bg-emerald-100 text-emerald-800';
     case 'processing':
-      return 'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300';
+      return 'bg-blue-100 text-blue-800';
     case 'failed':
-      return 'bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300';
+      return 'bg-red-100 text-red-800';
     case 'pending':
-      return 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300';
+      return 'bg-amber-100 text-amber-800';
     default:
-      return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
+      return 'bg-gray-100 text-gray-800';
   }
 }
 
@@ -125,12 +129,12 @@ function getStatusBadgeClasses(status: string): string {
 function getRoleBadgeClasses(role: UserRole): string {
   switch (role) {
     case 'admin':
-      return 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300';
+      return 'bg-purple-100 text-purple-800';
     case 'tutor':
-      return 'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300';
+      return 'bg-blue-100 text-blue-800';
     case 'student':
     default:
-      return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
+      return 'bg-gray-100 text-gray-800';
   }
 }
 
@@ -241,23 +245,31 @@ export default function AdminDashboardPage() {
       key: 'filename',
       header: 'File',
       render: (item) => (
-        <span className="font-medium text-gray-900 dark:text-gray-100">{item.filename}</span>
+        <span className="font-medium text-gray-900">{item.filename}</span>
       ),
     },
     {
       key: 'status',
       header: 'Status',
-      render: (item) => (
-        <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusBadgeClasses(item.status)}`}>
-          {item.status}
-        </span>
-      ),
+      render: (item) => {
+        const statusMap: Record<string, 'success' | 'warning' | 'error' | 'info' | 'pending'> = {
+          completed: 'success',
+          processing: 'info',
+          failed: 'error',
+          pending: 'pending',
+        };
+        return (
+          <AdminBadge status={statusMap[item.status] || 'default'}>
+            {item.status}
+          </AdminBadge>
+        );
+      },
     },
     {
       key: 'rows',
       header: 'Rows',
       render: (item) => (
-        <span className="text-gray-600 dark:text-gray-300">
+        <span className="text-gray-600">
           {item.successful_rows}/{item.total_rows}
         </span>
       ),
@@ -266,7 +278,7 @@ export default function AdminDashboardPage() {
       key: 'created_at',
       header: 'Date',
       render: (item) => (
-        <span className="text-gray-500 dark:text-gray-400">{formatRelativeTime(item.created_at)}</span>
+        <span className="text-gray-500">{formatRelativeTime(item.created_at)}</span>
       ),
     },
   ];
@@ -278,12 +290,12 @@ export default function AdminDashboardPage() {
       header: 'Name',
       render: (item) => (
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
-            <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
+          <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center">
+            <span className="text-sm font-medium text-indigo-600">
               {item.full_name.charAt(0).toUpperCase()}
             </span>
           </div>
-          <span className="font-medium text-gray-900 dark:text-gray-100">{item.full_name}</span>
+          <span className="font-medium text-gray-900">{item.full_name}</span>
         </div>
       ),
     },
@@ -291,330 +303,229 @@ export default function AdminDashboardPage() {
       key: 'email',
       header: 'Email',
       render: (item) => (
-        <span className="text-gray-600 dark:text-gray-300">{item.email}</span>
+        <span className="text-gray-600">{item.email}</span>
       ),
     },
     {
       key: 'role',
       header: 'Role',
-      render: (item) => (
-        <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getRoleBadgeClasses(item.role)}`}>
-          {item.role}
-        </span>
-      ),
+      render: (item) => {
+        const roleMap: Record<string, 'success' | 'warning' | 'error' | 'info' | 'pending' | 'default'> = {
+          admin: 'error',
+          tutor: 'info',
+          student: 'default',
+        };
+        return (
+          <AdminBadge status={roleMap[item.role] || 'default'}>
+            {item.role}
+          </AdminBadge>
+        );
+      },
     },
     {
       key: 'created_at',
       header: 'Joined',
       render: (item) => (
-        <span className="text-gray-500 dark:text-gray-400">{formatRelativeTime(item.created_at)}</span>
+        <span className="text-gray-500">{formatRelativeTime(item.created_at)}</span>
       ),
     },
   ];
 
   return (
-    <div className="space-y-6 max-w-full">
-      {/* Welcome Section */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 rounded-2xl p-6 lg:p-8 text-white">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
-        
-        <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
-            <h1 className="text-2xl lg:text-3xl font-bold mb-2">
-              Welcome back, {adminUser?.full_name?.split(' ')[0] || 'Admin'}! 👋
-            </h1>
-            <p className="text-emerald-100 text-sm lg:text-base max-w-xl">
-              You have {isAdmin ? 'full admin' : 'tutor'} access to the SabiPrep admin portal.
-              {stats && stats.activity.sessionsToday > 0 && (
-                <> There {stats.activity.sessionsToday === 1 ? 'has been' : 'have been'} <strong className="text-white">{stats.activity.sessionsToday}</strong> learning session{stats.activity.sessionsToday !== 1 ? 's' : ''} today.</>
-              )}
-            </p>
-          </div>
-          <button
-            onClick={() => {
-              fetchDashboardData();
-              fetchAlerts();
-            }}
-            className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-200 text-sm font-medium self-start"
-          >
-            <RefreshCcw className={`w-4 h-4 ${isStatsLoading ? 'animate-spin' : ''}`} />
-            Refresh
-          </button>
-        </div>
+    <div className="space-y-8 pb-8">
+      {/* Page Header */}
+      <div>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          Welcome back, {adminUser?.full_name?.split(' ')[0] || 'Admin'}! 👋
+        </h1>
+        <p className="text-gray-600">
+          {stats && stats.activity.sessionsToday > 0 
+            ? `You have ${stats.activity.sessionsToday} learning session${stats.activity.sessionsToday !== 1 ? 's' : ''} today. Keep up your good work!`
+            : 'Here\'s what\'s happening on your platform today.'}
+        </p>
       </div>
 
-      {/* Error message */}
-      {error && (
-        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
-              <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <span className="text-red-700 dark:text-red-300 font-medium">{error}</span>
-          </div>
-          <button
-            onClick={() => {
-              fetchDashboardData();
-              fetchAlerts();
-            }}
-            className="px-4 py-2 text-sm font-medium text-red-700 hover:text-red-800 bg-red-100 hover:bg-red-200 rounded-lg transition-colors"
-          >
-            Retry
-          </button>
-        </div>
-      )}
-
-      {/* Stats Grid */}
+      {/* Summary Metrics - Top Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard
-          label="Total Users"
-          value={stats?.users.total ?? '-'}
-          icon={StatIcons.users}
-          variant="primary"
-          isLoading={isStatsLoading}
-          subtitle={stats ? `${stats.users.active} active this week` : undefined}
-        />
-
-        <StatCard
-          label="Total Questions"
-          value={stats?.content.totalQuestions ?? '-'}
-          icon={StatIcons.questions}
-          variant="success"
-          isLoading={isStatsLoading}
-          subtitle={stats ? `${stats.content.publishedQuestions} published` : undefined}
-        />
-
-        <StatCard
-          label="Learning Sessions"
-          value={stats?.activity.totalSessions ?? '-'}
-          icon={StatIcons.sessions}
-          variant="info"
-          isLoading={isStatsLoading}
-          subtitle={stats ? `${stats.activity.sessionsToday} today` : undefined}
-        />
-
-        <StatCard
-          label="Avg. Accuracy"
-          value={stats ? `${stats.activity.averageAccuracy}%` : '-'}
-          icon={StatIcons.chart}
-          variant="warning"
-          isLoading={isStatsLoading}
-          subtitle={stats ? `${stats.activity.totalAnswered.toLocaleString()} questions answered` : undefined}
-        />
+        <AdminCard>
+          <AdminCardContent className="p-6">
+            <div className="text-sm text-muted-foreground mb-1">Total Users</div>
+            <div className="text-3xl font-bold text-foreground">{stats?.users.total ?? '-'}</div>
+            <div className="text-xs text-muted-foreground mt-2">
+              {stats ? `${stats.users.active} active this week` : 'Loading...'}
+            </div>
+          </AdminCardContent>
+        </AdminCard>
+        <AdminCard>
+          <AdminCardContent className="p-6">
+            <div className="text-sm text-muted-foreground mb-1">Total Questions</div>
+            <div className="text-3xl font-bold text-foreground">{stats?.content.totalQuestions ?? '-'}</div>
+            <div className="text-xs text-muted-foreground mt-2">
+              {stats ? `${stats.content.publishedQuestions} published` : 'Loading...'}
+            </div>
+          </AdminCardContent>
+        </AdminCard>
+        <AdminCard>
+          <AdminCardContent className="p-6">
+            <div className="text-sm text-muted-foreground mb-1">Learning Sessions</div>
+            <div className="text-3xl font-bold text-foreground">{stats?.activity.totalSessions ?? '-'}</div>
+            <div className="text-xs text-muted-foreground mt-2">
+              {stats ? `${stats.activity.sessionsToday} today` : 'Loading...'}
+            </div>
+          </AdminCardContent>
+        </AdminCard>
+        <AdminCard>
+          <AdminCardContent className="p-6">
+            <div className="text-sm text-muted-foreground mb-1">Avg. Accuracy</div>
+            <div className="text-3xl font-bold text-foreground">
+              {stats ? `${stats.activity.averageAccuracy}%` : '-'}
+            </div>
+            <div className="text-xs text-muted-foreground mt-2">
+              {stats ? `${stats.activity.totalAnswered.toLocaleString()} questions answered` : 'Loading...'}
+            </div>
+          </AdminCardContent>
+        </AdminCard>
       </div>
 
-      {/* Second Row Stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <StatCard
-          label="Subjects"
-          value={stats?.content.totalSubjects ?? '-'}
-          icon={StatIcons.subjects}
-          variant="primary"
-          isLoading={isStatsLoading}
-        />
+      {/* User Breakdown - Insight Section */}
+      <AdminCard>
+        <AdminCardHeader>
+          <AdminCardTitle>Users by Role</AdminCardTitle>
+        </AdminCardHeader>
+        <AdminCardContent>
+        {isStatsLoading ? (
+          <div className="space-y-3">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="h-12 bg-gray-100 rounded-lg animate-pulse" />
+            ))}
+          </div>
+        ) : stats ? (
+          <div className="space-y-3">
+            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <span className="text-sm text-gray-700 font-medium">Students</span>
+              <div className="flex items-center gap-3">
+                <span className="text-sm text-gray-500">
+                  {Math.round((stats.users.byRole.student / stats.users.total) * 100)}%
+                </span>
+                <span className="font-bold text-gray-900 text-lg">{stats.users.byRole.student}</span>
+              </div>
+            </div>
+            <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+              <span className="text-sm text-blue-700 font-medium">Tutors</span>
+              <div className="flex items-center gap-3">
+                <span className="text-sm text-blue-600">
+                  {Math.round((stats.users.byRole.tutor / stats.users.total) * 100)}%
+                </span>
+                <span className="font-bold text-blue-900 text-lg">{stats.users.byRole.tutor}</span>
+              </div>
+            </div>
+            <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
+              <span className="text-sm text-purple-700 font-medium">Admins</span>
+              <div className="flex items-center gap-3">
+                <span className="text-sm text-purple-600">
+                  {Math.round((stats.users.byRole.admin / stats.users.total) * 100)}%
+                </span>
+                <span className="font-bold text-purple-900 text-lg">{stats.users.byRole.admin}</span>
+              </div>
+            </div>
+            <div className="pt-3 mt-3 border-t border-gray-200">
+              <div className="flex items-center justify-between p-3 bg-emerald-50 rounded-lg">
+                <span className="text-sm text-emerald-700 font-medium">New this month</span>
+                <span className="font-bold text-emerald-600 text-lg">+{stats.users.newThisMonth}</span>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <p className="text-muted-foreground text-center py-4">Unable to load user breakdown</p>
+        )}
+        </AdminCardContent>
+      </AdminCard>
 
-        <StatCard
-          label="Topics"
-          value={stats?.content.totalTopics ?? '-'}
-          icon={StatIcons.subjects}
-          variant="success"
-          isLoading={isStatsLoading}
-        />
-
-        <StatCard
-          label="Draft Questions"
-          value={stats?.content.draftQuestions ?? '-'}
-          icon={StatIcons.clock}
-          variant="warning"
-          isLoading={isStatsLoading}
-          subtitle="Pending review"
-        />
-      </div>
+      {/* Quick Actions */}
+      <AdminCard>
+        <AdminCardHeader>
+          <AdminCardTitle>Quick Actions</AdminCardTitle>
+        </AdminCardHeader>
+        <AdminCardContent>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <Link 
+            href="/admin/questions/new"
+            className="group flex flex-col items-center gap-2 p-4 bg-emerald-50 hover:bg-emerald-100 rounded-lg border border-emerald-200 hover:border-emerald-300 transition-colors"
+          >
+            <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
+              <Plus className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-sm font-medium text-gray-900">Add Question</span>
+          </Link>
+          <Link 
+            href="/admin/import"
+            className="group flex flex-col items-center gap-2 p-4 bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 hover:border-blue-300 transition-colors"
+          >
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+              <Upload className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-sm font-medium text-gray-900">Import CSV</span>
+          </Link>
+          <Link 
+            href="/admin/users"
+            className="group flex flex-col items-center gap-2 p-4 bg-purple-50 hover:bg-purple-100 rounded-lg border border-purple-200 hover:border-purple-300 transition-colors"
+          >
+            <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+              <Users className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-sm font-medium text-gray-900">Manage Users</span>
+          </Link>
+          <Link 
+            href="/admin/content"
+            className="group flex flex-col items-center gap-2 p-4 bg-amber-50 hover:bg-amber-100 rounded-lg border border-amber-200 hover:border-amber-300 transition-colors"
+          >
+            <div className="w-10 h-10 bg-amber-600 rounded-lg flex items-center justify-center">
+              <FolderOpen className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-sm font-medium text-foreground">Edit Content</span>
+          </Link>
+        </div>
+        </AdminCardContent>
+      </AdminCard>
 
       {/* Alerts Section */}
-      {(isAlertsLoading || alerts.length > 0) && (
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-600 dark:bg-amber-700 flex items-center justify-center shadow-sm">
-                <Activity className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">System Alerts</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {alerts.length} active {alerts.length === 1 ? 'alert' : 'alerts'}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="p-6">
-            <AlertList
-              alerts={alerts}
-              isLoading={isAlertsLoading}
-              onDismiss={handleAlertDismiss}
-            />
-          </div>
+      {alerts.length > 0 && (
+        <div className="space-y-3">
+          <Alert className="border-amber-300 bg-amber-50">
+            <Activity className="h-4 w-4 text-amber-600" />
+            <AlertTitle className="text-amber-900">System Alerts</AlertTitle>
+            <AlertDescription className="text-amber-800">
+              {alerts.length} active alert{alerts.length !== 1 ? 's' : ''}
+            </AlertDescription>
+          </Alert>
+          {alerts.map((alert) => (
+            <Alert 
+              key={alert.id} 
+              variant={alert.severity === 'error' ? 'destructive' : 'default'}
+              className="border-l-4"
+            >
+              <AlertTitle>{alert.title}</AlertTitle>
+              <AlertDescription>{alert.message}</AlertDescription>
+            </Alert>
+          ))}
         </div>
       )}
-
-      {/* Quick Actions & Recent Activity */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Quick Actions Card */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-emerald-600 dark:bg-emerald-700 flex items-center justify-center shadow-sm">
-                <ClipboardList className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Quick Actions</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Common tasks</p>
-              </div>
-            </div>
-          </div>
-          <div className="p-6">
-            <div className="grid grid-cols-2 gap-3">
-              <Link 
-                href="/admin/questions/new"
-                className="group flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/20 border border-transparent hover:border-emerald-200 dark:hover:border-emerald-800 transition-all duration-200"
-              >
-                <div className="w-10 h-10 bg-emerald-600 dark:bg-emerald-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                  <Plus className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Add Question</span>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Create new</p>
-                </div>
-              </Link>
-              <Link 
-                href="/admin/import"
-                className="group flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 border border-transparent hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200"
-              >
-                <div className="w-10 h-10 bg-blue-600 dark:bg-blue-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                  <Upload className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Import CSV</span>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Bulk import</p>
-                </div>
-              </Link>
-              <Link 
-                href="/admin/users"
-                className="group flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-purple-50 dark:hover:bg-purple-900/20 border border-transparent hover:border-purple-200 dark:hover:border-purple-800 transition-all duration-200"
-              >
-                <div className="w-10 h-10 bg-purple-600 dark:bg-purple-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Manage Users</span>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">View all users</p>
-                </div>
-              </Link>
-              <Link 
-                href="/admin/content"
-                className="group flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl hover:bg-amber-50 dark:hover:bg-amber-900/20 border border-transparent hover:border-amber-200 dark:hover:border-amber-800 transition-all duration-200"
-              >
-                <div className="w-10 h-10 bg-amber-600 dark:bg-amber-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                  <FolderOpen className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Edit Content</span>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Subjects & topics</p>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* User Statistics Breakdown */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-blue-600 dark:bg-blue-700 flex items-center justify-center shadow-sm">
-                <TrendingUp className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">User Breakdown</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">By role</p>
-              </div>
-            </div>
-          </div>
-          <div className="p-6">
-            {isStatsLoading ? (
-              <div className="space-y-4">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex items-center justify-between">
-                    <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-                    <div className="h-4 w-12 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-                  </div>
-                ))}
-              </div>
-            ) : stats ? (
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-400 rounded-full" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300 font-medium">Students</span>
-                  </div>
-                  <span className="font-bold text-gray-900 dark:text-white text-lg">{stats.users.byRole.student}</span>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full" />
-                    <span className="text-sm text-blue-700 dark:text-blue-300 font-medium">Tutors</span>
-                  </div>
-                  <span className="font-bold text-blue-900 dark:text-blue-100 text-lg">{stats.users.byRole.tutor}</span>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full" />
-                    <span className="text-sm text-purple-700 dark:text-purple-300 font-medium">Admins</span>
-                  </div>
-                  <span className="font-bold text-purple-900 dark:text-purple-100 text-lg">{stats.users.byRole.admin}</span>
-                </div>
-                <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">
-                  <div className="flex items-center justify-between bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-lg">
-                    <span className="text-sm text-emerald-700 dark:text-emerald-300 font-medium">New this month</span>
-                    <span className="font-bold text-emerald-600 dark:text-emerald-400 text-lg">+{stats.users.newThisMonth}</span>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <p className="text-gray-500 dark:text-gray-400 text-center py-4">Unable to load user breakdown</p>
-            )}
-          </div>
-        </div>
-      </div>
 
       {/* Recent Activity Tables */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Recent Users */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+        <AdminCard>
+          <AdminCardHeader>
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-purple-600 dark:bg-purple-700 flex items-center justify-center shadow-sm">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Recent Registrations</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">New users</p>
-                </div>
-              </div>
-              <Link 
-                href="/admin/users"
-                className="flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium transition-colors"
-              >
+              <AdminCardTitle>Recent Registrations</AdminCardTitle>
+              <AdminButton variant="ghost" size="sm" href="/admin/users" className="gap-1">
                 View All
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </AdminButton>
             </div>
-          </div>
-          <div className="p-6">
-            <DataTable
+          </AdminCardHeader>
+          <AdminCardContent>
+            <AdminTable
               data={recentUsers}
               columns={userColumns}
               keyAccessor={(u) => u.id}
@@ -623,34 +534,23 @@ export default function AdminDashboardPage() {
               showSearch={false}
               skeletonRows={3}
             />
-          </div>
-        </div>
+          </AdminCardContent>
+        </AdminCard>
 
         {/* Recent Imports */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+        <AdminCard>
+          <AdminCardHeader>
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-blue-600 dark:bg-blue-700 flex items-center justify-center shadow-sm">
-                  <Upload className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Recent Imports</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">CSV uploads</p>
-                </div>
-              </div>
-              <Link 
-                href="/admin/import/history"
-                className="flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium transition-colors"
-              >
+              <AdminCardTitle>Recent Imports</AdminCardTitle>
+              <AdminButton variant="ghost" size="sm" href="/admin/import/history" className="gap-1">
                 View All
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </AdminButton>
             </div>
-          </div>
-          <div className="p-6">
+          </AdminCardHeader>
+          <AdminCardContent>
             {recentImports.length > 0 || isStatsLoading ? (
-              <DataTable
+              <AdminTable
                 data={recentImports}
                 columns={importColumns}
                 keyAccessor={(i) => i.id}
@@ -661,40 +561,21 @@ export default function AdminDashboardPage() {
               />
             ) : (
               <div className="flex flex-col items-center justify-center py-12 text-center">
-                <div className="w-16 h-16 bg-gray-500 dark:bg-gray-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
-                  <Upload className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mb-4">
+                  <Upload className="w-8 h-8 text-muted-foreground" />
                 </div>
-                <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">No imports yet</h4>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 max-w-xs">
+                <h4 className="text-sm font-semibold text-foreground mb-2">No imports yet</h4>
+                <p className="text-sm text-muted-foreground mb-4 max-w-xs">
                   Upload your first CSV file to bulk import questions into the system.
                 </p>
-                <Link
-                  href="/admin/import"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg transition-colors"
-                >
+                <AdminPrimaryButton href="/admin/import" className="gap-2">
                   <Upload className="w-4 h-4" />
                   Import CSV
-                </Link>
+                </AdminPrimaryButton>
               </div>
             )}
-          </div>
-        </div>
-      </div>
-
-      {/* Info Banner */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 shadow-sm">
-        <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-lg bg-blue-600 dark:bg-blue-700 flex items-center justify-center flex-shrink-0 shadow-sm">
-            <BookOpen className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white">Admin Dashboard Guide</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-              This dashboard provides an overview of your SabiPrep platform. Use the navigation menu to manage users, 
-              content, questions, and imports. System alerts will appear above when there are issues requiring attention.
-            </p>
-          </div>
-        </div>
+          </AdminCardContent>
+        </AdminCard>
       </div>
     </div>
   );

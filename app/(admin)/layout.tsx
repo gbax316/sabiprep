@@ -4,6 +4,20 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { AdminAuthProvider, useAdminAuth } from '@/lib/admin-auth-context';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Menu, Bell, LogOut, Settings } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Toaster } from '@/components/ui/toaster';
 
 /**
  * Admin navigation items
@@ -42,6 +56,15 @@ const navItems = [
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    name: 'AI Reviewer',
+    href: '/admin/review',
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
       </svg>
     ),
   },
@@ -85,22 +108,22 @@ function AdminSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 
       {/* Sidebar */}
       <aside 
-        className={`
-          fixed top-0 left-0 z-50 h-full w-64 bg-gray-900 transform transition-transform duration-300 ease-in-out
-          lg:translate-x-0 lg:static lg:z-auto
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        `}
+        className={cn(
+          "fixed top-0 left-0 z-50 h-full w-64 bg-background border-r border-border transform transition-transform duration-300 ease-in-out",
+          "lg:translate-x-0 lg:static lg:z-auto",
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        )}
       >
         {/* Logo */}
-        <div className="flex items-center gap-3 px-6 py-5 border-b border-gray-800">
-          <div className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex items-center gap-3 px-6 py-5 border-b border-border">
+          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+            <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
             </svg>
           </div>
           <div>
-            <h1 className="text-lg font-bold text-white">SabiPrep</h1>
-            <p className="text-xs text-gray-400">Admin Portal</p>
+            <h1 className="text-lg font-bold text-foreground">SabiPrep</h1>
+            <p className="text-xs text-muted-foreground">Admin Portal</p>
           </div>
         </div>
 
@@ -119,53 +142,48 @@ function AdminSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                 key={item.href}
                 href={item.href}
                 onClick={onClose}
-                className={`
-                  flex items-center gap-3 px-4 py-3 rounded-xl transition-colors
-                  ${isActive 
-                    ? 'bg-emerald-600 text-white' 
-                    : 'text-gray-400 hover:bg-gray-800 hover:text-white'
-                  }
-                `}
+                className={cn(
+                  "flex items-center gap-3 px-4 py-2.5 rounded-lg transition-colors text-sm font-medium",
+                  isActive 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground'
+                )}
               >
                 {item.icon}
-                <span className="font-medium">{item.name}</span>
+                <span>{item.name}</span>
               </Link>
             );
           })}
         </nav>
 
         {/* User Info */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-800">
+        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-border bg-muted/50">
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
-              <span className="text-sm font-medium text-white">
+            <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+              <span className="text-sm font-medium text-primary">
                 {adminUser?.full_name?.charAt(0).toUpperCase() || 'A'}
               </span>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-white truncate">
+              <p className="text-sm font-medium text-foreground truncate">
                 {adminUser?.full_name || 'Admin'}
               </p>
-              <p className="text-xs text-gray-400 truncate">
+              <p className="text-xs text-muted-foreground truncate">
                 {adminUser?.email}
               </p>
             </div>
-            <span className={`
-              px-2 py-1 text-xs font-medium rounded-full
-              ${isAdmin ? 'bg-emerald-600 text-white' : 'bg-blue-600 text-white'}
-            `}>
+            <Badge variant={isAdmin ? 'default' : 'secondary'} className="text-xs">
               {adminUser?.role || 'admin'}
-            </span>
+            </Badge>
           </div>
-          <button
+          <Button
             onClick={() => signOut()}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+            variant="ghost"
+            className="w-full justify-start gap-2"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
+            <LogOut className="w-4 h-4" />
             Sign Out
-          </button>
+          </Button>
         </div>
       </aside>
     </>
@@ -176,7 +194,7 @@ function AdminSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
  * Admin Header Component
  */
 function AdminHeader({ onMenuClick }: { onMenuClick: () => void }) {
-  const { adminUser, isAdmin } = useAdminAuth();
+  const { adminUser, isAdmin, signOut } = useAdminAuth();
   const pathname = usePathname();
 
   // Get page title from pathname
@@ -191,40 +209,63 @@ function AdminHeader({ onMenuClick }: { onMenuClick: () => void }) {
   };
 
   return (
-    <header className="bg-white border-b border-gray-200 px-4 py-4 lg:px-6">
+    <header className="bg-background border-b border-border px-6 py-4">
       <div className="flex items-center justify-between">
         {/* Mobile Menu Button */}
-        <button
+        <Button
           onClick={onMenuClick}
-          className="p-2 rounded-lg hover:bg-gray-100 lg:hidden"
+          variant="ghost"
+          size="icon"
+          className="lg:hidden"
         >
-          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+          <Menu className="w-5 h-5" />
+        </Button>
 
         {/* Page Title */}
-        <h2 className="text-xl font-semibold text-gray-900 hidden lg:block">
+        <h2 className="text-xl font-semibold text-foreground hidden lg:block">
           {getPageTitle()}
         </h2>
 
         {/* Right Side */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           {/* Notifications (placeholder) */}
-          <button className="p-2 rounded-lg hover:bg-gray-100 relative">
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-            </svg>
-          </button>
+          <Button variant="ghost" size="icon" className="relative">
+            <Bell className="w-5 h-5" />
+          </Button>
 
-          {/* User Avatar (mobile) */}
-          <div className="lg:hidden flex items-center gap-2">
-            <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-              <span className="text-sm font-medium text-gray-600">
-                {adminUser?.full_name?.charAt(0).toUpperCase() || 'A'}
-              </span>
-            </div>
-          </div>
+          {/* User Menu */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                  <span className="text-sm font-medium text-primary">
+                    {adminUser?.full_name?.charAt(0).toUpperCase() || 'A'}
+                  </span>
+                </div>
+                <span className="hidden md:block text-sm font-medium text-foreground">
+                  {adminUser?.full_name || 'Admin'}
+                </span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-56">
+              <DropdownMenuLabel>
+                <div className="flex flex-col space-y-1">
+                  <p className="text-sm font-medium">{adminUser?.full_name || 'Admin'}</p>
+                  <p className="text-xs text-muted-foreground">{adminUser?.email}</p>
+                </div>
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <Settings className="w-4 h-4 mr-2" />
+                Settings
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem onClick={() => signOut()}>
+                <LogOut className="w-4 h-4 mr-2" />
+                Sign Out
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </header>
@@ -253,10 +294,10 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
   // Show loading state
   if (!isInitialized || isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-white">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-emerald-600 mx-auto mb-4"></div>
-          <p className="text-gray-500">Loading...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
         </div>
       </div>
     );
@@ -273,7 +314,7 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="admin-theme min-h-screen bg-white flex">
       {/* Sidebar */}
       <AdminSidebar 
         isOpen={sidebarOpen} 
@@ -286,10 +327,12 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
         <AdminHeader onMenuClick={() => setSidebarOpen(true)} />
 
         {/* Page Content */}
-        <main className="flex-1 p-4 lg:p-6 overflow-y-auto">
+        <main className="flex-1 p-6 lg:p-8 overflow-y-auto bg-white">
           {children}
         </main>
       </div>
+      {/* Toast Notifications */}
+      <Toaster />
     </div>
   );
 }

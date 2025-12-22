@@ -263,7 +263,12 @@ export type AuditAction =
   | 'ROLE_CHANGE' 
   | 'STATUS_CHANGE'
   | 'LOGIN'
-  | 'LOGOUT';
+  | 'LOGOUT'
+  | 'question_review_created'
+  | 'question_review_approved'
+  | 'question_review_rejected'
+  | 'question_review_failed'
+  | 'question_review_batch_created';
 
 /**
  * Audit entity types

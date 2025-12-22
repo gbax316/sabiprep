@@ -10,7 +10,7 @@ export interface ModalProps {
   onClose: () => void;
   title?: string;
   description?: string;
-  size?: 'sm' | 'md' | 'lg' | 'full';
+  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
   showCloseButton?: boolean;
   closeOnOverlayClick?: boolean;
   closeOnEscape?: boolean;
@@ -23,6 +23,7 @@ const sizeStyles = {
   sm: 'max-w-sm',
   md: 'max-w-md',
   lg: 'max-w-lg',
+  xl: 'max-w-xl',
   full: 'max-w-full mx-4',
 };
 
@@ -66,36 +67,36 @@ export function Modal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4">
       {/* Overlay */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm"
         onClick={closeOnOverlayClick ? onClose : undefined}
       />
 
       {/* Modal */}
       <div
         className={cn(
-          'relative w-full bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border dark:border-slate-700',
+          'relative w-full bg-white rounded-2xl shadow-xl border border-gray-200',
           'animate-in fade-in zoom-in-95 duration-200',
           'max-h-[90vh] flex flex-col',
-          'mx-4 my-4', // Add margin for mobile
+          'mx-4 my-4',
           sizeStyles[size],
           className
         )}
       >
         {/* Header - Fixed */}
         {(title || showCloseButton) && (
-          <div className="flex items-start justify-between p-4 sm:p-6 pb-0 flex-shrink-0">
+          <div className="flex items-start justify-between p-5 pb-0 flex-shrink-0">
             <div className="flex-1 min-w-0 pr-2">
               {title && (
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white break-words">{title}</h2>
+                <h2 className="text-lg font-semibold text-gray-900 break-words">{title}</h2>
               )}
               {description && (
-                <p className="mt-1 text-xs sm:text-sm text-gray-500 dark:text-slate-400 break-words">{description}</p>
+                <p className="mt-1 text-sm text-gray-500 break-words">{description}</p>
               )}
             </div>
             {showCloseButton && (
               <button
                 onClick={onClose}
-                className="p-2 -mr-2 text-gray-400 hover:text-gray-600 dark:text-slate-400 dark:hover:text-slate-200 transition-colors flex-shrink-0"
+                className="p-1.5 -mr-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -104,13 +105,13 @@ export function Modal({
         )}
 
         {/* Content - Scrollable */}
-        <div className="p-4 sm:p-6 overflow-y-auto flex-1 min-h-0">
+        <div className="p-5 overflow-y-auto flex-1 min-h-0">
           {children}
         </div>
 
         {/* Footer - Fixed */}
         {footer && (
-          <div className="p-4 sm:p-6 pt-0 flex justify-end space-x-3 flex-shrink-0 border-t dark:border-slate-700">{footer}</div>
+          <div className="p-5 pt-0 flex justify-end gap-3 flex-shrink-0 border-t border-gray-100">{footer}</div>
         )}
       </div>
     </div>
@@ -163,7 +164,7 @@ export function ConfirmModal({
         </>
       }
     >
-      <p className="text-gray-600 dark:text-slate-300">{message}</p>
+      <p className="text-gray-600">{message}</p>
     </Modal>
   );
 }
@@ -186,10 +187,17 @@ export function AlertModal({
   variant = 'info',
 }: AlertModalProps) {
   const iconColors = {
-    success: 'text-emerald-500',
-    error: 'text-red-500',
-    warning: 'text-amber-500',
-    info: 'text-blue-500',
+    success: 'text-emerald-600',
+    error: 'text-red-600',
+    warning: 'text-amber-600',
+    info: 'text-indigo-600',
+  };
+
+  const bgColors = {
+    success: 'bg-emerald-50',
+    error: 'bg-red-50',
+    warning: 'bg-amber-50',
+    info: 'bg-indigo-50',
   };
 
   return (
@@ -207,22 +215,19 @@ export function AlertModal({
       <div className="text-center">
         <div
           className={cn(
-            'w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center',
-            variant === 'success' && 'bg-emerald-100',
-            variant === 'error' && 'bg-red-100',
-            variant === 'warning' && 'bg-amber-100',
-            variant === 'info' && 'bg-blue-100'
+            'w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center',
+            bgColors[variant]
           )}
         >
-          <span className={cn('text-3xl', iconColors[variant])}>
+          <span className={cn('text-2xl font-bold', iconColors[variant])}>
             {variant === 'success' && '✓'}
             {variant === 'error' && '✕'}
             {variant === 'warning' && '!'}
             {variant === 'info' && 'i'}
           </span>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{title}</h3>
-        <p className="text-gray-600 dark:text-slate-300">{message}</p>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+        <p className="text-gray-600 text-sm">{message}</p>
       </div>
     </Modal>
   );

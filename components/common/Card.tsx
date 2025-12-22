@@ -4,25 +4,26 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'elevated' | 'outlined' | 'selected' | 'gradient';
+  variant?: 'default' | 'elevated' | 'outlined' | 'selected' | 'gradient' | 'clean';
   padding?: 'none' | 'sm' | 'md' | 'lg';
   clickable?: boolean;
   children: React.ReactNode;
 }
 
 const variantStyles = {
-  default: 'bg-white shadow-sm',
-  elevated: 'bg-white shadow-lg',
-  outlined: 'bg-white border-2 border-gray-200',
+  default: 'bg-white shadow-sm border border-gray-100',
+  elevated: 'bg-white shadow-lg border border-gray-100',
+  outlined: 'bg-white border border-gray-200',
   selected: 'bg-white border-2 border-indigo-500',
   gradient: 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white',
+  clean: 'bg-white border border-gray-200',
 };
 
 const paddingStyles = {
   none: '',
   sm: 'p-3',
   md: 'p-4',
-  lg: 'p-5',
+  lg: 'p-6',
 };
 
 export function Card({
@@ -36,10 +37,10 @@ export function Card({
   return (
     <div
       className={cn(
-        'rounded-2xl',
+        'rounded-xl',
         variantStyles[variant],
         paddingStyles[padding],
-        clickable && 'cursor-pointer hover:shadow-md transition-shadow',
+        clickable && 'cursor-pointer hover:border-gray-300 hover:shadow-sm transition-all',
         className
       )}
       {...props}

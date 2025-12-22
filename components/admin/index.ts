@@ -33,8 +33,6 @@ export {
 export { 
   AdminHeader, 
   AdminPageWrapper,
-  AdminPrimaryButton,
-  AdminSecondaryButton,
   type AdminHeaderProps,
   type AdminPageWrapperProps,
   type BreadcrumbItem,
@@ -137,3 +135,45 @@ export {
 export {
   BulkActionBar,
 } from './BulkActionBar';
+
+// ReviewCard - Card component for displaying review information
+export {
+  ReviewCard,
+} from './ReviewCard';
+
+// ReviewProgress - Progress indicator for batch reviews
+export {
+  ReviewProgress,
+} from './ReviewProgress';
+
+// ReviewModal - Modal for reviewing and approving AI-generated content
+export {
+  ReviewModal,
+} from './ReviewModal';
+
+// Admin UI Components (shadcn-based wrappers)
+export {
+  AdminButton,
+  AdminPrimaryButton,
+  AdminSecondaryButton,
+  AdminCard,
+  AdminCardHeader,
+  AdminCardTitle,
+  AdminCardDescription,
+  AdminCardContent,
+  AdminCardFooter,
+  AdminBadge,
+  AdminDialog,
+  AdminDialogTrigger,
+  AdminDialogClose,
+  AdminDialogContent,
+  AdminDialogHeader,
+  AdminDialogFooter,
+  AdminDialogTitle,
+  AdminDialogDescription,
+  AdminTable,
+  type AdminButtonProps,
+  type AdminCardProps,
+  type AdminBadgeProps,
+  type AdminDialogContentProps,
+} from './ui';

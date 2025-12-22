@@ -74,6 +74,8 @@ export interface DataTableProps<T> {
   className?: string;
   /** Number of skeleton rows to show when loading */
   skeletonRows?: number;
+  /** Selected keys for external control */
+  selectedKeys?: Set<string>;
 }
 
 /**
@@ -84,6 +86,7 @@ type SortDirection = 'asc' | 'desc' | null;
 /**
  * DataTable Component
  * A reusable table component with sorting, filtering, pagination, and selection
+ * Clean, light design with indigo accents
  */
 export function DataTable<T>({
   data,
@@ -105,11 +108,16 @@ export function DataTable<T>({
   rowActions,
   className = '',
   skeletonRows = 5,
+  selectedKeys: externalSelectedKeys,
 }: DataTableProps<T>) {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortColumn, setSortColumn] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<SortDirection>(null);
-  const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set());
+  const [internalSelectedKeys, setInternalSelectedKeys] = useState<Set<string>>(new Set());
+  
+  // Use external or internal selected keys
+  const selectedKeys = externalSelectedKeys ?? internalSelectedKeys;
+  const setSelectedKeys = externalSelectedKeys ? () => {} : setInternalSelectedKeys;
   
   // Filter and sort data
   const processedData = useMemo(() => {
@@ -195,7 +203,7 @@ export function DataTable<T>({
   const getSortIcon = (columnKey: string) => {
     if (sortColumn !== columnKey) {
       return (
-        <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
         </svg>
       );
@@ -203,14 +211,14 @@ export function DataTable<T>({
     
     if (sortDirection === 'asc') {
       return (
-        <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
         </svg>
       );
     }
     
     return (
-      <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
       </svg>
     );
@@ -219,41 +227,41 @@ export function DataTable<T>({
   // Loading skeleton
   if (isLoading) {
     return (
-      <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
+      <div className={`bg-white rounded-lg border border-gray-200 overflow-hidden ${className}`}>
         {showSearch && (
-          <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
-            <div className="w-64 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />
+          <div className="p-4 border-b border-gray-200 bg-gray-50">
+            <div className="w-64 h-10 bg-gray-200 rounded-lg animate-pulse" />
           </div>
         )}
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-700">
+            <thead className="bg-gray-50 border-b border-gray-200">
               <tr>
-                {selectable && <th className="w-12 px-6 py-4" />}
+                {selectable && <th className="w-12 px-6 py-3" />}
                 {columns.map((col) => (
-                  <th key={col.key} className="px-6 py-4">
-                    <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                  <th key={col.key} className="px-6 py-3">
+                    <div className="h-4 bg-gray-200 rounded animate-pulse" />
                   </th>
                 ))}
-                {rowActions && <th className="w-24 px-6 py-4" />}
+                {rowActions && <th className="w-24 px-6 py-3" />}
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+            <tbody className="divide-y divide-gray-200">
               {Array.from({ length: skeletonRows }).map((_, idx) => (
-                <tr key={idx} className="bg-white dark:bg-gray-800">
+                <tr key={idx} className="bg-white hover:bg-gray-50">
                   {selectable && (
-                    <td className="px-6 py-4">
-                      <div className="w-4 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                    <td className="px-6 py-3">
+                      <div className="w-4 h-4 bg-gray-200 rounded animate-pulse" />
                     </td>
                   )}
                   {columns.map((col) => (
-                    <td key={col.key} className="px-6 py-4">
-                      <div className="h-4 bg-gray-100 dark:bg-gray-700 rounded animate-pulse" />
+                    <td key={col.key} className="px-6 py-3">
+                      <div className="h-4 bg-gray-100 rounded animate-pulse" />
                     </td>
                   ))}
                   {rowActions && (
-                    <td className="px-6 py-4">
-                      <div className="w-8 h-8 bg-gray-100 dark:bg-gray-700 rounded animate-pulse" />
+                    <td className="px-6 py-3">
+                      <div className="w-8 h-8 bg-gray-100 rounded animate-pulse" />
                     </td>
                   )}
                 </tr>
@@ -266,13 +274,13 @@ export function DataTable<T>({
   }
   
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
+    <div className={`bg-white rounded-lg border border-gray-200 overflow-hidden ${className}`}>
       {/* Search */}
       {showSearch && searchFilter && (
-        <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
+        <div className="p-4 border-b border-gray-200 bg-gray-50">
           <div className="relative max-w-xs">
             <svg
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500"
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -284,7 +292,7 @@ export function DataTable<T>({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={searchPlaceholder}
-              className="w-full pl-10 pr-4 py-2 text-sm border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+              className="w-full pl-10 pr-4 py-2.5 text-sm border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all"
             />
           </div>
         </div>
@@ -293,61 +301,61 @@ export function DataTable<T>({
       {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full">
-          <thead className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-700">
+          <thead className="bg-gray-50 border-b border-gray-200">
             <tr>
               {selectable && (
-                <th className="w-12 px-6 py-4">
+                <th className="w-12 px-6 py-3">
                   <input
                     type="checkbox"
                     checked={selectedKeys.size === processedData.length && processedData.length > 0}
                     onChange={handleSelectAll}
-                    className="w-4 h-4 text-emerald-600 rounded border-gray-300 dark:border-gray-600 focus:ring-emerald-500"
+                    className="w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500 focus:ring-offset-0"
                   />
                 </th>
               )}
               {columns.map((col) => (
                 <th
                   key={col.key}
-                  className={`px-6 py-4 text-${col.align || 'left'} ${col.width || ''}`}
+                  className={`px-6 py-3 text-${col.align || 'left'} ${col.width || ''}`}
                 >
                   {col.sortable ? (
                     <button
                       onClick={() => handleSort(col.key)}
-                      className="flex items-center gap-2 text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider hover:text-gray-900 dark:hover:text-white transition-colors"
+                      className="flex items-center gap-2 text-xs font-semibold text-gray-700 uppercase tracking-wider hover:text-gray-900 transition-colors"
                     >
                       {col.header}
                       {getSortIcon(col.key)}
                     </button>
                   ) : (
-                    <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">
+                    <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
                       {col.header}
                     </span>
                   )}
                 </th>
               ))}
               {rowActions && (
-                <th className="w-24 px-6 py-4 text-right">
-                  <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">
+                <th className="w-24 px-6 py-3 text-right">
+                  <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
                     Actions
                   </span>
                 </th>
               )}
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+          <tbody className="divide-y divide-gray-200">
             {processedData.length === 0 ? (
               <tr>
                 <td 
                   colSpan={columns.length + (selectable ? 1 : 0) + (rowActions ? 1 : 0)}
-                  className="px-6 py-12 text-center"
+                  className="px-6 py-16 text-center bg-white"
                 >
                   <div className="flex flex-col items-center justify-center">
                     {emptyIcon || (
-                      <svg className="w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                      <svg className="w-12 h-12 text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
                       </svg>
                     )}
-                    <p className="text-gray-500 dark:text-gray-400">{emptyMessage}</p>
+                    <p className="text-gray-600 text-sm font-medium">{emptyMessage}</p>
                   </div>
                 </td>
               </tr>
@@ -361,31 +369,31 @@ export function DataTable<T>({
                     key={key}
                     onClick={() => onRowClick?.(item, index)}
                     className={`
-                      transition-colors
-                      ${onRowClick ? 'cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700/50' : ''}
-                      ${isSelected ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'bg-white dark:bg-gray-800'}
+                      transition-colors bg-white
+                      ${onRowClick ? 'cursor-pointer hover:bg-gray-50' : ''}
+                      ${isSelected ? 'bg-indigo-50' : ''}
                     `}
                   >
                     {selectable && (
-                      <td className="px-6 py-4" onClick={(e) => e.stopPropagation()}>
+                      <td className="px-6 py-3" onClick={(e) => e.stopPropagation()}>
                         <input
                           type="checkbox"
                           checked={isSelected}
                           onChange={() => handleSelectRow(item)}
-                          className="w-4 h-4 text-emerald-600 rounded border-gray-300 dark:border-gray-600 focus:ring-emerald-500"
+                          className="w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500 focus:ring-offset-0"
                         />
                       </td>
                     )}
                     {columns.map((col) => (
                       <td
                         key={col.key}
-                        className={`px-6 py-4 text-sm text-gray-900 dark:text-gray-100 text-${col.align || 'left'} ${col.width || ''}`}
+                        className={`px-6 py-3 text-sm text-gray-900 text-${col.align || 'left'} ${col.width || ''}`}
                       >
                         {col.render ? col.render(item, index) : String((item as Record<string, unknown>)[col.key] ?? '')}
                       </td>
                     ))}
                     {rowActions && (
-                      <td className="px-6 py-4 text-right" onClick={(e) => e.stopPropagation()}>
+                      <td className="px-6 py-3 text-right" onClick={(e) => e.stopPropagation()}>
                         {rowActions(item)}
                       </td>
                     )}
@@ -399,22 +407,22 @@ export function DataTable<T>({
       
       {/* Pagination */}
       {pagination && (pagination.totalPages > 1 || onPageSizeChange) && (
-        <div className="px-6 py-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="px-6 py-4 border-t border-gray-200 bg-gray-50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Showing <span className="font-semibold text-gray-900 dark:text-white">{(pagination.page - 1) * pagination.limit + 1}</span> to{' '}
-              <span className="font-semibold text-gray-900 dark:text-white">{Math.min(pagination.page * pagination.limit, pagination.total)}</span> of{' '}
-              <span className="font-semibold text-gray-900 dark:text-white">{pagination.total}</span> results
+            <p className="text-sm text-gray-600">
+              Showing <span className="font-medium text-gray-900">{(pagination.page - 1) * pagination.limit + 1}</span> to{' '}
+              <span className="font-medium text-gray-900">{Math.min(pagination.page * pagination.limit, pagination.total)}</span> of{' '}
+              <span className="font-medium text-gray-900">{pagination.total}</span> results
             </p>
             {onPageSizeChange && (
               <div className="flex items-center gap-2">
-                <label className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
+                <label className="text-sm text-gray-600 whitespace-nowrap">
                   Rows per page:
                 </label>
                 <select
                   value={pagination.limit}
                   onChange={(e) => onPageSizeChange(Number(e.target.value))}
-                  className="px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors shadow-sm"
+                  className="px-3 py-1.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
                 >
                   {pageSizeOptions.map((size) => (
                     <option key={size} value={size}>
@@ -426,15 +434,15 @@ export function DataTable<T>({
             )}
           </div>
           {pagination.totalPages > 1 && (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               <button
                 onClick={() => onPageChange?.(pagination.page - 1)}
                 disabled={pagination.page <= 1}
-                className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-sm"
+                className="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
               >
                 Previous
               </button>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 mx-1">
                 {Array.from({ length: Math.min(5, pagination.totalPages) }, (_, i) => {
                   let pageNum: number;
                   if (pagination.totalPages <= 5) {
@@ -451,10 +459,10 @@ export function DataTable<T>({
                     <button
                       key={pageNum}
                       onClick={() => onPageChange?.(pageNum)}
-                      className={`min-w-[2.5rem] px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                      className={`min-w-[2.25rem] px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                         pagination.page === pageNum
-                          ? 'bg-emerald-600 dark:bg-emerald-700 text-white shadow-sm'
-                          : 'text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm'
+                          ? 'bg-indigo-600 text-white'
+                          : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
                       }`}
                     >
                       {pageNum}
@@ -465,7 +473,7 @@ export function DataTable<T>({
               <button
                 onClick={() => onPageChange?.(pagination.page + 1)}
                 disabled={pagination.page >= pagination.totalPages}
-                className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-sm"
+                className="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
               >
                 Next
               </button>

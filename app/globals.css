@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  /* Magic UI Dark Theme - Default */
+  /* Magic UI Dark Theme - Default (for student-facing pages) */
   --background: #020617;
   --foreground: #F9FAFB;
   
@@ -36,6 +36,52 @@
   
   /* Radius */
   --radius: 0.75rem;
+
+  /* shadcn UI Light Theme Variables (for admin section) */
+  --shadcn-background: 0 0% 100%;
+  --shadcn-foreground: 222.2 84% 4.9%;
+  --shadcn-card: 0 0% 100%;
+  --shadcn-card-foreground: 222.2 84% 4.9%;
+  --shadcn-popover: 0 0% 100%;
+  --shadcn-popover-foreground: 222.2 84% 4.9%;
+  --shadcn-primary: 221.2 83.2% 53.3%;
+  --shadcn-primary-foreground: 210 40% 98%;
+  --shadcn-secondary: 210 40% 96.1%;
+  --shadcn-secondary-foreground: 222.2 47.4% 11.2%;
+  --shadcn-muted: 210 40% 96.1%;
+  --shadcn-muted-foreground: 215.4 16.3% 46.9%;
+  --shadcn-accent: 210 40% 96.1%;
+  --shadcn-accent-foreground: 222.2 47.4% 11.2%;
+  --shadcn-destructive: 0 84.2% 60.2%;
+  --shadcn-destructive-foreground: 210 40% 98%;
+  --shadcn-border: 214.3 31.8% 91.4%;
+  --shadcn-input: 214.3 31.8% 91.4%;
+  --shadcn-ring: 221.2 83.2% 53.3%;
+  --shadcn-radius: 0.5rem;
+}
+
+/* Admin section light theme - override CSS variables for shadcn components */
+.admin-theme {
+  --background: var(--shadcn-background);
+  --foreground: var(--shadcn-foreground);
+  --card: var(--shadcn-card);
+  --card-foreground: var(--shadcn-card-foreground);
+  --popover: var(--shadcn-popover);
+  --popover-foreground: var(--shadcn-popover-foreground);
+  --primary: var(--shadcn-primary);
+  --primary-foreground: var(--shadcn-primary-foreground);
+  --secondary: var(--shadcn-secondary);
+  --secondary-foreground: var(--shadcn-secondary-foreground);
+  --muted: var(--shadcn-muted);
+  --muted-foreground: var(--shadcn-muted-foreground);
+  --accent: var(--shadcn-accent);
+  --accent-foreground: var(--shadcn-accent-foreground);
+  --destructive: var(--shadcn-destructive);
+  --destructive-foreground: var(--shadcn-destructive-foreground);
+  --border: var(--shadcn-border);
+  --input: var(--shadcn-input);
+  --ring: var(--shadcn-ring);
+  --radius: var(--shadcn-radius);
 }
 
 * {

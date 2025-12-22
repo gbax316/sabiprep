@@ -30,6 +30,7 @@ export interface AdminHeaderProps {
 /**
  * AdminHeader Component
  * Page header with title, subtitle, breadcrumbs, and action buttons
+ * Clean, light design with indigo accents
  */
 export function AdminHeader({
   title,
@@ -39,27 +40,27 @@ export function AdminHeader({
   className = '',
 }: AdminHeaderProps) {
   return (
-    <div className={`mb-6 ${className}`}>
+    <div className={`mb-8 ${className}`}>
       {/* Breadcrumbs */}
       {breadcrumbs && breadcrumbs.length > 0 && (
-        <nav className="mb-2">
+        <nav className="mb-3">
           <ol className="flex items-center gap-2 text-sm">
             {breadcrumbs.map((item, index) => (
               <li key={index} className="flex items-center gap-2">
                 {index > 0 && (
-                  <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 )}
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    className="text-gray-500 hover:text-indigo-600 transition-colors"
                   >
                     {item.label}
                   </Link>
                 ) : (
-                  <span className="text-gray-900 dark:text-white font-medium">{item.label}</span>
+                  <span className="text-gray-900 font-medium">{item.label}</span>
                 )}
               </li>
             ))}
@@ -70,9 +71,9 @@ export function AdminHeader({
       {/* Header content */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">{title}</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{title}</h1>
           {subtitle && (
-            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{subtitle}</p>
+            <p className="mt-1 text-sm text-gray-500">{subtitle}</p>
           )}
         </div>
         
@@ -127,10 +128,13 @@ export function AdminPageWrapper({
   );
 }
 
+// Note: AdminPrimaryButton and AdminSecondaryButton have been moved to components/admin/ui/AdminButton.tsx
+// They are now shadcn-based components. Import them from '@/components/admin' or '@/components/admin/ui'
+
 /**
- * Common action button styles
+ * Danger button for destructive actions
  */
-export function AdminPrimaryButton({
+export function AdminDangerButton({
   children,
   onClick,
   href,
@@ -145,7 +149,7 @@ export function AdminPrimaryButton({
 }) {
   const baseClasses = `
     inline-flex items-center gap-2 px-4 py-2.5
-    bg-emerald-600 hover:bg-emerald-700 
+    bg-red-600 hover:bg-red-700 
     text-white text-sm font-semibold 
     rounded-lg transition-all duration-200
     shadow-sm hover:shadow
@@ -168,7 +172,10 @@ export function AdminPrimaryButton({
   );
 }
 
-export function AdminSecondaryButton({
+/**
+ * Success button for positive actions
+ */
+export function AdminSuccessButton({
   children,
   onClick,
   href,
@@ -183,10 +190,10 @@ export function AdminSecondaryButton({
 }) {
   const baseClasses = `
     inline-flex items-center gap-2 px-4 py-2.5
-    bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700
-    border border-gray-300 dark:border-gray-600
-    text-gray-700 dark:text-gray-200 text-sm font-semibold 
+    bg-emerald-600 hover:bg-emerald-700 
+    text-white text-sm font-semibold 
     rounded-lg transition-all duration-200
+    shadow-sm hover:shadow
     disabled:opacity-50 disabled:cursor-not-allowed
     ${className}
   `.trim();

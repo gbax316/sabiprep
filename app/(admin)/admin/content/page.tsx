@@ -5,16 +5,22 @@ import {
   AdminHeader,
   AdminPrimaryButton,
   AdminSecondaryButton,
+  AdminButton,
   SubjectFormModal,
   TopicFormModal,
   DeleteConfirmModal,
-  DataTable,
+  AdminTable,
+  AdminCard,
+  AdminCardHeader,
+  AdminCardTitle,
+  AdminCardContent,
+  AdminBadge,
   SUBJECT_ICONS,
   type SubjectFormData,
   type TopicFormData,
   type ColumnDef,
 } from '@/components/admin';
-import { Badge } from '@/components/common';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   Plus,
   Pencil,
@@ -281,9 +287,9 @@ export default function ContentManagementPage() {
     
     return (
       <div
-        className={`group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer ${
+        className={`group bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer ${
           subject.status === 'inactive' ? 'opacity-60' : ''
-        } ${isSelected ? 'ring-2 ring-emerald-500 ring-offset-2 border-emerald-500' : 'hover:border-gray-300 dark:hover:border-gray-600'}`}
+        } ${isSelected ? 'ring-2 ring-emerald-500 ring-offset-2 border-emerald-500' : 'hover:border-gray-300'}`}
         onClick={() => {
           setSelectedSubject(subject);
           setSubjectModalMode('edit');
@@ -300,29 +306,29 @@ export default function ContentManagementPage() {
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
-                <h3 className="font-semibold text-gray-900 dark:text-white truncate text-base">
+                <h3 className="font-semibold text-gray-900 truncate text-base">
                   {subject.name}
                 </h3>
                 {isSelected && (
-                  <Badge variant="success" className="text-xs px-2 py-0.5 flex-shrink-0">
+                  <AdminBadge status="success" className="text-xs px-2 py-0.5 flex-shrink-0">
                     Active Filter
-                  </Badge>
+                  </AdminBadge>
                 )}
-                <Badge 
-                  variant={subject.status === 'active' ? 'success' : 'neutral'} 
+                <AdminBadge 
+                  status={subject.status === 'active' ? 'success' : 'pending'} 
                   className="text-xs px-2 py-0.5 flex-shrink-0"
                 >
                   {subject.status}
-                </Badge>
+                </AdminBadge>
               </div>
-              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mt-2">
+              <div className="flex items-center gap-4 text-sm text-muted-foreground mt-2">
                 <span className="flex items-center gap-1.5">
-                  <FolderOpen className="w-4 h-4" />
+                  <FolderOpen className="w-4 h-4 text-gray-600" />
                   <span className="font-medium">{subject.topic_count}</span>
                   <span className="text-gray-500">{subject.topic_count === 1 ? 'topic' : 'topics'}</span>
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <MessageSquare className="w-4 h-4" />
+                  <MessageSquare className="w-4 h-4 text-gray-600" />
                   <span className="font-medium">{subject.question_count}</span>
                   <span className="text-gray-500">{subject.question_count === 1 ? 'question' : 'questions'}</span>
                 </span>
@@ -332,7 +338,7 @@ export default function ContentManagementPage() {
                   {subject.exam_types.map(exam => (
                     <span 
                       key={exam}
-                      className="px-2 py-0.5 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md font-medium"
+                      className="px-2 py-0.5 text-xs bg-muted text-muted-foreground rounded-md font-medium"
                     >
                       {exam}
                     </span>
@@ -343,7 +349,7 @@ export default function ContentManagementPage() {
           </div>
         </div>
         
-        <div className="flex items-center justify-end gap-2 mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+        <div className="flex items-center justify-end gap-2 mt-4 pt-4 border-t border-border">
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -351,10 +357,10 @@ export default function ContentManagementPage() {
               setSubjectModalMode('edit');
               setIsSubjectModalOpen(true);
             }}
-            className="p-2 text-gray-500 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 rounded-lg transition-all duration-200"
+            className="p-2 text-muted-foreground hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
             title="Edit Subject"
           >
-            <Pencil className="w-4 h-4" />
+            <Pencil className="w-4 h-4 text-gray-700" />
           </button>
           <button
             onClick={(e) => {
@@ -370,22 +376,22 @@ export default function ContentManagementPage() {
             }}
             className={`p-2 rounded-lg transition-all duration-200 ${
               filterSubjectId === subject.id
-                ? 'text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20'
-                : 'text-gray-500 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20'
+                ? 'text-emerald-600 bg-emerald-50'
+                : 'text-muted-foreground hover:text-blue-600 hover:bg-blue-50'
             }`}
             title={filterSubjectId === subject.id ? 'Clear Filter' : 'View Topics'}
           >
-            <FolderOpen className="w-4 h-4" />
+            <FolderOpen className={`w-4 h-4 ${filterSubjectId === subject.id ? 'text-emerald-600' : 'text-gray-700'}`} />
           </button>
           <button
             onClick={(e) => {
               e.stopPropagation();
               openDeleteModal('subject', subject);
             }}
-            className="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-all duration-200"
+            className="p-2 text-muted-foreground hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200"
             title="Delete Subject"
           >
-            <Trash2 className="w-4 h-4" />
+            <Trash2 className="w-4 h-4 text-gray-700" />
           </button>
         </div>
       </div>
@@ -404,7 +410,7 @@ export default function ContentManagementPage() {
             className="w-3 h-3 rounded-full shadow-sm"
             style={{ backgroundColor: topic.subject_color || '#6B7280' }}
           />
-          <span className="font-semibold text-gray-900 dark:text-white">{topic.name}</span>
+          <span className="font-semibold text-gray-900">{topic.name}</span>
         </div>
       ),
     },
@@ -413,7 +419,7 @@ export default function ContentManagementPage() {
       header: 'Subject',
       sortable: true,
       render: (topic) => (
-        <span className="text-sm text-gray-600 dark:text-gray-400">{topic.subject_name}</span>
+        <span className="text-sm text-muted-foreground">{topic.subject_name}</span>
       ),
     },
     {
@@ -423,7 +429,7 @@ export default function ContentManagementPage() {
       render: (topic) => (
         <div className="flex items-center gap-2">
           <MessageSquare className="w-4 h-4 text-gray-400" />
-          <span className="font-medium text-gray-700 dark:text-gray-300">{topic.question_count}</span>
+          <span className="font-medium text-gray-900">{topic.question_count}</span>
         </div>
       ),
     },
@@ -432,9 +438,9 @@ export default function ContentManagementPage() {
       header: 'Status',
       sortable: true,
       render: (topic) => (
-        <Badge variant={topic.status === 'active' ? 'success' : 'neutral'} className="text-xs">
+        <AdminBadge status={topic.status === 'active' ? 'success' : 'pending'} className="text-xs">
           {topic.status}
-        </Badge>
+        </AdminBadge>
       ),
     },
     {
@@ -449,20 +455,20 @@ export default function ContentManagementPage() {
               setTopicModalMode('edit');
               setIsTopicModalOpen(true);
             }}
-            className="p-2 text-gray-500 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 rounded-lg transition-all duration-200"
+            className="p-2 text-muted-foreground hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
             title="Edit Topic"
           >
-            <Pencil className="w-4 h-4" />
+            <Pencil className="w-4 h-4 text-gray-700" />
           </button>
           <button
             onClick={(e) => {
               e.stopPropagation();
               openDeleteModal('topic', topic);
             }}
-            className="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-all duration-200"
+            className="p-2 text-muted-foreground hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200"
             title="Delete Topic"
           >
-            <Trash2 className="w-4 h-4" />
+            <Trash2 className="w-4 h-4 text-gray-700" />
           </button>
         </div>
       ),
@@ -482,61 +488,46 @@ export default function ContentManagementPage() {
 
       {/* View Mode Tabs (Mobile) */}
       <div className="md:hidden">
-        <div className="flex bg-gray-100 dark:bg-gray-800 rounded-xl p-1.5 shadow-inner">
-          <button
-            onClick={() => setViewMode('subjects')}
-            className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-medium transition-all duration-200 ${
-              viewMode === 'subjects'
-                ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-                : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
-            }`}
-          >
-            <span className="flex items-center justify-center gap-2">
+        <Tabs value={viewMode} onValueChange={(value) => setViewMode(value as ViewMode)}>
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="subjects" className="flex items-center gap-2">
               <LayoutGrid className="w-4 h-4" />
               Subjects
-            </span>
-          </button>
-          <button
-            onClick={() => setViewMode('topics')}
-            className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-medium transition-all duration-200 ${
-              viewMode === 'topics'
-                ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-                : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
-            }`}
-          >
-            <span className="flex items-center justify-center gap-2">
+            </TabsTrigger>
+            <TabsTrigger value="topics" className="flex items-center gap-2">
               <List className="w-4 h-4" />
               Topics
-            </span>
-          </button>
-        </div>
+            </TabsTrigger>
+          </TabsList>
+        </Tabs>
       </div>
 
       {/* Desktop Two-Column Layout */}
       <div className="hidden md:grid md:grid-cols-2 gap-6">
         {/* Subjects Column */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+        <AdminCard>
+          <AdminCardHeader>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/20 flex items-center justify-center">
-                  <LayoutGrid className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+                  <LayoutGrid className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div>
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Subjects</h2>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <AdminCardTitle>Subjects</AdminCardTitle>
+                  <p className="text-sm text-muted-foreground mt-1">
                     {subjects.length} {subjects.length === 1 ? 'subject' : 'subjects'}
                   </p>
                 </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => fetchSubjects()}
-                  className="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200"
-                title="Refresh"
-              >
-                <RefreshCcw className={`w-4 h-4 ${isLoadingSubjects ? 'animate-spin' : ''}`} />
-              </button>
+              </div>
+              <div className="flex items-center gap-2">
+                <AdminButton
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => fetchSubjects()}
+                  title="Refresh"
+                >
+                  <RefreshCcw className={`w-4 h-4 text-gray-900 ${isLoadingSubjects ? 'animate-spin' : ''}`} />
+                </AdminButton>
               <AdminPrimaryButton
                 onClick={() => {
                   setSelectedSubject(null);
@@ -549,18 +540,17 @@ export default function ContentManagementPage() {
               </AdminPrimaryButton>
               </div>
             </div>
-          </div>
-
-          <div className="p-6">
+          </AdminCardHeader>
+          <AdminCardContent>
           {isLoadingSubjects ? (
               <div className="space-y-4">
               {[1, 2, 3].map(i => (
-                  <div key={i} className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-5 animate-pulse">
+                  <div key={i} className="bg-muted rounded-xl p-5 animate-pulse">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-xl" />
+                      <div className="w-12 h-12 bg-muted-foreground/20 rounded-xl" />
                       <div className="flex-1 space-y-2">
-                        <div className="h-5 bg-gray-200 dark:bg-gray-600 rounded w-32" />
-                        <div className="h-4 bg-gray-200 dark:bg-gray-600 rounded w-48" />
+                        <div className="h-5 bg-muted-foreground/20 rounded w-32" />
+                        <div className="h-4 bg-muted-foreground/20 rounded w-48" />
                     </div>
                   </div>
                 </div>
@@ -568,13 +558,13 @@ export default function ContentManagementPage() {
             </div>
           ) : subjects.length === 0 ? (
               <div className="text-center py-16">
-                <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-8 h-8 text-gray-400" />
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="w-8 h-8 text-muted-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg font-semibold text-foreground mb-2">
                   No subjects yet
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-sm mx-auto">
+                <p className="text-muted-foreground mb-6 max-w-sm mx-auto">
                   Get started by creating your first subject. Subjects help organize your topics and questions.
                 </p>
                 <AdminPrimaryButton
@@ -595,20 +585,20 @@ export default function ContentManagementPage() {
               ))}
             </div>
           )}
-          </div>
-        </div>
+            </AdminCardContent>
+          </AdminCard>
 
         {/* Topics Column */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-          <div className="flex items-center justify-between mb-4">
+        <AdminCard>
+          <AdminCardHeader>
+            <div className="flex items-center justify-between w-full">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center">
-                  <List className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                  <List className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Topics</h2>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <AdminCardTitle>Topics</AdminCardTitle>
+                  <p className="text-sm text-muted-foreground mt-1">
                     {filteredTopics.length} {filteredTopics.length === 1 ? 'topic' : 'topics'}
                     {filterSubjectId && ` in ${subjects.find(s => s.id === filterSubjectId)?.name}`}
                   </p>
@@ -620,7 +610,7 @@ export default function ContentManagementPage() {
                   className="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200"
                 title="Refresh"
               >
-                <RefreshCcw className={`w-4 h-4 ${isLoadingTopics ? 'animate-spin' : ''}`} />
+                <RefreshCcw className={`w-4 h-4 text-gray-700 ${isLoadingTopics ? 'animate-spin' : ''}`} />
               </button>
               <AdminPrimaryButton
                 onClick={() => {
@@ -634,7 +624,8 @@ export default function ContentManagementPage() {
               </AdminPrimaryButton>
             </div>
           </div>
-
+          </AdminCardHeader>
+          <AdminCardContent>
           {/* Hierarchical Filters */}
             <div className="space-y-3">
             {/* Subject Filter */}
@@ -714,9 +705,9 @@ export default function ContentManagementPage() {
               </div>
             )}
             </div>
-          </div>
 
-          <div className="p-6">
+          {/* Topics List */}
+          <div className="mt-6">
           {isLoadingTopics ? (
               <div className="space-y-3">
               {[1, 2, 3, 4, 5].map(i => (
@@ -729,8 +720,7 @@ export default function ContentManagementPage() {
               ))}
             </div>
           ) : (
-              <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
-              <DataTable
+              <AdminTable
                 data={filteredTopics}
                 columns={topicColumns}
                 keyAccessor={(topic) => topic.id}
@@ -747,10 +737,10 @@ export default function ContentManagementPage() {
                   setIsTopicModalOpen(true);
                 }}
               />
-            </div>
           )}
           </div>
-        </div>
+          </AdminCardContent>
+        </AdminCard>
       </div>
 
       {/* Mobile View */}
@@ -932,25 +922,27 @@ export default function ContentManagementPage() {
                   ))}
                 </div>
               ) : (
-                <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
-              <DataTable
-                data={filteredTopics}
-                columns={topicColumns}
-                keyAccessor={(topic) => topic.id}
-                isLoading={isLoadingTopics}
-                emptyMessage={
-                  filterSubjectId
-                        ? `No topics in ${subjects.find(s => s.id === filterSubjectId)?.name || 'this subject'}. Create your first topic.`
-                        : "No topics found. Create your first topic to get started."
-                }
-                showSearch={false}
-                onRowClick={(topic) => {
-                  setSelectedTopic(topic);
-                  setTopicModalMode('edit');
-                  setIsTopicModalOpen(true);
-                }}
-              />
-                </div>
+                <AdminCard>
+                  <AdminCardContent className="p-0">
+                    <AdminTable
+                      data={filteredTopics}
+                      columns={topicColumns}
+                      keyAccessor={(topic) => topic.id}
+                      isLoading={isLoadingTopics}
+                      emptyMessage={
+                        filterSubjectId
+                              ? `No topics in ${subjects.find(s => s.id === filterSubjectId)?.name || 'this subject'}. Create your first topic.`
+                              : "No topics found. Create your first topic to get started."
+                      }
+                      showSearch={false}
+                      onRowClick={(topic) => {
+                        setSelectedTopic(topic);
+                        setTopicModalMode('edit');
+                        setIsTopicModalOpen(true);
+                      }}
+                    />
+                  </AdminCardContent>
+                </AdminCard>
               )}
             </div>
           </div>

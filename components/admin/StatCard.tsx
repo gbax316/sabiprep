@@ -5,7 +5,7 @@ import React from 'react';
 /**
  * Color variants for the StatCard
  */
-export type StatCardVariant = 'primary' | 'success' | 'warning' | 'danger' | 'info';
+export type StatCardVariant = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'indigo';
 
 /**
  * StatCard Props
@@ -32,38 +32,50 @@ export interface StatCardProps {
 }
 
 /**
- * Get color classes based on variant
+ * Get color classes based on variant - Clean, light design
  */
 function getVariantClasses(variant: StatCardVariant): {
   bg: string;
   icon: string;
   text: string;
+  border: string;
 } {
-  const variants: Record<StatCardVariant, { bg: string; icon: string; text: string }> = {
+  const variants: Record<StatCardVariant, { bg: string; icon: string; text: string; border: string }> = {
     primary: {
-      bg: 'bg-blue-100 dark:bg-blue-900/30',
-      icon: 'text-blue-600 dark:text-blue-400',
-      text: 'text-blue-600 dark:text-blue-400',
+      bg: 'bg-blue-50',
+      icon: 'text-blue-600',
+      text: 'text-blue-600',
+      border: 'border-blue-100',
     },
     success: {
-      bg: 'bg-emerald-100 dark:bg-emerald-900/30',
-      icon: 'text-emerald-600 dark:text-emerald-400',
-      text: 'text-emerald-600 dark:text-emerald-400',
+      bg: 'bg-emerald-50',
+      icon: 'text-emerald-600',
+      text: 'text-emerald-600',
+      border: 'border-emerald-100',
     },
     warning: {
-      bg: 'bg-amber-100 dark:bg-amber-900/30',
-      icon: 'text-amber-600 dark:text-amber-400',
-      text: 'text-amber-600 dark:text-amber-400',
+      bg: 'bg-amber-50',
+      icon: 'text-amber-600',
+      text: 'text-amber-600',
+      border: 'border-amber-100',
     },
     danger: {
-      bg: 'bg-red-100 dark:bg-red-900/30',
-      icon: 'text-red-600 dark:text-red-400',
-      text: 'text-red-600 dark:text-red-400',
+      bg: 'bg-red-50',
+      icon: 'text-red-600',
+      text: 'text-red-600',
+      border: 'border-red-100',
     },
     info: {
-      bg: 'bg-purple-100 dark:bg-purple-900/30',
-      icon: 'text-purple-600 dark:text-purple-400',
-      text: 'text-purple-600 dark:text-purple-400',
+      bg: 'bg-purple-50',
+      icon: 'text-purple-600',
+      text: 'text-purple-600',
+      border: 'border-purple-100',
+    },
+    indigo: {
+      bg: 'bg-indigo-50',
+      icon: 'text-indigo-600',
+      text: 'text-indigo-600',
+      border: 'border-indigo-100',
     },
   };
   
@@ -73,6 +85,7 @@ function getVariantClasses(variant: StatCardVariant): {
 /**
  * StatCard Component
  * Displays a statistic with label, value, icon, and optional change percentage
+ * Clean, card-based design with subtle colors
  */
 export function StatCard({
   label,
@@ -93,53 +106,64 @@ export function StatCard({
   
   if (isLoading) {
     return (
-      <div className={`bg-white rounded-xl p-6 shadow-sm border border-gray-100 ${className}`}>
+      <div className={`bg-white rounded-xl p-6 border border-gray-200 ${className}`}>
         <div className="flex items-center justify-between">
           <div className="flex-1">
             {/* Label skeleton */}
-            <div className="h-4 w-24 bg-gray-200 rounded animate-pulse mb-2" />
+            <div className="h-4 w-24 bg-gray-100 rounded animate-pulse mb-3" />
             {/* Value skeleton */}
-            <div className="h-8 w-16 bg-gray-200 rounded animate-pulse" />
+            <div className="h-9 w-20 bg-gray-100 rounded animate-pulse" />
           </div>
           {/* Icon skeleton */}
-          <div className="w-12 h-12 bg-gray-200 rounded-xl animate-pulse" />
+          <div className="w-12 h-12 bg-gray-100 rounded-xl animate-pulse" />
         </div>
         {/* Subtitle skeleton */}
-        <div className="h-4 w-32 bg-gray-200 rounded animate-pulse mt-2" />
+        <div className="h-4 w-32 bg-gray-100 rounded animate-pulse mt-3" />
       </div>
     );
   }
   
   return (
-    <div className={`bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${className}`}>
+    <div className={`bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 transition-all ${className}`}>
       <div className="flex items-center justify-between">
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-medium text-gray-500 mb-1 truncate">{label}</p>
-          <p className="text-2xl font-bold text-gray-900">{value}</p>
+          <p className="text-sm font-medium text-gray-500 mb-2">{label}</p>
+          <p className="text-3xl font-bold text-gray-900">{value}</p>
         </div>
         {icon && (
-          <div className={`w-12 h-12 ${colors.bg} rounded-xl flex items-center justify-center flex-shrink-0`}>
+          <div className={`w-12 h-12 ${colors.bg} rounded-xl flex items-center justify-center flex-shrink-0 border ${colors.border}`}>
             <div className={colors.icon}>{icon}</div>
           </div>
         )}
       </div>
       
       {/* Change indicator or subtitle */}
-      <div className="mt-2 flex items-center gap-2">
-        {hasChange && (
-          <>
-            <span className={`text-sm font-medium ${isPositive ? 'text-emerald-600' : 'text-red-600'}`}>
-              {isPositive ? '+' : ''}{change}%
-            </span>
-            {changeLabel && (
-              <span className="text-sm text-gray-400">{changeLabel}</span>
-            )}
-          </>
-        )}
-        {!hasChange && subtitle && (
-          <span className="text-sm text-gray-400">{subtitle}</span>
-        )}
-      </div>
+      {(hasChange || subtitle) && (
+        <div className="mt-3 flex items-center gap-2">
+          {hasChange && (
+            <>
+              <span className={`inline-flex items-center gap-1 text-sm font-medium ${isPositive ? 'text-emerald-600' : 'text-red-600'}`}>
+                {isPositive ? (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                  </svg>
+                ) : (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                )}
+                {Math.abs(change)}%
+              </span>
+              {changeLabel && (
+                <span className="text-sm text-gray-400">{changeLabel}</span>
+              )}
+            </>
+          )}
+          {!hasChange && subtitle && (
+            <span className="text-sm text-gray-500">{subtitle}</span>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -186,6 +210,16 @@ export const StatIcons = {
   upload: (
     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+    </svg>
+  ),
+  trending: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+    </svg>
+  ),
+  sparkles: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
     </svg>
   ),
 };

@@ -1,9 +1,28 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { AdminHeader, AdminSecondaryButton } from '@/components/admin';
-import { Badge } from '@/components/common';
-import { DataTable, type ColumnDef, type PaginationInfo } from '@/components/admin/DataTable';
+import { 
+  AdminHeader, 
+  AdminSecondaryButton,
+  AdminTable,
+  AdminCard,
+  AdminCardHeader,
+  AdminCardTitle,
+  AdminCardContent,
+  AdminBadge,
+  AdminButton,
+  type ColumnDef,
+  type PaginationInfo,
+} from '@/components/admin';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import type { AdminAuditLog } from '@/types/database';
 import type { AuditLogListParams, AuditLogWithAdmin } from '@/types/admin';
 import {
@@ -76,10 +95,26 @@ function ActionBadge({ action }: { action: string }) {
     text: 'text-gray-700 dark:text-gray-300',
   };
 
+  const statusMap: Record<string, 'success' | 'warning' | 'error' | 'info' | 'pending' | 'default'> = {
+    CREATE: 'success',
+    UPDATE: 'info',
+    DELETE: 'error',
+    BULK_PUBLISH: 'info',
+    BULK_ARCHIVE: 'warning',
+    BULK_DELETE: 'error',
+    IMPORT_START: 'info',
+    IMPORT_COMPLETE: 'success',
+    IMPORT_FAILED: 'error',
+    ROLE_CHANGE: 'warning',
+    STATUS_CHANGE: 'info',
+    LOGIN: 'success',
+    LOGOUT: 'default',
+  };
+  
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-lg text-xs font-medium ${bg} ${text}`}>
+    <AdminBadge status={statusMap[action] || 'default'}>
       {action.replace(/_/g, ' ')}
-    </span>
+    </AdminBadge>
   );
 }
 
@@ -101,10 +136,18 @@ function EntityTypeBadge({ entityType }: { entityType: string }) {
     label: entityType,
   };
 
+  const statusMap: Record<string, 'success' | 'warning' | 'error' | 'info' | 'pending' | 'default'> = {
+    user: 'info',
+    question: 'info',
+    subject: 'success',
+    topic: 'warning',
+    import: 'info',
+  };
+  
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-lg text-xs font-medium ${bg} ${text}`}>
+    <AdminBadge status={statusMap[entityType] || 'default'}>
       {label}
-    </span>
+    </AdminBadge>
   );
 }
 
@@ -331,138 +374,155 @@ export default function AuditLogsPage() {
 
       {/* Filters Panel */}
       {showFilters && (
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-6">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Filter Logs</h3>
-            {hasActiveFilters && (
-              <button
-                onClick={clearFilters}
-                className="text-sm text-emerald-600 hover:text-emerald-700 font-medium flex items-center gap-1"
-              >
-                <X className="w-4 h-4" />
-                Clear All
-              </button>
-            )}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Action Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Action Type
-              </label>
-              <select
-                value={filters.action || ''}
-                onChange={(e) => handleFilterChange('action', e.target.value || undefined)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none text-sm"
-              >
-                <option value="">All Actions</option>
-                <option value="CREATE">Create</option>
-                <option value="UPDATE">Update</option>
-                <option value="DELETE">Delete</option>
-                <option value="BULK_PUBLISH">Bulk Publish</option>
-                <option value="BULK_ARCHIVE">Bulk Archive</option>
-                <option value="BULK_DELETE">Bulk Delete</option>
-                <option value="IMPORT_START">Import Start</option>
-                <option value="IMPORT_COMPLETE">Import Complete</option>
-                <option value="IMPORT_FAILED">Import Failed</option>
-                <option value="ROLE_CHANGE">Role Change</option>
-                <option value="STATUS_CHANGE">Status Change</option>
-                <option value="LOGIN">Login</option>
-                <option value="LOGOUT">Logout</option>
-              </select>
+        <AdminCard>
+          <AdminCardHeader>
+            <div className="flex items-center justify-between w-full">
+              <AdminCardTitle>Filter Logs</AdminCardTitle>
+              {hasActiveFilters && (
+                <AdminButton
+                  variant="ghost"
+                  size="sm"
+                  onClick={clearFilters}
+                  className="text-destructive hover:text-destructive"
+                >
+                  <X className="w-4 h-4" />
+                  Clear All
+                </AdminButton>
+              )}
             </div>
+          </AdminCardHeader>
+          <AdminCardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Action Filter */}
+              <div>
+                <Label htmlFor="action">Action Type</Label>
+                <Select
+                  value={filters.action || 'all'}
+                  onValueChange={(value) => handleFilterChange('action', value === 'all' ? undefined : value)}
+                >
+                  <SelectTrigger id="action" className="mt-2">
+                    <SelectValue placeholder="All Actions" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Actions</SelectItem>
+                    <SelectItem value="CREATE">Create</SelectItem>
+                    <SelectItem value="UPDATE">Update</SelectItem>
+                    <SelectItem value="DELETE">Delete</SelectItem>
+                    <SelectItem value="BULK_PUBLISH">Bulk Publish</SelectItem>
+                    <SelectItem value="BULK_ARCHIVE">Bulk Archive</SelectItem>
+                    <SelectItem value="BULK_DELETE">Bulk Delete</SelectItem>
+                    <SelectItem value="IMPORT_START">Import Start</SelectItem>
+                    <SelectItem value="IMPORT_COMPLETE">Import Complete</SelectItem>
+                    <SelectItem value="IMPORT_FAILED">Import Failed</SelectItem>
+                    <SelectItem value="ROLE_CHANGE">Role Change</SelectItem>
+                    <SelectItem value="STATUS_CHANGE">Status Change</SelectItem>
+                    <SelectItem value="LOGIN">Login</SelectItem>
+                    <SelectItem value="LOGOUT">Logout</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
 
-            {/* Entity Type Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Entity Type
-              </label>
-              <select
-                value={filters.entity_type || ''}
-                onChange={(e) => handleFilterChange('entity_type', e.target.value || undefined)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none text-sm"
-              >
-                <option value="">All Entities</option>
-                <option value="user">User</option>
-                <option value="question">Question</option>
-                <option value="subject">Subject</option>
-                <option value="topic">Topic</option>
-                <option value="import">Import</option>
-              </select>
-            </div>
+              {/* Entity Type Filter */}
+              <div>
+                <Label htmlFor="entity_type">Entity Type</Label>
+                <Select
+                  value={filters.entity_type || 'all'}
+                  onValueChange={(value) => handleFilterChange('entity_type', value === 'all' ? undefined : value)}
+                >
+                  <SelectTrigger id="entity_type" className="mt-2">
+                    <SelectValue placeholder="All Entities" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Entities</SelectItem>
+                    <SelectItem value="user">User</SelectItem>
+                    <SelectItem value="question">Question</SelectItem>
+                    <SelectItem value="subject">Subject</SelectItem>
+                    <SelectItem value="topic">Topic</SelectItem>
+                    <SelectItem value="import">Import</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
 
-            {/* Date Range Filters */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Start Date
-              </label>
-              <input
-                type="date"
-                value={filters.startDate || ''}
-                onChange={(e) => handleFilterChange('startDate', e.target.value || undefined)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none text-sm"
-              />
-            </div>
+              {/* Date Range Filters */}
+              <div>
+                <Label htmlFor="startDate">Start Date</Label>
+                <Input
+                  id="startDate"
+                  type="date"
+                  value={filters.startDate || ''}
+                  onChange={(e) => handleFilterChange('startDate', e.target.value || undefined)}
+                  className="mt-2"
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                End Date
-              </label>
-              <input
-                type="date"
-                value={filters.endDate || ''}
-                onChange={(e) => handleFilterChange('endDate', e.target.value || undefined)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none text-sm"
-              />
+              <div>
+                <Label htmlFor="endDate">End Date</Label>
+                <Input
+                  id="endDate"
+                  type="date"
+                  value={filters.endDate || ''}
+                  onChange={(e) => handleFilterChange('endDate', e.target.value || undefined)}
+                  className="mt-2"
+                />
+              </div>
             </div>
-          </div>
-        </div>
+          </AdminCardContent>
+        </AdminCard>
       )}
 
       {/* Audit Logs Table */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-        <DataTable
-          data={logs}
-          columns={columns}
-          keyAccessor={(log) => log.id}
-          isLoading={isLoading}
-          pagination={pagination}
-          onPageChange={(page) => handleFilterChange('page', page)}
-          onPageSizeChange={(newLimit) => {
-            handleFilterChange('limit', newLimit);
-          }}
-          emptyMessage="No audit logs found. Actions will appear here as they occur."
-          showSearch={false}
-          skeletonRows={10}
-        />
-      </div>
+      <AdminCard>
+        <AdminCardContent className="p-0">
+          <AdminTable
+            data={logs}
+            columns={columns}
+            keyAccessor={(log) => log.id}
+            isLoading={isLoading}
+            pagination={pagination}
+            onPageChange={(page) => handleFilterChange('page', page)}
+            onPageSizeChange={(newLimit) => {
+              handleFilterChange('limit', newLimit);
+            }}
+            emptyMessage="No audit logs found. Actions will appear here as they occur."
+            showSearch={false}
+            skeletonRows={10}
+          />
+        </AdminCardContent>
+      </AdminCard>
 
       {/* Summary Stats */}
       {!isLoading && logs.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
-            <p className="text-sm text-gray-500 dark:text-gray-400">Total Logs</p>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{pagination.total}</p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
-            <p className="text-sm text-gray-500 dark:text-gray-400">Showing</p>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">
-              {logs.length} of {pagination.total}
-            </p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
-            <p className="text-sm text-gray-500 dark:text-gray-400">Page</p>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">
-              {pagination.page} / {pagination.totalPages}
-            </p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
-            <p className="text-sm text-gray-500 dark:text-gray-400">Actions Today</p>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">
-              {logs.filter((log) => isToday(log.created_at)).length}
-            </p>
-          </div>
+          <AdminCard>
+            <AdminCardContent>
+              <p className="text-sm text-muted-foreground">Total Logs</p>
+              <p className="text-2xl font-bold text-foreground mt-1">{pagination.total}</p>
+            </AdminCardContent>
+          </AdminCard>
+          <AdminCard>
+            <AdminCardContent>
+              <p className="text-sm text-muted-foreground">Showing</p>
+              <p className="text-2xl font-bold text-foreground mt-1">
+                {logs.length} of {pagination.total}
+              </p>
+            </AdminCardContent>
+          </AdminCard>
+          <AdminCard>
+            <AdminCardContent>
+              <p className="text-sm text-muted-foreground">Page</p>
+              <p className="text-2xl font-bold text-foreground mt-1">
+                {pagination.page} / {pagination.totalPages}
+              </p>
+            </AdminCardContent>
+          </AdminCard>
+          <AdminCard>
+            <AdminCardContent>
+              <p className="text-sm text-muted-foreground">Actions Today</p>
+              <p className="text-2xl font-bold text-foreground mt-1">
+                {logs.filter((log) => isToday(log.created_at)).length}
+              </p>
+            </AdminCardContent>
+          </AdminCard>
         </div>
       )}
     </div>

@@ -4,7 +4,16 @@ import React, { useState, useEffect, use } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { QuestionPreview } from '@/components/admin';
-import { Modal } from '@/components/common';
+import { 
+  AdminDialog,
+  AdminDialogContent,
+  AdminDialogHeader,
+  AdminDialogTitle,
+  AdminDialogDescription,
+  AdminDialogFooter,
+  AdminButton,
+  AdminSecondaryButton,
+} from '@/components/admin';
 
 /**
  * Question type with full details
@@ -511,33 +520,31 @@ export default function QuestionDetailPage({ params }: PageProps) {
       </div>
       
       {/* Delete Confirmation Modal */}
-      <Modal
-        isOpen={showDeleteModal}
-        onClose={() => setShowDeleteModal(false)}
-        title="Archive Question"
-      >
-        <div className="space-y-4">
-          <p className="text-gray-600">
-            Are you sure you want to archive this question? The question will be moved to archived status and won&apos;t be shown to students.
-          </p>
-          <div className="flex justify-end gap-3">
-            <button
+      <AdminDialog open={showDeleteModal} onOpenChange={(open) => !open && setShowDeleteModal(false)}>
+        <AdminDialogContent>
+          <AdminDialogHeader>
+            <AdminDialogTitle>Archive Question</AdminDialogTitle>
+            <AdminDialogDescription>
+              Are you sure you want to archive this question? The question will be moved to archived status and won&apos;t be shown to students.
+            </AdminDialogDescription>
+          </AdminDialogHeader>
+          <AdminDialogFooter>
+            <AdminSecondaryButton
               onClick={() => setShowDeleteModal(false)}
-              className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800"
               disabled={isDeleting}
             >
               Cancel
-            </button>
-            <button
+            </AdminSecondaryButton>
+            <AdminButton
+              variant="destructive"
               onClick={handleDelete}
               disabled={isDeleting}
-              className="px-4 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:opacity-50"
             >
               {isDeleting ? 'Archiving...' : 'Archive Question'}
-            </button>
-          </div>
-        </div>
-      </Modal>
+            </AdminButton>
+          </AdminDialogFooter>
+        </AdminDialogContent>
+      </AdminDialog>
     </div>
   );
 }
