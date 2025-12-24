@@ -130,7 +130,9 @@ export default function HomePage() {
       ]);
 
       setUserProfile(profile.status === 'fulfilled' ? profile.value : null);
-      setStats(userStats.status === 'fulfilled' ? userStats.value : {
+      
+      // Create default stats object with proper typing
+      const defaultStats: UserStats = {
         questionsAnswered: 0,
         correctAnswers: 0,
         accuracy: 0,
@@ -138,7 +140,9 @@ export default function HomePage() {
         currentStreak: 0,
         lastActiveDate: undefined,
         xpPoints: 0,
-      });
+      };
+      
+      setStats(userStats.status === 'fulfilled' ? userStats.value : defaultStats);
       // Use preferred subjects if available, otherwise use all subjects
       const preferred = preferredSubjects.status === 'fulfilled' ? preferredSubjects.value : [];
       const all = allSubjects.status === 'fulfilled' ? allSubjects.value : [];
@@ -173,6 +177,7 @@ export default function HomePage() {
         studyTimeMinutes: 0,
         currentStreak: 0,
         lastActiveDate: undefined,
+        xpPoints: 0,
       });
       setSubjects([]);
       setProgress([]);
