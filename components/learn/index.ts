@@ -2,6 +2,7 @@ export { ModeSelector, type LearningMode } from './ModeSelector';
 export { 
   StylePicker, 
   getQuestionCountFromStyle, 
+  getQuestionCountFromTimedStyle,
   getTimeLimitFromStyle,
   type PracticeStyle,
   type TestStyle,

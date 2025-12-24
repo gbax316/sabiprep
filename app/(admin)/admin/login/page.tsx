@@ -32,12 +32,16 @@ export default function AdminLoginPage() {
     }
   }, [searchParams]);
 
-  // Redirect if already authenticated
+  // Redirect if already authenticated (only after initialization is complete)
+  // This prevents redirect loops by ensuring we only redirect once auth is confirmed
   useEffect(() => {
-    if (isInitialized && canAccessAdmin) {
+    if (!isInitialized || isLoading) return; // Wait for initialization to complete
+    
+    // Only redirect if user can actually access admin
+    if (canAccessAdmin) {
       router.replace('/admin/dashboard');
     }
-  }, [isInitialized, canAccessAdmin, router]);
+  }, [isInitialized, isLoading, canAccessAdmin, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,14 +57,26 @@ export default function AdminLoginPage() {
         return;
       }
 
-      // Success - redirect to dashboard
-      router.push('/admin/dashboard');
+      // Success - redirect to dashboard (use replace to prevent back button issues)
+      router.replace('/admin/dashboard');
     } catch (err) {
       console.error('Login error:', err);
       setError('An unexpected error occurred. Please try again.');
       setIsLoading(false);
     }
   };
+
+  // Show loading state while initializing
+  if (!isInitialized || isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-emerald-600 mx-auto mb-4"></div>
+          <p className="text-gray-400">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">

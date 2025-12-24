@@ -52,6 +52,9 @@ export interface User {
   total_questions_answered: number;
   total_correct_answers: number;
   total_study_time_minutes: number;
+  xp_points: number;
+  daily_xp_claimed_at?: string;
+  daily_xp_streak_bonus_claimed: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -278,6 +281,7 @@ export interface UserStats {
   studyTimeMinutes: number;
   currentStreak: number;
   lastActiveDate?: Date;
+  xpPoints: number;
 }
 
 /**
@@ -382,4 +386,62 @@ export interface QuestionReview {
   error_message?: string;
   created_at: string;
   updated_at: string;
+}
+
+/**
+ * Daily Challenge (matches daily_challenges table)
+ */
+export interface DailyChallenge {
+  id: string;
+  subject_id: string;
+  challenge_date: string; // DATE format: YYYY-MM-DD
+  question_ids: string[]; // Array of question UUIDs
+  time_limit_seconds: number;
+  question_count: number;
+  created_at: string;
+  updated_at: string;
+}
+
+/**
+ * User Daily Challenge completion (matches user_daily_challenges table)
+ */
+export interface UserDailyChallenge {
+  id: string;
+  user_id: string;
+  daily_challenge_id: string;
+  session_id?: string;
+  score_percentage?: number;
+  correct_answers: number;
+  total_questions: number;
+  time_spent_seconds?: number;
+  completed_at: string;
+  xp_earned: number;
+}
+
+/**
+ * Mastery Badge (matches mastery_badges table)
+ */
+export interface MasteryBadge {
+  id: string;
+  name: string;
+  level: number; // 1-12
+  xp_requirement: number; // For global badges
+  correct_answers_requirement: number; // For per-subject badges
+  icon?: string;
+  description?: string;
+  color?: string;
+  created_at: string;
+}
+
+/**
+ * User Mastery Badge (matches user_mastery_badges table)
+ */
+export interface UserMasteryBadge {
+  id: string;
+  user_id: string;
+  mastery_badge_id: string;
+  subject_id?: string; // NULL for global badges
+  earned_at: string;
+  mastery_badge?: MasteryBadge; // Joined data
+  subject?: Subject; // Joined data (if per-subject)
 }

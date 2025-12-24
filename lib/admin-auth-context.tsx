@@ -92,21 +92,32 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
    * Initialize auth state
    */
   useEffect(() => {
+    let mounted = true;
+
     const initializeAuth = async () => {
       try {
         // Get current session
         const { data: { session } } = await supabase.auth.getSession();
         
-        if (session?.user) {
-          setUser(session.user);
-          const adminData = await fetchAdminUser(session.user.id);
-          setAdminUser(adminData);
+        if (mounted) {
+          if (session?.user) {
+            setUser(session.user);
+            const adminData = await fetchAdminUser(session.user.id);
+            setAdminUser(adminData);
+          } else {
+            // No session, ensure state is cleared
+            setUser(null);
+            setAdminUser(null);
+          }
+          setIsLoading(false);
+          setIsInitialized(true);
         }
       } catch (err) {
         console.error('Error initializing admin auth:', err);
-      } finally {
-        setIsLoading(false);
-        setIsInitialized(true);
+        if (mounted) {
+          setIsLoading(false);
+          setIsInitialized(true);
+        }
       }
     };
 
@@ -115,6 +126,8 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
     // Subscribe to auth state changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
+        if (!mounted) return;
+        
         if (event === 'SIGNED_IN' && session?.user) {
           setUser(session.user);
           const adminData = await fetchAdminUser(session.user.id);
@@ -124,10 +137,13 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
           setAdminUser(null);
         }
         setIsLoading(false);
+        // Only set initialized if not already set (to prevent race conditions)
+        setIsInitialized(prev => prev || true);
       }
     );
 
     return () => {
+      mounted = false;
       subscription.unsubscribe();
     };
   }, [fetchAdminUser]);
@@ -186,17 +202,20 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
    * Sign out
    */
   const signOut = async () => {
-    setIsLoading(true);
-    
     try {
-      await supabase.auth.signOut();
+      // Clear state first
       setUser(null);
       setAdminUser(null);
-      router.push('/admin/login');
+      
+      // Sign out from Supabase
+      await supabase.auth.signOut();
+      
+      // Navigate to login (use replace to prevent back button issues)
+      router.replace('/admin/login');
     } catch (err) {
       console.error('Sign out error:', err);
-    } finally {
-      setIsLoading(false);
+      // Still navigate even if sign out fails
+      router.replace('/admin/login');
     }
   };
 

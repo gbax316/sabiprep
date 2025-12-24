@@ -9,8 +9,8 @@ import { ProgressRing } from '@/components/magic/ProgressRing';
 import { BottomNav } from '@/components/common/BottomNav';
 import { Header } from '@/components/navigation/Header';
 import { useAuth } from '@/lib/auth-context';
-import { getSubjects, getUserStats, getUserProgress, updateUserStreak, getUserProfile, getUserSessions, getUserGoals, canResumeSession, updateSession, getPreferredSubjects } from '@/lib/api';
-import type { Subject, UserStats, UserProgress, LearningSession, UserGoal, User } from '@/types/database';
+import { getSubjects, getUserStats, getUserProgress, updateUserStreak, getUserProfile, getUserSessions, getUserGoals, canResumeSession, updateSession, getPreferredSubjects, getUserMasteryBadges, getTodayDailyChallenges, getUserDailyChallengeCompletions } from '@/lib/api';
+import type { Subject, UserStats, UserProgress, LearningSession, UserGoal, User, UserMasteryBadge, DailyChallenge, UserDailyChallenge } from '@/types/database';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { getSystemWideQuestionCount, getQuestionLimit } from '@/lib/guest-session';
@@ -69,6 +69,9 @@ export default function HomePage() {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [validatedSessions, setValidatedSessions] = useState<Set<string>>(new Set());
   const [invalidSessions, setInvalidSessions] = useState<Set<string>>(new Set());
+  const [masteryBadges, setMasteryBadges] = useState<UserMasteryBadge[]>([]);
+  const [todayDailyChallenges, setTodayDailyChallenges] = useState<DailyChallenge[]>([]);
+  const [dailyChallengeCompletions, setDailyChallengeCompletions] = useState<UserDailyChallenge[]>([]);
 
   // Redirect if not authenticated and not guest
   useEffect(() => {
@@ -106,7 +109,7 @@ export default function HomePage() {
       }
 
       // Fetch data in parallel with individual error handling
-      const [profile, userStats, allSubjects, preferredSubjects, userProgress, sessions, goals] = await Promise.allSettled([
+      const [profile, userStats, allSubjects, preferredSubjects, userProgress, sessions, goals, badges, challenges, challengeCompletions] = await Promise.allSettled([
         getUserProfile(userId).catch(() => null),
         getUserStats(userId).catch(() => ({
           questionsAnswered: 0,
@@ -121,6 +124,9 @@ export default function HomePage() {
         getUserProgress(userId).catch(() => []),
         getUserSessions(userId, 50).catch(() => []),
         getUserGoals(userId).catch(() => []),
+        getUserMasteryBadges(userId).catch(() => []),
+        getTodayDailyChallenges().catch(() => []),
+        getUserDailyChallengeCompletions(userId, 3).catch(() => []),
       ]);
 
       setUserProfile(profile.status === 'fulfilled' ? profile.value : null);
@@ -144,6 +150,9 @@ export default function HomePage() {
       const loadedSessions = sessions.status === 'fulfilled' ? sessions.value : [];
       setRecentSessions(loadedSessions);
       setUserGoals(goals.status === 'fulfilled' ? goals.value : []);
+      setMasteryBadges(badges.status === 'fulfilled' ? badges.value : []);
+      setTodayDailyChallenges(challenges.status === 'fulfilled' ? challenges.value : []);
+      setDailyChallengeCompletions(challengeCompletions.status === 'fulfilled' ? challengeCompletions.value : []);
       
       // Validate incomplete sessions in the background (non-blocking)
       // Only validate for authenticated users, not guests
@@ -785,7 +794,7 @@ export default function HomePage() {
                   </motion.div>
                   <div className="min-w-0">
                     <p className="text-[10px] sm:text-xs text-violet-200 leading-tight font-medium">XP</p>
-                    <p className="text-sm sm:text-lg font-black text-white leading-tight">{stats?.questionsAnswered || 0}</p>
+                    <p className="text-sm sm:text-lg font-black text-white leading-tight">{stats?.xpPoints || 0}</p>
                   </div>
                 </motion.div>
               </div>
@@ -932,7 +941,7 @@ export default function HomePage() {
                       whileHover={{ scale: 1.05 }}
                     >
                       <Star className="w-3.5 h-3.5 text-violet-400 flex-shrink-0" />
-                      <span className="text-violet-200 font-medium">{stats?.questionsAnswered || 0} XP</span>
+                      <span className="text-violet-200 font-medium">{stats?.xpPoints || 0} XP</span>
                     </motion.div>
                     <motion.div 
                       className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/30"
@@ -947,7 +956,7 @@ export default function HomePage() {
 
               {/* Quick Action Buttons - Enhanced */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-slate-700/50">
-                <Link href="/subjects">
+                <Link href="/quick-practice">
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2.5 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-500/30 hover:border-yellow-400/50">
                       <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-1.5 text-yellow-400" />
@@ -1619,6 +1628,139 @@ export default function HomePage() {
                 </Link>
               </div>
             </MagicCard>
+          </motion.div>
+        )}
+
+        {/* Mastery Badges Section */}
+        {masteryBadges.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                  className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-gradient-to-br from-yellow-500 to-amber-500 flex items-center justify-center shadow-lg shadow-yellow-500/30"
+                >
+                  <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+                </motion.div>
+                <h2 className="text-lg sm:text-xl font-bold text-white">Mastery Badges</h2>
+              </div>
+              <Link href="/achievements">
+                <motion.div whileHover={{ scale: 1.05, x: 3 }} whileTap={{ scale: 0.95 }}>
+                  <MagicButton variant="ghost" size="sm" className="text-xs sm:text-sm text-violet-400 hover:text-violet-300">
+                    View All <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                  </MagicButton>
+                </motion.div>
+              </Link>
+            </div>
+            <MagicCard className="p-4 sm:p-5 bg-gradient-to-br from-slate-900/95 via-amber-950/20 to-slate-900/95 border-2 border-amber-500/30">
+              <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                {masteryBadges
+                  .filter(b => !b.subject_id)
+                  .slice(0, 5)
+                  .map((badge, index) => {
+                    const badgeData = badge.mastery_badge;
+                    if (!badgeData) return null;
+
+                    return (
+                      <motion.div
+                        key={badge.id}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.95 + index * 0.1 }}
+                        className="flex flex-col items-center gap-2 flex-shrink-0"
+                      >
+                        <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${badgeData.color || 'from-amber-400 to-orange-500'} flex items-center justify-center text-2xl sm:text-3xl shadow-lg`}>
+                          {badgeData.icon || '🏆'}
+                        </div>
+                        <div className="text-center">
+                          <p className="text-xs sm:text-sm font-bold text-white">{badgeData.name}</p>
+                          <p className="text-[10px] text-slate-400">Level {badgeData.level}</p>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+              </div>
+            </MagicCard>
+          </motion.div>
+        )}
+
+        {/* Daily Challenges Quick View */}
+        {todayDailyChallenges.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-purple-500/30"
+                >
+                  <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+                </motion.div>
+                <h2 className="text-lg sm:text-xl font-bold text-white">Daily Challenges</h2>
+              </div>
+              <Link href="/daily-challenge">
+                <motion.div whileHover={{ scale: 1.05, x: 3 }} whileTap={{ scale: 0.95 }}>
+                  <MagicButton variant="ghost" size="sm" className="text-xs sm:text-sm text-purple-400 hover:text-purple-300">
+                    View All <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                  </MagicButton>
+                </motion.div>
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {todayDailyChallenges.slice(0, 2).map((challenge, index) => {
+                const completion = dailyChallengeCompletions.find(
+                  c => c.daily_challenge_id === challenge.id
+                );
+                const isCompleted = !!completion;
+
+                return (
+                  <motion.div
+                    key={challenge.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.05 + index * 0.1 }}
+                  >
+                    <Link href="/daily-challenge">
+                      <MagicCard className="p-4 bg-gradient-to-br from-purple-600/20 to-pink-600/20 border-purple-500/30 hover:border-purple-400/50 transition-all cursor-pointer">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-lg">
+                              📚
+                            </div>
+                            <span className="font-semibold text-white text-sm">Daily Challenge</span>
+                          </div>
+                          {isCompleted ? (
+                            <CheckCircle className="w-5 h-5 text-emerald-400" />
+                          ) : (
+                            <MagicBadge variant="info" size="sm" className="bg-amber-500/30 border-amber-400/50">
+                              <Star className="w-3 h-3 mr-1" />
+                              {challenge.question_count + 2} XP
+                            </MagicBadge>
+                          )}
+                        </div>
+                        <p className="text-xs text-purple-200 mb-2">
+                          {challenge.question_count} questions • {Math.floor(challenge.time_limit_seconds / 60)} min
+                        </p>
+                        {isCompleted && completion && (
+                          <p className="text-xs text-emerald-400 font-semibold">
+                            Completed: {Math.round(completion.score_percentage || 0)}% (+{completion.xp_earned} XP)
+                          </p>
+                        )}
+                      </MagicCard>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
           </motion.div>
         )}
       </div>

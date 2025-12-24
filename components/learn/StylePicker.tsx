@@ -32,9 +32,9 @@ const styleConfigs = {
     { id: 'custom' as TestStyle, name: 'Custom', description: 'You choose', icon: Settings, questions: null },
   ],
   timed: [
-    { id: '30min' as TimedStyle, name: '30 Min', description: 'Quick session', icon: Clock, time: 30 },
-    { id: '1hr' as TimedStyle, name: '1 Hour', description: 'Standard', icon: Clock, time: 60 },
-    { id: '2hr' as TimedStyle, name: '2 Hours', description: 'Full exam', icon: Clock, time: 120 },
+    { id: '30min' as TimedStyle, name: '30 Min', description: '20 questions', icon: Clock, time: 30 },
+    { id: '1hr' as TimedStyle, name: '1 Hour', description: '40 questions', icon: Clock, time: 60 },
+    { id: '2hr' as TimedStyle, name: '2 Hours', description: '80 questions', icon: Clock, time: 120 },
     { id: 'custom' as TimedStyle, name: 'Custom', description: 'You choose', icon: Settings, time: null },
   ],
 };
@@ -47,6 +47,20 @@ function getJambQuestionCount(subjectName?: string): number {
   if (lowerName.includes('english')) return 60;
   // All other subjects have 40 questions
   return 40;
+}
+
+// Helper function to calculate question count from timed duration (using ~1.5 min/question)
+export function getQuestionCountFromTimedStyle(style: TimedStyle, customTimeMinutes?: number): number {
+  if (style === 'custom' && customTimeMinutes !== undefined) {
+    return Math.round(customTimeMinutes / 1.5);
+  }
+  
+  const config = styleConfigs.timed.find(s => s.id === style);
+  if (config && 'time' in config && config.time) {
+    return Math.round(config.time / 1.5);
+  }
+  
+  return 20; // Default for 30min
 }
 
 export function StylePicker({ 
@@ -73,7 +87,8 @@ export function StylePicker({
   };
   
   const styles = getStyles();
-  const showCustomSlider = selectedStyle === 'custom' && onCustomQuestionCountChange;
+  // Only show custom slider for practice and test modes, not for timed mode
+  const showCustomSlider = selectedStyle === 'custom' && onCustomQuestionCountChange && mode !== 'timed';
   
   return (
     <div className="space-y-3">
@@ -172,7 +187,12 @@ export function StylePicker({
 }
 
 // Helper function to get question count from style
-export function getQuestionCountFromStyle(mode: LearningMode, style: StyleOption, customCount?: number, subjectName?: string): number {
+export function getQuestionCountFromStyle(mode: LearningMode, style: StyleOption, customCount?: number, subjectName?: string, customTimeMinutes?: number): number {
+  // Handle timed mode separately
+  if (mode === 'timed') {
+    return getQuestionCountFromTimedStyle(style as TimedStyle, customTimeMinutes);
+  }
+  
   if (style === 'custom' && customCount) return customCount;
   
   // Handle JAMB specifically with subject-aware question count

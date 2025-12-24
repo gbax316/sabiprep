@@ -69,13 +69,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
   const [showPreviousWarning, setShowPreviousWarning] = useState(false);
   const [questionTimes, setQuestionTimes] = useState<Map<string, QuestionTimeData>>(new Map());
   const [examStarted, setExamStarted] = useState(false);
-  const [warningsShown, setWarningsShown] = useState({
-    halfTime: false,
-    tenMinutes: false,
-    fiveMinutes: false,
-    oneMinute: false,
-    thirtySeconds: false,
-  });
+  // Removed warning modals - using timer color coding instead
   const questionStartTimeRef = useRef<number>(Date.now());
   const sessionStartTimeRef = useRef<number | null>(null);
 
@@ -90,9 +84,6 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       if (!sessionComplete) {
         handleAutoSubmit();
       }
-    },
-    onTick: (time) => {
-      checkTimeWarnings(time);
     },
   });
 
@@ -195,33 +186,71 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       // This handles brand new sessions that haven't been started yet
       let questionsPromise: Promise<Question[]>;
       let topicsPromise: Promise<Topic[]>;
+      
+      // Ensure we have a valid question count (default to 20 if not set)
+      const questionCount = sessionData.total_questions > 0 ? sessionData.total_questions : 20;
+      
+      // Get all available topic IDs from session (prefer topic_ids array, fall back to topic_id)
+      const allTopicIds = sessionData.topic_ids && sessionData.topic_ids.length > 0
+        ? sessionData.topic_ids
+        : (sessionData.topic_id ? [sessionData.topic_id] : []);
+      
+      console.log('[Timed] Loading questions:', {
+        sessionId,
+        questionCount,
+        topicIds: allTopicIds,
+        hasSessionStorage: typeof sessionStorage !== 'undefined',
+      });
 
-      if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
+      if (allTopicIds.length === 0) {
+        // No topics available - can't load questions
+        console.error('[Timed] No topics found in session data');
+        questionsPromise = Promise.resolve([]);
+        topicsPromise = Promise.resolve([]);
+      } else if (allTopicIds.length > 1) {
         // Multi-topic session - check for distribution in sessionStorage
-        const timedConfigStr = sessionStorage.getItem(`timedConfig_${sessionId}`);
+        const timedConfigStr = typeof sessionStorage !== 'undefined' 
+          ? sessionStorage.getItem(`timedConfig_${sessionId}`)
+          : null;
+          
         if (timedConfigStr) {
-          const { distribution } = JSON.parse(timedConfigStr);
-          questionsPromise = getQuestionsWithDistribution(distribution);
+          try {
+            const { distribution } = JSON.parse(timedConfigStr);
+            console.log('[Timed] Using sessionStorage distribution:', distribution);
+            
+            // Handle both array format (old) and Record format (new)
+            let distributionRecord: Record<string, number>;
+            if (Array.isArray(distribution)) {
+              // Convert old array format to Record
+              distributionRecord = {};
+              distribution.forEach((item: { topicId: string; count: number }) => {
+                distributionRecord[item.topicId] = item.count;
+              });
+              console.log('[Timed] Converted array distribution to Record:', distributionRecord);
+            } else {
+              distributionRecord = distribution;
+            }
+            
+            questionsPromise = getQuestionsWithDistribution(distributionRecord);
+          } catch (e) {
+            console.error('[Timed] Error parsing sessionStorage config:', e);
+            // Fallback to balanced distribution
+            questionsPromise = getRandomQuestionsFromTopics(allTopicIds, questionCount);
+          }
         } else {
-          // Fallback to balanced distribution
-          questionsPromise = getRandomQuestionsFromTopics(
-            sessionData.topic_ids,
-            sessionData.total_questions
-          );
+          // Fallback to balanced distribution from session data
+          console.log('[Timed] No sessionStorage, using balanced distribution');
+          questionsPromise = getRandomQuestionsFromTopics(allTopicIds, questionCount);
         }
         topicsPromise = getTopics(sessionData.subject_id).then(allTopics =>
-          allTopics.filter(t => sessionData.topic_ids!.includes(t.id))
+          allTopics.filter(t => allTopicIds.includes(t.id))
         );
       } else {
-        // Single topic session (backward compatible)
-        const topicId = sessionData.topic_id || sessionData.topic_ids?.[0];
-        if (topicId) {
-          questionsPromise = getRandomQuestions(topicId, sessionData.total_questions);
-          topicsPromise = getTopic(topicId).then(t => t ? [t] : []);
-        } else {
-          questionsPromise = Promise.resolve([]);
-          topicsPromise = Promise.resolve([]);
-        }
+        // Single topic session
+        const topicId = allTopicIds[0];
+        console.log('[Timed] Single topic session:', topicId);
+        questionsPromise = getRandomQuestions(topicId, questionCount);
+        topicsPromise = getTopic(topicId).then(t => t ? [t] : []);
       }
 
       // Load everything in parallel
@@ -235,8 +264,26 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       
       if (!newQuestionsData || newQuestionsData.length === 0) {
         // No questions available - this will be handled in the render section
+        console.error('[Timed] No questions loaded. Session data:', {
+          sessionId,
+          totalQuestions: sessionData.total_questions,
+          topicId: sessionData.topic_id,
+          topicIds: sessionData.topic_ids,
+        });
         setQuestions([]);
       } else {
+        // Validate question count matches expected
+        if (newQuestionsData.length < questionCount) {
+          console.warn(
+            `[Timed] Expected ${questionCount} questions but received ${newQuestionsData.length}. ` +
+            `Some topics may not have enough questions available.`
+          );
+        }
+        console.log('[Timed] Questions loaded successfully:', {
+          received: newQuestionsData.length,
+          expected: questionCount,
+          match: newQuestionsData.length === questionCount,
+        });
         setQuestions(newQuestionsData);
       }
       
@@ -263,39 +310,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
     }
   }
 
-  function checkTimeWarnings(timeRemaining: number) {
-    const totalSeconds = session?.time_limit_seconds || 0;
-    const halfTime = totalSeconds / 2;
-    const tenMinutes = 10 * 60;
-    const fiveMinutes = 5 * 60;
-    const oneMinute = 60;
-    const thirtySeconds = 30;
-
-    if (!warningsShown.halfTime && timeRemaining <= halfTime && timeRemaining > halfTime - 60) {
-      setWarningsShown(prev => ({ ...prev, halfTime: true }));
-      // Show subtle banner (can be enhanced with a toast)
-    }
-
-    if (!warningsShown.tenMinutes && timeRemaining <= tenMinutes && timeRemaining > tenMinutes - 60) {
-      setWarningsShown(prev => ({ ...prev, tenMinutes: true }));
-      // Show modal (handled in render)
-    }
-
-    if (!warningsShown.fiveMinutes && timeRemaining <= fiveMinutes && timeRemaining > fiveMinutes - 60) {
-      setWarningsShown(prev => ({ ...prev, fiveMinutes: true }));
-      // Show modal (handled in render)
-    }
-
-    if (!warningsShown.oneMinute && timeRemaining <= oneMinute && timeRemaining > oneMinute - 60) {
-      setWarningsShown(prev => ({ ...prev, oneMinute: true }));
-      // Show urgent modal (handled in render)
-    }
-
-    if (!warningsShown.thirtySeconds && timeRemaining <= thirtySeconds && timeRemaining > thirtySeconds - 60) {
-      setWarningsShown(prev => ({ ...prev, thirtySeconds: true }));
-      // Show countdown (handled in render)
-    }
-  }
+  // Removed checkTimeWarnings function - using timer color coding instead
 
   async function handleAnswerSelect(answer: 'A' | 'B' | 'C' | 'D' | 'E') {
     if (sessionComplete) return;
@@ -357,11 +372,13 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         await createSessionAnswer({
           sessionId: sessionId,
           questionId: currentQ.id,
+          topicId: currentQ.topic_id, // Include topic_id for analytics
           userAnswer: answer as 'A' | 'B' | 'C' | 'D',
           isCorrect,
           timeSpentSeconds: timeSpent,
           hintUsed: false,
           solutionViewed: false,
+          firstAttemptCorrect: !previousAnswer ? isCorrect : undefined, // Only set if it's the first attempt
         });
 
         // Update session progress
@@ -371,6 +388,11 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         });
       } catch (error) {
         console.error('Error recording answer:', error);
+        if (error instanceof Error) {
+          console.error('Error message:', error.message);
+          console.error('Error details:', error);
+        }
+        // Don't block user experience - continue even if answer recording fails
       }
     }
   }
@@ -498,9 +520,9 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       }
     }
 
-    // Stop timer and navigate away
+    // Stop timer and navigate away - go to subjects page to select a new subject
     stop();
-    router.push('/timed');
+    router.push('/subjects');
   }
 
   if (loading) {
@@ -572,11 +594,11 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
     previousQuestion.passage_id !== currentQuestion.passage_id
   ));
 
-  // Calculate pace indicator
+  // Calculate pace indicator (for status display)
   const expectedProgress = session.time_limit_seconds && session.time_limit_seconds > 0 
     ? (1 - (timeRemaining / session.time_limit_seconds)) * 100 
     : 0;
-  const actualProgress = (currentIndex / questions.length) * 100;
+  const actualProgress = questions.length > 0 ? (currentIndex / questions.length) * 100 : 0;
   const paceDifference = actualProgress - expectedProgress;
   
   let paceStatus: 'on-track' | 'behind' | 'ahead' = 'on-track';
@@ -589,7 +611,10 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
     paceColor = 'text-blue-600';
   }
 
-  // Timer color coding
+  // Timer color coding based on pace and time remaining
+  // Green: Good time (on track or ahead)
+  // Amber/Orange: Just in time (slightly behind or tight)
+  // Red: Behind time (significantly behind or very low time)
   const timePercentage = session.time_limit_seconds && session.time_limit_seconds > 0 
     ? (timeRemaining / session.time_limit_seconds) * 100 
     : 100;
@@ -598,25 +623,25 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
   let timerBg = 'bg-green-100';
   let timerPulse = false;
   
-  if (timePercentage < 5) {
+  // Red: Behind time (significantly behind pace OR very low time remaining)
+  if (paceDifference < -15 || timePercentage < 10) {
     timerColor = 'text-red-600';
     timerBg = 'bg-red-100';
-    timerPulse = true;
-  } else if (timePercentage < 20) {
-    timerColor = 'text-red-600';
-    timerBg = 'bg-red-100';
-  } else if (timePercentage < 50) {
+    timerPulse = timePercentage < 5;
+  } 
+  // Amber/Orange: Just in time (slightly behind OR moderate time remaining)
+  else if (paceDifference < -5 || timePercentage < 30) {
     timerColor = 'text-amber-600';
     timerBg = 'bg-amber-100';
+  }
+  // Green: Good time (on track or ahead)
+  else {
+    timerColor = 'text-green-600';
+    timerBg = 'bg-green-100';
   }
 
   const unansweredCount = questions.length - answers.size;
   const answeredCount = answers.size;
-
-  // Check for time warnings to show modals
-  const showTenMinuteWarning = warningsShown.tenMinutes && timeRemaining <= 10 * 60 && timeRemaining > 9 * 60;
-  const showFiveMinuteWarning = warningsShown.fiveMinutes && timeRemaining <= 5 * 60 && timeRemaining > 4 * 60;
-  const showOneMinuteWarning = warningsShown.oneMinute && timeRemaining <= 60 && timeRemaining > 0;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-8">
@@ -782,85 +807,6 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         </div>
       </header>
 
-      {/* Time Warning Modals */}
-      {showTenMinuteWarning && (
-        <Modal
-          isOpen={true}
-          onClose={() => setWarningsShown(prev => ({ ...prev, tenMinutes: false }))}
-          title="⏰ 10 Minutes Remaining!"
-        >
-          <div className="p-4">
-            <p className="text-gray-700 mb-2">
-              You have {unansweredCount} unanswered questions remaining.
-            </p>
-            <p className="text-sm text-gray-600">
-              Consider prioritizing questions you can answer quickly.
-            </p>
-            <Button
-              variant="primary"
-              onClick={() => setWarningsShown(prev => ({ ...prev, tenMinutes: false }))}
-              className="mt-4 w-full"
-            >
-              Got it
-            </Button>
-          </div>
-        </Modal>
-      )}
-
-      {showFiveMinuteWarning && (
-        <Modal
-          isOpen={true}
-          onClose={() => {}}
-          title="🚨 5 Minutes Remaining!"
-        >
-          <div className="p-4">
-            <p className="text-gray-700">
-              Prioritize unanswered questions. Time is running out!
-            </p>
-          </div>
-        </Modal>
-      )}
-
-      {showOneMinuteWarning && (
-        <Modal
-          isOpen={true}
-          onClose={() => {}}
-          title="⏰ FINAL MINUTE!"
-        >
-          <div className="p-4 bg-red-50 rounded-lg">
-            <p className="text-red-900 font-bold text-lg">
-              Complete current question and review!
-            </p>
-          </div>
-        </Modal>
-      )}
-
-      {/* Halfway Banner */}
-      {warningsShown.halfTime && timeRemaining <= (session.time_limit_seconds || 0) / 2 && timeRemaining > (session.time_limit_seconds || 0) / 2 - 60 && (
-        <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border-b border-amber-200/60 px-4 py-3 text-center shadow-sm">
-          <p className="text-sm font-medium text-amber-800">
-            ⏱️ Halfway mark! You should be near question {Math.ceil(questions.length / 2)}
-          </p>
-        </div>
-      )}
-
-      {/* 30 Second Countdown Banner */}
-      {warningsShown.thirtySeconds && timeRemaining <= 30 && (
-        <div className="bg-red-600 text-white px-4 py-2 text-center animate-pulse">
-          <p className="font-bold text-lg">
-            {Math.floor(timeRemaining)}... {Math.max(0, Math.floor(timeRemaining) - 1)}... {Math.max(0, Math.floor(timeRemaining) - 2)}...
-          </p>
-        </div>
-      )}
-
-      {/* Previous Button Warning */}
-      {showPreviousWarning && (
-        <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border-b border-amber-200/60 px-4 py-3 text-center shadow-sm">
-          <p className="text-sm font-medium text-amber-800">
-            ⏰ Every second counts! Make sure you're using your time wisely.
-          </p>
-        </div>
-      )}
 
       <div className="max-w-4xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6">
         {/* Question Display */}

@@ -103,15 +103,6 @@ export function TimePicker({ value, onChange }: TimePickerProps) {
         </div>
       </div>
       
-      {/* Time breakdown */}
-      <div className="bg-orange-50 rounded-xl p-3 border border-orange-100">
-        <div className="flex items-center justify-between text-sm">
-          <span className="text-orange-700">Time per question:</span>
-          <span className="font-medium text-orange-800">
-            ~{Math.round((value * 60) / 30)} seconds
-          </span>
-        </div>
-      </div>
     </div>
   );
 }

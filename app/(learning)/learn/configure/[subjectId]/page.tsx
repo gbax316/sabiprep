@@ -53,11 +53,25 @@ export default function ConfigureLearningPage({
   
   // Update question count when style changes
   useEffect(() => {
-    if (selectedStyle !== 'custom') {
-      const count = getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name);
-      setQuestionCount(Math.min(count, maxQuestions));
+    if (selectedMode === 'timed') {
+      if (selectedStyle === 'custom') {
+        // For timed mode custom, questions and time are independent
+        // Question count is controlled directly by QuestionSlider component
+        // Only initialize if switching to custom for the first time (preserve existing value otherwise)
+        // QuestionSlider will handle validation and limits
+      } else {
+        // For timed mode standard durations, use the helper function
+        const count = getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name);
+        setQuestionCount(Math.min(count, maxQuestions));
+      }
     } else {
-      setQuestionCount(Math.min(customQuestionCount, maxQuestions));
+      // For practice and test modes
+      if (selectedStyle !== 'custom') {
+        const count = getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name);
+        setQuestionCount(Math.min(count, maxQuestions));
+      } else {
+        setQuestionCount(Math.min(customQuestionCount, maxQuestions));
+      }
     }
   }, [selectedStyle, selectedMode, customQuestionCount, maxQuestions, subject?.name]);
   
@@ -127,43 +141,93 @@ export default function ConfigureLearningPage({
       
       const topicIdsArray = Array.from(selectedTopicIds);
       
-      // Calculate time limit for timed mode
+      // Calculate time limit and question count for timed mode
       let timeLimitSeconds: number | undefined;
+      let finalQuestionCount = questionCount;
+      
       if (selectedMode === 'timed') {
         if (selectedStyle === 'custom') {
           timeLimitSeconds = timeLimit * 60;
+          // For custom timed mode, use the question count selected directly by user via QuestionSlider
+          // Questions and time are independent - don't calculate one from the other
+          finalQuestionCount = Math.min(questionCount, maxQuestions);
         } else {
           timeLimitSeconds = getTimeLimitFromStyle(selectedStyle as TimedStyle);
+          // Recalculate question count from style for standard timed durations
+          finalQuestionCount = Math.min(
+            getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name),
+            maxQuestions
+          );
         }
+      } else if (selectedStyle === 'custom') {
+        // For practice/test custom mode, use customQuestionCount
+        finalQuestionCount = Math.min(customQuestionCount, maxQuestions);
+      } else {
+        // For practice/test standard styles, recalculate to ensure it's correct
+        finalQuestionCount = Math.min(
+          getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name),
+          maxQuestions
+        );
       }
       
-      // Create session
+      // Ensure questionCount is valid (at least 1)
+      if (finalQuestionCount < 1) {
+        alert('Please select a valid number of questions');
+        setCreatingSession(false);
+        return;
+      }
+      
+      // For timed mode, ensure time limit is valid
+      if (selectedMode === 'timed' && (!timeLimitSeconds || timeLimitSeconds < 1)) {
+        alert('Please select a valid time limit');
+        setCreatingSession(false);
+        return;
+      }
+      
+      // Ensure we have at least one topic
+      if (topicIdsArray.length === 0) {
+        alert('Please select at least one topic');
+        setCreatingSession(false);
+        return;
+      }
+      
+      // Create session - always set both topicId (first topic) and topicIds (all topics)
+      // This ensures fallback logic works on the timed page even if sessionStorage is lost
       const session = await createSession({
         userId: userId || '',
         subjectId: subject.id,
-        topicIds: topicIdsArray.length > 1 ? topicIdsArray : undefined,
-        topicId: topicIdsArray.length === 1 ? topicIdsArray[0] : undefined,
+        topicIds: topicIdsArray, // Always pass all selected topics
+        topicId: topicIdsArray[0], // Always pass first topic as fallback
         mode: selectedMode,
-        totalQuestions: questionCount,
+        totalQuestions: finalQuestionCount,
         timeLimit: timeLimitSeconds,
         isGuest: isGuest,
+      });
+      
+      console.log('[Configure] Session created:', {
+        sessionId: session.id,
+        mode: selectedMode,
+        totalQuestions: finalQuestionCount,
+        timeLimitSeconds,
+        topicCount: topicIdsArray.length,
       });
       
       // Store configuration for session pages that need it
       if (selectedMode === 'test') {
         // Calculate distribution for test mode
-        const distribution = calculateDistribution(topicIdsArray, questionCount);
+        const distribution = calculateDistribution(topicIdsArray, finalQuestionCount);
         sessionStorage.setItem(`testConfig_${session.id}`, JSON.stringify({
           examStyle: selectedStyle,
           distribution,
           topicIds: topicIdsArray,
-          totalQuestions: questionCount,
+          totalQuestions: finalQuestionCount,
         }));
       } else if (selectedMode === 'timed') {
-        const distribution = calculateDistribution(topicIdsArray, questionCount);
+        const distribution = calculateDistribution(topicIdsArray, finalQuestionCount);
         sessionStorage.setItem(`timedConfig_${session.id}`, JSON.stringify({
           distribution,
-          totalQuestions: questionCount,
+          topicIds: topicIdsArray, // Store topic IDs for fallback
+          totalQuestions: finalQuestionCount,
           totalTimeMinutes: selectedStyle === 'custom' ? timeLimit : Math.floor((timeLimitSeconds || 1800) / 60),
           examFormat: selectedStyle,
         }));
@@ -179,15 +243,27 @@ export default function ConfigureLearningPage({
   }
   
   // Calculate question distribution across topics
-  function calculateDistribution(topicIds: string[], totalQuestions: number) {
-    const distribution: { topicId: string; count: number }[] = [];
+  // Returns Record<topicId, questionCount> format for getQuestionsWithDistribution API
+  // Ensures the sum of all counts equals totalQuestions
+  function calculateDistribution(topicIds: string[], totalQuestions: number): Record<string, number> {
+    const distribution: Record<string, number> = {};
     const questionsPerTopic = Math.floor(totalQuestions / topicIds.length);
     let remainder = totalQuestions % topicIds.length;
     
     for (const topicId of topicIds) {
       const count = questionsPerTopic + (remainder > 0 ? 1 : 0);
       if (remainder > 0) remainder--;
-      distribution.push({ topicId, count });
+      distribution[topicId] = count;
+    }
+    
+    // Verify the distribution sums to totalQuestions (for debugging)
+    const sum = Object.values(distribution).reduce((acc, count) => acc + count, 0);
+    if (sum !== totalQuestions) {
+      console.warn(
+        `Distribution calculation error: requested ${totalQuestions} questions, ` +
+        `but distribution sums to ${sum}. Distribution:`,
+        distribution
+      );
     }
     
     return distribution;
@@ -307,7 +383,7 @@ export default function ConfigureLearningPage({
           />
         </motion.section>
         
-        {/* Question Slider (show for custom style in all modes) */}
+        {/* Question Slider (show for custom style in all modes including timed) */}
         <AnimatePresence>
           {selectedStyle === 'custom' && (
             <motion.section

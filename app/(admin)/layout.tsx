@@ -285,8 +285,16 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
   const isLoginPage = pathname === '/admin/login';
 
   // Redirect if not authorized (except on login page)
+  // Only redirect once, and only if we're sure the user isn't authorized
   useEffect(() => {
-    if (isInitialized && !isLoading && !canAccessAdmin && !isLoginPage) {
+    // Don't redirect if still loading or not initialized
+    if (!isInitialized || isLoading) return;
+    
+    // Don't redirect if already on login page
+    if (isLoginPage) return;
+    
+    // Only redirect if we're certain the user cannot access admin
+    if (!canAccessAdmin) {
       router.replace('/admin/login');
     }
   }, [isInitialized, isLoading, canAccessAdmin, isLoginPage, router]);

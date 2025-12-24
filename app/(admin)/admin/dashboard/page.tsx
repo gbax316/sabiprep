@@ -154,40 +154,79 @@ export default function AdminDashboardPage() {
   const [isAlertsLoading, setIsAlertsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch dashboard data
+  // Fetch dashboard data with timeout
   const fetchDashboardData = useCallback(async () => {
     try {
       setIsStatsLoading(true);
       setError(null);
 
-      const response = await fetch('/api/admin/dashboard');
-      const data: DashboardResponse = await response.json();
+      // Add timeout to prevent hanging
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
 
-      if (data.success && data.data) {
-        setStats(data.data.stats);
-        setRecentImports(data.data.recentImports || []);
-        setRecentUsers(data.data.recentUsers || []);
-      } else {
-        setError('Failed to load dashboard statistics');
+      try {
+        const response = await fetch('/api/admin/dashboard', {
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data: DashboardResponse = await response.json();
+
+        if (data.success && data.data) {
+          setStats(data.data.stats);
+          setRecentImports(data.data.recentImports || []);
+          setRecentUsers(data.data.recentUsers || []);
+        } else {
+          setError('Failed to load dashboard statistics');
+        }
+      } catch (fetchError: any) {
+        clearTimeout(timeoutId);
+        if (fetchError.name === 'AbortError') {
+          throw new Error('Request timed out. Please try again.');
+        }
+        throw fetchError;
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Error fetching dashboard data:', err);
-      setError('Failed to load dashboard data');
+      setError(err.message || 'Failed to load dashboard data');
     } finally {
       setIsStatsLoading(false);
     }
   }, []);
 
-  // Fetch alerts
+  // Fetch alerts with timeout
   const fetchAlerts = useCallback(async () => {
     try {
       setIsAlertsLoading(true);
 
-      const response = await fetch('/api/admin/dashboard/alerts');
-      const data: AlertsResponse = await response.json();
+      // Add timeout to prevent hanging
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
 
-      if (data.success && data.data) {
-        setAlerts(data.data.alerts || []);
+      try {
+        const response = await fetch('/api/admin/dashboard/alerts', {
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data: AlertsResponse = await response.json();
+
+        if (data.success && data.data) {
+          setAlerts(data.data.alerts || []);
+        }
+      } catch (fetchError: any) {
+        clearTimeout(timeoutId);
+        if (fetchError.name !== 'AbortError') {
+          console.error('Error fetching alerts:', fetchError);
+        }
       }
     } catch (err) {
       console.error('Error fetching alerts:', err);
@@ -198,6 +237,21 @@ export default function AdminDashboardPage() {
 
   // Load data on mount
   useEffect(() => {
+    // Check for refresh flag first
+    if (typeof window !== 'undefined') {
+      const shouldRefresh = sessionStorage.getItem('refresh_dashboard');
+      if (shouldRefresh === 'true') {
+        sessionStorage.removeItem('refresh_dashboard');
+        // Small delay to ensure navigation is complete
+        setTimeout(() => {
+          fetchDashboardData();
+          fetchAlerts();
+        }, 500);
+        return;
+      }
+    }
+
+    // Normal load
     fetchDashboardData();
     fetchAlerts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -215,19 +269,6 @@ export default function AdminDashboardPage() {
         }
       }
     };
-
-    // Also check on mount
-    if (typeof window !== 'undefined') {
-      const shouldRefresh = sessionStorage.getItem('refresh_dashboard');
-      if (shouldRefresh === 'true') {
-        sessionStorage.removeItem('refresh_dashboard');
-        // Small delay to ensure navigation is complete
-        setTimeout(() => {
-          fetchDashboardData();
-          fetchAlerts();
-        }, 500);
-      }
-    }
 
     window.addEventListener('focus', handleFocus);
     return () => window.removeEventListener('focus', handleFocus);

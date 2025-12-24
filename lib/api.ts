@@ -20,6 +20,10 @@ import type {
   UserGoal,
   UserGoalType,
   UserSubjectPreference,
+  DailyChallenge,
+  UserDailyChallenge,
+  MasteryBadge,
+  UserMasteryBadge,
 } from '@/types/database';
 
 // ============================================
@@ -547,6 +551,9 @@ export async function getRandomQuestionsFromTopics(
 export async function getQuestionsWithDistribution(
   distribution: Record<string, number>
 ): Promise<Question[]> {
+  const topicIds = Object.keys(distribution);
+  const totalRequested = Object.values(distribution).reduce((sum, count) => sum + count, 0);
+  
   // Fetch questions from all topics in parallel with intelligent distribution
   const fetchPromises = Object.entries(distribution)
     .filter(([_, count]) => count > 0)
@@ -567,13 +574,17 @@ export async function getQuestionsWithDistribution(
 
   const results = await Promise.all(fetchPromises);
   const allQuestions: Question[] = [];
-  let totalRequested = 0;
+  const questionIds = new Set<string>();
   let totalReceived = 0;
 
-  // Collect all questions from parallel fetches
+  // Collect all questions from parallel fetches (avoid duplicates)
   results.forEach((result) => {
-    allQuestions.push(...result.questions);
-    totalRequested += result.requested;
+    result.questions.forEach(q => {
+      if (!questionIds.has(q.id)) {
+        allQuestions.push(q);
+        questionIds.add(q.id);
+      }
+    });
     totalReceived += result.received;
     
     // Warn if we didn't get enough questions from a topic
@@ -584,10 +595,50 @@ export async function getQuestionsWithDistribution(
     }
   });
 
+  // If we got fewer questions than requested, try to compensate from other topics
+  if (allQuestions.length < totalRequested && topicIds.length > 1) {
+    const shortfall = totalRequested - allQuestions.length;
+    console.log(`Attempting to compensate for ${shortfall} missing questions from other topics`);
+    
+    // Try to get more questions from topics that have questions available
+    // Prioritize topics that originally requested more questions (more likely to have extras)
+    const sortedTopics = Object.entries(distribution)
+      .sort((a, b) => b[1] - a[1]) // Sort by requested count descending
+      .map(([topicId]) => topicId);
+    
+    for (const topicId of sortedTopics) {
+      if (allQuestions.length >= totalRequested) break;
+      
+      const needed = totalRequested - allQuestions.length;
+      if (needed <= 0) break;
+      
+      try {
+        // Try to get a few extra questions (request a bit more to account for potential duplicates)
+        const extraQuestions = await getRandomQuestions(topicId, needed + 2);
+        
+        // Add only new questions that we don't already have
+        let added = 0;
+        for (const q of extraQuestions) {
+          if (!questionIds.has(q.id) && allQuestions.length < totalRequested) {
+            allQuestions.push(q);
+            questionIds.add(q.id);
+            added++;
+          }
+        }
+        
+        if (added > 0) {
+          console.log(`Added ${added} extra questions from topic ${topicId}`);
+        }
+      } catch (error) {
+        console.error(`Error fetching extra questions from topic ${topicId}:`, error);
+      }
+    }
+  }
+
   // Log summary
-  if (totalReceived < totalRequested) {
+  if (allQuestions.length < totalRequested) {
     console.warn(
-      `Question distribution: requested ${totalRequested}, received ${totalReceived} (${totalRequested - totalReceived} missing)`
+      `Question distribution: requested ${totalRequested}, received ${allQuestions.length} (${totalRequested - allQuestions.length} missing)`
     );
   }
 
@@ -646,8 +697,8 @@ export async function createSession(params: CreateSessionParams): Promise<Learni
       id: sessionId,
       user_id: guestId,
       subject_id: params.subjectId,
-      topic_id: params.topicId || (topicIds.length === 1 ? topicIds[0] : undefined),
-      topic_ids: topicIds.length > 1 ? topicIds : (topicIds.length === 1 ? topicIds : undefined),
+      topic_id: params.topicId || topicIds[0] || undefined, // Always set first topic as fallback
+      topic_ids: topicIds.length > 0 ? topicIds : undefined, // Always store all topics
       mode: params.mode,
       total_questions: params.totalQuestions,
       questions_answered: 0,
@@ -662,6 +713,14 @@ export async function createSession(params: CreateSessionParams): Promise<Learni
       completed_at: undefined,
     };
     
+    console.log('[API] Created guest session:', {
+      sessionId,
+      topicId: guestSession.topic_id,
+      topicIds: guestSession.topic_ids,
+      totalQuestions: guestSession.total_questions,
+      timeLimitSeconds: guestSession.time_limit_seconds,
+    });
+    
     // Store guest session in sessionStorage
     sessionStorage.setItem(`guest_session_${sessionId}`, JSON.stringify(guestSession));
     
@@ -669,19 +728,23 @@ export async function createSession(params: CreateSessionParams): Promise<Learni
   }
   
   // Authenticated user session: create in database
+  const sessionPayload = {
+    user_id: params.userId,
+    subject_id: params.subjectId,
+    topic_id: params.topicId || topicIds[0] || null, // Always set first topic as fallback
+    topic_ids: topicIds.length > 0 ? topicIds : null, // Always store all topics
+    mode: params.mode,
+    total_questions: params.totalQuestions,
+    time_limit_seconds: params.timeLimit,
+    status: 'in_progress',
+    last_question_index: 0,
+  };
+  
+  console.log('[API] Creating session:', sessionPayload);
+  
   const { data, error } = await supabase
     .from('sessions')
-    .insert({
-      user_id: params.userId,
-      subject_id: params.subjectId,
-      topic_id: params.topicId || (topicIds.length === 1 ? topicIds[0] : null), // Keep for backward compatibility
-      topic_ids: topicIds.length > 1 ? topicIds : null, // Store as JSONB for multi-topic
-      mode: params.mode,
-      total_questions: params.totalQuestions,
-      time_limit_seconds: params.timeLimit,
-      status: 'in_progress',
-      last_question_index: 0,
-    })
+    .insert(sessionPayload)
     .select()
     .single();
 
@@ -941,7 +1004,8 @@ export async function completeSessionWithGoals(
   timeSpentSeconds?: number,
   correctAnswers?: number,
   totalQuestions?: number,
-  userId?: string
+  userId?: string,
+  isDailyChallenge: boolean = false
 ): Promise<LearningSession> {
   // Complete the session first
   const session = await completeSession(
@@ -952,26 +1016,34 @@ export async function completeSessionWithGoals(
     totalQuestions
   );
 
-  // Update goals if userId is provided
-  if (userId) {
+  // Update goals and award XP if userId is provided
+  if (userId && correctAnswers !== undefined && totalQuestions !== undefined) {
     try {
+      const studyTimeMinutes = timeSpentSeconds ? Math.floor(timeSpentSeconds / 60) : 0;
+      
+      // Award XP and update stats using incrementUserStats
+      await incrementUserStats(
+        userId,
+        totalQuestions,
+        correctAnswers,
+        studyTimeMinutes,
+        isDailyChallenge
+      );
+
       // Update weekly study time goal
-      if (timeSpentSeconds && timeSpentSeconds > 0) {
-        const studyTimeMinutes = Math.floor(timeSpentSeconds / 60);
+      if (studyTimeMinutes > 0) {
         await updateGoalProgress(userId, 'weekly_study_time', studyTimeMinutes);
       }
 
       // Update questions answered goals
-      if (totalQuestions && totalQuestions > 0) {
-        await updateGoalProgress(userId, 'weekly_questions', totalQuestions);
-        await updateGoalProgress(userId, 'daily_questions', totalQuestions);
-      }
+      await updateGoalProgress(userId, 'weekly_questions', totalQuestions);
+      await updateGoalProgress(userId, 'daily_questions', totalQuestions);
 
       // Check for goal achievements
       await checkGoalAchievements(userId);
     } catch (error) {
       // Don't fail if goal update fails
-      console.error('Error updating goals:', error);
+      console.error('Error updating goals and XP:', error);
     }
   }
 
@@ -1003,27 +1075,38 @@ export interface CreateAnswerParams {
 export async function createSessionAnswer(
   params: CreateAnswerParams
 ): Promise<SessionAnswer> {
-  const { data, error } = await supabase
-    .from('session_answers')
-    .insert({
-      session_id: params.sessionId,
-      question_id: params.questionId,
-      topic_id: params.topicId,
-      user_answer: params.userAnswer,
-      is_correct: params.isCorrect,
-      time_spent_seconds: params.timeSpentSeconds,
-      hint_used: params.hintUsed ?? false,
-      hint_level: params.hintLevel,
-      solution_viewed: params.solutionViewed ?? false,
-      solution_viewed_before_attempt: params.solutionViewedBeforeAttempt ?? false,
-      attempt_count: params.attemptCount ?? 1,
-      first_attempt_correct: params.firstAttemptCorrect,
-    })
-    .select()
-    .single();
+  try {
+    // Use upsert to handle answer updates (if user changes their answer)
+    const { data, error } = await supabase
+      .from('session_answers')
+      .upsert({
+        session_id: params.sessionId,
+        question_id: params.questionId,
+        topic_id: params.topicId,
+        user_answer: params.userAnswer,
+        is_correct: params.isCorrect,
+        time_spent_seconds: params.timeSpentSeconds,
+        hint_used: params.hintUsed ?? false,
+        hint_level: params.hintLevel,
+        solution_viewed: params.solutionViewed ?? false,
+        solution_viewed_before_attempt: params.solutionViewedBeforeAttempt ?? false,
+        attempt_count: params.attemptCount ?? 1,
+        first_attempt_correct: params.firstAttemptCorrect,
+      }, {
+        onConflict: 'session_id,question_id', // Update if answer already exists
+      })
+      .select()
+      .single();
 
-  if (error) throw error;
-  return data;
+    if (error) {
+      console.error('Error in createSessionAnswer:', error);
+      throw error;
+    }
+    return data;
+  } catch (error) {
+    console.error('Error creating session answer:', error);
+    throw error;
+  }
 }
 
 /**
@@ -1251,6 +1334,7 @@ export async function getUserStats(userId: string): Promise<UserStats> {
     studyTimeMinutes: user.total_study_time_minutes,
     currentStreak: user.streak_count,
     lastActiveDate: user.last_active_date ? new Date(user.last_active_date) : undefined,
+    xpPoints: user.xp_points || 0,
   };
 
   return stats;
@@ -1281,24 +1365,54 @@ export async function updateUserStreak(userId: string): Promise<void> {
 
 /**
  * Increment user stats after completing a session
+ * Also awards XP automatically
  */
 export async function incrementUserStats(
   userId: string,
   questionsAnswered: number,
   correctAnswers: number,
-  studyTimeMinutes: number
-): Promise<User> {
+  studyTimeMinutes: number,
+  isDailyChallenge: boolean = false
+): Promise<{ user: User; xpEarned: number }> {
   const user = await getUserProfile(userId);
   
   if (!user) {
     throw new Error('User not found');
   }
 
-  return updateUserProfile(userId, {
+  // Award XP using the database function
+  const { data: xpData, error: xpError } = await supabase.rpc('award_xp', {
+    user_uuid: userId,
+    correct_answers_count: correctAnswers,
+    is_daily_challenge: isDailyChallenge,
+  });
+
+  if (xpError) {
+    console.error('Error awarding XP:', xpError);
+    // Continue even if XP fails
+  }
+
+  const xpEarned = xpData || 0;
+
+  // Update user stats
+  const updatedUser = await updateUserProfile(userId, {
     total_questions_answered: user.total_questions_answered + questionsAnswered,
     total_correct_answers: user.total_correct_answers + correctAnswers,
     total_study_time_minutes: user.total_study_time_minutes + studyTimeMinutes,
   });
+
+  // Check and award mastery badges (global)
+  try {
+    await supabase.rpc('check_and_award_mastery_badges', {
+      user_uuid: userId,
+      subject_uuid: null, // Global badges
+    });
+  } catch (error) {
+    console.error('Error checking mastery badges:', error);
+    // Continue even if badge check fails
+  }
+
+  return { user: updatedUser, xpEarned };
 }
 
 // ============================================
@@ -2020,4 +2134,303 @@ export async function getPreferredSubjects(userId: string): Promise<Subject[]> {
     ...subject,
     total_questions: countMap[subject.id] || 0,
   }));
+}
+
+// ============================================
+// XP SYSTEM
+// ============================================
+
+/**
+ * Award XP to a user (called automatically via incrementUserStats)
+ */
+export async function awardXP(
+  userId: string,
+  correctAnswersCount: number,
+  isDailyChallenge: boolean = false
+): Promise<number> {
+  const { data, error } = await supabase.rpc('award_xp', {
+    user_uuid: userId,
+    correct_answers_count: correctAnswersCount,
+    is_daily_challenge: isDailyChallenge,
+  });
+
+  if (error) throw error;
+  return data || 0;
+}
+
+/**
+ * Get user's current XP
+ */
+export async function getUserXP(userId: string): Promise<number> {
+  const user = await getUserProfile(userId);
+  return user?.xp_points || 0;
+}
+
+// ============================================
+// DAILY CHALLENGES
+// ============================================
+
+/**
+ * Generate daily challenges for today (if not already generated)
+ */
+export async function generateDailyChallenges(challengeDate?: string): Promise<number> {
+  const date = challengeDate || new Date().toISOString().split('T')[0];
+  const { data, error } = await supabase.rpc('generate_daily_challenges', {
+    challenge_date: date,
+  });
+
+  if (error) {
+    // If function doesn't exist, it means migration hasn't been run
+    if (error.code === '42883' || error.message?.includes('function') || error.message?.includes('does not exist')) {
+      console.warn('generate_daily_challenges function does not exist. Please run the migration.');
+      return 0;
+    }
+    throw error;
+  }
+  return data || 0;
+}
+
+/**
+ * Get daily challenge for a subject on a specific date
+ */
+export async function getDailyChallenge(
+  subjectId: string,
+  challengeDate?: string
+): Promise<DailyChallenge | null> {
+  const date = challengeDate || new Date().toISOString().split('T')[0];
+  
+  // Ensure challenges are generated for today
+  await generateDailyChallenges(date);
+
+  const { data, error } = await supabase
+    .from('daily_challenges')
+    .select('*')
+    .eq('subject_id', subjectId)
+    .eq('challenge_date', date)
+    .single();
+
+  if (error && error.code !== 'PGRST116') throw error; // PGRST116 = no rows
+  return data || null;
+}
+
+/**
+ * Get all daily challenges for today
+ */
+export async function getTodayDailyChallenges(): Promise<DailyChallenge[]> {
+  const today = new Date().toISOString().split('T')[0];
+  
+  try {
+    // Ensure challenges are generated (this might fail if migration hasn't been run, so we catch it)
+    try {
+      await generateDailyChallenges(today);
+    } catch (genError) {
+      console.warn('Could not generate daily challenges (migration may not be run):', genError);
+      // Continue even if generation fails
+    }
+
+    const { data, error } = await supabase
+      .from('daily_challenges')
+      .select('*, subject:subjects(*)')
+      .eq('challenge_date', today);
+
+    if (error) {
+      // If table doesn't exist, return empty array
+      if (error.code === '42P01' || error.message?.includes('does not exist')) {
+        console.warn('Daily challenges table does not exist. Please run the migration.');
+        return [];
+      }
+      throw error;
+    }
+    
+    // Sort by subject name manually since order might not work with join
+    const sorted = (data || []).sort((a, b) => {
+      const subjectA = (a as any).subject?.name || '';
+      const subjectB = (b as any).subject?.name || '';
+      return subjectA.localeCompare(subjectB);
+    });
+    
+    return sorted;
+  } catch (error) {
+    console.error('Error in getTodayDailyChallenges:', error);
+    // Return empty array on error so the page can still render
+    return [];
+  }
+}
+
+/**
+ * Get user's daily challenge completion status
+ */
+export async function getUserDailyChallenge(
+  userId: string,
+  dailyChallengeId: string
+): Promise<UserDailyChallenge | null> {
+  const { data, error } = await supabase
+    .from('user_daily_challenges')
+    .select('*')
+    .eq('user_id', userId)
+    .eq('daily_challenge_id', dailyChallengeId)
+    .single();
+
+  if (error && error.code !== 'PGRST116') throw error;
+  return data || null;
+}
+
+/**
+ * Get all daily challenge completions for a user
+ */
+export async function getUserDailyChallengeCompletions(
+  userId: string,
+  limit: number = 30
+): Promise<UserDailyChallenge[]> {
+  try {
+    const { data, error } = await supabase
+      .from('user_daily_challenges')
+      .select('*, daily_challenge:daily_challenges(*, subject:subjects(*))')
+      .eq('user_id', userId)
+      .order('completed_at', { ascending: false })
+      .limit(limit);
+
+    if (error) {
+      // If table doesn't exist, return empty array
+      if (error.code === '42P01' || error.message?.includes('does not exist')) {
+        console.warn('User daily challenges table does not exist. Please run the migration.');
+        return [];
+      }
+      throw error;
+    }
+    return data || [];
+  } catch (error) {
+    console.error('Error in getUserDailyChallengeCompletions:', error);
+    return [];
+  }
+}
+
+/**
+ * Complete a daily challenge
+ */
+export async function completeDailyChallenge(
+  userId: string,
+  dailyChallengeId: string,
+  sessionId: string,
+  correctAnswers: number,
+  totalQuestions: number,
+  timeSpentSeconds: number
+): Promise<UserDailyChallenge> {
+  const scorePercentage = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0;
+
+  // Award XP (daily challenges get special handling)
+  const xpEarned = await awardXP(userId, correctAnswers, true);
+
+  // Record completion
+  const { data, error } = await supabase
+    .from('user_daily_challenges')
+    .insert({
+      user_id: userId,
+      daily_challenge_id: dailyChallengeId,
+      session_id: sessionId,
+      score_percentage: scorePercentage,
+      correct_answers: correctAnswers,
+      total_questions: totalQuestions,
+      time_spent_seconds: timeSpentSeconds,
+      xp_earned: xpEarned,
+    })
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data;
+}
+
+// ============================================
+// MASTERY BADGES
+// ============================================
+
+/**
+ * Get all mastery badges
+ */
+export async function getMasteryBadges(): Promise<MasteryBadge[]> {
+  const { data, error } = await supabase
+    .from('mastery_badges')
+    .select('*')
+    .order('level', { ascending: true });
+
+  if (error) throw error;
+  return data || [];
+}
+
+/**
+ * Get user's mastery badges
+ */
+export async function getUserMasteryBadges(
+  userId: string,
+  subjectId?: string
+): Promise<UserMasteryBadge[]> {
+  try {
+    let query = supabase
+      .from('user_mastery_badges')
+      .select('*, mastery_badge:mastery_badges(*), subject:subjects(*)')
+      .eq('user_id', userId);
+
+    if (subjectId) {
+      query = query.eq('subject_id', subjectId);
+    } else {
+      query = query.is('subject_id', null); // Global badges only
+    }
+
+    const { data, error } = await query.order('earned_at', { ascending: false });
+
+    if (error) {
+      // If table doesn't exist, return empty array
+      if (error.code === '42P01' || error.message?.includes('does not exist')) {
+        console.warn('Mastery badges tables do not exist. Please run the migration.');
+        return [];
+      }
+      throw error;
+    }
+    return data || [];
+  } catch (error) {
+    console.error('Error in getUserMasteryBadges:', error);
+    return [];
+  }
+}
+
+/**
+ * Get user's highest mastery badge level (global)
+ */
+export async function getUserHighestMasteryLevel(userId: string): Promise<number> {
+  const badges = await getUserMasteryBadges(userId);
+  if (badges.length === 0) return 0;
+  
+  const levels = badges.map(b => b.mastery_badge?.level || 0);
+  return Math.max(...levels);
+}
+
+/**
+ * Get user's mastery level for a specific subject
+ */
+export async function getUserSubjectMasteryLevel(
+  userId: string,
+  subjectId: string
+): Promise<number> {
+  const badges = await getUserMasteryBadges(userId, subjectId);
+  if (badges.length === 0) return 0;
+  
+  const levels = badges.map(b => b.mastery_badge?.level || 0);
+  return Math.max(...levels);
+}
+
+/**
+ * Check and award mastery badges (called automatically, but can be called manually)
+ */
+export async function checkAndAwardMasteryBadges(
+  userId: string,
+  subjectId?: string
+): Promise<number> {
+  const { data, error } = await supabase.rpc('check_and_award_mastery_badges', {
+    user_uuid: userId,
+    subject_uuid: subjectId || null,
+  });
+
+  if (error) throw error;
+  return data || 0;
 }

@@ -42,25 +42,61 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
       const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
       
-      // Fetch all data in parallel
+      // Fetch all data in parallel with optimized queries
       const [
-        usersResult,
-        questionsResult,
+        usersCountResult,
+        usersByRoleResult,
+        activeUsersResult,
+        newUsersResult,
+        questionsCountResult,
+        publishedQuestionsResult,
+        draftQuestionsResult,
         subjectsResult,
         topicsResult,
         sessionsResult,
         recentImportsResult,
         recentUsersResult,
       ] = await Promise.all([
-        // Users data - get all to calculate breakdowns
+        // Total users count
         supabase
           .from('users')
-          .select('id, role, status, last_active_date, created_at'),
+          .select('id', { count: 'exact', head: true }),
         
-        // Questions data - get all to calculate breakdowns
+        // Users by role - use count queries for efficiency
+        Promise.all([
+          supabase.from('users').select('id', { count: 'exact', head: true }).eq('role', 'student'),
+          supabase.from('users').select('id', { count: 'exact', head: true }).eq('role', 'tutor'),
+          supabase.from('users').select('id', { count: 'exact', head: true }).eq('role', 'admin'),
+        ]),
+        
+        // Active users (last 7 days) - limit to reasonable number
+        supabase
+          .from('users')
+          .select('id', { count: 'exact', head: true })
+          .gte('last_active_date', sevenDaysAgo.toISOString()),
+        
+        // New users this month
+        supabase
+          .from('users')
+          .select('id', { count: 'exact', head: true })
+          .gte('created_at', startOfMonth.toISOString()),
+        
+        // Total questions count
         supabase
           .from('questions')
-          .select('id, status'),
+          .select('id', { count: 'exact', head: true }),
+        
+        // Published questions count
+        supabase
+          .from('questions')
+          .select('id', { count: 'exact', head: true })
+          .eq('status', 'published'),
+        
+        // Draft questions count
+        supabase
+          .from('questions')
+          .select('id', { count: 'exact', head: true })
+          .eq('status', 'draft'),
         
         // Subjects count
         supabase
@@ -72,10 +108,12 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
           .from('topics')
           .select('id', { count: 'exact', head: true }),
         
-        // Sessions data for activity
+        // Sessions data for activity - limit to recent sessions for performance
         supabase
           .from('sessions')
-          .select('id, questions_answered, correct_answers, started_at'),
+          .select('id, questions_answered, correct_answers, started_at')
+          .order('started_at', { ascending: false })
+          .limit(1000), // Limit to last 1000 sessions for performance
         
         // Recent imports (last 10)
         supabase
@@ -92,52 +130,19 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
           .limit(10),
       ]);
       
-      // Process users data
-      const users = usersResult.data || [];
+      // Process users data from count queries
       const usersByRole: Record<UserRole, number> = {
-        student: 0,
-        tutor: 0,
-        admin: 0,
+        student: usersByRoleResult[0].count || 0,
+        tutor: usersByRoleResult[1].count || 0,
+        admin: usersByRoleResult[2].count || 0,
       };
       
-      let activeUsersCount = 0;
-      let newThisMonthCount = 0;
+      const activeUsersCount = activeUsersResult.count || 0;
+      const newThisMonthCount = newUsersResult.count || 0;
       
-      users.forEach((u) => {
-        // Count by role
-        if (u.role && usersByRole[u.role as UserRole] !== undefined) {
-          usersByRole[u.role as UserRole]++;
-        }
-        
-        // Count active users (active in last 7 days)
-        if (u.last_active_date) {
-          const lastActive = new Date(u.last_active_date);
-          if (lastActive >= sevenDaysAgo) {
-            activeUsersCount++;
-          }
-        }
-        
-        // Count new users this month
-        if (u.created_at) {
-          const createdAt = new Date(u.created_at);
-          if (createdAt >= startOfMonth) {
-            newThisMonthCount++;
-          }
-        }
-      });
-      
-      // Process questions data
-      const questions = questionsResult.data || [];
-      let publishedCount = 0;
-      let draftCount = 0;
-      
-      questions.forEach((q) => {
-        if (q.status === 'published') {
-          publishedCount++;
-        } else if (q.status === 'draft') {
-          draftCount++;
-        }
-      });
+      // Process questions data from count queries
+      const publishedCount = publishedQuestionsResult.count || 0;
+      const draftCount = draftQuestionsResult.count || 0;
       
       // Process sessions data
       const sessions = sessionsResult.data || [];
@@ -164,7 +169,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       // Build response
       const stats: AdminDashboardStats = {
         users: {
-          total: users.length,
+          total: usersCountResult.count || 0,
           active: activeUsersCount,
           newThisMonth: newThisMonthCount,
           byRole: usersByRole,
@@ -172,7 +177,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         content: {
           totalSubjects: subjectsResult.count || 0,
           totalTopics: topicsResult.count || 0,
-          totalQuestions: questions.length,
+          totalQuestions: questionsCountResult.count || 0,
           publishedQuestions: publishedCount,
           draftQuestions: draftCount,
         },

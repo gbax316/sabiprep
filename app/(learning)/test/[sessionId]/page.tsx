@@ -144,8 +144,21 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
         // Multi-topic session - check for distribution in sessionStorage
         if (testConfigStr) {
           const { distribution, totalQuestions: expectedTotal, topicIds } = JSON.parse(testConfigStr);
+          
+          // Handle both array format (old) and Record format (new)
+          let distributionRecord: Record<string, number>;
+          if (Array.isArray(distribution)) {
+            // Convert old array format to Record
+            distributionRecord = {};
+            distribution.forEach((item: { topicId: string; count: number }) => {
+              distributionRecord[item.topicId] = item.count;
+            });
+          } else {
+            distributionRecord = distribution;
+          }
+          
           // Fetch questions and validate count
-          let fetchedQuestions = await getQuestionsWithDistribution(distribution);
+          let fetchedQuestions = await getQuestionsWithDistribution(distributionRecord);
           
           // If we got fewer questions than expected, try to fetch more from any available topic
           if (fetchedQuestions.length < expectedTotal) {

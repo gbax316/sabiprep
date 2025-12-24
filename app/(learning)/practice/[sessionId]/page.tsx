@@ -263,9 +263,13 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         }
       }
       
-      // Resume from last question if paused
-      if (sessionData.status === 'paused' && sessionData.last_question_index !== undefined) {
-        setCurrentIndex(sessionData.last_question_index);
+      // Resume from last question if paused or in_progress
+      if ((sessionData.status === 'paused' || sessionData.status === 'in_progress') && 
+          sessionData.last_question_index !== undefined && 
+          sessionData.last_question_index >= 0) {
+        // Ensure the index is within bounds
+        const resumeIndex = Math.min(sessionData.last_question_index, questions.length - 1);
+        setCurrentIndex(resumeIndex);
       }
     } catch (error) {
       console.error('Error loading session:', error);
