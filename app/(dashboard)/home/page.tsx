@@ -137,6 +137,7 @@ export default function HomePage() {
         studyTimeMinutes: 0,
         currentStreak: 0,
         lastActiveDate: undefined,
+        xpPoints: 0,
       });
       // Use preferred subjects if available, otherwise use all subjects
       const preferred = preferredSubjects.status === 'fulfilled' ? preferredSubjects.value : [];
