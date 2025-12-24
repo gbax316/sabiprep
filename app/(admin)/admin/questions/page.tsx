@@ -203,23 +203,38 @@ export default function QuestionsPage() {
     hasImage: searchParams?.get('hasImage') || '',
   });
   
-  // Fetch subjects
+  // Fetch subjects with timeout
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        const response = await fetch('/api/admin/subjects');
-        if (response.ok) {
-          const data = await response.json();
-          setSubjects(data.subjects || []);
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        
+        try {
+          const response = await fetch('/api/admin/subjects', {
+            signal: controller.signal,
+          });
+          clearTimeout(timeoutId);
+          
+          if (response.ok) {
+            const data = await response.json();
+            setSubjects(data.subjects || []);
+          }
+        } catch (fetchError: any) {
+          clearTimeout(timeoutId);
+          if (fetchError.name !== 'AbortError') {
+            throw fetchError;
+          }
         }
       } catch (error) {
         console.error('Failed to fetch subjects:', error);
+        setSubjects([]);
       }
     };
     fetchSubjects();
   }, []);
   
-  // Fetch topics when subject changes
+  // Fetch topics when subject changes with timeout
   useEffect(() => {
     const fetchTopics = async () => {
       if (!filters.subjectId) {
@@ -229,13 +244,28 @@ export default function QuestionsPage() {
       
       setIsLoadingTopics(true);
       try {
-        const response = await fetch(`/api/admin/topics?subjectId=${filters.subjectId}`);
-        if (response.ok) {
-          const data = await response.json();
-          setTopics(data.topics || []);
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        
+        try {
+          const response = await fetch(`/api/admin/topics?subjectId=${filters.subjectId}`, {
+            signal: controller.signal,
+          });
+          clearTimeout(timeoutId);
+          
+          if (response.ok) {
+            const data = await response.json();
+            setTopics(data.topics || []);
+          }
+        } catch (fetchError: any) {
+          clearTimeout(timeoutId);
+          if (fetchError.name !== 'AbortError') {
+            throw fetchError;
+          }
         }
       } catch (error) {
         console.error('Failed to fetch topics:', error);
+        setTopics([]);
       } finally {
         setIsLoadingTopics(false);
       }
@@ -243,7 +273,7 @@ export default function QuestionsPage() {
     fetchTopics();
   }, [filters.subjectId]);
   
-  // Fetch questions
+  // Fetch questions with timeout
   const fetchQuestions = useCallback(async () => {
     setIsLoading(true);
     try {
@@ -261,8 +291,20 @@ export default function QuestionsPage() {
       if (filters.hasPassage) params.set('hasPassage', filters.hasPassage);
       if (filters.hasImage) params.set('hasImage', filters.hasImage);
       
-      const response = await fetch(`/api/admin/questions?${params.toString()}`);
-      if (response.ok) {
+      // Add timeout to prevent infinite loading (5 seconds)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      
+      try {
+        const response = await fetch(`/api/admin/questions?${params.toString()}`, {
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+        
+        if (!response.ok) {
+          throw new Error(response.status === 401 ? 'Unauthorized' : `Failed to fetch questions: ${response.status}`);
+        }
+        
         const data = await response.json();
         setQuestions(data.questions || []);
         setPagination(prev => ({
@@ -270,9 +312,17 @@ export default function QuestionsPage() {
           total: data.pagination.total,
           totalPages: data.pagination.totalPages,
         }));
+      } catch (fetchError: any) {
+        clearTimeout(timeoutId);
+        if (fetchError.name === 'AbortError') {
+          throw new Error('Request timed out. Please try again.');
+        }
+        throw fetchError;
       }
     } catch (error) {
       console.error('Failed to fetch questions:', error);
+      // Set empty state on error to prevent infinite loading
+      setQuestions([]);
     } finally {
       setIsLoading(false);
     }

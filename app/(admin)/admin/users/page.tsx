@@ -223,7 +223,7 @@ export default function UsersPage() {
   });
   const [isConfirmLoading, setIsConfirmLoading] = useState(false);
   
-  // Fetch users
+  // Fetch users with timeout
   const fetchUsers = useCallback(async () => {
     setIsLoading(true);
     setError(null);
@@ -236,18 +236,35 @@ export default function UsersPage() {
       if (roleFilter) params.set('role', roleFilter);
       if (statusFilter) params.set('status', statusFilter);
       
-      const response = await fetch(`/api/admin/users?${params.toString()}`);
-      const data = await response.json();
+      // Add timeout to prevent infinite loading (5 seconds)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
       
-      if (!response.ok) {
-        throw new Error(data.message || data.error || 'Failed to fetch users');
+      try {
+        const response = await fetch(`/api/admin/users?${params.toString()}`, {
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+        
+        if (!response.ok) {
+          throw new Error(response.status === 401 ? 'Unauthorized' : `Failed to fetch users: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        setUsers(data.users || []);
+        setPagination(data.pagination || pagination);
+      } catch (fetchError: any) {
+        clearTimeout(timeoutId);
+        if (fetchError.name === 'AbortError') {
+          throw new Error('Request timed out. Please try again.');
+        }
+        throw fetchError;
       }
-      
-      setUsers(data.users || []);
-      setPagination(data.pagination || pagination);
     } catch (err) {
       console.error('Error fetching users:', err);
       setError(err instanceof Error ? err.message : 'Failed to fetch users');
+      // Set empty state on error to prevent infinite loading
+      setUsers([]);
     } finally {
       setIsLoading(false);
     }

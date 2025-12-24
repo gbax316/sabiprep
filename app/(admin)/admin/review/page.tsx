@@ -159,7 +159,7 @@ export default function ReviewDashboardPage() {
   const [questionTotalPages, setQuestionTotalPages] = useState(1);
 
   /**
-   * Load review history and stats
+   * Load review history and stats with timeout
    */
   const loadReviews = useCallback(async () => {
     try {
@@ -171,44 +171,72 @@ export default function ReviewDashboardPage() {
       params.append('page', '1');
       params.append('limit', '50');
 
-      const response = await fetch(`/api/admin/questions/review/history?${params.toString()}`);
-      
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error('API Error:', errorText);
-        throw new Error(`Failed to load reviews: ${response.statusText}`);
-      }
+      // Add timeout to prevent infinite loading (5 seconds)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-      const data = await response.json();
-
-      // Handle both success response format and direct data format
-      const reviewsData = data.success 
-        ? (data.data?.reviews || data.reviews || []) 
-        : (data.reviews || data.data?.reviews || []);
-      
-      if (!Array.isArray(reviewsData)) {
-        console.error('Invalid reviews data format:', reviewsData);
-        setReviews([]);
-        setStats({
-          total: 0,
-          pending: 0,
-          approved: 0,
-          rejected: 0,
-          failed: 0,
+      try {
+        const response = await fetch(`/api/admin/questions/review/history?${params.toString()}`, {
+          signal: controller.signal,
         });
-        return;
+        clearTimeout(timeoutId);
+        
+        if (!response.ok) {
+          if (response.status === 401) {
+            throw new Error('Unauthorized - Please log in again');
+          }
+          const errorText = await response.text();
+          console.error('API Error:', errorText);
+          throw new Error(`Failed to load reviews: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        // Handle both success response format and direct data format
+        const reviewsData = data.success 
+          ? (data.data?.reviews || data.reviews || []) 
+          : (data.reviews || data.data?.reviews || []);
+        
+        if (!Array.isArray(reviewsData)) {
+          console.error('Invalid reviews data format:', reviewsData);
+          setReviews([]);
+          setStats({
+            total: 0,
+            pending: 0,
+            approved: 0,
+            rejected: 0,
+            failed: 0,
+          });
+          return;
+        }
+        
+        setReviews(reviewsData);
+        
+        // Calculate stats
+        setStats({
+          total: reviewsData.length,
+          pending: reviewsData.filter((r: ReviewWithRelations) => r.status === 'pending').length,
+          approved: reviewsData.filter((r: ReviewWithRelations) => r.status === 'approved').length,
+          rejected: reviewsData.filter((r: ReviewWithRelations) => r.status === 'rejected').length,
+          failed: reviewsData.filter((r: ReviewWithRelations) => r.status === 'failed').length,
+        });
+      } catch (fetchError: any) {
+        clearTimeout(timeoutId);
+        if (fetchError.name === 'AbortError') {
+          // Timeout - set empty state gracefully
+          console.warn('Request timed out while loading reviews');
+          setReviews([]);
+          setStats({
+            total: 0,
+            pending: 0,
+            approved: 0,
+            rejected: 0,
+            failed: 0,
+          });
+          return;
+        }
+        throw fetchError;
       }
-      
-      setReviews(reviewsData);
-      
-      // Calculate stats
-      setStats({
-        total: reviewsData.length,
-        pending: reviewsData.filter((r: ReviewWithRelations) => r.status === 'pending').length,
-        approved: reviewsData.filter((r: ReviewWithRelations) => r.status === 'approved').length,
-        rejected: reviewsData.filter((r: ReviewWithRelations) => r.status === 'rejected').length,
-        failed: reviewsData.filter((r: ReviewWithRelations) => r.status === 'failed').length,
-      });
     } catch (error) {
       console.error('Failed to load reviews:', error);
       // Set empty state on error

@@ -89,32 +89,55 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
   }, [user?.id, fetchAdminUser]);
 
   /**
-   * Initialize auth state
+   * Initialize auth state with timeout
    */
   useEffect(() => {
     let mounted = true;
 
     const initializeAuth = async () => {
       try {
-        // Get current session
-        const { data: { session } } = await supabase.auth.getSession();
-        
-        if (mounted) {
-          if (session?.user) {
-            setUser(session.user);
-            const adminData = await fetchAdminUser(session.user.id);
-            setAdminUser(adminData);
-          } else {
-            // No session, ensure state is cleared
-            setUser(null);
-            setAdminUser(null);
+        // Add timeout to prevent infinite loading (max 5 seconds)
+        const timeoutPromise = new Promise((_, reject) => {
+          setTimeout(() => reject(new Error('Auth initialization timeout')), 5000);
+        });
+
+        const authPromise = (async () => {
+          // Get current session
+          const { data: { session } } = await supabase.auth.getSession();
+          
+          if (mounted) {
+            if (session?.user) {
+              setUser(session.user);
+              // Fetch admin user with timeout
+              const adminDataPromise = fetchAdminUser(session.user.id);
+              const adminTimeoutPromise = new Promise<AdminSessionUser | null>((_, reject) => {
+                setTimeout(() => reject(new Error('Admin user fetch timeout')), 3000);
+              });
+              
+              try {
+                const adminData = await Promise.race([adminDataPromise, adminTimeoutPromise]);
+                setAdminUser(adminData);
+              } catch (adminErr) {
+                console.warn('Error or timeout fetching admin user:', adminErr);
+                setAdminUser(null);
+              }
+            } else {
+              // No session, ensure state is cleared
+              setUser(null);
+              setAdminUser(null);
+            }
+            setIsLoading(false);
+            setIsInitialized(true);
           }
-          setIsLoading(false);
-          setIsInitialized(true);
-        }
+        })();
+
+        await Promise.race([authPromise, timeoutPromise]);
       } catch (err) {
         console.error('Error initializing admin auth:', err);
         if (mounted) {
+          // Even on timeout/error, set initialized to false to allow login page to show
+          setUser(null);
+          setAdminUser(null);
           setIsLoading(false);
           setIsInitialized(true);
         }
@@ -128,17 +151,33 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
       async (event, session) => {
         if (!mounted) return;
         
-        if (event === 'SIGNED_IN' && session?.user) {
-          setUser(session.user);
-          const adminData = await fetchAdminUser(session.user.id);
-          setAdminUser(adminData);
-        } else if (event === 'SIGNED_OUT') {
-          setUser(null);
-          setAdminUser(null);
+        try {
+          if (event === 'SIGNED_IN' && session?.user) {
+            setUser(session.user);
+            // Fetch admin user with timeout
+            const adminDataPromise = fetchAdminUser(session.user.id);
+            const adminTimeoutPromise = new Promise<AdminSessionUser | null>((_, reject) => {
+              setTimeout(() => reject(new Error('Admin user fetch timeout')), 3000);
+            });
+            
+            try {
+              const adminData = await Promise.race([adminDataPromise, adminTimeoutPromise]);
+              setAdminUser(adminData);
+            } catch (adminErr) {
+              console.warn('Error or timeout fetching admin user:', adminErr);
+              setAdminUser(null);
+            }
+          } else if (event === 'SIGNED_OUT') {
+            setUser(null);
+            setAdminUser(null);
+          }
+        } catch (err) {
+          console.error('Error in auth state change handler:', err);
+        } finally {
+          setIsLoading(false);
+          // Only set initialized if not already set (to prevent race conditions)
+          setIsInitialized(prev => prev || true);
         }
-        setIsLoading(false);
-        // Only set initialized if not already set (to prevent race conditions)
-        setIsInitialized(prev => prev || true);
       }
     );
 

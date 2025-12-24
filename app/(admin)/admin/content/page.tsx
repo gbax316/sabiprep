@@ -102,40 +102,83 @@ export default function ContentManagementPage() {
     counts: { topicCount?: number; questionCount?: number };
   } | null>(null);
 
-  // Fetch subjects
+  // Fetch subjects with timeout
   const fetchSubjects = useCallback(async () => {
     setIsLoadingSubjects(true);
     try {
-      const response = await fetch('/api/admin/subjects');
-      const data = await response.json();
-      if (data.success) {
-        setSubjects(data.subjects);
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      
+      try {
+        const response = await fetch('/api/admin/subjects', {
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+        
+        const data = await response.json();
+        if (data.success) {
+          setSubjects(data.subjects || []);
+        } else {
+          setSubjects([]);
+        }
+      } catch (fetchError: any) {
+        clearTimeout(timeoutId);
+        if (fetchError.name === 'AbortError') {
+          throw new Error('Request timed out');
+        }
+        throw fetchError;
       }
     } catch (error) {
       console.error('Error fetching subjects:', error);
+      setSubjects([]);
     } finally {
       setIsLoadingSubjects(false);
     }
   }, []);
 
-  // Fetch topics
+  // Fetch topics with timeout
   const fetchTopics = useCallback(async (subjectId?: string) => {
     setIsLoadingTopics(true);
     try {
       const url = subjectId
         ? `/api/admin/topics?subjectId=${subjectId}`
         : '/api/admin/topics';
-      const response = await fetch(url);
-      const data = await response.json();
-      if (data.success) {
-        setTopics(data.topics);
-        // Store all topics if fetching without filter
-        if (!subjectId) {
-          setAllTopics(data.topics);
+      
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      
+      try {
+        const response = await fetch(url, {
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+        
+        const data = await response.json();
+        if (data.success) {
+          setTopics(data.topics || []);
+          // Store all topics if fetching without filter
+          if (!subjectId) {
+            setAllTopics(data.topics || []);
+          }
+        } else {
+          setTopics([]);
+          if (!subjectId) {
+            setAllTopics([]);
+          }
         }
+      } catch (fetchError: any) {
+        clearTimeout(timeoutId);
+        if (fetchError.name === 'AbortError') {
+          throw new Error('Request timed out');
+        }
+        throw fetchError;
       }
     } catch (error) {
       console.error('Error fetching topics:', error);
+      setTopics([]);
+      if (!subjectId) {
+        setAllTopics([]);
+      }
     } finally {
       setIsLoadingTopics(false);
     }

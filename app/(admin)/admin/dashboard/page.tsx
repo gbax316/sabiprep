@@ -160,9 +160,9 @@ export default function AdminDashboardPage() {
       setIsStatsLoading(true);
       setError(null);
 
-      // Add timeout to prevent hanging
+      // Add timeout to prevent hanging (7 seconds - slightly longer for dashboard with multiple data sources)
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+      const timeoutId = setTimeout(() => controller.abort(), 7000);
 
       try {
         const response = await fetch('/api/admin/dashboard', {
@@ -180,19 +180,39 @@ export default function AdminDashboardPage() {
           setStats(data.data.stats);
           setRecentImports(data.data.recentImports || []);
           setRecentUsers(data.data.recentUsers || []);
+          setError(null); // Clear any previous errors
         } else {
           setError('Failed to load dashboard statistics');
+          // Set empty states to prevent infinite loading
+          setStats(null);
+          setRecentImports([]);
+          setRecentUsers([]);
         }
       } catch (fetchError: any) {
         clearTimeout(timeoutId);
         if (fetchError.name === 'AbortError') {
-          throw new Error('Request timed out. Please try again.');
+          // Timeout - log as warning (expected behavior when server is slow)
+          console.warn('Dashboard data request timed out after 7 seconds');
+          setError('Request timed out. The server is taking longer than expected. Please try refreshing the page.');
+          // Set empty states to prevent infinite loading
+          setStats(null);
+          setRecentImports([]);
+          setRecentUsers([]);
+          return; // Return early to avoid re-throwing
         }
         throw fetchError;
       }
     } catch (err: any) {
-      console.error('Error fetching dashboard data:', err);
-      setError(err.message || 'Failed to load dashboard data');
+      // Only log non-timeout errors as errors
+      if (err.message && !err.message.includes('timed out')) {
+        console.error('Error fetching dashboard data:', err);
+      }
+      const errorMessage = err.message || 'Failed to load dashboard data';
+      setError(errorMessage);
+      // Set empty states to prevent infinite loading
+      setStats(null);
+      setRecentImports([]);
+      setRecentUsers([]);
     } finally {
       setIsStatsLoading(false);
     }
@@ -203,9 +223,9 @@ export default function AdminDashboardPage() {
     try {
       setIsAlertsLoading(true);
 
-      // Add timeout to prevent hanging
+      // Add timeout to prevent hanging (5 seconds - alerts are less critical)
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
 
       try {
         const response = await fetch('/api/admin/dashboard/alerts', {
@@ -214,22 +234,29 @@ export default function AdminDashboardPage() {
         clearTimeout(timeoutId);
 
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          // Alerts are non-critical, just set empty array on error
+          setAlerts([]);
+          return;
         }
 
         const data: AlertsResponse = await response.json();
 
         if (data.success && data.data) {
           setAlerts(data.data.alerts || []);
+        } else {
+          setAlerts([]);
         }
       } catch (fetchError: any) {
         clearTimeout(timeoutId);
+        // Alerts are non-critical, fail silently but set empty array
         if (fetchError.name !== 'AbortError') {
-          console.error('Error fetching alerts:', fetchError);
+          console.warn('Error fetching alerts:', fetchError);
         }
+        setAlerts([]);
       }
     } catch (err) {
-      console.error('Error fetching alerts:', err);
+      console.warn('Error fetching alerts:', err);
+      setAlerts([]);
     } finally {
       setIsAlertsLoading(false);
     }
@@ -385,6 +412,29 @@ export default function AdminDashboardPage() {
             : 'Here\'s what\'s happening on your platform today.'}
         </p>
       </div>
+
+      {/* Error Alert */}
+      {error && (
+        <Alert variant="destructive">
+          <AlertTitle>Unable to Load Dashboard</AlertTitle>
+          <AlertDescription className="flex items-center justify-between">
+            <span>{error}</span>
+            <AdminButton
+              onClick={() => {
+                setError(null);
+                fetchDashboardData();
+                fetchAlerts();
+              }}
+              variant="outline"
+              size="sm"
+              className="ml-4"
+            >
+              <RefreshCcw className="w-4 h-4 mr-2" />
+              Retry
+            </AdminButton>
+          </AlertDescription>
+        </Alert>
+      )}
 
       {/* Summary Metrics - Top Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
