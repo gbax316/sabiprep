@@ -141,7 +141,7 @@ export default function ConfigureLearningPage({
       
       const topicIdsArray = Array.from(selectedTopicIds);
       
-      // Calculate time limit and question count for timed mode
+      // Calculate time limit and question count
       let timeLimitSeconds: number | undefined;
       let finalQuestionCount = questionCount;
       
@@ -159,8 +159,20 @@ export default function ConfigureLearningPage({
             maxQuestions
           );
         }
+      } else if (selectedMode === 'test') {
+        if (selectedStyle === 'custom') {
+          // For test mode custom, both questions and time are set independently
+          timeLimitSeconds = timeLimit * 60;
+          finalQuestionCount = Math.min(questionCount, maxQuestions);
+        } else {
+          // For test mode standard styles, no time limit (or use default if needed)
+          finalQuestionCount = Math.min(
+            getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name),
+            maxQuestions
+          );
+        }
       } else if (selectedStyle === 'custom') {
-        // For practice/test custom mode, use customQuestionCount
+        // For practice custom mode, use customQuestionCount (no time limit)
         finalQuestionCount = Math.min(customQuestionCount, maxQuestions);
       } else {
         // For practice/test standard styles, recalculate to ensure it's correct
@@ -177,8 +189,9 @@ export default function ConfigureLearningPage({
         return;
       }
       
-      // For timed mode, ensure time limit is valid
-      if (selectedMode === 'timed' && (!timeLimitSeconds || timeLimitSeconds < 1)) {
+      // For timed mode and test mode custom, ensure time limit is valid
+      if ((selectedMode === 'timed' || (selectedMode === 'test' && selectedStyle === 'custom')) && 
+          (!timeLimitSeconds || timeLimitSeconds < 1)) {
         alert('Please select a valid time limit');
         setCreatingSession(false);
         return;
@@ -383,7 +396,7 @@ export default function ConfigureLearningPage({
           />
         </motion.section>
         
-        {/* Question Slider (show for custom style in all modes including timed) */}
+        {/* Question Slider (show for custom style in all modes) */}
         <AnimatePresence>
           {selectedStyle === 'custom' && (
             <motion.section
@@ -391,6 +404,7 @@ export default function ConfigureLearningPage({
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
+              className="w-full"
             >
               <QuestionSlider
                 mode={selectedMode}
@@ -402,14 +416,15 @@ export default function ConfigureLearningPage({
           )}
         </AnimatePresence>
         
-        {/* Time Picker (only for timed mode custom) */}
+        {/* Time Picker (for timed mode custom AND test mode custom) */}
         <AnimatePresence>
-          {selectedMode === 'timed' && selectedStyle === 'custom' && (
+          {((selectedMode === 'timed' || selectedMode === 'test') && selectedStyle === 'custom') && (
             <motion.section
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
+              className="w-full"
             >
               <TimePicker
                 value={timeLimit}
@@ -459,7 +474,7 @@ export default function ConfigureLearningPage({
               <span className="text-slate-500">Questions</span>
               <span className="font-medium text-slate-700">{questionCount}</span>
             </div>
-            {selectedMode === 'timed' && (
+            {(selectedMode === 'timed' || (selectedMode === 'test' && selectedStyle === 'custom')) && (
               <div className="flex justify-between">
                 <span className="text-slate-500">Time Limit</span>
                 <span className="font-medium text-slate-700">

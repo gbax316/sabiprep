@@ -88,33 +88,7 @@ export function StylePicker({
   
   const styles = getStyles();
   
-  // Slider display values (precompute to avoid type narrowing issues)
-  const sliderLabel = mode === 'timed' ? 'Duration' : 'Questions';
-  const sliderUnit = mode === 'timed' ? 'min' : '';
-  const sliderMin = mode === 'timed' ? 5 : 5;
-  const sliderMax = mode === 'timed' ? 180 : 100;
-  const sliderStep = mode === 'timed' ? 5 : 5;
-  
-  // Only show custom slider for practice and test modes, not for timed mode
-  const showCustomSlider = selectedStyle === 'custom' && onCustomQuestionCountChange && mode !== 'timed';
-  
-  // #region agent log
-  if (typeof window !== 'undefined') {
-    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId: 'debug-session',
-        runId: 'run1',
-        hypothesisId: 'H1',
-        location: 'components/learn/StylePicker.tsx:showCustomSlider',
-        message: 'StylePicker render state',
-        data: { mode, selectedStyle, showCustomSlider, customQuestionCount, sliderLabel, sliderUnit, sliderMin, sliderMax, sliderStep },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-  }
-  // #endregion
+  // Custom slider removed - QuestionSlider component in configure page handles this now
   
   return (
     <div className="space-y-3">
@@ -172,60 +146,6 @@ export function StylePicker({
           );
         })}
       </div>
-      
-      <AnimatePresence>
-        {showCustomSlider && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
-          >
-            <div className="pt-3 space-y-2">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-slate-600">{sliderLabel}</span>
-                <span className="font-semibold text-indigo-600">
-                  {customQuestionCount} {sliderUnit}
-                </span>
-              </div>
-              <input
-                type="range"
-                min={sliderMin}
-                max={sliderMax}
-                step={sliderStep}
-                value={customQuestionCount || 20}
-                onChange={(e) => {
-                  const next = parseInt(e.target.value);
-                  // #region agent log
-                  if (typeof window !== 'undefined') {
-                    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify({
-                        sessionId: 'debug-session',
-                        runId: 'run1',
-                        hypothesisId: 'H2',
-                        location: 'components/learn/StylePicker.tsx:onCustomQuestionCountChange',
-                        message: 'Custom slider change',
-                        data: { mode, selectedStyle, value: next },
-                        timestamp: Date.now(),
-                      }),
-                    }).catch(() => {});
-                  }
-                  // #endregion
-                  onCustomQuestionCountChange?.(next);
-                }}
-                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-500"
-              />
-              <div className="flex justify-between text-xs text-slate-400">
-                <span>{sliderMin}{sliderUnit ? ' min' : ''}</span>
-                <span>{sliderMax}{sliderUnit ? ' min' : ''}</span>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

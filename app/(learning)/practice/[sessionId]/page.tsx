@@ -99,15 +99,73 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
   async function loadSession() {
     try {
       setLoading(true);
+      // #region agent log
+      if (typeof window !== 'undefined') {
+        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: 'debug-session',
+            runId: 'practice-debug1',
+            hypothesisId: 'H1',
+            location: 'practice/[sessionId]/page.tsx:loadSession:start',
+            message: 'Load session start',
+            data: { sessionId, userId, isGuest },
+            timestamp: Date.now(),
+          }),
+        }).catch(() => {});
+      }
+      // #endregion
       const sessionData = await getSession(sessionId);
       
       if (!sessionData) {
         console.error('Session not found:', sessionId);
+        // #region agent log
+        if (typeof window !== 'undefined') {
+          fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              sessionId: 'debug-session',
+              runId: 'practice-debug1',
+              hypothesisId: 'H1',
+              location: 'practice/[sessionId]/page.tsx:loadSession:noSession',
+              message: 'Session not found',
+              data: { sessionId },
+              timestamp: Date.now(),
+            }),
+          }).catch(() => {});
+        }
+        // #endregion
         router.replace('/home');
         return;
       }
 
       setSession(sessionData);
+      // #region agent log
+      if (typeof window !== 'undefined') {
+        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: 'debug-session',
+            runId: 'practice-debug1',
+            hypothesisId: 'H2',
+            location: 'practice/[sessionId]/page.tsx:loadSession:sessionLoaded',
+            message: 'Session loaded',
+            data: {
+              sessionId: sessionData.id,
+              status: sessionData.status,
+              subjectId: sessionData.subject_id,
+              topicId: sessionData.topic_id,
+              topicIds: sessionData.topic_ids,
+              totalQuestions: sessionData.total_questions,
+            },
+            timestamp: Date.now(),
+          }),
+        }).catch(() => {});
+      }
+      // #endregion
 
       // Check if guest has reached question limit
       if (isGuest && hasReachedQuestionLimit()) {
@@ -117,11 +175,45 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       // FIRST: Try to restore original questions from session_answers
       const sessionAnswers = await getSessionAnswers(sessionId);
       let questionsData: Question[] = [];
+      // #region agent log
+      if (typeof window !== 'undefined') {
+        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: 'debug-session',
+            runId: 'practice-debug1',
+            hypothesisId: 'H3',
+            location: 'practice/[sessionId]/page.tsx:loadSession:answersFetched',
+            message: 'Session answers fetched',
+            data: { answersCount: sessionAnswers.length },
+            timestamp: Date.now(),
+          }),
+        }).catch(() => {});
+      }
+      // #endregion
       
       if (sessionAnswers.length > 0) {
         // Restore original questions
         const questionIds = sessionAnswers.map(a => a.question_id);
         questionsData = await getQuestionsByIds(questionIds);
+        // #region agent log
+        if (typeof window !== 'undefined') {
+          fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              sessionId: 'debug-session',
+              runId: 'practice-debug1',
+              hypothesisId: 'H4',
+              location: 'practice/[sessionId]/page.tsx:loadSession:restoredQuestions',
+              message: 'Questions restored from answers',
+              data: { requestedIds: questionIds.length, questionsRetrieved: questionsData.length },
+              timestamp: Date.now(),
+            }),
+          }).catch(() => {});
+        }
+        // #endregion
         
         // If we got questions, use them
         if (questionsData.length > 0) {
@@ -217,17 +309,30 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         questionsPromise = getRandomQuestionsFromTopics(
           sessionData.topic_ids,
           sessionData.total_questions
-        );
-        topicsPromise = getTopics(sessionData.subject_id);
+        ).catch(error => {
+          console.error('[Practice] Error fetching questions from multiple topics:', error);
+          return [];
+        });
+        topicsPromise = getTopics(sessionData.subject_id).catch(error => {
+          console.error('[Practice] Error fetching topics:', error);
+          return [];
+        });
         loadPromises.push(questionsPromise, topicsPromise);
       } else {
         // Single topic session (backward compatible)
         const topicId = sessionData.topic_id || sessionData.topic_ids?.[0];
         if (topicId) {
-          questionsPromise = getRandomQuestions(topicId, sessionData.total_questions);
-          topicsPromise = getTopic(topicId).then(t => t ? [t] : []);
+          questionsPromise = getRandomQuestions(topicId, sessionData.total_questions).catch(error => {
+            console.error('[Practice] Error fetching questions for topic:', { topicId, error });
+            return [];
+          });
+          topicsPromise = getTopic(topicId).then(t => t ? [t] : []).catch(error => {
+            console.error('[Practice] Error fetching topic:', { topicId, error });
+            return [];
+          });
           loadPromises.push(questionsPromise, topicsPromise);
         } else {
+          console.error('[Practice] No topic ID found in session:', sessionData);
           questionsPromise = Promise.resolve([]);
           topicsPromise = Promise.resolve([]);
         }
@@ -235,12 +340,40 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
 
       // Wait for all data in parallel
       const [subjectData, newQuestionsData, topicsResult] = await Promise.all(loadPromises);
+      // #region agent log
+      if (typeof window !== 'undefined') {
+        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: 'debug-session',
+            runId: 'practice-debug1',
+            hypothesisId: 'H5',
+            location: 'practice/[sessionId]/page.tsx:loadSession:fallbackResults',
+            message: 'Fallback questions loaded',
+            data: {
+              questionsLoaded: Array.isArray(newQuestionsData) ? newQuestionsData.length : -1,
+              topicsLoaded: Array.isArray(topicsResult) ? topicsResult.length : -1,
+            },
+            timestamp: Date.now(),
+          }),
+        }).catch(() => {});
+      }
+      // #endregion
       
       setSubject(subjectData);
       
       if (!newQuestionsData || newQuestionsData.length === 0) {
         // No questions available - this will be handled in the render section
+        console.error('[Practice] No questions loaded for session:', {
+          sessionId,
+          topicIds: sessionData.topic_ids,
+          topicId: sessionData.topic_id,
+          totalQuestions: sessionData.total_questions,
+        });
         setQuestions([]);
+        setLoading(false);
+        return; // Exit early to show error message
       } else {
         setQuestions(newQuestionsData);
       }
@@ -264,12 +397,17 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       }
       
       // Resume from last question if paused or in_progress
+      // IMPORTANT: Use newQuestionsData.length, not questions.length (which is old state)
       if ((sessionData.status === 'paused' || sessionData.status === 'in_progress') && 
           sessionData.last_question_index !== undefined && 
-          sessionData.last_question_index >= 0) {
-        // Ensure the index is within bounds
-        const resumeIndex = Math.min(sessionData.last_question_index, questions.length - 1);
-        setCurrentIndex(resumeIndex);
+          sessionData.last_question_index >= 0 &&
+          newQuestionsData && newQuestionsData.length > 0) {
+        // Ensure the index is within bounds using the newly loaded questions
+        const resumeIndex = Math.min(sessionData.last_question_index, newQuestionsData.length - 1);
+        setCurrentIndex(Math.max(0, resumeIndex)); // Ensure it's at least 0
+      } else if (newQuestionsData && newQuestionsData.length > 0) {
+        // For new sessions, start at index 0
+        setCurrentIndex(0);
       }
     } catch (error) {
       console.error('Error loading session:', error);
@@ -595,6 +733,31 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     // Get subject info for recovery
     const subjectId = session.subject_id;
     const topicId = session.topic_id || session.topic_ids?.[0];
+    // #region agent log
+    if (typeof window !== 'undefined') {
+      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId: 'debug-session',
+          runId: 'practice-debug1',
+          hypothesisId: 'H6',
+          location: 'practice/[sessionId]/page.tsx:render:noQuestions',
+          message: 'No questions in practice session render',
+          data: {
+            sessionId: session.id,
+            status: session.status,
+            subjectId,
+            topicId,
+            topicIds: session.topic_ids,
+            totalQuestions: session.total_questions,
+            questionsLength: questions.length,
+          },
+          timestamp: Date.now(),
+        }),
+      }).catch(() => {});
+    }
+    // #endregion
     
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">

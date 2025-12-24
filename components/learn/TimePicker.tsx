@@ -22,16 +22,16 @@ export function TimePicker({ value, onChange }: TimePickerProps) {
   };
   
   return (
-    <div className="space-y-4">
+    <div className="space-y-3 sm:space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold text-slate-800">Time Limit</h2>
-        <div className="flex items-center gap-2">
-          <Clock className="w-5 h-5 text-orange-500" />
+        <h2 className="text-base sm:text-lg font-semibold text-slate-800">Time Limit</h2>
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" />
           <motion.span 
             key={value}
             initial={{ scale: 1.2, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="text-xl font-bold text-orange-600"
+            className="text-lg sm:text-xl font-bold text-orange-600"
           >
             {formatTime(value)}
           </motion.span>
@@ -39,13 +39,13 @@ export function TimePicker({ value, onChange }: TimePickerProps) {
       </div>
       
       {/* Preset buttons */}
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
         {timePresets.map((preset) => (
           <motion.button
             key={preset}
             onClick={() => onChange(preset)}
             className={`
-              py-3 rounded-xl text-sm font-medium transition-all
+              py-2.5 sm:py-3 px-3 rounded-xl text-xs sm:text-sm font-medium transition-all
               ${value === preset 
                 ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-md' 
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
