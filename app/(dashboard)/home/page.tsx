@@ -118,6 +118,7 @@ export default function HomePage() {
           studyTimeMinutes: 0,
           currentStreak: 0,
           lastActiveDate: undefined,
+          xpPoints: 0,
         })),
         getSubjects().catch(() => []),
         getPreferredSubjects(userId).catch(() => []),
