@@ -338,7 +338,6 @@ export default function DailyChallengePage() {
                           variant="primary"
                           size="sm"
                           onClick={() => handleStartChallenge(challenge)}
-                          isLoading={isStarting}
                           disabled={isStarting}
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 border-0"
                         >
