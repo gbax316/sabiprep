@@ -154,8 +154,13 @@ export default function AdminDashboardPage() {
   const [isAlertsLoading, setIsAlertsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Track if component is mounted to prevent state updates after unmount
+  const [mounted, setMounted] = useState(true);
+
   // Fetch dashboard data with timeout
   const fetchDashboardData = useCallback(async () => {
+    if (!mounted) return;
+    
     try {
       setIsStatsLoading(true);
       setError(null);
@@ -169,12 +174,16 @@ export default function AdminDashboardPage() {
           signal: controller.signal,
         });
         clearTimeout(timeoutId);
+        
+        if (!mounted) return;
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data: DashboardResponse = await response.json();
+
+        if (!mounted) return;
 
         if (data.success && data.data) {
           setStats(data.data.stats);
@@ -190,6 +199,8 @@ export default function AdminDashboardPage() {
         }
       } catch (fetchError: any) {
         clearTimeout(timeoutId);
+        if (!mounted) return;
+        
         if (fetchError.name === 'AbortError') {
           // Timeout - log as warning (expected behavior when server is slow)
           console.warn('Dashboard data request timed out after 7 seconds');
@@ -203,6 +214,8 @@ export default function AdminDashboardPage() {
         throw fetchError;
       }
     } catch (err: any) {
+      if (!mounted) return;
+      
       // Only log non-timeout errors as errors
       if (err.message && !err.message.includes('timed out')) {
         console.error('Error fetching dashboard data:', err);
@@ -214,12 +227,16 @@ export default function AdminDashboardPage() {
       setRecentImports([]);
       setRecentUsers([]);
     } finally {
-      setIsStatsLoading(false);
+      if (mounted) {
+        setIsStatsLoading(false);
+      }
     }
-  }, []);
+  }, [mounted]);
 
   // Fetch alerts with timeout
   const fetchAlerts = useCallback(async () => {
+    if (!mounted) return;
+    
     try {
       setIsAlertsLoading(true);
 
@@ -233,6 +250,8 @@ export default function AdminDashboardPage() {
         });
         clearTimeout(timeoutId);
 
+        if (!mounted) return;
+
         if (!response.ok) {
           // Alerts are non-critical, just set empty array on error
           setAlerts([]);
@@ -241,6 +260,8 @@ export default function AdminDashboardPage() {
 
         const data: AlertsResponse = await response.json();
 
+        if (!mounted) return;
+
         if (data.success && data.data) {
           setAlerts(data.data.alerts || []);
         } else {
@@ -248,6 +269,8 @@ export default function AdminDashboardPage() {
         }
       } catch (fetchError: any) {
         clearTimeout(timeoutId);
+        if (!mounted) return;
+        
         // Alerts are non-critical, fail silently but set empty array
         if (fetchError.name !== 'AbortError') {
           console.warn('Error fetching alerts:', fetchError);
@@ -255,38 +278,56 @@ export default function AdminDashboardPage() {
         setAlerts([]);
       }
     } catch (err) {
+      if (!mounted) return;
       console.warn('Error fetching alerts:', err);
       setAlerts([]);
     } finally {
-      setIsAlertsLoading(false);
+      if (mounted) {
+        setIsAlertsLoading(false);
+      }
     }
+  }, [mounted]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
   }, []);
 
   // Load data on mount
   useEffect(() => {
+    if (!mounted) return;
+    
     // Check for refresh flag first
     if (typeof window !== 'undefined') {
       const shouldRefresh = sessionStorage.getItem('refresh_dashboard');
       if (shouldRefresh === 'true') {
         sessionStorage.removeItem('refresh_dashboard');
         // Small delay to ensure navigation is complete
-        setTimeout(() => {
-          fetchDashboardData();
-          fetchAlerts();
+        const refreshTimer = setTimeout(() => {
+          if (mounted) {
+            fetchDashboardData();
+            fetchAlerts();
+          }
         }, 500);
-        return;
+        return () => clearTimeout(refreshTimer);
       }
     }
 
     // Normal load
     fetchDashboardData();
     fetchAlerts();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Only run on mount
+  }, [mounted, fetchDashboardData, fetchAlerts]);
 
   // Refresh on window focus if flag is set
   useEffect(() => {
+    if (!mounted) return;
+    
     const handleFocus = () => {
+      if (!mounted) return;
+      
       if (typeof window !== 'undefined') {
         const shouldRefresh = sessionStorage.getItem('refresh_dashboard');
         if (shouldRefresh === 'true') {
@@ -299,8 +340,7 @@ export default function AdminDashboardPage() {
 
     window.addEventListener('focus', handleFocus);
     return () => window.removeEventListener('focus', handleFocus);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [mounted, fetchDashboardData, fetchAlerts]);
 
   // Handle alert dismiss
   const handleAlertDismiss = (alertId: string) => {

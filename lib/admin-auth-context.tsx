@@ -162,21 +162,37 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
             
             try {
               const adminData = await Promise.race([adminDataPromise, adminTimeoutPromise]);
-              setAdminUser(adminData);
+              if (mounted) {
+                setAdminUser(adminData);
+              }
             } catch (adminErr) {
               console.warn('Error or timeout fetching admin user:', adminErr);
-              setAdminUser(null);
+              if (mounted) {
+                setAdminUser(null);
+              }
             }
           } else if (event === 'SIGNED_OUT') {
-            setUser(null);
-            setAdminUser(null);
+            if (mounted) {
+              setUser(null);
+              setAdminUser(null);
+            }
+          } else if (event === 'TOKEN_REFRESHED') {
+            // Token refreshed - don't change loading state, just update user if needed
+            if (mounted && session?.user) {
+              setUser(session.user);
+            }
+            // Don't change isLoading or isInitialized on token refresh
+            return;
           }
         } catch (err) {
           console.error('Error in auth state change handler:', err);
         } finally {
-          setIsLoading(false);
-          // Only set initialized if not already set (to prevent race conditions)
-          setIsInitialized(prev => prev || true);
+          // Only update loading states if mounted and for sign in/out events
+          if (mounted && (event === 'SIGNED_IN' || event === 'SIGNED_OUT')) {
+            setIsLoading(false);
+            // Only set initialized if not already set (to prevent race conditions)
+            setIsInitialized(prev => prev || true);
+          }
         }
       }
     );

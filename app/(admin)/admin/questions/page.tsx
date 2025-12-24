@@ -172,6 +172,9 @@ export default function QuestionsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   
+  // Track if component is mounted to prevent state updates after unmount
+  const [mounted, setMounted] = useState(true);
+  
   // State
   const [questions, setQuestions] = useState<QuestionWithRelations[]>([]);
   const [subjects, setSubjects] = useState<Subject[]>([]);
@@ -190,6 +193,14 @@ export default function QuestionsPage() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isBulkActionLoading, setIsBulkActionLoading] = useState(false);
   
+  // Cleanup on unmount
+  useEffect(() => {
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
+  }, []);
+  
   // Filters
   const [filters, setFilters] = useState({
     search: searchParams?.get('search') || '',
@@ -205,6 +216,8 @@ export default function QuestionsPage() {
   
   // Fetch subjects with timeout
   useEffect(() => {
+    if (!mounted) return;
+    
     const fetchSubjects = async () => {
       try {
         const controller = new AbortController();
@@ -216,26 +229,32 @@ export default function QuestionsPage() {
           });
           clearTimeout(timeoutId);
           
+          if (!mounted) return;
+          
           if (response.ok) {
             const data = await response.json();
             setSubjects(data.subjects || []);
           }
         } catch (fetchError: any) {
           clearTimeout(timeoutId);
+          if (!mounted) return;
           if (fetchError.name !== 'AbortError') {
             throw fetchError;
           }
         }
       } catch (error) {
+        if (!mounted) return;
         console.error('Failed to fetch subjects:', error);
         setSubjects([]);
       }
     };
     fetchSubjects();
-  }, []);
+  }, [mounted]);
   
   // Fetch topics when subject changes with timeout
   useEffect(() => {
+    if (!mounted) return;
+    
     const fetchTopics = async () => {
       if (!filters.subjectId) {
         setTopics([]);
@@ -253,28 +272,36 @@ export default function QuestionsPage() {
           });
           clearTimeout(timeoutId);
           
+          if (!mounted) return;
+          
           if (response.ok) {
             const data = await response.json();
             setTopics(data.topics || []);
           }
         } catch (fetchError: any) {
           clearTimeout(timeoutId);
+          if (!mounted) return;
           if (fetchError.name !== 'AbortError') {
             throw fetchError;
           }
         }
       } catch (error) {
+        if (!mounted) return;
         console.error('Failed to fetch topics:', error);
         setTopics([]);
       } finally {
-        setIsLoadingTopics(false);
+        if (mounted) {
+          setIsLoadingTopics(false);
+        }
       }
     };
     fetchTopics();
-  }, [filters.subjectId]);
+  }, [mounted, filters.subjectId]);
   
   // Fetch questions with timeout
   const fetchQuestions = useCallback(async () => {
+    if (!mounted) return;
+    
     setIsLoading(true);
     try {
       const params = new URLSearchParams();
@@ -301,11 +328,15 @@ export default function QuestionsPage() {
         });
         clearTimeout(timeoutId);
         
+        if (!mounted) return;
+        
         if (!response.ok) {
           throw new Error(response.status === 401 ? 'Unauthorized' : `Failed to fetch questions: ${response.status}`);
         }
         
         const data = await response.json();
+        if (!mounted) return;
+        
         setQuestions(data.questions || []);
         setPagination(prev => ({
           ...prev,
@@ -314,19 +345,25 @@ export default function QuestionsPage() {
         }));
       } catch (fetchError: any) {
         clearTimeout(timeoutId);
+        if (!mounted) return;
+        
         if (fetchError.name === 'AbortError') {
           throw new Error('Request timed out. Please try again.');
         }
         throw fetchError;
       }
     } catch (error) {
+      if (!mounted) return;
+      
       console.error('Failed to fetch questions:', error);
       // Set empty state on error to prevent infinite loading
       setQuestions([]);
     } finally {
-      setIsLoading(false);
+      if (mounted) {
+        setIsLoading(false);
+      }
     }
-  }, [pagination.page, pagination.limit, filters]);
+  }, [mounted, pagination.page, pagination.limit, filters]);
   
   useEffect(() => {
     fetchQuestions();

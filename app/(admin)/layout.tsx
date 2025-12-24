@@ -295,8 +295,13 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
     if (isLoginPage) return;
     
     // Only redirect if we're certain the user cannot access admin
+    // Use a small delay to prevent rapid redirects that cause blank screens
     if (!canAccessAdmin) {
-      router.replace('/admin/login');
+      const redirectTimer = setTimeout(() => {
+        router.replace('/admin/login');
+      }, 100);
+      
+      return () => clearTimeout(redirectTimer);
     }
   }, [isInitialized, isLoading, canAccessAdmin, isLoginPage, router]);
 
@@ -356,8 +361,18 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
   }
 
   // Render protected content with layout
+  // Show loading instead of null to prevent blank screens during auth state transitions
   if (!canAccessAdmin) {
-    return null;
+    // Only show blank/null if we're absolutely sure user shouldn't access (after redirect delay)
+    // Otherwise show loading to prevent flash of blank screen
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Redirecting...</p>
+        </div>
+      </div>
+    );
   }
 
   return (

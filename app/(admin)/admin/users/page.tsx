@@ -185,6 +185,9 @@ function ConfirmModal({
 export default function UsersPage() {
   const router = useRouter();
   
+  // Track if component is mounted to prevent state updates after unmount
+  const [mounted, setMounted] = useState(true);
+  
   // Data state
   const [users, setUsers] = useState<User[]>([]);
   const [pagination, setPagination] = useState<PaginationInfo>({
@@ -202,6 +205,14 @@ export default function UsersPage() {
   // UI state
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
+  // Cleanup on unmount
+  useEffect(() => {
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
+  }, []);
   
   // Modal state
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
@@ -225,6 +236,8 @@ export default function UsersPage() {
   
   // Fetch users with timeout
   const fetchUsers = useCallback(async () => {
+    if (!mounted) return;
+    
     setIsLoading(true);
     setError(null);
     
@@ -246,29 +259,39 @@ export default function UsersPage() {
         });
         clearTimeout(timeoutId);
         
+        if (!mounted) return;
+        
         if (!response.ok) {
           throw new Error(response.status === 401 ? 'Unauthorized' : `Failed to fetch users: ${response.status}`);
         }
         
         const data = await response.json();
+        if (!mounted) return;
+        
         setUsers(data.users || []);
         setPagination(data.pagination || pagination);
       } catch (fetchError: any) {
         clearTimeout(timeoutId);
+        if (!mounted) return;
+        
         if (fetchError.name === 'AbortError') {
           throw new Error('Request timed out. Please try again.');
         }
         throw fetchError;
       }
     } catch (err) {
+      if (!mounted) return;
+      
       console.error('Error fetching users:', err);
       setError(err instanceof Error ? err.message : 'Failed to fetch users');
       // Set empty state on error to prevent infinite loading
       setUsers([]);
     } finally {
-      setIsLoading(false);
+      if (mounted) {
+        setIsLoading(false);
+      }
     }
-  }, [pagination.page, pagination.limit, search, roleFilter, statusFilter]);
+  }, [mounted, pagination.page, pagination.limit, search, roleFilter, statusFilter]);
   
   // Initial fetch and refetch on filter changes
   useEffect(() => {
