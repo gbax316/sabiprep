@@ -306,10 +306,25 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
 
       if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
         // Multi-topic session - load questions and topics in parallel
+        console.log('[Practice] Loading questions from multiple topics:', {
+          topicIds: sessionData.topic_ids,
+          topicIdsCount: sessionData.topic_ids.length,
+          totalQuestions: sessionData.total_questions,
+        });
         questionsPromise = getRandomQuestionsFromTopics(
           sessionData.topic_ids,
           sessionData.total_questions
-        ).catch(error => {
+        ).then(questions => {
+          console.log('[Practice] Questions loaded from multiple topics:', {
+            requested: sessionData.total_questions,
+            received: questions.length,
+            topicIds: sessionData.topic_ids,
+          });
+          if (questions.length < sessionData.total_questions) {
+            console.warn(`[Practice] Fewer questions returned than requested: ${questions.length} < ${sessionData.total_questions}`);
+          }
+          return questions;
+        }).catch(error => {
           console.error('[Practice] Error fetching questions from multiple topics:', error);
           return [];
         });
@@ -363,6 +378,16 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       
       setSubject(subjectData);
       
+      // Log questions loaded for debugging
+      if (newQuestionsData && Array.isArray(newQuestionsData)) {
+        console.log('[Practice] Questions loaded successfully:', {
+          requested: sessionData.total_questions,
+          received: newQuestionsData.length,
+          topicIds: sessionData.topic_ids,
+          topicIdsCount: sessionData.topic_ids?.length || 0,
+        });
+      }
+      
       if (!newQuestionsData || newQuestionsData.length === 0) {
         // No questions available - this will be handled in the render section
         console.error('[Practice] No questions loaded for session:', {
@@ -375,6 +400,10 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         setLoading(false);
         return; // Exit early to show error message
       } else {
+        // Warn if we got fewer questions than requested
+        if (newQuestionsData.length < sessionData.total_questions) {
+          console.warn(`[Practice] Session loaded with fewer questions than requested: ${newQuestionsData.length} < ${sessionData.total_questions}`);
+        }
         setQuestions(newQuestionsData);
       }
 

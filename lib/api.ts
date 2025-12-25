@@ -488,8 +488,17 @@ export async function getRandomQuestionsFromTopics(
   if (topicIds.length === 0) return [];
   if (topicIds.length === 1) return getRandomQuestions(topicIds[0], totalCount);
 
-  // Calculate questions per topic (balanced distribution)
-  const questionsPerTopic = Math.ceil(totalCount / topicIds.length);
+  // Calculate questions per topic with buffer to ensure we have enough after filtering
+  // Request 3-4x per topic to account for topics with fewer questions, filtering, and diversity selection
+  const baseQuestionsPerTopic = Math.ceil(totalCount / topicIds.length);
+  // For small counts, ensure minimum of 3 per topic; for larger counts, use multiplier approach
+  // Request 3x the base amount to ensure we have enough after diversity filtering
+  const questionsPerTopic = Math.max(
+    baseQuestionsPerTopic * 3,  // Request 3x base for buffer
+    totalCount < 10 ? 3 : 5     // Minimum per topic (3 for small counts, 5 for larger)
+  );
+
+  console.log(`[getRandomQuestionsFromTopics] Requesting ${questionsPerTopic} questions per topic (${topicIds.length} topics, target: ${totalCount} total)`);
 
   // Fetch questions from all topics in parallel with intelligent distribution
   const fetchPromises = topicIds.map(topicId => 
@@ -498,6 +507,22 @@ export async function getRandomQuestionsFromTopics(
 
   const results = await Promise.all(fetchPromises);
   let allQuestions: Question[] = results.flat();
+
+  // Log how many questions we got from each topic
+  results.forEach((questions, index) => {
+    if (questions.length < questionsPerTopic) {
+      console.warn(`[getRandomQuestionsFromTopics] Topic ${topicIds[index]} returned ${questions.length} questions (requested ${questionsPerTopic})`);
+    }
+  });
+
+  // Warn if we don't have enough questions
+  if (allQuestions.length < totalCount) {
+    console.warn(
+      `[getRandomQuestionsFromTopics] Insufficient questions: requested ${totalCount}, got ${allQuestions.length} (${totalCount - allQuestions.length} missing)`
+    );
+    // Return what we have (will be less than requested)
+    return allQuestions.sort(() => Math.random() - 0.5);
+  }
 
   // If we got more than needed, intelligently select to ensure diversity
   if (allQuestions.length > totalCount) {
@@ -540,7 +565,18 @@ export async function getRandomQuestionsFromTopics(
   }
 
   // Final shuffle to mix topics, difficulties, and exam types
-  return allQuestions.sort(() => Math.random() - 0.5).slice(0, totalCount);
+  // Slice to ensure we return exactly totalCount (or less if we don't have enough)
+  const finalQuestions = allQuestions.sort(() => Math.random() - 0.5).slice(0, totalCount);
+  
+  if (finalQuestions.length < totalCount) {
+    console.warn(
+      `[getRandomQuestionsFromTopics] Final result has ${finalQuestions.length} questions (requested ${totalCount})`
+    );
+  } else {
+    console.log(`[getRandomQuestionsFromTopics] Successfully returned ${finalQuestions.length} questions (requested ${totalCount})`);
+  }
+  
+  return finalQuestions;
 }
 
 /**

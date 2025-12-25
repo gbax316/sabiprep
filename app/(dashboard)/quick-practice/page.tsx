@@ -120,10 +120,19 @@ export default function QuickPracticePage() {
         totalQuestions: questionCount,
       });
 
+      // Log session creation for debugging
+      console.log('[QuickPractice] Session created:', {
+        sessionId: session.id,
+        subjectId: selectedSubject,
+        topicIds: selectedTopicIds,
+        topicIdsCount: selectedTopicIds.length,
+        totalQuestions: questionCount,
+      });
+
       router.push(`/practice/${session.id}`);
     } catch (error) {
       console.error('Error starting quick practice:', error);
-      alert('Failed to start practice session');
+      alert(error instanceof Error ? error.message : 'Failed to start practice session. Please try again.');
     } finally {
       setStarting(false);
     }
