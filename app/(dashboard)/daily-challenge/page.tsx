@@ -131,13 +131,14 @@ export default function DailyChallengePage() {
       }
 
       // Create a timed session for the daily challenge
+      // Note: timeLimit is in seconds (createSession stores it directly as time_limit_seconds)
       const session = await createSession({
         userId,
         subjectId: challenge.subject_id,
         topicIds: [], // Daily challenges use question_ids directly
         mode: 'timed',
         totalQuestions: challenge.question_count,
-        timeLimit: Math.floor(challenge.time_limit_seconds / 60), // Convert to minutes
+        timeLimit: challenge.time_limit_seconds, // Pass in seconds (1200 for 20 minutes)
       });
 
       // Store challenge metadata and questions in sessionStorage
@@ -302,7 +303,7 @@ export default function DailyChallengePage() {
                             <h3 className="font-bold text-white text-lg">
                               {subject?.name || 'Challenge'}
                             </h3>
-                            <p className="text-sm text-purple-200">10 questions • 10 minutes</p>
+                            <p className="text-sm text-purple-200">{challenge.question_count} questions • {Math.floor(challenge.time_limit_seconds / 60)} minutes</p>
                           </div>
                         </div>
                         {isCompleted ? (

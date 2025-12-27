@@ -732,7 +732,7 @@ export interface CreateSessionParams {
   topicIds?: string[]; // For multi-topic sessions
   mode: 'practice' | 'test' | 'timed';
   totalQuestions: number;
-  timeLimit?: number;
+  timeLimit?: number; // Time limit in SECONDS (e.g., 1200 for 20 minutes)
   isGuest?: boolean; // If true, create in-memory guest session
 }
 
