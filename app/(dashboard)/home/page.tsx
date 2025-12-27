@@ -636,7 +636,7 @@ export default function HomePage() {
             incompleteCount: incompleteSessions.length,
             validatedCount: validatedSessions.size,
             invalidCount: invalidSessions.size,
-            hasValidationStarted,
+            validationComplete,
           },
           timestamp: Date.now(),
         }),
