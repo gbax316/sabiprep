@@ -138,6 +138,7 @@ export function Header({
               {user && (
                 <Link
                   href="/profile"
+                  prefetch={true}
                   className="hidden sm:flex w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-violet-500 items-center justify-center text-white text-sm font-bold border-2 border-primary/20 hover:border-cyan-500/50 transition-all hover:scale-110 shadow-lg shadow-cyan-500/30 flex-shrink-0"
                   aria-label="Profile"
                 >
