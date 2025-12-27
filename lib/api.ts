@@ -26,6 +26,13 @@ import type {
   UserMasteryBadge,
 } from '@/types/database';
 
+import {
+  getGuestAttemptedQuestions,
+  recordGuestAttemptedQuestions,
+  resetGuestAttemptedQuestions,
+  isGuestPoolExhausted,
+} from './guest-question-tracking';
+
 // ============================================
 // SUBJECTS
 // ============================================
@@ -333,10 +340,15 @@ function setCached<T>(cache: Map<string, { data: T; timestamp: number }>, key: s
  * - Difficulty: 30% Easy, 50% Medium, 20% Hard
  * - Exam Type: Balanced distribution across available exam types
  * - Uses single optimized query with caching
+ * - Supports exclusion list for question non-repetition
+ * @param topicId - The topic ID to get questions from
+ * @param count - Number of questions to return
+ * @param excludeQuestionIds - Question IDs to exclude (already attempted)
  */
 export async function getRandomQuestions(
   topicId: string,
-  count: number = 20
+  count: number = 20,
+  excludeQuestionIds: string[] = []
 ): Promise<Question[]> {
   // Check cache first
   const cacheKey = `topic:${topicId}:all`;
@@ -347,14 +359,13 @@ export async function getRandomQuestions(
   if (cached) {
     allQuestions = cached;
   } else {
-    // Single optimized query - fetch all published questions for topic
-    // Use a larger pool for better distribution (2x instead of 3x)
+    // Fetch all published questions for topic (remove limit for accurate pool)
+    // We need all questions to properly support exclusion
     const { data, error } = await supabase
       .from('questions')
       .select('*')
       .eq('status', 'published')
-      .eq('topic_id', topicId)
-      .limit(count * 2); // Fetch 2x for better randomization pool
+      .eq('topic_id', topicId);
     
     if (error) throw error;
     allQuestions = data || [];
@@ -367,9 +378,17 @@ export async function getRandomQuestions(
 
   if (allQuestions.length === 0) return [];
 
-  // If we have fewer questions than requested, return all
-  if (allQuestions.length <= count) {
-    return allQuestions.sort(() => Math.random() - 0.5);
+  // Filter out excluded questions (already attempted)
+  const excludeSet = new Set(excludeQuestionIds);
+  const availableQuestions = excludeSet.size > 0 
+    ? allQuestions.filter(q => !excludeSet.has(q.id))
+    : allQuestions;
+
+  if (availableQuestions.length === 0) return [];
+
+  // If we have fewer questions than requested, return all available
+  if (availableQuestions.length <= count) {
+    return availableQuestions.sort(() => Math.random() - 0.5);
   }
 
   // Intelligent distribution strategy
@@ -377,7 +396,7 @@ export async function getRandomQuestions(
   const mediumCount = Math.max(1, Math.round(count * 0.5));
   const hardCount = Math.max(0, count - easyCount - mediumCount);
 
-  // Group questions by difficulty and exam_type
+  // Group available questions by difficulty and exam_type
   const byDifficulty: Record<string, Question[]> = {
     Easy: [],
     Medium: [],
@@ -387,7 +406,7 @@ export async function getRandomQuestions(
 
   const byExamType: Record<string, Question[]> = {};
 
-  allQuestions.forEach(q => {
+  availableQuestions.forEach(q => {
     const difficulty = q.difficulty || 'Unknown';
     byDifficulty[difficulty] = byDifficulty[difficulty] || [];
     byDifficulty[difficulty].push(q);
@@ -480,13 +499,18 @@ export async function getRandomQuestions(
  * - Each topic's questions are distributed by difficulty (30% Easy, 50% Medium, 20% Hard)
  * - Ensures exam type diversity across all topics
  * - Uses parallel fetching and caching for performance
+ * - Supports exclusion list for question non-repetition
+ * @param topicIds - Array of topic IDs to get questions from
+ * @param totalCount - Total number of questions to return
+ * @param excludeQuestionIds - Question IDs to exclude (already attempted)
  */
 export async function getRandomQuestionsFromTopics(
   topicIds: string[],
-  totalCount: number = 20
+  totalCount: number = 20,
+  excludeQuestionIds: string[] = []
 ): Promise<Question[]> {
   if (topicIds.length === 0) return [];
-  if (topicIds.length === 1) return getRandomQuestions(topicIds[0], totalCount);
+  if (topicIds.length === 1) return getRandomQuestions(topicIds[0], totalCount, excludeQuestionIds);
 
   // Calculate questions per topic with buffer to ensure we have enough after filtering
   // Request 3-4x per topic to account for topics with fewer questions, filtering, and diversity selection
@@ -498,11 +522,12 @@ export async function getRandomQuestionsFromTopics(
     totalCount < 10 ? 3 : 5     // Minimum per topic (3 for small counts, 5 for larger)
   );
 
-  console.log(`[getRandomQuestionsFromTopics] Requesting ${questionsPerTopic} questions per topic (${topicIds.length} topics, target: ${totalCount} total)`);
+  console.log(`[getRandomQuestionsFromTopics] Requesting ${questionsPerTopic} questions per topic (${topicIds.length} topics, target: ${totalCount} total, excluding ${excludeQuestionIds.length} questions)`);
 
   // Fetch questions from all topics in parallel with intelligent distribution
+  // Pass the exclusion list to each topic query
   const fetchPromises = topicIds.map(topicId => 
-    getRandomQuestions(topicId, questionsPerTopic)
+    getRandomQuestions(topicId, questionsPerTopic, excludeQuestionIds)
   );
 
   const results = await Promise.all(fetchPromises);
@@ -582,20 +607,23 @@ export async function getRandomQuestionsFromTopics(
 /**
  * Get intelligent questions from multiple topics with specific distribution
  * @param distribution Map of topicId -> question count
+ * @param excludeQuestionIds Question IDs to exclude (already attempted)
  * Each topic's questions are intelligently distributed by difficulty
  */
 export async function getQuestionsWithDistribution(
-  distribution: Record<string, number>
+  distribution: Record<string, number>,
+  excludeQuestionIds: string[] = []
 ): Promise<Question[]> {
   const topicIds = Object.keys(distribution);
   const totalRequested = Object.values(distribution).reduce((sum, count) => sum + count, 0);
   
   // Fetch questions from all topics in parallel with intelligent distribution
+  // Pass the exclusion list to each topic query
   const fetchPromises = Object.entries(distribution)
     .filter(([_, count]) => count > 0)
     .map(async ([topicId, count]) => {
       try {
-        const questions = await getRandomQuestions(topicId, count);
+        const questions = await getRandomQuestions(topicId, count, excludeQuestionIds);
         return { 
           topicId, 
           questions, 
@@ -650,7 +678,9 @@ export async function getQuestionsWithDistribution(
       
       try {
         // Try to get a few extra questions (request a bit more to account for potential duplicates)
-        const extraQuestions = await getRandomQuestions(topicId, needed + 2);
+        // Pass the exclusion list plus already selected questions to avoid duplicates
+        const allExcluded = [...excludeQuestionIds, ...Array.from(questionIds)];
+        const extraQuestions = await getRandomQuestions(topicId, needed + 2, allExcluded);
         
         // Add only new questions that we don't already have
         let added = 0;
@@ -870,23 +900,45 @@ export async function getSession(sessionId: string): Promise<LearningSession | n
 
 /**
  * Get user's recent sessions
+ * Prioritizes incomplete sessions (in_progress, paused) over completed ones
  */
 export async function getUserSessions(
   userId: string,
   limit: number = 10
 ): Promise<LearningSession[]> {
-  const { data, error } = await supabase
+  // Fetch incomplete sessions first (in_progress and paused)
+  const { data: incompleteSessions, error: incompleteError } = await supabase
     .from('sessions')
     .select('*')
     .eq('user_id', userId)
+    .in('status', ['in_progress', 'paused'])
     .order('created_at', { ascending: false })
     .limit(limit);
-
-  if (error) throw error;
-  if (!data) return [];
+  
+  if (incompleteError) throw incompleteError;
+  
+  // Calculate remaining slots for completed sessions
+  const remainingLimit = limit - (incompleteSessions?.length || 0);
+  
+  let completedSessions: LearningSession[] = [];
+  if (remainingLimit > 0) {
+    const { data, error } = await supabase
+      .from('sessions')
+      .select('*')
+      .eq('user_id', userId)
+      .not('status', 'in', '("in_progress","paused")')
+      .order('created_at', { ascending: false })
+      .limit(remainingLimit);
+    
+    if (error) throw error;
+    completedSessions = data || [];
+  }
+  
+  // Combine: incomplete sessions first, then completed
+  const allSessions = [...(incompleteSessions || []), ...completedSessions];
 
   // Parse topic_ids from JSONB for all sessions
-  return data.map(session => {
+  return allSessions.map(session => {
     if (session.topic_ids && typeof session.topic_ids === 'string') {
       try {
         session.topic_ids = JSON.parse(session.topic_ids);
@@ -1184,15 +1236,118 @@ export async function canResumeSession(sessionId: string): Promise<{
   questionCount: number;
   reason?: string;
 }> {
+  // #region agent log
+  if (typeof window !== 'undefined') {
+    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: 'debug-session',
+        runId: 'continue-button-debug',
+        hypothesisId: 'J',
+        location: 'lib/api.ts:canResumeSession:entry',
+        message: 'canResumeSession called',
+        data: { sessionId },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+  }
+  // #endregion
+  
   // Check if session exists
   const session = await getSession(sessionId);
   if (!session) {
+    // #region agent log
+    if (typeof window !== 'undefined') {
+      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId: 'debug-session',
+          runId: 'continue-button-debug',
+          hypothesisId: 'J',
+          location: 'lib/api.ts:canResumeSession:sessionNotFound',
+          message: 'Session not found',
+          data: { sessionId },
+          timestamp: Date.now(),
+        }),
+      }).catch(() => {});
+    }
+    // #endregion
     return { canResume: false, hasAnswers: false, questionCount: 0, reason: 'Session not found' };
   }
 
+  // #region agent log
+  if (typeof window !== 'undefined') {
+    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: 'debug-session',
+        runId: 'continue-button-debug',
+        hypothesisId: 'J',
+        location: 'lib/api.ts:canResumeSession:sessionFound',
+        message: 'Session found',
+        data: { 
+          sessionId: session.id,
+          status: session.status,
+          mode: session.mode,
+          total_questions: session.total_questions,
+          topic_id: session.topic_id,
+          topic_ids: session.topic_ids,
+        },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+  }
+  // #endregion
+
   // Check if session has answers (original questions)
   const answers = await getSessionAnswers(sessionId);
+  
+  // #region agent log
+  if (typeof window !== 'undefined') {
+    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: 'debug-session',
+        runId: 'continue-button-debug',
+        hypothesisId: 'J',
+        location: 'lib/api.ts:canResumeSession:answersChecked',
+        message: 'Session answers checked',
+        data: { 
+          sessionId: session.id,
+          answersCount: answers.length,
+          hasAnswers: answers.length > 0,
+        },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+  }
+  // #endregion
+  
   if (answers.length > 0) {
+    // #region agent log
+    if (typeof window !== 'undefined') {
+      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId: 'debug-session',
+          runId: 'continue-button-debug',
+          hypothesisId: 'J',
+          location: 'lib/api.ts:canResumeSession:returningCanResume',
+          message: 'Returning canResume=true (has answers)',
+          data: { 
+            sessionId: session.id,
+            questionCount: answers.length,
+          },
+          timestamp: Date.now(),
+        }),
+      }).catch(() => {});
+    }
+    // #endregion
     return { canResume: true, hasAnswers: true, questionCount: answers.length };
   }
 
@@ -1201,14 +1356,99 @@ export async function canResumeSession(sessionId: string): Promise<{
   if (topicId) {
     try {
       const questions = await getRandomQuestions(topicId, 1); // Just check if any exist
+      
+      // #region agent log
+      if (typeof window !== 'undefined') {
+        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: 'debug-session',
+            runId: 'continue-button-debug',
+            hypothesisId: 'J',
+            location: 'lib/api.ts:canResumeSession:topicQuestionsChecked',
+            message: 'Topic questions availability checked',
+            data: { 
+              sessionId: session.id,
+              topicId,
+              questionsFound: questions.length > 0,
+            },
+            timestamp: Date.now(),
+          }),
+        }).catch(() => {});
+      }
+      // #endregion
+      
       if (questions.length > 0) {
+        // #region agent log
+        if (typeof window !== 'undefined') {
+          fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              sessionId: 'debug-session',
+              runId: 'continue-button-debug',
+              hypothesisId: 'J',
+              location: 'lib/api.ts:canResumeSession:returningCanResumeNoAnswers',
+              message: 'Returning canResume=true (topic has questions)',
+              data: { 
+                sessionId: session.id,
+                topicId,
+              },
+              timestamp: Date.now(),
+            }),
+          }).catch(() => {});
+        }
+        // #endregion
         return { canResume: true, hasAnswers: false, questionCount: 0 };
       }
     } catch (error) {
       console.error('Error checking questions availability:', error);
+      // #region agent log
+      if (typeof window !== 'undefined') {
+        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: 'debug-session',
+            runId: 'continue-button-debug',
+            hypothesisId: 'J',
+            location: 'lib/api.ts:canResumeSession:errorCheckingQuestions',
+            message: 'Error checking questions',
+            data: { 
+              sessionId: session.id,
+              topicId,
+              error: error instanceof Error ? error.message : String(error),
+            },
+            timestamp: Date.now(),
+          }),
+        }).catch(() => {});
+      }
+      // #endregion
       return { canResume: false, hasAnswers: false, questionCount: 0, reason: 'Error checking questions' };
     }
   }
+
+  // #region agent log
+  if (typeof window !== 'undefined') {
+    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: 'debug-session',
+        runId: 'continue-button-debug',
+        hypothesisId: 'J',
+        location: 'lib/api.ts:canResumeSession:returningCannotResume',
+        message: 'Returning canResume=false (no questions available)',
+        data: { 
+          sessionId: session.id,
+          topicId: session.topic_id || session.topic_ids?.[0],
+        },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+  }
+  // #endregion
 
   return { canResume: false, hasAnswers: false, questionCount: 0, reason: 'No questions available' };
 }
@@ -2211,19 +2451,204 @@ export async function getUserXP(userId: string): Promise<number> {
  */
 export async function generateDailyChallenges(challengeDate?: string): Promise<number> {
   const date = challengeDate || new Date().toISOString().split('T')[0];
-  const { data, error } = await supabase.rpc('generate_daily_challenges', {
-    challenge_date: date,
-  });
+  
+  try {
+    const { data, error } = await supabase.rpc('generate_daily_challenges', {
+      challenge_date: date,
+    });
 
-  if (error) {
-    // If function doesn't exist, it means migration hasn't been run
-    if (error.code === '42883' || error.message?.includes('function') || error.message?.includes('does not exist')) {
-      console.warn('generate_daily_challenges function does not exist. Please run the migration.');
+    if (error) {
+      // If function doesn't exist, use fallback
+      if (error.code === '42883' || error.message?.includes('function') || error.message?.includes('does not exist')) {
+        console.warn('generate_daily_challenges function does not exist. Using fallback.');
+        return await generateDailyChallengesFallback(date);
+      }
+      throw error;
+    }
+    return data || 0;
+  } catch (error) {
+    console.warn('Error calling generate_daily_challenges RPC, using fallback:', error);
+    return await generateDailyChallengesFallback(challengeDate);
+  }
+}
+
+/**
+ * Fallback function to manually generate daily challenges
+ * Used when the RPC function doesn't exist or fails
+ */
+async function generateDailyChallengesFallback(challengeDate?: string): Promise<number> {
+  const date = challengeDate || new Date().toISOString().split('T')[0];
+  let challengeCount = 0;
+
+  try {
+    // Get all active subjects
+    const { data: subjects, error: subjectsError } = await supabase
+      .from('subjects')
+      .select('id, name, status')
+      .eq('status', 'active');
+
+    if (subjectsError || !subjects) {
+      console.error('Error fetching subjects for fallback:', subjectsError);
       return 0;
     }
-    throw error;
+
+    for (const subject of subjects) {
+      // Check if challenge already exists
+      const { data: existing } = await supabase
+        .from('daily_challenges')
+        .select('id')
+        .eq('subject_id', subject.id)
+        .eq('challenge_date', date)
+        .maybeSingle();
+
+      if (existing) continue; // Already exists
+
+      // First, get topics for this subject
+      const { data: topics, error: topicsError } = await supabase
+        .from('topics')
+        .select('id')
+        .eq('subject_id', subject.id);
+
+      if (topicsError || !topics || topics.length === 0) {
+        continue; // No topics
+      }
+
+      const topicIds = topics.map(t => t.id);
+
+      // Get random questions for this subject (up to 20)
+      const { data: questions, error: questionsError } = await supabase
+        .from('questions')
+        .select('id, topic_id')
+        .eq('status', 'published')
+        .in('topic_id', topicIds)
+        .limit(100); // Get pool to randomize from
+
+      if (questionsError || !questions || questions.length < 10) {
+        continue; // Not enough questions
+      }
+
+      // Randomly select up to 20 questions
+      const shuffled = questions.sort(() => Math.random() - 0.5);
+      const selectedQuestions = shuffled.slice(0, Math.min(20, shuffled.length));
+      const questionIds = selectedQuestions.map(q => q.id);
+
+      // Insert the challenge
+      const { error: insertError } = await supabase
+        .from('daily_challenges')
+        .insert({
+          subject_id: subject.id,
+          challenge_date: date,
+          question_ids: questionIds,
+          time_limit_seconds: 1200, // 20 minutes
+          question_count: questionIds.length,
+        });
+
+      if (!insertError) {
+        challengeCount++;
+      }
+    }
+
+    return challengeCount;
+  } catch (error) {
+    console.error('Error in generateDailyChallengesFallback:', error);
+    return 0;
   }
-  return data || 0;
+}
+
+/**
+ * Force generate a daily challenge for a specific subject
+ */
+export async function forceGenerateDailyChallenge(
+  subjectId: string,
+  challengeDate?: string,
+  questionCount: number = 20
+): Promise<DailyChallenge | null> {
+  const date = challengeDate || new Date().toISOString().split('T')[0];
+
+  try {
+    // Try RPC first
+    const { data: challengeId, error: rpcError } = await supabase.rpc('force_generate_daily_challenge', {
+      p_subject_id: subjectId,
+      p_challenge_date: date,
+      p_question_count: questionCount,
+    });
+
+    if (!rpcError && challengeId) {
+      // Fetch the created challenge
+      const { data } = await supabase
+        .from('daily_challenges')
+        .select('*, subject:subjects(*)')
+        .eq('id', challengeId)
+        .single();
+      return data || null;
+    }
+  } catch (error) {
+    console.warn('RPC force_generate_daily_challenge failed, using fallback:', error);
+  }
+
+  // Fallback: manually create
+  try {
+    // Delete existing challenge for this date
+    await supabase
+      .from('daily_challenges')
+      .delete()
+      .eq('subject_id', subjectId)
+      .eq('challenge_date', date);
+
+    // First, get topics for this subject
+    const { data: topics } = await supabase
+      .from('topics')
+      .select('id')
+      .eq('subject_id', subjectId);
+
+    if (!topics || topics.length === 0) {
+      console.warn('No topics available for subject:', subjectId);
+      return null;
+    }
+
+    const topicIds = topics.map(t => t.id);
+
+    // Get questions for this subject
+    const { data: questions } = await supabase
+      .from('questions')
+      .select('id')
+      .eq('status', 'published')
+      .in('topic_id', topicIds)
+      .limit(100);
+
+    if (!questions || questions.length === 0) {
+      console.warn('No questions available for subject:', subjectId);
+      return null;
+    }
+
+    // Randomly select questions
+    const shuffled = questions.sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, Math.min(questionCount, shuffled.length));
+    const questionIds = selected.map(q => q.id);
+
+    // Insert new challenge
+    const { data: newChallenge, error: insertError } = await supabase
+      .from('daily_challenges')
+      .insert({
+        subject_id: subjectId,
+        challenge_date: date,
+        question_ids: questionIds,
+        time_limit_seconds: questionCount * 60, // 1 min per question
+        question_count: questionIds.length,
+      })
+      .select('*, subject:subjects(*)')
+      .single();
+
+    if (insertError) {
+      console.error('Error creating challenge:', insertError);
+      return null;
+    }
+
+    return newChallenge;
+  } catch (error) {
+    console.error('Error in forceGenerateDailyChallenge fallback:', error);
+    return null;
+  }
 }
 
 /**
@@ -2469,4 +2894,421 @@ export async function checkAndAwardMasteryBadges(
 
   if (error) throw error;
   return data || 0;
+}
+
+// ============================================
+// USER ATTEMPTED QUESTIONS TRACKING
+// Prevents question repetition until all questions are exhausted
+// ============================================
+
+/**
+ * Get all question IDs that a user has attempted for a specific subject
+ * @param userId - The user ID
+ * @param subjectId - The subject ID
+ * @returns Array of question IDs that have been attempted
+ */
+export async function getUserAttemptedQuestions(
+  userId: string,
+  subjectId: string
+): Promise<string[]> {
+  try {
+    const { data, error } = await supabase
+      .from('user_attempted_questions')
+      .select('question_id')
+      .eq('user_id', userId)
+      .eq('subject_id', subjectId);
+
+    if (error) {
+      // If table doesn't exist, return empty array (migration not run)
+      if (error.code === '42P01' || error.message?.includes('does not exist')) {
+        console.warn('user_attempted_questions table does not exist. Please run the migration.');
+        return [];
+      }
+      throw error;
+    }
+
+    return (data || []).map(row => row.question_id);
+  } catch (error) {
+    console.error('Error getting user attempted questions:', error);
+    return [];
+  }
+}
+
+/**
+ * Record questions as attempted for a user
+ * Uses bulk upsert to efficiently handle multiple questions
+ * @param userId - The user ID
+ * @param subjectId - The subject ID
+ * @param questionIds - Array of question IDs to mark as attempted
+ */
+export async function recordAttemptedQuestions(
+  userId: string,
+  subjectId: string,
+  questionIds: string[]
+): Promise<void> {
+  if (!questionIds || questionIds.length === 0) return;
+
+  try {
+    // Use the database function for efficient bulk upsert
+    const { error } = await supabase.rpc('record_attempted_questions', {
+      p_user_id: userId,
+      p_subject_id: subjectId,
+      p_question_ids: questionIds,
+    });
+
+    if (error) {
+      // If function doesn't exist, fall back to regular upsert
+      if (error.code === '42883' || error.message?.includes('does not exist')) {
+        console.warn('record_attempted_questions function not found, using fallback');
+        await recordAttemptedQuestionsFallback(userId, subjectId, questionIds);
+        return;
+      }
+      throw error;
+    }
+  } catch (error) {
+    console.error('Error recording attempted questions:', error);
+    // Try fallback method
+    try {
+      await recordAttemptedQuestionsFallback(userId, subjectId, questionIds);
+    } catch (fallbackError) {
+      console.error('Fallback also failed:', fallbackError);
+    }
+  }
+}
+
+/**
+ * Fallback method for recording attempted questions (used if RPC function not available)
+ */
+async function recordAttemptedQuestionsFallback(
+  userId: string,
+  subjectId: string,
+  questionIds: string[]
+): Promise<void> {
+  const records = questionIds.map(questionId => ({
+    user_id: userId,
+    subject_id: subjectId,
+    question_id: questionId,
+  }));
+
+  const { error } = await supabase
+    .from('user_attempted_questions')
+    .upsert(records, {
+      onConflict: 'user_id,subject_id,question_id',
+      ignoreDuplicates: false,
+    });
+
+  if (error) {
+    // If table doesn't exist, silently fail (migration not run)
+    if (error.code === '42P01' || error.message?.includes('does not exist')) {
+      console.warn('user_attempted_questions table does not exist. Please run the migration.');
+      return;
+    }
+    throw error;
+  }
+}
+
+/**
+ * Reset attempted questions for a user in a subject
+ * Called when all questions have been exhausted to start fresh
+ * @param userId - The user ID
+ * @param subjectId - The subject ID
+ * @returns Number of records deleted
+ */
+export async function resetUserAttemptedQuestions(
+  userId: string,
+  subjectId: string
+): Promise<number> {
+  try {
+    // Try using the database function first
+    const { data, error } = await supabase.rpc('reset_user_attempted_questions', {
+      p_user_id: userId,
+      p_subject_id: subjectId,
+    });
+
+    if (error) {
+      // If function doesn't exist, fall back to regular delete
+      if (error.code === '42883' || error.message?.includes('does not exist')) {
+        console.warn('reset_user_attempted_questions function not found, using fallback');
+        return await resetAttemptedQuestionsFallback(userId, subjectId);
+      }
+      throw error;
+    }
+
+    return data || 0;
+  } catch (error) {
+    console.error('Error resetting attempted questions:', error);
+    return await resetAttemptedQuestionsFallback(userId, subjectId);
+  }
+}
+
+/**
+ * Fallback method for resetting attempted questions
+ */
+async function resetAttemptedQuestionsFallback(
+  userId: string,
+  subjectId: string
+): Promise<number> {
+  const { error, count } = await supabase
+    .from('user_attempted_questions')
+    .delete({ count: 'exact' })
+    .eq('user_id', userId)
+    .eq('subject_id', subjectId);
+
+  if (error) {
+    // If table doesn't exist, return 0 (migration not run)
+    if (error.code === '42P01' || error.message?.includes('does not exist')) {
+      console.warn('user_attempted_questions table does not exist. Please run the migration.');
+      return 0;
+    }
+    throw error;
+  }
+
+  return count || 0;
+}
+
+/**
+ * Get the count of attempted questions for a user in a subject
+ * @param userId - The user ID
+ * @param subjectId - The subject ID
+ * @returns Number of questions attempted
+ */
+export async function getUserAttemptedCount(
+  userId: string,
+  subjectId: string
+): Promise<number> {
+  try {
+    const { count, error } = await supabase
+      .from('user_attempted_questions')
+      .select('*', { count: 'exact', head: true })
+      .eq('user_id', userId)
+      .eq('subject_id', subjectId);
+
+    if (error) {
+      if (error.code === '42P01' || error.message?.includes('does not exist')) {
+        return 0;
+      }
+      throw error;
+    }
+
+    return count || 0;
+  } catch (error) {
+    console.error('Error getting attempted count:', error);
+    return 0;
+  }
+}
+
+/**
+ * Get total question count for a subject (published questions only)
+ * @param subjectId - The subject ID
+ * @returns Total number of published questions
+ */
+export async function getSubjectQuestionCount(
+  subjectId: string
+): Promise<number> {
+  try {
+    const { count, error } = await supabase
+      .from('questions')
+      .select('*', { count: 'exact', head: true })
+      .eq('subject_id', subjectId)
+      .eq('status', 'published');
+
+    if (error) throw error;
+    return count || 0;
+  } catch (error) {
+    console.error('Error getting subject question count:', error);
+    return 0;
+  }
+}
+
+/**
+ * Get remaining unattempted question count for a user in a subject
+ * @param userId - The user ID
+ * @param subjectId - The subject ID
+ * @returns Number of questions remaining
+ */
+export async function getUserRemainingQuestions(
+  userId: string,
+  subjectId: string
+): Promise<number> {
+  const [total, attempted] = await Promise.all([
+    getSubjectQuestionCount(subjectId),
+    getUserAttemptedCount(userId, subjectId),
+  ]);
+
+  return Math.max(0, total - attempted);
+}
+
+/**
+ * Check if user's question pool is exhausted for a subject
+ * @param userId - The user ID
+ * @param subjectId - The subject ID
+ * @returns True if all questions have been attempted
+ */
+export async function isUserPoolExhausted(
+  userId: string,
+  subjectId: string
+): Promise<boolean> {
+  const remaining = await getUserRemainingQuestions(userId, subjectId);
+  return remaining === 0;
+}
+
+// ============================================
+// SMART QUESTION SELECTION ORCHESTRATOR
+// Main function for selecting questions with non-repetition
+// ============================================
+
+/**
+ * Result of question selection with metadata
+ */
+export interface QuestionSelectionResult {
+  questions: Question[];
+  poolReset: boolean;       // True if pool was exhausted and reset
+  remainingInPool: number;  // Questions remaining after this selection
+  totalInPool: number;      // Total questions in the pool
+  attemptedBefore: number;  // Questions attempted before this selection
+}
+
+/**
+ * Smart question selector that prevents repetition
+ * 
+ * This is the main orchestrator function that:
+ * 1. Gets previously attempted question IDs
+ * 2. Checks if pool reset is needed (all questions exhausted)
+ * 3. Selects unattempted questions with balanced distribution
+ * 4. Records newly selected questions as attempted
+ * 
+ * @param userId - User ID (null for guests)
+ * @param subjectId - Subject ID for tracking
+ * @param topicIds - Topics to select questions from
+ * @param count - Number of questions to select
+ * @param distribution - Optional specific distribution by topic
+ * @returns Questions with selection metadata
+ */
+export async function selectQuestionsForSession(
+  userId: string | null,
+  subjectId: string,
+  topicIds: string[],
+  count: number,
+  distribution?: Record<string, number>
+): Promise<QuestionSelectionResult> {
+  // Step 1: Get total questions available in pool
+  const totalInPool = await getSubjectQuestionCount(subjectId);
+  
+  if (totalInPool === 0) {
+    console.warn(`[selectQuestionsForSession] No questions available for subject ${subjectId}`);
+    return {
+      questions: [],
+      poolReset: false,
+      remainingInPool: 0,
+      totalInPool: 0,
+      attemptedBefore: 0,
+    };
+  }
+
+  // Step 2: Get attempted question IDs
+  let attemptedQuestionIds: string[] = [];
+  let poolReset = false;
+
+  if (userId) {
+    // Authenticated user - fetch from database
+    attemptedQuestionIds = await getUserAttemptedQuestions(userId, subjectId);
+  } else {
+    // Guest user - fetch from localStorage
+    attemptedQuestionIds = getGuestAttemptedQuestions(subjectId);
+  }
+
+  const attemptedBefore = attemptedQuestionIds.length;
+  const remainingBefore = totalInPool - attemptedBefore;
+
+  console.log(`[selectQuestionsForSession] User has attempted ${attemptedBefore}/${totalInPool} questions. Remaining: ${remainingBefore}. Requesting: ${count}`);
+
+  // Step 3: Check if pool reset is needed
+  // Reset if: no questions remaining OR remaining < requested count
+  if (remainingBefore === 0 || (remainingBefore < count && remainingBefore < totalInPool * 0.1)) {
+    console.log(`[selectQuestionsForSession] Pool exhausted or nearly exhausted. Resetting...`);
+    
+    if (userId) {
+      await resetUserAttemptedQuestions(userId, subjectId);
+    } else {
+      resetGuestAttemptedQuestions(subjectId);
+    }
+    
+    attemptedQuestionIds = [];
+    poolReset = true;
+  }
+
+  // Step 4: Select questions excluding attempted ones
+  let questions: Question[] = [];
+  
+  if (distribution && Object.keys(distribution).length > 0) {
+    // Use distribution-based selection
+    questions = await getQuestionsWithDistribution(distribution, attemptedQuestionIds);
+  } else if (topicIds.length > 0) {
+    // Use topic-based selection
+    questions = await getRandomQuestionsFromTopics(topicIds, count, attemptedQuestionIds);
+  } else {
+    console.warn(`[selectQuestionsForSession] No topics specified for selection`);
+  }
+
+  // Step 5: Record newly selected questions as attempted
+  if (questions.length > 0) {
+    const newQuestionIds = questions.map(q => q.id);
+    
+    if (userId) {
+      // Record for authenticated user (don't await to avoid blocking)
+      recordAttemptedQuestions(userId, subjectId, newQuestionIds).catch(error => {
+        console.error('Error recording attempted questions:', error);
+      });
+    } else {
+      // Record for guest user (synchronous localStorage)
+      recordGuestAttemptedQuestions(subjectId, newQuestionIds);
+    }
+  }
+
+  // Calculate remaining after selection
+  const remainingAfter = poolReset 
+    ? totalInPool - questions.length 
+    : remainingBefore - questions.length;
+
+  console.log(`[selectQuestionsForSession] Selected ${questions.length} questions. Remaining in pool: ${Math.max(0, remainingAfter)}`);
+
+  return {
+    questions,
+    poolReset,
+    remainingInPool: Math.max(0, remainingAfter),
+    totalInPool,
+    attemptedBefore,
+  };
+}
+
+/**
+ * Quick question selection for quick practice mode
+ * Simplified version that selects from preferred subjects
+ * 
+ * @param userId - User ID (null for guests)
+ * @param subjectId - Subject to practice
+ * @param count - Number of questions
+ * @returns Questions with selection metadata
+ */
+export async function selectQuestionsForQuickPractice(
+  userId: string | null,
+  subjectId: string,
+  count: number
+): Promise<QuestionSelectionResult> {
+  // Get all topics for the subject
+  const topics = await getTopics(subjectId);
+  const topicIds = topics.map(t => t.id);
+  
+  if (topicIds.length === 0) {
+    console.warn(`[selectQuestionsForQuickPractice] No topics found for subject ${subjectId}`);
+    return {
+      questions: [],
+      poolReset: false,
+      remainingInPool: 0,
+      totalInPool: 0,
+      attemptedBefore: 0,
+    };
+  }
+
+  return selectQuestionsForSession(userId, subjectId, topicIds, count);
 }

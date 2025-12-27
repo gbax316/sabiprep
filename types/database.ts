@@ -445,3 +445,18 @@ export interface UserMasteryBadge {
   mastery_badge?: MasteryBadge; // Joined data
   subject?: Subject; // Joined data (if per-subject)
 }
+
+/**
+ * User Attempted Question (matches user_attempted_questions table)
+ * Tracks which questions a user has attempted per subject for non-repetition
+ */
+export interface UserAttemptedQuestion {
+  id: string;
+  user_id: string;
+  subject_id: string;
+  question_id: string;
+  first_attempted_at: string;
+  last_attempted_at?: string;
+  attempt_count: number;
+  created_at: string;
+}

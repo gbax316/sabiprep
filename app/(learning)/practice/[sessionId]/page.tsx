@@ -297,6 +297,26 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       
       // FALLBACK: If no session_answers, fetch new questions
       // This handles brand new sessions that haven't been started yet
+      
+      // First, check for pre-selected questions from sessionStorage
+      // These are selected using the non-repetition system at session creation
+      let preSelectedQuestionIds: string[] | null = null;
+      try {
+        const practiceConfigStr = sessionStorage.getItem(`practiceConfig_${sessionData.id}`);
+        if (practiceConfigStr) {
+          const practiceConfig = JSON.parse(practiceConfigStr);
+          if (practiceConfig.questionIds && Array.isArray(practiceConfig.questionIds)) {
+            preSelectedQuestionIds = practiceConfig.questionIds;
+            console.log('[Practice] Found pre-selected questions:', {
+              count: preSelectedQuestionIds.length,
+              poolReset: practiceConfig.poolReset,
+            });
+          }
+        }
+      } catch (e) {
+        console.warn('[Practice] Error reading practice config from sessionStorage:', e);
+      }
+      
       const loadPromises: Promise<any>[] = [
         getSubject(sessionData.subject_id), // Always load subject in parallel
       ];
@@ -304,7 +324,28 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       let questionsPromise: Promise<Question[]>;
       let topicsPromise: Promise<Topic[]>;
 
-      if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
+      if (preSelectedQuestionIds && preSelectedQuestionIds.length > 0) {
+        // Use pre-selected questions (non-repetition system)
+        console.log('[Practice] Loading pre-selected questions:', {
+          count: preSelectedQuestionIds.length,
+        });
+        questionsPromise = getQuestionsByIds(preSelectedQuestionIds).then(questions => {
+          console.log('[Practice] Pre-selected questions loaded:', {
+            requested: preSelectedQuestionIds!.length,
+            received: questions.length,
+          });
+          return questions;
+        }).catch(error => {
+          console.error('[Practice] Error loading pre-selected questions:', error);
+          return [];
+        });
+        topicsPromise = sessionData.topic_ids && sessionData.topic_ids.length > 0
+          ? getTopics(sessionData.subject_id).then(allTopics => 
+              allTopics.filter(t => sessionData.topic_ids!.includes(t.id))
+            ).catch(() => [])
+          : getTopic(sessionData.topic_id || '').then(t => t ? [t] : []).catch(() => []);
+        loadPromises.push(questionsPromise, topicsPromise);
+      } else if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
         // Multi-topic session - load questions and topics in parallel
         console.log('[Practice] Loading questions from multiple topics:', {
           topicIds: sessionData.topic_ids,

@@ -16,6 +16,7 @@ import {
   getSubjects,
   getSubject,
   getUserStats,
+  forceGenerateDailyChallenge,
 } from '@/lib/api';
 import type { DailyChallenge, UserDailyChallenge, Subject } from '@/types/database';
 import {
@@ -117,10 +118,16 @@ export default function DailyChallengePage() {
     try {
       setStarting(challenge.id);
 
-      // Get subject info
-      const subject = Array.from(subjects.values()).find(s => s.id === challenge.subject_id);
+      // Get subject info from the subjects map or from challenge itself
+      const subject = subjects.get(challenge.subject_id) || 
+        (challenge as any).subject as Subject | undefined;
+      
       if (!subject) {
-        throw new Error('Subject not found');
+        // Try to fetch subject
+        const fetchedSubject = await getSubject(challenge.subject_id);
+        if (!fetchedSubject) {
+          throw new Error('Subject not found');
+        }
       }
 
       // Create a timed session for the daily challenge
@@ -133,11 +140,21 @@ export default function DailyChallengePage() {
         timeLimit: Math.floor(challenge.time_limit_seconds / 60), // Convert to minutes
       });
 
-      // Store challenge metadata in sessionStorage for results page
+      // Store challenge metadata and questions in sessionStorage
       if (typeof window !== 'undefined') {
+        // Store daily challenge info
         sessionStorage.setItem(`dailyChallenge_${session.id}`, JSON.stringify({
           challengeId: challenge.id,
           questionIds: challenge.question_ids,
+          isDailyChallenge: true,
+        }));
+        
+        // Store pre-selected question IDs for the timed page
+        sessionStorage.setItem(`session_${session.id}_questions`, JSON.stringify({
+          questionIds: challenge.question_ids,
+          distribution: null,
+          topicIds: [],
+          isDailyChallenge: true,
         }));
       }
 

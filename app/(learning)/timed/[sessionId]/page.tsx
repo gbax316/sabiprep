@@ -22,6 +22,7 @@ import {
   createSessionAnswer,
   updateSession,
   completeSessionWithGoals,
+  completeDailyChallenge,
 } from '@/lib/api';
 import type { LearningSession, Question, Topic, Subject } from '@/types/database';
 import { useRouter } from 'next/navigation';
@@ -69,6 +70,9 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
   const [showPreviousWarning, setShowPreviousWarning] = useState(false);
   const [questionTimes, setQuestionTimes] = useState<Map<string, QuestionTimeData>>(new Map());
   const [examStarted, setExamStarted] = useState(false);
+  // Daily challenge tracking
+  const [isDailyChallenge, setIsDailyChallenge] = useState(false);
+  const [dailyChallengeId, setDailyChallengeId] = useState<string | null>(null);
   // Removed warning modals - using timer color coding instead
   const questionStartTimeRef = useRef<number>(Date.now());
   const sessionStartTimeRef = useRef<number | null>(null);
@@ -202,17 +206,109 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         hasSessionStorage: typeof sessionStorage !== 'undefined',
       });
 
-      if (allTopicIds.length === 0) {
+      // First, check for pre-selected questions from sessionStorage
+      // These are selected using the non-repetition system at session creation
+      let preSelectedQuestionIds: string[] | null = null;
+      let isDailyChallenge = false;
+      
+      // Check multiple storage keys for backwards compatibility
+      const timedConfigStr = typeof sessionStorage !== 'undefined' 
+        ? sessionStorage.getItem(`timedConfig_${sessionId}`)
+        : null;
+      const sessionConfigStr = typeof sessionStorage !== 'undefined'
+        ? sessionStorage.getItem(`session_${sessionId}_questions`)
+        : null;
+      const dailyChallengeStr = typeof sessionStorage !== 'undefined'
+        ? sessionStorage.getItem(`dailyChallenge_${sessionId}`)
+        : null;
+        
+      // First try session-based storage (used by daily challenges and new system)
+      if (sessionConfigStr) {
+        try {
+          const sessionConfig = JSON.parse(sessionConfigStr);
+          if (sessionConfig.questionIds && Array.isArray(sessionConfig.questionIds)) {
+            preSelectedQuestionIds = sessionConfig.questionIds;
+            isDailyChallenge = sessionConfig.isDailyChallenge || false;
+            console.log('[Timed] Found session pre-selected questions:', {
+              count: preSelectedQuestionIds.length,
+              isDailyChallenge,
+            });
+          }
+        } catch (e) {
+          console.warn('[Timed] Error reading session config from sessionStorage:', e);
+        }
+      }
+      
+      // Fallback to timed config storage
+      if (!preSelectedQuestionIds && timedConfigStr) {
+        try {
+          const timedConfig = JSON.parse(timedConfigStr);
+          if (timedConfig.questionIds && Array.isArray(timedConfig.questionIds)) {
+            preSelectedQuestionIds = timedConfig.questionIds;
+            console.log('[Timed] Found pre-selected questions from timedConfig:', {
+              count: preSelectedQuestionIds.length,
+              poolReset: timedConfig.poolReset,
+            });
+          }
+        } catch (e) {
+          console.warn('[Timed] Error reading timed config from sessionStorage:', e);
+        }
+      }
+      
+      // Also check daily challenge storage for question IDs
+      if (!preSelectedQuestionIds && dailyChallengeStr) {
+        try {
+          const dailyChallenge = JSON.parse(dailyChallengeStr);
+          if (dailyChallenge.questionIds && Array.isArray(dailyChallenge.questionIds)) {
+            preSelectedQuestionIds = dailyChallenge.questionIds;
+            isDailyChallenge = true;
+            console.log('[Timed] Found daily challenge questions:', {
+              count: preSelectedQuestionIds.length,
+              challengeId: dailyChallenge.challengeId,
+            });
+            // Set state for daily challenge tracking
+            setIsDailyChallenge(true);
+            if (dailyChallenge.challengeId) {
+              setDailyChallengeId(dailyChallenge.challengeId);
+            }
+          }
+        } catch (e) {
+          console.warn('[Timed] Error reading daily challenge from sessionStorage:', e);
+        }
+      }
+      
+      // If isDailyChallenge was set in session config, use it
+      if (isDailyChallenge) {
+        setIsDailyChallenge(true);
+      }
+
+      if (preSelectedQuestionIds && preSelectedQuestionIds.length > 0) {
+        // Use pre-selected questions (non-repetition system)
+        console.log('[Timed] Loading pre-selected questions:', {
+          count: preSelectedQuestionIds.length,
+        });
+        questionsPromise = getQuestionsByIds(preSelectedQuestionIds).then(questions => {
+          console.log('[Timed] Pre-selected questions loaded:', {
+            requested: preSelectedQuestionIds!.length,
+            received: questions.length,
+          });
+          return questions;
+        }).catch(error => {
+          console.error('[Timed] Error loading pre-selected questions:', error);
+          return [];
+        });
+        topicsPromise = allTopicIds.length > 0
+          ? getTopics(sessionData.subject_id).then(allTopics => 
+              allTopics.filter(t => allTopicIds.includes(t.id))
+            ).catch(() => [])
+          : getTopic(sessionData.topic_id || '').then(t => t ? [t] : []).catch(() => []);
+      } else if (allTopicIds.length === 0) {
         // No topics available - can't load questions
         console.error('[Timed] No topics found in session data');
         questionsPromise = Promise.resolve([]);
         topicsPromise = Promise.resolve([]);
       } else if (allTopicIds.length > 1) {
         // Multi-topic session - check for distribution in sessionStorage
-        const timedConfigStr = typeof sessionStorage !== 'undefined' 
-          ? sessionStorage.getItem(`timedConfig_${sessionId}`)
-          : null;
-          
         if (timedConfigStr) {
           try {
             const { distribution } = JSON.parse(timedConfigStr);
@@ -455,8 +551,30 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         totalTimeSpent,
         finalCorrect,
         questions.length,
-        userId
+        userId,
+        isDailyChallenge
       );
+      
+      // If this was a daily challenge, record the completion
+      if (isDailyChallenge && dailyChallengeId) {
+        try {
+          await completeDailyChallenge(
+            userId,
+            dailyChallengeId,
+            sessionId,
+            finalCorrect,
+            questions.length,
+            totalTimeSpent
+          );
+          console.log('[Timed] Daily challenge auto-completed:', {
+            challengeId: dailyChallengeId,
+            score: scorePercentage,
+          });
+        } catch (error) {
+          console.error('[Timed] Error completing daily challenge:', error);
+          // Continue anyway - session was completed
+        }
+      }
     }
     
     // Show brief overlay before redirect
@@ -492,8 +610,30 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         totalTimeSpent,
         finalCorrect,
         questions.length,
-        userId
+        userId,
+        isDailyChallenge
       );
+      
+      // If this was a daily challenge, record the completion
+      if (isDailyChallenge && dailyChallengeId) {
+        try {
+          await completeDailyChallenge(
+            userId,
+            dailyChallengeId,
+            sessionId,
+            finalCorrect,
+            questions.length,
+            totalTimeSpent
+          );
+          console.log('[Timed] Daily challenge completed:', {
+            challengeId: dailyChallengeId,
+            score: scorePercentage,
+          });
+        } catch (error) {
+          console.error('[Timed] Error completing daily challenge:', error);
+          // Continue anyway - session was completed
+        }
+      }
     }
     router.push(`/results/${sessionId}`);
   }

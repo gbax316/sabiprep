@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Sparkles } from 'lucide-react';
 import { useAuth } from '@/lib/auth-context';
-import { getSubject, getTopics, createSession } from '@/lib/api';
+import { getSubject, getTopics, createSession, selectQuestionsForSession } from '@/lib/api';
 import type { Subject, Topic } from '@/types/database';
 import {
   ModeSelector,
@@ -225,24 +225,62 @@ export default function ConfigureLearningPage({
         topicCount: topicIdsArray.length,
       });
       
-      // Store configuration for session pages that need it
+      // Pre-select questions using the non-repetition system
+      // This ensures questions are tracked as attempted and won't repeat
+      const distribution = calculateDistribution(topicIdsArray, finalQuestionCount);
+      
+      console.log('[Configure] Selecting questions with non-repetition system...');
+      
+      const selectionResult = await selectQuestionsForSession(
+        isGuest ? null : userId || null,
+        subject.id,
+        topicIdsArray,
+        finalQuestionCount,
+        distribution
+      );
+      
+      console.log('[Configure] Question selection result:', {
+        questionsSelected: selectionResult.questions.length,
+        poolReset: selectionResult.poolReset,
+        remainingInPool: selectionResult.remainingInPool,
+        totalInPool: selectionResult.totalInPool,
+      });
+      
+      // Show notification if pool was reset
+      if (selectionResult.poolReset) {
+        console.log('[Configure] Question pool was exhausted and reset. Starting fresh round.');
+      }
+      
+      // Store questions and configuration for session pages
+      const questionIds = selectionResult.questions.map(q => q.id);
+      
       if (selectedMode === 'test') {
-        // Calculate distribution for test mode
-        const distribution = calculateDistribution(topicIdsArray, finalQuestionCount);
         sessionStorage.setItem(`testConfig_${session.id}`, JSON.stringify({
           examStyle: selectedStyle,
           distribution,
           topicIds: topicIdsArray,
           totalQuestions: finalQuestionCount,
+          questionIds, // Pre-selected question IDs
+          poolReset: selectionResult.poolReset,
         }));
       } else if (selectedMode === 'timed') {
-        const distribution = calculateDistribution(topicIdsArray, finalQuestionCount);
         sessionStorage.setItem(`timedConfig_${session.id}`, JSON.stringify({
           distribution,
-          topicIds: topicIdsArray, // Store topic IDs for fallback
+          topicIds: topicIdsArray,
           totalQuestions: finalQuestionCount,
           totalTimeMinutes: selectedStyle === 'custom' ? timeLimit : Math.floor((timeLimitSeconds || 1800) / 60),
           examFormat: selectedStyle,
+          questionIds, // Pre-selected question IDs
+          poolReset: selectionResult.poolReset,
+        }));
+      } else {
+        // Practice mode
+        sessionStorage.setItem(`practiceConfig_${session.id}`, JSON.stringify({
+          distribution,
+          topicIds: topicIdsArray,
+          totalQuestions: finalQuestionCount,
+          questionIds, // Pre-selected question IDs
+          poolReset: selectionResult.poolReset,
         }));
       }
       

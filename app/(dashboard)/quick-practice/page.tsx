@@ -7,7 +7,7 @@ import { MagicBadge } from '@/components/magic/MagicBadge';
 import { BottomNav } from '@/components/common/BottomNav';
 import { Header } from '@/components/navigation/Header';
 import { useAuth } from '@/lib/auth-context';
-import { getSubjects, getTopics, createSession } from '@/lib/api';
+import { getSubjects, getTopics, createSession, selectQuestionsForSession } from '@/lib/api';
 import type { Subject, Topic } from '@/types/database';
 import { useRouter } from 'next/navigation';
 import {
@@ -128,6 +128,30 @@ export default function QuickPracticePage() {
         topicIdsCount: selectedTopicIds.length,
         totalQuestions: questionCount,
       });
+
+      // Pre-select questions using the non-repetition system
+      console.log('[QuickPractice] Selecting questions with non-repetition system...');
+      const selectionResult = await selectQuestionsForSession(
+        userId,
+        selectedSubject,
+        selectedTopicIds,
+        questionCount
+      );
+
+      console.log('[QuickPractice] Question selection result:', {
+        questionsSelected: selectionResult.questions.length,
+        poolReset: selectionResult.poolReset,
+        remainingInPool: selectionResult.remainingInPool,
+      });
+
+      // Store pre-selected questions in sessionStorage for the practice page
+      const questionIds = selectionResult.questions.map(q => q.id);
+      sessionStorage.setItem(`practiceConfig_${session.id}`, JSON.stringify({
+        topicIds: selectedTopicIds,
+        totalQuestions: questionCount,
+        questionIds,
+        poolReset: selectionResult.poolReset,
+      }));
 
       router.push(`/practice/${session.id}`);
     } catch (error) {

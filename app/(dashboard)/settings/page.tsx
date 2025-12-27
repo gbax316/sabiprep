@@ -6,6 +6,7 @@ import { Badge } from '@/components/common/Badge';
 import { BottomNav } from '@/components/common/BottomNav';
 import { Header } from '@/components/navigation/Header';
 import { useAuth } from '@/lib/auth-context';
+import { useRouter } from 'next/navigation';
 import {
   Bell,
   Moon,
@@ -86,6 +87,7 @@ function SettingLink({ icon, label, description, badge, onClick }: SettingLinkPr
 
 export default function SettingsPage() {
   const { signOut } = useAuth();
+  const router = useRouter();
   const [notifications, setNotifications] = useState(true);
   const [sounds, setSounds] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
@@ -109,9 +111,17 @@ export default function SettingsPage() {
       <div className="container-app py-6 space-y-6">
         {/* Notifications */}
         <div>
-          <h2 className="font-display text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3 px-1">
-            Notifications
-          </h2>
+          <div className="flex items-center justify-between mb-3 px-1">
+            <h2 className="font-display text-sm font-semibold text-slate-500 uppercase tracking-wider">
+              Notifications
+            </h2>
+            <button
+              onClick={() => router.push('/notifications')}
+              className="text-sm text-primary-600 font-medium hover:text-primary-700 transition-colors"
+            >
+              View All →
+            </button>
+          </div>
           <Card>
             <SettingToggle
               label="Push Notifications"
@@ -196,7 +206,7 @@ export default function SettingsPage() {
               icon={<HelpCircle className="w-5 h-5" />}
               label="Help Center"
               description="FAQs and tutorials"
-              onClick={() => alert('Help Center coming soon!')}
+              onClick={() => router.push('/help')}
             />
             <SettingLink
               icon={<Shield className="w-5 h-5" />}

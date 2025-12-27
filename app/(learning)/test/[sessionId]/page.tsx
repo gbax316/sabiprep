@@ -140,7 +140,48 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
       const testConfigStr = sessionStorage.getItem(`testConfig_${sessionId}`);
       const loadPromises: Promise<any>[] = [getSubject(sessionData.subject_id)];
 
-      if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
+      // First, check for pre-selected questions from sessionStorage
+      // These are selected using the non-repetition system at session creation
+      let preSelectedQuestionIds: string[] | null = null;
+      try {
+        if (testConfigStr) {
+          const testConfig = JSON.parse(testConfigStr);
+          if (testConfig.questionIds && Array.isArray(testConfig.questionIds)) {
+            preSelectedQuestionIds = testConfig.questionIds;
+            console.log('[Test] Found pre-selected questions:', {
+              count: preSelectedQuestionIds.length,
+              poolReset: testConfig.poolReset,
+            });
+          }
+        }
+      } catch (e) {
+        console.warn('[Test] Error reading test config from sessionStorage:', e);
+      }
+
+      if (preSelectedQuestionIds && preSelectedQuestionIds.length > 0) {
+        // Use pre-selected questions (non-repetition system)
+        console.log('[Test] Loading pre-selected questions:', {
+          count: preSelectedQuestionIds.length,
+        });
+        const questionsPromise = getQuestionsByIds(preSelectedQuestionIds).then(questions => {
+          console.log('[Test] Pre-selected questions loaded:', {
+            requested: preSelectedQuestionIds!.length,
+            received: questions.length,
+          });
+          return questions;
+        }).catch(error => {
+          console.error('[Test] Error loading pre-selected questions:', error);
+          return [];
+        });
+        loadPromises.push(questionsPromise);
+        
+        // Load topics
+        if (sessionData.topic_ids && sessionData.topic_ids.length > 0) {
+          loadPromises.push(getTopics(sessionData.subject_id));
+        } else {
+          loadPromises.push(getTopic(sessionData.topic_id || '').then(t => t ? [t] : []));
+        }
+      } else if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
         // Multi-topic session - check for distribution in sessionStorage
         if (testConfigStr) {
           const { distribution, totalQuestions: expectedTotal, topicIds } = JSON.parse(testConfigStr);
@@ -229,7 +270,19 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
       const subjectData = results[0];
       setSubject(subjectData);
 
-      if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
+      if (preSelectedQuestionIds && preSelectedQuestionIds.length > 0) {
+        // Pre-selected questions path
+        questionsData = results[1] as Question[];
+        const topicsResult = results[2];
+        if (Array.isArray(topicsResult)) {
+          if (sessionData.topic_ids && sessionData.topic_ids.length > 0) {
+            topicsData = topicsResult.filter(t => sessionData.topic_ids!.includes(t.id));
+          } else {
+            topicsData = topicsResult;
+          }
+          setTopics(topicsData);
+        }
+      } else if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {
         questionsData = results[1];
         const allTopics = results[2] as Topic[];
         topicsData = allTopics.filter(t => sessionData.topic_ids!.includes(t.id));
