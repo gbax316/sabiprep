@@ -303,6 +303,7 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
                                 <li key={child.href}>
                                   <Link
                                     href={child.href || '#'}
+                                    prefetch={true}
                                     onClick={() => handleNavClick(child.href)}
                                     className={cn(
                                       'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all',
@@ -345,6 +346,7 @@ export function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
                       <li key={filteredItem.href || filteredItem.label}>
                         <Link
                           href={filteredItem.href || '#'}
+                          prefetch={true}
                           onClick={() => handleNavClick(filteredItem.href)}
                           className={cn(
                             'flex items-center gap-3 px-3 py-3 rounded-xl transition-all',

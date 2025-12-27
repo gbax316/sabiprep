@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { NavigationDrawer } from './NavigationDrawer';
 import { useAuth } from '@/lib/auth-context';
@@ -55,13 +55,15 @@ export function Header({
   const isSubPage = pathSegments.length > 1;
   const shouldShowBack = showBack || isSubPage;
 
+  const router = useRouter();
+  
   const handleBack = () => {
     if (onBack) {
       onBack();
     } else if (backHref) {
-      window.location.href = backHref;
+      router.push(backHref);
     } else {
-      window.history.back();
+      router.back();
     }
   };
 
