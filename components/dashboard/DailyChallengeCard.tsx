@@ -73,16 +73,19 @@ export function DailyChallengeCard({
   // Compact view for dashboard widget
   if (compact) {
     return (
-      <MagicCard 
-        className={`
-          overflow-hidden cursor-pointer transition-all duration-300
-          ${isCompleted 
-            ? 'bg-gradient-to-br from-emerald-600/20 to-green-600/20 border-emerald-500/30'
-            : 'bg-gradient-to-br from-purple-600/20 to-pink-600/20 border-purple-500/30 hover:border-purple-500/50'
-          }
-        `}
+      <div 
         onClick={() => router.push('/daily-challenge')}
+        className="cursor-pointer"
       >
+        <MagicCard 
+          className={`
+            overflow-hidden transition-all duration-300
+            ${isCompleted 
+              ? 'bg-gradient-to-br from-emerald-600/20 to-green-600/20 border-emerald-500/30'
+              : 'bg-gradient-to-br from-purple-600/20 to-pink-600/20 border-purple-500/30 hover:border-purple-500/50'
+            }
+          `}
+        >
         <div className="p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -121,6 +124,7 @@ export function DailyChallengeCard({
           </div>
         </div>
       </MagicCard>
+      </div>
     );
   }
 
