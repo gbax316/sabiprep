@@ -441,11 +441,15 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         setLoading(false);
         return; // Exit early to show error message
       } else {
-        // Warn if we got fewer questions than requested
-        if (newQuestionsData.length < sessionData.total_questions) {
+        // Ensure we have exactly the requested number of questions (slice if needed)
+        let finalQuestions = newQuestionsData;
+        if (newQuestionsData.length > sessionData.total_questions) {
+          console.warn(`[Practice] Received more questions than requested (${newQuestionsData.length} > ${sessionData.total_questions}). Slicing to requested count.`);
+          finalQuestions = newQuestionsData.slice(0, sessionData.total_questions);
+        } else if (newQuestionsData.length < sessionData.total_questions) {
           console.warn(`[Practice] Session loaded with fewer questions than requested: ${newQuestionsData.length} < ${sessionData.total_questions}`);
         }
-        setQuestions(newQuestionsData);
+        setQuestions(finalQuestions);
       }
 
       if (sessionData.topic_ids && sessionData.topic_ids.length > 1) {

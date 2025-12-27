@@ -97,12 +97,31 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
   // Start timer when exam starts (only if timer has been reset to correct time)
   useEffect(() => {
-    if (examStarted && !isRunning && totalTimeSeconds > 0 && timeRemaining === totalTimeSeconds) {
-      // Timer has been reset to correct time, now start it
-      start();
-      sessionStartTimeRef.current = Date.now();
+    if (examStarted && !isRunning && totalTimeSeconds > 0 && !sessionComplete) {
+      // Check if timer is properly initialized (within 1 second tolerance due to async state)
+      // Also ensure timer is not at 0 or negative
+      if (timeRemaining > 0 && (timeRemaining === totalTimeSeconds || Math.abs(timeRemaining - totalTimeSeconds) <= 1)) {
+        // Timer has been reset to correct time, now start it
+        start();
+        sessionStartTimeRef.current = Date.now();
+        console.log('[Timed] Timer started:', {
+          timeRemaining,
+          totalTimeSeconds,
+          started: true,
+        });
+      } else if (timeRemaining <= 0 || timeRemaining !== totalTimeSeconds) {
+        // Timer not properly initialized yet, reset it again
+        console.log('[Timed] Timer not properly initialized, resetting...', {
+          timeRemaining,
+          totalTimeSeconds,
+          difference: Math.abs(timeRemaining - totalTimeSeconds),
+        });
+        // Stop any running timer first
+        stop();
+        reset(totalTimeSeconds);
+      }
     }
-  }, [examStarted, isRunning, start, totalTimeSeconds, timeRemaining]);
+  }, [examStarted, isRunning, start, stop, reset, totalTimeSeconds, timeRemaining, sessionComplete]);
 
   useEffect(() => {
     // Reset question start time when navigating
@@ -172,11 +191,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
           // Reset timer first, then start exam after a brief delay
           // This ensures the timer is properly initialized before starting
           if (sessionData.time_limit_seconds && sessionData.time_limit_seconds > 0) {
+            console.log('[Timed] Resetting timer for restored session:', {
+              timeLimitSeconds: sessionData.time_limit_seconds,
+            });
             reset(sessionData.time_limit_seconds);
-            // Small delay to ensure timer state is updated
+            // Longer delay to ensure timer state is fully updated
             setTimeout(() => {
               setExamStarted(true);
-            }, 50);
+            }, 200);
           } else {
             // No time limit set, start immediately (backward compatibility)
             setExamStarted(true);
@@ -358,7 +380,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
 
       setSubject(subjectData);
       
-      if (!newQuestionsData || newQuestionsData.length === 0) {
+      // Ensure we have exactly the requested number of questions (slice if needed)
+      let finalQuestions = newQuestionsData;
+      if (newQuestionsData && newQuestionsData.length > questionCount) {
+        console.warn(`[Timed] Received more questions than requested (${newQuestionsData.length} > ${questionCount}). Slicing to requested count.`);
+        finalQuestions = newQuestionsData.slice(0, questionCount);
+      }
+      
+      if (!finalQuestions || finalQuestions.length === 0) {
         // No questions available - this will be handled in the render section
         console.error('[Timed] No questions loaded. Session data:', {
           sessionId,
@@ -369,18 +398,18 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         setQuestions([]);
       } else {
         // Validate question count matches expected
-        if (newQuestionsData.length < questionCount) {
+        if (finalQuestions.length < questionCount) {
           console.warn(
-            `[Timed] Expected ${questionCount} questions but received ${newQuestionsData.length}. ` +
+            `[Timed] Expected ${questionCount} questions but received ${finalQuestions.length}. ` +
             `Some topics may not have enough questions available.`
           );
         }
         console.log('[Timed] Questions loaded successfully:', {
-          received: newQuestionsData.length,
+          received: finalQuestions.length,
           expected: questionCount,
-          match: newQuestionsData.length === questionCount,
+          match: finalQuestions.length === questionCount,
         });
-        setQuestions(newQuestionsData);
+        setQuestions(finalQuestions);
       }
       
       setTopics(newTopicsData);
@@ -388,11 +417,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       // Reset timer first, then start exam after a brief delay
       // This ensures the timer is properly initialized before starting
       if (sessionData.time_limit_seconds && sessionData.time_limit_seconds > 0) {
+        console.log('[Timed] Resetting timer for new session:', {
+          timeLimitSeconds: sessionData.time_limit_seconds,
+        });
         reset(sessionData.time_limit_seconds);
-        // Small delay to ensure timer state is updated
+        // Longer delay to ensure timer state is fully updated
         setTimeout(() => {
           setExamStarted(true);
-        }, 50);
+        }, 200);
       } else {
         // No time limit set, start immediately (backward compatibility)
         setExamStarted(true);
