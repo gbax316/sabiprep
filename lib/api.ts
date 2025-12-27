@@ -706,10 +706,19 @@ export async function getQuestionsWithDistribution(
     console.warn(
       `Question distribution: requested ${totalRequested}, received ${allQuestions.length} (${totalRequested - allQuestions.length} missing)`
     );
+  } else if (allQuestions.length > totalRequested) {
+    console.warn(
+      `[getQuestionsWithDistribution] Received more questions than requested: ${allQuestions.length} > ${totalRequested}. Slicing to exact count.`
+    );
   }
 
   // Final shuffle to mix topics and difficulties
-  return allQuestions.sort(() => Math.random() - 0.5);
+  // IMPORTANT: Slice to ensure we return exactly the requested count
+  const finalQuestions = allQuestions.sort(() => Math.random() - 0.5).slice(0, totalRequested);
+  
+  console.log(`[getQuestionsWithDistribution] Returning ${finalQuestions.length} questions (requested ${totalRequested})`);
+  
+  return finalQuestions;
 }
 
 // ============================================
@@ -1236,118 +1245,16 @@ export async function canResumeSession(sessionId: string): Promise<{
   questionCount: number;
   reason?: string;
 }> {
-  // #region agent log
-  if (typeof window !== 'undefined') {
-    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId: 'debug-session',
-        runId: 'continue-button-debug',
-        hypothesisId: 'J',
-        location: 'lib/api.ts:canResumeSession:entry',
-        message: 'canResumeSession called',
-        data: { sessionId },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-  }
-  // #endregion
-  
   // Check if session exists
   const session = await getSession(sessionId);
   if (!session) {
-    // #region agent log
-    if (typeof window !== 'undefined') {
-      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId: 'debug-session',
-          runId: 'continue-button-debug',
-          hypothesisId: 'J',
-          location: 'lib/api.ts:canResumeSession:sessionNotFound',
-          message: 'Session not found',
-          data: { sessionId },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-    }
-    // #endregion
     return { canResume: false, hasAnswers: false, questionCount: 0, reason: 'Session not found' };
   }
-
-  // #region agent log
-  if (typeof window !== 'undefined') {
-    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId: 'debug-session',
-        runId: 'continue-button-debug',
-        hypothesisId: 'J',
-        location: 'lib/api.ts:canResumeSession:sessionFound',
-        message: 'Session found',
-        data: { 
-          sessionId: session.id,
-          status: session.status,
-          mode: session.mode,
-          total_questions: session.total_questions,
-          topic_id: session.topic_id,
-          topic_ids: session.topic_ids,
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-  }
-  // #endregion
 
   // Check if session has answers (original questions)
   const answers = await getSessionAnswers(sessionId);
   
-  // #region agent log
-  if (typeof window !== 'undefined') {
-    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId: 'debug-session',
-        runId: 'continue-button-debug',
-        hypothesisId: 'J',
-        location: 'lib/api.ts:canResumeSession:answersChecked',
-        message: 'Session answers checked',
-        data: { 
-          sessionId: session.id,
-          answersCount: answers.length,
-          hasAnswers: answers.length > 0,
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-  }
-  // #endregion
-  
   if (answers.length > 0) {
-    // #region agent log
-    if (typeof window !== 'undefined') {
-      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId: 'debug-session',
-          runId: 'continue-button-debug',
-          hypothesisId: 'J',
-          location: 'lib/api.ts:canResumeSession:returningCanResume',
-          message: 'Returning canResume=true (has answers)',
-          data: { 
-            sessionId: session.id,
-            questionCount: answers.length,
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-    }
-    // #endregion
     return { canResume: true, hasAnswers: true, questionCount: answers.length };
   }
 
@@ -1357,98 +1264,14 @@ export async function canResumeSession(sessionId: string): Promise<{
     try {
       const questions = await getRandomQuestions(topicId, 1); // Just check if any exist
       
-      // #region agent log
-      if (typeof window !== 'undefined') {
-        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: 'debug-session',
-            runId: 'continue-button-debug',
-            hypothesisId: 'J',
-            location: 'lib/api.ts:canResumeSession:topicQuestionsChecked',
-            message: 'Topic questions availability checked',
-            data: { 
-              sessionId: session.id,
-              topicId,
-              questionsFound: questions.length > 0,
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      }
-      // #endregion
-      
       if (questions.length > 0) {
-        // #region agent log
-        if (typeof window !== 'undefined') {
-          fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              sessionId: 'debug-session',
-              runId: 'continue-button-debug',
-              hypothesisId: 'J',
-              location: 'lib/api.ts:canResumeSession:returningCanResumeNoAnswers',
-              message: 'Returning canResume=true (topic has questions)',
-              data: { 
-                sessionId: session.id,
-                topicId,
-              },
-              timestamp: Date.now(),
-            }),
-          }).catch(() => {});
-        }
-        // #endregion
         return { canResume: true, hasAnswers: false, questionCount: 0 };
       }
     } catch (error) {
       console.error('Error checking questions availability:', error);
-      // #region agent log
-      if (typeof window !== 'undefined') {
-        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: 'debug-session',
-            runId: 'continue-button-debug',
-            hypothesisId: 'J',
-            location: 'lib/api.ts:canResumeSession:errorCheckingQuestions',
-            message: 'Error checking questions',
-            data: { 
-              sessionId: session.id,
-              topicId,
-              error: error instanceof Error ? error.message : String(error),
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      }
-      // #endregion
       return { canResume: false, hasAnswers: false, questionCount: 0, reason: 'Error checking questions' };
     }
   }
-
-  // #region agent log
-  if (typeof window !== 'undefined') {
-    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId: 'debug-session',
-        runId: 'continue-button-debug',
-        hypothesisId: 'J',
-        location: 'lib/api.ts:canResumeSession:returningCannotResume',
-        message: 'Returning canResume=false (no questions available)',
-        data: { 
-          sessionId: session.id,
-          topicId: session.topic_id || session.topic_ids?.[0],
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-  }
-  // #endregion
 
   return { canResume: false, hasAnswers: false, questionCount: 0, reason: 'No questions available' };
 }

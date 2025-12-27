@@ -303,7 +303,13 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
         // No questions available - this will be handled in the render section
         setQuestions([]);
       } else {
-        setQuestions(questionsData);
+        // Ensure we have exactly the requested number of questions (slice if needed)
+        let finalQuestions = questionsData;
+        if (questionsData.length > sessionData.total_questions) {
+          console.warn(`[Test] Received more questions than requested (${questionsData.length} > ${sessionData.total_questions}). Slicing to exact count.`);
+          finalQuestions = questionsData.slice(0, sessionData.total_questions);
+        }
+        setQuestions(finalQuestions);
       }
     } catch (error) {
       console.error('Error loading session:', error);
