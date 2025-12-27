@@ -145,7 +145,17 @@ export default function QuickPracticePage() {
       });
 
       // Store pre-selected questions in sessionStorage for the practice page
-      const questionIds = selectionResult.questions.map(q => q.id);
+      // Ensure we only store exactly the requested number of questions
+      const questionIds = selectionResult.questions
+        .slice(0, questionCount)
+        .map(q => q.id);
+      
+      console.log('[QuickPractice] Storing questions in sessionStorage:', {
+        requested: questionCount,
+        selected: selectionResult.questions.length,
+        stored: questionIds.length,
+      });
+      
       sessionStorage.setItem(`practiceConfig_${session.id}`, JSON.stringify({
         topicIds: selectedTopicIds,
         totalQuestions: questionCount,

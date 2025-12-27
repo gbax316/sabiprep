@@ -168,34 +168,6 @@ export default function HomePage() {
       setProgress(userProgress.status === 'fulfilled' ? userProgress.value : []);
       const loadedSessions = sessions.status === 'fulfilled' ? sessions.value : [];
       
-      // #region agent log
-      if (typeof window !== 'undefined') {
-        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: 'debug-session',
-            runId: 'continue-button-debug',
-            hypothesisId: 'I',
-            location: 'home/page.tsx:loadDashboard:sessionsLoaded',
-            message: 'Sessions loaded from API',
-            data: { 
-              sessionsCount: loadedSessions.length,
-              sessions: loadedSessions.map(s => ({ 
-                id: s.id, 
-                status: s.status, 
-                mode: s.mode, 
-                total_questions: s.total_questions,
-                questions_answered: s.questions_answered,
-                subject_id: s.subject_id,
-              })),
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      }
-      // #endregion
-      
       setRecentSessions(loadedSessions);
       setUserGoals(goals.status === 'fulfilled' ? goals.value : []);
       setMasteryBadges(badges.status === 'fulfilled' ? badges.value : []);
@@ -292,45 +264,9 @@ export default function HomePage() {
 
   // Validate incomplete sessions (runs in background, non-blocking)
   async function validateIncompleteSessions(sessions: LearningSession[]) {
-    // #region agent log
-    if (typeof window !== 'undefined') {
-      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId: 'debug-session',
-          runId: 'continue-button-debug',
-          hypothesisId: 'A',
-          location: 'home/page.tsx:validateIncompleteSessions:entry',
-          message: 'validateIncompleteSessions called',
-          data: { totalSessions: sessions.length, sessions: sessions.map(s => ({ id: s.id, status: s.status, mode: s.mode, total_questions: s.total_questions })) },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-    }
-    // #endregion
-    
     const incompleteSessions = sessions.filter(s => 
       s.status === 'in_progress' || s.status === 'paused'
     );
-    
-    // #region agent log
-    if (typeof window !== 'undefined') {
-      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId: 'debug-session',
-          runId: 'continue-button-debug',
-          hypothesisId: 'A',
-          location: 'home/page.tsx:validateIncompleteSessions:filtered',
-          message: 'Incomplete sessions filtered',
-          data: { incompleteCount: incompleteSessions.length, incompleteSessions: incompleteSessions.map(s => ({ id: s.id, status: s.status, mode: s.mode, total_questions: s.total_questions })) },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-    }
-    // #endregion
     
     // If no incomplete sessions to validate, mark validation as complete immediately
     if (incompleteSessions.length === 0) {
@@ -340,44 +276,8 @@ export default function HomePage() {
     
     // Validate all incomplete sessions in parallel
     const validationPromises = incompleteSessions.map(async (session) => {
-      // #region agent log
-      if (typeof window !== 'undefined') {
-        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: 'debug-session',
-            runId: 'continue-button-debug',
-            hypothesisId: 'B',
-            location: 'home/page.tsx:validateIncompleteSessions:beforeValidation',
-            message: 'About to validate session',
-            data: { sessionId: session.id, status: session.status, mode: session.mode, total_questions: session.total_questions },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      }
-      // #endregion
-      
       try {
         const validation = await canResumeSession(session.id);
-        
-        // #region agent log
-        if (typeof window !== 'undefined') {
-          fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              sessionId: 'debug-session',
-              runId: 'continue-button-debug',
-              hypothesisId: 'B',
-              location: 'home/page.tsx:validateIncompleteSessions:validationResult',
-              message: 'Validation result received',
-              data: { sessionId: session.id, canResume: validation.canResume, hasAnswers: validation.hasAnswers, questionCount: validation.questionCount, reason: validation.reason },
-              timestamp: Date.now(),
-            }),
-          }).catch(() => {});
-        }
-        // #endregion
         
         if (validation.canResume) {
           setValidatedSessions(prev => {
@@ -426,42 +326,7 @@ export default function HomePage() {
   // Only returns sessions that have been validated as resumable
   // Filters out sessions with insufficient questions (minimum 3 questions required)
   const getIncompleteSession = (): LearningSession | null => {
-    // #region agent log
-    if (typeof window !== 'undefined') {
-      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId: 'debug-session',
-          runId: 'continue-button-debug',
-          hypothesisId: 'C',
-          location: 'home/page.tsx:getIncompleteSession:entry',
-          message: 'getIncompleteSession called',
-          data: { recentSessionsCount: recentSessions?.length || 0, validatedCount: validatedSessions.size, invalidCount: invalidSessions.size },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-    }
-    // #endregion
-    
     if (!recentSessions || recentSessions.length === 0) {
-      // #region agent log
-      if (typeof window !== 'undefined') {
-        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: 'debug-session',
-            runId: 'continue-button-debug',
-            hypothesisId: 'C',
-            location: 'home/page.tsx:getIncompleteSession:noSessions',
-            message: 'No recent sessions available',
-            data: {},
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      }
-      // #endregion
       return null;
     }
     
@@ -477,79 +342,13 @@ export default function HomePage() {
         return dateB - dateA;
       });
     
-    // #region agent log
-    if (typeof window !== 'undefined') {
-      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId: 'debug-session',
-          runId: 'continue-button-debug',
-          hypothesisId: 'C',
-          location: 'home/page.tsx:getIncompleteSession:filteredAndSorted',
-          message: 'Filtered and sorted incomplete sessions',
-          data: { 
-            incompleteCount: incompleteSessions.length,
-            sessions: incompleteSessions.map(s => ({ 
-              id: s.id, 
-              status: s.status, 
-              mode: s.mode, 
-              total_questions: s.total_questions,
-              created_at: s.created_at,
-            })),
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-    }
-    // #endregion
-    
     if (incompleteSessions.length === 0) {
-      // #region agent log
-      if (typeof window !== 'undefined') {
-        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: 'debug-session',
-            runId: 'continue-button-debug',
-            hypothesisId: 'F',
-            location: 'home/page.tsx:getIncompleteSession:noIncompleteFound',
-            message: 'No incomplete sessions found after filtering',
-            data: {},
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      }
-      // #endregion
       return null;
     }
     
     // If validation hasn't completed yet, don't return any session
     // This prevents race conditions where invalid sessions are shown before validation
     if (!validationComplete) {
-      // #region agent log
-      if (typeof window !== 'undefined') {
-        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: 'debug-session',
-            runId: 'continue-button-debug',
-            hypothesisId: 'RACE',
-            location: 'home/page.tsx:getIncompleteSession:validationPending',
-            message: 'Validation not complete, returning null to prevent race condition',
-            data: { 
-              incompleteCount: incompleteSessions.length,
-              validatedCount: validatedSessions.size,
-              invalidCount: invalidSessions.size,
-              validationComplete,
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      }
-      // #endregion
       return null;
     }
     
@@ -563,27 +362,6 @@ export default function HomePage() {
       // Minimum question count check: require at least 3 questions
       // This filters out test sessions with only 2 questions
       if (!session.total_questions || session.total_questions < 3) {
-        // #region agent log
-        if (typeof window !== 'undefined') {
-          fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              sessionId: 'debug-session',
-              runId: 'continue-button-debug',
-              hypothesisId: 'D',
-              location: 'home/page.tsx:getIncompleteSession:insufficientQuestions',
-              message: 'Session filtered out - insufficient questions',
-              data: { 
-                sessionId: session.id,
-                total_questions: session.total_questions,
-                mode: session.mode,
-              },
-              timestamp: Date.now(),
-            }),
-          }).catch(() => {});
-        }
-        // #endregion
         continue;
       }
       
@@ -594,55 +372,10 @@ export default function HomePage() {
       }
       
       // Valid session found
-      // #region agent log
-      if (typeof window !== 'undefined') {
-        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: 'debug-session',
-            runId: 'continue-button-debug',
-            hypothesisId: 'D',
-            location: 'home/page.tsx:getIncompleteSession:returningValidSession',
-            message: 'Returning valid incomplete session',
-            data: { 
-              sessionId: session.id,
-              mode: session.mode,
-              total_questions: session.total_questions,
-              status: session.status,
-              isValidated: validatedSessions.has(session.id),
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      }
-      // #endregion
       return session;
     }
     
     // No valid incomplete session found
-    // #region agent log
-    if (typeof window !== 'undefined') {
-      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId: 'debug-session',
-          runId: 'continue-button-debug',
-          hypothesisId: 'F',
-          location: 'home/page.tsx:getIncompleteSession:noValidSession',
-          message: 'No valid incomplete session found',
-          data: { 
-            incompleteCount: incompleteSessions.length,
-            validatedCount: validatedSessions.size,
-            invalidCount: invalidSessions.size,
-            validationComplete,
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-    }
-    // #endregion
     
     return null;
   };
@@ -761,60 +494,9 @@ export default function HomePage() {
     const dailyQuestions = getDailyQuestionsAnswered();
     const dailyGoal = getDailyGoal();
 
-    // #region agent log
-    if (typeof window !== 'undefined') {
-      fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId: 'debug-session',
-          runId: 'continue-button-debug',
-          hypothesisId: 'G',
-          location: 'home/page.tsx:getPrimaryCTA:entry',
-          message: 'getPrimaryCTA called',
-          data: { 
-            hasIncompleteSession: !!incompleteSession,
-            incompleteSessionId: incompleteSession?.id,
-            incompleteSessionMode: incompleteSession?.mode,
-            incompleteSessionTotalQuestions: incompleteSession?.total_questions,
-            incompleteSessionStatus: incompleteSession?.status,
-            streakAtRisk,
-            dailyQuestions,
-            dailyGoal,
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-    }
-    // #endregion
-
     if (incompleteSession) {
       const subject = subjects.find(s => s.id === incompleteSession.subject_id);
       const href = `/${incompleteSession.mode}/${incompleteSession.id}`;
-      
-      // #region agent log
-      if (typeof window !== 'undefined') {
-        fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: 'debug-session',
-            runId: 'continue-button-debug',
-            hypothesisId: 'G',
-            location: 'home/page.tsx:getPrimaryCTA:returningResume',
-            message: 'Returning resume CTA',
-            data: { 
-              sessionId: incompleteSession.id,
-              mode: incompleteSession.mode,
-              total_questions: incompleteSession.total_questions,
-              href,
-              subjectName: subject?.name,
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      }
-      // #endregion
       
       return {
         text: `Resume ${subject?.name || 'Session'}`,
@@ -1214,32 +896,6 @@ export default function HomePage() {
               <Link 
                 href={primaryCTA.href} 
                 className="flex-1 xs:flex-initial"
-                onClick={() => {
-                  // #region agent log
-                  if (typeof window !== 'undefined') {
-                    fetch('http://127.0.0.1:7242/ingest/427f2c1c-09b4-440f-8235-f4463fed2c6d', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify({
-                        sessionId: 'debug-session',
-                        runId: 'continue-button-debug',
-                        hypothesisId: 'H',
-                        location: 'home/page.tsx:primaryCTA:onClick',
-                        message: 'Continue button clicked in Today\'s Mission',
-                        data: { 
-                          href: primaryCTA.href,
-                          text: primaryCTA.text,
-                          incompleteSessionId: incompleteSession?.id,
-                          incompleteSessionMode: incompleteSession?.mode,
-                          incompleteSessionTotalQuestions: incompleteSession?.total_questions,
-                          incompleteSessionStatus: incompleteSession?.status,
-                        },
-                        timestamp: Date.now(),
-                      }),
-                    }).catch(() => {});
-                  }
-                  // #endregion
-                }}
               >
                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                   <MagicButton 
@@ -1389,7 +1045,7 @@ export default function HomePage() {
 
               {/* Quick Action Buttons - Enhanced */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-slate-700/50">
-                <Link href="/quick-practice">
+                <Link href="/quick-practice" prefetch={true}>
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2.5 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-500/30 hover:border-yellow-400/50">
                       <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-1.5 text-yellow-400" />

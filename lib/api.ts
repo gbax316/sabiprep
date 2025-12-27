@@ -3250,9 +3250,16 @@ export async function selectQuestionsForSession(
     console.warn(`[selectQuestionsForSession] No topics specified for selection`);
   }
 
-  // Step 5: Record newly selected questions as attempted
-  if (questions.length > 0) {
-    const newQuestionIds = questions.map(q => q.id);
+  // Ensure we return exactly the requested count (slice if needed)
+  const finalQuestions = questions.slice(0, count);
+  
+  if (finalQuestions.length !== count && questions.length > count) {
+    console.warn(`[selectQuestionsForSession] Returning ${finalQuestions.length} questions (requested ${count}, got ${questions.length}). Sliced to exact count.`);
+  }
+
+  // Step 5: Record newly selected questions as attempted (only final count)
+  if (finalQuestions.length > 0) {
+    const newQuestionIds = finalQuestions.map(q => q.id);
     
     if (userId) {
       // Record for authenticated user (don't await to avoid blocking)
@@ -3267,13 +3274,13 @@ export async function selectQuestionsForSession(
 
   // Calculate remaining after selection
   const remainingAfter = poolReset 
-    ? totalInPool - questions.length 
-    : remainingBefore - questions.length;
-
-  console.log(`[selectQuestionsForSession] Selected ${questions.length} questions. Remaining in pool: ${Math.max(0, remainingAfter)}`);
+    ? totalInPool - finalQuestions.length 
+    : remainingBefore - finalQuestions.length;
+  
+  console.log(`[selectQuestionsForSession] Selected ${finalQuestions.length} questions (requested ${count}). Remaining in pool: ${Math.max(0, remainingAfter)}`);
 
   return {
-    questions,
+    questions: finalQuestions,
     poolReset,
     remainingInPool: Math.max(0, remainingAfter),
     totalInPool,
