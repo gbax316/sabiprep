@@ -230,7 +230,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
             preSelectedQuestionIds = sessionConfig.questionIds;
             isDailyChallenge = sessionConfig.isDailyChallenge || false;
             console.log('[Timed] Found session pre-selected questions:', {
-              count: preSelectedQuestionIds.length,
+              count: sessionConfig.questionIds.length,
               isDailyChallenge,
             });
           }
@@ -246,7 +246,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
           if (timedConfig.questionIds && Array.isArray(timedConfig.questionIds)) {
             preSelectedQuestionIds = timedConfig.questionIds;
             console.log('[Timed] Found pre-selected questions from timedConfig:', {
-              count: preSelectedQuestionIds.length,
+              count: timedConfig.questionIds.length,
               poolReset: timedConfig.poolReset,
             });
           }
@@ -263,7 +263,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
             preSelectedQuestionIds = dailyChallenge.questionIds;
             isDailyChallenge = true;
             console.log('[Timed] Found daily challenge questions:', {
-              count: preSelectedQuestionIds.length,
+              count: dailyChallenge.questionIds.length,
               challengeId: dailyChallenge.challengeId,
             });
             // Set state for daily challenge tracking

@@ -149,7 +149,7 @@ export default function TestModePage({ params }: { params: Promise<{ sessionId: 
           if (testConfig.questionIds && Array.isArray(testConfig.questionIds)) {
             preSelectedQuestionIds = testConfig.questionIds;
             console.log('[Test] Found pre-selected questions:', {
-              count: preSelectedQuestionIds.length,
+              count: testConfig.questionIds.length,
               poolReset: testConfig.poolReset,
             });
           }
