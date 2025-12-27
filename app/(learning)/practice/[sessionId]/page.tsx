@@ -308,7 +308,7 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
           if (practiceConfig.questionIds && Array.isArray(practiceConfig.questionIds)) {
             preSelectedQuestionIds = practiceConfig.questionIds;
             console.log('[Practice] Found pre-selected questions:', {
-              count: preSelectedQuestionIds.length,
+              count: practiceConfig.questionIds.length,
               poolReset: practiceConfig.poolReset,
             });
           }
