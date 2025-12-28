@@ -24,6 +24,8 @@ import {
   Lightbulb,
   BookOpen,
   Home,
+  ChevronDown,
+  ChevronUp,
 } from 'lucide-react';
 
 export default function QuestionReviewPage({ params }: { params: Promise<{ sessionId: string }> }) {
@@ -35,6 +37,8 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showNavigator, setShowNavigator] = useState(false);
+  const [showSolution, setShowSolution] = useState(false);
+  const [cardWidth, setCardWidth] = useState(0);
 
   useEffect(() => {
     loadReviewData();
@@ -61,10 +65,23 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
       }
 
       setSession(sessionData);
-      setAnswers(sessionAnswers || []);
+      const allAnswers = sessionAnswers || [];
+      setAnswers(allAnswers);
 
-      // Get questions from session answers
-      const questionIds = (sessionAnswers || []).map(a => a.question_id).filter(Boolean);
+      // Get ALL question IDs from session answers, preserving order of first appearance
+      // Use a Set to track seen IDs while maintaining order
+      const seenIds = new Set<string>();
+      const questionIds: string[] = [];
+      
+      allAnswers.forEach((answer) => {
+        if (answer.question_id && !seenIds.has(answer.question_id)) {
+          seenIds.add(answer.question_id);
+          questionIds.push(answer.question_id);
+        }
+      });
+      
+      console.log(`[Review] Loading ${allAnswers.length} answers with ${questionIds.length} unique questions`);
+      console.log(`[Review] Question IDs:`, questionIds);
       
       if (questionIds.length === 0) {
         // No answers found - might be a guest session without stored answers
@@ -73,12 +90,67 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
         return;
       }
 
-      const questionsData = await getQuestionsByIds(questionIds).catch(err => {
+      // Fetch questions - handle potential batching if needed
+      let questionsData: Question[] = [];
+      try {
+        // Supabase .in() can handle up to 100 items, but let's batch if more
+        const BATCH_SIZE = 100;
+        if (questionIds.length > BATCH_SIZE) {
+          console.log(`[Review] Batching ${questionIds.length} questions into chunks of ${BATCH_SIZE}`);
+          const batches: Question[][] = [];
+          for (let i = 0; i < questionIds.length; i += BATCH_SIZE) {
+            const batch = questionIds.slice(i, i + BATCH_SIZE);
+            const batchQuestions = await getQuestionsByIds(batch);
+            batches.push(batchQuestions);
+          }
+          questionsData = batches.flat();
+        } else {
+          questionsData = await getQuestionsByIds(questionIds);
+        }
+      } catch (err) {
         console.error('Error fetching questions:', err);
-        return [];
+        questionsData = [];
+      }
+      
+      // Ensure questions are in the same order as questionIds and all are included
+      const questionMap = new Map(questionsData.map(q => [q.id, q]));
+      const orderedQuestions: Question[] = [];
+      const missingIds: string[] = [];
+      
+      questionIds.forEach((id, index) => {
+        const question = questionMap.get(id);
+        if (question) {
+          orderedQuestions.push(question);
+        } else {
+          missingIds.push(id);
+          console.warn(`[Review] Question ${id} (index ${index}) not found in database`);
+        }
       });
       
-      setQuestions(questionsData || []);
+      console.log(`[Review] Results: ${orderedQuestions.length} questions loaded out of ${questionIds.length} expected`);
+      console.log(`[Review] Total answers: ${allAnswers.length}, Unique questions: ${questionIds.length}`);
+      
+      if (missingIds.length > 0) {
+        console.warn(`[Review] Missing ${missingIds.length} questions:`, missingIds.slice(0, 5), missingIds.length > 5 ? '...' : '');
+        const missingAnswers = allAnswers.filter(a => missingIds.includes(a.question_id));
+        console.warn(`[Review] ${missingAnswers.length} answers reference missing questions`);
+      }
+      
+      if (orderedQuestions.length === 0 && questionIds.length > 0) {
+        console.error('[Review] No questions loaded! This might indicate a data issue.');
+        console.error('[Review] Question IDs requested:', questionIds.slice(0, 10), questionIds.length > 10 ? '...' : '');
+      }
+      
+      if (orderedQuestions.length > 0) {
+        console.log(`[Review] Successfully loaded ${orderedQuestions.length} questions for review`);
+        console.log(`[Review] Question IDs in order:`, orderedQuestions.map(q => q.id).slice(0, 10), orderedQuestions.length > 10 ? '...' : '');
+      }
+      
+      if (orderedQuestions.length !== questionIds.length) {
+        console.error(`[Review] Mismatch: Expected ${questionIds.length} questions but got ${orderedQuestions.length}`);
+      }
+      
+      setQuestions(orderedQuestions);
     } catch (error) {
       console.error('Error loading review data:', error);
       // Don't show alert for network errors - they're handled above
@@ -110,6 +182,7 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
   const handlePrevious = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
+      setShowSolution(false); // Reset solution visibility when changing questions
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -117,14 +190,85 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
   const handleNext = () => {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(currentIndex + 1);
+      setShowSolution(false); // Reset solution visibility when changing questions
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const handleNavigateToQuestion = (index: number) => {
     setCurrentIndex(index);
+    setShowSolution(false); // Reset solution visibility when changing questions
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  // Handle drag end for swipe gestures
+  const handleDragEnd = (event: any, info: { offset: { x: number }; velocity: { x: number } }) => {
+    const swipeThreshold = 50; // Minimum distance to trigger swipe
+    const velocityThreshold = 500; // Minimum velocity to trigger swipe
+
+    if (Math.abs(info.offset.x) > swipeThreshold || Math.abs(info.velocity.x) > velocityThreshold) {
+      if (info.offset.x > 0 && currentIndex > 0) {
+        // Swipe right - go to previous
+        handlePrevious();
+      } else if (info.offset.x < 0 && currentIndex < questions.length - 1) {
+        // Swipe left - go to next
+        handleNext();
+      }
+    }
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft' && currentIndex > 0) {
+        handlePrevious();
+      } else if (e.key === 'ArrowRight' && currentIndex < questions.length - 1) {
+        handleNext();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [currentIndex, questions.length]);
+
+  // Measure card width on mount and resize
+  const [containerWidth, setContainerWidth] = useState(0);
+  
+  useEffect(() => {
+    const updateCardWidth = () => {
+      const container = document.querySelector('.carousel-container');
+      if (container && questions.length > 0) {
+        // Get the actual container width
+        const width = container.clientWidth;
+        setContainerWidth(width);
+        
+        // Account for arrow buttons - they're absolutely positioned
+        // On mobile: smaller arrows, less space needed
+        // On desktop: larger arrows, more space needed
+        const isMobile = window.innerWidth < 640;
+        const isTablet = window.innerWidth >= 640 && window.innerWidth < 1024;
+        const arrowSpace = isMobile ? 44 : isTablet ? 56 : 64; // Space for arrows (button + padding)
+        
+        // Calculate available width for cards (accounting for arrows on both sides)
+        const availableWidth = width - (arrowSpace * 2);
+        // Ensure card width is at least 300px but not more than container width
+        const calculatedWidth = Math.max(Math.min(availableWidth, 800), 300);
+        setCardWidth(calculatedWidth);
+      }
+    };
+
+    // Use a small delay to ensure DOM is ready
+    const timeoutId = setTimeout(updateCardWidth, 100);
+    // Also update after questions load
+    if (questions.length > 0) {
+      updateCardWidth();
+    }
+    window.addEventListener('resize', updateCardWidth);
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', updateCardWidth);
+    };
+  }, [questions.length]);
 
   if (loading) {
     return (
@@ -150,15 +294,22 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
     );
   }
 
-  if (questions.length === 0 || answers.length === 0) {
+  if (questions.length === 0) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-slate-950">
         <div className="text-center max-w-md px-4">
           <p className="text-slate-400 mb-2">
             {sessionId.startsWith('guest_') 
               ? 'Review is not available for guest sessions. Please sign up to save and review your answers.'
-              : 'No questions or answers found for this session.'}
+              : answers.length === 0
+              ? 'No answers found for this session.'
+              : `No questions found. ${answers.length} answer${answers.length !== 1 ? 's' : ''} recorded but questions could not be loaded.`}
           </p>
+          {answers.length > 0 && !sessionId.startsWith('guest_') && (
+            <p className="text-xs text-amber-400 mb-4">
+              Check the browser console for details about missing questions.
+            </p>
+          )}
           <div className="flex gap-3 justify-center mt-4">
             <Link href={`/results/${sessionId}`}>
               <Button variant="outline">Back to Results</Button>
@@ -229,6 +380,11 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
             </Badge>
             <span className="text-xs sm:text-sm text-slate-400">
               Question {currentIndex + 1} of {questions.length}
+              {answers.length > questions.length && (
+                <span className="ml-1 text-amber-400" title={`${answers.length} total answers (some may be duplicates)`}>
+                  ({answers.length} answers)
+                </span>
+              )}
             </span>
           </div>
           <div className="w-full max-w-[200px] sm:max-w-[300px] bg-slate-800 rounded-full h-2 sm:h-2.5 overflow-hidden">
@@ -241,26 +397,129 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
           </div>
         </div>
 
-        {/* Question Display with Animation */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ type: 'spring', stiffness: 100, damping: 15 }}
+        {/* Sliding Question Card Carousel */}
+        <div className="relative overflow-hidden carousel-container rounded-2xl mx-auto w-full">
+          {/* Left Navigation Arrow */}
+          {currentIndex > 0 && (
+            <button
+              onClick={handlePrevious}
+              className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 z-20 bg-slate-800/95 hover:bg-slate-700/95 backdrop-blur-md rounded-full p-2 sm:p-3 border-2 border-slate-700/60 hover:border-cyan-500/70 transition-all shadow-xl hover:shadow-cyan-500/30 active:scale-95 flex items-center justify-center"
+              aria-label="Previous question"
+            >
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-cyan-400" />
+            </button>
+          )}
+
+          {/* Right Navigation Arrow */}
+          {currentIndex < questions.length - 1 && (
+            <button
+              onClick={handleNext}
+              className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 z-20 bg-slate-800/95 hover:bg-slate-700/95 backdrop-blur-md rounded-full p-2 sm:p-3 border-2 border-slate-700/60 hover:border-cyan-500/70 transition-all shadow-xl hover:shadow-cyan-500/30 active:scale-95 flex items-center justify-center"
+              aria-label="Next question"
+            >
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-cyan-400" />
+            </button>
+          )}
+
+          {/* Carousel Content - Centered */}
+          <div 
+            className="w-full flex items-center justify-center overflow-hidden relative" 
+            style={{ minHeight: '400px' }}
           >
-            <QuestionDisplay
-              question={currentQuestion}
-              showPassage={shouldShowPassage}
-              selectedAnswer={userAnswer}
-              showCorrectAnswer={true}
-              isReview={true}
-              questionNumber={currentIndex + 1}
-              disabled={true}
-            />
-          </motion.div>
-        </AnimatePresence>
+            <motion.div
+              className="flex items-center"
+              animate={{
+                x: cardWidth > 0 && containerWidth > 0
+                  ? containerWidth / 2 - (currentIndex * cardWidth + cardWidth / 2)
+                  : 0,
+              }}
+              transition={{
+                type: 'spring',
+                stiffness: 300,
+                damping: 30,
+              }}
+              drag="x"
+              dragConstraints={{
+                left: cardWidth > 0 && containerWidth > 0
+                  ? containerWidth / 2 - ((questions.length - 1) * cardWidth + cardWidth / 2)
+                  : 0,
+                right: cardWidth > 0 && containerWidth > 0
+                  ? containerWidth / 2 - (cardWidth / 2)
+                  : 0,
+              }}
+              dragElastic={0.1}
+              onDragEnd={handleDragEnd}
+              style={{ touchAction: 'pan-x' }}
+            >
+              {questions.length > 0 ? (
+                questions.map((question, index) => {
+                  const answer = answers.find(a => a.question_id === question.id);
+                  const isCurrent = index === currentIndex;
+                  const prevQuestion = index > 0 ? questions[index - 1] : null;
+                  const shouldShowPassageForQuestion = !!(question.passage && (
+                    !prevQuestion || prevQuestion.passage_id !== question.passage_id
+                  ));
+
+                  if (!question) {
+                    console.warn(`[Review] Question at index ${index} is undefined`);
+                    return null;
+                  }
+
+                  return (
+                    <motion.div
+                      key={question.id}
+                      className="flex-shrink-0 flex items-center justify-center"
+                      style={{ 
+                        width: cardWidth > 0 ? cardWidth : '100%', 
+                        minWidth: cardWidth > 0 ? cardWidth : '100%',
+                        maxWidth: cardWidth > 0 ? cardWidth : '100%',
+                        position: 'relative',
+                      }}
+                      animate={{
+                        scale: isCurrent ? 1 : 0.9,
+                        opacity: isCurrent ? 1 : 0.4,
+                        zIndex: isCurrent ? 10 : 1,
+                      }}
+                      transition={{ duration: 0.3, ease: 'easeOut' }}
+                    >
+                      <div 
+                        className="w-full mx-auto"
+                        style={{ 
+                          width: cardWidth > 0 ? Math.max(cardWidth - 16, cardWidth * 0.95) : '100%',
+                          padding: cardWidth > 0 ? '0 8px' : '0 8px',
+                        }}
+                      >
+                        <Card className={`p-4 sm:p-5 md:p-6 bg-slate-900/90 border-2 rounded-2xl shadow-2xl transition-all duration-300 ${
+                          isCurrent 
+                            ? 'border-slate-600/80 hover:border-cyan-500/60 hover:shadow-cyan-500/20 shadow-cyan-500/10' 
+                            : 'border-slate-700/50'
+                        }`}>
+                          <div className="w-full flex justify-center">
+                            <div className="w-full max-w-full">
+                              <QuestionDisplay
+                                question={question}
+                                showPassage={shouldShowPassageForQuestion}
+                                selectedAnswer={answer?.user_answer || null}
+                                showCorrectAnswer={true}
+                                isReview={true}
+                                questionNumber={index + 1}
+                                disabled={true}
+                              />
+                            </div>
+                          </div>
+                        </Card>
+                      </div>
+                    </motion.div>
+                  );
+                })
+              ) : (
+                <div className="w-full flex items-center justify-center p-8">
+                  <p className="text-slate-400">No questions to display</p>
+                </div>
+              )}
+            </motion.div>
+          </div>
+        </div>
 
         {/* Answer Review Section */}
         {currentAnswer && (
@@ -329,25 +588,53 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
           </motion.div>
         )}
 
-        {/* Solution Section */}
+        {/* Solution Section with Toggle */}
         {currentQuestion?.explanation && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, type: 'spring', stiffness: 100 }}
           >
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border-2 border-blue-500/30">
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                  <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border-2 border-blue-500/30 rounded-2xl">
+              {/* Toggle Button */}
+              <button
+                onClick={() => setShowSolution(!showSolution)}
+                className="w-full flex items-center justify-between p-3 sm:p-4 rounded-xl bg-blue-500/20 hover:bg-blue-500/30 transition-colors mb-3 sm:mb-4"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
+                  </div>
+                  <h3 className="font-bold text-base sm:text-lg text-white">
+                    {showSolution ? 'Hide Solution' : 'Show Solution'}
+                  </h3>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-base sm:text-lg text-white mb-2 sm:mb-3">Explanation</h3>
-                  <p className="text-sm sm:text-base text-slate-200 leading-relaxed whitespace-pre-wrap">
-                    {currentQuestion.explanation}
-                  </p>
-                </div>
-              </div>
+                {showSolution ? (
+                  <ChevronUp className="w-5 h-5 text-blue-400" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-blue-400" />
+                )}
+              </button>
+
+              {/* Collapsible Solution Content */}
+              <AnimatePresence>
+                {showSolution && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
+                    <div className="pt-2 sm:pt-3">
+                      <h4 className="font-semibold text-sm sm:text-base text-blue-300 mb-2 sm:mb-3">Explanation</h4>
+                      <p className="text-sm sm:text-base text-slate-200 leading-relaxed whitespace-pre-wrap">
+                        {currentQuestion.explanation}
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </Card>
           </motion.div>
         )}

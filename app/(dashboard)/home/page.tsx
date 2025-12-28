@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MagicCard } from '@/components/magic/MagicCard';
 import { MagicButton } from '@/components/magic/MagicButton';
@@ -58,6 +58,15 @@ import {
  * - Mobile-first, above-the-fold critical info
  * - Gamified and stimulating
  */
+
+// CTA (Call To Action) type definition for primary button
+interface PrimaryCTA {
+  text: string;
+  href: string;
+  variant: 'primary' | 'secondary' | 'ghost' | 'icon';
+  icon: React.ComponentType<{ className?: string }>;
+}
+
 export default function HomePage() {
   const { userId, isGuest, isLoading: authLoading, user: authUser, enableGuestMode } = useAuth();
   const router = useRouter();
@@ -478,11 +487,10 @@ export default function HomePage() {
       return null;
     }
     
-    // If validation hasn't completed yet, don't return any session
-    // This prevents race conditions where invalid sessions are shown before validation
-    if (!validationComplete) {
-      return null;
-    }
+    // If validation hasn't completed yet, we can still show sessions but with a warning
+    // This allows the button to work immediately while validation runs in background
+    // We'll do basic validation inline if needed
+    // Removed console.log to prevent infinite loop in render
     
     // Find the first valid incomplete session (most recent, validated, not invalid, has enough questions)
     for (const session of incompleteSessions) {
@@ -497,10 +505,25 @@ export default function HomePage() {
         continue;
       }
       
-      // Validation check: only allow validated sessions through
+      // Validation check: prefer validated sessions, but allow unvalidated if validation is in progress
       if (!validatedSessions.has(session.id)) {
-        // Session hasn't been validated - skip it
-        continue;
+        if (validationComplete) {
+          // Validation is complete and this session wasn't validated - skip it
+          continue;
+        }
+        // Validation is still in progress - do basic inline validation
+        // Check for required fields: mode, id, total_questions
+        if (!session.mode || !session.id || !session.total_questions) {
+          console.warn('[Home] Session missing required fields (validation in progress):', {
+            sessionId: session.id,
+            hasMode: !!session.mode,
+            hasId: !!session.id,
+            hasTotalQuestions: !!session.total_questions,
+          });
+          continue;
+        }
+        // Basic validation passed - allow it through (full validation will complete in background)
+        // Removed console.log to prevent infinite loop in render
       }
       
       // Valid session found
@@ -619,68 +642,90 @@ export default function HomePage() {
     };
   };
 
-  // Smart CTA logic
-  const getPrimaryCTA = () => {
+  // Smart CTA logic - Always returns a valid CTA object
+  const getPrimaryCTA = (): PrimaryCTA => {
     const incompleteSession = getIncompleteSession();
     const streakAtRisk = isStreakAtRisk();
     const dailyQuestions = getDailyQuestionsAnswered();
     const dailyGoal = getDailyGoal();
 
+    // Default fallback CTA (guaranteed return)
+    const defaultCTA: PrimaryCTA = {
+      text: 'Start Learning',
+      href: '/learn',
+      variant: 'primary',
+      icon: BookOpen,
+    };
+
+    // Priority 1: Resume incomplete session (if valid)
     if (incompleteSession) {
-      const subject = subjects.find(s => s.id === incompleteSession.subject_id);
-      
-      // Validate mode and session ID
-      const validModes = ['practice', 'test', 'timed'];
-      const mode = incompleteSession.mode?.toLowerCase();
-      
-      if (!mode || !validModes.includes(mode)) {
-        console.warn('[Home] Invalid session mode:', incompleteSession.mode, 'Session:', incompleteSession);
-        // Fall through to next CTA option
-      } else if (!incompleteSession.id) {
-        console.warn('[Home] Session missing ID:', incompleteSession);
-        // Fall through to next CTA option
-      } else {
-        const href = `/${mode}/${incompleteSession.id}`;
+      try {
+        const subject = subjects.find(s => s.id === incompleteSession.subject_id);
         
-        // Validate href construction
-        if (href && href !== '/undefined/undefined' && !href.includes('undefined')) {
-          return {
-            text: `Resume ${subject?.name || 'Session'}`,
-            href,
-            variant: 'primary' as const,
-            icon: Play,
-          };
+        // Validate mode and session ID
+        const validModes = ['practice', 'test', 'timed'];
+        const mode = incompleteSession.mode?.toLowerCase()?.trim();
+        const sessionId = incompleteSession.id?.trim();
+        
+        // Comprehensive validation
+        if (mode && validModes.includes(mode) && sessionId && sessionId.length > 0) {
+          const href = `/${mode}/${sessionId}`;
+          
+          // Double-check href is valid
+          if (href && !href.includes('undefined') && !href.includes('null') && href.length > 3) {
+            return {
+              text: `Resume ${subject?.name || 'Session'}`,
+              href,
+              variant: 'primary',
+              icon: Play,
+            };
+          } else {
+            console.warn('[Home] Invalid href constructed for incomplete session:', {
+              mode,
+              sessionId,
+              href,
+              incompleteSession,
+            });
+          }
         } else {
-          console.warn('[Home] Invalid href constructed:', { mode, sessionId: incompleteSession.id, href });
+          console.warn('[Home] Incomplete session validation failed:', {
+            hasMode: !!mode,
+            validMode: mode ? validModes.includes(mode) : false,
+            hasSessionId: !!sessionId,
+            mode,
+            sessionId,
+            incompleteSession,
+          });
         }
+      } catch (error) {
+        console.error('[Home] Error processing incomplete session:', error);
+        // Fall through to next option
       }
     }
 
-    if (streakAtRisk && stats?.currentStreak) {
+    // Priority 2: Streak at risk
+    if (streakAtRisk && stats?.currentStreak && stats.currentStreak > 0) {
       return {
         text: `Keep Your ${stats.currentStreak}-Day Streak!`,
         href: '/quick-practice',
-        variant: 'primary' as const,
+        variant: 'primary',
         icon: Flame,
       };
     }
 
-    if (dailyQuestions < dailyGoal) {
+    // Priority 3: Daily goal not met
+    if (dailyGoal > 0 && dailyQuestions < dailyGoal) {
       const remaining = dailyGoal - dailyQuestions;
       return {
         text: `Complete ${remaining} More Question${remaining > 1 ? 's' : ''} Today`,
-        href: '/learn', // Updated to use unified learning gateway
-        variant: 'primary' as const,
+        href: '/learn',
+        variant: 'primary',
         icon: Target,
       };
     }
 
-    return {
-      text: 'Start Learning',
-      href: '/learn', // Updated to use unified learning gateway
-      variant: 'primary' as const,
-      icon: BookOpen,
-    };
+    // Default: Start learning
+    return defaultCTA;
   };
 
   // Get motivational message
@@ -726,16 +771,37 @@ export default function HomePage() {
 
   // ========== DATA CALCULATIONS ==========
 
-  const incompleteSession = getIncompleteSession();
-  const weakAreas = getWeakAreas();
-  const weeklyStudyTimeMinutes = calculateWeeklyStudyTime();
+  // Memoize expensive calculations to prevent infinite re-renders
+  const incompleteSession = useMemo(() => getIncompleteSession(), [recentSessions, validatedSessions, invalidSessions, validationComplete, subjects]);
+  const weakAreas = useMemo(() => getWeakAreas(), [progress, subjects]);
+  const weeklyStudyTimeMinutes = useMemo(() => calculateWeeklyStudyTime(), [recentSessions]);
   const dailyQuestionsAnswered = getDailyQuestionsAnswered();
   const dailyGoal = getDailyGoal();
-  const dailyProgress = dailyGoal > 0 
-    ? Math.min((dailyQuestionsAnswered / dailyGoal) * 100, 100)
-    : 0;
-  const primaryCTA = getPrimaryCTA();
-  const PrimaryIcon = primaryCTA.icon;
+  const dailyProgress = useMemo(() => {
+    return dailyGoal > 0 
+      ? Math.min((dailyQuestionsAnswered / dailyGoal) * 100, 100)
+      : 0;
+  }, [dailyQuestionsAnswered, dailyGoal]);
+  // Get primary CTA with safety checks
+  const primaryCTA = useMemo(() => getPrimaryCTA(), [incompleteSession, stats, dailyQuestionsAnswered, dailyGoal, subjects]);
+  
+  // Ensure we have a valid CTA (defensive programming)
+  if (!primaryCTA || !primaryCTA.href || !primaryCTA.text || !primaryCTA.icon) {
+    console.error('[Home] Invalid primaryCTA returned:', primaryCTA);
+    // Use safe fallback - getPrimaryCTA should always return valid, but just in case
+    const fallbackCTA: PrimaryCTA = {
+      text: 'Start Learning',
+      href: '/learn',
+      variant: 'primary',
+      icon: BookOpen,
+    };
+    // If primaryCTA exists but is missing properties, merge with fallback
+    if (primaryCTA) {
+      Object.assign(primaryCTA, fallbackCTA);
+    }
+  }
+  
+  const PrimaryIcon = primaryCTA.icon || BookOpen;
 
   if (loading) {
     return (
@@ -1044,34 +1110,81 @@ export default function HomePage() {
               className="flex flex-col xs:flex-row gap-2 sm:gap-3"
             >
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="flex-1 xs:flex-initial">
-                <MagicButton 
-                  variant={primaryCTA.variant} 
-                  size="sm"
-                  className="w-full sm:w-auto text-sm sm:text-base py-2.5 sm:py-3 px-4 sm:px-6 shadow-lg shadow-cyan-500/40 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 border-0"
-                  onClick={async () => {
-                    // Validate href before navigation
-                    if (!primaryCTA.href || primaryCTA.href === '#' || primaryCTA.href.includes('undefined')) {
-                      console.error('[Home] Invalid CTA href:', primaryCTA);
-                      alert('Unable to navigate. Please try selecting a subject from the menu.');
-                      return;
-                    }
-                    
-                    // Log navigation for debugging
-                    console.log('[Home] Navigating to:', primaryCTA.href, 'from CTA:', primaryCTA.text);
-                    
-                    // Navigate using router.push for programmatic navigation
-                    try {
-                      await router.push(primaryCTA.href);
-                    } catch (error) {
-                      console.error('[Home] Navigation error:', error);
-                      alert('Failed to navigate. Please try again.');
-                    }
-                  }}
-                >
-                  <PrimaryIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
-                  <span className="truncate">{primaryCTA.text}</span>
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </MagicButton>
+                {primaryCTA && primaryCTA.href && primaryCTA.text ? (
+                  <MagicButton 
+                    variant={primaryCTA.variant || 'primary'} 
+                    size="sm"
+                    className="w-full sm:w-auto text-sm sm:text-base py-2.5 sm:py-3 px-4 sm:px-6 shadow-lg shadow-cyan-500/40 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 border-0"
+                    onClick={async () => {
+                      // Enhanced validation before navigation
+                      const href = primaryCTA.href?.trim();
+                      
+                      if (!href || href === '#' || href.includes('undefined') || href.includes('null') || href.length < 2) {
+                        console.error('[Home] Invalid CTA href - Navigation blocked:', {
+                          href,
+                          cta: primaryCTA,
+                          timestamp: new Date().toISOString(),
+                        });
+                        alert('Unable to navigate. Please try selecting a subject from the menu.');
+                        // Fallback navigation to safe route
+                        try {
+                          await router.push('/learn');
+                        } catch (fallbackError) {
+                          console.error('[Home] Fallback navigation also failed:', fallbackError);
+                        }
+                        return;
+                      }
+                      
+                      // Log navigation for debugging
+                      console.log('[Home] Navigating to:', href, 'from CTA:', primaryCTA.text);
+                      
+                      // Navigate using router.push for programmatic navigation
+                      try {
+                        await router.push(href);
+                      } catch (error) {
+                        console.error('[Home] Navigation error:', {
+                          error,
+                          href,
+                          errorType: error?.constructor?.name,
+                          errorMessage: error instanceof Error ? error.message : String(error),
+                          timestamp: new Date().toISOString(),
+                        });
+                        
+                        // Try fallback navigation
+                        try {
+                          console.log('[Home] Attempting fallback navigation to /learn');
+                          await router.push('/learn');
+                        } catch (fallbackError) {
+                          console.error('[Home] Fallback navigation also failed:', fallbackError);
+                          alert('Failed to navigate. Please try refreshing the page or selecting a subject from the menu.');
+                        }
+                      }
+                    }}
+                  >
+                    {PrimaryIcon && <PrimaryIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />}
+                    <span className="truncate">{primaryCTA.text}</span>
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </MagicButton>
+                ) : (
+                  // Fallback button if CTA is invalid
+                  <MagicButton 
+                    variant="primary" 
+                    size="sm"
+                    className="w-full sm:w-auto text-sm sm:text-base py-2.5 sm:py-3 px-4 sm:px-6 shadow-lg shadow-cyan-500/40 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 border-0"
+                    onClick={async () => {
+                      console.warn('[Home] Fallback button clicked - CTA was invalid');
+                      try {
+                        await router.push('/learn');
+                      } catch (error) {
+                        console.error('[Home] Fallback navigation error:', error);
+                      }
+                    }}
+                  >
+                    <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
+                    <span className="truncate">Start Learning</span>
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </MagicButton>
+                )}
               </motion.div>
               <Link href="/analytics" className="hidden xs:block">
                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>

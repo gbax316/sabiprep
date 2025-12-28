@@ -233,7 +233,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
               ? getTopics(sessionData.subject_id).then(allTopics =>
                   allTopics.filter(t => sessionData.topic_ids!.includes(t.id))
                 )
-              : getTopic(sessionData.topic_id || sessionData.topic_ids?.[0] || '').then(t => t ? [t] : [])
+              : (() => {
+                  const topicId = sessionData.topic_id || sessionData.topic_ids?.[0];
+                  if (!topicId || topicId.trim() === '') {
+                    console.warn('[Timed] Empty topic ID, skipping topic fetch');
+                    return Promise.resolve([]);
+                  }
+                  return getTopic(topicId).then(t => t ? [t] : []).catch(() => []);
+                })()
           ]);
           
           setSubject(subjectData);
@@ -374,7 +381,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
           ? getTopics(sessionData.subject_id).then(allTopics => 
               allTopics.filter(t => allTopicIds.includes(t.id))
             ).catch(() => [])
-          : getTopic(sessionData.topic_id || '').then(t => t ? [t] : []).catch(() => []);
+          : (() => {
+              const topicId = sessionData.topic_id;
+              if (!topicId || topicId.trim() === '') {
+                console.warn('[Timed] Empty topic ID for single topic session, skipping');
+                return Promise.resolve([]);
+              }
+              return getTopic(topicId).then(t => t ? [t] : []).catch(() => []);
+            })();
       } else if (allTopicIds.length === 0) {
         // No topics available - can't load questions
         console.error('[Timed] No topics found in session data');
