@@ -241,11 +241,12 @@ export default function ReviewDashboardPage() {
 
     try {
       setReviewing(true);
-      const response = await fetch('/api/admin/questions/review', {
+      // Use fetchWithRetry with 60 second timeout (AI reviews can take 10-30 seconds) and 1 retry
+      const response = await fetchWithRetry('/api/admin/questions/review', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ questionId: selectedQuestionId }),
-      });
+      }, 60000, 1);
 
       const data = await response.json();
 
@@ -262,7 +263,7 @@ export default function ReviewDashboardPage() {
         alert(`Review failed: ${data.error || 'Unknown error'}`);
       }
     } catch (error: any) {
-      alert(`Review failed: ${error.message}`);
+      alert(`Review failed: ${error.message || 'Request timed out or failed. Please try again.'}`);
     } finally {
       setReviewing(false);
     }
@@ -273,13 +274,15 @@ export default function ReviewDashboardPage() {
    */
   const loadSubjects = useCallback(async () => {
     try {
-      const response = await fetch('/api/admin/subjects');
+      // Use fetchWithRetry with 10 second timeout and 2 retries
+      const response = await fetchWithRetry('/api/admin/subjects', {}, 10000, 2);
       if (response.ok) {
         const data = await response.json();
         setSubjects(data.subjects || data || []);
       }
     } catch (error) {
       console.error('Failed to load subjects:', error);
+      setSubjects([]);
     }
   }, []);
 
@@ -299,7 +302,8 @@ export default function ReviewDashboardPage() {
         params.append('subjectId', subjectId);
       }
 
-      const response = await fetch(`/api/admin/questions?${params.toString()}`);
+      // Use fetchWithRetry with 10 second timeout and 2 retries
+      const response = await fetchWithRetry(`/api/admin/questions?${params.toString()}`, {}, 10000, 2);
       const data = await response.json();
 
       if (response.ok) {
@@ -308,9 +312,14 @@ export default function ReviewDashboardPage() {
         setQuestions(questionsList);
         const pagination = data.pagination || data.data?.pagination;
         setQuestionTotalPages(pagination?.totalPages || 1);
+      } else {
+        setQuestions([]);
+        setQuestionTotalPages(1);
       }
     } catch (error) {
       console.error('Failed to load questions:', error);
+      setQuestions([]);
+      setQuestionTotalPages(1);
     } finally {
       setLoadingQuestions(false);
     }
@@ -377,14 +386,15 @@ export default function ReviewDashboardPage() {
 
     try {
       setReviewingBatch(true);
-      const response = await fetch('/api/admin/questions/review/batch', {
+      // Use fetchWithRetry with 120 second timeout (batch reviews can take longer) and 1 retry
+      const response = await fetchWithRetry('/api/admin/questions/review/batch', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           questionIds: Array.from(selectedQuestionIds),
           batchSize: 10 
         }),
-      });
+      }, 120000, 1);
 
       const data = await response.json();
 
@@ -400,7 +410,7 @@ export default function ReviewDashboardPage() {
         alert(`Batch review failed: ${data.error || 'Unknown error'}`);
       }
     } catch (error: any) {
-      alert(`Batch review failed: ${error.message}`);
+      alert(`Batch review failed: ${error.message || 'Request timed out or failed. Please try again.'}`);
     } finally {
       setReviewingBatch(false);
     }
