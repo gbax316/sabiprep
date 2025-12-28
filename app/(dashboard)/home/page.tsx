@@ -628,14 +628,32 @@ export default function HomePage() {
 
     if (incompleteSession) {
       const subject = subjects.find(s => s.id === incompleteSession.subject_id);
-      const href = `/${incompleteSession.mode}/${incompleteSession.id}`;
       
-      return {
-        text: `Resume ${subject?.name || 'Session'}`,
-        href,
-        variant: 'primary' as const,
-        icon: Play,
-      };
+      // Validate mode and session ID
+      const validModes = ['practice', 'test', 'timed'];
+      const mode = incompleteSession.mode?.toLowerCase();
+      
+      if (!mode || !validModes.includes(mode)) {
+        console.warn('[Home] Invalid session mode:', incompleteSession.mode, 'Session:', incompleteSession);
+        // Fall through to next CTA option
+      } else if (!incompleteSession.id) {
+        console.warn('[Home] Session missing ID:', incompleteSession);
+        // Fall through to next CTA option
+      } else {
+        const href = `/${mode}/${incompleteSession.id}`;
+        
+        // Validate href construction
+        if (href && href !== '/undefined/undefined' && !href.includes('undefined')) {
+          return {
+            text: `Resume ${subject?.name || 'Session'}`,
+            href,
+            variant: 'primary' as const,
+            icon: Play,
+          };
+        } else {
+          console.warn('[Home] Invalid href constructed:', { mode, sessionId: incompleteSession.id, href });
+        }
+      }
     }
 
     if (streakAtRisk && stats?.currentStreak) {
@@ -651,7 +669,7 @@ export default function HomePage() {
       const remaining = dailyGoal - dailyQuestions;
       return {
         text: `Complete ${remaining} More Question${remaining > 1 ? 's' : ''} Today`,
-        href: '/subjects',
+        href: '/learn', // Updated to use unified learning gateway
         variant: 'primary' as const,
         icon: Target,
       };
@@ -659,7 +677,7 @@ export default function HomePage() {
 
     return {
       text: 'Start Learning',
-      href: '/subjects',
+      href: '/learn', // Updated to use unified learning gateway
       variant: 'primary' as const,
       icon: BookOpen,
     };
@@ -1025,22 +1043,36 @@ export default function HomePage() {
               transition={{ delay: 0.3, type: 'spring', stiffness: 100 }}
               className="flex flex-col xs:flex-row gap-2 sm:gap-3"
             >
-              <Link 
-                href={primaryCTA.href} 
-                className="flex-1 xs:flex-initial"
-              >
-                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                  <MagicButton 
-                    variant={primaryCTA.variant} 
-                    size="sm"
-                    className="w-full sm:w-auto text-sm sm:text-base py-2.5 sm:py-3 px-4 sm:px-6 shadow-lg shadow-cyan-500/40 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 border-0"
-                  >
-                    <PrimaryIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
-                    <span className="truncate">{primaryCTA.text}</span>
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </MagicButton>
-                </motion.div>
-              </Link>
+              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="flex-1 xs:flex-initial">
+                <MagicButton 
+                  variant={primaryCTA.variant} 
+                  size="sm"
+                  className="w-full sm:w-auto text-sm sm:text-base py-2.5 sm:py-3 px-4 sm:px-6 shadow-lg shadow-cyan-500/40 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 border-0"
+                  onClick={async () => {
+                    // Validate href before navigation
+                    if (!primaryCTA.href || primaryCTA.href === '#' || primaryCTA.href.includes('undefined')) {
+                      console.error('[Home] Invalid CTA href:', primaryCTA);
+                      alert('Unable to navigate. Please try selecting a subject from the menu.');
+                      return;
+                    }
+                    
+                    // Log navigation for debugging
+                    console.log('[Home] Navigating to:', primaryCTA.href, 'from CTA:', primaryCTA.text);
+                    
+                    // Navigate using router.push for programmatic navigation
+                    try {
+                      await router.push(primaryCTA.href);
+                    } catch (error) {
+                      console.error('[Home] Navigation error:', error);
+                      alert('Failed to navigate. Please try again.');
+                    }
+                  }}
+                >
+                  <PrimaryIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
+                  <span className="truncate">{primaryCTA.text}</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </MagicButton>
+              </motion.div>
               <Link href="/analytics" className="hidden xs:block">
                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                   <MagicButton 
@@ -1187,26 +1219,55 @@ export default function HomePage() {
                   </motion.div>
                 </Link>
                 {incompleteSession && incompleteSession.mode && incompleteSession.id ? (
-                  <Link href={`/${incompleteSession.mode}/${incompleteSession.id}`}>
-                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                      <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-500/30 hover:border-blue-400/50">
-                        <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-1.5 text-blue-400" />
-                        Continue
-                      </MagicButton>
-                    </motion.div>
-                  </Link>
+                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                    <MagicButton 
+                      variant="secondary" 
+                      size="sm" 
+                      className="w-full text-xs sm:text-sm py-2.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-500/30 hover:border-blue-400/50"
+                      onClick={async () => {
+                        // Validate mode and session ID
+                        const validModes = ['practice', 'test', 'timed'];
+                        const mode = incompleteSession.mode?.toLowerCase();
+                        
+                        if (!mode || !validModes.includes(mode)) {
+                          console.error('[Home] Invalid session mode in Today\'s Mission:', incompleteSession.mode);
+                          alert('Unable to resume session. Please start a new learning session.');
+                          return;
+                        }
+                        
+                        if (!incompleteSession.id) {
+                          console.error('[Home] Session missing ID in Today\'s Mission:', incompleteSession);
+                          alert('Unable to resume session. Please start a new learning session.');
+                          return;
+                        }
+                        
+                        const href = `/${mode}/${incompleteSession.id}`;
+                        console.log('[Home] Resuming session from Today\'s Mission:', href);
+                        
+                        try {
+                          await router.push(href);
+                        } catch (error) {
+                          console.error('[Home] Navigation error in Today\'s Mission:', error);
+                          alert('Failed to resume session. Please try again.');
+                        }
+                      }}
+                    >
+                      <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-1.5 text-blue-400" />
+                      Continue
+                    </MagicButton>
+                  </motion.div>
                 ) : (
-                  <Link href="/subjects">
+                  <Link href="/learn" prefetch={true}>
                     <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                       <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2.5 bg-gradient-to-r from-pink-500/20 to-rose-500/20 border-pink-500/30 hover:border-pink-400/50">
                         <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-1.5 text-pink-400" />
-                        <span className="hidden xs:inline">Challenge</span>
-                        <span className="xs:hidden">Try</span>
+                        <span className="hidden xs:inline">Start Learning</span>
+                        <span className="xs:hidden">Start</span>
                       </MagicButton>
                     </motion.div>
                   </Link>
                 )}
-                <Link href="/subjects" className="col-span-2 sm:col-span-1">
+                <Link href="/learn" prefetch={true} className="col-span-2 sm:col-span-1">
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2.5 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border-violet-500/30 hover:border-violet-400/50">
                       <Compass className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-1.5 text-violet-400" />
@@ -1655,7 +1716,7 @@ export default function HomePage() {
                 </motion.div>
                 <h2 className="text-lg sm:text-xl font-bold text-white">Recent Activity</h2>
               </div>
-              <Link href="/analytics">
+              <Link href="/history">
                 <motion.div whileHover={{ scale: 1.05, x: 3 }} whileTap={{ scale: 0.95 }}>
                   <MagicButton variant="ghost" size="sm" className="text-xs sm:text-sm text-cyan-400 hover:text-cyan-300">
                     View All <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
