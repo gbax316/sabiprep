@@ -61,47 +61,67 @@ export default function DailyChallengePage() {
     try {
       setLoading(true);
       
-      // Load today's challenges and user completions in parallel
-      // Don't fetch stats initially - can be deferred if needed
-      const [challenges, completions] = await Promise.all([
-        getTodayDailyChallenges(),
-        getUserDailyChallengeCompletions(userId, 7), // Last 7 completions
-      ]);
-
+      // Load today's challenges first (critical data)
+      const challenges = await getTodayDailyChallenges();
       setDailyChallenges(challenges);
-      setCompletedChallenges(completions);
 
       // Build subjects map for quick lookup
       const subjectsMap = new Map<string, Subject>();
+      const subjectIdsToFetch = new Set<string>();
+      
       for (const challenge of challenges) {
         if ('subject' in challenge && challenge.subject) {
           const subject = challenge.subject as Subject;
           subjectsMap.set(subject.id, subject);
+        } else if (challenge.subject_id) {
+          // Subject not included in join - fetch separately
+          subjectIdsToFetch.add(challenge.subject_id);
         }
       }
+      
       setSubjects(subjectsMap);
 
-      // Load stats in background (non-blocking)
-      getUserStats(userId)
-        .then(userStats => {
+      // Fetch missing subjects in background if needed
+      if (subjectIdsToFetch.size > 0) {
+        getSubjects()
+          .then(allSubjects => {
+            const updatedMap = new Map(subjectsMap);
+            for (const subject of allSubjects) {
+              if (subjectIdsToFetch.has(subject.id)) {
+                updatedMap.set(subject.id, subject);
+              }
+            }
+            setSubjects(updatedMap);
+          })
+          .catch(() => {
+            // Ignore errors - subjects will be fetched when needed
+          });
+      }
+
+      // Mark loading complete immediately - page can render
+      setLoading(false);
+
+      // Load non-critical data in background (completions, stats)
+      Promise.allSettled([
+        getUserDailyChallengeCompletions(userId, 7).then(completions => {
+          setCompletedChallenges(completions);
+        }).catch(() => {
+          // Ignore errors
+        }),
+        getUserStats(userId).then(userStats => {
           setStats({
             currentStreak: userStats.currentStreak,
             xpPoints: userStats.xpPoints,
           });
-        })
-        .catch(() => {
-          // Ignore errors - stats are not critical for initial render
-        });
+        }).catch(() => {
+          // Ignore errors
+        }),
+      ]);
     } catch (error) {
       console.error('Error loading daily challenges:', error);
-      if (error instanceof Error) {
-        console.error('Error message:', error.message);
-        console.error('Error stack:', error.stack);
-      }
       // Set empty arrays on error so the page still renders
       setDailyChallenges([]);
       setCompletedChallenges([]);
-    } finally {
       setLoading(false);
     }
   }
@@ -117,22 +137,31 @@ export default function DailyChallengePage() {
       
       if (allSubjects.length === 0) {
         alert('No subjects available to generate challenges from.');
+        setGenerating(false);
         return;
       }
       
       let generatedCount = 0;
       const errors: string[] = [];
       
-      // Generate challenge for each subject (20 questions, 20 minutes)
-      for (const subject of allSubjects) {
+      // Generate challenge for each subject in parallel (faster)
+      const generationPromises = allSubjects.map(async (subject) => {
         try {
           const challenge = await forceGenerateDailyChallenge(subject.id, undefined, 20); // 20 questions
-          if (challenge) {
-            generatedCount++;
-          }
+          return challenge ? { success: true, subjectName: subject.name } : { success: false, subjectName: subject.name };
         } catch (err) {
           console.error(`Failed to generate challenge for ${subject.name}:`, err);
-          errors.push(subject.name);
+          return { success: false, subjectName: subject.name, error: true };
+        }
+      });
+
+      const results = await Promise.all(generationPromises);
+      
+      for (const result of results) {
+        if (result.success) {
+          generatedCount++;
+        } else if (result.error) {
+          errors.push(result.subjectName);
         }
       }
       
@@ -144,7 +173,10 @@ export default function DailyChallengePage() {
       if (errors.length > 0) {
         alert(`Generated ${generatedCount} challenges. Some subjects failed: ${errors.join(', ')}`);
       } else if (generatedCount === 0) {
-        alert('Could not generate any challenges. Make sure subjects have at least 10 published questions.');
+        alert('Could not generate any challenges. Make sure subjects have at least 20 published questions.');
+      } else {
+        // All succeeded
+        alert(`Successfully generated ${generatedCount} challenges!`);
       }
     } catch (error) {
       console.error('Error generating challenges:', error);

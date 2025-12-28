@@ -2508,23 +2508,7 @@ export async function getTodayDailyChallenges(): Promise<DailyChallenge[]> {
   const today = new Date().toISOString().split('T')[0];
   
   try {
-    // First check if challenges exist for today (fast query)
-    const { data: existingChallenges, error: checkError } = await supabase
-      .from('daily_challenges')
-      .select('id')
-      .eq('challenge_date', today)
-      .limit(1);
-
-    // Only generate if no challenges exist (optimization: avoid calling generate on every page load)
-    if (!checkError && (!existingChallenges || existingChallenges.length === 0)) {
-      try {
-        await generateDailyChallenges(today);
-      } catch (genError) {
-        console.warn('Could not generate daily challenges (migration may not be run):', genError);
-        // Continue even if generation fails
-      }
-    }
-
+    // Load challenges directly - don't wait for generation (optimization: faster page load)
     const { data, error } = await supabase
       .from('daily_challenges')
       .select('*, subject:subjects(*)')
@@ -2537,6 +2521,15 @@ export async function getTodayDailyChallenges(): Promise<DailyChallenge[]> {
         return [];
       }
       throw error;
+    }
+    
+    // If no challenges exist, trigger generation in background (non-blocking)
+    if (!data || data.length === 0) {
+      // Don't wait for generation - let it run in background
+      generateDailyChallenges(today).catch((genError) => {
+        console.warn('Could not generate daily challenges in background:', genError);
+      });
+      return [];
     }
     
     // Sort by subject name manually since order might not work with join
