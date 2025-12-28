@@ -80,6 +80,11 @@ export default function HomePage() {
   const [achievements, setAchievements] = useState<Achievement[]>([]);
   const [userAchievements, setUserAchievements] = useState<UserAchievement[]>([]);
   const [challengeSubjects, setChallengeSubjects] = useState<Map<string, Subject>>(new Map());
+  
+  // Loading states for deferred sections
+  const [loadingAchievements, setLoadingAchievements] = useState(false);
+  const [loadingBadges, setLoadingBadges] = useState(false);
+  const [loadingChallenges, setLoadingChallenges] = useState(false);
 
   // Redirect if not authenticated and not guest
   useEffect(() => {
@@ -110,16 +115,13 @@ export default function HomePage() {
       setLoading(true);
       setError(null);
 
-      // Update streak on page load (don't fail if this errors)
-      try {
-        await updateUserStreak(userId);
-      } catch (streakError) {
-        console.warn('Error updating streak:', streakError);
-        // Continue loading even if streak update fails
-      }
+      // Update streak on page load (non-blocking)
+      updateUserStreak(userId).catch(() => {
+        console.warn('Error updating streak');
+      });
 
-      // Fetch data in parallel with individual error handling
-      const [profile, userStats, allSubjects, preferredSubjects, userProgress, sessions, goals, badges, challenges, challengeCompletions, allAchievements, userAchievementsData, allBadges] = await Promise.allSettled([
+      // CRITICAL DATA: Load first for initial render
+      const [profile, userStats, allSubjects, preferredSubjects, userProgress, sessions, goals] = await Promise.allSettled([
         getUserProfile(userId).catch(() => null),
         getUserStats(userId).catch(() => ({
           questionsAnswered: 0,
@@ -135,12 +137,6 @@ export default function HomePage() {
         getUserProgress(userId).catch(() => []),
         getUserSessions(userId, 50).catch(() => []),
         getUserGoals(userId).catch(() => []),
-        getUserMasteryBadges(userId).catch(() => []),
-        getTodayDailyChallenges().catch(() => []),
-        getUserDailyChallengeCompletions(userId, 3).catch(() => []),
-        getAchievements().catch(() => []),
-        getUserAchievements(userId).catch(() => []),
-        getMasteryBadges().catch(() => []),
       ]);
 
       setUserProfile(profile.status === 'fulfilled' ? profile.value : null);
@@ -170,12 +166,8 @@ export default function HomePage() {
       
       setRecentSessions(loadedSessions);
       setUserGoals(goals.status === 'fulfilled' ? goals.value : []);
-      setMasteryBadges(badges.status === 'fulfilled' ? badges.value : []);
-      setAllMasteryBadges(allBadges.status === 'fulfilled' ? allBadges.value : []);
-      const loadedChallenges = challenges.status === 'fulfilled' ? challenges.value : [];
-      setTodayDailyChallenges(loadedChallenges);
-      
-      // Build subject map for challenges
+
+      // Build subject map for challenges (from all subjects loaded)
       const subjectMap = new Map<string, Subject>();
       const allSubjectsList = allSubjects.status === 'fulfilled' ? allSubjects.value : [];
       for (const subject of allSubjectsList) {
@@ -183,10 +175,11 @@ export default function HomePage() {
       }
       setChallengeSubjects(subjectMap);
       
-      // Set achievements
-      setAchievements(allAchievements.status === 'fulfilled' ? allAchievements.value : []);
-      setUserAchievements(userAchievementsData.status === 'fulfilled' ? userAchievementsData.value : []);
-      setDailyChallengeCompletions(challengeCompletions.status === 'fulfilled' ? challengeCompletions.value : []);
+      // Mark initial load complete - page can now render
+      setLoading(false);
+      
+      // DEFERRED DATA: Load after initial render (non-blocking)
+      loadDeferredData(userId, allSubjectsList);
       
       // Validate incomplete sessions in the background (non-blocking)
       // Only validate for authenticated users, not guests
@@ -217,9 +210,67 @@ export default function HomePage() {
       setProgress([]);
       setRecentSessions([]);
       setUserGoals([]);
-    } finally {
       setLoading(false);
     }
+  }
+
+  // Load deferred data after initial render (non-critical sections)
+  async function loadDeferredData(userId: string, allSubjectsList: Subject[]) {
+    // Load achievements, badges, and challenges in parallel (non-blocking)
+    Promise.allSettled([
+      // Load mastery badges
+      (async () => {
+        try {
+          setLoadingBadges(true);
+          const [badges, allBadges] = await Promise.all([
+            getUserMasteryBadges(userId).catch(() => []),
+            getMasteryBadges().catch(() => []),
+          ]);
+          setMasteryBadges(badges);
+          setAllMasteryBadges(allBadges);
+        } catch (error) {
+          console.error('Error loading badges:', error);
+        } finally {
+          setLoadingBadges(false);
+        }
+      })(),
+      
+      // Load daily challenges
+      (async () => {
+        try {
+          setLoadingChallenges(true);
+          const [challenges, completions] = await Promise.all([
+            getTodayDailyChallenges().catch(() => []),
+            getUserDailyChallengeCompletions(userId, 3).catch(() => []),
+          ]);
+          setTodayDailyChallenges(challenges);
+          setDailyChallengeCompletions(completions);
+        } catch (error) {
+          console.error('Error loading challenges:', error);
+        } finally {
+          setLoadingChallenges(false);
+        }
+      })(),
+      
+      // Load achievements
+      (async () => {
+        try {
+          setLoadingAchievements(true);
+          const [allAchievementsData, userAchievementsData] = await Promise.all([
+            getAchievements().catch(() => []),
+            getUserAchievements(userId).catch(() => []),
+          ]);
+          setAchievements(allAchievementsData);
+          setUserAchievements(userAchievementsData);
+        } catch (error) {
+          console.error('Error loading achievements:', error);
+        } finally {
+          setLoadingAchievements(false);
+        }
+      })(),
+    ]).catch(() => {
+      // Ignore errors - these are non-critical
+    });
   }
 
   async function loadSubjectsForGuest() {
