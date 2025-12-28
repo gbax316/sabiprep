@@ -2389,28 +2389,47 @@ export async function forceGenerateDailyChallenge(
   const date = challengeDate || new Date().toISOString().split('T')[0];
 
   try {
-    // Try RPC first
+    // Try RPC first (this should work as RPC functions have elevated privileges)
     const { data: challengeId, error: rpcError } = await supabase.rpc('force_generate_daily_challenge', {
       p_subject_id: subjectId,
       p_challenge_date: date,
       p_question_count: questionCount,
     });
 
+    if (rpcError) {
+      console.error('RPC force_generate_daily_challenge error:', {
+        code: rpcError.code,
+        message: rpcError.message,
+        details: rpcError.details,
+        hint: rpcError.hint,
+      });
+      // If RPC fails, fallback will also fail due to RLS, but let's try anyway
+    }
+
     if (!rpcError && challengeId) {
       // Fetch the created challenge
-      const { data } = await supabase
+      const { data, error: fetchError } = await supabase
         .from('daily_challenges')
         .select('*, subject:subjects(*)')
         .eq('id', challengeId)
         .single();
+      
+      if (fetchError) {
+        console.error('Error fetching created challenge:', fetchError);
+        return null;
+      }
+      
       return data || null;
     }
   } catch (error) {
-    console.warn('RPC force_generate_daily_challenge failed, using fallback:', error);
+    console.error('Exception calling RPC force_generate_daily_challenge:', error);
+    // Continue to fallback, but it will likely fail due to RLS
   }
 
-  // Fallback: manually create
+  // Fallback: manually create (WARNING: This will fail if RLS blocks INSERT)
+  // This fallback only works if there's an INSERT policy or service role is used
   try {
+    console.warn('Using fallback method to create challenge. This may fail due to RLS policies.');
     // Ensure challenge_date is a valid date string
     const challengeDate = date || new Date().toISOString().split('T')[0];
     
