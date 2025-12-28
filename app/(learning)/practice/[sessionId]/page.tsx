@@ -528,12 +528,17 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
 
         // Update session progress (skip for guests)
         if (!isGuest && userId) {
-          await updateSession(sessionId, {
+          const newTimeSpentSeconds = (session?.time_spent_seconds || 0) + timeSpent;
+          const updatedSession = await updateSession(sessionId, {
             questions_answered: answeredQuestions.size + 1,
             correct_answers: correctAnswers + (isCorrect ? 1 : 0),
-            time_spent_seconds: session ? session.time_spent_seconds + timeSpent : timeSpent,
+            time_spent_seconds: newTimeSpentSeconds,
             last_question_index: currentIndex,
           });
+          // Update local session state to keep time_spent_seconds in sync
+          if (updatedSession) {
+            setSession(updatedSession);
+          }
         }
 
         // Auto-show solution after answering (if not already shown)

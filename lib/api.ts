@@ -946,7 +946,7 @@ export async function getUserSessions(
       .select('*')
       .eq('user_id', userId)
       .not('status', 'in', '("in_progress","paused")')
-      .order('created_at', { ascending: false })
+      .order('completed_at', { ascending: false, nullsFirst: false })
       .limit(remainingLimit);
     
     if (error) throw error;
