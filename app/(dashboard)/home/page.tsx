@@ -85,6 +85,9 @@ export default function HomePage() {
   const [loadingAchievements, setLoadingAchievements] = useState(false);
   const [loadingBadges, setLoadingBadges] = useState(false);
   const [loadingChallenges, setLoadingChallenges] = useState(false);
+  
+  // Refresh interval for real-time updates (30 seconds)
+  const REFRESH_INTERVAL = 30000;
 
   // Redirect if not authenticated and not guest
   useEffect(() => {
@@ -107,6 +110,43 @@ export default function HomePage() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId, isGuest]);
+
+  // Real-time refresh for daily challenges and achievements
+  useEffect(() => {
+    if (!userId || isGuest) return;
+
+    // Initial load of deferred data (if subjects are loaded)
+    if (subjects.length > 0) {
+      loadDeferredData(userId, subjects);
+    }
+
+    // Set up periodic refresh (every 30 seconds)
+    const refreshInterval = setInterval(() => {
+      refreshRealTimeData(userId);
+    }, REFRESH_INTERVAL);
+
+    // Refresh when page becomes visible (user returns to tab)
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        refreshRealTimeData(userId);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Refresh when window gains focus (user switches back to app)
+    const handleFocus = () => {
+      refreshRealTimeData(userId);
+    };
+    window.addEventListener('focus', handleFocus);
+
+    // Cleanup
+    return () => {
+      clearInterval(refreshInterval);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('focus', handleFocus);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId, isGuest, subjects.length]);
 
   async function loadDashboard() {
     if (!userId) return;
@@ -179,7 +219,10 @@ export default function HomePage() {
       setLoading(false);
       
       // DEFERRED DATA: Load after initial render (non-blocking)
-      loadDeferredData(userId, allSubjectsList);
+      // Note: Real-time refresh useEffect will also trigger this
+      if (allSubjectsList.length > 0) {
+        loadDeferredData(userId, allSubjectsList);
+      }
       
       // Validate incomplete sessions in the background (non-blocking)
       // Only validate for authenticated users, not guests
@@ -216,8 +259,33 @@ export default function HomePage() {
 
   // Load deferred data after initial render (non-critical sections)
   async function loadDeferredData(userId: string, allSubjectsList: Subject[]) {
-    // Load achievements, badges, and challenges in parallel (non-blocking)
+    await refreshRealTimeData(userId, allSubjectsList);
+  }
+
+  // Refresh real-time data (challenges, achievements, stats)
+  async function refreshRealTimeData(userId: string, allSubjectsList?: Subject[]) {
+    if (!userId) return;
+
+    // Load achievements, badges, challenges, and stats in parallel (non-blocking)
     Promise.allSettled([
+      // Refresh stats (needed for achievements)
+      (async () => {
+        try {
+          const userStats = await getUserStats(userId);
+          setStats({
+            currentStreak: userStats.currentStreak,
+            xpPoints: userStats.xpPoints,
+            questionsAnswered: userStats.questionsAnswered,
+            correctAnswers: userStats.correctAnswers,
+            accuracy: userStats.accuracy,
+            studyTimeMinutes: userStats.studyTimeMinutes,
+            lastActiveDate: userStats.lastActiveDate,
+          });
+        } catch (error) {
+          // Ignore errors - stats refresh is non-critical
+        }
+      })(),
+
       // Load mastery badges
       (async () => {
         try {
@@ -235,7 +303,7 @@ export default function HomePage() {
         }
       })(),
       
-      // Load daily challenges
+      // Load daily challenges (real-time updates)
       (async () => {
         try {
           setLoadingChallenges(true);
@@ -243,8 +311,21 @@ export default function HomePage() {
             getTodayDailyChallenges().catch(() => []),
             getUserDailyChallengeCompletions(userId, 3).catch(() => []),
           ]);
+          
           setTodayDailyChallenges(challenges);
           setDailyChallengeCompletions(completions);
+
+          // Build subjects map for challenges if needed
+          if (challenges.length > 0) {
+            const subjectsMap = new Map<string, Subject>(challengeSubjects);
+            for (const challenge of challenges) {
+              if ('subject' in challenge && challenge.subject) {
+                const subject = challenge.subject as Subject;
+                subjectsMap.set(subject.id, subject);
+              }
+            }
+            setChallengeSubjects(subjectsMap);
+          }
         } catch (error) {
           console.error('Error loading challenges:', error);
         } finally {
@@ -252,7 +333,7 @@ export default function HomePage() {
         }
       })(),
       
-      // Load achievements
+      // Load achievements (real-time updates)
       (async () => {
         try {
           setLoadingAchievements(true);
