@@ -424,7 +424,7 @@ export default function ConfigureLearningPage({
             selectedStyle={selectedStyle}
             onStyleSelect={setSelectedStyle}
             customQuestionCount={questionCount}
-            onCustomQuestionCountChange={setCustomQuestionCount}
+            onCustomQuestionCountChange={setQuestionCount}
             subjectName={subject?.name}
           />
         </motion.section>
