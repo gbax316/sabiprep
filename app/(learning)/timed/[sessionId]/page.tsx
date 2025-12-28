@@ -24,7 +24,7 @@ import {
   completeSessionWithGoals,
   completeDailyChallenge,
 } from '@/lib/api';
-import type { LearningSession, Question, Topic, Subject } from '@/types/database';
+import type { LearningSession, Question, Topic, Subject, SessionAnswer } from '@/types/database';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/auth-context';
 import {
@@ -175,7 +175,7 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       setSession(sessionData);
 
       // FIRST: Try to restore original questions from session_answers
-      let sessionAnswers = [];
+      let sessionAnswers: SessionAnswer[] = [];
       try {
         console.log('[Timed] Fetching session answers...');
         sessionAnswers = await getSessionAnswers(sessionId);
