@@ -34,6 +34,19 @@ interface AdminAuthContextType {
 
 const AdminAuthContext = createContext<AdminAuthContextType | undefined>(undefined);
 
+// Session cache to prevent unnecessary refetches
+const sessionCache: {
+  userId: string | null;
+  adminUser: AdminSessionUser | null;
+  timestamp: number;
+} = {
+  userId: null,
+  adminUser: null,
+  timestamp: 0,
+};
+
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+
 /**
  * Admin Auth Provider Component
  * Provides admin-specific authentication context for the admin portal
@@ -46,9 +59,19 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
   /**
-   * Fetch admin user data from the database
+   * Fetch admin user data from the database with caching
    */
   const fetchAdminUser = useCallback(async (userId: string): Promise<AdminSessionUser | null> => {
+    // Check cache first
+    const now = Date.now();
+    if (
+      sessionCache.userId === userId &&
+      sessionCache.adminUser &&
+      now - sessionCache.timestamp < CACHE_DURATION
+    ) {
+      return sessionCache.adminUser;
+    }
+
     try {
       const { data, error } = await supabase
         .from('users')
@@ -66,12 +89,19 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
         return null;
       }
 
-      return {
+      const adminData = {
         id: data.id,
         email: data.email,
         full_name: data.full_name,
         role: data.role as UserRole,
       };
+
+      // Update cache
+      sessionCache.userId = userId;
+      sessionCache.adminUser = adminData;
+      sessionCache.timestamp = now;
+
+      return adminData;
     } catch (err) {
       console.error('Error in fetchAdminUser:', err);
       return null;
@@ -96,36 +126,45 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
 
     const initializeAuth = async () => {
       try {
-        // Add timeout to prevent infinite loading (max 5 seconds)
+        // Add timeout to prevent infinite loading (max 10 seconds)
         const timeoutPromise = new Promise((_, reject) => {
-          setTimeout(() => reject(new Error('Auth initialization timeout')), 5000);
+          setTimeout(() => reject(new Error('Auth initialization timeout')), 10000);
         });
 
         const authPromise = (async () => {
           // Get current session
           const { data: { session } } = await supabase.auth.getSession();
           
-          if (mounted) {
-            if (session?.user) {
-              setUser(session.user);
-              // Fetch admin user with timeout
-              const adminDataPromise = fetchAdminUser(session.user.id);
-              const adminTimeoutPromise = new Promise<AdminSessionUser | null>((_, reject) => {
-                setTimeout(() => reject(new Error('Admin user fetch timeout')), 3000);
-              });
-              
-              try {
-                const adminData = await Promise.race([adminDataPromise, adminTimeoutPromise]);
+          if (!mounted) return;
+          
+          if (session?.user) {
+            setUser(session.user);
+            // Fetch admin user with timeout (increased to 5 seconds)
+            const adminDataPromise = fetchAdminUser(session.user.id);
+            const adminTimeoutPromise = new Promise<AdminSessionUser | null>((_, reject) => {
+              setTimeout(() => reject(new Error('Admin user fetch timeout')), 5000);
+            });
+            
+            try {
+              const adminData = await Promise.race([adminDataPromise, adminTimeoutPromise]);
+              if (mounted) {
                 setAdminUser(adminData);
-              } catch (adminErr) {
-                console.warn('Error or timeout fetching admin user:', adminErr);
+              }
+            } catch (adminErr) {
+              console.warn('Error or timeout fetching admin user:', adminErr);
+              if (mounted) {
                 setAdminUser(null);
               }
-            } else {
-              // No session, ensure state is cleared
+            }
+          } else {
+            // No session, ensure state is cleared
+            if (mounted) {
               setUser(null);
               setAdminUser(null);
             }
+          }
+          
+          if (mounted) {
             setIsLoading(false);
             setIsInitialized(true);
           }
@@ -153,11 +192,13 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
         
         try {
           if (event === 'SIGNED_IN' && session?.user) {
-            setUser(session.user);
-            // Fetch admin user with timeout
+            if (mounted) {
+              setUser(session.user);
+            }
+            // Fetch admin user with timeout (increased to 5 seconds)
             const adminDataPromise = fetchAdminUser(session.user.id);
             const adminTimeoutPromise = new Promise<AdminSessionUser | null>((_, reject) => {
-              setTimeout(() => reject(new Error('Admin user fetch timeout')), 3000);
+              setTimeout(() => reject(new Error('Admin user fetch timeout')), 5000);
             });
             
             try {
@@ -175,6 +216,10 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
             if (mounted) {
               setUser(null);
               setAdminUser(null);
+              // Clear cache on sign out
+              sessionCache.userId = null;
+              sessionCache.adminUser = null;
+              sessionCache.timestamp = 0;
             }
           } else if (event === 'TOKEN_REFRESHED') {
             // Token refreshed - don't change loading state, just update user if needed
@@ -231,6 +276,10 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
       if (!adminData) {
         // User exists but is not admin/tutor - sign them out
         await supabase.auth.signOut();
+        // Clear cache
+        sessionCache.userId = null;
+        sessionCache.adminUser = null;
+        sessionCache.timestamp = 0;
         setIsLoading(false);
         return { 
           success: false, 
@@ -261,6 +310,11 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
       // Clear state first
       setUser(null);
       setAdminUser(null);
+      
+      // Clear cache
+      sessionCache.userId = null;
+      sessionCache.adminUser = null;
+      sessionCache.timestamp = 0;
       
       // Sign out from Supabase
       await supabase.auth.signOut();

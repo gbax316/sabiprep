@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { fetchWithRetry } from '@/lib/admin-api-helpers';
 import {
   AdminHeader,
   AdminPrimaryButton,
@@ -102,31 +103,17 @@ export default function ContentManagementPage() {
     counts: { topicCount?: number; questionCount?: number };
   } | null>(null);
 
-  // Fetch subjects with timeout
+  // Fetch subjects with timeout and retry
   const fetchSubjects = useCallback(async () => {
     setIsLoadingSubjects(true);
     try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
-      
-      try {
-        const response = await fetch('/api/admin/subjects', {
-          signal: controller.signal,
-        });
-        clearTimeout(timeoutId);
+      const response = await fetchWithRetry('/api/admin/subjects', {}, 10000, 2);
         
-        const data = await response.json();
-        if (data.success) {
-          setSubjects(data.subjects || []);
-        } else {
-          setSubjects([]);
-        }
-      } catch (fetchError: any) {
-        clearTimeout(timeoutId);
-        if (fetchError.name === 'AbortError') {
-          throw new Error('Request timed out');
-        }
-        throw fetchError;
+      const data = await response.json();
+      if (data.success) {
+        setSubjects(data.subjects || []);
+      } else {
+        setSubjects([]);
       }
     } catch (error) {
       console.error('Error fetching subjects:', error);
@@ -136,7 +123,7 @@ export default function ContentManagementPage() {
     }
   }, []);
 
-  // Fetch topics with timeout
+  // Fetch topics with timeout and retry
   const fetchTopics = useCallback(async (subjectId?: string) => {
     setIsLoadingTopics(true);
     try {
@@ -144,34 +131,20 @@ export default function ContentManagementPage() {
         ? `/api/admin/topics?subjectId=${subjectId}`
         : '/api/admin/topics';
       
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
-      
-      try {
-        const response = await fetch(url, {
-          signal: controller.signal,
-        });
-        clearTimeout(timeoutId);
+      const response = await fetchWithRetry(url, {}, 10000, 2);
         
-        const data = await response.json();
-        if (data.success) {
-          setTopics(data.topics || []);
-          // Store all topics if fetching without filter
-          if (!subjectId) {
-            setAllTopics(data.topics || []);
-          }
-        } else {
-          setTopics([]);
-          if (!subjectId) {
-            setAllTopics([]);
-          }
+      const data = await response.json();
+      if (data.success) {
+        setTopics(data.topics || []);
+        // Store all topics if fetching without filter
+        if (!subjectId) {
+          setAllTopics(data.topics || []);
         }
-      } catch (fetchError: any) {
-        clearTimeout(timeoutId);
-        if (fetchError.name === 'AbortError') {
-          throw new Error('Request timed out');
+      } else {
+        setTopics([]);
+        if (!subjectId) {
+          setAllTopics([]);
         }
-        throw fetchError;
       }
     } catch (error) {
       console.error('Error fetching topics:', error);

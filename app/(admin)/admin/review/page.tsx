@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { fetchWithRetry } from '@/lib/admin-api-helpers';
 import { 
   AdminCard,
   AdminCardHeader,
@@ -159,7 +160,7 @@ export default function ReviewDashboardPage() {
   const [questionTotalPages, setQuestionTotalPages] = useState(1);
 
   /**
-   * Load review history and stats with timeout
+   * Load review history and stats with timeout and retry
    */
   const loadReviews = useCallback(async () => {
     try {
@@ -171,26 +172,19 @@ export default function ReviewDashboardPage() {
       params.append('page', '1');
       params.append('limit', '50');
 
-      // Add timeout to prevent infinite loading (5 seconds)
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
-
-      try {
-        const response = await fetch(`/api/admin/questions/review/history?${params.toString()}`, {
-          signal: controller.signal,
-        });
-        clearTimeout(timeoutId);
+      // Use fetchWithRetry with 10 second timeout and 2 retries
+      const response = await fetchWithRetry(`/api/admin/questions/review/history?${params.toString()}`, {}, 10000, 2);
         
-        if (!response.ok) {
-          if (response.status === 401) {
-            throw new Error('Unauthorized - Please log in again');
-          }
-          const errorText = await response.text();
-          console.error('API Error:', errorText);
-          throw new Error(`Failed to load reviews: ${response.statusText}`);
+      if (!response.ok) {
+        if (response.status === 401) {
+          throw new Error('Unauthorized - Please log in again');
         }
+        const errorText = await response.text();
+        console.error('API Error:', errorText);
+        throw new Error(`Failed to load reviews: ${response.statusText}`);
+      }
 
-        const data = await response.json();
+      const data = await response.json();
 
         // Handle both success response format and direct data format
         const reviewsData = data.success 

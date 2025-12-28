@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useAdminAuth } from '@/lib/admin-auth-context';
+import { fetchWithRetry } from '@/lib/admin-api-helpers';
 import { 
   AdminCard,
   AdminCardHeader,
@@ -157,7 +158,7 @@ export default function AdminDashboardPage() {
   // Track if component is mounted to prevent state updates after unmount
   const [mounted, setMounted] = useState(true);
 
-  // Fetch dashboard data with timeout
+  // Fetch dashboard data with timeout and retry
   const fetchDashboardData = useCallback(async () => {
     if (!mounted) return;
     
@@ -165,61 +166,35 @@ export default function AdminDashboardPage() {
       setIsStatsLoading(true);
       setError(null);
 
-      // Add timeout to prevent hanging (7 seconds - slightly longer for dashboard with multiple data sources)
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 7000);
-
-      try {
-        const response = await fetch('/api/admin/dashboard', {
-          signal: controller.signal,
-        });
-        clearTimeout(timeoutId);
+      // Use fetchWithRetry with 15 second timeout and 2 retries
+      const response = await fetchWithRetry('/api/admin/dashboard', {}, 15000, 2);
         
-        if (!mounted) return;
+      if (!mounted) return;
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-        const data: DashboardResponse = await response.json();
+      const data: DashboardResponse = await response.json();
 
-        if (!mounted) return;
+      if (!mounted) return;
 
-        if (data.success && data.data) {
-          setStats(data.data.stats);
-          setRecentImports(data.data.recentImports || []);
-          setRecentUsers(data.data.recentUsers || []);
-          setError(null); // Clear any previous errors
-        } else {
-          setError('Failed to load dashboard statistics');
-          // Set empty states to prevent infinite loading
-          setStats(null);
-          setRecentImports([]);
-          setRecentUsers([]);
-        }
-      } catch (fetchError: any) {
-        clearTimeout(timeoutId);
-        if (!mounted) return;
-        
-        if (fetchError.name === 'AbortError') {
-          // Timeout - log as warning (expected behavior when server is slow)
-          console.warn('Dashboard data request timed out after 7 seconds');
-          setError('Request timed out. The server is taking longer than expected. Please try refreshing the page.');
-          // Set empty states to prevent infinite loading
-          setStats(null);
-          setRecentImports([]);
-          setRecentUsers([]);
-          return; // Return early to avoid re-throwing
-        }
-        throw fetchError;
+      if (data.success && data.data) {
+        setStats(data.data.stats);
+        setRecentImports(data.data.recentImports || []);
+        setRecentUsers(data.data.recentUsers || []);
+        setError(null); // Clear any previous errors
+      } else {
+        setError('Failed to load dashboard statistics');
+        // Set empty states to prevent infinite loading
+        setStats(null);
+        setRecentImports([]);
+        setRecentUsers([]);
       }
     } catch (err: any) {
       if (!mounted) return;
       
-      // Only log non-timeout errors as errors
-      if (err.message && !err.message.includes('timed out')) {
-        console.error('Error fetching dashboard data:', err);
-      }
+      console.error('Error fetching dashboard data:', err);
       const errorMessage = err.message || 'Failed to load dashboard data';
       setError(errorMessage);
       // Set empty states to prevent infinite loading
@@ -233,22 +208,16 @@ export default function AdminDashboardPage() {
     }
   }, [mounted]);
 
-  // Fetch alerts with timeout
+  // Fetch alerts with timeout and retry
   const fetchAlerts = useCallback(async () => {
     if (!mounted) return;
     
     try {
       setIsAlertsLoading(true);
 
-      // Add timeout to prevent hanging (5 seconds - alerts are less critical)
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
-
+      // Use fetchWithRetry with 10 second timeout and 1 retry (alerts are less critical)
       try {
-        const response = await fetch('/api/admin/dashboard/alerts', {
-          signal: controller.signal,
-        });
-        clearTimeout(timeoutId);
+        const response = await fetchWithRetry('/api/admin/dashboard/alerts', {}, 10000, 1);
 
         if (!mounted) return;
 
@@ -268,13 +237,10 @@ export default function AdminDashboardPage() {
           setAlerts([]);
         }
       } catch (fetchError: any) {
-        clearTimeout(timeoutId);
         if (!mounted) return;
         
         // Alerts are non-critical, fail silently but set empty array
-        if (fetchError.name !== 'AbortError') {
-          console.warn('Error fetching alerts:', fetchError);
-        }
+        console.warn('Error fetching alerts:', fetchError);
         setAlerts([]);
       }
     } catch (err) {

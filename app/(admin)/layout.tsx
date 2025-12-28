@@ -307,11 +307,11 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
 
   // Show loading state with timeout protection
   useEffect(() => {
-    // Set timeout to show error if loading takes too long (6 seconds)
+    // Set timeout to show error if loading takes too long (12 seconds)
     if (!isInitialized || isLoading) {
       const timeoutId = setTimeout(() => {
         setLoadingTimeout(true);
-      }, 6000);
+      }, 12000);
       
       return () => clearTimeout(timeoutId);
     } else {
@@ -321,25 +321,37 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
 
   if (!isInitialized || isLoading) {
     if (loadingTimeout) {
-      // Show error state if loading takes too long
+      // Show error state if loading takes too long with retry option
       return (
         <div className="min-h-screen flex items-center justify-center bg-white">
           <div className="text-center max-w-md p-6">
-            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading Timeout</h2>
-            <p className="text-gray-600 mb-4">
-              The page is taking longer than expected to load. Please try refreshing.
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading Taking Longer Than Expected</h2>
+            <p className="text-gray-600 mb-6">
+              The page is taking longer than usual to load. This might be due to a slow connection or server delay. You can wait a bit longer or refresh the page.
             </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
-            >
-              Refresh Page
-            </button>
+            <div className="flex gap-3 justify-center">
+              <button
+                onClick={() => {
+                  setLoadingTimeout(false);
+                  // Retry by reloading
+                  window.location.reload();
+                }}
+                className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+              >
+                Retry Now
+              </button>
+              <button
+                onClick={() => window.location.reload()}
+                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
+              >
+                Refresh Page
+              </button>
+            </div>
           </div>
         </div>
       );

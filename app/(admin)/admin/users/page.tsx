@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import { fetchWithRetry } from '@/lib/admin-api-helpers';
 import { 
   AdminCard,
   AdminCardHeader,
@@ -234,7 +235,7 @@ export default function UsersPage() {
   });
   const [isConfirmLoading, setIsConfirmLoading] = useState(false);
   
-  // Fetch users with timeout
+  // Fetch users with timeout and retry
   const fetchUsers = useCallback(async () => {
     if (!mounted) return;
     
@@ -249,36 +250,20 @@ export default function UsersPage() {
       if (roleFilter) params.set('role', roleFilter);
       if (statusFilter) params.set('status', statusFilter);
       
-      // Add timeout to prevent infinite loading (5 seconds)
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      // Use fetchWithRetry with 10 second timeout and 2 retries
+      const response = await fetchWithRetry(`/api/admin/users?${params.toString()}`, {}, 10000, 2);
+        
+      if (!mounted) return;
       
-      try {
-        const response = await fetch(`/api/admin/users?${params.toString()}`, {
-          signal: controller.signal,
-        });
-        clearTimeout(timeoutId);
-        
-        if (!mounted) return;
-        
-        if (!response.ok) {
-          throw new Error(response.status === 401 ? 'Unauthorized' : `Failed to fetch users: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        if (!mounted) return;
-        
-        setUsers(data.users || []);
-        setPagination(data.pagination || pagination);
-      } catch (fetchError: any) {
-        clearTimeout(timeoutId);
-        if (!mounted) return;
-        
-        if (fetchError.name === 'AbortError') {
-          throw new Error('Request timed out. Please try again.');
-        }
-        throw fetchError;
+      if (!response.ok) {
+        throw new Error(response.status === 401 ? 'Unauthorized' : `Failed to fetch users: ${response.status}`);
       }
+      
+      const data = await response.json();
+      if (!mounted) return;
+      
+      setUsers(data.users || []);
+      setPagination(data.pagination || pagination);
     } catch (err) {
       if (!mounted) return;
       

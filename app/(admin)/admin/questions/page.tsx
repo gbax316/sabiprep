@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { fetchWithRetry } from '@/lib/admin-api-helpers';
 import { 
   AdminTable,
   AdminCard,
@@ -214,33 +215,21 @@ export default function QuestionsPage() {
     hasImage: searchParams?.get('hasImage') || '',
   });
   
-  // Fetch subjects with timeout
+  // Fetch subjects with timeout and retry
   useEffect(() => {
     if (!mounted) return;
     
     const fetchSubjects = async () => {
       try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5000);
-        
-        try {
-          const response = await fetch('/api/admin/subjects', {
-            signal: controller.signal,
-          });
-          clearTimeout(timeoutId);
+        const response = await fetchWithRetry('/api/admin/subjects', {}, 10000, 2);
           
-          if (!mounted) return;
+        if (!mounted) return;
           
-          if (response.ok) {
-            const data = await response.json();
-            setSubjects(data.subjects || []);
-          }
-        } catch (fetchError: any) {
-          clearTimeout(timeoutId);
-          if (!mounted) return;
-          if (fetchError.name !== 'AbortError') {
-            throw fetchError;
-          }
+        if (response.ok) {
+          const data = await response.json();
+          setSubjects(data.subjects || []);
+        } else {
+          setSubjects([]);
         }
       } catch (error) {
         if (!mounted) return;
@@ -251,7 +240,7 @@ export default function QuestionsPage() {
     fetchSubjects();
   }, [mounted]);
   
-  // Fetch topics when subject changes with timeout
+  // Fetch topics when subject changes with timeout and retry
   useEffect(() => {
     if (!mounted) return;
     
@@ -263,27 +252,15 @@ export default function QuestionsPage() {
       
       setIsLoadingTopics(true);
       try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5000);
-        
-        try {
-          const response = await fetch(`/api/admin/topics?subjectId=${filters.subjectId}`, {
-            signal: controller.signal,
-          });
-          clearTimeout(timeoutId);
+        const response = await fetchWithRetry(`/api/admin/topics?subjectId=${filters.subjectId}`, {}, 10000, 2);
           
-          if (!mounted) return;
+        if (!mounted) return;
           
-          if (response.ok) {
-            const data = await response.json();
-            setTopics(data.topics || []);
-          }
-        } catch (fetchError: any) {
-          clearTimeout(timeoutId);
-          if (!mounted) return;
-          if (fetchError.name !== 'AbortError') {
-            throw fetchError;
-          }
+        if (response.ok) {
+          const data = await response.json();
+          setTopics(data.topics || []);
+        } else {
+          setTopics([]);
         }
       } catch (error) {
         if (!mounted) return;
@@ -298,7 +275,7 @@ export default function QuestionsPage() {
     fetchTopics();
   }, [mounted, filters.subjectId]);
   
-  // Fetch questions with timeout
+  // Fetch questions with timeout and retry
   const fetchQuestions = useCallback(async () => {
     if (!mounted) return;
     
@@ -318,40 +295,24 @@ export default function QuestionsPage() {
       if (filters.hasPassage) params.set('hasPassage', filters.hasPassage);
       if (filters.hasImage) params.set('hasImage', filters.hasImage);
       
-      // Add timeout to prevent infinite loading (5 seconds)
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      // Use fetchWithRetry with 10 second timeout and 2 retries
+      const response = await fetchWithRetry(`/api/admin/questions?${params.toString()}`, {}, 10000, 2);
+        
+      if (!mounted) return;
       
-      try {
-        const response = await fetch(`/api/admin/questions?${params.toString()}`, {
-          signal: controller.signal,
-        });
-        clearTimeout(timeoutId);
-        
-        if (!mounted) return;
-        
-        if (!response.ok) {
-          throw new Error(response.status === 401 ? 'Unauthorized' : `Failed to fetch questions: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        if (!mounted) return;
-        
-        setQuestions(data.questions || []);
-        setPagination(prev => ({
-          ...prev,
-          total: data.pagination.total,
-          totalPages: data.pagination.totalPages,
-        }));
-      } catch (fetchError: any) {
-        clearTimeout(timeoutId);
-        if (!mounted) return;
-        
-        if (fetchError.name === 'AbortError') {
-          throw new Error('Request timed out. Please try again.');
-        }
-        throw fetchError;
+      if (!response.ok) {
+        throw new Error(response.status === 401 ? 'Unauthorized' : `Failed to fetch questions: ${response.status}`);
       }
+      
+      const data = await response.json();
+      if (!mounted) return;
+      
+      setQuestions(data.questions || []);
+      setPagination(prev => ({
+        ...prev,
+        total: data.pagination.total,
+        totalPages: data.pagination.totalPages,
+      }));
     } catch (error) {
       if (!mounted) return;
       
