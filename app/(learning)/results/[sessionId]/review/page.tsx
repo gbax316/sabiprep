@@ -38,7 +38,6 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showNavigator, setShowNavigator] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
-  const [cardWidth, setCardWidth] = useState(0);
 
   useEffect(() => {
     loadReviewData();
@@ -181,24 +180,18 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-      setShowSolution(false); // Reset solution visibility when changing questions
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      goToQuestion(currentIndex - 1);
     }
   };
 
   const handleNext = () => {
     if (currentIndex < questions.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-      setShowSolution(false); // Reset solution visibility when changing questions
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      goToQuestion(currentIndex + 1);
     }
   };
 
   const handleNavigateToQuestion = (index: number) => {
-    setCurrentIndex(index);
-    setShowSolution(false); // Reset solution visibility when changing questions
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    goToQuestion(index);
   };
 
   // Handle drag end for swipe gestures
@@ -231,44 +224,18 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [currentIndex, questions.length]);
 
-  // Measure card width on mount and resize
-  const [containerWidth, setContainerWidth] = useState(0);
-  
-  useEffect(() => {
-    const updateCardWidth = () => {
-      const container = document.querySelector('.carousel-container');
-      if (container && questions.length > 0) {
-        // Get the actual container width
-        const width = container.clientWidth;
-        setContainerWidth(width);
-        
-        // Account for arrow buttons - they're absolutely positioned
-        // On mobile: smaller arrows, less space needed
-        // On desktop: larger arrows, more space needed
-        const isMobile = window.innerWidth < 640;
-        const isTablet = window.innerWidth >= 640 && window.innerWidth < 1024;
-        const arrowSpace = isMobile ? 44 : isTablet ? 56 : 64; // Space for arrows (button + padding)
-        
-        // Calculate available width for cards (accounting for arrows on both sides)
-        const availableWidth = width - (arrowSpace * 2);
-        // Ensure card width is at least 300px but not more than container width
-        const calculatedWidth = Math.max(Math.min(availableWidth, 800), 300);
-        setCardWidth(calculatedWidth);
-      }
-    };
+  // Track swipe direction for animation
+  const [swipeDirection, setSwipeDirection] = useState<'left' | 'right'>('right');
 
-    // Use a small delay to ensure DOM is ready
-    const timeoutId = setTimeout(updateCardWidth, 100);
-    // Also update after questions load
-    if (questions.length > 0) {
-      updateCardWidth();
+  // Handle navigation with direction tracking
+  const goToQuestion = (newIndex: number) => {
+    if (newIndex >= 0 && newIndex < questions.length) {
+      setSwipeDirection(newIndex > currentIndex ? 'left' : 'right');
+      setCurrentIndex(newIndex);
+      setShowSolution(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    window.addEventListener('resize', updateCardWidth);
-    return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener('resize', updateCardWidth);
-    };
-  }, [questions.length]);
+  };
 
   if (loading) {
     return (
@@ -397,128 +364,102 @@ export default function QuestionReviewPage({ params }: { params: Promise<{ sessi
           </div>
         </div>
 
-        {/* Sliding Question Card Carousel */}
-        <div className="relative overflow-hidden carousel-container rounded-2xl mx-auto w-full">
-          {/* Left Navigation Arrow */}
-          {currentIndex > 0 && (
+        {/* Question Card - Single Card View with Swipe */}
+        <div className="relative w-full">
+          {/* Navigation Arrows - Fixed Position */}
+          <div className="flex items-center justify-between gap-2 sm:gap-4">
+            {/* Left Arrow */}
             <button
               onClick={handlePrevious}
-              className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 z-20 bg-slate-800/95 hover:bg-slate-700/95 backdrop-blur-md rounded-full p-2 sm:p-3 border-2 border-slate-700/60 hover:border-cyan-500/70 transition-all shadow-xl hover:shadow-cyan-500/30 active:scale-95 flex items-center justify-center"
+              disabled={currentIndex === 0}
+              className={`flex-shrink-0 p-2.5 sm:p-3 rounded-full border-2 transition-all duration-200 ${
+                currentIndex === 0
+                  ? 'bg-slate-800/50 border-slate-700/30 text-slate-600 cursor-not-allowed'
+                  : 'bg-slate-800/95 hover:bg-slate-700/95 border-slate-700/60 hover:border-cyan-500/70 text-cyan-400 shadow-lg hover:shadow-cyan-500/30 active:scale-95'
+              }`}
               aria-label="Previous question"
             >
-              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-cyan-400" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
-          )}
 
-          {/* Right Navigation Arrow */}
-          {currentIndex < questions.length - 1 && (
-            <button
-              onClick={handleNext}
-              className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 z-20 bg-slate-800/95 hover:bg-slate-700/95 backdrop-blur-md rounded-full p-2 sm:p-3 border-2 border-slate-700/60 hover:border-cyan-500/70 transition-all shadow-xl hover:shadow-cyan-500/30 active:scale-95 flex items-center justify-center"
-              aria-label="Next question"
-            >
-              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-cyan-400" />
-            </button>
-          )}
-
-          {/* Carousel Content - Centered */}
-          <div 
-            className="w-full flex items-center justify-center overflow-hidden relative" 
-            style={{ minHeight: '400px' }}
-          >
-            <motion.div
-              className="flex items-center"
-              animate={{
-                x: cardWidth > 0 && containerWidth > 0
-                  ? containerWidth / 2 - (currentIndex * cardWidth + cardWidth / 2)
-                  : 0,
-              }}
-              transition={{
-                type: 'spring',
-                stiffness: 300,
-                damping: 30,
-              }}
-              drag="x"
-              dragConstraints={{
-                left: cardWidth > 0 && containerWidth > 0
-                  ? containerWidth / 2 - ((questions.length - 1) * cardWidth + cardWidth / 2)
-                  : 0,
-                right: cardWidth > 0 && containerWidth > 0
-                  ? containerWidth / 2 - (cardWidth / 2)
-                  : 0,
-              }}
-              dragElastic={0.1}
-              onDragEnd={handleDragEnd}
+            {/* Question Card Container */}
+            <div 
+              className="flex-1 overflow-hidden relative min-h-[300px]"
               style={{ touchAction: 'pan-x' }}
             >
-              {questions.length > 0 ? (
-                questions.map((question, index) => {
-                  const answer = answers.find(a => a.question_id === question.id);
-                  const isCurrent = index === currentIndex;
-                  const prevQuestion = index > 0 ? questions[index - 1] : null;
-                  const shouldShowPassageForQuestion = !!(question.passage && (
-                    !prevQuestion || prevQuestion.passage_id !== question.passage_id
-                  ));
-
-                  if (!question) {
-                    console.warn(`[Review] Question at index ${index} is undefined`);
-                    return null;
-                  }
-
-                  return (
-                    <motion.div
-                      key={question.id}
-                      className="flex-shrink-0 flex items-center justify-center"
-                      style={{ 
-                        width: cardWidth > 0 ? cardWidth : '100%', 
-                        minWidth: cardWidth > 0 ? cardWidth : '100%',
-                        maxWidth: cardWidth > 0 ? cardWidth : '100%',
-                        position: 'relative',
-                      }}
-                      animate={{
-                        scale: isCurrent ? 1 : 0.9,
-                        opacity: isCurrent ? 1 : 0.4,
-                        zIndex: isCurrent ? 10 : 1,
-                      }}
-                      transition={{ duration: 0.3, ease: 'easeOut' }}
-                    >
-                      <div 
-                        className="w-full mx-auto"
-                        style={{ 
-                          width: cardWidth > 0 ? Math.max(cardWidth - 16, cardWidth * 0.95) : '100%',
-                          padding: cardWidth > 0 ? '0 8px' : '0 8px',
-                        }}
-                      >
-                        <Card className={`p-4 sm:p-5 md:p-6 bg-slate-900/90 border-2 rounded-2xl shadow-2xl transition-all duration-300 ${
-                          isCurrent 
-                            ? 'border-slate-600/80 hover:border-cyan-500/60 hover:shadow-cyan-500/20 shadow-cyan-500/10' 
-                            : 'border-slate-700/50'
-                        }`}>
-                          <div className="w-full flex justify-center">
-                            <div className="w-full max-w-full">
-                              <QuestionDisplay
-                                question={question}
-                                showPassage={shouldShowPassageForQuestion}
-                                selectedAnswer={answer?.user_answer || null}
-                                showCorrectAnswer={true}
-                                isReview={true}
-                                questionNumber={index + 1}
-                                disabled={true}
-                              />
-                            </div>
-                          </div>
-                        </Card>
+              <AnimatePresence mode="wait" initial={false}>
+                {currentQuestion && (
+                  <motion.div
+                    key={currentQuestion.id}
+                    initial={{ 
+                      x: swipeDirection === 'left' ? 300 : -300, 
+                      opacity: 0,
+                      scale: 0.95 
+                    }}
+                    animate={{ 
+                      x: 0, 
+                      opacity: 1,
+                      scale: 1 
+                    }}
+                    exit={{ 
+                      x: swipeDirection === 'left' ? -300 : 300, 
+                      opacity: 0,
+                      scale: 0.95 
+                    }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 300,
+                      damping: 30,
+                    }}
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={0.2}
+                    onDragEnd={handleDragEnd}
+                    className="w-full"
+                  >
+                    <Card className="p-4 sm:p-5 md:p-6 bg-slate-900/90 border-2 border-slate-600/80 rounded-2xl shadow-2xl shadow-cyan-500/10">
+                      <div className="w-full">
+                        <QuestionDisplay
+                          question={currentQuestion}
+                          showPassage={shouldShowPassage}
+                          selectedAnswer={currentAnswer?.user_answer || null}
+                          showCorrectAnswer={true}
+                          isReview={true}
+                          questionNumber={currentIndex + 1}
+                          disabled={true}
+                        />
                       </div>
-                    </motion.div>
-                  );
-                })
-              ) : (
+                    </Card>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              
+              {!currentQuestion && (
                 <div className="w-full flex items-center justify-center p-8">
-                  <p className="text-slate-400">No questions to display</p>
+                  <p className="text-slate-400">No question to display</p>
                 </div>
               )}
-            </motion.div>
+            </div>
+
+            {/* Right Arrow */}
+            <button
+              onClick={handleNext}
+              disabled={currentIndex >= questions.length - 1}
+              className={`flex-shrink-0 p-2.5 sm:p-3 rounded-full border-2 transition-all duration-200 ${
+                currentIndex >= questions.length - 1
+                  ? 'bg-slate-800/50 border-slate-700/30 text-slate-600 cursor-not-allowed'
+                  : 'bg-slate-800/95 hover:bg-slate-700/95 border-slate-700/60 hover:border-cyan-500/70 text-cyan-400 shadow-lg hover:shadow-cyan-500/30 active:scale-95'
+              }`}
+              aria-label="Next question"
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+            </button>
           </div>
+
+          {/* Swipe Hint */}
+          <p className="text-center text-xs text-slate-500 mt-3">
+            Swipe or use arrows to navigate • Question {currentIndex + 1} of {questions.length}
+          </p>
         </div>
 
         {/* Answer Review Section */}
