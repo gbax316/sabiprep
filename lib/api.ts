@@ -2397,16 +2397,23 @@ export async function forceGenerateDailyChallenge(
     });
 
     if (rpcError) {
-      console.error('RPC force_generate_daily_challenge error:', {
-        code: rpcError.code,
-        message: rpcError.message,
-        details: rpcError.details,
-        hint: rpcError.hint,
-      });
-      // If RPC fails, fallback will also fail due to RLS, but let's try anyway
-    }
-
-    if (!rpcError && challengeId) {
+      // Check if error is empty object (function might not exist)
+      const hasErrorInfo = rpcError.code || rpcError.message || rpcError.details || rpcError.hint;
+      
+      if (!hasErrorInfo) {
+        console.warn('RPC force_generate_daily_challenge returned empty error - function may not exist or migration not applied. Using fallback.');
+        console.warn('Full error object:', JSON.stringify(rpcError, Object.getOwnPropertyNames(rpcError)));
+        // Function likely doesn't exist - skip to fallback, but fallback should work with INSERT policy
+      } else {
+        console.error('RPC force_generate_daily_challenge error:', {
+          code: rpcError.code,
+          message: rpcError.message,
+          details: rpcError.details,
+          hint: rpcError.hint,
+        });
+      }
+      // Continue to fallback
+    } else if (challengeId) {
       // Fetch the created challenge
       const { data, error: fetchError } = await supabase
         .from('daily_challenges')
@@ -2419,17 +2426,24 @@ export async function forceGenerateDailyChallenge(
         return null;
       }
       
-      return data || null;
+      if (data) {
+        return data;
+      }
+    } else if (challengeId === null) {
+      // RPC returned null (likely no questions available)
+      console.warn('RPC returned null - subject may not have enough questions');
+      return null;
     }
   } catch (error) {
     console.error('Exception calling RPC force_generate_daily_challenge:', error);
-    // Continue to fallback, but it will likely fail due to RLS
+    console.error('Error details:', error instanceof Error ? error.message : JSON.stringify(error));
+    // Continue to fallback
   }
 
-  // Fallback: manually create (WARNING: This will fail if RLS blocks INSERT)
-  // This fallback only works if there's an INSERT policy or service role is used
+  // Fallback: manually create
+  // This should work now that we have INSERT policy for authenticated users
   try {
-    console.warn('Using fallback method to create challenge. This may fail due to RLS policies.');
+    console.log('Using fallback method to create challenge...');
     // Ensure challenge_date is a valid date string
     const challengeDate = date || new Date().toISOString().split('T')[0];
     

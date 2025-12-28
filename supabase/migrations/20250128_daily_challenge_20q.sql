@@ -264,6 +264,21 @@ DROP POLICY IF EXISTS "Anyone can view daily challenges" ON public.daily_challen
 CREATE POLICY "Anyone can view daily challenges" ON public.daily_challenges
   FOR SELECT USING (true);
 
+-- Allow authenticated users to insert daily challenges (for fallback generation)
+-- Note: RPC functions should handle this, but this allows fallback to work
+DROP POLICY IF EXISTS "Authenticated users can insert daily challenges" ON public.daily_challenges;
+CREATE POLICY "Authenticated users can insert daily challenges" ON public.daily_challenges
+  FOR INSERT WITH CHECK (auth.role() = 'authenticated');
+
+-- Allow authenticated users to update/delete daily challenges (for regeneration)
+DROP POLICY IF EXISTS "Authenticated users can update daily challenges" ON public.daily_challenges;
+CREATE POLICY "Authenticated users can update daily challenges" ON public.daily_challenges
+  FOR UPDATE USING (auth.role() = 'authenticated');
+
+DROP POLICY IF EXISTS "Authenticated users can delete daily challenges" ON public.daily_challenges;
+CREATE POLICY "Authenticated users can delete daily challenges" ON public.daily_challenges
+  FOR DELETE USING (auth.role() = 'authenticated');
+
 -- Users can view their own challenge completions
 DROP POLICY IF EXISTS "Users can view their own challenge completions" ON public.user_daily_challenges;
 CREATE POLICY "Users can view their own challenge completions" ON public.user_daily_challenges
