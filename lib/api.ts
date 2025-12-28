@@ -3047,8 +3047,9 @@ export async function selectQuestionsForSession(
 
   // Step 3: Check if pool reset is needed
   // Reset if: no questions remaining OR remaining < requested count
-  if (remainingBefore === 0 || (remainingBefore < count && remainingBefore < totalInPool * 0.1)) {
-    console.log(`[selectQuestionsForSession] Pool exhausted or nearly exhausted. Resetting...`);
+  // This ensures users always get the requested number of questions if available in total pool
+  if (remainingBefore === 0 || remainingBefore < count) {
+    console.log(`[selectQuestionsForSession] Pool exhausted or insufficient (${remainingBefore} remaining, need ${count}). Resetting...`);
     
     if (userId) {
       await resetUserAttemptedQuestions(userId, subjectId);
