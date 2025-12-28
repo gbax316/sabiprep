@@ -186,51 +186,34 @@ export default function ReviewDashboardPage() {
 
       const data = await response.json();
 
-        // Handle both success response format and direct data format
-        const reviewsData = data.success 
-          ? (data.data?.reviews || data.reviews || []) 
-          : (data.reviews || data.data?.reviews || []);
-        
-        if (!Array.isArray(reviewsData)) {
-          console.error('Invalid reviews data format:', reviewsData);
-          setReviews([]);
-          setStats({
-            total: 0,
-            pending: 0,
-            approved: 0,
-            rejected: 0,
-            failed: 0,
-          });
-          return;
-        }
-        
-        setReviews(reviewsData);
-        
-        // Calculate stats
+      // Handle both success response format and direct data format
+      const reviewsData = data.success 
+        ? (data.data?.reviews || data.reviews || []) 
+        : (data.reviews || data.data?.reviews || []);
+      
+      if (!Array.isArray(reviewsData)) {
+        console.error('Invalid reviews data format:', reviewsData);
+        setReviews([]);
         setStats({
-          total: reviewsData.length,
-          pending: reviewsData.filter((r: ReviewWithRelations) => r.status === 'pending').length,
-          approved: reviewsData.filter((r: ReviewWithRelations) => r.status === 'approved').length,
-          rejected: reviewsData.filter((r: ReviewWithRelations) => r.status === 'rejected').length,
-          failed: reviewsData.filter((r: ReviewWithRelations) => r.status === 'failed').length,
+          total: 0,
+          pending: 0,
+          approved: 0,
+          rejected: 0,
+          failed: 0,
         });
-      } catch (fetchError: any) {
-        clearTimeout(timeoutId);
-        if (fetchError.name === 'AbortError') {
-          // Timeout - set empty state gracefully
-          console.warn('Request timed out while loading reviews');
-          setReviews([]);
-          setStats({
-            total: 0,
-            pending: 0,
-            approved: 0,
-            rejected: 0,
-            failed: 0,
-          });
-          return;
-        }
-        throw fetchError;
+        return;
       }
+      
+      setReviews(reviewsData);
+      
+      // Calculate stats
+      setStats({
+        total: reviewsData.length,
+        pending: reviewsData.filter((r: ReviewWithRelations) => r.status === 'pending').length,
+        approved: reviewsData.filter((r: ReviewWithRelations) => r.status === 'approved').length,
+        rejected: reviewsData.filter((r: ReviewWithRelations) => r.status === 'rejected').length,
+        failed: reviewsData.filter((r: ReviewWithRelations) => r.status === 'failed').length,
+      });
     } catch (error) {
       console.error('Failed to load reviews:', error);
       // Set empty state on error
