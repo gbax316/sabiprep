@@ -140,16 +140,27 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
   }, [currentIndex, questions, questionTimes]);
 
   async function loadSession() {
+    const loadStep = 'initialization';
     try {
       setLoading(true);
+      console.log('[Timed] Starting session load:', { sessionId, loadStep });
       
       let sessionData: LearningSession | null = null;
       try {
+        console.log('[Timed] Fetching session data...');
         sessionData = await getSession(sessionId);
+        console.log('[Timed] Session data fetched:', { 
+          hasSession: !!sessionData,
+          mode: sessionData?.mode,
+          status: sessionData?.status,
+          totalQuestions: sessionData?.total_questions,
+        });
       } catch (sessionError) {
         console.error('[Timed] Error fetching session:', {
           sessionId,
+          loadStep: 'getSession',
           error: sessionError instanceof Error ? sessionError.message : sessionError,
+          errorType: sessionError?.constructor?.name,
           details: sessionError,
         });
         throw sessionError;
@@ -166,10 +177,14 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       // FIRST: Try to restore original questions from session_answers
       let sessionAnswers = [];
       try {
+        console.log('[Timed] Fetching session answers...');
         sessionAnswers = await getSessionAnswers(sessionId);
+        console.log('[Timed] Session answers fetched:', { count: sessionAnswers.length });
       } catch (answersError) {
         console.warn('[Timed] Error fetching session answers, continuing with fresh load:', {
+          loadStep: 'getSessionAnswers',
           error: answersError instanceof Error ? answersError.message : answersError,
+          errorType: answersError?.constructor?.name,
         });
         // Continue - we'll load questions from scratch
       }
@@ -178,8 +193,25 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       
       if (sessionAnswers.length > 0) {
         // Restore original questions
-        const questionIds = sessionAnswers.map(a => a.question_id);
-        questionsData = await getQuestionsByIds(questionIds);
+        const questionIds = sessionAnswers.map(a => a.question_id).filter(Boolean);
+        
+        if (questionIds.length === 0) {
+          console.warn('[Timed] No valid question IDs found in session answers');
+        } else {
+          try {
+            console.log('[Timed] Restoring questions from session answers:', { questionIdsCount: questionIds.length });
+            questionsData = await getQuestionsByIds(questionIds);
+            console.log('[Timed] Restored questions:', { received: questionsData.length, requested: questionIds.length });
+          } catch (restoreError) {
+            console.error('[Timed] Error restoring questions from session answers:', {
+              error: restoreError instanceof Error ? restoreError.message : restoreError,
+              details: restoreError,
+              questionIdsCount: questionIds.length,
+            });
+            // Continue to load questions from scratch
+            questionsData = [];
+          }
+        }
         
         // If we got questions, use them
         if (questionsData.length > 0) {
@@ -470,35 +502,90 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         setExamStarted(true);
       }
     } catch (error) {
-      // Enhanced error logging
+      // Enhanced error logging with comprehensive error capture
+      const errorDetails: any = {
+        sessionId,
+        errorType: typeof error,
+        errorConstructor: error?.constructor?.name,
+        timestamp: new Date().toISOString(),
+      };
+
+      // Try to extract all possible error properties
       if (error instanceof Error) {
-        console.error('Error loading session:', {
-          message: error.message,
-          stack: error.stack,
-          name: error.name,
+        errorDetails.message = error.message;
+        errorDetails.stack = error.stack;
+        errorDetails.name = error.name;
+        // Capture all enumerable properties
+        Object.keys(error).forEach(key => {
+          if (!['message', 'stack', 'name'].includes(key)) {
+            try {
+              errorDetails[key] = (error as any)[key];
+            } catch (e) {
+              errorDetails[key] = '[unable to serialize]';
+            }
+          }
         });
       } else if (error && typeof error === 'object') {
         // Handle Supabase or other structured errors
         const errorObj = error as any;
-        console.error('Error loading session:', {
-          code: errorObj.code,
-          message: errorObj.message,
-          details: errorObj.details,
-          hint: errorObj.hint,
-          error,
-        });
+        errorDetails.code = errorObj.code;
+        errorDetails.message = errorObj.message;
+        errorDetails.details = errorObj.details;
+        errorDetails.hint = errorObj.hint;
+        
+        // Capture all enumerable properties
+        try {
+          Object.keys(errorObj).forEach(key => {
+            if (!['code', 'message', 'details', 'hint'].includes(key)) {
+              try {
+                const value = errorObj[key];
+                // Try to serialize, but catch circular references
+                if (typeof value === 'object' && value !== null) {
+                  try {
+                    JSON.stringify(value);
+                    errorDetails[key] = value;
+                  } catch {
+                    errorDetails[key] = '[circular reference]';
+                  }
+                } else {
+                  errorDetails[key] = value;
+                }
+              } catch (e) {
+                errorDetails[key] = '[unable to serialize]';
+              }
+            }
+          });
+        } catch (e) {
+          errorDetails.serializationError = 'Failed to enumerate error properties';
+        }
+        
+        // Also include the raw error object for inspection
+        try {
+          errorDetails.rawError = JSON.parse(JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        } catch {
+          errorDetails.rawError = '[unable to stringify]';
+        }
       } else {
-        console.error('Error loading session (unknown format):', {
-          error,
-          type: typeof error,
-          stringified: JSON.stringify(error),
-        });
+        errorDetails.value = error;
+        try {
+          errorDetails.stringified = JSON.stringify(error);
+        } catch {
+          errorDetails.stringified = '[unable to stringify]';
+        }
       }
+
+      // Log comprehensive error details
+      console.error('[Timed] Error loading session - Full details:', errorDetails);
+      console.error('[Timed] Error loading session - Raw error object:', error);
+      console.error('[Timed] Error loading session - Error keys:', error && typeof error === 'object' ? Object.keys(error) : 'N/A');
       
       setLoading(false);
       
       // Show user-friendly error message
-      alert('Failed to load session. Please try again or return to home.');
+      const errorMessage = error instanceof Error 
+        ? `Failed to load session: ${error.message || 'Unknown error'}` 
+        : 'Failed to load session. Please try again or return to home.';
+      alert(errorMessage);
       router.replace('/home');
     } finally {
       setLoading(false);
