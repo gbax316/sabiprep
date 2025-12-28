@@ -2411,12 +2411,20 @@ export async function forceGenerateDailyChallenge(
 
   // Fallback: manually create
   try {
+    // Ensure challenge_date is a valid date string
+    const challengeDate = date || new Date().toISOString().split('T')[0];
+    
     // Delete existing challenge for this date
-    await supabase
+    const { error: deleteError } = await supabase
       .from('daily_challenges')
       .delete()
       .eq('subject_id', subjectId)
-      .eq('challenge_date', date);
+      .eq('challenge_date', challengeDate);
+    
+    if (deleteError) {
+      console.warn('Error deleting existing challenge (may not exist):', deleteError);
+      // Continue anyway - might not exist
+    }
 
     // First, get topics for this subject
     const { data: topics } = await supabase
@@ -2449,6 +2457,12 @@ export async function forceGenerateDailyChallenge(
     const selected = shuffled.slice(0, Math.min(questionCount, shuffled.length));
     const questionIds = selected.map(q => q.id);
 
+    // Validate we have questions
+    if (questionIds.length === 0) {
+      console.warn('No questions available for subject:', subjectId);
+      return null;
+    }
+
     // Insert new challenge
     // Daily challenge is always 20 questions in 20 minutes (1200 seconds)
     const actualQuestionCount = questionIds.length;
@@ -2458,7 +2472,7 @@ export async function forceGenerateDailyChallenge(
       .from('daily_challenges')
       .insert({
         subject_id: subjectId,
-        challenge_date: date,
+        challenge_date: challengeDate,
         question_ids: questionIds,
         time_limit_seconds: timeLimitSeconds,
         question_count: actualQuestionCount,
@@ -2467,7 +2481,29 @@ export async function forceGenerateDailyChallenge(
       .single();
 
     if (insertError) {
-      console.error('Error creating challenge:', insertError);
+      console.error('Error creating challenge:', {
+        error: insertError,
+        code: insertError.code,
+        message: insertError.message,
+        details: insertError.details,
+        hint: insertError.hint,
+        subjectId,
+        challengeDate,
+        questionCount: actualQuestionCount,
+      });
+      
+      // If it's a unique constraint violation, try to fetch the existing challenge
+      if (insertError.code === '23505') {
+        console.log('Challenge already exists, fetching existing challenge...');
+        const { data: existing } = await supabase
+          .from('daily_challenges')
+          .select('*, subject:subjects(*)')
+          .eq('subject_id', subjectId)
+          .eq('challenge_date', challengeDate)
+          .single();
+        return existing || null;
+      }
+      
       return null;
     }
 

@@ -194,13 +194,14 @@ export default function DailyChallengePage() {
         await loadDailyChallenges();
       }
       
-      if (errors.length > 0) {
-        alert(`Generated ${generatedCount} challenges. Some subjects failed: ${errors.join(', ')}`);
-      } else if (generatedCount === 0) {
+      // Show appropriate message
+      if (generatedCount === 0 && errors.length === 0) {
         alert('Could not generate any challenges. Make sure subjects have at least 20 published questions.');
+      } else if (errors.length > 0) {
+        alert(`Generated ${generatedCount} challenge${generatedCount !== 1 ? 's' : ''}. Some subjects failed: ${errors.join(', ')}. Check the console for details.`);
       } else {
         // All succeeded
-        alert(`Successfully generated ${generatedCount} challenges!`);
+        alert(`Successfully generated ${generatedCount} challenge${generatedCount !== 1 ? 's' : ''}!`);
       }
     } catch (error) {
       console.error('Error generating challenges:', error);
