@@ -41,6 +41,7 @@ export default function DailyChallengePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [starting, setStarting] = useState<string | null>(null); // Track which challenge is starting
+  const [generating, setGenerating] = useState(false); // Track challenge generation
   const [dailyChallenges, setDailyChallenges] = useState<DailyChallenge[]>([]);
   const [completedChallenges, setCompletedChallenges] = useState<UserDailyChallenge[]>([]);
   const [subjects, setSubjects] = useState<Map<string, Subject>>(new Map());
@@ -94,6 +95,54 @@ export default function DailyChallengePage() {
       setCompletedChallenges([]);
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function handleGenerateChallenges() {
+    if (!userId) return;
+    
+    try {
+      setGenerating(true);
+      
+      // Get all subjects
+      const allSubjects = await getSubjects();
+      
+      if (allSubjects.length === 0) {
+        alert('No subjects available to generate challenges from.');
+        return;
+      }
+      
+      let generatedCount = 0;
+      const errors: string[] = [];
+      
+      // Generate challenge for each subject
+      for (const subject of allSubjects) {
+        try {
+          const challenge = await forceGenerateDailyChallenge(subject.id);
+          if (challenge) {
+            generatedCount++;
+          }
+        } catch (err) {
+          console.error(`Failed to generate challenge for ${subject.name}:`, err);
+          errors.push(subject.name);
+        }
+      }
+      
+      if (generatedCount > 0) {
+        // Reload challenges to show the newly generated ones
+        await loadDailyChallenges();
+      }
+      
+      if (errors.length > 0) {
+        alert(`Generated ${generatedCount} challenges. Some subjects failed: ${errors.join(', ')}`);
+      } else if (generatedCount === 0) {
+        alert('Could not generate any challenges. Make sure subjects have at least 10 published questions.');
+      }
+    } catch (error) {
+      console.error('Error generating challenges:', error);
+      alert('Failed to generate challenges. Please try again.');
+    } finally {
+      setGenerating(false);
     }
   }
 
@@ -379,7 +428,27 @@ export default function DailyChallengePage() {
           <MagicCard className="p-8 text-center">
             <Sparkles className="w-16 h-16 mx-auto mb-4 text-slate-400" />
             <h3 className="text-xl font-bold text-white mb-2">No Challenges Today</h3>
-            <p className="text-slate-400">Check back tomorrow for new daily challenges!</p>
+            <p className="text-slate-400 mb-6">
+              Challenges may not have been generated yet, or subjects need more questions.
+            </p>
+            <MagicButton
+              variant="primary"
+              onClick={handleGenerateChallenges}
+              disabled={generating}
+              className="bg-gradient-to-r from-purple-500 to-pink-500 border-0"
+            >
+              {generating ? (
+                <span className="flex items-center gap-2">
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  Generating...
+                </span>
+              ) : (
+                <>
+                  <Zap className="w-4 h-4 mr-2" />
+                  Generate Today's Challenges
+                </>
+              )}
+            </MagicButton>
           </MagicCard>
         )}
 
