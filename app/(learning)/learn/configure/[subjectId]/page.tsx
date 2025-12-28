@@ -42,7 +42,6 @@ export default function ConfigureLearningPage({
   const [selectedTopicIds, setSelectedTopicIds] = useState<Set<string>>(new Set());
   const [questionCount, setQuestionCount] = useState(20);
   const [timeLimit, setTimeLimit] = useState(30); // in minutes
-  const [customQuestionCount, setCustomQuestionCount] = useState(20);
   
   // Calculate max questions available
   const maxQuestions = topics.reduce((sum, topic) => sum + (topic.total_questions || 0), 0) || 100;
@@ -53,27 +52,23 @@ export default function ConfigureLearningPage({
   
   // Update question count when style changes
   useEffect(() => {
-    if (selectedMode === 'timed') {
-      if (selectedStyle === 'custom') {
-        // For timed mode custom, questions and time are independent
-        // Question count is controlled directly by QuestionSlider component
-        // Only initialize if switching to custom for the first time (preserve existing value otherwise)
-        // QuestionSlider will handle validation and limits
-      } else {
-        // For timed mode standard durations, use the helper function
-        const count = getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name);
-        setQuestionCount(Math.min(count, maxQuestions));
+    if (selectedStyle === 'custom') {
+      // For custom mode in any learning mode:
+      // Don't override the user's selection - let the slider control it
+      // Just ensure the current value doesn't exceed maxQuestions
+      if (questionCount > maxQuestions) {
+        setQuestionCount(maxQuestions);
       }
+    } else if (selectedMode === 'timed') {
+      // For timed mode standard durations, use the helper function
+      const count = getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name);
+      setQuestionCount(Math.min(count, maxQuestions));
     } else {
-      // For practice and test modes
-      if (selectedStyle !== 'custom') {
-        const count = getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name);
-        setQuestionCount(Math.min(count, maxQuestions));
-      } else {
-        setQuestionCount(Math.min(customQuestionCount, maxQuestions));
-      }
+      // For practice and test standard styles
+      const count = getQuestionCountFromStyle(selectedMode, selectedStyle, undefined, subject?.name);
+      setQuestionCount(Math.min(count, maxQuestions));
     }
-  }, [selectedStyle, selectedMode, customQuestionCount, maxQuestions, subject?.name]);
+  }, [selectedStyle, selectedMode, maxQuestions, subject?.name]);
   
   // Reset style when mode changes
   useEffect(() => {
@@ -172,8 +167,8 @@ export default function ConfigureLearningPage({
           );
         }
       } else if (selectedStyle === 'custom') {
-        // For practice custom mode, use customQuestionCount (no time limit)
-        finalQuestionCount = Math.min(customQuestionCount, maxQuestions);
+        // For practice custom mode, use questionCount (from slider - no time limit)
+        finalQuestionCount = Math.min(questionCount, maxQuestions);
       } else {
         // For practice/test standard styles, recalculate to ensure it's correct
         finalQuestionCount = Math.min(
@@ -428,7 +423,7 @@ export default function ConfigureLearningPage({
             mode={selectedMode}
             selectedStyle={selectedStyle}
             onStyleSelect={setSelectedStyle}
-            customQuestionCount={customQuestionCount}
+            customQuestionCount={questionCount}
             onCustomQuestionCountChange={setCustomQuestionCount}
             subjectName={subject?.name}
           />
