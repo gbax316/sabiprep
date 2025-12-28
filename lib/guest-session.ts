@@ -7,7 +7,7 @@
 
 const GUEST_SESSION_KEY = 'sabiprep_guest_session';
 const GUEST_TRIAL_KEY = 'sabiprep_guest_trial';
-const QUESTION_LIMIT = 5;
+const QUESTION_LIMIT = 10;
 
 export interface GuestSession {
   guestId: string;
