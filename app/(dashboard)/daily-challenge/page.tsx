@@ -63,6 +63,7 @@ export default function DailyChallengePage() {
       
       // Load today's challenges first (critical data)
       const challenges = await getTodayDailyChallenges();
+      const hadNoChallenges = challenges.length === 0;
       setDailyChallenges(challenges);
 
       // Build subjects map for quick lookup
@@ -80,6 +81,29 @@ export default function DailyChallengePage() {
       }
       
       setSubjects(subjectsMap);
+
+      // If no challenges found and generation was triggered in background, 
+      // check again after a short delay
+      if (hadNoChallenges) {
+        setTimeout(async () => {
+          try {
+            const retryChallenges = await getTodayDailyChallenges();
+            if (retryChallenges.length > 0) {
+              setDailyChallenges(retryChallenges);
+              // Build subjects map for retried challenges
+              const updatedMap = new Map<string, Subject>();
+              for (const challenge of retryChallenges) {
+                if ('subject' in challenge && challenge.subject) {
+                  updatedMap.set((challenge.subject as Subject).id, challenge.subject as Subject);
+                }
+              }
+              setSubjects(updatedMap);
+            }
+          } catch (error) {
+            // Ignore retry errors
+          }
+        }, 2000); // Check again after 2 seconds
+      }
 
       // Fetch missing subjects in background if needed
       if (subjectIdsToFetch.size > 0) {
