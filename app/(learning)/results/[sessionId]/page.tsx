@@ -498,8 +498,11 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
     calculatedAccuracy = Math.round(score);
   }
   
-  // Time calculation - use actual session time
-  const totalTimeSeconds = session.time_spent_seconds || 0;
+  // Time calculation - calculate from answers (more accurate than session.time_spent_seconds)
+  // Sum up all time_spent_seconds from individual answers
+  const totalTimeFromAnswers = answers.reduce((sum, answer) => sum + (answer.time_spent_seconds || 0), 0);
+  // Use session time as fallback if answers don't have time data
+  const totalTimeSeconds = totalTimeFromAnswers > 0 ? totalTimeFromAnswers : (session.time_spent_seconds || 0);
   const timeInMinutes = Math.floor(totalTimeSeconds / 60);
   const timeInSeconds = totalTimeSeconds % 60;
   

@@ -551,7 +551,31 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
     if (isLastQuestion) {
       // Complete session
       const scorePercentage = (correctAnswers / questions.length) * 100;
-      const totalTimeSpent = session ? session.time_spent_seconds : 0;
+      
+      // Calculate total time from all answers (most accurate)
+      // Get all session answers to sum up time_spent_seconds
+      let totalTimeSpent = 0;
+      if (!isGuest && userId) {
+        try {
+          const sessionAnswers = await getSessionAnswers(sessionId);
+          totalTimeSpent = sessionAnswers.reduce((sum, answer) => sum + (answer.time_spent_seconds || 0), 0);
+        } catch (error) {
+          console.warn('Error fetching session answers for time calculation, using session time:', error);
+          // Fallback to session time
+          if (session) {
+            try {
+              const latestSession = await getSession(sessionId);
+              totalTimeSpent = latestSession?.time_spent_seconds || session.time_spent_seconds || 0;
+            } catch (e) {
+              totalTimeSpent = session.time_spent_seconds || 0;
+            }
+          }
+        }
+      } else if (session) {
+        // For guests, use session time
+        totalTimeSpent = session.time_spent_seconds || 0;
+      }
+      
       await completeSessionWithGoals(
         sessionId,
         scorePercentage,
@@ -643,7 +667,29 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
       const scorePercentage = answeredQuestions.size > 0
         ? (correctAnswers / answeredQuestions.size) * 100
         : 0;
-      const totalTimeSpent = session ? session.time_spent_seconds : 0;
+      
+      // Calculate total time from all answers (most accurate)
+      let totalTimeSpent = 0;
+      if (!isGuest && userId) {
+        try {
+          const sessionAnswers = await getSessionAnswers(sessionId);
+          totalTimeSpent = sessionAnswers.reduce((sum, answer) => sum + (answer.time_spent_seconds || 0), 0);
+        } catch (error) {
+          console.warn('Error fetching session answers for time calculation, using session time:', error);
+          // Fallback to session time
+          if (session) {
+            try {
+              const latestSession = await getSession(sessionId);
+              totalTimeSpent = latestSession?.time_spent_seconds || session.time_spent_seconds || 0;
+            } catch (e) {
+              totalTimeSpent = session.time_spent_seconds || 0;
+            }
+          }
+        }
+      } else if (session) {
+        // For guests, use session time
+        totalTimeSpent = session.time_spent_seconds || 0;
+      }
 
       await completeSessionWithGoals(
         sessionId,

@@ -1113,6 +1113,25 @@ export async function completeSessionWithGoals(
     totalQuestions
   );
 
+  // Record attempted questions when session is completed (not when selected)
+  // This ensures questions are only marked as attempted if actually completed
+  if (userId && session.subject_id) {
+    try {
+      // Get all questions that were answered in this session
+      const sessionAnswers = await getSessionAnswers(sessionId);
+      const answeredQuestionIds = sessionAnswers.map(a => a.question_id);
+      
+      if (answeredQuestionIds.length > 0) {
+        // Record questions as attempted (only those actually answered)
+        await recordAttemptedQuestions(userId, session.subject_id, answeredQuestionIds);
+        console.log(`[completeSessionWithGoals] Recorded ${answeredQuestionIds.length} questions as attempted for user ${userId}`);
+      }
+    } catch (error) {
+      // Don't fail session completion if recording attempted questions fails
+      console.error('Error recording attempted questions on session completion:', error);
+    }
+  }
+
   // Update goals and award XP if userId is provided
   if (userId && correctAnswers !== undefined && totalQuestions !== undefined) {
     try {
@@ -3119,6 +3138,7 @@ export async function selectQuestionsForSession(
   const remainingBefore = totalInPool - attemptedBefore;
 
   console.log(`[selectQuestionsForSession] User has attempted ${attemptedBefore}/${totalInPool} questions. Remaining: ${remainingBefore}. Requesting: ${count}`);
+  console.log(`[selectQuestionsForSession] Excluding ${attemptedQuestionIds.length} attempted questions:`, attemptedQuestionIds.slice(0, 10), attemptedQuestionIds.length > 10 ? '...' : '');
 
   // Step 3: Check if pool reset is needed
   // Reset if: no questions remaining OR remaining < requested count
@@ -3141,12 +3161,26 @@ export async function selectQuestionsForSession(
   
   if (distribution && Object.keys(distribution).length > 0) {
     // Use distribution-based selection
+    console.log(`[selectQuestionsForSession] Using distribution-based selection with ${attemptedQuestionIds.length} exclusions`);
     questions = await getQuestionsWithDistribution(distribution, attemptedQuestionIds);
   } else if (topicIds.length > 0) {
     // Use topic-based selection
+    console.log(`[selectQuestionsForSession] Using topic-based selection (${topicIds.length} topics) with ${attemptedQuestionIds.length} exclusions`);
     questions = await getRandomQuestionsFromTopics(topicIds, count, attemptedQuestionIds);
   } else {
     console.warn(`[selectQuestionsForSession] No topics specified for selection`);
+  }
+  
+  // Log selected question IDs for debugging
+  if (questions.length > 0) {
+    const selectedIds = questions.map(q => q.id);
+    console.log(`[selectQuestionsForSession] Selected ${questions.length} questions. First 5 IDs:`, selectedIds.slice(0, 5));
+    
+    // Check if any selected questions are in the attempted list (should not happen)
+    const duplicates = selectedIds.filter(id => attemptedQuestionIds.includes(id));
+    if (duplicates.length > 0) {
+      console.error(`[selectQuestionsForSession] ERROR: ${duplicates.length} selected questions are in attempted list!`, duplicates);
+    }
   }
 
   // Ensure we return exactly the requested count (slice if needed)
@@ -3156,20 +3190,10 @@ export async function selectQuestionsForSession(
     console.warn(`[selectQuestionsForSession] Returning ${finalQuestions.length} questions (requested ${count}, got ${questions.length}). Sliced to exact count.`);
   }
 
-  // Step 5: Record newly selected questions as attempted (only final count)
-  if (finalQuestions.length > 0) {
-    const newQuestionIds = finalQuestions.map(q => q.id);
-    
-    if (userId) {
-      // Record for authenticated user (don't await to avoid blocking)
-      recordAttemptedQuestions(userId, subjectId, newQuestionIds).catch(error => {
-        console.error('Error recording attempted questions:', error);
-      });
-    } else {
-      // Record for guest user (synchronous localStorage)
-      recordGuestAttemptedQuestions(subjectId, newQuestionIds);
-    }
-  }
+  // Step 5: DO NOT record questions as attempted here
+  // Questions should only be recorded as attempted when actually answered
+  // This prevents showing the same questions if user doesn't complete the session
+  // Questions will be recorded when session is completed or when answers are submitted
 
   // Calculate remaining after selection
   const remainingAfter = poolReset 
