@@ -2450,14 +2450,18 @@ export async function forceGenerateDailyChallenge(
     const questionIds = selected.map(q => q.id);
 
     // Insert new challenge
+    // Daily challenge is always 20 questions in 20 minutes (1200 seconds)
+    const actualQuestionCount = questionIds.length;
+    const timeLimitSeconds = actualQuestionCount === 20 ? 1200 : actualQuestionCount * 60; // 20 min for 20 questions, otherwise 1 min/question
+    
     const { data: newChallenge, error: insertError } = await supabase
       .from('daily_challenges')
       .insert({
         subject_id: subjectId,
         challenge_date: date,
         question_ids: questionIds,
-        time_limit_seconds: questionCount * 60, // 1 min per question
-        question_count: questionIds.length,
+        time_limit_seconds: timeLimitSeconds,
+        question_count: actualQuestionCount,
       })
       .select('*, subject:subjects(*)')
       .single();
@@ -2504,12 +2508,21 @@ export async function getTodayDailyChallenges(): Promise<DailyChallenge[]> {
   const today = new Date().toISOString().split('T')[0];
   
   try {
-    // Ensure challenges are generated (this might fail if migration hasn't been run, so we catch it)
-    try {
-      await generateDailyChallenges(today);
-    } catch (genError) {
-      console.warn('Could not generate daily challenges (migration may not be run):', genError);
-      // Continue even if generation fails
+    // First check if challenges exist for today (fast query)
+    const { data: existingChallenges, error: checkError } = await supabase
+      .from('daily_challenges')
+      .select('id')
+      .eq('challenge_date', today)
+      .limit(1);
+
+    // Only generate if no challenges exist (optimization: avoid calling generate on every page load)
+    if (!checkError && (!existingChallenges || existingChallenges.length === 0)) {
+      try {
+        await generateDailyChallenges(today);
+      } catch (genError) {
+        console.warn('Could not generate daily challenges (migration may not be run):', genError);
+        // Continue even if generation fails
+      }
     }
 
     const { data, error } = await supabase

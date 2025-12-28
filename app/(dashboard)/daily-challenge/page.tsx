@@ -62,18 +62,14 @@ export default function DailyChallengePage() {
       setLoading(true);
       
       // Load today's challenges and user completions in parallel
-      const [challenges, completions, userStats] = await Promise.all([
+      // Don't fetch stats initially - can be deferred if needed
+      const [challenges, completions] = await Promise.all([
         getTodayDailyChallenges(),
         getUserDailyChallengeCompletions(userId, 7), // Last 7 completions
-        getUserStats(userId),
       ]);
 
       setDailyChallenges(challenges);
       setCompletedChallenges(completions);
-      setStats({
-        currentStreak: userStats.currentStreak,
-        xpPoints: userStats.xpPoints,
-      });
 
       // Build subjects map for quick lookup
       const subjectsMap = new Map<string, Subject>();
@@ -84,6 +80,18 @@ export default function DailyChallengePage() {
         }
       }
       setSubjects(subjectsMap);
+
+      // Load stats in background (non-blocking)
+      getUserStats(userId)
+        .then(userStats => {
+          setStats({
+            currentStreak: userStats.currentStreak,
+            xpPoints: userStats.xpPoints,
+          });
+        })
+        .catch(() => {
+          // Ignore errors - stats are not critical for initial render
+        });
     } catch (error) {
       console.error('Error loading daily challenges:', error);
       if (error instanceof Error) {
@@ -115,10 +123,10 @@ export default function DailyChallengePage() {
       let generatedCount = 0;
       const errors: string[] = [];
       
-      // Generate challenge for each subject
+      // Generate challenge for each subject (20 questions, 20 minutes)
       for (const subject of allSubjects) {
         try {
-          const challenge = await forceGenerateDailyChallenge(subject.id);
+          const challenge = await forceGenerateDailyChallenge(subject.id, undefined, 20); // 20 questions
           if (challenge) {
             generatedCount++;
           }

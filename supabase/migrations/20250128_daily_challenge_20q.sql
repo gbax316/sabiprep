@@ -129,6 +129,8 @@ BEGIN
   END IF;
   
   -- Create the challenge
+  -- Daily challenge is 20 questions in 20 minutes (1200 seconds)
+  -- If fewer than 20 questions, use 1 minute per question as fallback
   INSERT INTO public.daily_challenges (
     subject_id,
     challenge_date,
@@ -139,7 +141,7 @@ BEGIN
     p_subject_id,
     p_challenge_date,
     question_ids_arr,
-    p_question_count * 60, -- 1 minute per question
+    CASE WHEN actual_count = 20 THEN 1200 ELSE actual_count * 60 END, -- 20 min for 20 questions, otherwise 1 min/question
     actual_count
   )
   RETURNING id INTO challenge_id;
