@@ -5,9 +5,6 @@ import {
   Brain,
   TrendingUp,
   User,
-  BookOpenCheck,
-  FileText,
-  Timer,
   Sparkles,
   Trophy,
   Settings,
@@ -48,29 +45,10 @@ export const navigationSections: NavSection[] = [
         badgeColor: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
       },
       {
+        href: '/learn',
         label: 'Learning Modes',
         icon: GraduationCap,
         description: 'Practice, Test, or Timed modes',
-        children: [
-          {
-            href: '/practice',
-            label: 'Practice Mode',
-            icon: BookOpenCheck,
-            description: 'Learn at your pace with hints'
-          },
-          {
-            href: '/test',
-            label: 'Test Mode',
-            icon: FileText,
-            description: 'Simulate real exam conditions'
-          },
-          {
-            href: '/timed',
-            label: 'Timed Mode',
-            icon: Timer,
-            description: 'Race against the clock'
-          },
-        ],
       },
     ],
   },
@@ -104,7 +82,7 @@ export const navigationSections: NavSection[] = [
 // These are the primary quick-access items
 export const bottomNavItems: NavItem[] = [
   { href: '/home', label: 'Home', icon: Home },
-  { href: '/subjects', label: 'Learn', icon: Brain }, // Unified learning gateway
+  { href: '/learn', label: 'Learn', icon: Brain }, // Unified learning gateway
   { href: '/analytics', label: 'Progress', icon: TrendingUp },
   { href: '/profile', label: 'Profile', icon: User },
 ];
