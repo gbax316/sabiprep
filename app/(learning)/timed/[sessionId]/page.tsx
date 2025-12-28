@@ -142,10 +142,21 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
   async function loadSession() {
     try {
       setLoading(true);
-      const sessionData = await getSession(sessionId);
+      
+      let sessionData: LearningSession | null = null;
+      try {
+        sessionData = await getSession(sessionId);
+      } catch (sessionError) {
+        console.error('[Timed] Error fetching session:', {
+          sessionId,
+          error: sessionError instanceof Error ? sessionError.message : sessionError,
+          details: sessionError,
+        });
+        throw sessionError;
+      }
       
       if (!sessionData) {
-        console.error('Session not found:', sessionId);
+        console.error('[Timed] Session not found:', sessionId);
         router.replace('/home');
         return;
       }
@@ -153,7 +164,15 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
       setSession(sessionData);
 
       // FIRST: Try to restore original questions from session_answers
-      const sessionAnswers = await getSessionAnswers(sessionId);
+      let sessionAnswers = [];
+      try {
+        sessionAnswers = await getSessionAnswers(sessionId);
+      } catch (answersError) {
+        console.warn('[Timed] Error fetching session answers, continuing with fresh load:', {
+          error: answersError instanceof Error ? answersError.message : answersError,
+        });
+        // Continue - we'll load questions from scratch
+      }
       let questionsData: Question[] = [];
       let topicsData: Topic[] = [];
       
@@ -371,12 +390,33 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         topicsPromise = getTopic(topicId).then(t => t ? [t] : []);
       }
 
-      // Load everything in parallel
-      const [subjectData, newQuestionsData, newTopicsData] = await Promise.all([
-        getSubject(sessionData.subject_id),
-        questionsPromise,
-        topicsPromise,
-      ]);
+      // Load everything in parallel with error handling
+      let subjectData: Subject | null = null;
+      let newQuestionsData: Question[] = [];
+      let newTopicsData: Topic[] = [];
+      
+      try {
+        [subjectData, newQuestionsData, newTopicsData] = await Promise.all([
+          getSubject(sessionData.subject_id).catch(err => {
+            console.error('[Timed] Error fetching subject:', err);
+            return null;
+          }),
+          questionsPromise.catch(err => {
+            console.error('[Timed] Error fetching questions:', err);
+            return [];
+          }),
+          topicsPromise.catch(err => {
+            console.error('[Timed] Error fetching topics:', err);
+            return [];
+          }),
+        ]);
+      } catch (parallelError) {
+        console.error('[Timed] Error in parallel fetch operations:', {
+          error: parallelError instanceof Error ? parallelError.message : parallelError,
+          details: parallelError,
+        });
+        // Continue with whatever data we have
+      }
 
       setSubject(subjectData);
       
@@ -430,8 +470,35 @@ export default function TimedModePage({ params }: { params: Promise<{ sessionId:
         setExamStarted(true);
       }
     } catch (error) {
-      console.error('Error loading session:', error);
+      // Enhanced error logging
+      if (error instanceof Error) {
+        console.error('Error loading session:', {
+          message: error.message,
+          stack: error.stack,
+          name: error.name,
+        });
+      } else if (error && typeof error === 'object') {
+        // Handle Supabase or other structured errors
+        const errorObj = error as any;
+        console.error('Error loading session:', {
+          code: errorObj.code,
+          message: errorObj.message,
+          details: errorObj.details,
+          hint: errorObj.hint,
+          error,
+        });
+      } else {
+        console.error('Error loading session (unknown format):', {
+          error,
+          type: typeof error,
+          stringified: JSON.stringify(error),
+        });
+      }
+      
       setLoading(false);
+      
+      // Show user-friendly error message
+      alert('Failed to load session. Please try again or return to home.');
       router.replace('/home');
     } finally {
       setLoading(false);

@@ -880,7 +880,17 @@ export async function getSession(sessionId: string): Promise<LearningSession | n
     .eq('id', sessionId)
     .single();
 
-  if (error) throw error;
+  if (error) {
+    // Enhanced error logging for Supabase errors
+    const errorDetails = {
+      code: error.code,
+      message: error.message,
+      details: error.details,
+      hint: error.hint,
+    };
+    console.error('[getSession] Supabase error:', errorDetails);
+    throw new Error(`Failed to fetch session: ${error.message || error.code || 'Unknown error'}`);
+  }
   if (!data) return null;
 
   // Ensure topic_ids is parsed correctly from JSONB
@@ -2844,7 +2854,9 @@ export async function getUserAttemptedQuestions(
       throw error;
     }
 
-    return (data || []).map(row => row.question_id);
+    const attemptedIds = (data || []).map(row => row.question_id);
+    console.log(`[getUserAttemptedQuestions] Found ${attemptedIds.length} attempted questions for user ${userId} in subject ${subjectId}`);
+    return attemptedIds;
   } catch (error) {
     console.error('Error getting user attempted questions:', error);
     return [];
