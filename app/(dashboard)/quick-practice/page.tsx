@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { MagicCard } from '@/components/magic/MagicCard';
 import { MagicButton } from '@/components/magic/MagicButton';
 import { MagicBadge } from '@/components/magic/MagicBadge';
@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function QuickPracticePage() {
+function QuickPracticeContent() {
   const { userId } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -574,5 +574,22 @@ export default function QuickPracticePage() {
 
       <BottomNav />
     </div>
+  );
+}
+
+export default function QuickPracticePage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center min-h-screen bg-slate-950">
+          <div className="text-center">
+            <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+            <p className="text-slate-400">Loading...</p>
+          </div>
+        </div>
+      }
+    >
+      <QuickPracticeContent />
+    </Suspense>
   );
 }
