@@ -358,6 +358,17 @@ export default function HomePage() {
           setLoadingAchievements(false);
         }
       })(),
+      
+      // Refresh sessions (needed for daily count and weekly time)
+      (async () => {
+        try {
+          const sessions = await getUserSessions(userId, 50);
+          setRecentSessions(sessions);
+          console.log('[refreshRealTimeData] Refreshed sessions:', sessions.length);
+        } catch (error) {
+          console.error('Error refreshing sessions:', error);
+        }
+      })(),
     ]).catch(() => {
       // Ignore errors - these are non-critical
     });
@@ -1322,7 +1333,7 @@ export default function HomePage() {
 
               {/* Quick Action Buttons - Enhanced */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-slate-700/50">
-                <Link href="/quick-practice" prefetch={true}>
+                <Link href="/quick-practice?count=5" prefetch={true}>
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <MagicButton variant="secondary" size="sm" className="w-full text-xs sm:text-sm py-2.5 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-500/30 hover:border-yellow-400/50">
                       <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-1.5 text-yellow-400" />

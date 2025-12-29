@@ -512,14 +512,15 @@ export async function getRandomQuestionsFromTopics(
   if (topicIds.length === 0) return [];
   if (topicIds.length === 1) return getRandomQuestions(topicIds[0], totalCount, excludeQuestionIds);
 
+  // FIX 3: Increase Question Fetching Buffer
   // Calculate questions per topic with buffer to ensure we have enough after filtering
-  // Request 3-4x per topic to account for topics with fewer questions, filtering, and diversity selection
+  // Request 5x per topic to account for topics with fewer questions, filtering, and diversity selection
   const baseQuestionsPerTopic = Math.ceil(totalCount / topicIds.length);
-  // For small counts, ensure minimum of 3 per topic; for larger counts, use multiplier approach
-  // Request 3x the base amount to ensure we have enough after diversity filtering
+  // For small counts, ensure minimum of 5 per topic; for larger counts, use multiplier approach
+  // Increased from 3x to 5x to handle more aggressive exclusions
   const questionsPerTopic = Math.max(
-    baseQuestionsPerTopic * 3,  // Request 3x base for buffer
-    totalCount < 10 ? 3 : 5     // Minimum per topic (3 for small counts, 5 for larger)
+    baseQuestionsPerTopic * 5,  // Increased from 3 to 5 for better buffer
+    totalCount < 10 ? 5 : 8     // Increased minimums (was 3/5, now 5/8)
   );
 
   console.log(`[getRandomQuestionsFromTopics] Requesting ${questionsPerTopic} questions per topic (${topicIds.length} topics, target: ${totalCount} total, excluding ${excludeQuestionIds.length} questions)`);
@@ -1311,6 +1312,8 @@ export async function canResumeSession(sessionId: string): Promise<{
 export async function getQuestionsByIds(questionIds: string[]): Promise<Question[]> {
   if (questionIds.length === 0) return [];
   
+  console.log(`[getQuestionsByIds] Fetching ${questionIds.length} questions by IDs`);
+  
   // Check if any question IDs are from guest sessions - guest questions might be stored differently
   // For now, we'll try to fetch from database (guest questions should still be in the database)
   // If it fails, we'll return empty array
@@ -1318,24 +1321,38 @@ export async function getQuestionsByIds(questionIds: string[]): Promise<Question
     const { data, error } = await supabase
       .from('questions')
       .select('*')
-      .in('id', questionIds);
+      .in('id', questionIds)
+      .eq('status', 'published'); // Only fetch published questions
 
     if (error) {
       // For guest sessions, this might fail - return empty array instead of throwing
       if (typeof window !== 'undefined') {
-        console.warn('Error fetching questions (might be guest session):', error);
+        console.warn('[getQuestionsByIds] Error fetching questions (might be guest session):', error);
         return [];
       }
       throw error;
     }
     
+    const foundQuestions = data || [];
+    console.log(`[getQuestionsByIds] Found ${foundQuestions.length} published questions out of ${questionIds.length} requested`);
+    
+    // Check if any questions are missing
+    const foundIds = new Set(foundQuestions.map(q => q.id));
+    const missingIds = questionIds.filter(id => !foundIds.has(id));
+    if (missingIds.length > 0) {
+      console.warn(`[getQuestionsByIds] ${missingIds.length} questions not found or not published:`, missingIds.slice(0, 5), missingIds.length > 5 ? '...' : '');
+    }
+    
     // Preserve the order of questionIds
-    const questionMap = new Map((data || []).map(q => [q.id, q]));
-    return questionIds.map(id => questionMap.get(id)).filter(Boolean) as Question[];
+    const questionMap = new Map(foundQuestions.map(q => [q.id, q]));
+    const orderedQuestions = questionIds.map(id => questionMap.get(id)).filter(Boolean) as Question[];
+    
+    console.log(`[getQuestionsByIds] Returning ${orderedQuestions.length} questions in requested order`);
+    return orderedQuestions;
   } catch (error) {
     // Handle network errors gracefully for guest sessions
     if (error instanceof TypeError && error.message.includes('fetch')) {
-      console.warn('Network error fetching questions (might be guest session):', error);
+      console.warn('[getQuestionsByIds] Network error fetching questions (might be guest session):', error);
       return [];
     }
     throw error;
@@ -3149,8 +3166,13 @@ export async function selectQuestionsForSession(
   const attemptedBefore = attemptedQuestionIds.length;
   const remainingBefore = totalInPool - attemptedBefore;
 
-  console.log(`[selectQuestionsForSession] User has attempted ${attemptedBefore}/${totalInPool} questions. Remaining: ${remainingBefore}. Requesting: ${count}`);
-  console.log(`[selectQuestionsForSession] Excluding ${attemptedQuestionIds.length} attempted questions:`, attemptedQuestionIds.slice(0, 10), attemptedQuestionIds.length > 10 ? '...' : '');
+  console.log(`[selectQuestionsForSession] User ${userId || 'guest'} - Subject ${subjectId}`);
+  console.log(`[selectQuestionsForSession] Pool status: ${attemptedBefore}/${totalInPool} attempted. Remaining: ${remainingBefore}. Requesting: ${count}`);
+  if (attemptedQuestionIds.length > 0) {
+    console.log(`[selectQuestionsForSession] Excluding ${attemptedQuestionIds.length} attempted questions (first 10):`, attemptedQuestionIds.slice(0, 10));
+  } else {
+    console.log(`[selectQuestionsForSession] No attempted questions to exclude - fresh start`);
+  }
 
   // Step 3: Check if pool reset is needed
   // Reset if: no questions remaining OR remaining < requested count
@@ -3174,10 +3196,32 @@ export async function selectQuestionsForSession(
   if (distribution && Object.keys(distribution).length > 0) {
     // Use distribution-based selection
     console.log(`[selectQuestionsForSession] Using distribution-based selection with ${attemptedQuestionIds.length} exclusions`);
+    console.log(`[selectQuestionsForSession] Distribution:`, distribution);
     questions = await getQuestionsWithDistribution(distribution, attemptedQuestionIds);
   } else if (topicIds.length > 0) {
     // Use topic-based selection
     console.log(`[selectQuestionsForSession] Using topic-based selection (${topicIds.length} topics) with ${attemptedQuestionIds.length} exclusions`);
+    console.log(`[selectQuestionsForSession] Topic IDs:`, topicIds);
+    
+    // Fetch topic details for logging
+    try {
+      const topicsDetails = await getTopicsByIds(topicIds);
+      const topicBreakdown = topicsDetails.map(t => ({
+        id: t.id,
+        name: t.name,
+        totalQuestions: t.total_questions,
+        availableAfterExclusion: t.total_questions // This is approximate - actual would need per-topic exclusion check
+      }));
+      console.log(`[selectQuestionsForSession] Topic breakdown:`, topicBreakdown);
+      
+      // Calculate expected questions per topic
+      const totalTopicQuestions = topicsDetails.reduce((sum, t) => sum + t.total_questions, 0);
+      console.log(`[selectQuestionsForSession] Total questions across topics: ${totalTopicQuestions}`);
+      console.log(`[selectQuestionsForSession] Expected questions after exclusion: ~${totalTopicQuestions - attemptedQuestionIds.length} (approximate)`);
+    } catch (err) {
+      console.warn('[selectQuestionsForSession] Could not fetch topic details for logging:', err);
+    }
+    
     questions = await getRandomQuestionsFromTopics(topicIds, count, attemptedQuestionIds);
   } else {
     console.warn(`[selectQuestionsForSession] No topics specified for selection`);
@@ -3198,8 +3242,13 @@ export async function selectQuestionsForSession(
   // Ensure we return exactly the requested count (slice if needed)
   const finalQuestions = questions.slice(0, count);
   
-  if (finalQuestions.length !== count && questions.length > count) {
-    console.warn(`[selectQuestionsForSession] Returning ${finalQuestions.length} questions (requested ${count}, got ${questions.length}). Sliced to exact count.`);
+  if (finalQuestions.length !== count) {
+    if (questions.length > count) {
+      console.warn(`[selectQuestionsForSession] Returning ${finalQuestions.length} questions (requested ${count}, got ${questions.length}). Sliced to exact count.`);
+    } else {
+      console.error(`[selectQuestionsForSession] CRITICAL: Only ${finalQuestions.length} questions available (requested ${count})!`);
+      console.error(`[selectQuestionsForSession] This may indicate insufficient questions in the selected topics or exclusion issues.`);
+    }
   }
 
   // Step 5: DO NOT record questions as attempted here

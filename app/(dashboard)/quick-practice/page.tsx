@@ -9,7 +9,7 @@ import { Header } from '@/components/navigation/Header';
 import { useAuth } from '@/lib/auth-context';
 import { getSubjects, getTopics, createSession, selectQuestionsForSession } from '@/lib/api';
 import type { Subject, Topic } from '@/types/database';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {
   Zap,
   Shuffle,
@@ -26,11 +26,17 @@ import { motion } from 'framer-motion';
 export default function QuickPracticePage() {
   const { userId } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  
+  // Read count from URL parameter if provided
+  const urlCount = searchParams?.get('count');
+  const initialCount = urlCount ? parseInt(urlCount) : 10;
+  
   const [loading, setLoading] = useState(true);
   const [starting, setStarting] = useState(false);
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
-  const [questionCount, setQuestionCount] = useState(10);
+  const [questionCount, setQuestionCount] = useState(initialCount);
   const [topics, setTopics] = useState<Topic[]>([]);
   const [availableQuestions, setAvailableQuestions] = useState<number>(0);
 
@@ -67,8 +73,17 @@ export default function QuickPracticePage() {
       // Calculate total available questions across all topics
       const totalAvailable = topicsData.reduce((sum, topic) => sum + topic.total_questions, 0);
       setAvailableQuestions(totalAvailable);
+      
+      // Log topic selection details
+      console.log(`[QuickPractice] Loaded ${topicsData.length} topics for subject ${subjectId}`);
+      console.log(`[QuickPractice] Total available questions: ${totalAvailable}`);
+      console.log(`[QuickPractice] Topics breakdown:`, topicsData.map(t => ({
+        id: t.id,
+        name: t.name,
+        questions: t.total_questions
+      })));
     } catch (error) {
-      console.error('Error loading topics:', error);
+      console.error('[QuickPractice] Error loading topics:', error);
       setTopics([]);
       setAvailableQuestions(0);
     }
@@ -95,21 +110,57 @@ export default function QuickPracticePage() {
         return;
       }
 
+      // FIX 4: Smart Topic Filtering - Filter out topics that are too small
+      const minQuestionsPerTopic = 3;
+      let viableTopics = topicsWithQuestions.filter(t => t.total_questions >= minQuestionsPerTopic);
+
+      // If filtering removed too many, use all topics
+      if (viableTopics.length === 0 || viableTopics.reduce((sum, t) => sum + t.total_questions, 0) < questionCount * 2) {
+        console.log('[QuickPractice] Using all topics - not enough viable topics after filtering');
+        viableTopics = topicsWithQuestions;
+      } else {
+        console.log(`[QuickPractice] Filtered to ${viableTopics.length} viable topics (>= ${minQuestionsPerTopic} questions each)`);
+      }
+
       // Strategy: Use multiple topics if needed to ensure we get the requested count
       // Sort topics by question count (descending) to prioritize topics with more questions
-      const sortedTopics = [...topicsWithQuestions].sort((a, b) => b.total_questions - a.total_questions);
+      const sortedTopics = [...viableTopics].sort((a, b) => b.total_questions - a.total_questions);
       
-      // Calculate how many topics we need to get enough questions
+      // FIX 1: Improve Topic Selection Strategy with Buffer Multiplier
+      // Add 3x buffer to account for exclusions (attempted questions)
+      const targetCount = questionCount * 3; // 3x buffer for exclusions
       let totalAvailable = 0;
       const selectedTopicIds: string[] = [];
+      
+      console.log(`[QuickPractice] Target buffer: ${targetCount} (${questionCount} requested * 3)`);
       
       for (const topic of sortedTopics) {
         selectedTopicIds.push(topic.id);
         totalAvailable += topic.total_questions;
-        if (totalAvailable >= questionCount) {
-          break; // We have enough questions
+        
+        console.log(`[QuickPractice] Added topic ${topic.name}: ${topic.total_questions} questions. Total: ${totalAvailable}`);
+        
+        // Stop when we have enough buffer OR we've selected enough topics
+        if (totalAvailable >= targetCount || selectedTopicIds.length >= 5) {
+          break;
         }
       }
+      
+      // If we still don't have enough topics, keep adding
+      if (totalAvailable < questionCount * 2 && selectedTopicIds.length < sortedTopics.length) {
+        console.log(`[QuickPractice] Not enough buffer (${totalAvailable}), adding more topics...`);
+        for (let i = selectedTopicIds.length; i < sortedTopics.length; i++) {
+          selectedTopicIds.push(sortedTopics[i].id);
+          totalAvailable += sortedTopics[i].total_questions;
+          console.log(`[QuickPractice] Added extra topic ${sortedTopics[i].name}: ${sortedTopics[i].total_questions} questions. Total: ${totalAvailable}`);
+          
+          if (totalAvailable >= questionCount * 2) {
+            break;
+          }
+        }
+      }
+      
+      console.log(`[QuickPractice] Final selection: ${selectedTopicIds.length} topics with ${totalAvailable} total questions (buffer: ${totalAvailable / questionCount}x)`);
 
       // Create a practice session with multiple topics if needed
       const session = await createSession({
@@ -131,7 +182,15 @@ export default function QuickPracticePage() {
 
       // Pre-select questions using the non-repetition system
       console.log('[QuickPractice] Selecting questions with non-repetition system...');
-      const selectionResult = await selectQuestionsForSession(
+      console.log('[QuickPractice] Selection params:', {
+        userId: userId || 'guest',
+        subjectId: selectedSubject,
+        topicIds: selectedTopicIds,
+        topicCount: selectedTopicIds.length,
+        requestedCount: questionCount,
+      });
+      
+      let selectionResult = await selectQuestionsForSession(
         userId,
         selectedSubject,
         selectedTopicIds,
@@ -142,7 +201,92 @@ export default function QuickPracticePage() {
         questionsSelected: selectionResult.questions.length,
         poolReset: selectionResult.poolReset,
         remainingInPool: selectionResult.remainingInPool,
+        totalInPool: selectionResult.totalInPool,
+        attemptedBefore: selectionResult.attemptedBefore,
+        requested: questionCount,
       });
+      
+      // FIX 2: Add Fallback Logic for Insufficient Questions
+      // Validate that we got the requested number of questions
+      if (selectionResult.questions.length < questionCount) {
+        console.error(`[QuickPractice] CRITICAL: Only ${selectionResult.questions.length} questions selected (requested ${questionCount})!`);
+        console.error('[QuickPractice] Selection details:', {
+          topicsUsed: selectedTopicIds.length,
+          topicsWithQuestions: topicsWithQuestions.length,
+          poolInfo: {
+            total: selectionResult.totalInPool,
+            attempted: selectionResult.attemptedBefore,
+            remaining: selectionResult.remainingInPool,
+            poolReset: selectionResult.poolReset
+          }
+        });
+        
+        // Build detailed error message
+        const topicBreakdown = topicsWithQuestions.map(t => `${t.name}: ${t.total_questions} questions`).join(', ');
+        console.error(`[QuickPractice] Topic breakdown: ${topicBreakdown}`);
+        
+        // FIX 2: Retry with ALL topics from the subject if insufficient questions
+        if (selectionResult.questions.length < questionCount && selectedTopicIds.length < topicsWithQuestions.length) {
+          console.warn('[QuickPractice] Insufficient questions, retrying with ALL topics...');
+          
+          // Retry with all topics
+          const allTopicIds = topicsWithQuestions.map(t => t.id);
+          console.log(`[QuickPractice] Fallback: Using all ${allTopicIds.length} topics (was using ${selectedTopicIds.length})`);
+          
+          const retryResult = await selectQuestionsForSession(
+            userId,
+            selectedSubject,
+            allTopicIds,
+            questionCount
+          );
+          
+          console.log('[QuickPractice] Fallback result:', {
+            questionsSelected: retryResult.questions.length,
+            poolReset: retryResult.poolReset,
+            remainingInPool: retryResult.remainingInPool,
+          });
+          
+          // Use retry result if it's better (got more questions)
+          if (retryResult.questions.length > selectionResult.questions.length) {
+            console.log(`[QuickPractice] Fallback successful: ${retryResult.questions.length} questions (was ${selectionResult.questions.length})`);
+            selectionResult = retryResult;
+            // Update selectedTopicIds to reflect what was actually used
+            selectedTopicIds.length = 0;
+            selectedTopicIds.push(...allTopicIds);
+          } else {
+            console.log('[QuickPractice] Fallback did not improve results, using original selection');
+          }
+        }
+        
+        // If we got 0 questions, show an error
+        if (selectionResult.questions.length === 0) {
+          alert(`No questions available for this selection.\n\nDetails:\n- Topics: ${selectedTopicIds.length}\n- Total questions in subject: ${selectionResult.totalInPool}\n- Already attempted: ${selectionResult.attemptedBefore}\n\nThe question pool will be reset for your next session.`);
+          setStarting(false);
+          return;
+        }
+        
+        // If we got some but not all, warn the user with details
+        if (selectionResult.questions.length < questionCount) {
+          const proceed = confirm(
+            `Only ${selectionResult.questions.length} questions available (requested ${questionCount}).\n\n` +
+            `Reason: ${selectionResult.poolReset ? 'Pool was reset but still insufficient questions' : `Only ${selectionResult.remainingInPool + selectionResult.questions.length} unattempted questions remaining`}.\n\n` +
+            `Continue with ${selectionResult.questions.length} questions?`
+          );
+          if (!proceed) {
+            setStarting(false);
+            return;
+          }
+        }
+      }
+      
+      // Log selected question IDs for verification
+      if (selectionResult.questions.length > 0) {
+        const selectedIds = selectionResult.questions.map(q => q.id);
+        console.log('[QuickPractice] Selected question IDs (first 5):', selectedIds.slice(0, 5));
+        console.log('[QuickPractice] All selected question IDs:', selectedIds);
+      } else {
+        console.warn('[QuickPractice] No questions selected!');
+      }
 
       // Store pre-selected questions in sessionStorage for the practice page
       // Ensure we only store exactly the requested number of questions
@@ -156,12 +300,43 @@ export default function QuickPracticePage() {
         stored: questionIds.length,
       });
       
-      sessionStorage.setItem(`practiceConfig_${session.id}`, JSON.stringify({
-        topicIds: selectedTopicIds,
-        totalQuestions: questionCount,
-        questionIds,
-        poolReset: selectionResult.poolReset,
-      }));
+      // Store in sessionStorage with error handling
+      try {
+        const configData = {
+          topicIds: selectedTopicIds,
+          totalQuestions: questionCount,
+          questionIds,
+          poolReset: selectionResult.poolReset,
+        };
+        
+        const configKey = `practiceConfig_${session.id}`;
+        const configJson = JSON.stringify(configData);
+        
+        sessionStorage.setItem(configKey, configJson);
+        
+        // Verify storage succeeded
+        const storedData = sessionStorage.getItem(configKey);
+        if (!storedData) {
+          console.error('[QuickPractice] ERROR: SessionStorage write failed - data not persisted!');
+        } else {
+          const parsed = JSON.parse(storedData);
+          console.log('[QuickPractice] SessionStorage verified:', {
+            key: configKey,
+            questionCount: parsed.questionIds?.length || 0,
+            expectedCount: questionIds.length
+          });
+          
+          if (parsed.questionIds?.length !== questionIds.length) {
+            console.error('[QuickPractice] WARNING: Stored question count mismatch!', {
+              expected: questionIds.length,
+              stored: parsed.questionIds?.length || 0
+            });
+          }
+        }
+      } catch (storageError) {
+        console.error('[QuickPractice] SessionStorage error:', storageError);
+        // Continue anyway - practice page will fall back to fetching questions
+      }
 
       router.push(`/practice/${session.id}`);
     } catch (error) {

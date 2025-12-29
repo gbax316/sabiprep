@@ -236,12 +236,21 @@ export default function PracticeModePage({ params }: { params: Promise<{ session
         // Use pre-selected questions (non-repetition system)
         console.log('[Practice] Loading pre-selected questions:', {
           count: preSelectedQuestionIds.length,
+          questionIds: preSelectedQuestionIds.slice(0, 10), // Log first 10 IDs
         });
         questionsPromise = getQuestionsByIds(preSelectedQuestionIds).then(questions => {
           console.log('[Practice] Pre-selected questions loaded:', {
             requested: preSelectedQuestionIds!.length,
             received: questions.length,
+            missing: preSelectedQuestionIds!.length - questions.length,
           });
+          
+          // Warn if we got fewer questions than expected
+          if (questions.length < preSelectedQuestionIds!.length) {
+            console.error(`[Practice] CRITICAL: Only loaded ${questions.length} out of ${preSelectedQuestionIds!.length} pre-selected questions!`);
+            console.error('[Practice] This may indicate questions were deleted, unpublished, or IDs are invalid.');
+          }
+          
           return questions;
         }).catch(error => {
           console.error('[Practice] Error loading pre-selected questions:', error);
