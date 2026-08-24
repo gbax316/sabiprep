@@ -9,13 +9,13 @@ import { createServerClient } from '@/lib/supabaseServer';
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
-// Optional: Add API key protection
-const CRON_SECRET = process.env.CRON_SECRET;
-
 export async function GET(request: NextRequest) {
-  // Verify cron secret if set
+  // Verify the cron secret. Vercel sends `Authorization: Bearer $CRON_SECRET`
+  // on scheduled invocations. Read at request time, not module scope, so the
+  // value is picked up per invocation rather than frozen at cold start.
+  const cronSecret = process.env.CRON_SECRET;
   const authHeader = request.headers.get('authorization');
-  if (CRON_SECRET && authHeader !== `Bearer ${CRON_SECRET}`) {
+  if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
