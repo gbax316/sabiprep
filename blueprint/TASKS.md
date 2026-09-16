@@ -45,9 +45,10 @@ deletes data.
 
 ### Authorization, one pattern
 
-- [ ] **AUTH-01** Write one migration closing all five forgery holes as a single pattern, not
-      five patches. Ships with its verification query; Orezi runs it in the SQL Editor and
-      pastes the result back.
+- [ ] **AUTH-01** One migration closing all five forgery holes as a single pattern, not five
+      patches. **Written 2026-09-16 at `supabase/migrations/20260916_lock_down_scoring_writes.sql`,
+      not yet applied.** Orezi runs it in the SQL Editor and pastes the 8-row verification result
+      back, then re-runs the anonymous curl probe. Unchecked until that result exists.
   - `award_xp`, `check_and_award_mastery_badges` and `update_goal_progress` accept any
     `user_uuid` and any value. No `auth.uid()` assertion, and no GRANT or REVOKE anywhere in
     16 migrations (SABI-REV-069)
