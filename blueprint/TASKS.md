@@ -49,6 +49,13 @@ deletes data.
       patches. **Written 2026-09-16 at `supabase/migrations/20260916_lock_down_scoring_writes.sql`,
       not yet applied.** Orezi runs it in the SQL Editor and pastes the 8-row verification result
       back, then re-runs the anonymous curl probe. Unchecked until that result exists.
+      **Incomplete as written, found by the 2026-09-16 re-audit.** Its header claims to establish
+      the pattern that every RPC writing for a user asserts `auth.uid()`, and it applies that to
+      three functions. A sweep of all 26 function definitions across the 17 migrations found six
+      with the same shape; this migration leaves five of them open, including
+      `reset_user_attempted_questions`, which lets any caller delete the attempted-question
+      archive that decision D2 exists to preserve. Widen AUTH-01 to the full sweep before
+      applying, or narrow the header. See BLOCKS-AUDIT.md, re-audit N1. **Operator decision.**
   - `award_xp`, `check_and_award_mastery_badges` and `update_goal_progress` accept any
     `user_uuid` and any value. No `auth.uid()` assertion, and no GRANT or REVOKE anywhere in
     16 migrations (SABI-REV-069)
