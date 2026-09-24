@@ -1,0 +1,73 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "reviews": {
+    "6": {
+      "q_number": 6,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The teaching is otherwise clear and complete, but saying that the vacuole has \"nothing to do with\" sensitivity is too absolute. Vacuolar changes contribute to turgor-driven plant responses, although sensitivity is not a standard function assigned to the vacuole in this question.",
+      "fix": "Replace the D line with: D. sensitivity: sensitivity is not a function assigned to the vacuole; it is the organism's ability to detect and respond to changes in its surroundings."
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The solution wrongly says that none of the stomach's secretions digests fat. Human stomachs secrete gastric lipase, although this question uses the WAEC convention that focuses on bile and pancreatic lipase in the small intestine. Lipase acts on fat molecules within droplets rather than splitting the droplets themselves. The required diagram alt text is also missing. The settled answer remains C under the syllabus treatment intended by the item. See [NCBI's review of intestinal physiology](https://pmc.ncbi.nlm.nih.gov/articles/PMC4956471/) and [PubMed's review of human gastric lipase](https://pubmed.ncbi.nlm.nih.gov/11099794/).",
+      "fix": "Replace hint 2 with: Most fat digestion in the small intestine depends on bile, which emulsifies large fat globules into smaller droplets, and pancreatic lipase, which breaks down fat molecules in those droplets. Find the organ that produces bile and the organ that secretes pancreatic lipase.\n\nReplace the principle paragraph with: For the school classification tested here, focus on the substances that act on fat in the small intestine. Bile emulsifies fat into small droplets, increasing the surface area available to lipase, while pancreatic lipase breaks down the fat molecules into absorbable products. The relevant parts are therefore the organ that produces bile and the organ that secretes pancreatic lipase.\n\nReplace the A line with: A. I, II and III: I is the stomach. Although the stomach secretes gastric lipase, this item follows the WAEC syllabus convention that focuses on bile and pancreatic lipase as the main substances involved in fat digestion in the small intestine, so I is not counted.\n\nReplace the B line with: B. I and III: under the convention used in this item, it includes I and leaves out II, the source of pancreatic lipase.\n\nReplace the D line with: D. I, III and IV: IV stores, concentrates and releases bile produced by III, but it does not produce the bile. The option also includes I and leaves out II, the source of pancreatic lipase.\n\nReplace the exam tip with: Exam tip: separate the organ that produces a digestive substance from an organ that merely stores and releases it. The liver produces bile, while the gall bladder stores and releases it.\n\nAdd this diagram alt text: A labelled drawing shows a tube entering a J-shaped sac at the upper right, a large curved structure at the upper left, a small pear-shaped sac beneath that structure, and a long narrow structure below the J-shaped sac. I points to the J-shaped sac, II to the long narrow structure beneath it, III to the large upper-left structure, and IV to the small sac beneath it. Below them, a thick outer tube surrounds several coils of a thinner tube."
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Several physiological claims are inaccurate. Villi are projections throughout the small intestine, not folds limited to the ileum. Water is absorbed in both the small and large intestines, with most gastrointestinal water absorption occurring in the small intestine. Some final digestion also occurs at brush-border enzymes, so saying that only absorption suffers is too absolute. The settled answer reflects the simplified school classification of villi by their primary function. See [NCBI's small-intestine physiology review](https://www.ncbi.nlm.nih.gov/books/NBK532263/) and [NCBI's intestinal absorption review](https://pmc.ncbi.nlm.nih.gov/articles/PMC4956471/).",
+      "fix": "Replace hint 2 with: Villi give the small intestine a huge absorptive surface, and each villus contains blood capillaries and a lacteal that carry absorbed nutrients away. Water is absorbed in both the small intestine and the colon, so do not treat the colon as the only or main site of water absorption.\n\nReplace hint 3 with: Two options mention absorbing nutrients. Separate the action of digestive juices in the gut from the uptake of their soluble products through the intestinal lining. Which option gives the main textbook function of villi?\n\nReplace the solution principle with: Villi are finger-like projections along the lining of the small intestine. They greatly increase the surface area for absorption, and each villus has a thin epithelium, blood capillaries and a lacteal that carry absorbed nutrients away. This question tests their main textbook function, which is nutrient absorption.\n\nReplace How to tell with: without villi, the surface area available for moving digested nutrients into the blood and lymph falls sharply. Pancreatic juice and bile can still act on food in the gut. Some final digestion occurs at the intestinal brush border, but the school-level distinction tested by these options is that villi are primarily structures for absorbing nutrients. This makes C the expected answer.\n\nReplace the B line with: B. absorption of water: water is absorbed in both the small and large intestines, but this item is testing the defining textbook role of villi in absorbing digested nutrients.\n\nReplace the D line with: D. digestion of food and absorption of nutrients: pancreatic juice and bile can still act in the gut, while the direct function lost with the villi is their large absorptive surface. The expected school-level answer therefore identifies nutrient absorption only.\n\nReplace the exam tip with: Exam tip: link villi chiefly to the absorption of digested nutrients. Remember that water is absorbed in both the small and large intestines, and read words such as 'only' and 'and' carefully."
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The idealized logistic model supports answer B, but the solution contradicts itself by acknowledging fluctuations and then saying a real population stays the same. Real populations normally fluctuate around carrying capacity. The item is also direct recall of one concept, so the stated difficulty should be easy rather than hard.",
+      "fix": "Replace the first solution paragraph with: Carrying capacity is the population size at which a stable habitat supports no further net increase. In the simplified logistic model used in this question, births balance deaths, so the population is treated as remaining constant at that level. Real populations may fluctuate around carrying capacity rather than staying exactly unchanged.\n\nReplace the A line with: A. alternately increases and decreases: real populations may fluctuate around carrying capacity, but the simplified S-shaped model tested here represents carrying capacity as a stable level, so B is expected.\n\nReplace the exam tip with: Exam tip: tie carrying capacity to zero net growth at the top of an ideal S-shaped curve. In the exam model, births balance deaths and the population is treated as constant, although a natural population may fluctuate around that level.\n\nReplace difficulty: hard with difficulty: easy."
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The absolute statement that only natural resources can be conserved is false outside this syllabus context. Cultural objects, buildings, energy and other things can also be conserved. The explanation must explicitly limit the definition to ecological conservation.",
+      "fix": "Replace the first solution paragraph with: In this ecology question, conservation means the careful use and protection of natural resources so that they remain available. Domestic waste is not classed as a natural resource here; it is managed through reduction, reuse, recycling and safe disposal.\n\nReplace How to tell with: ask whether each option is classed in the syllabus as a natural resource that should be protected for future use. Minerals, soil, water, forests and wildlife are. Domestic waste is managed to reduce harm and recover useful materials, but it is not itself listed as a natural resource to conserve.\n\nReplace the exam tip with: Exam tip: in ecology questions about conservation, first identify which options are natural resources. Do not confuse non-renewable, which means a resource cannot be replaced quickly, with impossible to conserve."
+    }
+  },
+  "failures": []
+}

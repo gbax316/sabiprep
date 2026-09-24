@@ -69,6 +69,44 @@ nymph questions, check the hind legs first" is.
 **Show working for anything calculated.** Each step on its own line, units
 carried through, the final value stated with its unit.
 
+## Syllabus answers without false claims
+
+Past papers are built on the syllabus's simplifications. "Villi are for absorption,"
+"the colon absorbs water," "at carrying capacity the population is constant." The key
+follows the examiner, so the teaching must too. But a solution must never state a
+simplification as if it were universally true, because the student carries that belief
+into the next exam and into life.
+
+- **Teach the examiner's answer.** Never argue the student out of the key.
+- **Scope what the syllabus simplifies.** "In the syllabus, strength comes from the cell
+  wall." "In Biology, conservation means the careful use of natural resources." "The
+  population is taken as constant."
+- **Avoid absolutes unless they are literally true.** *Nothing*, *only*, *never*,
+  *always*, *has no role* are almost always false somewhere. The vacuole does play a part
+  in some plant movements; energy and buildings are conserved too.
+- **Do not contradict yourself.** Saying a population wobbles and then that it stays the
+  same is a contradiction. Say it is taken as constant, or stays roughly the same.
+- **Stay at syllabus depth.** Scoping a claim is not an invitation to teach university
+  physiology. One short qualifier, then move on.
+
+Found on Biology 2025, where five of seven hard items stated a syllabus simplification as
+fact: Q6, Q24, Q25, Q31 and Q39.
+
+## Shared stems and sibling questions
+
+Where one stem, diagram or passage serves several questions, those questions are
+siblings. In practice mode a student works them in order and reads hints before
+answering.
+
+- **A hint must not give away a sibling's answer.** On 2025 Q29, "identify the
+  instrument", the hint said the disc was "pushed down into water", which is the answer to
+  Q30, "what does it measure". Describe what identifies this question's answer and nothing
+  that answers the next one.
+- A solution may name facts a sibling depends on, because it is read after answering and
+  cannot explain the answer otherwise. Hints are read before, so they carry the rule.
+- This matters most for English comprehension, where one passage can carry eight
+  questions and an early hint can answer a late one.
+
 ## Topic and difficulty
 
 `topic_id` is one canonical id from `taxonomies/<subject>.json`. Never invent a
@@ -150,3 +188,11 @@ R2 rejects an item that fails any of these, and says which:
 8. A fact in the solution is wrong.
 9. `topic_id` is not in the taxonomy, or plainly the wrong one.
 10. Language a fifteen-year-old would stumble over, where a plainer word exists.
+11. A syllabus simplification stated as universal truth, an unscoped absolute, or a
+    self-contradiction. Judge it at syllabus depth: a claim correctly scoped to the
+    syllabus passes, even if university biology would add detail.
+12. A hint that gives away the answer to a sibling question sharing the same stem.
+
+**When a check fails, quote the exact words that fail it.** A reviewer who paraphrases
+can misread; on 2025 Q24 a reviewer reported a claim the text never made. Quoting keeps
+every finding checkable.

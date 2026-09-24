@@ -1,24 +1,64 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "required": ["items"],
+  "required": [
+    "items"
+  ],
   "properties": {
     "items": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["q_number", "topic_id", "difficulty", "hint1", "hint2", "hint3", "solution"],
+        "required": [
+          "q_number",
+          "topic_id",
+          "difficulty",
+          "hint1",
+          "hint2",
+          "hint3",
+          "solution"
+        ],
         "properties": {
-          "q_number": { "type": "integer" },
-          "topic_id": { "type": "string", "description": "One canonical topic id from the subject taxonomy." },
-          "difficulty": { "type": "string", "enum": ["easy", "medium", "hard"] },
-          "hint1": { "type": "string", "description": "Orients to the concept. Never names or implies the answer." },
-          "hint2": { "type": "string", "description": "Points at the decisive feature or rules out the weakest options. Still does not give the answer." },
-          "hint3": { "type": "string", "description": "Brings the student to the final step. They must still make the choice themselves." },
-          "solution": { "type": "string", "description": "Plain text, no markdown. Structured with line breaks and plain labels." }
+          "q_number": {
+            "type": "integer"
+          },
+          "topic_id": {
+            "type": "string",
+            "description": "One canonical topic id from the subject taxonomy."
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
+          },
+          "hint1": {
+            "type": "string",
+            "description": "Orients to the concept. Never names or implies the answer."
+          },
+          "hint2": {
+            "type": "string",
+            "description": "Points at the decisive feature or rules out the weakest options. Still does not give the answer."
+          },
+          "hint3": {
+            "type": "string",
+            "description": "Brings the student to the final step. They must still make the choice themselves."
+          },
+          "solution": {
+            "type": "string",
+            "description": "Plain text, no markdown. Structured with line breaks and plain labels."
+          }
         }
       }
+    },
+    "subject": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
     }
   }
 }

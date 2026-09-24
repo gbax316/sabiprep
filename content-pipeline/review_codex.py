@@ -5,7 +5,7 @@ The teaching is written by Claude, so it is reviewed by a different model
 family. A reviewer from the author's own family tends to share the author's
 blind spots and pass what the author got wrong.
 
-Reviews every item against the ten-point R2 checklist in
+Reviews every item against the twelve-point R2 checklist in
 standards/teaching.md, with a separate hard flag for any wrong fact, because a
 wrong fact in a solution is the one defect that actively teaches a student
 something false.
@@ -26,7 +26,7 @@ PREAMBLE = """You are the quality reviewer for hints and worked solutions writte
 
 The answer to every question is already settled and correct. You are reviewing the TEACHING, not the answer.
 
-Below is the teaching standard in full. Review every item against its "What R2 checks" list, numbered 1 to 10, and against everything else it says.
+Below is the teaching standard in full. Review every item against its "What R2 checks" list, numbered 1 to 12, and against everything else it says.
 
 Be rigorous. A pass means you would put this in front of a student today.
 - Set fact_error true if ANY statement of fact in a hint or the solution is wrong, however small. This matters most of all.
@@ -35,6 +35,8 @@ Be rigorous. A pass means you would put this in front of a student today.
 - Check the solution is plain text: no **, #, backticks, or bullet dashes. Check notation uses Unicode (H₂O, not H2O).
 - Check there are no em-dashes and no exclamation marks.
 - If an item has an answer_challenge field, the author doubted the settled answer. Say whether you agree in notes.
+- For a fail, quote the exact words that fail the check in notes, so the finding can be verified against the text.
+- Judge facts at syllabus depth. A claim correctly scoped to the syllabus passes, even where university biology would add detail. Flag an unscoped absolute or a simplification stated as universal truth (check 11).
 - For a fail, give the exact corrected wording in fix, not a description of what to do.
 
 THE STANDARD:

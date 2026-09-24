@@ -1,0 +1,362 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Hint 3 wrongly says moulting occurs only in animals with hard outer coverings and only while they grow. The solution also wrongly calls locomotion a characteristic of all living things and says an insect locomotes at every life stage. An insect egg does not locomote, and plants do not show locomotion.",
+      "fix": "Hint 3: Of the two options left, ask which one solves the problem created when a growing nymph's rigid outer covering cannot expand.\n\nHow to tell: the question asks for a growth process that happens before the adult stage. The nymph has not yet reached its adult form, so it still has growing to do. Because its rigid exoskeleton cannot expand enough for continuous growth, it must moult before increasing to the next stage. Respiration and sensitivity continue in the adult, while locomotion is movement from place to place rather than a growth process.\n\nB. locomotion: this is movement of the whole organism from one place to another. A nymph can locomote, but locomotion is not the process that allows it to replace its rigid exoskeleton as it grows."
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The solution incorrectly equates the visible midrib and veins with vascular bundles. A leaf vein or midrib contains one or more vascular bundles together with surrounding tissues.",
+      "fix": "Xylem carries water and mineral salts into the leaf, while phloem transports sugars and other organic substances between the leaf and the rest of the plant. In a leaf, xylem and phloem lie together in vascular bundles contained within the midrib and veins.\n\nHow to tell: find the label that ends on the midrib or another vein. II is that label, and question 4 identifies it as the midrib, the main vein of the leaf. The midrib contains vascular bundles, so II is the labelled part that contains xylem and phloem."
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "fail",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "The hints and solution pass checks 1 to 10, and the topic is canonical. However, the diagram has no alt text, which fails the separate diagram-alt-text requirement.",
+      "fix": "Diagram alt text: Two side-by-side drawings show an irregularly shaped cell with a dark oval inside. In the left drawing, a small curved object lies beside an inward fold in the cell boundary; the printed labels are “Cell” and “Bacterium”. An arrow points to the right drawing, where the curved object is enclosed within the cell boundary and the printed label reads “Bacterium engulfed”."
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 nearly gives away B by mentioning roots, night and day. Hint 3 then confirms A, C and D, leaving B as the only possible choice. The solution, topic and distractor explanations are otherwise sound.",
+      "fix": "Hint 2: Respiration releases energy from food in living cells. Check whether each statement describes respiration itself or another process.\n\nHint 3: Set aside the statements about energy release and aerobic conditions. Test the remaining two statements against what must happen in a living root cell underground."
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Most filtered water is reabsorbed in the proximal convoluted tubule, not especially in the loop of Henle and collecting duct. Urine is also not always more concentrated than blood, since a well-hydrated mammal can produce dilute urine. The reasoning about option C is misleading because adding one solute can increase total solute concentration, although urea is not mainly added by active secretion.",
+      "fix": "Replace the first explanatory paragraph with:\nA solution is hypertonic when it has a higher concentration of dissolved particles than another solution. In the condition described, much water is reabsorbed from the filtrate into the blood. About two-thirds of the filtered water is reabsorbed in the proximal convoluted tubule, and more is reabsorbed later in the nephron. Dissolved substances are left in a smaller volume of water, making the urine more concentrated.\n\nReplace hint 3 with:\nBetween the two options left, ask which statement correctly describes the main change that concentrates the filtrate as it passes through the nephron.\n\nReplace the explanation for C with:\nC. urea is actively secreted into the renal tubules: urea enters the filtrate mainly by filtration at the glomerulus, not by active secretion. Urine becomes concentrated chiefly because water is reabsorbed."
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The statement that sympathetic action simply reduces saliva is too categorical. Sympathetic stimulation can produce a small amount of thick, protein-rich saliva, while parasympathetic stimulation produces a much larger flow of watery saliva. The settled answer remains correct.",
+      "fix": "Replace hint 2 with:\nIn an emergency the heart speeds up, while digestive activity and the flow of watery saliva decrease. A slower heartbeat and a general increase in saliva therefore do not fit the expected response.\n\nReplace the explanation for C with:\nC. increase in the secretion of saliva: parasympathetic stimulation produces a large flow of watery saliva for digestion. Sympathetic stimulation produces only a small amount of thick saliva, so a general increase in salivation is not the expected fight-or-flight response."
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The explanation says that perennials fruit repeatedly, but some perennial plants flower and fruit only once before dying. Living for more than two years is the defining feature.",
+      "fix": "Replace the explanation for B with:\nB. perennials: they live for more than two years. Many, such as mango and orange trees, produce fruits repeatedly."
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Hint 3 wrongly implies that every kind of food undergoes chemical digestion. Water, vitamins and mineral salts do not require digestion. Hint 1 and the solution also imply that all absorbed products enter the blood directly, although most digested lipids enter lacteals and travel first through the lymph.",
+      "fix": "Replace hint 1 with: Digestion makes large food molecules small enough to be absorbed through the gut wall into the blood or lymph.\n\nReplace hint 3 with: Of the two options left, one contains a mistake about what starch is. Which one describes what happens to all food classes that need chemical digestion?\n\nReplace the first solution paragraph with: Large food molecules such as starch, proteins and fats must be broken into smaller molecules before they can be absorbed through the gut wall. Water-soluble products enter blood capillaries, while most digested fats enter lacteals and travel first through the lymph.\n\nReplace the final How to tell sentence with: In each example, large or complex food molecules are broken into smaller molecules."
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The teaching says the stomach makes or releases pepsin directly. Gastric chief cells release inactive pepsinogen, which is converted to pepsin in the acidic stomach. The exam tip also implies that pancreatic lipase in the duodenum is the first enzyme involved in fat digestion, although lingual and gastric lipases act earlier.",
+      "fix": "Replace hint 2 with: Saliva has no protein-digesting enzyme. In the stomach, hydrochloric acid activates pepsinogen to form pepsin, the first enzyme to digest protein.\n\nReplace the first solution paragraph with: Protein digestion starts in the stomach. Gastric glands release hydrochloric acid and inactive pepsinogen. The acid converts pepsinogen into pepsin, which works best in acidic conditions and breaks proteins into shorter chains called peptides. Saliva contains no protein-digesting enzyme, so chemical digestion of protein does not begin until the stomach.\n\nReplace the line for option B with: B. II: this is the pancreas. It releases trypsinogen into the duodenum, where trypsinogen is activated to trypsin and continues protein digestion after it has started in the stomach.\n\nReplace the exam tip with: Exam tip: for questions about where digestion begins, match each food class to its earliest enzyme. Salivary amylase starts starch digestion in the mouth, while pepsin starts protein digestion in the stomach."
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The description of a hygrometer is too broad. A hygrometer does not usually have two thermometers. Two thermometers, one with a wet bulb, specifically describe a wet-and-dry-bulb hygrometer or psychrometer.",
+      "fix": "Replace the line for option D with: D. hygrometer: it measures humidity, the amount of water vapour in the air. A wet-and-dry-bulb hygrometer is one type and has two thermometers, one with a wet bulb."
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "fail",
+      "failed_checks": [
+        5,
+        8
+      ],
+      "fact_error": true,
+      "notes": "A Secchi disc directly measures water transparency or Secchi depth, not turbidity itself. Its reading can indicate turbidity. The exam tip also makes unreliable absolute claims about anything lowered, inserted or mounted, so it is not a safe transferable rule.",
+      "fix": "Replace the first solution paragraph with: The instrument is a Secchi disc, which measures water transparency. Its reading indicates how clear or cloudy the water is and how far light can penetrate. The disc is lowered until it disappears from view. In muddy water, or water containing much plankton, it disappears at a shallow depth. In clear water it remains visible much deeper.\n\nReplace the exam tip with: Exam tip: match an ecological instrument to both its location and its method. A Secchi disc is lowered through water until it disappears, a soil thermometer is inserted into soil, and a wind vane is mounted in open air where wind can reach it."
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Hint 3 and the rejection of option D say that each trophic level obtains energy by eating the level below. Producers do not eat another trophic level. They capture light energy, while consumers obtain energy by feeding on other organisms.",
+      "fix": "Replace hint 3 with: Consumers get energy by feeding on organisms at lower trophic levels, while producers capture light energy. Of the three options left, which one fits a pyramid that gets narrower as it rises?\n\nReplace the line for option D with: D. each trophic level is an independent energy source: producers capture light energy, while consumers obtain energy by feeding on organisms at lower trophic levels. The levels are linked, not independent."
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The teaching incorrectly defines ecological frequency as the number of plants counted. Frequency records how often a species occurs across sampling units, commonly as a percentage. The working also fails to carry the plant unit through the division.",
+      "fix": "Replace hint 2 with: \"Population density = number of organisms ÷ area. For this calculation, use the given 1,850 as the number of Ageratum plants.\"\n\nReplace the final two sentences of the principle with: \"The question uses 1,850 as the plant count needed for the calculation. In ecological sampling, frequency means how often a species occurs across sampling units, usually expressed as a percentage; it is not the total number of individuals.\"\n\nReplace the working with:\n\"How to tell:\nPopulation density = number of individuals ÷ area\n= 1,850 plants ÷ 100 m²\n= 18.50 plants/m²\nThe question gives the area as 100 m, but area is measured in square metres, so the intended unit must be 100 m².\""
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The solution uses an unreliable distinction: methods that act on the pathogen count as control, while methods that act on the host do not. Vaccination acts through the host but is still a specific method of controlling infectious disease. The exam tip wrongly groups vaccination with general habits such as diet and rest. Saying UV lamps sterilise equipment is also too absolute because UV commonly disinfects exposed surfaces but may not achieve complete sterilisation.",
+      "fix": "Replace hint 1 with: \"Watch the word not. Look for the activity that is a general health habit rather than a specific method of killing pathogens, interrupting their transmission or controlling their carriers.\"\n\nReplace the first paragraph with: \"Pathogen control uses specific measures to destroy pathogens, interrupt their transmission or control their carriers. A balanced diet supports general health and normal immune function, but it is not a specific method of controlling a pathogen.\"\n\nReplace the How to tell section with: \"How to tell: ask whether each activity is a specific control measure against a pathogen, its transmission or its carrier, or merely a general measure that supports health. Only eating a balanced diet is a general health measure.\"\n\nReplace option A's explanation with: \"A. exposure to ultraviolent radiation: ultraviolet (UV) radiation can inactivate many microorganisms and is used to disinfect water, air and exposed surfaces or equipment.\"\n\nReplace option D's explanation with: \"D. destroying the habitats of pathogens: removing environmental reservoirs or places where carriers breed, such as stagnant water where mosquitoes breed, can interrupt the spread of pathogens.\"\n\nReplace the exam tip with: \"Exam tip: separate specific control measures, such as disinfection, UV treatment, vaccination and carrier control, from general health habits such as eating a balanced diet. Both support health, but only the first group targets a particular infection or route of transmission.\""
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The explanation for option A is too absolute. Deforestation mainly destroys and fragments forest habitats, but the cleared land can become a different disturbed habitat. The option fails because habitat creation is not the main effect, not because no new habitat can ever result.",
+      "fix": "Replace option A's explanation with: \"A. creation of new habitats: deforestation mainly destroys and fragments forest habitats. The cleared land may become a different disturbed habitat, but creating habitat is not its main effect.\""
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The solution treats all tree felling as incompatible with conservation and all tree-crop planting as beneficial. Controlled selective felling can form part of sustainable forestry, while tree-crop plantations can damage natural forests if they replace them. The settled answer still follows from the unqualified wording of option A, but the teaching needs these distinctions.",
+      "fix": "Replace the first paragraph with: \"Forest conservation means protecting forests and managing their use so that they can recover and last. Uncontrolled felling, especially without replacement planting, reduces forest cover and works against conservation. Controlled selective felling can be part of sustainable forestry, but option A gives no such safeguard.\"\n\nReplace the How to tell section with: \"How to tell: under the wording of the options, planting seedlings and tree crops adds tree cover, while preventing bush fires protects existing trees. The unqualified felling of trees removes them without stating any conservation measure.\"\n\nReplace option D's explanation with: \"D. planting tree crops: when done on suitable land as part of reforestation or agroforestry, tree crops add woody cover and help protect the soil, although a plantation does not replace the biodiversity of a natural forest.\"\n\nReplace the exam tip with: \"Exam tip: in conservation questions, distinguish uncontrolled removal from managed use. Planting and fire prevention can protect or restore a resource, while removal without replacement does not.\""
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The teaching wrongly defines an adaptation as necessarily being shared by a whole species. Adaptive traits can vary within a species. It also says tasters and non-tasters look exactly the same, which is an unjustified absolute; only the PTC-tasting difference is not a visible structural feature. Saying PTC has no taste at all to non-tasters is also too absolute because sensitivity depends partly on concentration.",
+      "fix": "Replace hint 2 with: \"Only some people can taste this chemical, while others of the same species cannot. That makes it a difference between individuals. The question gives no evidence that the ability improves survival or reproduction in a particular habitat.\"\n\nReplace the final sentence of the first paragraph with: \"An adaptation is an inherited feature that improves survival or reproduction in a particular environment.\"\n\nReplace the How to tell section with: \"How to tell: at the concentration used in school tests, phenylthiocarbamide (PTC) tastes bitter to tasters but is tasteless or much less bitter to non-tasters. The difference concerns how their taste receptors respond, not the visible shape of the tongue. It is therefore treated as a physiological variation.\"\n\nReplace option A's explanation with: \"A. morphological variations: morphological means form or structure, but the PTC-tasting difference is not a visible structural feature.\"\n\nReplace option C's explanation with: \"C. morphological adaptation: PTC tasting is not a structural feature, and the question states no survival advantage linked to a particular environment.\"\n\nReplace option D's explanation with: \"D. physiological adaptation: the trait concerns body function, but the question presents it as a difference among individuals and gives no habitat-related advantage, so it is classified here as physiological variation.\""
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The size sequence wrongly presents an allele as a smaller part contained within a gene. An allele is a version of a gene. The sentence about “the two alleles of a gene” also needs a diploid context. The exam tip wrongly says the nucleus is another true answer when the stem says “found on”; alleles are in the nucleus but on chromosomes.",
+      "fix": "A gene is a section of DNA that influences a characteristic. An allele is one version of a gene. Genes, and therefore alleles, are located on chromosomes. In a diploid organism, the two alleles an individual carries occupy the same locus on a matching pair of chromosomes.\n\nHow to tell: work from the larger structures to the exact location.\nA tissue is made of cells. In a typical plant or animal cell, the nucleus contains chromosomes. An allele is a version of a gene located on a chromosome.\nTherefore, alleles are found on chromosomes inside the nucleus.\n\nExam tip: read the stem and each option as one sentence. Chromosomes are inside the nucleus, but genes and alleles are located on chromosomes, not on the nucleus."
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The exam tip says Aa × Aa “always gives” a 1 : 2 : 1 ratio. That is the expected probability ratio, not a guaranteed ratio among a couple’s actual children.",
+      "fix": "Exam tip: for Aa × Aa, a Punnett square gives an expected ratio of 1 AA : 2 Aa : 1 aa. For each child, the probability of the recessive trait is ¼ and the probability of the dominant trait is ¾."
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 closely paraphrases option C. After hint 2 removes the gene and mutation options, the student can match the wording without recalling the missing part of Lamarck’s theory.",
+      "fix": "Focus on what Lamarck thought happened after an organism changed through use or disuse. Which remaining option completes his theory?"
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The teaching makes two false absolute claims. Worker bees can lay unfertilised eggs, especially in queenless colonies, so the queen does not literally lay every egg and workers are not invariably sterile. Drones also contribute to thermoregulation, so mating is their main reproductive role rather than their only function. See the [honeybee thermoregulation study](https://pmc.ncbi.nlm.nih.gov/articles/PMC3227730/) and [Penn State Beekeeping Basics](https://portal.ct.gov/-/media/caes/documents/bee/penn_state_beekeeping_basics_agrs93.pdf).",
+      "fix": "hint2: A normal beehive has one queen as its main egg-layer, and no king. She mates with male honeybees during a flight outside the hive.\n\nsolution:\nHoneybees are social insects that live in a colony divided into three castes, each with its own main role. The queen is the main reproductive female and lays nearly all the eggs in a normal colony. Workers are females that normally do not reproduce; they collect nectar and pollen, build the comb, feed the young and guard the hive. Drones are males whose main reproductive role is to mate with a queen."
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The explanation omits the requirement that favourable variation must be heritable. Saying that organisms pass on their “useful features” can wrongly suggest that useful acquired features are inherited. Darwin and Wallace also developed natural selection independently, not through a joint collaboration.",
+      "fix": "Charles Darwin and Alfred Russel Wallace independently formulated the theory of evolution by natural selection. Darwin later explained it in On the Origin of Species, published in 1859. The theory says that individuals in a population have heritable differences and more young are produced than can survive. Individuals with inherited features that suit the environment are more likely to survive and reproduce, so the alleles for those features become more common over generations."
+    }
+  },
+  "failures": []
+}
