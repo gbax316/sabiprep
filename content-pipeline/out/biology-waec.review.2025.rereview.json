@@ -1,0 +1,272 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The wording \"these bundles are the midrib and veins\" and \"Every vein, the midrib included, is a vascular bundle\" incorrectly makes the midrib and veins identical to vascular bundles. The midrib and veins contain vascular bundles and also include other tissues. The universal claim \"Every vein\" compounds the error.",
+      "fix": "Replace \"In a leaf the two tissues run together in vascular bundles, and these bundles are the midrib and veins you can see on the leaf surface\" with \"In a leaf, xylem and phloem run together in vascular bundles located within the midrib and veins.\" Replace \"Every vein, the midrib included, is a vascular bundle, so II is where the xylem and phloem are\" with \"The midrib and the smaller veins contain vascular bundles, so label II identifies a part that contains xylem and phloem.\""
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The hint says \"sensitivity belongs to the whole organism, not to one part of a cell.\" This is factually too absolute because individual living cells can detect and respond to stimuli. The solution repeats the overly narrow claim in \"this is the whole organism responding to its surroundings.\" The valid reason for rejecting sensitivity is that it is not a vacuole function in the syllabus.",
+      "fix": "Replace the last sentence of hint 2 with: \"Protection is mainly linked to the cell wall, while sensitivity is the ability of a living cell or organism to respond to changes and is not a support function of the vacuole.\" Replace the line for D with: \"D. sensitivity: it is the ability of a living cell or organism to respond to changes in its surroundings, and it is not one of the functions the syllabus gives to the vacuole.\""
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 says, “It comes down to two labels that are easy to include by mistake, I and IV.” Since every option except C contains I or IV, the words “by mistake” eliminate all three distractors and reveal the answer without requiring the student to reason through the organs.",
+      "fix": "Two pairs remain plausible: I and III, or II and III. Compare I and II: which labelled organ makes the lipase that acts in the small intestine?"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The absolute claim “ultraviolet (UV) rays kill microorganisms, which is why UV lamps are used to sterilise water and equipment” is too strong. UV can inactivate many microorganisms and disinfect exposed surfaces, but it does not reliably sterilise equipment. The wording “does nothing to the pathogen itself” and “it does not kill the pathogen, stop it breeding or stop it spreading” also overstates the distinction: a balanced diet supports immune function, so the safe syllabus distinction is that it is not a specific pathogen-control measure.",
+      "fix": "Replace hint 1 with: Watch the word not. Look for the activity that is a general health habit rather than a specific method of destroying pathogens, interrupting their transmission or controlling their carriers.\n\nReplace the first solution paragraph with: Pathogen control uses specific measures to destroy pathogens, interrupt their transmission or control their carriers. A balanced diet supports general health and normal immune function, but in this syllabus question it is not classed as a specific method of controlling pathogens.\n\nReplace How to tell with: How to tell: ask whether each activity is a specific control measure against a pathogen, its transmission or its carrier, or a general measure that supports health. Only eating a balanced diet is a general health measure.\n\nReplace the A line with: A. exposure to ultraviolent radiation: ultraviolet (UV) radiation can inactivate many microorganisms and is used to disinfect water, air and exposed surfaces or equipment.\n\nReplace the exam tip with: Exam tip: separate specific control measures, such as disinfection, UV treatment, vaccination and carrier control, from general health habits such as eating a balanced diet. Both support health, but only the first group targets a particular infection or route of transmission."
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The absolute statements “One cannot be replaced once it is used up”, “minerals cannot be replaced once used up” and “non-renewable, which means it cannot be replaced” are not literally correct. Mineral deposits are not replenished on a human timescale, while mineral materials such as metals can be recycled. The current wording blurs ‘not rapidly renewed’ with ‘cannot be replaced at all’.",
+      "fix": "Replace hint 3 with: Two options are left. One is a non-renewable natural resource that is not replenished on a human timescale, and the other is what households throw away. Remember that non-renewable does not mean impossible to conserve.\n\nReplace the A line with: A. mineral resources: this draws students because mineral deposits are not replenished on a human timescale, but non-renewable resources can still be conserved by using less and recycling metals.\n\nReplace the exam tip with: Exam tip: in ecology questions about conservation, first identify which options are natural resources. Do not confuse non-renewable, which means a resource is not replenished on a human timescale, with impossible to conserve."
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The statements “Activities that add trees or protect the trees already there help” and “crops such as cocoa, rubber and oil palm keep a cover of trees on the land and protect the soil” treat tree-crop planting as inherently beneficial to forest conservation. Such plantations can instead replace natural forest and reduce biodiversity. The examiner’s treatment must therefore be scoped to suitable land and the syllabus context.",
+      "fix": "Replace the first solution paragraph with: Forest conservation means protecting forests and managing their use so that they can recover and last. Under the unqualified wording of option A, felling removes trees without any stated control or replacement planting, so it works against conservation. Controlled selective felling followed by regeneration can form part of sustainable forestry.\n\nReplace How to tell with: How to tell: under the wording of the options, planting seedlings and preventing bush fires protect or restore forest cover. Planting tree crops can add woody cover when it is done on suitable land, while the unqualified felling of trees gives no conservation safeguard.\n\nReplace the D line with: D. planting tree crops: in this syllabus question, planting tree crops is treated as suitable when it adds woody cover on appropriate land and helps protect the soil. A tree-crop plantation does not replace the biodiversity of a natural forest.\n\nReplace the exam tip with: Exam tip: in conservation questions, distinguish uncontrolled removal from managed use. Planting and fire prevention can protect or restore a resource, while removal without replacement does not."
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The claims \"there is nothing to see: a taster's tongue looks the same as a non-taster's\" and \"with no link to survival in a habitat\" are too absolute. Tongues can differ visibly, but PTC-tasting status is not itself a visible structural feature. The question gives no evidence of a survival advantage, which is different from proving that no link exists.",
+      "fix": "How to tell: phenylthiocarbamide (PTC) tastes bitter to some people and has little or no taste to others. The difference concerns how their taste receptors respond, not a visible structural feature. The question gives no evidence that this ability improves survival or reproduction in a particular habitat, so it is treated as variation rather than adaptation.\n\nA. morphological variations: morphological means form or structure, but the PTC-tasting difference is not a visible structural feature.\nC. morphological adaptation: PTC tasting is not a structural feature, and the question states no survival advantage linked to a particular habitat.\nD. physiological adaptation: the trait concerns body function, but the question presents it as a difference between individuals and gives no habitat-related advantage, so it is classified here as physiological variation."
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The exam tip says \"when two options are both true\", but \"nucleus\" is not true with the stem's preposition: alleles are found in the nucleus but on chromosomes. The claim \"In a body cell, the two alleles a person carries for a gene sit at the same position...on a matching pair of chromosomes\" is also too broad. For many X-linked genes, a male has only one allele.",
+      "fix": "A gene is a section of DNA that influences a characteristic. An allele is one version of a gene. Genes are located on chromosomes. For an autosomal gene in a human body cell, the two gene copies occupy corresponding positions, called loci, on a matching pair of chromosomes. They may carry the same or different alleles.\n\nExam tip: read the preposition carefully and choose the exact location. Chromosomes are inside the nucleus, but genes and alleles are located on chromosomes."
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 says \"a change an animal gained through use or disuse\" and asks \"What did he say happened to\" it. Because option C alone contains the matching idea of \"acquired characters\", a student can select it by matching the wording rather than recalling the second part of Lamarck's theory.",
+      "fix": "Hint 3: Lamarck's theory has two linked parts. You already have use and disuse. Which remaining statement completes the theory?"
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    }
+  },
+  "failures": []
+}
