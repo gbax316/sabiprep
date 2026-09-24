@@ -112,6 +112,46 @@ deleted" reasoning. See `PLAN.md`, Content pipeline, item 7.
 
 ---
 
+## 2026-09-24: content pipeline
+
+Real WAEC and JAMB papers, 2015 to 2025, into reviewed, import-ready rows. Code and
+standards in `content-pipeline/`, design in `QUESTION-PIPELINE.md`, rulings in D6.
+Biology WAEC is the reference subject, proved on the 2025 paper first.
+
+**Ask, verbatim:** process and format the questions for all subjects 2015 to 2025,
+redraw diagrams with code, keep English comprehension passages attached to their
+questions, preserve maths and physics notation, provide the correct answer with 100%
+certainty, three hints and a structured solution, match redrawn images to their
+questions, review answers and review the teaching, return all of it importable, deduce
+topics per subject. Build it so the resent subjects follow the same pattern.
+
+**Where 2025 stood when this section was written:** 50 extracted, 46 keyed, 4 held for a
+ruling, 6 diagrams redrawn. Read `out/biology-waec.final.2025.json` for the current key,
+not this line.
+
+- [ ] **CON-01** Finish the Biology 2025 slice: teaching review (Codex reviews Claude's
+      teaching), apply fixes, export the CSV and upload manifest. Then Orezi reads the
+      output before anything scales.
+- [ ] **CON-02** Rule on the four held 2025 questions. Each has a reason on file in
+      `out/biology-waec.final.2025.json`. **Orezi.**
+      Q7 two keys (III and IV both hypertonic) · Q17 ambiguous (biconvex is also convex) ·
+      Q26 contradictory stem · Q47 two keys.
+- [ ] **CON-03** Choose topic mode before the first import. Canonical names create up to 26
+      new topics beside the existing 106; existing names perpetuate the duplicates. The
+      clean route is consolidating first, which touches live questions. **Orezi.**
+- [ ] **CON-04** Upload the diagrams to storage and supply the public base URL the export
+      needs. Writes to live storage. **Orezi's call.**
+- [ ] **CON-05** Run Biology 2015 to 2024 through the pipeline, once CON-01 is signed off.
+- [ ] **CON-06** The 19 corrupted question files. Note sent to Chidera 2026-09-24; blocks
+      every subject except Biology, Literature and Geography.
+- [ ] **CON-07** The Ijamo District map for WAEC Geography Q1 to 10 is not in any folder.
+
+The import itself carries four P0 defects (IMP-01 to IMP-04 above). A clean CSV passes
+validation in full so `validRowsOnly` never matters, but importing the same file twice
+would still duplicate, so import each year once.
+
+---
+
 ## Needs an answer a console holds
 
 Not repository-visible, so they are findings rather than blanks. Each names where the answer

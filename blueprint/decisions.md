@@ -61,3 +61,43 @@ material, which is the convention `dev-pm` says to follow when a repo has one.
 document, 77 findings and 84KB. Decisions outlive the findings that produced them and get
 appended to long after the campaign is cold. D1 through D3 stay where they were ratified;
 everything from D4 forward is appended here.
+
+## D6: How the content pipeline decides what is true
+
+2026-09-24. Made in the build, while proving the pipeline on Biology WAEC 2025. Each is a
+default Orezi can overrule; the reason is recorded so the overrule is informed.
+
+**An answer is keyed only on cross-family evidence.** Two derivers answer independently, one
+Claude and one Codex, neither seeing the other. Keyed outright only when both answer, both
+say solvable, both agree, and both say certain. Anything short of that goes to a third
+reviewer who sees both arguments and may rule `key`, `ambiguous` or `defective`.
+*Rejected:* two runs of the same model. They share blind spots. *Rejected:* accepting
+agreement alone. On 2025 both families keyed Q17 as B, and it is ambiguous, because a
+biconvex lens is also a convex lens. Agreement alone would have shipped a wrong key.
+*Rejected:* online answer keys as a check. One gives 2025 Q31 as D, which is plainly wrong.
+
+**Teaching is reviewed by the other family.** Claude writes hints and solutions, Codex
+reviews them against `standards/teaching.md`, with a hard flag for any wrong fact.
+
+**Diagrams are traced where the drawing is organic, authored where it is schematic.**
+Tracing converts the original line work to SVG, so an insect's legs or a leaf's veins are
+exactly where the setter drew them. Authoring in code is used where tracing fails: a
+photographed page, stipple, tonal fill or fine text. The router is the trace's path count.
+*Rejected:* generative image models, including kie.ai. They invent plausible detail, which is
+the opposite of a replica, and on a question like "identify this nymph" the invented detail
+is the answer.
+
+**A redraw carries the original's information and never adds to it.** The authored Secchi
+disc shows the medium as the original does, a surface line and suspended particles, with no
+colour or label saying water, because that would answer Q30. Rod numbers unreadable in the
+source are omitted rather than guessed.
+
+**Alt text describes what a sighted student sees, in neutral words.** Never the answer's
+vocabulary. "I points to the pointed top end of the leaf", not "I is the apex".
+
+**Solutions are plain text.** The app renders them with `whitespace-pre-line` and no
+markdown, so structure comes from line breaks and plain labels, and notation from Unicode.
+
+**The evidence is committed.** Derivations, rulings, teaching, authored diagrams and alt
+text cost real tokens and would not regenerate identically, so they live in git. Only the
+deterministic extraction output is ignored.

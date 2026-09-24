@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reviews"],
+  "properties": {
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["q_number", "verdict", "failed_checks", "fact_error", "notes", "fix"],
+        "properties": {
+          "q_number": { "type": "integer" },
+          "verdict": { "type": "string", "enum": ["pass", "fail"] },
+          "failed_checks": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 1, "maximum": 10 },
+            "description": "Numbers from the R2 checklist in the teaching standard. Empty when verdict is pass."
+          },
+          "fact_error": {
+            "type": "boolean",
+            "description": "True if any statement of fact in the hints or solution is wrong. The most serious failure."
+          },
+          "notes": { "type": "string", "description": "What is wrong, specifically. Empty string when pass." },
+          "fix": { "type": "string", "description": "The exact corrected wording for whatever failed. Empty string when pass." }
+        }
+      }
+    }
+  }
+}
