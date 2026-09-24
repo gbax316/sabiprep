@@ -1,0 +1,54 @@
+{
+  "year": 2025,
+  "rulings": {
+    "6": {
+      "q_number": 6,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "In the standard WASSCE table of cell structures, the vacuole stores cell sap and keeps the cell turgid, and turgidity gives support to non-woody plants, so C is the textbook pairing. The strongest case for B is that a turgid cell is firm, which a student might call strength. In Nigerian secondary texts, however, strength and protection are listed as functions of the cellulose cell wall and of strengthening tissues such as collenchyma and sclerenchyma, not of the vacuole. Sensitivity is not a vacuole function at all, so C is the one answer an examiner would accept.",
+      "sided_with": "both"
+    },
+    "17": {
+      "q_number": 17,
+      "ruling": "ambiguous",
+      "answer": null,
+      "reasoning": "Long sight is corrected with a converging lens, and both A (biconvex lens) and B (convex lens) are converging lenses, so both are correct on the biology and the physics. The case for B is that convex lens is the usual textbook wording and the more general term, and real spectacle lenses are usually meniscus rather than biconvex. That distinction is beyond the syllabus, and nothing in the stem lets a student tell whether the setter meant biconvex or convex as the key; the options were built as two converging and two diverging lenses, so the setter saw a difference that secondary teaching does not. Keying B would teach students that a biconvex lens does not correct long sight, which is false, so no single key should be forced.",
+      "sided_with": "neither"
+    },
+    "24": {
+      "q_number": 24,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "The diagram labels I as the stomach, II as the pancreas, III as the liver and IV as the gall bladder. The pancreas secretes lipase in pancreatic juice and the liver secretes bile, whose salts emulsify fats, so II and III are the parts that secrete substances involved in fat digestion. The strongest case for D is that the gall bladder releases bile into the duodenum, but it only stores and concentrates bile made by the liver and does not secrete it. At this level the stomach (I) secretes pepsin, rennin and hydrochloric acid, and gastric lipase is outside the syllabus, which rules out A, B and D.",
+      "sided_with": "both"
+    },
+    "25": {
+      "q_number": 25,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "Villi are the adaptation of the ileum for absorption: they increase the surface area and carry blood capillaries and lacteals that take up digested food. The strongest case for D is that the epithelial cells covering the villi carry enzymes that finish digestion, but at WASSCE level intestinal juice is credited to glands in the ileum wall, and digestion by pancreatic juice and bile in the lumen would continue without villi. Water absorption is taught as a function of the colon, which makes B weaker. The expected answer is absorption of nutrients, option C.",
+      "sided_with": "both"
+    },
+    "28": {
+      "q_number": 28,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Humidity is the amount of water vapour in the air, so it acts only in terrestrial habitats and has no meaning in an aquatic one. Temperature and light act in both habitat types. The strongest case for D is that pressure is stressed as an aquatic factor, since hydrostatic pressure rises with depth, and a student might treat it as aquatic only. Standard secondary texts also list atmospheric pressure among the climatic factors of terrestrial habitats, so pressure affects both and B is the exception.",
+      "sided_with": "both"
+    },
+    "31": {
+      "q_number": 31,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Carrying capacity is the largest population the pond can support, and on the sigmoid growth curve a population at that level is in the stationary (plateau) phase, where birth rate equals death rate and the population remains constant. That is the WASSCE-level answer, so B is the key. The strongest case for A is that real populations fluctuate slightly above and below the carrying capacity rather than holding an exact number, which is true in field ecology. That refinement goes beyond the syllabus, where fluctuation is taught as a response to changing conditions rather than as the defining behaviour at carrying capacity, so a student trained on the stationary phase answers B; the teaching note can still mention small fluctuations around this level. C and D are wrong because growth has stopped, and a steady decline would mean the pond is no longer at its carrying capacity.",
+      "sided_with": "codex"
+    },
+    "39": {
+      "q_number": 39,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "Conservation means the careful use, protection and renewal of natural resources, and the WASSCE syllabus names soil, water, forests, wildlife and minerals as resources to be conserved. Domestic wastes are not a natural resource; they are managed by disposal, reduction and recycling, so D is the one that cannot be conserved. The strongest case for A is that minerals are non-renewable and cannot be replaced once used. Non-renewable is not the same as cannot be conserved: minerals are conserved by reduced use, recycling of metals and less waste in mining, which is why the syllabus lists them.",
+      "sided_with": "both"
+    }
+  }
+}

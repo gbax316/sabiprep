@@ -40,7 +40,19 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# content pipeline: generated, re-run extract.py to rebuild
-content-pipeline/out/
+# content pipeline: ignore ONLY what regenerates deterministically.
+# Model derivations, adjudication rulings, teaching content, authored diagrams,
+# alt text and the import CSV are the evidence behind every answer, cost real
+# tokens to produce and would not come back identical. Those are committed.
+content-pipeline/out/*.items.jsonl
+content-pipeline/out/*.report.json
+content-pipeline/out/*-input.*.json
+content-pipeline/out/diagrams/*.clean.png
+content-pipeline/out/diagrams/*.compare.png
+content-pipeline/out/diagrams/*.preview*.png
+content-pipeline/out/diagrams/*three-way*.png
+content-pipeline/out/diagrams/*contact*.png
+content-pipeline/out/diagrams/rod-zoom.png
+content-pipeline/out/diagrams/redraw-report.json
 # raw exam source papers and diagrams: 75MB, kept out of history
 Exam Questions/

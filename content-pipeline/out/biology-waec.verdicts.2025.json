@@ -1,0 +1,1111 @@
+{
+  "year": 2025,
+  "counts": {
+    "verified": 40,
+    "agreed-soft": 6,
+    "unsolvable": 3,
+    "disagree": 1
+  },
+  "verdicts": {
+    "1": {
+      "q_number": 1,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 1,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Humans belong to the genus Homo and the species Homo sapiens. Chordata is a phylum, while Mammalia is a class.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 1,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Man is Homo sapiens, so the genus is Homo and sapiens is the species name. Chordata is the phylum and Mammalia the class, so neither is the genus.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 2,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The broad, flattened body and long antennae identify the organism as a cockroach nymph. A grasshopper nymph would have conspicuously enlarged hind legs adapted for jumping.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 2,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The diagram shows a flattened oval body, long thread-like antennae, spiny walking legs and a pair of short cerci at the rear, which is a cockroach nymph. A grasshopper nymph would have enlarged jumping hind legs, a termite has short beaded antennae, and a mosquito has a larva, not a nymph.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The nymph must moult repeatedly because its rigid exoskeleton cannot expand continuously. Respiration occurs throughout life but is not the growth process that permits enlargement before adulthood.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A nymph grows by shedding its rigid exoskeleton several times (moulting or ecdysis) before reaching the adult stage in incomplete metamorphosis. Respiration, locomotion and sensitivity are general life processes, not growth stages.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 4,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Labels I, II, III and IV indicate the apex, midrib, lamina and axil, respectively. Option C is incorrect because the lamina and blade are the same structure, while label II points to the midrib.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 4,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "I points to the leaf tip (apex), III to the flat blade between the veins (lamina) and IV to the angle between the petiole and the stem where the bud sits (axil). Only C and D start with apex and end with axil, and C lists lamina and blade as two separate parts although they are the same thing, so D is the only coherent option.",
+        "solvable": true,
+        "issue": "In the diagram the pointer for II ends near the right margin where a vein meets it, not clearly on the midrib. The option set still only supports D."
+      },
+      "extract_anomaly": null
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 5,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Label II indicates the midrib, which contains vascular bundles made up of xylem and phloem. Label III indicates the lamina rather than the principal vascular structure requested.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 5,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Xylem and phloem run in the vascular bundles of the midrib and veins, which is the part labelled II. I is the apex, III is the lamina tissue between the veins and IV is the axil.",
+        "solvable": true,
+        "issue": "Depends on reading II as the midrib or vein; the II pointer lands on a vein at the margin either way, so the answer holds."
+      },
+      "extract_anomaly": null
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 6,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Besides storage, the plant vacuole maintains turgor pressure and thereby supports non-woody tissues. Strength is mainly associated with thickened supporting tissues such as sclerenchyma, not the vacuole itself.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 6,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "The plant vacuole stores water, sugars and wastes, and the cell sap keeps the cell turgid, which gives support to non-woody tissues. Protection and sensitivity are not vacuole functions.",
+        "solvable": true,
+        "issue": "B (strength) overlaps in meaning with support through turgor; C is the standard textbook wording."
+      },
+      "extract_anomaly": null
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 7,
+        "answer": "NONE",
+        "confidence": "probable",
+        "reasoning": "Both solution III (6% salt) and solution IV (10% salt) are hypertonic to a cell equivalent to 3% salt. Either would draw water out and concentrate the cell contents, thereby increasing their osmotic pressure; solution II would cause no net change.",
+        "solvable": false,
+        "issue": "Both C and D satisfy the wording, but no combined option is provided. If the question intended the greatest increase, D would be correct, but “greatest” is not stated; “coil” also appears to be a typo for “cell”."
+      },
+      "claude": {
+        "q_number": 7,
+        "answer": "A",
+        "confidence": "uncertain",
+        "reasoning": "Solution I (1%) is the only one hypotonic to the cell, so water enters by osmosis and the pressure built up inside the cell rises. A 'which' question needs a single key, and I is the only option that gives one, since III and IV are both hypertonic and the paper has to name III outright in Q8 to single it out. The strongest distractor is D: under the strict textbook definition, the osmotic pressure of the cell sap rises as water leaves and the sap concentrates, which happens in 10% most of all. But that reading makes C and D both correct, so it cannot be the setter's single key, and A is the most plausible intended answer rather than a certain one.",
+        "solvable": true,
+        "issue": "The stem uses 'osmotic pressure within the cell' loosely. On the strict definition (osmotic pressure of the cell sap, which rises as the cell loses water), III and IV both qualify and the item has two correct options, C and D. Only the loose reading, pressure building inside as water enters (strictly turgor pressure), gives the single key A. The stem also carries OCR damage: 'coil' for 'cell'."
+      },
+      "extract_anomaly": null
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 8,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Solution III is hypertonic to the plant cell, so water leaves by osmosis and the protoplast pulls away from the cell wall, causing plasmolysis. Crenation and haemolysis describe effects on animal cells, particularly red blood cells.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 8,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Solution III (6%) is hypertonic to cell contents equivalent to 3% salt, so the plant cell loses water by osmosis, the vacuole shrinks and the protoplasm pulls away from the cell wall: the cell becomes plasmolysed. Crenation (B) is the same water loss in an animal cell such as a red blood cell, which has no cell wall, and haemolysis (C) is an animal cell bursting in a hypotonic solution. Turgid (A) is the plant cell in a hypotonic solution such as I.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 9,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Aerobic respiration requires six oxygen molecules for each glucose molecule: C6H12O6 + 6O2 → 6CO2 + 6H2O. Three glucose molecules therefore require 18 oxygen molecules, not 6.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 9,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "C6H12O6 + 6O2 gives 6CO2 + 6H2O, so each glucose molecule needs 6 oxygen molecules. Three glucose molecules need 3 x 6 = 18.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 10,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Sclerenchyma cells have thick, lignified walls that provide mechanical support and strength. Water conduction is principally performed by xylem rather than sclerenchyma.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 10,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Sclerenchyma cells have thick lignified walls and are dead at maturity, which gives mechanical support and strength. Water conduction is by xylem vessels and food transport by phloem.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "The cell surrounds and engulfs a solid bacterium, a process called phagocytosis. Endocytosis is the broader category, while pinocytosis specifically involves the uptake of liquids.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "The diagram shows a cell engulfing a solid particle, a bacterium, which is phagocytosis ('cell eating'). Endocytosis is the broader category and pinocytosis is the uptake of fluid droplets, so phagocytosis is the specific process shown.",
+        "solvable": true,
+        "issue": "Typo in stem: 'refereed' for 'referred'."
+      },
+      "extract_anomaly": null
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 12,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "White blood cells in the circulatory system engulf bacteria by phagocytosis. Cells of the reproductive, respiratory and nervous systems do not primarily perform this defensive function.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 12,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The human cells that engulf bacteria are phagocytic white blood cells (neutrophils and monocytes), which belong to the blood and so to the circulatory system. The reproductive, respiratory and nervous systems are not the system associated with phagocytes at this level.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 13,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Respiration does not require light or chlorophyll and occurs continuously in living plant cells. Light and chlorophyll are requirements for photosynthesis, not respiration.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 13,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Respiration goes on in every living plant cell day and night and does not need light or chlorophyll; those are requirements of photosynthesis. The other statements describe respiration acceptably at syllabus level.",
+        "solvable": true,
+        "issue": "D is loosely worded since anaerobic respiration can occur without oxygen, but B is the clearly false statement."
+      },
+      "extract_anomaly": null
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 14,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Urine becomes hypertonic when water is reabsorbed from the renal tubules, leaving a higher concentration of dissolved wastes. Glucose removal alone does not account for urine's greater concentration relative to blood.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 14,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Urine becomes hypertonic to blood because much of the water in the filtrate is reabsorbed in the loop of Henle and collecting duct, concentrating the solutes. Urea mainly enters the filtrate by ultrafiltration rather than active secretion, so C is not the reason.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 15,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Indole-3-acetic acid is the principal naturally occurring auxin in plants. Dichlorophenoxyacetic acid is a synthetic auxin commonly used as a herbicide.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 15,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Indole acetic acid (IAA) is the natural auxin made in shoot and root tips. 2,4-D (dichlorophenoxyacetic acid) is a synthetic auxin used as a herbicide, and florigen is a flowering hormone.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 16,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Sympathetic stimulation causes vasoconstriction in many arteries as part of the fight-or-flight response. It accelerates the heartbeat and inhibits bladder contraction rather than slowing the heart or contracting the bladder.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 16,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Sympathetic stimulation constricts arterioles to skin and gut, raising blood pressure. Slowing the heart, increasing saliva flow and contracting the bladder are parasympathetic effects.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 17,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Long-sightedness is corrected with a converging, or convex, lens that brings the image forward onto the retina. A biconvex lens is also a type of convex lens, so option A is technically defensible, but B states the standard general correction.",
+        "solvable": true,
+        "issue": "Options A and B overlap because a biconvex lens is a convex lens."
+      },
+      "claude": {
+        "q_number": 17,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "In long sight the image falls behind the retina, so a converging (convex) lens is used to bring it forward onto the retina. Concave and biconcave lenses diverge light and correct short sight.",
+        "solvable": true,
+        "issue": "A (biconvex lens) is also a converging lens and equally corrects long sight; the item offers two correct options. B follows the usual textbook wording."
+      },
+      "extract_anomaly": null
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 18,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The malleus is attached to the tympanic membrane and is therefore the first middle-ear ossicle to receive its vibrations. The incus receives vibrations afterward from the malleus.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 18,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The malleus is attached to the inner surface of the eardrum, so it is the first middle-ear structure to pick up the vibration, passing it to the incus and then the stapes. The oval window receives the vibration last, from the stapes, and leads into the inner ear.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 19,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Water-dispersed fruits commonly possess a fibrous covering that traps air and provides buoyancy. A smooth surface alone does not enable a fruit to float effectively.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 19,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Water-dispersed fruits such as the coconut have a light fibrous mesocarp that traps air and keeps the fruit afloat. A smooth surface or high water content does not help flotation, and every fruit has a pericarp.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 20,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Annual plants complete germination, growth, flowering and fruit production within one year or growing season. Biennials require two seasons, while perennials live for several years.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 20,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Annuals complete their life cycle, including fruiting, within one growing season or year. Biennials take two years and perennials live for many years; 'herbs' describes a growth form, not a life span.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 21,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Chemical digestion breaks large, complex food molecules into small, simple molecules that can be absorbed. Starch is already a carbohydrate, so option A describes its classification incorrectly rather than the general process.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 21,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Chemical digestion is the enzyme-driven breakdown of large complex food molecules into small simple molecules that can be absorbed. Starch is itself a carbohydrate, so A is wrong, and C and D describe synthesis, not digestion.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 22,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Vitamin K is required for the production of blood-clotting factors. Vitamin E is mainly an antioxidant and its deficiency does not normally cause failure of blood clotting.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 22,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Vitamin K is needed for the liver to make prothrombin and other clotting factors, so its deficiency causes prolonged bleeding. Vitamins E, B and A are not clotting vitamins.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 23,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Part I is the stomach, where pepsin begins enzymatic protein digestion. The pancreas at II supplies proteases to the small intestine, but protein digestion has already started before then.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 23,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "In the diagram I is the stomach (the sac at the end of the oesophagus), II the pancreas, III the liver and IV the gall bladder. Protein digestion starts in the stomach, where pepsin in acid conditions breaks proteins into peptides.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 24,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Part II is the pancreas, which secretes lipase, while part III is the liver, which secretes bile for fat emulsification. Part IV is the gall bladder, which stores and releases bile but does not secrete or produce it.",
+        "solvable": true,
+        "issue": "The expected school-level answer excludes the stomach, although some advanced accounts recognize a limited role for gastric lipase."
+      },
+      "claude": {
+        "q_number": 24,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The liver (III) secretes bile, which emulsifies fats, and the pancreas (II) secretes lipase, which digests them. The gall bladder (IV) only stores bile, and the stomach (I) is not a fat-digesting organ at this level, which rules out A, B and D.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 25,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Villi greatly increase the surface area of the small intestine for absorbing digested nutrients. Food can still undergo digestion without villi, so option D incorrectly treats villi as essential digestive structures.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 25,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Villi greatly increase the surface area of the ileum and carry capillaries and lacteals, so their main role is absorbing digested nutrients. Most water is absorbed later in the colon, so B is weaker.",
+        "solvable": true,
+        "issue": "D is defensible at a higher level because villus epithelial cells carry brush-border enzymes that complete digestion; the syllabus answer is absorption."
+      },
+      "extract_anomaly": null
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 26,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "The adult human dental formula gives each jaw two pairs of incisors, one pair of canines, two pairs of premolars and three pairs of molars. Consequently, A, B and D are all incorrect, while only C is correct, so the question cannot have one answer as written.",
+        "solvable": false,
+        "issue": "The stem asks for the statement that is not correct, but three options, A, B and D, are incorrect. It was probably intended to ask for the correct statement."
+      },
+      "claude": {
+        "q_number": 26,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "The human dental formula is I 2/2, C 1/1, PM 2/2, M 3/3, so each jaw has two pairs of incisors, one pair of canines, two pairs of premolars and three pairs of molars. A and B both claim three pairs of premolars and D claims four pairs of molars, so three options are not correct and only C is correct.",
+        "solvable": false,
+        "issue": "Contradictory item: the stem asks for the statement that is not correct, but A, B and D are all incorrect. If the stem was meant to read 'correct', the key would be C. Possible OCR or setter error in the premolar counts of A or B."
+      },
+      "extract_anomaly": null
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 27,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Bean and Tridax plants growing on the same farmland compete for light, water, mineral salts and space. Neither plant feeds on or lives directly upon the other, so predation and parasitism do not apply.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 27,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Tridax is a weed that grows among the bean crop and both draw on the same light, water and soil nutrients, which is competition. Neither plant feeds on, lives on or grows attached to the other.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 28,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Humidity refers to atmospheric water vapour and is chiefly relevant to terrestrial and aerial conditions rather than every habitat. Temperature, light and pressure can influence both aquatic and terrestrial habitats.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 28,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Temperature, light and pressure (atmospheric on land, hydrostatic in water) act in both terrestrial and aquatic habitats. Humidity is the amount of water vapour in air and is a factor of terrestrial habitats only.",
+        "solvable": true,
+        "issue": "D is defensible only if the setter treats pressure as an aquatic-only factor; standard texts list pressure in both habitat types."
+      },
+      "extract_anomaly": null
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 29,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The diagram shows a quartered black-and-white disc being lowered with a marked line, identifying it as a Secchi disc. A wind vane, Six's thermometer and hygrometer have entirely different structures.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 29,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The diagram shows a disc painted in alternating black and white quadrants on a graduated rod being lowered into a water body, which is a Secchi disc. A wind vane, Six's thermometer and hygrometer look nothing like this.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 30,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "A Secchi disc is lowered into water to estimate transparency or turbidity from the depth at which it disappears from view. It does not measure an atmospheric or terrestrial factor.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 30,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The Secchi disc measures turbidity (light penetration or clarity) of water by noting the depth at which the disc disappears. It is not used in air or on land.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "disagree",
+      "answer": null,
+      "codex": {
+        "q_number": 31,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "At carrying capacity, environmental resources support no further net population growth, so births and immigration balance deaths and emigration. Alternating increases and decreases may occur around carrying capacity in nature, but that is fluctuation rather than the equilibrium described.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 31,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "At carrying capacity birth rate roughly equals death rate, and the population fluctuates slightly above and below that level rather than rising steadily. It cannot keep increasing or fall to extinction under stable conditions.",
+        "solvable": true,
+        "issue": "B (remains unchanged) is defensible because many secondary texts describe the plateau of the sigmoid curve as a constant population."
+      },
+      "extract_anomaly": null
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 32,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Energy decreases from producers at the base to consumers at higher trophic levels because much is lost as heat and through metabolic activities. It cannot remain constant because energy transfer between trophic levels is inefficient.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 32,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Only about 10 percent of energy passes from one trophic level to the next, the rest being lost as heat and in respiration, so energy decreases from producers at the base to the top carnivores at the apex. It never stays constant or increases up the pyramid.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 33,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Excess nitrates stimulate rapid algal growth; decomposition of the algae then consumes dissolved oxygen, causing aquatic organisms to die. Option C incorrectly places oxygen depletion before the algal bloom.",
+        "solvable": true,
+        "issue": "Option B is grammatically truncated, but its intended ending is clear from the sequence."
+      },
+      "claude": {
+        "q_number": 33,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Nutrient enrichment (nitrates, phosphates) causes an algal bloom; when the algae die, decomposers use up the dissolved oxygen, and fish and other organisms die. C and D put the steps in the wrong order and A omits the algal cause of oxygen loss.",
+        "solvable": true,
+        "issue": "Option B is truncated ('death of aquatic', missing 'organisms'); does not affect the answer."
+      },
+      "extract_anomaly": null
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 34,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A population consists of organisms of the same species living in a particular area, such as tilapia in a lake. The other options combine organisms from different species and therefore describe communities rather than populations.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 34,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A population is the number of organisms of one species in a given area at a given time, such as tilapia in a lake. B, C and D each combine two different species, which is part of a community.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 35,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Population density equals the number of organisms divided by area: 1,850 ÷ 100 = 18.50 per square metre. The other values do not result from this calculation.",
+        "solvable": true,
+        "issue": "The area unit is printed as 100 m, but the answer units and wording show that 100 m² is intended."
+      },
+      "claude": {
+        "q_number": 35,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Population density is the number of individuals divided by the area: 1850 / 100 m2 = 18.50 per m2. The other values come from misplaced decimals or wrong division.",
+        "solvable": true,
+        "issue": "Area is printed as '100m' instead of 100 m2, and 'frequency' is used to mean the count of plants. The intended reading is clear from the per-m2 options."
+      },
+      "extract_anomaly": null
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Eating a balanced diet supports general health and resistance but does not directly control or destroy pathogens. Ultraviolet radiation and disinfectants kill pathogens, while destroying their habitats limits their survival and spread.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "UV radiation and disinfectants kill pathogens, and destroying their habitats or breeding sites removes them, so these directly control pathogens. A balanced diet improves the host's resistance but does nothing to the pathogen itself.",
+        "solvable": true,
+        "issue": "Typo in option A: 'ultraviolent' for 'ultraviolet'."
+      },
+      "extract_anomaly": null
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 37,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "BCG vaccination is used to protect against tuberculosis. Malaria and cholera are not prevented by BCG, while diphtheria is prevented with a diphtheria-containing vaccine.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 37,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "BCG (Bacille Calmette-Guerin) is the vaccine against tuberculosis. Diphtheria is covered by the DPT vaccine, and there is no BCG protection against malaria or cholera.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 38,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Deforestation removes vegetation that protects and binds the soil, thereby increasing erosion and the loss of soil particles. It also raises rather than reduces atmospheric carbon dioxide because fewer trees remove the gas by photosynthesis.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 38,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Removing forest cover exposes the soil to rain and wind, so the main effect is soil erosion, the loss of soil particles. Deforestation destroys habitats, reduces species survival and raises atmospheric carbon (IV) oxide, so A, C and D are the opposite of what happens.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 39,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Domestic waste is not regarded as a natural resource to be conserved, although it may be reduced, reused or recycled. Minerals, soil, water, forests and wildlife are resources that can be managed and conserved.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 39,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "Minerals, soil, water, forests and wildlife are the natural resources listed for conservation in the syllabus; minerals are conserved by reduced use and recycling. Domestic wastes are not a natural resource to be conserved but material to be disposed of or recycled.",
+        "solvable": true,
+        "issue": "A is defensible only if the setter equates non-renewable with 'cannot be conserved'; the syllabus treats minerals as conservable."
+      },
+      "extract_anomaly": null
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 40,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Felling trees removes forest vegetation and is unsuitable for conservation when it is not controlled or paired with replacement. Planting seedlings and preventing bush fires help restore and protect forests.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 40,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Felling trees removes forest cover and is the activity conservation seeks to control. Planting seedlings, planting tree crops and preventing bush fires all protect or restore forests.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 41,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Fingerprint patterns and blood groups occur in distinct categories and are examples of discontinuous variation. Height and weight vary continuously across a range, so options containing them are unsuitable.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 41,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Fingerprint pattern (arch, loop, whorl) and ABO blood group fall into distinct classes with no intermediates, so both are discontinuous. Height, weight and skin colour show continuous variation, so every other pair contains at least one continuous feature.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 42,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The ability to taste phenylthiocarbamide concerns how the body functions, so it is a physiological variation. It is not a structural feature or an adaptation acquired in response to the environment.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 42,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Tasting PTC depends on a chemical receptor response, not on body form, so it is a physiological variation. It is a difference between individuals of a species, not an adaptation to the environment.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 43,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Alleles are alternative forms of a gene found at corresponding loci on chromosomes. The nucleus contains chromosomes, but the alleles are located specifically on the chromosomes.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 43,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Alleles are alternative forms of a gene occupying the same locus on homologous chromosomes. The nucleus contains the chromosomes, but alleles are specifically carried on the chromosomes, and the nucleolus makes ribosomes.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 44,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Crossing two heterozygous parents, Aa × Aa, produces AA, Aa, Aa and aa. Only aa is albino, giving a probability of 1/4.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 44,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Aa x Aa gives AA, Aa, Aa and aa in a 1:2:1 ratio, so the chance of an albino (aa) child is 1/4. One half is the probability of a carrier child, not an albino.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 45,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The diagram shows a DNA double helix unwinding and producing two double-helical molecules. This represents DNA replication, not protein synthesis, which would involve RNA and ribosomes.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 45,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The diagram shows one DNA double helix unzipping at a fork, with each separated strand pairing with new bases to form two identical double helices, which is DNA replication. Protein synthesis would show mRNA and ribosomes, not two daughter helices.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 46,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "In double-stranded DNA, adenine pairs with thymine, so their percentages are equal. Therefore, if adenine is 32%, thymine is also 32%.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 46,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "By base pairing, adenine always pairs with thymine, so the amounts are equal: thymine is also 32 percent. The remaining 36 percent is shared equally by guanine and cytosine at 18 percent each.",
+        "solvable": true,
+        "issue": "Typo in stem: 'huma' for 'human'."
+      },
+      "extract_anomaly": null
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 47,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Males cannot normally be unaffected carriers of an X-linked recessive colour-blindness allele because they have only one X chromosome. Females can be carriers, however, so option C is also incorrect as written.",
+        "solvable": true,
+        "issue": "The item has two incorrect statements: B and C. B is selected as the likely intended answer, but C is equally false."
+      },
+      "claude": {
+        "q_number": 47,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "Colour blindness is a sex-linked recessive trait, so A and D are correct. Males have one X chromosome and cannot be carriers, making B false, and females with one recessive allele are the carriers, making C false too.",
+        "solvable": false,
+        "issue": "Contradictory item: B and C are both not correct, so the question has two keys. Possibly a setter or OCR error in B or C (for example 'Males are often affected')."
+      },
+      "extract_anomaly": null
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 48,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Lamarck proposed that characteristics acquired through use or disuse could be inherited by offspring. Mutation-based explanations belong to modern genetics rather than Lamarck's theory.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 48,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Lamarck proposed use and disuse and the inheritance of acquired characteristics, so organisms pass traits acquired in their lifetime to their offspring. Mutation and gene inheritance belong to later genetic theory, not Lamarck.",
+        "solvable": true,
+        "issue": "Typo in stem: 'Lamarch' for 'Lamarck'."
+      },
+      "extract_anomaly": null
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 49,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A honeybee colony consists of a queen, male drones and female workers. Soldiers and kings are associated with organisms such as termites, not honeybees.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 49,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A honeybee colony has one queen, many sterile female workers and male drones. Soldiers, kings and reproductives are termite castes.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 50,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Charles Darwin formulated the theory of evolution by natural selection. Jean Lamarck instead proposed the inheritance of acquired characteristics.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 50,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Charles Darwin, with Alfred Wallace, formulated the theory of evolution by natural selection. Lamarck proposed the inheritance of acquired characters, Schleiden co-founded cell theory and Pasteur disproved spontaneous generation.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    }
+  }
+}

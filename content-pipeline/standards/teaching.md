@@ -113,6 +113,29 @@ Exam tip: in "identify the nymph" questions, check the hind legs first. Enlarged
 
 Topic: `growth-development`. Difficulty: `medium`, because it requires reading the diagram against knowledge of two developmental patterns.
 
+## Diagram alt text
+
+The import rejects any question image without alt text
+(`import/validate/route.ts:259-268`), and a student using a screen reader
+depends on it. One alt text per diagram file, shared by every question the file
+serves.
+
+**Give a blind student what a sighted student sees, and nothing more.**
+
+- Describe shapes, positions, arrows and any printed words, in neutral spatial
+  language: "the pointed top end", "a J-shaped sac below the tube", "a line
+  running out to the edge".
+- **Never use the answer's vocabulary.** For a "name the labelled parts"
+  question, "I is at the apex" gives away the answer. "I points to the pointed
+  top end of the leaf" gives the same information a sighted student has, and no
+  more.
+- Never name the organism, organ, instrument or process a question asks the
+  student to identify.
+- Printed labels on the diagram are quoted exactly, because a sighted student
+  reads them too.
+- Keep it to what the questions need. A labelled diagram can take three or four
+  sentences. A simple one takes one.
+
 ## What R2 checks
 
 R2 rejects an item that fails any of these, and says which:

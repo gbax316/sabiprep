@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 390" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+  <title id="t">Ecological instrument being lowered</title>
+  <desc id="d">A hand grips the top of a graduated rod and lowers it, as shown by a downward arrow. The rod passes through a dashed surface line into a medium drawn with suspended particles. At the bottom of the rod is a flat circular disc divided into four quadrants, with diagonally opposite quadrants filled. A solid line marks the bottom.</desc>
+  <!--
+    Authored, not traced. The source is a photograph of a printed page: tonal
+    fills, stippled medium and fine rod numbers that tracing cannot reproduce.
+    Carries exactly the information the original carries, and no more:
+      - quadranted disc, diagonally opposite quadrants filled (Q29 identifies it)
+      - dashed surface line and suspended particles, as drawn in the original
+        (no colour or label naming the medium, which would give away Q30)
+      - graduated rod, hand, downward arrow
+    Rod numbers were unreadable in the source at 4x zoom, so they are omitted
+    rather than guessed. The graduation ticks are kept.
+  -->
+  <defs>
+    <mask id="outsideDisc">
+      <rect width="400" height="390" fill="white"/>
+      <ellipse cx="170" cy="286" rx="98" ry="44" fill="black"/>
+      <rect x="160" y="0" width="20" height="286" fill="black"/>
+    </mask>
+    <pattern id="particles" width="15" height="13" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.7" fill="#E2E8F0"/>
+      <circle cx="10.5" cy="9.5" r="1.7" fill="#E2E8F0"/>
+    </pattern>
+  </defs>
+
+  <g fill="none" stroke="#E2E8F0" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- medium: suspended particles below the surface, kept clear of disc and rod -->
+    <rect x="28" y="216" width="344" height="134" fill="url(#particles)" stroke="none" mask="url(#outsideDisc)"/>
+
+    <!-- surface line -->
+    <line x1="28" y1="212" x2="372" y2="212" stroke-width="3" stroke-dasharray="9 7"/>
+
+    <!-- bottom -->
+    <line x1="18" y1="360" x2="382" y2="360" stroke-width="5"/>
+
+    <!-- disc: outline, quadrant dividers, diagonally opposite quadrants filled -->
+    <path d="M170,286 L170,242 A98,44 0 0 1 268,286 Z" fill="#E2E8F0" stroke-width="2.5"/>
+    <path d="M170,286 L170,330 A98,44 0 0 1 72,286 Z" fill="#E2E8F0" stroke-width="2.5"/>
+    <ellipse cx="170" cy="286" rx="98" ry="44" stroke-width="3.5"/>
+    <line x1="72" y1="286" x2="268" y2="286" stroke-width="3"/>
+    <line x1="170" y1="242" x2="170" y2="330" stroke-width="3"/>
+
+    <!-- rod -->
+    <rect x="161" y="34" width="18" height="252" stroke-width="3"/>
+    <!-- graduation ticks -->
+    <line x1="172" y1="126" x2="179" y2="126" stroke-width="2.5"/>
+    <line x1="172" y1="150" x2="179" y2="150" stroke-width="2.5"/>
+    <line x1="172" y1="174" x2="179" y2="174" stroke-width="2.5"/>
+    <line x1="172" y1="198" x2="179" y2="198" stroke-width="2.5"/>
+    <line x1="172" y1="222" x2="179" y2="222" stroke-width="2.5"/>
+
+    <!-- hand gripping the rod -->
+    <path d="M28,74 C58,66 92,62 124,62" stroke-width="3"/>
+    <path d="M28,98 C60,96 94,94 126,96" stroke-width="3"/>
+    <path d="M124,58 C140,50 196,50 206,60 C214,68 212,78 202,82
+             C212,86 212,96 202,100 C210,104 208,114 196,116
+             C170,120 138,118 126,108" stroke-width="3"/>
+    <path d="M180,64 C194,64 202,68 202,74" stroke-width="2.2"/>
+    <path d="M180,84 C194,84 202,86 202,92" stroke-width="2.2"/>
+    <path d="M178,102 C190,102 198,104 198,110" stroke-width="2.2"/>
+    <path d="M126,96 C132,84 140,78 154,76" stroke-width="2.2"/>
+
+    <!-- direction of movement -->
+    <line x1="302" y1="30" x2="302" y2="116" stroke-width="3.5"/>
+    <path d="M290,100 L302,120 L314,100" stroke-width="3.5"/>
+  </g>
+</svg>
