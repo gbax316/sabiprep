@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# content pipeline: generated, re-run extract.py to rebuild
+content-pipeline/out/
+# raw exam source papers and diagrams: 75MB, kept out of history
+Exam Questions/
