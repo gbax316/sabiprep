@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["answers"],
+  "properties": {
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["q_number", "answer", "confidence", "reasoning", "solvable", "issue"],
+        "properties": {
+          "q_number": { "type": "integer" },
+          "answer": { "type": "string", "enum": ["A", "B", "C", "D", "E", "NONE"] },
+          "confidence": { "type": "string", "enum": ["certain", "probable", "uncertain"] },
+          "reasoning": { "type": "string" },
+          "solvable": { "type": "boolean" },
+          "issue": { "type": "string" }
+        }
+      }
+    }
+  }
+}

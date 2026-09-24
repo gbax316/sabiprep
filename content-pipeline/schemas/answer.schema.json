@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["answer", "confidence", "reasoning", "solvable", "issue"],
+  "properties": {
+    "answer": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E", "NONE"],
+      "description": "The single correct option letter. NONE only when the question cannot be answered from what is given."
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["certain", "probable", "uncertain"],
+      "description": "certain: the answer follows unambiguously from established knowledge and the material shown. probable: very likely but one other option is defensible. uncertain: genuinely unclear."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Two to four sentences: why this answer is right and why the strongest distractor is wrong."
+    },
+    "solvable": {
+      "type": "boolean",
+      "description": "False if the question depends on something missing, garbled, or contradictory."
+    },
+    "issue": {
+      "type": "string",
+      "description": "Empty string if none. Otherwise name the defect: missing diagram, ambiguous stem, two defensible answers, OCR damage, etc."
+    }
+  }
+}

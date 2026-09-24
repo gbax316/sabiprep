@@ -72,6 +72,13 @@ def stem_range(text):
     if not m:
         return None
     tail = m.group(1)
+
+    # OCR reads "to" as "10": "answer questions 22 10 24" means 22 to 24.
+    # Taken literally it binds Q10, Q22 and Q24, which puts a stimulus on a
+    # question it has nothing to do with and strips it from Q23.
+    ocr = re.match(r'\s*(\d+)\s+10\s+(\d+)\s*$', tail)
+    if ocr and int(ocr.group(1)) < int(ocr.group(2)) and int(ocr.group(2)) - int(ocr.group(1)) < 10:
+        return list(range(int(ocr.group(1)), int(ocr.group(2)) + 1))
     rng = re.match(r'\s*(\d+)\s*(?:to|-|–)\s*(\d+)', tail)
     if rng:
         a, b = int(rng.group(1)), int(rng.group(2))
@@ -80,6 +87,17 @@ def stem_range(text):
     nums = [int(n) for n in re.findall(r'\d+', tail)]
     nums = [n for n in nums if 1 <= n <= 100]
     return sorted(set(nums)) or None
+
+
+def anchors(text):
+    """
+    Labels a stimulus hands to the questions after it: roman numerals I to VI
+    ("solution III") and single-letter labels P to Z ("patients X and Y").
+    A to E are left out because they collide with option letters.
+    """
+    found = set(re.findall(r'\b(VI|IV|V|III|II|I)\b', text))
+    found |= set(re.findall(r'\b([P-Z])\b', text))
+    return found
 
 
 # Both option styles seen in the sources. Which one a paper uses varies by year,
@@ -188,6 +206,7 @@ def extract(cfg):
     stem_seq = 0
     stem_for_q = {}             # (year, qnum) -> stem record
     seen = set()
+    inferred = None             # an unlabelled stimulus waiting to bind forward
 
     def is_new_block(t):
         """True when a paragraph starts something rather than continuing it."""
@@ -203,6 +222,7 @@ def extract(cfg):
         if yh:
             year, exam_brand = yh
             pending_stems = []
+            inferred = None
             continue
         if re.fullmatch(r'(OBJECTIVE\s+QUESTIONS?|SECTION\s+[AB]\b.*)', text, re.I):
             continue
@@ -238,6 +258,21 @@ def extract(cfg):
             stem, opts, problem = split_options(body)
             st = stem_for_q.get(key)
 
+            # An unlabelled stimulus binds to the question right after it, and
+            # onward only while the following questions keep referring to its
+            # labels. An explicit "answer questions N and M" stem always wins.
+            if st is None and inferred is not None:
+                first = not inferred['questions']
+                shares = bool(anchors(body) & inferred['anchors'])
+                if first or shares:
+                    inferred['questions'].append(qnum)
+                    stem_for_q[key] = inferred
+                    st = inferred
+                else:
+                    inferred = None
+            elif st is not None:
+                inferred = None
+
             items.append({
                 'subject': subject,
                 'exam_brand': exam_brand,
@@ -249,6 +284,7 @@ def extract(cfg):
                 'option_count': len(opts),
                 'passage_id': st['passage_id'] if st else None,
                 'passage_text': st['text'] if st else None,
+                'stem_inferred': bool(st and st.get('inferred')),
                 'diagram_files': [os.path.relpath(p, cfg.get('diagram_root', '.'))
                                   for p in diagrams.get(key, [])],
                 'source_paragraph': i,
@@ -265,7 +301,19 @@ def extract(cfg):
         if rng:
             stem_seq += 1
             pid = f"{subject.lower().replace(' ', '-')}-{exam_brand.lower()}-{year}-s{stem_seq:02d}"
-            rec = {'passage_id': pid, 'text': text, 'questions': rng, 'para': i}
+            full = text
+            # A description on the line before an explicit range line is the
+            # same stem, split in two: "The diagram below are illustrations of
+            # types of comb" then "Study them and answer questions 40 and 41".
+            # Without this merge the explicit line claims the questions and the
+            # description, the part that says what the diagram is, is lost.
+            if inferred is not None and not inferred['questions'] and i - inferred['para'] == 1:
+                full = inferred['text'] + ' ' + text
+                for p in problems:
+                    if p.get('passage_id') == inferred['passage_id']:
+                        p['kind'] = 'stimulus-merged-into-stem'
+                inferred = None
+            rec = {'passage_id': pid, 'text': full, 'questions': rng, 'para': i}
             for q in rng:
                 stem_for_q[(year, q)] = rec
             pending_stems.append(rec)
@@ -278,9 +326,24 @@ def extract(cfg):
             pending_stems[-1]['text'] += ' ' + text
             for q in pending_stems[-1]['questions']:
                 stem_for_q[(year, q)] = pending_stems[-1]
-        else:
+        elif len(_run_from([(m.start(), m.end(), m.group(1))
+                            for rx in OPT_STYLES.values()
+                            for m in rx.finditer(text)])) >= 3:
+            # Carries a full option run: a question that lost its number, not a
+            # stimulus. Leave it for the audit pass to report.
             problems.append({'kind': 'orphan-line', 'year': year, 'para': i,
                              'text': text[:160]})
+        else:
+            # Descriptive text with no question number and no stated range.
+            # Real papers do this: "Four cells ... were immersed in solutions
+            # I to IV" then questions 7 and 8. Hold it and bind it forward.
+            stem_seq += 1
+            pid = (f"{subject.lower().replace(' ', '-')}-{exam_brand.lower()}"
+                   f"-{year}-s{stem_seq:02d}")
+            inferred = {'passage_id': pid, 'text': text, 'questions': [],
+                        'para': i, 'inferred': True, 'anchors': anchors(text)}
+            problems.append({'kind': 'inferred-stimulus', 'year': year, 'para': i,
+                             'passage_id': pid, 'text': text[:160]})
 
     # A diagram that binds to no extracted question is a real gap, not noise.
     bound = {(it['year'], it['q_number']) for it in items}
