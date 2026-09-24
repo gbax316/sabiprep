@@ -47,6 +47,7 @@ next-env.d.ts
 content-pipeline/out/*.items.jsonl
 content-pipeline/out/*.report.json
 content-pipeline/out/*-input.*.json
+content-pipeline/out/*-changed.*.json
 content-pipeline/out/diagrams/*.clean.png
 content-pipeline/out/diagrams/*.compare.png
 content-pipeline/out/diagrams/*.preview*.png
