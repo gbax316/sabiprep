@@ -4,7 +4,7 @@
   "gate": {
     "status": "awaiting",
     "unit": "2025",
-    "at": "2026-09-25T13:24:08",
+    "at": "2026-09-25T13:49:30",
     "note": ""
   },
   "units": {
@@ -110,14 +110,14 @@
         },
         "export": {
           "status": "done",
-          "at": "2026-09-25T13:24:08",
-          "summary": "PREVIEW (no image base set): biology-waec.2025.PREVIEW.csv, 4 held, 0 pre-flight flags; style scan: Structural tells (section 4 of the rulebook) are not machine-checkable. Read for those too.",
+          "at": "2026-09-25T13:49:30",
+          "summary": "PREVIEW (no image base set): biology-waec.2025.PREVIEW.csv, 4 held, 0 pre-flight flags; style scan: REVIEW (7 across 5 location(s))",
           "seconds": 1,
           "cost_usd": 0.0
         },
         "preview": {
           "status": "done",
-          "at": "2026-09-25T13:24:08",
+          "at": "2026-09-25T13:49:30",
           "summary": "biology-waec.2025.preview.html",
           "seconds": 0,
           "cost_usd": 0.0

@@ -26,6 +26,8 @@ Design notes that matter for every subject, not just this one:
 import argparse, json, os, re, sys, zipfile
 from collections import defaultdict
 
+import notation
+
 IMG_EXT = ('.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg')
 
 # UTME and WASSCE are how the papers are branded. The database enum is narrower.
@@ -65,13 +67,24 @@ def paragraphs(docx_path, keep_italic=False):
     italic words in I_OPEN / I_CLOSE."""
     with zipfile.ZipFile(docx_path) as z:
         xml = z.read('word/document.xml').decode('utf8', 'ignore')
+    root = re.search(r'<w:document\b([^>]*)>', xml)
+    ns = ' '.join(re.findall(r'xmlns:\w+="[^"]*"', root.group(1))) if root else ''
     out = []
     for block in re.findall(r'<w:p[ >].*?</w:p>', xml, re.S):
         parts = []
-        for run in re.findall(r'<w:r[ >].*?</w:r>', block, re.S):
+        # Runs and Word equations, in document order. Equations were once
+        # skipped entirely, which dropped every fraction and root they held.
+        for tok in re.findall(r'<m:oMathPara\b.*?</m:oMathPara>|<m:oMath\b.*?</m:oMath>|<w:r[ >].*?</w:r>', block, re.S):
+            if tok.startswith('<m:'):
+                parts.append(notation.math_text(tok, ns))
+                continue
+            run = tok
             t = _run_text(run)
             if not t:
                 continue
+            va = re.search(r'<w:vertAlign w:val="(superscript|subscript)"', run)
+            if va:
+                t = notation.script_run(t, va.group(1), ''.join(parts))
             if _underlined(run) and t.strip():
                 parts.append(f'{U_OPEN}{t}{U_CLOSE}')
             elif keep_italic and _italic(run) and t.strip():
@@ -79,7 +92,7 @@ def paragraphs(docx_path, keep_italic=False):
             else:
                 parts.append(t)
         text = ''.join(parts) if parts else re.sub(r'<[^>]+>', '', block)
-        text = html_unescape(text).replace('\xa0', ' ')
+        text = notation.normalise(html_unescape(text).replace('\xa0', ' '))
         # Adjacent marked runs are one phrase ("august occasion").
         text = re.sub(re.escape(U_CLOSE) + r'(\s*)' + re.escape(U_OPEN), r'\1', text)
         text = re.sub(re.escape(I_CLOSE) + r'(\s*)' + re.escape(I_OPEN), r'\1', text)
