@@ -129,22 +129,41 @@ topics per subject. Build it so the resent subjects follow the same pattern.
 ruling, 6 diagrams redrawn. Read `out/biology-waec.final.2025.json` for the current key,
 not this line.
 
-- [ ] **CON-01** Finish the Biology 2025 slice: teaching review (Codex reviews Claude's
-      teaching), apply fixes, export the CSV and upload manifest. Then Orezi reads the
-      output before anything scales.
+- [x] **CON-01** Biology 2025 slice: teaching reviewed across families, fixed, re-checked
+      where changed, exported and pre-flighted. Preview sent 2026-09-25.
 - [ ] **CON-02** Rule on the four held 2025 questions. Each has a reason on file in
       `out/biology-waec.final.2025.json`. **Orezi.**
       Q7 two keys (III and IV both hypertonic) · Q17 ambiguous (biconvex is also convex) ·
       Q26 contradictory stem · Q47 two keys.
-- [ ] **CON-03** Choose topic mode before the first import. Canonical names create up to 26
-      new topics beside the existing 106; existing names perpetuate the duplicates. The
-      clean route is consolidating first, which touches live questions. **Orezi.**
+- [x] **CON-03** Topic structure. Superseded by `taxonomies/biology.json` 2.1: 29 topics and
+      100 subtopics on the WAEC syllabus, all 106 legacy topics folded in, proven on the 46
+      settled 2025 questions. The open part is CON-11.
 - [ ] **CON-04** Upload the diagrams to storage and supply the public base URL the export
       needs. Writes to live storage. **Orezi's call.**
-- [ ] **CON-05** Run Biology 2015 to 2024 through the pipeline, once CON-01 is signed off.
-- [ ] **CON-06** The 19 corrupted question files. Note sent to Chidera 2026-09-24; blocks
-      every subject except Biology, Literature and Geography.
+- [ ] **CON-05** Run Biology 2015 to 2024 through the pipeline.
+- [ ] **CON-06** The corrupted WAEC question files. UTME arrived as real files on
+      2026-09-25; the WAEC subjects other than Biology, Literature and Geography are still
+      the sign-in pages.
 - [ ] **CON-07** The Ijamo District map for WAEC Geography Q1 to 10 is not in any folder.
+- [ ] **CON-08** Confirm three year labels the extractor proposes but does not apply.
+      **Orezi.** Government's second "2016" is probably 2015 (the file has no 2015).
+      English's second "2015" is probably 2014. Mathematics' second "2020" looks like a
+      second sitting, since every neighbouring year is present.
+- [ ] **CON-09** Decide how the app draws underlined and italic words. English questions
+      depend on them ("one underlined word and one gap"); they are carried as ⟦ ⟧ and ⟪ ⟫
+      markers and the app renders neither today. **Orezi.**
+- [ ] **CON-10** UTME Biology is missing from the UTME folder; the other eight arrived.
+- [ ] **CON-11** Write the topic migration: add a parent link to `topics`, create the 2.1
+      tree, move each legacy question to its new node, retire old topics as `inactive`.
+      **Never delete a topic:** `questions.topic_id` is `ON DELETE CASCADE`, so deleting one
+      deletes its questions. Written for Orezi to run, with a count that proves nothing moved
+      out of existence.
+- [ ] **CON-12** Scaffold the pipeline as a system (D7): the worker briefs as files rather
+      than prompts in a chat, an orchestrator, and a state file per subject.
+- [ ] **CON-13** Prove Mathematics and Physics notation on one paper before either scales.
+      The source uses U+2500 box-drawing as a minus sign and drops spaces (`sin2x`).
+- [ ] **CON-14** Ask Chidera whether UTME English comprehension passages were left out when
+      the file was typed. None runs past 400 characters.
 
 The import itself carries four P0 defects (IMP-01 to IMP-04 above). A clean CSV passes
 validation in full so `validRowsOnly` never matters, but importing the same file twice
