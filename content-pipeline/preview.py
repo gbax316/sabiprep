@@ -69,7 +69,11 @@ def main():
 
     cfg = json.load(open(os.path.join(HERE, 'configs', f'{a.slug}.json'), encoding='utf8'))
     tax = json.load(open(os.path.join(HERE, 'taxonomies', f"{cfg['subject'].lower()}.json"), encoding='utf8'))
-    topic = {c['id']: c['name'] for c in tax['canonical']}
+    topic = {}
+    for tp in tax['topics']:
+        topic[tp['id']] = tp['name']
+        for s in tp['subtopics']:
+            topic[s['id']] = f"{tp['name']} › {s['name']}"
     items = {i['q_number']: i for i in (json.loads(l) for l in open(os.path.join(out, f'{a.slug}.items.jsonl'), encoding='utf8'))
              if i['year'] == a.year}
     final = json.load(open(os.path.join(out, f'{a.slug}.final.{a.year}.json'), encoding='utf8'))
@@ -93,7 +97,7 @@ def main():
             for n in (1, 2, 3))
         cards.append(f"""
 <section class="q">
-  <div class="chips"><span class="chip n">Question {q}</span><span class="chip">{e(topic[t['topic_id']])}</span><span class="chip">{e(t['difficulty'])}</span></div>
+  <div class="chips"><span class="chip n">Question {q}</span><span class="chip">{e(topic[t.get('subtopic_id') or t['topic_id']])}</span><span class="chip">{e(t['difficulty'])}</span></div>
   {shared}{fig}
   <p class="qtext">{e(it['stem'])}</p>
   <ol class="opts">{opts}</ol>

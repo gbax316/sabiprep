@@ -48,8 +48,21 @@ def main():
 
     cfg = json.load(open(os.path.join(HERE, 'configs', f'{a.slug}.json'), encoding='utf8'))
     tax = json.load(open(os.path.join(HERE, 'taxonomies', f"{cfg['subject'].lower()}.json"), encoding='utf8'))
-    canon = {c['id']: c for c in tax['canonical']}
-    preferred = {c['id']: c.get('preferred_existing') for c in tax['canonical']}
+    # Two-level taxonomy: parents with subtopics. A question sits on a
+    # subtopic; the import's single "topic" column carries the subtopic name,
+    # and the parent link is made by the topic migration, not by the CSV.
+    names, parent_of = {}, {}
+    for t in tax['topics']:
+        names[t['id']] = t['name']
+        for s in t['subtopics']:
+            names[s['id']] = s['name']
+            parent_of[s['id']] = t['id']
+    # "existing" mode reuses a legacy database topic name that folds into the
+    # same node. Half the syllabus had no legacy topic at all, so this mode
+    # holds rows rather than invent a name.
+    legacy_for = {}
+    for old, node in tax.get('legacy_to', {}).items():
+        legacy_for.setdefault(node, old)
 
     items = {i['q_number']: i for i in (json.loads(l) for l in open(os.path.join(out, f'{a.slug}.items.jsonl'), encoding='utf8'))
              if i['year'] == a.year}
@@ -80,13 +93,16 @@ def main():
             held.append((q, 'review-failed', t.get('review_status')))
             continue
 
-        tid = t['topic_id']
-        if tid not in canon:
+        tid = t.get('subtopic_id') or t['topic_id']
+        if tid not in names:
             held.append((q, 'bad-topic', tid))
             continue
-        topic = canon[tid]['name'] if a.topic_mode == 'canonical' else preferred.get(tid)
+        if tid not in parent_of:
+            held.append((q, 'parent-only', f'{tid} is a parent; place it on a subtopic first'))
+            continue
+        topic = names[tid] if a.topic_mode == 'canonical' else legacy_for.get(tid)
         if not topic:
-            held.append((q, 'no-existing-topic', f'{tid} has no preferred existing name'))
+            held.append((q, 'no-existing-topic', f'{tid} has no legacy topic folded into it'))
             continue
 
         img = alt = w = h = ''

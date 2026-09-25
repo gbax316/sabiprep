@@ -1,0 +1,364 @@
+{
+  "year": 2025,
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "classification.kingdoms",
+      "confidence": "clear",
+      "note": "Taxonomic rank of man (genus Homo). The label says classification and naming; the id says kingdoms, which is narrower than what it holds."
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "growth.metamorphosis",
+      "confidence": "clear",
+      "note": "Cockroach nymph. The syllabus names the cockroach life history under life histories. Recognising the insect also draws on the external features listed under classification.kingdoms, but the stage is the frame."
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "growth.metamorphosis",
+      "confidence": "clear",
+      "note": "Moulting (ecdysis) between nymph and adult."
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "plant-nutrition.leaf",
+      "confidence": "clear",
+      "note": "External leaf parts (apex, midrib, lamina, axil). Fits the label, but the subtopic sits under Plant Nutrition and cites A.II.1(a) photosynthesis. External plant morphology is not a nutrition topic, and the syllabus has it only in Section B."
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "plant-nutrition.leaf",
+      "confidence": "overlap",
+      "note": "also fits transport.plants because the student must know the midrib carries the vascular bundle (leaf anatomy) and that xylem and phloem are the transport tissues. support.plant-tissues also claims xylem. Vascular tissue has three partial homes."
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "cell.components",
+      "confidence": "clear",
+      "note": "Vacuole function: storage and support through turgor."
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "cell-environment.osmosis",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "respiration.cellular",
+      "confidence": "clear",
+      "note": "Equation of aerobic respiration: 6 O2 per glucose."
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "support.plant-tissues",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "cell-environment.endocytosis",
+      "confidence": "clear",
+      "note": "Placed after taxonomy 2.1 added this subtopic in response to this question."
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "transport.blood",
+      "confidence": "clear",
+      "note": "Phagocytes are white blood cells, so the system is circulatory. Defence could pull toward microorganisms.immunity, but the question only asks which system holds them."
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "respiration.cellular",
+      "confidence": "clear",
+      "note": "Respiration in plants needs no light or chlorophyll; contrast with photosynthesis."
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "excretion.kidney",
+      "confidence": "clear",
+      "note": "Water reabsorption makes urine hypertonic."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "plant-response.hormones",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "coordination.pns",
+      "confidence": "clear",
+      "note": "Sympathetic effects; the syllabus puts the autonomic system under A.I.13(b)."
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "sense-organs.ear",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "reproduction.fruits-seeds",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "applied.agriculture",
+      "confidence": "clear",
+      "note": "Annuals. Syllabus Section C, relevance of biology to agriculture (a): classification of plants based on life cycle. Placed by the syllabus reference only. Nothing in the label says so, and going by labels it reads as growth, where no subtopic fits."
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "animal-nutrition.enzymes",
+      "confidence": "overlap",
+      "note": "also fits animal-nutrition.alimentary because defining chemical digestion is about enzymes breaking large molecules into small ones, and digestion as a process in the gut is the alimentary subtopic's content too."
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "animal-nutrition.food-classes",
+      "confidence": "clear",
+      "note": "Vitamin K deficiency. Clotting touches transport.blood, but the tested fact is the vitamin's role."
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "animal-nutrition.enzymes",
+      "confidence": "overlap",
+      "note": "also fits animal-nutrition.alimentary because the student must know pepsin acts in the stomach (syllabus A.II.2(d) puts an enzyme's site of action under enzymes) and must find the stomach on a diagram of the alimentary system (A.II.2(f))."
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "animal-nutrition.alimentary",
+      "confidence": "overlap",
+      "note": "also fits animal-nutrition.enzymes (pancreatic lipase) and excretion.liver (bile; the syllabus liver note asks for the liver's position relative to gall bladder, bile duct and pancreas). Bile is not an enzyme, which tips it to the alimentary system with its accessory organs."
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "animal-nutrition.alimentary",
+      "confidence": "clear",
+      "note": "Villi and absorption in the small intestine."
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "associations.competition",
+      "confidence": "clear",
+      "note": "Crop and weed competing on farmland."
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "ecological-factors.physical",
+      "confidence": "clear",
+      "note": "Humidity does not act on aquatic habitats. Matches the A.III.2 note on factors common to all habitats."
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "ecological-factors.measurement",
+      "confidence": "clear",
+      "note": "Secchi disc."
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "ecological-factors.measurement",
+      "confidence": "clear",
+      "note": "Secchi disc measures turbidity in water."
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "population.growth",
+      "confidence": "clear",
+      "note": "Carrying capacity and a stable population."
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "energy-flow.pyramids",
+      "confidence": "overlap",
+      "note": "also fits energy-flow.energy because a pyramid of energy is energy loss between trophic levels drawn as a shape. Syllabus A.III.4(c)(ii) lists pyramids under energy flow, not under A.III.4(b) as this subtopic cites."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "conservation.pollution",
+      "confidence": "clear",
+      "note": "Eutrophication, water pollution."
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "ecosystem.components",
+      "confidence": "overlap",
+      "note": "also fits population.growth by label. Syllabus A.III.1(a) lists population, community, habitat and ecosystem as ecological components, so the syllabus puts it in ecosystem.components; going by labels you would pick Population Ecology."
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "population.sampling",
+      "confidence": "overlap",
+      "note": "also fits population.growth, whose label says population size. Syllabus Section C, population studies by sampling, lists (a) population size and (c) density, so the reference puts density in sampling. Both labels claim size."
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "microorganisms.disease",
+      "confidence": "clear",
+      "note": "Control of pathogens (UV, disinfectants, removing breeding sites). Syllabus A.III.8(c)(i), methods of controlling harmful microorganisms. The label names transmission, not control; control of transmission reads as part of it."
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "microorganisms.immunity",
+      "confidence": "clear",
+      "note": "BCG and tuberculosis."
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "conservation.resources",
+      "confidence": "clear",
+      "note": "Deforestation leads to soil erosion. I read it as the need to conserve forest and soil (A.IV.1). No subtopic names human impacts such as deforestation or overgrazing."
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "conservation.resources",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "conservation.methods",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "variation.types",
+      "confidence": "clear",
+      "note": "Placed after taxonomy 2.1 added this subtopic in response to this question."
+    },
+    {
+      "q_number": 42,
+      "subtopic_id": "variation.physiological",
+      "confidence": "clear",
+      "note": "PTC tasting is named in A.V.2."
+    },
+    {
+      "q_number": 43,
+      "subtopic_id": "genetics.chromosomes",
+      "confidence": "clear",
+      "note": "Needs the meaning of allele (genetics.terminology), but it tests where alleles are carried."
+    },
+    {
+      "q_number": 44,
+      "subtopic_id": "genetics.mendel",
+      "confidence": "overlap",
+      "note": "also fits genetics.probability because the stem asks for a probability, but the answer is the outcome of a monohybrid cross, Aa x Aa. Syllabus A.VI.4 says computation of probability is not required, which points worked crosses to Mendel."
+    },
+    {
+      "q_number": 45,
+      "subtopic_id": "genetics.chromosomes",
+      "confidence": "clear",
+      "note": "DNA replication. The syllabus note under A.VI.3 (chromosomes: the basis of heredity) asks candidates to study DNA structure and gene replication, so it belongs here. The label does not mention DNA."
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "genetics.chromosomes",
+      "confidence": "clear",
+      "note": "Complementary base pairing (adenine with thymine). Same A.VI.3 note as Q45; placed by the syllabus reference, not the label."
+    },
+    {
+      "q_number": 48,
+      "subtopic_id": "evolution.theories",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 49,
+      "subtopic_id": "adaptation.behavioural",
+      "confidence": "clear",
+      "note": "Bees are named in A.VII.1(b)."
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "evolution.theories",
+      "confidence": "overlap",
+      "note": "also fits evolution.natural-selection because Darwin's theory is natural selection, so a question about who proposed it belongs to both by construction."
+    }
+  ],
+  "taxonomy_findings": [
+    {
+      "kind": "missing",
+      "where": "subtopics[]",
+      "detail": "Each subtopic has a name and a syllabus reference but no scope line. Seven of 46 placements (Q20, Q23, Q34, Q35, Q44, Q45, Q46) needed the syllabus text itself, because the labels hide what the references hold. Each subtopic needs a line naming the items it covers, for example genetics.chromosomes: DNA structure and replication."
+    },
+    {
+      "kind": "too-narrow",
+      "where": "source.scope_rule",
+      "detail": "The scope rule says Paper 1 draws only on Section A. The 2025 paper set Section B content (Q11 endocytosis, Q4 external leaf morphology) and Section C content (Q20 plant life cycles, Q35 population density). Section C is covered. Section B was dropped, so Q11 has no home. Either the 2015 mirror is stale or WAEC draws on more than its stated scheme."
+    },
+    {
+      "kind": "missing",
+      "where": "cell-environment",
+      "detail": "No bulk transport subtopic covering endocytosis (phagocytosis, pinocytosis) and exocytosis (Q11). Add cell-environment.bulk-transport."
+    },
+    {
+      "kind": "missing",
+      "where": "variation",
+      "detail": "Continuous and discontinuous variation has no home (Q41). Syllabus A.V sorts variation by type (morphological, physiological) and by pattern (continuous, discontinuous). The taxonomy split by type only, so a question about pattern straddles both subtopics. Add variation.continuous-discontinuous."
+    },
+    {
+      "kind": "overlap",
+      "where": "animal-nutrition.enzymes",
+      "detail": "The line between enzymes and alimentary catches 3 of the 5 digestion items (Q21, Q23, Q24). Syllabus A.II.2(d) puts each enzyme's source and site of action under enzymes, while (f) covers what each part of the gut does. The taxonomy needs a rule, for example: enzymes = properties and identity of enzymes; alimentary = what happens where along the gut, including which enzyme acts there."
+    },
+    {
+      "kind": "overlap",
+      "where": "genetics.mendel",
+      "detail": "Any monohybrid cross ends in a ratio or a probability, so it fits both mendel and probability (Q44). Syllabus A.VI.4 says computation of probability is not required, so worked crosses belong to mendel, but the probability label draws them in. State the rule or merge the two."
+    },
+    {
+      "kind": "overlap",
+      "where": "evolution.theories",
+      "detail": "theories and natural-selection overlap by construction because Darwin's theory is natural selection (Q50). Syllabus A.VII.2(b) has a single item, theories of evolution; the separate natural-selection subtopic is the taxonomy's own addition. Rule: theories = who proposed what, Lamarck against Darwin; natural-selection = the mechanism applied to examples and speciation."
+    },
+    {
+      "kind": "overlap",
+      "where": "energy-flow.pyramids",
+      "detail": "A pyramid of energy (Q32) is energy loss drawn as a shape, so it fits pyramids and energy equally. Syllabus A.III.4(c)(ii) lists pyramids of energy and of numbers under energy flow, not under A.III.4(b) as cited. Fix the reference and say which subtopic holds the energy pyramid."
+    },
+    {
+      "kind": "overlap",
+      "where": "population.growth",
+      "detail": "growth and sampling both claim population size: growth by its label, sampling by its reference (Section C population studies lists (a) size and (c) density). The density calculation in Q35 fits both. Rename growth to population dynamics (growth, carrying capacity, factors affecting size) and give estimates of size and density to sampling."
+    },
+    {
+      "kind": "too-narrow",
+      "where": "ecosystem.components",
+      "detail": "The label reads as biotic and abiotic components, but syllabus A.III.1(a) also puts the ecological terms here: population, community, habitat, biosphere. Going by labels, Q34 (what is a population) looks like population ecology. Rename to ecological terms and components of an ecosystem."
+    },
+    {
+      "kind": "too-narrow",
+      "where": "genetics.chromosomes",
+      "detail": "The A.VI.3 note puts DNA structure and replication here, but the label says chromosomes only. Two of 46 items (Q45 replication, Q46 base pairing) land here only if you read the syllabus. Rename to chromosomes, DNA and the basis of heredity, or add genetics.dna."
+    },
+    {
+      "kind": "too-broad",
+      "where": "applied.agriculture",
+      "detail": "The catch-all label hides specific syllabus items: the Section C classification of plants by life cycle (annuals, biennials, perennials) and the effects of farming practices. Going by labels, Q20 (annuals) looks like growth. Name the contents or add a plant life-cycle subtopic."
+    },
+    {
+      "kind": "misplaced",
+      "where": "plant-nutrition.leaf",
+      "detail": "It is the only home for leaf structure, yet it sits under Plant Nutrition and cites A.II.1(a), which is photosynthesis and has no leaf-structure item. Q4 (external leaf parts) fits the label but not the parent. Q5 (which leaf part carries xylem and phloem) fits this subtopic and transport.plants equally, and support.plant-tissues also claims xylem. Vascular tissue and plant morphology each need one named home."
+    },
+    {
+      "kind": "too-narrow",
+      "where": "microorganisms.disease",
+      "detail": "The label says transmission. Syllabus A.III.8(c)(i), methods of controlling harmful microorganisms, has no named home, so Q36 only lands here by stretching the label. Rename to disease, its transmission and control."
+    },
+    {
+      "kind": "misplaced",
+      "where": "ecological-factors.physical",
+      "detail": "Five syllabus references do not match the syllabus text. ecological-factors.physical and .edaphic cite A.III.2(a)/(b), but the physical and edaphic split is A.III.3(a)/(b). energy-flow.pyramids cites A.III.4(b), but pyramids are A.III.4(c)(ii). conservation.pollution cites A.IV, but pollution is A.III.6(c)-(d). associations.competition cites A.III.6(a), whose list is parasitism, symbiosis, commensalism and saprophytism; competition is in Section C under adaptation for survival."
+    },
+    {
+      "kind": "missing",
+      "where": "animal-nutrition",
+      "detail": "Syllabus A.II.2(c), food tests, has no subtopic: food-classes cites (a)-(b) and enzymes cites (d). No 2025 question tests it; I found the gap while checking references."
+    }
+  ],
+  "taxonomy_version": "2.1"
+}

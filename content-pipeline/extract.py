@@ -32,20 +32,66 @@ IMG_EXT = ('.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg')
 EXAM_TYPE_MAP = {'WASSCE': 'WAEC', 'WAEC': 'WAEC', 'UTME': 'JAMB', 'JAMB': 'JAMB'}
 
 
-def paragraphs(docx_path):
-    """Every non-empty paragraph, in document order, as plain text."""
+# Underlining is content, not decoration. English papers say "there is one
+# underlined word and one gap", and the question cannot be answered without
+# knowing which word it is. Underlined text is wrapped in these markers, which
+# never occur in the source, so every downstream stage can see it and the
+# exporter decides how the app draws it.
+U_OPEN, U_CLOSE = '⟦', '⟧'   # ⟦ ⟧  underlined
+# Italics are content in English ("the word or phrase in italics") but mark
+# species names in Biology, where wrapping them would alter reviewed text. So
+# they are kept per subject, by the config flag "keep_italic".
+I_OPEN, I_CLOSE = '⟪', '⟫'   # ⟪ ⟫  italic
+
+
+def _italic(run):
+    m = re.search(r'<w:i(?:\s+w:val="([^"]+)")?\s*/>', run)
+    return bool(m) and (m.group(1) or 'true').lower() not in ('0', 'false', 'off')
+
+
+def _run_text(run):
+    run = re.sub(r'<w:(br|tab)\s*/>', ' ', run)
+    return ''.join(re.findall(r'<w:t(?:\s[^>]*)?>(.*?)</w:t>', run, re.S))
+
+
+def _underlined(run):
+    m = re.search(r'<w:u\s+w:val="([^"]+)"', run)
+    return bool(m) and m.group(1) != 'none'
+
+
+def paragraphs(docx_path, keep_italic=False):
+    """Every non-empty paragraph, in document order, as plain text, with
+    underlined words wrapped in U_OPEN / U_CLOSE and, when keep_italic is set,
+    italic words in I_OPEN / I_CLOSE."""
     with zipfile.ZipFile(docx_path) as z:
         xml = z.read('word/document.xml').decode('utf8', 'ignore')
     out = []
     for block in re.findall(r'<w:p[ >].*?</w:p>', xml, re.S):
-        # <w:br/> and <w:tab/> are real breaks; everything else is markup.
-        block = re.sub(r'<w:(br|tab)\s*/>', ' ', block)
-        text = re.sub(r'<[^>]+>', '', block)
-        text = text.replace('\xa0', ' ')
+        parts = []
+        for run in re.findall(r'<w:r[ >].*?</w:r>', block, re.S):
+            t = _run_text(run)
+            if not t:
+                continue
+            if _underlined(run) and t.strip():
+                parts.append(f'{U_OPEN}{t}{U_CLOSE}')
+            elif keep_italic and _italic(run) and t.strip():
+                parts.append(f'{I_OPEN}{t}{I_CLOSE}')
+            else:
+                parts.append(t)
+        text = ''.join(parts) if parts else re.sub(r'<[^>]+>', '', block)
+        text = html_unescape(text).replace('\xa0', ' ')
+        # Adjacent marked runs are one phrase ("august occasion").
+        text = re.sub(re.escape(U_CLOSE) + r'(\s*)' + re.escape(U_OPEN), r'\1', text)
+        text = re.sub(re.escape(I_CLOSE) + r'(\s*)' + re.escape(I_OPEN), r'\1', text)
         text = re.sub(r'\s+', ' ', text).strip()
         if text:
             out.append(text)
     return out
+
+
+def html_unescape(s):
+    return (s.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>')
+             .replace('&quot;', '"').replace('&apos;', "'"))
 
 
 def year_header(text, subject_words):
@@ -70,6 +116,13 @@ def stem_range(text):
     m = re.search(r'answer\s+(?:the\s+)?questions?\s+([0-9,\s]+(?:(?:and|to|-|–)\s*[0-9,\s]+)*)',
                   text, re.I)
     if not m:
+        # Section instructions state the same range another way: "In each of
+        # questions 13-18, choose ...", "In questions 28 to 30, ...". A digit
+        # range is required, so a stem such as "which of the following
+        # questions" never matches.
+        m = re.search(r'\bin\s+(?:each\s+of\s+)?(?:the\s+)?questions?\s+'
+                      r'(\d+\s*(?:-|–|to|and)\s*\d+(?:\s*(?:,|and)\s*\d+)*)', text, re.I)
+    if not m:
         return None
     tail = m.group(1)
 
@@ -87,6 +140,27 @@ def stem_range(text):
     nums = [int(n) for n in re.findall(r'\d+', tail)]
     nums = [n for n in nums if 1 <= n <= 100]
     return sorted(set(nums)) or None
+
+
+# What separates an instruction from a stimulus is not how it opens, which
+# varies endlessly in hand-typed papers ("In each of the following", "For
+# these questions", "Choose the appropriate option", "In this question"). It is
+# that an instruction tells the student to act, and a stimulus describes
+# something ("four cells were immersed", "a student used the following steps").
+# Enumerating openings was tried first and never converged.
+TASK_VERB = re.compile(r'\b(choose|select|identify|pick\s+out|fill\s+in|complete|indicate|underline)\b', re.I)
+SECTION_CUE = re.compile(r'^\s*(instructions?\s*:|(?:the\s+following|these)\s+questions\s+(?:are|were)\s+based|'
+                         r'read\s+the\s+following)', re.I)
+
+
+def is_instruction(text):
+    """
+    A section instruction tells the student what to do with every question
+    that follows. Unlike a stimulus it carries no labels for later questions
+    to refer back to, so it binds to all of them until the next instruction,
+    stem or year.
+    """
+    return bool(TASK_VERB.search(text) or SECTION_CUE.match(text))
 
 
 def anchors(text):
@@ -200,7 +274,7 @@ def psfx(paper):
 def extract(cfg):
     src = cfg['source']
     subject = cfg['subject']
-    paras = paragraphs(src)
+    paras = paragraphs(src, keep_italic=bool(cfg.get('keep_italic')))
 
     diagrams, unparsed_diagrams = index_diagrams(cfg.get('diagram_root'))
 
@@ -277,7 +351,7 @@ def extract(cfg):
             if st is None and inferred is not None:
                 first = not inferred['questions']
                 shares = bool(anchors(body) & inferred['anchors'])
-                if first or shares:
+                if first or shares or inferred.get('instruction'):
                     inferred['questions'].append(qnum)
                     stem_for_q[key] = inferred
                     st = inferred
@@ -365,10 +439,12 @@ def extract(cfg):
             stem_seq += 1
             pid = (f"{subject.lower().replace(' ', '-')}-{exam_brand.lower()}"
                    f"-{year}{psfx(paper)}-s{stem_seq:02d}")
+            instr = is_instruction(text)
             inferred = {'passage_id': pid, 'text': text, 'questions': [],
-                        'para': i, 'inferred': True, 'anchors': anchors(text)}
-            problems.append({'kind': 'inferred-stimulus', 'year': year, 'para': i,
-                             'passage_id': pid, 'text': text[:160]})
+                        'para': i, 'inferred': True, 'anchors': anchors(text),
+                        'instruction': instr}
+            problems.append({'kind': 'section-instruction' if instr else 'inferred-stimulus',
+                             'year': year, 'para': i, 'passage_id': pid, 'text': text[:160]})
 
     # A diagram that binds to no extracted question is a real gap, not noise.
     bound = {(it['year'], it['q_number']) for it in items if it['paper'] == 1}
