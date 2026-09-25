@@ -193,6 +193,10 @@ def index_diagrams(root):
     return idx, unparsed
 
 
+def psfx(paper):
+    return '' if paper == 1 else f'-p{paper}'
+
+
 def extract(cfg):
     src = cfg['source']
     subject = cfg['subject']
@@ -204,9 +208,15 @@ def extract(cfg):
     year = exam_brand = None
     pending_stems = []          # stems seen since the last question
     stem_seq = 0
-    stem_for_q = {}             # (year, qnum) -> stem record
+    stem_for_q = {}             # (year, paper, qnum) -> stem record
     seen = set()
     inferred = None             # an unlabelled stimulus waiting to bind forward
+    # A year header can appear twice in one file. It is never a duplicate to
+    # drop: in the UTME set the repeat always carried different questions,
+    # either a second sitting or a different year mislabelled. Each occurrence
+    # opens its own paper, keyed (year, paper), and the repeat is reported.
+    paper_count, headers = {}, []
+    paper = 1
 
     def is_new_block(t):
         """True when a paragraph starts something rather than continuing it."""
@@ -221,6 +231,9 @@ def extract(cfg):
         yh = year_header(text, subject)
         if yh:
             year, exam_brand = yh
+            paper_count[year] = paper_count.get(year, 0) + 1
+            paper = paper_count[year]
+            headers.append({'para': i, 'year': year, 'paper': paper, 'text': text[:60]})
             pending_stems = []
             inferred = None
             continue
@@ -248,10 +261,10 @@ def extract(cfg):
                 i = nxt
                 merged += 1
 
-            key = (year, qnum)
+            key = (year, paper, qnum)
             if key in seen:
                 problems.append({'kind': 'duplicate-question-number', 'year': year,
-                                 'q': qnum, 'para': i, 'text': text[:120]})
+                                 'paper': paper, 'q': qnum, 'para': i, 'text': text[:120]})
                 continue
             seen.add(key)
 
@@ -273,11 +286,23 @@ def extract(cfg):
             elif st is not None:
                 inferred = None
 
+            # Diagrams are named by year and question only, so for a second
+            # paper in the same year the file cannot say which paper it belongs
+            # to. Bind it for the first paper; for any later paper report the
+            # ambiguity instead of attaching the wrong drawing.
+            dfiles = diagrams.get((year, qnum), [])
+            if paper > 1 and dfiles:
+                problems.append({'kind': 'diagram-paper-ambiguous', 'year': year,
+                                 'paper': paper, 'q': qnum, 'para': i,
+                                 'text': ', '.join(os.path.basename(p) for p in dfiles)})
+                dfiles = []
+
             items.append({
                 'subject': subject,
                 'exam_brand': exam_brand,
                 'exam_type': EXAM_TYPE_MAP.get(exam_brand, exam_brand),
                 'year': year,
+                'paper': paper,
                 'q_number': qnum,
                 'stem': stem,
                 'options': opts,
@@ -286,7 +311,7 @@ def extract(cfg):
                 'passage_text': st['text'] if st else None,
                 'stem_inferred': bool(st and st.get('inferred')),
                 'diagram_files': [os.path.relpath(p, cfg.get('diagram_root', '.'))
-                                  for p in diagrams.get(key, [])],
+                                  for p in dfiles],
                 'source_paragraph': i,
                 'raw': text,
                 'extract_problem': problem,
@@ -300,7 +325,7 @@ def extract(cfg):
         rng = stem_range(text)
         if rng:
             stem_seq += 1
-            pid = f"{subject.lower().replace(' ', '-')}-{exam_brand.lower()}-{year}-s{stem_seq:02d}"
+            pid = f"{subject.lower().replace(' ', '-')}-{exam_brand.lower()}-{year}{psfx(paper)}-s{stem_seq:02d}"
             full = text
             # A description on the line before an explicit range line is the
             # same stem, split in two: "The diagram below are illustrations of
@@ -315,7 +340,7 @@ def extract(cfg):
                 inferred = None
             rec = {'passage_id': pid, 'text': full, 'questions': rng, 'para': i}
             for q in rng:
-                stem_for_q[(year, q)] = rec
+                stem_for_q[(year, paper, q)] = rec
             pending_stems.append(rec)
             continue
 
@@ -325,7 +350,7 @@ def extract(cfg):
         if pending_stems:
             pending_stems[-1]['text'] += ' ' + text
             for q in pending_stems[-1]['questions']:
-                stem_for_q[(year, q)] = pending_stems[-1]
+                stem_for_q[(year, paper, q)] = pending_stems[-1]
         elif len(_run_from([(m.start(), m.end(), m.group(1))
                             for rx in OPT_STYLES.values()
                             for m in rx.finditer(text)])) >= 3:
@@ -339,21 +364,47 @@ def extract(cfg):
             # I to IV" then questions 7 and 8. Hold it and bind it forward.
             stem_seq += 1
             pid = (f"{subject.lower().replace(' ', '-')}-{exam_brand.lower()}"
-                   f"-{year}-s{stem_seq:02d}")
+                   f"-{year}{psfx(paper)}-s{stem_seq:02d}")
             inferred = {'passage_id': pid, 'text': text, 'questions': [],
                         'para': i, 'inferred': True, 'anchors': anchors(text)}
             problems.append({'kind': 'inferred-stimulus', 'year': year, 'para': i,
                              'passage_id': pid, 'text': text[:160]})
 
     # A diagram that binds to no extracted question is a real gap, not noise.
-    bound = {(it['year'], it['q_number']) for it in items}
+    bound = {(it['year'], it['q_number']) for it in items if it['paper'] == 1}
     orphan_images = sorted({os.path.relpath(p, cfg['diagram_root'])
                             for (y, q), paths in diagrams.items()
                             if (y, q) not in bound for p in paths}) if cfg.get('diagram_root') else []
 
+    def label(y, p):
+        return str(y) if p == 1 else f'{y}#{p}'
+
     by_year = defaultdict(int)
     for it in items:
-        by_year[it['year']] += 1
+        by_year[(it['year'], it['paper'])] += 1
+
+    # A repeated year header is reported with the year it most probably is.
+    # Papers run in strictly descending year order in every file seen so far,
+    # so a repeat sitting where year Y-1 belongs, in a file that has no Y-1,
+    # is most likely Y-1 mislabelled. Where every year is already present it
+    # is a second sitting of the same year. This is a proposal for a human,
+    # never applied automatically.
+    present = {h['year'] for h in headers}
+    repeats = []
+    for n, h in enumerate(headers):
+        if h['paper'] == 1:
+            continue
+        nxt = headers[n + 1]['year'] if n + 1 < len(headers) else None
+        cand = h['year'] - 1
+        if cand not in present and (nxt is None or nxt < cand):
+            guess, why = cand, f'no {cand} header in the file, and this sits where {cand} belongs in descending order'
+        else:
+            guess, why = h['year'], 'every neighbouring year is present, so this looks like a second sitting'
+        repeats.append({'para': h['para'], 'labelled': h['year'], 'paper': h['paper'],
+                        'items': by_year.get((h['year'], h['paper']), 0),
+                        'probable_year': guess, 'reason': why})
+        problems.append({'kind': 'repeated-year-header', 'year': h['year'], 'paper': h['paper'],
+                         'para': h['para'], 'text': f'probably {guess}: {why}'})
 
     # --- audit pass: make every gap visible rather than letting it pass ---
 
@@ -361,12 +412,12 @@ def extract(cfg):
     #    one, and knowing which one is what makes it recoverable.
     nums_by_year = defaultdict(set)
     for it in items:
-        nums_by_year[it['year']].add(it['q_number'])
+        nums_by_year[(it['year'], it['paper'])].add(it['q_number'])
     missing = {}
-    for y, nums in nums_by_year.items():
+    for (y, p), nums in nums_by_year.items():
         gaps = sorted(set(range(1, max(nums) + 1)) - nums)
         if gaps:
-            missing[str(y)] = gaps
+            missing[label(y, p)] = gaps
 
     # 2. Option-letter damage. When a run stops early but later letters are
     #    present, the marker in between was almost certainly mis-scanned, which
@@ -401,7 +452,7 @@ def extract(cfg):
         'source': src,
         'subject': subject,
         'items': len(items),
-        'years': {str(y): by_year[y] for y in sorted(by_year)},
+        'years': {label(y, pp): by_year[(y, pp)] for (y, pp) in sorted(by_year)},
         'with_options': sum(1 for it in items if it['option_count'] >= 2),
         'option_counts': dict(sorted(
             (str(k), v) for k, v in
@@ -417,6 +468,7 @@ def extract(cfg):
         'orphan_images': orphan_images,
         'unparsed_image_names': unparsed_diagrams,
         'missing_question_numbers': missing,
+        'repeated_year_headers': repeats,
         'needs_human': [
             {'year': it['year'], 'q': it['q_number'], 'anomaly': it['anomaly'],
              'options_found': it['option_count'], 'raw': it['raw'][:220]}
@@ -457,6 +509,8 @@ def main():
     print(f"  missing q nums : {r['missing_question_numbers'] or 'none'}")
     print(f"  needs human    : {len(r['needs_human'])}")
     print(f"  per year       : {r['years']}")
+    for rp in r['repeated_year_headers']:
+        print(f"  REPEATED {rp['labelled']} (paper {rp['paper']}, {rp['items']} questions): probably {rp['probable_year']}. {rp['reason']}")
 
 
 if __name__ == '__main__':
