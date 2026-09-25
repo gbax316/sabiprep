@@ -2,5 +2,15 @@
   "slug": "economics-utme",
   "subject": "Economics",
   "source": "../../Exam Questions/UTME JAMB Questions/2024 - 2014 UTME Economics.docx",
-  "diagram_root": "../../Exam Questions/Economics UTME Diagrams"
+  "diagram_root": "../../Exam Questions/Economics UTME Diagrams",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/economics-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/economics-jamb.txt"
+    }
+  ]
 }

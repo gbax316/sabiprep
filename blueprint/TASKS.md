@@ -130,7 +130,9 @@ ruling, 6 diagrams redrawn. Read `out/biology-waec.final.2025.json` for the curr
 not this line.
 
 - [x] **CON-01** Biology 2025 slice: teaching reviewed across families, fixed, re-checked
-      where changed, exported and pre-flighted. Preview sent 2026-09-25.
+      where changed, exported and pre-flighted. Preview sent 2026-09-25. Now under the
+      orchestrator and **waiting at its gate** (D7): `out/biology-waec.2025.preview.html`
+      opens with the topic tree, the held list and one alt-text dispute (Q4-5, label II).
 - [ ] **CON-02** Rule on the four held 2025 questions. Each has a reason on file in
       `out/biology-waec.final.2025.json`. **Orezi.**
       Q7 two keys (III and IV both hypertonic) · Q17 ambiguous (biconvex is also convex) ·
@@ -139,8 +141,11 @@ not this line.
       100 subtopics on the WAEC syllabus, all 106 legacy topics folded in, proven on the 46
       settled 2025 questions. The open part is CON-11.
 - [ ] **CON-04** Upload the diagrams to storage and supply the public base URL the export
-      needs. Writes to live storage. **Orezi's call.**
-- [ ] **CON-05** Run Biology 2015 to 2024 through the pipeline.
+      needs. Writes to live storage. **Orezi's call.** Strip SVG comments on upload: an
+      authored file's maintainer notes can name what a question tests (the Secchi file says
+      which question identifies it). The URL goes in `SABIPREP_IMAGE_BASE`, never in a file.
+- [ ] **CON-05** Run Biology 2015 to 2024 through the pipeline. Waits on Biology's gate:
+      `python run.py approve biology-waec`, then `python run.py run biology-waec`.
 - [ ] **CON-06** The corrupted WAEC question files. UTME arrived as real files on
       2026-09-25; the WAEC subjects other than Biology, Literature and Geography are still
       the sign-in pages.
@@ -158,8 +163,12 @@ not this line.
       **Never delete a topic:** `questions.topic_id` is `ON DELETE CASCADE`, so deleting one
       deletes its questions. Written for Orezi to run, with a count that proves nothing moved
       out of existence.
-- [ ] **CON-12** Scaffold the pipeline as a system (D7): the worker briefs as files rather
-      than prompts in a chat, an orchestrator, and a state file per subject.
+- [x] **CON-12** The pipeline as a system (D7), `bd9be20`: `run.py`, eight frozen briefs,
+      state per subject, a Codex diagram check, the gate page. See `content-pipeline/README.md`.
+- [ ] **CON-15** Prove the system cold on a new subject: Economics UTME 2024, the newest
+      paper, with seven diagrams and four shared stems. Taxonomy from the WAEC and JAMB
+      syllabi, then every stage to the gate. Measures the real cost per paper, which sets
+      the budget for the other 100 or so.
 - [ ] **CON-13** Prove Mathematics and Physics notation on one paper before either scales.
       The source uses U+2500 box-drawing as a minus sign and drops spaces (`sin2x`).
 - [ ] **CON-14** Ask Chidera whether UTME English comprehension passages were left out when
