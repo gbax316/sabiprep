@@ -21,8 +21,8 @@ Stages:
                line work it reproduces, so fidelity is a number, not a glance
 
 Usage:
-    python redraw.py --image "path/2025_Q2-3.png" --out out/diagrams/
-    python redraw.py --dir "path/2025" --out out/diagrams/
+    python redraw.py --image "path/2025_Q2-3.png" --out out/diagrams/biology-waec
+    python redraw.py --dir "path/2025" --out out/diagrams/biology-waec
 """
 
 import argparse, io, json, os, re, sys
@@ -178,7 +178,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--image')
     ap.add_argument('--dir')
-    ap.add_argument('--out', default='out/diagrams')
+    ap.add_argument('--out', required=True, help='out/diagrams/<slug>')
     a = ap.parse_args()
     paths = [a.image] if a.image else sorted(
         os.path.join(a.dir, f) for f in os.listdir(a.dir) if f.lower().endswith(('.png', '.jpg', '.jpeg')))
@@ -197,7 +197,15 @@ def main():
         except Exception as e:
             print(f"{os.path.basename(p):<22} FAILED {e}")
             results.append({'source': os.path.basename(p), 'error': str(e)})
-    json.dump(results, open(os.path.join(a.out, 'redraw-report.json'), 'w'), indent=2)
+    # Merge by source file. Each year is traced in its own run, and the
+    # exporter reads every year's image sizes from this one report.
+    rpath = os.path.join(a.out, 'redraw-report.json')
+    merged = {}
+    if os.path.exists(rpath):
+        merged = {r['source']: r for r in json.load(open(rpath, encoding='utf8'))}
+    merged.update({r['source']: r for r in results})
+    json.dump(sorted(merged.values(), key=lambda r: r['source']),
+              open(rpath, 'w', encoding='utf8'), indent=2)
 
 
 if __name__ == '__main__':

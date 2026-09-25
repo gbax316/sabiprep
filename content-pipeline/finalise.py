@@ -20,6 +20,8 @@ Usage:
 import argparse, json, os, sys
 from collections import Counter
 
+from common import unit_name
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -27,11 +29,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--slug', required=True)
     ap.add_argument('--year', type=int, required=True)
+    ap.add_argument('--paper', type=int, default=1)
     a = ap.parse_args()
     out = os.path.join(HERE, 'out')
+    u = unit_name(a.year, a.paper)
 
-    verdicts = json.load(open(os.path.join(out, f'{a.slug}.verdicts.{a.year}.json'), encoding='utf8'))['verdicts']
-    adj_path = os.path.join(out, f'{a.slug}.adjudication.{a.year}.json')
+    verdicts = json.load(open(os.path.join(out, f'{a.slug}.verdicts.{u}.json'), encoding='utf8'))['verdicts']
+    adj_path = os.path.join(out, f'{a.slug}.adjudication.{u}.json')
     rulings = json.load(open(adj_path, encoding='utf8'))['rulings'] if os.path.exists(adj_path) else {}
 
     final = {}
@@ -58,11 +62,11 @@ def main():
         final[str(q)] = rec
 
     counts = Counter(r['state'] for r in final.values())
-    path = os.path.join(out, f'{a.slug}.final.{a.year}.json')
-    json.dump({'year': a.year, 'counts': dict(counts), 'answers': final},
+    path = os.path.join(out, f'{a.slug}.final.{u}.json')
+    json.dump({'year': a.year, 'paper': a.paper, 'counts': dict(counts), 'answers': final},
               open(path, 'w', encoding='utf8'), indent=2, ensure_ascii=False)
 
-    print(f"{a.slug} {a.year}: {len(final)} questions")
+    print(f"{a.slug} {u}: {len(final)} questions")
     for s in ('keyed', 'ambiguous', 'defective', 'needs-human'):
         print(f"  {s:<12} {counts.get(s, 0):>3}")
     held = [r for r in final.values() if r['state'] != 'keyed']

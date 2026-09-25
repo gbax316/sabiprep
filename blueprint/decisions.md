@@ -101,3 +101,46 @@ markdown, so structure comes from line breaks and plain labels, and notation fro
 **The evidence is committed.** Derivations, rulings, teaching, authored diagrams and alt
 text cost real tokens and would not regenerate identically, so they live in git. Only the
 deterministic extraction output is ignored.
+
+## D7: The pipeline runs as a system, with one human gate per subject
+
+2026-09-25. Orezi chose the gate. The rest are defaults made in the build, each with its reason.
+
+**One gate per subject, after its first paper.** The orchestrator (`content-pipeline/run.py`)
+runs a subject's most recent paper alone, then stops. Orezi reviews that paper's questions as
+a student sees them, the topic tree with the paper counted onto it, and the held list, all on
+one page. Approval lets the remaining years run unattended. Questions that cannot be settled
+are held with a reason and reviewed in one batch, never guessed into the import.
+*Rejected:* a gate every year, about 200 reviews across the corpus, most showing the same
+thing once a subject is proven. *Rejected:* review only at the end, where a subject-wide
+mistake like the lost underline markers would be baked into all eleven years first.
+
+**The unit of work is a paper, not a year.** Some source files hold two papers under one
+year header. Every stage names and loads by (year, paper), so a second paper can never
+overwrite the first. A second paper waits until its true year is confirmed (CON-08).
+
+**Workers get a brief, a folder and nothing else.** Each Claude stage runs headless with its
+brief from `content-pipeline/briefs/`, in its own folder under `work/`, in restricted mode.
+Restricted mode confines file access to that folder and the diagram folder; this was tested,
+and a read of the other family's answers is refused. Without it, the independence D6 rests on
+would be a promise in a prompt.
+
+**Every review is bounded.** Teaching: written, reviewed by Codex, fixed once, changed items
+re-reviewed, one final pass that has the last word or holds the item. Diagrams: checked by
+Codex against the original, repaired once, re-checked once. A drawing that still fails holds
+its questions, because every student sees it. An alt-text dispute that survives a weighed
+repair ships and is queued for Orezi, because the two families disagreeing about wording is
+not the same as a broken question. *Rejected:* reviewing until the reviewer is satisfied. On
+Biology 2025 the second round did not converge, and each extra round rewrites correct text.
+
+**Diagrams get a cross-family visual check.** The trace fidelity number cannot see what the
+cleaning step destroyed, and in unattended years nobody looks. Proven on Biology 2025: the
+check passed the five good traces and the authored Secchi disc, and failed the rejected Secchi
+trace for the reason it was rejected by eye. It also found a real error in the alt text
+(Q2's legs), a word that gave away Q29's answer, and one false finding (Q4), so its findings
+are weighed, never applied blindly. The answer-word leak is also checked mechanically in the
+pre-flight, because the model passed the same text once and failed it once.
+
+**Model assignment follows the routing roster.** Deriving, ruling, teaching, fixing, drawing
+and the taxonomy on Opus; classification and alt text on Sonnet; every Claude-written artifact
+reviewed by Codex. Set in `content-pipeline/pipeline.json`, not in code.

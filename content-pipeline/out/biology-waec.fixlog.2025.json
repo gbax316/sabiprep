@@ -608,6 +608,42 @@
       "decision": "accepted",
       "reason": "\"gained through use or disuse\" lets a student word-match \"acquired characters\"",
       "change": "hint 3 asks what Lamarck claimed happens to bodily changes in the young"
+    },
+    {
+      "q_number": 2,
+      "source": "diagram-check",
+      "round": 3,
+      "finding": "alt text says six legs of similar length; the rear pair reaches further",
+      "decision": "accepted",
+      "reason": "True of the drawing. The same wording sat in the standard's worked example; the shipped solution had already been corrected in round 1.",
+      "change": "Alt text now says slim jointed legs with the rear pair reaching furthest back. Worked example in standards/teaching.md now says no pair is thickened for jumping."
+    },
+    {
+      "q_number": 4,
+      "source": "diagram-check",
+      "round": 3,
+      "finding": "alt text misdescribes label II, which the reviewer says marks the central line",
+      "decision": "rejected",
+      "reason": "Label II's leader ends where a side vein meets the leaf edge, as the alt text says. The proposed wording ('the prominent central line') would describe the keyed answer, midrib, which the alt-text rule forbids.",
+      "change": ""
+    },
+    {
+      "q_number": 23,
+      "source": "diagram-check",
+      "round": 3,
+      "finding": "alt text names a mouth region the drawing does not show",
+      "decision": "accepted",
+      "reason": "The drawing has no mouth; the phrase interprets rather than describes.",
+      "change": "Now 'running from the top of the drawing down to the bottom'."
+    },
+    {
+      "q_number": 29,
+      "source": "diagram-check",
+      "round": 3,
+      "finding": "alt text calls the plate a disc; 'Secchi disc' is the only option containing that word",
+      "decision": "accepted",
+      "reason": "A screen-reader user would be handed option C. Raised on the trace check; the same words were in the shipped alt text, which the first check passed.",
+      "change": "'flat circular disc' is now 'flat circular plate', in alt.json and in the authored SVG's desc."
     }
   ],
   "round2_note": "Round 2 was not sent back through another model cycle. Codex re-raised findings the fixer had rejected, and a further author-reviewer round would re-run the same syllabus-versus-reality argument without converging. The orchestrator ruled each of the nine from the text; five were new damage introduced by the round-1 fix. Verified by the deterministic CSV validator and the style scan."

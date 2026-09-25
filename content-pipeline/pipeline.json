@@ -1,0 +1,24 @@
+{
+  "why": "Settings for run.py that are choices, not code. Change them here.",
+  "models": {
+    "derive": "opus",
+    "third": "opus",
+    "classify": "sonnet",
+    "teach": "opus",
+    "fix": "opus",
+    "alt": "sonnet",
+    "author": "opus",
+    "taxonomy": "opus"
+  },
+  "models_note": "Claude lanes only. The Codex lanes (derive_codex, review_codex, check_diagrams) run Codex's configured model. Routing follows os-inputs/_os-model-routing.md: judgment and long drafting on Opus, first-pass classification and alt text on Sonnet, every Claude-written artifact reviewed by Codex.",
+  "worker_timeout_minutes": 60,
+  "teach_chunk": 30,
+  "parallel_workers": 3,
+  "topic_mode": "canonical",
+  "image_base_env": "SABIPREP_IMAGE_BASE",
+  "image_base_note": "The public storage URL the diagrams are uploaded to. Read from this environment variable, never written here. Unset means exports are written as PREVIEW files that cannot be mistaken for importable ones.",
+  "trace_min_fidelity": 0.95,
+  "style_scan_env": "STYLE_SCAN",
+  "style_scan_default": "C:/Users/orezi/BaxAIOS/personal-os/os-references/scripts/style-scan.py",
+  "supabase_env_file": "../.env.local"
+}

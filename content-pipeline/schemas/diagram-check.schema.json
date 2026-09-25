@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["diagrams"],
+  "properties": {
+    "diagrams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["stem", "drawing", "drawing_checks", "drawing_notes", "alt", "alt_checks", "alt_notes"],
+        "properties": {
+          "stem": {"type": "string"},
+          "drawing": {"type": "string", "enum": ["pass", "fail"]},
+          "drawing_checks": {
+            "type": "array",
+            "items": {"type": "string", "enum": ["D1", "D2", "D3", "D4"]},
+            "description": "Failed drawing checks. Empty when drawing is pass."
+          },
+          "drawing_notes": {"type": "string", "description": "For a fail, name the exact element that differs and where. Empty for a pass."},
+          "alt": {"type": "string", "enum": ["pass", "fail"]},
+          "alt_checks": {
+            "type": "array",
+            "items": {"type": "string", "enum": ["A1", "A2", "A3"]},
+            "description": "Failed alt-text checks. Empty when alt is pass."
+          },
+          "alt_notes": {"type": "string", "description": "For a fail, quote the exact words that fail and give replacement wording. Empty for a pass."}
+        }
+      }
+    }
+  }
+}

@@ -16,6 +16,8 @@ Writes out/<slug>.codex.<year>.json
 import argparse, json, os, subprocess, sys, tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+from common import load_config, unit_name
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 SCHEMA = os.path.join(HERE, 'schemas', 'answers-batch.schema.json')
 
@@ -62,7 +64,7 @@ def block(it):
 def run_batch(batch, cfg, diagram_root):
     images, seen = [], set()
     for it in batch:
-        for p in it.get('diagram_files', []):
+        for p in (it.get('diagram_files', []) if diagram_root else []):
             full = os.path.join(diagram_root, p)
             if full not in seen and os.path.exists(full):
                 seen.add(full)
@@ -109,6 +111,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--slug', required=True)
     ap.add_argument('--year', type=int)
+    ap.add_argument('--paper', type=int, default=1)
     ap.add_argument('--all', action='store_true')
     ap.add_argument('--batch', type=int, default=10)
     ap.add_argument('--parallel', type=int, default=3)
@@ -116,21 +119,22 @@ def main():
     a = ap.parse_args()
     only = {int(x) for x in a.questions.split(',')} if a.questions else None
 
-    cfg_path = os.path.join(HERE, 'configs', f'{a.slug}.json')
-    cfg = json.load(open(cfg_path, encoding='utf8'))
-    diagram_root = os.path.normpath(os.path.join(os.path.dirname(cfg_path), cfg['diagram_root']))
+    cfg = load_config(a.slug)
+    diagram_root = cfg['_diagram_root']
 
     all_items = [json.loads(l) for l in open(os.path.join(HERE, 'out', f'{a.slug}.items.jsonl'), encoding='utf8')]
-    years = sorted({it['year'] for it in all_items}) if a.all else [a.year]
+    units = (sorted({(it['year'], it.get('paper', 1)) for it in all_items}) if a.all
+             else [(a.year, a.paper)])
     exam = all_items[0]['exam_brand'] if all_items else 'WASSCE'
     run_cfg = {'subject': cfg['subject'], 'exam': exam}
 
-    for year in years:
-        items = sorted([it for it in all_items if it['year'] == year
+    for year, paper in units:
+        u = unit_name(year, paper)
+        items = sorted([it for it in all_items if it['year'] == year and it.get('paper', 1) == paper
                         and (only is None or it['q_number'] in only)], key=lambda x: x['q_number'])
         batches = [items[i:i + a.batch] for i in range(0, len(items), a.batch)]
         results, failures = {}, []
-        out = os.path.join(HERE, 'out', f'{a.slug}.codex.{year}.json')
+        out = os.path.join(HERE, 'out', f'{a.slug}.codex.{u}.json')
         if only is not None and os.path.exists(out):
             prior = json.load(open(out, encoding='utf8'))
             results = {int(k): v for k, v in prior['answers'].items() if int(k) not in only}
@@ -144,16 +148,16 @@ def main():
                 if r['ok']:
                     results.update(r['answers'])
                     flag = f" missing {r['missing']}" if r['missing'] else ''
-                    print(f"  {year} {span}: {len(r['answers'])} answers{flag}", flush=True)
+                    print(f"  {u} {span}: {len(r['answers'])} answers{flag}", flush=True)
                 else:
                     failures.append({'span': span, **r})
-                    print(f"  {year} {span}: FAILED {r['error']}", flush=True)
+                    print(f"  {u} {span}: FAILED {r['error']}", flush=True)
 
-        json.dump({'deriver': 'codex', 'year': year,
+        json.dump({'deriver': 'codex', 'year': year, 'paper': paper,
                    'answers': {str(k): v for k, v in sorted(results.items())},
                    'failures': failures}, open(out, 'w', encoding='utf8'),
                   indent=2, ensure_ascii=False)
-        print(f"{year}: {len(results)}/{len(items)} derived -> {os.path.basename(out)}", flush=True)
+        print(f"{u}: {len(results)}/{len(items)} derived -> {os.path.basename(out)}", flush=True)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,152 @@
+{
+  "slug": "biology-waec",
+  "subject": "Biology",
+  "gate": {
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-25T13:24:08",
+    "note": ""
+  },
+  "units": {
+    "2025": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-25T13:22:54",
+          "summary": "adopted: run by hand on 2026-09-24 and 25, before the orchestrator existed; diagram repairs applied by hand and logged in the fixlog, round 3",
+          "cost_usd": 0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-25T13:24:06",
+          "summary": "re-checked ['2025_Q2-3', '2025_Q23-24', '2025_Q4-5']; not passing ['2025_Q4-5']",
+          "seconds": 56,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-25T13:24:08",
+          "summary": "PREVIEW (no image base set): biology-waec.2025.PREVIEW.csv, 4 held, 0 pre-flight flags; style scan: Structural tells (section 4 of the rulebook) are not machine-checkable. Read for those too.",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-25T13:24:08",
+          "summary": "biology-waec.2025.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 7,
+          "why": "defective",
+          "detail": "Both C and D satisfy the wording, but no combined option is provided. If the question intended the g"
+        },
+        {
+          "q_number": 17,
+          "why": "ambiguous",
+          "detail": "Long sight is corrected with a converging lens, and both A (biconvex lens) and B (convex lens) are c"
+        },
+        {
+          "q_number": 26,
+          "why": "defective",
+          "detail": "The stem asks for the statement that is not correct, but three options, A, B and D, are incorrect. I"
+        },
+        {
+          "q_number": 47,
+          "why": "defective",
+          "detail": "The item has two incorrect statements: B and C. B is selected as the likely intended answer, but C i"
+        }
+      ]
+    }
+  },
+  "cost_usd": 0.0
+}

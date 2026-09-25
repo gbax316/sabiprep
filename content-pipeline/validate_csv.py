@@ -17,6 +17,26 @@ from urllib.parse import urlparse
 REQUIRED = ['subject', 'topic', 'exam_type', 'year', 'question_text',
             'option_a', 'option_b', 'correct_answer']
 DIAGRAM_WORDS = re.compile(r'\b(diagram|figure|graph|illustrat\w*|shown below|drawing|chart|map)\b', re.I)
+WORD = re.compile(r"[a-z][a-z'-]{3,}")
+
+
+def answer_words_in_alt(r):
+    """Words the alt text shares with the correct option, where no other option
+    and not the question uses them. On Biology 2025 Q29 the alt text called the
+    instrument a "circular disc", and the only option containing "disc" was the
+    key, Secchi disc: a screen-reader user was handed the answer. A model
+    reviewer passed that text once and failed it once, so it is also checked
+    here mechanically."""
+    alt = set(WORD.findall(r['image_alt_text'].lower()))
+    if not alt or r['correct_answer'] not in 'ABCDE' or not r['correct_answer']:
+        return set()
+    key = set(WORD.findall(r.get(f"option_{r['correct_answer'].lower()}", '').lower()))
+    others = set()
+    for c in 'abcde':
+        if c != r['correct_answer'].lower():
+            others |= set(WORD.findall(r.get(f'option_{c}', '').lower()))
+    asked = set(WORD.findall((r['question_text'] + ' ' + r['passage']).lower()))
+    return (key - others - asked) & alt
 
 
 def main(path):
@@ -75,6 +95,9 @@ def main(path):
             gaps.append(f"{q}: em-dash")
         if not r['solution'].startswith(f"Answer: {ca}."):
             gaps.append(f"{q}: solution does not open with 'Answer: {ca}.'")
+        leak = answer_words_in_alt(r)
+        if leak:
+            gaps.append(f"{q}: alt text uses a word only the correct option has: {', '.join(sorted(leak))}")
 
     # passages: every row sharing a passage_id must carry the same text
     by_pid = {}

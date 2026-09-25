@@ -1,0 +1,23 @@
+{
+  "checker": "codex",
+  "unit": "2025",
+  "results": {
+    "2025_Q29-30": {
+      "stem": "2025_Q29-30",
+      "drawing": "fail",
+      "drawing_checks": [
+        "D4"
+      ],
+      "drawing_notes": "The two filled diagonal quadrants of the circular plate are badly broken by large white blotches and particle-like marks, especially the lower-left quadrant, so the meaningful alternating shading is not cleanly readable at tablet size.",
+      "alt": "fail",
+      "alt_checks": [
+        "A1",
+        "A2"
+      ],
+      "alt_notes": "“passes through a dashed surface line” misdescribes the drawing; there is no distinct dashed surface line, only the upper boundary of the particle-filled region. Replace with “passes into a region drawn with many small particles.” The words “circular disc” use vocabulary from the correct answer, “Secchi disc.” Replace with “flat circular plate.”",
+      "svg": "2025_Q29-30.svg"
+    }
+  },
+  "no_svg": [],
+  "failures": []
+}

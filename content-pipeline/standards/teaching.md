@@ -109,8 +109,11 @@ answering.
 
 ## Topic and difficulty
 
-`topic_id` is one canonical id from `taxonomies/<subject>.json`. Never invent a
-topic. If none fits, say so in review rather than forcing one.
+Every question sits on one subtopic: `subtopic_id`, an id from the subject's
+`taxonomies/<subject>.json`. A separate classifier places it before teaching is
+written, by what a student must know to answer it rather than by words in the
+stem. The author keeps that placement, and flags it with `placement_challenge`
+only when it is plainly wrong. Never invent an id.
 
 `difficulty`:
 
@@ -139,17 +142,17 @@ Answer: D. cockroach
 
 A nymph is the young stage of an insect that develops by incomplete metamorphosis. It already looks like a small, wingless version of the adult, so its body plan tells you which insect it is.
 
-How to tell: the body is flattened and oval, the antennae are very long and thread-like, and all six legs are roughly the same size. That is the cockroach body plan.
+How to tell: the body is flattened and oval, the antennae are very long and thread-like, and the legs are slim running legs. No pair is thickened for jumping. That is the cockroach body plan.
 
 Why not the others:
 A. grasshopper: its nymph has large, powerful hind legs for jumping. These legs are all similar.
 B. mosquito: it develops by complete metamorphosis, through a larva and a pupa, so it has no nymph stage.
 C. termite: its nymphs are pale and soft-bodied, with short, bead-like antennae.
 
-Exam tip: in "identify the nymph" questions, check the hind legs first. Enlarged hind legs point to a grasshopper. Equal legs with long antennae point to a cockroach.
+Exam tip: in "identify the nymph" questions, check the hind legs first. Enlarged hind legs point to a grasshopper. Slim running legs with long antennae point to a cockroach.
 ```
 
-Topic: `growth-development`. Difficulty: `medium`, because it requires reading the diagram against knowledge of two developmental patterns.
+Subtopic: `growth.metamorphosis`. Difficulty: `medium`, because it requires reading the diagram against knowledge of two developmental patterns.
 
 ## Diagram alt text
 
@@ -186,7 +189,7 @@ R2 rejects an item that fails any of these, and says which:
 6. Markdown syntax appears anywhere, or notation is written as `x^2` instead of `x²`.
 7. The solution contradicts the verified answer.
 8. A fact in the solution is wrong.
-9. `topic_id` is not in the taxonomy, or plainly the wrong one.
+9. `subtopic_id` is not in the taxonomy, or plainly the wrong place for what the question tests.
 10. Language a fifteen-year-old would stumble over, where a plainer word exists.
 11. A syllabus simplification stated as universal truth, an unscoped absolute, or a
     self-contradiction. Judge it at syllabus depth: a claim correctly scoped to the

@@ -1,0 +1,40 @@
+{
+  "checker": "codex",
+  "unit": "2025",
+  "results": {
+    "2025_Q2-3": {
+      "stem": "2025_Q2-3",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q2-3.svg"
+    },
+    "2025_Q23-24": {
+      "stem": "2025_Q23-24",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q23-24.svg"
+    },
+    "2025_Q4-5": {
+      "stem": "2025_Q4-5",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "fail",
+      "alt_checks": [
+        "A1"
+      ],
+      "alt_notes": "“II points to a line that runs out to the leaf edge” misdescribes label II, which points to the thick central line. Replace it with: “II points to the thick central line running from the short stalk toward the pointed top.”",
+      "svg": "2025_Q4-5.svg"
+    }
+  },
+  "no_svg": [],
+  "failures": []
+}

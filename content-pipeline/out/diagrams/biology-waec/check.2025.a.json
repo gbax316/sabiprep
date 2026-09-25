@@ -1,0 +1,74 @@
+{
+  "checker": "codex",
+  "unit": "2025",
+  "results": {
+    "2025_Q11-12": {
+      "stem": "2025_Q11-12",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q11-12.svg"
+    },
+    "2025_Q2-3": {
+      "stem": "2025_Q2-3",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "fail",
+      "alt_checks": [
+        "A1"
+      ],
+      "alt_notes": "The phrase \"six jointed legs of similar length\" is inaccurate because the rear pair extends farther than the other legs. Replace it with \"six jointed legs, with the rear pair extending farthest.\"",
+      "svg": "2025_Q2-3.svg"
+    },
+    "2025_Q23-24": {
+      "stem": "2025_Q23-24",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "fail",
+      "alt_checks": [
+        "A1"
+      ],
+      "alt_notes": "The words “running from the mouth region” refer to a mouth region that is not shown. Replace them with “descending from the top of the diagram.”",
+      "svg": "2025_Q23-24.svg"
+    },
+    "2025_Q29-30": {
+      "stem": "2025_Q29-30",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q29-30.authored.svg"
+    },
+    "2025_Q4-5": {
+      "stem": "2025_Q4-5",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "fail",
+      "alt_checks": [
+        "A1"
+      ],
+      "alt_notes": "“II points to a line that runs out to the leaf edge” misdescribes label II, which indicates the prominent central line of the leaf. Replace it with: “II points to the prominent central line running from the short stalk toward the pointed top end.”",
+      "svg": "2025_Q4-5.svg"
+    },
+    "2025_Q45": {
+      "stem": "2025_Q45",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q45.svg"
+    }
+  },
+  "no_svg": [],
+  "failures": []
+}

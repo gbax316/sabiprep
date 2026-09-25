@@ -1,0 +1,33 @@
+{
+  "2025_Q11-12": {
+    "status": "pass",
+    "unit": "2025",
+    "checked": "a"
+  },
+  "2025_Q2-3": {
+    "status": "pass",
+    "unit": "2025",
+    "checked": "recheck"
+  },
+  "2025_Q23-24": {
+    "status": "pass",
+    "unit": "2025",
+    "checked": "recheck"
+  },
+  "2025_Q29-30": {
+    "status": "pass",
+    "unit": "2025",
+    "checked": "a"
+  },
+  "2025_Q4-5": {
+    "status": "alt-disputed",
+    "unit": "2025",
+    "checked": "recheck",
+    "reason": "“II points to a line that runs out to the leaf edge” misdescribes label II, which points to the thick central line. Replace it with: “II points to the thick central line running from the short stalk toward the pointed top.”"
+  },
+  "2025_Q45": {
+    "status": "pass",
+    "unit": "2025",
+    "checked": "a"
+  }
+}

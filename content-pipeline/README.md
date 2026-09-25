@@ -1,47 +1,98 @@
 # Content pipeline
 
-Turns raw exam papers into reviewed, import-ready question rows.
+Turns raw WAEC and JAMB past papers into reviewed, import-ready question rows:
+the key, three hints, a worked solution, the subtopic, redrawn diagrams and alt
+text. Every subject goes through the same stages, driven by one orchestrator,
+so a resent subject comes out matching Biology.
 
-Built against `blueprint/QUESTION-PIPELINE.md`, which defines the roles. Biology
-WAEC is the reference subject: it was the only one whose questions and diagrams
-both arrived intact, so the pipeline is proved there and every resent subject
-runs through the same stages with only a config file changing.
+Rulings behind the design are D6 (how truth is decided) and D7 (how it runs) in
+`blueprint/decisions.md`. The teaching bar is `standards/teaching.md`.
 
-## Stages
-
-| Stage | Role | What it does | Deterministic |
-|---|---|---|---|
-| W1 | Extractor | `.docx` to structured items: stem, options, shared stem, diagram binding | yes |
-| W2 | Answer deriver | Solves each question. Run independently more than once, in contexts that cannot see each other | no |
-| R1 | Answer adjudicator | Compares the independent derivations. Agreed, disagreed, or unsolvable | no |
-| W3 | Teaching author | Given a verified answer: worked solution, three progressive hints, the principle | no |
-| R2 | Quality reviewer | Does hint 1 narrow without revealing? Does the solution show method? | no |
-| W4 | Diagram author | Redraws a source diagram as SVG, verified against the original | no |
-
-Only W1 is running today. The rest are next.
-
-## Running W1
+## Running a subject
 
 ```bash
 cd content-pipeline
-python extract.py --config configs/biology-waec.json
+python extract.py --config configs/<slug>.json     # W1, deterministic, re-runnable
+python run.py taxonomy <slug>                       # once per subject: the topic tree
+python run.py run <slug>                            # first paper, then stops at the gate
+python run.py approve <slug> --note "..."           # after Orezi reviews the gate page
+python run.py run <slug>                            # every remaining year, unattended
+python run.py status [<slug>]
 ```
 
-Outputs land in `out/`:
+`run` resumes where it stopped. `--unit 2024 --from teach` re-runs one paper
+from a stage. Nothing here writes to the database or to storage: the output is
+a CSV and an upload manifest, imported by a person.
 
-- `<slug>.items.jsonl` one JSON object per question
-- `<slug>.report.json` counts, gaps, and everything that needs a human
+## The gate
 
-Adding a subject is a config file, not code:
+A subject's most recent paper runs alone and stops. The preview page,
+`out/<slug>.<unit>.preview.html`, opens with what the gate needs: the topic tree
+with that paper's questions counted onto it, what the classifier found wrong
+with the tree, alt-text disputes, and the held list. Below it, every settled
+question as a student sees it in practice mode. Approval unlocks the other
+years. Held questions from every year are reviewed together at the end.
+
+## Stages, in order
+
+Claude stages run headless (`claude -p --restricted --safe-mode`), each in its
+own folder under `work/<slug>/<unit>/<stage>/`, holding only its brief and
+inputs, with the diagram folder as the one other place it can read. The brief is
+saved beside its output, so every result can be traced to exactly what the
+worker was told. Codex stages call `codex exec` with a JSON schema.
+
+| Stage | Who | Brief or script | What it produces |
+|---|---|---|---|
+| derive | Claude and Codex, blind to each other | `briefs/derive.md`, `derive_codex.py` | two independent answer sets |
+| compare | script | `adjudicate.py` | verified, agreed-soft, disagree, unsolvable |
+| third | Claude | `briefs/third-review.md` | a ruling on every non-verified question |
+| settle | script | `finalise.py` | the answer key: keyed, ambiguous, defective |
+| classify | Claude (Sonnet) | `briefs/classify.md` | each question on one subtopic, plus findings about the tree |
+| teach | Claude | `briefs/teach.md` | hints and solutions, shared stems kept in one chunk |
+| review | Codex | `review_codex.py` | twelve checks per item, failing words quoted |
+| fix | Claude | `briefs/fix.md` | findings weighed, applied or rejected with a reason, logged |
+| recheck | Codex | `review_codex.py` | changed items only |
+| final-fix | Claude | `briefs/fix.md`, final pass | last word on what still fails, or a hold |
+| trace | script | `redraw.py` | SVG traced from the scan, fidelity measured |
+| alt | Claude (Sonnet) | `briefs/alt.md` | alt text that never names an answer |
+| author | Claude | `briefs/author.md` | a hand-written SVG where the trace was rejected |
+| diagram-check | Codex | `check_diagrams.py` | original and redraw compared, alt text checked |
+| diagram-repair | Claude | `briefs/alt.md`, `briefs/author.md` | findings weighed and repaired once |
+| diagram-recheck | Codex | `check_diagrams.py` | repaired diagrams only; a drawing that still fails holds its questions |
+| export | script | `export_csv.py`, `validate_csv.py` | the 24-column import CSV, upload manifest, held list, pre-flight |
+| preview | script | `preview.py --gate` | the gate page |
+
+Models per stage are in `pipeline.json`. The storage URL for diagrams comes from
+the `SABIPREP_IMAGE_BASE` environment variable; without it the export is written
+as `PREVIEW` files that cannot be mistaken for importable ones.
+
+## Adding a subject
+
+A config file, not code:
 
 ```json
 {
   "slug": "physics-waec",
   "subject": "Physics",
   "source": "../../Exam Questions/2025-2015 WASSCE PHYSICS QUESTIONS.docx",
-  "diagram_root": "../../Exam Questions/Physics waec Diagrams"
+  "diagram_root": "../../Exam Questions/Physics waec Diagrams",
+  "syllabi": [{"exam": "WASSCE", "path": "../syllabi/physics-waec.txt"},
+              {"exam": "UTME", "path": "../syllabi/physics-jamb.txt"}]
 }
 ```
+
+One taxonomy serves a subject's WAEC and UTME papers, at
+`taxonomies/<subject>.json`. `keep_italic` is for subjects where italics carry
+meaning (English). `db_subject` names the live subject when it differs from
+`subject`. A second paper under one year header is blocked until its true year
+is confirmed and listed under `papers_confirmed`.
+
+## Where things live
+
+- `out/`: every result, committed, because derivations, rulings and teaching cost real tokens and would not come back identical. Only deterministic output is ignored.
+- `out/diagrams/<slug>/`: SVGs, alt text, check results and `status.json`, one folder per subject because every paper names its images `2025_Q2-3`.
+- `state/<slug>.json`: where each subject stands, stage by stage, with spend.
+- `work/`: each worker's folder, inputs and session log. Ignored; the result it produced is in `out/`.
 
 ## What W1 handles, and why each rule exists
 
@@ -88,14 +139,3 @@ could. On Biology it found:
   was typed up and cannot be recovered from this file.
 - **Two questions with a damaged option letter**, such as 2019 Q38 reading
   `(a) air (b) soil (e) water (d) noise`, where `(e)` should be `(c)`.
-
-## Current state: Biology WAEC
-
-| | |
-|---|---|
-| Items extracted | 547 across 2015 to 2025 |
-| Clean, four options | 540 |
-| Need a human | 7 |
-| Shared stems | 71, covering 152 items |
-| Diagrams bound | 146 |
-| Lost question numbers | 3, two recoverable |

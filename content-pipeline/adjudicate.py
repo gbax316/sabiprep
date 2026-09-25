@@ -19,6 +19,8 @@ Usage:
 import argparse, json, os, sys
 from collections import Counter
 
+from common import load_items, unit_name
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 VERIFIED = 'verified'            # agree, both certain, both solvable
@@ -50,14 +52,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--slug', required=True)
     ap.add_argument('--year', type=int, required=True)
+    ap.add_argument('--paper', type=int, default=1)
     a = ap.parse_args()
 
     out = os.path.join(HERE, 'out')
-    items = {it['q_number']: it for it in
-             (json.loads(l) for l in open(os.path.join(out, f'{a.slug}.items.jsonl'), encoding='utf8'))
-             if it['year'] == a.year}
-    cx = load(os.path.join(out, f'{a.slug}.codex.{a.year}.json'))
-    cl = load(os.path.join(out, f'{a.slug}.claude.{a.year}.json'))
+    u = unit_name(a.year, a.paper)
+    items = load_items(a.slug, a.year, a.paper)
+    cx = load(os.path.join(out, f'{a.slug}.codex.{u}.json'))
+    cl = load(os.path.join(out, f'{a.slug}.claude.{u}.json'))
     if cx is None or cl is None:
         print(f"missing derivation: codex={'ok' if cx else 'MISSING'} claude={'ok' if cl else 'MISSING'}")
         return 1
@@ -77,12 +79,12 @@ def main():
         }
 
     counts = Counter(v['verdict'] for v in verdicts.values())
-    path = os.path.join(out, f'{a.slug}.verdicts.{a.year}.json')
-    json.dump({'year': a.year, 'counts': dict(counts), 'verdicts': verdicts},
+    path = os.path.join(out, f'{a.slug}.verdicts.{u}.json')
+    json.dump({'year': a.year, 'paper': a.paper, 'counts': dict(counts), 'verdicts': verdicts},
               open(path, 'w', encoding='utf8'), indent=2, ensure_ascii=False)
 
     total = len(verdicts)
-    print(f"{a.slug} {a.year}: {total} questions")
+    print(f"{a.slug} {u}: {total} questions")
     for k in (VERIFIED, AGREED_SOFT, DISAGREE, UNSOLVABLE, INCOMPLETE):
         print(f"  {k:<12} {counts.get(k, 0):>3}")
     print(f"  verified rate: {counts.get(VERIFIED, 0) / total:.0%}")

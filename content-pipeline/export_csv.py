@@ -26,6 +26,8 @@ Usage:
 
 import argparse, csv, json, os, sys
 
+from common import load_items, subject_key, taxonomy_path, unit_name
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 COLUMNS = ['subject', 'topic', 'exam_type', 'year', 'question_text',
@@ -39,6 +41,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--slug', required=True)
     ap.add_argument('--year', type=int, required=True)
+    ap.add_argument('--paper', type=int, default=1)
     ap.add_argument('--topic-mode', required=True, choices=['canonical', 'existing'])
     ap.add_argument('--image-base', required=True,
                     help='public base URL of the storage folder the diagrams are uploaded to')
@@ -47,7 +50,7 @@ def main():
     out = os.path.join(HERE, 'out')
 
     cfg = json.load(open(os.path.join(HERE, 'configs', f'{a.slug}.json'), encoding='utf8'))
-    tax = json.load(open(os.path.join(HERE, 'taxonomies', f"{cfg['subject'].lower()}.json"), encoding='utf8'))
+    tax = json.load(open(taxonomy_path(cfg), encoding='utf8'))
     # Two-level taxonomy: parents with subtopics. A question sits on a
     # subtopic; the import's single "topic" column carries the subtopic name,
     # and the parent link is made by the topic migration, not by the CSV.
@@ -64,15 +67,22 @@ def main():
     for old, node in tax.get('legacy_to', {}).items():
         legacy_for.setdefault(node, old)
 
-    items = {i['q_number']: i for i in (json.loads(l) for l in open(os.path.join(out, f'{a.slug}.items.jsonl'), encoding='utf8'))
-             if i['year'] == a.year}
-    final = json.load(open(os.path.join(out, f'{a.slug}.final.{a.year}.json'), encoding='utf8'))['answers']
-    tpath = a.teaching or os.path.join(out, f'{a.slug}.teaching.{a.year}.json')
+    u = unit_name(a.year, a.paper)
+    items = load_items(a.slug, a.year, a.paper)
+    final = json.load(open(os.path.join(out, f'{a.slug}.final.{u}.json'), encoding='utf8'))['answers']
+    tpath = a.teaching or os.path.join(out, f'{a.slug}.teaching.{u}.json')
     teach = {t['q_number']: t for t in json.load(open(tpath, encoding='utf8'))['items']}
 
-    alt_path = os.path.join(out, 'diagrams', f'{a.slug}.alt.json')
+    # One folder per subject: every paper names its images 2025_Q2-3, so a
+    # shared folder would let the second subject overwrite the first.
+    ddir = os.path.join(out, 'diagrams', a.slug)
+    alt_path = os.path.join(ddir, 'alt.json')
     alts = json.load(open(alt_path, encoding='utf8')) if os.path.exists(alt_path) else {}
-    dims_path = os.path.join(out, 'diagrams', 'redraw-report.json')
+    dims_path = os.path.join(ddir, 'redraw-report.json')
+    # A diagram the cross-family check still failed after one repair is held,
+    # and so is every question that depends on it.
+    status_path = os.path.join(ddir, 'status.json')
+    dstatus = json.load(open(status_path, encoding='utf8')) if os.path.exists(status_path) else {}
     dims = {}
     if os.path.exists(dims_path):
         for r in json.load(open(dims_path, encoding='utf8')):
@@ -108,23 +118,25 @@ def main():
         img = alt = w = h = ''
         if it['diagram_files']:
             stem = os.path.splitext(os.path.basename(it['diagram_files'][0]))[0]
+            if dstatus.get(stem, {}).get('status') == 'held':
+                held.append((q, 'diagram-held', dstatus[stem].get('reason', '')[:100]))
+                continue
             alt = alts.get(stem, '')
             if not alt:
                 held.append((q, 'no-alt-text', stem))
                 continue
-            img = f"{a.image_base.rstrip('/')}/{cfg['subject'].lower()}/{it['exam_type'].lower()}/{a.year}/{stem}.svg"
+            img = f"{a.image_base.rstrip('/')}/{subject_key(cfg)}/{it['exam_type'].lower()}/{a.year}/{stem}.svg"
             w, h = dims.get(stem, ['', ''])
             # The uploaded object is always named <stem>.svg. Its source is the
             # authored version when one exists, because an authored file only
             # exists where the trace failed. Uploading the trace instead would
             # ship the degraded diagram under the right name.
-            ddir = os.path.join(out, 'diagrams')
             src = next((p for p in (f'{stem}.authored.svg', f'{stem}.svg')
                         if os.path.exists(os.path.join(ddir, p))), None)
             if not src:
                 held.append((q, 'no-diagram-asset', stem))
                 continue
-            uploads[f"{cfg['subject'].lower()}/{it['exam_type'].lower()}/{a.year}/{stem}.svg"] = src
+            uploads[f"{subject_key(cfg)}/{it['exam_type'].lower()}/{a.year}/{stem}.svg"] = src
 
         opts = it['options']
         rows.append({
@@ -141,16 +153,20 @@ def main():
             'image_width': w, 'image_height': h,
         })
 
-    path = os.path.join(out, f'{a.slug}.{a.year}.import.csv')
+    path = os.path.join(out, f'{a.slug}.{u}.import.csv')
     with open(path, 'w', newline='', encoding='utf-8-sig') as fh:
         wr = csv.DictWriter(fh, fieldnames=COLUMNS)
         wr.writeheader()
         wr.writerows(rows)
 
-    manifest = os.path.join(out, f'{a.slug}.{a.year}.uploads.json')
+    manifest = os.path.join(out, f'{a.slug}.{u}.uploads.json')
     json.dump(dict(sorted(uploads.items())), open(manifest, 'w', encoding='utf8'), indent=2)
 
-    print(f"{a.slug} {a.year}: {len(rows)} rows exported, {len(held)} held")
+    json.dump([{'q_number': q, 'why': why, 'detail': detail} for q, why, detail in held],
+              open(os.path.join(out, f'{a.slug}.{u}.held.json'), 'w', encoding='utf8'),
+              indent=2, ensure_ascii=False)
+
+    print(f"{a.slug} {u}: {len(rows)} rows exported, {len(held)} held")
     print(f"  -> {os.path.basename(path)}")
     print(f"  -> {os.path.basename(manifest)}  ({len(uploads)} diagrams to upload before importing)")
     for dest, src in sorted(uploads.items()):
