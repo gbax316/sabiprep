@@ -1,0 +1,30 @@
+{
+  "checker": "codex",
+  "unit": "2024",
+  "results": {
+    "2024_Q15-18": {
+      "stem": "2024_Q15-18",
+      "drawing": "fail",
+      "drawing_checks": [
+        "D2"
+      ],
+      "drawing_notes": "The label at the right end of the horizontal line is rendered as “r” in the redraw, but the original label is “x”. Replace “r” with a clearly readable lowercase “x”.",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2024_Q15-18.svg"
+    },
+    "2024_Q34-36": {
+      "stem": "2024_Q34-36",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2024_Q34-36.svg"
+    }
+  },
+  "no_svg": [],
+  "failures": []
+}

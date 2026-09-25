@@ -1,0 +1,301 @@
+{
+  "entries": [
+    {
+      "q_number": 1,
+      "source": "check-11",
+      "finding": "hint 3 'A rise in Y's own price cannot make people buy more Y' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "The law of demand has recognised exceptions, so 'cannot' is too strong; scoping it to the law of demand matches the solution's own line for C.",
+      "change": "Hint 3 now opens 'By the law of demand, a rise in Y's own price does not make people buy more Y.'",
+      "round": 1
+    },
+    {
+      "q_number": 2,
+      "source": "codex",
+      "finding": "hint 3 'found in every village and town' is a false absolute",
+      "decision": "accepted",
+      "reason": "Neither sector is literally in every village and town.",
+      "change": "Hint 3 now says 'the two sectors commonly found in villages as well as towns'.",
+      "round": 1
+    },
+    {
+      "q_number": 4,
+      "source": "codex",
+      "finding": "distractor A: policy 'does not decide how buyers react' is too absolute",
+      "decision": "accepted",
+      "reason": "Policies such as bans or tariffs can affect import demand, so the flat denial is unscoped.",
+      "change": "Line A now says policy can bring about the depreciation, but whether it protects local industry turns on how strongly buyers react to dearer imports.",
+      "round": 1
+    },
+    {
+      "q_number": 4,
+      "source": "codex",
+      "finding": "principle omits the need for local substitutes",
+      "decision": "rejected",
+      "reason": "The principle is already conditional ('when buyers respond by buying ... more local goods'), and How to tell names the no-local-substitute case; adding more is over-reach.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 6,
+      "source": "codex",
+      "finding": "possible effects of migration and subsidies stated as certain; exam tip overbroad",
+      "decision": "accepted",
+      "reason": "Check 11: syllabus tendencies were stated as inevitable ('so less food is produced', 'Farms shrink', 'so raises output', 'Anything ... is a remedy').",
+      "change": "Scoped with 'takes much of this labour away, so less food tends to be produced', 'Some farms shrink', 'so helps raise output', and 'Options that give farmers markets, money or services are treated as remedies'.",
+      "round": 1
+    },
+    {
+      "q_number": 8,
+      "source": "codex",
+      "finding": "securities described as always issued to the public and traded on the stock exchange; preference dividend stated as fixed",
+      "decision": "accepted",
+      "reason": "Private company shares are not listed, and fixed dividends and interest are usual, not guaranteed.",
+      "change": "Hint 2 and solution scoped: issued 'to investors', 'those of public companies can be bought and sold on the stock exchange', 'can usually be sold on', 'usually carrying a fixed rate of dividend', 'usually pays fixed interest'. Rejected the heavier rewrite as unnecessary.",
+      "round": 1
+    },
+    {
+      "q_number": 9,
+      "source": "codex",
+      "finding": "hint 2 'Either way, more money comes into the economy' is wrong for borrowing from the public",
+      "decision": "accepted",
+      "reason": "Borrowing from the public does not create new money.",
+      "change": "Hint 2 now ends 'Either way, the government is spending more than it takes out of the economy in taxes.'",
+      "round": 1
+    },
+    {
+      "q_number": 9,
+      "source": "codex",
+      "finding": "solution states the inflationary effect as universal",
+      "decision": "accepted",
+      "reason": "Check 11: the effect is a syllabus tendency depending on financing and spare capacity.",
+      "change": "How to tell now separates demand from new money created by central-bank financing; line D and exam tip say 'treated as' inflationary or not neutral 'in the syllabus'.",
+      "round": 1
+    },
+    {
+      "q_number": 15,
+      "source": "codex",
+      "finding": "hints name line x as the firm's demand or price line, answering sibling Q17",
+      "decision": "accepted",
+      "reason": "Check 12: Q17 asks what x represents.",
+      "change": "Hint 1 now just points to the shape of line x; hint 3 asks about a firm with 'no control at all over its price' instead of 'one firm's demand line'.",
+      "round": 1
+    },
+    {
+      "q_number": 16,
+      "source": "codex",
+      "finding": "hints call x 'the price line' and identify the U-shaped average cost curve, answering siblings Q17 and Q18",
+      "decision": "accepted",
+      "reason": "Check 12: naming x as price and one curve as average cost identifies what x and Y represent.",
+      "change": "Hint 1 says 'line x'; hint 2 describes the height as an amount per unit; hint 3 says the curves meet line x so cost per unit equals the height, without naming either curve. Codex's proposed hint 3 was not used because it all but states the answer.",
+      "round": 1
+    },
+    {
+      "q_number": 21,
+      "source": "codex",
+      "finding": "hint 1 makes sale for money a universal condition; family-shop example in hint 2 is wrong",
+      "decision": "accepted",
+      "reason": "Some non-market output is valued, and a relative's unpaid work in a shop shows up in the shop's recorded sales.",
+      "change": "Hint 1 says national income 'mainly' adds up goods and services with a market price; hint 2 drops the family-shop example and says unpaid home services 'usually' have no price attached.",
+      "round": 1
+    },
+    {
+      "q_number": 24,
+      "source": "codex",
+      "finding": "'(n + 1) ÷ 2' stated for all n",
+      "decision": "accepted",
+      "reason": "It holds only for an odd number of values.",
+      "change": "Principle and exam tip now cover odd n and add the even case; 'the commonest mistake' softened to 'a common mistake' (check 11).",
+      "round": 1
+    },
+    {
+      "q_number": 27,
+      "source": "codex",
+      "finding": "Pacioli's 1494 book said to have 'first set out' double-entry bookkeeping",
+      "decision": "accepted",
+      "reason": "Double-entry was in use and described earlier; Pacioli's was the first printed account.",
+      "change": "Hint 3 and solution say 'the first printed account'; 'is called' became 'is often called'.",
+      "round": 1
+    },
+    {
+      "q_number": 31,
+      "source": "codex",
+      "finding": "exam tip 'a maximum price is set below equilibrium and causes shortages' is too absolute",
+      "decision": "accepted",
+      "reason": "The solution itself shows a ceiling above equilibrium has no effect; the tip should match.",
+      "change": "Exam tip now says each control has an effect only when set below or above equilibrium, and then tends to cause shortages or surpluses.",
+      "round": 1
+    },
+    {
+      "q_number": 34,
+      "source": "codex",
+      "finding": "position relative to the curve is used to rank output; C<D justified by position alone",
+      "decision": "accepted",
+      "reason": "Check 11: the ranking was stated as a general rule, and inside-versus-beyond alone does not prove C<D. The diagram shows D has more of both goods than C.",
+      "change": "Hint 2, principle, lines B and D, and exam tip now compare points by the amounts of M and N, with points on the curve 'treated as equal' in this question. Codex's longer rewrite was trimmed to syllabus depth.",
+      "round": 1
+    },
+    {
+      "q_number": 36,
+      "source": "codex",
+      "finding": "'whole curve', 'more of both goods', saving 'only if ... machines', and 'more farming' not scoped",
+      "decision": "accepted",
+      "reason": "Check 11: a curve can shift unevenly, saving can fund other capital, and 'more farming' means reallocating existing resources.",
+      "change": "Hint 1 drops 'whole' and 'more of both goods'; principle says technology lets resources 'produce more'; line B says saving can help if invested in machines, roads or skills; line D says 'more of the existing resources'.",
+      "round": 1
+    },
+    {
+      "q_number": 38,
+      "source": "codex",
+      "finding": "'#' in the solution is forbidden markdown",
+      "decision": "rejected",
+      "reason": "Misread of check 6: '#' appears mid-line, and only as a quote of the printed option text '#20'. The solution explains that # stands for ₦, which helps a student reading the options. Every calculated value already uses ₦.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 39,
+      "source": "codex",
+      "finding": "hint 3 'Using p = 20' gives away sibling Q38",
+      "decision": "accepted",
+      "reason": "Check 12: it states Q38's answer in a hint.",
+      "change": "Hint 3 now says 'Using the equilibrium price you found, work out a quarter of it and take that away from 20.'",
+      "round": 1
+    },
+    {
+      "q_number": 22,
+      "source": "check-12",
+      "finding": "siblings Q22 to Q25 checked for leaks",
+      "decision": "rejected",
+      "reason": "No hint in the group states another question's answer. Q25's 'including any zeros' points to the smallest value, which is not an answer to Q22, Q23 or Q24.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 35,
+      "source": "check-12",
+      "finding": "siblings Q34 to Q36 checked for leaks",
+      "decision": "rejected",
+      "reason": "Q34 hint 2 no longer calls points on the curve efficient, so it does not answer Q35. Q35 and Q36 hints do not answer each other.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 40,
+      "source": "check-12",
+      "finding": "Q38 and Q40 hints checked against siblings",
+      "decision": "rejected",
+      "reason": "Q38 hint 3 leaves p unsolved and never calls 15 a quantity. Q40 hints use only the stem's given P = ₦4 and Q = 19.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 2,
+      "source": "codex",
+      "finding": "'Agriculture employs the largest share of Nigeria's workers' stated as unscoped current fact",
+      "decision": "accepted",
+      "reason": "The share of employment by sector depends on the data source and year; the key rests on the syllabus position, so the claim should be scoped to it.",
+      "change": "Principle sentence now reads 'In the syllabus, agriculture is Nigeria's largest employer of labour.' Rest of the item unchanged.",
+      "round": 2
+    },
+    {
+      "q_number": 9,
+      "source": "codex",
+      "finding": "C line says de-inflation 'comes from cutting spending or raising taxes, the opposite of a deficit'",
+      "decision": "accepted",
+      "reason": "Read as the only route, which is overbroad (monetary restraint and higher output also slow inflation), and fiscal tightening is not strictly the opposite of a deficit.",
+      "change": "C line now: 'this means slowing the rise in prices, for example by cutting spending or raising taxes, while deficit financing works the other way by adding to demand.' Codex's wording not used in full; the syllabus framing is kept.",
+      "round": 2
+    },
+    {
+      "q_number": 15,
+      "source": "codex",
+      "finding": "Hint 2 'A firm facing a flat line cannot: it must accept the market price', read with hint 1, identifies line x for sibling Q17 'X represents?'",
+      "decision": "accepted",
+      "reason": "Hint 1 sends the student to line x and hint 2 then says a flat line means the firm takes the market price, which answers Q17 before it is attempted. The price-taker principle can be given without describing what the line stands for.",
+      "change": "Hint 2 rewritten: 'Ask how much control one firm has over the price it charges. In some markets a firm can raise its price and still sell some output. In others each firm is so small that it must accept the price the whole market sets.' Solution unchanged, as solutions may name sibling facts.",
+      "round": 2
+    },
+    {
+      "q_number": 15,
+      "source": "codex",
+      "finding": "No alt text for the diagram",
+      "decision": "rejected",
+      "reason": "Alt text is authored separately and is not part of a teaching item.",
+      "change": "",
+      "round": 2
+    },
+    {
+      "q_number": 16,
+      "source": "codex",
+      "finding": "Hint 2 'Marginal cost is shown by a curve on the diagram, not by an area' points towards sibling Q18 'Y represents?'",
+      "decision": "accepted",
+      "reason": "It tells the student that marginal cost is one of the drawn curves, which Y labels, before Q18 is attempted. The sentence only eliminates one distractor, so removing it costs little.",
+      "change": "Removed that sentence from hint 2. The rest of the hint and the solution are unchanged.",
+      "round": 2
+    },
+    {
+      "q_number": 16,
+      "source": "codex",
+      "finding": "No alt text for the diagram",
+      "decision": "rejected",
+      "reason": "Alt text is authored separately and is not part of a teaching item.",
+      "change": "",
+      "round": 2
+    },
+    {
+      "q_number": 34,
+      "source": "codex",
+      "finding": "Hint 2 'two points on the same curve are treated as equal' is vague about what 'equal' means",
+      "decision": "accepted",
+      "reason": "'Equal' with no qualifier could be read as equal output. The sentence also leaks sibling Q35 (see the check-12 entry). Removing it fixes both problems, and hint 3 still guides the student.",
+      "change": "Removed the third sentence of hint 2.",
+      "round": 2
+    },
+    {
+      "q_number": 34,
+      "source": "codex",
+      "finding": "Exam tip 'Points on the curve are treated as equal' is unscoped",
+      "decision": "accepted",
+      "reason": "As a transferable rule it must say equal in what sense, otherwise it teaches that different bundles are the same output.",
+      "change": "Exam tip now says 'Points on the curve are treated as equally efficient'.",
+      "round": 2
+    },
+    {
+      "q_number": 34,
+      "source": "codex",
+      "finding": "Solution line B 'A=B' should say 'true only if the equality refers to productive efficiency'",
+      "decision": "rejected",
+      "reason": "The line already reads 'taken as true here, because A and B both lie on the curve, so they are equally efficient, even though they are different mixes of M and N', which is scoped and accurate. Codex's 'true only if' wording would argue against the key's reading of B.",
+      "change": "",
+      "round": 2
+    },
+    {
+      "q_number": 34,
+      "source": "check-12",
+      "finding": "Hint 2 'two points on the same curve are treated as equal' points to sibling Q35 'The country is at optimum at', answer 'A and B'",
+      "decision": "accepted",
+      "reason": "Telling the student that A and B, the two points on the curve, count as equal points straight to the 'A and B' option in Q35.",
+      "change": "Same change as the Codex hint 2 entry: the sentence was removed.",
+      "round": 2
+    },
+    {
+      "q_number": 38,
+      "source": "orchestrator",
+      "round": 3,
+      "finding": "the source writes naira as #; the extractor now reads it as ₦",
+      "decision": "accepted",
+      "reason": "The options now print ₦20, so a solution explaining the # sign would describe text the student no longer sees.",
+      "change": "Answer line and distractor lines read ₦; the sentence explaining # is replaced by \"Here Qr is the demand equation, Qd.\""
+    },
+    {
+      "q_number": 15,
+      "source": "diagram-check",
+      "round": 3,
+      "finding": "alt text for 2024_Q15-18 describes the two curves as one",
+      "decision": "accepted",
+      "reason": "True of the original: a U-shaped curve and a steeper second curve meet at e and run together beyond it. Raised only on the recheck, after the redraw, so no worker had weighed it.",
+      "change": "Alt text rewritten to describe both curves separately, in neutral shape words; no option word is used."
+    }
+  ]
+}

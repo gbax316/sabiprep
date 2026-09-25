@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 90 590 650" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+<!-- Authored by hand, not traced: the automatic trace (and the earlier shipped redraw) failed the cross-family check, which found the label at the right end of the horizontal line rendered as "r" instead of "x". Geometry follows 2024_Q15-18.png. Nothing omitted as unreadable. -->
+<title id="t">Graph for questions 15 to 18</title>
+<desc id="d">A graph with a vertical axis labeled "P" and a horizontal axis labeled "Qty". A horizontal line labeled "x" runs across the graph at a fixed height. A curve dips down from the upper left, bottoms out, then rises to meet a point labeled "e" where it touches the line "x"; from there the curve continues upward and to the right, more steeply, and is labeled "Y" near its top end. A shaded, cross-hatched rectangular area sits below the line "x", bounded on the left by the "P" axis and on the right by a dashed vertical line that drops from point "e" down to the "Qty" axis.</desc>
+<defs>
+  <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+    <line x1="7" y1="0" x2="7" y2="14" stroke="#E2E8F0" stroke-width="1.6"/>
+  </pattern>
+</defs>
+<!-- hatched area: P axis to dashed line, line x down to Qty axis -->
+<rect x="160" y="372" width="272" height="274" fill="url(#hatch)"/>
+<!-- axes -->
+<g stroke="#E2E8F0" stroke-width="4" fill="none" stroke-linecap="round">
+  <line x1="158" y1="648" x2="158" y2="125"/>
+  <line x1="158" y1="648" x2="610" y2="650"/>
+  <!-- line x -->
+  <line x1="155" y1="370" x2="612" y2="378"/>
+</g>
+<path d="M158 112 L150 132 L166 132 Z" fill="#E2E8F0"/>
+<path d="M624 650 L604 642 L604 658 Z" fill="#E2E8F0"/>
+<!-- dashed drop from e -->
+<line x1="434" y1="378" x2="431" y2="646" stroke="#E2E8F0" stroke-width="4" stroke-dasharray="11 6"/>
+<!-- curves -->
+<g stroke="#E2E8F0" stroke-width="5" fill="none" stroke-linecap="round">
+  <path d="M213 348 C232 418 268 457 310 458 C368 459 410 422 437 375 L586 178"/>
+  <path d="M245 462 C320 463 405 438 438 377 L580 200"/>
+</g>
+<!-- labels -->
+<g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="38">
+  <text x="108" y="140" font-style="italic">P</text>
+  <text x="588" y="165" font-style="italic">Y</text>
+  <text x="418" y="364" font-style="italic">e</text>
+  <text x="620" y="390" font-style="italic">x</text>
+  <text x="578" y="708">Qty</text>
+</g>
+</svg>

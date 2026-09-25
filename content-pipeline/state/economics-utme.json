@@ -1,0 +1,163 @@
+{
+  "slug": "economics-utme",
+  "subject": "Economics",
+  "gate": {
+    "status": "awaiting",
+    "unit": "2024",
+    "at": "2026-09-25T14:36:50",
+    "note": ""
+  },
+  "units": {
+    "2024": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-25T13:51:48",
+          "summary": "39/39 codex, 39/39 claude",
+          "seconds": 121,
+          "cost_usd": 0.37
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-25T13:51:48",
+          "summary": "agreed-soft 9, disagree 1, unsolvable 3, verified 26",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-25T13:52:50",
+          "summary": "13 ruled: ambiguous 1, defective 2, key 10",
+          "seconds": 61,
+          "cost_usd": 0.3
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-25T13:52:50",
+          "summary": "ambiguous 1, defective 2, keyed 36",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-25T13:54:43",
+          "summary": "clear 36; 1 taxonomy findings",
+          "seconds": 112,
+          "cost_usd": 0.32
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-25T14:00:55",
+          "summary": "36 written in 2 part(s); answer challenges none; style scan: REVIEW (8 across 8 location(s))",
+          "seconds": 371,
+          "cost_usd": 2.35
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-25T14:10:32",
+          "summary": "36 reviewed, 15 fail, fact errors [2, 4, 6, 8, 9, 21, 24, 27, 31, 34, 36]",
+          "seconds": 577,
+          "cost_usd": 0.0
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-25T14:15:41",
+          "summary": "16 accepted, 5 rejected; style scan: REVIEW (8 across 8 location(s))",
+          "seconds": 308,
+          "cost_usd": 1.56
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-25T14:24:42",
+          "summary": "15 changed items re-reviewed, 5 still fail [2, 9, 15, 16, 34]",
+          "seconds": 540,
+          "cost_usd": 0.0
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-25T14:26:51",
+          "summary": "5 ruled on the last pass, held none; style scan: REVIEW (8 across 8 location(s))",
+          "seconds": 128,
+          "cost_usd": 0.78
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-25T14:26:58",
+          "summary": "2 diagrams, 2 traced now, 0 need authoring ",
+          "seconds": 7,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-25T14:27:37",
+          "summary": "2 written, 0 already had alt text",
+          "seconds": 39,
+          "cost_usd": 0.13
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-25T14:27:37",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-25T14:28:52",
+          "summary": "2 checked, failed ['2024_Q15-18']",
+          "seconds": 74,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-25T14:29:55",
+          "summary": "alt rewritten none, redrawn ['2024_Q15-18']",
+          "seconds": 63,
+          "cost_usd": 0.21
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-25T14:31:29",
+          "summary": "re-checked ['2024_Q15-18']; not passing ['2024_Q15-18']",
+          "seconds": 93,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-25T14:36:50",
+          "summary": "PREVIEW (no image base set): economics-utme.2024.PREVIEW.csv, 3 held, 1 pre-flight flags; style scan: REVIEW (24 across 16 location(s))",
+          "seconds": 2,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-25T14:36:50",
+          "summary": "economics-utme.2024.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 5,
+          "why": "defective",
+          "detail": "The stem is truncated and never names the theory, so it does not ask a complete question. Adam Smith"
+        },
+        {
+          "q_number": 17,
+          "why": "ambiguous",
+          "detail": "x is the horizontal price line of a perfectly competitive firm, which is at once average revenue and"
+        },
+        {
+          "q_number": 18,
+          "why": "defective",
+          "detail": "Options A and B are identical ('marginal cost'), so even if marginal cost is the right answer there "
+        }
+      ]
+    }
+  },
+  "cost_usd": 7.74,
+  "taxonomy_cost_usd": 1.72
+}

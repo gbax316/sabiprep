@@ -1,0 +1,870 @@
+{
+  "year": 2024,
+  "paper": 1,
+  "counts": {
+    "agreed-soft": 9,
+    "verified": 26,
+    "unsolvable": 3,
+    "disagree": 1
+  },
+  "verdicts": {
+    "1": {
+      "q_number": 1,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 1,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "X and Y are described as competitive goods, meaning substitutes. A rise in Y's price causes consumers to substitute X for Y, increasing the quantity of X demanded; option B states the opposite substitution effect.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 1,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "Competitive goods are substitutes, so a rise in the price of Y makes consumers switch to X, raising the quantity of X demanded. C is wrong because a price rise reduces the quantity of Y demanded. The phrase 'perfectly elastic' is confused (it does not fit cross elasticity), but the substitution effect still points to A.",
+        "solvable": true,
+        "issue": "Stem wording 'elasticity of demand ... is perfectly elastic' is garbled; the intended idea (substitutes) is still clear."
+      },
+      "extract_anomaly": null
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 2,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Agriculture is traditionally the largest employer of labour in Nigeria, particularly through farming and related rural activities. Information technology is growing but employs a much smaller proportion of the labour force.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 2,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Agriculture employs the largest share of Nigeria's labour force. Education and IT employ far fewer people.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "An increase in the naira's value against the dollar is an appreciation of the naira and, conversely, a depreciation of the dollar relative to the naira. Option B incorrectly describes the naira as losing value.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "If the Naira gains value against the Dollar, the Naira appreciates, which means the Dollar depreciates relative to the Naira. B is the opposite, and inflation is about the general price level.",
+        "solvable": true,
+        "issue": "The expected answer 'appreciation of Naira' is not an option; C is the mirror statement."
+      },
+      "extract_anomaly": null
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 4,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Currency depreciation protects domestic industry effectively when demand for imported products responds strongly to their increased domestic prices. The degree of depreciation alone is insufficient if import demand is highly inelastic.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 4,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Depreciation makes imports dearer, and it cuts imports (protecting local industry) only if demand for imports is price elastic. The degree or period of depreciation matters less than how responsive import demand is.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 5,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "David Ricardo is most strongly associated with the theory of comparative advantage in international trade. However, Adam Smith also developed an international-trade theory based on absolute advantage, so the question lacks the wording needed to distinguish options A and D.",
+        "solvable": true,
+        "issue": "The question is incomplete or underspecified: both Adam Smith and David Ricardo developed theories of international trade. D is selected as the likely intended answer."
+      },
+      "claude": {
+        "q_number": 5,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "The stem is incomplete and does not say which theory is meant. Adam Smith (absolute advantage) and David Ricardo (comparative advantage) both put forward international trade theories, so the options cannot be told apart.",
+        "solvable": false,
+        "issue": "Stem is truncated ('Which of the following theories on international trade.'); the name of the theory is missing, so A and D both qualify. If it meant comparative cost, the answer is D."
+      },
+      "extract_anomaly": null
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 6,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "Rural-to-urban migration reduces the agricultural labour available for food production. Agro-processing, rural infrastructure and farmer subsidies generally support agricultural production rather than harm it.",
+        "solvable": true,
+        "issue": "“Rural migration” is imprecise; the intended term appears to be “rural-urban migration.”"
+      },
+      "claude": {
+        "q_number": 6,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Rural-urban migration takes labour away from farming and so cuts food output. Agro-processing, rural infrastructure and subsidies all help food production.",
+        "solvable": true,
+        "issue": "'subsiding' is a typo for 'subsidising'."
+      },
+      "extract_anomaly": null
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 7,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Dumping involves selling a product abroad at a lower price than in the producer's domestic market. Therefore, the local price is higher than the foreign price; equal prices would not constitute dumping.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 7,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Dumping is selling goods abroad at a price below the home-market price, so the local price is higher than the foreign price. A reverses the relationship.",
+        "solvable": true,
+        "issue": "It depends on reading 'local' as the exporter's home market."
+      },
+      "extract_anomaly": null
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Preference shares, debentures and ordinary shares are securities issued by companies, whereas a bank loan is obtained through a direct lending agreement. However, without a stated classification criterion, debentures and bank loans could also be grouped together as debt finance.",
+        "solvable": true,
+        "issue": "The basis for identifying the odd item is not stated. C is the likely intended answer because it is not a company-issued security."
+      },
+      "claude": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Preference shares, debentures and ordinary shares are securities that a company issues and that are traded on the capital market; a bank loan is not a security. Ordinary shares could be argued as the odd one (the only pure ownership capital, with preference shares partly fixed-return), but the securities grouping is the stronger reading.",
+        "solvable": true,
+        "issue": "D is defensible on an ownership-versus-fixed-return grouping."
+      },
+      "extract_anomaly": null
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 9,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Deficit financing increases aggregate demand by permitting government expenditure beyond current revenue. Unless matched by additional output, this tends to raise the general price level, making it inflationary rather than deflationary.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 9,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Deficit financing (spending more than revenue, often funded by borrowing or printing money) adds to aggregate demand and the money supply, so it is inflationary. It is not deflationary.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 10,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "An indifference curve shows combinations of two commodities that provide a consumer with the same level of satisfaction. An isoquant concerns equal output for a producer, not equal satisfaction for a consumer.",
+        "solvable": true,
+        "issue": "Option C is abbreviated; it means “indifference curve.”"
+      },
+      "claude": {
+        "q_number": 10,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "An indifference curve joins combinations of two goods that give the consumer the same satisfaction. An isoquant is the production counterpart.",
+        "solvable": true,
+        "issue": "The stem says 'two combinations'; it means combinations of two commodities."
+      },
+      "extract_anomaly": null
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 11,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "An isoquant shows combinations of two inputs that produce the same level of output. An indifference curve instead shows combinations of goods giving a consumer equal satisfaction.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 11,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "An isoquant shows combinations of inputs that produce the same output. An indifference curve is about consumer satisfaction, not output.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 12,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Marginal product is the change in total product from an additional unit of a variable input. At the maximum point of total product, this change is zero; a falling but positive MP would mean total product is still increasing.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 12,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Total product is at its maximum when an extra unit of input adds nothing, so MP = 0. MP is falling before that point, but it is exactly zero at the maximum.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 13,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The short run is a period in which at least one input is fixed while other inputs can vary. It is not defined by a specific number of years.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 13,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The short run is the period in which at least one input is fixed while others vary, so fixed and variable inputs are combined. It is not defined by a set number of years.",
+        "solvable": true,
+        "issue": "'were' is a typo for 'where'."
+      },
+      "extract_anomaly": null
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 14,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "General acceptability is the essential feature that enables money to function as a medium of exchange. Durability and recognizability are desirable qualities, but neither is useful if people will not accept the money.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 14,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "General acceptability is the most important quality of money; without it nothing works as a medium of exchange. Durability and recognizability are desirable but secondary, so 'all of the above' does not fit 'most important'.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 15,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The horizontal price and revenue line indicates that the firm is a price taker, which is characteristic of perfect competition. A monopolistic firm would normally face a downward-sloping demand or average-revenue curve.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 15,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The demand/price line x is horizontal (P = AR = MR), and the firm's equilibrium is at the minimum of AC where MC cuts it. That is a perfectly competitive firm. A monopolist faces a downward-sloping demand curve.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 16,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "At the illustrated long-run equilibrium, price equals average cost, so the shaded rectangle calculated as price multiplied by output is also total cost. It is not profit because economic profit is zero when price equals average cost.",
+        "solvable": true,
+        "issue": "The same rectangle also measures total revenue, but total revenue is not among the options."
+      },
+      "claude": {
+        "q_number": 16,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "The shaded rectangle is price times output at e. Because the AC curve touches the price line at e, P = AC, so the area equals total revenue and also total cost (normal profit only). There is no supernormal profit or loss area, so D is the only option that fits.",
+        "solvable": true,
+        "issue": "The area is also total revenue, which is not an option; 'profit' could be offered by a key that means normal profit."
+      },
+      "extract_anomaly": null
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "disagree",
+      "answer": null,
+      "codex": {
+        "q_number": 17,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "X is the horizontal average-revenue or price line faced by a perfectly competitive firm. Marginal revenue coincides with this same line, while marginal cost is represented by a cost curve rather than the entire horizontal line.",
+        "solvable": true,
+        "issue": "Both B and C are economically correct because AR equals MR equals price under perfect competition; C appears to be the intended label."
+      },
+      "claude": {
+        "q_number": 17,
+        "answer": "D",
+        "confidence": "uncertain",
+        "reasoning": "x is the horizontal price line of a perfectly competitive firm, so it is both AR and MR (P = AR = MR). Because B and C are both right, the examiner most likely wanted 'all of the above'. Strictly, x is not the MC curve, although MC = MR = AR at e.",
+        "solvable": true,
+        "issue": "B and C are both correct; D includes marginal cost, which x is not strictly, so no option is exactly right."
+      },
+      "extract_anomaly": null
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 18,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "Y appears to identify the marginal-cost curve rising through the equilibrium point. However, both A and B state “marginal cost,” so the supplied options do not permit a unique option letter.",
+        "solvable": false,
+        "issue": "Options A and B are identical, making the correct option letter indeterminate."
+      },
+      "claude": {
+        "q_number": 18,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "Y labels the rising curve that passes through e from below, which is the MC curve (with AC close beside it). It is not the price line, which is x.",
+        "solvable": true,
+        "issue": "Options A and B are both 'marginal cost' (a typing error; B was probably 'average cost'). A and B are therefore indistinguishable."
+      },
+      "extract_anomaly": null
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 19,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A demand schedule lists the quantities consumers are willing and able to buy at various prices during a given period. “Various levels” is incomplete because it does not identify price as the changing variable.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 19,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A demand schedule is a table of the quantities demanded at various prices. The other options leave out price, which defines it.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 20,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "The law of supply states that quantity supplied generally increases as price increases, other things being equal. This gives price and quantity supplied a positive or direct relationship, not a negative one.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 20,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Under the law of supply, quantity supplied rises as price rises, which is a positive (direct) relationship. 'Negative' and 'indirect' describe demand.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 21,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Unpaid services are generally excluded because they have no recorded market value. Their omission makes measured national income lower than the economy's actual productive contribution, so it is underestimated rather than overestimated.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 21,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Unpaid services (such as housework) are left out of national income accounts, so national income is underestimated. Leaving them out cannot overstate it.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 22,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The value 1 occurs seven times, more frequently than any other observation. Therefore, 1 is the mode; 2 occurs only three times.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 22,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Frequencies: 0 appears 3 times, 1 appears 6 times, 2 appears 3 times, 3 appears 2 times, 5 appears once. 1 is the most frequent value.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 23,
+        "answer": "NONE",
+        "confidence": "certain",
+        "reasoning": "The 15 observations sum to 24, giving a mean of 24 ÷ 15 = 1.6. None of the listed options equals 1.6, while option C, 1.53, does not follow from the supplied data.",
+        "solvable": false,
+        "issue": "No correct option is provided: the mean of the stated data is 1.6."
+      },
+      "claude": {
+        "q_number": 23,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The sum is 0x3 + 1x6 + 2x3 + 3x2 + 5x1 = 23 over n = 15, which gives a mean of 23/15 = 1.53. The other values are the mode, the maximum or rounded figures.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "There are 15 observations, so the median is the eighth value after arranging them in ascending order. The eighth value is 1, not 2.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Sorted, the 15 values are 0,0,0,1,1,1,1,1,1,2,2,2,3,3,5. The 8th value is 1.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 25,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "The range is the maximum value minus the minimum value. Thus, 5 − 0 = 5; option B would result from incorrectly treating 1 as the minimum.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 25,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Range = maximum minus minimum = 5 - 0 = 5.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 26,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "A national population census is conventionally conducted at ten-year intervals. Five years is shorter than the standard census cycle.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 26,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "By international convention (and UN recommendation), population censuses are usually held every 10 years.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 27,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Luca Pacioli is chiefly associated with accounting, particularly double-entry bookkeeping. J. S. Mill, J. M. Keynes and David Ricardo are prominent economists, making Pacioli the odd one out.",
+        "solvable": true,
+        "issue": "Option D appears to misspell David Ricardo as “D. Richard,” but its intended identity is clear."
+      },
+      "claude": {
+        "q_number": 27,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Luca Pacioli is known as the father of accounting (double-entry bookkeeping). Mill, Keynes and Ricardo are economists.",
+        "solvable": true,
+        "issue": "'D. Richard' is presumably D. Ricardo; 'Paciolo' is a misspelling of Pacioli."
+      },
+      "extract_anomaly": null
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 28,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The United Nations is a global organization rather than a regional one. The AU, EU and ECOWAS serve defined geographical regions.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 28,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The UN is a global organization. The AU, EU and ECOWAS are regional.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 29,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "The government budget is the broad fiscal instrument through which taxation and public expenditure are coordinated. Taxes are an important fiscal tool, but they represent only one side of the budget.",
+        "solvable": true,
+        "issue": "Some treatments list taxation itself as a principal fiscal instrument, but the budget is the expected broader answer in this syllabus context."
+      },
+      "claude": {
+        "q_number": 29,
+        "answer": "A",
+        "confidence": "uncertain",
+        "reasoning": "Interest rate and money supply are monetary tools, so they are ruled out. The budget is usually described as the main instrument of fiscal policy because it covers both taxation and spending, but many texts name taxation as the most effective fiscal tool.",
+        "solvable": true,
+        "issue": "A (budget) and B (taxes) are both defensible."
+      },
+      "extract_anomaly": null
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 31,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "An effective maximum price is fixed below the equilibrium price to prevent sellers from charging the market-clearing price. If it were above equilibrium, it would not constrain the prevailing market price.",
+        "solvable": true,
+        "issue": "“Maximum prize” is evidently a typographical error for “maximum price.”"
+      },
+      "claude": {
+        "q_number": 31,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "A maximum (ceiling) price has an effect only if it is set below the equilibrium price. Set above equilibrium it would not bind.",
+        "solvable": true,
+        "issue": "'prize' is a typo for 'price'; 'hone' is a typo for 'none'."
+      },
+      "extract_anomaly": null
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 32,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Yemi, formally Olayemi, Cardoso has served as CBN Governor since October 2023, as confirmed by the [CBN](https://www.cbn.gov.ng/AboutCBN/Biodata/cardoso.htm). Wale Edun is the Minister of Finance, not the CBN Governor.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 32,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Olayemi Cardoso has been CBN Governor since September 2023, so he was governor when the 2024 paper was set. Tinubu is President and Wale Edun is Finance Minister.",
+        "solvable": true,
+        "issue": "The answer depends on time ('current')."
+      },
+      "extract_anomaly": null
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 33,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The Bank of Industry's head office is at 23 Marina Road, Lagos, according to its [2024 annual report](https://www.boi.ng/wp-content/uploads/2025/07/2024-BOI-Annual-Report.pdf). Abuja has a BOI office but is not its headquarters.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 33,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The Bank of Industry's head office is in Lagos (Marina/Broad Street). Abuja is a common distractor because many federal agencies are based there.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 34,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Points A and B are equally efficient because both lie on the production possibility curve, while C is inefficient and D represents a currently unattainable output combination. Therefore A is not greater than D, making A > D the wrong relationship.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 34,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "D lies outside the PPF and A lies on it, so A < D and 'A>D' is wrong. A = B (both on the frontier), A > C (C is inside) and C < D are all true.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 35,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A country operates at optimum productive efficiency at any point on its production possibility curve. Both A and B lie on the curve, whereas C indicates underutilization and D is currently unattainable.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 35,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A and B both lie on the production possibility frontier, where resources are fully and efficiently used. C is inside (inefficient) and D cannot be reached.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Technological advancement increases productive capacity and shifts the production possibility curve outward, potentially making D attainable. Reducing production only moves actual output inside the existing curve.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Reaching D needs an outward shift of the PPF, which comes from technological advance (or more or better resources). 'More farming' only moves along the curve; lower production moves inward.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 37,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Opportunity cost is the next-best alternative forgone, which here is constructing or maintaining the road. The subsidy payment is the direct monetary cost, not the opportunity cost.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 37,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Opportunity cost is the next best alternative given up, which here is the road that is not built (left undone or to decay). C puts the forgone alternative in money terms, and A is the money cost of the choice made, not its opportunity cost.",
+        "solvable": true,
+        "issue": "C ('amount to be paid on road') is arguable if the road is valued in money."
+      },
+      "extract_anomaly": null
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 38,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "At equilibrium, 20 − ¼p = 5 + ½p. Solving gives 15 = ¾p, so p = ₦20; ₦15 does not make demand equal supply.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 38,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Set 20 - p/4 = 5 + p/2, so 15 = 3p/4 and p = 20. Check: Qd = 15 and Qs = 15.",
+        "solvable": true,
+        "issue": "'Qr' is taken to be Qd; '#' stands for the Naira sign."
+      },
+      "extract_anomaly": null
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 39,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Substituting the equilibrium price ₦20 gives Q = 20 − ¼(20) = 15 units. The supply equation also gives 5 + ½(20) = 15, confirming the result.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 39,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "At p = 20, Q = 20 - 5 = 15 = 5 + 10. The value 20 is the equilibrium price, not the quantity.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 40,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Point elasticity is |dQ/dP × P/Q| = ¼ × 4/19 = 1/19. The option 1/4 is only the demand function's slope magnitude, not its price elasticity at the stated point.",
+        "solvable": true,
+        "issue": ""
+      },
+      "claude": {
+        "q_number": 40,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Point elasticity = |dQ/dP| x P/Q = (1/4) x (4/19) = 1/19. The value 1/4 is only the slope term, without the P/Q ratio.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    }
+  }
+}

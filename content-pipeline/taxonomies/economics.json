@@ -1,0 +1,1291 @@
+{
+  "subject": "Economics",
+  "version": "1.0",
+  "status": "proposal",
+  "why": "The live database holds 25 broad Economics topics, most of them a whole syllabus topic or several joined together, so a student cannot see which part of a topic they are weak on. Version 1.0 is the first two-level taxonomy: parent topics at the grain of the numbered topics in the WAEC and JAMB syllabi, and subtopics at the grain of their sub-areas, with one subtopic citing both exams wherever they cover the same content. It was checked against the 39 surviving items of the 2024 UTME paper; every one lands on a single subtopic, and the four that test content outside both syllabi are placed and explained in the scope rule. No WASSCE paper was available to check against, so the subtopics cited only to WAEC have not yet been tested on a real WASSCE paper. Every one of the 25 legacy database topics is folded in. Nothing in the database is changed by this file.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC Economics examination syllabus, WASSCE",
+        "retrieved_from": "https://waecsyllabus.com/files/ssce/ECONOMICS.pdf",
+        "retrieved_on": "2026-09-25",
+        "provenance_note": "Third-party mirror, the same one used for Biology. PDF dated 2015-09-24, author field awajis.com. Not fetched from a WAEC domain directly."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME Economics syllabus, 23 topics with objectives, labelled the 2026 version",
+        "retrieved_from": "https://allschool.ng/jamb-syllabus-for-economics/",
+        "retrieved_on": "2026-09-25",
+        "provenance_note": "Third-party reproduction. The official copy is on jamb.gov.ng behind its syllabus portal. Topic list cross-checked against a second copy on kofastudy.com."
+      }
+    ],
+    "scope_rule": "Neither syllabus limits the objective paper to part of its content: WAEC Paper 1 is fifty multiple choice questions on the whole syllabus, and the UTME is objective throughout. So every topic in both syllabi is placed. The 2024 UTME paper also tested four things outside both syllabi, and each is placed where it sits most naturally rather than given a subtopic of its own: economists and the history of economic thought (Q27, Luca Paciolo as the odd one out among economists) under basics.meaning; the theorists of international trade (Q5, Smith and Ricardo) under trade.basis; current Nigerian office holders and institutions (Q32, the CBN governor; Q33, the Bank of Industry headquarters) under financial.central-bank and financial.types; and oligopoly and duopoly (Q15 options), which neither syllabus names, under markets.imperfect. Where one syllabus goes further than the other, the subtopic cites only that syllabus and the other is null. JAMB only: scientific method, measures of dispersion, indifference curves, consumer surplus, isoquants, rent, interest and profit, the circular flow, consumption and saving, the multiplier, the consumer price index, deflation, monetary policy and economic reforms. WAEC only: distributive trade, meaning and types of industry, terms of trade, commercial policy and protection, and the levels of economic integration."
+  },
+  "how_to_use": "Place a question by what a student must know or do to answer it, not by words in the stem. A question that mentions a tax but asks for an elasticity coefficient goes under elasticity; one that mentions elasticity but asks who bears a tax goes under tax incidence. A question that makes the student calculate goes where the calculation is taught. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins.",
+  "topics": [
+    {
+      "id": "basics",
+      "name": "Economics as a science and basic concepts",
+      "part": "Foundations",
+      "syllabus": {
+        "waec": "1",
+        "jamb": "1"
+      },
+      "subtopics": [
+        {
+          "id": "basics.meaning",
+          "name": "Meaning and scope of economics",
+          "syllabus": {
+            "waec": "1",
+            "jamb": "1"
+          },
+          "covers": "Definitions of economics (Smith, Marshall, Robbins), economics as a social science, micro and macroeconomics, and the major economists and what each is known for. Tested in 2024 UTME Q27. A question about a trade theorist's theory goes to trade.basis."
+        },
+        {
+          "id": "basics.scarcity-choice",
+          "name": "Wants, scarcity, choice and opportunity cost",
+          "syllabus": {
+            "waec": "1",
+            "jamb": "1a"
+          },
+          "covers": "Human wants, scarcity, choice, scale of preference, rationality and opportunity cost, including identifying the opportunity cost in a given choice (2024 UTME Q37). Scarcity as the basic economic problem goes here; the questions of what, how and for whom to produce go to systems.economic-problems."
+        },
+        {
+          "id": "basics.ppc",
+          "name": "Production possibility curve",
+          "syllabus": {
+            "waec": "1",
+            "jamb": "1b(ii)"
+          },
+          "covers": "Drawing and reading the production possibility curve: points inside, on and outside it, efficiency, opportunity cost along it, its shape, and what shifts it outward or inward. Tested in 2024 UTME Q34 to Q36. Any question built on a PPC diagram goes here, even when it asks about opportunity cost."
+        },
+        {
+          "id": "basics.economic-activities",
+          "name": "Economic activities and types of production",
+          "syllabus": {
+            "waec": "1",
+            "jamb": "1a, 8a"
+          },
+          "covers": "Production, distribution and consumption as economic activities; primary, secondary and tertiary production (extractive, manufacturing, construction, services, direct and indirect production); and the relative contribution of each sector to output, employment, savings, investment and foreign exchange. A question on productivity or on TP, AP and MP goes to production.productivity."
+        }
+      ]
+    },
+    {
+      "id": "systems",
+      "name": "Economic systems",
+      "part": "Foundations",
+      "syllabus": {
+        "waec": "3",
+        "jamb": "2"
+      },
+      "subtopics": [
+        {
+          "id": "systems.types",
+          "name": "Capitalism, socialism and mixed economy",
+          "syllabus": {
+            "waec": "3(a)-(c)",
+            "jamb": "2a"
+          },
+          "covers": "Free enterprise, centrally planned and mixed economies: their basic features, advantages and disadvantages, and identifying a system from a description."
+        },
+        {
+          "id": "systems.economic-problems",
+          "name": "Basic economic problems and how each system solves them",
+          "syllabus": {
+            "waec": "3(d)",
+            "jamb": "1b(i), 2b"
+          },
+          "covers": "What to produce, how to produce, for whom to produce and efficiency of resource use, and how the price mechanism, central planning or a mix answers each. A question that only asks what scarcity is goes to basics.scarcity-choice."
+        },
+        {
+          "id": "systems.reforms",
+          "name": "Economic reforms in Nigeria",
+          "syllabus": {
+            "waec": null,
+            "jamb": "2c"
+          },
+          "covers": "Contemporary reforms such as deregulation, banking sector consolidation and the cashless policy, and what they mean for the economic system. Privatisation and commercialisation go to business.privatisation."
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Methods and tools of economic analysis",
+      "part": "Foundations",
+      "syllabus": {
+        "waec": "4",
+        "jamb": "3"
+      },
+      "subtopics": [
+        {
+          "id": "tools.methods",
+          "name": "Scientific method in economics",
+          "syllabus": {
+            "waec": null,
+            "jamb": "3a"
+          },
+          "covers": "Inductive and deductive reasoning, and positive and normative statements, including classifying a given statement."
+        },
+        {
+          "id": "tools.tables-graphs",
+          "name": "Tables, charts and graphs",
+          "syllabus": {
+            "waec": "4",
+            "jamb": "3b(i), 3b(iv)"
+          },
+          "covers": "Reading and drawing tables, bar charts, pie charts, histograms and line graphs, calculating the angle or share in a pie chart, and the merits and demerits of each. A graph that tests an economic concept (a demand curve, a PPC) goes to that concept."
+        },
+        {
+          "id": "tools.central-tendency",
+          "name": "Mean, median and mode",
+          "syllabus": {
+            "waec": "4",
+            "jamb": "3b(ii)"
+          },
+          "covers": "Calculating the arithmetic mean, median and mode of raw, tabulated or grouped data, and their merits and demerits. Tested in 2024 UTME Q22 to Q24."
+        },
+        {
+          "id": "tools.dispersion",
+          "name": "Range, variance and standard deviation",
+          "syllabus": {
+            "waec": null,
+            "jamb": "3b(iii)"
+          },
+          "covers": "Calculating and interpreting the range, variance and standard deviation. Tested in 2024 UTME Q25."
+        }
+      ]
+    },
+    {
+      "id": "demand",
+      "name": "Theory of demand",
+      "part": "Price theory",
+      "syllabus": {
+        "waec": "5",
+        "jamb": "4"
+      },
+      "subtopics": [
+        {
+          "id": "demand.law",
+          "name": "Law of demand, demand schedule and curve",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "4a(i)-(ii)"
+          },
+          "covers": "Meaning of demand, effective demand, the law of demand, individual and market demand schedules and curves, and exceptional demand curves (Giffen, Veblen and ostentatious goods, expectation of price change). Tested in 2024 UTME Q19."
+        },
+        {
+          "id": "demand.determinants",
+          "name": "Determinants of demand and shifts in demand",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "4a(i), 4a(iii)"
+          },
+          "covers": "Factors that determine demand (price, prices of other goods, income, taste, expectations, population) and the difference between a change in quantity demanded (movement along the curve) and a change in demand (shift of the curve)."
+        },
+        {
+          "id": "demand.types",
+          "name": "Types of demand",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "4b"
+          },
+          "covers": "Derived, composite, joint (complementary) and competitive demand, and how a price change of one good affects the demand for a related good (2024 UTME Q1). If the question asks for a cross elasticity coefficient or its sign, it goes to demand.elasticity."
+        },
+        {
+          "id": "demand.elasticity",
+          "name": "Measuring elasticity of demand",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "4c"
+          },
+          "covers": "Price, income and cross elasticity of demand: calculating the coefficient, interpreting it, and the types (perfectly elastic, elastic, unitary, inelastic, perfectly inelastic) and their curves. Tested in 2024 UTME Q40."
+        },
+        {
+          "id": "demand.elasticity-uses",
+          "name": "Determinants and importance of elasticity of demand",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "4c-d"
+          },
+          "covers": "Why demand for a good is elastic or inelastic (substitutes, necessity, share of income, habit, time) and why elasticity matters to consumers, producers (pricing, total revenue) and government. A question about who bears a tax goes to public-finance.incidence; one about devaluation and import demand goes to bop.exchange-rate."
+        }
+      ]
+    },
+    {
+      "id": "supply",
+      "name": "Theory of supply",
+      "part": "Price theory",
+      "syllabus": {
+        "waec": "6",
+        "jamb": "6"
+      },
+      "subtopics": [
+        {
+          "id": "supply.law",
+          "name": "Law of supply, supply schedule and curve",
+          "syllabus": {
+            "waec": "6",
+            "jamb": "6a(i)-(ii)"
+          },
+          "covers": "Meaning of supply, the law of supply, individual and market supply schedules and curves, and exceptional supply curves such as the backward-bending supply of labour. Tested in 2024 UTME Q20."
+        },
+        {
+          "id": "supply.determinants",
+          "name": "Determinants of supply and shifts in supply",
+          "syllabus": {
+            "waec": "6",
+            "jamb": "6a(i), 6a(iii)"
+          },
+          "covers": "Factors that determine supply (price, input costs, technology, prices of other goods, weather, government policy) and the difference between a change in quantity supplied and a change in supply."
+        },
+        {
+          "id": "supply.types",
+          "name": "Types of supply",
+          "syllabus": {
+            "waec": "6",
+            "jamb": "6b"
+          },
+          "covers": "Joint (complementary), competitive and composite supply, with examples."
+        },
+        {
+          "id": "supply.elasticity",
+          "name": "Elasticity of supply",
+          "syllabus": {
+            "waec": "6",
+            "jamb": "6c"
+          },
+          "covers": "Calculating and interpreting elasticity of supply, its types and curves, its determinants (time, spare capacity, perishability) and its importance to producers and government."
+        }
+      ]
+    },
+    {
+      "id": "consumer",
+      "name": "Theory of consumer behaviour",
+      "part": "Price theory",
+      "syllabus": {
+        "waec": "7",
+        "jamb": "5"
+      },
+      "subtopics": [
+        {
+          "id": "consumer.utility",
+          "name": "Utility and diminishing marginal utility",
+          "syllabus": {
+            "waec": "7",
+            "jamb": "5a(i), 5b"
+          },
+          "covers": "Cardinal and ordinal utility, total, average and marginal utility and calculating them from a schedule, the law of diminishing marginal utility, and how marginal utility explains the downward-sloping demand curve."
+        },
+        {
+          "id": "consumer.equilibrium",
+          "name": "Consumer equilibrium using marginal utility",
+          "syllabus": {
+            "waec": "7",
+            "jamb": "5c"
+          },
+          "covers": "The equi-marginal condition (MUa/Pa equals MUb/Pb), finding the equilibrium combination from a table, and the effect of a price change on that equilibrium. Equilibrium found with an indifference map goes to consumer.indifference."
+        },
+        {
+          "id": "consumer.indifference",
+          "name": "Indifference curves and budget line",
+          "syllabus": {
+            "waec": null,
+            "jamb": "5a(ii), 5c-d"
+          },
+          "covers": "Indifference curves and their properties, the budget line and its shifts, equilibrium where the budget line touches an indifference curve, and income and substitution effects. Tested in 2024 UTME Q10. A curve of inputs giving equal output is an isoquant and goes to production.producer-equilibrium."
+        },
+        {
+          "id": "consumer.surplus",
+          "name": "Consumer surplus",
+          "syllabus": {
+            "waec": null,
+            "jamb": "5e"
+          },
+          "covers": "Meaning and calculation of consumer surplus and its applications, such as price discrimination and taxation."
+        }
+      ]
+    },
+    {
+      "id": "price",
+      "name": "Theory of price determination",
+      "part": "Price theory",
+      "syllabus": {
+        "waec": "8",
+        "jamb": "7"
+      },
+      "subtopics": [
+        {
+          "id": "price.market-system",
+          "name": "The market and the price system",
+          "syllabus": {
+            "waec": "8",
+            "jamb": "7a-b"
+          },
+          "covers": "Meaning of market and price, types of market, and the functions of the price system (rationing, allocating resources, signalling)."
+        },
+        {
+          "id": "price.equilibrium",
+          "name": "Equilibrium price and quantity",
+          "syllabus": {
+            "waec": "8",
+            "jamb": "7c(i)"
+          },
+          "covers": "Finding equilibrium price and quantity from a schedule, a graph or demand and supply equations, excess demand and excess supply, and equilibrium in factor markets. Tested in 2024 UTME Q38 and Q39."
+        },
+        {
+          "id": "price.changes",
+          "name": "Effects of changes in demand and supply on equilibrium",
+          "syllabus": {
+            "waec": "8",
+            "jamb": "7d"
+          },
+          "covers": "Predicting what happens to equilibrium price and quantity when demand, supply or both shift. A question that only asks what causes a shift goes to demand.determinants or supply.determinants."
+        },
+        {
+          "id": "price.controls",
+          "name": "Price control: maximum and minimum prices",
+          "syllabus": {
+            "waec": "8",
+            "jamb": "7c(ii)"
+          },
+          "covers": "Maximum (ceiling) and minimum (floor) price legislation, where each is set relative to equilibrium, and their effects: shortages, surpluses, rationing, queues and the black market. Tested in 2024 UTME Q31. Minimum agricultural prices as a farm policy go to agriculture.marketing-policy."
+        }
+      ]
+    },
+    {
+      "id": "factors",
+      "name": "Factors of production",
+      "part": "Production and the firm",
+      "syllabus": {
+        "waec": "2",
+        "jamb": "23a-c"
+      },
+      "subtopics": [
+        {
+          "id": "factors.types",
+          "name": "Land, labour, capital and entrepreneur",
+          "syllabus": {
+            "waec": "2",
+            "jamb": "23a"
+          },
+          "covers": "Meaning, features and importance of each factor of production, forms of capital, functions of the entrepreneur, and which reward goes to which factor. Mobility and efficiency of labour go to labour.force."
+        },
+        {
+          "id": "factors.rewards",
+          "name": "Rent, interest and profit",
+          "syllabus": {
+            "waec": null,
+            "jamb": "23b-c"
+          },
+          "covers": "How rent, interest and profit are determined, economic rent and transfer earnings, normal and supernormal profit as a reward, and the liquidity preference theory of interest. Wages go to labour.wages; the motives for holding money go to money.demand-supply."
+        }
+      ]
+    },
+    {
+      "id": "production",
+      "name": "Theory of production",
+      "part": "Production and the firm",
+      "syllabus": {
+        "waec": "9",
+        "jamb": "8"
+      },
+      "subtopics": [
+        {
+          "id": "production.division-labour",
+          "name": "Division of labour and specialisation",
+          "syllabus": {
+            "waec": "9",
+            "jamb": "8c"
+          },
+          "covers": "Meaning of division of labour and specialisation, their advantages and disadvantages, and what limits them (size of market, nature of product)."
+        },
+        {
+          "id": "production.productivity",
+          "name": "Total, average and marginal product",
+          "syllabus": {
+            "waec": "9",
+            "jamb": "8b, 8g"
+          },
+          "covers": "Calculating TP, AP and MP from a schedule, the relationship between them, the law of variable proportions (diminishing returns), and factors affecting productivity. Tested in 2024 UTME Q12."
+        },
+        {
+          "id": "production.scale",
+          "name": "Scale of production and size of firms",
+          "syllabus": {
+            "waec": "9",
+            "jamb": "8d-e, 17e, 19e"
+          },
+          "covers": "Internal and external economies and diseconomies of scale, production functions and returns to scale (increasing, constant, decreasing), and the factors that determine the size of a firm."
+        },
+        {
+          "id": "production.producer-equilibrium",
+          "name": "Isoquants and producer equilibrium",
+          "syllabus": {
+            "waec": null,
+            "jamb": "8f"
+          },
+          "covers": "Isoquants and isocost lines, and the least-cost combination of inputs by isoquant-isocost and marginal analysis. Tested in 2024 UTME Q11."
+        }
+      ]
+    },
+    {
+      "id": "costs",
+      "name": "Theory of cost and revenue",
+      "part": "Production and the firm",
+      "syllabus": {
+        "waec": "10",
+        "jamb": "9"
+      },
+      "subtopics": [
+        {
+          "id": "costs.concepts",
+          "name": "Fixed, variable, total, average and marginal cost",
+          "syllabus": {
+            "waec": "10(i)",
+            "jamb": "9a"
+          },
+          "covers": "Meaning of each cost concept and calculating one from the others in a table or from a cost function."
+        },
+        {
+          "id": "costs.short-long-run",
+          "name": "Short-run and long-run costs",
+          "syllabus": {
+            "waec": "10(i)",
+            "jamb": "9d-e"
+          },
+          "covers": "What the short run and long run are (2024 UTME Q13), the shapes of short-run and long-run cost curves, and why the marginal cost curve above average variable cost is the firm's supply curve."
+        },
+        {
+          "id": "costs.views",
+          "name": "Economist's and accountant's view of cost",
+          "syllabus": {
+            "waec": "10(ii)",
+            "jamb": "9c"
+          },
+          "covers": "Opportunity (implicit) cost against money (explicit) cost, and economic against accounting profit."
+        },
+        {
+          "id": "costs.revenue",
+          "name": "Revenue concepts",
+          "syllabus": {
+            "waec": "10(iii)",
+            "jamb": "9b"
+          },
+          "covers": "Total, average and marginal revenue, calculating them from a table, and marginal revenue product. A question that uses marginal revenue product to explain wages goes to labour.wages."
+        }
+      ]
+    },
+    {
+      "id": "markets",
+      "name": "Market structures",
+      "part": "Production and the firm",
+      "syllabus": {
+        "waec": "11",
+        "jamb": "10"
+      },
+      "subtopics": [
+        {
+          "id": "markets.perfect",
+          "name": "Perfect competition",
+          "syllabus": {
+            "waec": "11",
+            "jamb": "10a"
+          },
+          "covers": "Assumptions and features of perfect competition, why price equals AR equals MR, short-run and long-run equilibrium, and reading the curves on a perfect competition diagram (2024 UTME Q15, Q17, Q18)."
+        },
+        {
+          "id": "markets.monopoly",
+          "name": "Monopoly and price discrimination",
+          "syllabus": {
+            "waec": "11",
+            "jamb": "10b"
+          },
+          "covers": "Sources and features of monopoly, the monopolist's equilibrium, control of monopoly, and price discrimination: its conditions, forms and effects."
+        },
+        {
+          "id": "markets.imperfect",
+          "name": "Monopolistic competition and oligopoly",
+          "syllabus": {
+            "waec": "11",
+            "jamb": "10b"
+          },
+          "covers": "Features and short-run and long-run equilibrium of monopolistic competition, product differentiation and advertising, and oligopoly and duopoly, which neither syllabus names but the 2024 UTME used as options."
+        },
+        {
+          "id": "markets.profit-shutdown",
+          "name": "Profit, loss and shut-down of firms",
+          "syllabus": {
+            "waec": "11",
+            "jamb": "10c"
+          },
+          "covers": "Normal profit, supernormal profit and loss, reading the profit or loss area on a cost and revenue diagram (2024 UTME Q16), and the break-even and shut-down conditions in each market. A question that asks which market a diagram shows goes to that market."
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "name": "Business organisations",
+      "part": "Production and the firm",
+      "syllabus": {
+        "waec": "12",
+        "jamb": "19, 17d"
+      },
+      "subtopics": [
+        {
+          "id": "business.private",
+          "name": "Private business organisations",
+          "syllabus": {
+            "waec": "12",
+            "jamb": "19a-b"
+          },
+          "covers": "Sole proprietorship, partnership, private and public limited companies and co-operative societies: their features, advantages, disadvantages and problems."
+        },
+        {
+          "id": "business.public",
+          "name": "Public enterprises",
+          "syllabus": {
+            "waec": "12",
+            "jamb": "19c"
+          },
+          "covers": "Statutory corporations and joint ventures: why government sets them up, their features and their problems."
+        },
+        {
+          "id": "business.privatisation",
+          "name": "Privatisation, commercialisation and indigenisation",
+          "syllabus": {
+            "waec": "12",
+            "jamb": "19f"
+          },
+          "covers": "Privatisation and commercialisation as solutions to the problems of public enterprises, the difference between them and their merits and demerits, and indigenisation and nationalisation policies."
+        },
+        {
+          "id": "business.finance",
+          "name": "Sources of funds and management of firms",
+          "syllabus": {
+            "waec": "12",
+            "jamb": "17d, 19d"
+          },
+          "covers": "Internal and external sources of funds: ordinary and preference shares, debentures, loans, overdrafts and retained profit, and how businesses are managed and controlled. Tested in 2024 UTME Q8. How the stock exchange works goes to financial.markets."
+        }
+      ]
+    },
+    {
+      "id": "distribution",
+      "name": "Distributive trade",
+      "part": "Production and the firm",
+      "syllabus": {
+        "waec": "13",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "distribution.channels",
+          "name": "Channels of distribution",
+          "syllabus": {
+            "waec": "13",
+            "jamb": null
+          },
+          "covers": "The chain from producer to consumer, and the roles of producers, wholesalers, retailers and co-operatives, including arguments for eliminating the middleman."
+        },
+        {
+          "id": "distribution.problems",
+          "name": "Problems of distribution and the role of government",
+          "syllabus": {
+            "waec": "13",
+            "jamb": null
+          },
+          "covers": "Problems of distribution in West Africa (transport, storage, hoarding, too many middlemen) and their solutions, and government agencies in product distribution."
+        }
+      ]
+    },
+    {
+      "id": "population",
+      "name": "Population",
+      "part": "Population and labour",
+      "syllabus": {
+        "waec": "14(a)",
+        "jamb": "20"
+      },
+      "subtopics": [
+        {
+          "id": "population.theories",
+          "name": "Population theories",
+          "syllabus": {
+            "waec": "14(a)",
+            "jamb": "20a"
+          },
+          "covers": "The Malthusian theory and its criticisms, the demographic transition theory, and their relevance to Nigeria. Optimum population as a size goes to population.size-growth."
+        },
+        {
+          "id": "population.census",
+          "name": "Census",
+          "syllabus": {
+            "waec": "14(a)",
+            "jamb": "20b"
+          },
+          "covers": "What a census is, how often it is held (2024 UTME Q26), its importance, and the problems of conducting one in Nigeria."
+        },
+        {
+          "id": "population.size-growth",
+          "name": "Population size, growth and migration",
+          "syllabus": {
+            "waec": "14(a)",
+            "jamb": "20c, 20e"
+          },
+          "covers": "Birth rate, death rate and migration as determinants of size and growth, rural-urban migration, under-population, optimum population and over-population, and population policy and economic development."
+        },
+        {
+          "id": "population.structure",
+          "name": "Population structure and distribution",
+          "syllabus": {
+            "waec": "14(a)",
+            "jamb": "20d"
+          },
+          "covers": "Age, sex, occupational and geographical distribution, the dependency ratio, and population pyramids."
+        }
+      ]
+    },
+    {
+      "id": "labour",
+      "name": "Labour market",
+      "part": "Population and labour",
+      "syllabus": {
+        "waec": "14(b)",
+        "jamb": "23b-e"
+      },
+      "subtopics": [
+        {
+          "id": "labour.force",
+          "name": "Labour force, efficiency and mobility",
+          "syllabus": {
+            "waec": "14(b)(i)",
+            "jamb": "23d"
+          },
+          "covers": "The labour force and what determines its size, human capital, efficiency of labour, and occupational and geographical mobility of labour and other factors, and what hinders it."
+        },
+        {
+          "id": "labour.wages",
+          "name": "Wage determination and trade unions",
+          "syllabus": {
+            "waec": "14(b)(ii)",
+            "jamb": "23b-c"
+          },
+          "covers": "Supply of and demand for labour, how wages are determined, the marginal productivity theory of wages, trade unions and employers' associations, collective bargaining, and government wage policy such as the minimum wage."
+        },
+        {
+          "id": "labour.unemployment",
+          "name": "Unemployment and underemployment",
+          "syllabus": {
+            "waec": "14(b)(ii)",
+            "jamb": "23e"
+          },
+          "covers": "Types of unemployment (structural, frictional, seasonal, cyclical, disguised), underemployment, their causes in Nigeria and solutions."
+        }
+      ]
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "part": "The Nigerian and West African economy",
+      "syllabus": {
+        "waec": "15",
+        "jamb": "16"
+      },
+      "subtopics": [
+        {
+          "id": "agriculture.types",
+          "name": "Structure and systems of agriculture",
+          "syllabus": {
+            "waec": "15",
+            "jamb": "16a"
+          },
+          "covers": "Food crops, export (cash) crops, livestock, fisheries and forestry, and peasant, commercial, co-operative and state farming and their features."
+        },
+        {
+          "id": "agriculture.importance",
+          "name": "Importance of agriculture to the economy",
+          "syllabus": {
+            "waec": "15",
+            "jamb": "16b"
+          },
+          "covers": "Agriculture as a source of food, employment (the largest employer, 2024 UTME Q2), raw materials, foreign exchange and government revenue, and the link between agriculture and industry."
+        },
+        {
+          "id": "agriculture.marketing-policy",
+          "name": "Marketing, agricultural policies and price instability",
+          "syllabus": {
+            "waec": "15",
+            "jamb": "16d-e"
+          },
+          "covers": "Marketing of farm produce and commodity (marketing) boards, agricultural policies and programmes such as guaranteed minimum prices and subsidies, and the causes, effects and solutions of unstable farm incomes, including buffer stocks."
+        },
+        {
+          "id": "agriculture.problems",
+          "name": "Problems of agriculture and remedies",
+          "syllabus": {
+            "waec": "15",
+            "jamb": "16c"
+          },
+          "covers": "Why agricultural output is low (land tenure, poor tools, finance, storage, rural-urban migration as it affects farming, 2024 UTME Q6) and how the problems can be solved."
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "Industry and industrialisation",
+      "part": "The Nigerian and West African economy",
+      "syllabus": {
+        "waec": "16",
+        "jamb": "17"
+      },
+      "subtopics": [
+        {
+          "id": "industry.concepts",
+          "name": "Meaning and types of industry",
+          "syllabus": {
+            "waec": "16",
+            "jamb": null
+          },
+          "covers": "Meaning and types of industry, and the terms plant, firm, industry and industrial estate. Primary, secondary and tertiary production as sectors go to basics.economic-activities."
+        },
+        {
+          "id": "industry.location",
+          "name": "Location and localisation of industry",
+          "syllabus": {
+            "waec": "16",
+            "jamb": "17a"
+          },
+          "covers": "The difference between location and localisation, the factors that influence where an industry sits, and the advantages and disadvantages of localisation."
+        },
+        {
+          "id": "industry.strategies",
+          "name": "Strategies of industrialisation",
+          "syllabus": {
+            "waec": "16",
+            "jamb": "17b"
+          },
+          "covers": "Import substitution, export promotion, and other industrialisation strategies used in Nigeria, with their merits and demerits."
+        },
+        {
+          "id": "industry.development",
+          "name": "Industrialisation and economic development",
+          "syllabus": {
+            "waec": "16",
+            "jamb": "17c"
+          },
+          "covers": "The role of industry in development, the problems of industrialising in Nigeria and West Africa, and the link between agricultural and industrial development."
+        }
+      ]
+    },
+    {
+      "id": "natural-resources",
+      "name": "Natural resources and the economy",
+      "part": "The Nigerian and West African economy",
+      "syllabus": {
+        "waec": "25, 24 (OPEC)",
+        "jamb": "18"
+      },
+      "subtopics": [
+        {
+          "id": "natural-resources.major",
+          "name": "Development of major natural resources",
+          "syllabus": {
+            "waec": "25",
+            "jamb": "18a, 18f"
+          },
+          "covers": "Where petroleum, gold, diamond, tin, timber, groundnut and other resources are found and how they were developed, their positive and negative effects on West African economies, environmental damage from exploitation, and how it can be controlled."
+        },
+        {
+          "id": "natural-resources.oil",
+          "name": "The oil sector",
+          "syllabus": {
+            "waec": "24 (OPEC)",
+            "jamb": "18b-e"
+          },
+          "covers": "Contributions of the oil and non-oil sectors, linkage effects, upstream and downstream activities, and the roles of NNPC and OPEC. Every OPEC question goes here, including its founding and membership, because both syllabi treat OPEC through oil."
+        }
+      ]
+    },
+    {
+      "id": "development",
+      "name": "Economic growth, development and planning",
+      "part": "The Nigerian and West African economy",
+      "syllabus": {
+        "waec": "21",
+        "jamb": "15"
+      },
+      "subtopics": [
+        {
+          "id": "development.meaning",
+          "name": "Growth and development and their indicators",
+          "syllabus": {
+            "waec": "21",
+            "jamb": "15a-b"
+          },
+          "covers": "The difference between economic growth and economic development, and indicators such as per capita income, life expectancy, literacy and the human development index."
+        },
+        {
+          "id": "development.problems",
+          "name": "Features and problems of developing countries",
+          "syllabus": {
+            "waec": "21",
+            "jamb": "15c-d"
+          },
+          "covers": "Factors that promote or hinder growth and development, and the characteristics and problems of developing countries, Nigeria in particular."
+        },
+        {
+          "id": "development.planning",
+          "name": "Development planning",
+          "syllabus": {
+            "waec": "21",
+            "jamb": "15e"
+          },
+          "covers": "Objectives and elements of a development plan, types of plan (short, medium, long term, rolling), Nigeria's development plans, and the problems of planning."
+        }
+      ]
+    },
+    {
+      "id": "national-income",
+      "name": "National income",
+      "part": "Macroeconomics",
+      "syllabus": {
+        "waec": "17",
+        "jamb": "11"
+      },
+      "subtopics": [
+        {
+          "id": "national-income.concepts",
+          "name": "National income concepts",
+          "syllabus": {
+            "waec": "17",
+            "jamb": "11a"
+          },
+          "covers": "GDP, GNP, NNP, national income, per capita income, depreciation and net factor income from abroad, and calculating one from another."
+        },
+        {
+          "id": "national-income.measurement",
+          "name": "Measuring national income and its problems",
+          "syllabus": {
+            "waec": "17",
+            "jamb": "11b"
+          },
+          "covers": "Output, income and expenditure methods, double counting, and the problems of measurement such as unrecorded subsistence output and unpaid services (2024 UTME Q21)."
+        },
+        {
+          "id": "national-income.uses",
+          "name": "Uses and limitations of national income data",
+          "syllabus": {
+            "waec": "17",
+            "jamb": "11c"
+          },
+          "covers": "Using national income figures to compare living standards over time and between countries, why such comparisons mislead, and trends and structure of national income."
+        },
+        {
+          "id": "national-income.circular-flow",
+          "name": "Circular flow of income",
+          "syllabus": {
+            "waec": null,
+            "jamb": "11d"
+          },
+          "covers": "The two-sector and three-sector circular flow models, injections and leakages."
+        },
+        {
+          "id": "national-income.consumption-saving",
+          "name": "Consumption, saving and investment",
+          "syllabus": {
+            "waec": null,
+            "jamb": "11e"
+          },
+          "covers": "Meaning and determinants of consumption, saving and investment, and the average and marginal propensities to consume and save."
+        },
+        {
+          "id": "national-income.multiplier",
+          "name": "The multiplier and equilibrium national income",
+          "syllabus": {
+            "waec": null,
+            "jamb": "11f-g"
+          },
+          "covers": "Calculating the multiplier from MPC or MPS, its effect on income, and elementary determination of equilibrium national income. A question that only asks for MPC goes to national-income.consumption-saving."
+        }
+      ]
+    },
+    {
+      "id": "money",
+      "name": "Money",
+      "part": "Macroeconomics",
+      "syllabus": {
+        "waec": "18(a)",
+        "jamb": "12a-d"
+      },
+      "subtopics": [
+        {
+          "id": "money.nature",
+          "name": "Barter, and types, characteristics and functions of money",
+          "syllabus": {
+            "waec": "18(a)",
+            "jamb": "12a"
+          },
+          "covers": "Barter and its problems, the history and types of money, the characteristics of good money (2024 UTME Q14) and its functions."
+        },
+        {
+          "id": "money.demand-supply",
+          "name": "Demand for and supply of money",
+          "syllabus": {
+            "waec": "18(a)",
+            "jamb": "12b"
+          },
+          "covers": "Motives for holding money (transactions, precautionary, speculative), what determines the money supply, and what the money supply consists of. How commercial banks create money goes to financial.deposit-banks."
+        },
+        {
+          "id": "money.value",
+          "name": "Value of money and the quantity theory",
+          "syllabus": {
+            "waec": "18(a)",
+            "jamb": "12c-d"
+          },
+          "covers": "The relationship between the value of money and the price level, and the Fisher equation MV = PT, including solving it for one term."
+        }
+      ]
+    },
+    {
+      "id": "inflation",
+      "name": "Inflation and deflation",
+      "part": "Macroeconomics",
+      "syllabus": {
+        "waec": "18(b)",
+        "jamb": "12e-f"
+      },
+      "subtopics": [
+        {
+          "id": "inflation.types-causes",
+          "name": "Meaning, types and causes of inflation",
+          "syllabus": {
+            "waec": "18(b)",
+            "jamb": "12e"
+          },
+          "covers": "Demand-pull, cost-push, creeping, galloping and hyperinflation, and what causes each. A question on whether deficit financing is inflationary goes to public-finance.budget-debt."
+        },
+        {
+          "id": "inflation.measurement",
+          "name": "Consumer price index",
+          "syllabus": {
+            "waec": null,
+            "jamb": "12e"
+          },
+          "covers": "Calculating and interpreting a price index and the inflation rate from it."
+        },
+        {
+          "id": "inflation.effects-control",
+          "name": "Effects and control of inflation",
+          "syllabus": {
+            "waec": "18(b)",
+            "jamb": "12e"
+          },
+          "covers": "Who gains and who loses from inflation (debtors, creditors, fixed-income earners) and how monetary, fiscal and direct measures control it. The instruments themselves go to financial.monetary-policy and public-finance.fiscal-policy."
+        },
+        {
+          "id": "inflation.deflation",
+          "name": "Deflation",
+          "syllabus": {
+            "waec": null,
+            "jamb": "12f"
+          },
+          "covers": "Meaning, measurement, effects and control of deflation."
+        }
+      ]
+    },
+    {
+      "id": "financial",
+      "name": "Financial institutions",
+      "part": "Macroeconomics",
+      "syllabus": {
+        "waec": "19",
+        "jamb": "13"
+      },
+      "subtopics": [
+        {
+          "id": "financial.types",
+          "name": "Types and functions of financial institutions",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "13a-b, 13g"
+          },
+          "covers": "Traditional institutions (esusu, money lenders), development banks such as the Bank of Industry (2024 UTME Q33), merchant and mortgage banks, insurance companies and building societies: what each does, their role in development, and the challenges facing them in Nigeria. Commercial banks go to financial.deposit-banks and the CBN to financial.central-bank."
+        },
+        {
+          "id": "financial.central-bank",
+          "name": "The Central Bank and financial regulation",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "13d"
+          },
+          "covers": "Functions of the Central Bank of Nigeria, its officials (2024 UTME Q32), and financial sector regulators such as NDIC, SEC and NAICOM and what each does. The tools the CBN uses to control money go to financial.monetary-policy."
+        },
+        {
+          "id": "financial.deposit-banks",
+          "name": "Commercial banks and money creation",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "13e"
+          },
+          "covers": "Functions of commercial (deposit money) banks, types of account, and how banks create credit, including calculating deposits created from a cash reserve ratio."
+        },
+        {
+          "id": "financial.markets",
+          "name": "Money and capital markets",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "13c"
+          },
+          "covers": "The difference between money and capital markets, their institutions and instruments (treasury bills, bonds, shares), and the stock exchange."
+        },
+        {
+          "id": "financial.monetary-policy",
+          "name": "Monetary policy and its instruments",
+          "syllabus": {
+            "waec": null,
+            "jamb": "13f"
+          },
+          "covers": "Open market operations, bank rate, reserve requirements, special deposits and moral suasion, and their effects. A question that asks which tool is fiscal and which monetary goes to public-finance.fiscal-policy."
+        }
+      ]
+    },
+    {
+      "id": "public-finance",
+      "name": "Public finance",
+      "part": "Macroeconomics",
+      "syllabus": {
+        "waec": "20",
+        "jamb": "14"
+      },
+      "subtopics": [
+        {
+          "id": "public-finance.fiscal-policy",
+          "name": "Objectives of public finance and fiscal policy",
+          "syllabus": {
+            "waec": "20",
+            "jamb": "14a-b"
+          },
+          "covers": "Meaning and objectives of public finance, fiscal policy and its instruments (taxation, spending, the budget), and telling fiscal from monetary tools (2024 UTME Q29)."
+        },
+        {
+          "id": "public-finance.revenue",
+          "name": "Government revenue and revenue allocation",
+          "syllabus": {
+            "waec": "20",
+            "jamb": "14c, 14h"
+          },
+          "covers": "Sources of government revenue (taxes, royalties, rents, fees, grants and aid), revenue allocation between tiers of government in Nigeria and its criteria, and resource control. A question on a specific tax goes to public-finance.taxation."
+        },
+        {
+          "id": "public-finance.taxation",
+          "name": "Taxation: types, canons and rates",
+          "syllabus": {
+            "waec": "20",
+            "jamb": "14d"
+          },
+          "covers": "Direct and indirect taxes, their objectives, merits and demerits, the canons of taxation, and proportional, progressive and regressive rates, including calculating tax paid."
+        },
+        {
+          "id": "public-finance.incidence",
+          "name": "Incidence and effects of taxes",
+          "syllabus": {
+            "waec": "20",
+            "jamb": "14e"
+          },
+          "covers": "Who bears the burden of a tax, how elasticity of demand and supply shifts it between buyer and seller, and the effects of taxes on production and consumption."
+        },
+        {
+          "id": "public-finance.expenditure",
+          "name": "Public expenditure",
+          "syllabus": {
+            "waec": "20",
+            "jamb": "14f"
+          },
+          "covers": "Recurrent and capital expenditure, why public spending grows, and its effects on the economy."
+        },
+        {
+          "id": "public-finance.budget-debt",
+          "name": "Government budget and public debt",
+          "syllabus": {
+            "waec": "20",
+            "jamb": "14g"
+          },
+          "covers": "Balanced, surplus and deficit budgets, deficit financing and its effect on prices (2024 UTME Q9), and internal and external public debt, its causes and burden."
+        }
+      ]
+    },
+    {
+      "id": "trade",
+      "name": "International trade",
+      "part": "International economics",
+      "syllabus": {
+        "waec": "22(a)",
+        "jamb": "21a, 21c"
+      },
+      "subtopics": [
+        {
+          "id": "trade.basis",
+          "name": "Basis of international trade",
+          "syllabus": {
+            "waec": "22(a)",
+            "jamb": "21a"
+          },
+          "covers": "Differences between domestic and international trade, why countries trade, absolute and comparative advantage and working them out from a table, and the theorists behind them (Smith, Ricardo, 2024 UTME Q5)."
+        },
+        {
+          "id": "trade.terms",
+          "name": "Terms of trade",
+          "syllabus": {
+            "waec": "22(a)",
+            "jamb": null
+          },
+          "covers": "Meaning of terms of trade, calculating it from export and import price indices, and what favourable and unfavourable terms mean."
+        },
+        {
+          "id": "trade.protection",
+          "name": "Commercial policy and protection",
+          "syllabus": {
+            "waec": "22(a)",
+            "jamb": null
+          },
+          "covers": "Objectives of commercial policy, tariffs and their types, quotas, embargoes and other direct controls, arguments for and against protection, and dumping (2024 UTME Q7). Using exchange rate changes to protect industry goes to bop.exchange-rate."
+        },
+        {
+          "id": "trade.structure",
+          "name": "Composition and direction of foreign trade",
+          "syllabus": {
+            "waec": "22(a)",
+            "jamb": "21c"
+          },
+          "covers": "What Nigeria and other West African countries export and import, and who their main trading partners are."
+        }
+      ]
+    },
+    {
+      "id": "bop",
+      "name": "Balance of payments and exchange rates",
+      "part": "International economics",
+      "syllabus": {
+        "waec": "22(b)",
+        "jamb": "21b, 21d"
+      },
+      "subtopics": [
+        {
+          "id": "bop.components",
+          "name": "Balance of trade and balance of payments",
+          "syllabus": {
+            "waec": "22(b)",
+            "jamb": "21b"
+          },
+          "covers": "Visible and invisible trade, the balance of trade, and the current, capital and monetary accounts of the balance of payments, including calculating a balance from given figures."
+        },
+        {
+          "id": "bop.disequilibrium",
+          "name": "Balance of payments problems and correction",
+          "syllabus": {
+            "waec": "22(b)",
+            "jamb": "21b"
+          },
+          "covers": "Causes of balance of payments deficit and surplus, how a deficit is corrected (expenditure-reducing and switching policies, exchange control) and how it is financed (reserves, borrowing). Devaluation as a corrective measure goes to bop.exchange-rate."
+        },
+        {
+          "id": "bop.exchange-rate",
+          "name": "Exchange rates",
+          "syllabus": {
+            "waec": "22(b)",
+            "jamb": "21d"
+          },
+          "covers": "Meaning, types (fixed, floating, managed) and determination of exchange rates, appreciation, depreciation and devaluation, and the conditions for depreciation to work, such as import elasticity (2024 UTME Q3 and Q4)."
+        }
+      ]
+    },
+    {
+      "id": "integration",
+      "name": "Economic integration",
+      "part": "International economics",
+      "syllabus": {
+        "waec": "23",
+        "jamb": "22 (ECOWAS, AU, EU)"
+      },
+      "subtopics": [
+        {
+          "id": "integration.forms",
+          "name": "Meaning, objectives and levels of integration",
+          "syllabus": {
+            "waec": "23",
+            "jamb": null
+          },
+          "covers": "Free trade area, customs union, common market and economic union: their features, and the objectives and benefits of integration."
+        },
+        {
+          "id": "integration.ecowas",
+          "name": "ECOWAS and integration in West Africa",
+          "syllabus": {
+            "waec": "23",
+            "jamb": "22"
+          },
+          "covers": "Formation, objectives, organs, achievements and problems of ECOWAS, and other African integration efforts. Every ECOWAS question goes here."
+        }
+      ]
+    },
+    {
+      "id": "organisations",
+      "name": "International economic organisations",
+      "part": "International economics",
+      "syllabus": {
+        "waec": "24",
+        "jamb": "22"
+      },
+      "subtopics": [
+        {
+          "id": "organisations.finance",
+          "name": "IMF, World Bank and African Development Bank",
+          "syllabus": {
+            "waec": "24",
+            "jamb": "22"
+          },
+          "covers": "The IMF, IBRD (World Bank) and AfDB: when they were set up, what they do, and their relevance to Nigeria and West Africa."
+        },
+        {
+          "id": "organisations.others",
+          "name": "UN, trade and regional bodies",
+          "syllabus": {
+            "waec": "24",
+            "jamb": "22"
+          },
+          "covers": "UNCTAD, ECA, WTO, OECD, AU and the EU (EEC): functions and relevance, and telling regional from global bodies (2024 UTME Q28). OPEC goes to natural-resources.oil and ECOWAS to integration.ecowas."
+        }
+      ]
+    }
+  ],
+  "legacy_note": "All 25 legacy database topics are broad: each names a whole syllabus topic or joins two or three of them. None matches a single subtopic, so every one is folded into the parent topic it fits best and none is guessed into a subtopic. A question moved to a parent is correct but unplaced within it, and is flagged for reclassification. Where a name spans several parents, the rule is the one its questions most likely test: 'Demand, supply and price determination' to price, where demand and supply meet; 'International trade, balance of payments and economic integration' to trade, its first and broadest part; 'Money and financial institutions' to money; 'Factors of production and division of labour' to factors; 'Contemporary economic problems and policies in West Africa' to development; and 'Structure of the West African economy' to basics, because the only place either syllabus describes the economy's structure is WAEC topic 1, the sectors and their contributions. These last four are judgement calls and their questions should be the first reclassified.",
+  "legacy_to": {
+    "Agriculture and the West African economy": "agriculture",
+    "Balance of payments and exchange rate": "bop",
+    "Basic tools of economic analysis (tables, graphs, statistics)": "tools",
+    "Business organizations": "business",
+    "Consumer theory: utility, indifference and consumer equilibrium": "consumer",
+    "Contemporary economic problems and policies in West Africa": "development",
+    "Cost and revenue concepts": "costs",
+    "Definition and scope of economics; basic concepts": "basics",
+    "Demand, supply and price determination": "price",
+    "ECOWAS and economic integration in West Africa": "integration",
+    "Economic growth, development and planning": "development",
+    "Economic systems and the basic economic problem": "systems",
+    "Factors of production and division of labour": "factors",
+    "Industry and industrialization": "industry",
+    "Inflation, deflation and price stability": "inflation",
+    "International trade and protection": "trade",
+    "International trade, balance of payments and economic integration": "trade",
+    "Labour market, wages, unemployment and migration": "labour",
+    "Market structures and price/output determination": "markets",
+    "Money and financial institutions": "money",
+    "National income and its measurement": "national-income",
+    "Population and demographic concepts": "population",
+    "Public finance, taxation and government budget": "public-finance",
+    "Structure of the West African economy": "basics",
+    "Theory of production, scale of production and productivity": "production"
+  }
+}

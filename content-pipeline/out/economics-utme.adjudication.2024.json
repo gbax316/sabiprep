@@ -1,0 +1,97 @@
+{
+  "year": 2024,
+  "paper": 1,
+  "rulings": {
+    "1": {
+      "q_number": 1,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Competitive goods are substitutes, so a rise in the price of Y shifts buyers toward X and the quantity of X demanded rises. The phrase 'perfectly elastic' is loosely worded but does not change the direction of the effect. C fails because a rise in Y's own price reduces, not increases, the quantity of Y demanded. B reverses the substitution effect, so A is the only answer an examiner would accept.",
+      "sided_with": "both"
+    },
+    "3": {
+      "q_number": 3,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "If the Naira gains value against the Dollar, the Naira appreciates and, by the same exchange rate, the Dollar depreciates against the Naira. The natural answer 'appreciation of Naira' is absent, but C is its exact mirror and is correct. The strongest case for D is that the expected wording is missing, yet C is a true statement of the same event, so D is not needed. B is the opposite movement and A concerns the general price level.",
+      "sided_with": "both"
+    },
+    "5": {
+      "q_number": 5,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "The stem is truncated and never names the theory, so it does not ask a complete question. Adam Smith (absolute advantage) and David Ricardo (comparative cost advantage) both propounded theories of international trade, so A and D both qualify on the words given. Codex's case for D rests on Ricardo being the most famous trade theorist, but that is a guess at the missing words, not something a student can derive. The question needs its missing phrase restored before it can be keyed.",
+      "sided_with": "claude"
+    },
+    "6": {
+      "q_number": 6,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Rural-urban migration drains the farm labour force and so reduces food output, which is the standard point in Nigerian texts on problems of agriculture. Agro-processing firms, rural social infrastructure and farmer subsidies all encourage food production. The wording 'rural migration' and 'subsiding' are typing slips that do not create a rival answer. A is the only option that harms production.",
+      "sided_with": "both"
+    },
+    "7": {
+      "q_number": 7,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Dumping is selling a product in a foreign market at a price lower than it sells for in the home market, so the local price is higher than the foreign price. The only argument for A would be reading 'local' as the importing country's market, but the standard textbook definition is framed from the exporter's side and the stem follows that framing. Equal prices would not be dumping. B is the examiner's answer.",
+      "sided_with": "both"
+    },
+    "8": {
+      "q_number": 8,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "Preference shares, debentures and ordinary shares are all securities a company issues to raise long-term capital and which are traded on the capital market, while a bank loan is borrowing from a single lender and is not a security. The strongest rival grouping is equity versus debt, but that splits the options two and two and yields no single odd item. Picking D as the only pure ownership capital fails because preference shareholders are also part-owners. C is the one clear odd item.",
+      "sided_with": "both"
+    },
+    "16": {
+      "q_number": 16,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "The shaded rectangle runs from the origin to price at x and output at e, so it is price times output. The AC curve passes through e on the price line, so P = AC and this area equals total cost as well as total revenue. The case for B would be that the firm earns normal profit, but the rectangle is not a profit area; any supernormal profit or loss would be a rectangle between price and AC, and there is none. Total revenue is not offered, so D is the correct option.",
+      "sided_with": "both"
+    },
+    "17": {
+      "q_number": 17,
+      "ruling": "ambiguous",
+      "answer": null,
+      "reasoning": "x is the horizontal price line of a perfectly competitive firm, which is at once average revenue and marginal revenue (P = AR = MR), so B and C are both fully correct and a student cannot tell which the setter wanted. Claude's case for D is that it collects both correct answers, but D also includes marginal cost, and x is not the MC curve, which is the rising curve labelled Y; MC only equals MR at the single point e. Codex's preference for C as the more usual label is a guess about intent rather than a distinction the diagram supports. B and C are the two defensible options.",
+      "sided_with": "neither"
+    },
+    "18": {
+      "q_number": 18,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "Options A and B are identical ('marginal cost'), so even if marginal cost is the right answer there is no unique letter to key. The label Y also sits at the end of two converging rising curves, one of which is the U-shaped AC curve, so what B was meant to say (probably average cost) could itself be the intended answer. Claude's choice of A treats the first of two identical options as the key, which an examiner's scheme cannot justify. The options need correcting before this can be keyed.",
+      "sided_with": "codex"
+    },
+    "23": {
+      "q_number": 23,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "Counting the fifteen values gives three 0s, six 1s, three 2s, two 3s and one 5, a sum of 0 + 6 + 6 + 6 + 5 = 23. The mean is 23/15 = 1.53, which is option C. Codex's total of 24 is an addition slip, so its claim that no option fits does not hold. A is the mode and D is the largest value.",
+      "sided_with": "claude"
+    },
+    "29": {
+      "q_number": 29,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Interest rate and money supply are monetary policy tools, which leaves budget and taxes. Standard Nigerian texts describe the budget as the main or most important instrument of fiscal policy, because it brings taxation, expenditure and borrowing together in one plan. The case for B is that taxation is often called a potent fiscal tool, but it is only one component of the budget, and a 'most effective' question points to the comprehensive instrument. A is the answer the marking scheme would carry.",
+      "sided_with": "both"
+    },
+    "33": {
+      "q_number": 33,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "The Bank of Industry's head office is at 23 Marina, Lagos. Abuja is the tempting distractor because most federal agencies are headquartered there and BOI has an office in Abuja, but it is not the head office. Ogun and Kano have no claim. B is correct.",
+      "sided_with": "both"
+    },
+    "37": {
+      "q_number": 37,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Opportunity cost is the next best alternative forgone, stated in real terms, which here is the road that is not built or maintained. A is the money cost of the chosen option, not its opportunity cost. The case for C is that it describes the forgone alternative in money, but standard texts stress that opportunity cost is the real alternative given up rather than its money value. B is the answer an examiner would mark.",
+      "sided_with": "both"
+    }
+  }
+}

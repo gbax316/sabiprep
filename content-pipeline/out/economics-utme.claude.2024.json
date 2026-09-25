@@ -1,0 +1,320 @@
+{
+  "deriver": "claude",
+  "year": 2024,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Competitive goods are substitutes, so a rise in the price of Y makes consumers switch to X, raising the quantity of X demanded. C is wrong because a price rise reduces the quantity of Y demanded. The phrase 'perfectly elastic' is confused (it does not fit cross elasticity), but the substitution effect still points to A.",
+      "solvable": true,
+      "issue": "Stem wording 'elasticity of demand ... is perfectly elastic' is garbled; the intended idea (substitutes) is still clear."
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Agriculture employs the largest share of Nigeria's labour force. Education and IT employ far fewer people.",
+      "solvable": true,
+      "issue": ""
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "If the Naira gains value against the Dollar, the Naira appreciates, which means the Dollar depreciates relative to the Naira. B is the opposite, and inflation is about the general price level.",
+      "solvable": true,
+      "issue": "The expected answer 'appreciation of Naira' is not an option; C is the mirror statement."
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Depreciation makes imports dearer, and it cuts imports (protecting local industry) only if demand for imports is price elastic. The degree or period of depreciation matters less than how responsive import demand is.",
+      "solvable": true,
+      "issue": ""
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The stem is incomplete and does not say which theory is meant. Adam Smith (absolute advantage) and David Ricardo (comparative advantage) both put forward international trade theories, so the options cannot be told apart.",
+      "solvable": false,
+      "issue": "Stem is truncated ('Which of the following theories on international trade.'); the name of the theory is missing, so A and D both qualify. If it meant comparative cost, the answer is D."
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Rural-urban migration takes labour away from farming and so cuts food output. Agro-processing, rural infrastructure and subsidies all help food production.",
+      "solvable": true,
+      "issue": "'subsiding' is a typo for 'subsidising'."
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Dumping is selling goods abroad at a price below the home-market price, so the local price is higher than the foreign price. A reverses the relationship.",
+      "solvable": true,
+      "issue": "It depends on reading 'local' as the exporter's home market."
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Preference shares, debentures and ordinary shares are securities that a company issues and that are traded on the capital market; a bank loan is not a security. Ordinary shares could be argued as the odd one (the only pure ownership capital, with preference shares partly fixed-return), but the securities grouping is the stronger reading.",
+      "solvable": true,
+      "issue": "D is defensible on an ownership-versus-fixed-return grouping."
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Deficit financing (spending more than revenue, often funded by borrowing or printing money) adds to aggregate demand and the money supply, so it is inflationary. It is not deflationary.",
+      "solvable": true,
+      "issue": ""
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "An indifference curve joins combinations of two goods that give the consumer the same satisfaction. An isoquant is the production counterpart.",
+      "solvable": true,
+      "issue": "The stem says 'two combinations'; it means combinations of two commodities."
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "An isoquant shows combinations of inputs that produce the same output. An indifference curve is about consumer satisfaction, not output.",
+      "solvable": true,
+      "issue": ""
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Total product is at its maximum when an extra unit of input adds nothing, so MP = 0. MP is falling before that point, but it is exactly zero at the maximum.",
+      "solvable": true,
+      "issue": ""
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The short run is the period in which at least one input is fixed while others vary, so fixed and variable inputs are combined. It is not defined by a set number of years.",
+      "solvable": true,
+      "issue": "'were' is a typo for 'where'."
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "General acceptability is the most important quality of money; without it nothing works as a medium of exchange. Durability and recognizability are desirable but secondary, so 'all of the above' does not fit 'most important'.",
+      "solvable": true,
+      "issue": ""
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The demand/price line x is horizontal (P = AR = MR), and the firm's equilibrium is at the minimum of AC where MC cuts it. That is a perfectly competitive firm. A monopolist faces a downward-sloping demand curve.",
+      "solvable": true,
+      "issue": ""
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "The shaded rectangle is price times output at e. Because the AC curve touches the price line at e, P = AC, so the area equals total revenue and also total cost (normal profit only). There is no supernormal profit or loss area, so D is the only option that fits.",
+      "solvable": true,
+      "issue": "The area is also total revenue, which is not an option; 'profit' could be offered by a key that means normal profit."
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "D",
+      "confidence": "uncertain",
+      "reasoning": "x is the horizontal price line of a perfectly competitive firm, so it is both AR and MR (P = AR = MR). Because B and C are both right, the examiner most likely wanted 'all of the above'. Strictly, x is not the MC curve, although MC = MR = AR at e.",
+      "solvable": true,
+      "issue": "B and C are both correct; D includes marginal cost, which x is not strictly, so no option is exactly right."
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Y labels the rising curve that passes through e from below, which is the MC curve (with AC close beside it). It is not the price line, which is x.",
+      "solvable": true,
+      "issue": "Options A and B are both 'marginal cost' (a typing error; B was probably 'average cost'). A and B are therefore indistinguishable."
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A demand schedule is a table of the quantities demanded at various prices. The other options leave out price, which defines it.",
+      "solvable": true,
+      "issue": ""
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Under the law of supply, quantity supplied rises as price rises, which is a positive (direct) relationship. 'Negative' and 'indirect' describe demand.",
+      "solvable": true,
+      "issue": ""
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Unpaid services (such as housework) are left out of national income accounts, so national income is underestimated. Leaving them out cannot overstate it.",
+      "solvable": true,
+      "issue": ""
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Frequencies: 0 appears 3 times, 1 appears 6 times, 2 appears 3 times, 3 appears 2 times, 5 appears once. 1 is the most frequent value.",
+      "solvable": true,
+      "issue": ""
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The sum is 0x3 + 1x6 + 2x3 + 3x2 + 5x1 = 23 over n = 15, which gives a mean of 23/15 = 1.53. The other values are the mode, the maximum or rounded figures.",
+      "solvable": true,
+      "issue": ""
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Sorted, the 15 values are 0,0,0,1,1,1,1,1,1,2,2,2,3,3,5. The 8th value is 1.",
+      "solvable": true,
+      "issue": ""
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Range = maximum minus minimum = 5 - 0 = 5.",
+      "solvable": true,
+      "issue": ""
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "By international convention (and UN recommendation), population censuses are usually held every 10 years.",
+      "solvable": true,
+      "issue": ""
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Luca Pacioli is known as the father of accounting (double-entry bookkeeping). Mill, Keynes and Ricardo are economists.",
+      "solvable": true,
+      "issue": "'D. Richard' is presumably D. Ricardo; 'Paciolo' is a misspelling of Pacioli."
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The UN is a global organization. The AU, EU and ECOWAS are regional.",
+      "solvable": true,
+      "issue": ""
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "A",
+      "confidence": "uncertain",
+      "reasoning": "Interest rate and money supply are monetary tools, so they are ruled out. The budget is usually described as the main instrument of fiscal policy because it covers both taxation and spending, but many texts name taxation as the most effective fiscal tool.",
+      "solvable": true,
+      "issue": "A (budget) and B (taxes) are both defensible."
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A maximum (ceiling) price has an effect only if it is set below the equilibrium price. Set above equilibrium it would not bind.",
+      "solvable": true,
+      "issue": "'prize' is a typo for 'price'; 'hone' is a typo for 'none'."
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Olayemi Cardoso has been CBN Governor since September 2023, so he was governor when the 2024 paper was set. Tinubu is President and Wale Edun is Finance Minister.",
+      "solvable": true,
+      "issue": "The answer depends on time ('current')."
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The Bank of Industry's head office is in Lagos (Marina/Broad Street). Abuja is a common distractor because many federal agencies are based there.",
+      "solvable": true,
+      "issue": ""
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "D lies outside the PPF and A lies on it, so A < D and 'A>D' is wrong. A = B (both on the frontier), A > C (C is inside) and C < D are all true.",
+      "solvable": true,
+      "issue": ""
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A and B both lie on the production possibility frontier, where resources are fully and efficiently used. C is inside (inefficient) and D cannot be reached.",
+      "solvable": true,
+      "issue": ""
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Reaching D needs an outward shift of the PPF, which comes from technological advance (or more or better resources). 'More farming' only moves along the curve; lower production moves inward.",
+      "solvable": true,
+      "issue": ""
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Opportunity cost is the next best alternative given up, which here is the road that is not built (left undone or to decay). C puts the forgone alternative in money terms, and A is the money cost of the choice made, not its opportunity cost.",
+      "solvable": true,
+      "issue": "C ('amount to be paid on road') is arguable if the road is valued in money."
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Set 20 - p/4 = 5 + p/2, so 15 = 3p/4 and p = 20. Check: Qd = 15 and Qs = 15.",
+      "solvable": true,
+      "issue": "'Qr' is taken to be Qd; '#' stands for the Naira sign."
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "At p = 20, Q = 20 - 5 = 15 = 5 + 10. The value 20 is the equilibrium price, not the quantity.",
+      "solvable": true,
+      "issue": ""
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Point elasticity = |dQ/dP| x P/Q = (1/4) x (4/19) = 1/19. The value 1/4 is only the slope term, without the P/Q ratio.",
+      "solvable": true,
+      "issue": ""
+    }
+  },
+  "failures": []
+}

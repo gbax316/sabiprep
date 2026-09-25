@@ -1,0 +1,245 @@
+{
+  "year": 2024,
+  "paper": 1,
+  "counts": {
+    "keyed": 36,
+    "defective": 2,
+    "ambiguous": 1
+  },
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "2": {
+      "q_number": 2,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "3": {
+      "q_number": 3,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "4": {
+      "q_number": 4,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "5": {
+      "q_number": 5,
+      "state": "defective",
+      "answer": null,
+      "reason": "The stem is truncated and never names the theory, so it does not ask a complete question. Adam Smith (absolute advantage) and David Ricardo (comparative cost advantage) both propounded theories of international trade, so A and D both qualify on the words given. Codex's case for D rests on Ricardo being the most famous trade theorist, but that is a guess at the missing words, not something a student can derive. The question needs its missing phrase restored before it can be keyed."
+    },
+    "6": {
+      "q_number": 6,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "7": {
+      "q_number": 7,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "8": {
+      "q_number": 8,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "9": {
+      "q_number": 9,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "10": {
+      "q_number": 10,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "11": {
+      "q_number": 11,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "12": {
+      "q_number": 12,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "13": {
+      "q_number": 13,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "14": {
+      "q_number": 14,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "15": {
+      "q_number": 15,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "16": {
+      "q_number": 16,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "third review, sided with both"
+    },
+    "17": {
+      "q_number": 17,
+      "state": "ambiguous",
+      "answer": null,
+      "reason": "x is the horizontal price line of a perfectly competitive firm, which is at once average revenue and marginal revenue (P = AR = MR), so B and C are both fully correct and a student cannot tell which the setter wanted. Claude's case for D is that it collects both correct answers, but D also includes marginal cost, and x is not the MC curve, which is the rising curve labelled Y; MC only equals MR at the single point e. Codex's preference for C as the more usual label is a guess about intent rather than a distinction the diagram supports. B and C are the two defensible options."
+    },
+    "18": {
+      "q_number": 18,
+      "state": "defective",
+      "answer": null,
+      "reason": "Options A and B are identical ('marginal cost'), so even if marginal cost is the right answer there is no unique letter to key. The label Y also sits at the end of two converging rising curves, one of which is the U-shaped AC curve, so what B was meant to say (probably average cost) could itself be the intended answer. Claude's choice of A treats the first of two identical options as the key, which an examiner's scheme cannot justify. The options need correcting before this can be keyed."
+    },
+    "19": {
+      "q_number": 19,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "20": {
+      "q_number": 20,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "21": {
+      "q_number": 21,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "22": {
+      "q_number": 22,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "23": {
+      "q_number": 23,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with claude"
+    },
+    "24": {
+      "q_number": 24,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "25": {
+      "q_number": 25,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "26": {
+      "q_number": 26,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "27": {
+      "q_number": 27,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "28": {
+      "q_number": 28,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "29": {
+      "q_number": 29,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "31": {
+      "q_number": 31,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "32": {
+      "q_number": 32,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "33": {
+      "q_number": 33,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "34": {
+      "q_number": 34,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "35": {
+      "q_number": 35,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "36": {
+      "q_number": 36,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "37": {
+      "q_number": 37,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "38": {
+      "q_number": 38,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "39": {
+      "q_number": 39,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "40": {
+      "q_number": 40,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    }
+  }
+}

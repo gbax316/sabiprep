@@ -165,12 +165,18 @@ not this line.
       out of existence.
 - [x] **CON-12** The pipeline as a system (D7), `bd9be20`: `run.py`, eight frozen briefs,
       state per subject, a Codex diagram check, the gate page. See `content-pipeline/README.md`.
-- [ ] **CON-15** Prove the system cold on a new subject: Economics UTME 2024, the newest
-      paper, with seven diagrams and four shared stems. Taxonomy from the WAEC and JAMB
-      syllabi, then every stage to the gate. Measures the real cost per paper, which sets
-      the budget for the other 100 or so.
+- [x] **CON-15** Proved cold on Economics UTME 2024: taxonomy from both syllabi (28 topics,
+      103 subtopics, all 25 live topics folded), then every stage to the gate unattended.
+      36 of 39 keyed, 3 held as real paper defects. **$6.02 per paper** on the Claude side
+      plus $1.72 per subject for the taxonomy; about 40 minutes a paper. Found and fixed on
+      the way: Word equations were dropped (`3ec8276`), naira typed as "#" now reads ₦, and
+      the diagram check caught a traced label "x" that had become "r". **Waiting at its gate.**
 - [ ] **CON-13** Prove Mathematics and Physics notation on one paper before either scales.
-      The source uses U+2500 box-drawing as a minus sign and drops spaces (`sin2x`).
+      **Mostly done in `3ec8276`:** Word equations and raised or lowered text now come out
+      as Unicode (x², H₂SO₄, ¼, √3/2, ²⁴₁₁N, 121₃), and U+2500 reads as a minus, across all
+      subjects; Chemistry needed it as much as Maths. Still open: spaces the typist dropped
+      (`sin2x`, `Evaluate4610₈`), and whether a determinant written `|−x 12; −1 4|` reads well
+      enough or needs an image. Look at one Maths paper's gate page before Maths scales.
 - [ ] **CON-14** Ask Chidera whether UTME English comprehension passages were left out when
       the file was typed. None runs past 400 characters.
 

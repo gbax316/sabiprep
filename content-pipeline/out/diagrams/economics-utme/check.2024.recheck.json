@@ -1,0 +1,20 @@
+{
+  "checker": "codex",
+  "unit": "2024",
+  "results": {
+    "2024_Q15-18": {
+      "stem": "2024_Q15-18",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "fail",
+      "alt_checks": [
+        "A1"
+      ],
+      "alt_notes": "“A curve dips down from the upper left, bottoms out, then rises to meet a point labeled ‘e’ where it touches the line ‘x’; from there the curve continues upward and to the right, more steeply, and is labeled ‘Y’” conflates the two distinct curves. Replace with: “One curve descends from the upper left, reaches a minimum, and rises to point ‘e’. A second curve begins below the horizontal line, crosses the first curve near its minimum, passes through ‘e’, and then rises steeply to the right; ‘Y’ is printed near its upper end.”",
+      "svg": "2024_Q15-18.authored.svg"
+    }
+  },
+  "no_svg": [],
+  "failures": []
+}

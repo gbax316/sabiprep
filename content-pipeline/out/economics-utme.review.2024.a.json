@@ -1,0 +1,342 @@
+{
+  "reviewer": "codex",
+  "year": 2024,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "fail",
+      "failed_checks": [
+        11
+      ],
+      "fact_error": true,
+      "notes": "Hint 3 makes the false absolute claim \"the two sectors found in every village and town\". These sectors are common across Nigeria, but neither can literally be assumed to exist in every village and town.",
+      "fix": "Narrow it to the two sectors commonly found in villages and towns. Which of them gives work to people in a great many rural households?"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The explanation \"This protects local industry when buyers respond by buying fewer imports and more local goods\" omits the necessary condition that suitable local substitutes are available. The distractor reason \"policy can cause the depreciation, but it does not decide how buyers react to dearer imports\" is also too absolute: government policies can influence import demand and the availability or attractiveness of local substitutes.",
+      "fix": "Depreciation lowers the value of the domestic currency, so imports usually become dearer in domestic currency. Where local substitutes are available, local industry can benefit when buyers respond by buying fewer imports and more locally made goods. Elastic demand for imports makes that response stronger.\n\nA. government policies: government policies can influence import demand and local production, but this question asks about buyers' responsiveness to the higher import price; that responsiveness is measured by the elasticity of demand for imports."
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The claims \"takes this labour away, so less food is produced\" and \"Farms shrink or are abandoned\" state possible effects of rural-urban migration as inevitable effects. The claim that subsidising farmers \"so raises output\" is likewise too absolute. The exam tip's \"Anything that gives farmers markets, money or services is a remedy\" is an overbroad universal claim.",
+      "fix": "Food production in Nigeria often relies heavily on human labour because much farming is done by hand on small farms. Here, 'rural migration' is being used to mean rural-urban migration. It can reduce the farm labour supply and therefore lower food output.\n\nHow to tell: when many young people leave villages for city jobs, farmers may have fewer workers for clearing, planting and harvesting, so some farms may shrink or be abandoned. The other three options generally provide farmers with useful support or stronger incentives.\n\nD. subsiding farmer: this is intended to mean subsidising farmers, which can lower the cost of seeds, fertiliser and tools and help raise output.\n\nExam tip: in syllabus questions on problems of agriculture, rural-urban migration is treated as a cause of low output because it can drain farm labour. Options that provide useful markets, finance or services are usually remedies."
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The statements \"A company issues them to the public to raise long-term capital, and they can be bought and sold on the stock exchange\" and \"In all three cases the holder has a paper that can be traded on the capital market\" are unscoped generalisations. Shares or debentures may be privately issued or unlisted, and securities need not be represented by physical paper. \"paying a fixed dividend\" also overstates the position: preference shares usually carry a fixed-rate dividend, but payment is not guaranteed in the same way as interest on debt.",
+      "fix": "Ordinary shares, preference shares and debentures are types of company security. In the syllabus comparison, companies can issue them to investors as long-term finance, and transferable or listed versions may be traded on the capital market. A bank loan is borrowing from a bank under a loan agreement, so it is not a company security.\n\nHow to tell: ordinary and preference shareholders provide share capital, while debenture holders lend to the company for interest. These are securities held by investors. A bank loan is a loan agreement with a bank, not a security issued to investors.\n\nA. preference share: a company security that usually carries a fixed-rate dividend.\nB. debentures: company debt securities that usually pay fixed interest.\nD. Ordinary shares: company securities that give their holders ownership rights and a possible share of the profits."
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "Hint 2 says, \"Either way, more money comes into the economy.\" Borrowing from the public generally redirects existing funds; it does not itself create new money. The solution repeats the problem in \"deficit spending adds money and demand to the economy.\" The statements \"extra government spending changes total demand, so its effect on prices is not neutral\" and \"A deficit budget adds to demand and is inflationary\" also present a conditional syllabus tendency as universally true. Inflation depends on the financing method, spare productive capacity and the response of output.",
+      "fix": "Hint 2: The gap may be filled by borrowing or by creating new money. Creating new money increases the money supply; borrowing from the public mainly redirects existing funds into government spending.\n\nDeficit financing means the government spends more than its revenue and covers the gap by borrowing or creating new money. In the syllabus it is treated as inflationary because it can raise total demand, especially when financed by the central bank. If output does not rise as fast, prices tend to rise.\n\nHow to tell: deficit spending can raise demand, while central-bank financing also increases the money supply. The syllabus therefore treats deficit financing as a cause of demand-pull inflation, especially when the economy has little spare capacity.\n\nD. neutral: in syllabus questions, deficit financing is treated as inflationary because it can raise total demand, particularly when financed by the central bank.\n\nExam tip: in syllabus questions, a deficit budget is treated as inflationary because it can add to demand, while a surplus budget is treated as anti-inflationary because it withdraws spending power."
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "fail",
+      "failed_checks": [
+        12
+      ],
+      "fact_error": false,
+      "notes": "Hint 1 identifies X as “the demand or price line the firm faces,” and hint 3 again calls it “one firm's demand line.” This discloses what the labelled line represents before sibling question 17 asks what X represents.",
+      "fix": "Hint 1: Look first at the line labelled x. Notice its shape before examining the other curves.\n\nHint 2: In one market structure, an individual firm is too small to influence the market price. It accepts the market price and chooses only its output.\n\nHint 3: Which option describes a market with so many sellers that no single firm can influence the market price?"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "fail",
+      "failed_checks": [
+        12
+      ],
+      "fact_error": false,
+      "notes": "Hint 1 calls X “the price line x,” directly disclosing information needed by sibling question 17. Hint 2 says “Marginal cost is shown by a curve on the diagram,” while hint 3 identifies “the U-shaped average cost curve.” Together, these descriptions can also identify the cost curves before sibling question 18 asks what Y represents.",
+      "fix": "Hint 1: The shaded rectangle runs from the origin up to line x and across to the output at e. Start with area = height × width.\n\nHint 2: The shaded region is an area, so compare it with formulas that multiply a per-unit amount by total output. A curve itself cannot be the shaded rectangle.\n\nHint 3: At output e, the firm's cost per unit equals the rectangle's height. Which total is found by multiplying cost per unit by output?"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The exam tip says, \"a maximum price is set below equilibrium and causes shortages.\" This is too absolute. A maximum price can be set at or above equilibrium but will then be non-binding, as the solution's own ₦1,200 example shows. Only a binding maximum price is below equilibrium and produces a shortage under the usual demand and supply assumptions.",
+      "fix": "Exam tip: a binding maximum price is set below equilibrium and tends to cause a shortage. A binding minimum price is set above equilibrium and tends to cause a surplus. Link each control to its effect."
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The claims \"A point inside the curve stands for less output than a point on it\" and \"Beyond the curve is highest, on the curve comes next (points on the curve rank equal), and inside the curve is lowest\" are not generally true. A PPC does not give one numerical ranking of all bundles. An inside point may contain more of one good than a particular point on the curve, while two points on the curve are equally productively efficient but are not equal output bundles. The principle also incorrectly says that relative position \"shows how much output it stands for\". Position relative to the curve shows attainability and productive efficiency; the coordinates show the quantities of M and N. For option C<D, being inside versus outside is not by itself enough to establish the inequality, although the diagram does show D containing more of both goods than C.",
+      "fix": "Hint 2: The curve separates attainable combinations from unattainable ones. A point inside it is attainable but inefficient, while a point on it is attainable and productively efficient. For this question, two points on the curve are treated as equal in productive efficiency, not as identical combinations of M and N.\n\nA PPC shows the maximum attainable combinations of two goods with present resources and technology. A point inside the curve is attainable but inefficient, a point on the curve is attainable and efficient, and a point beyond it is currently unattainable. The coordinates show the quantities of M and N.\n\nWhy not the others:\nB. A=B: for this question, the equality means that A and B are equally productively efficient because both lie on the curve; they are not identical output combinations.\nC. A>C: true in the diagram because A has more M than C and about the same amount of N.\nD. C<D: true in the diagram because D has more M and more N than C.\n\nExam tip: first classify each point as inside, on or beyond the PPC. Inside means attainable but inefficient, on the curve means attainable and efficient, and beyond means currently unattainable. For a greater-than comparison, check the quantities shown on both axes rather than ranking points only by their position relative to the curve."
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The statements \"the whole curve has to move outward\" and \"what lets a country produce more of both goods, not just more of one of them\" are too broad. Productive capacity can expand more in one sector than another, causing the PPC to rotate or shift unevenly. The claim that better technology lets the same resources \"make more of both goods\" is also not true of technology that improves only one sector. The statement that saving helps \"only if the money is invested in new machines\" is a false absolute because productive investment can also fund education, infrastructure, research and other forms of capital. The explanation of \"more farming\" should also make clear that it means reallocating existing resources, since additional farming resources or improved farming productivity could expand capacity.",
+      "fix": "Hint 1: Reaching D means productive capacity must expand enough for the curve to pass through that point. Ask what increases the country's ability to produce, rather than merely changing its current output or the mix of goods produced.\n\nHint 2: The PPC expands when resources increase, improve or become more productive. Choosing to produce less or reallocating existing resources between the two goods changes the production point, not productive capacity.\n\nThe PPC shows the maximum attainable combinations of two goods with present resources and technology. Technological advancement can raise productivity and expand the combinations the country can produce, allowing a point such as D to lie on a new PPC.\n\nB. increasing saving: saving can support a future outward shift if it finances productive investment, but saving by itself does not immediately increase productive capacity.\nD. more farming: in this option, more farming means reallocating existing resources to produce more farm output. That changes the output mix and moves the production point along the PPC rather than shifting the curve."
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "fail",
+      "failed_checks": [
+        6
+      ],
+      "fact_error": false,
+      "notes": "The solution contains the forbidden markdown character “#” in “Answer: D. #20”, “The # in the options stands for the naira sign”, “A. #10”, “B. #15”, and “C. #18”. The naira sign should be written as ₦ throughout.",
+      "fix": "Answer: D. ₦20\n\nReplace “The # in the options stands for the naira sign, ₦, and Qr is the demand equation, Qd.” with “The symbol printed in the options is intended to be the naira sign, ₦, and Qr is the demand equation, Qd.”\n\nReplace the distractor labels with:\nA. ₦10: at ₦10, Qd = 17.5 units and Qs = 10 units, so demand is greater than supply.\nB. ₦15: at ₦15, Qd = 16.25 units and Qs = 12.5 units, still not equal; 15 is the number on the left of 15 = ¾p, not p itself.\nC. ₦18: at ₦18, Qd = 15.5 units and Qs = 14 units, still not equal."
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "fail",
+      "failed_checks": [
+        12
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 gives away the answer to sibling question 38 by stating “Using p = 20”. Hints must not reveal a sibling’s answer.",
+      "fix": "Hint 3: Use the equilibrium price you calculated in the previous question. In Qd = 20 − ¼p, find one quarter of that price and subtract it from 20. Be careful not to choose the price itself just because it also appears among the quantity options."
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "“it adds up goods and services that are sold for money and recorded” incorrectly makes sale for money a universal condition; national accounts also assign values to some non-market output. “Unpaid services, such as a parent cooking at home or a relative helping in the family shop without pay, produce real value but have no price attached, so they are not counted.” is not generally true of the family-shop example: the relative’s contribution may already be captured in the shop’s recorded output or value added, even without a separate wage.",
+      "fix": "Replace hint 1 with: “Think about how national income is measured: it records the value of final goods and services produced, but many unpaid household services are omitted because no market price is recorded.”\nReplace hint 2 with: “Unpaid household services, such as a parent cooking or caring for relatives at home, produce real value but are usually not assigned a market value in national income accounts, so they are left out.”"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "“For n values, it is the value in position (n + 1) ÷ 2.” is true only when n is odd. The exam tip repeats the error in “then use (n + 1) ÷ 2 to find the middle position.” For an even number of values, the median is the mean of the two middle values.",
+      "fix": "Replace the principle with: “The median is the middle value when the data are arranged in order. For an odd number n of values, it is the value in position (n + 1) ÷ 2. For an even number of values, it is the mean of the two middle values.”\nReplace the exam tip with: “Exam tip: for the median, first arrange the data in order. If n is odd, use (n + 1) ÷ 2 to find the middle position. If n is even, average the values in positions n ÷ 2 and (n ÷ 2) + 1. Taking the middle of the unordered list is a common mistake.”"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The hint says Pacioli’s book “first set out the double-entry system of keeping business records”, and the solution says “his book of 1494 first set out double-entry bookkeeping.” Double-entry bookkeeping existed before 1494, and Benedetto Cotrugli had described it in an earlier manuscript. Pacioli’s work is distinguished as the first printed exposition, not the first exposition without qualification.",
+      "fix": "Replace hint 3 with: “One of the names belongs to an Italian mathematician of the 1400s whose 1494 book contained the first printed exposition of double-entry bookkeeping. Which name is that?”\nReplace the opening paragraph with: “Luca Pacioli (spelt Paciolo in the question) was an Italian mathematician of the 1400s. He is often called the father of accounting because his 1494 book contained the first printed exposition of double-entry bookkeeping. The other three names are intended to refer to economists.”"
+    }
+  },
+  "failures": [
+    {
+      "span": "Q20-27",
+      "ok": false,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    }
+  ]
+}

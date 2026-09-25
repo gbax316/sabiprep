@@ -1,0 +1,140 @@
+{
+  "reviewer": "codex",
+  "year": 2024,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "fail",
+      "failed_checks": [
+        11
+      ],
+      "fact_error": false,
+      "notes": "The claim \"Agriculture employs the largest share of Nigeria's workers\" presents the syllabus treatment as an unqualified current fact. It must be scoped to what UTME Economics expects.",
+      "fix": "In the UTME Economics syllabus, agriculture is treated as Nigeria's largest employer of labour."
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The distractor explanation \"this means bringing inflation down, which comes from cutting spending or raising taxes, the opposite of a deficit\" is inaccurate and overbroad. Disinflation can result from monetary restraint or increased output as well as fiscal measures. Cutting spending or raising taxes may reduce a deficit without producing its opposite, a surplus.",
+      "fix": "C. De-inflationary: this means slowing the rate at which the general price level rises. Deficit financing generally raises total demand, so the syllabus treats it as inflationary rather than de-inflationary."
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "fail",
+      "failed_checks": [
+        12
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 says, \"A firm facing a flat line cannot: it must accept the market price.\" Following Hint 1's direction to line x, this identifies x as the firm's demand line, which is its average revenue curve and gives away sibling Question 17, \"X represents?\" Separately, the item supplies only \"Diagram: 2024_Q15-18.png\" and no required alt text.",
+      "fix": "Hint 2: In one market structure, every firm is too small to influence the price set by the whole market. Think about which option has that feature.\n\nDiagram alt text: Graph with P on the vertical axis and Qty on the horizontal axis. A horizontal line labelled x crosses point e, with a dashed vertical line from e to the Qty axis. One curve begins above line x, dips below it and rises to e; a second, shorter curve also rises to e. Both continue steeply towards the upper right near the label Y. The rectangle bounded by the axes, line x and the dashed line is shaded with diagonal strokes."
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "fail",
+      "failed_checks": [
+        12
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 says, \"Marginal cost is shown by a curve on the diagram, not by an area.\" Because Y labels the relevant curve and sibling Question 18 asks \"Y represents?\", this gives away that sibling's answer. Separately, the item supplies only \"Diagram: 2024_Q15-18.png\" and no required alt text.",
+      "fix": "Hint 2: The width is the quantity of output and the height is an amount per unit, so their product is a total amount. Use that relationship to identify what the shaded area represents.\n\nDiagram alt text: Graph with P on the vertical axis and Qty on the horizontal axis. A horizontal line labelled x crosses point e, with a dashed vertical line from e to the Qty axis. One curve begins above line x, dips below it and rises to e; a second, shorter curve also rises to e. Both continue steeply towards the upper right near the label Y. The rectangle bounded by the axes, line x and the dashed line is shaded with diagonal strokes."
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The statements \"two points on the same curve are treated as equal\" and \"Points on the curve are treated as equal\" are not properly scoped. Points A and B are equally productively efficient because both lie on the PPC, but they are not equal output bundles: A has more M, while B has more N. Without the efficiency qualifier, the teaching gives the student a false general rule.",
+      "fix": "Replace hint 2 with: \"On this graph, compare points by how much of M and N each one shows. A point with more of one good and no less of the other represents a larger output bundle. For option B, read A = B as equal productive efficiency: both points lie on the PPC, although they show different mixes of M and N.\"\n\nReplace the explanation for B with: \"B. A=B: true only if the equality refers to productive efficiency. A and B are both on the PPC, but they are different output bundles: A has more M, while B has more N.\"\n\nReplace the exam tip with: \"Exam tip: in 'which is wrong' questions on a PPC, first place each point inside, on or outside the curve, then compare the quantities of both goods. Points on the curve are equally productively efficient, but they are not equal output bundles. A point with more of one good and no less of the other represents a larger output bundle.\""
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": ""
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,231 @@
+{
+  "unit": "2024",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "demand.types",
+      "confidence": "clear",
+      "note": "Tests effect of a competitive good's price change on quantity demanded of a related good, not a coefficient, so demand.types over demand.elasticity."
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "agriculture.importance",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "bop.exchange-rate",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "bop.exchange-rate",
+      "confidence": "clear",
+      "note": "Import elasticity as condition for depreciation to protect industry; taxonomy explicitly routes this away from trade.protection."
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "agriculture.problems",
+      "confidence": "clear",
+      "note": "Rural-urban migration tested for its effect on food production, not as a population phenomenon, so agriculture.problems over population.size-growth."
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "trade.protection",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "business.finance",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "public-finance.budget-debt",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "consumer.indifference",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "production.producer-equilibrium",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "production.productivity",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "costs.short-long-run",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "money.nature",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "markets.perfect",
+      "confidence": "clear",
+      "note": "Options include oligopoly and duopoly per the taxonomy's scope rule, but the tested content and answer are about identifying the perfect competition diagram."
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "markets.profit-shutdown",
+      "confidence": "clear",
+      "note": "Same diagram set as Q15/17/18; answer is total cost, not profit or loss, see taxonomy finding."
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "demand.law",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "supply.law",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "national-income.measurement",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "tools.central-tendency",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "tools.central-tendency",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "tools.central-tendency",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "tools.dispersion",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "population.census",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "basics.meaning",
+      "confidence": "clear",
+      "note": "Outside both syllabi, placed per the taxonomy's scope rule."
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "organisations.others",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "public-finance.fiscal-policy",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "price.controls",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "financial.central-bank",
+      "confidence": "clear",
+      "note": "Outside both syllabi, placed per the taxonomy's scope rule."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "financial.types",
+      "confidence": "clear",
+      "note": "Outside both syllabi, placed per the taxonomy's scope rule."
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "basics.ppc",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "basics.ppc",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "basics.ppc",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "basics.scarcity-choice",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "price.equilibrium",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "price.equilibrium",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "demand.elasticity",
+      "confidence": "clear",
+      "note": ""
+    }
+  ],
+  "taxonomy_findings": [
+    {
+      "kind": "too-narrow",
+      "where": "markets.profit-shutdown",
+      "detail": "Covers line only names profit or loss area reading, but the one 2024 item it cites (Q16) tests reading the total cost area on the same diagram. Neither markets.profit-shutdown nor costs.concepts names diagram-based total cost reading, so the covers text should be widened to say cost, profit or loss area."
+    }
+  ],
+  "year": 2024,
+  "paper": 1,
+  "taxonomy_version": "1.0"
+}

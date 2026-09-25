@@ -29,6 +29,8 @@ Rules, each from something seen in the real files:
   q²/4πε₀r, which reads as (q²/4)πε₀r.
 * The box-drawing character U+2500 is used as a minus sign throughout the
   Mathematics file. It is read as U+2212, the minus sign.
+* "#" before a number is the naira sign, typed on a keyboard without one:
+  "#20" is ₦20.
 """
 
 import re
@@ -213,4 +215,7 @@ def math_text(snippet, ns_decls):
 
 
 def normalise(text):
-    return text.replace('─', MINUS)
+    text = text.replace('─', MINUS)
+    # Naira typed as "#": keyboards have no naira key. 89 times across the
+    # UTME files, always before a number, and "#" is used for nothing else.
+    return re.sub(r'#\s?(?=\d)', '₦', text)
