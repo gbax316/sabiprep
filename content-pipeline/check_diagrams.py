@@ -22,6 +22,7 @@ import argparse, io, json, os, re, subprocess, sys, tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from common import HERE, load_config, load_items, unit_name
+from lanes import second_family
 
 SCHEMA = os.path.join(HERE, 'schemas', 'diagram-check.schema.json')
 INK = re.compile(r'#E2E8F0', re.I)
@@ -31,8 +32,8 @@ PREAMBLE = """You are checking a redrawn exam diagram against the original, for 
 Image 1 is the ORIGINAL, scanned from the paper. Image 2 is the REDRAW, rendered black on white for comparison (in the app it is light ink on a dark background; ignore that difference).
 
 Check the drawing:
-- D1: an element the questions depend on is missing from the redraw, or the redraw adds one the original does not have. Elements are labels, letters, numerals, arrows, lines, shapes, scale marks, shading that carries meaning.
-- D2: a printed label, letter, number or word differs from the original, or is unreadable in the redraw.
+- D1: an element the questions depend on is missing from the redraw, or the redraw adds one the original does not have. Elements are labels, letters, numerals, arrows, lines, shapes, scale marks, shading that carries meaning. Stray marks count too: fragments of a caption, page number or neighbouring text caught at an edge of the redraw.
+- D2: a printed label, letter, number or word differs from the original, or is unreadable in the redraw. Compare every label character by character, including its case and any subscript: a label that looks close is not good enough.
 - D3: geometry is distorted enough to change an answer: a relative length, position, angle, proportion, or which label points at which part.
 - D4: the redraw is too cluttered, broken or faint to read at tablet size.
 Ignore differences that no question could depend on: paper texture, scan noise, slightly smoother curves, line weight.
@@ -80,25 +81,16 @@ def check_one(d, cfg, exam, workdir):
               + (f"\nShared stem: {d['passage']}\n" if d['passage'] else '')
               + f"\nThe questions it serves:\n{qs}\n\nAlt text:\n{d['alt'] or '(none written)'}\n\n"
               + f'Return one entry with stem "{d["stem"]}".')
-    with tempfile.NamedTemporaryFile('w+', suffix='.json', delete=False, encoding='utf8') as tf:
-        last = tf.name
-    cmd = ['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', SCHEMA,
-           '--output-last-message', last, '-i', d['original'], '-i', png]
-    proc = None
+    data, lane = second_family(prompt, SCHEMA, [d['original'], png])
+    if data is None:
+        return {'ok': False, 'stem': d['stem'], 'error': json.dumps(lane)[:600], 'lane': lane}
     try:
-        proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True, encoding='utf8', timeout=900)
-        data = json.loads(open(last, encoding='utf8').read().strip())
         r = next(x for x in data['diagrams'] if x['stem'] == d['stem'])
-        r['svg'] = os.path.basename(d['svg'])
-        return {'ok': True, 'result': r}
     except Exception as e:
-        return {'ok': False, 'stem': d['stem'], 'error': f'{type(e).__name__}: {e}',
-                'stderr_tail': (proc.stderr or '')[-600:] if proc else ''}
-    finally:
-        try:
-            os.unlink(last)
-        except OSError:
-            pass
+        return {'ok': False, 'stem': d['stem'], 'error': f'{type(e).__name__}: {e}', 'lane': lane}
+    r['svg'] = os.path.basename(d['svg'])
+    r['lane'] = 'codex' if lane['family'] == 'codex' else f"claude-{lane['model']}"
+    return {'ok': True, 'result': r, 'lane': lane}
 
 
 def main():
@@ -143,11 +135,12 @@ def main():
     workdir = os.path.join(HERE, 'work', a.slug, u, 'diagram-check')
     os.makedirs(workdir, exist_ok=True)
 
-    results, failures = {}, []
+    results, failures, lanes = {}, [], []
     with ThreadPoolExecutor(max_workers=a.parallel) as ex:
         futs = {ex.submit(check_one, d, cfg, exam, workdir): d for d in todo}
         for fut in as_completed(futs):
             r = fut.result()
+            lanes.append(r.get('lane', {}))
             if r['ok']:
                 x = r['result']
                 results[x['stem']] = x
@@ -159,7 +152,8 @@ def main():
 
     path = os.path.join(ddir, f'check.{u}.{a.label}.json')
     json.dump({'checker': 'codex', 'unit': u, 'results': dict(sorted(results.items())),
-               'no_svg': missing, 'failures': failures},
+               'no_svg': missing, 'failures': failures, 'lanes': lanes,
+               'fallback_cost_usd': round(sum(l.get('cost_usd', 0) for l in lanes), 4)},
               open(path, 'w', encoding='utf8'), indent=2, ensure_ascii=False)
     bad = [s for s, r in results.items() if r['drawing'] == 'fail' or r['alt'] == 'fail']
     print(f"{a.slug} {u}: {len(results)} checked, {len(bad)} failed, {len(missing)} with no SVG, "

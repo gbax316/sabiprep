@@ -89,6 +89,23 @@ def main():
             if 'size' in r:
                 dims[os.path.splitext(r['source'])[0]] = r['size']
 
+    # Questions that share only a diagram have no shared stem, so they had no
+    # group key and no app could keep them together. Give each such diagram a
+    # group key of its own, so every group, text or diagram, travels as one.
+    serves = {}
+    for i in items.values():
+        for rel in i.get('diagram_files') or []:
+            serves.setdefault(rel, []).append(i['q_number'])
+
+    def group_key(it):
+        if it['passage_id']:
+            return it['passage_id']
+        for rel in it.get('diagram_files') or []:
+            if len(serves.get(rel, [])) > 1:
+                stem = os.path.splitext(os.path.basename(rel))[0]
+                return f"{a.slug}-{u}-{stem}".replace('_', '-').lower()
+        return ''
+
     rows, held, uploads = [], [], {}
     for q in sorted(items):
         it, f = items[q], final.get(str(q), {})
@@ -148,7 +165,7 @@ def main():
             'correct_answer': f['answer'], 'solution': t['solution'],
             'hint': t['hint1'], 'hint1': t['hint1'], 'hint2': t['hint2'], 'hint3': t['hint3'],
             'further_study_links': '', 'difficulty': t['difficulty'],
-            'passage': it['passage_text'] or '', 'passage_id': it['passage_id'] or '',
+            'passage': it['passage_text'] or '', 'passage_id': group_key(it),
             'question_image_url': img, 'image_alt_text': alt,
             'image_width': w, 'image_height': h,
         })

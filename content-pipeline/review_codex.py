@@ -20,6 +20,7 @@ import argparse, json, os, subprocess, sys, tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from common import load_config, load_items, taxonomy_path, unit_name
+from lanes import second_family
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SCHEMA = os.path.join(HERE, 'schemas', 'review-batch.schema.json')
@@ -81,23 +82,14 @@ def run_batch(batch, items, final, cfg, diagram_root, standard, placements):
               + '\n\n'.join(block(items[t['q_number']], t, final[str(t['q_number'])]['answer'],
                                       placements(t)) for t in batch))
 
-    with tempfile.NamedTemporaryFile('w+', suffix='.json', delete=False, encoding='utf8') as tf:
-        last = tf.name
-    cmd = ['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only',
-           '--output-schema', SCHEMA, '--output-last-message', last]
-    for p in images:
-        cmd += ['-i', p]
+    data, lane = second_family(prompt, SCHEMA, images)
+    if data is None:
+        return {'ok': False, 'error': json.dumps(lane)[:600], 'lane': lane}
     try:
-        subprocess.run(cmd, input=prompt, capture_output=True, text=True, encoding='utf8', timeout=900)
-        data = json.loads(open(last, encoding='utf8').read().strip())
-        return {'ok': True, 'reviews': {r['q_number']: r for r in data['reviews']}}
+        tag = 'codex' if lane['family'] == 'codex' else f"claude-{lane['model']}"
+        return {'ok': True, 'lane': lane, 'reviews': {r['q_number']: {**r, 'lane': tag} for r in data['reviews']}}
     except Exception as e:
-        return {'ok': False, 'error': f'{type(e).__name__}: {e}'}
-    finally:
-        try:
-            os.unlink(last)
-        except OSError:
-            pass
+        return {'ok': False, 'error': f'{type(e).__name__}: {e}', 'lane': lane}
 
 
 def main():
@@ -132,11 +124,12 @@ def main():
     run_cfg = {'subject': cfg['subject'], 'exam': next(iter(items.values()))['exam_brand']}
 
     batches = [teaching[i:i + a.batch] for i in range(0, len(teaching), a.batch)]
-    results, failures = {}, []
+    results, failures, lanes = {}, [], []
     with ThreadPoolExecutor(max_workers=a.parallel) as ex:
         futs = {ex.submit(run_batch, b, items, final, run_cfg, diagram_root, standard, placements): b for b in batches}
         for fut in as_completed(futs):
             r, b = fut.result(), futs[fut]
+            lanes.append(r.get('lane', {}))
             span = f"Q{b[0]['q_number']}-{b[-1]['q_number']}"
             if r['ok']:
                 results.update(r['reviews'])
@@ -147,7 +140,8 @@ def main():
 
     path = os.path.join(out, f'{a.slug}.review.{u}.{a.label}.json')
     json.dump({'reviewer': 'codex', 'year': a.year, 'paper': a.paper,
-               'reviews': {str(k): v for k, v in sorted(results.items())}, 'failures': failures},
+               'reviews': {str(k): v for k, v in sorted(results.items())}, 'failures': failures,
+               'lanes': lanes, 'fallback_cost_usd': round(sum(l.get('cost_usd', 0) for l in lanes), 4)},
               open(path, 'w', encoding='utf8'), indent=2, ensure_ascii=False)
 
     passed = sum(1 for r in results.values() if r['verdict'] == 'pass')

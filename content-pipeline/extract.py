@@ -108,14 +108,21 @@ def html_unescape(s):
 
 
 def year_header(text, subject_words):
-    """A year block opens with a line like '2019 WASSCE BIOLOGY QUESTIONS'."""
-    m = re.match(r'^(20(?:1[0-9]|2[0-9]))\s+(WASSCE|WAEC|UTME|JAMB)\b', text, re.I)
+    """A year block opens with a line like '2019 WASSCE BIOLOGY QUESTIONS'.
+    The WAEC Mathematics file names the exam once, then heads each later year
+    '2024 OBJECTIVE QUESTIONS'; those return no exam name, and the caller keeps
+    the one it already has. Missing that form once folded ten years of the file
+    into its first."""
+    m = re.match(r'^(20(?:1[0-9]|2[0-9]))\s+(WASSCE|WAEC|UTME|JAMB|OBJECTIVE)\b', text, re.I)
     if not m:
         return None
     # Guard against a question that merely starts with a year.
     if re.match(r'^\d+\.', text):
         return None
-    return int(m.group(1)), m.group(2).upper()
+    # One name per exam, whichever the typist used.
+    brand = m.group(2).upper()
+    brand = {'WAEC': 'WASSCE', 'JAMB': 'UTME', 'OBJECTIVE': None}.get(brand, brand)
+    return int(m.group(1)), brand
 
 
 def stem_range(text):
@@ -317,7 +324,8 @@ def extract(cfg):
         text = paras[i]
         yh = year_header(text, subject)
         if yh:
-            year, exam_brand = yh
+            year, brand = yh
+            exam_brand = brand or exam_brand
             paper_count[year] = paper_count.get(year, 0) + 1
             paper = paper_count[year]
             headers.append({'para': i, 'year': year, 'paper': paper, 'text': text[:60]})

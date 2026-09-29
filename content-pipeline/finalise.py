@@ -43,8 +43,12 @@ def main():
         q = int(k)
         rec = {'q_number': q}
         if v['verdict'] == 'verified':
+            # The second lane is Codex unless Codex was out of usage, when Claude
+            # stood in (lanes.py). Say which, so a same-family key is visible.
+            lane = (v.get('codex') or {}).get('lane', 'codex')
             rec.update(state='keyed', answer=v['answer'],
-                       evidence='cross-family agreement, both certain')
+                       evidence=('cross-family agreement, both certain' if lane == 'codex'
+                                 else f'same-family agreement ({lane} stood in for Codex), both certain'))
         elif k in rulings:
             r = rulings[k]
             if r['ruling'] == 'key':

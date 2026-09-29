@@ -1,0 +1,30 @@
+{
+  "checker": "codex",
+  "unit": "2024",
+  "results": {
+    "2024_Q34-36": {
+      "stem": "2024_Q34-36",
+      "drawing": "fail",
+      "drawing_checks": [
+        "D2"
+      ],
+      "drawing_notes": "Vertical axis label at the top-left of the redraw reads 'M1' (a second, numeral-like stroke is drawn right after the M) where the original clearly prints only 'M'. This is a printed-label mismatch a student reading the tablet version would see. Fix: redraw the vertical axis label as a single 'M', matching the original and the alt text.",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2024_Q34-36.svg",
+      "lane": "claude-sonnet"
+    }
+  },
+  "no_svg": [],
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2218,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) Start hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.c"
+    }
+  ],
+  "fallback_cost_usd": 0.2218
+}

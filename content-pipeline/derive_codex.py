@@ -17,6 +17,7 @@ import argparse, json, os, subprocess, sys, tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from common import load_config, unit_name
+from lanes import second_family
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SCHEMA = os.path.join(HERE, 'schemas', 'answers-batch.schema.json')
@@ -78,33 +79,18 @@ def run_batch(batch, cfg, diagram_root):
     prompt = (PREAMBLE.format(exam=cfg['exam'], subject=cfg['subject'])
               + img_note + '\n' + '\n\n'.join(block(it) for it in batch))
 
-    cmd = ['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only',
-           '--output-schema', SCHEMA]
-    for p in images:
-        cmd += ['-i', p]
-
-    with tempfile.NamedTemporaryFile('w+', suffix='.json', delete=False, encoding='utf8') as tf:
-        last = tf.name
-    cmd += ['--output-last-message', last]
-
+    data, lane = second_family(prompt, SCHEMA, images)
+    if data is None:
+        return {'ok': False, 'error': json.dumps(lane)[:600], 'lane': lane}
     try:
-        proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True,
-                              encoding='utf8', timeout=900)
-        raw = open(last, encoding='utf8').read().strip()
-        data = json.loads(raw)
-        got = {a['q_number']: a for a in data['answers']}
-        want = {it['q_number'] for it in batch}
-        return {'ok': True, 'answers': got,
-                'missing': sorted(want - set(got)),
-                'extra': sorted(set(got) - want)}
+        got = {a['q_number']: {**a, 'lane': lane['family'] if lane['family'] == 'codex'
+                               else f"claude-{lane['model']}"} for a in data['answers']}
     except Exception as e:
-        return {'ok': False, 'error': f'{type(e).__name__}: {e}',
-                'stderr_tail': (proc.stderr[-600:] if 'proc' in dir() else '')}
-    finally:
-        try:
-            os.unlink(last)
-        except OSError:
-            pass
+        return {'ok': False, 'error': f'{type(e).__name__}: {e}', 'lane': lane}
+    want = {it['q_number'] for it in batch}
+    return {'ok': True, 'answers': got, 'lane': lane,
+            'missing': sorted(want - set(got)),
+            'extra': sorted(set(got) - want)}
 
 
 def main():
@@ -133,7 +119,7 @@ def main():
         items = sorted([it for it in all_items if it['year'] == year and it.get('paper', 1) == paper
                         and (only is None or it['q_number'] in only)], key=lambda x: x['q_number'])
         batches = [items[i:i + a.batch] for i in range(0, len(items), a.batch)]
-        results, failures = {}, []
+        results, failures, lanes = {}, [], []
         out = os.path.join(HERE, 'out', f'{a.slug}.codex.{u}.json')
         if only is not None and os.path.exists(out):
             prior = json.load(open(out, encoding='utf8'))
@@ -144,6 +130,7 @@ def main():
             for fut in as_completed(futs):
                 r = fut.result()
                 b = futs[fut]
+                lanes.append(r.get('lane', {}))
                 span = f"Q{b[0]['q_number']}-{b[-1]['q_number']}"
                 if r['ok']:
                     results.update(r['answers'])
@@ -155,7 +142,8 @@ def main():
 
         json.dump({'deriver': 'codex', 'year': year, 'paper': paper,
                    'answers': {str(k): v for k, v in sorted(results.items())},
-                   'failures': failures}, open(out, 'w', encoding='utf8'),
+                   'failures': failures, 'lanes': lanes,
+                   'fallback_cost_usd': round(sum(l.get('cost_usd', 0) for l in lanes), 4)}, open(out, 'w', encoding='utf8'),
                   indent=2, ensure_ascii=False)
         print(f"{u}: {len(results)}/{len(items)} derived -> {os.path.basename(out)}", flush=True)
 

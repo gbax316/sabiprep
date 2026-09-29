@@ -616,6 +616,14 @@ def need_author(ctx):
     rep = {r['source']: r for r in jload(os.path.join(ctx.ddir, 'redraw-report.json'), [])}
     th, out = PIPE['trace_min_fidelity'], {}
     for stem, d in unit_diagrams(ctx).items():
+        if ctx.cfg.get('diagram_route') == 'author':
+            # Schematic subjects: typed labels do not survive tracing (an "x"
+            # came out as "r", an "M" as a broken glyph, a caption fragment
+            # rode along), so every diagram is drawn by hand and the trace is
+            # only a coordinate guide.
+            out[stem] = ('the diagrams in this subject carry typed labels, which tracing damages, so every one is drawn '
+                         'by hand; the trace is supplied only as a guide to positions')
+            continue
         r = rep.get(os.path.basename(d['rel']))
         if not r or 'error' in r:
             out[stem] = 'the trace failed to run'
@@ -841,6 +849,16 @@ def blocked_reason(cfg, unit):
     return None
 
 
+def fallback_cost(ctx, stage):
+    """Claude spend in a second-family stage where Codex was out (lanes.py)."""
+    files = {'derive': [ctx.out('codex')],
+             'review': [os.path.join(OUT, f'{ctx.slug}.review.{ctx.unit}.a.json')],
+             'recheck': [os.path.join(OUT, f'{ctx.slug}.review.{ctx.unit}.rereview.json')],
+             'diagram-check': [check_file(ctx, 'a')],
+             'diagram-recheck': [check_file(ctx, 'recheck')]}.get(stage, [])
+    return sum((jload(f) or {}).get('fallback_cost_usd', 0) for f in files)
+
+
 def run_unit(slug, unit, st, start=None):
     ctx = Ctx(slug, unit, st)
     u = st['units'].setdefault(unit, {'status': 'pending', 'stages': {}})
@@ -864,6 +882,7 @@ def run_unit(slug, unit, st, start=None):
             save_state(st)
             ctx.log(f'{stage} FAILED: {e}')
             return False
+        ctx.cost += fallback_cost(ctx, stage)
         u['stages'][stage] = {'status': 'done', 'at': now(), 'summary': summary,
                               'seconds': int(time.time() - t0), 'cost_usd': round(ctx.cost, 2)}
         save_state(st)

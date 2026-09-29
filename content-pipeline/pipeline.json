@@ -20,5 +20,7 @@
   "trace_min_fidelity": 0.95,
   "style_scan_env": "STYLE_SCAN",
   "style_scan_default": "C:/Users/orezi/BaxAIOS/personal-os/os-references/scripts/style-scan.py",
-  "supabase_env_file": "../.env.local"
+  "supabase_env_file": "../.env.local",
+  "codex_fallback_model": "sonnet",
+  "codex_fallback_note": "When Codex is out of usage, the second-family lane runs on Claude with this model, a different model from the Opus author. Results are tagged with the lane, and the gate shows how many were same-family (Orezi, 2026-09-29)."
 }
