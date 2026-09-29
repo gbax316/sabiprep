@@ -1,0 +1,62 @@
+{
+  "reviewer": "codex",
+  "year": 2024,
+  "paper": 1,
+  "reviews": {
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3356,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.3356
+}

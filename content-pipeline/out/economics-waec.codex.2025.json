@@ -1,0 +1,491 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Choice is the basic economic problem that arises because resources are scarce relative to unlimited human wants. Price and quality differences (A, B) and differing tastes (D) are secondary factors that do not by themselves force choice; scarcity of resources is the root cause.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The opportunity cost of 1 bag of maize is the 5 bags of rice sacrificed, which is a large sacrifice, so maize has the higher opportunity cost. Rice's opportunity cost per bag is only 1/5 of a bag of maize, far smaller, so option A is wrong.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Land being 'fixed in supply' refers to the fact that its total surface area is constant and cannot be increased or decreased by human effort. Uniform quality (A) and unlimited uses (B) are not true of land, and 'free gift of nature' (C) describes a different characteristic (origin, not fixity of supply).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A free market rewards entrepreneurs who innovate with higher profits, giving strong incentives for innovation. It does not guarantee full employment or income equality, and public goods are typically under-provided by free markets due to the free-rider problem, ruling out A, C and D.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In a command (centrally planned) economy, the state or central planning committee sets wages as part of overall resource allocation, rather than leaving it to employers, unions, or market forces. Options A, B and D describe wage determination mechanisms typical of market or mixed economies, not command economies.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The diagram shows a single bar subdivided into three distinct segments (hatched, blank, dotted) stacked on top of one another, which is the defining feature of a component (subdivided) bar chart. A multiple bar graph or three-column bar graph would show several separate bars side by side rather than one bar split into components, ruling out A and D.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A rational consumer maximizes satisfaction by buying more of a good when its price falls (or income rises), not when price rises; buying more at a higher price contradicts the law of demand and rational utility-maximizing behaviour. Equating marginal utility to price (A) and buying more as income rises for a normal good (B) are both consistent with rational consumer behaviour, so they are not the exception.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Goods with negative income elasticity of demand are, by definition, inferior goods, since demand for them falls as income rises. Normal goods (B) have positive income elasticity, while substitutes and complements (C, D) relate to cross-price elasticity, not income elasticity, so they do not fit.",
+      "solvable": true,
+      "issue": "The prompt states options could not be read from the source, yet options A-D are nonetheless listed in the question text; the answer is based on those listed options, but their fidelity to the original paper is uncertain.",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A box of matches is a low-priced necessity that takes up a negligible share of a rich consumer's income, so demand for it barely changes when price changes, making it price inelastic. It would not be price elastic, perfectly elastic, or notably income elastic given its trivial cost relative to income.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A price elasticity of demand of 0.25 is well below 1, indicating inelastic demand, which typically occurs when a good has few or no close substitutes so consumers cannot easily switch away when price rises. Having many close substitutes (A) or being a luxury (B) would instead produce elastic demand (elasticity greater than 1).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "A necessary good with no substitute has very inelastic demand, so quantity demanded barely changes with price, making the curve tend toward vertical (perfectly inelastic). The distractor 'negatively sloped' merely restates the general law of demand and does not capture the special inelasticity implied by 'necessity with no substitute'.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A rightward shift of the supply curve means supply has increased at every price, which happens when production costs fall, such as through a subsidy on farm equipment. Worsening weather or fewer farmers would shift supply left (decrease), and a price increase is a movement along the curve, not a shift of it.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Price elasticity of supply depends on producers' conditions such as availability of labour, cost of production, and government policy (taxes/subsidies), all of which affect how easily output can be adjusted. Consumers' income level affects demand elasticity, not supply.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "",
+      "solvable": false,
+      "issue": "The option list is garbled: option A's letter/label is missing and merged into the question stem ('...may cause supply of goods to decrease. B. more firms...'), so it cannot be reliably determined where the stem ends and option A begins.",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Once marginal utility turns negative, each additional unit consumed subtracts from total utility, so total utility falls. It only stays constant or peaks when marginal utility is exactly zero, not negative.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Consumers maximise satisfaction by buying up to the point where price equals marginal utility; if price exceeds marginal utility, they are overconsuming relative to that optimum, so they cut back, which raises marginal utility due to the law of diminishing marginal utility. Buying more would push marginal utility even lower, worsening the mismatch.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A price fixed above equilibrium is a price floor, which guarantees producers a higher-than-market price and is used to encourage them to keep producing or expand output. It works against consumers, who face higher prices, ruling out the 'favour consumers' option.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A perfectly elastic demand curve is horizontal, so price is fixed at that level regardless of quantity traded. An increase in supply (rightward shift) then only raises the equilibrium quantity while the equilibrium price stays constant at the horizontal demand level.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "In the short run, at least one factor (typically capital/fixed assets like factory buildings) is fixed, so output can only be raised by using more of the variable factors, such as raw materials. Increasing fixed assets or building a new factory are long-run actions.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Economies from using larger, more efficient machinery or plant are technical economies of scale, arising from improved production processes. Managerial, financial, and marketing economies relate to administration, capital raising, and distribution/advertising respectively, not the plant itself.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The law of variable proportions states that as more units of a variable factor are added to a fixed factor, marginal product first rises (increasing returns) and later falls (diminishing returns). Total product does not rise continuously since it eventually falls, ruling out C.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In the diagram, X is the steepest curve (exits the chart earliest, top-left) and is the marginal cost (MC) curve, which cuts the other two curves from below at their minimum points. Z is the lowest, flattest U-shaped curve that stays below Y throughout and slowly converges toward it as output rises, which is characteristic of the average variable cost (AVC) curve relative to average cost (Y), since AC = AVC + AFC and AFC shrinks with output.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Equilibrium (profit-maximizing) output for a firm under perfect competition occurs where MC = MR = AR = P. Curve X (MC) is the steepest curve and crosses the horizontal AR=MR price line at output Q, which is the first crossing point after R (the shutdown point where MC meets the minimum of AVC).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Since average cost (Y) equals average variable cost (Z) plus average fixed cost, the vertical gap between curves Y and Z at any output represents average fixed cost. This gap narrows as output increases because average fixed cost falls as output rises, matching the converging pattern of Y and Z in the diagram.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "If minimum average variable cost exceeds average revenue (price), the firm cannot even cover its variable costs at any output level, so it minimizes losses by shutting down completely rather than continuing to produce. Employing more labour or altering worker pay would not resolve a price below minimum AVC.",
+      "solvable": true,
+      "issue": "Option C is missing from the question text (options jump from B directly to D), but the correct answer B is unambiguous regardless of the missing option's content.",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A monopolist's price equals average revenue by definition (P = AR), so it can never be lower or higher than AR, ruling out A and C. Because the monopolist faces a downward-sloping demand curve, marginal revenue is always less than price/average revenue, so price is always higher than marginal revenue.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A business becomes a separate legal person (distinct from its owners) only when it is recognized in law as a corporate entity, such as a registered company. Sharing liabilities with owners or being governed by a partnership deed does not confer separate legal personality.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A debenture is a form of loan capital, so its holders are creditors of the company, not owners, and they earn fixed interest regardless of profit, ruling out D. It is not a share and is typically issued only by companies, not all business organizations, ruling out A and C.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Reluctance to relocate to another town for a job due to family ties is a barrier to geographical mobility of labour, which concerns movement between locations. Occupational and vertical/horizontal mobility relate to changing job type or rank, not location.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A worker losing a job because their skills (e.g. lack of computer literacy) no longer match the requirements of the job is an example of structural unemployment, caused by a mismatch between workers' skills and available jobs. This differs from frictional (temporary job-search) or cyclical (economic downturn) unemployment.",
+      "solvable": true,
+      "issue": "Options C and D in the question text are run together without clear separation, but the intended options and correct answer (structural unemployment) are still identifiable.",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Peasant farming is small-scale, traditional subsistence farming relying mainly on family labour and simple tools, so capital-intensive methods are least applied there. Plantation, state, and commercial farming are all large-scale operations that typically invest in machinery and equipment.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Diversification means spreading production and exports across several sectors and products rather than depending on one primary commodity, reducing vulnerability to price shocks. Option A describes the opposite (mono-product dependence), which diversification aims to correct.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Weight-losing industries (e.g. sugar milling, timber processing) are sited near the raw material source to minimise the cost of transporting bulky inputs, since the finished product weighs much less than the raw material. Siting near the market would raise transport costs unnecessarily since the raw material is what is bulky, not the finished product.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Pensions are transfer payments, not payments for current productive activity, so including them in national income overstates the true value of output produced. The value-added method (C) actually prevents overstatement by avoiding double counting, while subsistence output (B) is typically under-recorded, causing understatement rather than overstatement.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "National income figures do not reveal what goods and services actually make up the output, so a rising figure may hide a shift toward capital or military goods rather than consumer welfare, making it a poor standard-of-living indicator. Options A, B and D describe conditions that are simply untrue in practice and are not the standard textbook limitation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A contraction in money supply makes money scarcer relative to goods, so each unit of money can command more goods, i.e. the value of money rises (and price level falls). Option C is the opposite effect and would occur with an expansion, not a contraction, of money supply.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Inflation raises domestic prices relative to foreign prices, making exports less competitive and imports relatively cheaper, which worsens the balance of payments. Borrowers (A) actually benefit from inflation since they repay debts in depreciated currency, so that option describes a positive rather than negative effect.",
+      "solvable": true,
+      "issue": "Sales revenue and dividends could nominally rise under inflation, but balance of payments is the standard textbook answer for a genuinely negative effect.",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The precautionary motive is the desire to hold money to meet unforeseen expenses or emergencies, so a high degree of uncertainty increases this motive. A high interest rate (A) instead discourages holding idle money in favour of interest-bearing assets.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Promissory notes are credit instruments (IOUs) representing a promise to pay, not generally accepted media of exchange, so they are not a form of money. Bank notes, current account deposits, and fiat coins are all widely accepted as legal or customary means of payment.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Shareholders' funds represent the bank's own capital, a source of funds and therefore a liability/equity item on the balance sheet, not an asset. Loans, buildings, and equipment are all things of value owned by the bank and are correctly classified as assets.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A deficit budget means planned expenditure exceeds expected revenue, so revenue is lower than proposed expenditure (option B, despite the typo 'Tover'). Option A describes a surplus budget, and C describes a balanced budget, neither of which is a deficit.",
+      "solvable": true,
+      "issue": "Option B is garbled ('Tover' instead of 'Lower') but the intended meaning is unambiguous from context.",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "A tax expressed as a percentage rate (10%) is ad valorem, since it is charged as a proportion of the commodity's value rather than a fixed sum per unit, which is what defines a specific tax. The wording 'per unit' is imprecise, but the percentage figure points to ad valorem taxation.",
+      "solvable": true,
+      "issue": "The phrase 'flat tax rate...levied per unit' mixes ad valorem (percentage) and specific (per unit) tax language, making the question slightly ambiguous between A and D.",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Tax avoidance is the legal use of loopholes in tax law to reduce one's tax liability. Options A and D describe tax evasion, which is illegal concealment or escape from taxation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Indirect taxes (e.g., VAT, customs and excise duties) are the major and most reliable revenue source for developing country governments due to ease of collection and broad tax base. Royalties, grants/loans, and asset sales are less stable and less substantial sources.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Long-term investment inflows (e.g., foreign direct investment, portfolio investment) are recorded in the capital account section of the balance of payments. The current account records trade in goods/services and income flows, not capital investment.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "From the table, tax system R rises from 10% at $100 to 40% at $500 to 70% at $1000, meaning the tax rate increases consistently as income rises, which is the defining feature of a progressive tax. Q is constant (proportional) and T falls as income rises (regressive), while S does not follow a consistent pattern.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Dumping (selling goods below cost/market price abroad) undercuts local producers in the importing country, forcing them out of business and causing unemployment. It discourages rather than increases local production (ruling out C) and does not raise wages or tax revenue.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Reducing or removing export duties makes exports cheaper and more competitive, boosting export earnings and correcting a persistent balance of payments deficit. Revaluing the currency would make exports more expensive (worsening the deficit), while using reserves or receiving gifts merely finances the deficit temporarily without correcting it.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Economic integration requires member nations to cede some independence (e.g., in trade and monetary policy) to achieve common goals, so 'complete independence of each nation' is not a benefit of integration. The other options (variety of goods, free factor mobility, larger market size) are recognized benefits.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "OPEC controls global oil supply mainly by setting production quotas for its member countries, limiting how much crude oil each can produce. It does not buy up excess oil, expel members, or use legal action as supply-control tools.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1186,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1074,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2012,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1049,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1093,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.6414
+}

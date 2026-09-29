@@ -1,0 +1,167 @@
+{
+  "slug": "economics-waec",
+  "subject": "Economics",
+  "gate": {
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T14:29:49",
+    "note": ""
+  },
+  "units": {
+    "2025": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T13:26:42",
+          "summary": "50/50 codex, 50/50 claude",
+          "seconds": 463,
+          "cost_usd": 1.31
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T13:26:43",
+          "summary": "agreed-soft 7, unsolvable 4, verified 39",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T13:28:57",
+          "summary": "10 ruled: defective 3, key 7",
+          "seconds": 133,
+          "cost_usd": 0.44
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T13:28:58",
+          "summary": "defective 4, keyed 46",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T13:32:51",
+          "summary": "clear 44, nofit 1, overlap 1; 2 taxonomy findings",
+          "seconds": 233,
+          "cost_usd": 0.49
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T13:40:39",
+          "summary": "46 written in 2 part(s); answer challenges none; style scan: REVIEW (5 across 4 location(s))",
+          "seconds": 467,
+          "cost_usd": 2.37
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T13:55:08",
+          "summary": "46 reviewed, 6 fail, fact errors none",
+          "seconds": 869,
+          "cost_usd": 2.2
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T14:01:34",
+          "summary": "9 accepted, 2 rejected; style scan: REVIEW (5 across 4 location(s))",
+          "seconds": 385,
+          "cost_usd": 1.76
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T14:05:57",
+          "summary": "7 changed items re-reviewed, 0 still fail ",
+          "seconds": 263,
+          "cost_usd": 0.32
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T14:05:57",
+          "summary": "every changed item passed",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T14:06:10",
+          "summary": "3 diagrams, 3 traced now, 3 need authoring ['2025_Q22-24', '2025_Q46', '2025_Q6']",
+          "seconds": 13,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T14:07:54",
+          "summary": "3 written, 0 already had alt text",
+          "seconds": 103,
+          "cost_usd": 0.18
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T14:10:09",
+          "summary": "authored ['2025_Q22-24', '2025_Q46', '2025_Q6']",
+          "seconds": 134,
+          "cost_usd": 1.2
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T14:29:36",
+          "summary": "3 checked, failed none",
+          "seconds": 1166,
+          "cost_usd": 0.48
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T14:29:36",
+          "summary": "nothing failed",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T14:29:36",
+          "summary": "re-checked none; not passing none",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T14:29:47",
+          "summary": "PREVIEW (no image base set): economics-waec.2025.PREVIEW.csv, 4 held, 2 pre-flight flags; style scan: REVIEW (8 across 7 location(s))",
+          "seconds": 10,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T14:29:49",
+          "summary": "economics-waec.2025.preview.html",
+          "seconds": 1,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 8,
+          "why": "defective",
+          "detail": "As transcribed, the options object is empty and all four options sit inside the stem, so there is no"
+        },
+        {
+          "q_number": 9,
+          "why": "defective",
+          "detail": "As transcribed, options B, C and D are merged into option B's text, so option C does not exist as a "
+        },
+        {
+          "q_number": 14,
+          "why": "defective",
+          "detail": "The option list is garbled: option A's letter/label is missing and merged into the question stem ('."
+        },
+        {
+          "q_number": 30,
+          "why": "defective",
+          "detail": "As transcribed, options B, C and D are merged into option B's text, so option C does not exist as a "
+        }
+      ]
+    }
+  },
+  "cost_usd": 10.75
+}

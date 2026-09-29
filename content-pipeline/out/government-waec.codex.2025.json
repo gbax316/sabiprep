@@ -1,0 +1,491 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Voter turnout and civic engagement represent the active, ongoing participation of citizens that sustains democratic government, making it the best fit for 'live blood of democracy'. Option A is undermined by the restrictive word 'only', and party membership or secrecy do not capture the broad citizen involvement the phrase implies.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Governance is defined as the methods, approaches and strategies used to exercise authority and manage the affairs of a state. Jurisdiction refers to a scope of legal authority and sovereignty to supreme independent power, neither of which describes 'approaches and strategies' of managing state affairs.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Sovereignty is the concept describing a state's supreme authority to govern itself and preserve its territorial integrity free of external interference. Self-determination instead refers to a people's right to choose their own political status (e.g. independence movements), which is a narrower and different concept.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The House of Representatives is part of the legislature, so it performs the legislative function of making laws. Dispensation of justice belongs to the judiciary, not the legislature.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "A constitution's paramount role in a stable democracy is safeguarding civil liberties and fundamental rights of citizens against arbitrary state power. Option A is weakened by the word 'only', since a constitution does far more than establish government powers, and D is similarly too restrictive.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Active participation in governance (voting, holding leaders accountable, engaging in policy processes) is the most significant citizen role in national development. Passive options like merely observing (C) or giving only financial/spiritual support (B) do not drive development the way active engagement does.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The media's key democratic function is the watchdog role, exposing wrongdoing and holding government accountable to the public. Although options B and D are garbled/merged in the source text and option C's text is missing, option A is unambiguously the standard correct description of media influence in a democracy.",
+      "solvable": true,
+      "issue": "Options for this question are garbled: option C text is missing and options B and D appear merged onto one line, but the correct answer (A) is unaffected by this defect.",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Pressure groups contribute to governance mainly by lobbying government officials to adopt policies favourable to their specific interests. Although option C text is missing and options B and D are merged onto one line in the source, option A remains the clear, standard answer.",
+      "solvable": true,
+      "issue": "Options for this question are garbled: option C text is missing and options B and D appear merged onto one line, but the correct answer (A) is unaffected by this defect.",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Public opinion influences democratic governance by helping shape the decisions of elected officials and guiding public policy, without being the sole or legally binding determinant. Options B and C overstate its power (legal framework, sole determinant of elections), while A wrongly claims it has no impact.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "In the reciprocal social contract, a state expects citizens to actively engage in civic duties (voting, paying taxes, obeying laws) in return for its protection and services. Options B, C and D are undermined by their absolute or overly passive framing ('passive', 'always', 'unconditional'), which does not match a healthy citizen-state relationship.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Political culture shapes national cohesion by fostering shared values, norms and beliefs that give citizens a sense of common identity and belonging. Option A is wrong because encouraging civil disobedience undermines rather than builds cohesion, and D is wrong because political culture works through attitudes and values, not mere dictation of laws.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Political socialization is the process by which citizens learn about government, institutions and civic norms, which underpins state development. Option C is wrong because socialization promotes civic understanding, not acceptance of inequality, and D is wrong because it is not aimed at extremism.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Erosion of civil liberties (e.g. restrictions on speech, press, assembly) is the classic sign that a democracy is drifting toward totalitarian control. Active political participation (C) is a feature of healthy democracy, not totalitarianism, making it the weaker distractor.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Judicial independence ensures courts can decide cases free from political pressure, influence or manipulation, which is essential for stable democratic governance. Option C is wrong because the judiciary's independence is meant to check, not protect, the political class.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Electoral Management Bodies in West Africa commonly face challenges of inadequate voter education and insufficient funding, which affect their capacity to run elections effectively. Option C is implausible as a 'challenge' since inconsistency, not consistency, in results would be the problem.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Political parties sustain democracy by offering voters real alternatives and choices in elections, which underpins competitive representation. Centralizing power (A) and suppressing dissent (C) describe anti-democratic behaviour, not a contribution to democratic sustainability.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Public corporations maximize their potential through innovation, research and retooling to improve efficiency and service delivery. Option C is wrong because direct government control and job cuts do not build capacity, and D is wrong because chasing immediate profits undermines long-term public service goals.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "The civil service's core governance role is providing administrative support to implement government policy; ruling on cases belongs to the judiciary and conducting elections belongs to electoral bodies, not the civil service. The option list is malformed (option C is missing, jumping from B to D), but the correct choice among the given options is still unambiguous.",
+      "solvable": true,
+      "issue": "Option C is missing from the question; options given jump from B directly to D.",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Lack of transparency in financial transactions (corruption/mismanagement of funds) is widely cited as a key factor hindering effective local government administration in Nigeria. Bureaucratic inefficiencies (C) is a related but more generic distractor, making B the stronger, more specific answer typically emphasized in the syllabus.",
+      "solvable": true,
+      "issue": "Options B and C are both plausible hindrances to local government administration.",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Division of powers between central and regional/state governments is a defining pillar of federalism. Centralized authority (A) and unitary authority (D) describe unitary systems, and absolute power (C) contradicts the constitutional limits inherent in federalism.",
+      "solvable": true,
+      "issue": "Option B has a typo ('division or powers' instead of 'division of powers') but the intended meaning is clear.",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Delegated legislation allows specialized bodies and experts to draft detailed technical regulations that elected legislators lack time or expertise to write, which strengthens effective democratic governance. Option A is wrong because it wrongly implies unconditional power, which contradicts democratic checks and accountability.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Traditional authorities, being close to and respected by local communities, help bridge the gap between citizens and formal state institutions, thereby enhancing public trust in governance. Option A is wrong because resisting globalization is not a recognized function of traditional institutions in democratic governance.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A protectorate retained a degree of local internal administration under indigenous rulers while the colonial power controlled foreign affairs and defense, unlike a colony which was fully annexed. Option B is wrong because complete annexation and integration describes a colony, not a protectorate.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A British Crown Colony was directly administered by the British Crown through appointed governors and officials, with little to no local self-government. Option A is wrong because Crown Colonies were defined precisely by the absence of full local autonomy.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "French assimilation policy aimed to turn colonized Africans into French citizens by making them adopt French culture, language, and values, treating colonies as extensions of France. Option D is wrong because assimilation sought integration into French institutions, not the establishment of separate autonomous local governments.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Nationalism unified diverse groups against colonial rule but also tended to exclude or marginalize other groups, ethnicities, or dissenting views, a lesson relevant to modern governance. Option A is too narrow, as nationalism's effects extended well beyond economic growth alone.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "After World War II, West African nationalist leaders shifted from mere reformist demands to actively organizing political parties and movements to press for full independence. Option C is wrong because most nationalist leaders sought to replace, not maintain, the existing colonial-influenced political system.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Post-World War II political agitation in West Africa was driven mainly by the desire of colonized peoples for self-rule and independence, fueled by war experiences and global anti-colonial sentiment. Option D is wrong because economic investment was not the primary motivation behind nationalist agitation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Colonial administration disrupted existing traditional structures of authority by imposing foreign systems of governance (direct or indirect rule) that undermined indigenous political institutions, a widely cited negative political impact. Option D is a plausible distractor since power was indeed centralized in British hands, but the disruption of traditional authority is the more commonly emphasized negative political development impact in the syllabus.",
+      "solvable": true,
+      "issue": "Options A and D are both defensible negative impacts of colonial administration; A is chosen as the standard syllabus answer.",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Pre-independence constitutions in British West Africa (e.g., Richards, Macpherson constitutions) commonly featured centralized power concentrated in the hands of the governor and colonial executive. Option A is wrong because full local government was not a common feature, as local governments had only limited, not full, powers under these constitutions.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Military coups in West Africa are almost always justified by claims of restoring order amid insecurity, coups, ethnic conflict, or political breakdown. Low investment or lack of army infrastructure are not the stated common justification across states; security/political instability is the recurring pretext.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Military takeovers typically suspend or dissolve the constitution and the legislature (parliament), replacing lawmaking with decrees, so the legislature is the arm most directly and negatively affected. The civil service and local government usually continue functioning under military rule, and the economy is affected indirectly rather than structurally.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A deliberate, well-considered foreign policy allows a state to build alliances and cooperate with neighbours on trade, security and development, which is why states take its determination seriously. Reducing cultural diversity or increasing aid dependency are not goals of foreign policy formulation, and reducing market dependency is a narrower, less central aim than fostering cooperation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "National security (protecting sovereignty, territorial integrity and national interest) is the primary consideration guiding any state's foreign policy. Historical tradition or cultural exchange may inform policy but are secondary to safeguarding the nation's core survival interests.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The UN was formed chiefly to maintain international peace and security by fostering diplomatic relations and dialogue among nations rather than war. Facilitating trade and cultural exchange are secondary UN functions (through agencies), and 'regulating international policies' is vague and not the specific peace-and-security aim intended here.",
+      "solvable": true,
+      "issue": "Options B and D are both loosely plausible descriptions of UN functions, though B aligns more directly with the peace-and-security context stated in the question.",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The Universal Declaration of Human Rights (1948) remains a foundational, widely-cited UN achievement that has endured and shaped international human rights law to this day. Trade promotion, arms-related technology, and universal democracy are not achievements of the UN and democracy is in fact not universally applied.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "E-governance uses digital platforms to deliver government services to citizens regardless of their location, making government accessible across distance and background more effectively than physical town hall meetings or media outreach, which are limited by geography and reach.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Political parties aggregate and represent the diverse interests of different groups in society, channelling them into governance, which underpins stability and continuity of democracy. Centralizing power or encouraging apathy/dissent undermines rather than supports democratic stability, and 'filtering' participation is not the constructive role parties play.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "An Electoral Management Body clears doubt and suspicion among political actors by operating openly and transparently, e.g., open collation, published results, and accessible processes. Limiting public influence or merely 'favouring all parties' (vague and not a real operational method) would not build the trust that transparency does.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Online surveys and polls can reach a broad, diverse cross-section of the public efficiently, making them the most effective general method for gauging public opinion for decision-making. Single-target community polls, high-profile interview polls, and skewed sample polls are all narrow or biased sampling methods that misrepresent broader public opinion.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The most fundamental civic duty underpinning state stability is compliance with the law: paying taxes, obeying laws, and protecting public property sustains governance and national development. Advocacy for rights (B) and community service (C) are secondary civic activities, not paramount obligations, and partisan politics (A) is optional, not a duty of every citizen.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A constitution provides predictability and stability chiefly by establishing clear, enduring rules for how government is organized and exercised. Guiding judicial dispensation (A) and protecting executive powers (B) are narrower, single-branch functions, while encouraging reform (D) concerns change rather than stability itself.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Meaningful democratic governance requires the rule of law and free, fair elections as its core structural indicators, since they guarantee accountability and legitimate transfer of power. Good leadership and patriotism (B) are desirable but not structural safeguards, and a strong police/military presence (D) is not a democratic indicator at all.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Multi-party systems allow for a range of political ideologies and choices, giving citizens genuine political diversity compared to a single-party system. Political polarization (B) is a possible drawback rather than an advantage, and options C and D do not describe benefits of multi-partyism.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Advocates of privatization/commercialization argue that private management improves efficiency and profitability compared to bureaucratic state control. Government control (A) and state sovereignty (C) describe reasons for retaining public ownership, not privatizing, and redundancy (D) is a possible negative consequence, not a justification.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "ECOWAS was founded primarily to promote economic cooperation and integration among West African states. Cultural diversity (B) and geographical isolation (C) are not unifying factors, and political rivalry (D) would undermine rather than bind the community.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The UN's effectiveness as the leading global organization rests on fostering strong international cooperation among member states to address shared global issues. Exclusive regional influence (A) contradicts its global mandate, and it is not defined by military focus (B) or specialized membership (C), since membership is broadly open.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Nigeria retains Commonwealth membership largely for the economic collaboration and trade benefits it offers among member states. Cultural assimilation (A) and visa-free policy (D) are not accurate features of the Commonwealth, and it does not entail mandatory military assistance (B).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The African Union's significance lies in fostering regional unity and cooperation among African states within the global community. It does not shield members from globalization (B) or fully protect against neo-colonialism (C), and it actively promotes rather than obstructs diplomatic engagement with other continents (D).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Civil society organizations strengthen democratic governance by facilitating broad citizen engagement and activism, holding government accountable. Advancing only sectoral interests (A) or setting agendas alone (D) is too narrow, and encouraging civil disobedience (B) is not their defining democratic contribution.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0904,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1092,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1018,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1075,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0885,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.4974
+}

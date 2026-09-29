@@ -1,0 +1,491 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Discipline is the training of oneself to follow rules and exercise self-control. Integrity refers to moral uprightness rather than the training process, so it does not fit as well.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Value clarification is the process where individuals are encouraged to identify, define and respect their own and others' values. Value orientation instead refers to instilling a given set of values, not letting people define their own.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Under Nigeria's naturalization requirements, an applicant must be of full age (18 years and above) and must have resided in Nigeria for a continuous period of 15 years. Option C/D wrongly cite 21 years and shorter residence periods, which do not match the constitutional requirement.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Civic Education is primarily studied to instill nationalism and patriotism in citizens so they contribute positively to nation-building. Option D is wrong because Civic Education aims to equip citizens with solutions to societal problems, not merely identify them without solving them.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A voter's card is a personal identification document, not a national symbol representing the state's identity. The flag, currency, and coat of arms are all recognized national symbols.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Nationalist-owned newspapers such as the West African Pilot were used to expose and criticize the failures and weaknesses of colonial administration, rallying public opinion against colonial rule. Promoting the image of nationalists (D) is a plausible but weaker distractor since the newspapers' primary historical role emphasized in the syllabus was exposing colonial shortcomings.",
+      "solvable": true,
+      "issue": "Options A and D are both defensible depending on textbook emphasis; A is chosen as the more commonly cited syllabus answer.",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Nationalism's main significance is fostering allegiance and loyalty of citizens to their nation, binding them together as one people. Political awareness (D) is a byproduct rather than the main significance of nationalism.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The Universal Declaration of Human Rights (1948) contains exactly 30 articles. This is a well-established fact, ruling out the other numeric distractors.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Imprisonment directly restricts a person's freedom of movement and their ability to associate with others, so these rights are forfeited. Right to life and right to fair hearing remain protected even for a convicted prisoner, ruling out options containing those.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Defamation made in a written or permanent form, such as a social media post, constitutes libel. Slander refers to spoken defamatory statements, which does not apply here since the statement was written.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Equality before the law is the principle that everyone, regardless of status, is subject to the same laws and treated alike. Supremacy of the law refers to the law being above everyone including government, which is a related but distinct concept about the law's authority, not about equal treatment of persons.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Constituted authority (government) exists primarily to maintain law, order, and protect lives and property of citizens. Promoting international relations or providing scholarships are secondary functions of government, not the primary justification for authority in society.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Responsible parenthood ensures children are properly raised, trained in good morals and values, which reduces delinquency and social vices in society, aiding national development. Ensuring upbringing of strict leaders is not a recognized outcome of responsible parenthood.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Traffic regulations refer to the codes, rules and ethics guiding road users generally, not just pedestrians or drivers on express roads. Option B is too narrow as it excludes drivers and other road users.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Traffic wardens are primarily responsible for directing and controlling the flow of traffic on roads. Formulating rules and legislation is the role of lawmakers, not traffic wardens.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Compromise, where conflicting parties make mutual concessions, is a recognized mechanism for resolving inter-communal conflicts. Reorientation, commendation, and diligence are not standard conflict resolution mechanisms.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The saying \"no man is an island\" emphasizes that individuals depend on one another and need cooperation with others to survive and progress in society. It is a general statement about human interdependence, not specifically about government or marriage.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Drug abuse involves misuse of drugs such as taking excessive dosages, unauthorized use, or trafficking hard substances. Taking the correct, prescribed dosage of medication as directed is proper drug use, not abuse.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Human trafficking involves stages such as recruitment, transportation, and exploitation of victims. Counseling, liberation, and empowerment are intervention and rehabilitation efforts against trafficking, not aspects of the trafficking process itself.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Women are predominantly trafficked for the purpose of sexual exploitation and servitude, such as forced prostitution. Debt bondage is a control mechanism used by traffickers but is not the main purpose for which women specifically are trafficked.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "HIV attacks the immune system (CD4 cells), weakening the body's defences and causing AIDS, i.e. immune deficiency. 'Virus deficiency' and 'virus/immune repletion' are not real physiological outcomes of HIV infection.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Babies contract HIV mainly through mother-to-child transmission, which occurs during pregnancy, delivery, or breastfeeding; among the listed options, breastfeeding is the plausible route for infants. Blood transfusion, sharp-object sharing, and sexual transmission are not typical routes for babies, making them weaker distractors.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Youth empowerment is commonly enhanced by giving youths startup capital to become self-reliant entrepreneurs, which is a direct empowerment measure. Granting of bursaries (C) is a defensible alternative since it also supports youths, but it is educational support rather than empowerment for economic self-reliance, so D is preferred.",
+      "solvable": true,
+      "issue": "Options C (bursaries) and D (startup capital) are both plausible youth-empowerment measures, so this is not fully unambiguous.",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Transversal skills (skills applicable across various life and work contexts, such as communication, critical thinking, and problem-solving) are commonly cited in civic education as vital for youth empowerment. 'Manipulative' and 'non-cognitive' skills are narrower or less directly tied to empowerment framing in the syllabus.",
+      "solvable": true,
+      "issue": "Terminology overlaps loosely with non-cognitive skills, making the intended distinction somewhat textbook-specific.",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Leadership, communication, and self-reliance skills are all standard youth empowerment skills taught in civic education. Investigation skills is not typically listed among youth empowerment skills, making it the odd one out.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The legislature has the constitutional power to impeach a president through a resolution passed by the requisite majority. The executive and judiciary do not hold this power, and 'supreme court' is not a separate organ of government but part of the judiciary.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The concurrent legislative list contains matters on which both the federal and state governments can legislate. The exclusive list is for the federal government alone, and the residual list is for states alone; 'joint list' is not a recognised constitutional term.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Defence of the nation is a matter of national security handled solely by the federal government, placing it on the exclusive legislative list. Education, roads, and industries are typically concurrent or residual matters that states can also legislate on.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Ministers, commissioners, and supervisory councillors are political appointees who head ministries/departments and implement policy, placing them in the executive arm of government. They are not law-makers (legislature), adjudicators (judiciary), or permanent civil servants.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Local government administration brings governance closer to the people at the grassroots level, supporting grassroot government. It does not inherently support unitary government, consensus politics, or foreign culture.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The stem is already a complete, standalone sentence ('...is necessitated by fear of ethnic domination.') with no blank for the options to complete, and option A is a truncated duplicate of option B ('inclusion of a secretive clause in the' vs 'inclusion of a secretive clause in the constitution'). The question text is garbled/corrupted and does not present a coherent question-option structure.",
+      "solvable": false,
+      "issue": "Stem is a complete sentence with no gap for the listed options to fill, and option A is a truncated duplicate of option B, indicating corrupted question text.",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Representative government is characterized by citizens electing representatives to act on their behalf through periodic elections. Minority rule and centralization of power contradict the representative/democratic principle, and inter-regional cooperation is not a defining feature of representative government.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Direct democracy means all citizens participate directly in decision-making rather than through elected representatives. 'Citizens' representatives' describes representative (indirect) democracy, the opposite of direct democracy, while restricting participation to only male or adult male citizens contradicts the inclusive nature of direct democracy.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A multi-party system allows citizens diverse political choices and platforms to express dissent, enhancing individual freedom. One-party and autocratic systems restrict political choice and freedom, and a communal system is not a political party system relevant to this comparison.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Law and order (II) and Fundamental Human Rights (VII) are foundational pillars of any stable society; their absence would lead to chaos and societal collapse. The other pairings combine a negative social ill (e.g., political apathy, human trafficking) with a positive term, which does not fit the 'absence spells doom' framing as cleanly.",
+      "solvable": true,
+      "issue": "Pairing logic is somewhat interpretive since the option combines two independently listed items; another reasonable pairing (II and V) is defensible.",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Every child is entitled to responsible parenting (VI) and Fundamental Human Rights (VII), both of which directly concern a child's welfare and protection. The other listed terms (political apathy, law and order, human trafficking, HIV/AIDS, popular participation) are broader societal concepts not specific to a child's entitlements.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Trade unions, market women associations, and student unions are organized groups that pursue and protect the interests of their members by influencing government policy, which is the defining feature of pressure groups. They are not political parties since they do not seek to contest elections or form government.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Inept and irresponsible governance is best addressed through lawful, constitutional means such as elections, courts, and legislative processes, which preserve stability while ensuring accountability. Attacks and revolts are violent and unconstitutional, and mere criticism alone lacks the enforceable mechanism that constitutional means provide.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "A clear-cut separation of governmental powers among the executive, legislature, and judiciary prevents any one arm from unduly interfering in the functions of another. Checks and balances, while related, actually involves controlled mutual oversight (a form of sanctioned interference) rather than preventing interference outright, making separation of powers the better fit.",
+      "solvable": true,
+      "issue": "Checks and balances (D) is a defensible alternative answer since it is closely related to separation of powers in preventing abuse of power.",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The immunity clause in the constitution protects certain public officers (e.g., the president, governors, and their deputies) from being sued in court while in office. It does not mean they are unaccountable to the electorate or that arbitrary rule is absent, and it has nothing to do with the president's power to grant pardons.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Neutrality of civil servants means they must serve any government of the day impartially, which requires them not to be affiliated with any political party. Security of tenure (C) relates to job protection, not neutrality, and is a distinct principle of the civil service.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Political apathy refers to indifference or lack of interest in political participation, shown by refusing to register, lack of interest, or withholding information. Rigging of elections is an active malpractice committed by interested political actors, not a sign of apathy.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "",
+      "solvable": false,
+      "issue": "The question references a shared diagram with letter X, but no image was attached or provided in this task, so the diagram cannot be examined.",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "",
+      "solvable": false,
+      "issue": "The question depends on the same missing diagram referenced in question 43, which was not attached.",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "When CSOs face inadequate funding, they are typically forced to reduce the scope and scale of their activities and programmes. Lobbying for government funds (A) would compromise their independence and is not an established response, making it a weaker distractor.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "CSOs directly alleviate poverty through practical interventions such as promoting youth empowerment programmes, skills acquisition, and livelihood support. Influencing government decisions or legislation (A, D) relates to advocacy rather than direct poverty alleviation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Civil Society Organizations rely heavily on foreign donations and grants from international bodies and donor agencies as a major funding source. Government allocation (A) is generally avoided to preserve independence, and taxation/borrowing (D) is a state power, not available to CSOs.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "CSOs are non-partisan advocacy and pressure groups; establishing new political parties is a step toward contesting for power, which falls outside the defining character of civil society organizations. Checkmating government excesses and training future leaders are well-established CSO roles.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Industrial (trade union) strikes are the recognized, established method by which public servants withhold labour to protect their interests. Mass resignation (D) is not a protest tool since it ends employment rather than pressuring for change.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Anonymity means civil servants work behind the scenes, so credit or blame for policy outcomes goes to the political office holders (ministers), not to the civil servants themselves. Being fair and impartial (C) describes neutrality rather than anonymity.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0967,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0752,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1168,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1088,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1112,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.5087
+}

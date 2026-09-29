@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 195 720 410" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+<!-- Authored by hand from the original scan (2025_Q22-24.png), not traced: automatic tracing damages the typed labels.
+     Coordinates follow the original image's pixel positions. Nothing was omitted as unreadable. -->
+<title id="t">Figure 2: cost curves X, Y, Z and the AR = MR line</title>
+<desc id="d">A graph with the vertical axis labelled 'Cost/Revenue' and the horizontal axis labelled 'Output/Sales', origin marked O. A horizontal line at a height marked P runs across the graph and is labelled 'AR = MR' where it meets the right edge. Three curves, each dipping down from the left and then curving back up to the right, are labelled X, Y and Z. Curve X sits above the others on the left, dips to its lowest point, then rises very steeply on the right, crossing above line P and ending as the highest of the three curves at the top right. Curve Y dips to its lowest point a little further right than X, then rises more gently than X, crossing line P further to the right, and ends below X at the top right. Curve Z lies below both X and Y for most of the graph, dips to its lowest point furthest to the right, and rises most gently of the three, staying closest to line P and crossing it last, furthest to the right. Four dashed vertical lines run from the horizontal axis up into the curves, marked from left to right R, Q, S and T.</desc>
+<g fill="none" stroke="#E2E8F0" stroke-linecap="round" stroke-linejoin="round">
+  <!-- axes -->
+  <path d="M172 202 V560 H580" stroke-width="2.5"/>
+  <!-- AR = MR line at P -->
+  <path d="M172 378 H598" stroke-width="2"/>
+  <!-- curve X -->
+  <path d="M228 443 C262 478 300 498 335 498 C385 498 476 370 521 258" stroke-width="2.5"/>
+  <!-- curve Y -->
+  <path d="M225 300 C290 350 360 400 420 400 C470 400 540 355 578 290" stroke-width="2.5"/>
+  <!-- curve Z -->
+  <path d="M185 342 C240 400 320 465 385 465 C450 465 525 410 598 340" stroke-width="2.5"/>
+  <!-- dashed verticals at R, Q, S, T -->
+  <g stroke-width="1.8" stroke-dasharray="6 4" stroke-linecap="butt">
+    <path d="M333 560 V378"/>
+    <path d="M458 560 V378"/>
+    <path d="M487 560 V378"/>
+    <path d="M558 560 V378"/>
+  </g>
+</g>
+<g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="24">
+  <text x="152" y="233" text-anchor="end">Cost/</text>
+  <text x="166" y="265" text-anchor="end">Revenue</text>
+  <text x="150" y="387" text-anchor="middle">P</text>
+  <text x="170" y="589" text-anchor="middle">O</text>
+  <text x="333" y="589" text-anchor="middle">R</text>
+  <text x="455" y="589" text-anchor="middle">Q</text>
+  <text x="489" y="589" text-anchor="middle">S</text>
+  <text x="558" y="589" text-anchor="middle">T</text>
+  <text x="580" y="589">Output/Sales</text>
+  <text x="604" y="387">AR = MR</text>
+  <text x="520" y="254" text-anchor="middle">X</text>
+  <text x="585" y="279" text-anchor="middle">Y</text>
+  <text x="613" y="334" text-anchor="middle">Z</text>
+</g>
+</svg>

@@ -1,0 +1,243 @@
+{
+  "unit": "2025",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "respiration.cellular",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "cell.components",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "animal-nutrition.modes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "organisation.levels",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "genetics.chromosomes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "ecological-factors.measurement",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "evolution.theories",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "variation.physiological",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "evolution.trends",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "transport.plants",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "genetics.terminology",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "respiration.surfaces",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "adaptation.structural",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "plant-nutrition.minerals",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "animal-nutrition.food-classes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "associations.competition",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "genetics.chromosomes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "animal-nutrition.feeding",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "associations.symbiosis",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "population.growth",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "ecosystem.habitats",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "growth.growth",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "coordination.reflex",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "respiration.cellular",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "cell.components",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "conservation.pollution",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "cell-environment.osmosis",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "animal-nutrition.enzymes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "sense-organs.eye",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "coordination.cns",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "excretion.organs",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "animal-nutrition.alimentary",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "genetics.applications",
+      "confidence": "overlap",
+      "note": "also fits cell.division because nondisjunction is a meiotic event, but the question tests the resulting genetic disorder, which is what genetics.applications covers"
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "growth.germination",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "transport.plants",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "classification.living-nonliving",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "classification.kingdoms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "cell.division",
+      "confidence": "clear",
+      "note": ""
+    }
+  ],
+  "taxonomy_findings": [
+    {
+      "kind": "overlap",
+      "where": "genetics.applications",
+      "detail": "Q35 tests Down syndrome caused by nondisjunction during meiosis. cell.division covers meiosis mechanism and where and why each division happens, but has no sorting rule for an error of division (nondisjunction) producing a named genetic disorder, which is explicitly genetics.applications territory. Neither covers line nor sorting rule on either subtopic addresses this specific boundary."
+    }
+  ],
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "2.2"
+}

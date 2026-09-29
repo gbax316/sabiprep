@@ -2,18 +2,157 @@
   "slug": "chemistry-waec",
   "subject": "Chemistry",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T13:18:53",
     "note": ""
   },
   "units": {
     "2025": {
-      "status": "running",
-      "stages": {},
-      "error": ""
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T12:30:21",
+          "summary": "49/49 codex, 49/49 claude",
+          "seconds": 771,
+          "cost_usd": 0.92
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T12:30:22",
+          "summary": "agreed-soft 4, disagree 3, unsolvable 1, verified 41",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T12:31:23",
+          "summary": "8 ruled: ambiguous 1, defective 1, key 6",
+          "seconds": 61,
+          "cost_usd": 0.24
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T12:31:24",
+          "summary": "ambiguous 1, defective 1, keyed 47",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T12:33:53",
+          "summary": "clear 46, overlap 1; 1 taxonomy findings",
+          "seconds": 149,
+          "cost_usd": 0.54
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T12:40:53",
+          "summary": "47 written in 2 part(s); answer challenges none; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 420,
+          "cost_usd": 2.41
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T13:07:36",
+          "summary": "47 reviewed, 10 fail, fact errors [24]",
+          "seconds": 1602,
+          "cost_usd": 2.48
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T13:13:50",
+          "summary": "8 accepted, 4 rejected; style scan: REVIEW (5 across 5 location(s))",
+          "seconds": 373,
+          "cost_usd": 1.95
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T13:18:46",
+          "summary": "8 changed items re-reviewed, 0 still fail ",
+          "seconds": 295,
+          "cost_usd": 0.38
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T13:18:46",
+          "summary": "every changed item passed",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T13:18:46",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T13:18:46",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T13:18:46",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T13:18:46",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T13:18:46",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T13:18:46",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T13:18:52",
+          "summary": "PREVIEW (no image base set): chemistry-waec.2025.PREVIEW.csv, 2 held, 0 pre-flight flags; style scan: REVIEW (5 across 5 location(s))",
+          "seconds": 5,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T13:18:53",
+          "summary": "chemistry-waec.2025.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 11,
+          "why": "ambiguous",
+          "detail": "Food preservation and salting out soap from glycerol are clear textbook uses of sodium chloride. A i"
+        },
+        {
+          "q_number": 48,
+          "why": "defective",
+          "detail": "Ethene polymerises to polyethene, so the chemistry is not in doubt. However, options A and B are bot"
+        }
+      ]
     }
   },
-  "cost_usd": 15.08,
+  "cost_usd": 24.0,
   "taxonomy_cost_usd": 15.08
 }

@@ -1,0 +1,399 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "fail",
+      "failed_checks": [
+        10
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 says: 'Only one of them is the round-sounding lease term taught with the Act.' Ninety-nine is not a round number, a round number is one like 100. A student who takes 'round-sounding' literally is pushed toward D (100), the wrong option, which is the opposite of what the hint is meant to do. The facts elsewhere (Land Use Act 1978, Governor, certificate of occupancy up to 99 years) are correct.",
+      "fix": "The two long figures differ by just one year. Only one of them is the exact term the Land Use Act sets for a certificate of occupancy, the other is simply the nearby century figure students sometimes confuse it with.",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "fail",
+      "failed_checks": [
+        1
+      ],
+      "fact_error": false,
+      "notes": "Hint 1 says: \"Break the instrument's name into parts: 'hygro' comes from a Greek word about wetness.\" This decodes the exact word the answer turns on before any narrowing has happened, so it does hint 2's or hint 3's job at the hint 1 stage. It also fails the standard's calibration test for hint 1: decoding 'hygro' would not help a student on a different climatic-factor instrument question (wind speed, daylength, pressure), so it is pitched too specifically for a first hint. By hint 3 ('Which fits hygro?') the chain built on hint 1 leaves nothing left to work out.",
+      "fix": "Each weather factor has its own measuring instrument. Before you decide, work out which option describes a condition of the air itself, not how fast it moves, how hard it presses down, or how long the sun is out.",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "fail",
+      "failed_checks": [
+        2,
+        11
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 resolves the question by explicit statement rather than asking the student to supply the deciding fact themselves: 'One describes a method; the other describes a saving in water, which is really a feature of drip irrigation. Which one fits water sprayed from above?' By telling the student outright that the water-saving option 'is really a feature of drip irrigation', the hint eliminates it in the hint's own words, leaving only one option, so the closing question is rhetorical and answerable without thought (unlike the worked example's hint 3, which requires the student to recall an unstated body-plan fact). Separately, the solution uses 'surface' in two conflicting senses: the principle explains the answer text 'supplies water to crops on the surface of farmland' by saying 'the water lands on top of the crop and the land surface', while the exam tip defines 'surface' as a distinct irrigation type: 'surface, flowing over the land in furrows or basins'. A student could easily read this as overhead irrigation being called 'surface irrigation', which is the wrong category in this same syllabus (surface irrigation is flooding/furrow/basin/border, a different type from overhead).",
+      "fix": "Hint 3: 'Two options are left. Think about where the sprayed water actually ends up landing, rather than how much water each method uses, then decide which one matches water falling from above like rain.'\n\nSolution principle (replace the existing paragraph): 'Overhead irrigation, such as a sprinkler, sprays water into the air above the crop so that it falls like rain onto the plants and the ground below. The option calls this delivering water to the surface of the farmland because the water lands on top of the land itself, unlike water sent through buried pipes or delivered straight to the roots. This is different from what the syllabus calls surface irrigation (flooding, furrow, basin and border), where water is let to flow along the ground instead of being sprayed from above.'",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 states the content of both remaining options and leaves only a rhetorical question: 'One option places animal waste close to water. The other left cuts out synthetic chemicals altogether. Which one prevents pollution?' This adds no fact the student must recall; hint 2 already established the rule ('any option that adds farm chemicals to the land is a source of pollution, not a way to prevent it'), so combining that rule with hint 3's restatement answers the question by plain logic alone, with no domain knowledge required, unlike the worked example's hint 3, which requires the student to recall an unstated fact (cockroach body plan) to reach the answer.",
+      "fix": "Hint 3: 'A way to prevent pollution has to stop chemicals or waste from reaching the soil and water in the first place, not just move them somewhere else. Between the two remaining options, which farming approach does that?'",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 states the deciding fact itself instead of asking the student to supply it: 'Yam sprouts new shoots from its tuber, which is a feature of stems. Which fits?' Because the hint already tells the student that sprouting shoots is a stem feature, the closing 'Which fits?' is rhetorical and answerable without further thought, unlike the worked example's hint 3, which requires the student to recall an unstated fact (which insect has that body plan) rather than being told the connecting fact outright.",
+      "fix": "Hint 3: 'You are left with root and stem. Think about where a plant normally grows new buds and shoots from, and which of these two organs does that.'",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 states the full mechanism and its consequence rather than leaving a fact for the student to supply: 'The bran is rich in vitamins, minerals and protein. Once it is removed, what happens to the grain as food?' Given that bran being nutrient-rich is stated outright, the closing question follows by plain logic with no additional recall needed, unlike the worked example's hint 3, which withholds the deciding fact (body plan) and requires the student to know it themselves.",
+      "fix": "Hint 3: 'Bran contains nutrients the rest of the grain does not carry on its own. Think about whether losing that layer would make the grain larger, harder, more likely to sprout, or less nutritious, and pick the option that matches losing a nutrient-rich layer.'",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 gives the answer away through the disease's own defining symptom instead of requiring reasoning. Quote: \"Which of these diseases attacks the base of the trunk near the soil, making the bark ooze gum?\" The phrase \"ooze gum\" is the literal origin of the name \"gummosis\", so a student can match the word alone, with no disease knowledge needed, and the wording nearly repeats the solution's own \"How to tell\" (\"making the bark crack and ooze gum\"). This fails the hint 3 test: a student can answer by reading hint 3 alone, without thinking.",
+      "fix": "Of the diseases left, which one attacks the collar and roots at the base of the tree, rather than the leaves, twigs or fruit?",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 tells the student to resolve only one of the three items and then choose, which mechanically solves the question because only one answer option (B) excludes vegetables while the other three all include it. Quote: \"Decide about vegetables first: are they grown on large long-term estates, or in gardens and small plots and replanted often? Then choose.\" No judgement about fruits or beverages is needed at all; ruling out vegetables alone selects B by elimination, without the student thinking through the full item. This fails the hint 3 test.",
+      "fix": "For each of the three, fruits, vegetables and beverages, decide whether it is a perennial crop grown on a large permanent estate or a short-season crop grown in smaller plots, then pick the option that fits all three.",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 states the answer's defining trait before asking the question it is meant to help the student answer. Quote: \"Allamanda has woody, bushy stems with bright yellow trumpet flowers and is often used as a hedge. Is it tall with one trunk, or low and bushy?\" Having already called the stems \"bushy\", the follow-up question \"low and bushy?\" is answered by the hint's own wording, so the student need not think through the tree-versus-shrub distinction at all.",
+      "fix": "Allamanda has bright yellow trumpet-shaped flowers and woody stems, and is often trained as a hedge. Does it grow from one tall main trunk, or from several stems close to the ground?",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 eliminates all three wrong options at once by naming their shared viral cause, leaving only the correct option untouched, and hint 3 then simply points at what remains. Quote hint 2: \"Mosaic, swollen shoot and leaf curl are signs of disease caused by viruses, which fungicides cannot kill.\" Since A, B and C are cassava mosaic, swollen shoot and leaf curl respectively, this rules out three of the four options in one line. Quote hint 3: \"Once you know three of the diseases share one cause, check the fourth: is it caused by a fungus?\" This directs the student straight to option D without weighing it against any remaining candidate, so the student can answer without thinking.",
+      "fix": "hint2: Cassava mosaic and cotton leaf curl are caused by viruses, which fungicides cannot kill. hint3: Between swollen shoot of cocoa and sigatoka of banana, one is viral and one is fungal. Which of the two is caused by a fungus?",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 resolves both remaining options for the student instead of leaving the final step to them: \"Heat stress also lowers fertility. Of the options left, which outcome follows from eating less?\" The first sentence explains away option C (litter size falls because of fertility, not feed), and the second sentence points directly at option D by tying it to 'eating less', which is a near-automatic link (less feed intake to less milk) that needs no real thought once C has been explained away. A student can pick D straight from this hint without weighing the two options.",
+      "fix": "hint3: Heat stress affects an animal's reproduction as well as its feed intake. Of the two options left, think about which one changes from day to day with how much the animal eats right now, and which one is decided much earlier, around mating and pregnancy.",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "hint2 names and rules out all three wrong options at once: 'Maize, yam and plantain are staple foods that West African families eat every day. Most of the harvest is used within the country.' With three of the four options eliminated by name, cocoa is already the only option left before the student even reaches hint3. hint3 then removes any need to think at all: 'Which crop on the list is grown mainly so its beans can be shipped abroad to make chocolate?' 'beans' and 'chocolate' identify cocoa uniquely and directly, so a student can answer from this clause alone without engaging with the food-crop-versus-cash-crop reasoning the hint is supposed to build. This fails the hint3 test: a student reading hint3 alone, without thinking, can answer.",
+      "fix": "hint2: Maize and yam are staple foods eaten daily in most West African homes, with little left over to sell abroad.\nhint3: Between the two crops left, think about which one is dried, packed and shipped abroad in large quantities, and which one is usually eaten fresh by the family soon after harvest.",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4993,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.5333,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.371,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2411,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3217,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 1.9664
+}

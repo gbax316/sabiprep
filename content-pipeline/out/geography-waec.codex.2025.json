@@ -1,0 +1,491 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The scale statement cannot be determined without the actual map, since the scale (either given as a representative fraction or a stated linear scale) is a specific value printed or drawn on the map itself.",
+      "solvable": false,
+      "issue": "The map of IJAMO DISTRICT was not attached to this task, so the scale cannot be read or verified.",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Determining the bearing of Ebie from Oze requires measuring the angle between the two points on the actual map using a protractor and the map's north line.",
+      "solvable": false,
+      "issue": "The map of IJAMO DISTRICT was not attached to this task, so the positions of Ebie and Oze cannot be located or measured.",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Calculating the new representative fraction after enlargement depends on knowing the map's original RF, which in turn depends on the original scale shown on the map.",
+      "solvable": false,
+      "issue": "The map of IJAMO DISTRICT (and thus its original scale) was not attached to this task, so the enlarged RF cannot be computed.",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The number of tributaries of River Momi is a count that must be read directly off the drainage pattern drawn on the map.",
+      "solvable": false,
+      "issue": "The map of IJAMO DISTRICT was not attached to this task, so River Momi and its tributaries cannot be examined.",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Inferring the likely occupation of the people of Ijamo settlement requires reading the surrounding land-use symbols (e.g., farms, rivers, relief, vegetation) shown on the map.",
+      "solvable": false,
+      "issue": "The map of IJAMO DISTRICT was not attached to this task, so the surrounding land-use evidence cannot be assessed.",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The area of the mapped region must be calculated from the grid squares or boundary coordinates shown on the actual map together with its scale.",
+      "solvable": false,
+      "issue": "The map of IJAMO DISTRICT was not attached to this task, so the map's extent cannot be measured.",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The straight-line (crow-flies) distance from Ofia to Yot requires measuring the map distance between the two points and converting using the map's scale.",
+      "solvable": false,
+      "issue": "The map of IJAMO DISTRICT was not attached to this task, so Ofia and Yot cannot be located or measured.",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Ranking settlements by size requires comparing the built-up area symbols for Ijamo, Oze, Fada, and Asebe as drawn on the map.",
+      "solvable": false,
+      "issue": "The map of IJAMO DISTRICT was not attached to this task, so settlement sizes cannot be compared.",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question cannot be answered because its answer options are incomplete in the source text (option B is missing) and, in any case, Ebie's location relative to the district would need to be read off the map.",
+      "solvable": false,
+      "issue": "The answer options for this question are garbled/incomplete (option B is missing), and the map of IJAMO DISTRICT needed to locate Ebie was not attached.",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A dot marked with a numerical value (e.g., ·845) on a topographical map is the standard symbol for a spot height, indicating the exact elevation of that point above sea level. A benchmark is instead usually denoted 'BM' with a value, and hachures or valley symbols are line-based relief representations, not a dot-with-figure, so those distractors don't fit the described symbol.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question depends on the temperature and rainfall table for Station Q, but no table data or image was provided with the prompt.",
+      "solvable": false,
+      "issue": "Missing table/diagram of Station Q's temperature and rainfall data; cannot compute the annual temperature range without it.",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question depends on the temperature and rainfall table for Station Q, but no table data or image was provided with the prompt.",
+      "solvable": false,
+      "issue": "Missing table/diagram of Station Q's rainfall figures; cannot count dry season months without it.",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question depends on the temperature and rainfall table for Station Q, but no table data or image was provided with the prompt.",
+      "solvable": false,
+      "issue": "Missing table/diagram of Station Q's monthly rainfall figures; cannot sum the annual rainfall without it.",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Frontal rainfall occurs when a warm air mass and a cold air mass with different characteristics meet at a front, forcing the warmer, lighter air to rise and mix, causing condensation and rainfall. Convectional and orographic (relief) rainfall are caused by heating and topography respectively, not the meeting of air masses.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A blow hole is a vertical, narrow, chimney-like opening formed by wave erosion that connects a sea cave near a cliff top to the surface, enlarging through the alternate compression and expansion of trapped air as waves surge in. A spit and tombolo are depositional features, not erosional chimney-like openings, so they do not fit the description.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Savanna grasses commonly die back to their roots and lie dormant during the long dry season, sprouting again when the rains return, which is a key drought adaptation. Option C is a plausible distractor, but savanna grasses typically develop deep, not shallow, roots to reach underground water during drought.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "An isobar is a line on a map joining places of equal atmospheric pressure. Isohyet joins equal rainfall, isoneph joins equal cloud cover, and isohaline joins equal salinity, so none of these fit pressure.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "On 22nd December (the December solstice), the sun's vertical rays are overhead at midday along the Tropic of Capricorn (23.5°S). The Tropic of Cancer receives overhead sun at the June solstice instead, making it the main distractor.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Using the standard environmental lapse rate of 6.5°C per 1000 m, a rise of 5000 m corresponds to a temperature change of 32.5°C. Adding this to the summit temperature of 7°C gives 39.5°C at the foot of the mountain, matching option D exactly.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Solstices occur on 21st June (June solstice) and 22nd December (December solstice), when the sun's overhead position reaches its extreme northern and southern limits at the Tropics of Cancer and Capricorn. The other date pairs mix in equinox dates (21st/23rd March, 23rd September) which are not solstices.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Hydrolysis is a chemical reaction between minerals and water that breaks down rock chemically, making it chemical weathering. Block disintegration, exfoliation and salt wedging are all mechanical/physical weathering processes caused by temperature change or crystal growth, not chemical reactions.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Rift valleys form when a block of land subsides between two parallel faults, so they are a faulting landform. Folding produces fold mountains, vulcanicity produces volcanic landforms, and residual mountains are erosional remnants, none of which describe a rift valley's origin.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question lists four landform items (zeugen, seif, yadang, barchan) but the lettered answer options (A-D) pairing these items were not provided in the source, so the correct combination cannot be determined.",
+      "solvable": false,
+      "issue": "Lettered options (A-D) for this question were not extracted from the source; only the roman-numeral landform list is present.",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A lunar eclipse occurs when the earth passes directly between the sun and the moon, causing the earth's shadow to fall on the moon. The option text was misformatted (option A's letter label is missing, merged into the question stem), but the four intended options are still recoverable, and 'earth comes between the sun and the moon' is the only scientifically correct description.",
+      "solvable": true,
+      "issue": "Option A's letter label appears merged into the question stem due to a formatting/OCR issue, but the four options are still distinguishable and the correct one is unambiguous.",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The ozone layer's key function is absorbing harmful ultraviolet radiation from the sun, protecting life on earth. It does not primarily control evaporation, absorb carbon dioxide, or absorb water vapour, which are unrelated to ozone's role.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Read from the earth's centre outward, the internal structure sequence is core, then mantle, then crust, which matches option C exactly. The other options mix up the order (e.g., placing crust or mantle first without a consistent inside-out or outside-in progression).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Mercury is both the smallest planet in the solar system and the closest to the sun. Mars, Venus and Earth are all larger than Mercury and farther from the sun.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The shorter angular separation between 134°E and 120°W is 360 - (134+120) = 106°, giving a time difference of about 7 hours; since Town B lies to the east of Town A along this shorter path, its local time is ahead, so 10:00am + 7h ≈ 5:00pm. The distractor 5:00am wrongly assumes B is behind A rather than ahead.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Headward erosion extends a river valley upstream at its source, lengthening the valley over time. Vertical erosion deepens the valley, lateral erosion widens it, and sheet erosion is a slope process unrelated to channel lengthening.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A lopolith is a large saucer-shaped body of magma that solidifies beneath the earth's surface, making it an intrusive volcanic feature. Lava cones, craters and composite cones are all extrusive features formed on the earth's surface by erupted material.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The Mediterranean climate is defined by mild, wet winters and hot, dry summers, so rainfall concentrates in winter while summer stays warm and dry. Option A is wrong because the annual temperature range in Mediterranean areas is moderate, not above 50°C, and option D describes a desert climate, not Mediterranean.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question depends on identifying a labelled feature (X) on a limestone cave diagram, but no image was provided with this question.",
+      "solvable": false,
+      "issue": "The referenced cave diagram showing the landform labelled X was not attached, so the feature cannot be identified.",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Gabbro is a coarse-grained, intrusive igneous rock that crystallizes slowly from magma beneath the earth's surface. It is not formed by deposition (sedimentary) or heat/pressure alteration (metamorphic), which rules out the other options.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Deflation is the wind erosion process in which loose, fine surface particles are lifted and blown away, lowering the desert surface. Abrasion involves wind-carried particles wearing down rock surfaces by impact, and attrition/traction describe particle-to-particle wear and rolling transport, not the removal/lowering process described.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Introducing harmful substances into the environment is the standard definition of environmental pollution. The other terms (balance, interaction, intervention) describe ecological relationships or actions, not the contamination described.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Urban centres typically provide administrative services (local government offices, courts, agencies) that serve surrounding rural populations. Food crop supply flows the opposite way (rural to urban), and unemployment/trade deficit are not functions urban areas provide to rural areas.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Most West African countries produce similar primary commodities (cocoa, palm oil, groundnuts, timber, minerals), leaving little complementary demand for intra-regional trade. Political instability and colonial ties affect trade patterns but are not the primary structural reason for low intra-regional trade volume in standard syllabus treatment.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Secondary industries take raw materials produced by agriculture, mining, and fishing (primary industries) and process or manufacture them into finished goods. Primary industry is itself the direct extraction of these raw materials rather than a user of them, which is why option B is the weaker fit despite the overlapping wording.",
+      "solvable": true,
+      "issue": "The wording could be read either as describing primary industry (which produces these raw materials) or secondary industry (which uses them as inputs); the phrase 'uses raw materials from' points to secondary industry as the intended answer.",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Air travel in Africa is generally under-patronized mainly because fares are relatively expensive compared to average incomes, making it unaffordable for most travellers who use cheaper road or rail transport instead. Limited airports is a supply-side infrastructure issue rather than the direct reason for low patronage by travellers.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Educating couples on family planning to have fewer children directly addresses the root cause of overpopulation by lowering birth rates. Emigrating and returning, promoting agriculture, or discouraging rural-urban migration do not reduce a country's overall population growth.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Farmsteads, hamlets, villages and towns form a hierarchy of settlements distinguished primarily by their size (population and area), not by their function which would instead separate agricultural, market, or administrative centres. Location and shape are physical siting characteristics unrelated to this ranked classification.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Industries in urban centres are established because they create employment and generate revenue (taxes, trade) for government and residents. Religious tolerance is unrelated to industrial siting, and unemployment is a problem industries aim to reduce, not a reason for establishing them, so III and IV are invalid.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Most developing countries, lacking advanced manufacturing bases, mainly export agricultural products (cash crops, raw produce) on the global market. Manufactured goods, mining equipment, and automobiles are typically produced and exported by industrialized nations.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A resort is a place people visit for leisure, relaxation, or recreation, making it directly associated with tourism. Commerce, banking, and refugee activities do not relate to the leisure function implied by the term.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "ECOWAS was founded with 15 member states in West Africa, a figure well established in the WASSCE Geography syllabus. The other numbers do not match the historically taught membership count.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Population density is population divided by land area: 100,000,000 / 500,000 = 200 persons per square kilometer. The other options result from arithmetic errors in this division.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Primary siting factors for industries in Tropical Africa include nearness to raw materials, nearness to market, and government industrial policy, all of which directly affect production and profitability. Existence of tertiary education institutions is a secondary or incidental factor, not a primary one, since industries can source skilled labour from elsewhere.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Hydro power and solar are naturally replenished and considered renewable energy sources. Coal, nuclear fuel, natural gas, and diesel are finite, non-renewable fossil or mineral-based fuels, ruling out the other pairs.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Subsistence farming relies on simple tools, family labour, and produce mainly for home consumption, making it labour intensive rather than capital intensive. Being capital intensive is a feature of commercial or mechanized farming, so it is the characteristic that does not belong.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Shipbuilding involves large-scale processing of heavy raw materials like steel and requires substantial capital and machinery, classifying it as a heavy industry. Printing, food processing, and household goods manufacture are light industries producing consumer goods with lighter inputs.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.165,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1212,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\answers-batch.schema.json"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.134,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\answers-batch.schema.json"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0963,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0786,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.5951
+}

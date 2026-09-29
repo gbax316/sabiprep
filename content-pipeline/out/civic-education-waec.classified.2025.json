@@ -1,0 +1,290 @@
+{
+  "unit": "2025",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "values.meaning-types",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "values.meaning-types",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "citizenship.acquisition",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "citizenship.civic-education",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "nationalism.national-unity",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "nationalism.nationalists",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "nationalism.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "human-rights.udhr",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "human-rights.limitations",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "human-rights.limitations",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "rule-of-law.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "law-order.constituted-authority",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "parenthood.importance",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "traffic.regulations",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "traffic.agencies",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "relationships.inter-communal-conflict",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "relationships.interpersonal",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "drug-abuse.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "human-trafficking.meaning-causes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "human-trafficking.meaning-causes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "hiv-aids.meaning-transmission",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "hiv-aids.meaning-transmission",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "youth-empowerment.government",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "youth-empowerment.skills",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "youth-empowerment.skills",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "government.arms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "government.tiers",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "government.tiers",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "government.arms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "government.tiers",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "democracy.meaning-types",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "democracy.meaning-types",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "democracy.parties-elections",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "law-order.meaning",
+      "confidence": "overlap",
+      "note": "requires knowing why both law and order and fundamental human rights matter to society, so it also fits human-rights.meaning; the taxonomy has no home for a list-matching item that pairs concepts from two different parent topics"
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "human-rights.meaning",
+      "confidence": "overlap",
+      "note": "human-rights.meaning covers the rights of the child, but the answer also names responsible parenting, so it also fits parenthood.roles or parenthood.importance; same cross-parent list-matching problem as Q35"
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "political-apathy.leaders-followers",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "government.separation-of-powers",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "rule-of-law.limitations",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "public-service.meaning-features",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 42,
+      "subtopic_id": "political-apathy.meaning-causes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 45,
+      "subtopic_id": "civil-society.qualities-problems",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "civil-society.meaning-functions",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 48,
+      "subtopic_id": "civil-society.qualities-problems",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 49,
+      "subtopic_id": "public-service.problems-reforms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "public-service.meaning-features",
+      "confidence": "clear",
+      "note": ""
+    }
+  ],
+  "taxonomy_findings": [
+    {
+      "kind": "too-narrow",
+      "where": "law-order.meaning / human-rights.meaning",
+      "detail": "Q35 is a list-matching item that asks which pair of seven named concepts would doom society if absent, with the settled answer pairing law and order with fundamental human rights. Answering it needs the importance content from two different parents at once, and the taxonomy's own coverage notes never cite a 2025 question for law-order.meaning even though this one tests it. A single-subtopic tree has no clean home for a question built to span two topics."
+    },
+    {
+      "kind": "overlap",
+      "where": "human-rights.meaning / parenthood.roles",
+      "detail": "Q36 pairs responsible parenting with fundamental human rights as the entitlements of every child. human-rights.meaning already covers the rights of the child, but the settled answer also credits responsible parenting, so the question tests both parents together rather than one subtopic. As with Q35, the list-matching format the exam uses for shared-stem items does not map onto a taxonomy built one subtopic per question."
+    }
+  ],
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1"
+}

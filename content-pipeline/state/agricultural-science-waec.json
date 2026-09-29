@@ -2,18 +2,212 @@
   "slug": "agricultural-science-waec",
   "subject": "Agricultural Science",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T13:16:24",
     "note": ""
   },
   "units": {
     "2025": {
-      "status": "running",
-      "stages": {},
-      "error": ""
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T12:30:17",
+          "summary": "50/50 codex, 50/50 claude",
+          "seconds": 767,
+          "cost_usd": 1.01
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T12:30:17",
+          "summary": "agreed-soft 10, disagree 2, unsolvable 12, verified 26",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T12:31:50",
+          "summary": "13 ruled: ambiguous 2, key 11",
+          "seconds": 92,
+          "cost_usd": 0.36
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T12:31:50",
+          "summary": "ambiguous 2, defective 11, keyed 37",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T12:34:07",
+          "summary": "clear 37; 0 taxonomy findings",
+          "seconds": 136,
+          "cost_usd": 0.53
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T12:37:46",
+          "summary": "37 written in 2 part(s); answer challenges none; style scan: REVIEW (5 across 5 location(s))",
+          "seconds": 218,
+          "cost_usd": 1.22
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T13:04:36",
+          "summary": "37 reviewed, 12 fail, fact errors none",
+          "seconds": 1610,
+          "cost_usd": 1.97
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T13:11:04",
+          "summary": "15 accepted, 1 rejected; style scan: REVIEW (6 across 6 location(s))",
+          "seconds": 388,
+          "cost_usd": 2.17
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T13:16:15",
+          "summary": "14 changed items re-reviewed, 0 still fail ",
+          "seconds": 310,
+          "cost_usd": 0.7
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T13:16:15",
+          "summary": "every changed item passed",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T13:16:15",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T13:16:15",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T13:16:15",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T13:16:15",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T13:16:15",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T13:16:15",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T13:16:22",
+          "summary": "PREVIEW (no image base set): agricultural-science-waec.2025.PREVIEW.csv, 13 held, 1 pre-flight flags; style scan: REVIEW (8 across 8 location(s))",
+          "seconds": 7,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T13:16:24",
+          "summary": "agricultural-science-waec.2025.preview.html",
+          "seconds": 1,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 5,
+          "why": "defective",
+          "detail": "The question references 'the diagram below' illustrating a brooding equipment, but no image was atta"
+        },
+        {
+          "q_number": 6,
+          "why": "defective",
+          "detail": "The question depends on identifying the illustrated brooding equipment from 'the diagram below', but"
+        },
+        {
+          "q_number": 11,
+          "why": "defective",
+          "detail": "Missing data: mass of empty dish and mass of dish + fresh soil are not given, so the mass of fresh s"
+        },
+        {
+          "q_number": 12,
+          "why": "defective",
+          "detail": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute "
+        },
+        {
+          "q_number": 13,
+          "why": "defective",
+          "detail": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute "
+        },
+        {
+          "q_number": 15,
+          "why": "defective",
+          "detail": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram "
+        },
+        {
+          "q_number": 16,
+          "why": "defective",
+          "detail": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram "
+        },
+        {
+          "q_number": 21,
+          "why": "defective",
+          "detail": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled"
+        },
+        {
+          "q_number": 22,
+          "why": "defective",
+          "detail": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled"
+        },
+        {
+          "q_number": 28,
+          "why": "defective",
+          "detail": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | T"
+        },
+        {
+          "q_number": 29,
+          "why": "defective",
+          "detail": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | T"
+        },
+        {
+          "q_number": 34,
+          "why": "ambiguous",
+          "detail": "Waterleaf produces small dehiscent capsules that split to release many tiny seeds, and standard Nige"
+        },
+        {
+          "q_number": 49,
+          "why": "ambiguous",
+          "detail": "The four options form a two-by-two grid: A and C differ by the ₦30,000 marketing cost, and B and D a"
+        }
+      ]
     }
   },
-  "cost_usd": 16.85,
+  "cost_usd": 24.81,
   "taxonomy_cost_usd": 16.85
 }

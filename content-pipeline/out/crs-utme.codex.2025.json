@@ -1,0 +1,395 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "In the creation account, man is made last, in God's own image, and given dominion over all other creatures, which is the clearest demonstration of God's sovereign rule over the universe. Rivers and animals were made earlier but do not display sovereignty in the same way, and Eve's creation is a subset of man's creation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The River Euphrates is one of the two great rivers (with the Tigris) that flow through Mesopotamia, the land between the rivers. Israel, Egypt and Canaan are not traversed by the Euphrates.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "1 Samuel 31 records that Saul and his sons died fighting the Philistines on Mount Gilboa. Sinai, Zion and Carmel are associated with other events (the Law, Jerusalem, and Elijah's contest respectively), not Saul's death.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "2 Kings 23 describes Josiah's reform as centering on tearing down idols, high places, and pagan altars throughout Judah after the Book of the Law was found. The other options relate to unrelated biblical events (Babel, Jeremiah's birth, Goliath's defeat).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "2 Kings 22:8 identifies Hilkiah as the high priest who discovered the Book of the Law during temple repairs in Josiah's reign, prompting the reforms. He was not a military commander, a prophet who rebuked Josiah, or a scribe of Amos.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "2 Kings 23:29 records that Josiah confronted Pharaoh Neco at Megiddo and was killed there. Jericho, Gilgal and Samaria are not the sites of this battle.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "1 Kings 18 states 450 prophets of Baal took part in the contest on Mount Carmel and were seized and killed at the Kishon valley afterward (v.40). The 400 figure refers to the prophets of Asherah mentioned separately, who were not part of that killing.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "1 Kings 17:3 records God directing Elijah to hide by the brook Cherith after he announced the drought, where ravens fed him. Jordan, Kidron and Kishon are other water bodies in Elijah's story but not where he was sent at that point.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "1 Kings 11 explains that Solomon's foreign wives turned his heart to worship their gods, which angered God and led to the kingdom's later division. Building the temple was approved, and the other options are unrelated to Solomon's own wrongdoing.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Jeremiah's prophecies blend stern warnings of judgment and punishment for Judah's sin with messages of hope, such as the promise of a new covenant and eventual restoration. The other pairings (wealth/prosperity, dreams/visions, law/order) do not characterize the dual thrust of his book.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Hosea named his daughter Lo-Ruhamah, meaning 'no mercy' or 'not pitied', symbolizing God withdrawing mercy from Israel (Hosea 1:6). 'Loved by God' and the other options do not match the Hebrew meaning, which is explicitly negative.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Amaziah, the priest of Bethel, confronted Amos and told him to flee to Judah and stop prophesying at the royal sanctuary (Amos 7:10-17). Hilkiah, Hophni, and Nathan belong to unrelated biblical episodes and had no dealings with Amos.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "At Babel, God scattered the builders and confused their language, an act directly affecting all the nations of the earth and showing His sovereign control over them (Genesis 11:1-9). Choosing Israel, sending manna, and dividing the Jordan are acts toward Israel specifically, not a display of sovereignty over the nations.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "1 Samuel 28:6 states that when Saul inquired of the Lord, the Lord did not answer him by dreams, Urim, or prophets, so he turned to the medium at Endor. The other options are not the stated biblical reason.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "This is Joshua's farewell challenge to Israel at Shechem: 'choose you this day whom ye will serve... but as for me and my house, we will serve the LORD' (Joshua 24:15). It is not attributed to Moses, Aaron, or Caleb.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "God addresses Ezekiel as 'son of man' over ninety times throughout the book of Ezekiel, far more than any other prophet. Jeremiah, Isaiah, and Amos are not characteristically addressed this way.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Nebuzaradan, captain of the Babylonian guard, burned the temple and the city of Jerusalem and carried the remaining people into exile (2 Kings 25:8-11). He had no role in the Jordan crossing, Nehemiah's wall-building, or temple sacrifices.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Pharaoh Necho of Egypt deposed Jehoahaz and took him captive to Egypt, where he died (2 Kings 23:33-34). He was not taken to Assyria or Babylon, and Cyrus is a person, not a place.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In Daniel 3:8, it is 'certain Chaldeans' who came forward and accused the Jews (Shadrach, Meshach, and Abednego) to Nebuchadnezzar for refusing to worship the golden image. The Assyrians, Syrians, and eunuchs are not named in this account.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Of the options given, only Jeremiah was active in Jerusalem as a contemporary prophet at the time of Jehoiachin's deportation to Babylon in 597 BC, later writing to the exiles (Jeremiah 22, 29). Elijah and Hosea lived centuries earlier, and Malachi prophesied after the exile ended, so neither could have witnessed this event.",
+      "solvable": true,
+      "issue": "The prophet most directly associated with witnessing Jehoiachin's deportation is Ezekiel, who was deported with him, but Ezekiel is not among the answer choices; Jeremiah is the only chronologically plausible option provided.",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Jesus raised the widow's son at Nain, recorded in Luke 7:11-17. Capernaum, Bethany, and Jericho are sites of other miracles, not this one.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "In Luke 7:14, Jesus says \"Young man, I say to you, arise!\" while raising the widow of Nain's son. This is distinct from Jairus' daughter (\"Talitha cumi\") and the other listed miracles.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The Emmaus road encounter (Luke 24:13-35) occurred after Jesus' resurrection, when two disciples met the risen Christ. It did not happen after His crucifixion but had not yet reached His ascension.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Paul (then called Saul) struck Elymas the sorcerer blind for opposing the gospel before the proconsul Sergius Paulus, as recorded in Acts 13:8-11.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "In Acts 12:20-22, people from Tyre and Sidon, seeking peace with Herod, flattered him by shouting he had the voice of a god, leading to his death for not giving God glory.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Demetrius the silversmith, whose idol-making business was threatened by Paul's preaching against idolatry, incited opposition against Paul at Ephesus (Acts 19:23-29).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "After being shipwrecked, Paul was bitten by a viper on the island of Malta but suffered no harm, as recorded in Acts 28:1-6.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Acts 23:8 explicitly states the Sadducees denied the resurrection, while the Pharisees affirmed it along with angels and spirits, ruling out option A as the primary doctrine denied.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In 1 Corinthians 12:28, Paul lists God's appointments in order: first apostles, second prophets, third teachers, making teacher the correct third position.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Cornelius, a centurion of the Italian Regiment, is described in Acts 10:1 as living in Caesarea, where Peter later visited him.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Luke 2:36 identifies Anna as a prophetess of the tribe of Asher who worshipped in the temple day and night. She was not a priestess, not Mary's cousin (that was Elizabeth), and not connected to Jairus's household.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "In Acts 5:34-39, Gamaliel cited the failed movements of Theudas and Judas the Galilean to argue that if the apostles' undertaking is of human origin it will collapse on its own, but if it is from God it cannot be overthrown. He was not advocating that preaching stop outright, and Theudas is not compared favourably to Moses.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The exhortation to 'clothe yourselves with humility' is grounded in the principle that 'God opposes the proud but gives grace to the humble' (1 Peter 5:5, echoed in James 4:6). Humility is tied to receiving grace, not to material wealth, Jewish custom, or political power.",
+      "solvable": true,
+      "issue": "The stem attributes this teaching to 'Paul's letters', but the quoted principle appears in 1 Peter 5:5 (and James 4:6), not in a Pauline epistle; this is likely an error in the source paper. The correct option among those given is still unambiguous.",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Luke 24:30-31 records that the disciples' eyes were opened to recognise Jesus at Emmaus when he took bread, blessed and broke it, and gave it to them. He had already opened the Scriptures to them earlier on the road without their recognising him, and he vanished only after they recognised him, not before.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "James 5:17-18 cites Elijah's prayer that stopped and later restored rain as the example of the effectiveness of a righteous person's prayer. Moses, Isaiah, and Abraham are not the figures used in that passage.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In 1 Peter 2:18-20, Peter addresses servants/slaves, urging them to endure unjust suffering patiently as this finds favour with God. Wives are addressed separately in 1 Peter 3:1-6 on submission, not specifically on enduring suffering in this way.",
+      "solvable": true,
+      "issue": "Options B and D are both printed as 'children', an apparent duplication/typo in the source paper (one was likely meant to be a different word, e.g. 'servants'). This does not affect the correctness of option C, which remains the unambiguous answer.",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The 'faith chapter' (Hebrews 11, traditionally read among Paul's teaching in this syllabus) lists Abel, Abraham, and Rahab among the heroes of faith, but Baruch is not mentioned there at all. Baruch is Jeremiah's scribe and appears nowhere in this list.",
+      "solvable": true,
+      "issue": "Option C is spelled 'Rehab' instead of 'Rahab', a likely typographical error, but it clearly refers to Rahab and does not affect the correct answer, D.",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Acts 18:3 states that Paul was a tentmaker by trade, which he practised alongside Aquila and Priscilla to support his ministry. He was not a fisherman, weaver, or farmer by trade.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Acts 15:36-40 records that Paul and Barnabas had a sharp disagreement over whether to take John Mark on their second missionary journey, since he had earlier deserted them in Pamphylia, leading them to separate. Timothy, Silas, and Philip are not the subject of that dispute.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Philemon centres on Paul's appeal to Philemon to forgive and receive back his runaway slave Onesimus as a beloved brother, making forgiveness and reconciliation its central theme. It is not primarily about crime and punishment, or righteousness and inequity, though those touch on related ideas only tangentially.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0905,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0761,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0821,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0918,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.3405
+}

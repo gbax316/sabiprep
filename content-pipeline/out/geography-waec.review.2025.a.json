@@ -1,0 +1,351 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "fail",
+      "failed_checks": [
+        2,
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "Hint 3 gives away the answer instead of leaving the choice to the student: \"Of the three left, think of Obudu Mountain Resort in Cross River State. Which activity is it known for?\" A student who knows Obudu Mountain Resort (Nigeria's best-known resort, commonly taught as an example) simply recalls that it is a tourist site, which is option A's exact text, so no elimination or reasoning among A/B/C is actually required; this fails the hint-3 test that a student must still make the choice. Separately, both the hint and the solution state as a flat, unscoped fact that \"Refugees live in camps, not resorts\" (hint 2) and \"a refugee is a person who has fled war or disaster, and refugees live in camps, not resorts\" (Why not the others, D). This is not literally true: most refugees worldwide live in host communities and urban areas rather than camps (per UNHCR), so stating it as a universal fact is a false absolute a student would carry forward.",
+      "fix": "Replace hint 3 with: \"Of the three left, think about whether a resort is mainly a place for buying and selling, a place for keeping and lending money, or a place people visit for rest and holidays.\" Replace the sentence in hint 2 with: \"A refugee is someone forced to flee war or disaster, not someone on holiday, so refugee is not connected with resorts.\" Replace the corresponding line in Why not the others with: \"D. refugee: a refugee is a person who has fled war or disaster, not a holidaymaker, so it is not connected with resorts.\"",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3681,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2924,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3876,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1508,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2464,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 1.4453
+}

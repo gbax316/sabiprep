@@ -1,0 +1,387 @@
+{
+  "reviewer": "codex",
+  "year": 2024,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Hint3 says: \"Two options fail the double-letter count near the start. Of the two left, check the ending: should 'date' have a doubled t?\" This miscounts the options. Checking both the c's and the m's (as hint2 instructs), THREE options fail, not two: A. Accomodate has double c but only one m; C. Acommodate has double m but only one c; D. Accomodatte has double c but only one m (and a wrong double t). Only B. Accommodate has both letters doubled. So there are not \"two left\" after the count in hint2, there is only one (the answer), and hint3's premise is factually wrong.",
+      "fix": "Checking the c's and the m's together, only one option has both doubled correctly; the other three are each missing one of the two doubled letters. Confirm your choice by checking the ending too: it should have a single t, not a double t.",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint2 gives the rule with two analogues that map syllable-for-syllable onto immunity: 'the main stress falls on the syllable just before -ity, as in aBILity and elecTRICity.' In both aBILity and elecTRICity the stressed syllable is exactly the one immediately adjacent to -ity, so applying the same rule to im-mu-ni-ty already fixes the answer on mu before hint3 is read. Hint3 then reduces to spelling inspection, not reasoning: 'of the first two syllables, which one sits right before -ity?' A student can answer this by simply looking at the written split im-mu-ni-ty and seeing that mu is the one adjacent to ni-ty, with no pronunciation or judgment required, unlike hint3 in Q35 and Q36 which both require the student to actually say the word aloud. This lets the student answer from hint3 without thinking.",
+      "fix": "That leaves two candidates, IM and MU. Say immune on its own, then say immunity at normal speed: does the syllable that is stressed in immune keep its push, or does the stress jump to the front?",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2564,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2691,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.5161,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2136,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.554,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 1.8092
+}

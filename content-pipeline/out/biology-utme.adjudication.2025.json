@@ -1,0 +1,55 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "rulings": {
+    "4": {
+      "q_number": 4,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Standard Nigerian texts give Hydra as the example of tissue level, Paramecium and Amoeba as cellular (protoplasmic) level, and the onion bulb as the example of organ level. The strongest case against B is that an onion bulb is an organ, not an organism, so the stem is loosely worded. That looseness mirrors the textbook list of examples exactly and does not point to any other option. Hydra has specialised tissues but no organs in the syllabus classification, so A is weaker.",
+      "sided_with": "both"
+    },
+    "8": {
+      "q_number": 8,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "Nigerian secondary texts list tongue rolling, PTC tasting and blood groups as physiological variations, and height, size, body shape and fingerprints as morphological variations. Fingerprints are the most tempting alternative because they are a discontinuous, genetically fixed trait. However, a fingerprint is a structural feature of the skin and is classed as morphological in the standard texts. Only tongue rolling is a functional ability, so C is the one answer an examiner would accept.",
+      "sided_with": "both"
+    },
+    "19": {
+      "q_number": 19,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "The bacteria and protozoa in the rumen digest cellulose for the cow and get food and shelter in return, which is the textbook example of mutualism. The strongest case for A is that many Nigerian texts use symbiosis as a synonym for mutualism. But a setter who treated the two words as identical would not offer both, so offering both shows symbiosis is being used as the broad term for any close association, and mutualism is the precise answer. Reading the stem as the protozoa preying on the bacteria goes beyond the syllabus, which teaches this pair only as a mutualism example, so C is not a serious rival.",
+      "sided_with": "both"
+    },
+    "22": {
+      "q_number": 22,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "The question asks what type of cells divide constantly at root and shoot tips, and the answer is meristematic cells. Apical is the strongest distractor because the tissue is called the apical meristem. But apical only names where the cells are, and the stem already gives that location, so repeating it does not answer the question about cell type. Intercalary and lateral name meristems in other positions and do not fit the apex.",
+      "sided_with": "both"
+    },
+    "26": {
+      "q_number": 26,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "The vacuole stores cell sap, which holds water, food reserves and waste products, and the textbooks name it as the storage organelle for wastes. The lysosome is the closest alternative because it deals with worn-out cell parts. But it breaks material down with hydrolytic enzymes instead of storing it, so it does not fit the word storing. Mitochondria and endoplasmic reticulum have no storage role for waste.",
+      "sided_with": "both"
+    },
+    "27": {
+      "q_number": 27,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Seawater is where rivers, sewage outfalls, industrial effluent and oil spills finally end up, and it also holds the most dissolved matter of any natural water. Rainwater is taught as the purest natural water, and spring water is filtered through rock. Well water is the strongest alternative because shallow wells can be contaminated by nearby pit latrines. That is a local, case-by-case risk, and the word typically in the stem points to the general comparison, where seawater is clearly the most loaded.",
+      "sided_with": "both"
+    },
+    "28": {
+      "q_number": 28,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "The stem is cut off at 'a man with blood group' and never states the blood group, even though the whole question depends on it. Option A also has a stray 'A.' prefix. If you assume both genotypes must belong to the same blood group, option B (AO, AA) is the only matching pair, both group A, which suggests the missing word was A. But the student has to rebuild the question from the options, which is not a fair test. Repair the stem to read 'blood group A' and the key is B.",
+      "sided_with": "neither"
+    }
+  }
+}

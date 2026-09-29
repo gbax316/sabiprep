@@ -1,0 +1,328 @@
+{
+  "deriver": "claude",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Nigeria served as a non-permanent member of the UN Security Council for 2014-2015 (elected October 2013). Non-permanent membership is a UN Security Council concept; the AU, OAU (defunct since 2002) and OPEC (Nigeria a full member since 1971) have no such category.",
+      "solvable": true,
+      "issue": "Stem says 'admitted' in 2014; strictly Nigeria was elected in 2013 for the 2014-2015 term. Duplicates Q23."
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In the Hausa emirate system the Sarkin Pawa was the head of butchers. The Sarkin Ruwa was in charge of water/fishing, the Sarkin Fada of palace affairs and the Waziri was the chief adviser/prime minister.",
+      "solvable": true,
+      "issue": ""
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Babangida established the Armed Forces Ruling Council after his August 1985 coup. Buhari's highest body was the Supreme Military Council, Abacha's the Provisional Ruling Council, and Gowon's the Supreme Military Council.",
+      "solvable": true,
+      "issue": ""
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "France tested atomic bombs in the Sahara (Reggane, Algeria) from 1960, and the Balewa government broke diplomatic relations with France in January 1961. Israel, Chad and Libya had nothing to do with those tests.",
+      "solvable": true,
+      "issue": ""
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The Murtala Mohammed regime raised the number of states from 12 to 19 in February 1976. In 1967 Gowon created 12 states, and 1789 and 1965 are irrelevant.",
+      "solvable": true,
+      "issue": ""
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Under the Babangida transition of the aborted Third Republic, the government created and imposed two parties, the SDP and NRC. The First, Second and Fourth Republics all had multi-party systems.",
+      "solvable": true,
+      "issue": ""
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Uganda has never been an OPEC member. Venezuela and Kuwait are founding members, and Nigeria joined in 1971.",
+      "solvable": true,
+      "issue": "Duplicates Q26."
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The name 'Ghana Must Go' came from the 1983 mass expulsion of Ghanaians from Nigeria under Shagari, when Jerry Rawlings led Ghana. Busia is the strongest distractor, because his 1969 Aliens Compliance Order expelled Nigerians from Ghana and is often cited as the background, but the bag's name dates from 1983.",
+      "solvable": true,
+      "issue": "Busia (C) is defensible if the question means the 1969 expulsion that prompted the retaliation."
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Foreign policy is formulated mainly by the executive, meaning the President with the Federal Executive Council, advised by the Ministry of Foreign Affairs. The Ministry does not act 'alone', and the National Assembly only ratifies treaties and confirms appointments.",
+      "solvable": true,
+      "issue": ""
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Authority is the recognised or legitimate right to command and enforce obedience. Power is the ability or capacity to compel, not the right, and sovereignty is the supreme power of the state, which some texts also phrase in similar terms.",
+      "solvable": true,
+      "issue": "Sovereignty (B) is defensible under some textbook wordings ('supreme power to enforce obedience')."
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "The Federal Character Commission implements the federal character principle, which ensures fair representation in appointments, promotes unity by preventing sectional dominance and protects minorities. All three options describe its purpose, so D fits best.",
+      "solvable": true,
+      "issue": "An examiner could key A as the narrow statutory mandate, but the options overlap and D covers all of them."
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "The stem ties the exploitation and subjugation to 'the colonial era', which is colonialism: direct political control and economic exploitation of a territory. Imperialism is broader (extending power over other nations by any means), and neocolonialism is the indirect control that comes after independence.",
+      "solvable": true,
+      "issue": "Imperialism (B) is defensible because it is often defined as economic exploitation and political domination."
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Foreign policy is commonly defined as the totality of a country's interactions and dealings with other states in the international system. Diplomacy is the instrument for conducting those relations, not the interaction itself.",
+      "solvable": true,
+      "issue": "Diplomacy (B) is defensible because the stem's wording is loose."
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Abacha created six new states in October 1996, which brought the total to 36. Babangida left 30 states in 1991, and Gowon created 12.",
+      "solvable": true,
+      "issue": ""
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Sovereignty, meaning supreme authority internally and freedom from external control, is what makes a state independent and recognised as such. Population and territory are elements of a state but do not by themselves confer independence.",
+      "solvable": true,
+      "issue": ""
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "ECOWAS, the OAU and the AU are intergovernmental bodies made up of several sovereign states, so they are international organisations. 'Economic organizations' fits ECOWAS alone, not the OAU or AU.",
+      "solvable": true,
+      "issue": "The phrase 'government agencies and communities' is loosely worded but does not affect the answer."
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Military rule, party systems, political parties, constitutional development and decolonisation are core topics of the Government syllabus. History touches some of them, but not party systems and constitutional development as analytical subjects.",
+      "solvable": true,
+      "issue": ""
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Under the 1999 Constitution the President appoints ministers, subject to Senate confirmation. Elections are run by INEC, governors are elected, and senators are recalled by their constituents.",
+      "solvable": true,
+      "issue": ""
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Military rule suspends elections, legislatures and party activity, which denies citizens political participation, a core democratic principle. National security and conflict resolution are not principles that military rule negates.",
+      "solvable": true,
+      "issue": ""
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Gowon created 12 states on 27 May 1967, replacing the four regions. 1976 was the move to 19 states.",
+      "solvable": true,
+      "issue": "Stray quotation marks around the stem."
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Sovereignty means the state's supreme authority within its borders and its independence from external control. The other options describe tyranny, militarism or group interests, not sovereignty.",
+      "solvable": true,
+      "issue": ""
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The Clifford Constitution introduced the elective principle (elected members for Lagos and Calabar), which led to the first political parties such as the NNDP. That is why it is credited with laying the foundation for democracy and party politics in Nigeria.",
+      "solvable": true,
+      "issue": ""
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Nigeria sat on the UN Security Council as a non-permanent member for 2014-2015. ECOWAS, OPEC and the AU have no non-permanent membership.",
+      "solvable": true,
+      "issue": "Duplicates Q1."
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The US legislature is Congress, made up of the Senate and the House of Representatives. The House of Lords and House of Commons are British, and the National Assembly is Nigeria's.",
+      "solvable": true,
+      "issue": ""
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Opposition to deregulation (and privatisation), especially from labour unions, comes mainly from fear of job losses and so unemployment. Efficiency is usually cited as a benefit of deregulation, not a worry.",
+      "solvable": true,
+      "issue": "The stem is awkwardly worded ('Opposition as a disadvantage of deregulation'), possibly garbled in transcription."
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Uganda is not an OPEC member. Saudi Arabia and Kuwait are founding members, and Nigeria joined in 1971.",
+      "solvable": true,
+      "issue": "Duplicates Q7."
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Afrocentrism in Nigeria's foreign policy means Nigeria gives priority to African problems such as decolonisation, the fight against apartheid and peacekeeping. 'Control Africa' and 'centre of Africa' misstate the principle, which rests on commitment, not domination.",
+      "solvable": true,
+      "issue": "None of the options is phrased the way textbooks usually state it, but D is the closest."
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "In a unitary system all constitutional power is concentrated at the centre, which may delegate it to local units. A federal system divides power, and a confederal one leaves power with the component units.",
+      "solvable": true,
+      "issue": ""
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Franchise (suffrage) is the right to vote and, in the broader sense used in Government texts, to be voted for. The electorate is the body of voters, not the right.",
+      "solvable": true,
+      "issue": ""
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The Permanent Secretary is the highest career official in the civil service and heads the administrative class within a ministry. Directors and assistant directors rank below the Permanent Secretary.",
+      "solvable": true,
+      "issue": "The stem says 'class' but the options are posts; strictly the highest class is the administrative class, which the Permanent Secretary heads."
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Usman dan Fodio led the 1804 jihad that founded the Sokoto Caliphate. Muhammad Bello and Abdullahi were his lieutenants and successors, and Nana Asma'u was his daughter, a scholar.",
+      "solvable": true,
+      "issue": ""
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The landmark Local Government Reform, which created a uniform single-tier system nationwide, came in 1976 under Murtala and Obasanjo. The other years had no reform of comparable significance.",
+      "solvable": true,
+      "issue": ""
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Section 1 of the 1999 Constitution declares the Constitution supreme and binding on all authorities. Acts and decrees are subordinate to it.",
+      "solvable": true,
+      "issue": ""
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Separation of powers divides government functions among the legislature, executive and judiciary so that no one organ concentrates power and abuses it. It is not meant to strengthen or weaken any single organ.",
+      "solvable": true,
+      "issue": ""
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The judiciary's primary function is to interpret laws and apply them to cases. Law making belongs to the legislature and execution to the executive.",
+      "solvable": true,
+      "issue": ""
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Shehu Shagari became Nigeria's first Executive President in 1979 under the presidential system. Azikiwe was a ceremonial President, Balewa was Prime Minister and Obasanjo was a military Head of State at the time.",
+      "solvable": true,
+      "issue": ""
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The Independent National Electoral Commission (INEC) conducts federal and state elections in Nigeria. None of the other bodies has that function.",
+      "solvable": true,
+      "issue": ""
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "General Olusegun Obasanjo handed over to President Shehu Shagari on 1 October 1979. Murtala was killed in 1976, and Gowon was overthrown in 1975.",
+      "solvable": true,
+      "issue": ""
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The mace is the symbol of the legislature's authority, and without it the house cannot sit lawfully. The gavel is used to keep order and is associated with the judiciary or presiding officers.",
+      "solvable": true,
+      "issue": ""
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The Action Group (1951) was a major party of the First Republic era. The SDP and NRC belong to the Third Republic, and the PDP to the Fourth.",
+      "solvable": true,
+      "issue": "Strictly, the AG was formed in 1951, before the First Republic (1963), but it was the only one of these parties active then."
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,231 @@
+{
+  "unit": "2025",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "land.land-use-act",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "demand-supply.features",
+      "confidence": "clear",
+      "note": "tests that irrigation evens out seasonality, the feature named in this subtopic's covers line"
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "crop-improvement.aims",
+      "confidence": "clear",
+      "note": "options are all aims of crop improvement (short maturity, resistance etc), so this goes here even though the stem asks why research matters"
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "ecology.climatic",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "tools.simple-tools",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "tools.maintenance",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "soil-formation.rocks",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "soil.water",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "soil-formation.profile",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "soil-fertility.nutrients",
+      "confidence": "clear",
+      "note": "starts from a symptom (purple leaves), so it goes here even though the answer is a fertilizer"
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "irrigation.irrigation",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "ecology.pollution",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "crop-plants.storage-organs",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "processing-storage.storage",
+      "confidence": "clear",
+      "note": "drying before storage to prevent mould, not the fungal disease itself"
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "crop-diseases.bacterial-nematode",
+      "confidence": "clear",
+      "note": "blackarm is a bacterial disease of cotton"
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "processing-storage.processing",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "crop-diseases.fungal",
+      "confidence": "clear",
+      "note": "gummosis is fungal; budding on resistant stock stays with the disease it prevents"
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "agriculture.farming-systems",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "propagation.seeds",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "forestry.agroforestry",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "ornamentals.types",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "crop-diseases.fungal",
+      "confidence": "clear",
+      "note": "sigatoka of banana is fungal, controlled by fungicide"
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "farm-animals.breeds",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "farm-animals.products",
+      "confidence": "clear",
+      "note": "which product comes from a living vs slaughtered animal"
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "anatomy.digestive",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "anatomy.digestive",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "animal-improvement.ai",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "anatomy.environmental-physiology",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "livestock-management.poultry",
+      "confidence": "clear",
+      "note": "floor space and stocking arithmetic"
+    },
+    {
+      "q_number": 42,
+      "subtopic_id": "livestock-management.poultry",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 43,
+      "subtopic_id": "farm-animals.products",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 44,
+      "subtopic_id": "animal-health.fungal-protozoan",
+      "confidence": "clear",
+      "note": "coccidiosis (protozoan) and ringworm (fungal) both treated with sulpha drugs; fowl pox (viral, excluded from answer) lives elsewhere"
+    },
+    {
+      "q_number": 45,
+      "subtopic_id": "apiculture.bees",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "marketing.export",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 47,
+      "subtopic_id": "farm-management.accounts",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 48,
+      "subtopic_id": "farm-management.accounts",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "marketing.functions",
+      "confidence": "clear",
+      "note": ""
+    }
+  ],
+  "taxonomy_findings": [],
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1"
+}

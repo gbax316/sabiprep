@@ -1,0 +1,55 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "rulings": {
+    "10": {
+      "q_number": 10,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "The stem itself describes the symbol as a dot with a figure (.845), which is the standard convention for a spot height on Nigerian topographical maps, so the missing map does not block the answer. A benchmark is shown as BM with an arrow mark cut on a structure, not a bare dot and number, so C is the strongest distractor but fails on the symbol form. Hachures are short tapering lines and a valley is a landform, not a point symbol. An examiner would mark B.",
+      "sided_with": "both"
+    },
+    "16": {
+      "q_number": 16,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Standard texts describe savanna grasses as tall, tussocky and deep rooted, withering above ground and lying dormant through the long dry season before sprouting when the rains return. Option C is the most tempting distractor because some grasses do have fibrous roots, but savanna grasses are taught as having long roots that reach underground water, so shallow spreading roots is the wrong adaptation. Short layered growth and evergreen leaves contradict the textbook description. B is the examiner's answer.",
+      "sided_with": "both"
+    },
+    "24": {
+      "q_number": 24,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "As extracted, the item has no options: the options object is empty and the four choices are merged into the stem with the A label lost, and option B is misprinted as 'between the sun and the moon'. Codex's strongest point is that the intended options are recoverable and the text labelled C (earth comes between the sun and the moon) is the only correct description of a lunar eclipse. That is true on the physics, but a key cannot be attached to an item with no option letters, so it cannot be published as it stands. Once repaired (A sun between earth and moon, B moon between sun and earth, C earth between sun and moon, D sun misses its orbit), the answer is C.",
+      "sided_with": "claude"
+    },
+    "36": {
+      "q_number": 36,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Urban centres serve their rural hinterlands with administrative, commercial, health and educational services, and administration is the textbook example. Food crop supply is the strongest distractor, but it is a function of rural settlements to urban ones, the reverse direction the stem asks about. Unemployment and trade deficit are problems, not functions. B is unambiguous.",
+      "sided_with": "both"
+    },
+    "38": {
+      "q_number": 38,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "Secondary (manufacturing) industry is defined in Nigerian texts as industry that processes raw materials obtained from primary activities such as agriculture, mining, fishing and lumbering. The case for B is that primary industry is associated with those same activities, but primary industry produces or extracts those materials rather than using materials from them, and the stem's wording 'uses raw materials from' points squarely at the processing stage. Service and tertiary industry provide services rather than transforming raw materials. C is the key.",
+      "sided_with": "both"
+    },
+    "39": {
+      "q_number": 39,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "The standard reason given in Nigerian Geography texts for low patronage of air transport in Africa is its high cost relative to the low incomes of most people. Option A is the strongest alternative, since few airports is a listed problem of air transport, but it explains limited coverage rather than low patronage by travellers, and most major cities do have airports that are still underused because of fares. Discomfort is false and operation taxes affect airlines rather than passengers directly. An examiner would key D.",
+      "sided_with": "both"
+    },
+    "45": {
+      "q_number": 45,
+      "ruling": "ambiguous",
+      "answer": null,
+      "reasoning": "Textbooks and past marking schemes give ECOWAS membership as 15, so the setter almost certainly intended C. However Mali, Burkina Faso and Niger's withdrawal took effect on 29 January 2025, before this paper was sat, so the present tense 'consists of' was factually 12 on exam day and A is correct on current fact. A well-prepared student aware of current affairs could not tell whether the setter wanted the textbook figure or the actual figure, and keying C would teach a figure that is now false. The item should be held or reworded (for example 'at its peak' or 'as of 2024') rather than keyed.",
+      "sided_with": "neither"
+    }
+  }
+}

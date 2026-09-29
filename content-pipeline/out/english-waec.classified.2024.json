@@ -1,0 +1,483 @@
+{
+  "unit": "2024",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "vocabulary.antonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "election register"
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "meeting register"
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "law register"
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "collective noun, matches the herd of cattle example in the covers line"
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "building register"
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "health register"
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "health register"
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "press register"
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "clear",
+      "note": "swept off her feet is a fixed idiom"
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "clear",
+      "note": "kept abreast of is a fixed idiom"
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "idioms.sentence-interpretation",
+      "confidence": "clear",
+      "note": "the last but one turns on literal wording, not an idiom"
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "clear",
+      "note": "easy on the eye is a fixed idiom"
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "clear",
+      "note": "through thick and thin"
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "clear",
+      "note": "under the weather"
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "clear",
+      "note": "beaten at his own game is a fixed idiom"
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "overlap",
+      "note": "pull through reads as a verb plus particle, which the idioms.idioms sorting rule sends to idioms.phrasal-verbs, but the taxonomy's own list of phrasal verbs tested in this paper (Q47, Q53, Q55, Q61, Q65) does not include Q30, and groups Q21 to Q30 under idioms.idioms and idioms.sentence-interpretation instead"
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "vocabulary.synonyms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "verbs.sequence",
+      "confidence": "clear",
+      "note": "would have finished, tense forced by the past reporting verb said"
+    },
+    {
+      "q_number": 42,
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "confidence": "clear",
+      "note": "order of adjectives before a noun"
+    },
+    {
+      "q_number": 43,
+      "subtopic_id": "verbs.mood-conditionals",
+      "confidence": "clear",
+      "note": "subjunctive were after if"
+    },
+    {
+      "q_number": 44,
+      "subtopic_id": "word-classes.nouns",
+      "confidence": "clear",
+      "note": "uncountable noun chalk"
+    },
+    {
+      "q_number": 45,
+      "subtopic_id": "verbs.sequence",
+      "confidence": "clear",
+      "note": "reported speech, tense and time word changed"
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "balanced diet is the collocation example in the covers line"
+    },
+    {
+      "q_number": 47,
+      "subtopic_id": "idioms.phrasal-verbs",
+      "confidence": "clear",
+      "note": "rustle up"
+    },
+    {
+      "q_number": 48,
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "confidence": "clear",
+      "note": "intensifier before an adjective"
+    },
+    {
+      "q_number": 49,
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "confidence": "clear",
+      "note": "adverb of degree"
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "dented boot is the collocation example in the covers line"
+    },
+    {
+      "q_number": 51,
+      "subtopic_id": "word-classes.pronouns",
+      "confidence": "clear",
+      "note": "relative pronoun in which"
+    },
+    {
+      "q_number": 52,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "clear",
+      "note": "cannot but is a listed fixed expression"
+    },
+    {
+      "q_number": 53,
+      "subtopic_id": "idioms.phrasal-verbs",
+      "confidence": "clear",
+      "note": "fell through"
+    },
+    {
+      "q_number": 54,
+      "subtopic_id": "concord.question-tags",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 55,
+      "subtopic_id": "idioms.phrasal-verbs",
+      "confidence": "clear",
+      "note": "broke into"
+    },
+    {
+      "q_number": 56,
+      "subtopic_id": "verbs.tenses",
+      "confidence": "clear",
+      "note": "tense fixed by the order of events, before I arrived is the covers line's own example"
+    },
+    {
+      "q_number": 57,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "clear",
+      "note": "next to nothing is a listed fixed expression"
+    },
+    {
+      "q_number": 58,
+      "subtopic_id": "verbs.non-finite",
+      "confidence": "clear",
+      "note": "having bought, perfect participle"
+    },
+    {
+      "q_number": 59,
+      "subtopic_id": "word-classes.prepositions",
+      "confidence": "clear",
+      "note": "deficiency in"
+    },
+    {
+      "q_number": 60,
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "confidence": "clear",
+      "note": "superlative earliest"
+    },
+    {
+      "q_number": 61,
+      "subtopic_id": "idioms.phrasal-verbs",
+      "confidence": "clear",
+      "note": "make do"
+    },
+    {
+      "q_number": 62,
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "confidence": "clear",
+      "note": "somewhat, adverb of degree"
+    },
+    {
+      "q_number": 63,
+      "subtopic_id": "concord.question-tags",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 64,
+      "subtopic_id": "word-classes.nouns",
+      "confidence": "clear",
+      "note": "a crossroads, a noun always plural"
+    },
+    {
+      "q_number": 65,
+      "subtopic_id": "idioms.phrasal-verbs",
+      "confidence": "clear",
+      "note": "play down"
+    },
+    {
+      "q_number": 66,
+      "subtopic_id": "verbs.modals",
+      "confidence": "clear",
+      "note": "ought not to have walked, perfect modal form"
+    },
+    {
+      "q_number": 67,
+      "subtopic_id": "word-classes.nouns",
+      "confidence": "clear",
+      "note": "price tag, a noun used as a modifier"
+    },
+    {
+      "q_number": 68,
+      "subtopic_id": "concord.pronoun-antecedent",
+      "confidence": "clear",
+      "note": "one and one's is the covers line's own example"
+    },
+    {
+      "q_number": 69,
+      "subtopic_id": "vocabulary.word-choice",
+      "confidence": "clear",
+      "note": "sell-by dates is the collocation example in the covers line"
+    },
+    {
+      "q_number": 70,
+      "subtopic_id": "word-classes.prepositions",
+      "confidence": "clear",
+      "note": "judge by"
+    },
+    {
+      "q_number": 71,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": "election gapped passage"
+    },
+    {
+      "q_number": 72,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 73,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 74,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 75,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 76,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 77,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 78,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 79,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 80,
+      "subtopic_id": "comprehension.cloze",
+      "confidence": "clear",
+      "note": ""
+    }
+  ],
+  "taxonomy_findings": [
+    {
+      "kind": "overlap",
+      "where": "idioms.idioms / idioms.phrasal-verbs",
+      "detail": "Q30, pull through that fever, is a verb plus particle whose meaning is more than the sum of its parts, which by the idioms.idioms sorting rule should go to idioms.phrasal-verbs. But the taxonomy's source note lists only Q47, Q53, Q55, Q61, Q65 as the phrasal verbs tested in this paper, and separately assigns the whole Q21 to Q30 block to idioms.idioms and idioms.sentence-interpretation. The general sorting rule and the specific real-paper citation point two different ways for this question, and a future two-word verb of this kind, such as pull through, get over, come round, used in a This means that sentence will hit the same fork."
+    }
+  ],
+  "year": 2024,
+  "paper": 1,
+  "taxonomy_version": "1.1"
+}

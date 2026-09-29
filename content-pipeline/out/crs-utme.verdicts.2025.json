@@ -1,0 +1,930 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "agreed-soft": 7,
+    "verified": 33
+  },
+  "verdicts": {
+    "1": {
+      "q_number": 1,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 1,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "In the creation account, man is made last, in God's own image, and given dominion over all other creatures, which is the clearest demonstration of God's sovereign rule over the universe. Rivers and animals were made earlier but do not display sovereignty in the same way, and Eve's creation is a subset of man's creation.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 1,
+        "answer": "B",
+        "confidence": "uncertain",
+        "reasoning": "CRS syllabus treats God's sovereignty in creation chiefly through the creation of man, made in God's image and given dominion over all creation (Gen 1:26-28). However, in strict order of creation animals (and the waters) precede man, so 'first' makes the stem ambiguous; Eve comes after man.",
+        "solvable": true,
+        "issue": "Stem is vague: 'first shown' could mean chronologically first (animals/waters precede man) rather than chiefly shown; rivers are not explicitly created in Gen 1."
+      },
+      "extract_anomaly": null
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 2,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The River Euphrates is one of the two great rivers (with the Tigris) that flow through Mesopotamia, the land between the rivers. Israel, Egypt and Canaan are not traversed by the Euphrates.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 2,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The Euphrates (with the Tigris) defines Mesopotamia, the 'land between the rivers'. It does not flow through Israel, Egypt (the Nile) or Canaan.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "1 Samuel 31 records that Saul and his sons died fighting the Philistines on Mount Gilboa. Sinai, Zion and Carmel are associated with other events (the Law, Jerusalem, and Elijah's contest respectively), not Saul's death.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Saul and his sons died fighting the Philistines on Mount Gilboa (1 Sam 31:1-8). Carmel is associated with Elijah, Sinai with the Law and Zion with Jerusalem.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 4,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "2 Kings 23 describes Josiah's reform as centering on tearing down idols, high places, and pagan altars throughout Judah after the Book of the Law was found. The other options relate to unrelated biblical events (Babel, Jeremiah's birth, Goliath's defeat).",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 4,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Josiah's reform removed idols, Asherah poles and high places and centralised worship in Jerusalem (2 Kgs 23). Babel, Jeremiah's birth and Goliath have nothing to do with the reform.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 5,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "2 Kings 22:8 identifies Hilkiah as the high priest who discovered the Book of the Law during temple repairs in Josiah's reign, prompting the reforms. He was not a military commander, a prophet who rebuked Josiah, or a scribe of Amos.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 5,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Hilkiah was the high priest who found the Book of the Law during the temple repairs (2 Kgs 22:8). Shaphan was the scribe and Huldah the prophetess consulted.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 6,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "2 Kings 23:29 records that Josiah confronted Pharaoh Neco at Megiddo and was killed there. Jericho, Gilgal and Samaria are not the sites of this battle.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 6,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Josiah went out against Pharaoh Neco and was killed at Megiddo (2 Kgs 23:29; 2 Chr 35:22). The other places are unconnected with this battle.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 7,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "1 Kings 18 states 450 prophets of Baal took part in the contest on Mount Carmel and were seized and killed at the Kishon valley afterward (v.40). The 400 figure refers to the prophets of Asherah mentioned separately, who were not part of that killing.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 7,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Elijah faced 450 prophets of Baal (1 Kgs 18:19, 22) and had them slain at the brook Kishon (18:40). The 400 were prophets of Asherah.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "1 Kings 17:3 records God directing Elijah to hide by the brook Cherith after he announced the drought, where ravens fed him. Jordan, Kidron and Kishon are other water bodies in Elijah's story but not where he was sent at that point.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "God sent Elijah to hide by the brook Cherith east of the Jordan, where ravens fed him (1 Kgs 17:3-6). Kishon is where the Baal prophets were killed.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 9,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "1 Kings 11 explains that Solomon's foreign wives turned his heart to worship their gods, which angered God and led to the kingdom's later division. Building the temple was approved, and the other options are unrelated to Solomon's own wrongdoing.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 9,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Solomon loved many foreign women who turned his heart after their gods, which angered the Lord (1 Kgs 11:1-10). Building the temple pleased God; the Adonijah execution is not the cited cause of divine displeasure.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 10,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Jeremiah's prophecies blend stern warnings of judgment and punishment for Judah's sin with messages of hope, such as the promise of a new covenant and eventual restoration. The other pairings (wealth/prosperity, dreams/visions, law/order) do not characterize the dual thrust of his book.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 10,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Jeremiah proclaimed judgement/punishment on Judah for sin and also hope of restoration and a new covenant (Jer 29-31). The other pairs do not describe his message.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Hosea named his daughter Lo-Ruhamah, meaning 'no mercy' or 'not pitied', symbolizing God withdrawing mercy from Israel (Hosea 1:6). 'Loved by God' and the other options do not match the Hebrew meaning, which is explicitly negative.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Lo-Ruhamah means 'not pitied' or 'no mercy' (Hos 1:6). 'Loved by God' is the opposite, used on her restoration (Ruhamah).",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 12,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Amaziah, the priest of Bethel, confronted Amos and told him to flee to Judah and stop prophesying at the royal sanctuary (Amos 7:10-17). Hilkiah, Hophni, and Nathan belong to unrelated biblical episodes and had no dealings with Amos.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 12,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Amaziah the priest of Bethel reported Amos to Jeroboam II and told him to go back to Judah (Amos 7:10-13). Hilkiah, Hophni and Nathan belong to other periods.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 13,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "At Babel, God scattered the builders and confused their language, an act directly affecting all the nations of the earth and showing His sovereign control over them (Genesis 11:1-9). Choosing Israel, sending manna, and dividing the Jordan are acts toward Israel specifically, not a display of sovereignty over the nations.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 13,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "At Babel God confused the language and scattered the builders over the earth, forming the nations (Gen 11:1-9) - the syllabus example of sovereignty over nations. Choosing Israel (B) also shows sovereignty but over one nation's election rather than the nations generally.",
+        "solvable": true,
+        "issue": "B is arguably defensible."
+      },
+      "extract_anomaly": null
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 14,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "1 Samuel 28:6 states that when Saul inquired of the Lord, the Lord did not answer him by dreams, Urim, or prophets, so he turned to the medium at Endor. The other options are not the stated biblical reason.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 14,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Saul inquired of the Lord but received no answer by dreams, Urim or prophets, so he consulted the medium of Endor (1 Sam 28:6-7). The threat was the Philistines, not David or the Amalekites.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 15,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "This is Joshua's farewell challenge to Israel at Shechem: 'choose you this day whom ye will serve... but as for me and my house, we will serve the LORD' (Joshua 24:15). It is not attributed to Moses, Aaron, or Caleb.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 15,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Joshua said this at the covenant renewal at Shechem (Josh 24:15). Moses had died before this.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 16,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "God addresses Ezekiel as 'son of man' over ninety times throughout the book of Ezekiel, far more than any other prophet. Jeremiah, Isaiah, and Amos are not characteristically addressed this way.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 16,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "God addresses Ezekiel as 'son of man' over ninety times. It is not the characteristic address for Jeremiah, Isaiah or Amos.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 17,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Nebuzaradan, captain of the Babylonian guard, burned the temple and the city of Jerusalem and carried the remaining people into exile (2 Kings 25:8-11). He had no role in the Jordan crossing, Nehemiah's wall-building, or temple sacrifices.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 17,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Nebuzaradan burned the temple and Jerusalem, broke down its walls and carried the people into exile (2 Kgs 25:8-11). The other roles belong to Joshua, Nehemiah's helpers and priests.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 18,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Pharaoh Necho of Egypt deposed Jehoahaz and took him captive to Egypt, where he died (2 Kings 23:33-34). He was not taken to Assyria or Babylon, and Cyrus is a person, not a place.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 18,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Pharaoh Neco deposed Jehoahaz and took him to Egypt, where he died (2 Kgs 23:33-34). Jehoiachin and Zedekiah went to Babylon; 'Cyrus' is a person, not a place.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 19,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "In Daniel 3:8, it is 'certain Chaldeans' who came forward and accused the Jews (Shadrach, Meshach, and Abednego) to Nebuchadnezzar for refusing to worship the golden image. The Assyrians, Syrians, and eunuchs are not named in this account.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 19,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Certain Chaldeans came forward and accused the Jews (Dan 3:8-12). The other groups are not named in the account.",
+        "solvable": true,
+        "issue": "Stem typo: 'bow than to' for 'bow down to'; does not affect the answer."
+      },
+      "extract_anomaly": null
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 20,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "Of the options given, only Jeremiah was active in Jerusalem as a contemporary prophet at the time of Jehoiachin's deportation to Babylon in 597 BC, later writing to the exiles (Jeremiah 22, 29). Elijah and Hosea lived centuries earlier, and Malachi prophesied after the exile ended, so neither could have witnessed this event.",
+        "solvable": true,
+        "issue": "The prophet most directly associated with witnessing Jehoiachin's deportation is Ezekiel, who was deported with him, but Ezekiel is not among the answer choices; Jeremiah is the only chronologically plausible option provided.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 20,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Jeremiah was prophesying in Jerusalem when Jehoiachin (Coniah) was deported in 597 BC and wrote to those exiles (Jer 22:24-30; 24:1; 29:1-2). Malachi was post-exilic; Elijah and Hosea were much earlier.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 21,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Jesus raised the widow's son at Nain, recorded in Luke 7:11-17. Capernaum, Bethany, and Jericho are sites of other miracles, not this one.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 21,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Jesus raised the widow's only son at Nain (Luke 7:11-15). Bethany is where Lazarus was raised; Capernaum is linked to Jairus' daughter.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 22,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "In Luke 7:14, Jesus says \"Young man, I say to you, arise!\" while raising the widow of Nain's son. This is distinct from Jairus' daughter (\"Talitha cumi\") and the other listed miracles.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 22,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "'Young man, I say to you, arise' was spoken to the widow's son at Nain (Luke 7:14). To Jairus' daughter he said 'Child, arise' / 'Talitha cumi'.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 23,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The Emmaus road encounter (Luke 24:13-35) occurred after Jesus' resurrection, when two disciples met the risen Christ. It did not happen after His crucifixion but had not yet reached His ascension.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 23,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The Emmaus walk occurred on the day of the resurrection, when the risen Jesus appeared to two disciples (Luke 24:13-35). Although it is also after the crucifixion, the defining event is the resurrection; it preceded the ascension.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Paul (then called Saul) struck Elymas the sorcerer blind for opposing the gospel before the proconsul Sergius Paulus, as recorded in Acts 13:8-11.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Paul (Saul), filled with the Spirit, struck Elymas blind at Paphos (Acts 13:8-11). Barnabas was present but Paul pronounced the judgement.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 25,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "In Acts 12:20-22, people from Tyre and Sidon, seeking peace with Herod, flattered him by shouting he had the voice of a god, leading to his death for not giving God glory.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 25,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Herod Agrippa I addressed the people of Tyre and Sidon, who shouted 'The voice of a god' before he was struck down (Acts 12:20-23). The event was at Caesarea, but the people were from Tyre and Sidon.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 26,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Demetrius the silversmith, whose idol-making business was threatened by Paul's preaching against idolatry, incited opposition against Paul at Ephesus (Acts 19:23-29).",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 26,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Demetrius the silversmith, who made shrines of Artemis, stirred up the riot against Paul (Acts 19:23-41). Gamaliel and Agrippa are linked to Jerusalem and Caesarea.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 27,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "After being shipwrecked, Paul was bitten by a viper on the island of Malta but suffered no harm, as recorded in Acts 28:1-6.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 27,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "After the shipwreck Paul was bitten by a viper on Malta (Melita) and suffered no harm (Acts 28:1-6). Crete was passed before the storm.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 28,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Acts 23:8 explicitly states the Sadducees denied the resurrection, while the Pharisees affirmed it along with angels and spirits, ruling out option A as the primary doctrine denied.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 28,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "The Sadducees are best known for denying the resurrection (Matt 22:23; Acts 23:8). Acts 23:8 also says they denied angels and spirits, so A is technically defensible, but the resurrection is the standard answer.",
+        "solvable": true,
+        "issue": "A (angels) is also biblically correct per Acts 23:8."
+      },
+      "extract_anomaly": null
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 29,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "In 1 Corinthians 12:28, Paul lists God's appointments in order: first apostles, second prophets, third teachers, making teacher the correct third position.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 29,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "1 Cor 12:28: 'first apostles, second prophets, third teachers'. Evangelists appear in Ephesians 4:11, not the Corinthian list.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 30,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Cornelius, a centurion of the Italian Regiment, is described in Acts 10:1 as living in Caesarea, where Peter later visited him.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 30,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Cornelius was a centurion at Caesarea (Acts 10:1). Peter was at Joppa, not the other listed places.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 31,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Luke 2:36 identifies Anna as a prophetess of the tribe of Asher who worshipped in the temple day and night. She was not a priestess, not Mary's cousin (that was Elizabeth), and not connected to Jairus's household.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 31,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Anna, daughter of Phanuel, was a prophetess who greeted the infant Jesus at the temple (Luke 2:36-38). Mary's kinswoman was Elizabeth; Israel had no priestesses.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 32,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "In Acts 5:34-39, Gamaliel cited the failed movements of Theudas and Judas the Galilean to argue that if the apostles' undertaking is of human origin it will collapse on its own, but if it is from God it cannot be overthrown. He was not advocating that preaching stop outright, and Theudas is not compared favourably to Moses.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 32,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Gamaliel cited Theudas and Judas the Galilean, whose movements came to nothing, to argue that a merely human undertaking will fail but one from God cannot be stopped (Acts 5:34-39). He advised leaving the apostles alone, not stopping them.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 33,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "The exhortation to 'clothe yourselves with humility' is grounded in the principle that 'God opposes the proud but gives grace to the humble' (1 Peter 5:5, echoed in James 4:6). Humility is tied to receiving grace, not to material wealth, Jewish custom, or political power.",
+        "solvable": true,
+        "issue": "The stem attributes this teaching to 'Paul's letters', but the quoted principle appears in 1 Peter 5:5 (and James 4:6), not in a Pauline epistle; this is likely an error in the source paper. The correct option among those given is still unambiguous.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 33,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "The call to 'clothe yourselves with humility' is grounded in 'God opposes the proud but gives grace to the humble' (1 Pet 5:5; cf. Col 3:12). The other options are material or political motives foreign to the text.",
+        "solvable": true,
+        "issue": "The exact phrase and reason are in 1 Peter 5:5, not Paul's letters; the attribution is loose but A is clearly the intended answer."
+      },
+      "extract_anomaly": null
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Luke 24:30-31 records that the disciples' eyes were opened to recognise Jesus at Emmaus when he took bread, blessed and broke it, and gave it to them. He had already opened the Scriptures to them earlier on the road without their recognising him, and he vanished only after they recognised him, not before.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Their eyes were opened when he took bread, blessed and broke it (Luke 24:30-31, 35). He opened the Scriptures earlier while they still did not recognise him.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 35,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "James 5:17-18 cites Elijah's prayer that stopped and later restored rain as the example of the effectiveness of a righteous person's prayer. Moses, Isaiah, and Abraham are not the figures used in that passage.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 35,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "James 5:16-18 cites Elijah, whose prayer stopped and then brought back the rain, as an example of effective prayer. Abraham is cited by James on faith and works, not prayer.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "In 1 Peter 2:18-20, Peter addresses servants/slaves, urging them to endure unjust suffering patiently as this finds favour with God. Wives are addressed separately in 1 Peter 3:1-6 on submission, not specifically on enduring suffering in this way.",
+        "solvable": true,
+        "issue": "Options B and D are both printed as 'children', an apparent duplication/typo in the source paper (one was likely meant to be a different word, e.g. 'servants'). This does not affect the correctness of option C, which remains the unambiguous answer.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "1 Peter 2:18-20 tells servants/slaves to submit to masters and endure unjust suffering patiently. Wives are told to submit (3:1), not specifically to endure suffering.",
+        "solvable": true,
+        "issue": "Stem is garbled ('Peter addressed to endure') and options B and D are duplicates ('children'), suggesting a typing defect."
+      },
+      "extract_anomaly": null
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 37,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The 'faith chapter' (Hebrews 11, traditionally read among Paul's teaching in this syllabus) lists Abel, Abraham, and Rahab among the heroes of faith, but Baruch is not mentioned there at all. Baruch is Jeremiah's scribe and appears nowhere in this list.",
+        "solvable": true,
+        "issue": "Option C is spelled 'Rehab' instead of 'Rahab', a likely typographical error, but it clearly refers to Rahab and does not affect the correct answer, D.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 37,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Hebrews 11 (traditionally attributed to Paul in the syllabus) lists Abel, Abraham and Rahab as examples of faith; Baruch, Jeremiah's scribe, is not mentioned. 'Rehab' is a misspelling of Rahab.",
+        "solvable": true,
+        "issue": "Option C 'Rehab' is a typo for Rahab; Hebrews' Pauline authorship is assumed by the question."
+      },
+      "extract_anomaly": null
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 38,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Acts 18:3 states that Paul was a tentmaker by trade, which he practised alongside Aquila and Priscilla to support his ministry. He was not a fisherman, weaver, or farmer by trade.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 38,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Paul worked as a tentmaker with Aquila and Priscilla at Corinth (Acts 18:3). Fishing was the trade of Peter, Andrew, James and John.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 39,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Acts 15:36-40 records that Paul and Barnabas had a sharp disagreement over whether to take John Mark on their second missionary journey, since he had earlier deserted them in Pamphylia, leading them to separate. Timothy, Silas, and Philip are not the subject of that dispute.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 39,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Paul and Barnabas disagreed sharply over taking John Mark, who had deserted them in Pamphylia (Acts 15:36-39). Silas was then chosen by Paul.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 40,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Philemon centres on Paul's appeal to Philemon to forgive and receive back his runaway slave Onesimus as a beloved brother, making forgiveness and reconciliation its central theme. It is not primarily about crime and punishment, or righteousness and inequity, though those touch on related ideas only tangentially.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 40,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Paul appeals to Philemon to forgive and receive back his runaway slave Onesimus as a brother, so the theme is forgiveness and reconciliation. Love and faith are praised (v.5) but are not the central theme.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    }
+  }
+}

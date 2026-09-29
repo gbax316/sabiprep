@@ -1,0 +1,62 @@
+{
+  "checker": "codex",
+  "unit": "2025",
+  "results": {
+    "2025_Q22-24": {
+      "stem": "2025_Q22-24",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q22-24.authored.svg",
+      "lane": "claude-sonnet"
+    },
+    "2025_Q46": {
+      "stem": "2025_Q46",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q46.authored.svg",
+      "lane": "claude-sonnet"
+    },
+    "2025_Q6": {
+      "stem": "2025_Q6",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q6.authored.svg",
+      "lane": "claude-sonnet"
+    }
+  },
+  "no_svg": [],
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0722,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\diagram-check.schema.json"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0945,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\diagram-check.schema.json"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3087,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\diagram-check.schema.json"
+    }
+  ],
+  "fallback_cost_usd": 0.4754
+}

@@ -1,0 +1,482 @@
+{
+  "deriver": "codex",
+  "year": 2024,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Malevolence means ill will or wickedness, so its opposite is benevolence, which also fits the gap describing the hero's good deeds. Wickedness (A) is a synonym, not an opposite, and indifference/hostility do not contrast with malevolence in the required sense.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "August means grand or dignified, so its opposite is trivial, which fits describing a small, unimportant office party. Grand, solemn, and ceremonious are synonyms or near-synonyms of august, not opposites.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Complacent means self-satisfied and unguarded, so its opposite is vigilant, fitting the rivals who stayed alert. Content and satisfied are synonyms of complacent, and indifferent does not contrast with it.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Bogus means fake or fraudulent, so its opposite is genuine, matching records that are found to be authentic. Fraudulent, deceptive, and counterfeit are synonyms of bogus, not opposites.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Quick-tempered describes someone easily angered, so its opposite is patient, describing the calm assistant. Irritable, impulsive, and volatile are synonyms of quick-tempered, not opposites.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Nocturnal means active at night, so its opposite is diurnal, meaning active during the day, fitting the eagle. Crepuscular refers to twilight activity, night-active is a synonym, and sleepy is unrelated in meaning.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Repealed means officially revoked or cancelled, so the synonym revoked fits the parallel action on the outdated regulation. Enacted is an antonym, while enforced and sustained mean the opposite of cancelling a law.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Impertinence means rudeness or disrespect, so its synonym insolence fits describing his equally shocking behaviour. Politeness and deference are antonyms, and timidity is unrelated in meaning.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Sagacity means wisdom or sound judgment, so wisdom is the synonym that fits what the villagers sought from the elder. Knowledge is close but less precise than wisdom for sagacity, while foolishness and ignorance are antonyms.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Impregnable means unable to be broken into or overcome, so its synonym invulnerable fits describing the security system. Vulnerable, weak, and accessible are antonyms of impregnable, not synonyms.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "\"Seldom\" means rarely, so \"rarely\" is the closest synonym that also fits the gap logically (snowfall being even less frequent than rain). \"Frequently\" and \"regularly\" are near-opposites in meaning, and \"occasionally\" is not as close in meaning to \"seldom\" as \"rarely\".",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "\"Invigorating\" means giving vigour or energy, which is closest in meaning to \"refreshing\". \"Exhausting\", \"draining\", and \"tiring\" all describe the opposite effect (depleting energy rather than renewing it).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "With \"neither...nor\" joining subjects of different number, the verb agrees with the nearer subject, \"the teachers\" (plural), so \"are\" is correct. \"Is\" would wrongly agree with the singular \"principal\", and \"were\"/\"have been\" are wrong tense choices for a present general statement.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "\"Committee\" is a collective noun that by default takes a singular verb (\"is divided\") when treated as a single unit, which is the standard convention tested in WAEC/UTME grammar. \"Are\" is a defensible British-usage alternative when emphasising the individual members' disagreement, making this pair genuinely debatable, but \"is\" is the conventionally expected answer.",
+      "solvable": true,
+      "issue": "Collective noun agreement for \"committee\" genuinely allows both a singular verb (treating it as one unit) and a plural verb (British usage, emphasising the individual members' disagreement); option B (\"is\") is taken as the intended answer per standard exam convention.",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "\"A variety of\" functions like \"many\", and the verb agrees with the following plural noun \"options\", requiring \"are\". \"Is\" and \"was\" wrongly treat \"variety\" as the singular head noun for agreement purposes, and \"were\" is wrong tense for a present statement.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "\"Each\" is a singular indefinite pronoun and always takes a singular verb, so \"is\" is correct even though it is followed by a plural noun phrase (\"of the candidates\"). \"Are\" and \"were\" wrongly treat the subject as plural.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "\"News\" is an uncountable noun that is always singular in form, so it takes \"has\", not \"have\". \"Are\" and \"were\" are also wrong because they are plural forms.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The sentence describes an action (the ceremony starting) that will be completed before another future action (our arrival), which requires the future perfect \"will have started\". \"Would have started\" is conditional/past-hypothetical, \"will start\" is simple future (wrong aspect), and \"had started\" is past perfect, inconsistent with the future time frame set by \"by the time we arrive\".",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "\"Accommodate\" is correctly spelled with double \"c\" and double \"m\". The other options each omit one of these doubled letters or add an extra letter, making them misspellings.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The phrase \"by the time...tomorrow\" signals an action completed before a specific future point, which requires the future perfect \"will have completed\". \"Will complete\" is simple future, \"would complete\" is conditional, and \"are completing\" is present continuous, none of which fit the \"by the time...\" future-completion structure.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "\"Conscientious\" is the standard correct spelling, following the pattern of words like \"conscience\" plus the \"-tious\" ending. The other options misspell the middle syllable, which is a common error since the \"sc\" and \"ti\" sounds blend confusingly in speech.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The past perfect continuous \"had been living\" is required because the living took place over a duration before another past event (\"decided to move\"). \"Have been living\" (B) is present perfect and does not fit with the past time clause \"before we decided to move.\"",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "\"To bite off more than one can chew\" idiomatically means to take on more responsibility or a task larger than one can manage. Option A wrongly takes the phrase literally about eating, which misses its figurative meaning.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The main clause is affirmative (\"is eager\"), so the tag question must be negative and match the subject and auxiliary: \"isn't he.\" Option C/D wrongly use \"do/does\" instead of the auxiliary \"is\" from the main clause.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The main clause \"You'd rather not attend\" is negative in meaning (rather not = would rather not), so the tag must be positive: \"would you.\" It keeps the modal \"would\" from the contraction \"You'd,\" ruling out \"did/didn't\" which use the wrong auxiliary.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "\"To let the cat out of the bag\" is a well-established idiom meaning to reveal a secret, usually inadvertently. Option D (create confusion) is a plausible-sounding distractor but does not match the idiom's actual meaning.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "\"To put one's house in order\" is an idiom meaning to organize one's personal affairs or responsibilities, not a literal reference to cleaning a house. Option A takes the phrase literally, which is the common wrong reading of this idiom.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "\"Out of bounds\" means prohibited or not permitted to enter, which fits \"restricted area... for visitors.\" Option B is the direct opposite of the correct meaning and is easily ruled out by the context of a \"restricted area.\"",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "\"Generous to a fault\" means someone is generous to an excessive degree, so much that it could be considered a flaw. Option D (reluctantly generous) contradicts the idiom, which implies eager, excessive generosity rather than reluctance.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The underlined \"u\" in \"bluff\" is pronounced /ʌ/, the short vowel sound heard in \"cup\" or \"stuff.\" \"Rough\" shares this exact /ʌ/ sound, while \"through\" (/uː/), \"drought\" (/aʊ/), and \"cough\" (/ɒ/ or /ɔː/) all have different vowel sounds despite similar spelling patterns.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The underlined 'ei' in 'weight' is pronounced /eɪ/, the same sound as 'ea' in 'great'. 'Height' has /aɪ/, 'beat' has /iː/, and 'threat' has /e/, so none of those match.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The 'tch' in 'batch' represents the consonant sound /tʃ/, which matches the 'ch' in 'church'. In 'chemistry' and 'chaos' the 'ch' is /k/, and in 'ache' it is also /k/, so they do not match.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The 'dg' in 'judge' represents /dʒ/, the same sound as the 'g' in 'giant'. In 'gear', 'gather', and 'goal' the 'g' is the hard sound /g/, so they do not match.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "'Characterize' carries primary stress on the first syllable: CHAR-ac-ter-ize. This is a fixed stress pattern for this word and the other stress placements are incorrect.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "'Continental' is stressed on the third syllable: con-ti-NEN-tal. This is the standard pronunciation, distinguishing it from the other proposed stress positions.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'Immunity' is stressed on the second syllable: im-MU-ni-ty. This matches standard dictionary pronunciation, ruling out stress on the first, third, or fourth syllables.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Emphatic stress on 'SCHOOL' highlights the destination, implying a contrast with some other place the children might have gone, such as the park. The other options shift focus to manner of movement or who went, which the stress on 'school' does not support.",
+      "solvable": true,
+      "issue": "Emphatic stress questions can admit more than one defensible reading since the contrasted alternative is not given in context.",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Emphatic stress on 'BOUGHT' highlights the action/manner of acquisition, implying a contrast with an alternative action like baking, rather than who did it or what was bought. Options B and D shift the contrast to the subject or object, which the stress on the verb does not support.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "solvable": false,
+      "reasoning": "The sentence 'John CANNOT only sing, he can also dance' implies John's ability is not limited to singing, since he can also dance. None of the options correctly express this.",
+      "issue": "Options B and D are identical ('John can only sing'), and neither matches the correct implication that John can do both; the option set appears corrupted or garbled.",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "solvable": false,
+      "reasoning": "This question requires specific plot detail (the name of Salma's hostel in her 100 level) from Khadijah Abubakar Jalli's 'The Life Changer'.",
+      "issue": "The source text/novel content needed to verify the specific hostel name is not provided, and this detail cannot be reliably determined from general knowledge.",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question depends on specific plot content from the passage 'The Life Changer' by Khadijah Abubakar Jalli, but no excerpt or image of that text was attached to this task.",
+      "solvable": false,
+      "issue": "Source passage/excerpt for 'The Life Changer' was not provided, so the plot detail asked about cannot be verified.",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question depends on specific plot content from the passage 'The Life Changer' by Khadijah Abubakar Jalli, but no excerpt or image of that text was attached to this task.",
+      "solvable": false,
+      "issue": "Source passage/excerpt for 'The Life Changer' was not provided, so the plot detail asked about cannot be verified.",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question depends on specific plot content from the passage 'The Life Changer' by Khadijah Abubakar Jalli, but no excerpt or image of that text was attached to this task.",
+      "solvable": false,
+      "issue": "Source passage/excerpt for 'The Life Changer' was not provided, so the plot detail asked about cannot be verified.",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question depends on specific plot content from the passage 'The Life Changer' by Khadijah Abubakar Jalli, but no excerpt or image of that text was attached to this task.",
+      "solvable": false,
+      "issue": "Source passage/excerpt for 'The Life Changer' was not provided, so the plot detail asked about cannot be verified.",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question depends on specific plot content from the passage 'The Life Changer' by Khadijah Abubakar Jalli, but no excerpt or image of that text was attached to this task.",
+      "solvable": false,
+      "issue": "Source passage/excerpt for 'The Life Changer' was not provided, so the plot detail asked about cannot be verified.",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question depends on the specific dialogue and speaker context from the passage 'The Life Changer' by Khadijah Abubakar Jalli, but no excerpt or image of that text was attached to this task.",
+      "solvable": false,
+      "issue": "Source passage/excerpt for 'The Life Changer' was not provided, so the quoted line's speaker/addressee cannot be verified.",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question asks about the real-world author Khadijah Abubakar Jalli's business ownership, which is not established English Language or literary knowledge and is not verifiable from any attached source.",
+      "solvable": false,
+      "issue": "No source text or reference confirming the author's business ownership was provided; this is not general knowledge.",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question depends on specific plot content from the passage 'The Life Changer' by Khadijah Abubakar Jalli, but no excerpt or image of that text was attached to this task.",
+      "solvable": false,
+      "issue": "Source passage/excerpt for 'The Life Changer' was not provided, so the plot detail asked about cannot be verified.",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "This question depends on the specific dialogue and speaker context from the passage 'The Life Changer' by Khadijah Abubakar Jalli, but no excerpt or image of that text was attached to this task.",
+      "solvable": false,
+      "issue": "Source passage/excerpt for 'The Life Changer' was not provided, so the quoted line's speaker cannot be verified.",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0826,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0902,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1266,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0915,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1258,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.5167
+}

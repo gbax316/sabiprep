@@ -1,0 +1,80 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "Checked against the diagram: X, Y, Z run top to bottom at the right of the chart, consistent with X = MC rising above both average curves, Y = ATC, Z = AVC. ATC is algebraically always above AVC since AFC = ATC - AVC >= 0, so identifying Y as ATC and Z as AVC, and their gap as AFC, is correct regardless of the sketch's exact proportions.",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3248,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.3248
+}

@@ -1,0 +1,390 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "In 'Why not the others', the ketone line reads: 'C. Ketone: it has a C=O group and is made by oxidising an alkanol, not by adding water to an alkene.' This is stated as if any alkanol oxidises to a ketone. At syllabus depth (the alkanols subtopic itself teaches this), only a secondary alkanol oxidises to a ketone; a primary alkanol oxidises to an aldehyde and then a carboxylic acid, and a tertiary alkanol resists oxidation. 'an alkanol' is an unscoped generalisation of a claim that is only true for one class of alkanols, so it teaches the student something false about the other two classes.",
+      "fix": "C. Ketone: it has a C=O group and is made by oxidising a secondary alkanol, not by adding water to an alkene.",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 reads: 'Maltose is formed when starch is broken down, so its units are the same as the units starch is built from.' This does not just narrow to the final two options, it supplies the entire connecting fact the solution itself later gives in 'How to tell' ('Maltose comes from the breakdown of starch, which is a long chain of glucose units.'). Because 'starch is a polymer of glucose' is common, already-taught knowledge (it is even named explicitly in this subtopic's own placement description), a student who reads this hint needs no further thought to land on glucose over mannose. That fails the hint 3 test: the student can answer without thinking.",
+      "fix": "Two options remain, mannose and glucose. Mannose does not appear anywhere else in this syllabus. Which of the two is a sugar you have already met many times as a building block of common carbohydrates?",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 lets the student answer without thinking once it is read after hint 2. Hint 2 already rules out the catalyst by name of concept: 'it changes neither the position of equilibrium nor Kc.' Hint 3 then says, in one sentence, 'Changing concentration or pressure moves the position, but the mixture then adjusts until the ratio Kc is back to its old value.' That single sentence explicitly clears both remaining wrong options (pressure and concentration), so by the closing question, 'Which factor makes the ratio itself settle at a new value?', three of the four options (catalyst, pressure, concentration) have been named and ruled out and only temperature is left unaddressed. The student does not need to reason about temperature at all, only notice it is the one option nothing has excluded yet, which fails the requirement that a student who reads all three hints must still make the choice.",
+      "fix": "Changing concentration shifts the position of the equilibrium, but the mixture then adjusts until the ratio Kc settles back to its old value. Between pressure and temperature, which one only shifts the position for reactions of gases, and which one actually changes how far the reaction favours products over reactants?",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.5189,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.5491,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4009,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2622,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4287,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 2.1598
+}

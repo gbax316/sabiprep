@@ -1,0 +1,85 @@
+{
+  "entries": [
+    {
+      "q_number": 6,
+      "source": "codex",
+      "finding": "ketone line says ketones come from oxidising 'an alkanol', unscoped",
+      "decision": "accepted",
+      "reason": "Only a secondary alkanol oxidises to a ketone; primary gives an aldehyde then an acid, tertiary resists. The unscoped wording teaches a false general rule.",
+      "change": "C line now reads 'made by oxidising a secondary alkanol'.",
+      "round": 1
+    },
+    {
+      "q_number": 7,
+      "source": "codex",
+      "finding": "hint 3 lets the student answer without thinking",
+      "decision": "rejected",
+      "reason": "Hint 3 narrows to two and still leaves one recall step (what starch is built from), which is the final step a hint 3 is meant to bring the student to. The proposed fix rests on familiarity ('a sugar you have already met') and an unsupported claim that mannose appears nowhere else in the syllabus, which is weaker teaching.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 21,
+      "source": "codex",
+      "finding": "hints 2 and 3 together rule out catalyst, concentration and pressure, leaving temperature by elimination",
+      "decision": "accepted",
+      "reason": "After hint 3, every option but temperature has been named and ruled out, so the student can answer by elimination without reasoning about temperature.",
+      "change": "Hint 3 now rules out concentration only and asks which of pressure and temperature changes the ratio itself. Did not adopt Codex's wording, which described pressure's effect in a way that nearly answers it.",
+      "round": 1
+    },
+    {
+      "q_number": 9,
+      "source": "check-11",
+      "finding": "exam tip says magnesium 'reacts only with steam'",
+      "decision": "accepted",
+      "reason": "Magnesium reacts slowly with cold water to give the hydroxide, which the syllabus also teaches; 'only' is an unscoped absolute.",
+      "change": "Exam tip now reads 'A metal that reacts well only with steam'.",
+      "round": 1
+    },
+    {
+      "q_number": 34,
+      "source": "check-11",
+      "finding": "hint 2 and exam tip state that an oxide plus water always keeps the non-metal's oxidation number",
+      "decision": "accepted",
+      "reason": "False for NO₂/N₂O₄, which gives both HNO₂ and HNO₃, as Q35's own solution says. An unscoped absolute that contradicts a neighbouring item.",
+      "change": "Hint 2 and exam tip scoped to an oxide that 'simply combines with water' and softened to 'usually keeps'.",
+      "round": 1
+    },
+    {
+      "q_number": 35,
+      "source": "check-11",
+      "finding": "'The other oxides have nitrogen at +3 or +4' includes NO₄",
+      "decision": "accepted",
+      "reason": "NO₄ would have nitrogen at +8, so the sentence contradicts the C line.",
+      "change": "Now reads 'The oxides in B and D have nitrogen at +4 and +3 and dissolve to give acids.'",
+      "round": 1
+    },
+    {
+      "q_number": 35,
+      "source": "codex",
+      "finding": "hint 2 eliminates all three distractors and hint 3 solves it by calculation (check 2)",
+      "decision": "accepted",
+      "reason": "Hint 2 ruled out B, D and C ('One of the formulas is not a real, stable oxide'), which states the answer indirectly; hint 3's '+1 or +2' rule then picks NO outright. The standard wants hint 2 to drop the weakest distractors and hint 3 to narrow to two.",
+      "change": "Hint 2 now eliminates only N₂O₄ and N₂O₃ as acidic. Hint 3 narrows to NO and NO₄ and asks the student to test which is a real oxide and whether it gives an acid. Wrote hint 3 in my own words, because Codex's proposed hint 3 all but named the answer. Solution unchanged.",
+      "round": 2
+    },
+    {
+      "q_number": 35,
+      "source": "check-11",
+      "finding": "self-check for unscoped absolutes",
+      "decision": "rejected",
+      "reason": "The neutral-oxide list is scoped to the syllabus and the exam tip says 'usually acidic'. No absolute or simplification is stated as universal.",
+      "change": "",
+      "round": 2
+    },
+    {
+      "q_number": 35,
+      "source": "check-12",
+      "finding": "self-check for sibling leaks",
+      "decision": "rejected",
+      "reason": "passage_id is null, so there are no siblings.",
+      "change": "",
+      "round": 2
+    }
+  ]
+}

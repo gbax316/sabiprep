@@ -1,0 +1,82 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 says: 'Option B is a misprint: \"was born\" should read \"was torn\".' This does not do hint 2's job (give the decisive principle, or eliminate a weak distractor); it singles out the correct option by letter and decodes its garbled text into the true, sensible statement, when no other option gets this treatment. Combined with the rest of hint 2, 'Matthew lists four signs in a set order, and the earthquake and the splitting of the rocks come together,' and hint 3's binary choice 'did Matthew start with something in nature or something in the house of worship', a student can now reason purely by elimination: earthquake and rock-splitting are tied together so neither can be uniquely 'first', tombs are last (hint 3), so the only option left standing on its own, already decoded as a real, sensible event by hint 2, is B. The student reaches the answer by structural elimination and letter-matching alone, without ever needing to recall that Matthew places the curtain tearing before the earthquake. This is the same failure the standard warns against for hint 3 ('if a student can answer by reading hint 3 alone, without thinking, it is too strong'), produced here one hint earlier because hint 2 named the letter of the correct option.",
+      "fix": "hint2: One of the options has a misprint: read 'was born' as 'was torn'. Matthew lists four signs in a set order, and two of them, the earthquake and the splitting of the rocks, happen together.",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.42,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.42
+}

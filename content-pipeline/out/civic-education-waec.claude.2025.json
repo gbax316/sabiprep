@@ -1,0 +1,408 @@
+{
+  "deriver": "claude",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Discipline is training oneself to obey rules and exercise self-control. Integrity is honesty and firm moral principle, not self-subjection to rules.",
+      "solvable": true,
+      "issue": ""
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Value clarification is the process by which people identify their own values while respecting those of others. Value orientation refers to the general direction of a person's values, not the process of defining them.",
+      "solvable": true,
+      "issue": ""
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Section 27 of the 1999 Constitution requires full age (18) and residence amounting to at least 15 years (plus the 12 months immediately before applying). The 21-year options reflect no constitutional rule.",
+      "solvable": true,
+      "issue": ""
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Civic Education aims to produce patriotic, responsible citizens who show nationalism. Studying the physical environment belongs to Geography, and the other options are negative or irrelevant.",
+      "solvable": true,
+      "issue": ""
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A voter's card is a personal electoral document, not a national symbol. The flag, coat of arms and national currency are all recognised national symbols.",
+      "solvable": true,
+      "issue": ""
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Nationalist papers such as the West African Pilot exposed the evils and weaknesses of colonial rule and mobilised opposition to it. D, promoting the nationalists' image, was a side effect rather than their main contribution.",
+      "solvable": true,
+      "issue": "D is weakly defensible."
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Nationalism builds loyalty and allegiance to the nation, which unites citizens for development. A (selflessness) is close to this but describes an attitude that follows from allegiance; D (political awareness) is also defensible.",
+      "solvable": true,
+      "issue": "A and D are close alternatives."
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The UDHR of 1948 has 30 articles. 48 is a distractor taken from the year.",
+      "solvable": true,
+      "issue": ""
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Imprisonment takes away a convict's freedom of movement and association. The right to life and the right to fair hearing are not forfeited by a prison sentence, so the other options each contain a wrong right.",
+      "solvable": true,
+      "issue": ""
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Defamation in written or published form, including social media posts, is libel. Slander is spoken defamation.",
+      "solvable": true,
+      "issue": ""
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Equality before the law means the law applies equally to everyone regardless of status. Supremacy of the law is the related idea that law stands above arbitrary power.",
+      "solvable": true,
+      "issue": ""
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Constituted authority maintains law and order and so secures life and property. The other options are not its basic purpose.",
+      "solvable": true,
+      "issue": ""
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Good parenting produces well-behaved children and so reduces social vices such as crime and drug abuse. The other options are not its main link to national development.",
+      "solvable": true,
+      "issue": ""
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Traffic regulations are the codes and rules that govern road use by all users. B covers pedestrians only and is too narrow. The wording of C ('codes and ethics of traffic') is loose, but it is the only complete option.",
+      "solvable": true,
+      "issue": ""
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Traffic wardens direct and control the flow of traffic. Making rules and putting up signs are the work of other bodies.",
+      "solvable": true,
+      "issue": ""
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Compromise, along with dialogue, mediation and arbitration, is a standard way of resolving conflict. The other options are not conflict-resolution mechanisms.",
+      "solvable": true,
+      "issue": ""
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The saying stresses that people depend on one another and need cooperation to progress. B narrows this to government, which the saying does not mean.",
+      "solvable": true,
+      "issue": ""
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Taking the correct dose of a prescribed drug is proper use, not abuse. Overdosing, taking drugs without authorisation and trafficking are all forms of drug abuse or misuse.",
+      "solvable": true,
+      "issue": ""
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Recruitment is a stage in the act of human trafficking, alongside transportation, harbouring and exploitation. Liberation, counselling and empowerment are responses to trafficking.",
+      "solvable": true,
+      "issue": ""
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Women are trafficked mainly for sexual exploitation. Debt bondage is a means of control, not the main purpose.",
+      "solvable": true,
+      "issue": ""
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "HIV destroys CD4 cells and weakens the immune system, causing immune deficiency and eventually AIDS. The other options are made-up terms.",
+      "solvable": true,
+      "issue": ""
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Babies usually get HIV from their mothers. Of the options given, breastfeeding is the mother-to-child route. Transmission at birth is actually more common but is not offered, and the other options are uncommon in infants.",
+      "solvable": true,
+      "issue": "The syllabus answer is breastfeeding, although transmission during delivery is epidemiologically more common and is not an option."
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Giving young people startup capital lets them start businesses and become self-reliant, which is the core of empowerment. Bursaries (C) support education and are also defensible, but they are less directly empowering.",
+      "solvable": true,
+      "issue": "C is defensible."
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "The WASSCE syllabus lists manipulative (vocational and technical) skills among the youth empowerment skills. The other options are general educational terms that are not part of the syllabus list.",
+      "solvable": true,
+      "issue": "D (non-cognitive skills) is arguably defensible."
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Leadership, communication and self-reliance skills are standard youth empowerment skills. Investigation skills are not on the usual list.",
+      "solvable": true,
+      "issue": ""
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The legislature (the National Assembly) has the power to impeach the president. The judiciary, including the Supreme Court, does not.",
+      "solvable": true,
+      "issue": ""
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The concurrent list covers matters on which both federal and state governments can legislate. The residual list belongs to the states alone, and the exclusive list to the federal government alone.",
+      "solvable": true,
+      "issue": ""
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Defence is on the exclusive legislative list. Education, roads and industries are concurrent or shared matters.",
+      "solvable": true,
+      "issue": ""
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Ministers (federal), commissioners (state) and supervisory councillors (local government) are political office-holders in the executive at each level. They are not civil servants.",
+      "solvable": true,
+      "issue": ""
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Local government is the government closest to the people, at the grassroots. It is not tied to a unitary system or to consensus politics.",
+      "solvable": true,
+      "issue": ""
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The intended answer, 'fear of ethnic domination', has been merged into the stem, and option A is cut off ('...in the') and duplicates B. None of the options as printed is a sound reason for adopting federalism.",
+      "solvable": false,
+      "issue": "Typing damage: the text of the correct option ('fear of ethnic domination') appears in the stem, and option A is truncated and duplicates B."
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Representative government relies on periodic elections of representatives. Minority rule and centralisation of power go against it.",
+      "solvable": true,
+      "issue": ""
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "In direct democracy all citizens take part in governing personally. C describes indirect (representative) democracy.",
+      "solvable": true,
+      "issue": ""
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A multi-party system gives citizens choice and freedom of association, which enhances individual freedom. One-party and autocratic systems restrict it.",
+      "solvable": true,
+      "issue": ""
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Without law and order (II) and fundamental human rights (VII), a society falls into anarchy and oppression. The other pairs include negative items (I, III, IV), whose absence would be good for society. The wording of the stem is vague.",
+      "solvable": true,
+      "issue": ""
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Every child is entitled to responsible parenting (VI) and to fundamental human rights (VII). Law and order and popular participation are not specifically child entitlements.",
+      "solvable": true,
+      "issue": ""
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Trade unions, market women's associations and student unions are classic examples of pressure (interest) groups. C (civil societies) is also defensible in a broad sense.",
+      "solvable": true,
+      "issue": "C is defensible."
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Constitutional means such as elections, recall, courts and impeachment are the proper check on bad governance. Attacks and revolts are unlawful.",
+      "solvable": true,
+      "issue": ""
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "A clear separation of powers stops one organ of government from interfering in the work of another. D, checks and balances, deliberately lets organs influence one another, although some would argue it prevents abuse.",
+      "solvable": true,
+      "issue": "D is arguably defensible."
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Section 308 immunity protects certain officers (the President, Vice-President, Governors and Deputy Governors) from civil or criminal proceedings while in office. B describes the prerogative of mercy.",
+      "solvable": true,
+      "issue": ""
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Political neutrality means civil servants must not be partisan or affiliated to a political party. C, security of tenure, is a separate principle.",
+      "solvable": true,
+      "issue": ""
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Rigging an election is active electoral malpractice, not apathy. Refusing to register, lack of interest and withholding information are forms of apathy.",
+      "solvable": true,
+      "issue": ""
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question depends on a diagram showing what X is, and no diagram is provided. Separation of powers and checks and balances are equally possible labels.",
+      "solvable": false,
+      "issue": "Diagram missing: the paper has no diagram files, but the passage says 'Use the diagram below'."
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "What X means depends on the missing diagram. Its answer also depends on Q43.",
+      "solvable": false,
+      "issue": "Diagram missing, as for Q43."
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Without enough funds, CSOs have to reduce their programmes and activities. A is possible but would compromise their independence, so it is not the typical consequence the question expects.",
+      "solvable": true,
+      "issue": ""
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Youth empowerment programmes such as skills training and microcredit reduce poverty directly. The other options concern influencing governance, not poverty alleviation.",
+      "solvable": true,
+      "issue": ""
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "C",
+      "confidence": "uncertain",
+      "reasoning": "Many CSOs, especially in Nigeria, depend heavily on grants and donations from foreign donors. B, membership dues, is also often listed as a main source and may be what the key expects.",
+      "solvable": true,
+      "issue": "B and C are both commonly taught as major funding sources."
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "CSOs are non-partisan and do not set up political parties. Advocating democracy, checking government excesses and training future leaders are typical roles of CSOs.",
+      "solvable": true,
+      "issue": ""
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "An industrial strike, organised through unions, is the recognised way workers press their demands. A hunger strike is an individual and unusual form of protest.",
+      "solvable": true,
+      "issue": ""
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Anonymity means civil servants work behind the scenes, and the minister takes credit or blame for policy. D is a loose paraphrase, but the textbook meaning is A.",
+      "solvable": true,
+      "issue": ""
+    }
+  },
+  "failures": []
+}

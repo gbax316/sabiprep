@@ -1,0 +1,124 @@
+{
+  "reviewer": "codex",
+  "year": 2024,
+  "paper": 1,
+  "reviews": {
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "51": {
+      "q_number": 51,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "55": {
+      "q_number": 55,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "64": {
+      "q_number": 64,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "70": {
+      "q_number": 70,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 reads: \"Between the two left, recall the proverb warning that a book's cover is a poor guide to what is inside. Which preposition follows judge a book in that proverb?\" By this point hint 2 has already eliminated 'at' and 'for', leaving only 'from' and 'by'. The proverb 'Don't judge a book by its cover' maps almost word-for-word onto the question ('Don't judge the boy ... his past'), so a student only has to recall this extremely common saying to get 'by' without reasoning about what the two remaining prepositions actually mean or how they function differently after 'judge'. This is a bare recall shortcut, not the intended elimination-by-understanding, so it fails the hint-3 test: a student can answer from hint 3 alone without thinking.",
+      "fix": "Between the two left, think about how each one is normally used with judge. From usually appears in the phrase judging from something, describing what you are inferring from (judging from his smile, he passed) rather than what standard is applied to a person. By is used right after judge and the person or thing being judged, to name the basis of the judgement. Which pattern matches judge the boy ... his past?",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2872,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2438,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.531
+}

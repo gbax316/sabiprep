@@ -1,0 +1,58 @@
+{
+  "entries": [
+    {
+      "q_number": 44,
+      "source": "codex",
+      "finding": "hint 3 answers the question: recalling Obudu Mountain Resort as a tourist site gives option A without any choosing",
+      "decision": "accepted",
+      "reason": "Check 2 fails. A student who knows Obudu answers from hint 3 alone. Codex's replacement, which defines all three options and describes a resort as a holiday place, would also give the answer away, so I wrote a hint that narrows to two instead.",
+      "change": "hint3 now reads: \"Banking deals with keeping and lending money, which is not why people visit a resort. Of the two left, which one is about travel for leisure rather than buying and selling?\"",
+      "round": 1
+    },
+    {
+      "q_number": 44,
+      "source": "codex",
+      "finding": "\"Refugees live in camps, not resorts\" is an unscoped absolute, in hint 2 and in the Why not the others line for D",
+      "decision": "accepted",
+      "reason": "Check 11 fails. Many refugees live in host communities and towns rather than camps, so the claim is not literally true. Dropping it takes nothing away from the elimination.",
+      "change": "hint2 now reads: \"A refugee is a person who has fled from war or disaster, not someone travelling for rest or pleasure, so the word is not linked with resorts.\" The D line now reads: \"D. refugee: a refugee is a person who has fled war or disaster, not a holidaymaker, so the word is not linked with resorts.\"",
+      "round": 1
+    },
+    {
+      "q_number": 48,
+      "source": "check-11",
+      "finding": "exam tip \"Anything mined or drilled ... is non-renewable\" clashes with the same tip listing heat from inside the earth as renewable, even though geothermal heat is reached by drilling",
+      "decision": "accepted",
+      "reason": "This is an unscoped absolute that contradicts the sentence before it. Limiting it to fuels makes it true and keeps the contrast the tip teaches.",
+      "change": "\"Anything mined or drilled\" changed to \"Any fuel that is mined or drilled\".",
+      "round": 1
+    },
+    {
+      "q_number": 48,
+      "source": "codex",
+      "finding": "hint 2 labels every term in the three wrong pairs as non-renewable, so hint 3 lets the student answer without thinking (check 2)",
+      "decision": "accepted",
+      "reason": "Verified against the text: hint 2 names coal, natural gas, diesel and nuclear, which together make up options A, B and D, leaving only C unflagged. Hint 3 then only has to apply that list.",
+      "change": "hint2 now eliminates only the nuclear pairs (A and D) by the uranium principle. hint3 narrows to the two remaining pairs and asks the student to test each one, rather than using Codex's wording, which named 'sunlight and flowing water' and so pointed straight at C. Solution unchanged.",
+      "round": 2
+    },
+    {
+      "q_number": 48,
+      "source": "check-11",
+      "finding": "absolutes and scoping in the solution",
+      "decision": "rejected",
+      "reason": "The solution makes no unscoped absolutes. 'Not replaced in a human lifetime' and 'used up once burned or used' are accurate at syllabus depth, and the renewable list in the exam tip is the standard syllabus list.",
+      "change": "",
+      "round": 2
+    },
+    {
+      "q_number": 48,
+      "source": "check-12",
+      "finding": "sibling leaks",
+      "decision": "rejected",
+      "reason": "passage_id is null, so the question has no siblings.",
+      "change": "",
+      "round": 2
+    }
+  ]
+}

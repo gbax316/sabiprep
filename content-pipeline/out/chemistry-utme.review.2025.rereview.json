@@ -1,0 +1,64 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "6": {
+      "q_number": 6,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 eliminates every distractor by itself, leaving only one option before hint 3 is even read. It says 'Oxides in which nitrogen has a high oxidation number, such as +3 or +4, dissolve in water to give nitrous or nitric acid, so they are acidic' (rules out B and D) and 'One of the formulas is not a real, stable oxide of nitrogen at all' (rules out C, NO4). That leaves only A. Hint 3, read alone, then solves the question outright by direct calculation rather than requiring a real choice: 'Work out nitrogen's oxidation number in each formula, taking oxygen as -2. The neutral oxides of nitrogen in the syllabus have nitrogen at +1 or +2.' A student who can compute oxidation numbers gets NO=+2 (fits), N2O4=+4, NO4=+8 (impossible), N2O3=+3, and lands on A without ever weighing acidic versus neutral. This fails the hint-3 test in the standard ('if a student can answer by reading hint 3 alone, without thinking, it is too strong') and also breaches hint 2's own rule, since eliminating all three distractors states the answer indirectly. The student never has to make the final choice the standard requires.",
+      "fix": "hint2: N2O4 and N2O3 have nitrogen at +4 and +3. Oxides with nitrogen this high in oxidation number dissolve in water to give an acid, so they are acidic, not neutral.\nhint3: Between NO and NO4, one is a well known, stable oxide of nitrogen and one would need nitrogen at +8, which is not a real oxidation state for nitrogen. Which of the two is the real oxide, and is it acidic or neutral?",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3791,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.3791
+}

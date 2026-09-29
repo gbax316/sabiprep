@@ -1,0 +1,296 @@
+{
+  "unit": "2025",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "basics.scarcity-choice",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "basics.scarcity-choice",
+      "confidence": "clear",
+      "note": "opportunity cost identified in a given choice"
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "factors.types",
+      "confidence": "clear",
+      "note": "feature of land as a factor of production"
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "systems.types",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "systems.types",
+      "confidence": "clear",
+      "note": "wage setting by a central planning committee is a feature of the command economic system, not market wage theory"
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "tools.tables-graphs",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "consumer.utility",
+      "confidence": "clear",
+      "note": "tests how marginal utility explains the downward-sloping demand curve for a normal good, which the covers line names directly"
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "demand.elasticity",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "demand.elasticity",
+      "confidence": "clear",
+      "note": "perfectly inelastic curve shape"
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "supply.determinants",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "supply.elasticity",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "consumer.utility",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "consumer.equilibrium",
+      "confidence": "overlap",
+      "note": "also fits consumer.utility, since it turns on diminishing marginal utility for one good; consumer.equilibrium's covers line frames the equi-marginal rule as a two-good comparison (MUa/Pa=MUb/Pb) and does not literally state the single-good price-versus-MU case tested here"
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "agriculture.marketing-policy",
+      "confidence": "clear",
+      "note": "minimum price for a named farm crop, per the taxonomy's own sorting rule over price.controls"
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "price.changes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "costs.short-long-run",
+      "confidence": "clear",
+      "note": "only a variable factor can be raised in the short run"
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "production.scale",
+      "confidence": "clear",
+      "note": "technical economies of scale"
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "production.productivity",
+      "confidence": "clear",
+      "note": "law of variable proportions"
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "costs.concepts",
+      "confidence": "clear",
+      "note": "identifying the AVC curve"
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "costs.short-long-run",
+      "confidence": "nofit",
+      "note": "the diagram (per Q22 and Q24) shows only AC and AVC curves, no MC or price/revenue line, so 'equilibrium output' cannot be read the way markets.perfect or markets.profit-shutdown expect (which assume a price/MR line), and costs.concepts only covers defining and calculating cost figures, not reading an equilibrium point off a curve. Best guess is costs.short-long-run for its MC-as-supply-curve content, but no subtopic actually covers finding an output level from cost curves alone."
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "costs.concepts",
+      "confidence": "clear",
+      "note": "AFC = AC minus AVC"
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "markets.profit-shutdown",
+      "confidence": "clear",
+      "note": "shut-down condition, minimum AVC exceeds AR"
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "markets.monopoly",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "business.private",
+      "confidence": "clear",
+      "note": "separate legal personality of a corporate entity"
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "business.finance",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "labour.force",
+      "confidence": "clear",
+      "note": "geographical mobility of labour"
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "agriculture.types",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "development.problems",
+      "confidence": "clear",
+      "note": "diversification as the remedy to a mono-product economy"
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "industry.location",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "national-income.measurement",
+      "confidence": "clear",
+      "note": "transfer payment wrongly included, overstatement problem"
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "national-income.uses",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "money.value",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "inflation.effects-control",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "money.demand-supply",
+      "confidence": "clear",
+      "note": "precautionary motive"
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "money.nature",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "financial.deposit-banks",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "public-finance.budget-debt",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 42,
+      "subtopic_id": "public-finance.taxation",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 43,
+      "subtopic_id": "public-finance.taxation",
+      "confidence": "clear",
+      "note": "tax avoidance versus evasion"
+    },
+    {
+      "q_number": 44,
+      "subtopic_id": "public-finance.revenue",
+      "confidence": "clear",
+      "note": "comparing sources of government revenue, not a specific tax's rate or canon"
+    },
+    {
+      "q_number": 45,
+      "subtopic_id": "bop.components",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "public-finance.taxation",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 47,
+      "subtopic_id": "trade.protection",
+      "confidence": "clear",
+      "note": "dumping"
+    },
+    {
+      "q_number": 48,
+      "subtopic_id": "bop.disequilibrium",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 49,
+      "subtopic_id": "integration.forms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "natural-resources.oil",
+      "confidence": "clear",
+      "note": ""
+    }
+  ],
+  "taxonomy_findings": [
+    {
+      "kind": "overlap",
+      "where": "consumer.equilibrium / consumer.utility",
+      "detail": "Q16 asks what a consumer does when price exceeds marginal utility for a single good. consumer.equilibrium's covers line states the equi-marginal rule only as a two-good comparison (MUa/Pa=MUb/Pb), while consumer.utility covers how MU explains the demand curve. Neither line names the single-good price-versus-MU adjustment that this kind of question actually tests, so it can be argued either way."
+    },
+    {
+      "kind": "missing",
+      "where": "costs / markets",
+      "detail": "Q22 to Q24 read a diagram with only AC and AVC curves and ask for an 'equilibrium output'. costs.concepts covers defining and calculating cost figures from a table or function, not reading equilibrium off a curve; markets.perfect and markets.profit-shutdown both assume a price or marginal revenue line is shown, which this diagram does not have. There is no subtopic for finding a firm's optimum or equilibrium output from cost curves alone, without a stated market structure or revenue line."
+    }
+  ],
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1"
+}

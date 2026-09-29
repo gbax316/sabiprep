@@ -1,0 +1,112 @@
+{
+  "entries": [
+    {
+      "q_number": 16,
+      "source": "codex",
+      "finding": "check 10: 'mixed acid anhydride' is needless jargon",
+      "decision": "accepted",
+      "reason": "The term is real but adds nothing needed to answer, and it is an extra word a fifteen-year-old must decode. The sentence before it already carries the idea.",
+      "change": "Deleted the final principle sentence 'An oxide like this is called a mixed acid anhydride.' Nothing else changed.",
+      "round": 1
+    },
+    {
+      "q_number": 17,
+      "source": "codex",
+      "finding": "check 2: hint 3 lets student answer by recall of the second method",
+      "decision": "rejected",
+      "reason": "Hint 3 does not name the method. The student still has to recall it and match it to an option. Codex's proposed hint describes option D's reaction word for word and asks which is taught, so it is stronger than the original.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 24,
+      "source": "codex",
+      "finding": "check 8/11: very dilute HCl giving oxygen is an unsupported technicality",
+      "decision": "rejected",
+      "reason": "The chemistry is correct: as the acid becomes very dilute, OH⁻ discharge and oxygen at the anode do become significant, and the syllabus teaches the same concentration effect it uses for chloride solutions. Codex's common-ion argument does not remove this. The text is scoped ('the syllabus answer for dilute hydrochloric acid is chlorine') and does not contradict the key.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 31,
+      "source": "codex",
+      "finding": "check 2: hint 3 'scan for a metal symbol' is mechanical",
+      "decision": "rejected",
+      "reason": "Hint 3 names no option and the student must still recognise K as the metal. This is the same pitch as Q13's hint 3, which passed. Codex's fix rules out NO₂, SO₃ and SO₂ by name and points at the fourth formula, so it hands over the answer.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 36,
+      "source": "codex",
+      "finding": "check 2: hint 3 names 3s² and 3p⁴ and says count them, giving group VI",
+      "decision": "accepted",
+      "reason": "After hint 2 says outer electrons give the group, naming the exact outer orbitals to add leaves only 2 + 4. Codex's wording 'atomic number 16 points to sulphur rather than period 4' confuses period with atomic number, so I wrote my own.",
+      "change": "Hint 3 now rules out A (16 is not a mass number) and C (highest shell is 3), then leaves the student to check the outer-electron claim against the unpaired-electron claim, with a reminder that p electrons go in singly before pairing.",
+      "round": 1
+    },
+    {
+      "q_number": 37,
+      "source": "codex",
+      "finding": "check 2: hint 3 is a digit-matching shortcut",
+      "decision": "accepted",
+      "reason": "'Look for a name where the methyl branch and the OH share the same number' can be applied to the option strings without drawing any structure, and it repeats the exam tip.",
+      "change": "Hint 3 now rules out the two unbranched alkanols (OH carbon joined to at most two carbons), then asks the student to draw the OH carbon in each branched name and count its carbon neighbours. I adapted Codex's wording, using 'at most two' in place of 'only ever two'.",
+      "round": 1
+    },
+    {
+      "q_number": 45,
+      "source": "codex",
+      "finding": "check 2: hint 3 'which column label' matches group number directly",
+      "decision": "accepted",
+      "reason": "Hint 2 already said that columns share outer electrons, so asking for the column label is a word match. Codex's fix, 'only one of them counts electrons', is also near-direct, so I wrote my own.",
+      "change": "Hint 3 now sets aside period number and atomic mass, then asks which of the two labels left goes up by one per outer electron as you move from sodium to chlorine along period 3, and which stays the same.",
+      "round": 1
+    },
+    {
+      "q_number": 46,
+      "source": "codex",
+      "finding": "check 2: hint 3 restates the definition via mass number",
+      "decision": "rejected",
+      "reason": "After hints 1 and 2 the item is pure recall. Hint 3 still requires the student to recall what mass number counts, and it names no option. Codex's fix tells the student to rule out every option that includes electrons or leaves out a nucleus particle, which leaves only A.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 47,
+      "source": "codex",
+      "finding": "check 2: hint 2 accounts for all three distractors, making hint 3 redundant",
+      "decision": "accepted",
+      "reason": "Hint 2 gave the colours for Cu²⁺ and Fe³⁺ and the behaviour of NH₄⁺, which leaves Fe²⁺ by elimination before hint 3.",
+      "change": "Removed 'and iron(III) hydroxide is reddish-brown' from hint 2. I did not add Codex's extra sentence, because hint 3 already narrows to the two iron ions.",
+      "round": 1
+    },
+    {
+      "q_number": 50,
+      "source": "codex",
+      "finding": "check 2: hint 3 'reduce the ratio as far as it will go' paraphrases 'simplest'",
+      "decision": "accepted",
+      "reason": "The student can match 'as far as it will go' to 'simplest' without reasoning.",
+      "change": "Hint 3 now rules out molecular and structural formulae (actual atoms, not a ratio), then asks which of the two options left is only a general name and which describes the glucose ratio. This follows Codex's idea in my own wording.",
+      "round": 1
+    },
+    {
+      "q_number": 4,
+      "source": "check-11",
+      "finding": "'does not support burning' stated absolutely; burning magnesium keeps burning in CO₂",
+      "decision": "accepted",
+      "reason": "An unscoped absolute, false for a reaction taught in the syllabus. A one-phrase qualifier fixes it.",
+      "change": "Principle now says 'does not support the burning of most substances'. The hint and exam tip describe what an extinguisher gas needs, not a fact about CO₂, so they are unchanged.",
+      "round": 1
+    },
+    {
+      "q_number": 44,
+      "source": "check-11",
+      "finding": "exam tip 'Any question about removing colour, smell or gases links to adsorption' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "Many gases are removed by absorption, for example CO₂ taken up by an alkali. The rule as written is false.",
+      "change": "Exam tip now reads 'Questions about removing colour or smells usually link to adsorption, and adsorption links to charcoal.'",
+      "round": 1
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "44": {
+      "q_number": 44,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 names all four non-renewable terms that make up the three wrong pairs: \"Coal, natural gas and diesel are fossil fuels formed over millions of years, and nuclear power uses uranium mined from the ground.\" Since option A is coal+nuclear, option B is natural gas+diesel, and option D is nuclear+natural gas, every wrong pair is built entirely from terms hint 2 has already labelled non-renewable. Hint 3 then just gives the mechanical rule to apply that list: \"Check each pair for any fuel dug or pumped out of the ground, and drop any pair that has one.\" By this point a student needs no comparison between two remaining contenders (the standard's usual pattern for hint 3); they only need to notice that hydro power and solar are the two words hint 2 never flagged. This lets the student answer without thinking, which fails check 2, and hint 2's blanket naming is the root cause: it eliminates three of four options at once instead of the weakest distractor(s), effectively stating the answer indirectly.",
+      "fix": "hint2: Nuclear power plants run on uranium, a mineral dug from the ground, so any pair containing nuclear power cannot be fully renewable.\nhint3: Between natural gas and diesel, and hydro power and solar, which pair relies on fuel pumped or dug from the ground rather than on sunlight and flowing water?",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1893,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.1893
+}

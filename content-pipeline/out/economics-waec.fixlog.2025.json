@@ -1,0 +1,103 @@
+{
+  "entries": [
+    {
+      "q_number": 3,
+      "source": "check-11",
+      "finding": "'cannot be increased or reduced by human effort' is an unscoped absolute (land reclamation, e.g. Eko Atlantic, does add land)",
+      "decision": "accepted",
+      "reason": "The syllabus treats land as fixed, and the next sentence already scopes that, but the first sentence stated it as literal fact.",
+      "change": "'cannot be increased or reduced' changed to 'can hardly be increased or reduced' in the solution's principle.",
+      "round": 1
+    },
+    {
+      "q_number": 10,
+      "source": "check-11",
+      "finding": "'habit-forming goods have inelastic demand' states a tendency as a universal rule",
+      "decision": "accepted",
+      "reason": "It is a textbook tendency, not a law, and line B of the same item already says 'tends to be'.",
+      "change": "Line C now says 'habit-forming goods tend to have inelastic demand'.",
+      "round": 1
+    },
+    {
+      "q_number": 23,
+      "source": "codex",
+      "finding": "check 9: subtopic costs.short-long-run is the wrong place; reassign to markets.profit-shutdown",
+      "decision": "accepted",
+      "reason": "The misplacement is real, but the item already has a placement_challenge that flags it, and markets.perfect fits better than markets.profit-shutdown ('short-run and long-run equilibrium, and reading the curves on a perfect competition diagram'). Under the standard, the author flags placement and does not overwrite the classifier's id.",
+      "change": "No text change. subtopic_id left as it was, and the existing placement_challenge to markets.perfect stays for the placement stage.",
+      "round": 1
+    },
+    {
+      "q_number": 24,
+      "source": "check-12",
+      "finding": "hint 3 'Y is average total cost and Z is average variable cost' gives away Q22's answer (Z is the average variable cost curve)",
+      "decision": "accepted",
+      "reason": "Q22 and Q24 share Figure 2 (passage economics-wassce-2025-s02). A student who opens Q24's hints before, or instead of, Q22 is told Q22's key outright.",
+      "change": "Hint 3 rewritten so it no longer says which curve is which: 'Average total cost is average variable cost plus one other average cost, so the gap between the two U-shaped average cost curves is that other cost. Which one is it?'",
+      "round": 1
+    },
+    {
+      "q_number": 25,
+      "source": "codex",
+      "finding": "check 4: option C is missing from 'Why not the others'",
+      "decision": "rejected",
+      "reason": "The item has no option C. In items.json the options are A and a garbled B that also holds D, so option C was lost in the source scan. Codex itself says not to invent C's wording, and it cannot be recovered from the files here. The teaching covers every option that exists. Held for source repair.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 37,
+      "source": "codex",
+      "finding": "check 2: hint 2 confirms all three distractors as gainers, so the answer is settled before hint 3",
+      "decision": "accepted",
+      "reason": "Hint 2 marked A, C and D as gainers ('Firms' money revenue and profits also tend to rise'), which gives the answer away indirectly. Hint 2 may rule out the weakest distractors, but not every one.",
+      "change": "Hint 2 keeps the borrowers sentence and drops the revenue and profit sentence. It now ends 'Ask the same question of each of the other options: do rising prices push it up or pull it down?' Codex's wording ('not simply a sum of money') was not used, because it points too hard at B.",
+      "round": 1
+    },
+    {
+      "q_number": 38,
+      "source": "codex",
+      "finding": "check 2: hint 2 eliminates interest, payment system and paydays together",
+      "decision": "accepted",
+      "reason": "Hint 2 cleared A, B and C, which left only D before hint 3 was read.",
+      "change": "Hint 2 now deals only with interest rates: '...so they hold less idle cash. That links interest rates to a different motive for holding money.' The payment and payday sentence was removed.",
+      "round": 1
+    },
+    {
+      "q_number": 39,
+      "source": "codex",
+      "finding": "check 2: hint 2 clears bank notes, fiat coins and current account deposits together",
+      "decision": "accepted",
+      "reason": "Hint 2 confirmed A, B and D as money, which left C by elimination.",
+      "change": "Hint 2 now reads 'Notes and coins are legal tender: the law says they must be accepted in payment. Think about how each of the other options gets accepted, if it is accepted at all.' Codex's 'always accepted' was not used, because it is an absolute.",
+      "round": 1
+    },
+    {
+      "q_number": 39,
+      "source": "check-11",
+      "finding": "line A 'accepted everywhere in the country' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "Legal tender means the law requires it to be accepted in payment. It does not mean it is accepted everywhere in practice.",
+      "change": "Line A now reads 'they are legal tender, which the law says must be accepted in payment.'",
+      "round": 1
+    },
+    {
+      "q_number": 40,
+      "source": "codex",
+      "finding": "check 2: hint 2 clears buildings, vehicles and loans together",
+      "decision": "accepted",
+      "reason": "Hint 2 confirmed B, C and D as assets, which left A alone. Clearing the two weakest distractors is within hint 2's job, but clearing all three is not.",
+      "change": "Hint 2 now reads 'Buildings, vehicles and equipment are things the bank owns, so they are assets.' Loans are left for the student to test.",
+      "round": 1
+    },
+    {
+      "q_number": 41,
+      "source": "codex",
+      "finding": "option B prints as 'Tover than proposed expenditure' (source corruption), noted but not failed",
+      "decision": "rejected",
+      "reason": "This is a problem in the source import, not in the hint or solution, and the solution already gives the correct text 'lower than proposed expenditure'. Passed to content ops. No teaching change.",
+      "change": "",
+      "round": 1
+    }
+  ]
+}

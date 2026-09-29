@@ -1,0 +1,931 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "verified": 32,
+    "agreed-soft": 7,
+    "unsolvable": 1
+  },
+  "verdicts": {
+    "1": {
+      "q_number": 1,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 1,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Oxygen is the terminal electron acceptor in the electron transport chain, combining with electrons and protons to form water. NADH and FADH2 are electron donors that feed electrons into the chain, not acceptors, and ATP is the end product of oxidative phosphorylation, not an electron carrier.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 1,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Oxygen accepts electrons at the end of the electron transport chain and is reduced to water. NADH and FADH2 are electron donors, not the final acceptor.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 2,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Ribosomes are the site of translation, where mRNA is decoded to synthesize proteins. Energy production and cellular respiration occur in mitochondria, and nutrient transport is not a ribosomal function.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 2,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Ribosomes are the site where mRNA is translated into polypeptides. Energy production and respiration are mitochondrial functions.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Rhizopus is a mould that feeds saprophytically on dead organic matter. Sundew and bladderwort are carnivorous plants, while mistletoe is a parasitic plant, so none of those fit saprophytic nutrition.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Rhizopus (bread mould) feeds on dead organic matter and is therefore a saprophyte. Sundew and bladderwort are insectivorous plants, and mistletoe is a partial parasite.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 4,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "An onion bulb is a modified stem/leaf structure representing organ-level organization, while Hydra is generally classified as having tissue-level organization, and Paramecium and Amoeba are unicellular with no tissue or organ level at all.",
+        "solvable": true,
+        "issue": "Hydra is sometimes loosely described in secondary texts as having organ-like structures, making this option arguably defensible, though the standard classification places it at the tissue level.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 4,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The onion bulb is the standard textbook example of the organ level of organization. Hydra is the standard example of the tissue level, and Paramecium and Amoeba are cellular level.",
+        "solvable": true,
+        "issue": "An onion bulb is strictly an organ rather than an organism, but the stem follows the standard syllabus example."
+      },
+      "extract_anomaly": null
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 5,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "A typical human somatic cell, male or female, contains 46 chromosomes (23 pairs), including the XY sex chromosome pair in males. 23 is the haploid gamete number, not the somatic number.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 5,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Human somatic cells are diploid, with 46 chromosomes (44 autosomes plus XY in males). 23 is the haploid number found in gametes.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 6,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A Secchi disk is a flat circular disk lowered into water to measure its transparency/turbidity. A hygrometer measures humidity, an anemometer measures wind speed, and a hydrometer measures liquid density.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 6,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A Secchi disc is lowered into water to measure how clear, or turbid, it is. A hydrometer measures density, a hygrometer measures humidity and an anemometer measures wind speed.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 7,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Jean-Baptiste Lamarck proposed the theory of use and disuse (inheritance of acquired characteristics). Darwin proposed natural selection, Mendel proposed laws of inheritance, and Pasteur is known for germ theory and pasteurization.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 7,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Lamarck proposed use and disuse together with the inheritance of acquired characters. Darwin proposed natural selection.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Tongue rolling is a classic example of a physiological (functional/genetic ability) variation used in biology teaching, alongside traits like PTC tasting. Body shape and size are continuous/environmental variations, while fingerprint pattern is typically classed as a morphological variation.",
+        "solvable": true,
+        "issue": "Fingerprint could arguably be considered a distinct trait type in some texts, but standard WAEC/JAMB classification treats tongue rolling as the physiological variation example.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Tongue rolling is a functional (physiological) trait, like blood group and the ability to taste PTC. Body shape, size and fingerprints are morphological variations.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 9,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Plant evolution progressed from simple algae to non-vascular mosses, then to vascular seedless ferns, and finally to seed-bearing conifers, reflecting increasing structural complexity. The other options reverse or scramble this established evolutionary sequence.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 9,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Plants progressed from algae to bryophytes (mosses), then to pteridophytes (ferns), then to gymnosperms (conifers). Option A wrongly places ferns before mosses.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 10,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Xylem transports water and minerals upward while phloem transports manufactured food (sucrose) throughout the plant, so both vascular tissues are involved in transportation of substances. Choosing only one ignores the complementary role of the other.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 10,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Xylem transports water and mineral salts, and phloem transports manufactured food. Both are therefore transport tissues.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Genotype refers to the genetic makeup (allele combination) of an organism, while phenotype is the observable expression of that genotype. Dominant and recessive traits are types of alleles, not terms for the overall genetic makeup.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "The genotype is an individual's genetic constitution. The phenotype is the observable expression of that genotype.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 12,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Insects respire through a network of air tubes called tracheae, which open to the exterior via spiracles and deliver oxygen directly to tissues. Book lungs are found in arachnids, gills in aquatic animals, and Malpighian tubules are excretory, not respiratory, organs.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 12,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Insects breathe through a tracheal system that opens at spiracles. Book lungs belong to arachnids, and Malpighian tubules are excretory organs.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 13,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A long, narrow, tubular beak (as in hummingbirds and sunbirds) is adapted to reach into flowers and suck nectar. Tearing, crushing, and fish-catching beaks are typically hooked, short and stout, or spear-like/serrated respectively, not long and tubular.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 13,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A long, narrow, tubular beak, as in sunbirds and hummingbirds, is adapted for sucking nectar from flowers. Tearing needs a hooked beak and crushing seeds needs a short, stout one.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 14,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Nitrogen is required by plants in large amounts (a macronutrient) for making proteins and chlorophyll. Iron, boron, and copper are needed only in trace amounts and are classified as micronutrients.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 14,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Nitrogen is needed in large amounts and is a macronutrient. Iron, boron and copper are micronutrients (trace elements).",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 15,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Sucrose is a disaccharide formed by the condensation of one glucose molecule and one fructose molecule. Glucose+glucose forms maltose, and galactose+glucose forms lactose.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 15,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Sucrose is a disaccharide made of glucose and fructose. Glucose plus glucose gives maltose, and galactose plus glucose gives lactose.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 16,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Cows and goats are different species competing for the same grass resource on a shared field, which is interspecific competition. Intraspecific competition would require members of the same species competing.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 16,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Cows and goats are different species competing for the same grass, which is interspecific competition. Intraspecific competition is between members of one species.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 17,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The repeating structural units of a DNA molecule are nucleotides, each made of a deoxyribose sugar, a phosphate group, and a nitrogenous base. Phosphate, nitrogen base, and sugar are only the sub-components of a single nucleotide, not the repeating unit itself.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 17,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "DNA is a polymer of nucleotides, and each nucleotide contains a phosphate, a deoxyribose sugar and a base. The other options are only single parts of a nucleotide.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 18,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Mosquitoes have needle-like piercing and sucking mouthparts (proboscis) adapted for drawing blood or plant fluids. Cockroaches have chewing mouthparts, butterflies have a siphoning proboscis, and houseflies have sponging mouthparts.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 18,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The female mosquito has piercing and sucking mouthparts. A housefly has sponging mouthparts, a butterfly has a siphoning proboscis and a cockroach has biting and chewing mouthparts.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 19,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "Rumen bacteria and protozoa jointly digest cellulose that the host cannot break down, and this cellulose-digesting microbial community is the standard secondary-school example of mutualism in the ruminant gut. The wording of the question is ambiguous, since some rumen protozoa also feed on bacteria (a predation-like interaction), making 'predation' a defensible alternative reading.",
+        "solvable": true,
+        "issue": "The question's phrasing ('relationship between bacteria and protozoa') is ambiguous: it could mean the joint mutualistic relationship of these microbes with the cattle host (the standard syllabus example), or the direct interaction between the two microbe groups themselves, where protozoa are known to prey on bacteria.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 19,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "The microbes digest cellulose for the cow and in return receive food and shelter, so both partners benefit, which is mutualism. Symbiosis is often used as a synonym, but mutualism is the more specific term.",
+        "solvable": true,
+        "issue": "Nigerian texts often treat symbiosis as a synonym for mutualism, so A is also defensible."
+      },
+      "extract_anomaly": null
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 20,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Carrying capacity is the standard ecological term for the maximum population size a habitat's resources can sustainably support. The other options are not recognized ecological terms for this concept.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 20,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Carrying capacity is the maximum population that a habitat's resources can sustain. The other options are not standard ecological terms.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 21,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Seaweeds (algae) and barnacles are classic intertidal/marine organisms found attached to rocks along seashores. Estuarine habitats (brackish river-sea mix) are a distinct, more specific category not typically the default classification for these organisms in this context.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 21,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Seaweeds and barnacles are typical organisms of the marine rocky shore. They are not typical of freshwater or terrestrial habitats.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 22,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Cells at root and shoot tips that divide constantly and remain undifferentiated are meristematic cells. Apical describes the location (the tip) rather than the cell type itself, so it is the weaker, distractor answer.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 22,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Cells that divide constantly are meristematic cells. The apical meristem is where they are found at root and stem tips, so 'apical' names the location rather than the cell type.",
+        "solvable": true,
+        "issue": "B (apical) is defensible if the question means the meristem by its position."
+      },
+      "extract_anomaly": null
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 23,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Sneezing is an involuntary, automatic response to irritation of the nasal lining, making it a reflex action. Dancing, walking, and crying are voluntary or consciously controlled behaviours, not reflexes.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 23,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Sneezing is an automatic, involuntary response to a stimulus, which makes it a reflex. Dancing and walking are voluntary actions.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Oxygen delivered to body cells is used in aerobic respiration to break down food and release energy (as ATP). It is not itself used for growth, waste removal, or carboxyhaemoglobin formation (which is actually a harmful complex with carbon monoxide, not oxygen's purpose).",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Cells use oxygen in aerobic respiration to release energy from food. Carboxyhaemoglobin forms with carbon monoxide, not oxygen.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 25,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "",
+        "solvable": false,
+        "issue": "The prompt text lists four options (A-D) but simultaneously states 'No options could be read from the source for this question,' a direct contradiction. Since the displayed options cannot be confirmed as the genuine source choices, the question cannot be reliably answered.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 25,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "The options object is empty, so no option letter can be returned. The stem text carries the options inline, and of those, 'C. Whales evolved from ancestors that had legs' is correct: vestigial limb bones are comparative-anatomy evidence of descent from four-legged land ancestors. D is wrong because the bones are non-functional.",
+        "solvable": false,
+        "issue": "Source defect: the four options are embedded in the stem text ('·A. ... B. ... C. ... D. ...') and the options object is empty. Once the options are split out of the stem, the answer is C (certain)."
+      },
+      "extract_anomaly": "options-not-in-text"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 26,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Vacuoles are the organelles typically described as storing waste products (as well as water and food reserves), especially in plant cells. Lysosomes are a plausible distractor since they contain digestive enzymes that break down waste, but their role is degradation rather than storage.",
+        "solvable": true,
+        "issue": "Lysosome (B) is a defensible alternative since it is also associated with cellular waste handling, though 'storing' points more directly to the vacuole.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 26,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Vacuoles store cell sap, including waste products, especially in plant cells. Lysosomes digest materials rather than store them.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 27,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "Seawater accumulates pollutants from rivers, industrial discharge, sewage, and oil spills that ultimately drain into the ocean, giving it the highest pollutant load compared to rainfall, spring, or well water. Rainfall is generally the least contaminated natural water source.",
+        "solvable": true,
+        "issue": "Well water (B) could be argued as heavily polluted from ground seepage, making this less than fully certain.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 27,
+        "answer": "A",
+        "confidence": "uncertain",
+        "reasoning": "Seas receive run-off, sewage and industrial effluent from rivers and coasts, as well as oil spills, so they carry the highest pollutant load. Rain and spring water are comparatively pure, although well water can be contaminated locally.",
+        "solvable": true,
+        "issue": "The stem is vague about what 'pollutants' means. B (well water) could be argued in a local-contamination context."
+      },
+      "extract_anomaly": null
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 28,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "A person with blood group A can have genotype AA (homozygous) or AO (heterozygous, since A is dominant over O), matching option B (AO, AA). The other options combine genotypes inconsistent with a pure group A phenotype (e.g., include AB or OO).",
+        "solvable": true,
+        "issue": "The question stem appears truncated ('blood group A.') and options are terse shorthand, making the intended wording slightly unclear, though the genetics points clearly to option B.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 28,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The stem has lost the blood group letter, but only option B (AO, AA) gives two genotypes that share one blood group: both give group A. Each of the other pairs mixes two different groups.",
+        "solvable": true,
+        "issue": "Source defect: the blood group is missing from the stem ('a man with blood group'). Option A also carries a stray 'A.' prefix."
+      },
+      "extract_anomaly": null
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 29,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Osmosis is passive movement of water down its concentration gradient and requires no ATP. Active transport, muscle contraction, and mitosis are all energy-demanding processes that require ATP.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 29,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Osmosis is passive diffusion of water down its water potential gradient and needs no ATP. Active transport, muscle contraction and mitosis all use ATP.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 30,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Salivary amylase breaks down starch into maltose, initiating carbohydrate digestion in the mouth. Trypsin and pepsin act on proteins, and lipase acts on fats, so none of these are found in saliva for carbohydrate digestion.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 30,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Salivary amylase (ptyalin) begins the breakdown of starch in the mouth. Pepsin and trypsin digest proteins.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 31,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The iris is the pigmented muscular structure that contracts or dilates the pupil to control the amount of light entering the eye. The cornea and lens focus light but do not regulate its quantity, and the retina only receives the image.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 31,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The iris changes the size of the pupil and so controls how much light enters the eye. The lens focuses light, and the cornea refracts it.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 32,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The medulla oblongata controls involuntary vital functions such as heartbeat, breathing, and blood pressure. The cerebrum controls voluntary and conscious activities while the cerebellum coordinates balance and muscular movement, not autonomic functions.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 32,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The medulla oblongata controls heartbeat, breathing and other involuntary activities. The cerebellum coordinates balance and muscular movement.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 33,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Malpighian tubules are the excretory organs of insects, removing nitrogenous waste into the gut. Flame cells belong to flatworms, nephridia to annelids like earthworms, and green glands to crustaceans, not insects.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 33,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Malpighian tubules are the excretory organs of insects. Flame cells belong to flatworms, nephridia to annelids and green glands to crustaceans.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The large intestine's main function is the absorption of water (and some salts) from indigestible food remains, forming solid feces. Digestion of proteins and fats occurs earlier in the small intestine, and bile storage is done by the gall bladder.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The colon's main role is absorbing water and salts from undigested material. Protein and fat digestion happen mainly in the stomach and small intestine, and bile is stored in the gall bladder.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 35,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Down syndrome results from nondisjunction during meiosis, causing an extra copy of chromosome 21 (trisomy 21). Albinism, sickle-cell anemia, and colour blindness are all caused by gene mutations, not chromosomal nondisjunction.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 35,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Down syndrome (trisomy 21) results from nondisjunction of chromosome 21 during meiosis. Albinism, sickle-cell anaemia and colour blindness are caused by gene mutations.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 36,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Seed germination requires oxygen for respiration, water to activate enzymes and soften the seed coat, and a suitable (warm) temperature for enzyme activity. Darkness/cold or dry conditions in the other options would inhibit rather than promote germination.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 36,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Germination needs water, oxygen and a suitable temperature. Each of the other options includes an inhibiting factor such as dryness or cold.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 37,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Xylem tissue conducts water and dissolved mineral salts from the roots upward to other plant parts. Phloem instead transports manufactured food (sugars), while cambium and cortex are not conducting tissues.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 37,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Xylem conducts water and mineral salts up from the roots. Phloem translocates manufactured food.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 38,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Locomotion (movement from place to place) is not universal, since plants and many sessile organisms cannot move about, though all living things show some form of movement (irritability). Respiration, growth, and irritability, however, are true characteristics common to all living organisms.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 38,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Locomotion is not shared by all living things; most plants cannot move from place to place. Respiration, growth and irritability are universal.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 39,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Amphibians have a three-chambered heart (two atria, one ventricle) and lay jelly-coated eggs that are fertilized and develop in water. Reptiles have leathery-shelled eggs laid on land, and birds/mammals have four-chambered hearts.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 39,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Amphibians have a three-chambered heart and lay jelly-coated eggs in water. Reptiles also mostly have three chambers, but they lay shelled eggs on land.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 40,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Meiosis is significant because it produces haploid gametes with half the chromosome number, ensuring that fertilization restores the normal diploid number in offspring. Mitosis, not meiosis, is responsible for growth, cell repair, and maintaining constant chromosome number in somatic cells.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 40,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Meiosis halves the chromosome number to form haploid gametes, so fertilization restores the diploid number. Constancy of chromosome number in somatic cells (D), and repair and growth (A), are the roles of mitosis.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    }
+  }
+}

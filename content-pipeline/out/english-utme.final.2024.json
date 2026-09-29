@@ -1,0 +1,304 @@
+{
+  "year": 2024,
+  "paper": 1,
+  "counts": {
+    "keyed": 38,
+    "defective": 11
+  },
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "2": {
+      "q_number": 2,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "3": {
+      "q_number": 3,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "4": {
+      "q_number": 4,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "5": {
+      "q_number": 5,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "6": {
+      "q_number": 6,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "7": {
+      "q_number": 7,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "8": {
+      "q_number": 8,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "9": {
+      "q_number": 9,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "10": {
+      "q_number": 10,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "11": {
+      "q_number": 11,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "12": {
+      "q_number": 12,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "13": {
+      "q_number": 13,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "14": {
+      "q_number": 14,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with claude"
+    },
+    "15": {
+      "q_number": 15,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "16": {
+      "q_number": 16,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "17": {
+      "q_number": 17,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "18": {
+      "q_number": 18,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "19": {
+      "q_number": 19,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "20": {
+      "q_number": 20,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "21": {
+      "q_number": 21,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "22": {
+      "q_number": 22,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "23": {
+      "q_number": 23,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "24": {
+      "q_number": 24,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "26": {
+      "q_number": 26,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "27": {
+      "q_number": 27,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "28": {
+      "q_number": 28,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "29": {
+      "q_number": 29,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "30": {
+      "q_number": 30,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "31": {
+      "q_number": 31,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "32": {
+      "q_number": 32,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "33": {
+      "q_number": 33,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "34": {
+      "q_number": 34,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "35": {
+      "q_number": 35,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "36": {
+      "q_number": 36,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "37": {
+      "q_number": 37,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "38": {
+      "q_number": 38,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "39": {
+      "q_number": 39,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "40": {
+      "q_number": 40,
+      "state": "defective",
+      "answer": null,
+      "reason": "Options B and D are identical ('John can only sing'), and neither matches the correct implication that John can do both; the option set appears corrupted or garbled. | Options B and D are identical ('John can only sing'), and the stem prints 'CANNOT' where 'can NOT (only)' is meant. The intended key cannot be told apart."
+    },
+    "41": {
+      "q_number": 41,
+      "state": "defective",
+      "answer": null,
+      "reason": "This is a recall question on a detail of the prescribed novel 'The Life Changer', and neither the novel nor the relevant extract is in the item. A key cannot be set from the item or from general knowledge. Claude's B (Queen Amina Hall) is a plausible memory, but it is uncertain, and A (Queen Elizabeth Hall) is also a women's hall name, so elimination does not settle it. The item needs to be keyed against the text before release."
+    },
+    "42": {
+      "q_number": 42,
+      "state": "defective",
+      "answer": null,
+      "reason": "This is a set-text recall question, and the source text is not supplied. The stem is also damaged ('introduced that was introduced'), though the intended meaning is clear. Claude's B (Dambu Nama) comes from weak recall, and C and D are equally plausible northern foods, so no letter can responsibly be keyed without checking the novel."
+    },
+    "43": {
+      "q_number": 43,
+      "state": "defective",
+      "answer": null,
+      "reason": "This is a set-text recall question with no source supplied. All four options are philosophy courses, so nothing in the item narrows the choice. Claude's A (Political Philosophy) was given with weak recall, and it cannot be keyed until it is verified against the novel."
+    },
+    "44": {
+      "q_number": 44,
+      "state": "defective",
+      "answer": null,
+      "reason": "This is a set-text recall question with no source supplied. Claude's B (Ethics and Disciplinary Committee chair) fits a disciplinary episode in the plot, but A (Head of Department) is an equally natural role for a lecturer, and the item alone gives no basis for choosing. It must be verified against the text before it is keyed."
+    },
+    "45": {
+      "q_number": 45,
+      "state": "defective",
+      "answer": null,
+      "reason": "This is a set-text recall question on a trivial detail, and no source is supplied. Three options are Samsung series, and Claude's C was an admitted guess. There is no way to key it from the item, so it must be checked against the novel."
+    },
+    "46": {
+      "q_number": 46,
+      "state": "defective",
+      "answer": null,
+      "reason": "This is a set-text recall question with no source supplied. Claude's A (Salma) is uncertain, and Claude names B (Joyce) as a strong alternative. With two characters both plausible and no text to check, a key would be a guess."
+    },
+    "47": {
+      "q_number": 47,
+      "state": "defective",
+      "answer": null,
+      "reason": "This asks who is addressed in a quoted line from the set text, but the surrounding passage is not supplied, and the stem says 'except' for 'excerpt'. Claude's A (Omar) is a reasonable inference from the novel's frame, where Ummi warns her children, but Salma is also one of the children. The addressee cannot be confirmed without the text."
+    },
+    "48": {
+      "q_number": 48,
+      "state": "defective",
+      "answer": null,
+      "reason": "This asks about the author's business, which is biographical, not part of the text, and the item gives no source for it. Claude's D (She's Boutique Afrique) is offered as probable, but it is a fact about a real person that cannot be confirmed here. It should be verified against the book's author note before it is keyed."
+    },
+    "49": {
+      "q_number": 49,
+      "state": "defective",
+      "answer": null,
+      "reason": "This is a set-text recall question with no source supplied. Claude's A (Lafiaji) was an admitted best guess. Only B can be ruled out on plausibility, and A, C and D all remain possible. It must be keyed from the novel."
+    },
+    "50": {
+      "q_number": 50,
+      "state": "defective",
+      "answer": null,
+      "reason": "This asks who a quoted line refers to in the set text, but the passage is not supplied, and the stem says 'except' for 'excerpt'. Claude's A (Omar) rests on a general sense of the family conversations, not on recall of this line, and B and C are characters as well. It cannot be keyed without the text."
+    }
+  }
+}

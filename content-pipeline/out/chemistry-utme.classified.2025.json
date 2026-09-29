@@ -1,0 +1,243 @@
+{
+  "unit": "2025",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "states.gas-laws",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "acids-bases.ph",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "redox.agents",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "pollution.air",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "organic-basics.naming",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "hydrocarbons.alkenes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "biomolecules.carbohydrates",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "organic-basics.isomerism",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "common-metals.calcium",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "bonding.shapes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "common-metals.aluminium",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "states.gas-laws",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "nitrogen.nitric-acid",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "common-metals.iron",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "nitrogen.nitric-acid",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "states.diffusion",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "pollution.air",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "states.liquids",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "periodic.trends",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "equilibrium.constant",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "kinetics.rate",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "redox.definitions",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "states.kinetic-theory",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "equilibrium.constant",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "electrochemistry.cells",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "carbon.allotropes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "functional-groups.carbonyls",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "functional-groups.alkanoic-acids",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "states.molar-volume",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "redox.agents",
+      "confidence": "overlap",
+      "note": "Also fits halogens.chlorine: the question asks which compound of chlorine acts as both oxidising and reducing agent, which is chlorine's variable oxidation state behaviour (disproportionation), but it is also exactly the general redox.agents content of substances that can act as both. The taxonomy's own covers lines cite this same question under both subtopics."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "redox.oxidation-numbers",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "sulphur.sulphuric-acid",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "hydrogen-oxygen.oxides",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "bonding.covalent",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "hydrocarbons.alkenes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "common-metals.iron",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "energetics.heats",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "functional-groups.esters",
+      "confidence": "clear",
+      "note": ""
+    }
+  ],
+  "taxonomy_findings": [
+    {
+      "kind": "overlap",
+      "where": "redox.agents / halogens.chlorine",
+      "detail": "Both subtopics' covers lines cite UTME 2025 Q32 (which chlorine compound acts as both oxidising and reducing agent). The question sits exactly on the border the two covers lines describe: a substance's dual oxidising and reducing role (redox.agents) shown through chlorine's variable oxidation states (halogens.chlorine). Neither subtopic's sorting rule breaks the tie, since halogens.chlorine's rule only routes oxidation-number work away to redox.oxidation-numbers, not this kind of dual-role identification question."
+    }
+  ],
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1"
+}

@@ -7,7 +7,132 @@
     "at": null,
     "note": ""
   },
-  "units": {},
-  "cost_usd": 11.32,
+  "units": {
+    "2024": {
+      "status": "failed",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T14:05:37",
+          "summary": "80/80 codex, 80/80 claude",
+          "seconds": 435,
+          "cost_usd": 1.35
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T14:05:37",
+          "summary": "agreed-soft 17, disagree 1, unsolvable 1, verified 61",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T14:06:56",
+          "summary": "19 ruled: ambiguous 1, defective 1, key 17",
+          "seconds": 78,
+          "cost_usd": 0.32
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T14:06:57",
+          "summary": "ambiguous 1, defective 1, keyed 78",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T14:09:13",
+          "summary": "clear 77, overlap 1; 1 taxonomy findings",
+          "seconds": 136,
+          "cost_usd": 0.42
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T14:15:40",
+          "summary": "78 written in 4 part(s); answer challenges none; style scan: REVIEW (16 across 9 location(s))",
+          "seconds": 386,
+          "cost_usd": 4.59
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T14:59:12",
+          "summary": "78 reviewed, 9 fail, fact errors [51]",
+          "seconds": 2612,
+          "cost_usd": 3.35
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T15:06:54",
+          "summary": "12 accepted, 1 rejected; style scan: REVIEW (16 across 9 location(s))",
+          "seconds": 461,
+          "cost_usd": 2.58
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T15:18:43",
+          "summary": "11 changed items re-reviewed, 1 still fail [70]",
+          "seconds": 708,
+          "cost_usd": 0.53
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T15:19:40",
+          "summary": "1 ruled on the last pass, held none; style scan: REVIEW (16 across 9 location(s))",
+          "seconds": 57,
+          "cost_usd": 0.37
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T15:19:40",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T15:19:40",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T15:19:40",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T15:19:40",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T15:19:41",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T15:19:41",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "failed",
+          "at": "2026-09-29T15:22:09",
+          "summary": "the CSV fails an import rule:  missing question_text\n    row 75 (2024 ''): duplicate question text of row 74\n    row 76 (2024 ''): missing question_text\n    row 76 (2024 ''): duplicate question text of row 75\n    row 77 (2024 ''): missing question_text\n    row 77 (2024 ''): duplicate question text of row 76\n    row 78 (2024 ''): missing question_text\n    row 78 (2024 ''): duplicate question text of row 77\n    row 79 (2024 ''): missing question_text\n    row 79 (2024 ''): duplicate question text of row 78\n  gaps the import misses: 1 FLAG\n    row 66 (2024 'Did you notice that the ...... had been '): two options are identical\n",
+          "cost_usd": 0.0
+        }
+      },
+      "error": "export: the CSV fails an import rule:  missing question_text\n    row 75 (2024 ''): duplicate question text of row 74\n    row 76 (2024 ''): missing question_text\n    row 76 (2024 ''): duplicate question text of row 75\n    row 77 (2024 ''): missing question_text\n    row 77 (2024 ''): duplicate question text of row 76\n    row 78 (2024 ''): missing question_text\n    row 78 (2024 ''): duplicate question text of row 77\n    row 79 (2024 ''): missing question_text\n    row 79 (2024 ''): duplicate question text of row 78\n  gaps the import misses: 1 FLAG\n    row 66 (2024 'Did you notice that the ...... had been '): two options are identical\n"
+    }
+  },
+  "cost_usd": 24.83,
   "taxonomy_cost_usd": 11.32
 }

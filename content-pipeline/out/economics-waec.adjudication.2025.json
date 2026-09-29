@@ -1,0 +1,76 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "rulings": {
+    "8": {
+      "q_number": 8,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "As transcribed, the options object is empty and all four options sit inside the stem, so there is no option letter that can be keyed. The strongest argument for keying is Codex's point that the options are fully legible in the stem, and on the merits the answer is clearly inferior goods, since negative income elasticity means demand falls as income rises, while normal goods have positive income elasticity and substitutes and complements are defined by cross elasticity. The defect is purely a transcription split: once the options are separated as A inferior goods, B normal goods, C substitute goods, D complementary goods, the key is A.",
+      "sided_with": "claude"
+    },
+    "9": {
+      "q_number": 9,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "As transcribed, options B, C and D are merged into option B's text, so option C does not exist as a separate letter and cannot be keyed. The strongest argument for keying is Codex's point that the letters and wording survive intact, and on the merits the answer is price inelastic, because matches take a negligible share of a rich consumer's income so price changes barely affect quantity demanded. Price elastic and perfectly elastic demand contradict that, and income elastic does not fit a trivial necessity. Once the options are split and 'clastic' in A is corrected to 'elastic', the key is C.",
+      "sided_with": "claude"
+    },
+    "11": {
+      "q_number": 11,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "The stem singles out a necessary good with no substitute, which is the textbook case of perfectly inelastic demand, drawn as a vertical demand curve. The strongest argument for B is that most real demand curves slope downward and the stem says 'usually', but 'negatively sloped' applies to every normal good and ignores the qualifiers the setter deliberately added. Standard Nigerian texts pair 'necessity without substitute' with perfectly inelastic, vertical demand, so an examiner would mark A.",
+      "sided_with": "both"
+    },
+    "23": {
+      "q_number": 23,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "In Figure 2, X is the steep marginal cost curve and the horizontal line at P is AR = MR, so the firm is in equilibrium where rising MC cuts MR, which is at output Q. At R the dashed line marks where the falling average cost curve Y crosses the price line near the bottom of MC, which is not a profit-maximising point. S and T are where the rising portions of Y and Z meet the price line, which are average cost intersections rather than MC = MR. Q is therefore the only equilibrium output.",
+      "sided_with": "both"
+    },
+    "30": {
+      "q_number": 30,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "As transcribed, options B, C and D are merged into option B's text, so option C does not exist as a separate letter and cannot be keyed. The strongest argument for keying is Codex's point that each letter and its wording remain legible, and on the merits the answer is structural unemployment, since a typist displaced for lacking computer skills faces a mismatch between skills and the changed structure of labour demand. Frictional unemployment is temporary movement between jobs, cyclical follows a downturn and seasonal follows the calendar, so none fits. Once the options are split as A cyclical, B seasonal, C structural, D frictional, the key is C.",
+      "sided_with": "claude"
+    },
+    "35": {
+      "q_number": 35,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "National income figures do not show what the output consists of, so a rise driven by capital or military goods overstates improvement in living standards, which is a standard textbook limitation. Options A, B and D describe stable prices, constant money value and uniform working conditions, which, if true, would make the figure more reliable rather than less. The strongest case for another option would be reading A or B as hinting at price changes, but as worded they assert stability, which is the opposite of a limitation. 'arc' in D is a typo for 'are' and does not affect the answer.",
+      "sided_with": "both"
+    },
+    "37": {
+      "q_number": 37,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Domestic inflation makes exports dearer and imports relatively cheaper, worsening the balance of payments, which is the standard textbook effect. Borrowers gain because they repay in money of lower value, so A is a beneficiary, not a victim. Sales revenue and dividends could be argued to suffer in real terms, but in money terms they tend to rise with prices and textbooks list profit earners and shareholders among gainers from inflation. B is the only option consistently presented as adversely affected.",
+      "sided_with": "both"
+    },
+    "42": {
+      "q_number": 42,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "The tax is stated as 10 percent, a proportion of the commodity's value, which is the defining feature of an ad valorem tax. The strongest argument for A is the phrase 'per unit', which echoes the textbook definition of a specific tax, but a specific tax is a fixed money sum per unit regardless of price, and a percentage cannot be that. An ad valorem tax is also collected on each unit sold, so 'per unit' does not exclude D, while '10%' does exclude A. A well-prepared student would therefore choose D.",
+      "sided_with": "both"
+    },
+    "44": {
+      "q_number": 44,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "In developing countries the direct tax base is narrow, so governments rely mainly on indirect taxes such as customs duties, excise duties and VAT, which are easy to collect. The strongest case for A is that royalties and rents dominate revenue in mineral exporters such as Nigeria, but the question asks generally about developing countries and textbooks give indirect taxes as the major source. Grants and loans are not revenue in the usual sense and asset sales are one-off, so neither competes.",
+      "sided_with": "both"
+    },
+    "48": {
+      "q_number": 48,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Reducing or removing export duties makes exports cheaper abroad and raises export earnings, which is a corrective measure for a persistent deficit. Revaluation raises the price of exports and makes imports cheaper, so B worsens the deficit. Using reserves and receiving gifts finance a deficit temporarily, and the strongest argument for them is that they do close the gap in the accounts, but the stem specifies a long-term deficit, which such stopgaps cannot correct.",
+      "sided_with": "both"
+    }
+  }
+}

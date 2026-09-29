@@ -1,0 +1,202 @@
+{
+  "slug": "english-utme",
+  "subject": "English Language",
+  "gate": {
+    "status": "awaiting",
+    "unit": "2024",
+    "at": "2026-09-29T15:06:14",
+    "note": ""
+  },
+  "units": {
+    "2024": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T13:58:49",
+          "summary": "49/49 codex, 49/49 claude",
+          "seconds": 227,
+          "cost_usd": 0.92
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T13:58:50",
+          "summary": "agreed-soft 5, disagree 1, unsolvable 11, verified 32",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T14:00:22",
+          "summary": "16 ruled: defective 10, key 6",
+          "seconds": 91,
+          "cost_usd": 0.3
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T14:00:22",
+          "summary": "defective 11, keyed 38",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T14:03:40",
+          "summary": "clear 37, overlap 1; 1 taxonomy findings",
+          "seconds": 197,
+          "cost_usd": 0.38
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T14:10:12",
+          "summary": "38 written in 2 part(s); answer challenges none; style scan: REVIEW (3 across 3 location(s))",
+          "seconds": 392,
+          "cost_usd": 2.42
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T14:49:24",
+          "summary": "38 reviewed, 2 fail, fact errors [19]",
+          "seconds": 2351,
+          "cost_usd": 1.81
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T14:53:05",
+          "summary": "6 accepted, 1 rejected; style scan: REVIEW (3 across 3 location(s))",
+          "seconds": 220,
+          "cost_usd": 1.13
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T15:06:12",
+          "summary": "5 changed items re-reviewed, 0 still fail ",
+          "seconds": 786,
+          "cost_usd": 0.34
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T15:06:12",
+          "summary": "every changed item passed",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T15:06:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T15:06:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T15:06:12",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T15:06:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T15:06:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T15:06:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T15:06:14",
+          "summary": "PREVIEW (no image base set): english-utme.2024.PREVIEW.csv, 11 held, 3 pre-flight flags; style scan: REVIEW (53 across 29 location(s))",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T15:06:14",
+          "summary": "english-utme.2024.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 40,
+          "why": "defective",
+          "detail": "Options B and D are identical ('John can only sing'), and neither matches the correct implication th"
+        },
+        {
+          "q_number": 41,
+          "why": "defective",
+          "detail": "This is a recall question on a detail of the prescribed novel 'The Life Changer', and neither the no"
+        },
+        {
+          "q_number": 42,
+          "why": "defective",
+          "detail": "This is a set-text recall question, and the source text is not supplied. The stem is also damaged ('"
+        },
+        {
+          "q_number": 43,
+          "why": "defective",
+          "detail": "This is a set-text recall question with no source supplied. All four options are philosophy courses,"
+        },
+        {
+          "q_number": 44,
+          "why": "defective",
+          "detail": "This is a set-text recall question with no source supplied. Claude's B (Ethics and Disciplinary Comm"
+        },
+        {
+          "q_number": 45,
+          "why": "defective",
+          "detail": "This is a set-text recall question on a trivial detail, and no source is supplied. Three options are"
+        },
+        {
+          "q_number": 46,
+          "why": "defective",
+          "detail": "This is a set-text recall question with no source supplied. Claude's A (Salma) is uncertain, and Cla"
+        },
+        {
+          "q_number": 47,
+          "why": "defective",
+          "detail": "This asks who is addressed in a quoted line from the set text, but the surrounding passage is not su"
+        },
+        {
+          "q_number": 48,
+          "why": "defective",
+          "detail": "This asks about the author's business, which is biographical, not part of the text, and the item giv"
+        },
+        {
+          "q_number": 49,
+          "why": "defective",
+          "detail": "This is a set-text recall question with no source supplied. Claude's A (Lafiaji) was an admitted bes"
+        },
+        {
+          "q_number": 50,
+          "why": "defective",
+          "detail": "This asks who a quoted line refers to in the set text, but the passage is not supplied, and the stem"
+        }
+      ]
+    }
+  },
+  "cost_usd": 7.3
+}

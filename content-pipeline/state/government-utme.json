@@ -1,0 +1,146 @@
+{
+  "slug": "government-utme",
+  "subject": "Government",
+  "gate": {
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T15:35:16",
+    "note": ""
+  },
+  "units": {
+    "2025": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T14:43:56",
+          "summary": "40/40 codex, 40/40 claude",
+          "seconds": 843,
+          "cost_usd": 0.68
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T14:43:56",
+          "summary": "agreed-soft 9, verified 31",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T14:44:43",
+          "summary": "9 ruled: key 9",
+          "seconds": 46,
+          "cost_usd": 0.23
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T14:44:43",
+          "summary": "keyed 40",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T14:46:38",
+          "summary": "clear 39, overlap 1; 1 taxonomy findings",
+          "seconds": 115,
+          "cost_usd": 0.42
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T14:53:04",
+          "summary": "40 written in 2 part(s); answer challenges none; style scan: REVIEW (168 across 61 location(s))",
+          "seconds": 385,
+          "cost_usd": 2.46
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T15:17:27",
+          "summary": "40 reviewed, 5 fail, fact errors [4]",
+          "seconds": 1463,
+          "cost_usd": 1.82
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T15:22:47",
+          "summary": "6 accepted, 0 rejected; style scan: REVIEW (167 across 60 location(s))",
+          "seconds": 319,
+          "cost_usd": 1.52
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T15:34:00",
+          "summary": "6 changed items re-reviewed, 1 still fail [34]",
+          "seconds": 673,
+          "cost_usd": 0.28
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T15:35:12",
+          "summary": "1 ruled on the last pass, held none; style scan: REVIEW (167 across 60 location(s))",
+          "seconds": 71,
+          "cost_usd": 0.27
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T15:35:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T15:35:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T15:35:12",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T15:35:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T15:35:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T15:35:12",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T15:35:15",
+          "summary": "PREVIEW (no image base set): government-utme.2025.PREVIEW.csv, 0 held, 0 pre-flight flags; style scan: REVIEW (198 across 68 location(s))",
+          "seconds": 2,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T15:35:16",
+          "summary": "government-utme.2025.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": []
+    }
+  },
+  "cost_usd": 7.68
+}

@@ -1,0 +1,328 @@
+{
+  "deriver": "claude",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The Lion and the Jewel centres on the clash between tradition (Baroka) and modernity (Lakunle), with Sidi as the prize. 'Change' is too vague and gender is a secondary concern.",
+      "solvable": true,
+      "issue": ""
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The play is a comedy: light, satirical, with a happy ending in Sidi's marriage to Baroka. Farce is too broad a label for its satire; there is no tragic fall.",
+      "solvable": true,
+      "issue": ""
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The central struggle is between the old (Baroka, tradition) and the new (Lakunle, modernity). Option A names the two characters who embody that struggle, so it is also defensible, but B states the conflict itself.",
+      "solvable": true,
+      "issue": "Option A (Lakunle and Baroka) is defensible, since they are the rivals who represent old and new."
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "B",
+      "confidence": "uncertain",
+      "reasoning": "The play's dances and stage directions refer to Yoruba drums; recall points to bata and gangan, but I cannot confirm the exact pair from the text. Omele and iya-ilu are also Yoruba drum names, which makes the distractors plausible.",
+      "solvable": true,
+      "issue": "Typing defect: options C and D have run together in C ('Bata and Omele C. Gangan and Omele'), and there is no separate D. Intended D is probably 'Gangan and Omele'. The exact drums named are uncertain."
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Osborne's opening stage direction describes Jimmy as a tall, thin young man of about twenty-five. The other ages have no basis in the text.",
+      "solvable": true,
+      "issue": ""
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Jimmy's anger comes from the British class system: he is working-class and married to upper-middle-class Alison. Betrayal (Helena) is a subplot, not the main theme.",
+      "solvable": true,
+      "issue": ""
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Alison calmly goes along with Helena's having wired her father, and she packs to leave with him, which is acceptance. She shows no hatred and does not reject the arrangement.",
+      "solvable": true,
+      "issue": ""
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Jimmy repeatedly mocks Cliff as an ignorant 'peasant', for example in the Sunday-paper banter. 'Fool' and 'idiot' are generic insults, but the text's recurring word is peasant.",
+      "solvable": true,
+      "issue": ""
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Puck is also called Robin Goodfellow, Oberon's mischievous sprite. Quince, Starveling and Bottom are the rude mechanicals.",
+      "solvable": true,
+      "issue": ""
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Theseus opens the play complaining that the old moon wanes too slowly and delays his wedding, which is plainly impatience. Lysander's eagerness to elope is less explicitly framed as impatience.",
+      "solvable": true,
+      "issue": ""
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The play moves between the real world of Athens and the illusory fairy world of the wood, blending reality and illusion. 'Dream and illusion' leaves out the reality half.",
+      "solvable": true,
+      "issue": ""
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Emily Brontë (1818 to 1848) died of tuberculosis at 30. None of the other ages fits.",
+      "solvable": true,
+      "issue": ""
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "The novel is built on the love of Heathcliff and Catherine, and Heathcliff's revenge grows out of that thwarted love. Revenge is a strong rival answer.",
+      "solvable": true,
+      "issue": "Revenge (C) is also commonly named as a dominant theme."
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The dissolute Hindley gambles and mortgages Wuthering Heights to Heathcliff, who ends up owning it. His death only follows the loss.",
+      "solvable": true,
+      "issue": ""
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Mr Kenneth is the local doctor and Mr Green is the attorney (lawyer) whom Edgar sends for. The pairing 'doctor and lawyer' is the text printed at the start of option B.",
+      "solvable": true,
+      "issue": "Typing defect: option B reads 'doctor and lawyer B. doctor and clerk', two options merged, and one letter is missing. The correct text 'doctor and lawyer' is the first half of B."
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "D",
+      "confidence": "uncertain",
+      "reasoning": "Under British rent law of the time, 'controlled' (sitting) tenants could not easily be evicted, which fits the landlord's difficulty. 'Old' is a plausible distractor, and my recall of the passage is not firm.",
+      "solvable": true,
+      "issue": ""
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Adah's son Vicky is hospitalised with viral meningitis. Titi, Bubu and Dada are the other children, and none of them has meningitis.",
+      "solvable": true,
+      "issue": ""
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "The novel follows Adah's life chronologically from childhood in Lagos to London, a linear plot. Episodic is defensible because the chapters are fairly self-contained.",
+      "solvable": true,
+      "issue": "Episodic (B) is also defensible."
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "B",
+      "confidence": "uncertain",
+      "reasoning": "'I-Put-It-To-Me' is a lawyerly nickname, and I tentatively link it to Joe Boye. I cannot confirm this from memory, and Nii Tackie and Tally O are plausible alternatives.",
+      "solvable": true,
+      "issue": ""
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "uncertain",
+      "reasoning": "My tentative recall is an early-morning opening in Accra, which fits the title's 'dawn'. That favours 4 a.m. or 6 a.m. over the p.m. options, but I cannot confirm the exact hour.",
+      "solvable": true,
+      "issue": ""
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The novel moves between Lagos and Accra, whose airports are Murtala Muhammed and Kotoka. Kantamanto and Makola are Accra markets, not airports.",
+      "solvable": true,
+      "issue": ""
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Sesay's poem mourns the burdens and suffering of the women of his land, a lament. It has reflective elements, but its dominant mood is lamentation.",
+      "solvable": true,
+      "issue": "The stem asks what the poem 'is' but the options are moods; the meaning is still clear."
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "A",
+      "confidence": "uncertain",
+      "reasoning": "Wosornu's 'Raider of the Treasure Trove' is written in unrhymed lines, so of the options only blank verse (unrhymed) fits even loosely. It is not a sonnet, and it has no couplet or alternate rhyme scheme.",
+      "solvable": true,
+      "issue": "The poem is really free verse, not strict iambic-pentameter blank verse, so the key may rest on a loose use of 'blank verse'. The quotation marks in the stem are misplaced ('Raider of the Treasure' Trove)."
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Onu Chibuike's poem ironically mocks the retired driver's reckless drinking habits, which is satire. Sarcasm is a narrower device; the poem as a whole is satirical.",
+      "solvable": true,
+      "issue": "'al-lusive' in option D is a hyphenation artefact for 'allusive'."
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Osundare's poem uses animals choosing a leader as an allegory of political leadership. It is not dramatic in form, and 'metaphorical' is less precise than allegory.",
+      "solvable": true,
+      "issue": ""
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "After cataloguing Africa's suffering, Neto's poem closes with hope and determination for freedom, an optimistic note. Pessimistic or melancholic would fit the body of the poem but not its ending.",
+      "solvable": true,
+      "issue": ""
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The poem contrasts the free bird with the caged bird, whose freedom is limited, so its theme is limitation and freedom. Hope amid adversity is present but secondary.",
+      "solvable": true,
+      "issue": ""
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "The symbolism of Lawrence's 'Bat' comes from its swallows-versus-bats contrast, its twilight Florentine setting, and the bat's cultural meaning (a symbol of happiness in China). Tone is attitude, not a source of symbolism, so it is the exception.",
+      "solvable": true,
+      "issue": ""
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "T. S. Eliot wrote 'Journey of the Magi' in 1927, and it is a Modernist poem. It is not Romantic or Victorian.",
+      "solvable": true,
+      "issue": "The poem's actual title is 'Journey of the Magi', without 'The'."
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Hopkins laments the felling of the aspens at Binsey and humanity's careless destruction of nature, which is environmental degradation. Industrialization is related but is not the direct subject.",
+      "solvable": true,
+      "issue": ""
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A limerick is a humorous five-line poem rhyming AABBA. Option D describes a sonnet.",
+      "solvable": true,
+      "issue": ""
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Romantic poets such as Wordsworth and Keats celebrated nature above all. Beauty matters to them, but chiefly as found in nature.",
+      "solvable": true,
+      "issue": ""
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Peripeteia (Aristotle) is the sudden reversal of fortune. Option C describes denouement.",
+      "solvable": true,
+      "issue": ""
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Aesthetics is concerned with beauty and artistic appreciation. Taste is closely related, which makes D a defensible distractor.",
+      "solvable": true,
+      "issue": "Taste (D) is arguably defensible."
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "An oxymoron joins contradictory terms, as in 'bitter sweet'. Option B is personification and option D is synecdoche.",
+      "solvable": true,
+      "issue": ""
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "The speaker looks back wistfully at the sacred tree that 'once stood' and is now replaced, a nostalgic tone. 'Senseless cathedral of doom' also carries criticism, so D is defensible.",
+      "solvable": true,
+      "issue": "Critical (D) is also defensible given 'senseless cathedral of doom'."
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The tree stands for indigenous tradition and religion, and the cathedral stands for the imposed foreign (colonial or Christian) order. They are symbols, not hyperbole or irony.",
+      "solvable": true,
+      "issue": ""
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The cast is the set of characters and the actors who play them. Stage directions and the audience are separate things.",
+      "solvable": true,
+      "issue": ""
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Pathos evokes pity and sorrow. Option C describes logos, and option D describes satire.",
+      "solvable": true,
+      "issue": ""
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The denouement is the final unravelling or resolution of the plot. The climax (B) comes before it.",
+      "solvable": true,
+      "issue": ""
+    }
+  },
+  "failures": []
+}

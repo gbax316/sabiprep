@@ -1,0 +1,62 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "rulings": {
+    "4": {
+      "q_number": 4,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "Nigerian secondary texts list irritation of the eyes, nose and respiratory tract as the signature effect of sulphur dioxide among oxide pollutants. The strongest case for B is that nitrogen dioxide is also a respiratory irritant, but the option says nitrogen oxide, and the texts attach this triad of effects chiefly to SO2 while giving NO2 mainly acid rain and photochemical smog. Carbon monoxide acts by binding haemoglobin, and ozone is not an oxide pollutant in the sense the stem means. A well-prepared student will choose C.",
+      "sided_with": "both"
+    },
+    "5": {
+      "q_number": 5,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "IUPAC retains phenol as the name for C6H5OH, and it is the preferred IUPAC name, so B is what the stem asks for. The strongest argument for D is that hydroxybenzene is a descriptive substitutive name that some texts give in brackets. However, IUPAC does not use hydroxybenzene as the name for the parent compound, and a question asking for the IUPAC name expects phenol. Benzyl alcohol is C6H5CH2OH and benzene hydroxide is not a valid name.",
+      "sided_with": "both"
+    },
+    "12": {
+      "q_number": 12,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "The ideal gas equation PV = nRT is the formula that links moles to pressure, volume and temperature, and it is the only correct option as printed. The strongest argument for C is that it may have been n = PV/RT with the fraction flattened, which would also be correct. But option D keeps its slash intact, and B is plainly a garbled distractor, so C reads as a deliberately wrong distractor in the same style rather than as damage. D inverts the relationship.",
+      "sided_with": "both"
+    },
+    "14": {
+      "q_number": 14,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Screening against magnetic fields needs a ferromagnetic material of high permeability, and soft iron is the standard example that carries the field lines around the protected device. The strongest case for C is that copper is used for electromagnetic and radio-frequency shielding. However, copper does not screen static or low-frequency magnetic fields, and the stem asks specifically about magnetic fields. Brass and zinc are non-magnetic.",
+      "sided_with": "both"
+    },
+    "19": {
+      "q_number": 19,
+      "ruling": "ambiguous",
+      "answer": null,
+      "reasoning": "Hydrogen is a neutral, unreactive gas, and the standard Nigerian drying-agent table says concentrated H2SO4 dries all gases except NH3, H2S and the reducing hydrogen halides, while fused CaCl2 and P4O10 dry all gases except NH3. So A, B and C are all suitable drying agents for hydrogen. The argument for A is that it is often named in the laboratory preparation, but fused CaCl2 is named just as often for the same preparation, so the setter's choice between A and B cannot be determined. Only D is clearly wrong, and a well-prepared student would find at least two correct options.",
+      "sided_with": "neither"
+    },
+    "27": {
+      "q_number": 27,
+      "ruling": "ambiguous",
+      "answer": null,
+      "reasoning": "Isomers have the same molecular formula but different structures, and both but-2-ene (B) and cyclobutane (D) are C4H8, like but-1-ene. The argument for B is that position isomerism within the alkenes is what the setter most likely had in mind. However, a student who applies the textbook definition by checking molecular formulas, which is exactly the skill being tested, will find that both B and D qualify, and nothing in the stem limits the answer to alkenes. The typing errors ('or' for 'of', 'Bu-tan-2-ol') do not change the meaning.",
+      "sided_with": "neither"
+    },
+    "28": {
+      "q_number": 28,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Graphite conducts because each carbon uses three electrons in bonding within its layer, which leaves one delocalized pi electron per atom free to move. Option A is loosely worded, since the electrons move within the layers rather than between them, but Nigerian texts often use this looser phrasing, and it names the correct mechanism. D is the strongest distractor, but weak van der Waals forces explain softness and lubrication, not conductivity. Graphite has no mobile ions and no metal atoms.",
+      "sided_with": "both"
+    },
+    "32": {
+      "q_number": 32,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "Chlorine at oxidation state 0 disproportionates in alkali to chloride (-1) and chlorate(I) or chlorate(V), which is the classic syllabus example of one species acting as both oxidizing and reducing agent. The strongest case for B is that NaClO (+1) can also disproportionate on heating, but that reaction is not taught at this level in that way, while Cl2 is the standard answer. The stem calls Cl2 a compound, which is loose wording but does not change what is being asked. NaCl can act only as a reducing agent.",
+      "sided_with": "both"
+    }
+  }
+}

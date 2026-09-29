@@ -1,0 +1,311 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "keyed": 37,
+    "defective": 11,
+    "ambiguous": 2
+  },
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "2": {
+      "q_number": 2,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "3": {
+      "q_number": 3,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "4": {
+      "q_number": 4,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "5": {
+      "q_number": 5,
+      "state": "defective",
+      "answer": null,
+      "reason": "The question references 'the diagram below' illustrating a brooding equipment, but no image was attached or provided for this question, so the specific equipment cannot be identified to determine its disadvantage. | The diagram of the brooding equipment is missing; the paper was supplied with no diagrams."
+    },
+    "6": {
+      "q_number": 6,
+      "state": "defective",
+      "answer": null,
+      "reason": "The question depends on identifying the illustrated brooding equipment from 'the diagram below', but no image was attached or provided, so it cannot be determined which alternative equipment (hover, coal pot, gas lamp) performs a similar function. | The diagram of the brooding equipment is missing."
+    },
+    "7": {
+      "q_number": 7,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "8": {
+      "q_number": 8,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "9": {
+      "q_number": 9,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "10": {
+      "q_number": 10,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "11": {
+      "q_number": 11,
+      "state": "defective",
+      "answer": null,
+      "reason": "Missing data: mass of empty dish and mass of dish + fresh soil are not given, so the mass of fresh soil cannot be derived from the single value provided. | The passage data is truncated: the empty dish mass and the dish + fresh soil mass are missing."
+    },
+    "12": {
+      "q_number": 12,
+      "state": "defective",
+      "answer": null,
+      "reason": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute moisture lost. | The passage data is truncated: the dish + fresh soil mass is missing."
+    },
+    "13": {
+      "q_number": 13,
+      "state": "defective",
+      "answer": null,
+      "reason": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute percentage moisture. | The passage data is truncated. Even with the full data, the key depends on whether the percentage is taken on a fresh-weight or dry-weight basis (for example 25% vs 33%)."
+    },
+    "14": {
+      "q_number": 14,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "15": {
+      "q_number": 15,
+      "state": "defective",
+      "answer": null,
+      "reason": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram of the soil analysis tool is missing."
+    },
+    "16": {
+      "q_number": 16,
+      "state": "defective",
+      "answer": null,
+      "reason": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram is missing, and no option matches 'I only'. The item appears defective, or depends on a particle-size scale in which fine sand is below 0.05mm."
+    },
+    "17": {
+      "q_number": 17,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "18": {
+      "q_number": 18,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "19": {
+      "q_number": 19,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "20": {
+      "q_number": 20,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "21": {
+      "q_number": 21,
+      "state": "defective",
+      "answer": null,
+      "reason": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled diagram of the crop is missing."
+    },
+    "22": {
+      "q_number": 22,
+      "state": "defective",
+      "answer": null,
+      "reason": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled diagram of the crop is missing."
+    },
+    "23": {
+      "q_number": 23,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with claude"
+    },
+    "24": {
+      "q_number": 24,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "25": {
+      "q_number": 25,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "26": {
+      "q_number": 26,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "27": {
+      "q_number": 27,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "28": {
+      "q_number": 28,
+      "state": "defective",
+      "answer": null,
+      "reason": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | The survey diagram is missing. The trapezium interpretation giving 100 m² (B) is likely but unverified."
+    },
+    "29": {
+      "q_number": 29,
+      "state": "defective",
+      "answer": null,
+      "reason": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | The survey diagram is missing, so the area is unverified. If the area is 100 m² the answer is D (888); B (444) would be the number of stands or holes, not plants."
+    },
+    "30": {
+      "q_number": 30,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "31": {
+      "q_number": 31,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "32": {
+      "q_number": 32,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "33": {
+      "q_number": 33,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "34": {
+      "q_number": 34,
+      "state": "ambiguous",
+      "answer": null,
+      "reason": "Waterleaf produces small dehiscent capsules that split to release many tiny seeds, and standard Nigerian texts usually describe its spread by seeds and stem cuttings without fixing a single dispersal agent. The case for D is that the capsule opens by splitting, which some sources call explosive dehiscence. The case for C is that the seeds are small and light enough to be carried by wind, and some sources list wind. Neither deriver was confident, and the syllabus texts do not settle it, so a well-prepared student could not tell whether C or D was intended."
+    },
+    "35": {
+      "q_number": 35,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "36": {
+      "q_number": 36,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "37": {
+      "q_number": 37,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "third review, sided with both"
+    },
+    "38": {
+      "q_number": 38,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "39": {
+      "q_number": 39,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "40": {
+      "q_number": 40,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "41": {
+      "q_number": 41,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "42": {
+      "q_number": 42,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "43": {
+      "q_number": 43,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "44": {
+      "q_number": 44,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "45": {
+      "q_number": 45,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "46": {
+      "q_number": 46,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "47": {
+      "q_number": 47,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "48": {
+      "q_number": 48,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "49": {
+      "q_number": 49,
+      "state": "ambiguous",
+      "answer": null,
+      "reason": "The four options form a two-by-two grid: A and C differ by the ₦30,000 marketing cost, and B and D add ₦3,800, which is the value of the 5 trays eaten by the family at ₦760 per tray (total cost of ₦380,000 over 500 trays). The case for A is the plain formula of revenue minus production and marketing cost. However, farm accounting in Nigerian texts credits produce consumed at home as non-cash income, and the stem goes out of its way to state the 1 percent family consumption, which suggests the setter intended B. Because a well-prepared student could not tell whether home consumption was meant to be credited, both A and B are defensible."
+    },
+    "50": {
+      "q_number": 50,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "third review, sided with claude"
+    }
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "2": {
+      "q_number": 2,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Nickel acts as a catalyst in hydrogenation of alkenes, and catalysts speed up reactions by providing an alternative pathway with lower activation energy. It does not increase yield or affect the exothermicity of the reaction, since those are determined by thermodynamics, not the catalyst.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Aluminium is extracted by electrolysis of purified alumina (Al2O3) dissolved in molten cryolite, the Hall-Heroult process, because aluminium is too reactive to be reduced by carbon/coke. Reduction with coke works for less reactive metals like iron, not aluminium.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Carbon (IV) oxide (CO2) is used in fire extinguishers because it is denser than air, non-flammable, and smothers fire by excluding oxygen. Sulphur (IV) oxide and nitrogen (IV) oxide are toxic/reactive gases not used for this purpose.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Sodium and potassium are Group 1 metals with low ionization energies, so they readily give up their single outer electron to form Na+ and K+, making them strong reducing agents. They do not accept electrons, and describing their potentials as 'positive reduction potential' or 'negative oxidation potential' is inconsistent with their known strongly negative reduction potentials.",
+      "solvable": true,
+      "issue": "Option wording (reduction/oxidation potential signs) is imprecise, but the electron-donating tendency of Na and K is unambiguous chemistry.",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Using the combined gas law P1V1/T1 = P2V2/T2 with P1=1 atm, V1=400 cm3, T1=400 K gives a constant of 1. Only option C (200 K, 1 atm) satisfies (1x200)/200 = 1, matching the initial state's ratio.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The most common isotope of hydrogen (protium) has a nucleus consisting of a single proton and no neutron. It is the only element whose common isotope has no neutrons in its nucleus.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Acidified potassium dichromate(VI), K2Cr2O7, is orange due to Cr2O7^2- ions; when it acts as an oxidizing agent it is reduced to green Cr3+ ions. The other color pairs listed do not correspond to this well-known redox color change.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Selenium is classified as a metalloid, showing intermediate properties between metals and non-metals. Aluminium and sodium are metals, while phosphorus is a non-metal.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Iodine sublimes readily on heating, turning directly from solid to vapour, while calcium chloride does not sublime, allowing the two to be separated by sublimation. Evaporation and crystallization methods are unsuitable since both components are solids and iodine would simply sublime away rather than remain in solution.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "B",
+      "confidence": "uncertain",
+      "reasoning": "Sodium chloride is a well-established raw material for water softening/treatment, food preservation (salting), and salting-out soap from glycerol in soap manufacture. Option B, 'manufacturing of chloride,' is not a standard named industrial process (unlike, e.g., manufacture of chlorine or sodium hydroxide), suggesting it is the intended exception, though the phrasing appears garbled.",
+      "solvable": true,
+      "issue": "Option B ('manufacturing of chloride') is oddly worded/likely garbled text, possibly a mis-transcription of the original option, making the intended distractor uncertain.",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Hydrogen bonding, van der Waals forces, and dipole-dipole attraction are all forces acting between molecules. A metallic bond, by contrast, is the intramolecular (interatomic) force holding metal atoms together via delocalized electrons, not a force between separate molecules.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "AgCl, KNO3, and (NH4)2CO3 are all ionic compounds formed from metal or polyatomic ions held by electrostatic attraction. NO2 (nitrogen dioxide) is a simple covalent molecule formed by two non-metals sharing electrons, so it is the exception.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Group 1 (alkali metal) carbonates such as Na2CO3 are thermally very stable and do not decompose even at the strongest laboratory heating temperatures, unlike carbonates of less electropositive metals such as Ca, Mg, and Al, which decompose to the oxide and CO2. Al2CO3 is not even a real stable compound, but among genuine choices Na2CO3 is the classic stable one.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "On the universal indicator colour chart, red corresponds to the low end of the pH scale (pH 1-3), indicating a strong/concentrated acid, while orange and yellow indicate weaker or dilute acids. Blue and purple indicate alkalis, ruling out the base options.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Nitrogen(IV) oxide dissolves in water via a disproportionation reaction, 3NO2 + H2O -> 2HNO3 + NO, or NO2 reacting to give a mixture of nitric acid (HNO3) and nitrous acid (HNO2), i.e. two different acids. CO2, SO2, and SO3 each yield only a single acid (carbonic, sulfurous, and sulfuric acid respectively) when dissolved in water.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Ethanol is prepared in the laboratory by catalytic hydration of ethene (C2H4 + H2O -> C2H5OH) using an acid catalyst. Oxidation of a primary alcohol produces an aldehyde or carboxylic acid rather than ethanol, so option B describes the reverse process.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Alkali metals conduct heat and electricity well because their metallic bonding involves a 'sea' of delocalized valence electrons that move freely through the lattice, carrying charge and thermal energy. Being classified in the s-block (not d-block) and simply 'being metals' do not explain the mechanism of conduction, so B and D are not the specific reason.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "ΔH is positive (endothermic) when the enthalpy of the products is greater than that of the reactants, since energy must be absorbed to form higher-energy products. Option B describes an exothermic (negative ΔH) reaction, the opposite case.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Propene (CH2=CH-CH3) contains a single carbon-carbon double bond, which consists of one sigma bond and one pi bond; all other bonds in the molecule are single (sigma) bonds. Therefore only one pi bond is present.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Butene is an alkene containing a reactive C=C double bond, which readily undergoes addition reactions (e.g. with H2, X2, or HX). Ethane and ethanol are saturated with no double bond, and benzene's delocalized aromatic ring resists addition, favouring substitution instead.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Concentration = 5.6 g dm⁻³ ÷ 56 g mol⁻¹ = 0.1 mol dm⁻³. In 200 cm³ (0.2 dm³), moles = 0.1 × 0.2 = 0.02 mol. Option B (1.12) mistakenly treats 5.6 as if it were the mass in the whole sample without dividing by molar mass correctly.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "H2O is a liquid at room temperature (boiling point 100°C), unlike BH3, HCl and H2S which are all gases at room temperature. The hydrogen bonding in water gives it an unusually high boiling point compared to other covalent hydrides.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "In dilute hydrochloric acid, the concentration of Cl⁻ ions is low relative to water, so OH⁻ ions are preferentially discharged at the anode, liberating oxygen gas. Chlorine gas (option C) is only produced when the HCl or chloride solution is concentrated.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "F⁻, Na⁺, Mg²⁺ and Al³⁺ are isoelectronic (all have 10 electrons), so ionic size decreases as nuclear charge increases: F⁻ > Na⁺ > Mg²⁺ > Al³⁺, matching option A. Option D reverses this order, listing the smallest ion first.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The cigarette filter works by adsorption, trapping nicotine and tar particles on its surface as smoke passes through. Absorption (option B) would imply the nicotine is taken up into the bulk of the filter material rather than held on its surface.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Solubility = 0.02 mol ÷ 0.025 dm³ = 0.8 mol dm⁻³. Option D (5.0 x 10⁻² mol dm⁻³) results from an error such as dividing by the wrong volume unit.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Baking bread, wine production, and antibiotic manufacture all rely on microorganisms (yeast, bacteria/fungi) acting on substrates, which is biotechnology. Soap manufacturing is a purely chemical process (saponification of fats/oils with alkali) and does not involve biological organisms.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Mass of water = 10 × 18 = 180. Percentage = (180/286) × 100 = 62.9%. Option A (68.4%) does not correspond to any straightforward calculation error and is incorrect.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Esters (alkanoates) are prepared by esterification of an alkanol with an alkanoic acid using concentrated H2SO4 as a catalyst/dehydrating agent under heat. NaOH (options A and C) would instead hydrolyze/saponify any ester formed, not promote esterification.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "NO2, SO3 and SO2 are simple molecular oxides formed by covalent bonding between nonmetals. KNO3 (potassium nitrate) is an ionic compound composed of K⁺ and NO3⁻ ions, making it the exception.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Silver chloride is insoluble and is classically prepared by double decomposition (precipitation) of a soluble silver salt with a soluble chloride, e.g. AgNO3 + NaCl. The other salts (a soluble carbonate, nitrate, and lead nitrate) are all soluble and made by other routes such as direct acid reaction, not precipitation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "CH3-CHCl-CH2OH has OH on C1 and Cl on C2 when numbered to give the principal characteristic group (OH) the lowest locant, giving 2-chloropropan-1-ol; option D is this name with typographical corruption. Option C wrongly places the chlorine locant order and mislabels carbon 3, and option A omits locants entirely.",
+      "solvable": true,
+      "issue": "Option D contains OCR-type typos ('chloropngpan-l-ol') but is clearly intended to read 2-chloropropan-1-ol.",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Neon has 10 electrons; Mg2+ (12 protons, loses 2 electrons) also has 10 electrons, making it isoelectronic with neon. K+ and Ca2+ both have 18 electrons (argon configuration), and Li+ has only 2 electrons (helium configuration).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Reducing power of halogen atoms increases down the group as atomic size increases and ionization energy decreases, making it easier to lose an electron; iodine, being the largest atom listed, is the most powerful reducing agent. Fluorine, being the smallest with the highest ionization energy, is the weakest reducing agent (and note option C's 'fluoride ride atom' is meant as fluorine atom).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The configuration 1s2 2s2 2p6 3s2 3p4 is sulfur (atomic number 16), which has 6 valence electrons and belongs to Group VI. It is in period 3 (not 4), has only 2 unpaired electrons in the 3p subshell (not 3), and its mass number is not fixed at 16 since that is the atomic number/proton count, not the mass number.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "2-methylpentan-2-ol has its hydroxyl-bearing carbon attached to three other carbon groups (a methyl, and the two arms of the pentane chain), making it a tertiary alcohol. Pentan-2-ol and pentan-3-ol are secondary alcohols, and 2-methylpentan-1-ol is a primary alcohol.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Sodium is a highly reactive metal that cannot be obtained by chemical reduction, so it is commercially extracted by electrolysis of fused (molten) sodium chloride in the Downs process. Copper is obtained by electrolytic refining of a solution (not a fused salt), silver is obtained by other extraction methods, and helium is a noble gas extracted from natural gas, not by electrolysis.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Metallic lustre arises because the sea of free (delocalized) electrons in the metal absorbs and re-emits light, giving the shiny appearance. High density and chemical inertness are unrelated to optical reflectivity, and 'refractive density' is not a real property that explains lustre.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A reaction is exothermic when the energy released in forming new bonds exceeds the energy absorbed in breaking the original bonds, releasing the excess as heat to the surroundings. If the energy released were less than or equal to the energy absorbed, the reaction would be endothermic or thermoneutral, not exothermic.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Silver lies below hydrogen in the reactivity series and therefore cannot displace hydrogen from dilute hydrochloric acid. Calcium, iron, and zinc are all more reactive than hydrogen and readily react with dilute HCl to liberate hydrogen gas.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Orbitals of the same sublevel that have identical energy in an isolated (free) atom are called degenerate orbitals; this is the standard term for the five d-orbitals before any field splits them. 'Non-degenerate' describes orbitals of differing energy, the opposite situation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "BeO is amphoteric because beryllium's small size and high polarizing power give it a diagonal relationship with aluminium, so it reacts with both acids and bases. CaO, MgO and BaO are typical basic Group 2 oxides that react only with acids.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Charcoal (especially animal/activated charcoal) is used to decolorize sugar solutions by adsorbing colored impurities. Graphite, lampblack and soot are other carbon allotropes/forms not used for this purpose.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "For main group elements, the group number indicates the number of valence electrons in the outermost shell. The period number instead indicates the number of electron shells, not the valence electron count.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Nucleons are the particles found in the nucleus of an atom, which are protons and neutrons. Electrons orbit outside the nucleus and are not classified as nucleons.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Fe2+ reacts with NaOH to form Fe(OH)2, a dirty green precipitate that later darkens on exposure to air. Fe3+ instead gives a reddish-brown precipitate of Fe(OH)3, so it is the weaker distractor here.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Chemically the polymer formed from ethene (C2H4) is polyethene, but options A and B are both printed as the identical text 'polyethene', making it impossible to determine which single letter is intended as the key.",
+      "solvable": false,
+      "issue": "Options A and B are duplicate identical text ('polyethene'), so no single correct letter can be determined.",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A hypothesis that has been tested and confirmed within the limits of available evidence becomes a theory. A law is a concise statement of an observed regularity, typically established with even stronger, more universal support, which is a later stage than described here.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The empirical formula gives the simplest whole-number ratio of atoms of each element in a compound. The molecular formula, by contrast, gives the actual number of atoms of each element in a molecule.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0859,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0996,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1719,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0894,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0934,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.5402
+}

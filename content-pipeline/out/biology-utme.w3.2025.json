@@ -1,0 +1,350 @@
+{
+  "subject": "Biology",
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "2.2",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "respiration.cellular",
+      "difficulty": "medium",
+      "hint1": "Think about what happens to the electrons at the very end of aerobic respiration, and which substance is used up there.",
+      "hint2": "NADH and FADH₂ are carriers that bring electrons into the chain and hand them over. They give electrons at the start, so they are not the ones taking them at the end.",
+      "hint3": "Of the two options left, one is made using the energy the chain releases, and the other is taken into the body by breathing. Which one could be receiving electrons at the end?",
+      "solution": "Answer: C. Oxygen\n\nIn aerobic respiration, electrons taken from food are passed along a chain of carriers in the mitochondria, and the energy they release is used to make ATP. Something must take the electrons away at the end, or the chain would stop. Oxygen does this: it joins with the electrons and hydrogen ions to form water.\n\nHow to tell: ask what aerobic respiration uses up and what it makes. Oxygen is taken in and water is one of the products. That water is formed at the end of the chain, when oxygen accepts the electrons.\n\nWhy not the others:\nA. NADH: it carries electrons into the chain and gives them away, so it is an electron donor.\nB. FADH₂: like NADH, it hands its electrons to the chain, so it is also a donor.\nD. ATP: it is the energy product made using the chain, not a carrier of electrons.\n\nExam tip: when a question asks for the final acceptor at the end of a chain, look for the substance that is used up and turned into a product. In aerobic respiration that is oxygen, which becomes water."
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "cell.components",
+      "difficulty": "easy",
+      "hint1": "Recall the main job of each organelle in a cell, then match the ribosome to the kind of molecule it helps to make.",
+      "hint2": "Energy production and cellular respiration are both the work of the mitochondrion, so those two options describe a different organelle.",
+      "hint3": "Of the two options left, one is about moving materials that already exist, and the other is about building a new molecule. Which fits a ribosome?",
+      "solution": "Answer: A. Protein synthesis\n\nRibosomes are tiny structures, found free in the cytoplasm or on the rough endoplasmic reticulum, where amino acids are joined in the right order to make proteins. The order follows instructions copied from DNA in the nucleus.\n\nHow to tell: synthesis means making. The ribosome is the cell's protein factory, so its function is making proteins.\n\nWhy not the others:\nB. Energy production: this is the job of the mitochondria, which release energy from food.\nC. Cellular respiration: this takes place mainly in the mitochondria, not in ribosomes.\nD. Transport of nutrients: moving materials is the work of the cell membrane and the endoplasmic reticulum, not the ribosome.\n\nExam tip: learn each organelle with one key word. Nucleus: control. Mitochondrion: energy. Ribosome: protein. Chloroplast: photosynthesis. Vacuole: storage."
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "animal-nutrition.modes",
+      "difficulty": "easy",
+      "hint1": "Saprophytic describes how an organism gets its food. Think about what kind of food source a saprophyte feeds on.",
+      "hint2": "A saprophyte feeds on dead and decaying matter. It releases enzymes onto the food, digests it outside its body and absorbs the products. Plants that trap insects, and plants that take food from a living host, are not saprophytes.",
+      "hint3": "Sundew and bladder-wort both trap small animals, so compare the other two. For each one, ask: does it feed on something living or something dead?",
+      "solution": "Answer: C. Rhizopus\n\nSaprophytic nutrition is feeding on dead organic matter. The organism releases digestive enzymes onto the dead material, then absorbs the simple food that is produced. Many fungi and bacteria feed this way, and in doing so they cause decay.\n\nHow to tell: Rhizopus is the black bread mould. It grows on stale bread and rotting food, which are dead organic matter, and feeds by releasing enzymes onto them and absorbing the products.\n\nWhy not the others:\nA. Sundew: it is an insectivorous plant that makes its own food by photosynthesis and traps insects for extra nitrogen.\nB. Bladder-wort: it is also insectivorous, trapping small water animals in tiny bladders.\nD. Mistletoe: it is a partial parasite that takes water and mineral salts from a living host tree.\n\nExam tip: for mode of nutrition questions, ask where the food comes from. Dead matter points to a saprophyte, a living host points to a parasite, and trapped insects point to an insectivorous plant."
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "organisation.levels",
+      "difficulty": "medium",
+      "hint1": "The levels of organisation are cell, tissue, organ and system. Think about which example textbooks give for each level.",
+      "hint2": "Paramecium and Amoeba are single-celled. The whole organism is one cell, so they belong to the cellular level.",
+      "hint3": "Of the two options left, one is the usual textbook example of the tissue level. Which is it, and so which one is left for the organ level?",
+      "solution": "Answer: B. Onion bulb\n\nAn organ is a structure made of several different tissues working together to do one job. In the syllabus, the onion bulb is the standard example of the organ level: it is made of different tissues, such as the thin outer protective layer and the fleshy scale leaves, which together store food for the plant.\n\nHow to tell: sort the four options by level.\nAmoeba and Paramecium: one cell, so cellular level.\nHydra: cells grouped into tissues, so tissue level.\nOnion bulb: tissues grouped into an organ, so organ level.\nThe question calls it an organism, but the onion bulb is really an organ of the onion plant, which is exactly why it is the example of this level.\n\nWhy not the others:\nA. Hydra: in the syllabus it is the example of the tissue level, with tissues but no true organs.\nC. Paramecium: it is a single cell that carries out every life process, so it is at the cellular level.\nD. Amoeba: it is also single-celled, so it is at the cellular level.\n\nExam tip: learn one example per level. Amoeba or Paramecium for the cell level, Hydra for the tissue level, the onion bulb for the organ level, and higher animals such as humans for the system level."
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "genetics.chromosomes",
+      "difficulty": "easy",
+      "hint1": "Somatic means a body cell, as opposed to a sex cell. Think about whether body cells carry one set of chromosomes or two.",
+      "hint2": "Body cells are diploid: they carry two sets of chromosomes, one set from each parent. Sex cells, the sperm and egg, carry one set.",
+      "hint3": "Find the option that is the number in a single human sperm or egg. Then work out what a body cell with two sets must have.",
+      "solution": "Answer: B. 46\n\nA human somatic (body) cell is diploid, meaning it has two sets of chromosomes, one from the mother and one from the father. Each set has 23, so a body cell has 23 pairs. Being male does not change the number: a male body cell has 44 ordinary chromosomes plus one X and one Y.\n\nHow to tell:\nOne set in humans = 23 chromosomes\nA body cell has two sets: 2 × 23 = 46 chromosomes\n\nWhy not the others:\nA. 48: this is not the human number. It is the number in a chimpanzee body cell.\nC. 26: this is not a human chromosome number at all.\nD. 23: this is the haploid number, found in a sperm or egg cell.\n\nExam tip: gametes are haploid (n) and body cells are diploid (2n). If you are given one number, double it or halve it to get the other."
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "ecological-factors.measurement",
+      "difficulty": "easy",
+      "hint1": "Transparency means how clear the water is, or how far light can pass down through it. Think about the instruments used to study ponds, rivers and the sea.",
+      "hint2": "A hygrometer measures humidity in the air and an anemometer measures wind speed, so neither is used on a body of water.",
+      "hint3": "Of the two options left, one measures how heavy a liquid is for its volume. Is that the same thing as how clear the water is?",
+      "solution": "Answer: A. Secchi Disk\n\nA Secchi disc is a flat, round disc, usually painted black and white, lowered into water on a marked rope. The depth at which it just disappears from view tells you how clear the water is. The deeper it can be seen, the clearer the water. Cloudy water is said to be turbid.\n\nHow to tell: transparency is a property of water, so the instrument must be one that is put into water. The Secchi disc is the one used to judge clearness.\n\nWhy not the others:\nB. Hygrometer: it measures relative humidity, the amount of water vapour in the air.\nC. Anemometer: it measures wind speed.\nD. Hydrometer: it measures the density of a liquid, not its clearness.\n\nExam tip: learn each instrument with its factor. Secchi disc: turbidity. Hygrometer: humidity. Anemometer: wind speed. Wind vane: wind direction. Rain gauge: rainfall. Hydrometer: density. Do not mix up hygro (moisture in air) and hydro (water)."
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "evolution.theories",
+      "difficulty": "easy",
+      "hint1": "Several scientists proposed ideas about how living things change over many generations. Think about which idea says body parts grow stronger when they are used.",
+      "hint2": "Mendel worked out the laws of inheritance using pea plants, and Pasteur is known for his work on germs. Neither proposed a theory of how organisms evolve.",
+      "hint3": "Of the two scientists left, one is known for natural selection. Which one proposed the earlier idea that used parts develop and unused parts waste away?",
+      "solution": "Answer: B. Jean Lamarck\n\nLamarck proposed that body parts used often become larger and stronger, and parts not used become weak and may disappear. He added that changes gained during a lifetime, called acquired characters, are passed on to the offspring. His usual example is the giraffe stretching its neck to reach leaves. Modern biology does not accept that acquired characters are inherited, but Lamarck's theory is still examined as an important early idea.\n\nHow to tell: the phrase use and disuse belongs to Lamarck's theory.\n\nWhy not the others:\nA. Gregor Mendel: he is known for the laws of inheritance from his pea plant experiments.\nC. Charles Darwin: he proposed evolution by natural selection.\nD. Louis Pasteur: he is known for germ theory and pasteurisation.\n\nExam tip: link each name to a key phrase. Lamarck: use and disuse, inheritance of acquired characters. Darwin: natural selection, survival of the fittest. Mendel: laws of inheritance."
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "variation.physiological",
+      "difficulty": "medium",
+      "hint1": "Variation can be in how an organism looks or in how its body works. Decide which of these physiological refers to.",
+      "hint2": "Body shape and size are features you can see and measure, so they are about appearance, not body function.",
+      "hint3": "Of the two options left, ask of each: is it something you look at, or something the body can or cannot do?",
+      "solution": "Answer: C. Tongue rolling\n\nIn the syllabus, variation is split into two kinds. Morphological variation is in structure or appearance, such as height, size, shape, colour and fingerprints. Physiological variation is in how the body works, such as tongue rolling, the ability to taste a chemical called PTC, and blood groups.\n\nHow to tell: tongue rolling is an ability. Some people can roll the tongue into a tube and some cannot, which is a difference in function, so it is physiological.\n\nWhy not the others:\nA. Body shape: it is a visible feature, so it is morphological.\nB. Size: it is a measured feature of the body, so it is morphological.\nD. Finger-print: it is a pattern of ridges on the skin, a structural feature, so the syllabus classes it as morphological even though it is inherited.\n\nExam tip: ask whether you can see or measure the trait. If you can, it is morphological. If it is something the body can or cannot do, or a chemical difference such as blood group, it is physiological."
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "evolution.trends",
+      "difficulty": "medium",
+      "hint1": "Plant groups can be arranged from the simplest to the most advanced. Think about the features plants gained as they moved from water onto land.",
+      "hint2": "The order should begin with the simplest group, which lives in water and has no true roots, stems or leaves. Options that begin with another group can be set aside.",
+      "hint3": "The two options left differ only in the middle. Which of mosses and ferns has transport tissue, xylem and phloem, and should that group come earlier or later?",
+      "solution": "Answer: B. Algae → Mosses → Ferns → Conifers\n\nEvolution is taught as a trend from simple to complex. Each plant group in this order has features the group before it lacks.\n\nHow to tell:\nAlgae: simple, mostly live in water, no true roots, stems or leaves.\nMosses: live on land but have no transport tissue and need water for fertilisation.\nFerns: have transport tissue (xylem and phloem) and true roots, stems and leaves, but still reproduce by spores.\nConifers: produce seeds, so they depend less on water for reproduction.\n\nWhy not the others:\nA. Algae → Ferns → Mosses → Conifers: it puts ferns before mosses, but ferns have transport tissue that mosses lack, so ferns are more advanced.\nC. Mosses → Conifers → Ferns → Algae: it is scrambled and ends with the simplest group.\nD. Conifers → Ferns → Mosses → Algae: it is the reverse order, from advanced to simple.\n\nExam tip: learn the order algae, mosses, ferns, conifers, flowering plants. Then check the direction the question asks for, simple to advanced or the reverse."
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "transport.plants",
+      "difficulty": "easy",
+      "hint1": "Plants have two kinds of transport tissue in their vascular bundles. Think about what each one carries.",
+      "hint2": "Xylem carries water and mineral salts up from the roots to the leaves.",
+      "hint3": "Now think about how sugar made in the leaves reaches the roots, fruits and growing tips. Is that movement also transport?",
+      "solution": "Answer: C. Both A and B\n\nTransport in flowering plants uses two tissues, xylem and phloem, together called vascular tissue. Xylem carries water and mineral salts from the roots to the leaves. Phloem carries food made in the leaves, mainly sucrose, to other parts of the plant, a process called translocation.\n\nHow to tell: check each tissue on its own. Xylem transports water and minerals, and phloem transports food, so both are involved.\n\nWhy not the others:\nA. Xylem: it does transport, but choosing it alone leaves out phloem.\nB. Phloem: it does transport, but choosing it alone leaves out xylem.\nD. Neither A nor B: both tissues are transport tissues.\n\nExam tip: when both A and B is an option, test A and B separately. If each is true on its own, the combined option is the answer."
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "genetics.terminology",
+      "difficulty": "easy",
+      "hint1": "Genetics uses paired terms, one for the genes an organism carries and one for what can be seen. Decide which of these the question describes.",
+      "hint2": "Dominant and recessive describe how one form of a gene behaves against another. They describe single traits, not the whole genetic makeup.",
+      "hint3": "Of the two options left, the root pheno means to show or appear. Which term is left for what is carried in the genes?",
+      "solution": "Answer: A. Genotype\n\nThe genotype is the set of genes, or alleles, an organism carries for a characteristic, written with letters such as TT, Tt or tt. The phenotype is the characteristic you can observe, such as tall or short, which comes from the genotype together with the environment.\n\nHow to tell: genetic makeup means the genes themselves, and the term for that is genotype. A pea plant with genotype Tt has the phenotype tall.\n\nWhy not the others:\nB. Phenotype: it is the observable feature, not the genes.\nC. Dominant trait: it is the trait that shows when at least one dominant allele is present.\nD. Recessive trait: it is the trait that shows only when two recessive alleles are present.\n\nExam tip: genotype is written in letters (Tt) and phenotype in words (tall). If the question is about genes or letters, choose genotype. If it is about appearance, choose phenotype."
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "respiration.surfaces",
+      "difficulty": "easy",
+      "hint1": "Different animal groups use different respiratory surfaces. Think about how air reaches the cells of a small land animal with a hard outer covering.",
+      "hint2": "Malpighian tubules are for removing waste, not breathing, and gills are the breathing organs of fish and many other animals that take oxygen from water.",
+      "hint3": "Of the two options left, recall which one belongs to spiders and scorpions, a different group from insects.",
+      "solution": "Answer: C. Tracheae\n\nInsects breathe through a tracheal system. This is a network of air tubes called tracheae, which open to the outside through small holes called spiracles along the sides of the thorax and abdomen. The tubes branch into very fine tubes that carry air right up to the tissues, so oxygen reaches the cells through the tubes.\n\nHow to tell: the tracheal system with spiracles is the respiratory system of insects.\n\nWhy not the others:\nA. Lung books: book lungs are the breathing organs of spiders and scorpions.\nB. Malpighian tubules: they are excretory organs that remove nitrogen waste in insects.\nD. Gills: they take oxygen from water in fish and many other water animals.\n\nExam tip: match each animal group to its breathing organ. Insects: tracheae and spiracles. Fish: gills. Spiders: book lungs. Earthworm: moist skin. Mammals: lungs."
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "adaptation.structural",
+      "difficulty": "easy",
+      "hint1": "The shape of a bird's beak matches the food it eats. Picture what a long, thin tube could reach into.",
+      "hint2": "Beaks for tearing flesh are short, strong and hooked, as in hawks. Beaks for crushing seeds are short, thick and cone-shaped.",
+      "hint3": "Two options are left. For each, ask: is the food solid and moving, or held deep inside something narrow?",
+      "solution": "Answer: A. Sucking nectar\n\nA beak's shape is a structural adaptation to the bird's food. A long, narrow, tubular beak, as in the sunbird and the hummingbird, can reach deep inside a flower and draw up the sweet liquid nectar at its base.\n\nHow to tell: nectar is a liquid hidden at the bottom of a narrow flower. A long tube is the shape that can reach it and draw it up.\n\nWhy not the others:\nB. For tearing: flesh-eating birds such as eagles and hawks have short, strong, hooked beaks.\nC. Crushing seeds: seed-eaters such as weaver birds have short, stout, cone-shaped beaks.\nD. Catching fish: fish-eaters such as the kingfisher have long, strong, pointed beaks for gripping or spearing, not hollow tubes.\n\nExam tip: read the shape word. Hooked: tearing flesh. Short and stout: crushing seeds. Long and tubular: sucking nectar. Long and pointed: catching fish. Flat and broad: straining food from mud and water."
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "plant-nutrition.minerals",
+      "difficulty": "easy",
+      "hint1": "Plant mineral nutrients are grouped by how much of each a plant needs. Think about which elements are needed in the largest amounts.",
+      "hint2": "Macronutrients are needed in large amounts. Micronutrients, also called trace elements, are needed in very small amounts. Iron helps in making chlorophyll but is needed in tiny amounts, so it is a micronutrient.",
+      "hint3": "Of the three options left, two are also needed in tiny amounts. Recall the main elements a farmer adds in fertiliser. Is any of them among the three?",
+      "solution": "Answer: D. Nitrogen\n\nA macronutrient is a mineral element a plant needs in large amounts. The mineral macronutrients are nitrogen, phosphorus, potassium, calcium, magnesium and sulphur. Nitrogen is used to make proteins, chlorophyll and nucleic acids, so a plant short of nitrogen grows poorly and its older leaves turn yellow.\n\nHow to tell: nitrogen is on the macronutrient list and is the main element in most fertilisers. The other three are needed in trace amounts.\n\nWhy not the others:\nA. Iron: it is a micronutrient, needed in small amounts for making chlorophyll.\nB. Boron: it is a micronutrient, needed in small amounts.\nC. Copper: it is a micronutrient, needed in small amounts for some enzymes.\n\nExam tip: learn the six mineral macronutrients: nitrogen, phosphorus, potassium, calcium, magnesium and sulphur. Iron, boron, copper, zinc, manganese and molybdenum are trace elements."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "animal-nutrition.food-classes",
+      "difficulty": "easy",
+      "hint1": "Sucrose is a disaccharide, a sugar made of two simple sugar units joined together. Think about which two units.",
+      "hint2": "Two glucose units joined together make maltose, and glucose joined with galactose makes lactose, the sugar in milk.",
+      "hint3": "Two options are left. Recall what the enzyme sucrase produces when it digests table sugar.",
+      "solution": "Answer: B. Glucose + Fructose\n\nSucrose, ordinary table sugar from sugar cane, is a disaccharide. It forms when one glucose unit and one fructose unit join together and a molecule of water is removed. When sucrose is digested, the enzyme sucrase splits it back into glucose and fructose.\n\nHow to tell:\nglucose + fructose → sucrose + water\n\nWhy not the others:\nA. Glucose + Glucose: this pair makes maltose.\nC. Fructose + Fructose: this pair does not make sucrose and is not one of the disaccharides in the syllabus.\nD. Galactose + Glucose: this pair makes lactose.\n\nExam tip: learn the three common disaccharides together. Maltose = glucose + glucose. Sucrose = glucose + fructose. Lactose = glucose + galactose. Glucose is in all three, so look at the second sugar."
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "associations.competition",
+      "difficulty": "easy",
+      "hint1": "Types of competition are named by who is competing with whom. Check whether the animals in the question are the same kind or different kinds.",
+      "hint2": "Mutualism and commensalism describe organisms living closely together where at least one gains and neither is harmed. Neither is a type of competition.",
+      "hint3": "The two options left differ only in their first part. Work out what each prefix means, then ask whether cows and goats belong to one species.",
+      "solution": "Answer: A. Interspecific\n\nCompetition happens when organisms need the same resource, such as food, water or space, and there is not enough for all. Intraspecific competition is within one species. Interspecific competition is between different species.\n\nHow to tell: cows and goats are different species, and they are competing for the same grass, so the competition is interspecific.\n\nWhy not the others:\nB. Intraspecific: this is between members of the same species, such as cow against cow.\nC. Mutualism: this is an association in which both partners benefit, not competition.\nD. Commensalism: this is an association in which one partner benefits and the other is not affected.\n\nExam tip: inter means between, as in international (between nations). Intra means within. Different species point to interspecific, the same species to intraspecific."
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "genetics.chromosomes",
+      "difficulty": "easy",
+      "hint1": "Large biological molecules are polymers, long chains built by joining many small repeating units. Think about the name of DNA's repeating unit.",
+      "hint2": "Each repeating unit of DNA is itself made of three smaller parts joined together.",
+      "hint3": "Look at the four options. Are they all the same size of thing, or is one of them bigger than the others?",
+      "solution": "Answer: C. Nucleotides\n\nDNA is a polymer: a very long chain of repeating units called nucleotides. Each nucleotide is made of three parts: a phosphate group, a deoxyribose sugar and a nitrogen base (A, T, G or C). The sugar of one nucleotide joins the phosphate of the next to form the backbone, and the bases pair up across the two strands.\n\nHow to tell: the question asks for the whole repeating unit, and the unit that contains phosphate, sugar and base together is the nucleotide.\n\nWhy not the others:\nA. Phosphate: it is only one part of each nucleotide.\nB. Nitrogen base: it is only one part of each nucleotide.\nD. Deoxyribose sugars: it is only one part of each nucleotide.\n\nExam tip: when asked for the repeating unit of a large molecule, choose the whole building block, not one of its parts. Nucleotide for DNA, amino acid for protein, glucose for starch."
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "animal-nutrition.feeding",
+      "difficulty": "easy",
+      "hint1": "Insect mouthparts are shaped to suit the food. Think about which kind of food would need to be reached through skin or a plant's surface.",
+      "hint2": "A cockroach has biting and chewing mouthparts for solid food, and a housefly has sponging mouthparts that soak up liquid food lying on a surface.",
+      "hint3": "Of the two options left, both take in liquid food. Ask which of them must first get through a barrier to reach the liquid.",
+      "solution": "Answer: B. Mosquito\n\nPiercing and sucking mouthparts are long, needle-like parts held inside a sheath. They are pushed through skin or a plant's surface, and the liquid underneath is sucked up. The female mosquito uses them to pierce skin and suck blood.\n\nHow to tell: the mosquito's food, blood, lies under the skin, so it must pierce before it can suck.\n\nWhy not the others:\nA. Cockroach: it has biting and chewing mouthparts for solid food.\nC. Butterfly: it has a long, coiled tube for sucking nectar, but it does not pierce.\nD. Housefly: it has sponging mouthparts that pour saliva on food and mop up the liquid.\n\nExam tip: match the mouthparts to the food. Solid food: chewing (cockroach, grasshopper). Nectar: sucking tube (butterfly). Liquid on a surface: sponging (housefly). Blood or plant sap: piercing and sucking (mosquito, aphid)."
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "associations.symbiosis",
+      "difficulty": "medium",
+      "hint1": "Associations are named by who benefits and who is harmed. Think about what the cow gets from the microbes and what the microbes get from the cow.",
+      "hint2": "Predation is one animal killing and eating another, and commensalism is one partner gaining while the other is not affected. In the rumen, both the cow and the microbes gain something.",
+      "hint3": "The two options left are related terms, and one is broader than the other. When a question offers both, which should you choose?",
+      "solution": "Answer: D. Mutualism\n\nMutualism is an association between two different organisms in which both benefit. A cow cannot make the enzyme that digests cellulose, the main material in grass. Bacteria and protozoa living in its rumen digest the cellulose, and the cow uses the products. In return the microbes get a steady supply of food and a warm, moist place to live.\n\nHow to tell: mark each partner. Cow: benefits. Microbes: benefit. Both benefit, so it is mutualism.\n\nWhy not the others:\nA. Symbiosis: it is often used for any close living together of two species, so it is broader. Some textbooks use it to mean mutualism, but when both are offered, the examiner wants the precise term.\nB. Commensalism: one partner benefits and the other is not affected, but here the cow clearly benefits too.\nC. Predation: a predator hunts and kills its prey, which is not what happens between the cow and the microbes in this example.\n\nExam tip: mark each partner with + (gains), 0 (not affected) or − (harmed). ++ is mutualism, +0 is commensalism, +− is parasitism or predation. If both symbiosis and mutualism are offered for a ++ pair, choose mutualism."
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "population.growth",
+      "difficulty": "easy",
+      "hint1": "Ecology has a set term for the population limit that a habitat's food, water and space can support. Think about population growth curves.",
+      "hint2": "On an S-shaped growth curve, the population rises, then levels off when resources run short. The level at which it flattens has a special name.",
+      "hint3": "Three of the options sound sensible in everyday English. Which one is the term you would see labelled on a growth curve?",
+      "solution": "Answer: D. Carrying capacity\n\nCarrying capacity is the largest population of a species that the resources of a habitat can support over a long time. When a population reaches it, births and deaths roughly balance, so the population is taken as staying about the same size.\n\nHow to tell: the key words are maximum number, resources and sustainably. Together they define carrying capacity.\n\nWhy not the others:\nA. Operating capacity: it is not a term used in ecology.\nB. Working potential: it is not a term used in ecology.\nC. Maximum population: it sounds close, but it is not the technical term, and it does not carry the idea of what the habitat can support over a long time.\n\nExam tip: in definition questions, choose the technical term, not an everyday phrase that sounds similar. The words can support or sustain, together with habitat, point to carrying capacity."
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "ecosystem.habitats",
+      "difficulty": "easy",
+      "hint1": "Habitats are sorted by their water: salty, fresh, a mix of both, or none. Think about how salty the water must be for these organisms.",
+      "hint2": "Seaweeds are large algae and barnacles are small shelled animals that stick to rocks. Both need to be covered by water, so the land habitat can be set aside. Seaweeds are not found in ponds and rivers.",
+      "hint3": "Two options are left, both with salty water. One is fully salty all the time, the other is where a river meets the sea and the saltiness keeps changing. Which is the usual home of these organisms?",
+      "solution": "Answer: B. Marine\n\nA marine habitat is the sea, with water that is salty at a fairly steady level. Seaweeds such as Sargassum and barnacles attached to rocks are typical organisms of the rocky seashore and shallow sea, so they are taught as marine organisms.\n\nHow to tell: both organisms are named as typical of the seashore, which is part of the marine habitat.\n\nWhy not the others:\nA. Terrestrial: this is land, and these organisms need to be covered by seawater for much of the time.\nC. Freshwater: its water is not salty enough for them. Typical freshwater organisms include Spirogyra and water lily.\nD. Estuarine: some may be found near the sea end of an estuary, but they are taught as typical marine organisms. Estuaries are known for mangroves and mudskippers.\n\nExam tip: learn a few typical organisms for each habitat. Seaweeds, barnacles and sea anemones: marine. Mangroves and mudskippers: estuarine. Water lily and Spirogyra: freshwater."
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "growth.growth",
+      "difficulty": "hard",
+      "hint1": "Plants grow in length from special regions of dividing cells. Think about the general name for cells in a plant that keep on dividing.",
+      "hint2": "Intercalary meristems lie at the base of leaves and between the nodes of grasses, and lateral meristems lie along the sides of stems and roots, making them thicker. Neither is at the tip.",
+      "hint3": "Of the two options left, one word tells you where the cells are and the other tells you what kind of cells they are. Which does the question ask for?",
+      "solution": "Answer: C. Meristematic\n\nMeristematic cells are small, thin-walled cells with dense cytoplasm, a large nucleus and no large vacuole. They keep dividing by mitosis to make new cells. Groups of them are called meristems. The meristems at the tips of roots and stems are called apical meristems, and they make the plant grow longer.\n\nHow to tell: the question already gives the position, the apex, and then asks for the type of cell that divides constantly. Cells defined by constant division are meristematic.\n\nWhy not the others:\nA. Intercalary: it is a meristem at the base of leaves or between nodes, not at the tip.\nB. Apical: it names the position at the tip, which the question already gives, not the type of cell.\nD. Lateral: it is a meristem along the sides of stems and roots that makes them thicker.\n\nExam tip: separate position words (apical, lateral, intercalary) from the cell type word (meristematic). If the question asks what type of cells, answer with the type. If it asks which meristem, answer with the position."
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "coordination.reflex",
+      "difficulty": "easy",
+      "hint1": "Actions are either voluntary, chosen and controlled by you, or reflex, automatic. Think about which kind of action happens without you deciding.",
+      "hint2": "A reflex is fast, automatic and happens the same way each time the stimulus comes. Dancing and walking are learned movements that you choose to start and stop.",
+      "hint3": "Of the two options left, ask which one you could start on purpose whenever you choose.",
+      "solution": "Answer: A. Sneezing\n\nA reflex action is a quick, automatic response to a stimulus that happens without conscious thought. Many reflexes protect the body. Sneezing happens when something irritates the lining of the nose: air is forced out suddenly to clear it, and you cannot easily choose to start a real sneeze.\n\nHow to tell: sneezing is set off by a stimulus such as dust or pepper, and it happens before you decide anything.\n\nWhy not the others:\nB. Dancing: it is voluntary and learned, controlled by the cerebrum.\nC. Walking: it is voluntary, since you decide when to start and stop.\nD. Crying: it comes with emotions and can often be held back, so it is not taught as a simple reflex.\n\nExam tip: ask whether the person decides to do it. Common reflexes in exams are sneezing, coughing, blinking, the knee jerk, pulling the hand away from heat, and the pupil changing size."
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "respiration.cellular",
+      "difficulty": "medium",
+      "hint1": "Oxygen carried by the blood is used by body cells in one process that goes on all the time. Think about what that process gives the cell.",
+      "hint2": "Carboxyhaemoglobin is the name for haemoglobin joined with carbon monoxide, a poisonous gas. That is not what oxygen is carried for.",
+      "hint3": "Growth and waste removal are both real jobs in the body. Ask which option describes what oxygen is used for directly, rather than something that depends on it later.",
+      "solution": "Answer: B. Release of energy from food\n\nBody cells use oxygen in aerobic respiration, which takes place in the mitochondria. Oxygen breaks down food, mainly glucose, to release energy. That energy is then used for growth, movement, making new materials and every other job the cell does.\n\nHow to tell:\nglucose + oxygen → carbon dioxide + water + energy\nC₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy\n\nWhy not the others:\nA. Growth and development of cells: growth uses energy that respiration releases, so it is not oxygen's direct purpose.\nC. Formation of carboxyl haemoglobin: carboxyhaemoglobin forms with carbon monoxide and reduces the oxygen the blood can carry.\nD. Removal of waste products: this is done by the kidneys, lungs and skin, not by oxygen.\n\nExam tip: when a question asks the main purpose of oxygen, breathing or respiration in cells, the answer is the release of energy from food."
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "cell.components",
+      "difficulty": "medium",
+      "hint1": "Each organelle has one main job in the syllabus. Focus on the action word in the question and match it to an organelle's job.",
+      "hint2": "Mitochondria release energy in respiration, and the endoplasmic reticulum is a network of channels that makes and carries materials in the cell. Neither stores waste.",
+      "hint3": "Of the two options left, both deal with unwanted material in some way. Does the question ask about breaking material down, or keeping it?",
+      "solution": "Answer: C. Vacuole\n\nA vacuole is a fluid-filled sac surrounded by a membrane. In a plant cell it is large and central and filled with cell sap, which holds water, sugars, salts and waste products. Textbooks name the vacuole as the organelle that stores waste. In animal cells, vacuoles are small and usually short-lived.\n\nHow to tell: the key word is storing. The vacuole holds materials, including waste, in its sap.\n\nWhy not the others:\nA. Mitochondria: they release energy from food in aerobic respiration.\nB. Lysosome: it contains digestive enzymes that break down worn-out parts and waste, so it breaks material down rather than storing it.\nD. Endoplasmic reticulum: it is a network of membranes that makes and carries proteins and fats around the cell.\n\nExam tip: watch the action word. Store: vacuole. Digest or break down: lysosome. Release energy: mitochondrion. Make protein: ribosome."
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "conservation.pollution",
+      "difficulty": "medium",
+      "hint1": "Compare the four sources by how much contact each has with human activity and with water draining from the land.",
+      "hint2": "Rainwater forms by evaporation and condensation, which leaves most dissolved matter behind, so it is taught as the purest natural water. Spring water has been filtered by passing through layers of soil and rock.",
+      "hint3": "Of the two options left, one is polluted only in some places, depending on what is near it. The other collects drainage from a very wide area. Which fits the word typically?",
+      "solution": "Answer: A. Seawater\n\nPollutants build up where water from many sources collects. Rivers carry sewage, farm fertilisers and factory waste down to the sea, and the sea also receives oil spills and waste from ships. So, as a general pattern, seawater carries the largest load of pollutants of these four.\n\nHow to tell: trace the path of water. Rain falls fairly clean. Some soaks into the ground and becomes spring or well water. The rest runs into rivers, which end in the sea, bringing what they picked up along the way.\n\nWhy not the others:\nB. Well water: it can be polluted by a nearby pit latrine or refuse dump, but that happens in some places, so it is not typically the most polluted.\nC. Spring water: it is filtered through soil and rock, so it is usually fairly clean.\nD. Rainfall: it is taught as the purest natural water, though in industrial areas it can pick up gases that make acid rain.\n\nExam tip: when a question says typically or generally, choose the general pattern, not a special case. Where water collects from many sources, pollutants collect too."
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "cell-environment.osmosis",
+      "difficulty": "medium",
+      "hint1": "Some processes in cells use energy from respiration, and some happen on their own because particles move randomly. Think about which kind each option is.",
+      "hint2": "Active transport moves substances against a concentration gradient, and the word active tells you it uses energy from ATP.",
+      "hint3": "Of the three options left, two involve the cell doing physical work, pulling fibres or parts of the cell. Ask which one could happen even across a non-living membrane.",
+      "solution": "Answer: B. Osmosis\n\nOsmosis is the movement of water molecules from a dilute solution to a more concentrated solution through a partially permeable membrane. It happens because water molecules move about randomly and spread down their own concentration gradient, so the cell does not need to spend ATP. It even works across a non-living membrane such as Visking tubing.\n\nHow to tell: osmosis is a passive process, like diffusion. The other three all need the cell to do work.\n\nWhy not the others:\nA. Active transport: it uses ATP to move substances against a concentration gradient, as when root hairs take in mineral salts.\nC. Muscle contraction: it uses ATP to make the muscle fibres slide and shorten.\nD. Mitosis: it uses ATP to pull the chromosomes apart and form two new cells.\n\nExam tip: diffusion and osmosis are passive and need no ATP. Active transport, movement, cell division and building large molecules need ATP. Moving down a gradient is free. Moving against it costs energy."
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "animal-nutrition.enzymes",
+      "difficulty": "easy",
+      "hint1": "Each digestive enzyme acts on one class of food. Think about which enzyme acts on starch and where starch digestion begins.",
+      "hint2": "Pepsin in the stomach and trypsin from the pancreas both digest proteins, so neither starts carbohydrate digestion.",
+      "hint3": "Of the two options left, recall which class of food each one acts on.",
+      "solution": "Answer: C. Amylase\n\nSaliva contains salivary amylase, also called ptyalin. It begins the digestion of starch, a carbohydrate, in the mouth, breaking it down into maltose. It works best in the nearly neutral conditions of the mouth.\n\nHow to tell: carbohydrate digestion begins in the mouth, and the enzyme in saliva that acts on starch is amylase.\n\nWhy not the others:\nA. Trypsin: it comes from the pancreas and digests proteins in the small intestine.\nB. Pepsin: it digests proteins in the acid conditions of the stomach.\nD. Lipase: in the syllabus it comes from the pancreas and digests fats in the small intestine, not in the mouth.\n\nExam tip: the enzyme's name often hints at its food. Amyl means starch, lip means fat, and prote or pep points to protein. Starch digestion starts in the mouth, protein digestion in the stomach, and fat digestion in the small intestine."
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "sense-organs.eye",
+      "difficulty": "easy",
+      "hint1": "Parts of the eye either let light in, bend light, control how much light enters, or detect light. Think about what changes size in bright and dim light.",
+      "hint2": "The retina is at the back of the eye, where light is detected, so it cannot control how much light gets in. The lens changes shape to focus light.",
+      "hint3": "Of the two options left, one is a fixed, clear layer and the other can change. Which could control the amount of light?",
+      "solution": "Answer: B. Iris\n\nThe iris is the coloured ring of muscle around the pupil, the hole in the front of the eye. In bright light, its circular muscles contract and the pupil gets smaller, letting in less light and protecting the retina. In dim light, its radial muscles contract and the pupil gets wider, letting in more light.\n\nHow to tell: the amount of light entering depends on the size of the pupil, and the iris is the structure that changes that size.\n\nWhy not the others:\nA. Retina: it is the light-sensitive layer that detects light, not the part that controls how much enters.\nC. Cornea: it is the clear front layer that bends light, and its size does not change.\nD. Lens: it focuses light onto the retina by changing its thickness.\n\nExam tip: amount of light: iris. Focusing: lens. Detecting light: retina. Bending light at the front: cornea. If the pupil is an option, remember it is only the opening, and the iris is what controls it."
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "coordination.cns",
+      "difficulty": "easy",
+      "hint1": "Each part of the brain controls a different kind of activity. Decide whether the question describes actions you choose, or ones that go on without thought.",
+      "hint2": "The cerebrum controls thinking, memory and voluntary actions, and the cerebellum controls balance and coordinates movement.",
+      "hint3": "Of the two options left, recall which one lies at the base of the brain, joined to the spinal cord, and which lies deep in the middle of the brain.",
+      "solution": "Answer: C. Medulla oblongata\n\nThe medulla oblongata is the lowest part of the brain, where it joins the spinal cord. It contains the centres that control involuntary actions needed to stay alive, such as heartbeat, breathing and blood pressure, as well as reflexes such as swallowing, coughing and sneezing.\n\nHow to tell: heartbeat and breathing go on without thought, and the centres for them are in the medulla oblongata.\n\nWhy not the others:\nA. Cerebrum: it controls thinking, memory, the senses and voluntary actions.\nB. Cerebellum: it controls balance, posture and the coordination of muscle movement.\nD. Thalamus: it passes sensory messages on to the cerebrum.\n\nExam tip: learn one key job per part. Cerebrum: thinking and voluntary action. Cerebellum: balance. Medulla oblongata: heartbeat and breathing. Hypothalamus: body temperature and thirst."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "excretion.organs",
+      "difficulty": "easy",
+      "hint1": "Each option is an excretory structure, but each one belongs to a different group of animals. Think about which animal group each one is linked with.",
+      "hint2": "Flame cells are found in flatworms such as the tapeworm, and nephridia are found in segmented worms such as the earthworm.",
+      "hint3": "Two options are left. One belongs to crustaceans such as the crayfish. Which of the two is found in insects?",
+      "solution": "Answer: C. Malpighian tubules\n\nDifferent animal groups remove nitrogen waste with different organs. In insects, thin tubes called Malpighian tubules take waste out of the blood and pass it into the gut, so it leaves the body with the faeces.\n\nHow to tell: match each organ to its animal group. Flame cells go with flatworms, nephridia with earthworms, green glands with crustaceans, and Malpighian tubules with insects.\n\nWhy not the others:\nA. Flame cells: these are the excretory cells of flatworms such as planaria and tapeworms.\nB. Nephridia: these are the excretory tubes of segmented worms such as the earthworm.\nD. Green glands: these are the excretory organs of crustaceans such as the crayfish.\n\nExam tip: for any \"excretory organ of this animal\" question, learn the pairs: contractile vacuole with Amoeba, flame cell with flatworm, nephridium with earthworm, Malpighian tubule with insect, green gland with crustacean, kidney with vertebrates."
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "animal-nutrition.alimentary",
+      "difficulty": "easy",
+      "hint1": "Think about what is left of the food by the time it reaches the large intestine, and what the body still wants to take back from it.",
+      "hint2": "Most digestion of proteins and fats is finished in the stomach and small intestine, before food reaches the large intestine.",
+      "hint3": "Two options are left. One of them is the job of an organ outside the gut altogether. Which one is a job the gut itself does near its end?",
+      "solution": "Answer: B. Absorption of water\n\nBy the time food reaches the large intestine, most useful nutrients have already been digested and absorbed in the small intestine. What is left is watery undigested material, and in the syllabus the main job of the large intestine (colon) is to absorb water, along with some salts, from it. This turns the remains into solid faeces.\n\nHow to tell: follow the food along the gut. Digestion happens mainly in the mouth, stomach and small intestine. The large intestine comes last, so its job is to recover water before the waste leaves the body.\n\nWhy not the others:\nA. Digestion of proteins: this starts in the stomach with pepsin and is completed in the small intestine.\nC. Storage of bile: bile is made by the liver and stored in the gall bladder.\nD. Breakdown of fats: this happens in the small intestine, using bile and lipase.\n\nExam tip: for \"function of a gut region\" questions, place the region in order along the gut. Early regions digest, the small intestine digests and absorbs food, and the large intestine absorbs water."
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "genetics.applications",
+      "difficulty": "medium",
+      "hint1": "Nondisjunction is a mistake in how chromosomes separate. Decide whether each disorder comes from a change in one gene or from a change in the number of whole chromosomes.",
+      "hint2": "Nondisjunction means a pair of chromosomes fails to separate during meiosis, so a gamete ends up with one chromosome too many or too few.",
+      "hint3": "Three of these disorders come from a change in a single gene. Only one is linked to an extra whole chromosome. Which one?",
+      "solution": "Answer: B. Down syndrome\n\nNondisjunction happens when a pair of chromosomes fails to separate during meiosis. One gamete then carries an extra chromosome. In most cases of Down syndrome, a gamete carries two copies of chromosome 21, so after fertilisation the child has three copies instead of two. This is called trisomy 21.\n\nHow to tell: ask whether the disorder is caused by a faulty gene or by the wrong number of chromosomes. Only Down syndrome is caused by an extra chromosome.\n\nWhy not the others:\nA. Albinism: it is caused by a recessive gene that stops the body making the skin pigment melanin.\nC. Sickle-cell anemia: it is caused by a change in the gene for haemoglobin, a gene mutation.\nD. Colour blindness: it is caused by a recessive gene carried on the X chromosome, a sex-linked gene.\n\nExam tip: if a question mentions nondisjunction or an extra chromosome, look for Down syndrome. If it mentions a recessive gene, a carrier or sex-linkage, think of albinism, sickle-cell anaemia, colour blindness or haemophilia."
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "growth.germination",
+      "difficulty": "easy",
+      "hint1": "A germinating seed is a living thing that is starting to grow fast. Think about what it needs to release energy and to make its enzymes work.",
+      "hint2": "Cold slows enzymes down, and dry conditions leave the seed without the water it needs to swell and start growing.",
+      "hint3": "Only one option has no cold or dry factor in it. Check each list for something that would hold germination back.",
+      "solution": "Answer: B. Oxygen, water, suitable temperature\n\nA germinating seed respires fast to get energy for growth. It needs water to swell, soften the seed coat and switch on its enzymes, oxygen for respiration, and a suitable warm temperature so that its enzymes can work well.\n\nHow to tell: the three conditions for germination in the syllabus are water, oxygen and a suitable temperature. Only option B lists all three with nothing that would stop germination.\n\nWhy not the others:\nA. Darkness, dry air, low temperature: dryness means no water, and low temperature slows the enzymes.\nC. Carbon dioxide, water, cold temperature: the seed needs oxygen, not carbon dioxide, and cold slows its enzymes.\nD. Sunlight, wind, dry soil: dry soil gives no water, and most seeds do not need light to germinate.\n\nExam tip: for germination questions, remember the three: water, oxygen, warmth. Any option with cold, dryness or no oxygen is wrong. In an experiment, the seed that fails to germinate is the one missing one of the three."
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "transport.plants",
+      "difficulty": "easy",
+      "hint1": "Plants have two transport tissues, and each carries different materials. Think about what is taken in through the roots.",
+      "hint2": "Cambium is a layer of dividing cells that makes new tissue, and cortex is packing tissue. Neither is a transport tube.",
+      "hint3": "Two transport tissues are left. Decide which one carries food made in the leaves, and which one carries the materials the question describes.",
+      "solution": "Answer: C. Xylem\n\nXylem is made of long, hollow, dead tubes (vessels) joined end to end. Water and dissolved mineral salts taken in by the root hairs move up through these tubes to the stem and leaves.\n\nHow to tell: the materials named are water and mineral salts, and they come from the roots. That is the job of xylem. Food made in the leaves is carried by phloem instead.\n\nWhy not the others:\nA. Phloem: it carries manufactured food, mainly sugars, from the leaves to other parts. This is called translocation.\nB. Cambium: it is a layer of dividing cells that makes new xylem and phloem, not a transport tissue.\nD. Cortex: it is packing and storage tissue between the outer layer and the vascular tissue.\n\nExam tip: link the tissue to what it carries. Xylem: water and mineral salts, upward from the roots. Phloem: food, from the leaves to where it is used or stored."
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "classification.living-nonliving",
+      "difficulty": "medium",
+      "hint1": "This question asks for the one that is NOT shared by every living thing. Think of a plant, like a mango tree, and check each feature against it.",
+      "hint2": "Every living cell releases energy from food, and every living thing gets bigger and responds to its surroundings in some way.",
+      "hint3": "Ask which feature a rooted plant does not show: does a mango tree move its whole body from one place to another?",
+      "solution": "Answer: A. Locomotion\n\nLocomotion means moving the whole body from one place to another. Many animals do this, but most plants are fixed in one place by their roots, so locomotion is not shared by all living things. In the syllabus, plants still show movement of parts, such as a shoot bending toward light.\n\nHow to tell: test each feature on a rooted plant. It respires, it grows and it responds to light and gravity, but it does not move from place to place.\n\nWhy not the others:\nB. Respiration: every living cell releases energy from food, so all living things respire.\nC. Growth: all living things increase in size or number of cells during their life.\nD. Irritability: all living things respond to changes around them, which is what irritability means.\n\nExam tip: in \"not a characteristic of all living things\" questions, test each option on a plant. Locomotion fails because plants move parts, not their whole body."
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "classification.kingdoms",
+      "difficulty": "medium",
+      "hint1": "The question gives two clues, the heart and the eggs. Check each vertebrate group against both clues, not just one.",
+      "hint2": "Birds and mammals have a four-chambered heart, so the first clue already sets them aside.",
+      "hint3": "Two groups have a three-chambered heart in the syllabus. One lays eggs with a tough shell on land. Which one lays soft eggs covered in jelly in water?",
+      "solution": "Answer: B. Amphibians\n\nAmphibians, such as frogs and toads, have a heart with three chambers: two atria and one ventricle. They lay soft eggs with no shell, protected only by a coat of jelly, so the eggs must be laid in water or they would dry out.\n\nHow to tell: use both clues. A three-chambered heart points to amphibians or most reptiles. Jelly-coated eggs in water point only to amphibians, as in frog spawn.\n\nWhy not the others:\nA. Reptiles: most have a three-chambered heart, but they lay eggs with a leathery shell on land.\nC. Birds: they have a four-chambered heart and lay hard-shelled eggs on land.\nD. Mammals: they have a four-chambered heart, and most give birth to live young.\n\nExam tip: when a question gives two features of a vertebrate group, use one to cut the list to two and the other to decide. In exam questions, jelly-coated eggs laid in water point to amphibians, and shelled eggs laid on land point to reptiles or birds."
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "cell.division",
+      "difficulty": "medium",
+      "hint1": "Meiosis and mitosis are both cell division, but they happen in different places and for different reasons. Think about where meiosis takes place in the body.",
+      "hint2": "Growth, repair and making body cells with the same chromosome number as the parent cell are the jobs of mitosis.",
+      "hint3": "Ask what happens to the number of chromosomes in the new cells made by meiosis, and what those cells are used for.",
+      "solution": "Answer: B. It produces gametes with half the number of chromosomes\n\nMeiosis happens in the reproductive organs and makes gametes (sex cells) with half the normal number of chromosomes. When a sperm and an egg join at fertilisation, the full number is restored, so the number stays the same from one generation to the next.\n\nHow to tell: meiosis halves the chromosome number, and its products are gametes. Mitosis keeps the number the same and makes body cells for growth and repair.\n\nWhy not the others:\nA. It promotes cell repair and growth: this is the job of mitosis, which makes new body cells.\nC. It increases the size of the organism: growth in size comes from mitosis, not meiosis.\nD. It ensures the constancy of chromosome number in somatic cells: somatic means body cells, and it is mitosis that keeps their number constant.\n\nExam tip: in any mitosis or meiosis question, sort the options into two piles. Growth, repair and body cells go with mitosis. Gametes, halving the chromosome number and variation go with meiosis."
+    }
+  ]
+}

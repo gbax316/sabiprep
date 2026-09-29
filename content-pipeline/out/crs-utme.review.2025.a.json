@@ -1,0 +1,420 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 states the answer indirectly, which the standard forbids for hint 2 just as much as for hint 1 and 3 (\"Must not: State the answer, even indirectly\"). The offending text: \"Look for the creature through whom God showed his rule by making it in his own image and giving it power over everything else. A thing that was simply made does not show that as clearly.\" Among the four options (Eve, Man, Rivers, Animals), only Man was made in God's image and given power over everything else, so this sentence uniquely identifies the correct option before hint 3 is even read, making hint 3 redundant. The proper move for hint 2 is to eliminate the weakest distractors (Rivers, Animals) using a general principle, the way hint 2 does in the other seven items here (e.g. Q3's \"Sinai goes with the Law, and Zion with Jerusalem\"), and save the decisive trait for hint 3. All facts in the hints and solution are otherwise correct.",
+      "fix": "Sovereignty means supreme rule. Rivers are only part of the description of the Garden of Eden, and animals were the ones placed under rule rather than given it. Look at the two people-related options that are left before deciding.",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 and hint 3 together hand the student the answer instead of narrowing choices. Hint 2 says 'be careful with the options that sound kind' - of the four options, B 'Loved by God', C 'My delight' and D 'Chosen one' all sound kind and A 'No mercy' obviously does not, so this sentence isolates A as the only option left standing, which functions as stating the answer indirectly (forbidden for hint 2). Hint 3 then says 'In Hebrew, 'Lo' means 'not' and 'ruhamah' means 'shown pity'. Put the two parts together and match them to an option.' This is not a narrowing question, it is the full translation the solution itself uses ('Lo' means 'not' and 'ruhamah' means 'pitied' or 'shown mercy'. Put together, the name means no mercy'), so a student who does the trivial concatenation gets the letter without weighing any alternative. This fails the hint 3 test: a student reading hint 3 alone answers without thinking.",
+      "fix": "hint2: Hosea's children's names were meant as warnings to unfaithful Israel, not as blessings. 'Chosen one' and 'my delight' both sound like promises, so think about whether they fit a warning.\nhint3: 'Loved by God' describes a promise Israel would receive later (Hosea 2:23), but this name described what Israel did NOT have from God right then. Of the two names left, which one matches losing God's pity rather than receiving love?",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 reads: 'This prophet was among the exiles in Babylon and was told to eat a scroll at his call (Ezekiel 2-3).' The parenthetical citation '(Ezekiel 2-3)' names the book of Ezekiel, which is the correct answer to 'Which prophet is most frequently addressed as Son of man?'. Unlike a scripture reference that merely supports a principle, this one spells out the identity being asked for, so hint 2 states the answer even though it is only a citation, which its job description forbids.",
+      "fix": "hint2: This prophet was among the exiles already taken to Babylon before Jerusalem fell, and was told to eat a scroll at his call.",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 collapses to a rhetorical question. By hint 2 ('Nations that played no part in the Daniel stories can be set aside.'), Assyria and Syria are already gone, leaving only the Chaldeans and the eunuchs. Hint 3 then reads: 'The eunuchs looked after the young men's training and food in Daniel 1, not their accusation. Of the groups left, which one was Babylonian rather than a foreign nation?' The first sentence explicitly rules out the eunuchs as the accusers, which is the very fact the question is about (who accused them). With the eunuchs eliminated inside the hint itself, only the Chaldeans remain, so 'which one was Babylonian' has nothing left to choose between: the answer has already been handed over. A student can answer hint 3 alone without thinking.",
+      "fix": "Of the two groups left, one belonged to the king's own circle of wise men and officials in Babylon, resentful of the three Hebrews' rise. Which one was that?",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "fail",
+      "failed_checks": [
+        10
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 is hard to parse: 'Jesus was killed and later went up to heaven. The Emmaus walk fits between two events. Which one had happened that very morning?' The sentence names crucifixion and ascension as the 'two events' the walk sits between, then asks the student to pick 'which one had happened that very morning' as if choosing between those same two named events. But by this point (after hint 2 has pointed the student to an event after the resurrection) the real remaining choice is between resurrection and ascension, neither of which is the pair actually named in the hint. A fifteen-year-old reading this cannot tell which two events the final question refers to, since the two events named in the hint's own first sentence do not match the two the question is really testing.",
+      "fix": "Of the two events left, one had already happened by that very morning, and one was still forty days away. Which one had already happened?",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Misquote of Acts 12:22. The solution says the crowd shouted, 'The voice of a god, and not of man' (dropping the article). Both the question stem itself ('The voice of a god, and not of a man!') and Acts 12:22 (ESV: 'the voice of a god, and not of a man!') have 'a man', not 'man'. A quoted scripture line must match verbatim; this one contradicts the item's own question text.",
+      "fix": "When Herod made a speech in royal robes, they shouted, 'The voice of a god, and not of a man'.",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "Unscoped absolute stated as fact, in both hint 2 and the solution. Hint 2 says 'Look for the teaching the Gospels name every time the Sadducees appear', and the solution's How to tell repeats it: 'the resurrection is the belief linked with the Sadducees every time they appear in the Gospels and Acts'. This is false: the Sadducees appear in Matthew 3:7 (John the Baptist's rebuke) and Matthew 16:1-12 (asking for a sign, the warning about their leaven) with no mention of the resurrection dispute at all.",
+      "fix": "Hint 2: 'The Sadducees held firmly to the Law of Moses, so they did not deny it. Look for the teaching the Gospels name whenever the Sadducees argue with Jesus about life after death.' Solution How to tell: 'How to tell: the resurrection is the belief most often linked with the Sadducees in the Gospels and Acts, so it is the doctrine the question is looking for.'",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 is too strong: 'Which option matches the lesson that a movement's success depends on where it comes from?' This is a near-synonym restatement of option A's own text, 'Human plans fail if not from God' (movement's success/failure = plans failing or not; depends on where it comes from = depends on whether it is from God). None of the other three options (stop preaching, prophets always false, Theudas greater than Moses) resemble this description at all, so a student can match the paraphrase to option A without recalling anything about Theudas or Judas the Galilean. Hint 3 must narrow to two and leave the reasoning to the student, not state the answer's content in different words.",
+      "fix": "Gamaliel's advice was to leave the apostles alone, not to silence them, and he said nothing in praise of Theudas. Think again about how both Theudas' and Judas the Galilean's followings ended, and choose the option that draws the right lesson from it.",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 reads: \"Between a Jewish custom and a statement about how God treats the proud and the humble, which is the reason the verse actually quotes from Proverbs 3:34?\" The phrase \"a statement about how God treats the proud and the humble\" is a near-verbatim paraphrase of option A itself (\"God opposes the proud but gives grace to the humble\"), and \"a Jewish custom\" is a paraphrase of option C (\"It was the tradition of the Jews\"). A student can match this wording to option A by pattern alone, without knowing anything about Proverbs 3:34, 1 Peter 5:5 or James 4:6. This fails the hint 3 test: the hint lets the student answer without thinking, because it restates the content of the two remaining options rather than pointing to evidence the student must still interpret.",
+      "fix": "Riches and power are worldly rewards, so set them aside. Between a Jewish custom and the proverb you identified in hint two, which one does 1 Peter 5:5 actually give as the reason for clothing yourselves with humility?",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3528,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4437,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4877,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.5142,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.5306,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 2.329
+}

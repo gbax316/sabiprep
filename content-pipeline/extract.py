@@ -427,7 +427,7 @@ def extract(cfg):
             # types of comb" then "Study them and answer questions 40 and 41".
             # Without this merge the explicit line claims the questions and the
             # description, the part that says what the diagram is, is lost.
-            if inferred is not None and not inferred['questions'] and i - inferred['para'] == 1:
+            if inferred is not None and not inferred['questions'] and i - inferred.get('last', inferred['para']) == 1:
                 full = inferred['text'] + ' ' + text
                 for p in problems:
                     if p.get('passage_id') == inferred['passage_id']:
@@ -457,6 +457,22 @@ def extract(cfg):
             # Descriptive text with no question number and no stated range.
             # Real papers do this: "Four cells ... were immersed in solutions
             # I to IV" then questions 7 and 8. Hold it and bind it forward.
+            # A passage can run over several paragraphs before its first
+            # question (the English cloze passages do). Each paragraph once
+            # replaced the one before, so only the last reached the questions.
+            # A new instruction starts a new block; only passage paragraphs extend one.
+            if (inferred is not None and not inferred['questions'] and not is_instruction(text)
+                    and i - inferred.get('last', inferred['para']) == 1):
+                # A bare heading ("SECTION 3", "OBJECTIVE TEST QUESTIONS") says
+                # nothing a student needs; the paragraph after it replaces it.
+                if re.fullmatch(r'SECTION\s+\w+|[A-Z][A-Z0-9\s&,:\-]{2,40}', inferred['text'].strip()):
+                    inferred['text'] = text
+                else:
+                    inferred['text'] += ' ' + text
+                inferred['last'] = i
+                inferred['anchors'] |= anchors(text)
+                inferred['instruction'] = inferred['instruction'] or is_instruction(text)
+                continue
             stem_seq += 1
             pid = (f"{subject.lower().replace(' ', '-')}-{exam_brand.lower()}"
                    f"-{year}{psfx(paper)}-s{stem_seq:02d}")
@@ -575,6 +591,34 @@ def extract(cfg):
     return items, report
 
 
+GAP = re.compile(r'(?:[.…_]{2,}|[–—-]+)\s*(\d{1,3})\s*(?:[.…_]{2,}|[–—-]+)')   # ……71…… or – 79 --
+
+
+def bind_cloze(items):
+    """A cloze passage carries its own question numbers, written into the
+    gaps: "The ......71...... of the chairman". The instruction above it names
+    no range ("the numbered gaps indicate missing words"), so the ordinary
+    binding gave the passage to the first gap only, and every other gap came
+    out as four bare options. A passage belongs to exactly the questions whose
+    numbers appear in its gaps, in its own paper."""
+    by_unit = {}
+    for it in items:
+        by_unit.setdefault((it['year'], it.get('paper', 1)), {})[it['q_number']] = it
+    bound = 0
+    for unit in by_unit.values():
+        for it in list(unit.values()):
+            text = it.get('passage_text') or ''
+            gaps = {int(g) for g in GAP.findall(text)}
+            if len(gaps) < 2 or it['q_number'] not in gaps:
+                continue
+            for q in gaps:
+                other = unit.get(q)
+                if other is not None and other.get('passage_id') != it['passage_id']:
+                    other['passage_text'], other['passage_id'] = it['passage_text'], it['passage_id']
+                    bound += 1
+    return bound
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--config', required=True)
@@ -588,6 +632,7 @@ def main():
             cfg[k] = os.path.normpath(os.path.join(root, cfg[k]))
 
     items, report = extract(cfg)
+    report['cloze_gaps_bound'] = bind_cloze(items)
     os.makedirs(a.outdir, exist_ok=True)
     slug = cfg['slug']
     with open(os.path.join(a.outdir, f'{slug}.items.jsonl'), 'w', encoding='utf8') as f:

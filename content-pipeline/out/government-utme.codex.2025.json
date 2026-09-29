@@ -1,0 +1,395 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Nigeria was elected as a non-permanent member of the UN Security Council in October 2014, serving the 2014-2015 term. Nigeria is a founding member of the AU/OAU and OPEC already, so 'admitted' in 2014 does not fit those.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In the Hausa pre-colonial emirate system, Sarkin Pawa was the title of the head of all butchers. Sarkin Ruwa headed fishermen/water affairs, Sarkin Fada headed palace officials, and Waziri was the chief adviser/vizier, none of which relate to butchers.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The Armed Forces Ruling Council (AFRC) was established in 1985 when Ibrahim Babangida took power, replacing the Supreme Military Council as the highest ruling body. Abacha later used the Provisional Ruling Council (PRC), not the AFRC.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Nigeria severed diplomatic relations with France in 1961 after France conducted atomic bomb tests in the Sahara Desert (Algeria), viewing it as a threat to African safety. Israel, Chad, and Libya were not involved in this incident.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "In 1976, the Murtala Mohammed regime created seven additional states out of the existing 12, bringing Nigeria to a 19-state structure. 1967 marked the creation of 12 states from the original four regions, not 19.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The Third Republic, under Babangida's transition programme, uniquely operated a two-party system with the government-created Social Democratic Party (SDP) and National Republican Convention (NRC). The First and Second Republics had multiple competing parties.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Uganda has never been a member of OPEC, whereas Venezuela, Nigeria, and Kuwait are all long-standing OPEC member states.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The 'Ghana Must Go' bag got its name in 1983 when Nigeria expelled illegal immigrants, mostly Ghanaians, who used these bags to carry belongings; at that time Ghana was under the leadership of Jerry John Rawlings. Nkrumah, Busia, and Kufuor's tenures do not align with this 1983 event.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Nigeria's foreign policy is primarily formulated by the Executive arm, specifically the President working with the Federal Executive Council, though the Ministry of Foreign Affairs implements it. The National Assembly and Judiciary do not formulate foreign policy.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Authority is defined in government studies as the recognized right to command, take decisions, and enforce obedience from citizens. Power differs in that it can compel obedience without a recognized right, and sovereignty refers to supreme independent power of a state rather than the right itself.",
+      "solvable": true,
+      "issue": "Authority and sovereignty are both plausible depending on textbook phrasing, but 'right to enforce obedience' most directly matches the standard definition of authority.",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "The Federal Character Commission's mandate under the 1999 Constitution covers equitable representation of ethnic groups, promoting national unity, and preventing marginalization of minorities, so all three listed functions apply. The strongest distractor, A, is only a partial description of its role.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Colonialism refers specifically to the practice of a foreign power directly controlling and economically exploiting a territory, matching the description given. Imperialism (the strongest distractor) is the broader policy or drive to extend a nation's power and influence, of which colonialism is one concrete manifestation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Foreign policy is defined as the set of goals and strategies guiding a state's interaction with other states in the international system. Diplomacy, the strongest distractor, is only the method (negotiation and representation) used to implement that policy, not the interaction itself.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "General Sani Abacha's regime created six additional states in 1996, raising Nigeria's total from 30 to 36, the structure still in use today. Babangida (the strongest distractor) only brought the count to 30 states in 1991.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Sovereignty, the supreme authority to govern without external interference, is the defining attribute of an independent state. Territory and population are necessary but not sufficient, since dependent territories also possess them without being sovereign states.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "ECOWAS, OAU, and AU are bodies formed by multiple sovereign states to cooperate on shared regional or continental goals, the defining feature of international organizations. Political institutions, the strongest distractor, refers to domestic structures like the executive or legislature, not multi-state bodies.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Military rule, party systems, political parties, and constitutional development are core themes of the Government syllabus, which also covers colonization and decolonization as political processes. History, the strongest distractor, could plausibly cover colonization/decolonization too, but the combination with party systems and constitutional development points to Government.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Under the 1999 Constitution's Fourth Republic, the President appoints ministers subject to Senate confirmation. Governors are elected, not appointed by the President, and elections are conducted by INEC, ruling out the other options.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Military rule suspends elections, party activity, and free expression, directly undermining citizens' political participation. National security, the strongest distractor, is often cited by military regimes as their justification rather than something they negate.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "General Yakubu Gowon's regime restructured Nigeria into 12 states in 1967, replacing the four-region structure. 1976, the strongest distractor, is when the states were expanded from 12 to 19, not when the 12-state structure began.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Sovereignty refers to the supreme, independent authority of a state to govern itself without external control. Options B, C, and D describe specific applications of power (tyranny, military use, colonial group interest) rather than the concept of sovereignty itself.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "The Clifford Constitution of 1922 introduced the elective principle, allowing Nigerians to elect representatives to the Legislative Council for the first time, which is widely regarded as the foundation of democratic representation in Nigeria. Colonial control already existed before 1922, so that option does not capture the constitution's distinct contribution.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Nigeria was elected in October 2013 to serve as a non-permanent member of the United Nations Security Council for the 2014-2015 term. ECOWAS, OPEC, and AU do not have a 'non-permanent member' category, which is specific to the UN Security Council structure.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The legislature of the United States is called Congress, comprising the Senate and House of Representatives. House of Lords and House of Commons belong to the UK Parliament, while National Assembly is used in countries like Nigeria and France.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "A major criticism of deregulation is fear of unemployment, as removing state control and protection can lead to job losses through restructuring, closures, or increased competition. Efficiency is typically cited as a benefit of deregulation, not a disadvantage, ruling out option C.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Uganda is not a member of OPEC, whereas Saudi Arabia, Nigeria, and Kuwait are all founding or long-standing member states of the Organization of the Petroleum Exporting Countries. This is a straightforward factual recall question.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Nigeria's 'Africa as the centerpiece' foreign policy reflects the belief that Nigeria should prioritize and pay greater attention to African affairs and problems over other regions. Claiming Nigeria can 'control Africa' misrepresents the policy, which is about commitment and leadership through attention, not domination.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A unitary system of government concentrates all constitutional powers at the central government, with any local units deriving authority from and subordinate to the centre. A federal system, by contrast, constitutionally divides powers between central and regional governments, which is the opposite of what is described.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Franchise is the legal right of a qualified citizen to vote in elections and to be voted for. Electorate refers to the body of people entitled to vote, not the right itself, which distinguishes it from franchise.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The Permanent Secretary is the highest-ranking career civil servant in a ministry, heading its administration above Directors and Assistant Directors. Director and Assistant Director are subordinate ranks within the same ministerial hierarchy.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Usman dan Fodio led the 1804 jihad that culminated in the establishment of the Sokoto Caliphate. Muhammad Bello was his son and successor who consolidated and administered the caliphate but did not lead the jihad itself, making it the weaker distractor.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The major local government reform in Nigeria, which introduced a uniform single-tier system of local government across the country, was carried out in 1976 under the Obasanjo military government. Later dates like 1999 relate to the return to civil rule, not the local government reform itself.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The Constitution is the supreme law of Nigeria, as it explicitly declares its own supremacy over all other laws including Acts of Parliament. Acts of Parliament and decrees are subordinate to and must conform with the Constitution.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Separation of powers distributes governmental authority among the executive, legislature, and judiciary specifically to prevent the concentration and abuse of power in any single arm. It does not aim to strengthen or weaken any one arm at the expense of the others, ruling out A, C, and D.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The judiciary's primary function is the interpretation of laws and adjudication of disputes. Execution of laws belongs to the executive and law making to the legislature, so those distractors describe the other arms of government.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Shehu Shagari became Nigeria's first Executive President in 1979 under the newly adopted presidential constitution. Tafawa Balewa was only a Prime Minister (First Republic) and Azikiwe a ceremonial President, neither being an executive president.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The Independent National Electoral Commission (INEC) is the body constitutionally responsible for organizing and conducting elections in Nigeria. The National Assembly makes laws but does not itself conduct elections.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Olusegun Obasanjo, as military Head of State, handed over power to the elected civilian government of Shehu Shagari in 1979, marking Nigeria's return to the Second Republic. Gowon and Mohammed had already left office before 1979, and Abacha died in office in 1998 without handing over.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The Mace is the traditional symbol of authority of the legislature, carried by the Sergeant-at-Arms and placed before the presiding officer during sittings. The Gavel and Robe are associated more with courts, not legislative authority.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The Action Group (AG), led by Obafemi Awolowo, was one of the major political parties formed and active during Nigeria's First Republic. SDP, PDP, and NRC were all formed decades later, in the Second/Third Republic transition and the Fourth Republic.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.084,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0794,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0919,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0886,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.3439
+}

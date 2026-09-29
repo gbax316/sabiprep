@@ -1,0 +1,395 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "By Boyle's Law, at constant temperature, pressure and volume of a gas are inversely proportional, so increasing pressure decreases volume. Option A is wrong because it describes the opposite relationship.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "pH is defined as -log[H3O+], so pH = 3 gives [H3O+] = 1 × 10⁻³ mol/dm³. Option C is wrong because it inverts the exponent sign, giving a physically impossible concentration greater than 1.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Potassium dichromate(VI) is orange due to Cr2O7^2- ions; when reduced by a reducing agent it forms green Cr3+ ions. Option B is wrong because it reverses the actual direction of the colour change (dichromate is the oxidising agent, not the product).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Sulphur dioxide is a well-known irritant gas that affects the eyes, nose, and respiratory tract, a classic point emphasized in secondary school chemistry on air pollutants. Nitrogen oxides can also irritate the respiratory system, making it a plausible but weaker distractor since SO2 irritation is the more commonly cited textbook example.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "C6H5OH is the retained IUPAC name phenol, used for the hydroxyl-substituted benzene ring. Option D (hydroxybenzene) is a systematic-sounding but non-standard name, while phenol is the officially accepted IUPAC name.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Hydration of an alkene with concentrated H2SO4 as catalyst adds water across the double bond to form an alcohol (e.g., ethene to ethanol). Option D (ester) is wrong because esters require a carboxylic acid, not simple hydration of an alkene.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Maltose is a disaccharide made of two glucose units joined by a glycosidic bond, so its acid hydrolysis yields only glucose. Fructose is wrong because it is the hydrolysis product of sucrose, not maltose.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "C4H10 (butane) has exactly two structural isomers: n-butane and isobutane (2-methylpropane). Option C (4) is wrong and would correspond to a larger alkane like C5H12 having more isomers, not C4H10.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Calcium reacts with cold water to form calcium hydroxide and hydrogen gas: Ca + 2H2O to Ca(OH)2 + H2. Option A is wrong because calcium oxide is formed by burning calcium in oxygen or heating calcium carbonate, not by reaction with water.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The carbon atom in methane forms four equivalent sigma bonds arranged tetrahedrally, requiring sp3 hybridization. Option B (sp2) is wrong because that hybridization gives a trigonal planar geometry with only three sigma bonds, not the four seen in methane.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Aluminium is used in aircraft construction because it has a low density (light) yet forms a protective oxide layer that resists corrosion, giving a strong but lightweight, durable structure. Option A is wrong because aluminium is not heavy, and malleability alone is not the reason for its aerospace use.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "The ideal gas equation PV = nRT relates pressure, volume, temperature and moles, and is the formula used to determine the number of moles of a gas. The other options are algebraically incorrect rearrangements (option C omits the division sign entirely and option D inverts the relationship), so they cannot correctly compute n.",
+      "solvable": true,
+      "issue": "Option C 'n = PVRT' appears to be a transcription error (likely meant n = PV/RT); as written it is not a valid rearrangement, which introduces some ambiguity but A remains the standard formula referenced.",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "On heating, potassium trioxonitrate(V) (KNO3) decomposes to potassium nitrite (KNO2) and oxygen gas: 2KNO3 → 2KNO2 + O2. Option A is wrong because potassium nitrate decomposes to the nitrite, not the oxide, under normal heating conditions (unlike less reactive metal nitrates which give the oxide).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Iron (soft iron) has high magnetic permeability and is used to shield or screen electrical devices from external magnetic fields. Copper and brass are non-magnetic and are used for electrical conductivity, not magnetic shielding, making them poor distractors for this purpose.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Ammonium trioxonitrate(V) (NH4NO3) decomposes on heating to give dinitrogen oxide (nitrogen(I) oxide) and water: NH4NO3 → N2O + 2H2O. Ammonia (option C) is not the product of thermal decomposition of the salt itself, as both the ammonium and nitrate parts react together to form N2O.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Gold particles migrating into silver over time, even in solids, occurs through diffusion, the gradual movement of particles from a region of higher to lower concentration. Osmosis is wrong because it specifically involves solvent movement across a semi-permeable membrane, which does not apply to solid metal bars.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Carbon sequestration is the process of capturing and storing atmospheric CO2, which reduces rather than contributes to the greenhouse effect. Methane emission, combustion, and deforestation all add greenhouse gases or reduce CO2-absorbing vegetation, increasing the greenhouse effect.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Colligative properties depend on the number of solute particles, not their identity, and include boiling point elevation, freezing point depression, and osmotic pressure. Surface tension is a property of the liquid's intermolecular forces and is not classified as a colligative property.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Concentrated tetraoxosulphate(VI) acid (H2SO4) is the standard drying agent used for hydrogen gas since H2 does not react with it. Anhydrous CaCl2 and P4O10 could also dry H2 in principle, but concentrated H2SO4 is the conventional textbook choice for this purpose.",
+      "solvable": true,
+      "issue": "Anhydrous CaCl2 and P4O10 are also chemically suitable to dry neutral H2 gas, so option A is the conventional expected answer but not the only technically defensible one.",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Sodium, magnesium, phosphorus, and chlorine are all period 3 elements, and atomic radius decreases across a period due to increasing nuclear charge pulling electrons closer. Chlorine, being furthest right among these (excluding the noble gas argon), has the smallest atomic radius, while sodium has the largest.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The equilibrium constant Kc is a function of temperature only; changing pressure or concentration shifts the position of equilibrium but not the value of Kc, and a catalyst affects only the rate at which equilibrium is reached. Therefore temperature is the only listed factor that changes Kc itself.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Reaction rate is defined as the change in concentration of a reactant or product per unit time. 'Product divided by time' and 'reactant x time' are not valid rate expressions, and while 'mass/time' resembles a rate expression it is not the standard chemical definition used for concentration-based rates.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Zn + Cu2+ -> Zn2+ + Cu involves Zn being oxidized (loses electrons, 0 to +2) and Cu2+ being reduced (gains electrons, +2 to 0), making it a genuine redox reaction. The acid-base neutralization (A) and double displacement/precipitation reactions (C, D) involve no change in oxidation states.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Heating a gas increases the average kinetic energy of its molecules, so they move faster and, at constant pressure, spread farther apart, causing expansion. Mass does not increase on heating, and molecules actually collide more often (not less) as they move faster.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A Kc value of 1.5 x 10^5, being much greater than 1, indicates that at equilibrium the concentration of products greatly exceeds that of reactants, i.e. products are significantly favored. Kc reflects the equilibrium position, not reaction rate or completeness, so 'slow' and 'at completion' are incorrect interpretations.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The reducing agent is the species that is itself oxidized (loses electrons), and oxidation occurs at the anode in an electrochemical cell. Option A incorrectly pairs the anode with reduction, and option B incorrectly pairs the cathode with oxidation; in a galvanic cell reduction occurs at the cathode.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "But-2-ene (C4H8) is a positional isomer of but-1-ene (C4H8), differing only in the location of the double bond, which is the isomerism relationship typically tested at this level. Butan-2-ol (C4H10O) and ethyne (C2H2) have different molecular formulas so are not isomers at all.",
+      "solvable": true,
+      "issue": "Cyclobutane also has molecular formula C4H8 and is technically a structural (ring) isomer of but-1-ene, making it a second defensible answer alongside but-2-ene; the intended answer is most likely but-2-ene since it shares the same functional class.",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Graphite conducts electricity because each carbon atom is bonded to only three others within a layer, leaving one delocalized electron per atom that is free to move along the plane of the layer. Graphite has no free ions or metal atoms, and the weak van der Waals forces between layers explain its softness/lubricating property, not its conductivity.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Aldehydes have a hydrogen atom attached to the carbonyl carbon, making them easily oxidized further to carboxylic acids, whereas ketones lack this hydrogen and resist further oxidation. Both aldehydes and ketones react similarly regarding hydrogen bonding, reaction with sodium metal (neither reacts, lacking an -OH), and water solubility for small members, so oxidative behavior is the key distinguishing property.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Carboxylic acids are acidic because the carboxylate anion formed after loss of the acidic proton is stabilized by resonance delocalization of the negative charge over two oxygen atoms, making the anion more stable and the proton loss more favorable. The carbonyl group alone (A) or hydrogen bonding (D) do not account for the enhanced acidity compared to alcohols, which also have hydrogen bonding but are far less acidic.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "At STP, moles = 2.24 dm3 / 22.4 dm3mol-1 = 0.1 mol, so molar mass = 5.6g / 0.1 mol = 56 g/mol. Option B (44) would be the answer only if the volume were 2.24 dm3 for a different mass, so it is not supported by the given data.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Elemental chlorine (oxidation state 0) sits between -1 and its positive oxoacid states, so it disproportionates, e.g. with cold NaOH to give NaCl (Cl reduced to -1) and NaOCl (Cl oxidized to +1), meaning Cl2 acts as both oxidizing and reducing agent. NaClO also disproportionates on heating, so it is a defensible alternative, but Cl2's self-oxidation-reduction is the classic textbook example tested at this level.",
+      "solvable": true,
+      "issue": "NaClO can also disproportionate (3NaClO -> 2NaCl + NaClO3), making it a secondary defensible answer.",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In HClO4 (perchloric acid), chlorine has an oxidation state of +7, the maximum it can attain among its oxoacids. The other options (HClO +1, HClO2 +3) have lower oxidation states, so they are ruled out.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "SO3 is an acidic oxide that reacts violently (vigorously) with water to form sulphuric acid, H2SO4. It does not form H2S (option B, which is unrelated) nor is it basic, ruling out the other distractors.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "NO (nitrogen monoxide) is a neutral oxide, showing neither acidic nor basic behaviour with water. N2O4 and N2O3 are acidic oxides (forming HNO3/HNO2 mixtures), and NO4 is not a genuine nitrogen oxide.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "In NH4+, nitrogen forms three ordinary covalent N-H bonds using its three unpaired electrons, and a fourth bond forms when the nitrogen lone pair is donated to H+, making it a dative (coordinate) bond. Once formed, all four N-H bonds are identical in length and strength, but their origin is one dative and three covalent, ruling out option B.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Ethene, an alkene with a C=C double bond, decolorizes bromine water via addition and decolorizes acidified KMnO4 via oxidation to a diol. Benzene resists both due to its stable aromatic ring, and ethanol/methane lack the reactive double bond needed for these tests.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In the blast furnace, CO reduces iron(III) oxide to molten iron (Fe2O3 + 3CO -> 2Fe + 3CO2), acting as the reducing agent. It is not an oxidizing agent to silica; silica is removed by reaction with limestone-derived CaO, not by CO.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Heat of reaction = sum(Hf products) - sum(Hf reactants) = 2(-396) - 2(-297) = -792 + 594 = -198 kJ/mol. Option A (-99) is off by a factor of two, arising from forgetting to double the per-mole values for the balanced equation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Methyl ethanoate (CH3COOCH3) reacting with ammonia undergoes nucleophilic substitution at the carbonyl, displacing the methoxy group as methanol and forming ethanamide (CH3CONH2). Option C reverses the alcohol product incorrectly, and options A and B misname the amide product as an amine.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0791,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1064,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1067,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.092,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.3842
+}

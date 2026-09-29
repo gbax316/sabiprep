@@ -1,0 +1,146 @@
+{
+  "slug": "crs-utme",
+  "subject": "Christian Religious Studies",
+  "gate": {
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T13:58:21",
+    "note": ""
+  },
+  "units": {
+    "2025": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T13:22:32",
+          "summary": "40/40 codex, 40/40 claude",
+          "seconds": 350,
+          "cost_usd": 0.66
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T13:22:35",
+          "summary": "agreed-soft 7, verified 33",
+          "seconds": 2,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T13:24:34",
+          "summary": "7 ruled: key 7",
+          "seconds": 118,
+          "cost_usd": 0.21
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T13:24:37",
+          "summary": "keyed 40",
+          "seconds": 2,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T13:27:21",
+          "summary": "clear 40; 0 taxonomy findings",
+          "seconds": 163,
+          "cost_usd": 0.43
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T13:32:49",
+          "summary": "40 written in 2 part(s); answer challenges none; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 328,
+          "cost_usd": 1.9
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T13:46:09",
+          "summary": "40 reviewed, 9 fail, fact errors [25, 28]",
+          "seconds": 800,
+          "cost_usd": 2.33
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T13:52:05",
+          "summary": "11 accepted, 2 rejected; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 355,
+          "cost_usd": 1.82
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T13:57:33",
+          "summary": "10 changed items re-reviewed, 1 still fail [19]",
+          "seconds": 327,
+          "cost_usd": 0.59
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T13:58:18",
+          "summary": "1 ruled on the last pass, held none; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 45,
+          "cost_usd": 0.26
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T13:58:18",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T13:58:18",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T13:58:18",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T13:58:18",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T13:58:18",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T13:58:18",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T13:58:20",
+          "summary": "PREVIEW (no image base set): crs-utme.2025.PREVIEW.csv, 0 held, 1 pre-flight flags; style scan: REVIEW (29 across 18 location(s))",
+          "seconds": 2,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T13:58:21",
+          "summary": "crs-utme.2025.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": []
+    }
+  },
+  "cost_usd": 8.2
+}

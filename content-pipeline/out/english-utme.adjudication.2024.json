@@ -1,0 +1,118 @@
+{
+  "year": 2024,
+  "paper": 1,
+  "rulings": {
+    "13": {
+      "q_number": 13,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "With neither...nor the verb agrees with the nearer subject, the plural 'the teachers', so A is out. The strongest rival is C, 'were', which is also plural. But the sentence has no past-time marker, and in this JAMB item type the unmarked present is the expected default, so the setter's contrast is is/are. D, 'have been', is grammatical in form but shifts to perfect aspect without any cue, and a well-prepared student would pick B.",
+      "sided_with": "both"
+    },
+    "14": {
+      "q_number": 14,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Standard Nigerian secondary texts teach that a collective noun takes a plural verb when its members are thought of as acting separately, and 'The committee are divided' is the textbook example of this. 'Divided' means the members hold different views, so the committee is not acting as one unit. The strongest argument for B is that a collective noun takes a singular verb by default and American usage would keep 'is'. But this item is set up to test the exception, and the singular reading contradicts the sense of 'divided'. C, 'were', is plural too but has no past-time cue, as in Q13.",
+      "sided_with": "claude"
+    },
+    "15": {
+      "q_number": 15,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "'A variety of' followed by a plural noun works as a quantifier meaning 'various', like 'a number of', so the verb agrees with 'options' and is plural: 'are'. The strongest argument for A is that 'variety' is grammatically the head noun, and some prescriptive grammars say 'is'. But the pattern taught at this level, as with 'a number of', gives a plural verb, and B is the expected key. D, 'were', is plural but has no past-time cue.",
+      "sided_with": "both"
+    },
+    "26": {
+      "q_number": 26,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "'You'd' is 'you would', and 'rather not' makes the statement negative, so the rule of a positive tag after a negative statement gives 'would you'. The strongest argument for B is that 'would rather' tags are unusual and some drills ignore the 'not'. But the negation is explicit in the stem, and the reversal rule taught in Nigerian texts gives A. C and D use 'did', the wrong auxiliary, since the contraction is 'would', not 'had'.",
+      "sided_with": "both"
+    },
+    "38": {
+      "q_number": 38,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Emphatic stress on SCHOOL contrasts the destination with another place, and A is the only option that denies a different destination. The strongest argument for D is that it also concerns destination, but 'didn't walk home' is about the return journey, not an alternative to where they went. B would need stress on WALKED and C on CHILDREN. The codex hedge about open alternatives is over-cautious, because only A contrasts the stressed element.",
+      "sided_with": "both"
+    },
+    "39": {
+      "q_number": 39,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Stress on BOUGHT contrasts the way the cake was obtained, and A (she did not bake it) is the natural contrast. C, 'borrowed', also contrasts the verb, but it is stated as a positive alternative rather than what the stress implies was not done, and nobody borrows a cake. B would need stress on SISTER and D on CAKE, so A is the key.",
+      "sided_with": "both"
+    },
+    "41": {
+      "q_number": 41,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This is a recall question on a detail of the prescribed novel 'The Life Changer', and neither the novel nor the relevant extract is in the item. A key cannot be set from the item or from general knowledge. Claude's B (Queen Amina Hall) is a plausible memory, but it is uncertain, and A (Queen Elizabeth Hall) is also a women's hall name, so elimination does not settle it. The item needs to be keyed against the text before release.",
+      "sided_with": "codex"
+    },
+    "42": {
+      "q_number": 42,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This is a set-text recall question, and the source text is not supplied. The stem is also damaged ('introduced that was introduced'), though the intended meaning is clear. Claude's B (Dambu Nama) comes from weak recall, and C and D are equally plausible northern foods, so no letter can responsibly be keyed without checking the novel.",
+      "sided_with": "codex"
+    },
+    "43": {
+      "q_number": 43,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This is a set-text recall question with no source supplied. All four options are philosophy courses, so nothing in the item narrows the choice. Claude's A (Political Philosophy) was given with weak recall, and it cannot be keyed until it is verified against the novel.",
+      "sided_with": "codex"
+    },
+    "44": {
+      "q_number": 44,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This is a set-text recall question with no source supplied. Claude's B (Ethics and Disciplinary Committee chair) fits a disciplinary episode in the plot, but A (Head of Department) is an equally natural role for a lecturer, and the item alone gives no basis for choosing. It must be verified against the text before it is keyed.",
+      "sided_with": "codex"
+    },
+    "45": {
+      "q_number": 45,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This is a set-text recall question on a trivial detail, and no source is supplied. Three options are Samsung series, and Claude's C was an admitted guess. There is no way to key it from the item, so it must be checked against the novel.",
+      "sided_with": "codex"
+    },
+    "46": {
+      "q_number": 46,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This is a set-text recall question with no source supplied. Claude's A (Salma) is uncertain, and Claude names B (Joyce) as a strong alternative. With two characters both plausible and no text to check, a key would be a guess.",
+      "sided_with": "codex"
+    },
+    "47": {
+      "q_number": 47,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This asks who is addressed in a quoted line from the set text, but the surrounding passage is not supplied, and the stem says 'except' for 'excerpt'. Claude's A (Omar) is a reasonable inference from the novel's frame, where Ummi warns her children, but Salma is also one of the children. The addressee cannot be confirmed without the text.",
+      "sided_with": "codex"
+    },
+    "48": {
+      "q_number": 48,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This asks about the author's business, which is biographical, not part of the text, and the item gives no source for it. Claude's D (She's Boutique Afrique) is offered as probable, but it is a fact about a real person that cannot be confirmed here. It should be verified against the book's author note before it is keyed.",
+      "sided_with": "codex"
+    },
+    "49": {
+      "q_number": 49,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This is a set-text recall question with no source supplied. Claude's A (Lafiaji) was an admitted best guess. Only B can be ruled out on plausibility, and A, C and D all remain possible. It must be keyed from the novel.",
+      "sided_with": "codex"
+    },
+    "50": {
+      "q_number": 50,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "This asks who a quoted line refers to in the set text, but the passage is not supplied, and the stem says 'except' for 'excerpt'. Claude's A (Omar) rests on a general sense of the family conversations, not on recall of this line, and B and C are characters as well. It cannot be keyed without the text.",
+      "sided_with": "codex"
+    }
+  }
+}

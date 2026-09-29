@@ -1,0 +1,67 @@
+{
+  "entries": [
+    {
+      "q_number": 19,
+      "source": "codex",
+      "finding": "hint3 says 'two options fail the double-letter count... of the two left', but three options fail the cc/mm count",
+      "decision": "accepted",
+      "reason": "Checked against the options: A and D have one m, C has one c, so only B passes both counts. The hint's premise is false and would confuse a student counting correctly.",
+      "change": "hint3 rewritten: check the c's, then the m's, cross out any option failing either count, then confirm the ending has a single t. Codex's wording was not used as-is because it states outright that only one option passes.",
+      "round": 1
+    },
+    {
+      "q_number": 19,
+      "source": "check-8",
+      "finding": "exam tip says committee has 'two doubled pairs'",
+      "decision": "accepted",
+      "reason": "committee has three doubled letters (mm, tt, ee), so 'two doubled pairs' is wrong for it.",
+      "change": "Tip now says committee, embarrass and occurrence 'also have more than one doubled letter'.",
+      "round": 1
+    },
+    {
+      "q_number": 37,
+      "source": "codex",
+      "finding": "hint3 ('which one sits right before -ity?') lets the student answer by looking at the split, without thinking",
+      "decision": "accepted",
+      "reason": "Once hint2 gives the rule, the draft hint3 just points at the syllable next to -ity. That fails the hint 3 test.",
+      "change": "hint3 replaced with Codex's fix: narrow to IM and MU and have the student compare the stress in immune with immunity said aloud.",
+      "round": 1
+    },
+    {
+      "q_number": 10,
+      "source": "check-11",
+      "finding": "hint3 'The prefix in- reverses a word's meaning' and solution 'The prefix in- means not' are unscoped absolutes",
+      "decision": "accepted",
+      "reason": "in- does not always mean not (income, inflammable, invaluable).",
+      "change": "hint3: 'The prefix in- often means not.' Solution: 'Here the prefix in- means not'.",
+      "round": 1
+    },
+    {
+      "q_number": 18,
+      "source": "check-11",
+      "finding": "tip: 'By the time plus a present verb takes will have plus the past participle' stated as a rule",
+      "decision": "accepted",
+      "reason": "Not always true, for example 'By the time we arrive, we will be tired.'",
+      "change": "Added 'usually' to both halves of the tip.",
+      "round": 1
+    },
+    {
+      "q_number": 20,
+      "source": "check-11",
+      "finding": "tip: with 'by the time' and a future event, 'choose will have plus the past participle' stated as a rule",
+      "decision": "accepted",
+      "reason": "Same over-general rule as Q18.",
+      "change": "Tip now says will have plus the past participle 'is usually the form to choose'.",
+      "round": 1
+    },
+    {
+      "q_number": 0,
+      "source": "check-12",
+      "finding": "sibling leak check across s01 (Q1-6), s02 (Q7-12), s03 (Q13-18), s04 (Q28-30), s05 (Q31-32), s06 (Q33-34), s07 (Q35-37), s08 (Q38-39)",
+      "decision": "rejected",
+      "reason": "These groups share only an instruction line, and every item has its own sentence or word. No hint names or points to a sibling's answer. Q35 hint2 ('-ize usually does not move the stress') and Q36 hint2 ('stress can move when an ending is added') each apply to their own word and settle nothing in Q37.",
+      "change": "",
+      "round": 1
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "18": {
+      "q_number": 18,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Hint 2 says: 'The syllabus list includes intellectual, communicative, artistic, leadership and life-coping skills. Terms that are not on that list are unlikely to be the answer.' The settled answer, manipulative skills, is not one of the five terms named in that sentence, so a student who applies the hint's own rule would wrongly deprioritise the correct option. This also contradicts the solution itself, which gives the full eight-item syllabus list (life-coping, manipulative, intellectual, communicative, artistic, leadership, vocational and ICT) and states that manipulative skills is on it. The hint is internally inconsistent with the solution and actively misleading rather than merely unhelpful.",
+      "fix": "hint2: The syllabus names eight types of youth empowerment skill: life-coping, manipulative, intellectual, communicative, artistic, leadership, vocational and ICT skills. A term that is not one of these eight is unlikely to be the answer.",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 only eliminates option B (the prerogative of mercy), leaving three options (A, C, D) instead of the usual two. Hint 3 then says: 'Of the options left, which one describes protection from court cases, and which ones describe something much wider?' 'Protection from court cases' is close to a direct paraphrase of option A, 'Some public officers cannot be sued', so a student can match the wording straight to the option without working through the reasoning. The test for hint 3 is that a student should not be able to answer it without thinking, and here the near-verbatim match does the work for them.",
+      "fix": "hint2: The power to forgive a convicted person is a different constitutional power, called the prerogative of mercy. Also remember that officers with immunity can still be voted out of office at election time, so immunity does not mean they escape all accountability.\nhint3: Of the two options left, one is a narrow legal protection and the other is a broad claim about how power is used in general. Immunity is a specific rule about legal cases, not a promise about how a leader governs. Which of the two is the narrow, specific legal protection?",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.513,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.513
+}

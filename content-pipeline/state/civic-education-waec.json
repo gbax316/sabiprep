@@ -2,12 +2,172 @@
   "slug": "civic-education-waec",
   "subject": "Civic Education",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T13:55:00",
     "note": ""
   },
-  "units": {},
-  "cost_usd": 6.46,
+  "units": {
+    "2025": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T13:23:52",
+          "summary": "50/50 codex, 50/50 claude",
+          "seconds": 429,
+          "cost_usd": 0.88
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T13:23:53",
+          "summary": "agreed-soft 12, disagree 1, unsolvable 3, verified 34",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T13:26:07",
+          "summary": "13 ruled: ambiguous 2, key 11",
+          "seconds": 133,
+          "cost_usd": 0.27
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T13:26:08",
+          "summary": "ambiguous 2, defective 3, keyed 45",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T13:28:30",
+          "summary": "clear 43, overlap 2; 2 taxonomy findings",
+          "seconds": 141,
+          "cost_usd": 0.34
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T13:32:51",
+          "summary": "45 written in 2 part(s); answer challenges none; style scan: REVIEW (2 across 2 location(s))",
+          "seconds": 260,
+          "cost_usd": 2.11
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T13:42:29",
+          "summary": "45 reviewed, 5 fail, fact errors [24]",
+          "seconds": 577,
+          "cost_usd": 1.84
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T13:47:35",
+          "summary": "6 accepted, 1 rejected; style scan: REVIEW (2 across 2 location(s))",
+          "seconds": 306,
+          "cost_usd": 1.7
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T13:53:50",
+          "summary": "6 changed items re-reviewed, 2 still fail [24, 40]",
+          "seconds": 375,
+          "cost_usd": 0.51
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T13:54:57",
+          "summary": "2 ruled on the last pass, held none; style scan: REVIEW (2 across 2 location(s))",
+          "seconds": 66,
+          "cost_usd": 0.33
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T13:54:57",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T13:54:57",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T13:54:57",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T13:54:57",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T13:54:57",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T13:54:57",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T13:54:59",
+          "summary": "PREVIEW (no image base set): civic-education-waec.2025.PREVIEW.csv, 5 held, 0 pre-flight flags; style scan: REVIEW (4 across 3 location(s))",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T13:54:59",
+          "summary": "civic-education-waec.2025.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 31,
+          "why": "defective",
+          "detail": "Stem is a complete sentence with no gap for the listed options to fill, and option A is a truncated "
+        },
+        {
+          "q_number": 37,
+          "why": "ambiguous",
+          "detail": "Trade unions, market women associations and student unions are the textbook examples of pressure gro"
+        },
+        {
+          "q_number": 43,
+          "why": "defective",
+          "detail": "The question references a shared diagram with letter X, but no image was attached or provided in thi"
+        },
+        {
+          "q_number": 44,
+          "why": "defective",
+          "detail": "The question depends on the same missing diagram referenced in question 43, which was not attached. "
+        },
+        {
+          "q_number": 47,
+          "why": "ambiguous",
+          "detail": "Standard Nigerian Civic Education texts list both membership dues and donations or grants from forei"
+        }
+      ]
+    }
+  },
+  "cost_usd": 14.44,
   "taxonomy_cost_usd": 6.46
 }

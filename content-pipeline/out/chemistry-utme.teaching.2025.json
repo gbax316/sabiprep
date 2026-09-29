@@ -1,0 +1,350 @@
+{
+  "subject": "Chemistry",
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "states.gas-laws",
+      "difficulty": "easy",
+      "hint1": "This is about how the pressure, volume and temperature of a gas are linked. Notice which quantity is held fixed.",
+      "hint2": "With the temperature fixed, Boyle's law applies: for a fixed mass of gas, pressure × volume stays the same.",
+      "hint3": "If P × V cannot change and P goes up, think about what V must do to keep the product fixed. Then ask whether a real gas can ever be squeezed to nothing.",
+      "solution": "Answer: C. Volume decreases\n\nBoyle's law: for a fixed mass of gas at constant temperature, pressure is inversely proportional to volume, so P × V stays the same. Pushing harder on the gas squeezes its particles closer together.\n\nHow to tell:\nP₁V₁ = P₂V₂\nIf the pressure doubles, P₂ = 2P₁\nV₂ = P₁V₁ ÷ 2P₁ = ½V₁\nThe volume halves, so it decreases.\n\nWhy not the others:\nA. Volume increases: that is the opposite of an inverse relationship.\nB. Volume remains constant: V must change to keep P × V the same when P changes.\nD. Volume becomes zero: V gets smaller, but a real gas is never squeezed to zero volume because its particles still take up space.\n\nExam tip: in gas law questions, first note what is held constant. Constant temperature means Boyle's law: when P goes up, V goes down by the same factor."
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "acids-bases.ph",
+      "difficulty": "medium",
+      "hint1": "pH is a short way of writing the hydrogen ion concentration using powers of ten.",
+      "hint2": "pH = −log[H₃O⁺], so [H₃O⁺] is 10 raised to the power of minus the pH.",
+      "hint3": "Only two options have a negative power of ten. Decide which one you get when the pH is exactly 3, and check that its unit is complete.",
+      "solution": "Answer: A. 1 × 10⁻³ mol/dm³\n\npH is defined as pH = −log[H₃O⁺]. The pH number is the negative power of ten in the concentration, so each step of 1 on the pH scale is a factor of 10 in concentration.\n\nHow to tell:\npH = −log[H₃O⁺] = 3\nlog[H₃O⁺] = −3\n[H₃O⁺] = 10⁻³ = 1 × 10⁻³ mol/dm³\n\nWhy not the others:\nB. 1 × 10⁻⁴ mol/dm: this is the concentration for pH 4, and the unit is also incomplete.\nC. 1 × 10³ mol/dm³: the sign of the power is wrong; that is 1000 mol/dm³, far more than any real solution.\nD. 3 × 10⁻¹ mol/dm³: the pH number is not a multiplier; it is the power of ten.\n\nExam tip: when the pH is a whole number n, [H₃O⁺] = 1 × 10⁻ⁿ mol/dm³. A lower pH means a larger H₃O⁺ concentration."
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "redox.agents",
+      "difficulty": "easy",
+      "hint1": "Potassium dichromate is a common oxidising agent in the laboratory. Start by recalling the colour of its solution.",
+      "hint2": "When a reducing agent reacts with it, the dichromate is itself reduced to chromium(III) ions, Cr³⁺, which have a different colour. The change starts from the dichromate colour.",
+      "hint3": "Pick the option that starts with the colour of dichromate solution and ends with the colour of Cr³⁺ ions, not the other way round.",
+      "solution": "Answer: A. Orange to green\n\nPotassium dichromate, K₂Cr₂O₇ (syllabus name potassium heptaoxodichromate(VI)), is an oxidising agent. Its Cr₂O₇²⁻ ion is orange. When a reducing agent reacts with the acidified solution, chromium is reduced from +6 to +3, and Cr³⁺ ions are green.\n\nHow to tell: the reaction starts with orange dichromate and ends with green Cr³⁺, so the colour goes from orange to green.\n\nWhy not the others:\nB. Green to orange: this is the reverse; green Cr³⁺ is the product, not the starting substance.\nC. Red to blue: neither colour belongs to dichromate or Cr³⁺; this is a litmus colour change.\nD. Yellow to brown: this does not describe dichromate being reduced.\n\nExam tip: learn the two reagent tests as a pair. Acidified potassium dichromate goes orange to green, and acidified potassium tetraoxomanganate(VII) goes purple to colourless. Both show that a reducing agent, such as SO₂, is present."
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "pollution.air",
+      "difficulty": "medium",
+      "hint1": "Recall how each gas harms the body. Some irritate the soft, moist tissues they touch; others harm the body in a different way.",
+      "hint2": "Carbon monoxide harms by joining haemoglobin in the blood so it cannot carry oxygen, not by irritating tissue. Ozone is O₃, a form of oxygen, not an oxide of another element.",
+      "hint3": "Two oxides remain, and both come from burning fuels. Recall which one the syllabus gives for irritating the eyes, nose and airways, and which one it links mainly with smog.",
+      "solution": "Answer: C. Sulphur dioxide\n\nSulphur dioxide, SO₂ (sulphur(IV) oxide), is a sharp, choking gas. It dissolves in the moisture of the eyes, nose and airways to form an acid, which irritates them. It comes mainly from burning fuels that contain sulphur.\n\nHow to tell: the question asks for an oxide that irritates the eyes, nose and respiratory tract (the airways). In the syllabus list of air pollutants, this irritation is the effect given for sulphur dioxide.\n\nWhy not the others:\nA. Carbon monoxide: it harms by binding haemoglobin so the blood carries less oxygen; it has no smell and does not irritate.\nB. Nitrogen oxide: oxides of nitrogen can also irritate the airways, but the syllabus links them mainly with acid rain and smog and gives this irritation effect to sulphur dioxide.\nD. Ozone: it is O₃, a form of oxygen rather than an oxide of another element.\n\nExam tip: match each pollutant to its signature effect: CO poisons blood haemoglobin, SO₂ irritates the eyes and airways and causes acid rain, CFCs damage the ozone layer, and CO₂ adds to the greenhouse effect."
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "organic-basics.naming",
+      "difficulty": "easy",
+      "hint1": "Some well-known compounds keep a traditional name that IUPAC accepts as the official one. Picture the structure first: a benzene ring with an OH group.",
+      "hint2": "Benzyl alcohol has a CH₂ between the ring and the OH, so its formula is C₆H₅CH₂OH, not C₆H₅OH. Organic compounds with OH are not named as hydroxides.",
+      "hint3": "Two options are left. One is a descriptive name that some books show in brackets; the other is the name IUPAC actually keeps for this compound.",
+      "solution": "Answer: B. Phenol\n\nWhen an OH group is joined directly to a benzene ring, the compound is a phenol. IUPAC keeps phenol as the official name for the simplest one, C₆H₅OH, in the same way it keeps the name benzene.\n\nHow to tell: C₆H₅ is a benzene ring with one hydrogen removed, and the OH is attached straight to the ring. That is phenol.\n\nWhy not the others:\nA. Benzyl alcohol: that is C₆H₅CH₂OH, with a CH₂ group between the ring and the OH.\nC. Benzene hydroxide: organic OH groups are not named as hydroxides; hydroxide is the OH⁻ ion in bases such as NaOH.\nD. Hydroxybenzene: it describes the structure, and some books show it in brackets, but it is not the name IUPAC uses for this compound.\n\nExam tip: OH directly on the ring means phenol; OH on a CH₂ attached to the ring means benzyl alcohol. Look for that extra CH₂ first."
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "hydrocarbons.alkenes",
+      "difficulty": "easy",
+      "hint1": "Hydration means adding water. Think about what happens when a small molecule adds across a C=C double bond.",
+      "hint2": "Water adds an H to one carbon of the double bond and an OH to the other. An alkane would need hydrogen gas added instead, not water.",
+      "hint3": "Ketones and esters both contain a C=O group. Does adding H and OH across a C=C bond create a C=O group, or something else?",
+      "solution": "Answer: A. Alcohol\n\nHydration is the addition of water across the C=C double bond. The double bond opens, an H goes to one carbon and an OH to the other, giving an alkanol (alcohol). Concentrated H₂SO₄ first adds across the double bond, and the product is then warmed with water to give the alkanol.\n\nHow to tell: CH₂=CH₂ + H₂O → CH₃CH₂OH. Ethene becomes ethanol.\n\nWhy not the others:\nB. Alkane: it comes from adding hydrogen, H₂, with a nickel catalyst, not water.\nC. Ketone: it has a C=O group and is made by oxidising a secondary alkanol, not by adding water to an alkene.\nD. Ester: it is made from an alkanoic acid and an alkanol.\n\nExam tip: for alkene addition, name the product from what is added: H₂ gives an alkane, a halogen gives a dihaloalkane, a hydrogen halide gives a haloalkane, and H₂O gives an alkanol."
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "biomolecules.carbohydrates",
+      "difficulty": "easy",
+      "hint1": "Hydrolysis breaks a disaccharide into its two simple sugar units. Recall which units make up maltose.",
+      "hint2": "Fructose is released when sucrose is hydrolysed, and galactose comes from lactose.",
+      "hint3": "Two options remain. Maltose is formed when starch is broken down, so its units are the same as the units starch is built from.",
+      "solution": "Answer: C. Glucose\n\nMaltose is a disaccharide made of two glucose units joined together. Acid hydrolysis adds water and breaks that link, so the only product is glucose.\n\nHow to tell: C₁₂H₂₂O₁₁ + H₂O → 2C₆H₁₂O₆ (glucose). Maltose comes from the breakdown of starch, which is a long chain of glucose units.\n\nWhy not the others:\nA. Fructose: it comes, together with glucose, from hydrolysis of sucrose.\nB. Mannose: it is not a unit of maltose.\nD. Galactose: it comes, together with glucose, from hydrolysis of lactose.\n\nExam tip: learn the three disaccharides as sums: maltose = glucose + glucose, sucrose = glucose + fructose, lactose = glucose + galactose."
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "organic-basics.isomerism",
+      "difficulty": "medium",
+      "hint1": "Isomers have the same molecular formula but different arrangements of atoms. For an alkane, the part that can be arranged differently is the carbon chain.",
+      "hint2": "Draw every different way to join four carbon atoms. A chain that is only bent or turned on paper is still the same molecule.",
+      "hint3": "Try a straight chain of four, then a chain of three with one carbon branching off the middle. Can you find any other arrangement that is truly different?",
+      "solution": "Answer: A. 2\n\nIsomers are compounds with the same molecular formula but different structures. For an alkane, the only thing that can change is how the carbon chain is arranged, straight or branched.\n\nHow to tell:\nStraight chain: CH₃CH₂CH₂CH₃, butane\nBranched: CH₃CH(CH₃)CH₃, 2-methylpropane\nA branch on an end carbon just makes the straight chain again, so there is no third structure.\n\nWhy not the others:\nB. 3: this is the number of isomers of C₅H₁₂, pentane.\nC. 4: four carbons can be joined in only two different ways, not four.\nD. 5: this is the number of isomers of C₆H₁₄, hexane.\n\nExam tip: learn the counts: C₄H₁₀ has 2 isomers, C₅H₁₂ has 3 and C₆H₁₄ has 5. When drawing, check that each new structure is not an old one turned or bent."
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "common-metals.calcium",
+      "difficulty": "easy",
+      "hint1": "Think about what a reactive metal forms when it reacts with water, and which gas bubbles off.",
+      "hint2": "Water supplies only hydrogen and oxygen, so a carbonate, which needs carbon, or a nitrate, which needs nitrogen, cannot form.",
+      "hint3": "Sodium and water give NaOH and hydrogen. Apply the same pattern to calcium and decide which of the two remaining products fits.",
+      "solution": "Answer: B. Calcium hydroxide\n\nCalcium is a reactive metal. With cold water it replaces hydrogen in the water, forming the metal hydroxide and releasing hydrogen gas.\n\nHow to tell: Ca + 2H₂O → Ca(OH)₂ + H₂. The water turns slightly milky because calcium hydroxide is only slightly soluble.\n\nWhy not the others:\nA. Calcium oxide: it forms when calcium burns in oxygen or when limestone is heated; in water it would itself turn into the hydroxide.\nC. Calcium carbonate: it needs carbon, which water does not supply.\nD. Calcium nitrate: it needs nitrogen, which water does not supply.\n\nExam tip: reactive metal + cold water → metal hydroxide + hydrogen. A metal that reacts well only with steam, such as magnesium, zinc or iron, gives the oxide instead."
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "bonding.shapes",
+      "difficulty": "easy",
+      "hint1": "Hybridisation is linked to shape. Count how many bonds the central carbon forms and how they are arranged in space.",
+      "hint2": "Carbon in methane forms four identical single bonds pointing to the corners of a tetrahedron. sp gives two bonds in a line, and sp² gives three bonds in a flat triangle.",
+      "hint3": "The number of orbitals mixed equals the number of bond directions needed. One s orbital plus how many p orbitals makes four?",
+      "solution": "Answer: C. sp³\n\nIn methane, CH₄, carbon forms four equal single bonds. To do this it mixes one 2s orbital with three 2p orbitals, giving four identical sp³ hybrid orbitals. These point to the corners of a tetrahedron, with bond angles of 109.5°.\n\nHow to tell:\nBonds on carbon: 4, with no lone pairs\nOrbitals mixed: 1 s + 3 p = 4\nHybridisation: sp³, tetrahedral shape\n\nWhy not the others:\nA. sp: it gives two bonds in a straight line, as on each carbon in ethyne.\nB. sp²: it gives three bonds in a flat triangle, as on each carbon in ethene.\nD. sp³d: it needs five orbitals including a d orbital, and carbon's outer shell has no d orbitals.\n\nExam tip: count the bond directions and lone pairs on the central atom: 2 means sp, 3 means sp², 4 means sp³. A double or triple bond counts as one direction."
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "common-metals.aluminium",
+      "difficulty": "easy",
+      "hint1": "Think about what an aircraft needs from its metal: it has to lift off the ground, and it has to last many years in wind and rain.",
+      "hint2": "A heavy metal makes a plane harder to lift, and being magnetic or shiny does nothing to help it fly.",
+      "hint3": "Of the options left, pick the one that meets both needs from hint 1, not just one of them.",
+      "solution": "Answer: C. It is light and does not corrode easily\n\nAluminium has a low density, so large parts can be made without much weight. Its surface quickly forms a thin, tough layer of aluminium oxide that sticks to the metal and protects it from further attack, so it does not corrode easily.\n\nHow to tell: an aeroplane needs a metal that is light, to save fuel and make lift easier, and that lasts in air and moisture. Aluminium, usually as an alloy such as duralumin, gives both.\n\nWhy not the others:\nA. It is malleable and heavy: aluminium is malleable, but it is light, not heavy.\nB. It resists water: this is only part of the reason and says nothing about its low weight.\nD. It is magnetic and shiny: aluminium is not magnetic, and shininess plays no part in flight.\n\nExam tip: for 'why is this metal used' questions, match the property to the job: aircraft need low density, electric cables need good conduction of electricity, cooking pots need good conduction of heat."
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "states.gas-laws",
+      "difficulty": "easy",
+      "hint1": "This is about the one equation that links pressure, volume, temperature and the amount of gas.",
+      "hint2": "The ideal gas equation contains all four of P, V, n and T, plus the gas constant R. A formula with P missing cannot be right.",
+      "hint3": "If n is made the subject correctly, P and V end up on top and R and T underneath. Check each remaining option against that, or against the original form of the equation.",
+      "solution": "Answer: A. PV = nRT\n\nThe ideal gas equation, PV = nRT, links pressure P, volume V, number of moles n and absolute temperature T, with R the molar gas constant (8.314 J mol⁻¹ K⁻¹). Rearranged, it gives the number of moles: n = PV ÷ RT.\n\nHow to tell:\nStart with PV = nRT\nDivide both sides by RT: n = PV ÷ RT\nOnly option A is a correct form of this equation.\n\nWhy not the others:\nB. V = nRT: the pressure is missing, so the two sides do not balance.\nC. n = PVRT: R and T should divide, not multiply.\nD. n = RT/PV: this is upside down; it gives 1 ÷ n, not n.\n\nExam tip: learn PV = nRT and rearrange it for whatever is asked, such as n = PV ÷ RT or P = nRT ÷ V. Put T in kelvin."
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "nitrogen.nitric-acid",
+      "difficulty": "medium",
+      "hint1": "Heating a metal nitrate breaks it down, and the products depend on how reactive the metal is.",
+      "hint2": "Nitrates of very reactive metals such as sodium and potassium lose only some oxygen when heated. Less reactive metals such as copper and lead give an oxide, brown nitrogen dioxide and oxygen.",
+      "hint3": "Potassium is very reactive. If each KNO₃ loses one oxygen atom, what salt is left behind, and what gas is given off?",
+      "solution": "Answer: B. Potassium nitrite and oxygen\n\nWhen heated, the nitrate (trioxonitrate(V)) of a very reactive metal such as potassium or sodium only loses oxygen, leaving the nitrite (dioxonitrate(III)). The reactive metal holds the rest of the ion firmly, so it does not break down further.\n\nHow to tell: 2KNO₃ → 2KNO₂ + O₂. The white solid melts, and a gas that relights a glowing splint is given off.\n\nWhy not the others:\nA. Potassium oxide and oxygen: breaking down all the way to the oxide happens with less reactive metals such as copper, which also give brown NO₂.\nC. Potassium nitrate and nitrogen: potassium nitrate is the starting substance, so it cannot be a product.\nD. Potassium and nitrogen dioxide: heating does not free a metal as reactive as potassium from its compound.\n\nExam tip: heating nitrates follows reactivity: K and Na give the nitrite and O₂; metals from Ca down to Cu give the oxide, NO₂ and O₂; Ag and Hg give the metal, NO₂ and O₂."
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "common-metals.iron",
+      "difficulty": "medium",
+      "hint1": "To screen a magnetic field, a material must interact strongly with magnetism. Think about which metals a magnet attracts.",
+      "hint2": "A magnetic screen works by drawing the field lines into itself and carrying them around the device. Conducting electricity well is a different property and does not do this.",
+      "hint3": "Brass is an alloy of two of the other options. Of the four, only one is strongly attracted by a magnet.",
+      "solution": "Answer: B. Iron\n\nMagnetic screening needs a magnetic (ferromagnetic) material. Soft iron draws magnetic field lines into itself far more easily than air does, so it carries the field around the space it encloses and protects whatever is inside.\n\nHow to tell: of the four, only iron is strongly attracted by a magnet, and that is the property a magnetic screen needs.\n\nWhy not the others:\nA. Brass: it is an alloy of copper and zinc, and it is not magnetic.\nC. Copper: it is an excellent electrical conductor used in wires, but it is not magnetic, so it does not screen steady magnetic fields.\nD. Zinc: it is not magnetic, and is mainly used for galvanising iron.\n\nExam tip: for 'use of a metal' questions, find the one property the job needs. Magnetism points to iron (with cobalt and nickel); conducting electricity points to copper or aluminium."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "nitrogen.nitric-acid",
+      "difficulty": "medium",
+      "hint1": "Ammonium salts behave differently from metal salts when heated, because the ammonium part can break down too.",
+      "hint2": "In this salt, the ammonium ion and the nitrate ion react with each other, giving water and an oxide of nitrogen. Ammonia is the gas given off by heating ammonium salts such as ammonium chloride.",
+      "hint3": "Balance NH₄NO₃ → ? + 2H₂O. Find what is left once four H and two O have gone into water, then work out the oxidation number of nitrogen in it.",
+      "solution": "Answer: B. Nitrogen (I) oxide\n\nAmmonium trioxonitrate(V), NH₄NO₃, contains nitrogen in two forms: −3 in NH₄⁺ and +5 in NO₃⁻. On gentle heating the two parts react with each other, giving dinitrogen oxide, N₂O, in which nitrogen is +1, and water.\n\nHow to tell:\nNH₄NO₃ → N₂O + 2H₂O\nIn N₂O: 2 × (N) + (−2) = 0, so each N is +1\nN₂O is therefore nitrogen(I) oxide, also called laughing gas.\n\nWhy not the others:\nA. Nitrogen gas: it forms only when the salt is heated strongly or explodes; the syllabus reaction on gentle heating gives N₂O.\nC. Ammonia: it comes from heating ammonium salts such as ammonium chloride; here the ammonium part is used up in forming N₂O.\nD. Oxygen: it appears only in the strong-heating or explosive breakdown; gentle heating puts all the oxygen into N₂O and water.\n\nExam tip: name a nitrogen oxide from the oxidation number of nitrogen in it: N₂O is nitrogen(I) oxide, NO is nitrogen(II) oxide and NO₂ is nitrogen(IV) oxide."
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "states.diffusion",
+      "difficulty": "easy",
+      "hint1": "Focus on what has moved and in what state: particles of one solid metal have ended up inside another solid over many years.",
+      "hint2": "Osmosis needs a liquid solvent and a semi-permeable membrane. Sublimation is a change from solid straight to gas.",
+      "hint3": "Of the two left, one is the random jiggling of tiny specks seen under a microscope in a liquid or gas; the other is particles spreading from where they are many to where they are few. Which fits gold spreading into silver?",
+      "solution": "Answer: A. Diffusion\n\nDiffusion is the movement of particles from a region where they are more concentrated to where they are less concentrated. It is fastest in gases, slower in liquids and very slow in solids, because particles in a solid mostly vibrate about fixed places and only rarely change places.\n\nHow to tell: the gold particles started only in the gold bar and ended up inside the silver. They moved from high concentration to low concentration, and the years it took show how slow diffusion in solids is.\n\nWhy not the others:\nB. Osmosis: it is the movement of a solvent, such as water, through a semi-permeable membrane.\nC. Sublimation: it is a change of state from solid directly to gas, not the mixing of two solids.\nD. Brownian motion: it is the random movement of small specks, such as pollen grains, in a liquid or gas, caused by particles hitting them.\n\nExam tip: diffusion can happen in all three states of matter, while osmosis needs a membrane and a solvent. Very slow mixing of two solids in contact is diffusion."
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "pollution.air",
+      "difficulty": "medium",
+      "hint1": "Read the word 'least' carefully. For each option, ask whether it puts greenhouse gases such as carbon dioxide into the air or takes them out.",
+      "hint2": "Burning fuels releases CO₂, and cutting down forests removes trees that would have absorbed CO₂.",
+      "hint3": "Two options remain. One releases a greenhouse gas; decide what the other one does to the amount of CO₂ in the air.",
+      "solution": "Answer: A. Carbon sequestration\n\nThe greenhouse effect is strengthened when gases such as CO₂ and methane build up in the air and trap heat. Carbon sequestration means capturing CO₂ and storing it, for example in trees, soil or underground rock, so it lowers the amount in the air instead of adding to it.\n\nHow to tell: the other three options all raise greenhouse gas levels. Sequestration is the only one that removes CO₂, so it contributes the least.\n\nWhy not the others:\nB. Methane emission: methane is a greenhouse gas that traps more heat per molecule than CO₂.\nC. Combustion: burning fuels releases CO₂.\nD. Deforestation: fewer trees absorb less CO₂, and burning or rotting wood releases more.\n\nExam tip: in 'least' or 'not' questions, look for the one option that works in the opposite direction. Anything that stores or absorbs CO₂ reduces the greenhouse effect."
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "states.liquids",
+      "difficulty": "medium",
+      "hint1": "Colligative properties are properties of a solution that change when a solute is dissolved, and they depend only on how many solute particles there are.",
+      "hint2": "Dissolving a solute such as salt raises a liquid's boiling point and lowers its freezing point, and both changes depend on the number of dissolved particles.",
+      "hint3": "Two options remain. One is the pressure that drives solvent through a membrane into a solution; the other comes from attractions between molecules at a liquid's surface. Which does not depend on counting solute particles?",
+      "solution": "Answer: B. Surface tension\n\nA colligative property of a solution depends on the number of dissolved solute particles, not on what those particles are. The four usually listed are lowering of vapour pressure, elevation (raising) of boiling point, depression (lowering) of freezing point, and osmotic pressure.\n\nHow to tell: surface tension comes from the attractions between molecules at the surface of a liquid. It depends on what the liquid and solute are, not simply on how many particles are dissolved, so it is not on the list.\n\nWhy not the others:\nA. Boiling point elevation: more dissolved particles raise the boiling point more, so it is colligative.\nC. Freezing point depression: more dissolved particles lower the freezing point more, so it is colligative.\nD. Osmotic pressure: it depends on the concentration of dissolved particles, so it is colligative.\n\nExam tip: learn the four colligative properties: vapour pressure lowering, boiling point elevation, freezing point depression and osmotic pressure. Other properties, such as surface tension, viscosity and density, are not colligative."
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "periodic.trends",
+      "difficulty": "medium",
+      "hint1": "Find where each element sits in the periodic table. Are they in the same group or the same period?",
+      "hint2": "All four are in Period 3. Across a period, the number of protons in the nucleus rises while the outer electrons stay in the same shell.",
+      "hint3": "More protons pull the same shells in more tightly. Put the four in order of atomic number and look at the end with the strongest pull.",
+      "solution": "Answer: B. Chlorine\n\nAtomic radius decreases across a period. Moving from left to right, each element has one more proton, so the nuclear charge increases, but the new electron goes into the same outer shell. The stronger pull draws the electrons closer, so the atom is smaller.\n\nHow to tell:\nNa (11), Mg (12), P (15), Cl (17): all in Period 3\nLargest nuclear charge: Cl, with 17 protons\nOrder of size: Na > Mg > P > Cl\n\nWhy not the others:\nA. Sodium: it is at the start of Period 3, so it has the largest radius of the four.\nC. Magnesium: it has fewer protons than chlorine pulling on the same shells, so it is larger.\nD. Phosphorus: it is to the left of chlorine, so its atom is larger.\n\nExam tip: atomic radius gets smaller across a period and larger down a group. For elements in the same period, leaving out the noble gas, the one with the highest atomic number is the smallest."
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "equilibrium.constant",
+      "difficulty": "easy",
+      "hint1": "Keep two ideas apart: the position of an equilibrium, and the value of the equilibrium constant itself.",
+      "hint2": "A catalyst speeds up the forward and backward reactions equally, so it changes neither the position of equilibrium nor Kc.",
+      "hint3": "Changing concentration moves the position, but the mixture then adjusts until the ratio Kc is back to its old value. Of the two factors left, pressure and temperature, which one changes the ratio itself and not just the position?",
+      "solution": "Answer: D. Temperature\n\nKc is the ratio of product concentrations to reactant concentrations at equilibrium, each raised to the power of its number in the equation. For a given reaction, its value changes only when the temperature changes.\n\nHow to tell: if you add more reactant or raise the pressure, the equilibrium shifts, but the concentrations adjust until the ratio returns to the same Kc. A change in temperature favours either the endothermic or the exothermic direction and gives a new value of Kc.\n\nWhy not the others:\nA. Pressure: it can shift the position for reactions of gases, but Kc returns to the same value.\nB. Concentration: the mixture readjusts, so Kc stays the same.\nC. Catalyst: it speeds up both directions equally, so equilibrium is reached sooner but Kc is unchanged.\n\nExam tip: the position of equilibrium can be moved by concentration, pressure and temperature, but the value of K is changed only by temperature."
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "kinetics.rate",
+      "difficulty": "easy",
+      "hint1": "A rate measures how fast something changes. Think about which quantity chemists follow as a reaction goes on.",
+      "hint2": "A rate is a change divided by the time taken, so a quantity multiplied by time cannot be a rate.",
+      "hint3": "Of the options left, decide which quantity chemists use in the definition of rate, and whether it is the amount itself or how much it has changed.",
+      "solution": "Answer: D. change in concentration/time\n\nThe rate of a reaction is how fast a reactant is used up or a product is formed. It is defined as the change in concentration of a reactant or product per unit time.\n\nHow to tell: rate = change in concentration ÷ time taken. For example, if a reactant falls from 0.50 mol/dm³ to 0.30 mol/dm³ in 40 s:\nChange = 0.50 − 0.30 = 0.20 mol/dm³\nRate = 0.20 mol/dm³ ÷ 40 s = 0.005 mol dm⁻³ s⁻¹\n\nWhy not the others:\nA. Product divided by time: it does not say change in amount or concentration, so it is incomplete.\nB. Reactant x time: multiplying by time cannot give how fast something happens.\nC. Rate = mass/time: mass lost per unit time can be used to follow a reaction, but the definition of rate uses concentration.\n\nExam tip: any rate is a change divided by time. In chemistry the standard form is change in concentration ÷ time, with units such as mol dm⁻³ s⁻¹."
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "redox.definitions",
+      "difficulty": "medium",
+      "hint1": "A redox reaction is one in which oxidation numbers change. Check whether any element gains or loses electrons.",
+      "hint2": "In a neutralisation, an acid and a base swap partners and every element keeps its oxidation number.",
+      "hint3": "For each remaining equation, work out the oxidation number of each element on both sides. Also check that each equation makes sense: atoms cannot appear on the right from nowhere.",
+      "solution": "Answer: B. Zn + Cu²⁺ → Zn²⁺ + Cu\n\nA redox reaction has oxidation and reduction happening together. One species loses electrons, so its oxidation number rises, and another gains those electrons, so its oxidation number falls.\n\nHow to tell:\nZn: 0 → +2, loses 2 electrons, oxidised\nCu: +2 → 0, gains 2 electrons, reduced\nBoth changes happen in the same reaction, so it is redox.\n\nWhy not the others:\nA. HCl + NaOH → NaCl + H₂O: this is neutralisation; H stays +1, Cl stays −1, Na stays +1 and O stays −2.\nC. Cl₂ + Na₂SO₄ → BaSO₄ + 2NaCl: this cannot happen as printed, because barium appears on the right with none on the left.\nD. HNO₃ + HCl → AgCl + HNO₃: silver appears on the right with none on the left; the intended reaction of AgNO₃ with HCl is a precipitation with no change in oxidation numbers.\n\nExam tip: to spot redox, look for an element changing between its free state and a compound or ion. A metal displacing another metal from a solution of its ions is always a redox reaction."
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "states.kinetic-theory",
+      "difficulty": "easy",
+      "hint1": "Explain this with the kinetic theory: what does heating do to the particles of a gas?",
+      "hint2": "Heating adds energy, not matter, so the mass of the gas stays the same. The extra energy goes into the motion of the particles.",
+      "hint3": "Faster particles hit the container walls harder and more often. If the gas is free to expand, what happens to the space between its particles?",
+      "solution": "Answer: C. Molecules move faster and farther apart\n\nBy the kinetic theory, heating a gas raises the average kinetic energy of its molecules. They move faster and strike the walls harder, and if the gas is free to expand they push outwards until they are spread over a larger volume.\n\nHow to tell: temperature rises → molecules move faster → at the same pressure they spread farther apart → the volume increases. This is Charles' law explained by particles.\n\nWhy not the others:\nA. Its mass increases: heating adds energy, not matter, so the mass does not change.\nB. Molecules collide less often: faster molecules collide more often, not less.\nD. Pressure drops immediately: heating raises the pressure at first; the gas then expands until its pressure matches the surroundings again.\n\nExam tip: to explain any gas behaviour, go back to the particles: temperature controls how fast they move, and volume depends on how far apart they are."
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "equilibrium.constant",
+      "difficulty": "medium",
+      "hint1": "Kc is products over reactants at equilibrium. Think about what a very large or a very small value of that fraction tells you.",
+      "hint2": "Kc describes the mixture once equilibrium is reached, not how fast it gets there, so it cannot tell you that a reaction is slow.",
+      "hint3": "1.5 × 10⁵ is 150 000. If the top of the fraction is that many times the bottom, which side is there much more of? Remember that a mixture at equilibrium still contains some of both.",
+      "solution": "Answer: B. Products are significantly favored\n\nKc compares the concentrations of products (top of the fraction) with those of reactants (bottom) at equilibrium. A value much larger than 1 means the equilibrium mixture contains far more products than reactants.\n\nHow to tell:\nKc = 1.5 × 10⁵ = 150 000\nThis is much greater than 1\nSo at equilibrium, products greatly outweigh reactants.\n\nWhy not the others:\nA. Reactants are largely favored: that would need Kc much smaller than 1.\nC. Reaction is slow: Kc says nothing about speed; rate is a separate question.\nD. Reaction is at completion: even with a large Kc, some reactants remain at equilibrium, so the reaction has not gone fully to completion.\n\nExam tip: Kc much greater than 1 means products are favoured, Kc much less than 1 means reactants are favoured, and Kc close to 1 means a similar mix. K does not tell you the rate."
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "electrochemistry.cells",
+      "difficulty": "medium",
+      "hint1": "Link the reducing agent to what happens to it in the reaction, then link that process to an electrode.",
+      "hint2": "A reducing agent gives away electrons, so it is itself oxidised. The salt bridge only carries ions between the two halves of the cell to complete the circuit.",
+      "hint3": "Oxidation happens at one electrode and reduction at the other. Two options pair an electrode with the wrong process. Check each pairing.",
+      "solution": "Answer: C. At the anode where oxidation occurs\n\nA reducing agent reduces something else by giving it electrons, so the reducing agent itself is oxidised. In every electrochemical cell, oxidation takes place at the anode and reduction at the cathode.\n\nHow to tell:\nReducing agent → loses electrons → is oxidised\nOxidation → takes place at the anode\nSo the reducing agent is at the anode. In the Daniell cell, zinc is the reducing agent and is the anode: Zn → Zn²⁺ + 2e⁻.\n\nWhy not the others:\nA. At the anode where reduction occurs: reduction takes place at the cathode, not the anode.\nB. At the cathode where oxidation occurs: oxidation takes place at the anode, not the cathode.\nD. In the salt bridge: the salt bridge lets ions move to keep the two halves electrically balanced; no electron transfer happens there.\n\nExam tip: remember 'An Ox, Red Cat': anode oxidation, reduction cathode. This holds for both electrolytic and electrochemical cells."
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "carbon.allotropes",
+      "difficulty": "medium",
+      "hint1": "To conduct electricity, a substance needs charged particles that are free to move. Think about the structure of graphite.",
+      "hint2": "Graphite is pure carbon, so it contains no metal atoms and no ions. The weak forces between its layers explain why it is soft and slippery, not why it conducts.",
+      "hint3": "Each carbon in a graphite layer bonds to only three others, but carbon has four outer electrons. Where does the fourth electron go, and can it move?",
+      "solution": "Answer: A. Delocalized π-electrons between layers\n\nIn graphite, each carbon atom forms strong covalent bonds to three other carbons in a flat layer of hexagons. Carbon has four outer electrons, so each atom has one electron left over. These spare electrons, called π-electrons, are delocalised: they are not tied to one atom and can move through the structure, carrying an electric current.\n\nHow to tell: conduction needs mobile charged particles. Graphite has no ions and no metal, so its mobile carriers are the delocalised electrons. Strictly, these electrons move along each layer rather than across from one layer to the next, which is why graphite conducts best along its layers. The option's wording is loose, but it names the correct cause.\n\nWhy not the others:\nB. Free movement of ions: graphite is made only of carbon atoms and contains no ions.\nC. Presence of metal atoms in the lattice: graphite contains carbon only.\nD. Weak van der Waals forces: these hold the layers together loosely and explain why graphite is soft and slippery, not why it conducts.\n\nExam tip: for any conductor, name the mobile charged particles: delocalised electrons in metals and graphite, free ions in molten or dissolved ionic compounds. Diamond uses all four outer electrons in bonding, so it does not conduct."
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "functional-groups.carbonyls",
+      "difficulty": "medium",
+      "hint1": "Both families contain a C=O group. Compare what is attached to the carbon of that group in each.",
+      "hint2": "Neither family has an O-H group, so neither gives hydrogen with sodium, and small members of both dissolve in water in a similar way.",
+      "hint3": "An aldehyde has a hydrogen atom on its C=O carbon; a ketone has two carbon groups there instead. Which of the two remaining properties depends on that hydrogen?",
+      "solution": "Answer: C. Tendency to undergo further oxidation\n\nAldehydes (alkanals) have a hydrogen atom joined to the carbon of the C=O group, and that hydrogen can be replaced by OH. So an aldehyde is easily oxidised further to an alkanoic acid. Ketones (alkanones) have two carbon groups on the C=O carbon and no such hydrogen, so mild oxidising agents do not attack them.\n\nHow to tell:\nAldehyde: RCHO → RCOOH with mild oxidising agents\nKetone: RCOR′ → no reaction with mild oxidising agents\nThis is why Fehling's solution and Tollens' reagent react with aldehydes but not with ketones.\n\nWhy not the others:\nA. Ability to form hydrogen bonds: both have the same C=O oxygen, so both form hydrogen bonds with water in the same way.\nB. Reaction with sodium metal: neither has an O-H group, so neither gives hydrogen with sodium the way alkanols do.\nD. Ability to dissolve in water: small members of both families dissolve in water, so this does not tell them apart.\n\nExam tip: to tell aldehydes from ketones, use oxidation. Aldehydes are oxidised by Tollens' reagent (silver mirror) and Fehling's solution (red precipitate); ketones are not."
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "functional-groups.alkanoic-acids",
+      "difficulty": "hard",
+      "hint1": "An acid is a substance that gives away H⁺. Think about the ion left behind after the acid loses its H⁺, and how stable that ion is.",
+      "hint2": "Alkanols form hydrogen bonds and ketones contain a C=O group, yet neither turns blue litmus red. So those features alone cannot explain the acidity.",
+      "hint3": "After losing H⁺, the COO⁻ group has two oxygen atoms that could carry the negative charge. Decide which option describes what that does to the ion.",
+      "solution": "Answer: C. Resonance stabilization of the carboxylate anion\n\nAn acid gives up H⁺ more readily when the ion left behind is stable. When a carboxylic acid, RCOOH, loses H⁺, it forms the carboxylate ion, RCOO⁻. Its negative charge is shared equally over both oxygen atoms instead of sitting on one. This sharing, called resonance, makes the ion stable, so the acid gives up H⁺ readily.\n\nHow to tell:\nRCOOH ⇌ RCOO⁻ + H⁺\nIn RCOO⁻, the charge is spread over two oxygen atoms\nIn an alkanol, RO⁻ keeps the charge on one oxygen, so alkanols are far weaker acids.\n\nWhy not the others:\nA. The carbonyl group: aldehydes and ketones also have C=O but do not turn blue litmus red, so C=O alone is not the reason.\nB. The ability of the molecule to form esters: forming esters is a reaction of the acid, not the cause of its acidity; alkanols form esters too.\nD. Their hydrogen bonding: alkanols and water also form hydrogen bonds but are much weaker acids.\n\nExam tip: to compare acid strengths, look at the ion left after H⁺ is lost. The more its negative charge is spread out, the more stable it is and the stronger the acid."
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "states.molar-volume",
+      "difficulty": "medium",
+      "hint1": "At s.t.p., the volume of a gas tells you how many moles it contains. Recall the molar volume.",
+      "hint2": "One mole of any gas occupies 22.4 dm³ at s.t.p. Find the number of moles first, then use molar mass = mass ÷ moles.",
+      "hint3": "2.24 dm³ is a simple fraction of 22.4 dm³. Use that fraction to find the moles, then work out the mass of one whole mole.",
+      "solution": "Answer: D. 56\n\nAt s.t.p. (0 °C and 1 atm), one mole of any gas occupies 22.4 dm³, the molar volume. So the volume of a gas gives its number of moles, and mass ÷ moles gives the molar mass. The number in the molar mass is the relative molecular mass.\n\nHow to tell:\nMoles = volume ÷ molar volume\nMoles = 2.24 dm³ ÷ 22.4 dm³/mol = 0.1 mol\nMolar mass = mass ÷ moles\nMolar mass = 5.6 g ÷ 0.1 mol = 56 g/mol\nRelative molecular mass = 56 (it has no unit)\n\nWhy not the others:\nA. 22: this does not come from the data; it may come from mixing up the molar volume, 22.4, with the answer.\nB. 44: that is the relative molecular mass of CO₂; 5.6 g of CO₂ would occupy about 2.85 dm³, not 2.24 dm³.\nC. 28: this is 5.6 ÷ 0.2, which would need twice the volume, 4.48 dm³.\n\nExam tip: for gases at s.t.p., go through moles first: moles = volume ÷ 22.4 dm³, then Mr = mass ÷ moles. Use 22.4 with dm³ and 22 400 with cm³."
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "redox.agents",
+      "difficulty": "hard",
+      "hint1": "A species that can act as both an oxidising and a reducing agent must be able to go both up and down in oxidation number. Work out chlorine's oxidation number in each option.",
+      "hint2": "Chlorine's oxidation numbers run from −1, its lowest, up to +7. In NaCl chlorine is −1, so it can only be oxidised, which means it can act only as a reducing agent.",
+      "hint3": "The textbook example of one species being oxidised and reduced in the same reaction is chlorine meeting cold sodium hydroxide, which gives both a chloride and a chlorate(I). Which option is the chlorine species that starts that reaction?",
+      "solution": "Answer: D. Cl₂\n\nTo act as both an oxidising agent and a reducing agent, a species must be able to gain electrons and also lose them, so its oxidation number must lie between the lowest and highest values for that element. Chlorine in Cl₂ is 0, between −1 and +7, and it is the standard syllabus example. The question calls Cl₂ a compound; strictly it is an element, but it is still the intended answer.\n\nHow to tell: with cold dilute sodium hydroxide, chlorine is both reduced and oxidised in the same reaction, which is called disproportionation:\nCl₂ + 2NaOH → NaCl + NaClO + H₂O\nCl: 0 → −1 in NaCl (reduced, so Cl₂ acts as an oxidising agent)\nCl: 0 → +1 in NaClO (oxidised, so Cl₂ acts as a reducing agent)\n\nWhy not the others:\nA. NaCl: chlorine is at −1, its lowest oxidation number, so it can only be oxidised and can act only as a reducing agent.\nB. NaClO: chlorine is +1 and it can break down on heating, but the syllabus uses it as an oxidising agent, as in bleach, not as the example of both roles.\nC. HClO₃: chlorine is +5 and the acid is a strong oxidising agent; it is not the syllabus example of both roles.\n\nExam tip: compare a species' oxidation number with the element's lowest and highest values. At the lowest it can only be a reducing agent, at the highest only an oxidising agent, and in between it may act as both."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "redox.oxidation-numbers",
+      "difficulty": "medium",
+      "hint1": "This is an oxidation number question. Recall the usual oxidation numbers of hydrogen and oxygen in compounds, and what the oxidation numbers in a neutral molecule must add up to.",
+      "hint2": "In these acids hydrogen is +1 and oxygen is −2, and the total for the molecule is 0. An oxoacid must contain oxygen, and each extra oxygen atom pushes chlorine's oxidation number up by 2.",
+      "hint3": "Chlorine has seven outer electrons, so +7 is the highest it can reach. For each oxoacid, solve 1 + x − 2n = 0, where n is the number of oxygen atoms, and see which one reaches +7.",
+      "solution": "Answer: C. HClO₄\n\nIn an oxoacid, hydrogen is +1, oxygen is −2 and the oxidation numbers of a neutral molecule add up to zero. So the more oxygen atoms bonded to chlorine, the higher chlorine's oxidation number. Its highest is +7, one for each of its seven outer electrons.\n\nHow to tell: let x be the oxidation number of chlorine in HClO₄.\n(+1) + x + 4(−2) = 0\n1 + x − 8 = 0\nx = +7\n\nWhy not the others:\nA. HCl: it has no oxygen, so it is not an oxoacid at all, and chlorine in it is −1.\nB. HClO: 1 + x − 2 = 0, so chlorine is only +1.\nD. HClO₂: 1 + x − 4 = 0, so chlorine is only +3.\n\nExam tip: for oxoacids of one element with the same number of hydrogen atoms, the one with the most oxygen atoms has the highest oxidation number. Confirm it with H = +1, O = −2 and a total of 0."
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "sulphur.sulphuric-acid",
+      "difficulty": "easy",
+      "hint1": "Decide whether oxides of non-metals are usually acidic or basic, and think about what such an oxide forms when it meets water.",
+      "hint2": "Sulphur is +6 in SO₃. When an oxide like this simply combines with water, the non-metal usually keeps its oxidation number, so the product should still have sulphur at +6. Also, a physical change such as subliming cannot turn a compound into an element.",
+      "hint3": "You should now be choosing between a statement about what kind of oxide SO₃ is and a statement about its reaction with water. Decide which kind of oxide a non-metal oxide like SO₃ is, and which acid has sulphur at +6.",
+      "solution": "Answer: C. It reacts violently with water to form H₂SO₄\n\nSO₃, sulphur (VI) oxide, is an acidic oxide. It is the acid anhydride of tetraoxosulphate (VI) acid, which means adding water to it gives that acid, and the reaction gives out a great deal of heat.\n\nHow to tell:\nSO₃ + H₂O → H₂SO₄\nSulphur is +6 in SO₃ and still +6 in H₂SO₄, as expected when an oxide simply combines with water.\nThe reaction is so vigorous that it forms a dense acid mist, which is why in the Contact process SO₃ is dissolved in concentrated H₂SO₄ instead of water.\n\nWhy not the others:\nA. It is a basic oxide: SO₃ is the oxide of a non-metal and dissolves to give an acid, so it is acidic.\nB. It reacts with water to form H₂S: sulphur is −2 in H₂S, and water cannot reduce sulphur from +6 to −2.\nD. It sublimes easily to form sulphur: SO₃ does turn to vapour easily, but that is a physical change, so it stays SO₃ and does not become sulphur.\n\nExam tip: when an acidic oxide simply combines with water, the acid formed usually keeps the non-metal's oxidation number. SO₂ gives H₂SO₃ (+4), SO₃ gives H₂SO₄ (+6), CO₂ gives H₂CO₃ (+4)."
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "hydrogen-oxygen.oxides",
+      "difficulty": "easy",
+      "hint1": "A neutral oxide gives neither an acid nor an alkali with water, and does not form salts with acids or alkalis. Think about which nitrogen oxides behave like that.",
+      "hint2": "In N₂O₄ and N₂O₃, nitrogen has a high oxidation number, +4 and +3. Oxides like these dissolve in water to give nitrous or nitric acid, so they are acidic, not neutral.",
+      "hint3": "That leaves NO and NO₄. Work out nitrogen's oxidation number in each, taking oxygen as −2, and ask which formula is a real oxide of nitrogen. Then check whether that oxide gives an acid with water.",
+      "solution": "Answer: A. NO\n\nA neutral oxide shows neither acidic nor basic behaviour: it does not give an acid or an alkali with water and does not react with acids or alkalis to form a salt. In the syllabus, nitrogen has two neutral oxides, NO (nitrogen (II) oxide) and N₂O (dinitrogen (I) oxide).\n\nHow to tell: nitrogen is +2 in NO. NO does not dissolve in water to give an acid and does not form a salt with an alkali, so it is neutral. The oxides in B and D have nitrogen at +4 and +3 and dissolve to give acids.\n\nWhy not the others:\nB. N₂O₄: it is acidic, and dissolves in water to give a mixture of HNO₂ and HNO₃.\nC. NO₄: this is not a known stable oxide of nitrogen, since nitrogen would need to be +8.\nD. N₂O₃: it is acidic, the anhydride of nitrous acid: N₂O₃ + H₂O → 2HNO₂.\n\nExam tip: learn the short syllabus list of neutral oxides: CO, NO, N₂O and H₂O. A non-metal oxide not on that list is usually acidic."
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "bonding.covalent",
+      "difficulty": "medium",
+      "hint1": "Think about where the two electrons in each bond come from. In an ordinary covalent bond each atom gives one electron. In a dative (coordinate) bond both electrons come from the same atom.",
+      "hint2": "NH₄⁺ forms when an ammonia molecule, NH₃, picks up a hydrogen ion, H⁺. The H⁺ has no electrons of its own to share.",
+      "hint3": "Count the bonds already present in NH₃ and the lone pairs left on its nitrogen. How many hydrogen ions join, and what kind of bond can each one form?",
+      "solution": "Answer: D. One dative bond and three covalent bonds\n\nA covalent bond is a pair of electrons shared between two atoms, one electron from each. A dative (coordinate) bond is also a shared pair, but both electrons come from one atom that has a lone pair, an unshared pair of outer electrons.\n\nHow to tell:\nNitrogen has 5 outer electrons.\nIn NH₃ it uses 3 of them to form three N–H covalent bonds.\nThe other 2 stay on nitrogen as one lone pair.\nNH₃ + H⁺ → NH₄⁺: the H⁺ has no electrons, so nitrogen gives its lone pair to form the fourth bond, a dative bond.\nTotal: three covalent bonds and one dative bond. Once formed, the four N–H bonds are identical in length and strength. They differ only in where the electrons came from.\n\nWhy not the others:\nA. One covalent and three coordinate bonds: nitrogen in NH₃ has only one lone pair, so it can form only one dative bond.\nB. Four covalent bonds: this ignores that one pair of electrons came wholly from nitrogen, and the question asks how the bonds were formed.\nC. Two covalent and two dative bonds: that would need two lone pairs on nitrogen and two hydrogen ions, but there is one of each.\n\nExam tip: the number of dative bonds equals the number of H⁺ ions added to a neutral molecule. NH₄⁺ (NH₃ + H⁺) has one dative and three covalent bonds. H₃O⁺ (H₂O + H⁺) has one dative and two covalent bonds."
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "hydrocarbons.alkenes",
+      "difficulty": "medium",
+      "hint1": "Bromine water and acidified KMnO₄ are two standard laboratory tests. Ask what structural feature in an organic molecule both tests detect.",
+      "hint2": "Both tests pick out a carbon-carbon double or triple bond. A compound with only single bonds between its carbon atoms does not decolourise bromine water, even if it can react with KMnO₄.",
+      "hint3": "You should be left with two compounds whose structures are often drawn with double bonds. Decide which one's double bond actually takes part in addition reactions easily.",
+      "solution": "Answer: C. Ethene\n\nBromine water (orange-brown) and acidified KMnO₄ (purple) are the syllabus tests for unsaturation, a carbon-carbon double or triple bond. Ethene has a C=C double bond, which bromine adds across and which KMnO₄ oxidises, so both lose their colour.\n\nHow to tell:\nWith bromine: CH₂=CH₂ + Br₂ → CH₂BrCH₂Br, a colourless product, so the orange-brown colour disappears.\nWith acidified KMnO₄: ethene is oxidised to ethane-1,2-diol, and the purple manganate (VII) is reduced to colourless Mn²⁺.\nEthene passes both tests.\n\nWhy not the others:\nA. Benzene: its ring is unusually stable, so under ordinary test conditions it decolourises neither reagent.\nB. Ethanol: it can reduce acidified KMnO₄ as it is oxidised, but it has no C=C, so it does not decolourise bromine water.\nD. Methane: it is saturated, with only single bonds, so it does not react with either reagent under test conditions.\n\nExam tip: a compound that decolourises both bromine water and KMnO₄ has a C=C or C≡C, so look for an alkene or alkyne. Benzene fails both tests, and an alcohol can pass the KMnO₄ test alone."
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "common-metals.iron",
+      "difficulty": "easy",
+      "hint1": "Think about what must happen to iron ore to turn it into iron metal, and which substance in the furnace makes that happen.",
+      "hint2": "Iron ore is mainly iron (III) oxide, Fe₂O₃, so oxygen must be removed from it to get iron. The flux in the blast furnace is limestone, which is not a gas.",
+      "hint3": "Look at what happens to carbon monoxide when it meets Fe₂O₃. Does it gain or lose oxygen, and what does that make it?",
+      "solution": "Answer: C. A reducing agent to iron (III) oxide\n\nA reducing agent removes oxygen from another substance (or gives it electrons) and is itself oxidised. In the blast furnace, carbon monoxide takes oxygen from iron (III) oxide, leaving iron metal.\n\nHow to tell:\nCoke burns: C + O₂ → CO₂\nCO₂ meets more hot coke: CO₂ + C → 2CO\nCO reduces the ore: Fe₂O₃ + 3CO → 2Fe + 3CO₂\nIron goes from +3 to 0, so it is reduced. Carbon goes from +2 in CO to +4 in CO₂, so CO is oxidised and acts as the reducing agent.\n\nWhy not the others:\nA. An oxidising agent to silica: CO gains oxygen, which makes it a reducing agent, and silica is removed by calcium oxide as slag.\nB. A flux to remove impurities: the flux is limestone, CaCO₃, which breaks down to CaO and joins with silica to form calcium silicate slag.\nD. A drying agent for air: CO does not remove water, and the air blown in is hot air, not air dried by CO.\n\nExam tip: in blast furnace questions, match each substance to its job: coke is the fuel and the source of CO, CO is the main reducing agent, and limestone is the flux that turns silica into slag."
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "energetics.heats",
+      "difficulty": "medium",
+      "hint1": "You are given heats of formation. Recall the rule that links the heat change of a reaction to the heats of formation of its products and reactants.",
+      "hint2": "ΔH = ΣΔHf(products) − ΣΔHf(reactants). O₂ is an element in its standard state, so its heat of formation is zero.",
+      "hint3": "Before subtracting, multiply each heat of formation by the number in front of that substance in the equation. Then do the subtraction carefully and check the sign.",
+      "solution": "Answer: B. −198 kJ mol⁻¹\n\nThe heat change of a reaction is the total heat of formation of the products minus the total heat of formation of the reactants, each multiplied by its number of moles in the equation. An element in its standard state has a heat of formation of zero.\n\nHow to tell:\nΔHf of O₂ = 0 kJ mol⁻¹, because O₂ is an element\nProducts: 2 × (−396) = −792 kJ\nReactants: 2 × (−297) + 0 = −594 kJ\nΔH = −792 − (−594)\nΔH = −792 + 594\nΔH = −198 kJ mol⁻¹ for the reaction as written\n\nWhy not the others:\nA. −99 kJ mol⁻¹: this is the change for one mole of SO₃, because it leaves out the 2 in front of SO₂ and SO₃.\nC. +198 kJ mol⁻¹: the size is right but the sign is wrong, which comes from doing reactants minus products.\nD. +683 kJ mol⁻¹: no correct use of the data gives this, and a positive value is impossible here because SO₃ has the more negative heat of formation.\n\nExam tip: for heat of reaction from heats of formation, multiply by the coefficients, set elements to zero, then do products minus reactants. If the products have the more negative total, the answer must be negative."
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "functional-groups.esters",
+      "difficulty": "hard",
+      "hint1": "Split the ester's name into its two parts. Which part came from an alcohol, and which came from an acid?",
+      "hint2": "When ammonia reacts with an ester, NH₂ takes the place of the alcohol part. The acid part keeps its C=O and becomes an amide, and the alcohol part is set free as an alcohol.",
+      "hint3": "Two options name an amide. Count carbons: the part named 'ethanoate' has two carbons and the part named 'methyl' has one. Which of those two options puts each part in the right product?",
+      "solution": "Answer: D. ethanamide and methanol\n\nAn ester is built from an acid part and an alcohol part. With ammonia, the NH₂ group replaces the alcohol part: the acid part becomes an amide, which keeps the C=O group, and the alcohol part is released as the alcohol it came from. It works like hydrolysis, with ammonia in place of water.\n\nHow to tell:\nMethyl ethanoate: 'methyl' is the alcohol part (from methanol), 'ethanoate' is the acid part (from ethanoic acid).\nCH₃COOCH₃ + NH₃ → CH₃CONH₂ + CH₃OH\nThe two-carbon ethanoyl part, CH₃CO–, joins NH₂ to give ethanamide, CH₃CONH₂.\nThe one-carbon methyl part, CH₃O–, takes a hydrogen to give methanol, CH₃OH.\n\nWhy not the others:\nA. methylamine and ethanol: the nitrogen product keeps the C=O, so it is an amide, not an amine, and the alcohol set free has one carbon, not two.\nB. ethylamine and methanol: the alcohol is right, but the nitrogen product is an amide with a C=O, not an amine.\nC. methanamide and ethanol: this swaps the two parts, when the two-carbon acid part becomes the amide and the one-carbon part becomes the alcohol.\n\nExam tip: in an ester name, the first word is the alcohol part and the word ending in '-oate' is the acid part. In hydrolysis or reaction with ammonia, the first word comes off as that alcohol, and the '-oate' part becomes the acid (with water) or the amide (with ammonia)."
+    }
+  ]
+}

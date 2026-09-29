@@ -158,7 +158,11 @@ def main():
         opts = it['options']
         rows.append({
             'subject': cfg['subject'], 'topic': topic, 'exam_type': it['exam_type'],
-            'year': a.year, 'question_text': it['stem'],
+            # A cloze gap has no stem of its own: the passage carries the words and
+            # the question is only its number. The import needs text, so the gap is
+            # named the way the paper's instruction does.
+            'year': a.year, 'question_text': it['stem'].strip() or (
+                f"Choose the option that best fills gap {q} in the passage." if it['passage_text'] else ''),
             'option_a': opts.get('A', ''), 'option_b': opts.get('B', ''),
             'option_c': opts.get('C', ''), 'option_d': opts.get('D', ''),
             'option_e': opts.get('E', ''),

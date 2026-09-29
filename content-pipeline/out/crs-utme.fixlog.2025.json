@@ -1,0 +1,148 @@
+{
+  "entries": [
+    {
+      "q_number": 1,
+      "source": "codex",
+      "finding": "hint 2 states the answer indirectly via 'made in his own image and given power'",
+      "decision": "rejected",
+      "reason": "The standard gives hint 2 the job of stating the decisive principle, which is what it does. Eve was also made in God's image (Genesis 1:27), so hint 2 still leaves Eve and Man, and hint 3 is needed to separate them. The student still has to choose.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 3,
+      "source": "check-11",
+      "finding": "hint 2 'Each mountain in the Old Testament is tied to one big event' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "Sinai, Zion and Carmel each have more than one event in the Old Testament, so the claim is false as stated.",
+      "change": "hint2 now reads 'Each of these mountains is best known for one big event.'",
+      "round": 1
+    },
+    {
+      "q_number": 6,
+      "source": "check-11",
+      "finding": "hint 2 'Jericho and Gilgal belong to the time of Joshua' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "Gilgal is also where Saul was made king and offered his wrong sacrifice (used in this paper's Q14), and Jericho appears in the Elisha stories.",
+      "change": "hint2 now reads 'Jericho and Gilgal are best known from the time of Joshua'.",
+      "round": 1
+    },
+    {
+      "q_number": 11,
+      "source": "codex",
+      "finding": "hint 2 'options that sound kind' leaves only A, hint 3 gives the full translation",
+      "decision": "accepted",
+      "reason": "Three of the four options sound kind, so hint 2 leaves only one option. Hint 3 gives 'not' + 'shown pity', which a student can match to 'No mercy' without thinking.",
+      "change": "hint2 now rules out 'Chosen one' and 'My delight' by name. hint3 narrows to the two opposites (Hosea 1:6 and 2:23) and asks which fits a warning name. I wrote my own wording rather than using Codex's proposed hint3, which was still very direct.",
+      "round": 1
+    },
+    {
+      "q_number": 16,
+      "source": "codex",
+      "finding": "hint 2 citation '(Ezekiel 2-3)' names the answer",
+      "decision": "accepted",
+      "reason": "The book reference is the prophet's name, which gives away the answer.",
+      "change": "Removed '(Ezekiel 2-3)' from hint2.",
+      "round": 1
+    },
+    {
+      "q_number": 19,
+      "source": "codex",
+      "finding": "hint 3 rules out the eunuchs itself, which hands over the answer",
+      "decision": "accepted",
+      "reason": "After hint 2 only the Chaldeans and the eunuchs are left, and hint 3 says the eunuchs did not accuse them, so no choice remains.",
+      "change": "hint3 now describes both remaining groups (a people's name that Daniel also uses for the wise men, and a class of palace servants) and asks which name Daniel 3:8 gives. I did not use Codex's wording because it describes eunuchs as court officials too, so it would not tell the two groups apart.",
+      "round": 1
+    },
+    {
+      "q_number": 23,
+      "source": "codex",
+      "finding": "hint 3 names crucifixion and ascension but asks the student to choose between two other events",
+      "decision": "accepted",
+      "reason": "The two events the hint names are not the two left to choose between, so a student cannot tell what it is asking.",
+      "change": "hint3 replaced with Codex's wording: one event had already happened that morning, the other was forty days away.",
+      "round": 1
+    },
+    {
+      "q_number": 23,
+      "source": "check-12",
+      "finding": "hint 2 'knew him when he broke bread' answers Q34",
+      "decision": "accepted",
+      "reason": "No item has a passage_id, so there are no formal siblings. Still, Q34 asks about the same Emmaus story, and hint 2 here gave its answer word for word to a student working in order. The hint does not need that clause.",
+      "change": "Removed 'and knew him when he broke bread' from hint2.",
+      "round": 1
+    },
+    {
+      "q_number": 25,
+      "source": "codex",
+      "finding": "solution misquotes Acts 12:22 as 'not of man'",
+      "decision": "accepted",
+      "reason": "Acts 12:22 and the question stem both say 'not of a man'.",
+      "change": "Quote corrected to 'The voice of a god, and not of a man'.",
+      "round": 1
+    },
+    {
+      "q_number": 28,
+      "source": "codex",
+      "finding": "'every time the Sadducees appear' is false (Matthew 3:7, 16:1-12)",
+      "decision": "accepted",
+      "reason": "The Sadducees appear in Gospel passages that do not mention the resurrection, so 'every time' is false.",
+      "change": "hint2 now points to the teaching the Gospels name 'when they introduce the Sadducees who came to question Jesus'. The solution's How to tell now says 'most often linked'.",
+      "round": 1
+    },
+    {
+      "q_number": 32,
+      "source": "codex",
+      "finding": "hint 3 paraphrases option A",
+      "decision": "accepted",
+      "reason": "'A movement's success depends on where it comes from' restates option A, so a student can match the words without recalling the story.",
+      "change": "hint3 now asks, of the two options left, which lesson Gamaliel drew from the way both movements ended.",
+      "round": 1
+    },
+    {
+      "q_number": 33,
+      "source": "codex",
+      "finding": "hint 3 paraphrases options A and C",
+      "decision": "accepted",
+      "reason": "'A statement about how God treats the proud and the humble' is option A in other words.",
+      "change": "hint3 now asks which of the two options left could be the words of Proverbs 3:34 quoted in 1 Peter 5:5. I did not use Codex's wording because 'the proverb you identified in hint two' was just as direct.",
+      "round": 1
+    },
+    {
+      "q_number": 25,
+      "source": "check-12",
+      "finding": "hint 3 mentions Caesarea, the answer to Q30",
+      "decision": "rejected",
+      "reason": "The two questions are about different stories and do not share a stem. The hint names Caesarea as where Herod gave his speech, which does not tell a student where Cornelius lived.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 19,
+      "source": "codex",
+      "finding": "hint 1 gives the defining trait of the answer ('the king's own wise men and officials'), which pairs straight to Chaldeans",
+      "decision": "accepted",
+      "reason": "In Daniel 'Chaldeans' is the term for the king's wise men, so hint 1 does hint 3's narrowing work and makes the answer available from the first hint; it also overlaps hint 2.",
+      "change": "Replaced hint 1 with the reviewer's orienting wording: 'Recall Daniel 3:8, and notice which group at Nebuchadnezzar's court is named as the ones who came forward and made the accusation.'",
+      "round": 2
+    },
+    {
+      "q_number": 19,
+      "source": "check-11",
+      "finding": "scan for unscoped absolutes or simplifications",
+      "decision": "rejected",
+      "reason": "No failing claim: Assyria had fallen before Daniel 3's setting, the lions' den accusers (Daniel 6:4) are correct, and no absolute is stated beyond what the text supports.",
+      "change": "",
+      "round": 2
+    },
+    {
+      "q_number": 19,
+      "source": "check-12",
+      "finding": "sibling leaks",
+      "decision": "rejected",
+      "reason": "passage_id is null; the item has no siblings.",
+      "change": "",
+      "round": 2
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "Selenium's status as a metalloid is genuinely contested among sources (many list only B, Si, Ge, As, Sb, Te), but the solution handles this correctly: it teaches the settled answer B, explicitly flags that some textbooks class selenium as a non-metal, and hedges the exam tip with 'often included' rather than stating an absolute. This matches the standard's guidance to teach the examiner's answer while scoping the simplification, so it is not a fact error.",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "fail",
+      "failed_checks": [
+        10
+      ],
+      "fact_error": false,
+      "notes": "The solution's How-to-tell paragraph ends with: \"An oxide like this is called a mixed acid anhydride.\" This is unnecessary jargon for a fifteen-year-old, and worse, it collides with the syllabus's own use of \"acid anhydride\", which in this curriculum names an organic functional group (e.g. ethanoic anhydride), not an inorganic oxide. A student who has met that organic term will be confused by seeing it reused here with a different meaning, and the sentence adds nothing needed to answer the question.",
+      "fix": "So NO₂ reacts with water to give both acids, one nitrogen going down and the other going up.",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 reads: \"Two options remain. The syllabus gives two ways of making ethanol: one is fermentation of sugars. What is the other?\" After hint 2 the remaining options are A (reduction of ethanoic acid) and D (hydration of ethene). This hint gives no principle to weigh them against, no property to check, nothing to eliminate with; it is simply the memorised fact \"the second method of making ethanol is hydration of ethene\", which is the exact wording of option D. A student who has learned the syllabus's two methods answers immediately, with no thinking required, which fails the hint-3 test in the standard.",
+      "fix": "Two options remain. One of these reactions needs a powerful reducing agent that is outside this syllabus. The other adds water directly across the C=C double bond in an alkene, using an acid catalyst. Which one is actually taught as a way of making ethanol?",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The solution introduces an unscoped, unverified exception that is not taught anywhere in the placement's syllabus scope (the taxonomy groups 'dilute H2SO4 and HCl' as one entry with no dilute/very-dilute split, unlike the separate dilute-vs-concentrated-NaCl entries). In 'How to tell' it says: 'If the acid is made very dilute, hydroxide ions are discharged instead and oxygen is given off, but the syllabus answer for dilute hydrochloric acid is chlorine.' This is repeated in 'Why not the others': 'A. oxygen gas is given off: this is the anode product only when the acid is very dilute, not the expected answer here.' In an acid, water's OH- is suppressed by the acid's own H+ (common-ion effect), so Cl- stays vastly dominant over OH- at essentially any dilution that would still be called 'dilute hydrochloric acid' in this syllabus; there is no taught threshold at which HCl electrolysis flips to oxygen. This is the kind of teaching point established for dilute vs concentrated NaCl, not for HCl, and grafting it onto HCl here states an unscoped, unsupported technicality as fact right next to the settled answer, which risks the student doubting the very answer the solution just gave (an internal near self-contradiction) for a claim the syllabus does not make.",
+      "fix": "In 'How to tell', delete the final sentence and end with: 'Chloride ions are present in far greater amount than hydroxide ions in this acid, so chloride ions are discharged at the anode and chlorine gas is given off.' In 'Why not the others', replace the A line with: 'A. oxygen gas is given off: oxygen would form only if hydroxide ions were discharged, but chloride ions are present in much greater amount here and are discharged instead.'",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 lets the student answer without thinking. Hint 2 already states the whole decisive rule: \"A compound of a reactive metal with non-metals is usually ionic.\" Hint 3 then says only: \"Scan each formula for the symbol of a metal.\" Since NO₂, SO₃ and SO₂ contain only non-metal symbols and KNO₃ is the only formula with a metal symbol (K), following this instruction leads mechanically and immediately to the answer, with no remaining weighing of alternatives, no narrowing to two, and no further reasoning left for the student. This is exactly the failure the standard's hint-3 test names: \"if a student can answer by reading hint 3 alone, without thinking, it is too strong.\"",
+      "fix": "3. You have found that NO₂, SO₃ and SO₂ contain only non-metal elements. Look again at the fourth formula: which element in it is not a non-metal, and what does that make you expect about the bonding in the whole compound?",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 performs the entire group-number calculation for the student instead of leaving it to them. It says: \"The outer shell here is shell 3, holding 3s² and 3p⁴. Count those outer electrons, and remember that the number 16 is a count of electrons in a neutral atom, which is not the same thing as mass number.\" Hint 2 has already told the student that outer-shell electrons give the group (\"The electrons in that outermost shell (s plus p) give the group\"), so naming exactly which orbitals to add (3s² and 3p⁴, summing to 6) leaves only the trivial arithmetic 2+4=6, which maps straight onto option D, \"belongs to group VI\", with no further thought needed. It also separately disposes of option A in the same sentence. By the end of hint 3 the student can pick D mechanically, which fails the test that a student must still make the choice after reading hint 3.",
+      "fix": "hint3: You already know the atomic number is 16, which points to sulphur rather than period 4. That leaves two claims to check: one about how many electrons sit in the outer shell in total, and one about how the outer p electrons pair up across three orbitals. Work out each one for yourself before choosing.",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 hands over a pure text-matching shortcut instead of requiring structural reasoning: \"A tertiary OH carbon needs a branch on that very carbon. Look for a name where the methyl branch and the OH share the same number.\" A student can scan the four option strings for matching digits (2-methyl...-2-ol) and land on option A without drawing a single structure or counting a single bond, which is exactly the mechanical shortcut the Exam tip reserves for after the question is answered (\"For a tertiary alkanol, look for a branch number that is the same as the OH number\"). Reading hint 3 alone lets the student answer without thinking, which is the failure this check targets.",
+      "fix": "hint3: Two of these alkanols have no branch at all, so their OH carbon can only ever be joined to two other carbons: rule those out using hint 2's rule. Between the two branched names left, draw out the OH carbon in full and count every carbon bonded to it, including the branch, then decide which one reaches three.",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 reads: \"The period number gives the number of electron shells. Which column label gives the number of electrons in the outer shell?\" Of the four options (group number, shell number, period number, atomic mass), only \"group number\" is a column label; shell number and atomic mass are not column-related at all, and period number has just been ruled out in the same sentence. A student only needs to recognise which of the four option words means \"column label\" to answer, with no reasoning about valence electrons required, so the choice is effectively made for them.",
+      "fix": "Hint 3: Shell number and group number can sound alike, but only one of them counts electrons rather than labelling a shell. Between group number and shell number, which one changes as you move from one element to the next along a row, while the other stays the same for every element in that row?",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 reads: \"Mass number is the total number of nucleons. Which particles does mass number count?\" Mass number = protons + neutrons is a definition students already memorise alongside atomic number, so this hint restates the correct option's content (protons and neutrons) under a different name rather than requiring reasoning about what a nucleon is. A student who already knows the mass-number rule can answer instantly without thinking about the nucleus at all.",
+      "fix": "Hint 3: Electrons are far lighter than protons and neutrons and are found outside the nucleus. From the four options, rule out any option that leaves out a particle found in the nucleus, and any option that includes electrons.",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 reads: \"Copper(II) hydroxide is blue, and iron(III) hydroxide is reddish-brown. An ammonium salt with sodium hydroxide gives off a gas on warming, not a coloured precipitate.\" This addresses all three wrong options (Cu²⁺, Fe³⁺, NH₄⁺) by name of colour/behaviour, leaving Fe²⁺ as the only option left unaccounted for. A student can already identify the answer after hint 2, so hint 3 (\"A green precipitate comes from one of the two iron ions. Which oxidation state of iron gives green?\") is read after the choice has already been made, not before it.",
+      "fix": "Hint 2: Copper(II) hydroxide is blue, and an ammonium salt gives off a gas on warming with sodium hydroxide rather than forming a coloured precipitate. The two ions left are both forms of iron.",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 reads: \"The empirical formula is found by reducing the ratio of atoms as far as it will go. Which option describes that?\" This restates option A's own wording (\"simplest formula\") using the word \"ratio\" reduced \"as far as it will go\", which is simply a paraphrase of \"simplest\". A student can match this phrase to option A's wording directly, without needing to reason about why B, C or D are wrong.",
+      "fix": "Hint 3: Molecular formula and structural formula both give a fixed, actual number or arrangement of atoms in one molecule, so neither is a ratio. Between the two options left, which one names a specific kind of formula, and which one is just a general term that could mean either kind?",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4252,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4016,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4337,
+      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3994,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4051,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4114,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 2.4764
+}

@@ -1,0 +1,314 @@
+{
+  "subject": "Geography",
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1",
+  "items": [
+    {
+      "q_number": 10,
+      "subtopic_id": "map-reading.relief",
+      "difficulty": "easy",
+      "hint1": "Think about the different ways a topographical map shows height. Some methods use lines, some use a dot with a figure, and some add letters beside a mark.",
+      "hint2": "Hachures are short lines drawn down a slope, not a dot with a number. A valley is a landform, not a symbol for one point.",
+      "hint3": "Two height symbols are left. Ask which one is written with letters beside the figure, and which one is only a dot and a figure.",
+      "solution": "Answer: B. spot height\n\nA spot height is a dot on a map with a number beside it. The number is the height of that exact point above sea level, in the unit given in the map key.\n\nHow to tell: the symbol in the question is a dot followed by a figure, ·845, with no letters. A dot and a height figure alone is the spot height symbol, so that point is 845 units above sea level.\n\nWhy not the others:\nA. hachure: hachures are short lines drawn down a slope to show steepness, not a dot with a number.\nC. benchmark: a benchmark is marked with the letters BM, often with an arrow mark, beside the height figure.\nD. valley: a valley is a landform shown by the shape of the contours, not a symbol at a single point.\n\nExam tip: for relief symbols, look at the form of the mark. A dot and a number is a spot height, BM and a number is a benchmark, a small triangle and a number is a trigonometrical station, and short tapering lines are hachures."
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "weather-climate.rainfall",
+      "difficulty": "easy",
+      "hint1": "Each type of rainfall is named after what forces the moist air to rise. Look at what the question says makes the air rise here.",
+      "hint2": "Convectional rain comes from strong heating of the ground, often on hot afternoons. It needs only one body of air, not two.",
+      "hint3": "Two of the options are one type under two names: rain from air pushed up a hill or mountain. Does the question mention high land, or two kinds of air meeting?",
+      "solution": "Answer: D. frontal rainfall\n\nFrontal rainfall forms where a warm air mass meets a cold air mass. The warm air is lighter, so it is forced to rise over the cold air along the boundary between them, called a front. As the warm air rises it cools, its water vapour condenses, and rain falls.\n\nHow to tell: the question describes air masses of different characteristics meeting. A meeting of two air masses is a front, so the rain it gives is frontal rainfall, also called cyclonic rainfall.\n\nWhy not the others:\nA. convectional rainfall: it comes from strong heating of the ground, which makes air rise in one place, with no meeting of air masses.\nB. relief rainfall: it forms when moist wind is forced up the side of a hill or mountain.\nC. orographic: this is another name for relief rainfall, so it also depends on high land, not on air masses meeting.\n\nExam tip: name the rainfall by what lifts the air. Heat from the ground gives convectional rain, high land gives relief (orographic) rain, and two air masses meeting gives frontal (cyclonic) rain."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "denudation.coast",
+      "difficulty": "medium",
+      "hint1": "Start with the first point in the list. Is this landform made by waves wearing rock away, or by waves dropping sand and shingle?",
+      "hint2": "Erosional features are cut into rock, like caves and arches. Depositional features are built up from sand and shingle. Sort the four options into these two groups.",
+      "hint3": "Only a feature cut into a cliff could link the cliff top to the sea below. Which option is a shaft cut through rock, not a heap of sand?",
+      "solution": "Answer: A. blow hole\n\nA blow hole forms when waves attack a sea cave at the foot of a cliff. Each wave squeezes the air trapped inside the cave, and as the wave pulls back the air expands again. This repeated squeezing and expanding weakens the rock in the cave roof until a narrow shaft opens up to the top of the cliff.\n\nHow to tell: all four points fit. It is made by wave erosion (I), it grows by the compression and expansion of air (II), it links the cliff top to the sea (III), and it is a narrow, chimney-like opening (IV).\n\nWhy not the others:\nB. tombolo: it is a bar of deposited sand or shingle that joins an island to the mainland.\nC. beach: it is a gently sloping deposit of sand or pebbles along the shore.\nD. spit: it is a long ridge of deposited sand joined to the land at one end and stretching out into the sea.\n\nExam tip: in coastal questions, first decide erosion or deposition. An erosional feature involving trapped air points to a blow hole. Features built of sand or shingle are beaches, spits, bars and tombolos."
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "vegetation.types",
+      "difficulty": "medium",
+      "hint1": "Think about the savanna year. It has a wet season and a long dry season. How could grass survive months with little rain?",
+      "hint2": "Savanna grass is known for being tall, often taller than a person, so growing very short does not fit.",
+      "hint3": "Narrow it to two: shallow spreading roots, or lying dormant. Ask which of these would really help a plant survive five or more months without rain.",
+      "solution": "Answer: B. lying dormant during the long drought\n\nSavanna has a wet season and a long dry season. In the syllabus, savanna grasses survive the dry season by lying dormant: the leaves above ground dry up and turn brown, while the roots stay alive in the soil. When the rains return, new shoots grow from those roots.\n\nHow to tell: the adaptation must solve the main problem of the climate, which is a long drought. Resting through the dry months and growing again in the rains solves that problem.\n\nWhy not the others:\nA. growing very short and in layers: savanna grass is typically tall and grows in tufts, often over 1 metre, and layers describe the trees of the rainforest.\nC. having shallow roots which spread-near the surface: savanna grasses are taught as having long roots that reach water deep in the soil, since the surface soil dries out first.\nD. having evergreen leaves: green leaves all year would lose water through the whole dry season, so the grass leaves wither instead.\n\nExam tip: for any plant adaptation question, name the main problem of the climate first, such as a long drought, then pick the option that solves that problem."
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "statistical.maps",
+      "difficulty": "easy",
+      "hint1": "All four words begin with iso, which means equal. The second part of each word tells you what is equal along the line.",
+      "hint2": "An isohyet joins places with equal rainfall. The hyet part comes from a Greek word for rain.",
+      "hint3": "Isohaline is about salt in sea water, so it belongs on ocean maps. Of the two left, recall the name of the instrument that measures air pressure and compare.",
+      "solution": "Answer: C. isobar\n\nAn isoline is a line on a map joining places with the same value of something. The prefix iso means equal, and the rest of the word names what is equal. An isobar joins places with equal atmospheric pressure. The bar part is the same as in barometer, the instrument that measures pressure.\n\nHow to tell: the thing that is equal along this line is air pressure, and the isoline for pressure is the isobar.\n\nWhy not the others:\nA. isohaline: it joins places in the sea with equal salinity, that is, equal saltiness.\nB. isohyet: it joins places with equal rainfall.\nD. isoneph: it joins places with equal cloud cover.\n\nExam tip: learn isolines in pairs: isobar and pressure, isotherm and temperature, isohyet and rainfall, isohel and sunshine, isoneph and cloud, isohaline and salinity."
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "earth.movements",
+      "difficulty": "easy",
+      "hint1": "The overhead midday sun moves between two lines of latitude during the year. Think about which hemisphere is having its summer in late December.",
+      "hint2": "The Arctic and Antarctic Circles lie far from the equator, at about 66½°. The midday sun is never directly overhead that far from the equator.",
+      "hint3": "That leaves the two tropics. Around 21 June the overhead sun is at its farthest point north. Where would it be six months later?",
+      "solution": "Answer: D. Tropic of Capricorn\n\nThe earth's axis is tilted by about 23½°. As the earth goes round the sun, the place where the midday sun is directly overhead moves between 23½°N and 23½°S. Around 22 December the southern hemisphere leans towards the sun, so the overhead sun reaches its farthest point south.\n\nHow to tell: the farthest point south that the overhead sun reaches is the Tropic of Capricorn, 23½°S. It gets there around 22 December, the December solstice.\n\nWhy not the others:\nA. Tropic of cancer: the sun is overhead there around 21 June, when the northern hemisphere leans towards the sun.\nB. Arctic of circle: at about 66½°N the midday sun is never overhead, and in late December it stays low or below the horizon.\nC. Antarctic circle: at about 66½°S the midday sun is never overhead, even though it has daylight all day around 22 December.\n\nExam tip: link each date to a line of latitude. Around 21 March and 23 September the sun is overhead at the equator, around 21 June at the Tropic of Cancer, and around 22 December at the Tropic of Capricorn."
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "weather-climate.factors",
+      "difficulty": "hard",
+      "hint1": "Temperature changes with height at a steady rate. Decide first whether the foot of a mountain is warmer or cooler than its top.",
+      "hint2": "In the syllabus, temperature falls by about 6.5°C for every 1,000 metres you climb. Going down, it rises by the same amount.",
+      "hint3": "Work out the change for 5,000 metres, then use it on the 7°C at the top. Take care: one option is only the change itself, not the temperature at the foot.",
+      "solution": "Answer: D. 39.5°C\n\nAir gets cooler as you go higher, because it is heated mainly from the ground below. The syllabus uses a lapse rate of about 6.5°C for every 1,000 m. Going down the mountain, the temperature rises by the same amount.\n\nHow to tell: the top is 5,000 m above sea level and the foot is taken as sea level.\nHeight difference = 5,000 m\nNumber of 1,000 m steps = 5,000 ÷ 1,000 = 5\nTemperature change = 5 × 6.5°C = 32.5°C\nThe foot is lower, so it is warmer than the top.\nTemperature at the foot = 7°C + 32.5°C = 39.5°C\n\nWhy not the others:\nA. 25.5°C: this comes from taking 7°C away from the change (32.5 − 7), when it should be added.\nB. 32.5°C: this is only the change in temperature, not the temperature at the foot.\nC. 35.9°C: it does not match any correct step using 6.5°C per 1,000 m.\n\nExam tip: in lapse rate sums, find the change first (height ÷ 1,000 × 6.5°C). Then add it when going down and subtract it when going up."
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "earth.movements",
+      "difficulty": "easy",
+      "hint1": "The year has two solstices and two equinoxes. A solstice is when the overhead midday sun reaches its farthest point north or south of the equator.",
+      "hint2": "At a solstice the sun is overhead at one of the tropics. At an equinox it is overhead at the equator, and day and night are about equal in length everywhere.",
+      "hint3": "Both dates in the correct pair must be tropic dates. Check each pair for any date when the sun is overhead at the equator.",
+      "solution": "Answer: A. 21st June and 22nd December\n\nA solstice is the date when the overhead midday sun reaches its farthest point from the equator. This happens twice a year: at the Tropic of Cancer around 21 June, and at the Tropic of Capricorn around 22 December.\n\nHow to tell: both dates in the pair must be solstice dates. 21 June and 22 December are the pair where the sun is overhead at a tropic.\n\nWhy not the others:\nB. 21st Marchand 23rd December: 21 March is an equinox, and the December solstice is taken as 22 December.\nC. 21st March and 21st June: 21 March is an equinox, so only one of the two dates is a solstice.\nD. 23rd September and 22nd December: 23 September is an equinox, so only one of the two dates is a solstice.\n\nExam tip: equinoxes fall in March and September, solstices in June and December. A pair that contains a March or September date is not a pair of solstices."
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "denudation.weathering",
+      "difficulty": "easy",
+      "hint1": "Weathering is either physical, where rock breaks into pieces without changing what it is made of, or chemical, where the minerals themselves are changed.",
+      "hint2": "Salt wedging happens when salt crystals grow in cracks and force the rock apart. That is a physical push, not a change in the minerals.",
+      "hint3": "Two of the remaining processes are caused by heating by day and cooling by night. Which remaining process is a reaction between minerals and something else?",
+      "solution": "Answer: B. hydrolysis\n\nChemical weathering changes the minerals in a rock into new substances, which weakens the rock. Hydrolysis is a chemical reaction between water and minerals in the rock. For example, feldspar in granite reacts with water and slowly turns into clay.\n\nHow to tell: hydrolysis is the one process here that makes new substances. The other three break rock into pieces without changing its minerals, so they are physical (mechanical) weathering.\n\nWhy not the others:\nA. block disintegration: rock cracks into blocks along its joints as it heats and cools, a physical process.\nC. exfoliation: outer layers of rock peel off like onion skin because of heating by day and cooling by night, a physical process.\nD. salt wedging: salt crystals grow in cracks and force the rock apart, a physical process.\n\nExam tip: if a process breaks rock into pieces, it is physical weathering. Hydrolysis, oxidation, carbonation, solution and hydration are reactions, so they are chemical weathering."
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "tectonics.faulting",
+      "difficulty": "easy",
+      "hint1": "Picture a rift valley: a long, narrow valley with steep, straight sides. What kind of earth movement makes sides like that?",
+      "hint2": "A residual mountain is what is left after the land around it has been worn away. It is a landform, not a process that makes valleys.",
+      "hint3": "Of the processes left, decide between bending rock, breaking rock and pouring out lava. Steep, straight valley walls are the clue.",
+      "solution": "Answer: B. faulting\n\nA fault is a crack in the earth's crust along which rocks move. When tension pulls the crust apart, a block of land between two roughly parallel faults can sink down. The sunken block forms a rift valley, and the steep fault scarps form its walls.\n\nHow to tell: a rift valley is long and narrow with steep, straight sides, and those sides are fault lines. The East African Rift Valley is the usual example.\n\nWhy not the others:\nA. folding: it squeezes rock layers into up-folds and down-folds, forming fold mountains such as the Alps.\nC. vulcanicity: it builds cones, craters and lava plateaux, and although volcanoes are found along some rift valleys, the valley itself is made by faulting.\nD. residual mountain: it is a landform left behind by erosion, not a process that forms a valley.\n\nExam tip: link landforms to earth movements. Faulting gives rift valleys, block mountains (horsts) and fault scarps. Folding gives fold mountains."
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "earth-structure.atmosphere",
+      "difficulty": "easy",
+      "hint1": "The ozone layer is in the stratosphere, high above the clouds. Think about what reaches the earth from the sun and could harm living things.",
+      "hint2": "Water vapour and evaporation belong to the lowest layer of the atmosphere, where weather happens. The ozone layer is much higher up.",
+      "hint3": "Of the two left, one is a gas found mostly in the lower air and linked to plants and breathing. The other is a kind of energy. Which one does the ozone layer deal with?",
+      "solution": "Answer: C. absorb ultra violet radiation from the sun\n\nThe ozone layer is a band of ozone gas in the stratosphere, roughly 15 to 35 km above the earth. Ozone absorbs most of the sun's ultra violet (UV) radiation before it reaches the ground. Too much UV causes sunburn, skin cancer and eye damage, and harms plants, so this layer protects life.\n\nHow to tell: UV radiation is the one choice that comes from the sun, and absorbing it is the main work of the ozone layer in the syllabus.\n\nWhy not the others:\nA. prevent evaporation of water from the earth's surface: evaporation happens at the surface and is controlled by heat and wind, not by the ozone layer.\nB. absorb the carbon dioxide in the atmosphere: carbon dioxide is taken in mainly by plants and the oceans, not by ozone.\nD. absorb water vapour from the atmosphere: water vapour is found mostly in the troposphere, the lowest layer, far below the ozone layer.\n\nExam tip: give each layer of the atmosphere one job. The troposphere holds the weather, and the stratosphere holds the ozone layer that absorbs UV radiation."
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "earth-structure.interior",
+      "difficulty": "easy",
+      "hint1": "The earth is built in layers, like an onion. Choose where you will start, at the centre or at the surface, and keep going in the same direction.",
+      "hint2": "The crust is the thin outer layer we live on. It is the thinnest of the three layers.",
+      "hint3": "In a correct sequence, each layer must touch the one listed next to it. Which order moves in a single direction, from the inside out or the outside in?",
+      "solution": "Answer: C. core, mantle and crust\n\nThe earth has three main layers. At the centre is the core, made mostly of iron and nickel. Around it is the mantle, a thick layer of very hot rock. On the outside is the thin crust, the rocky layer we live on.\n\nHow to tell: a sequence must move in one direction. Starting at the centre and moving outwards gives core, then mantle, then crust.\n\nWhy not the others:\nA. mantle, crust and core: it jumps from the crust at the surface straight to the core at the centre.\nB. crust, core and mantle: it puts the core between the crust and the mantle, but the mantle is the middle layer.\nD. mantle, core and crust: it jumps from the core at the centre to the crust at the surface, skipping the mantle.\n\nExam tip: for any order of layers, picture a ball cut in half. Each layer must sit next to the one before it, whether you go from the centre outward or from the surface inward."
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "earth.solar-system",
+      "difficulty": "easy",
+      "hint1": "Recall the order of the planets starting from the sun. The first four are the small rocky planets.",
+      "hint2": "Earth is the largest of the four inner planets, so it cannot be the smallest.",
+      "hint3": "Narrow it to the planets that lie between the sun and Earth. Which of them comes first in the order?",
+      "solution": "Answer: B. Mercury\n\nThe planets in order from the sun are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Mercury is first in that order, and it is also the smallest of the eight planets.\n\nHow to tell: the question asks for a planet that is both the smallest and the closest to the sun. Mercury fits both.\n\nWhy not the others:\nA. Mars: it is smaller than Earth, but it is fourth from the sun and still larger than Mercury.\nC. Venus: it is second from the sun and almost as large as Earth.\nD. Earth: it is third from the sun and the largest of the four inner planets.\n\nExam tip: learn the order with a memory sentence such as My Very Easy Method Just Speeds Up Naming, one first letter for each planet from the sun outward."
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "earth.longitude-time",
+      "difficulty": "hard",
+      "hint1": "Time changes by 4 minutes for every 1° of longitude. First find how many degrees apart the two towns are, and whether the second town is east or west of the first.",
+      "hint2": "When one town is east and the other is west of the Prime Meridian, add the two longitudes to get the difference. A place to the west has an earlier time.",
+      "hint3": "Change the degrees into hours and minutes, then take that time away from 10:00 am. Watch for the result going back past midnight, and read am and pm carefully.",
+      "solution": "Answer: B. 5:00p.m\n\nThe earth turns through 360° in 24 hours, so each degree of longitude equals 4 minutes of time. A place to the west has an earlier time, because the sun reaches it later.\n\nHow to tell:\nTown A is 134°E and Town B is 120°W, on opposite sides of the Prime Meridian, so add: 134° + 120° = 254°\nTime difference = 254 × 4 minutes = 1,016 minutes\n1,016 minutes = 16 hours 56 minutes, about 17 hours\nTown B is to the west, so its time is behind: 10:00 am − 17 hours\n10:00 am − 10 hours = midnight, and 7 more hours back = 5:00 pm on the day before\nWorked exactly, 10:00 am − 16 h 56 min = 5:04 pm, and the nearest option is 5:00 pm.\nCheck: the other way round the globe the towns are 360° − 254° = 106° apart, about 7 hours, and 10:00 am + 7 hours also gives 5:00 pm. Only the date differs.\n\nWhy not the others:\nA. 5:00a.m: it has the right hour but the wrong half of the day, since going back about 17 hours from 10:00 am lands in the afternoon.\nC. 4:00 pm: it is about an hour too early, since 16 h 56 min back from 10:00 am gives 5:04 pm.\nD. 4:00a.m: it is wrong in both the hour and the half of the day.\n\nExam tip: in time sums, subtract the longitudes if both places are on the same side of Greenwich and add them if they are on opposite sides. Multiply by 4 minutes, then add the time for a place to the east and subtract it for a place to the west."
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "denudation.rivers",
+      "difficulty": "medium",
+      "hint1": "A river valley can grow in three directions: deeper, wider or longer. Each kind of river erosion works in one of these directions.",
+      "hint2": "Sheet erosion is rain wash that removes a thin layer of soil across a whole slope. It does not work along a river channel.",
+      "hint3": "Match each of the three left to deeper, wider or longer. Longer means the valley grows back into the land at its upper end.",
+      "solution": "Answer: D. headward erosion\n\nHeadward erosion is erosion at the source, or head, of a river. Water flowing into the head of the valley wears back the land there, so the valley cuts further and further back into the land and becomes longer.\n\nHow to tell: the question asks how a valley increases in length. Deepening and widening do not add length. Cutting back at the source does.\n\nWhy not the others:\nA. sheet erosion: rain water removes a thin layer of soil evenly across a slope, not along a river valley.\nB. vertical erosion: the river cuts down into its bed and deepens the valley, as in the V-shaped valleys of the upper course.\nC. lateral erosion: the river wears away its banks and widens the valley, mainly in the middle and lower course.\n\nExam tip: remember the three directions of river erosion. Vertical erosion deepens, lateral erosion widens, and headward erosion lengthens. Headward erosion is also what leads to river capture."
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "vulcanicity.landforms",
+      "difficulty": "medium",
+      "hint1": "Volcanic features are either extrusive, formed when magma reaches the surface, or intrusive, formed when magma cools and hardens underground.",
+      "hint2": "A crater is the hollow at the top of a volcano, where material comes out at the surface.",
+      "hint3": "Ask of each remaining option: can it be seen on the surface while the volcano is active, or is it only exposed later when erosion removes the rock above it?",
+      "solution": "Answer: A. lopolith\n\nIntrusive features form when magma forces its way into the rocks of the crust but cools and hardens before it reaches the surface. A lopolith is a large intrusion shaped like a saucer, sagging in the middle. It is seen at the surface only after the rocks above it have been worn away.\n\nHow to tell: the lopolith forms underground, while the other three form at the surface from lava and ash that come out of the earth.\n\nWhy not the others:\nB. lava cone: it is a hill built on the surface from layers of lava that flow out and cool.\nC. crater: it is the hollow at the top of a volcano, where lava, ash and gases come out at the surface.\nD. composite cone: it is a volcano built on the surface from alternate layers of ash and lava.\n\nExam tip: names ending in -lith (batholith, laccolith, lopolith, phacolith), together with sills and dykes, are intrusive features. Cones, craters, calderas and lava plateaux are extrusive."
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "climate-types.temperate",
+      "difficulty": "medium",
+      "hint1": "Think about the seasons in Mediterranean lands: when does the rain come, and what are the summers like?",
+      "hint2": "An annual rainfall below 250 mm describes a desert. Mediterranean lands get more rain than that.",
+      "hint3": "An annual range above 50°C belongs deep inside very large continents, not near a sea. Between the other two, which describes the feature this climate is best known for?",
+      "solution": "Answer: B. a concentration of rainfall in winter and a dry warm summer\n\nThe Mediterranean climate is found on the western sides of continents, at about 30° to 45° north and south of the equator. Its best-known feature is that rain falls mainly in winter, brought by westerly winds, while the summer is warm to hot and dry.\n\nHow to tell: many climates get their rain in the hot season. The Mediterranean is taught as the climate with winter rain and a dry summer, which is exactly what this option describes.\n\nWhy not the others:\nA. annual range of temperature is more than 50°C: Mediterranean lands are near the sea and have a moderate range, far below 50°C.\nC. temperature range from 28°C in summer to 17°C in winter: Mediterranean winters are cooler than this, often around 10°C, and temperature figures alone do not mark out this climate.\nD. annual rainfall is less than 250mm: this is a desert figure, while Mediterranean areas usually get roughly 400 mm to 900 mm a year.\n\nExam tip: for climate types, the season of the rain is often the strongest clue. Winter rain with a dry summer points to Mediterranean. Summer rain with a dry winter points to savanna (tropical continental)."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "rocks.types",
+      "difficulty": "easy",
+      "hint1": "Rocks are grouped by how they formed: from cooled molten rock, from layers of deposited material, or from rock changed by heat and pressure.",
+      "hint2": "Fossilized rock is not one of the three main rock groups. Fossils are found mainly in sedimentary rocks.",
+      "hint3": "Gabbro is dark and made of large, interlocking crystals, with no layers. Decide between the two groups whose rocks can have interlocking crystals.",
+      "solution": "Answer: B. igneous rock\n\nIgneous rocks form when molten rock, called magma, cools and hardens. Gabbro forms when magma cools slowly deep underground, which gives its crystals time to grow large. It is a dark, heavy, coarse-grained intrusive igneous rock.\n\nHow to tell: gabbro has large interlocking crystals and no layers or fossils, which marks it as a rock formed from slowly cooled magma.\n\nWhy not the others:\nA. metamorphic rock: these form when existing rock is changed by heat and pressure, as limestone becomes marble.\nC. sedimentary rock: these form from layers of deposited material such as sand or shells, like sandstone.\nD. fossilized rock: this is not a rock group, and fossils are found mainly in sedimentary rock.\n\nExam tip: learn named examples by group. Igneous: granite, basalt, gabbro. Sedimentary: sandstone, limestone, coal. Metamorphic: marble, slate, quartzite."
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "denudation.wind",
+      "difficulty": "easy",
+      "hint1": "Wind erodes in more than one way. Some processes wear rock down, some move material along, and one removes loose material from the ground.",
+      "hint2": "Traction is a way of moving material, by rolling heavy grains along the ground. It is transport, not the lowering of a surface.",
+      "hint3": "Of the three left, ask which ones need grains to hit something, and which one needs only loose grains and a strong wind.",
+      "solution": "Answer: D. deflation\n\nDeflation is the lifting and blowing away of loose, dry sand and dust by the wind. As the loose material is carried off, the ground surface gets lower. Over time this can form hollows called deflation hollows.\n\nHow to tell: the question describes wind lifting and blowing away loose particles so that the surface is lowered. That is deflation.\n\nWhy not the others:\nA. abrasion: sand carried by the wind is blasted against rock and wears it away, as in mushroom rocks.\nB. attrition: sand grains carried by the wind knock against each other and become smaller and rounder.\nC. traction: heavy grains are rolled along the ground, which is a way of moving material, not of lowering the surface.\n\nExam tip: for wind erosion, remember that deflation removes loose material, abrasion wears rock with the sand it carries, and attrition wears down the grains themselves."
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "environment.pollution",
+      "difficulty": "easy",
+      "hint1": "Focus on the key word harmful. Ask which term describes damage done to the environment, not just any change or contact.",
+      "hint2": "Environmental balance is the steady state in which living things and their surroundings support each other. Adding harmful things upsets it.",
+      "hint3": "Think of the word used for smoke from factories or oil spilled into rivers. Of the three left, which term names that kind of harm?",
+      "solution": "Answer: A. pollution\n\nEnvironmental pollution is the introduction of harmful substances, called pollutants, into the air, water or land. Examples in Nigeria include gas flaring, oil spills in the Niger Delta, smoke from vehicles and refuse dumped in drains.\n\nHow to tell: the question gives the standard definition of pollution: harmful substances introduced into the environment.\n\nWhy not the others:\nB. balance: environmental balance is the steady state between living things and their surroundings, which pollution upsets.\nC. interaction: it is the way people and the environment affect each other, which can be helpful or harmful.\nD. intervention: it is any action people take to change or manage the environment, which can be helpful or harmful.\n\nExam tip: for definition questions, pick the term that matches every key word in the definition. Harmful substances introduced points to pollution, while a steady state points to balance."
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "settlement.interaction",
+      "difficulty": "medium",
+      "hint1": "Notice the direction in the question: what do towns and cities provide for the villages around them?",
+      "hint2": "A function is something useful a settlement does for others. Unemployment and a trade deficit are problems, not services.",
+      "hint3": "Of the two left, one is something villages usually send to towns. Work out which way each one flows.",
+      "solution": "Answer: B. administration\n\nTowns and cities provide services that the surrounding rural areas need but do not have. These include administration, such as local government offices, courts and police headquarters, as well as markets, hospitals, schools and banks.\n\nHow to tell: the question asks for a function that urban settlements perform for rural ones. Administration is run from towns and serves the villages around them.\n\nWhy not the others:\nA. unemployment: this is a problem found in many towns, not a service towns give to villages.\nC. food crop supply: food crops flow the other way, from rural farms to urban markets.\nD. trade deficit: this is an economic problem, where a place buys more than it sells, not a service.\n\nExam tip: in rural and urban interaction questions, check the direction. Villages give towns food, raw materials and labour. Towns give villages administration, manufactured goods and services such as health and education."
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "trade.types",
+      "difficulty": "medium",
+      "hint1": "Trade happens when one country has something another country needs. Think about what West African countries mostly produce.",
+      "hint2": "Differences in climate would give countries different products to exchange, which encourages trade rather than reducing it.",
+      "hint3": "Colonial ties and political instability both play some part. Which of the three left explains why neighbours have little to sell to each other in the first place?",
+      "solution": "Answer: C. similarity of products\n\nCountries trade mainly to get goods they cannot produce themselves. Most West African countries produce similar goods, mainly farm produce such as cocoa, palm oil and groundnuts, and raw minerals. In the syllabus this is the major reason for low trade among them: neighbours have little that the others need.\n\nHow to tell: the question asks for a major reason. Similar products remove the basic reason for trade, while the other factors add to the problem.\n\nWhy not the others:\nA. colonial ties: these tied trade to Europe, but they are taught as an added reason, not the major one.\nB. differences in climate: differences would give countries different products to exchange, which encourages trade.\nD. political instability: it disrupts trade in some countries at some times, but it is not taught as the major reason across the region.\n\nExam tip: when asked why trade is low between neighbouring countries, look first for similar products. Countries that produce the same goods have little to sell to each other."
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "industry.classification",
+      "difficulty": "medium",
+      "hint1": "Industries are grouped by what they do: getting raw materials from nature, making goods from them, or providing services.",
+      "hint2": "Service industry and tertiary industry are two names for the same class. It provides services such as transport, banking and trade, rather than working on raw materials.",
+      "hint3": "Agriculture, mining and fishing are themselves one of the two classes left. Read the question again: does it describe that class, or the class that uses what it produces?",
+      "solution": "Answer: C. secondary industry\n\nSecondary industry takes raw materials and processes or manufactures them into finished goods. Those raw materials come from primary industry, which is agriculture, mining, fishing and lumbering. For example, a textile mill uses cotton from farms, and a cannery uses fish.\n\nHow to tell: the key words are uses raw materials from. Agriculture, mining and fishing produce the raw materials, and the class that uses them is secondary, or manufacturing, industry.\n\nWhy not the others:\nA. service industry: it provides services such as banking and transport, and does not turn raw materials into goods.\nB. primary industry: this is agriculture, mining and fishing themselves, the class that produces the raw materials, not the one that uses them.\nD. tertiary industry: this is another name for service industry, which provides services rather than making goods.\n\nExam tip: primary industry gets raw materials from nature, secondary industry makes goods from them, and tertiary industry provides services. Watch the verb: produce or extract points to primary, use or process points to secondary."
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "transport.modes",
+      "difficulty": "medium",
+      "hint1": "Patronage means how many people choose to use a service. Think about the traveller's side of the choice, not the airline's.",
+      "hint2": "Air travel is known as one of the fastest and most comfortable ways to travel, so discomfort does not explain why few people use it.",
+      "hint3": "Taxes on airline operations fall first on the airlines. Between the other two, which one stops a person who lives near an airport from flying?",
+      "solution": "Answer: D. expensive nature of travelling by air\n\nIn the syllabus, the major reason fewer people use air transport in Africa is its high cost. Air fares are high compared with the incomes of most people, so they choose cheaper road transport, or rail and water transport where these are available.\n\nHow to tell: patronage means use by passengers. What keeps most passengers away is that they cannot afford the fare.\n\nWhy not the others:\nA. limited number of airports in Africa: this limits where planes can go, but many people who live near an airport still do not fly because of the fare.\nB. discomfort of travelling by air: air travel is generally seen as fast and comfortable.\nC. high airline operation taxes: these fall on the airlines, and they affect passengers only when they push fares up.\n\nExam tip: when a question asks why people use a service less, first compare its cost with the incomes of the people who would use it. High cost against low incomes is the usual reason examiners expect."
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "population.growth",
+      "difficulty": "medium",
+      "hint1": "Over-population means there are too many people for the resources of a country. Think about what actually changes the number of people.",
+      "hint2": "Emigrating and then coming back a year later does not change the population for long.",
+      "hint3": "Ask of each of the three left: does it change how many people live in the country, or only where they live and what work they do?",
+      "solution": "Answer: A. educating couples on the need to give birth to fewer children\n\nA population grows mainly because more babies are born than people die. Educating couples on family planning lowers the birth rate, which slows population growth at its source. Over time this brings the population into better balance with the country's resources.\n\nHow to tell: this is the choice that reduces the number of people being added. The others leave the total population much the same.\n\nWhy not the others:\nB. advising its citizens to emigrate to other countries and return to their home country a year later: the people come back after a year, so the population is the same as before.\nC. sensitizing its citizens to engage in agriculture: more farming may produce more food, but it does not reduce the number of people.\nD. discouraging rural-urban migration: this changes where people live inside the country, not how many people there are.\n\nExam tip: for solutions to over-population, look for what lowers the birth rate, such as family planning and education. Moving people around within a country only changes where the pressure falls."
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "settlement.types",
+      "difficulty": "easy",
+      "hint1": "The four settlement types are listed in a particular order. Think about what changes as you move from the first to the last.",
+      "hint2": "Function is about what a settlement does, such as mining, farming or trade. The list does not tell you what any of these places does.",
+      "hint3": "Of the three left, picture a farmstead and a town side by side. What is the most obvious difference between them?",
+      "solution": "Answer: C. size\n\nSettlements can be ranked by size, from the smallest to the largest. A farmstead is a single farm house or a few buildings, a hamlet is a small group of houses, a village is larger, and a town is larger again. This ranking is called the settlement hierarchy.\n\nHow to tell: the list grows step by step in the number of people and buildings, which is a classification by size.\n\nWhy not the others:\nA. function: it groups settlements by what they do, such as mining towns, market towns or ports.\nB. location: it groups settlements by where they are, such as coastal, riverside or hilltop settlements.\nD. shape: it groups settlements by their pattern, such as nucleated, linear or dispersed.\n\nExam tip: a list that grows from small to large, such as hamlet, village, town, city, is a classification by size. A list of jobs, such as mining, market, port, is a classification by function."
+    },
+    {
+      "q_number": 42,
+      "subtopic_id": "industry.development",
+      "difficulty": "medium",
+      "hint1": "Take each numbered point on its own and ask whether it is a benefit that would make a government or company want to build an industry in a town.",
+      "hint2": "Religious tolerance is about how people of different faiths live together. It is not a reason for building a factory.",
+      "hint3": "Point IV is the opposite of point I. Decide which of the two is a benefit and which is a problem, then see which options are left.",
+      "solution": "Answer: A. I and II only\n\nIndustries are set up in urban centres because of the benefits they bring. They create jobs for people (employment), and they earn money for the government and the owners through taxes and sales (revenue generation).\n\nHow to tell:\nI. Employment: a benefit, so it is a reason.\nII. Revenue generation: a benefit, so it is a reason.\nIII. Religious tolerance: not connected with setting up industries.\nIV. Unemployment: a problem that industries help to reduce, not a reason for setting them up.\nSo the reasons are I and II.\n\nWhy not the others:\nB. II and IV only: IV, unemployment, is a problem industry helps to solve, not a reason.\nC. III and IV only: neither religious tolerance nor unemployment is a reason for setting up industries.\nD. I and IV only: IV is the problem that I, employment, answers, so they cannot both be reasons.\n\nExam tip: in I, II, III, IV questions, mark each statement right or wrong on its own first, then find the option with exactly that set. Watch for a pair of opposites, since both cannot be correct."
+    },
+    {
+      "q_number": 43,
+      "subtopic_id": "trade.world",
+      "difficulty": "easy",
+      "hint1": "Developing countries are those still building up their industries. Think about what such countries have most of to sell abroad.",
+      "hint2": "Automobiles and mining equipment need large factories and advanced technology to make. They come mostly from industrialised countries.",
+      "hint3": "Of the two left, think about which group of goods most developing countries buy from abroad, and which group they sell.",
+      "solution": "Answer: C. agricultural products\n\nMost developing countries have few large factories, so what they sell abroad is mainly primary products: agricultural products such as cocoa, coffee, cotton and rubber, and raw minerals such as crude oil. They buy manufactured goods from developed countries.\n\nHow to tell: agricultural products are the one primary product among the choices. The other three are manufactured goods, which most developing countries import rather than export.\n\nWhy not the others:\nA. mining equipment: it is heavy machinery made mainly in industrialised countries and bought by developing ones.\nB. manufacturing goods: these are exported mainly by developed countries, and most developing countries import them.\nD. automobile: cars are made mainly in industrialised countries such as Japan, Germany and the USA.\n\nExam tip: in world trade questions, developing countries mostly sell primary products, farm produce and raw minerals, and buy manufactured goods. Pick the primary product."
+    },
+    {
+      "q_number": 44,
+      "subtopic_id": "tourism.meaning",
+      "difficulty": "easy",
+      "hint1": "Think about the kind of place a resort is, and the reason people travel there.",
+      "hint2": "A refugee is a person who has fled from war or disaster, not someone travelling for rest or pleasure, so the word is not linked with resorts.",
+      "hint3": "Banking deals with keeping and lending money, which is not why people visit a resort. Of the two left, which one is about travel for leisure rather than buying and selling?",
+      "solution": "Answer: A. tourism\n\nA resort is a place people visit for rest, holidays and recreation. It usually has hotels and attractions such as beaches, hills, hot springs or a cool climate. Resorts are therefore part of tourism, which is travel for leisure and pleasure.\n\nHow to tell: resorts in Nigeria such as Obudu Mountain Resort in Cross River State and the beach resorts of Lagos are visited by tourists.\n\nWhy not the others:\nB. commerce: it is buying and selling and the services that support trade, which is not what resorts are for.\nC. banking: it deals with keeping and lending money, not with holidays.\nD. refugee: a refugee is a person who has fled war or disaster, not a holidaymaker, so the word is not linked with resorts.\n\nExam tip: link places to activities. A resort goes with tourism, a market with commerce, and a port with shipping and trade."
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "population.distribution",
+      "difficulty": "medium",
+      "hint1": "Population density tells you how crowded a place is. Think about which two numbers you need and how they fit together.",
+      "hint2": "Density = total population ÷ total land area. The answer is in persons per square kilometre.",
+      "hint3": "Write 100 million in full, then divide it by 500,000. Cancelling the same number of zeros from both numbers first makes the sum easier.",
+      "solution": "Answer: C. 200 persons per square kilometers\n\nPopulation density is the average number of people living on each square kilometre of land. It is found by dividing the total population by the total land area.\n\nHow to tell:\nPopulation = 100 million = 100,000,000 people\nLand area = 500,000 km² (the question writes km, but an area is in square kilometres)\nDensity = 100,000,000 ÷ 500,000\nCancel five zeros from each: 1,000 ÷ 5\nDensity = 200 persons per km²\nCheck: 200 × 500,000 = 100,000,000\n\nWhy not the others:\nA. 20 persons per square kilometer: this is ten times too small, a slip of one zero.\nB. 50 persons per square kilometer: 50 × 500,000 = 25,000,000, only a quarter of the population.\nD. 5,000 person per square kilometers: 5,000 × 500,000 = 2,500,000,000, far more than 100 million.\n\nExam tip: density is population ÷ area, not area ÷ population. Check your answer by multiplying it by the area, which should give back the population."
+    },
+    {
+      "q_number": 47,
+      "subtopic_id": "industry.location",
+      "difficulty": "medium",
+      "hint1": "This is a NOT question. Recall the standard list of factors your syllabus gives for siting an industry, then look for the option that is missing from that list.",
+      "hint2": "The main siting factors are the ones that directly decide the cost of making and selling goods: where the raw materials are, where the buyers are, power, labour, transport, capital and what the government allows or encourages.",
+      "hint3": "Three options clearly affect what a factory costs to run or where it is allowed to be. Which one is about something a town may have, but which a factory does not need nearby in order to produce and sell?",
+      "solution": "Answer: A. existence of tertiary education institutions\n\nIn the syllabus, the primary factors for siting an industry are the ones that directly affect the cost of producing and selling goods: raw materials, market, power, labour, transport, capital, water and government policy. A university or polytechnic nearby can be useful, but a factory does not depend on it to run, so it is not treated as a primary factor.\n\nHow to tell: ask of each option, \"Would the factory's costs or its right to operate change a lot if this were missing?\" Without raw materials or buyers nearby, transport costs rise. Without government approval or support, the factory may not be built at all. Without a tertiary institution close by, the factory can still recruit skilled workers from elsewhere.\n\nWhy not the others:\nB. nearness to market: being close to buyers cuts the cost of moving finished goods, especially goods that are bulky or spoil quickly.\nC. nearness to source of raw materials: industries using heavy or perishable raw materials are sited near them to cut transport costs and losses.\nD. government policy on industrialization: governments decide where industries may go and offer incentives such as tax relief, so policy strongly shapes location in Tropical Africa.\n\nExam tip: for \"not a factor of industrial location\" questions, match each option against the standard list: raw materials, market, power, labour, transport, capital, water, government policy. The option that is not on the list is usually the answer."
+    },
+    {
+      "q_number": 48,
+      "subtopic_id": "environment.resources",
+      "difficulty": "easy",
+      "hint1": "A renewable energy source is one that nature keeps replacing, so using it today does not use it up for tomorrow.",
+      "hint2": "Nuclear power plants run on uranium, a mineral dug from the ground, so any pair containing nuclear power cannot be fully renewable.",
+      "hint3": "Two pairs are left: natural gas and diesel, and hydro power and solar. For each pair, ask whether it burns a fuel pumped or dug from the ground, or uses something nature keeps supplying.",
+      "solution": "Answer: C. hydro power and solar\n\nA renewable source of energy is one that is replaced naturally as fast as we use it. Sunlight arrives every day, and rain keeps refilling the rivers and dams that drive hydro power, so both keep coming back.\n\nHow to tell: a pair counts only if both parts are renewable. Every other pair contains at least one fossil fuel (coal, natural gas, diesel) or nuclear fuel (uranium). These are mined or drilled from the ground and are used up once burned or used.\n\nWhy not the others:\nA. coal and nuclear: coal is a fossil fuel and uranium for nuclear power is a mined mineral, so both are non-renewable.\nB. natural gas and diesel: both are fossil fuels, and diesel is made from crude oil.\nD. nuclear and natural gas: uranium and natural gas are both taken from the ground and are not replaced in a human lifetime.\n\nExam tip: sort energy sources by where they come from. Sun, wind, flowing water, heat from inside the earth and plant matter are renewable. Any fuel that is mined or drilled, such as coal, oil, gas, diesel, petrol and uranium, is non-renewable."
+    },
+    {
+      "q_number": 49,
+      "subtopic_id": "agriculture.systems",
+      "difficulty": "easy",
+      "hint1": "This is a NOT question. Picture a typical subsistence farmer: who eats the food, what tools are used and who does the work.",
+      "hint2": "A subsistence farmer is usually poor, farms a small plot, and uses hoes and cutlasses with family members doing the work. Three options describe this farmer well.",
+      "hint3": "\"Labour intensive\" means the farm relies mostly on people's work, and \"capital intensive\" means it relies mostly on money spent on machines and inputs. Which of these two fits a small farm with little money?",
+      "solution": "Answer: B. it is capital intensive\n\nSubsistence farming produces food mainly for the farmer's own family. The farmer usually has little money to invest, so the farm depends on human effort and simple tools rather than costly machines, fertilizers and hired workers.\n\nHow to tell: \"capital intensive\" means a lot of money is put into machinery, chemicals and other inputs. That describes large commercial or mechanized farms, not a small family plot worked with a hoe.\n\nWhy not the others:\nA. the produce is mainly for home consumption: this is the defining feature of subsistence farming, with only any small surplus sold.\nC. simple farm tools and method are used: hoes, cutlasses and methods like bush fallowing are typical of subsistence farms.\nD. it is labour intensive: most of the work is done by hand, usually by the farmer and family members.\n\nExam tip: in farming-system questions, pair the opposites. Subsistence goes with small farms, simple tools, family labour and home use. Commercial goes with large farms, machines, heavy capital and sale for profit. The option from the wrong column is the odd one out."
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "industry.classification",
+      "difficulty": "easy",
+      "hint1": "Industries are grouped as heavy or light by the size and weight of their raw materials and products, and by how much machinery and money they need.",
+      "hint2": "Light industries use light raw materials, make small goods people buy for everyday use, and can run in small factories, often close to where people live.",
+      "hint3": "Printing and food processing both handle light materials such as paper and farm produce. Of the two options left, which needs heavier raw materials, bigger machines and more space to make its product?",
+      "solution": "Answer: D. ship building\n\nHeavy industry uses large amounts of bulky raw materials such as iron and steel, needs huge machines and a lot of money, and produces large, heavy products. Light industry uses lighter materials and makes smaller goods, mostly for everyday consumers.\n\nHow to tell: a ship is built from thousands of tonnes of steel in a large shipyard with cranes and dry docks. That is bulky input, heavy equipment and a huge product, the marks of heavy industry.\n\nWhy not the others:\nA. printing: it uses paper and ink and turns out light products such as books and newspapers, so it is light industry.\nB. food processing: it handles farm produce and makes packaged foods and drinks for shoppers, which is light industry.\nC. household goods: items such as soap, plastics and utensils are small consumer goods, made in light industry.\n\nExam tip: to class an industry as heavy or light, ask how big and heavy its raw materials and finished products are. Steel, ships, cars, cement and heavy machinery point to heavy industry. Food, clothing, printing and small consumer goods point to light industry."
+    }
+  ]
+}

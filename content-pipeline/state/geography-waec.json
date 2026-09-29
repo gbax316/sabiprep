@@ -2,12 +2,227 @@
   "slug": "geography-waec",
   "subject": "Geography",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T15:21:32",
     "note": ""
   },
-  "units": {},
-  "cost_usd": 12.28,
+  "units": {
+    "2025": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T14:37:15",
+          "summary": "50/50 codex, 50/50 claude",
+          "seconds": 1654,
+          "cost_usd": 1.12
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T14:37:15",
+          "summary": "agreed-soft 6, unsolvable 15, verified 29",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T14:38:28",
+          "summary": "7 ruled: ambiguous 1, defective 1, key 5",
+          "seconds": 72,
+          "cost_usd": 0.35
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T14:38:29",
+          "summary": "ambiguous 1, defective 15, keyed 34",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T14:39:48",
+          "summary": "clear 34; 0 taxonomy findings",
+          "seconds": 79,
+          "cost_usd": 0.37
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T14:49:40",
+          "summary": "34 written in 2 part(s); answer challenges none; style scan: REVIEW (5 across 4 location(s))",
+          "seconds": 591,
+          "cost_usd": 1.73
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T15:06:45",
+          "summary": "34 reviewed, 1 fail, fact errors [44]",
+          "seconds": 1025,
+          "cost_usd": 1.45
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T15:11:15",
+          "summary": "3 accepted, 0 rejected; style scan: REVIEW (5 across 4 location(s))",
+          "seconds": 269,
+          "cost_usd": 1.58
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T15:20:23",
+          "summary": "2 changed items re-reviewed, 1 still fail [48]",
+          "seconds": 548,
+          "cost_usd": 0.19
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T15:21:23",
+          "summary": "1 ruled on the last pass, held none; style scan: REVIEW (5 across 4 location(s))",
+          "seconds": 59,
+          "cost_usd": 0.26
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T15:21:23",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T15:21:23",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T15:21:23",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T15:21:23",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T15:21:23",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T15:21:23",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T15:21:30",
+          "summary": "PREVIEW (no image base set): geography-waec.2025.PREVIEW.csv, 16 held, 1 pre-flight flags; style scan: REVIEW (6 across 4 location(s))",
+          "seconds": 6,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T15:21:32",
+          "summary": "geography-waec.2025.preview.html",
+          "seconds": 1,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 1,
+          "why": "defective",
+          "detail": "The map of IJAMO DISTRICT was not attached to this task, so the scale cannot be read or verified. | "
+        },
+        {
+          "q_number": 2,
+          "why": "defective",
+          "detail": "The map of IJAMO DISTRICT was not attached to this task, so the positions of Ebie and Oze cannot be "
+        },
+        {
+          "q_number": 3,
+          "why": "defective",
+          "detail": "The map of IJAMO DISTRICT (and thus its original scale) was not attached to this task, so the enlarg"
+        },
+        {
+          "q_number": 4,
+          "why": "defective",
+          "detail": "The map of IJAMO DISTRICT was not attached to this task, so River Momi and its tributaries cannot be"
+        },
+        {
+          "q_number": 5,
+          "why": "defective",
+          "detail": "The map of IJAMO DISTRICT was not attached to this task, so the surrounding land-use evidence cannot"
+        },
+        {
+          "q_number": 6,
+          "why": "defective",
+          "detail": "The map of IJAMO DISTRICT was not attached to this task, so the map's extent cannot be measured. | M"
+        },
+        {
+          "q_number": 7,
+          "why": "defective",
+          "detail": "The map of IJAMO DISTRICT was not attached to this task, so Ofia and Yot cannot be located or measur"
+        },
+        {
+          "q_number": 8,
+          "why": "defective",
+          "detail": "The map of IJAMO DISTRICT was not attached to this task, so settlement sizes cannot be compared. | M"
+        },
+        {
+          "q_number": 9,
+          "why": "defective",
+          "detail": "The answer options for this question are garbled/incomplete (option B is missing), and the map of IJ"
+        },
+        {
+          "q_number": 11,
+          "why": "defective",
+          "detail": "Missing table/diagram of Station Q's temperature and rainfall data; cannot compute the annual temper"
+        },
+        {
+          "q_number": 12,
+          "why": "defective",
+          "detail": "Missing table/diagram of Station Q's rainfall figures; cannot count dry season months without it. | "
+        },
+        {
+          "q_number": 13,
+          "why": "defective",
+          "detail": "Missing table/diagram of Station Q's monthly rainfall figures; cannot sum the annual rainfall withou"
+        },
+        {
+          "q_number": 23,
+          "why": "defective",
+          "detail": "Lettered options (A-D) for this question were not extracted from the source; only the roman-numeral "
+        },
+        {
+          "q_number": 24,
+          "why": "defective",
+          "detail": "As extracted, the item has no options: the options object is empty and the four choices are merged i"
+        },
+        {
+          "q_number": 32,
+          "why": "defective",
+          "detail": "The referenced cave diagram showing the landform labelled X was not attached, so the feature cannot "
+        },
+        {
+          "q_number": 45,
+          "why": "ambiguous",
+          "detail": "Textbooks and past marking schemes give ECOWAS membership as 15, so the setter almost certainly inte"
+        }
+      ]
+    }
+  },
+  "cost_usd": 19.33,
   "taxonomy_cost_usd": 12.28
 }

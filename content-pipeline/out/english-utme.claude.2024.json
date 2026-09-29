@@ -1,0 +1,400 @@
+{
+  "deriver": "claude",
+  "year": 2024,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Malevolence (ill will) is opposed by benevolence (goodwill), which also suits the hero. Wickedness and hostility are synonyms, and indifference is only neutral.",
+      "solvable": true,
+      "issue": ""
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "An august occasion is grand and majestic, so its opposite is trivial. Grand, solemn and ceremonious all keep the sense of dignity.",
+      "solvable": true,
+      "issue": ""
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Complacent means self-satisfied and unwatchful, so its opposite is vigilant. Content and satisfied are near-synonyms, and indifferent is close in sense.",
+      "solvable": true,
+      "issue": ""
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Bogus means fake, so its opposite is genuine. The other options (fraudulent, deceptive, counterfeit) are all synonyms.",
+      "solvable": true,
+      "issue": ""
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Quick-tempered is opposed by patient, which fits 'in stressful situations'. Irritable and volatile are synonyms, and impulsive is related in sense.",
+      "solvable": true,
+      "issue": "The stem is missing a noun after 'quick-tempered' (probably 'manager'). This does not affect the answer."
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Nocturnal means active at night, and its opposite is diurnal, active by day. Crepuscular means active at twilight, and night-active is a synonym.",
+      "solvable": true,
+      "issue": ""
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'Repealed' is plainly the target word, and revoked is its synonym, fitting 'similarly'. Enacted, enforced and sustained are all the opposite.",
+      "solvable": true,
+      "issue": "The underline marker is missing from the stem. 'Repealed' is evidently the underlined word."
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Impertinence means rudeness or insolence. Politeness, deference and timidity all run the other way.",
+      "solvable": true,
+      "issue": ""
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Sagacity means wisdom or sound judgement, which is also what one seeks from an elder. Knowledge is related but is not the same as sagacity.",
+      "solvable": true,
+      "issue": ""
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Impregnable means unable to be broken into, so invulnerable is the synonym. The other options are all antonyms.",
+      "solvable": true,
+      "issue": ""
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Seldom means rarely. Occasionally is weaker and does not match the desert context, while frequently and regularly are opposites.",
+      "solvable": true,
+      "issue": ""
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Invigorating means giving energy, so refreshing is the synonym. The other options are all antonyms.",
+      "solvable": true,
+      "issue": ""
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "With neither...nor, the verb agrees with the nearer subject, 'the teachers', so it is plural: 'are'. 'Were' is also plural, and nothing in the sentence fixes the tense.",
+      "solvable": true,
+      "issue": "B (are) and C (were) are both grammatical. B is the expected key because the sentence has no past-time marker."
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "'Divided' implies that the members hold differing views, so the collective noun takes notional plural agreement: 'The committee are divided'. 'Is' would treat the committee as a single unit, which contradicts 'divided'.",
+      "solvable": true,
+      "issue": "'Were' is also plural and grammatical. Under strict American usage, 'is' would also be defended."
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "'A variety of' plus a plural noun takes a plural verb in the sense of 'various options', so 'are available'. 'Is' treats 'variety' as the head noun and is the main distractor.",
+      "solvable": true,
+      "issue": "The sentence has no tense marker, so 'were' is also plural and grammatical. Some grammars also accept 'is'."
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "'Each of' takes a singular verb, so 'is'. 'Are', 'were' and 'have been' are all plural.",
+      "solvable": true,
+      "issue": ""
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "'News' is an uncountable singular noun, so 'has spread'. The other options are all plural forms.",
+      "solvable": true,
+      "issue": ""
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "'By the time' plus a present-tense clause about the future calls for the future perfect: 'will have started'. 'Had started' would need a past-tense clause.",
+      "solvable": true,
+      "issue": ""
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The correct spelling is 'accommodate', with double c and double m. Each other option drops or adds a letter.",
+      "solvable": true,
+      "issue": ""
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'By the time...tomorrow' calls for the future perfect: 'will have completed'. 'Will complete' does not show completion before a point in the future.",
+      "solvable": true,
+      "issue": "The gap marker is missing from the stem (it should follow 'students'). This does not affect the answer."
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The standard spelling is 'conscientious'. Each other option misspells the 'sci' or 'tious' part.",
+      "solvable": true,
+      "issue": ""
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "An action that continued up to another past event ('before we decided') takes the past perfect continuous. 'Have been living' is wrong because the time frame is past.",
+      "solvable": true,
+      "issue": ""
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The idiom means taking on more than one can manage. 'To eat too quickly' is the literal trap.",
+      "solvable": true,
+      "issue": ""
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A positive statement with 'is' takes a negative tag with the same auxiliary: 'isn't he'. 'Doesn't he' uses the wrong auxiliary.",
+      "solvable": true,
+      "issue": ""
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "'You'd rather not' contains 'would' and is negative, so the tag is positive: 'would you'. 'Wouldn't you' ignores the 'not'.",
+      "solvable": true,
+      "issue": "Tags on 'would rather' are unusual, and some drills key 'wouldn't you' by ignoring the negation. Q25 is absent from the input."
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "To let the cat out of the bag means to reveal a secret. 'To release a pet' is the literal distractor.",
+      "solvable": true,
+      "issue": ""
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The idiom means to organise one's personal affairs or correct one's own faults. Cleaning the home is the literal reading.",
+      "solvable": true,
+      "issue": ""
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "'Out of bounds' means prohibited or off-limits. 'Easily accessible' is its opposite.",
+      "solvable": true,
+      "issue": ""
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "'To a fault' means to an excessive degree, so the person is excessively generous. 'Perfectly generous' misses the implied excess.",
+      "solvable": true,
+      "issue": ""
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The 'u' in bluff is /ʌ/, the same vowel as in rough. Through has /uː/, drought has /aʊ/ and cough has /ɒ/.",
+      "solvable": true,
+      "issue": ""
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Weight has /eɪ/, as does great. Height has /aɪ/, beat has /iː/ and threat has /e/.",
+      "solvable": true,
+      "issue": "The underline marker is missing, but 'eigh' is evidently the part meant."
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The 'tch' in batch is /tʃ/, as is the 'ch' in church. Chemistry, chaos and ache all have /k/.",
+      "solvable": true,
+      "issue": "The underline marker is missing. 'tch' is assumed, since 'b' has no match among the options."
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The 'j' and 'dge' in judge are both /dʒ/, as is the 'g' in giant. Gear, gather and goal have hard /g/.",
+      "solvable": true,
+      "issue": "The underline marker is missing, but both candidate parts give the same sound."
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Characterise is stressed on the first syllable: /ˈkærəktəraɪz/. A secondary stress may fall on -ize, but never the primary one.",
+      "solvable": true,
+      "issue": "Option D reads 'characterlZE', a typing error for 'characterIZE'."
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Continental is stressed on the third syllable: con-ti-NEN-tal. CON carries only secondary stress.",
+      "solvable": true,
+      "issue": "Option D has no capitalised syllable (it should presumably be 'continenTAL'). This does not affect the answer."
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Immunity is stressed on the second syllable: im-MU-ni-ty (/ɪˈmjuːnəti/). All other placements are wrong.",
+      "solvable": true,
+      "issue": ""
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Stressing SCHOOL contrasts the destination with another place, so they did not walk to the park. B would need stress on WALKED, and C on CHILDREN.",
+      "solvable": true,
+      "issue": ""
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Stressing BOUGHT contrasts how the cake was obtained, so she did not bake it. B would need stress on SISTER, and D on CAKE.",
+      "solvable": true,
+      "issue": ""
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The sentence is garbled: 'John CANNOT only sing' should be 'John can NOT only sing'. The implied contrast is with the assumption that John can only sing. That reading matches both B and D, which are word-for-word identical, so no single letter can be chosen.",
+      "solvable": false,
+      "issue": "Options B and D are identical ('John can only sing'), and the stem prints 'CANNOT' where 'can NOT (only)' is meant. The intended key cannot be told apart."
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "B",
+      "confidence": "uncertain",
+      "reasoning": "From recall of the novel, Salma lived in Queen Amina Hall as a fresher, a female hostel named after the Zazzau queen. The other halls are not female halls tied to her story.",
+      "solvable": true,
+      "issue": "This is a recall question on a set text that is not supplied. The answer depends on memory of the novel."
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "B",
+      "confidence": "uncertain",
+      "reasoning": "From recall, Salma shared dambu nama, a northern shredded-meat delicacy, with her roommate. Masa and dan wake are also northern foods and are plausible distractors.",
+      "solvable": true,
+      "issue": "This is a recall question on a set text that is not supplied, and my memory of this detail is weak."
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "A",
+      "confidence": "uncertain",
+      "reasoning": "From recall, the course Salma struggled with in her final year was Political Philosophy. I cannot firmly rule out the other philosophy options.",
+      "solvable": true,
+      "issue": "This is a recall question on a set text that is not supplied, and my memory is weak."
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "B",
+      "confidence": "uncertain",
+      "reasoning": "Dr Kabir appears in connection with the disciplinary process over Salma's exam-malpractice case, which fits the Ethics and Disciplinary Committee chair. Head of Department is the main alternative.",
+      "solvable": true,
+      "issue": "This is a recall question on a set text that is not supplied."
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "C",
+      "confidence": "uncertain",
+      "reasoning": "This is a best guess from recall that the fiancé used a Samsung Note. All three Samsung options are plausible.",
+      "solvable": true,
+      "issue": "This is a recall question on a set text that is not supplied, and my memory of this detail is weak."
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "A",
+      "confidence": "uncertain",
+      "reasoning": "From recall, Salma was insulted as a prostitute during the robbery incident while out with Joyce. Joyce is the strongest alternative.",
+      "solvable": true,
+      "issue": "This is a recall question on a set text that is not supplied."
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "A",
+      "confidence": "uncertain",
+      "reasoning": "Ummi's warnings about social media are aimed at her teenage son Omar, the child most absorbed in it. Salma is an older child and less likely to be addressed so.",
+      "solvable": true,
+      "issue": "This is a recall question on a set text that is not supplied. The stem says 'except' for 'excerpt'."
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Khadija Abubakar Jalli is a fashion entrepreneur whose label is She's Boutique Afrique. The other names are not associated with her.",
+      "solvable": true,
+      "issue": "This is a recall question on the author's biography, not the text."
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "A",
+      "confidence": "uncertain",
+      "reasoning": "This is a best guess that Omar's family belonged to Lafiaji. Lafayette is an implausible foreign place, and Iperindo is Yoruba and does not fit the family.",
+      "solvable": true,
+      "issue": "This is a recall question on a set text that is not supplied, and my memory of this detail is weak."
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "A",
+      "confidence": "uncertain",
+      "reasoning": "The exchange about university students not wearing uniform fits Omar's curiosity about university life in the family conversations with Ummi. Labaran and Jamila are less central.",
+      "solvable": true,
+      "issue": "This is a recall question on a set text that is not supplied. The stem says 'except' for 'excerpt'."
+    }
+  },
+  "failures": []
+}

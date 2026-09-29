@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 130 570 590" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+  <!-- Authored by hand, not traced: the diagrams in this subject carry typed labels, which
+       tracing damages. Coordinates follow the original 2025_Q6.png (800x800 px).
+       Nothing in the original was unreadable; nothing omitted. -->
+  <title id="t">Figure 1</title>
+  <desc id="d">A single vertical bar rising from the horizontal axis, divided by two horizontal lines into three sections stacked one above the other. The bottom section is filled with diagonal hatch lines, the middle section is plain and unfilled, and the top section is filled with scattered dots. The vertical axis is labelled Y and the horizontal axis is labelled X, with the origin marked O.</desc>
+
+  <g fill="none" stroke="#E2E8F0" stroke-width="4" stroke-linecap="square">
+    <!-- axes -->
+    <path d="M168 166 V632 H632"/>
+    <!-- bar outline and the two dividing lines -->
+    <rect x="234" y="199" width="135" height="433"/>
+    <line x1="234" y1="329" x2="369" y2="329"/>
+    <line x1="234" y1="431" x2="369" y2="431"/>
+  </g>
+
+  <!-- bottom section: diagonal hatching rising to the right -->
+  <g stroke="#E2E8F0" stroke-width="3.5" stroke-linecap="butt">
+    <line x1="234" y1="456" x2="264.4" y2="431"/>
+    <line x1="234" y1="482" x2="294.3" y2="431"/>
+    <line x1="234" y1="507" x2="322.9" y2="431"/>
+    <line x1="234" y1="532" x2="351.7" y2="431"/>
+    <line x1="234" y1="557" x2="369" y2="440"/>
+    <line x1="234" y1="582" x2="369" y2="465"/>
+    <line x1="234" y1="608" x2="369" y2="491"/>
+    <line x1="236" y1="632" x2="369" y2="517"/>
+    <line x1="280" y1="632" x2="369" y2="555"/>
+    <line x1="313" y1="632" x2="369" y2="584"/>
+    <line x1="343" y1="632" x2="369" y2="610"/>
+  </g>
+
+  <!-- top section: scattered dots -->
+  <g fill="#E2E8F0">
+    <circle cx="263" cy="240" r="3.5"/>
+    <circle cx="291" cy="243" r="3.5"/>
+    <circle cx="317" cy="233" r="3.5"/>
+    <circle cx="333" cy="249" r="3.5"/>
+    <circle cx="277" cy="264" r="3.5"/>
+    <circle cx="315" cy="264" r="3.5"/>
+    <circle cx="349" cy="265" r="3.5"/>
+    <circle cx="331" cy="280" r="3.5"/>
+    <circle cx="365" cy="281" r="3.5"/>
+    <circle cx="267" cy="287" r="3.5"/>
+    <circle cx="307" cy="293" r="3.5"/>
+  </g>
+
+  <!-- axis labels -->
+  <g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="40" text-anchor="middle">
+    <text x="139" y="189">Y</text>
+    <text x="155" y="688">O</text>
+    <text x="620" y="688">X</text>
+  </g>
+</svg>

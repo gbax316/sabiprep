@@ -1,0 +1,309 @@
+{
+  "unit": "2025",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "concepts.participation",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "government.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "concepts.sovereignty",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "organs.legislature",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "constitution.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "citizenship.duties",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "pressure-opinion.media",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "pressure-opinion.methods",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "pressure-opinion.public-opinion",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "citizenship.duties",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "concepts.culture-socialisation",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "concepts.culture-socialisation",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "ideologies.totalitarianism",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "organs.judiciary",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "elections.commission",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "parties.parties",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "public-admin.corporations",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "local-government.problems",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "types.federal",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "legislation.delegated",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "local-government.traditional-rulers",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "colonial.british-structure",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "colonial.british-structure",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "colonial.french",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "nationalism.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "nationalism.leaders",
+      "confidence": "overlap",
+      "note": "also fits nationalism.meaning: the stem asks what nationalist leaders as a group were associated with after WWII, a general claim about the era's activity, not a named leader's individual contribution, which is what nationalism.leaders covers is for"
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "nationalism.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "colonial.impact",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "pre-independence.compared",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "military.causes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "military.impact",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "foreign-policy.concepts",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "foreign-policy.concepts",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "intl-orgs.un",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "intl-orgs.un",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "principles.accountability",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "parties.systems",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "elections.commission",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "pressure-opinion.public-opinion",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "citizenship.duties",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 42,
+      "subtopic_id": "constitution.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 43,
+      "subtopic_id": "forms.democracy",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 44,
+      "subtopic_id": "parties.systems",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 45,
+      "subtopic_id": "public-admin.privatisation",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "intl-orgs.ecowas",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 47,
+      "subtopic_id": "intl-orgs.un",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 48,
+      "subtopic_id": "intl-orgs.commonwealth",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 49,
+      "subtopic_id": "intl-orgs.oau-au",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "pressure-opinion.pressure-groups",
+      "confidence": "clear",
+      "note": ""
+    }
+  ],
+  "taxonomy_findings": [
+    {
+      "kind": "overlap",
+      "where": "nationalism.leaders",
+      "detail": "Q27 tests a generic claim about nationalist leaders as a category after World War II, not a named leader's individual contribution, which is what the covers line describes. nationalism.meaning (causes, rise and effects of nationalism) or nationalism.movements (goals and strategies) fit the generic framing just as well. A sorting rule distinguishing a question about leaders in general from one about a named leader's specific record would close this."
+    }
+  ],
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1"
+}

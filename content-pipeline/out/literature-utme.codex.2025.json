@@ -1,0 +1,395 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The Lion and the Jewel dramatizes the pull between Baroka's traditional Yoruba world and Lakunle's borrowed Western modernity, embodied in the contest for Sidi. Gender and generational conflict are present but subordinate to this central tension, so tradition and modernity is the strongest answer.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The play ends in reconciliation and marriage celebration with comic irony (Lakunle's defeat, Baroka's trickery played for laughs), fitting the conventions of comedy. It lacks the catastrophic downfall of tragedy or the deliberate absurdity of farce.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "The dramatic struggle plays out concretely as a rivalry between Lakunle and Baroka for Sidi's hand, each representing modern and traditional values respectively. Option B (the old and the new) restates the play's theme rather than the personal struggle the question asks about, making A the more direct fit.",
+      "solvable": true,
+      "issue": "Options A and B are both defensible since Lakunle/Baroka personify old vs new; the question could intend either the literal rivalry or its symbolic framing.",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Bata and gangan drums are the ones referenced in the play's stage directions accompanying the dance and mime sequences (e.g., the dance depicting the stranger/photographer). Omele and iya-ilu, while part of Yoruba drum ensembles generally, are not the pair named in the text.",
+      "solvable": true,
+      "issue": "Options C and D are both lettered 'C' in the source question, a labeling defect, but this does not affect the chosen answer B, which is unambiguous.",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Osborne's stage directions introduce Jimmy Porter as 'a tall, thin young man about twenty-five,' making 25 the textually stated age. The other ages are not supported by the play's description.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Look Back in Anger centers on Jimmy's resentment toward the class system and his marriage into the upper-middle-class Redfern family, making social class struggle the dominant theme. Betrayal and religious hypocrisy are minor or absent, and sexism is secondary to the class conflict driving Jimmy's rage.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "When Helena informs Alison that she has summoned Colonel Redfern, Alison responds with numb, passive acceptance of the decision rather than active resistance, reflecting her exhaustion and resignation at that point in the play. Rejection or hatred would contradict her generally submissive characterization in this scene.",
+      "solvable": true,
+      "issue": "Alison's emotional state is layered (relief mixed with grief), so acceptance versus dismissal could both be argued depending on interpretation.",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Jimmy repeatedly disparages Cliff's lack of sophistication by calling him a 'peasant,' a term used pointedly in the text to mark Cliff as uneducated and unrefined. 'Idiot' and 'fool' are generic insults Jimmy uses more broadly and are not the specific comparison tied to ignorance.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Puck introduces himself in the play as also being called Robin Goodfellow, the mischievous fairy servant of Oberon. Quince, Starveling, and Bottom are mechanicals, unrelated to this alternate name.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The play opens with Theseus impatiently lamenting how slowly the moon wanes before his wedding to Hippolyta ('the moon... lingers my desires'). Lysander, Demetrius, and Hermia appear later in the scene focused on their romantic dispute, not on impatience for an event.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question refers to \"the play\" but no play title or stem identifying the text is given for this question.",
+      "solvable": false,
+      "issue": "Missing shared stem naming the play this question refers to; cannot determine which text is being described.",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Emily Bronte was born in 1818 and died in 1848, making her 30 years old at death. Options like 18 or 50 do not match her well-documented birth and death dates.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Heathcliff's systematic revenge against Hindley, the Lintons, and the next generation drives the majority of the plot after his return, making revenge the dominant organizing theme. Love is also strongly present, but it functions mainly as the motive that fuels the revenge plot rather than the plot's main engine.",
+      "solvable": true,
+      "issue": "Love and Revenge are both defensible as the 'dominant' theme depending on interpretation.",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "After their father's death, Hindley's drinking and gambling debts allow Heathcliff to gradually acquire mortgages on Wuthering Heights, eventually winning full ownership through Hindley's gambling losses. This is explicit in the novel and not attributable to death, agreement, or mystery.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The option list is corrupted: label B is used twice for two different answers ('doctor and lawyer' and 'doctor and clerk'), and there is no option D, making it impossible to determine the intended correct choice.",
+      "solvable": false,
+      "issue": "Duplicate option label 'B' assigned to two different answer texts and a missing option D; the choice set is garbled.",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "In the novel, sitting tenants under rent-controlled tenancies are legally protected from eviction, which is why landlords like Mr. Noble struggle to remove them and instead let rooms to immigrant tenants like Adah's family in uncontrolled properties. This reflects the historical UK rent-control housing context depicted in the book rather than the tenants' age or race.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "In Second Class Citizen, Adah's son Vicky falls seriously ill with meningitis in London, causing panic that the authorities might take him away, which becomes a pivotal crisis in the novel. The other named children are not the ones associated with this illness.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The novel unfolds as a series of loosely connected episodes tracing Adah's life from Nigeria to London rather than following one tight continuous causal chain, which is characteristic of an episodic plot structure.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "C",
+      "confidence": "uncertain",
+      "reasoning": "\"I-Put-It-To-Me\" is a nickname mocking a character's habit of using courtroom-style rhetorical phrasing when telling exaggerated stories, a trait associated with the character Tally O in the novel. Confidence is low because this minor character detail is not as widely documented as the novel's central plot points.",
+      "solvable": true,
+      "issue": "Limited widely-available reference material on this minor nickname makes the identification less certain than other answers.",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "D",
+      "confidence": "uncertain",
+      "reasoning": "The title's reference to 'dawn' and the novel's opening scene of arrival in Accra suggest an early morning setting, consistent with 6a.m. rather than an afternoon or evening time. Confidence is low because the exact opening hour is a specific textual detail not as firmly recalled as major plot events.",
+      "solvable": true,
+      "issue": "Precise opening time is a fine textual detail with limited corroborating reference material available.",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Murtala Muhammed International Airport (Lagos, Nigeria) and Kotoka International Airport (Accra, Ghana) are real, named airports, matching a novel involving Nigeria-Ghana travel (e.g. 'Unexpected Joy at Dawn'). Options A, B and D pair an airport with Kantamanto or Makola, which are Accra markets, not airports, so they are internally inconsistent with the question asking for two airports.",
+      "solvable": true,
+      "issue": "The novel itself is not named in the question, so the identification relies on which prescribed text this paper intends; treat as probable rather than certain.",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "'Song of the Women of My Land' catalogues the unending, unacknowledged toil of African women (farming, cooking, fetching water) in a tone of mourning for their condition, which is standardly classed as lamentation. 'Reflective' is the strongest distractor since the poem does reflect on women's roles, but its dominant mood is one of sorrowful complaint rather than detached musing.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "A",
+      "confidence": "uncertain",
+      "reasoning": "I cannot confidently verify the exact rhyme scheme of 'Raiders of the Treasure Trove' from standard anthology knowledge; many African protest/thematic poems of this kind are composed in unrhymed free/blank verse, which is why I lean toward Blank Verse, but this is not a poem I can identify with certainty.",
+      "solvable": true,
+      "issue": "Low confidence: this poem title is not one I can reliably match to a known anthology text, so the rhyme-scheme answer is a best guess rather than a verified fact.",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Joe de Graft's 'A Government Driver on His Retirement' mocks the injustice and neglect faced by a loyal civil servant left without a pension, using irony and mockery typical of satire. 'Sarcastic' is close but describes a tone/device within the poem rather than its overall classification, which is satirical social commentary.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Frank Aig-Imoukhuede's 'The Leader and the Led' uses a procession of animals to stand in for African leaders and the masses, which is the defining feature of allegory. 'Dramatic poem' is a plausible distractor because it is delivered as a monologue, but the animal-as-leader device is specifically allegorical rather than merely dramatic in form.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Agostinho Neto's 'The Grieved Lands of Africa' moves from depicting suffering under colonialism to a forward-looking vision of liberation and renewal, ending on a hopeful, optimistic note. 'Melancholic' fits the poem's earlier stanzas but not its closing turn toward hope.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Maya Angelou's 'Caged Bird' juxtaposes the free bird's liberty with the caged bird's confinement, making limitation versus freedom its central theme. 'Hope and adversity' is a related but secondary idea (the caged bird's song of hope despite captivity), subordinate to the core freedom/limitation contrast.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "D.H. Lawrence's 'Bat' is symbolic through its contrast of swallows and bats (two categories of flying creatures), its reference to Chinese cultural associations of the bat with happiness, and its shifting tone from admiration to revulsion; the Italian setting (Florence) is descriptive scene-setting rather than a source of the poem's symbolism.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "T.S. Eliot's 'Journey of the Magi' is a hallmark Modernist poem, using fragmented narrative, colloquial diction, and disillusionment characteristic of Modernism. 'Victorian' is wrong since Eliot wrote in the twentieth century, well after the Victorian era.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Gerard Manley Hopkins' 'Binsey Poplars' mourns the felling of a row of trees, lamenting humanity's careless destruction of nature, making environmental degradation its main theme. 'Spiritualism' is a distractor drawn from Hopkins' broader religious concerns elsewhere, but this particular poem's explicit subject is the loss of trees/nature.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A limerick is a well-established humorous verse form of five lines with a fixed AABBA rhyme scheme and a bouncy rhythm. It is not tragic, solemn, or a fourteen-line sonnet form (option D describes a sonnet), so the other options are clearly wrong.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Romantic poetry is defined by its reverence for Nature as a source of inspiration, emotion, and spiritual truth, seen in poets like Wordsworth. While beauty, life, and people may appear in Romantic verse, Nature is the central, defining preoccupation of the movement.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Peripeteia, a term from Aristotle's Poetics, refers to the sudden reversal of fortune in a tragedy, where events turn to their opposite outcome. Option C describes anagnorisis (recognition), not peripeteia, making it the closest but incorrect distractor.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Aesthetics is the branch of literary study concerned with beauty and artistic quality in a work. Interpretation and taste relate to reader response rather than the term's core meaning, and comedy is a genre, not an aesthetic concern.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "An oxymoron combines two contradictory terms (e.g., 'deafening silence') for rhetorical effect. Option B describes personification, C describes repetition, and D describes synecdoche, so none of these fit the definition.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "The poem condemns the destruction of a living tree to erect a 'huge, senseless cathedral of doom,' with harsh judgmental diction ('senseless,' 'doom') signalling a critical tone toward the surveyors and builders. Nostalgic is a defensible secondary reading since the tree's past beauty is recalled, but the biting word choice pushes the tone toward criticism of the act rather than mere wistful longing.",
+      "solvable": true,
+      "issue": "Tone could arguably be read as nostalgic as well as critical; critical is the stronger fit given the condemnatory diction.",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The tree represents nature and traditional life, while the cathedral represents encroaching, destructive modernity/urbanization, making them symbolic contrasts. Irony is present in calling the cathedral 'senseless' and a place of 'doom' rather than worship, but the tree-versus-cathedral relationship itself is fundamentally symbolic representation, not a statement whose literal and intended meaning diverge.",
+      "solvable": true,
+      "issue": "Ironical is a defensible alternative given the incongruous description of the cathedral, but symbolic better captures what the tree and cathedral each represent.",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "In drama, the 'cast' refers to the group of actors and the roles/characters they play in a production. Stage directions, audience, and prologue are distinct dramatic elements unrelated to this term.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Pathos is a literary device or quality used to evoke feelings of pity, sorrow, or compassion in the audience. It is not primarily used for humour, logical argument, or ridicule, which distinguishes it from the other options.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The denouement is the final part of a play where the plot's complications are resolved and loose ends are tied up. Exposition and rising action occur earlier in the plot, and the climax precedes the denouement, so none of these match the term's placement at the end.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1248,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1202,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1933,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.083,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.5213
+}

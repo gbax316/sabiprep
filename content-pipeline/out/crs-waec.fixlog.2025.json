@@ -1,0 +1,121 @@
+{
+  "entries": [
+    {
+      "q_number": 15,
+      "source": "codex",
+      "finding": "hint 2 eliminates A, B and C at once, so hint 3 does no work",
+      "decision": "accepted",
+      "reason": "'The text does not blame tiredness or fear' plus 'no wish for David to kill Saul' leaves only D before hint 3 is read, which breaks the hint 2 rule on stating the answer indirectly.",
+      "change": "Hint 2 now rules out only B: 'Saul's men were an army guarding their king while they hunted David, so a wish to see David kill Saul does not fit them.' Hint 3 unchanged, so tiredness and fear still have to be weighed against the deep sleep from the Lord.",
+      "round": 1
+    },
+    {
+      "q_number": 15,
+      "source": "check-11",
+      "finding": "'frightened soldiers stay awake' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "A general claim about all frightened soldiers stated as fact; the item was already being changed.",
+      "change": "C line now reads 'the text says nothing about fear, and fear is more likely to keep soldiers awake than put them to sleep.'",
+      "round": 1
+    },
+    {
+      "q_number": 17,
+      "source": "codex",
+      "finding": "hint 2 eliminates A, B and D at once, so hint 3 does no work",
+      "decision": "accepted",
+      "reason": "Hint 2 dismissed battle, building works and choice of officials by name, leaving only C before hint 3.",
+      "change": "Hint 2 now rules out battle only and gives the principle: \"'Contrary to the will of God' means breaking something God had commanded, not just making an unpopular choice.\" Hint 3 unchanged.",
+      "round": 1
+    },
+    {
+      "q_number": 40,
+      "source": "codex",
+      "finding": "How to tell lists earthquake and rocks as separate second and third steps while hint 2 and the D line say they came together",
+      "decision": "accepted",
+      "reason": "Real self-contradiction (check 11). Matthew 27:51 joins the earthquake and the splitting of the rocks in one clause, so a strict four-step sequence overstates the text. The answer B is unaffected.",
+      "change": "How to tell now reads First (curtain), Then (earth shook and rocks split together), Last (tombs). A and D lines say each happened together with the other, straight after the curtain was torn. Exam tip sequence rewritten the same way. Hints unchanged.",
+      "round": 1
+    },
+    {
+      "q_number": 44,
+      "source": "codex",
+      "finding": "'a few weeks before' understates the gap between Peter's denial and Pentecost",
+      "decision": "accepted",
+      "reason": "The denial was on the night before the crucifixion at Passover and Pentecost came fifty days after Passover, so about seven weeks. 'A few weeks' is loose enough to mislead.",
+      "change": "'a few weeks before' changed to 'about seven weeks before'.",
+      "round": 1
+    },
+    {
+      "q_number": 45,
+      "source": "codex",
+      "finding": "hint 3 can be answered from the grammar of the options alone",
+      "decision": "accepted",
+      "reason": "'Which option is about Saul's own experience rather than his work?' singles out B by wording, since A, C and D all describe Saul acting on others. No recall of Acts 9 is needed.",
+      "change": "Hint 3 replaced with: \"The Lord's words continue past 'to carry my name'. Recall what the rest of Acts 9:15-16 says would happen to Saul himself, and choose the option that matches it.\"",
+      "round": 1
+    },
+    {
+      "q_number": 48,
+      "source": "codex",
+      "finding": "hint 3 can be answered from the grammar of the options alone",
+      "decision": "accepted",
+      "reason": "B, C and D are all phrased 'the Lord ...', so 'rather than something the Lord does for them' picks out A with no knowledge of 1 Peter 2:2.",
+      "change": "Hint 3 now ends: 'Recall the last word of 1 Peter 2:2, and choose the option that names it.'",
+      "round": 1
+    },
+    {
+      "q_number": 47,
+      "source": "check-8",
+      "finding": "hint 2 says the instruction to the suffering is 'only two words long'",
+      "decision": "accepted",
+      "reason": "The instruction quoted in the solution is 'Let him pray', three words, so the hint gets the count wrong.",
+      "change": "'only two words long' changed to 'only a few words long'.",
+      "round": 1
+    },
+    {
+      "q_number": 0,
+      "source": "check-12",
+      "finding": "sibling leaks across shared stems",
+      "decision": "no_change",
+      "reason": "No item in this paper has a passage_id or shared stem, so none are siblings. Items next to each other on the same story (Q4 and Q5 on Joseph, Q24 and Q25 on Josiah) were also read in order: no hint answers the question that follows it. Q25's solution mentions Josiah tearing his clothes, but the student reads it after already answering Q24.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 0,
+      "source": "check-11",
+      "finding": "sweep of all 47 items for unscoped absolutes and syllabus simplifications",
+      "decision": "no_change",
+      "reason": "Syllabus readings are already scoped ('the exam key takes this as', 'CRS teaches', 'is often explained as', 'usually'), and the absolute claims left are narrow statements about what the Bible text says. Q15 was the only one fixed.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 40,
+      "source": "codex",
+      "finding": "hint 2 names option B by letter and decodes it, pointing at the key",
+      "decision": "accepted",
+      "reason": "Hint 2 singles out the correct option by its letter, which points to the answer indirectly. The misprint still has to be explained so the option makes sense, but it can be done without the letter.",
+      "change": "hint2 now says 'One of the options has a misprint: read 'was born' as 'was torn'', following Codex's proposed wording, and no longer names B.",
+      "round": 2
+    },
+    {
+      "q_number": 40,
+      "source": "check-11",
+      "finding": "'four signs' and 'tombs ... last' stated as Matthew's full list",
+      "decision": "accepted",
+      "reason": "Matthew 27:52-53 goes on past the opening of the tombs (the saints are raised and later appear), so 'Matthew lists four signs' and 'the tombs opened last' are unscoped. These are true only of the four events in the options.",
+      "change": "hint2: 'Matthew gives the four events in the options in a set order'; hint3: 'last of these four'; solution: 'Last of these four:', C line 'last of these four', exam tip 'and then the tombs were opened'.",
+      "round": 2
+    },
+    {
+      "q_number": 40,
+      "source": "check-12",
+      "finding": "no siblings",
+      "decision": "rejected",
+      "reason": "passage_id is null, so this question has no siblings and no hint can leak a sibling's answer.",
+      "change": "",
+      "round": 2
+    }
+  ]
+}

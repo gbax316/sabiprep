@@ -1,0 +1,255 @@
+{
+  "unit": "2025",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "intl-orgs.un",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "pre-colonial.hausa-fulani",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "military.regimes",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "foreign-policy.major-powers",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "federalism.states",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "nigeria-parties.third-republic",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "intl-orgs.opec",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "foreign-policy.africa",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "foreign-policy.concepts",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "concepts.power-authority",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "federalism.problems",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "colonial.acquisition",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "foreign-policy.concepts",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "federalism.states",
+      "confidence": "clear",
+      "note": "Names a military ruler's era but tests state creation; military.regimes has an explicit sorting rule sending state-creation questions here even when the answer is a ruler."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "concepts.sovereignty",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "intl-orgs.general",
+      "confidence": "overlap",
+      "note": "Also fits foreign-policy.concepts, which cites this exact question (UTME 2025 Q16) as tested there. But foreign-policy.concepts own sorting rule says what an international organisation is and its types goes to intl-orgs.general, and intl-orgs.general own sorting rule says a question spanning several named organisations goes there. The stem gives ECOWAS, OAU and AU as examples of a category, which is exactly that case. This is a self-contradiction in the taxonomy, not just a close call."
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "government.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "organs.executive",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "military.impact",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "federalism.states",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "concepts.sovereignty",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "pre-independence.clifford",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "intl-orgs.un",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "organs.legislature",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "public-admin.privatisation",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "intl-orgs.opec",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "foreign-policy.africa",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "types.unitary",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "elections.franchise",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "public-admin.civil-service",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "pre-colonial.hausa-fulani",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "local-government.reforms",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "constitution.meaning",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "principles.separation",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "organs.judiciary",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "post-independence.1979-1989",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "elections.commission",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "military.disengagement",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "organs.legislature",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "nigeria-parties.first-republic",
+      "confidence": "clear",
+      "note": ""
+    }
+  ],
+  "taxonomy_findings": [
+    {
+      "kind": "overlap",
+      "where": "foreign-policy.concepts / intl-orgs.general",
+      "detail": "Q16 (ECOWAS, OAU, AU and other bodies are examples of what) is cited as tested under foreign-policy.concepts, but that subtopic's own sorting rule sends what an international organisation is and its types to intl-orgs.general, and intl-orgs.general's own sorting rule claims a question spanning several named organisations. The two covers lines point the same content at each other. The border needs a rule that survives its own citations, for example: a question naming several organisations to illustrate the category international organisation goes to intl-orgs.general regardless of whether the stem also uses the phrase foreign policy or international relations."
+    }
+  ],
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1"
+}

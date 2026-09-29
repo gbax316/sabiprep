@@ -1,0 +1,85 @@
+{
+  "entries": [
+    {
+      "q_number": 1,
+      "source": "codex",
+      "finding": "hint 2 eliminates all three distractors, so hint 3's 'world body and the continental body' has nothing left to narrow",
+      "decision": "accepted",
+      "reason": "'The continental bodies' covers both the AU and the OAU, so hint 2 left only the UN and contradicted the two-way choice in hint 3.",
+      "change": "Hint 2 now removes only the OAU (replaced by the AU in 2002) and OPEC (no permanent seats), leaving the UN and the AU for hint 3. Hint 3 unchanged.",
+      "round": 1
+    },
+    {
+      "q_number": 3,
+      "source": "codex",
+      "finding": "hint 2 eliminates Gowon, Buhari and Abacha in one sentence",
+      "decision": "accepted",
+      "reason": "'Supreme Military Council ... from 1966 up to 1985' also covers Buhari, so hint 2 left only Babangida and hint 3 had nothing to narrow.",
+      "change": "Hint 2 now removes Abacha (PRC) and Gowon only. Hint 3 narrows to the two 1980s rulers and asks which came to power in the August 1985 coup. Codex's proposed hint 3 was not used, because 'which one lost power that month' nearly makes the choice.",
+      "round": 1
+    },
+    {
+      "q_number": 4,
+      "source": "codex",
+      "finding": "hint 2 eliminates B, C and D, then hint 3 says 'Two remain'",
+      "decision": "accepted",
+      "reason": "Hint 2's Israel sentence removed the last distractor, so 'Two remain' in hint 3 was false.",
+      "change": "Hint 2 now removes only Chad and Libya. Hint 3 unchanged. Codex's proposed hint 3 was not used, because putting the 1973 Israel break into hint 3 hands over the answer.",
+      "round": 1
+    },
+    {
+      "q_number": 24,
+      "source": "codex",
+      "finding": "hint 3 'what the US Senate and House are called together' is the answer word",
+      "decision": "accepted",
+      "reason": "Recalling that name is recalling option C itself, with no weighing of the two options left.",
+      "change": "Hint 3 now notes that both countries have a Senate and a House of Representatives under different overall names, and asks the student to match each name to its country.",
+      "round": 1
+    },
+    {
+      "q_number": 34,
+      "source": "codex",
+      "finding": "hint 3 paraphrases options A and B",
+      "decision": "accepted",
+      "reason": "'build up one arm, or to stop power being misused' restates the two options, and after hint 2 the choice needs no thought.",
+      "change": "Second part of hint 3 replaced: the student considers what checks such as the President's veto and judicial review are used for.",
+      "round": 1
+    },
+    {
+      "q_number": 19,
+      "source": "check-11",
+      "finding": "'under military rule there are no elections and no parties' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "False for Nigeria as stated: the Babangida regime set up the SDP and NRC and held local, state and National Assembly elections.",
+      "change": "Principle now says military regimes 'usually' suspend the constitution; How to tell now says elections and parties are 'normally suspended' and citizens cannot vote the military ruler in or out.",
+      "round": 1
+    },
+    {
+      "q_number": 34,
+      "source": "codex",
+      "finding": "check 2: hint 3's 'help one arm grow, or let one arm stop another' restates options A and B as a binary choice",
+      "decision": "accepted",
+      "reason": "After C and D are set aside, the two halves of the closing question map directly onto A and B, so the student can pick without reasoning.",
+      "change": "Replaced the closing question with a scenario of one President holding all three powers and asked what legislative oversight and judicial review guard against. Did not use Codex's wording about the veto being 'used against that picture', since the veto is the President's own power and would confuse the scenario.",
+      "round": 2
+    },
+    {
+      "q_number": 34,
+      "source": "check-11",
+      "finding": "scan for unscoped absolutes or simplifications",
+      "decision": "rejected",
+      "reason": "No unscoped absolutes. The claims about Montesquieu and the 1999 Constitution vesting powers in separate arms are accurate.",
+      "change": "",
+      "round": 2
+    },
+    {
+      "q_number": 34,
+      "source": "check-12",
+      "finding": "sibling leak check",
+      "decision": "rejected",
+      "reason": "passage_id is null, so the question has no siblings.",
+      "change": "",
+      "round": 2
+    }
+  ]
+}

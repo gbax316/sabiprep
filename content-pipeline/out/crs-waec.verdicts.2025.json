@@ -1,0 +1,1161 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "unsolvable": 1,
+    "agreed-soft": 17,
+    "verified": 32
+  },
+  "verdicts": {
+    "1": {
+      "q_number": 1,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 1,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "In Genesis 1:14-17 God set lights (sun, moon, stars) in the firmament of heaven to give light upon the earth, so the firmament served as the place from which light was given. The other options (soil erosion, body temperature) have no basis in the creation narrative.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 1,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "In Genesis 1:6-8 the firmament was made to separate the waters above from the waters below. None of the three printed options (light source, soil erosion, body temperature) states this; light is the purpose of the luminaries on day four, not the firmament.",
+        "solvable": false,
+        "issue": "Only options A-C present and none is correct; option D (presumably 'separate the waters') appears to be missing from the transcription."
+      },
+      "extract_anomaly": "fewer-options-than-expected"
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 2,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Genesis 2:17 explicitly states that on the day man eats of the tree of knowledge of good and evil he shall surely die, so the prohibition was to prevent physical death. 'Exposure to evil' is a plausible-sounding distractor but the text's stated consequence is death, not exposure to evil per se.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 2,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "Genesis 2:17: 'in the day that you eat of it you shall die.' The stated reason for the prohibition was death. 'Exposure to evil' is defensible from the tree's name, but the text names death as the consequence.",
+        "solvable": true,
+        "issue": "B (exposure to evil) is arguable on a theological reading."
+      },
+      "extract_anomaly": null
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 3,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Genesis 1:28 records God blessing man (male and female) saying 'be fruitful and multiply, fill the earth and subdue it.' The command to subdue the earth was given specifically to mankind, not to animals or vegetation.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 3,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Genesis 1:28: God blessed man and woman, saying 'be fruitful and multiply, fill the earth and subdue it.' Animals were told to multiply but were not given dominion to subdue the earth.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 4,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "After interpreting Pharaoh's dreams as seven years of plenty followed by seven years of famine, Joseph advised storing surplus grain during the plentiful years (Genesis 41:33-36), which was implemented. Recruitment of labour and elevation of the butler are not outcomes of the dream interpretation itself.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 4,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Joseph advised that a fifth of the produce be stored during the seven years of plenty, and this was done (Genesis 41:34-49). The butler's restoration came earlier, from interpreting his own dream.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 5,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Joseph's ability to foresee the coming famine from the dreams and plan a nationwide storage strategy years in advance demonstrates visionary foresight. While he was also hardworking, the specific trait shown by interpreting and planning for the future is being visionary.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 5,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Joseph foresaw the coming famine and planned ahead for it, which shows foresight (visionary). Righteousness is a general trait of Joseph's but is not what the interpretation and advice show.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 6,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "In Exodus 2:11-12, Moses killed the Egyptian after seeing him beating a Hebrew, described as 'one of his brethren,' showing his strong attachment to his own kinsmen despite being raised in Pharaoh's household. This act was impulsive and not sanctioned by God, so it does not show obedience to God.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 6,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Moses killed the Egyptian he saw beating a Hebrew, 'one of his people' (Exodus 2:11-12). This shows loyalty to his Hebrew roots. He was not acting on God's command then, so D does not fit.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 7,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "In Numbers 13:31, ten of the twelve spies (the majority) reported 'We are not able to go up against the people, for they are stronger than we,' while only Caleb and Joshua (the minority) urged the people to proceed. The statement therefore reflects the majority report.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 7,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Numbers 13:31: ten of the twelve spies gave this report, while Joshua and Caleb disagreed. So it was the majority view, not the view of all the spies.",
+        "solvable": true,
+        "issue": "'spics' is a typo for 'spies'; 'able to up' is missing 'go'."
+      },
+      "extract_anomaly": null
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Numbers 27:18-20 records God instructing Moses to lay his hand on Joshua and invest him with some of his authority so the congregation would obey him, in connection with Joshua's appointment as Moses' successor. This does not relate to Aaron or Eleazar.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Numbers 27:18-20: God told Moses to lay his hand on Joshua and invest him with some of his authority so that the congregation would obey him. Eleazar only took part in the commissioning.",
+        "solvable": true,
+        "issue": "'success' is a typo for 'succeed'."
+      },
+      "extract_anomaly": null
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 9,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Joshua 1:8 instructs Joshua to keep the Book of the Law in his mouth and meditate on it day and night so that he would make his way prosperous and have good success. This is the specific condition God attaches to Joshua's success.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 9,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Joshua 1:8: 'This book of the law shall not depart out of your mouth, but you shall meditate on it day and night... then you shall have good success.'",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 10,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "In Judges 4, Barak insists Deborah accompany him to battle, and Deborah's agreement to go shows her courage in facing war and her role as a leader guiding Israel's military campaign against Sisera. The alternative reading as humility is weaker since the passage centers on her decisive, courageous leadership in war.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 10,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Barak would only go to battle if Deborah went with him (Judges 4:8). Her agreeing to lead Israel to war against Sisera showed courage and leadership. The other pairs do not describe going into battle.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 11,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "In the Judges cycle, Israel's oppression by foreign nations, including the twenty years under Jabin of Canaan, followed Israel's turning away from God to idolatry, so the harassment served to remind them that God expects obedience and faithfulness. Option D is factually wrong since Canaan's strength was not the theological reason given in the text; the emphasis is on Israel's unfaithfulness as the cause.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 11,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Judges 4:1-3: Israel did evil in the sight of the Lord, so God sold them into the hand of Jabin of Canaan, who oppressed them for twenty years. The oppression punished unfaithfulness, which shows God expects obedience. C is close but is worded as a general right, not the reason.",
+        "solvable": true,
+        "issue": "C is loosely defensible."
+      },
+      "extract_anomaly": null
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 12,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "1 Samuel 2:25 states plainly that Eli's sons would not listen to their father's rebuke because it was the will of the LORD to slay them. Option A (deriving pleasure) describes their sin but not the reason they ignored the warning, which the text attributes directly to divine intent.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 12,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "1 Samuel 2:25 says they would not listen to their father 'for it was the will of the Lord to slay them.' The text gives this reason directly.",
+        "solvable": true,
+        "issue": "'warming' is a typo for 'warning'."
+      },
+      "extract_anomaly": null
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 13,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "1 Samuel 8:1-5 records that when Samuel grew old he made his sons judges, but they turned aside after gain, took bribes and perverted justice, prompting the elders to demand a king. Option A wrongly attributes this to Eli, whose sons' misconduct led to a different earlier crisis, not the request for a king.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 13,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "1 Samuel 8:5: 'Behold, you are old and your sons do not walk in your ways; now appoint for us a king.' D, a king to fight their battles like the other nations (8:20), is a secondary reason given later.",
+        "solvable": true,
+        "issue": "D is partly defensible from 1 Samuel 8:20."
+      },
+      "extract_anomaly": null
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 14,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "In 1 Samuel 31:4, the mortally wounded Saul asks his armour-bearer to kill him so the uncircumcised Philistines, who were attacking him, would not abuse him. Ammonites, Amalekites and Egyptians are not the enemy army present at that battle on Mount Gilboa.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 14,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Saul said this on Mount Gilboa while fighting the Philistines (1 Samuel 31:4). In Samuel, 'uncircumcised' is the standard term for the Philistines.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 15,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "1 Samuel 26:12 explicitly states that Saul and his men were in a deep sleep because the LORD had caused it to fall upon them, allowing David and Abishai to enter the camp unnoticed. This was not due to tiredness or fear, which the text does not cite as the cause.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 15,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "1 Samuel 26:12: they were all asleep 'because a deep sleep from the Lord had fallen upon them.'",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 16,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "2 Samuel 12:18 says the servants feared to tell David the child was dead, reasoning that if he was so distressed while the child was alive, he might harm himself upon hearing of its death. There is no indication in the text that they feared David would kill or punish them for it.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 16,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "2 Samuel 12:18: 'How then can we say to him the child is dead? He may do himself some harm.' The servants did not fear being harmed themselves.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 17,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "1 Kings 11 records that Solomon's marriages to many foreign wives turned his heart after other gods, which was explicitly contrary to the LORD's command, provoking God's anger against him. Using foreign labour and appointing Jeroboam over the labour force were administrative decisions, not sins against God's will.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 17,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "1 Kings 11:1-10: Solomon loved many foreign women from nations God had forbidden Israel to marry into, and they turned his heart to other gods.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 18,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "1 Kings 12:3-4 records that Jeroboam and the assembly of Israel came to Rehoboam at Shechem saying his father had made their yoke heavy, asking him to lighten it. This exchange happened at Rehoboam's coronation meeting, not at Gibeon or in connection with Saul's death.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 18,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "1 Kings 12:3-4: Jeroboam and the assembly of Israel came to Rehoboam at Shechem and asked him to lighten the heavy yoke. The installation was at Shechem, not Gibeon, and the break-away came after Rehoboam refused.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 19,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "In 1 Kings 3:14, after granting Solomon wisdom at Gibeon, God tells him that if he walks in God's ways, keeping his statutes and commandments as David did, his days will be lengthened. The condition given is obedient living, not a specific offering or sacrifice.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 19,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "1 Kings 3:14: 'If you will walk in my ways, keeping my statutes... then I will lengthen your days.'",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 20,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "1 Kings 18:27 records Elijah mocking the prophets of Baal on Mount Carmel, saying their god might be musing, on a journey, or asleep and needed to be cried aloud to. Ashtoreth, Asherah and Molech were not the deity being contested at that Carmel showdown.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 20,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Elijah mocked the prophets of Baal on Mount Carmel, saying Baal might be musing or gone aside (1 Kings 18:27).",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 21,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Because of Ahab's sin of leading Israel into Baal worship, Elijah prophesied a severe drought that lasted three and a half years (1 Kings 17:1). Disease or pestilence were not the punishments described in this narrative.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 21,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Because of Ahab's idolatry, Elijah announced there would be no dew or rain (1 Kings 17:1), and a three-year drought followed.",
+        "solvable": true,
+        "issue": "'Arab's' is a typo for 'Ahab's'."
+      },
+      "extract_anomaly": null
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 22,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Jezebel's ultimate aim in writing the letters was to have Naboth condemned on a false charge so that his vineyard could be legally confiscated by the crown after his death, as shown when she told Ahab to 'arise and take possession' once Naboth was dead. Option C describes the method the letters instructed the elders to carry out, but it was a means to the real goal of seizing the vineyard.",
+        "solvable": true,
+        "issue": "Options B and C are both textually supported since the stoning was the stated method and seizing the vineyard was the underlying purpose.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 22,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The letters arranged a fast and false witnesses so that Naboth would be condemned under the law, which cleared the way for Ahab to take the vineyard (1 Kings 21:8-16). Stoning (C) was the means she ordered, but her aim was the vineyard under a show of legality.",
+        "solvable": true,
+        "issue": "C describes what the letters ordered and is arguable."
+      },
+      "extract_anomaly": null
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 23,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "This exclamation was made by the King of Israel (Jehoram) upon reading the letter from the King of Syria asking him to cure Naaman of leprosy (2 Kings 5:7). He tore his clothes, believing Syria was seeking a pretext to quarrel with him.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 23,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "2 Kings 5:7: the king of Israel read the Syrian king's letter, tore his clothes and said this.",
+        "solvable": true,
+        "issue": "'care' is a typo for 'cure'."
+      },
+      "extract_anomaly": null
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 24,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "When the book of the law was read to King Josiah, he immediately rent his clothes in distress over Israel's disobedience (2 Kings 22:11). Sending for inquiry from Huldah the prophetess came afterward, not as his first reaction.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 24,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "2 Kings 22:11: when the king heard the words of the book of the law, he rent his clothes. Only after that did he send to inquire of the Lord, and the purge of idols came later.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 25,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Because of Josiah's humility and repentance, God promised through Huldah that he would be gathered to his grave in peace and would not witness the disaster coming upon Israel (2 Kings 22:20). This was a personal assurance, not a promise of military victories or extended kingship.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 25,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "2 Kings 22:19-20: because Josiah was penitent, he would be gathered to his grave in peace and his eyes would not see the evil coming on the place. He actually died in battle at Megiddo.",
+        "solvable": true,
+        "issue": "Option says 'Isreal's' where the text is about Judah/Jerusalem; answer unaffected."
+      },
+      "extract_anomaly": null
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 26,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Nehemiah described the broken-down walls and burnt gates of Jerusalem as a reproach, a source of shame and disgrace to the Jewish remnant among the nations (Nehemiah 1:3, 2:17). This framing motivated him to seek permission to rebuild the walls.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 26,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "Nehemiah 2:17: 'Come, let us build the wall of Jerusalem, that we may no longer be a reproach' (RSV 'disgrace'). 'Challenge' fits how he responded, but the text calls the ruins a reproach.",
+        "solvable": true,
+        "issue": "A (challenge) is loosely defensible."
+      },
+      "extract_anomaly": null
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 27,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "When Nebuchadnezzar's forces destroyed Jerusalem, the captain of the guard carried away the men of valour, the king's household, and other notable people, but left the poorest of the land to be vinedressers and farmers (2 Kings 25:11-12).",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 27,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "2 Kings 24:14 and 25:12: none remained except the poorest people of the land, who were left as vinedressers and ploughmen.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 28,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "When Shadrach, Meshach and Abednego refused to bow to the image, Nebuchadnezzar's immediate response was fury, and he sent for the three men to confront them directly (Daniel 3:13). Only after they still refused to comply did he order the furnace heated seven times hotter and command them cast into it.",
+        "solvable": true,
+        "issue": "The question does not specify whether it refers to his reaction to the initial refusal to bow or to their defiant reply before the king, which affects whether D or B is intended.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 28,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Daniel 3:13: Nebuchadnezzar, in furious rage, commanded that the three be brought. He questioned them and only then ordered the furnace.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 29,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Amaziah, the priest of Bethel, told Amos to flee to Judah and stop prophesying at Bethel because it was the king's sanctuary and royal residence (Amos 7:10-13). Jeroboam was the reigning king who was only informed of Amos's words, not the one who confronted him directly.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 29,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Amos 7:10-13: Amaziah, the priest of Bethel, told Amos not to prophesy there because 'it is the king's sanctuary.' Jeroboam II was the king he reported to.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 30,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Amos used the imagery of people being dragged away with hooks like captured fish to warn that the Israelites, especially the wealthy oppressors of Samaria, would be forcibly led away into exile and slavery (Amos 4:1-3). It is a figure of forced captivity, not literal fishing occupations.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 30,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Amos 4:2-3 pictures the people dragged away with hooks, like captives led off by their captors. It predicts exile and subjugation, not fishing or scattering.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 31,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Jesus, though sinless, submitted to John's baptism, an act John himself protested; this submission signifies humility. Arrogance and fear contradict the narrative, and wisdom does not fit the theme of submission to a lesser figure.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 31,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Jesus, who was sinless, submitted to John's baptism 'to fulfil all righteousness' (Matthew 3:13-15). This shows humility. John's reluctance was about his own unworthiness.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 32,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "At the pinnacle of the temple, the tempter challenged Jesus to throw himself down, citing Psalm 91 about angels bearing him up. Turning stone to bread was the first temptation, and worshipping Satan was the third, so these do not belong to the temple scene.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 32,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Matthew 4:5-6: on the pinnacle of the temple the devil said, 'If you are the Son of God, throw yourself down.' Invoking the angels was the supporting quotation, not the challenge itself.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 33,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Peter's exclamation after the miraculous catch of fish expresses awe at Jesus' divine, holy power, prompting him to feel unworthy as a sinful man in Jesus' presence. Humanity is the weaker distractor since the reaction is to a supernatural act, not an ordinary human trait.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 33,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "After the miraculous catch (Luke 5:8), Peter's sense of his own sinfulness in Jesus' presence shows he saw the holy and divine in him. 'Authority' is arguable but weaker.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Jesus' teaching on discipleship (e.g., taking up one's cross, forsaking all) emphasizes determination and self-denial as core demands. Humility and respect are secondary virtues, not the central demands Jesus lists for following him.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Jesus' demands of discipleship, such as denying oneself, taking up the cross and counting the cost (Luke 9:23, 14:25-33), teach self-denial and determination.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 35,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The unmerciful servant was jailed because, after being forgiven a huge debt, he refused to show the same mercy and had his fellow servant imprisoned over a small debt; his master then revoked the forgiveness. Owing the huge sum was the original situation, not the reason for his punishment.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 35,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The master jailed him because he showed no mercy to his fellow servant after being forgiven himself (Matthew 18:32-34). The debt (C) was the terms of his jailing, but his harsh treatment of the fellow servant was why he was jailed.",
+        "solvable": true,
+        "issue": "C is arguable, since he was jailed until he paid the debt."
+      },
+      "extract_anomaly": null
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 36,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Jesus taught that forgiving others' debts/trespasses results in receiving God's forgiveness in return, as in the Lord's Prayer and the unmerciful servant parable. 'Seeing God' is tied to purity of heart, not forgiveness, making it the wrong beatitude match.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 36,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Matthew 6:14 and Luke 6:37: if you forgive others, your heavenly Father will forgive you, so they obtain pardon. 'See God' and 'sons of God' belong to other Beatitudes.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 37,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "In Gethsemane, Jesus told his disciples to 'watch and pray' so they would not fall into temptation, a charge to remain vigilant. Healing the sick and winning souls are not part of this specific instruction in the garden.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 37,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Matthew 26:38, 41: 'Watch and pray that you may not enter into temptation', which is a call to be vigilant.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 38,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Caiaphas directly asked Jesus whether he was the Christ, the Son of God, seeking grounds for a blasphemy charge based on his answer. Jesus' claim to be the Christ was the actual question posed, while destroying the temple was a separate accusation from false witnesses.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 38,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Matthew 26:63: 'I adjure you by the living God, tell us if you are the Christ, the Son of God.' The claim about destroying the temple came from the witnesses, not Caiaphas's question.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 39,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Jesus rebuked Cleopas for being slow to believe what the prophets had spoken, stressing that the scriptures concerning the Christ had to be fulfilled. This points to the fulfillment of God's word rather than themes of political apathy or evangelism.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 39,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "On the Emmaus road, Jesus rebuked them for being slow to believe what the prophets had said, and explained that the Christ had to suffer (Luke 24:25-27). The lesson is that God's word must be fulfilled.",
+        "solvable": true,
+        "issue": "Stem is garbled: it was Jesus who rebuked Cleopas and his companion, not Cleopas who rebuked Jesus; 'reference' probably means 'inference'."
+      },
+      "extract_anomaly": null
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 40,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "In Matthew 27:51-52, the temple curtain was torn immediately at Jesus' death, followed by the earthquake, splitting rocks, and finally the opening of tombs. The option's wording ('was born') appears to be a typographical error for 'was torn', but the intended event and its priority are clear from the text.",
+        "solvable": true,
+        "issue": "Option B contains a likely typo ('temples curtain was born') for 'temple's curtain was torn'.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 40,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Matthew 27:51 lists, in order: the temple curtain was torn in two, then the earth shook, the rocks split, and the tombs were opened.",
+        "solvable": true,
+        "issue": "'born' is a typo for 'torn'."
+      },
+      "extract_anomaly": null
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 41,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Peter's words 'you have not lied to men but to God' were addressed to Ananias (Acts 5:4), and immediately after hearing this he fell down and died (Acts 5:5). Sapphira's burial and any conversion of Saul are unrelated events that occur later in Acts.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 41,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Acts 5:4-5: Peter said this to Ananias, and when Ananias heard these words he fell down and died. Sapphira's death came about three hours later.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 42,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Acts 6:1 states the Hellenists complained because their widows were being neglected in the daily distribution of food, prompting the appointment of seven deacons. It was not about general poverty or the number of disciples per se, though disciples were increasing, that was the context, not the cause.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 42,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Acts 6:1-3: the Hellenists complained that their widows were being neglected in the daily distribution, so the seven were appointed. The growing number of disciples was the background, not the direct reason.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 43,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "This question was put to Peter in Acts 11:3 after his visit to Cornelius; his explanation of the vision showing that God shows no partiality implies Christians should treat all men equally regardless of ethnicity. It does not imply avoiding sinners or merely upholding old traditions.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 43,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Peter explained that God had shown him no one is unclean and that God gave the Gentiles the same gift (Acts 11:1-18). Christians should therefore treat all people equally.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 44,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "The coming of the Holy Spirit at Pentecost emboldened the apostles to preach fearlessly, marking the birth of the church, the beginning of evangelism, and acceptance of Jesus as Messiah through Peter's sermon; fear is the opposite of what resulted, since the apostles who once hid in fear now spoke boldly.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 44,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "After Pentecost the apostles preached boldly (Acts 2), the church was born, about three thousand accepted Jesus as Christ, and evangelism began. Fear is the opposite of the outcome.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 45,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "In Acts 9:15-16, the Lord tells Ananias that Saul is a chosen instrument to carry His name, and He 'will show him how much he must suffer' for the name of Jesus, alongside spreading the gospel. The other options describe later actions of Paul's ministry, not the stated reason for his conversion.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 45,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Acts 9:15-16: Saul was a chosen instrument to carry Christ's name, and 'I will show him how much he must suffer for the sake of my name.'",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 46,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "James 2:8 calls loving one's neighbour as oneself the 'royal law'; fulfilling it in the context of impartiality (James 2:1-9) means treating and caring for fellow believers as one's own responsibility, i.e., being each other's keeper. The other options describe separate teachings found elsewhere in James or the New Testament, not this specific royal law passage.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 46,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "James 2:8 defines the royal law as 'You shall love your neighbour as yourself.' That corresponds to being each other's keeper. 'Do good to those who hate them' is love of enemies, a different command.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 47,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "James 5:14-15 instructs the sick to call the elders to pray over them, while James 5:13 instructs anyone suffering to pray for themselves. This distinguishes intercessory prayer by elders for the sick from personal prayer for the suffering.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 47,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "James 5:13-14: 'Is any among you suffering? Let him pray.' The elders are called for the sick.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 48,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "1 Peter 2:2 exhorts believers to crave pure spiritual milk like newborn infants 'that by it you may grow up to salvation.' The other options are not the stated purpose in this verse.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 48,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "1 Peter 2:2: 'Like newborn babes, long for the pure spiritual milk, that by it you may grow up to salvation.'",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 49,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "1 Peter 5:5 directly instructs, 'Likewise, you who are younger, be subject to the elders,' following the admonition to elders in verses 1-4 to shepherd the flock willingly. The passage does not tell the youth to pressure erring elders.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 49,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "1 Peter 5:5: 'Likewise you that are younger be subject to the elders.'",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 50,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "1 Peter repeatedly frames suffering as temporary, assuring believers that after suffering 'a little while,' God will restore, establish and give them eternal glory (1 Peter 5:10; cf. 1:6-7). This distinguishes the passage from a general statement that Jesus also suffered.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 50,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "1 Peter 5:10 and 4:13: after you have suffered a little while, the God who called you to his eternal glory will restore you, so suffering is temporary and leads to glory. A is also Petrine (1 Peter 2:21, 4:1), which makes it defensible.",
+        "solvable": true,
+        "issue": "A (Christ also suffered) is defensible from 1 Peter 2:21."
+      },
+      "extract_anomaly": null
+    }
+  }
+}

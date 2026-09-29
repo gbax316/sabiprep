@@ -1,0 +1,148 @@
+{
+  "entries": [
+    {
+      "q_number": 1,
+      "source": "codex",
+      "finding": "check 10: hint 3 'round-sounding lease term' misleads, 99 is not round",
+      "decision": "accepted",
+      "reason": "Taken literally, 'round-sounding' points to 100, the wrong option. Codex's proposed wording named D as the confusable century figure, which would make the choice for the student, so a neutral question was used instead.",
+      "change": "hint3 now: 'The two long figures differ by just one year. Which exact figure does the Act set for a certificate of occupancy?'",
+      "round": 1
+    },
+    {
+      "q_number": 4,
+      "source": "codex",
+      "finding": "check 1: hint 1 decodes 'hygro' as wetness, so hint 3 needs no thought",
+      "decision": "accepted",
+      "reason": "Hint 1 does not name the answer, but decoding the key word at hint 1 leaves hint 3 ('Which fits hygro?') automatic, and hint 1 does not transfer to other instrument questions. Codex's replacement described three options by their features in hint 1, which would itself fail check 1, so it was not used.",
+      "change": "hint1 made general (the first part of an instrument's name tells you what it measures). hint3 now asks the student to link 'hygro' to another known word (hygroscopic water) instead of being told its meaning.",
+      "round": 1
+    },
+    {
+      "q_number": 9,
+      "source": "check-11",
+      "finding": "hint 2 'so they do not build up in layers' and gabbro line 'so it has no layers' are unscoped absolutes",
+      "decision": "accepted",
+      "reason": "Igneous rocks can show layering (layered gabbro intrusions, stacked lava flows). The point the question needs is that they do not form by sediment settling.",
+      "change": "hint2: 'not from material settling layer upon layer'. Gabbro line: 'not built up from settled layers'.",
+      "round": 1
+    },
+    {
+      "q_number": 18,
+      "source": "codex",
+      "finding": "check 2: hint 3 eliminates A itself ('really a feature of drip irrigation')",
+      "decision": "accepted",
+      "reason": "Hint 3 leaves only one option standing and the closing question is rhetorical.",
+      "change": "hint3 now asks the student to test each remaining option: does it say how the water reaches the crop, or something true of other methods too.",
+      "round": 1
+    },
+    {
+      "q_number": 18,
+      "source": "codex",
+      "finding": "check 11: 'surface' used in two senses, answer text vs surface irrigation in exam tip",
+      "decision": "accepted",
+      "reason": "A student could read the key as calling overhead irrigation 'surface irrigation', a separate type in the syllabus. Codex's replacement paragraph was longer than needed, so one short clarifying sentence was used.",
+      "change": "Principle: replaced 'In the syllabus this is the option that matches its definition' with a note that 'surface' here only means the water lands on top of the farmland, and is not the syllabus's surface irrigation (furrows or basins).",
+      "round": 1
+    },
+    {
+      "q_number": 19,
+      "source": "codex",
+      "finding": "check 2: hint 3 restates both options and asks a rhetorical question",
+      "decision": "accepted",
+      "reason": "With hint 2's rule, hint 3 answers by plain reading. Codex's wording ('not just move them somewhere else') misdescribes option C, so own wording used.",
+      "change": "hint3 now asks the student to test each remaining option: does it keep chemicals and waste away from soil and water, or bring them closer.",
+      "round": 1
+    },
+    {
+      "q_number": 20,
+      "source": "codex",
+      "finding": "check 2: hint 3 states 'sprouting shoots is a feature of stems'",
+      "decision": "accepted",
+      "reason": "The connecting fact was given, so 'Which fits?' was rhetorical.",
+      "change": "hint3 now asks which organ normally carries buds that grow into shoots, and where yam's shoots come from.",
+      "round": 1
+    },
+    {
+      "q_number": 25,
+      "source": "codex",
+      "finding": "check 2: hint 3 states bran is nutrient-rich, then asks the obvious",
+      "decision": "accepted",
+      "reason": "Hint 3 hands over the deciding fact. Codex's replacement listed all four outcomes and told the student to pick the one matching a nutrient loss, which is no weaker, so own wording used.",
+      "change": "hint3 now sets aside A and B and leaves the student to choose between lower food value and higher germination after losing the outer layers and germ.",
+      "round": 1
+    },
+    {
+      "q_number": 26,
+      "source": "codex",
+      "finding": "check 2: hint 3 'ooze gum' matches the name gummosis",
+      "decision": "accepted",
+      "reason": "A student can match 'gum' to 'gummosis' with no disease knowledge.",
+      "change": "hint3 now asks which disease attacks the collar and roots at the base of the tree rather than the leaves, twigs or fruit (Codex's wording).",
+      "round": 1
+    },
+    {
+      "q_number": 27,
+      "source": "codex",
+      "finding": "check 2: hint 3 resolves only vegetables, which alone selects B",
+      "decision": "accepted",
+      "reason": "Only B leaves out II, so deciding vegetables alone answers the question mechanically.",
+      "change": "hint3 now asks the student to classify all three crop groups before choosing (Codex's wording).",
+      "round": 1
+    },
+    {
+      "q_number": 32,
+      "source": "codex",
+      "finding": "check 2: hint 3 calls stems 'bushy' then asks 'low and bushy?'",
+      "decision": "accepted",
+      "reason": "The question was answered by the hint's own words.",
+      "change": "hint3 now describes flowers, woody stems and hedge use, and asks one trunk or several stems near the ground (Codex's wording).",
+      "round": 1
+    },
+    {
+      "q_number": 33,
+      "source": "codex",
+      "finding": "check 2: hint 2 rules out A, B and C at once, hint 3 points at D",
+      "decision": "accepted",
+      "reason": "Eliminating all three distractors in hint 2 states the answer indirectly.",
+      "change": "hint2 names only cassava mosaic and cotton leaf curl as viral. hint3 narrows to swollen shoot vs sigatoka and asks which is fungal.",
+      "round": 1
+    },
+    {
+      "q_number": 40,
+      "source": "codex",
+      "finding": "check 2: hint 3 explains away C and ties D to eating less",
+      "decision": "accepted",
+      "reason": "Hint 3 resolved both remaining options for the student. Codex's replacement still steered to D by describing it, so own wording used that makes the student check the direction of each change.",
+      "change": "hint3 now: heat stress harms breeding as well as feeding; for each remaining option, ask whether heat stress pushes it up or down.",
+      "round": 1
+    },
+    {
+      "q_number": 46,
+      "source": "codex",
+      "finding": "check 2: hint 2 rules out three options by name, hint 3 'beans' and 'chocolate' identify cocoa",
+      "decision": "accepted",
+      "reason": "Cocoa was the only option left after hint 2, and hint 3 named its product.",
+      "change": "hint2 names only maize and yam. hint3 compares shipped-abroad vs eaten fresh without naming the product (Codex's wording).",
+      "round": 1
+    },
+    {
+      "q_number": 47,
+      "source": "check-12",
+      "finding": "hint 3 'not the number sold' tells the student in advance that trays sold differs from 500, the answer basis for sibling Q48",
+      "decision": "accepted",
+      "reason": "It removes Q48's option D before Q48 is attempted, and Q47 does not need it: dividing by 495 gives no listed option.",
+      "change": "hint3: dropped 'not the number sold'.",
+      "round": 1
+    },
+    {
+      "q_number": 23,
+      "source": "check-12",
+      "finding": "sibling check for passage s07",
+      "decision": "rejected",
+      "reason": "Q21 and Q22 are not in this set and Q23's hints name only moisture and moulds, which answer nothing about identifying the crop.",
+      "change": "",
+      "round": 1
+    }
+  ]
+}

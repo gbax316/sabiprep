@@ -1,0 +1,310 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "keyed": 46,
+    "defective": 4
+  },
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "2": {
+      "q_number": 2,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "3": {
+      "q_number": 3,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "4": {
+      "q_number": 4,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "5": {
+      "q_number": 5,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "6": {
+      "q_number": 6,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "7": {
+      "q_number": 7,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "8": {
+      "q_number": 8,
+      "state": "defective",
+      "answer": null,
+      "reason": "As transcribed, the options object is empty and all four options sit inside the stem, so there is no option letter that can be keyed. The strongest argument for keying is Codex's point that the options are fully legible in the stem, and on the merits the answer is clearly inferior goods, since negative income elasticity means demand falls as income rises, while normal goods have positive income elasticity and substitutes and complements are defined by cross elasticity. The defect is purely a transcription split: once the options are separated as A inferior goods, B normal goods, C substitute goods, D complementary goods, the key is A."
+    },
+    "9": {
+      "q_number": 9,
+      "state": "defective",
+      "answer": null,
+      "reason": "As transcribed, options B, C and D are merged into option B's text, so option C does not exist as a separate letter and cannot be keyed. The strongest argument for keying is Codex's point that the letters and wording survive intact, and on the merits the answer is price inelastic, because matches take a negligible share of a rich consumer's income so price changes barely affect quantity demanded. Price elastic and perfectly elastic demand contradict that, and income elastic does not fit a trivial necessity. Once the options are split and 'clastic' in A is corrected to 'elastic', the key is C."
+    },
+    "10": {
+      "q_number": 10,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "11": {
+      "q_number": 11,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "12": {
+      "q_number": 12,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "13": {
+      "q_number": 13,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "14": {
+      "q_number": 14,
+      "state": "defective",
+      "answer": null,
+      "reason": "The option list is garbled: option A's letter/label is missing and merged into the question stem ('...may cause supply of goods to decrease. B. more firms...'), so it cannot be reliably determined where the stem ends and option A begins. | Options were merged into the stem and the options object is empty, so no option letter exists to select. Option A's letter is also missing from the stem. Once split (A supply of goods to decrease), the answer is A."
+    },
+    "15": {
+      "q_number": 15,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "16": {
+      "q_number": 16,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "17": {
+      "q_number": 17,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "18": {
+      "q_number": 18,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "19": {
+      "q_number": 19,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "20": {
+      "q_number": 20,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "21": {
+      "q_number": 21,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "22": {
+      "q_number": 22,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "23": {
+      "q_number": 23,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "24": {
+      "q_number": 24,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "25": {
+      "q_number": 25,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "26": {
+      "q_number": 26,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "27": {
+      "q_number": 27,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "28": {
+      "q_number": 28,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "29": {
+      "q_number": 29,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "30": {
+      "q_number": 30,
+      "state": "defective",
+      "answer": null,
+      "reason": "As transcribed, options B, C and D are merged into option B's text, so option C does not exist as a separate letter and cannot be keyed. The strongest argument for keying is Codex's point that each letter and its wording remain legible, and on the merits the answer is structural unemployment, since a typist displaced for lacking computer skills faces a mismatch between skills and the changed structure of labour demand. Frictional unemployment is temporary movement between jobs, cyclical follows a downturn and seasonal follows the calendar, so none fits. Once the options are split as A cyclical, B seasonal, C structural, D frictional, the key is C."
+    },
+    "31": {
+      "q_number": 31,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "32": {
+      "q_number": 32,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "33": {
+      "q_number": 33,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "34": {
+      "q_number": 34,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "35": {
+      "q_number": 35,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "36": {
+      "q_number": 36,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "37": {
+      "q_number": 37,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "38": {
+      "q_number": 38,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "39": {
+      "q_number": 39,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "40": {
+      "q_number": 40,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "41": {
+      "q_number": 41,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "42": {
+      "q_number": 42,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "third review, sided with both"
+    },
+    "43": {
+      "q_number": 43,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "44": {
+      "q_number": 44,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "third review, sided with both"
+    },
+    "45": {
+      "q_number": 45,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "46": {
+      "q_number": 46,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "47": {
+      "q_number": 47,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "48": {
+      "q_number": 48,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "49": {
+      "q_number": 49,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "50": {
+      "q_number": 50,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    }
+  }
+}

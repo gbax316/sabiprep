@@ -1,0 +1,47 @@
+{
+  "slug": "literature-utme",
+  "subject": "Literature in English",
+  "gate": {
+    "status": "open",
+    "unit": null,
+    "at": null,
+    "note": ""
+  },
+  "units": {
+    "2025": {
+      "status": "running",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T15:31:07",
+          "summary": "40/40 codex, 40/40 claude",
+          "seconds": 682,
+          "cost_usd": 0.91
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T15:31:11",
+          "summary": "agreed-soft 15, disagree 7, unsolvable 2, verified 16",
+          "seconds": 3,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T15:33:36",
+          "summary": "24 ruled: ambiguous 2, key 22",
+          "seconds": 145,
+          "cost_usd": 0.48
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T15:33:38",
+          "summary": "ambiguous 2, keyed 38",
+          "seconds": 1,
+          "cost_usd": 0.0
+        }
+      },
+      "error": ""
+    }
+  },
+  "cost_usd": 1.39
+}

@@ -1,0 +1,431 @@
+{
+  "subject": "Chemistry",
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1",
+  "items": [
+    {
+      "q_number": 2,
+      "subtopic_id": "kinetics.collision",
+      "difficulty": "easy",
+      "hint1": "Think about what a catalyst does to the energy that colliding particles need before they can react.",
+      "hint2": "A catalyst does not change the energy of the reactants or of the products, so it cannot change the heat given out by the reaction.",
+      "hint3": "For the options left, ask: does a catalyst change where a reaction ends up, or only how easily and how fast it gets going?",
+      "solution": "Answer: B. lowers the activation energy of the reaction\n\nNickel is a catalyst in the hydrogenation of alkenes. A catalyst gives the reaction a different route with a lower activation energy, which is the minimum energy colliding particles need to react. More collisions now have enough energy, so the alkene and hydrogen react faster, and the nickel is left unchanged at the end.\n\nHow to tell: the question asks why nickel is added. A catalyst changes the speed of a reaction, not its energy change or its end point, and it does this by lowering the activation energy.\n\nWhy not the others:\nA. increases the yield of the product: a catalyst speeds up the forward and reverse reactions equally, so it does not change how much product is present at equilibrium.\nC. makes the reaction more exothermic: the heat change, ΔH, depends on the energies of the reactants and products, which a catalyst does not alter.\nD. prevents a reverse reaction from occurring: a catalyst speeds up the reverse reaction too, it cannot stop it.\n\nExam tip: if an option says a catalyst changes the yield, the ΔH or the direction of a reaction, cross it out. A catalyst changes only the rate, by lowering the activation energy."
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "common-metals.aluminium",
+      "difficulty": "easy",
+      "hint1": "Think about where the metal sits in the reactivity series. The method used to extract a metal depends on how reactive it is.",
+      "hint2": "Metals above carbon in the reactivity series hold on to oxygen too strongly for coke to take it away, so they need a different method.",
+      "hint3": "Froth flotation and roasting are only early treatments of some ores, not ways of getting the metal out. Of the two options left, which one works for a metal more reactive than carbon?",
+      "solution": "Answer: A. electrolysis of the purified ore\n\nHow a metal is extracted depends on its place in the reactivity series. Aluminium is high in the series, above carbon, so coke cannot remove the oxygen from aluminium oxide. It is extracted by electrolysis instead.\n\nHow to tell: bauxite is first purified to aluminium oxide, Al₂O₃. This is dissolved in molten cryolite, which lowers the melting point, and electrolysed with carbon electrodes. Aluminium collects at the cathode.\n\nWhy not the others:\nB. froth floatation of the smelted ore: froth flotation concentrates some sulphide ores, such as those of zinc and lead. It does not produce the metal and is not used for aluminium.\nC. reduction of the ore with coke in a furnace: this works for metals below carbon in the series, such as iron, but not for aluminium.\nD. roasting the ore in excess supply of air: roasting turns sulphide ores into oxides. It does not produce aluminium.\n\nExam tip: for extraction questions, place the metal in the reactivity series first. In the syllabus, metals above carbon (potassium, sodium, calcium, magnesium, aluminium) are extracted by electrolysis, and metals below it, such as zinc and iron, by reduction with carbon."
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "carbon.oxides",
+      "difficulty": "easy",
+      "hint1": "Think about what a fire needs to keep burning, and what a gas would have to do to take that away.",
+      "hint2": "A gas for fighting fires must not burn, must not help things burn, and must be safe to spray near people. A gas that is poisonous or burns itself is no use.",
+      "hint3": "Carbon (II) oxide burns in air, so it would feed a fire. Of the others, which gas is heavier than air and not a poisonous, choking gas?",
+      "solution": "Answer: A. Carbon (IV) oxide\n\nCarbon (IV) oxide, CO₂, does not burn and does not support burning. It is also denser than air, so it sinks and covers the fire like a blanket, keeping oxygen away from the burning material.\n\nHow to tell: a fire needs fuel, heat and oxygen. A gas that is non-flammable and heavier than air cuts off the oxygen, and CO₂ is the gas with both properties among the options.\n\nWhy not the others:\nB. Nitrogen (IV) oxide: a poisonous brown gas, not safe to spray near people.\nC. Carbon (II) oxide: it burns in air with a blue flame and is very poisonous.\nD. Sulphur (IV) oxide: a poisonous, choking gas.\n\nExam tip: for questions on the uses of a gas, link the use to a property. A fire extinguisher needs a gas that does not burn, does not support burning and is denser than air. That points to CO₂."
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "electrochemistry.cells",
+      "difficulty": "hard",
+      "hint1": "Read the stem carefully: does it name atoms or ions? Think about what has already happened to these particles.",
+      "hint2": "Sodium and potassium atoms each lose one outer electron to become Na⁺ and K⁺, which then have the stable electron arrangement of a noble gas. The reduction potentials of sodium and potassium are among the most negative in the electrochemical series.",
+      "hint3": "An ion that has already given away its outer electron cannot easily lose another. Of the options that describe electrons moving, which direction is left for these ions?",
+      "solution": "Answer: C. tendency to accept electrons\n\nNa⁺ and K⁺ are what is left after sodium and potassium atoms have each lost their one outer electron. They now have a noble gas arrangement, so the only electron change open to them is to gain an electron back and become the metal again. Gaining electrons is reduction. Their tendency to do this is weak, which is why sodium and potassium sit at the top of the electrochemical series, but accepting electrons is the only direction they can go, as happens when they are discharged at the cathode in molten salts.\n\nHow to tell: the stem names the ions, not the atoms.\nNa → Na⁺ + e⁻ has already happened.\nThe change still open to the ion is Na⁺ + e⁻ → Na.\n\nWhy not the others:\nA. tendency to give electrons: this describes sodium and potassium atoms, which are strong reducing agents, not their ions.\nB. positive reduction potential: the standard reduction potentials of sodium and potassium are strongly negative, about −2.7 V and −2.9 V.\nD. negative oxidation potential: an oxidation potential has the opposite sign to the reduction potential, so for sodium and potassium it is positive.\n\nExam tip: always check whether a question names the atom or the ion. A metal atom gives electrons. Its positive ion can only take electrons back."
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "states.gas-laws",
+      "difficulty": "medium",
+      "hint1": "Use the general gas equation, which links pressure, volume and temperature for a fixed amount of gas.",
+      "hint2": "P₁V₁/T₁ = P₂V₂/T₂. Work out P₁V₁/T₁ from the starting conditions, then test each option. Temperatures must be in kelvin, which they already are.",
+      "hint3": "Halving the volume could come from halving the kelvin temperature or from doubling the pressure. Check which option gives exactly one halving, not two changes that cancel out or add up.",
+      "solution": "Answer: C. 200 K and 1 atm\n\nFor a fixed mass of gas, PV/T stays the same. Volume goes up with kelvin temperature and goes down as pressure rises, so to halve the volume the new temperature and pressure together must cause exactly a halving.\n\nHow to tell:\nP₁V₁/T₁ = (1 atm × 400 cm³) ÷ 400 K = 1 atm cm³ K⁻¹\nFor C: P₂V₂/T₂ = (1 atm × 200 cm³) ÷ 200 K = 1 atm cm³ K⁻¹, which matches.\nOr use V₂ = V₁ × (P₁ ÷ P₂) × (T₂ ÷ T₁)\nV₂ = 400 cm³ × (1 ÷ 1) × (200 ÷ 400) = 200 cm³\n\nWhy not the others:\nA. 800 K and 1 atm: V₂ = 400 cm³ × 1 × (800 ÷ 400) = 800 cm³, so the volume doubles.\nB. 800 K and 0.5 atm: V₂ = 400 cm³ × (1 ÷ 0.5) × (800 ÷ 400) = 1600 cm³.\nD. 200 K and 0.5 atm: halving the temperature halves the volume, but halving the pressure doubles it again, so V₂ = 400 cm³.\n\nExam tip: in P, V, T questions, write V₂ = V₁ × (P₁ ÷ P₂) × (T₂ ÷ T₁) and put each option into it. Always use kelvin for temperature."
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "atomic-structure.particles",
+      "difficulty": "easy",
+      "hint1": "Recall which particles are found inside the nucleus of an atom and which move around outside it.",
+      "hint2": "Electrons are found outside the nucleus. Hydrogen has atomic number 1, and the most common kind of hydrogen atom has mass number 1.",
+      "hint3": "Mass number = protons + neutrons. Use the atomic number and mass number of ordinary hydrogen to count each kind of particle in its nucleus.",
+      "solution": "Answer: A. one proton only\n\nThe nucleus holds the protons and neutrons, and the electrons move outside it. The most common isotope of hydrogen, called protium, has atomic number 1 and mass number 1, so its nucleus is a single proton with no neutron.\n\nHow to tell:\nProtons = atomic number = 1\nNeutrons = mass number − atomic number = 1 − 1 = 0\n\nWhy not the others:\nB. one proton and one neutron: this is the nucleus of deuterium, a rarer isotope of hydrogen with mass number 2.\nC. one neutron only: every hydrogen nucleus has one proton, because that is what makes it hydrogen.\nD. one electron only: electrons are outside the nucleus, not in it.\n\nExam tip: neutrons = mass number − atomic number. Ordinary hydrogen is the one common atom with no neutrons in its nucleus."
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "redox.agents",
+      "difficulty": "easy",
+      "hint1": "Recall the colour of acidified potassium heptaoxodichromate (VI) solution before it reacts, and which chromium ion it turns into when it is reduced.",
+      "hint2": "When the dichromate acts as an oxidising agent it is itself reduced, and chromium goes from +6 to +3. Yellow is the colour of a different ion, chromate (VI), so the starting colour here is not yellow.",
+      "hint3": "You now know the starting colour. What colour are Cr³⁺ ions in solution: red or green?",
+      "solution": "Answer: C. orange to green\n\nAcidified potassium heptaoxodichromate (VI), K₂Cr₂O₇, contains the orange Cr₂O₇²⁻ ion. When it oxidises another substance it is reduced itself: chromium changes from the +6 to the +3 oxidation state, and Cr³⁺ ions are green.\n\nHow to tell:\nCr₂O₇²⁻ (orange) + 14H⁺ + 6e⁻ → 2Cr³⁺ (green) + 7H₂O\n\nWhy not the others:\nA. orange to red: the starting colour is right, but Cr³⁺ is green, not red.\nB. yellow to green: yellow is the chromate (VI) ion, CrO₄²⁻, found in alkaline solution, not acidified dichromate.\nD. yellow to red: neither colour fits, since acidified dichromate starts orange and ends green.\n\nExam tip: learn the two oxidising agent colour changes together. Acidified dichromate (VI) turns orange to green, and acidified tetraoxomanganate (VII) turns purple to colourless. Either change shows that the substance added is a reducing agent."
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "periodic.table",
+      "difficulty": "easy",
+      "hint1": "Metalloids lie along the staircase line in the p-block that separates metals from non-metals. Picture where each element sits on the periodic table.",
+      "hint2": "Sodium is a Group 1 metal, and aluminium, although in the p-block, is a metal that conducts electricity well.",
+      "hint3": "Two elements remain. Metallic character increases down a group. Which one lies further down its group, closer to the staircase line?",
+      "solution": "Answer: B. selenium\n\nA metalloid has properties between those of metals and non-metals. For example, it conducts electricity weakly, as a semiconductor. Metalloids lie along the diagonal staircase line in the p-block, where metals give way to non-metals.\n\nHow to tell: selenium is in Group 16, Period 4, beside arsenic and tellurium on the staircase line, and it behaves as a semiconductor. Some textbooks list selenium as a non-metal, but of these four options it is the one that fits the metalloid description.\n\nWhy not the others:\nA. aluminium: a metal and a good conductor, even though its oxide is amphoteric.\nC. phosphorus: a non-metal higher up Group 15 that does not conduct electricity.\nD. sodium: a reactive Group 1 metal.\n\nExam tip: learn the metalloids along the staircase line: boron, silicon, germanium, arsenic, antimony and tellurium, with selenium often included. An amphoteric oxide, as aluminium has, does not make an element a metalloid."
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "matter.separation",
+      "difficulty": "easy",
+      "hint1": "Every separation method uses a difference in some property between the parts of a mixture. Think about what each substance does when it is heated.",
+      "hint2": "Both substances here are solids. Distillation is for mixtures of liquids, and evaporation recovers a dissolved solid from its solvent.",
+      "hint3": "Recall what happens when iodine crystals are warmed gently. Which remaining method depends on that kind of change?",
+      "solution": "Answer: B. sublimation\n\nSublimation is when a solid turns straight into a vapour on heating, without melting first. It separates a solid that sublimes from one that does not.\n\nHow to tell: warm the mixture gently. Iodine sublimes to a violet vapour, which turns back into solid iodine on a cold surface above it. Calcium chloride does not sublime, so it stays behind.\n\nWhy not the others:\nA. evaporation: this removes a liquid solvent to leave a dissolved solid, but here there is no solvent.\nC. fractional distillation: this separates liquids with different boiling points.\nD. fractional crystallization: this separates two dissolved solids by their different solubilities, and is not needed when one solid sublimes.\n\nExam tip: if a mixture contains iodine, ammonium chloride or naphthalene, which the syllabus treats as substances that sublime, think of sublimation first."
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "bonding.intermolecular",
+      "difficulty": "easy",
+      "hint1": "Separate the forces that act between whole molecules from the bonds that hold a substance's particles together inside its structure.",
+      "hint2": "Intermolecular forces are attractions between separate molecules. A bond that holds a giant structure together, with no separate molecules in it, is not an intermolecular force.",
+      "hint3": "For each option, ask whether the force needs separate molecules to act between. One option describes a bond found in a substance that has no separate molecules.",
+      "solution": "Answer: D. metallic bead (metallic bond)\n\nIntermolecular forces are attractions between separate molecules. A metallic bond is different: it is the attraction between positive metal ions and a sea of delocalised electrons, which are electrons free to move through the whole metal. A metal has no separate molecules, so this is not an intermolecular force.\n\nHow to tell: metallic bead in the question is a misprint for metallic bond. It holds a giant metal structure together, while the other three all act between molecules.\n\nWhy not the others:\nA. hydrogen bond: the attraction between a hydrogen atom joined to nitrogen, oxygen or fluorine in one molecule and a nitrogen, oxygen or fluorine atom in another molecule.\nB. van der Waal's: weak attractions that act between all molecules.\nC. dipole-dipole: the attraction between the positive end of one polar molecule and the negative end of another.\n\nExam tip: if a bond holds a giant structure together, as ionic, metallic and giant covalent bonds do, it is not intermolecular. Intermolecular forces need separate molecules to act between."
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "bonding.ionic",
+      "difficulty": "easy",
+      "hint1": "Look at the kinds of elements or ions in each formula: a metal, non-metals, or a group ion such as ammonium.",
+      "hint2": "A compound of a metal with non-metals, or one containing the ammonium ion, NH₄⁺, is treated as ionic. A compound made only of non-metal atoms joined in small molecules is covalent.",
+      "hint3": "For each formula, ask whether it contains a metal or the ammonium group, or only non-metal atoms.",
+      "solution": "Answer: C. NO₂\n\nIonic compounds form when electrons are transferred, usually from a metal to a non-metal, making positive and negative ions. Covalent compounds form when non-metal atoms share electrons. The ammonium ion, NH₄⁺, behaves like a metal ion, so its salts are ionic.\n\nHow to tell: NO₂ contains only nitrogen and oxygen, two non-metals that share electrons in small molecules. It is a brown gas at room temperature, which fits a simple covalent substance.\n\nWhy not the others:\nA. AgCl: made of silver ions, Ag⁺, and chloride ions, Cl⁻, and treated as ionic in the syllabus, although it has some covalent character.\nB. KNO₃: made of K⁺ and NO₃⁻ ions.\nD. (NH₄)₂CO₃: made of NH₄⁺ and CO₃²⁻ ions.\n\nExam tip: to spot a covalent compound quickly, look for a formula made only of non-metals with no NH₄ group. A metal or NH₄⁺ in the formula points to ionic, even when the other ion has covalent bonds inside it, as NO₃⁻ and CO₃²⁻ do."
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "carbon.carbonates",
+      "difficulty": "medium",
+      "hint1": "Think about how the stability of a metal trioxocarbonate (IV) to heat depends on how reactive the metal is.",
+      "hint2": "Heating a trioxocarbonate (IV) usually breaks it into the metal oxide and carbon (IV) oxide. The more reactive the metal, the more stable its trioxocarbonate (IV) is to heat.",
+      "hint3": "Calcium and magnesium trioxocarbonates (IV) break down on strong heating in the laboratory. Of the two metals left, which is more reactive than both of them?",
+      "solution": "Answer: D. Na₂CO₃\n\nThe more reactive a metal, the more stable its trioxocarbonate (IV) is to heat. In the syllabus, the trioxocarbonates (IV) of sodium and potassium do not decompose on strong heating with a Bunsen burner, while those of less reactive metals break down into the metal oxide and carbon (IV) oxide.\n\nHow to tell:\nCaCO₃ → CaO + CO₂ on strong heating\nMgCO₃ → MgO + CO₂ on heating\nNa₂CO₃: no decomposition, because sodium is the most reactive metal in the list\n\nWhy not the others:\nA. Al₂CO₃: aluminium is less reactive than sodium, and a simple aluminium trioxocarbonate (IV) is not stable at all. The printed formula is also not a real formula.\nB. CaCO₃: decomposes into calcium oxide and CO₂, the reaction used to make quicklime.\nC. MgCO₃: decomposes even more easily than CaCO₃.\n\nExam tip: in action of heat questions, find the Group 1 metal other than lithium among the options. Its trioxocarbonate (IV) is the one that stays unchanged on heating."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "acids-bases.ph",
+      "difficulty": "medium",
+      "hint1": "Recall the universal indicator colour chart and the pH value each colour stands for.",
+      "hint2": "The colours from green to purple stand for neutral and alkaline solutions, pH 7 and above. Red sits at the very low end of the pH scale.",
+      "hint3": "Two acid options remain. Red means pH about 1 to 2, a very high amount of hydrogen ions. Which of the two acid options gives more hydrogen ions?",
+      "solution": "Answer: A. concentrated acid\n\nUniversal indicator shows the pH of a solution by its colour. Red means pH about 1 to 2, the most acidic end of the scale, which needs a large amount of hydrogen ions in the solution. The examiner links this to a concentrated acid. Strictly, concentrated means a lot of acid dissolved and strong means the acid ionises fully, but for this question concentrated acid is the answer expected.\n\nHow to tell: the colour chart runs\nred: pH 1 to 2\norange and yellow: pH 3 to 6\ngreen: pH 7\nblue: pH 8 to 10\npurple: pH 11 to 14\n\nWhy not the others:\nB. concentrated alkali: gives purple, at pH 11 to 14.\nC. dilute acid: has fewer hydrogen ions and a higher pH, so it gives orange or yellow.\nD. dilute base: gives blue, at pH 8 to 10.\n\nExam tip: learn the universal indicator colours in order as pH rises: red, orange, yellow, green, blue, purple. The further from green, the more acidic or alkaline the solution."
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "hydrogen-oxygen.oxides",
+      "difficulty": "hard",
+      "hint1": "Think about which acid each oxide gives with water, and compare the oxidation number of the non-metal in the oxide with its oxidation number in that acid.",
+      "hint2": "An oxide usually gives one acid, with the non-metal keeping its oxidation number. An oxide whose non-metal is in an oxidation state between two of its common acids can give both at once.",
+      "hint3": "Work out the oxidation number of the non-metal in each oxide. Compare with its common acids: for carbon, H₂CO₃ (+4); for sulphur, H₂SO₃ (+4) and H₂SO₄ (+6); for nitrogen, HNO₂ (+3) and HNO₃ (+5). Which oxide does not match any single acid?",
+      "solution": "Answer: B. NO₂\n\nMost acidic oxides give one acid in water, with the non-metal keeping its oxidation number. In NO₂, nitrogen is +4, but its common acids have nitrogen at +3 (HNO₂) and at +5 (HNO₃). So NO₂ reacts with water to give both acids, one nitrogen going down and the other going up. An oxide like this is called a mixed acid anhydride.\n\nHow to tell:\n2NO₂ + H₂O → HNO₂ + HNO₃\nThe products are dioxonitrate (III) acid and trioxonitrate (V) acid.\n\nWhy not the others:\nA. CO₂: CO₂ + H₂O → H₂CO₃, one acid, carbon staying at +4.\nC. SO₂: SO₂ + H₂O → H₂SO₃, one acid, sulphur staying at +4.\nD. SO₃: SO₃ + H₂O → H₂SO₄, one acid, sulphur staying at +6.\n\nExam tip: to predict what an oxide gives in water, find the oxidation number of the non-metal. If it matches one of its acids, you get that acid. If it falls between two, as nitrogen at +4 in NO₂ does, you get both."
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "functional-groups.alkanols",
+      "difficulty": "medium",
+      "hint1": "Compare the formula of ethanol with the starting material in each option. Ask which reaction adds the right atoms and which takes them away.",
+      "hint2": "Oxidising a primary alkanol gives an alkanal and then an alkanoic acid, and oxidising an alkene gives a diol, so neither oxidation route gives ethanol.",
+      "hint3": "Two options remain. The syllabus gives two ways of making ethanol: one is fermentation of sugars. What is the other?",
+      "solution": "Answer: D. hydration of ethene\n\nHydration means adding water across the C=C double bond of an alkene. Ethene plus water gives ethanol, and in the syllabus this, together with fermentation of sugars, is how ethanol is made.\n\nHow to tell:\nC₂H₄ + H₂O → C₂H₅OH\nIn the laboratory, ethene is absorbed in concentrated tetraoxosulphate (VI) acid to form ethyl hydrogensulphate, which is then warmed with water. In industry, ethene and steam are passed over a phosphoric acid catalyst.\n\nWhy not the others:\nA. reduction of ethanoic acid: this does give ethanol, but it needs a special reducing agent outside the syllabus, so it is not the method taught.\nB. oxidation of primary alkanol: this gives an alkanal and then an alkanoic acid, moving away from ethanol, not towards it.\nC. oxidation of alkenes: oxidising ethene, for example with tetraoxomanganate (VII), gives a diol, ethane-1,2-diol, not ethanol.\n\nExam tip: hydration adds water and dehydration removes it. Alkene + water gives an alkanol, and an alkanol minus water gives an alkene. Match the reaction named to the change in the formula."
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "bonding.metallic",
+      "difficulty": "easy",
+      "hint1": "Think about what must be able to move through a solid for it to carry an electric current.",
+      "hint2": "In a solid metal the ions stay in fixed positions. A current is a flow of charge, so there must be charged particles that are free to move.",
+      "hint3": "Vibrating ions can pass on some heat, but they cannot carry a current through a solid. Which remaining option explains both heat and electricity?",
+      "solution": "Answer: A. contain delocalized electrons\n\nIn metallic bonding, each metal atom releases its outer electrons into a shared sea of delocalised electrons, which move freely between the positive ions. These moving electrons carry charge, so the metal conducts electricity, and they carry energy quickly through the metal, so it conducts heat.\n\nHow to tell: sodium and potassium each release one outer electron into the sea. When a voltage is applied, the delocalised electrons drift towards the positive terminal, and that flow is the current.\n\nWhy not the others:\nB. are found in the d-block: alkali metals are in the s-block, Group 1, not the d-block.\nC. have vibrating ions: the ions vibrate in fixed positions, so they cannot move through the metal to carry a current.\nD. are all metals: this names what they are but does not explain why they conduct.\n\nExam tip: for any question on why metals conduct heat or electricity, the answer is the delocalised, or free, electrons. The ions in a solid metal are fixed in place."
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "energetics.enthalpy",
+      "difficulty": "easy",
+      "hint1": "Recall how ΔH for a reaction is worked out from the heat content of the products and of the reactants.",
+      "hint2": "ΔH = H(products) − H(reactants). A positive ΔH means the reaction takes in heat from its surroundings, so it is endothermic.",
+      "hint3": "Try numbers: if the products hold 50 kJ and the reactants 30 kJ, what is the sign of ΔH? Now swap the numbers and check again.",
+      "solution": "Answer: A. ΔHproduct > ΔHreactants\n\nThe enthalpy change, ΔH, is the heat content of the products minus that of the reactants. If the products hold more energy, the reaction must have taken in energy from its surroundings, so ΔH is positive and the reaction is endothermic.\n\nHow to tell:\nΔH = H(products) − H(reactants)\nIf H(products) = 50 kJ and H(reactants) = 30 kJ:\nΔH = 50 kJ − 30 kJ = +20 kJ, which is positive\n\nWhy not the others:\nB. ΔHproduct < ΔHreactants: the products have less energy, so ΔH is negative and the reaction is exothermic.\nC. ΔHproduct = ΔHreactants: the subtraction gives zero, so there is no heat change.\nD. ΔHproduct = zero: the sign of ΔH would then depend on the heat content of the reactants, so this does not make ΔH positive.\n\nExam tip: positive ΔH means endothermic, with the products higher than the reactants on an energy diagram. Negative ΔH means exothermic, with the products lower."
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "bonding.shapes",
+      "difficulty": "medium",
+      "hint1": "Draw the full structure of the molecule, showing every bond, then recall which kinds of bond contain pi bonds.",
+      "hint2": "A single bond is one sigma bond. A double bond is one sigma bond plus one pi bond. A triple bond is one sigma bond plus two pi bonds.",
+      "hint3": "Propene is an alkene with three carbon atoms. Count how many double and triple bonds its structure contains.",
+      "solution": "Answer: D. one\n\nA pi bond forms only in a double or triple bond, from the sideways overlap of p orbitals. Every single bond is a sigma bond. So to count pi bonds, count the multiple bonds.\n\nHow to tell: propene is CH₂=CH-CH₃.\n1 C=C double bond: 1 sigma + 1 pi\n1 C-C single bond: 1 sigma\n6 C-H bonds: 6 sigma\nTotal: 8 sigma bonds and 1 pi bond\n\nWhy not the others:\nA. three: this is the number of carbon atoms, not pi bonds.\nB. six: this is the number of C-H bonds, which are all sigma bonds.\nC. two: this would need a triple bond or two double bonds, as in propyne or propadiene.\n\nExam tip: number of pi bonds = number of double bonds + 2 × number of triple bonds. Every bond between two atoms has exactly one sigma bond."
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "hydrocarbons.alkenes",
+      "difficulty": "easy",
+      "hint1": "An addition reaction needs a multiple bond that can open up to take in new atoms. Look at the bonds in each compound.",
+      "hint2": "Ethane and ethanol have only single bonds, so they are saturated and have nowhere to add new atoms.",
+      "hint3": "Two compounds remain, and both are drawn with double bonds. Benzene's ring electrons are spread around the whole ring, which makes it unusually stable. Which of the two adds atoms readily?",
+      "solution": "Answer: B. butene\n\nIn an addition reaction, a molecule with a C=C double bond takes in atoms across that bond, which becomes a single bond. Alkenes such as butene, C₄H₈, do this readily because the pi bond in C=C is weak and easy to break.\n\nHow to tell:\nC₄H₈ + Br₂ → C₄H₈Br₂\nButene quickly decolourises bromine water at room temperature, the test for a C=C double bond.\n\nWhy not the others:\nA. ethane: saturated, with single bonds only, so it reacts by substitution.\nC. ethanol: a saturated alkanol with no C=C double bond.\nD. benzene: its ring electrons are delocalised, which makes it very stable, so it prefers substitution and adds only under harsh conditions.\n\nExam tip: when a question asks which compound readily undergoes addition, look for an alkene or alkyne. Benzene looks unsaturated but prefers substitution."
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "solutions.concentration",
+      "difficulty": "medium",
+      "hint1": "Change the concentration from grams per dm³ into moles per dm³ first, then deal with the volume.",
+      "hint2": "Concentration in mol dm⁻³ = concentration in g dm⁻³ ÷ molar mass. The volume must be in dm³ before you multiply: 1000 cm³ = 1 dm³.",
+      "hint3": "Once you have the concentration in mol dm⁻³, ask: what fraction of 1 dm³ is 200 cm³? The moles present are that fraction of the concentration.",
+      "solution": "Answer: C. 0.02\n\nA concentration in g dm⁻³ gives the grams dissolved in each dm³. Dividing by the molar mass turns this into moles in each dm³, and multiplying by the volume in dm³ gives the moles in the sample.\n\nHow to tell:\nConcentration = 5.6 g dm⁻³ ÷ 56 g mol⁻¹ = 0.1 mol dm⁻³\nVolume = 200 cm³ ÷ 1000 = 0.2 dm³\nMoles = 0.1 mol dm⁻³ × 0.2 dm³ = 0.02 mol\n\nWhy not the others:\nA. 2.01: far too large, since it would mean about 113 g of KOH in 200 cm³ when only 1.12 g is present.\nB. 1.12: this is the mass of KOH in grams in 200 cm³ (5.6 g dm⁻³ × 0.2 dm³), not the number of moles.\nD. 0.01: half the correct value, as if the volume were 100 cm³.\n\nExam tip: moles = concentration in mol dm⁻³ × volume in dm³. If the concentration is in g dm⁻³, divide by the molar mass first, and always change cm³ to dm³ by dividing by 1000."
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "bonding.intermolecular",
+      "difficulty": "medium",
+      "hint1": "Whether a small covalent molecule is a gas or a liquid at room temperature depends on how strongly its molecules attract one another.",
+      "hint2": "Hydrogen bonding is a strong force between molecules that forms when hydrogen is joined to nitrogen, oxygen or fluorine. It raises boiling points far above those of similar molecules without it.",
+      "hint3": "Check the atom joined to hydrogen in each hydride, and ask which of them can form hydrogen bonds between its molecules.",
+      "solution": "Answer: A. H₂O\n\nSmall covalent molecules are usually gases at room temperature because the forces between their molecules are weak. Water is an exception: its molecules are held together by hydrogen bonds, which are much stronger than van der Waals forces, so water is a liquid that boils at 100 °C.\n\nHow to tell: oxygen is very electronegative, so each O-H bond is strongly polar and water molecules form hydrogen bonds with one another. H₂S is a heavier molecule, yet it boils at about −60 °C, because sulphur cannot form hydrogen bonds in this way.\n\nWhy not the others:\nB. BH₃: it exists as diborane, B₂H₆, which is a gas at room temperature.\nC. HCl: a gas, because chlorine does not form hydrogen bonds in the syllabus treatment.\nD. H₂S: a gas, held only by weak van der Waals forces.\n\nExam tip: when hydrides are compared, expect those of nitrogen, oxygen and fluorine to have unusually high boiling points for their size, because of hydrogen bonding."
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "electrochemistry.electrolysis",
+      "difficulty": "medium",
+      "hint1": "List the ions present in dilute hydrochloric acid, including those from water, and decide which electrode each kind of ion moves to.",
+      "hint2": "The anode is the positive electrode, so only negative ions move to it. In this solution they are chloride ions from the acid and a few hydroxide ions from water.",
+      "hint3": "Both Cl⁻ and OH⁻ reach the anode. In the syllabus treatment of hydrochloric acid, the ion present in much greater amount is discharged. Which ion is that, and what gas does it give?",
+      "solution": "Answer: C. chlorine gas is given off\n\nDuring electrolysis, negative ions move to the anode and give up electrons there. When two negative ions compete, the syllabus teaches that the one present in much higher concentration can be discharged first. In hydrochloric acid, chloride ions far outnumber hydroxide ions, so chloride ions are discharged and chlorine gas is given off.\n\nHow to tell:\nIons present: H⁺ and Cl⁻ from the acid, a few H⁺ and OH⁻ from water\nAt the anode: 2Cl⁻ → Cl₂ + 2e⁻\nAt the cathode: 2H⁺ + 2e⁻ → H₂\nIf the acid is made very dilute, hydroxide ions are discharged instead and oxygen is given off, but the syllabus answer for dilute hydrochloric acid is chlorine.\n\nWhy not the others:\nA. oxygen gas is given off: this is the anode product only when the acid is very dilute, not the expected answer here.\nB. hydrogen gas is given off: hydrogen forms at the cathode, not the anode.\nD. hydrogen chloride gas is given off: the acid is split into ions, which are discharged separately, so HCl gas is not a product.\n\nExam tip: in electrolysis questions, list every ion, including those from water. Send positive ions to the cathode and negative ions to the anode, then for a chloride solution use its concentration to choose between chlorine and oxygen."
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "periodic.trends",
+      "difficulty": "medium",
+      "hint1": "Count the electrons in each ion. Ions with the same number of electrons can be compared in a very simple way.",
+      "hint2": "F⁻, Na⁺, Mg²⁺ and Al³⁺ all have 10 electrons arranged as 2,8. For such ions, the more protons in the nucleus, the more tightly the electrons are pulled in and the smaller the ion.",
+      "hint3": "Write the number of protons under each ion. The question asks for decreasing size, largest first. Should the list start with the ion that has the most protons or the fewest?",
+      "solution": "Answer: A. F⁻, Na⁺, Mg²⁺, Al³⁺\n\nIons with the same number of electrons are called isoelectronic. For them, size depends on the charge of the nucleus: more protons pull the same 10 electrons in more tightly, so the ion is smaller.\n\nHow to tell:\nF⁻: 9 protons, 10 electrons\nNa⁺: 11 protons, 10 electrons\nMg²⁺: 12 protons, 10 electrons\nAl³⁺: 13 protons, 10 electrons\nMore protons means a smaller ion, so from largest to smallest: F⁻ > Na⁺ > Mg²⁺ > Al³⁺\n\nWhy not the others:\nB. Na⁺, Mg²⁺, Al³⁺, F⁻: puts F⁻, the largest ion, last.\nC. Al³⁺, Na⁺, Mg²⁺, F⁻: starts with Al³⁺, the smallest ion, and mixes up the middle two.\nD. Al³⁺, Mg²⁺, Na⁺, F⁻: this is increasing size, smallest first, the reverse of what is asked.\n\nExam tip: for isoelectronic ions, the one with the most protons is the smallest. Read carefully whether the question asks for increasing or decreasing order, because the reversed list is usually one of the options."
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "carbon.allotropes",
+      "difficulty": "medium",
+      "hint1": "Think about how a filter holds on to substances in the smoke that passes through it. Two words that sound alike describe different ways of taking up a substance.",
+      "hint2": "Burning happens at the lit end of the cigarette, not in the filter, and evaporation would put more vapour into the smoke, not less.",
+      "hint3": "The two words left differ by one letter. One means taking a substance into the whole body of a material, and the other means holding it on the surface. Where does a filter trap the particles from smoke?",
+      "solution": "Answer: A. adsorption\n\nAdsorption is when particles of a substance stick to the surface of a solid. Materials with a very large surface area, such as the fine fibres of a filter or charcoal, adsorb well. Absorption is different: it means taking a substance into the whole body of a material, as a sponge takes up water.\n\nHow to tell: as smoke is drawn through the filter, nicotine and tar particles stick to the surfaces of its many fine fibres, so less reaches the lungs. The filter reduces the nicotine but does not remove all of it.\n\nWhy not the others:\nB. absorption: this means soaking into the bulk of a material, but the filter holds particles on the surface of its fibres.\nC. burning: burning happens at the lit end, and the filter itself does not burn.\nD. evaporation: this turns a liquid into vapour and would not take nicotine out of the smoke.\n\nExam tip: adsorption means sticking on a surface, as with charcoal in gas masks, in decolourising sugar and in filters. Absorption means soaking into the whole material. If a question mentions a surface, a filter or charcoal, think adsorption."
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "solutions.solubility",
+      "difficulty": "medium",
+      "hint1": "Solubility in mol dm⁻³ is the number of moles of solute in 1 dm³ of saturated solution. Start by getting the volume into dm³.",
+      "hint2": "The volume in the stem is 25 cm³, since the printed unit has lost its ³. Remember that 1 dm³ = 1000 cm³.",
+      "hint3": "25 cm³ holds 0.02 mol. How many 25 cm³ portions make up 1 dm³, and how many moles would they hold together?",
+      "solution": "Answer: B. 0.8 mol dm⁻³\n\nSolubility is the amount of solute in a saturated solution, given per dm³. To find it, scale the moles in the sample up to 1 dm³ by dividing the moles by the volume in dm³.\n\nHow to tell:\nVolume = 25 cm³ ÷ 1000 = 0.025 dm³\nSolubility = 0.02 mol ÷ 0.025 dm³ = 0.8 mol dm⁻³\nCheck: 1000 cm³ ÷ 25 cm³ = 40 portions, and 40 × 0.02 mol = 0.8 mol\n(The units in the printed options have lost their ⁻³.)\n\nWhy not the others:\nA. 5.0 × 10⁻⁴ mol dm⁻³: this comes from multiplying 0.02 × 0.025 instead of dividing.\nC. 0.4 mol dm⁻³: this is half the correct value.\nD. 5.0 × 10⁻² mol dm⁻³: scaling 25 cm³ up to 1 dm³ must give more than 0.02 mol, so this is far too small.\n\nExam tip: for solubility in mol dm⁻³, divide the moles by the volume in dm³. As a check, scaling a small volume up to 1 dm³ must give more moles, not fewer."
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "industry.biotechnology",
+      "difficulty": "easy",
+      "hint1": "Biotechnology means using living things, mostly microorganisms such as yeast, bacteria and moulds, to make useful products. Check each process for a living organism.",
+      "hint2": "Yeast ferments sugar to make ethanol and carbon (IV) oxide, and this one step is used in more than one of the processes listed.",
+      "hint3": "For each process not yet accounted for, ask: is the product made by a living organism, or by mixing chemicals together?",
+      "solution": "Answer: D. manufacturing of soap\n\nBiotechnology uses living organisms, or the enzymes they make, to produce useful products. Soap is made by a purely chemical reaction called saponification: fats or oils are boiled with an alkali such as sodium hydroxide, and no living organism takes part.\n\nHow to tell:\nfat or oil + sodium hydroxide → soap + propane-1,2,3-triol (glycerol)\n\nWhy not the others:\nA. baking of bread: yeast ferments sugar in the dough, and the carbon (IV) oxide it gives off makes the dough rise.\nB. production of wine: yeast ferments the sugar in fruit juice into ethanol.\nC. production of antibiotics: antibiotics such as penicillin are made by moulds or bacteria.\n\nExam tip: for biotechnology questions, ask whether a living thing does the work. Fermentation by yeast and antibiotics from moulds are biotechnology. Saponification, cracking and the Haber process are chemical processes."
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "stoichiometry.empirical",
+      "difficulty": "medium",
+      "hint1": "Percentage by mass of a part = mass of that part in one formula ÷ molar mass of the whole × 100. Start by finding how many water molecules the formula contains.",
+      "hint2": "The formula shows 10H₂O, so the mass of water is 10 × 18. The molar mass of the whole hydrated salt is given as 286. The stem prints NaCO₃, but the data show the salt is Na₂CO₃.10H₂O.",
+      "hint3": "Divide the mass of water by 286 and multiply by 100. Work to one decimal place, because two of the options are close together.",
+      "solution": "Answer: B. 62.9%\n\nWater of crystallisation is water that is part of a salt's crystals and appears in its formula. Its percentage by mass is the mass of all the water in one mole of the salt, divided by the molar mass of the salt, times 100.\n\nHow to tell:\nMass of water in 1 mol = 10 × 18 g = 180 g\nMolar mass of Na₂CO₃.10H₂O = 286 g mol⁻¹\nPercentage of water = (180 g ÷ 286 g) × 100 = 62.9%\n\nWhy not the others:\nA. 68.4%: this does not come from the correct working and is too high.\nC. 9.7%: far too small for a salt containing ten water molecules.\nD. 6.3%: this is (18 ÷ 286) × 100, which counts only one water molecule instead of ten.\n\nExam tip: in water of crystallisation questions, multiply 18 by the number in front of H₂O before dividing by the molar mass of the whole salt."
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "functional-groups.esters",
+      "difficulty": "easy",
+      "hint1": "Alkanoates are esters. Recall the reaction that makes an ester from an alkanol and an alkanoic acid, and what it needs to work well.",
+      "hint2": "Esterification is slow and reversible, and it gives water as a product. The conditions needed must speed up the reaction and help take away that water.",
+      "hint3": "An alkali breaks esters down, so it works against you here. Of the options left, which contains a substance that takes up water strongly?",
+      "solution": "Answer: B. Conc. H₂SO₄ and heat\n\nAn alkanoic acid and an alkanol react to form an ester and water. The reaction is slow and reversible. Concentrated tetraoxosulphate (VI) acid acts as a catalyst and also takes up the water formed, which pushes the reaction towards the ester. Heating speeds it up.\n\nHow to tell:\nCH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O, with concentrated H₂SO₄ and heat\nThe ester formed, ethyl ethanoate, has a sweet, fruity smell.\n\nWhy not the others:\nA. Water and NaOH: water pushes the reaction backwards, and NaOH breaks esters down.\nC. NaOH and heat: these are the conditions for breaking an ester down, as in soap-making, the reverse of what is wanted.\nD. Water and aqueous HCl: water with a dilute acid favours breaking the ester down, not forming it.\n\nExam tip: making an ester needs concentrated H₂SO₄ and heat. Breaking an ester down needs water with dilute acid, or NaOH and heat. Match the conditions to the direction the question asks for."
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "bonding.ionic",
+      "difficulty": "easy",
+      "hint1": "Look at the kinds of elements in each formula: only non-metals, or a metal as well.",
+      "hint2": "Compounds made only of non-metals usually share electrons and are covalent. A compound of a reactive metal with non-metals is usually ionic.",
+      "hint3": "Scan each formula for the symbol of a metal.",
+      "solution": "Answer: D. KNO₃\n\nIonic compounds are made of positive and negative ions, usually formed when a metal transfers electrons to non-metals. Covalent compounds form when non-metal atoms share electrons. Potassium is a reactive metal, so potassium trioxonitrate (V) is ionic.\n\nHow to tell: KNO₃ is made of K⁺ ions and NO₃⁻ ions. The bonds inside the NO₃⁻ ion are covalent, but the compound as a whole is ionic because it is built from ions.\n\nWhy not the others:\nA. NO₂: nitrogen and oxygen are both non-metals, sharing electrons.\nB. SO₃: sulphur and oxygen are both non-metals, sharing electrons.\nC. SO₂: sulphur and oxygen are both non-metals, sharing electrons.\n\nExam tip: in questions asking which compound is the odd one out between ionic and covalent, scan for a metal symbol or NH₄. A formula made only of non-metals is covalent."
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "acids-bases.salts",
+      "difficulty": "medium",
+      "hint1": "Double decomposition means mixing two solutions so that their ions swap partners. Think about what the new salt must do for it to be collected.",
+      "hint2": "This method is used for salts that do not dissolve in water: the salt forms as a solid, a precipitate, that can be filtered off. So check the solubility rules.",
+      "hint3": "Apply the solubility rules for sodium salts, trioxonitrate (V) salts and chlorides to each option. Look for the one that would form a precipitate.",
+      "solution": "Answer: D. silver chloride\n\nDouble decomposition, also called precipitation, mixes two soluble salts so that their ions swap and an insoluble salt forms as a solid. In the syllabus this method is used for insoluble salts, because a soluble salt would stay dissolved with the other product and could not be separated by filtering.\n\nHow to tell:\nAgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq)\nThe white precipitate of silver chloride is filtered off, washed and dried.\n\nWhy not the others:\nA. sodium trioxocarbonate (IV): by the solubility rules, sodium salts are soluble, so it would not precipitate.\nB. barium trioxonitrate (V): trioxonitrate (V) salts are soluble.\nC. lead (II) trioxonitrate (V): also soluble, and made by reacting lead (II) oxide or trioxocarbonate (IV) with dilute trioxonitrate (V) acid.\n\nExam tip: an insoluble salt is made by precipitation. A soluble salt is made by reacting an acid with a metal, base or trioxocarbonate (IV), then crystallising. Learn the common insoluble salts, such as AgCl, BaSO₄, PbSO₄ and most trioxocarbonates (IV) other than those of sodium, potassium and ammonium."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "organic-basics.naming",
+      "difficulty": "medium",
+      "hint1": "Draw the three-carbon chain and mark which carbon carries the OH group and which carries the Cl atom. The CI in the formula is a misprint for Cl, chlorine.",
+      "hint2": "In IUPAC naming the OH group decides the ending (-ol) and the numbering: count the chain from the end that gives the OH carbon the lowest number. The Cl is then a prefix, chloro-, with its own number. A name with no numbers at all is incomplete.",
+      "hint3": "Numbering from the CH₂OH end, the OH is on carbon 1. Which carbon does the Cl sit on, and which name has both numbers right, allowing for a misprint in the printed options?",
+      "solution": "Answer: D. 2-chloropngpan-l-ol (a misprint of 2-chloropropan-1-ol)\n\nIn an alkanol, the OH group is the main group. It gives the name its ending, -ol, and the chain is numbered from the end that gives the OH carbon the lowest possible number. Other groups, such as Cl, are added in front as prefixes with their own numbers.\n\nHow to tell:\nThe compound is CH₃–CHCl–CH₂OH, a chain of three carbons, so the parent is propane.\nNumber from the CH₂OH end: C1 carries OH, C2 carries Cl, C3 is the CH₃.\nThe OH on C1 gives propan-1-ol.\nThe Cl on C2 gives the prefix 2-chloro.\nFull name: 2-chloropropan-1-ol. Option D is this name with printing errors.\n\nWhy not the others:\nA. chloropropanol: it gives no numbers, so it does not say where the Cl and OH are.\nB. 1- chloropropane-1-ol: it puts the Cl on carbon 1, but the Cl is on the middle carbon.\nC. 2-chloropropan-3-ol: it numbers from the wrong end, giving the OH the number 3 instead of 1.\n\nExam tip: in naming questions, find the group that sets the ending (here -ol) and number the chain so that group gets the lowest number. Then read off the numbers for every other group."
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "atomic-structure.particles",
+      "difficulty": "medium",
+      "hint1": "Isoelectronic means having the same number of electrons. Start by counting the electrons in a neutral neon atom.",
+      "hint2": "For a positive ion, electrons = atomic number minus the charge. A neutral neon atom has 10 electrons, so you need an ion that also ends up with 10.",
+      "hint3": "Mg has atomic number 12 and Li has 3, while K has 19 and Ca has 20. Work out the electrons left in each ion and pick the one that matches neon.",
+      "solution": "Answer: B. Mg²⁺\n\nIsoelectronic species have the same number of electrons, and so the same electron arrangement, even though their nuclei differ. A positive ion has lost electrons, so its electron count is its atomic number minus its charge.\n\nHow to tell:\nNe: atomic number 10, neutral, so 10 electrons.\nMg²⁺: 12 − 2 = 10 electrons, the same as neon.\n\nWhy not the others:\nA. K⁺: 19 − 1 = 18 electrons, which matches argon, not neon.\nC. Ca²⁺: 20 − 2 = 18 electrons, which also matches argon.\nD. Li⁺: 3 − 1 = 2 electrons, which matches helium.\n\nExam tip: for any isoelectronic question, write each species as atomic number minus charge for positive ions, or plus charge for negative ions, and match the totals."
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "halogens.trends",
+      "difficulty": "medium",
+      "hint1": "A reducing agent gives away electrons. Think about how easily each halogen gives up or gains electrons, and how that changes down group VII.",
+      "hint2": "Halogens are strong oxidising agents because they gain electrons readily. That pull on electrons is strongest at the top of the group and weakens as the atoms get bigger going down.",
+      "hint3": "The strongest reducing agent in the group is the one with the weakest oxidising power. Is that the smallest atom or the largest one?",
+      "solution": "Answer: D. Iodine atom\n\nGoing down group VII the atoms get bigger, so the outer electrons are further from the nucleus and held less tightly. Oxidising power (the pull to gain electrons) falls down the group, and reducing power (the ability to give electrons away) rises.\n\nHow to tell: the order down the group is fluorine, chlorine, bromine, iodine. Iodine is the largest of the four, so it is the weakest oxidising agent and, of these, the most powerful reducing agent.\n\nWhy not the others:\nA. Bromine atom: it is above iodine, so it holds its electrons more tightly and reduces less strongly.\nB. Chlorine atom: it is higher still, and it is a strong oxidising agent.\nC. Fluoride ride atom (meaning fluorine atom): it is the smallest and the strongest oxidising agent in the group, so it is the weakest reducing agent.\n\nExam tip: for halogens, oxidising power decreases down the group and reducing power increases. If a question asks for the strongest oxidiser, go to the top. If it asks for the strongest reducer, go to the bottom."
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "periodic.table",
+      "difficulty": "hard",
+      "hint1": "The configuration tells you three things: how many shells are in use, how many electrons are in the outermost shell, and how the last few electrons sit in their orbitals. Check each option against one of these.",
+      "hint2": "Add up all the electrons to get the atomic number. The highest shell number used gives the period. The electrons in that outermost shell (s plus p) give the group.",
+      "hint3": "The outer shell here is shell 3, holding 3s² and 3p⁴. Count those outer electrons, and remember that the number 16 is a count of electrons in a neutral atom, which is not the same thing as mass number.",
+      "solution": "Answer: D. belongs to group VI\n\nFor a main-group element, the number of electrons in the outermost shell gives the group, and the number of the outermost shell gives the period. The total number of electrons in a neutral atom equals the atomic number (proton number), not the mass number.\n\nHow to tell:\nThe configuration is 1s² 2s² 2p⁶ 3s² 3p⁴ (the stem misprints 2s² as s²).\nTotal electrons: 2 + 2 + 6 + 2 + 4 = 16, so the atomic number is 16. This is sulphur.\nOutermost shell is shell 3, so the period is 3.\nOuter electrons: 3s² + 3p⁴ = 6, so the group is VI.\n\nWhy not the others:\nA. has mass number of 16: 16 is the atomic number. Mass number also counts neutrons, and for sulphur it is 32.\nB. has three unpaired electrons: the four 3p electrons fill three p orbitals as one pair and two singles, so there are two unpaired electrons.\nC. belongs to period 4: the highest shell used is 3, so it is in period 3.\n\nExam tip: when given a configuration, read the group from the outer-shell electrons and the period from the highest shell number, and never mistake the total electron count for mass number."
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "functional-groups.alkanols",
+      "difficulty": "medium",
+      "hint1": "Whether an alkanol is primary, secondary or tertiary depends on the carbon that carries the OH group. Draw each structure from its name and look at that carbon.",
+      "hint2": "Count how many other carbon atoms are joined to the OH carbon. One carbon attached means primary, two means secondary, three means tertiary.",
+      "hint3": "A tertiary OH carbon needs a branch on that very carbon. Look for a name where the methyl branch and the OH share the same number.",
+      "solution": "Answer: A. 2-methylpentan-2-ol\n\nAn alkanol is classed by the carbon holding the OH group. If that carbon is joined to one other carbon it is primary, to two it is secondary, and to three it is tertiary.\n\nHow to tell: in 2-methylpentan-2-ol the chain is CH₃–C(OH)(CH₃)–CH₂–CH₂–CH₃. Carbon 2 carries the OH and is joined to carbon 1, carbon 3 and the methyl branch. That is three carbons, so it is tertiary.\n\nWhy not the others:\nB. 2-methylpentan-1-ol: the OH is on carbon 1, which is joined to only one other carbon, so it is primary.\nC. pentan-3-ol: the OH carbon is joined to carbons 2 and 4 only, so it is secondary.\nD. pentan-2-ol: the OH carbon is joined to carbons 1 and 3 only, so it is secondary.\n\nExam tip: an OH on carbon 1 of a chain is primary. For a tertiary alkanol, look for a branch number that is the same as the OH number, such as 2-methyl...-2-ol."
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "electrochemistry.applications",
+      "difficulty": "easy",
+      "hint1": "Think about the reactivity series. How a metal is extracted depends on how reactive it is.",
+      "hint2": "Very reactive metals hold on to their compounds so strongly that carbon cannot reduce them. They are obtained by passing electricity through the molten (fused) salt. Less reactive metals can be got by simpler means.",
+      "hint3": "Only one option is a very reactive metal near the top of the reactivity series. Two others are low in the series, and one is not a metal at all.",
+      "solution": "Answer: D. sodium\n\nMetals near the top of the reactivity series, such as sodium, cannot be extracted by heating their ores with carbon. They are obtained by electrolysis of the molten (fused) salt, where the metal ions gain electrons at the cathode.\n\nHow to tell: sodium is made commercially by electrolysis of molten sodium chloride in the Downs cell. Sodium ions go to the cathode and become sodium metal, while chlorine is given off at the anode. Water is kept out, because sodium would react with it.\n\nWhy not the others:\nA. silver: it is low in the reactivity series and is not made by electrolysis of a fused salt.\nB. copper: electrolysis is used to purify copper, but from an aqueous solution of copper(II) tetraoxosulphate(VI), not a fused salt.\nC. helium: it is a noble gas that forms no salts, and it is obtained from natural gas.\n\nExam tip: if a question links a metal to electrolysis of a fused or molten compound, pick a very reactive metal such as sodium, potassium, calcium, magnesium or aluminium."
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "bonding.metallic",
+      "difficulty": "easy",
+      "hint1": "Metallic properties are explained by the metallic bond. Recall what that bond is made of.",
+      "hint2": "A metal is a lattice of positive ions in a sea of electrons that are not tied to any one atom. Lustre is the shine you see when light hits the surface.",
+      "hint3": "Ask which option could interact with light falling on the metal. Heaviness and unreactiveness do not make a surface shine.",
+      "solution": "Answer: D. free electrons\n\nIn a metal, the outer electrons are delocalised, meaning free to move through the whole lattice. When light falls on the surface, these free electrons absorb it and give it out again, which makes the metal look shiny.\n\nHow to tell: lustre is about how the surface deals with light, and the part of the metallic structure that interacts with light is the sea of free electrons.\n\nWhy not the others:\nA. high density: density is about how much mass is packed in a volume, and some shiny metals such as sodium have low density.\nB. refractive density: this is not a property used to explain lustre.\nC. chemical inertness: many shiny metals are reactive, and freshly cut sodium is lustrous.\n\nExam tip: questions on why metals shine, conduct electricity or conduct heat usually point to the free (delocalised) electrons of the metallic bond."
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "energetics.enthalpy",
+      "difficulty": "medium",
+      "hint1": "Every reaction breaks some bonds and makes new ones. Decide which of those steps takes in energy and which gives it out.",
+      "hint2": "Breaking bonds takes in energy (endothermic). Making bonds gives out energy (exothermic). The overall energy change is the balance between the two.",
+      "hint3": "An exothermic reaction gives out heat overall. For there to be heat left over to release, how must the energy given out compare with the energy taken in?",
+      "solution": "Answer: B. greater than energy taken in for breaking bonds\n\nBreaking bonds needs energy, and making bonds releases energy. A reaction is exothermic when more energy is released in making the new bonds than was taken in to break the old ones, so the extra is given out as heat and ΔH is negative.\n\nHow to tell:\nEnergy taken in: bond breaking.\nEnergy given out: bond making.\nIf energy out > energy in, heat is released overall: exothermic.\nIf energy out < energy in, heat is absorbed overall: endothermic.\n\nWhy not the others:\nA. less than energy in for breaking bonds: this means more energy is taken in than given out, which is endothermic.\nC. equal to the energy taken in for breaking bonds: there would be no overall heat change.\nD. remains the same as the energy taken in: this also means equal energies and no overall heat change.\n\nExam tip: remember bond breaking takes in, bond making gives out. Exothermic means making wins, endothermic means breaking wins."
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "metals.general",
+      "difficulty": "easy",
+      "hint1": "Use the reactivity series and find where hydrogen sits in it.",
+      "hint2": "A metal above hydrogen in the series can displace hydrogen from a dilute acid. A metal below hydrogen cannot.",
+      "hint3": "Three of these metals are above hydrogen. Which one is well below it, near gold?",
+      "solution": "Answer: B. silver\n\nA metal gives off hydrogen with dilute hydrochloric acid only if it is more reactive than hydrogen, because it must push hydrogen out of the acid. Metals below hydrogen in the reactivity series do not do this.\n\nHow to tell: part of the reactivity series, from most to least reactive, is calcium, magnesium, zinc, iron, lead, hydrogen, copper, silver, gold. Silver is below hydrogen, so it does not release hydrogen from dilute HCl.\n\nWhy not the others:\nA. calcium: it is high above hydrogen and reacts vigorously with dilute HCl to give hydrogen.\nC. iron: it is above hydrogen and gives hydrogen and iron(II) chloride.\nD. zinc: it is above hydrogen and is the usual metal used to make hydrogen with dilute acid in the laboratory.\n\nExam tip: for any metal and dilute acid question, place the metal against hydrogen in the reactivity series. Copper, silver and gold are the common ones that sit below it."
+    },
+    {
+      "q_number": 42,
+      "subtopic_id": "atomic-structure.configuration",
+      "difficulty": "easy",
+      "hint1": "The question is asking for the special term for orbitals that have exactly the same energy.",
+      "hint2": "The three p orbitals of a sub-level all have equal energy, and there is a single word used for this. The same word applies to the five d orbitals of an isolated atom.",
+      "hint3": "One option is that word and one option is its opposite. The other two are not standard terms. Which describes equal energy?",
+      "solution": "Answer: A. degenerate\n\nOrbitals that have the same energy are called degenerate orbitals. In an isolated atom, the five d orbitals of one sub-level all have the same energy, so they are degenerate. This is also why Hund's rule applies: electrons spread out singly across degenerate orbitals before they pair.\n\nHow to tell: the stem says the five d orbitals have the same energy level. Same energy is the definition of degenerate.\n\nWhy not the others:\nB. non-degenerate: this describes orbitals of different energy, the opposite of what the stem says.\nC. high-level orbital: this is not the term for orbitals of equal energy.\nD. low-level orbital: this is also not the term for orbitals of equal energy.\n\nExam tip: whenever a question mentions orbitals of equal or the same energy, the word you need is degenerate."
+    },
+    {
+      "q_number": 43,
+      "subtopic_id": "hydrogen-oxygen.oxides",
+      "difficulty": "easy",
+      "hint1": "An amphoteric oxide reacts with both acids and alkalis. Most metal oxides react only with acids.",
+      "hint2": "All four options are oxides of group II metals. Most group II oxides are basic, but the first member of the group behaves differently because its atom is very small.",
+      "hint3": "Find the group II metal at the top of the group. Its oxide is the unusual one.",
+      "solution": "Answer: D. BeO\n\nAn amphoteric oxide shows both acidic and basic properties, so it reacts with acids and with alkalis to form salts. In group II, the oxides are basic, except beryllium oxide, which is amphoteric because beryllium is a very small atom that behaves more like aluminium.\n\nHow to tell: BeO reacts with acids to give beryllium salts and with sodium hydroxide solution to give a beryllate salt. It shows both kinds of behaviour, so it is amphoteric.\n\nWhy not the others:\nA. CaO: it is a basic oxide that reacts with acids and forms an alkali with water.\nB. MgO: it is a basic oxide that reacts with acids, not with alkalis.\nC. BaO: it is a strongly basic oxide.\n\nExam tip: learn the common amphoteric oxides for WASSCE: ZnO, Al₂O₃, PbO, SnO and BeO. If one of them appears among basic metal oxides, it is the amphoteric one."
+    },
+    {
+      "q_number": 44,
+      "subtopic_id": "carbon.allotropes",
+      "difficulty": "easy",
+      "hint1": "Decolourising sugar means removing coloured impurities from a sugar solution. Think about which form of carbon traps other substances on its surface.",
+      "hint2": "Taking up substances onto a surface is called adsorption. The form of carbon that does this well is very porous, with a huge surface area.",
+      "hint3": "One option is the porous carbon used in cigarette filters and water filters. Which one is it?",
+      "solution": "Answer: A. charcoal\n\nCharcoal is porous and has a very large surface area. Coloured impurities stick to its surface (adsorption), so passing a brown sugar solution through charcoal, especially animal or activated charcoal, removes the colour and leaves white sugar.\n\nHow to tell: the use is removing colour, and removing colour depends on adsorption. Charcoal is the form of carbon used for adsorption, as in sugar refining and filters.\n\nWhy not the others:\nB. graphite: it is used as a lubricant, in pencils and as electrodes because of its layers and free electrons, not for adsorption.\nC. lampblack: it is used as a black pigment in inks, paints and shoe polish.\nD. soot: it is fine black carbon from smoky flames and is not used to decolourise sugar.\n\nExam tip: in the syllabus, charcoal, lampblack and soot are forms of amorphous carbon. Any question about removing colour, smell or gases links to adsorption, and adsorption links to charcoal."
+    },
+    {
+      "q_number": 45,
+      "subtopic_id": "periodic.table",
+      "difficulty": "easy",
+      "hint1": "Think about what the vertical columns and the horizontal rows of the periodic table each tell you about an element's electrons.",
+      "hint2": "Elements in the same vertical column have the same number of outer (valence) electrons, which is why they react alike. The rows tell you something else.",
+      "hint3": "The period number gives the number of electron shells. Which column label gives the number of electrons in the outer shell?",
+      "solution": "Answer: A. group number\n\nValence electrons are the electrons in the outermost shell. For main-group elements, the group number (I to VII in the usual numbering) equals the number of valence electrons, which is why elements in one group have similar chemical properties.\n\nHow to tell: sodium is in group I and has 1 outer electron. Chlorine is in group VII and has 7 outer electrons. The group number matches the valence electrons each time.\n\nWhy not the others:\nB. shell number: this tells you which shell, not how many electrons are in the outer one.\nC. period number: this gives the number of shells in use, not the number of outer electrons.\nD. atomic mass: this depends on protons and neutrons, not on valence electrons.\n\nExam tip: for main-group elements, remember group gives outer electrons and period gives number of shells. Use this to place any element from its configuration."
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "atomic-structure.particles",
+      "difficulty": "easy",
+      "hint1": "The word nucleon comes from nucleus. Think about which particles are found in the nucleus of an atom.",
+      "hint2": "The nucleus is the tiny centre that holds almost all the mass of the atom. Electrons move in shells outside it.",
+      "hint3": "Mass number is the total number of nucleons. Which particles does mass number count?",
+      "solution": "Answer: A. protons and neutrons\n\nNucleons are the particles found in the nucleus. The nucleus contains protons and neutrons, while electrons are arranged in shells outside the nucleus. The mass number of an atom is the total number of nucleons.\n\nHow to tell: nucleon means nucleus particle, and the only particles in the nucleus are protons and neutrons.\n\nWhy not the others:\nB. neutrons and electrons: electrons are outside the nucleus, and protons are missing.\nC. protons and electrons: electrons are outside the nucleus, and neutrons are missing.\nD. neutrons, protons and electrons: electrons are not in the nucleus, so they are not nucleons.\n\nExam tip: mass number = number of nucleons = protons + neutrons. Electrons are never counted in it."
+    },
+    {
+      "q_number": 47,
+      "subtopic_id": "practical.qualitative",
+      "difficulty": "easy",
+      "hint1": "Sodium hydroxide test questions depend on the colour of the hydroxide precipitate each metal ion forms. Recall the colours.",
+      "hint2": "Copper(II) hydroxide is blue, and iron(III) hydroxide is reddish-brown. An ammonium salt with sodium hydroxide gives off a gas on warming, not a coloured precipitate.",
+      "hint3": "A green precipitate comes from one of the two iron ions. Which oxidation state of iron gives green?",
+      "solution": "Answer: B. Fe²⁺\n\nWhen sodium hydroxide is added to a solution of a metal ion, the metal hydroxide often comes down as a precipitate whose colour identifies the ion. Iron(II) ions give iron(II) hydroxide, Fe(OH)₂, which is a dirty green precipitate. It slowly turns brown at the surface as air oxidises it.\n\nHow to tell:\nFe²⁺ + 2OH⁻ → Fe(OH)₂, green precipitate.\nGreen matches the observation in the question.\n\nWhy not the others:\nA. Cu²⁺: it gives a blue precipitate of Cu(OH)₂.\nC. NH⁴⁺ (meaning NH₄⁺): it gives no precipitate, and on warming it gives off ammonia gas.\nD. Fe³⁺: it gives a reddish-brown precipitate of Fe(OH)₃.\n\nExam tip: learn the NaOH precipitate colours as a set: Fe²⁺ green, Fe³⁺ reddish-brown, Cu²⁺ blue, and Zn²⁺, Al³⁺, Pb²⁺ and Ca²⁺ white."
+    },
+    {
+      "q_number": 49,
+      "subtopic_id": "intro.scientific-method",
+      "difficulty": "easy",
+      "hint1": "Recall the steps of the scientific method in order: observation, hypothesis, experiment, and what comes after.",
+      "hint2": "A hypothesis is a suggested explanation. Once experiments support it, it earns a new name that still means an explanation, one that could change if new evidence appears.",
+      "hint3": "Two options are the usual later stages of the scientific method. One is an explanation backed by the evidence available, and the other is a statement of something always observed to happen. Which fits a tested hypothesis?",
+      "solution": "Answer: B. theory\n\nIn the scientific method, a hypothesis is a suggested explanation of an observation. When experiments support it within the limits of the evidence available, it becomes a theory: an accepted explanation that can still be changed if new evidence appears.\n\nHow to tell: the stem says the hypothesis is proven only within the limit of the available evidence. That describes a tested explanation, which is a theory.\n\nWhy not the others:\nA. scope: this is not a stage of the scientific method.\nC. principle: this is a general rule, not the name given to a tested hypothesis in the scientific method.\nD. law: in the syllabus, a law is a statement of behaviour that has been observed consistently over many experiments, a further stage than the one described.\n\nExam tip: for scientific method questions, keep the order clear: observation leads to a hypothesis, a tested hypothesis becomes a theory, and a regularity that holds in many experiments is stated as a law."
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "stoichiometry.empirical",
+      "difficulty": "easy",
+      "hint1": "Think about the difference between the formula that shows the actual number of atoms in a molecule and one that shows only their ratio.",
+      "hint2": "Glucose is C₆H₁₂O₆, but its atoms are in the ratio 1 : 2 : 1, written CH₂O. Ask which kind of formula CH₂O is.",
+      "hint3": "The empirical formula is found by reducing the ratio of atoms as far as it will go. Which option describes that?",
+      "solution": "Answer: A. simplest formula of a compound\n\nThe empirical formula shows the simplest whole-number ratio of the atoms of each element in a compound. The molecular formula shows the actual number of each atom in one molecule, and it is a whole-number multiple of the empirical formula.\n\nHow to tell:\nGlucose molecular formula: C₆H₁₂O₆.\nDivide each number by 6: C₁H₂O₁.\nEmpirical formula: CH₂O, the simplest ratio.\n\nWhy not the others:\nB. molecular of a compound: the molecular formula gives the actual numbers of atoms, which can be larger than the simplest ratio.\nC. chemical formula of a compound: this is a general term that covers both empirical and molecular formulae.\nD. structural formula of a compound: this shows how the atoms are joined, not the simplest ratio.\n\nExam tip: empirical means simplest ratio, molecular means actual number. Molecular formula = n × empirical formula, where n is a whole number."
+    }
+  ]
+}

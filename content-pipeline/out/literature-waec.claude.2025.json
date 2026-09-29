@@ -1,0 +1,408 @@
+{
+  "deriver": "claude",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "An epic celebrates the deeds of a hero, so heroism is its dominant theme. Victory often occurs in epics but is an outcome, not the governing theme.",
+      "solvable": true,
+      "issue": ""
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The sentence plays on two meanings of 'mouse' (the rodent and the computer mouse), which is a pun. It is not zeugma because no single verb governs two objects in different senses.",
+      "solvable": true,
+      "issue": ""
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Tone is by definition the speaker's attitude towards the subject. Plot, rhythm and setting do not express attitude directly.",
+      "solvable": true,
+      "issue": ""
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Assonance is the repetition of vowel sounds. Alliteration repeats initial consonant sounds.",
+      "solvable": true,
+      "issue": ""
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The proscenium (including its apron) is the part of the stage in front of the curtain. Backstage is behind it, and centre stage is the middle of the acting area.",
+      "solvable": true,
+      "issue": ""
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Nature (the wind) responding violently to a human event attributes human feeling to nature, which is pathetic fallacy. It is not mere hyperbole because nothing is exaggerated.",
+      "solvable": true,
+      "issue": "Typo in source: 'kind' should be 'king'; this does not affect the answer."
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "'Amponsah's residence' at the head of the scene states where the action takes place, which is the setting. It is not a curtain raiser or interlude.",
+      "solvable": true,
+      "issue": "Stem misspells 'Amponsah' as 'Amponash'."
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Kwaku and Adwoa are people in the play's script, so they are characters. Actors are the real people who play them on stage.",
+      "solvable": true,
+      "issue": ""
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Adwoa mutters the line to herself while another character (Kwaku) is present and is not meant to hear it, which is an aside. A soliloquy is spoken by a character who is alone on stage.",
+      "solvable": true,
+      "issue": "Stem reads 'drop dead' but the passage reads 'stop dead'; this does not affect the answer."
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The bracketed instruction to the actor, [Muttering to herself], is a stage direction. The other options are theatrical events, not script instructions.",
+      "solvable": true,
+      "issue": ""
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A foil is a character who contrasts with another and so highlights that character's qualities. An antagonist opposes the protagonist but need not serve as a contrast.",
+      "solvable": true,
+      "issue": ""
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Saying 'not pleasant' to mean 'unpleasant' or bad is understatement through negation, which is litotes. It contains no paradox.",
+      "solvable": true,
+      "issue": ""
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The canon is the body of literary works widely accepted as authoritative or important. A compilation is simply any collection.",
+      "solvable": true,
+      "issue": ""
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The lines come from Maya Angelou's 'Phenomenal Woman'. The speaker walks in 'as cool as you please' and men stand or kneel, so she exudes self-confidence. She does not disrespect men; she describes their reaction to her.",
+      "solvable": true,
+      "issue": "'And to man' is probably a typing error for 'And to a man'."
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "The 'as ... as' comparative structure is what WAEC-level questions treat as simile. Strictly it is an idiom, and exaggeration is arguably defensible, but the as-comparison points to simile.",
+      "solvable": true,
+      "issue": "The expression is an idiom rather than a true simile, so 'exaggeration' is somewhat defensible."
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The line sets two opposite reactions side by side, standing and falling to their knees, which is contrast. Parallelism needs repeated grammatical structures, and there is no such repetition here.",
+      "solvable": true,
+      "issue": ""
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A chapter is a major division of prose, and a stanza is the equivalent division of a poem. Act and scene are divisions of drama.",
+      "solvable": true,
+      "issue": ""
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The extract for questions 18 and 19 is missing. The passage_text contains only the instruction line.",
+      "solvable": false,
+      "issue": "The extract text for Q18-19 is missing from the source."
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The extract for questions 18 and 19 is missing, so the feeling it evokes cannot be determined.",
+      "solvable": false,
+      "issue": "The extract text for Q18-19 is missing from the source."
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The sea is given the human or animate action of eating, which is personification. It is not chiasmus, because nothing is reversed.",
+      "solvable": true,
+      "issue": ""
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Old Major's speech in Animal Farm is indignant and full of resentment at man's exploitation ('stolen', 'hideous cruelty', 'only real enemy'), so it is angry. 'Moralistic' is somewhat defensible because the speech condemns wrongdoing, but the dominant tone is indignation.",
+      "solvable": true,
+      "issue": "'Moralistic' is a possible alternative reading."
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'The last atom of our strength' is an exaggeration for emphasis, which is hyperbole. No opposites are balanced, so it is not antithesis.",
+      "solvable": true,
+      "issue": ""
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The speaker asks the question for effect and then answers it himself, which is a rhetorical question. It is not sarcasm or an adage.",
+      "solvable": true,
+      "issue": ""
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Old Major is instructing and enlightening his 'comrades' about the cause of their misery and what to do about it, so his voice is didactic. It is formal oratory rather than colloquial, and it is not comical.",
+      "solvable": true,
+      "issue": ""
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "The line promises a future freed from hunger and overwork, so it evokes hopeful expectancy. 'Spite' is a weaker alternative because the line looks forward to relief rather than dwelling on malice.",
+      "solvable": true,
+      "issue": ""
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "It is a short, personal poem expressing a speaker's feelings for a beloved, which is a lyric. It is not an elevated ode addressing a subject, a lament (dirge) or a heroic narrative (epic).",
+      "solvable": true,
+      "issue": "Option C reads 'a lyrics' and option A reads 'adirge' (typing errors). The poem text has duplicated lines and typos ('voce', 'wort')."
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The speaker longs to see the beloved again and fantasises about holding and fondling her, which expresses desire. 'Devotion' is defensible, but the sensual yearning favours desire.",
+      "solvable": true,
+      "issue": "'Devotion' is also defensible."
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The repeated grammatical frame 'My eyes will ... / My ears will ...' is parallelism. The alliteration is incidental and is not the device being tested.",
+      "solvable": true,
+      "issue": "'My ears will drink' does not appear in the extract as typed (lines are duplicated or garbled), but the structure is clear from the stem."
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Visual images dominate: brightness of smile, eyes resting, silver moonshine and mirage. There are some auditory and tactile touches (voice, velvety texture), but sight is the most prominent.",
+      "solvable": true,
+      "issue": "The extract appears truncated or garbled, so the whole poem's balance of images cannot be fully checked."
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "D",
+      "confidence": "uncertain",
+      "reasoning": "The speaker admits that what he will hold are only 'delusions' and a 'mirage', and he is unsure when he will see the beloved again, which gives a resigned or pessimistic note. 'Dramatic' is possible, and none of the options fits perfectly.",
+      "solvable": true,
+      "issue": "The options fit poorly; 'dramatic' is a possible alternative."
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In Act 1 Scene 1, Lysander argues his claim to Hermia before Duke Theseus ('my lord'). Egeus is present but is not the one addressed.",
+      "solvable": true,
+      "issue": ""
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Lysander compares his lineage and fortune with those of his rival Demetrius, whom Egeus favours.",
+      "solvable": true,
+      "issue": "Option B misspells 'Egeus' as 'Eqeus'."
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Act 1 Scene 1 takes place in Athens, at Theseus's palace. The wood scenes come later.",
+      "solvable": true,
+      "issue": ""
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'Why should not I then prosecute my right?' shows that Lysander is defending his right to marry Hermia. He is not accepting blame or seeking reconciliation.",
+      "solvable": true,
+      "issue": ""
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Helena is the daughter of Nedar, and Demetrius wooed her before turning to Hermia. Hermia is Egeus's daughter.",
+      "solvable": true,
+      "issue": ""
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Oberon speaks the charm as he squeezes the love-juice on the sleeping Titania's eyes (Act 2 Scene 2). Puck's charm is spoken over Lysander and is different.",
+      "solvable": true,
+      "issue": ""
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Oberon recites the charm while applying the flower's juice to Titania's eyelids. He is not picking herbs or reversing a mistake.",
+      "solvable": true,
+      "issue": "'picking herba' is a typing error for 'herbs'."
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Oberon wants to punish Titania for refusing to give him the changeling boy, hence 'Wake when some vile thing is near'. He is not trying to please her.",
+      "solvable": true,
+      "issue": ""
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The charm is laid on the sleeping Titania. Its references to beasts and 'some vile thing' fit his revenge on her.",
+      "solvable": true,
+      "issue": ""
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Oberon and Titania are husband and wife, the fairy king and queen, so 'lovers' is the intended answer. They are estranged at this point, which makes 'enemies' arguable.",
+      "solvable": true,
+      "issue": "Estranged spouses; 'enemies' is arguable."
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Hermia uses 'maiden's patience' and accuses Demetrius of killing Lysander in Act 3 Scene 2. Helena never makes this accusation.",
+      "solvable": true,
+      "issue": ""
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Hermia is speaking to Demetrius, whom she suspects of killing the sleeping Lysander.",
+      "solvable": true,
+      "issue": ""
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Hermia thinks Lysander has been slain, because he deserted her while she slept. Bottom and Thisby are not involved.",
+      "solvable": true,
+      "issue": ""
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Calling Demetrius 'thou serpent' identifies him directly with a snake, without 'like' or 'as', which is a metaphor. The address to a present person is not apostrophe in the technical sense.",
+      "solvable": true,
+      "issue": ""
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "'Hast thou slain him ... killed him sleeping?' accuses Demetrius of killing Lysander. Bottom is not involved.",
+      "solvable": true,
+      "issue": ""
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Quince delivers the Prologue that introduces the players in the mechanicals' play in Act 5. Snout is Wall, Snug is Lion and Starveling is Moonshine.",
+      "solvable": true,
+      "issue": ""
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "After Quince's Prologue ends and the players exit, Theseus speaks next ('I wonder if the lion be to speak'), and then Demetrius replies. The extract is truncated, but the question refers to the end of the Prologue speech.",
+      "solvable": true,
+      "issue": "The extract is truncated, so 'after Quince's speech' relies on knowledge of the full text."
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Nick Bottom plays Pyramus. Flute plays Thisby.",
+      "solvable": true,
+      "issue": ""
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Tom Snout the tinker plays Wall, presented 'with lime and rough-cast'.",
+      "solvable": true,
+      "issue": ""
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The man with lantern, dog and bush of thorn 'presenteth Moonshine', a part played by Starveling. Lion carries no lantern.",
+      "solvable": true,
+      "issue": "The stem is incomplete (it has no verb), but the intended meaning is clear from the extract."
+    }
+  },
+  "failures": []
+}

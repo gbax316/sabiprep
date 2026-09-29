@@ -1,0 +1,648 @@
+{
+  "deriver": "claude",
+  "year": 2024,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Invaluable means extremely useful, so its opposite is useless. Insincere and preposterous describe other qualities, not value.",
+      "solvable": true,
+      "issue": "Rubric says 'measuring' for 'meaning'."
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Culpable means deserving blame, so its opposite is innocent. Accountable is close to a synonym, and honest is a different quality.",
+      "solvable": true,
+      "issue": ""
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Rigid in opinions means inflexible, and 'tolerant of other people's views' is the opposite and fits 'of'. Critical and wary don't contrast with rigid.",
+      "solvable": true,
+      "issue": ""
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Affable means friendly and pleasant, and antagonistic (hostile) is its clearest opposite. Guarded means reserved, which is only a weak contrast, and caution is a noun.",
+      "solvable": true,
+      "issue": "Guarded is a weaker but possible contrast."
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Castigated means severely rebuked, so its direct opposite is commended (praised). Exonerated means cleared of blame, which is the opposite of 'accused' rather than 'scolded', but it can be defended.",
+      "solvable": true,
+      "issue": "Exonerated is a defensible distractor."
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Eulogized means praised highly, and denounced (publicly condemned) matches that strength in the opposite direction. Criticized is a milder opposite, and discourage is ungrammatical here.",
+      "solvable": true,
+      "issue": "Criticized is also a possible opposite; denounced chosen for matching intensity."
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Mean (stingy, unkind) is the direct opposite of generous. Indifferent means lacking interest, not ungenerous.",
+      "solvable": true,
+      "issue": ""
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Restless is the opposite of calm. Angry and hungry are not direct antonyms.",
+      "solvable": true,
+      "issue": "'all long' should read 'all along'."
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Self-effacing means modest and keeping out of the limelight, so its opposite is conceited. Aggressive is a different trait.",
+      "solvable": true,
+      "issue": "'self-effacting' is a typo for 'self-effacing'."
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Prudent means careful, especially with money, so its opposite is extravagant. Mindless is only loosely opposite, and mean is not opposite at all.",
+      "solvable": true,
+      "issue": ""
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The fixed phrase is 'won by a margin of twenty votes'. Surplus is not used for election results.",
+      "solvable": true,
+      "issue": ""
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Once the agenda is finished, a meeting is adjourned (formally brought to a close). Suspended means paused before finishing, and dissolved applies to bodies, not sittings.",
+      "solvable": true,
+      "issue": "Stem says 'dismissed', which is probably a typo for 'discussed'."
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "'Seek redress in a court of law' is the standard collocation for getting a remedy for a wrong. Litigation is the process, not what the aggrieved person seeks.",
+      "solvable": true,
+      "issue": ""
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Herd is the collective noun for cows. Flock is used for sheep and birds.",
+      "solvable": true,
+      "issue": "'principle' should be 'principal'."
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "A building kept for its historical significance stands as a historic monument. Edifice just means a large building, which is less apt with 'stands as'.",
+      "solvable": true,
+      "issue": "Edifice is marginally defensible."
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "'Refreshed and rejuvenated' is the usual pairing for renewed vigour after rest. Revived suggests recovery from collapse, and reloaded or remodeled don't fit.",
+      "solvable": true,
+      "issue": "Revived is loosely possible."
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A dermatologist treats skin diseases. The others treat the heart, the female reproductive system and the eyes.",
+      "solvable": true,
+      "issue": ""
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A diagnosis identifies the disease. A prescription is the treatment ordered, and a prediction is a forecast.",
+      "solvable": true,
+      "issue": ""
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "An incentive is something given to motivate someone to work harder. Offer and attraction don't carry that sense of motivation.",
+      "solvable": true,
+      "issue": "A noun is missing after 'a valuable' (e.g. 'a valuable gift')."
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "'Weather forecast' is the fixed compound. 'Weather prediction' or 'weather broadcast' are not idiomatic.",
+      "solvable": true,
+      "issue": ""
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "To jangle someone's nerves is to unsettle or upset them, which is closest to disturb. Annoy is also defensible because the idiom can suggest irritation.",
+      "solvable": true,
+      "issue": "Annoy (B) is also defensible. 'Oja' is a typo for 'Ojo'."
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "To be swept off one's feet is to fall suddenly and deeply in love. A pleasant surprise alone misses the romantic sense.",
+      "solvable": true,
+      "issue": ""
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "To keep abreast of events is to stay well-informed about them. Involved implies taking part, which the idiom does not mean.",
+      "solvable": true,
+      "issue": ""
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "'Last but one' means second to last, that is, the one before the last. A is the very last, which is wrong.",
+      "solvable": true,
+      "issue": ""
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "'Easy on the eye' means pleasant to look at, which is attractive. Grandiose means pretentiously large, which is not the same.",
+      "solvable": true,
+      "issue": ""
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The stem should contain an idiomatic sentence to interpret, but it is corrupted: 'attitude' repeats and the original expression is missing. Without that expression, none of baffles, irritates, amazes or amuses can be chosen on principle.",
+      "solvable": false,
+      "issue": "Stem garbled: the idiom to be interpreted is missing (probably something like 'gets on my nerves', which would give B)."
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'Through thick and thin' means in good times and bad. Accompanying someone everywhere takes the idiom literally.",
+      "solvable": true,
+      "issue": "Option A has 'eventually' for 'eventuality'."
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'Under the weather' means slightly ill. 'In the rain' is a literal misreading.",
+      "solvable": true,
+      "issue": ""
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "To be beaten at one's own game is to be defeated by one's own methods. Leaked strategies are not implied.",
+      "solvable": true,
+      "issue": "Options have a stray 'Taya’s' for 'Taya'."
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "To pull through is to recover from a serious illness. C is the opposite.",
+      "solvable": true,
+      "issue": ""
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Apparent means clearly seen or understood, that is, evident. Noticed describes the observer, not the fact.",
+      "solvable": true,
+      "issue": "'damage' should be 'damaged'."
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Impounded means seized by authority, so confiscated. Intercepted means stopped in transit, without seizure.",
+      "solvable": true,
+      "issue": "Stem is missing words ('merchant’s goods were impounded'), but the meaning is still clear."
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Wane means to decrease gradually. Disappear and dissipate overstate it, and deteriorate means to get worse in quality rather than smaller in amount.",
+      "solvable": true,
+      "issue": "Dissipate is marginally defensible."
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Ominous means giving a sign of something bad to come, which is portentous. Prophetic means foretelling but has no sense of bad luck.",
+      "solvable": true,
+      "issue": ""
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The fringe of a town is its edge or outskirts. Limit means a boundary line, and outside means beyond the town altogether.",
+      "solvable": true,
+      "issue": ""
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Spurned means rejected with contempt, which is rebuffed. Refuted means disproved, and denied does not fit 'an offer'.",
+      "solvable": true,
+      "issue": ""
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Eventually means in the end, after delay, that is, finally. Actually is a false friend.",
+      "solvable": true,
+      "issue": ""
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Inquisitive means curious and eager to know. Naughty and troublesome add ideas the word does not carry.",
+      "solvable": true,
+      "issue": ""
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Audacious means boldly daring. Agile describes physical nimbleness, not boldness.",
+      "solvable": true,
+      "issue": ""
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Menacingly means in a threatening manner. Stealthily means secretly, which is a different idea.",
+      "solvable": true,
+      "issue": "'crowed' should be 'crowd'."
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "In reported speech after 'He said' with 'by then', the future perfect backshifts to 'would have finished'. 'Will have finished' breaks the sequence of tenses.",
+      "solvable": true,
+      "issue": ""
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Adjective order runs age, then colour, then material: new blue silk.",
+      "solvable": true,
+      "issue": ""
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "An unreal conditional takes the subjunctive 'were'. 'Was' is informal and not accepted in standard exam usage.",
+      "solvable": true,
+      "issue": ""
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Chalk is uncountable, so 'some chalk' is correct. 'A chalk' and 'chalks' treat it as countable.",
+      "solvable": true,
+      "issue": ""
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Reported speech backshifts the tense and changes 'yesterday' to 'the previous day'. D keeps 'yesterday', which is wrong.",
+      "solvable": true,
+      "issue": ""
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "'Balanced diet' is the fixed nutritional term. 'Mixed' and 'complete' are not the standard collocation.",
+      "solvable": true,
+      "issue": ""
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'Rustle up' means to prepare food quickly. The other particles do not form this phrasal verb.",
+      "solvable": true,
+      "issue": ""
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "'Very' intensifies the plain adjective 'unhappy'. 'Too' implies excess and needs a consequence, and 'much' does not modify a plain adjective.",
+      "solvable": true,
+      "issue": ""
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'Considerably' idiomatically modifies a comparative ('considerably cheaper'). 'Greatly cheaper' is unidiomatic, and 'most cheaper' is ungrammatical.",
+      "solvable": true,
+      "issue": ""
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A car's metal boot is dented in a collision. Cracked and chipped suit glass or paint.",
+      "solvable": true,
+      "issue": ""
+    },
+    "51": {
+      "q_number": 51,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "'An environment in which their children can grow' uses the correct preposition with a relative pronoun. 'In that' is not allowed.",
+      "solvable": true,
+      "issue": ""
+    },
+    "52": {
+      "q_number": 52,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "'Cannot but admire' is the idiom for 'cannot help admiring'. The other conjunctions don't form this construction.",
+      "solvable": true,
+      "issue": ""
+    },
+    "53": {
+      "q_number": 53,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A plan that fails 'falls through'. 'Fell down' and 'fell off' do not have this meaning.",
+      "solvable": true,
+      "issue": ""
+    },
+    "54": {
+      "q_number": 54,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The tag goes with the main clause 'You think', which is positive, so the tag is 'don't you'. A and C wrongly tag the subordinate clause.",
+      "solvable": true,
+      "issue": ""
+    },
+    "55": {
+      "q_number": 55,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "'Broke into tears' means began crying suddenly. 'Broke up' means ended or dispersed.",
+      "solvable": true,
+      "issue": ""
+    },
+    "56": {
+      "q_number": 56,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "An action completed before another past action takes the past perfect 'had eaten'. The other options are ungrammatical.",
+      "solvable": true,
+      "issue": ""
+    },
+    "57": {
+      "q_number": 57,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'Next to nothing' means almost nothing, which matches the contrast with 'claimed to be an expert'.",
+      "solvable": true,
+      "issue": ""
+    },
+    "58": {
+      "q_number": 58,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The perfect participle 'Having bought' shows the purchase came first. The other forms are ungrammatical.",
+      "solvable": true,
+      "issue": "'face her studies' probably means 'focus on her studies'; this does not affect the answer."
+    },
+    "59": {
+      "q_number": 59,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The idiom is 'deficiency in' a nutrient (or 'of'), so 'in' is the only fit among the options.",
+      "solvable": true,
+      "issue": ""
+    },
+    "60": {
+      "q_number": 60,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "'The ... he has submitted ... since joining' calls for a superlative after 'the', so 'earliest'. 'Later' is comparative and doesn't fit 'the'.",
+      "solvable": true,
+      "issue": ""
+    },
+    "61": {
+      "q_number": 61,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "'Make do with' means to manage with what is available. 'Make up' and 'make out' mean other things.",
+      "solvable": true,
+      "issue": ""
+    },
+    "62": {
+      "q_number": 62,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "'Somewhat hasty' correctly modifies the adjective. 'More hasty' needs 'than', 'much hasty' is ungrammatical, and 'scarcely' clashes with the sense.",
+      "solvable": true,
+      "issue": ""
+    },
+    "63": {
+      "q_number": 63,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A positive statement takes a negative tag, and 'everybody ... their' takes 'they', giving 'shouldn't they'. C wrongly changes the person.",
+      "solvable": true,
+      "issue": ""
+    },
+    "64": {
+      "q_number": 64,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The idiom is 'at a crossroads', where crossroads is singular in meaning but ends in -s. 'A crossroad' is non-standard.",
+      "solvable": true,
+      "issue": "'experienced' may be a typo for 'inexperienced'; this does not affect the answer."
+    },
+    "65": {
+      "q_number": 65,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "'Play down' means to minimise the importance of problems. 'Play up' means to exaggerate, which doesn't fit the context.",
+      "solvable": true,
+      "issue": ""
+    },
+    "66": {
+      "q_number": 66,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "'Ought not to have walked' criticises a past action. 'Need not to' is ungrammatical, and 'would not' and 'might not' do not give advice.",
+      "solvable": true,
+      "issue": ""
+    },
+    "67": {
+      "q_number": 67,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "'Price tag' is a compound noun with the first noun acting as a modifier. There is no possessive or plural.",
+      "solvable": true,
+      "issue": "Options C and D are identical ('prices tag'), so one option letter is duplicated."
+    },
+    "68": {
+      "q_number": 68,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A sentence with the impersonal 'one' keeps 'one's' in formal usage. 'His' and 'your' break the concord.",
+      "solvable": true,
+      "issue": ""
+    },
+    "69": {
+      "q_number": 69,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A 'sell-by date' is the date by which a consumable must be sold. The other compounds are unrelated.",
+      "solvable": true,
+      "issue": ""
+    },
+    "70": {
+      "q_number": 70,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "One judges someone 'by' their past. 'Judge for' and 'judge at' are wrong.",
+      "solvable": true,
+      "issue": ""
+    },
+    "71": {
+      "q_number": 71,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "An elected official's term of office is a tenure, and it 'elapses'. Reign is for monarchs.",
+      "solvable": true,
+      "issue": "The cloze passage is badly garbled, with repeated and scrambled sentences around 77–78."
+    },
+    "72": {
+      "q_number": 72,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Registered parties select candidates to stand for election. Aspirants are those who seek selection before it happens, so B is arguable.",
+      "solvable": true,
+      "issue": "Passage around 72–73 is garbled; aspirants is defensible."
+    },
+    "73": {
+      "q_number": 73,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "Candidates present manifestoes to inform the public of their intentions once in office. The passage wording at blank 73 is corrupted ('registered ...73... to public'), but only manifestoes fits 'inform them of their intentions'.",
+      "solvable": true,
+      "issue": "Blank 73 sits in a corrupted sentence: 'registered' seems to belong to a missing word 'parties'."
+    },
+    "74": {
+      "q_number": 74,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Seeking votes from the public is canvassing. Lobbying targets officials, and buying votes is illegal.",
+      "solvable": true,
+      "issue": ""
+    },
+    "75": {
+      "q_number": 75,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "'Universal suffrage' means every adult citizen may vote, as the passage goes on to explain.",
+      "solvable": true,
+      "issue": ""
+    },
+    "76": {
+      "q_number": 76,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A citizen over eighteen is 'eligible' to vote, that is, qualified. Suitable and approved don't fit the legal sense.",
+      "solvable": true,
+      "issue": ""
+    },
+    "77": {
+      "q_number": 77,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Voters go to the polling stations. Polling booths are the cubicles inside, so A is possible but less apt for 'go to'.",
+      "solvable": true,
+      "issue": "Booths is defensible, and the passage repeats the sentence containing 77."
+    },
+    "78": {
+      "q_number": 78,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Checking voters against the register before voting is accreditation, in Nigerian electoral usage. The sentence is garbled ('for ...78... the person of their choice'), but accreditation is the only procedural term that fits the register check.",
+      "solvable": true,
+      "issue": "Sentence at 78 is corrupted and appears to merge 'for accreditation' with 'vote for the person of their choice'."
+    },
+    "79": {
+      "q_number": 79,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Votes are counted at the polling unit by the presiding officer while party agents watch. The returning officer collates results and declares them at a higher level, so B is arguable.",
+      "solvable": true,
+      "issue": "Returning officer is defensible."
+    },
+    "80": {
+      "q_number": 80,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "At the end of counting, the winner is announced (declared). Chosen and appointed misdescribe an election result.",
+      "solvable": true,
+      "issue": "Standard term would be 'declared'; announced is the closest option."
+    }
+  },
+  "failures": []
+}

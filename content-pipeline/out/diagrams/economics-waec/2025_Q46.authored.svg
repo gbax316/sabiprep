@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 245 600 310" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+  <!-- Authored by hand, not traced: the diagrams in this subject carry typed labels, which tracing damages. Redrawn from 2025_Q46.png; nothing omitted, everything was readable. -->
+  <title id="t">Tax rates of systems Q, T, S and R at three income levels</title>
+  <desc id="d">A table with four columns: 'Tax System', '$100', '$500' and '$1000'. Below the header are four rows, each a tax system letter followed by its percentages at the three income levels: Q, 10%, 10%, 10%; T, 90%, 70%, 30%; S, 20%, 65%, 40%; R, 10%, 40%, 70%.</desc>
+  <g fill="none" stroke="#E2E8F0" stroke-width="3" stroke-linecap="square">
+    <rect x="120" y="262" width="558" height="276"/>
+    <line x1="342" y1="262" x2="342" y2="538"/>
+    <line x1="452" y1="262" x2="452" y2="538"/>
+    <line x1="565" y1="262" x2="565" y2="538"/>
+    <line x1="120" y1="318" x2="678" y2="318"/>
+    <line x1="120" y1="373" x2="678" y2="373"/>
+    <line x1="120" y1="428" x2="678" y2="428"/>
+    <line x1="120" y1="483" x2="678" y2="483"/>
+  </g>
+  <g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="28">
+    <text x="140" y="301">Tax System</text>
+    <g text-anchor="middle">
+      <text x="398" y="301">$100</text>
+      <text x="509" y="301">$500</text>
+      <text x="621" y="301">$1000</text>
+    </g>
+    <text x="140" y="357">Q</text>
+    <text x="143" y="412">T</text>
+    <text x="146" y="467">S</text>
+    <text x="148" y="523">R</text>
+    <g text-anchor="middle">
+      <text x="398" y="357">10%</text>
+      <text x="509" y="357">10%</text>
+      <text x="619" y="357">10%</text>
+      <text x="400" y="412">90%</text>
+      <text x="509" y="412">70%</text>
+      <text x="619" y="412">30%</text>
+      <text x="401" y="467">20%</text>
+      <text x="509" y="467">65%</text>
+      <text x="619" y="467">40%</text>
+      <text x="401" y="523">10%</text>
+      <text x="509" y="523">40%</text>
+      <text x="619" y="523">70%</text>
+    </g>
+  </g>
+</svg>

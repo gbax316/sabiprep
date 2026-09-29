@@ -1,0 +1,76 @@
+{
+  "entries": [
+    {
+      "q_number": 17,
+      "source": "codex",
+      "finding": "hint 3 turns the item into an odd-one-out spotting task",
+      "decision": "accepted",
+      "reason": "After hint 2 says the unit has three parts, asking whether one option is 'bigger than the others' lets a student pick the composite without recalling the term.",
+      "change": "Hint 3 now asks which single word names the whole joined unit rather than one of its three parts, so the student must recall the term nucleotide.",
+      "round": 1
+    },
+    {
+      "q_number": 22,
+      "source": "codex",
+      "finding": "hint 3 reduces the choice to matching the word 'type' in the stem",
+      "decision": "rejected",
+      "reason": "Telling apart a position word (apical) from a cell-type word (meristematic) is exactly the biology this hard item tests, and the student must still know which word is which; the proposed replacement ('recall the name for small, thin-walled cells that keep dividing') is no weaker and nearly defines the answer.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 29,
+      "source": "codex",
+      "finding": "hint 3 describes both muscle contraction and mitosis as physical work, leaving osmosis by elimination",
+      "decision": "accepted",
+      "reason": "'Pulling fibres or parts of the cell' identifies both remaining ATP users at once, so the closing question does no work.",
+      "change": "Hint 3 now eliminates only muscle contraction, then asks which of the two left could happen across a non-living membrane, so the student must judge mitosis versus osmosis. Hint 2 kept as written; Codex's version, which also eliminated mitosis in hint 2, was not used because it left hint 3 with a single-step giveaway.",
+      "round": 1
+    },
+    {
+      "q_number": 31,
+      "source": "codex",
+      "finding": "hint 3 answerable by logic alone ('fixed' versus 'can change')",
+      "decision": "accepted",
+      "reason": "Asking which of 'a fixed, clear layer' and something that 'can change' could control an amount needs no eye anatomy.",
+      "change": "Hint 3 now describes the cornea as the clear front layer light passes first and asks the student to recall which of the two rings the pupil, which needs knowledge of the iris.",
+      "round": 1
+    },
+    {
+      "q_number": 38,
+      "source": "codex",
+      "finding": "hint 2 describes all three distractors, hint 3 defines locomotion",
+      "decision": "accepted",
+      "reason": "'Releases energy from food', 'gets bigger' and 'responds to its surroundings' map onto B, C and D, so hint 2 states the answer indirectly.",
+      "change": "Hint 2 now eliminates only respiration and growth. Hint 3 notes a rooted mango tree still responds to stimuli and asks which of the two remaining terms means reacting to a stimulus and which means moving the whole organism, using Codex's wording.",
+      "round": 1
+    },
+    {
+      "q_number": 24,
+      "source": "check-8",
+      "finding": "solution says 'Oxygen breaks down food'",
+      "decision": "accepted",
+      "reason": "Oxygen does not itself break down food; it is used in the process as the final electron acceptor (as Q1 teaches). The loose wording would contradict Q1.",
+      "change": "'Oxygen breaks down food' changed to 'Oxygen is used to break down food'.",
+      "round": 1
+    },
+    {
+      "q_number": 0,
+      "source": "check-11",
+      "finding": "self-review of all 38 items for unscoped absolutes and syllabus simplifications",
+      "decision": "accepted",
+      "reason": "Syllabus simplifications (Q4 onion bulb, Q8 fingerprint, Q15, Q20, Q27, Q30 lipase, Q34 colon, Q39 heart) are already scoped; remaining absolutes such as 'every living cell releases energy' (Q38) and 'not a human chromosome number at all' (Q5) are literally true at syllabus depth. No further changes.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 0,
+      "source": "check-12",
+      "finding": "sibling leaks",
+      "decision": "accepted",
+      "reason": "No item in this paper has a passage_id or shared stem, so there are no sibling groups to check.",
+      "change": "",
+      "round": 1
+    }
+  ]
+}

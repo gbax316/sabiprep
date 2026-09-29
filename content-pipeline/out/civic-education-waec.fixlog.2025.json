@@ -1,0 +1,94 @@
+{
+  "entries": [
+    {
+      "q_number": 18,
+      "source": "codex",
+      "finding": "hint 3 paraphrases option A ('a patient following exactly what the doctor ordered')",
+      "decision": "accepted",
+      "reason": "Hint 3 restates option A's own wording, so a student can match words without applying the definition of drug abuse.",
+      "change": "Hint 3 rewritten to narrow to the two options left (a patient taking medicine, dealing in hard drugs) and ask which involves no wrongdoing when tested against the meaning of drug abuse. Codex's wording was not used word for word.",
+      "round": 1
+    },
+    {
+      "q_number": 24,
+      "source": "codex",
+      "finding": "syllabus skill list drops vocational and ICT and adds 'value skills'",
+      "decision": "accepted",
+      "reason": "The list in taxonomy.json for youth-empowerment.skills is life-coping, manipulative, intellectual, communicative, artistic, leadership, vocational and ICT. The draft's list was wrong syllabus content.",
+      "change": "Solution list replaced with the taxonomy list. Hint 2 'creative' changed to 'artistic' so it matches the syllabus name.",
+      "round": 1
+    },
+    {
+      "q_number": 25,
+      "source": "codex",
+      "finding": "'the main aim of youth empowerment' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "Youth empowerment has several aims, so calling self-reliance the main one overstates it (check 11).",
+      "change": "C line now reads 'because supporting oneself is one of the key aims of youth empowerment'.",
+      "round": 1
+    },
+    {
+      "q_number": 28,
+      "source": "codex",
+      "finding": "'a country can have only one army' stated as universal",
+      "decision": "accepted",
+      "reason": "Not true of every federation. It is true of Nigeria's system, which is what the question tests (check 11).",
+      "change": "How to tell scoped to Nigeria's federal system, using Codex's wording.",
+      "round": 1
+    },
+    {
+      "q_number": 35,
+      "source": "codex",
+      "finding": "hint 3 eliminates both B and C, leaving only D",
+      "decision": "accepted",
+      "reason": "Hint 3 tells the student to check HIV/AIDS and human trafficking, which removes B and C at once and leaves only D. Hint 3 should narrow to two options and leave the final choice to the student.",
+      "change": "Hint 3 now rules out B only, leaves C and D, and asks the student to judge III, VI, II and VII themselves.",
+      "round": 1
+    },
+    {
+      "q_number": 40,
+      "source": "check-10",
+      "finding": "'Some officers and cannot be sued match that.' is a broken sentence",
+      "decision": "accepted",
+      "reason": "The sentence is ungrammatical and a fifteen-year-old would stumble over it.",
+      "change": "Now reads: The words 'some public officers' and 'cannot be sued' match that.",
+      "round": 1
+    },
+    {
+      "q_number": 35,
+      "source": "check-12",
+      "finding": "Q35/Q36 hints checked for sibling leaks",
+      "decision": "rejected",
+      "reason": "Q35 hints sort the items into needs and problems but never pair VI with VII. Q36 hints rule out V and set VII against II without pointing to II and VII together, and Q35 is answered before Q36 is reached. Neither item's hints give away the other's answer.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 24,
+      "source": "codex",
+      "finding": "hint 2 lists five skill types without manipulative, then says terms not on that list are unlikely to be the answer",
+      "decision": "accepted",
+      "reason": "The hint's own rule points the student away from the key and conflicts with the solution. The proposed fix (list all eight) was not used, because only C would then appear on the list and hint 2 would give the answer away.",
+      "change": "hint2 now gives a few example syllabus types (not manipulative) and says general education or curriculum terms are not on the syllabus list, without the misleading rule.",
+      "round": 2
+    },
+    {
+      "q_number": 24,
+      "source": "check-11",
+      "finding": "solution presents the eight-item list as the syllabus's complete list ('names the types ... as')",
+      "decision": "accepted",
+      "reason": "Exhaustive wording claims more than needed and is hard to verify; 'including' keeps the teaching and drops the absolute.",
+      "change": "'names the types of youth empowerment skills as' changed to 'names types of youth empowerment skills, including'.",
+      "round": 2
+    },
+    {
+      "q_number": 40,
+      "source": "codex",
+      "finding": "hint 3 'protection from court cases' paraphrases option A, so the student can match without thinking",
+      "decision": "accepted",
+      "reason": "Hint 3 nearly restates option A, and hint 2 left three options, so hint 3 did the choosing.",
+      "change": "hint2 adds that immune officers can still be voted out or impeached (eliminates C); hint3 now contrasts a narrow legal protection with a broad claim about use of power, without paraphrasing A. Shortened from the proposed fix.",
+      "round": 2
+    }
+  ]
+}

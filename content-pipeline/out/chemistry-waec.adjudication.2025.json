@@ -1,0 +1,62 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "rulings": {
+    "5": {
+      "q_number": 5,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "The stem names the ions Na+ and K+, not the atoms, and a cation can only gain electrons, as it does when discharged at the cathode to form the metal. The strongest case for A is that the setter may have meant the metals, which readily give electrons, but as printed Na+ and K+ already have a stable noble gas configuration and do not give electrons. B and D both carry the wrong sign, since sodium and potassium have negative reduction potentials and positive oxidation potentials. On the stem as written, C is the only true statement.",
+      "sided_with": "claude"
+    },
+    "9": {
+      "q_number": 9,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Aluminium and sodium are metals and phosphorus is a non-metal in every Nigerian secondary text. Selenium sits on the metal to non-metal boundary next to arsenic and tellurium and has semiconducting properties, so it is the only option that can be classed as a metalloid. Some texts call selenium a non-metal, but that does not make any other option defensible, so a prepared student reaches B by elimination.",
+      "sided_with": "both"
+    },
+    "11": {
+      "q_number": 11,
+      "ruling": "ambiguous",
+      "answer": null,
+      "reasoning": "Food preservation and salting out soap from glycerol are clear textbook uses of sodium chloride. A is the likely intended exception because water is treated with chlorine rather than salt, but brine is also used to regenerate ion-exchange water softeners, so A is arguably a real use. B as printed, manufacturing of chloride, is not a standard named use and looks like a garbled form of manufacture of chlorine, which is a real use. A prepared student cannot tell whether the setter wanted A or the oddly worded B, so no key should be forced.",
+      "sided_with": "neither"
+    },
+    "15": {
+      "q_number": 15,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Red on the universal indicator chart means pH of about 1 to 2, a strong acid, while dilute or weak acids give orange to yellow. The strongest objection is that concentration and strength are different ideas, so concentrated acid is not strictly the same as strong acid. Even so, C gives a higher-pH colour and B and D are alkalis showing blue to purple, so A is the only option an examiner would accept.",
+      "sided_with": "both"
+    },
+    "17": {
+      "q_number": 17,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "Nigerian secondary texts give hydration of ethene, either directly with a catalyst or through ethyl hydrogensulphate followed by hydrolysis, as a standard way of preparing ethanol. Reduction of ethanoic acid with lithium tetrahydridoaluminate(III) is correct chemistry, but it is outside the syllabus and not how the texts describe preparing ethanol. Oxidation of a primary alkanol gives an alkanal or alkanoic acid, and oxidation of alkenes gives diols, so D is the key.",
+      "sided_with": "both"
+    },
+    "24": {
+      "q_number": 24,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "In the standard Nigerian treatment of this electrolysis, chloride ions are discharged at the anode as chlorine, and hydrogen is released at the cathode. The strongest case for A is the concentration effect, since very dilute chloride solutions give oxygen. However, the texts reserve that result for very dilute solutions, and ordinary dilute hydrochloric acid is taught as giving chlorine. The stem says dilute, not very dilute, so C is the expected answer, and B is the cathode product.",
+      "sided_with": "claude"
+    },
+    "26": {
+      "q_number": 26,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "A cigarette filter traps nicotine and tar on the surface of its fibres or charcoal, which is adsorption, and this is the textbook example given alongside charcoal in gas masks. Absorption is the tempting distractor, but it means uptake into the bulk of a material, which is exactly the contrast the question tests. Burning and evaporation do not remove nicotine.",
+      "sided_with": "both"
+    },
+    "48": {
+      "q_number": 48,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "Ethene polymerises to polyethene, so the chemistry is not in doubt. However, options A and B are both printed as polyethene, so the correct content sits under two letters and no single letter can be keyed. Choosing A over B would be arbitrary, and one of the two was probably meant to be a different distractor such as polyvinyl chloride. The item must be fixed at source before it can be used.",
+      "sided_with": "codex"
+    }
+  }
+}

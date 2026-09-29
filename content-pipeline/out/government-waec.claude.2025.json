@@ -1,0 +1,408 @@
+{
+  "deriver": "claude",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Democracy lives on citizens taking part, so voter turnout and civic engagement are its lifeblood. Party membership (B) is only one narrow form of participation, and A ('only') and D (secrecy) run against democracy.",
+      "solvable": true,
+      "issue": "Stem says 'live blood' for 'lifeblood'."
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Governance is the process, approaches and strategies by which authority is exercised to manage a state's affairs. Sovereignty (D) is supreme authority itself, not the way it is exercised, and jurisdiction is the scope of legal authority.",
+      "solvable": true,
+      "issue": "'approached' is a typo for 'approaches'."
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Sovereignty is a state's supreme power to govern itself and keep its territory free of outside interference. Self-determination (C) is a people's right to choose their political status, usually meaning independence, and does not define an established state's territorial integrity.",
+      "solvable": true,
+      "issue": ""
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The House of Representatives is a chamber of the legislature, so its function is law-making. Dispensing justice (A) belongs to the judiciary.",
+      "solvable": true,
+      "issue": ""
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A democratic constitution's key role is to limit government and protect citizens' fundamental rights and civil liberties. A and D are made wrong by 'only', and B is a minor provision.",
+      "solvable": true,
+      "issue": "Option A is garbled ('governmental governments powers only')."
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Citizens contribute most to national development by taking an active part in governance: voting, holding leaders to account and joining civic life. Merely watching (C) is passive, and strikes and boycotts (D) are occasional tools of protest, not the main role.",
+      "solvable": true,
+      "issue": ""
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "The media's classic democratic role is as the watchdog, or fourth estate, that exposes wrongdoing and holds government accountable to the people. Advancing party ideology (D) is partisan and is not how the media strengthens governance.",
+      "solvable": true,
+      "issue": "Options damaged: C is missing, and D is merged into the text of B. A is the textbook answer, but the missing C cannot be checked."
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Pressure groups influence governance mainly by lobbying government to adopt policies that favour their interests. Funding parties to gain popularity (D) is not their defining contribution, and community events (B) are incidental.",
+      "solvable": true,
+      "issue": "Options damaged: C is missing, and D is merged into the text of B. The missing C cannot be checked."
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Public opinion informs and shapes the decisions of elected officials and guides public policy. It is not the sole determinant of elections (C), and it does not set the constitutional framework (B).",
+      "solvable": true,
+      "issue": ""
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "In return for protecting and providing for citizens, the state expects them to perform their civic duties actively, such as voting, paying taxes and obeying laws. Passive obedience (B) and unconditional support (D) are not democratic expectations.",
+      "solvable": true,
+      "issue": ""
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Political culture is the shared beliefs, values and attitudes towards the political system, and these foster a sense of belonging and a national identity. D contradicts the idea, because political culture is itself about attitudes.",
+      "solvable": true,
+      "issue": ""
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Political socialization passes on political values and knowledge, shaping how citizens understand government and society. The other options describe distorted or extremist outcomes, not its function.",
+      "solvable": true,
+      "issue": ""
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Totalitarianism is marked by the state controlling all of life and suppressing rights, so the erosion of civil liberties is the key warning sign. Low voter turnout (B) signals apathy, not totalitarianism.",
+      "solvable": true,
+      "issue": ""
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Judicial independence lets judges decide cases free of political pressure, influence and manipulation, which safeguards the rule of law. It is not meant to make judges sacrosanct (B) or to protect politicians (C).",
+      "solvable": true,
+      "issue": ""
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Electoral bodies in West Africa commonly struggle with inadequate or late funding and poor voter education. Consistency in results (C) is not a challenge, and over-reliance on technology (D) is not the recognised main problem.",
+      "solvable": true,
+      "issue": ""
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Competing parties give voters alternatives to choose from, which sustains democracy. The other options (centralising power, suppressing dissent, limiting competition) are anti-democratic.",
+      "solvable": true,
+      "issue": ""
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Public corporations reach their potential through innovation, research and retooling that improve efficiency and service. Strict regulation (A) is defensible, but it controls the corporation rather than developing its potential, and C and D run against the public-service purpose.",
+      "solvable": true,
+      "issue": "Opinion-style item; A is weakly defensible."
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Of the options given, 'providing administrative support' is a role of the civil service, while ruling on cases (the judiciary) and conducting elections (the electoral body) are not. However, option C is missing and could also be a civil-service role, for example implementing policy.",
+      "solvable": false,
+      "issue": "Options damaged: C is missing, and D ('providing administrative support') is merged into the text of B, so no clean key can be chosen."
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Corruption and financial mismanagement (a lack of transparency in how money is handled) are the most commonly cited obstacles to local government in West Africa. Bureaucratic inefficiency (C) is also defensible, but financial impropriety is the standard textbook answer.",
+      "solvable": true,
+      "issue": "C is also defensible."
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The defining pillar of federalism is the constitutional division of powers between the central and component governments. Centralised or unitary authority (A, D) belongs to a unitary system.",
+      "solvable": true,
+      "issue": "'division or powers' is a typo for 'division of powers'."
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Delegated legislation lets expert bodies and ministries fill in technical detail under the authority of a parent law. It does not give unconditional power (A), and uniform punitive application (D) is not its purpose.",
+      "solvable": true,
+      "issue": ""
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Traditional rulers are close to the grassroots and can mobilise people and build trust in, and legitimacy for, modern governance institutions. Putting traditional authority first (D) or resisting globalisation (A) does not advance democracy.",
+      "solvable": true,
+      "issue": "Vaguely worded; C is weakly defensible."
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A protectorate kept its local rulers and some internal autonomy, while the protecting power controlled its foreign affairs and defence. Complete annexation (B) describes a colony, not a protectorate.",
+      "solvable": true,
+      "issue": ""
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A Crown Colony was governed directly by the British Crown through an appointed Governor and officials. It had no full local autonomy (A) and no fully empowered local assemblies (D).",
+      "solvable": true,
+      "issue": ""
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Assimilation aimed to turn Africans into French citizens by having them adopt French culture, language and values. It did not seek independence (A) or separate local government (D).",
+      "solvable": true,
+      "issue": "Option C is garbled ('without regard authorities')."
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Nationalism can unite people around a shared identity but can also exclude minorities or out-groups, which is a key lesson for modern governance. The other options are one-sided or overstated.",
+      "solvable": true,
+      "issue": "Loosely worded item."
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Post-war nationalist leaders such as Nkrumah, Azikiwe and Awolowo campaigned for self-government and independence. They opposed colonial rule rather than promoting it (A).",
+      "solvable": true,
+      "issue": ""
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Post-war agitation was driven by the aspiration to self-determination and independence, strengthened by the Atlantic Charter and the experience of returning ex-servicemen. The other options are not the driving force.",
+      "solvable": true,
+      "issue": "'as aspiration' is a typo for 'an aspiration'; 'strength' is a typo for 'strengthen' in A."
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Colonial rule weakened and distorted traditional authority structures, for example by making chiefs agents of the colonial state, and this is the standard negative impact cited. D (power concentrated in British administrators) is also true of colonial rule and is defensible.",
+      "solvable": true,
+      "issue": "D is also defensible."
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The pre-independence constitutions (for example Clifford and Richards in Nigeria, and Guggisberg and Burns in the Gold Coast) concentrated power in the Governor, so centralised power was the common feature. Full local government (A) and unlimited power (C) do not fit.",
+      "solvable": true,
+      "issue": "'British West Colonies' is a typo for 'British West African Colonies'."
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Coup makers typically justify taking over by pointing to insecurity, political instability and corruption. The lack of army infrastructure (D) and the other options are not the usual stated reasons.",
+      "solvable": true,
+      "issue": ""
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Military regimes suspend or dissolve the legislature and rule by decree, so the legislature is the arm most affected. The civil service (B) usually carries on working under military rule.",
+      "solvable": true,
+      "issue": ""
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "A carefully determined foreign policy helps West African states build regional cooperation and integration (for example through ECOWAS). Reducing economic dependency (C) is also a plausible aim, so the item is not clear-cut.",
+      "solvable": true,
+      "issue": "C is also defensible."
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "National interest, above all national security and survival, is the overriding consideration in foreign policy. Historical tradition and cultural exchange are secondary factors.",
+      "solvable": true,
+      "issue": ""
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "The UN was formed to keep international peace and security, largely by settling disputes through diplomacy and friendly relations among nations (Article 1). None of the options says 'maintain peace' directly, so fostering diplomatic relations is the closest; trade (A) and culture (C) are not its peace and security aim.",
+      "solvable": true,
+      "issue": "No option states the main aim (maintaining international peace and security) directly."
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The 1948 Universal Declaration of Human Rights is a lasting landmark achievement of the UN. It did not achieve universal democracy (D), and arms (C) are not an achievement.",
+      "solvable": true,
+      "issue": ""
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "E-governance delivers government services online, overcoming distance and differences in background. Town hall meetings (D) are limited by physical location.",
+      "solvable": true,
+      "issue": ""
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A party system brings together and represents the diverse interests in society, which gives governance stability and continuity. Centralising power (C) and encouraging apathy (D) weaken democracy.",
+      "solvable": true,
+      "issue": ""
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Openness in the electoral process removes suspicion among political actors. Favouring parties (D) would compromise the body's neutrality, and limiting the public's influence (A) would breed mistrust.",
+      "solvable": true,
+      "issue": ""
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Surveys and polls reach a broad sample of the public. The other options are biased or narrow by definition (a single community, high-profile interviewees only, skewed samples).",
+      "solvable": true,
+      "issue": ""
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A citizen's core obligations are to pay taxes, obey the law and protect public property. Advocating for one's rights (B) is a right rather than an obligation, and partisan politics (A) is optional.",
+      "solvable": true,
+      "issue": ""
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The constitution sets out the fundamental rules by which the state is governed, and this makes government predictable and stable. Guiding the judiciary (A) is narrower, and protecting executive powers (B) is not its purpose.",
+      "solvable": true,
+      "issue": ""
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The rule of law and free and fair elections are the core institutional indicators of democracy. B and C are desirable but not defining, and D describes coercive capacity.",
+      "solvable": true,
+      "issue": ""
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A multi-party system allows political diversity and gives voters choice. Polarisation (B) is a drawback, and a unipolar system (C) describes one party.",
+      "solvable": true,
+      "issue": ""
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Privatisation is advocated mainly to improve efficiency and profitability and to cut waste. Government control (A) is what privatisation removes.",
+      "solvable": true,
+      "issue": "'though' is a typo for 'thought'."
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "ECOWAS was founded in 1975 to promote economic cooperation and integration among its members. Cultural diversity, isolation and rivalry do not bind the members together.",
+      "solvable": true,
+      "issue": ""
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The UN's success rests on broad international cooperation among nearly all states. It has open, universal membership, not specialised criteria (C) or regional exclusivity (A).",
+      "solvable": true,
+      "issue": ""
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Nigeria benefits from economic, educational and technical collaboration among Commonwealth members. There is no mandatory military assistance (B) and no general visa-free policy (D).",
+      "solvable": true,
+      "issue": ""
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The AU fosters unity, solidarity and cooperation among African states and gives them a collective voice internationally. It cannot shield members from globalisation (B), and it does not obstruct diplomacy (D).",
+      "solvable": true,
+      "issue": ""
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Civil society organisations deepen democracy by mobilising citizen engagement, advocacy and accountability. A and D are made wrong by 'only', and civil disobedience (B) is not their democratic role.",
+      "solvable": true,
+      "issue": ""
+    }
+  },
+  "failures": []
+}
