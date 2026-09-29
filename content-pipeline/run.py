@@ -1276,6 +1276,28 @@ def cmd_matchtest(slug, sample, seed=7):
     return 0
 
 
+def cmd_replace(slug, unit):
+    """Place a finished paper onto a revised tree without re-teaching it:
+    re-run the classifier, move each teaching item to its new subtopic, and
+    rebuild the export and the gate page. Teaching does not depend on the
+    subtopic, so nothing else needs to change."""
+    cfg = load_config(slug)
+    st = load_state(slug, cfg)
+    ctx = Ctx(slug, unit, st)
+    summary = s_classify(ctx)
+    cls = {i['q_number']: i['subtopic_id'] for i in jload(ctx.out('classified'))['items']}
+    t = jload(ctx.out('teaching'))
+    moved = 0
+    for i in t['items']:
+        if cls.get(i['q_number']) and cls[i['q_number']] != i.get('subtopic_id'):
+            i['subtopic_id'] = cls[i['q_number']]
+            moved += 1
+    t['taxonomy_version'] = ctx.taxonomy().get('version')
+    jsave(ctx.out('teaching'), t)
+    print(f'{slug} {unit}: classify {summary}; {moved} of {len(t["items"])} moved; cost ${round(ctx.cost, 2)}')
+    return run_unit(slug, unit, st, 'export') and 0
+
+
 def cmd_status(slug=None):
     slugs = [slug] if slug else sorted(f[:-5] for f in os.listdir(os.path.join(HERE, 'configs')))
     for s in slugs:
@@ -1307,6 +1329,7 @@ def main():
     p = sub.add_parser('taxonomy'); p.add_argument('slug'); p.add_argument('--rebuild', action='store_true')
     p = sub.add_parser('run'); p.add_argument('slug'); p.add_argument('--unit'); p.add_argument('--from', dest='start', choices=STAGES)
     p = sub.add_parser('approve'); p.add_argument('slug'); p.add_argument('--note', default='')
+    p = sub.add_parser('replace'); p.add_argument('slug'); p.add_argument('--unit', required=True)
     p = sub.add_parser('coverage'); p.add_argument('slug')
     p = sub.add_parser('revise'); p.add_argument('slug')
     p = sub.add_parser('matchtest'); p.add_argument('slug'); p.add_argument('--sample', type=int, default=80); p.add_argument('--seed', type=int, default=7)
@@ -1320,6 +1343,8 @@ def main():
         return cmd_run(a.slug, a.unit, a.start)
     if a.cmd == 'approve':
         return cmd_approve(a.slug, a.note)
+    if a.cmd == 'replace':
+        return cmd_replace(a.slug, a.unit)
     if a.cmd == 'coverage':
         return cmd_coverage(a.slug)
     if a.cmd == 'revise':

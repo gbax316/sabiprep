@@ -180,7 +180,7 @@
       "hint2": "A herb is a plant with a soft, non-woody stem. That describes its structure, not how long it lives.",
       "hint3": "Perennials live for many years. Of the two options left, one needs two years to produce fruit and the other only one. Which is which?",
       "solution": "Answer: C. annuals\n\nFlowering plants can be grouped by how long they take to complete their life cycle. Annuals grow from seed, flower, produce fruits and seeds, and die, all within one year or one growing season. Maize, rice and cowpea are annuals.\n\nHow to tell: the question says the plant grows and fruits within a year. The word annual means yearly, as in an annual event that happens once a year.\n\nWhy not the others:\nA. biennials: they need two years, making leaves and storing food in the first year and flowering in the second, like carrot and onion.\nB. perennials: they live for many years, and most, like mango and orange trees, fruit again and again.\nD. herbs: this describes plants with soft, non-woody stems, not how long they live.\n\nExam tip: link the name to the number of years. Annual, one year. Biennial, two years (bi means two, as in bicycle). Perennial, many years.",
-      "subtopic_id": "applied.agriculture"
+      "subtopic_id": "applied.plant-life-cycles"
     },
     {
       "q_number": 21,
@@ -220,7 +220,7 @@
       "hint2": "Fat is handled in two steps: bile breaks it into tiny droplets, then the enzyme lipase splits the fat in those droplets into fatty acids and glycerol. Find the organ in the diagram that makes bile and the organ that makes lipase.",
       "hint3": "Ask of each labelled part whether it makes a juice used on fat, only stores one, or makes nothing for fat at all. Keep only the parts that make one. For each, ask whether that organ actually makes a substance that works on fat, or only stores one, or makes juices for other foods.",
       "solution": "Answer: C. II and III\n\nFat is digested mainly in the small intestine, in two steps. Bile breaks large fat drops into tiny droplets, and the enzyme lipase then splits the fat in those droplets into fatty acids and glycerol, so the parts that secrete substances for fat digestion are the organ that makes bile and the organ that makes lipase.\n\nHow to tell: in the diagram, I is the bag at the top right where the gullet enters, the stomach. II is the long, thin organ lying just below the stomach, the pancreas. III is the large organ filling the upper left, the liver. IV is the small sac attached to the liver, the gall bladder. The pancreas (II) secretes pancreatic juice, which contains lipase, and the liver (III) secretes bile. That gives II and III.\n\nWhy not the others:\nA. I, II and III: I is the stomach, whose juice in the syllabus carries pepsin and rennin for protein, plus hydrochloric acid, and none of these digests fat.\nB. I and III: it adds the stomach, which does not belong, and it leaves out the pancreas, the main source of lipase.\nD. I, III and IV: IV is the gall bladder, which stores bile made by the liver and releases it into the duodenum but does not make it, so it is not counted as secreting bile. This option also adds the stomach and leaves out the pancreas.\n\nExam tip: when a question asks which organ secretes a substance, choose the organ that makes it, not the one that stores it. The liver makes bile; the gall bladder stores it but does not make it.",
-      "subtopic_id": "animal-nutrition.alimentary"
+      "subtopic_id": "animal-nutrition.enzymes"
     },
     {
       "q_number": 25,
@@ -350,7 +350,7 @@
       "hint2": "Cutting down a forest destroys the homes and food of many animals, so any option describing a gain for wildlife is wrong.",
       "hint3": "Of the two options left, picture heavy rain on bare land where a forest used to be, and think about what the trees did with carbon (IV) oxide. Which option is a real effect?",
       "solution": "Answer: B. loss of soil particles\n\nTrees protect the soil. Their leaves break the force of falling rain, their roots bind the soil together, and their fallen leaves cover the ground. When a forest is cut down, rain washes the bare soil away and wind blows it off. This loss of soil particles is soil erosion, the main direct effect of deforestation.\n\nHow to tell: think about what the trees were doing before they were removed. Once the roots and leaf cover are gone, little is left to hold the topsoil in place.\n\nWhy not the others:\nA. creation of new habitats: deforestation mainly destroys habitats. The cleared land may suit a few other species, but that is not its main effect.\nC. survival of more species: fewer species survive, because many lose their homes and food.\nD. reduction of carbon (IV) oxide in the atmosphere: fewer trees take in less carbon (IV) oxide, and burning the cut trees releases more, so the amount in the air goes up.\n\nExam tip: for questions on the effects of deforestation, list what the forest was doing before it was cut: covering the soil, giving animals homes and food, taking in carbon (IV) oxide, and giving off water vapour that helps bring rain. Each effect is the loss of one of these.",
-      "subtopic_id": "conservation.resources"
+      "subtopic_id": "ecological-factors.edaphic"
     },
     {
       "q_number": 39,
@@ -463,5 +463,5 @@
       "subtopic_id": "evolution.theories"
     }
   ],
-  "taxonomy_version": "2.1"
+  "taxonomy_version": "2.2"
 }

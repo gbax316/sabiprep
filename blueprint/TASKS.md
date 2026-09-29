@@ -206,9 +206,10 @@ certainty [...] design the need review batch so we can work through those".
 subject's first paper at its gate, every question the system cannot confirm in the review
 batch rather than the import.
 
-**Budget:** measured $6 a paper and about $4 a subject for its tree (build, coverage,
-placement test twice, one revision). About 21 subject-exam files and 210 papers: roughly
-$1,400 on the Claude side at full run, less where Codex carries the reviews.
+**Budget:** measured $6 a paper. Trees cost more than estimated: $131 for all twelve, about
+$11 a subject (coverage mapped twice and four placement tests each), against the $4 first
+guessed. About 210 papers: roughly $1,300 more on the Claude side at full run, less where
+Codex carries the reviews.
 
 **Sources in hand:** twelve new files extracted (UTME Biology, eleven WAEC subjects). The
 WAEC Mathematics file needed a heading fix and now yields all 547 questions.
@@ -218,14 +219,11 @@ WAEC Mathematics file needed a heading fix and now yields all 547 questions.
 - [x] **TAX-01** The standard: `content-pipeline/standards/taxonomy.md`. Topics give the
       bird's-eye view, stamped with where the scheme of work teaches them, so the tree reads
       SS1 to SS3; subtopics give the depth.
-- [ ] **TAX-02** Economics: coverage mapped (WAEC 105/105, JAMB 123 of 126 fully, scheme
-      78 of 85 fully, 1 missing); placement test 91 and 95 percent. Revision running.
-- [ ] **TAX-03** Biology: coverage mapped. JAMB 25 of 32 fully, 2 missing (Nigerian biomes,
-      sanitation); scheme 61 of 72, 7 missing (irritability, tolerance, culturing,
-      reproductive health). Placement test, then revision.
-- [ ] **TAX-04** The other ten subjects: sources (both syllabi and the scheme), build,
-      coverage, placement test, revision. Chemistry, Physics, Mathematics, English,
-      Government, CRS, Literature, Civic Education, Agricultural Science, Geography.
+- [x] **TAX-02 to TAX-04** All twelve trees meet the standard (`da762b2`); fresh-test
+      scores are in that commit. Coverage gaps left are WAEC content set only for Ghana,
+      Sierra Leone, The Gambia or Liberia, excluded by stated scope rules.
+- [ ] **GATE-01** First paper of every subject-exam file run to its gate (19 running, four at
+      a time, on the new trees). Biology WAEC 2025 and Economics UTME 2024 re-placed.
 
 ### Sources still needed from Chidera
 

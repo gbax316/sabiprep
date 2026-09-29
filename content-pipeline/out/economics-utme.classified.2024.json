@@ -5,7 +5,7 @@
       "q_number": 1,
       "subtopic_id": "demand.types",
       "confidence": "clear",
-      "note": "Tests effect of a competitive good's price change on quantity demanded of a related good, not a coefficient, so demand.types over demand.elasticity."
+      "note": ""
     },
     {
       "q_number": 2,
@@ -23,13 +23,13 @@
       "q_number": 4,
       "subtopic_id": "bop.exchange-rate",
       "confidence": "clear",
-      "note": "Import elasticity as condition for depreciation to protect industry; taxonomy explicitly routes this away from trade.protection."
+      "note": ""
     },
     {
       "q_number": 6,
       "subtopic_id": "agriculture.problems",
       "confidence": "clear",
-      "note": "Rural-urban migration tested for its effect on food production, not as a population phenomenon, so agriculture.problems over population.size-growth."
+      "note": ""
     },
     {
       "q_number": 7,
@@ -83,13 +83,13 @@
       "q_number": 15,
       "subtopic_id": "markets.perfect",
       "confidence": "clear",
-      "note": "Options include oligopoly and duopoly per the taxonomy's scope rule, but the tested content and answer are about identifying the perfect competition diagram."
+      "note": ""
     },
     {
       "q_number": 16,
       "subtopic_id": "markets.profit-shutdown",
       "confidence": "clear",
-      "note": "Same diagram set as Q15/17/18; answer is total cost, not profit or loss, see taxonomy finding."
+      "note": ""
     },
     {
       "q_number": 19,
@@ -143,7 +143,7 @@
       "q_number": 27,
       "subtopic_id": "basics.meaning",
       "confidence": "clear",
-      "note": "Outside both syllabi, placed per the taxonomy's scope rule."
+      "note": ""
     },
     {
       "q_number": 28,
@@ -167,13 +167,13 @@
       "q_number": 32,
       "subtopic_id": "financial.central-bank",
       "confidence": "clear",
-      "note": "Outside both syllabi, placed per the taxonomy's scope rule."
+      "note": ""
     },
     {
       "q_number": 33,
       "subtopic_id": "financial.types",
       "confidence": "clear",
-      "note": "Outside both syllabi, placed per the taxonomy's scope rule."
+      "note": ""
     },
     {
       "q_number": 34,
@@ -218,14 +218,8 @@
       "note": ""
     }
   ],
-  "taxonomy_findings": [
-    {
-      "kind": "too-narrow",
-      "where": "markets.profit-shutdown",
-      "detail": "Covers line only names profit or loss area reading, but the one 2024 item it cites (Q16) tests reading the total cost area on the same diagram. Neither markets.profit-shutdown nor costs.concepts names diagram-based total cost reading, so the covers text should be widened to say cost, profit or loss area."
-    }
-  ],
+  "taxonomy_findings": [],
   "year": 2024,
   "paper": 1,
-  "taxonomy_version": "1.0"
+  "taxonomy_version": "1.1"
 }
