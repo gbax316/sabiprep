@@ -2,5 +2,19 @@
   "slug": "geography-waec",
   "subject": "Geography",
   "source": "../../Exam Questions/2025 WAEC GEOGRAPHY.docx",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/geography-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/geography-jamb.txt"
+    },
+    {
+      "exam": "SOW",
+      "path": "../syllabi/geography-sow.txt"
+    }
+  ]
 }

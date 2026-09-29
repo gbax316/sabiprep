@@ -1,0 +1,242 @@
+{
+  "slug": "biology-utme",
+  "taxonomy_version": "2.2",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.8,
+  "agree_subtopic": 73,
+  "agree_topic": 79,
+  "nofit": 3,
+  "disagreements": [
+    {
+      "year": 2015,
+      "q_number": 37,
+      "stem": "The organelle responsible for sexual reproduction is",
+      "sonnet": "cell.components",
+      "opus": "reproduction.lower-organisms",
+      "notes": [
+        "Diagram not shown. Assumed a generic cell diagram where the nucleus is marked as the organelle responsible for reproduction. If the diagram is a Paramecium with macronucleus and micronucleus labelled, this belongs to reproduction.lower-organisms (conjugation) instead.",
+        "Diagram missing; the organelle for sexual reproduction is most likely the micronucleus of Paramecium (conjugation). Also fits cell.components, since it asks which organelle does a job. organisation.cell-forms sends reproduction to the process subtopic, so placed here."
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 25,
+      "stem": "What is the relationship between zebra and lion?",
+      "sonnet": "associations.competition",
+      "opus": "associations.symbiosis",
+      "notes": [
+        "",
+        "Named pair, type of association, so symbiosis by rule. But the answer is predation, which associations.competition covers as predator and prey."
+      ]
+    },
+    {
+      "year": 2024,
+      "q_number": 38,
+      "stem": "Use the diagram above to answer the question below. Emulsification of fats takes place in the part labelled",
+      "sonnet": "animal-nutrition.enzymes",
+      "opus": "animal-nutrition.alimentary",
+      "notes": [
+        "Emulsification of fat by bile is located by picking a region on a gut diagram, which the taxonomy's sorting rule sends to enzymes even though bile is not itself an enzyme. Also fits animal-nutrition.alimentary.",
+        "Emulsification by bile on a gut diagram. Bile is not an enzyme, so the enzyme rule does not apply cleanly, yet it is a digestion step picked on a gut diagram, which the enzymes rule claims."
+      ]
+    },
+    {
+      "year": 2025,
+      "q_number": 29,
+      "stem": "Which of the following processes does not require energy (ATP) in living organisms?",
+      "sonnet": "cell-environment.osmosis",
+      "opus": "cell-environment.active-transport",
+      "notes": [
+        "Comparative question asking which listed process needs no ATP; osmosis is the answer but the item also tests cell-environment.active-transport and cell.division by contrast.",
+        "Tests which processes are passive and which need ATP. Equally cell-environment.osmosis (the answer). No home for passive against active movement."
+      ]
+    },
+    {
+      "year": 2015,
+      "q_number": 50,
+      "stem": "The structure labelled I is",
+      "sonnet": "sense-organs.eye",
+      "opus": "sense-organs",
+      "notes": [
+        "Diagram not shown. Assumed to be an eye or retina structure since photosensitive is the answer; could instead be a generic receptor-type diagram, which would fit sense-organs.others.",
+        "Diagram missing, so the organism is unknown. Options are receptor types by stimulus (tactile, photosensitive, chemoreceptive); no subtopic covers receptor types in general."
+      ]
+    },
+    {
+      "year": 2018,
+      "q_number": 11,
+      "stem": "Which of the following will not respond to antibiotic treatment?",
+      "sonnet": "microorganisms.types",
+      "opus": "microorganisms.disease",
+      "notes": [
+        "Tests recognising measles as viral versus the others bacterial, a microorganisms.types distinction; also touches microorganisms.disease control by antibiotics.",
+        "Viral diseases do not respond to antibiotics. Treatment with drugs is not in the covers line; microorganisms.types (virus against bacterium) is a weaker second."
+      ]
+    },
+    {
+      "year": 2017,
+      "q_number": 25,
+      "stem": "The modification in structure, physiology and behavior of plant and animal is called",
+      "sonnet": "adaptation.structural",
+      "opus": "adaptation",
+      "notes": [
+        "Asks for the general definition of adaptation itself (structural, physiological and behavioural modification). Only the parent adaptation fits; its three subtopics (behavioural, structural, colouration) all assume the concept is already defined.",
+        "The meaning of adaptation across structure, physiology and behaviour. Each subtopic covers one kind; none covers the concept."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "classification.living-nonliving / cell.properties",
+        "detail": "Basic characteristics-of-life questions that define irritability as a response to stimuli, with no cell named in the stem, sit on the boundary between these two subtopics and neither covers line says which wins."
+      },
+      {
+        "kind": "overlap",
+        "where": "coordination.pns / coordination.impulse",
+        "detail": "A question naming which neurone part carries an impulse (axon) is a structural identification that could sit in either subtopic. The existing sorting rule only separates how an impulse travels from the kinds of neurone, not which named part carries it."
+      },
+      {
+        "kind": "missing",
+        "where": "animal-nutrition.enzymes",
+        "detail": "Bile's emulsification of fat is routed to animal-nutrition.enzymes by the gut-diagram sorting rule, but bile is not an enzyme. The covers line does not account for non-enzymatic digestive substances such as bile, so this placement stretches the subtopic's own definition."
+      },
+      {
+        "kind": "overlap",
+        "where": "evolution.trends / respiration.surfaces",
+        "detail": "A question ranking a named organ system's primitiveness across organism groups (most primitive respiratory system) sits at the join of evolution.trends and the organ's own subtopic. evolution.trends' sorting rule covers ordering groups in general but does not flag that it also captures organ-specific primitiveness questions."
+      },
+      {
+        "kind": "overlap",
+        "where": "variation.causes / evolution.theories / genetics.mendel",
+        "detail": "A cross-style question testing that an acquired injury is not inherited borders three subtopics at once: the acquired-versus-inherited distinction, Lamarck's theory which the taxonomy explicitly routes to evolution.theories, and the offspring-ratio phrasing that reads like a Mendelian cross."
+      },
+      {
+        "kind": "overlap",
+        "where": "adaptation.behavioural / reproduction.animals-compared",
+        "detail": "Nuptial flight (the mating and dispersal flight of termite reproductives) sits between adaptation.behavioural's coverage of termite castes and reproduction.animals-compared's coverage of courtship and mating behaviour."
+      },
+      {
+        "kind": "overlap",
+        "where": "support.animal-skeleton / support.joints-movement",
+        "detail": "Cartilage's role in reducing wear and tear at a joint sits between the skeletal-materials coverage of support.animal-skeleton and the joint-function coverage of support.joints-movement."
+      },
+      {
+        "kind": "missing",
+        "where": "adaptation",
+        "detail": "A question asking for the general definition of adaptation itself has no subtopic. adaptation's three subtopics (behavioural, structural, colouration) all assume the concept of adaptation is already known and do not cover the term's meaning."
+      },
+      {
+        "kind": "missing",
+        "where": "classification.kingdoms",
+        "detail": "Questions that ask to identify a named external body part from a diagram, such as a fish's pectoral fin, have no clear home. classification.kingdoms covers distinguishing features of a group in the abstract, not labelling a specific diagram's parts."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "adaptation",
+        "detail": "No subtopic for what adaptation means (Q80). Add adaptation.meaning, as was done for excretion.homeostasis."
+      },
+      {
+        "kind": "missing",
+        "where": "classification",
+        "detail": "No home for external features of type specimens such as a fish's fins or an insect's parts, a WAEC diagram staple (Q75). Add classification.external-features or practical.specimens."
+      },
+      {
+        "kind": "missing",
+        "where": "adaptation.structural",
+        "detail": "Plant ecological groups (hydrophytes, xerophytes, halophytes, mesophytes, epiphytes) are named nowhere; they split between adaptation.structural and ecosystem.habitats (Q12, Q60, Q69). Name them in one covers line with a rule."
+      },
+      {
+        "kind": "missing",
+        "where": "cell-environment",
+        "detail": "No home for passive against active movement as a comparison; which process needs ATP splits osmosis and active-transport (Q22). Add a rule sending it to active-transport."
+      },
+      {
+        "kind": "overlap",
+        "where": "classification.living-nonliving",
+        "detail": "Irritability is claimed by both living-nonliving and cell.properties with no rule (Q2, Q4). Rule: defining irritability as a trait of life goes to living-nonliving."
+      },
+      {
+        "kind": "misplaced",
+        "where": "coordination.pns",
+        "detail": "Neurone structure sits under the peripheral nervous system though neurones serve the whole system; which part of a neurone carries the impulse splits pns and impulse (Q10). Move neurone structure and function to coordination.impulse."
+      },
+      {
+        "kind": "overlap",
+        "where": "associations.symbiosis",
+        "detail": "The whatever-the-answer rule pulls predator and prey pairs into symbiosis while associations.competition covers predation (Q20). Carve predation out of the rule."
+      },
+      {
+        "kind": "overlap",
+        "where": "genetics.mendel",
+        "detail": "A cross about a genetic disorder (sickle cell) fits mendel and applications equally (Q46). The cross rule exists only for blood groups; extend it to disorders."
+      },
+      {
+        "kind": "overlap",
+        "where": "animal-nutrition.enzymes",
+        "detail": "The enzymes and alimentary rule does not cover non-enzymatic digestion such as bile emulsifying fat on a gut diagram (Q21)."
+      },
+      {
+        "kind": "overlap",
+        "where": "plant-nutrition.minerals",
+        "detail": "Micronutrient questions that do not name plants or animals split with animal-nutrition.food-classes (Q59). A default rule is needed."
+      },
+      {
+        "kind": "too-broad",
+        "where": "evolution.trends",
+        "detail": "Picking the most primitive goes to trends even when the knowledge tested is one organ system across groups, such as respiratory organs (Q67). Limit the rule to ordering whole groups."
+      },
+      {
+        "kind": "overlap",
+        "where": "variation.morphological",
+        "detail": "Fingerprints appear in both morphological and applications with no rule for naming a pattern type (loop, arch, whorl) (Q29)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "sense-organs.others",
+        "detail": "Covers named organs only; receptor types by stimulus (photo, chemo, mechano, thermo) have no home (Q23)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "microorganisms.disease",
+        "detail": "Control is by heat, chemicals and UV only; treatment with antibiotics and why viral diseases do not respond is not named (Q26)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "reproduction.human",
+        "detail": "Assisted reproduction such as in vitro fertilisation is not named and could drift to applied.biotechnology (Q73)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "evolution.evidence",
+        "detail": "Fossil dating (carbon dating) is not named, and a stem that says evolutionary trend lures to evolution.trends (Q17)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "ecological-factors.measurement",
+        "detail": "Wind instruments (wind vane, anemometer) are missing from the example list though wind is in ecological-factors.physical (Q28)."
+      },
+      {
+        "kind": "overlap",
+        "where": "cell.components",
+        "detail": "Protist organelles with a process role, such as the micronucleus in conjugation, split cell.components and reproduction.lower-organisms (Q1)."
+      }
+    ]
+  }
+}

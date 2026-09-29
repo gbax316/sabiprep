@@ -41,7 +41,10 @@
             "waec": "1",
             "jamb": "1"
           },
-          "covers": "Definitions of economics (Smith, Marshall, Robbins), economics as a social science, micro and macroeconomics, and the major economists and what each is known for. Tested in 2024 UTME Q27. A question about a trade theorist's theory goes to trade.basis."
+          "covers": "Definitions of economics (Smith, Marshall, Robbins), economics as a social science, micro and macroeconomics, and the major economists and what each is known for. Tested in 2024 UTME Q27. A question about a trade theorist's theory goes to trade.basis.",
+          "taught_in": [
+            "SS1 T1"
+          ]
         },
         {
           "id": "basics.scarcity-choice",
@@ -50,7 +53,10 @@
             "waec": "1",
             "jamb": "1a"
           },
-          "covers": "Human wants, scarcity, choice, scale of preference, rationality and opportunity cost, including identifying the opportunity cost in a given choice (2024 UTME Q37). Scarcity as the basic economic problem goes here; the questions of what, how and for whom to produce go to systems.economic-problems."
+          "covers": "Human wants, scarcity, choice, scale of preference, rationality and opportunity cost, including identifying the opportunity cost in a given choice (2024 UTME Q37). Scarcity as the basic economic problem goes here; the questions of what, how and for whom to produce go to systems.economic-problems.",
+          "taught_in": [
+            "SS1 T1"
+          ]
         },
         {
           "id": "basics.ppc",
@@ -59,7 +65,8 @@
             "waec": "1",
             "jamb": "1b(ii)"
           },
-          "covers": "Drawing and reading the production possibility curve: points inside, on and outside it, efficiency, opportunity cost along it, its shape, and what shifts it outward or inward. Tested in 2024 UTME Q34 to Q36. Any question built on a PPC diagram goes here, even when it asks about opportunity cost."
+          "covers": "Drawing and reading the production possibility curve: points inside, on and outside it, efficiency, opportunity cost along it, its shape, and what shifts it outward or inward. Tested in 2024 UTME Q34 to Q36. Any question built on a PPC diagram goes here, even when it asks about opportunity cost.",
+          "taught_in": []
         },
         {
           "id": "basics.economic-activities",
@@ -68,8 +75,18 @@
             "waec": "1",
             "jamb": "1a, 8a"
           },
-          "covers": "Production, distribution and consumption as economic activities; primary, secondary and tertiary production (extractive, manufacturing, construction, services, direct and indirect production); and the relative contribution of each sector to output, employment, savings, investment and foreign exchange. A question on productivity or on TP, AP and MP goes to production.productivity. Classifying manufacturing or construction as secondary production goes here; the role and problems of Nigeria's manufacturing and construction industries go to industry.development."
+          "covers": "Production, distribution and consumption as economic activities; primary, secondary and tertiary production (extractive, manufacturing, construction, services, direct and indirect production); and the relative contribution of each sector to output, employment, savings, investment and foreign exchange. A question on productivity or on TP, AP and MP goes to production.productivity. Classifying manufacturing or construction as secondary production goes here; the role and problems of Nigeria's manufacturing and construction industries go to industry.development.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T3",
+            "SS3 T1"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T3",
+        "SS3 T1"
       ]
     },
     {
@@ -88,7 +105,10 @@
             "waec": "3(a)-(c)",
             "jamb": "2a"
           },
-          "covers": "Free enterprise, centrally planned and mixed economies, and welfarism (the welfare state): their basic features, advantages and disadvantages, and identifying a system from a description, even when the description is that prices decide what is produced. The functions of the price mechanism itself go to price.market-system. Whether an economy is open or closed is a question of trade and goes to trade.basis, even when the options mix it with capitalist, socialist or mixed."
+          "covers": "Free enterprise, centrally planned and mixed economies, and welfarism (the welfare state): their basic features, advantages and disadvantages, and identifying a system from a description, even when the description is that prices decide what is produced. The functions of the price mechanism itself go to price.market-system. Whether an economy is open or closed is a question of trade and goes to trade.basis, even when the options mix it with capitalist, socialist or mixed.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "systems.economic-problems",
@@ -97,7 +117,10 @@
             "waec": "3(d)",
             "jamb": "1b(i), 2b"
           },
-          "covers": "What to produce, how to produce, for whom to produce and efficiency of resource use, and how the price mechanism, central planning or a mix answers each. A question that only asks what scarcity is goes to basics.scarcity-choice. A question on how a system uses the price mechanism to answer what, how and for whom goes here; one on the functions of the price mechanism in a market (rationing, allocating, signalling) goes to price.market-system; one that asks which system a description fits goes to systems.types."
+          "covers": "What to produce, how to produce, for whom to produce and efficiency of resource use, and how the price mechanism, central planning or a mix answers each. A question that only asks what scarcity is goes to basics.scarcity-choice. A question on how a system uses the price mechanism to answer what, how and for whom goes here; one on the functions of the price mechanism in a market (rationing, allocating, signalling) goes to price.market-system; one that asks which system a description fits goes to systems.types.",
+          "taught_in": [
+            "SS1 T1"
+          ]
         },
         {
           "id": "systems.reforms",
@@ -106,8 +129,16 @@
             "waec": null,
             "jamb": "2c"
           },
-          "covers": "Contemporary reforms such as deregulation, banking sector consolidation and the cashless policy, and what they mean for the economic system. Privatisation and commercialisation go to business.privatisation."
+          "covers": "Contemporary reforms such as deregulation, banking sector consolidation and the cashless policy, and what they mean for the economic system. Privatisation and commercialisation go to business.privatisation.",
+          "taught_in": [
+            "SS3 T2"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T2",
+        "SS3 T2"
       ]
     },
     {
@@ -126,7 +157,8 @@
             "waec": null,
             "jamb": "3a"
           },
-          "covers": "Inductive and deductive reasoning, and positive and normative statements, including classifying a given statement; and the basic concepts of economic analysis: variables and functions, and stock and flow variables (a stock is measured at a point in time, a flow over a period), which neither syllabus names but the 2019 UTME tested (Q29). Whether a quantity such as wealth, capital or income is a stock or a flow goes here, not to national-income.concepts."
+          "covers": "Inductive and deductive reasoning, and positive and normative statements, including classifying a given statement; and the basic concepts of economic analysis: variables and functions, and stock and flow variables (a stock is measured at a point in time, a flow over a period), which neither syllabus names but the 2019 UTME tested (Q29). Whether a quantity such as wealth, capital or income is a stock or a flow goes here, not to national-income.concepts.",
+          "taught_in": []
         },
         {
           "id": "tools.tables-graphs",
@@ -135,7 +167,10 @@
             "waec": "4",
             "jamb": "3b(i), 3b(iv)"
           },
-          "covers": "Reading and drawing tables, bar charts, pie charts, histograms and line graphs, calculating the angle or share in a pie chart, and the merits and demerits of each. A graph that tests an economic concept (a demand curve, a PPC) goes to that concept."
+          "covers": "Reading and drawing tables, bar charts, pie charts, histograms and line graphs, calculating the angle or share in a pie chart, and the merits and demerits of each. A graph that tests an economic concept (a demand curve, a PPC) goes to that concept.",
+          "taught_in": [
+            "SS1 T1"
+          ]
         },
         {
           "id": "tools.central-tendency",
@@ -144,7 +179,10 @@
             "waec": "4",
             "jamb": "3b(ii)"
           },
-          "covers": "Calculating the arithmetic mean, median and mode of raw, tabulated or grouped data, and their merits and demerits. Tested in 2024 UTME Q22 to Q24."
+          "covers": "Calculating the arithmetic mean, median and mode of raw, tabulated or grouped data, and their merits and demerits. Tested in 2024 UTME Q22 to Q24.",
+          "taught_in": [
+            "SS2 T1"
+          ]
         },
         {
           "id": "tools.dispersion",
@@ -153,8 +191,15 @@
             "waec": null,
             "jamb": "3b(iii)"
           },
-          "covers": "Calculating and interpreting the range, variance and standard deviation. Tested in 2024 UTME Q25."
+          "covers": "Calculating and interpreting the range, variance and standard deviation. Tested in 2024 UTME Q25.",
+          "taught_in": [
+            "SS2 T1"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1"
       ]
     },
     {
@@ -173,7 +218,11 @@
             "waec": "5",
             "jamb": "4a(i)-(ii)"
           },
-          "covers": "Meaning of demand, effective demand, the law of demand, individual and market demand schedules and curves, demand equations and solving one for price or quantity at a given value, and exceptional demand curves (Giffen, Veblen and ostentatious goods, expectation of price change). Tested in 2024 UTME Q19. A question that asks about the laws of demand and supply together goes here. Setting the demand and supply equations equal to find equilibrium goes to price.equilibrium."
+          "covers": "Meaning of demand, effective demand, the law of demand, individual and market demand schedules and curves, demand equations and solving one for price or quantity at a given value, and exceptional demand curves (Giffen, Veblen and ostentatious goods, expectation of price change). Tested in 2024 UTME Q19. A question that asks about the laws of demand and supply together goes here. Setting the demand and supply equations equal to find equilibrium goes to price.equilibrium.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T2"
+          ]
         },
         {
           "id": "demand.determinants",
@@ -182,7 +231,8 @@
             "waec": "5",
             "jamb": "4a(i), 4a(iii)"
           },
-          "covers": "Factors that determine demand (price, prices of other goods, income, taste, expectations, population) and the difference between a change in quantity demanded (movement along the curve) and a change in demand (shift of the curve)."
+          "covers": "Factors that determine demand (price, prices of other goods, income, taste, expectations, population) and the difference between a change in quantity demanded (movement along the curve) and a change in demand (shift of the curve).",
+          "taught_in": []
         },
         {
           "id": "demand.types",
@@ -191,7 +241,8 @@
             "waec": "5",
             "jamb": "4b"
           },
-          "covers": "Derived, composite, joint (complementary) and competitive demand, and how a price change of one good affects the demand for a related good (2024 UTME Q1). If the question asks for a cross elasticity coefficient or its sign, it goes to demand.elasticity."
+          "covers": "Derived, composite, joint (complementary) and competitive demand, and how a price change of one good affects the demand for a related good (2024 UTME Q1). If the question asks for a cross elasticity coefficient or its sign, it goes to demand.elasticity.",
+          "taught_in": []
         },
         {
           "id": "demand.elasticity",
@@ -200,7 +251,10 @@
             "waec": "5",
             "jamb": "4c"
           },
-          "covers": "Price, income and cross elasticity of demand: calculating the coefficient, interpreting it, and the types (perfectly elastic, elastic, unitary, inelastic, perfectly inelastic) and their curves. Tested in 2024 UTME Q40."
+          "covers": "Price, income and cross elasticity of demand: calculating the coefficient, interpreting it, and the types (perfectly elastic, elastic, unitary, inelastic, perfectly inelastic) and their curves. Tested in 2024 UTME Q40.",
+          "taught_in": [
+            "SS2 T1"
+          ]
         },
         {
           "id": "demand.elasticity-uses",
@@ -209,8 +263,14 @@
             "waec": "5",
             "jamb": "4c-d"
           },
-          "covers": "Why demand for a good is elastic or inelastic (substitutes, necessity, share of income, habit, time) and why elasticity matters to consumers, producers (pricing, total revenue) and government. A question about who bears a tax goes to public-finance.incidence; one about devaluation and import demand goes to bop.exchange-rate."
+          "covers": "Why demand for a good is elastic or inelastic (substitutes, necessity, share of income, habit, time) and why elasticity matters to consumers, producers (pricing, total revenue) and government. A question about who bears a tax goes to public-finance.incidence; one about devaluation and import demand goes to bop.exchange-rate.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2"
       ]
     },
     {
@@ -229,7 +289,11 @@
             "waec": "6",
             "jamb": "6a(i)-(ii)"
           },
-          "covers": "Meaning of supply, the law of supply, individual and market supply schedules and curves, supply equations and solving one for price or quantity at a given value (2023 UTME Q37), and exceptional supply curves such as the backward-bending supply of labour. Tested in 2024 UTME Q20. A question that asks about the laws of demand and supply together goes to demand.law. Setting the demand and supply equations equal to find equilibrium goes to price.equilibrium."
+          "covers": "Meaning of supply, the law of supply, individual and market supply schedules and curves, supply equations and solving one for price or quantity at a given value (2023 UTME Q37), and exceptional supply curves such as the backward-bending supply of labour. Tested in 2024 UTME Q20. A question that asks about the laws of demand and supply together goes to demand.law. Setting the demand and supply equations equal to find equilibrium goes to price.equilibrium.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T2"
+          ]
         },
         {
           "id": "supply.determinants",
@@ -238,7 +302,8 @@
             "waec": "6",
             "jamb": "6a(i), 6a(iii)"
           },
-          "covers": "Factors that determine supply (price, input costs, technology, prices of other goods, weather, government policy) and the difference between a change in quantity supplied and a change in supply."
+          "covers": "Factors that determine supply (price, input costs, technology, prices of other goods, weather, government policy) and the difference between a change in quantity supplied and a change in supply.",
+          "taught_in": []
         },
         {
           "id": "supply.types",
@@ -247,7 +312,8 @@
             "waec": "6",
             "jamb": "6b"
           },
-          "covers": "Joint (complementary), competitive and composite supply, with examples."
+          "covers": "Joint (complementary), competitive and composite supply, with examples.",
+          "taught_in": []
         },
         {
           "id": "supply.elasticity",
@@ -256,8 +322,16 @@
             "waec": "6",
             "jamb": "6c"
           },
-          "covers": "Calculating and interpreting elasticity of supply, its types and curves, its determinants (time, spare capacity, perishability) and its importance to producers and government."
+          "covers": "Calculating and interpreting elasticity of supply, its types and curves, its determinants (time, spare capacity, perishability) and its importance to producers and government.",
+          "taught_in": [
+            "SS2 T1"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2"
       ]
     },
     {
@@ -276,7 +350,10 @@
             "waec": "7",
             "jamb": "5a(i), 5b"
           },
-          "covers": "Cardinal and ordinal utility, total, average and marginal utility and calculating them from a schedule, the law of diminishing marginal utility, and how marginal utility explains the downward-sloping demand curve."
+          "covers": "Cardinal and ordinal utility, total, average and marginal utility and calculating them from a schedule, the law of diminishing marginal utility, and how marginal utility explains the downward-sloping demand curve.",
+          "taught_in": [
+            "SS2 T1"
+          ]
         },
         {
           "id": "consumer.equilibrium",
@@ -285,7 +362,8 @@
             "waec": "7",
             "jamb": "5c"
           },
-          "covers": "The equi-marginal condition (MUa/Pa equals MUb/Pb), finding the equilibrium combination from a table, and the effect of a price change on that equilibrium. Equilibrium found with an indifference map goes to consumer.indifference."
+          "covers": "The equi-marginal condition (MUa/Pa equals MUb/Pb), finding the equilibrium combination from a table, and the effect of a price change on that equilibrium. Equilibrium found with an indifference map goes to consumer.indifference.",
+          "taught_in": []
         },
         {
           "id": "consumer.indifference",
@@ -294,7 +372,8 @@
             "waec": null,
             "jamb": "5a(ii), 5c-d"
           },
-          "covers": "Indifference curves and their properties, the budget line and its shifts, equilibrium where the budget line touches an indifference curve, and income and substitution effects. Tested in 2024 UTME Q10. Equilibrium found by comparing marginal utility per naira goes to consumer.equilibrium. A curve of inputs giving equal output is an isoquant and goes to production.producer-equilibrium."
+          "covers": "Indifference curves and their properties, the budget line and its shifts, equilibrium where the budget line touches an indifference curve, and income and substitution effects. Tested in 2024 UTME Q10. Equilibrium found by comparing marginal utility per naira goes to consumer.equilibrium. A curve of inputs giving equal output is an isoquant and goes to production.producer-equilibrium.",
+          "taught_in": []
         },
         {
           "id": "consumer.surplus",
@@ -303,8 +382,12 @@
             "waec": null,
             "jamb": "5e"
           },
-          "covers": "Meaning and calculation of consumer surplus and its applications, such as price discrimination and taxation."
+          "covers": "Meaning and calculation of consumer surplus and its applications, such as price discrimination and taxation.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS2 T1"
       ]
     },
     {
@@ -323,7 +406,10 @@
             "waec": "8",
             "jamb": "7a-b"
           },
-          "covers": "Meaning of market and price, types of market, and the functions of the price system (rationing, allocating resources, signalling). A question on what the price mechanism does in a market goes here; one on how an economic system uses it to answer what, how and for whom goes to systems.economic-problems; one that asks which system a description fits goes to systems.types."
+          "covers": "Meaning of market and price, types of market, and the functions of the price system (rationing, allocating resources, signalling). A question on what the price mechanism does in a market goes here; one on how an economic system uses it to answer what, how and for whom goes to systems.economic-problems; one that asks which system a description fits goes to systems.types.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "price.equilibrium",
@@ -332,7 +418,11 @@
             "waec": "8",
             "jamb": "7c(i)"
           },
-          "covers": "Finding equilibrium price and quantity from a schedule, a graph or demand and supply equations, excess demand and excess supply, and equilibrium in factor markets. Tested in 2024 UTME Q38 and Q39. A question that solves only the demand or only the supply equation at a given price or quantity goes to demand.law or supply.law, even inside a set of questions on the same equations."
+          "covers": "Finding equilibrium price and quantity from a schedule, a graph or demand and supply equations, excess demand and excess supply, and equilibrium in factor markets. Tested in 2024 UTME Q38 and Q39. A question that solves only the demand or only the supply equation at a given price or quantity goes to demand.law or supply.law, even inside a set of questions on the same equations.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T1"
+          ]
         },
         {
           "id": "price.changes",
@@ -341,7 +431,8 @@
             "waec": "8",
             "jamb": "7d"
           },
-          "covers": "Predicting what happens to equilibrium price and quantity when demand, supply or both shift. A question that only asks what causes a shift goes to demand.determinants or supply.determinants."
+          "covers": "Predicting what happens to equilibrium price and quantity when demand, supply or both shift. A question that only asks what causes a shift goes to demand.determinants or supply.determinants.",
+          "taught_in": []
         },
         {
           "id": "price.controls",
@@ -350,8 +441,16 @@
             "waec": "8",
             "jamb": "7c(ii)"
           },
-          "covers": "Maximum (ceiling) and minimum (floor) price legislation, where each is set relative to equilibrium, and their effects: shortages, surpluses, rationing, queues and the black market. Tested in 2024 UTME Q31. Minimum agricultural prices as a farm policy go to agriculture.marketing-policy."
+          "covers": "Maximum (ceiling) and minimum (floor) price legislation, where each is set relative to equilibrium, and their effects: shortages, surpluses, rationing, queues and the black market. Tested in 2024 UTME Q31. Minimum agricultural prices as a farm policy go to agriculture.marketing-policy.",
+          "taught_in": [
+            "SS2 T1"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2"
       ]
     },
     {
@@ -370,7 +469,11 @@
             "waec": "2",
             "jamb": "23a"
           },
-          "covers": "Meaning, features and importance of each factor of production, forms of capital, functions of the entrepreneur, and which reward goes to which factor. Mobility and efficiency of labour go to labour.force."
+          "covers": "Meaning, features and importance of each factor of production, forms of capital, functions of the entrepreneur, and which reward goes to which factor. Mobility and efficiency of labour go to labour.force.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2"
+          ]
         },
         {
           "id": "factors.rewards",
@@ -379,8 +482,13 @@
             "waec": null,
             "jamb": "23b-c"
           },
-          "covers": "How rent, interest and profit are determined, economic rent and transfer earnings, normal and supernormal profit as a reward, and the liquidity preference theory of interest. Wages go to labour.wages; the motives for holding money go to money.demand-supply."
+          "covers": "How rent, interest and profit are determined, economic rent and transfer earnings, normal and supernormal profit as a reward, and the liquidity preference theory of interest. Wages go to labour.wages; the motives for holding money go to money.demand-supply.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2"
       ]
     },
     {
@@ -399,7 +507,10 @@
             "waec": "9",
             "jamb": "8c"
           },
-          "covers": "Meaning of division of labour and specialisation, their advantages and disadvantages, and what limits them (size of market, nature of product)."
+          "covers": "Meaning of division of labour and specialisation, their advantages and disadvantages, and what limits them (size of market, nature of product).",
+          "taught_in": [
+            "SS1 T2"
+          ]
         },
         {
           "id": "production.productivity",
@@ -408,7 +519,10 @@
             "waec": "9",
             "jamb": "8b, 8g"
           },
-          "covers": "Calculating TP, AP and MP from a schedule, the relationship between them, the law of variable proportions (diminishing returns), and factors affecting productivity. Tested in 2024 UTME Q12."
+          "covers": "Calculating TP, AP and MP from a schedule, the relationship between them, the law of variable proportions (diminishing returns), and factors affecting productivity. Tested in 2024 UTME Q12.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "production.scale",
@@ -417,7 +531,10 @@
             "waec": "9",
             "jamb": "8d-e, 17e, 19e"
           },
-          "covers": "Internal and external economies and diseconomies of scale, production functions and returns to scale (increasing, constant, decreasing), and the factors that determine the size of a firm."
+          "covers": "Internal and external economies and diseconomies of scale, production functions and returns to scale (increasing, constant, decreasing), and the factors that determine the size of a firm.",
+          "taught_in": [
+            "SS1 T2"
+          ]
         },
         {
           "id": "production.producer-equilibrium",
@@ -426,8 +543,13 @@
             "waec": null,
             "jamb": "8f"
           },
-          "covers": "Isoquants and isocost lines, and the least-cost combination of inputs by isoquant-isocost and marginal analysis. Tested in 2024 UTME Q11."
+          "covers": "Isoquants and isocost lines, and the least-cost combination of inputs by isoquant-isocost and marginal analysis. Tested in 2024 UTME Q11.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2"
       ]
     },
     {
@@ -446,7 +568,10 @@
             "waec": "10(i)",
             "jamb": "9a"
           },
-          "covers": "Meaning of each cost concept and calculating one from the others in a table or from a cost function."
+          "covers": "Meaning of each cost concept and calculating one from the others in a table or from a cost function.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "costs.short-long-run",
@@ -455,7 +580,8 @@
             "waec": "10(i)",
             "jamb": "9d-e"
           },
-          "covers": "What the short run and long run are (2024 UTME Q13), the shapes of short-run and long-run cost curves, and why the marginal cost curve above average variable cost is the firm's supply curve."
+          "covers": "What the short run and long run are (2024 UTME Q13), the shapes of short-run and long-run cost curves, and why the marginal cost curve above average variable cost is the firm's supply curve.",
+          "taught_in": []
         },
         {
           "id": "costs.views",
@@ -464,7 +590,8 @@
             "waec": "10(ii)",
             "jamb": "9c"
           },
-          "covers": "Opportunity (implicit) cost against money (explicit) cost, and economic against accounting profit."
+          "covers": "Opportunity (implicit) cost against money (explicit) cost, and economic against accounting profit.",
+          "taught_in": []
         },
         {
           "id": "costs.revenue",
@@ -473,8 +600,14 @@
             "waec": "10(iii)",
             "jamb": "9b"
           },
-          "covers": "Total, average and marginal revenue, calculating them from a table, and marginal revenue product. A question that uses marginal revenue product to explain wages goes to labour.wages."
+          "covers": "Total, average and marginal revenue, calculating them from a table, and marginal revenue product. A question that uses marginal revenue product to explain wages goes to labour.wages.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS2 T2"
       ]
     },
     {
@@ -493,7 +626,10 @@
             "waec": "11",
             "jamb": "10a"
           },
-          "covers": "Assumptions and features of perfect competition, why price equals AR equals MR, short-run and long-run equilibrium, and reading the curves on a perfect competition diagram (2024 UTME Q15, Q17, Q18)."
+          "covers": "Assumptions and features of perfect competition, why price equals AR equals MR, short-run and long-run equilibrium, and reading the curves on a perfect competition diagram (2024 UTME Q15, Q17, Q18).",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "markets.monopoly",
@@ -502,7 +638,8 @@
             "waec": "11",
             "jamb": "10b"
           },
-          "covers": "Sources and features of monopoly, the monopolist's equilibrium, control of monopoly, and price discrimination: its conditions, forms and effects."
+          "covers": "Sources and features of monopoly, the monopolist's equilibrium, control of monopoly, and price discrimination: its conditions, forms and effects.",
+          "taught_in": []
         },
         {
           "id": "markets.imperfect",
@@ -511,7 +648,10 @@
             "waec": "11",
             "jamb": "10b"
           },
-          "covers": "Features and short-run and long-run equilibrium of monopolistic competition, product differentiation and advertising, and oligopoly and duopoly, which neither syllabus names but the 2024 UTME used as options."
+          "covers": "Features and short-run and long-run equilibrium of monopolistic competition, product differentiation and advertising, and oligopoly and duopoly, which neither syllabus names but the 2024 UTME used as options.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "markets.profit-shutdown",
@@ -520,8 +660,12 @@
             "waec": "11",
             "jamb": "10c"
           },
-          "covers": "Normal profit, supernormal profit and loss, reading the profit or loss area on a cost and revenue diagram (2024 UTME Q16), and the break-even and shut-down conditions in each market. A question that asks which market a diagram shows goes to that market."
+          "covers": "Normal profit, supernormal profit and loss, reading the profit or loss area on a cost and revenue diagram (2024 UTME Q16), and the break-even and shut-down conditions in each market. A question that asks which market a diagram shows goes to that market.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS2 T2"
       ]
     },
     {
@@ -540,7 +684,10 @@
             "waec": "12",
             "jamb": "19a-b"
           },
-          "covers": "Sole proprietorship, partnership, private and public limited companies and co-operative societies: their features, advantages, disadvantages and problems."
+          "covers": "Sole proprietorship, partnership, private and public limited companies and co-operative societies: their features, advantages, disadvantages and problems.",
+          "taught_in": [
+            "SS1 T2"
+          ]
         },
         {
           "id": "business.public",
@@ -549,7 +696,10 @@
             "waec": "12",
             "jamb": "19c"
           },
-          "covers": "Statutory corporations and joint ventures: why government sets them up, their features and their problems."
+          "covers": "Statutory corporations and joint ventures: why government sets them up, their features and their problems.",
+          "taught_in": [
+            "SS1 T2"
+          ]
         },
         {
           "id": "business.privatisation",
@@ -558,7 +708,8 @@
             "waec": "12",
             "jamb": "19f"
           },
-          "covers": "Privatisation and commercialisation as solutions to the problems of public enterprises, the difference between them and their merits and demerits, indigenisation and nationalisation policies, and Nigerian cases such as the unbundling of NEPA into PHCN and the sale of its successor companies, which neither syllabus names but UTME papers test."
+          "covers": "Privatisation and commercialisation as solutions to the problems of public enterprises, the difference between them and their merits and demerits, indigenisation and nationalisation policies, and Nigerian cases such as the unbundling of NEPA into PHCN and the sale of its successor companies, which neither syllabus names but UTME papers test.",
+          "taught_in": []
         },
         {
           "id": "business.finance",
@@ -567,8 +718,12 @@
             "waec": "12",
             "jamb": "17d, 19d"
           },
-          "covers": "Internal and external sources of funds: ordinary and preference shares, debentures, loans, overdrafts and retained profit, and how businesses are managed and controlled. Tested in 2024 UTME Q8. A question on where a firm goes to raise funds goes here, even when the answer is the stock exchange; how the stock exchange works goes to financial.markets."
+          "covers": "Internal and external sources of funds: ordinary and preference shares, debentures, loans, overdrafts and retained profit, and how businesses are managed and controlled. Tested in 2024 UTME Q8. A question on where a firm goes to raise funds goes here, even when the answer is the stock exchange; how the stock exchange works goes to financial.markets.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS1 T2"
       ]
     },
     {
@@ -587,7 +742,10 @@
             "waec": "13",
             "jamb": null
           },
-          "covers": "The chain from producer to consumer, and the roles of producers, wholesalers, retailers and co-operatives, including arguments for eliminating the middleman."
+          "covers": "The chain from producer to consumer, and the roles of producers, wholesalers, retailers and co-operatives, including arguments for eliminating the middleman.",
+          "taught_in": [
+            "SS1 T3"
+          ]
         },
         {
           "id": "distribution.problems",
@@ -596,8 +754,14 @@
             "waec": "13",
             "jamb": null
           },
-          "covers": "Problems of distribution in West Africa (transport, storage, hoarding, too many middlemen) and their solutions, and government agencies in product distribution."
+          "covers": "Problems of distribution in West Africa (transport, storage, hoarding, too many middlemen) and their solutions, and government agencies in product distribution.",
+          "taught_in": [
+            "SS1 T3"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS1 T3"
       ]
     },
     {
@@ -616,7 +780,10 @@
             "waec": "14(a)",
             "jamb": "20a"
           },
-          "covers": "The meaning of population and its basic terms, the Malthusian theory and its criticisms, the demographic transition theory, and their relevance to Nigeria. Optimum population as a size goes to population.size-growth."
+          "covers": "The meaning of population and its basic terms, the Malthusian theory and its criticisms, the demographic transition theory, and their relevance to Nigeria. Optimum population as a size goes to population.size-growth.",
+          "taught_in": [
+            "SS1 T2"
+          ]
         },
         {
           "id": "population.census",
@@ -625,7 +792,10 @@
             "waec": "14(a)",
             "jamb": "20b"
           },
-          "covers": "What a census is, how often it is held (2024 UTME Q26), its importance, and the problems of conducting one in Nigeria."
+          "covers": "What a census is, how often it is held (2024 UTME Q26), its importance, and the problems of conducting one in Nigeria.",
+          "taught_in": [
+            "SS1 T2"
+          ]
         },
         {
           "id": "population.size-growth",
@@ -634,7 +804,10 @@
             "waec": "14(a)",
             "jamb": "20c, 20e"
           },
-          "covers": "Birth rate, death rate and migration as determinants of size and growth, rural-urban migration, under-population, optimum population and over-population, and population policy and economic development. Why people move into or out of an area (push and pull factors) goes here; how a population is spread across areas goes to population.structure. The meaning of population goes to population.theories."
+          "covers": "Birth rate, death rate and migration as determinants of size and growth, rural-urban migration, under-population, optimum population and over-population, and population policy and economic development. Why people move into or out of an area (push and pull factors) goes here; how a population is spread across areas goes to population.structure. The meaning of population goes to population.theories.",
+          "taught_in": [
+            "SS1 T2"
+          ]
         },
         {
           "id": "population.structure",
@@ -643,8 +816,12 @@
             "waec": "14(a)",
             "jamb": "20d"
           },
-          "covers": "Age, sex, occupational and geographical distribution, the dependency ratio, and population pyramids. How a population is spread across areas goes here; why people move into or out of an area goes to population.size-growth."
+          "covers": "Age, sex, occupational and geographical distribution, the dependency ratio, and population pyramids. How a population is spread across areas goes here; why people move into or out of an area goes to population.size-growth.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS1 T2"
       ]
     },
     {
@@ -663,7 +840,12 @@
             "waec": "14(b)(i)",
             "jamb": "23d"
           },
-          "covers": "The labour force and what determines its size, human capital, efficiency of labour, and occupational and geographical mobility of labour and other factors, and what hinders it."
+          "covers": "The labour force and what determines its size, human capital, efficiency of labour, and occupational and geographical mobility of labour and other factors, and what hinders it.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2",
+            "SS3 T1"
+          ]
         },
         {
           "id": "labour.wages",
@@ -672,7 +854,10 @@
             "waec": "14(b)(ii)",
             "jamb": "23b-c"
           },
-          "covers": "Supply of and demand for labour, how wages are determined, the marginal productivity theory of wages, trade unions and employers' associations, collective bargaining, and government wage policy such as the minimum wage."
+          "covers": "Supply of and demand for labour, how wages are determined, the marginal productivity theory of wages, trade unions and employers' associations, collective bargaining, and government wage policy such as the minimum wage.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "labour.unemployment",
@@ -681,8 +866,14 @@
             "waec": "14(b)(ii)",
             "jamb": "23e"
           },
-          "covers": "Types of unemployment (structural, frictional, seasonal, cyclical, disguised), underemployment, their causes in Nigeria and solutions. The Phillips curve, which links unemployment to inflation, goes to inflation.effects-control."
+          "covers": "Types of unemployment (structural, frictional, seasonal, cyclical, disguised), underemployment, their causes in Nigeria and solutions. The Phillips curve, which links unemployment to inflation, goes to inflation.effects-control.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2",
+        "SS3 T1"
       ]
     },
     {
@@ -701,7 +892,10 @@
             "waec": "15",
             "jamb": "16a"
           },
-          "covers": "Food crops, export (cash) crops, livestock, fisheries and forestry, and peasant, commercial, co-operative and state farming and their features."
+          "covers": "Food crops, export (cash) crops, livestock, fisheries and forestry, and peasant, commercial, co-operative and state farming and their features.",
+          "taught_in": [
+            "SS1 T3"
+          ]
         },
         {
           "id": "agriculture.importance",
@@ -710,7 +904,8 @@
             "waec": "15",
             "jamb": "16b"
           },
-          "covers": "Agriculture as a source of food, employment (the largest employer, 2024 UTME Q2), raw materials, foreign exchange and government revenue, and the link between agriculture and industry."
+          "covers": "Agriculture as a source of food, employment (the largest employer, 2024 UTME Q2), raw materials, foreign exchange and government revenue, and the link between agriculture and industry.",
+          "taught_in": []
         },
         {
           "id": "agriculture.marketing-policy",
@@ -719,7 +914,10 @@
             "waec": "15",
             "jamb": "16d-e"
           },
-          "covers": "Marketing of farm produce and commodity (marketing) boards, agricultural policies and programmes such as guaranteed minimum prices and subsidies, and the causes, effects and solutions of unstable farm incomes, including buffer stocks."
+          "covers": "Marketing of farm produce and commodity (marketing) boards, agricultural policies and programmes such as guaranteed minimum prices and subsidies, and the causes, effects and solutions of unstable farm incomes, including buffer stocks.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "agriculture.problems",
@@ -728,8 +926,13 @@
             "waec": "15",
             "jamb": "16c"
           },
-          "covers": "Why agricultural output is low (land tenure, poor tools, finance, storage, rural-urban migration as it affects farming, 2024 UTME Q6) and how the problems can be solved."
+          "covers": "Why agricultural output is low (land tenure, poor tools, finance, storage, rural-urban migration as it affects farming, 2024 UTME Q6) and how the problems can be solved.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T2"
       ]
     },
     {
@@ -748,7 +951,10 @@
             "waec": "16",
             "jamb": null
           },
-          "covers": "Meaning and types of industry, and the terms plant, firm, industry and industrial estate. Primary, secondary and tertiary production as sectors go to basics.economic-activities."
+          "covers": "Meaning and types of industry, and the terms plant, firm, industry and industrial estate. Primary, secondary and tertiary production as sectors go to basics.economic-activities.",
+          "taught_in": [
+            "SS1 T2"
+          ]
         },
         {
           "id": "industry.location",
@@ -757,7 +963,10 @@
             "waec": "16",
             "jamb": "17a"
           },
-          "covers": "The difference between location and localisation, the factors that influence where an industry sits, and the advantages and disadvantages of localisation."
+          "covers": "The difference between location and localisation, the factors that influence where an industry sits, and the advantages and disadvantages of localisation.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "industry.strategies",
@@ -766,7 +975,8 @@
             "waec": "16",
             "jamb": "17b"
           },
-          "covers": "Import substitution, export promotion, and other industrialisation strategies used in Nigeria, with their merits and demerits."
+          "covers": "Import substitution, export promotion, and other industrialisation strategies used in Nigeria, with their merits and demerits.",
+          "taught_in": []
         },
         {
           "id": "industry.development",
@@ -775,8 +985,17 @@
             "waec": "16",
             "jamb": "17c"
           },
-          "covers": "The role of industry in development, the problems of industrialising in Nigeria and West Africa, the role and problems of Nigeria's manufacturing and construction industries, and the link between agricultural and industrial development. Classifying manufacturing or construction as secondary production goes to basics.economic-activities."
+          "covers": "The role of industry in development, the problems of industrialising in Nigeria and West Africa, the role and problems of Nigeria's manufacturing and construction industries, and the link between agricultural and industrial development. Classifying manufacturing or construction as secondary production goes to basics.economic-activities.",
+          "taught_in": [
+            "SS2 T2",
+            "SS3 T1"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2",
+        "SS3 T1"
       ]
     },
     {
@@ -795,7 +1014,10 @@
             "waec": "25",
             "jamb": "18a, 18f"
           },
-          "covers": "Where petroleum, gold, diamond, tin, timber, groundnut and other resources are found and how they were developed, their positive and negative effects on West African economies, environmental damage from exploitation, and how it can be controlled. Challenges of exploiting natural resources in general go here; problems particular to the oil and gas industry go to natural-resources.oil."
+          "covers": "Where petroleum, gold, diamond, tin, timber, groundnut and other resources are found and how they were developed, their positive and negative effects on West African economies, environmental damage from exploitation, and how it can be controlled. Challenges of exploiting natural resources in general go here; problems particular to the oil and gas industry go to natural-resources.oil.",
+          "taught_in": [
+            "SS1 T3"
+          ]
         },
         {
           "id": "natural-resources.oil",
@@ -804,8 +1026,15 @@
             "waec": "24 (OPEC)",
             "jamb": "18b-e"
           },
-          "covers": "Contributions of the oil and non-oil sectors, linkage effects, upstream and downstream activities, the roles of NNPC and OPEC, and the problems of the oil and gas industry (pipeline vandalism and oil theft, low refining capacity and fuel imports, oil price swings, unrest in the Niger Delta). Every OPEC question goes here, including its founding and membership, because both syllabi treat OPEC through oil. Challenges of exploiting natural resources in general go to natural-resources.major."
+          "covers": "Contributions of the oil and non-oil sectors, linkage effects, upstream and downstream activities, the roles of NNPC and OPEC, and the problems of the oil and gas industry (pipeline vandalism and oil theft, low refining capacity and fuel imports, oil price swings, unrest in the Niger Delta). Every OPEC question goes here, including its founding and membership, because both syllabi treat OPEC through oil. Challenges of exploiting natural resources in general go to natural-resources.major.",
+          "taught_in": [
+            "SS3 T1"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS3 T1"
       ]
     },
     {
@@ -824,7 +1053,10 @@
             "waec": "21",
             "jamb": "15a-b"
           },
-          "covers": "The difference between economic growth and economic development, and indicators such as per capita income, life expectancy, literacy and the human development index. Per capita income as one indicator of development set against others goes here; per capita income as a measure of living standards over time or between countries goes to national-income.uses."
+          "covers": "The difference between economic growth and economic development, and indicators such as per capita income, life expectancy, literacy and the human development index. Per capita income as one indicator of development set against others goes here; per capita income as a measure of living standards over time or between countries goes to national-income.uses.",
+          "taught_in": [
+            "SS3 T2"
+          ]
         },
         {
           "id": "development.problems",
@@ -833,7 +1065,10 @@
             "waec": "21",
             "jamb": "15c-d"
           },
-          "covers": "Factors that promote or hinder growth and development, the lessons Nigeria can draw from the development of the Asian Tigers, Japan, Europe and America, and the characteristics and problems of developing countries, Nigeria in particular, including dependence on one main export (a mono-product economy). The mono-product economy as a feature or problem goes here; what Nigeria exports and to whom goes to trade.structure."
+          "covers": "Factors that promote or hinder growth and development, the lessons Nigeria can draw from the development of the Asian Tigers, Japan, Europe and America, and the characteristics and problems of developing countries, Nigeria in particular, including dependence on one main export (a mono-product economy). The mono-product economy as a feature or problem goes here; what Nigeria exports and to whom goes to trade.structure.",
+          "taught_in": [
+            "SS3 T2"
+          ]
         },
         {
           "id": "development.planning",
@@ -842,8 +1077,14 @@
             "waec": "21",
             "jamb": "15e"
           },
-          "covers": "Objectives and elements of a development plan, types of plan (short, medium, long term, rolling), Nigeria's development plans and programmes such as the MDGs, NEEDS and Vision 20:2020, and the problems of planning."
+          "covers": "Objectives and elements of a development plan, types of plan (short, medium, long term, rolling), Nigeria's development plans and programmes such as the MDGs, NEEDS and Vision 20:2020, and the problems of planning.",
+          "taught_in": [
+            "SS3 T2"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS3 T2"
       ]
     },
     {
@@ -862,7 +1103,10 @@
             "waec": "17",
             "jamb": "11a"
           },
-          "covers": "GDP, GNP, NNP, national income, per capita income, depreciation and net factor income from abroad, and calculating one from another. Whether a quantity is a stock or a flow goes to tools.methods."
+          "covers": "GDP, GNP, NNP, national income, per capita income, depreciation and net factor income from abroad, and calculating one from another. Whether a quantity is a stock or a flow goes to tools.methods.",
+          "taught_in": [
+            "SS2 T3"
+          ]
         },
         {
           "id": "national-income.measurement",
@@ -871,7 +1115,8 @@
             "waec": "17",
             "jamb": "11b"
           },
-          "covers": "Output, income and expenditure methods, double counting, and the problems of measurement such as unrecorded subsistence output and unpaid services (2024 UTME Q21). A question that adds up consumption, investment, government spending and net exports with no propensity given goes here; one that gives an MPC or MPS and asks for national income goes to national-income.multiplier."
+          "covers": "Output, income and expenditure methods, double counting, and the problems of measurement such as unrecorded subsistence output and unpaid services (2024 UTME Q21). A question that adds up consumption, investment, government spending and net exports with no propensity given goes here; one that gives an MPC or MPS and asks for national income goes to national-income.multiplier.",
+          "taught_in": []
         },
         {
           "id": "national-income.uses",
@@ -880,7 +1125,8 @@
             "waec": "17",
             "jamb": "11c"
           },
-          "covers": "Using national income figures to compare living standards over time and between countries, why such comparisons mislead, and trends and structure of national income. Per capita income as a measure of living standards goes here; per capita income as one indicator of development set against others such as life expectancy or the HDI goes to development.meaning; calculating it goes to national-income.concepts."
+          "covers": "Using national income figures to compare living standards over time and between countries, why such comparisons mislead, and trends and structure of national income. Per capita income as a measure of living standards goes here; per capita income as one indicator of development set against others such as life expectancy or the HDI goes to development.meaning; calculating it goes to national-income.concepts.",
+          "taught_in": []
         },
         {
           "id": "national-income.circular-flow",
@@ -889,7 +1135,8 @@
             "waec": null,
             "jamb": "11d"
           },
-          "covers": "The two-sector and three-sector circular flow models, injections and leakages. What an open or closed economy is goes to trade.basis."
+          "covers": "The two-sector and three-sector circular flow models, injections and leakages. What an open or closed economy is goes to trade.basis.",
+          "taught_in": []
         },
         {
           "id": "national-income.consumption-saving",
@@ -898,7 +1145,8 @@
             "waec": null,
             "jamb": "11e"
           },
-          "covers": "Meaning and determinants of consumption, saving and investment, and the average and marginal propensities to consume and save."
+          "covers": "Meaning and determinants of consumption, saving and investment, and the average and marginal propensities to consume and save.",
+          "taught_in": []
         },
         {
           "id": "national-income.multiplier",
@@ -907,8 +1155,14 @@
             "waec": null,
             "jamb": "11f-g"
           },
-          "covers": "Calculating the multiplier from MPC or MPS, its effect on income, and elementary determination of equilibrium national income. A question that only asks for MPC goes to national-income.consumption-saving. A national income question that gives an MPC or MPS goes here, even when it also lists consumption, investment, government spending and trade figures (2017 UTME Q12); adding up expenditure with no propensity given goes to national-income.measurement."
+          "covers": "Calculating the multiplier from MPC or MPS, its effect on income, and elementary determination of equilibrium national income. A question that only asks for MPC goes to national-income.consumption-saving. A national income question that gives an MPC or MPS goes here, even when it also lists consumption, investment, government spending and trade figures (2017 UTME Q12); adding up expenditure with no propensity given goes to national-income.measurement.",
+          "taught_in": [
+            "SS2 T3"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS2 T3"
       ]
     },
     {
@@ -927,7 +1181,11 @@
             "waec": "18(a)",
             "jamb": "12a"
           },
-          "covers": "Barter and its problems, the history and types of money, the characteristics of good money (2024 UTME Q14) and its functions."
+          "covers": "Barter and its problems, the history and types of money, the characteristics of good money (2024 UTME Q14) and its functions.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
         },
         {
           "id": "money.demand-supply",
@@ -936,7 +1194,8 @@
             "waec": "18(a)",
             "jamb": "12b"
           },
-          "covers": "Motives for holding money (transactions, precautionary, speculative), what determines the money supply, and what the money supply consists of. How commercial banks create money goes to financial.deposit-banks."
+          "covers": "Motives for holding money (transactions, precautionary, speculative), what determines the money supply, and what the money supply consists of. How commercial banks create money goes to financial.deposit-banks.",
+          "taught_in": []
         },
         {
           "id": "money.value",
@@ -945,8 +1204,13 @@
             "waec": "18(a)",
             "jamb": "12c-d"
           },
-          "covers": "The relationship between the value of money and the price level, and the Fisher equation MV = PT, including solving it for one term."
+          "covers": "The relationship between the value of money and the price level, and the Fisher equation MV = PT, including solving it for one term.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T3"
       ]
     },
     {
@@ -965,7 +1229,10 @@
             "waec": "18(b)",
             "jamb": "12e"
           },
-          "covers": "Demand-pull, cost-push, creeping, galloping and hyperinflation, and what causes each. A question on whether deficit financing is inflationary goes to public-finance.budget-debt. The Phillips curve goes to inflation.effects-control."
+          "covers": "Demand-pull, cost-push, creeping, galloping and hyperinflation, and what causes each. A question on whether deficit financing is inflationary goes to public-finance.budget-debt. The Phillips curve goes to inflation.effects-control.",
+          "taught_in": [
+            "SS2 T3"
+          ]
         },
         {
           "id": "inflation.measurement",
@@ -974,7 +1241,8 @@
             "waec": null,
             "jamb": "12e"
           },
-          "covers": "Calculating and interpreting a price index and the inflation rate from it."
+          "covers": "Calculating and interpreting a price index and the inflation rate from it.",
+          "taught_in": []
         },
         {
           "id": "inflation.effects-control",
@@ -983,7 +1251,8 @@
             "waec": "18(b)",
             "jamb": "12e"
           },
-          "covers": "Who gains and who loses from inflation (debtors, creditors, fixed-income earners), how monetary, fiscal and direct measures control it, and the Phillips curve and the trade-off between inflation and unemployment, which neither syllabus names but the 2020 UTME tested (Q39). Every Phillips curve question goes here. A question that names a monetary instrument or stance (such as contractionary monetary policy) goes to financial.monetary-policy, and one that names a fiscal instrument goes to public-finance.fiscal-policy, even when the purpose is to control inflation; a question that asks how inflation can be controlled without naming an instrument goes here."
+          "covers": "Who gains and who loses from inflation (debtors, creditors, fixed-income earners), how monetary, fiscal and direct measures control it, and the Phillips curve and the trade-off between inflation and unemployment, which neither syllabus names but the 2020 UTME tested (Q39). Every Phillips curve question goes here. A question that names a monetary instrument or stance (such as contractionary monetary policy) goes to financial.monetary-policy, and one that names a fiscal instrument goes to public-finance.fiscal-policy, even when the purpose is to control inflation; a question that asks how inflation can be controlled without naming an instrument goes here.",
+          "taught_in": []
         },
         {
           "id": "inflation.deflation",
@@ -992,8 +1261,12 @@
             "waec": null,
             "jamb": "12f"
           },
-          "covers": "Meaning, measurement, effects and control of deflation."
+          "covers": "Meaning, measurement, effects and control of deflation.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS2 T3"
       ]
     },
     {
@@ -1012,7 +1285,10 @@
             "waec": "19",
             "jamb": "13a-b, 13g"
           },
-          "covers": "Traditional institutions (esusu, money lenders), development banks such as the Bank of Industry (2024 UTME Q33), merchant and mortgage banks, insurance companies and building societies: what each does, their role in development, and the challenges facing them in Nigeria. Commercial banks go to financial.deposit-banks and the CBN to financial.central-bank, but challenges facing banks in Nigeria, commercial banks included, go here."
+          "covers": "Traditional institutions (esusu, money lenders), development banks such as the Bank of Industry (2024 UTME Q33), merchant and mortgage banks, insurance companies and building societies: what each does, their role in development, and the challenges facing them in Nigeria. Commercial banks go to financial.deposit-banks and the CBN to financial.central-bank, but challenges facing banks in Nigeria, commercial banks included, go here.",
+          "taught_in": [
+            "SS2 T3"
+          ]
         },
         {
           "id": "financial.central-bank",
@@ -1021,7 +1297,10 @@
             "waec": "19",
             "jamb": "13d"
           },
-          "covers": "Functions of the Central Bank of Nigeria, its officials (2024 UTME Q32), and financial sector regulators such as NDIC, SEC and NAICOM and what each does. The tools the CBN uses to control money go to financial.monetary-policy."
+          "covers": "Functions of the Central Bank of Nigeria, its officials (2024 UTME Q32), and financial sector regulators such as NDIC, SEC and NAICOM and what each does. The tools the CBN uses to control money go to financial.monetary-policy.",
+          "taught_in": [
+            "SS3 T1"
+          ]
         },
         {
           "id": "financial.deposit-banks",
@@ -1030,7 +1309,10 @@
             "waec": "19",
             "jamb": "13e"
           },
-          "covers": "Functions of commercial (deposit money) banks, types of account, and how banks create credit, including calculating deposits created from a cash reserve ratio. Challenges facing banks in Nigeria go to financial.types."
+          "covers": "Functions of commercial (deposit money) banks, types of account, and how banks create credit, including calculating deposits created from a cash reserve ratio. Challenges facing banks in Nigeria go to financial.types.",
+          "taught_in": [
+            "SS1 T3"
+          ]
         },
         {
           "id": "financial.markets",
@@ -1039,7 +1321,10 @@
             "waec": "19",
             "jamb": "13c"
           },
-          "covers": "The difference between money and capital markets, their institutions and instruments (treasury bills, bonds, shares), and the stock exchange. Where a firm goes to raise funds goes to business.finance, even when the answer is the stock exchange."
+          "covers": "The difference between money and capital markets, their institutions and instruments (treasury bills, bonds, shares), and the stock exchange. Where a firm goes to raise funds goes to business.finance, even when the answer is the stock exchange.",
+          "taught_in": [
+            "SS2 T3"
+          ]
         },
         {
           "id": "financial.monetary-policy",
@@ -1048,8 +1333,14 @@
             "waec": null,
             "jamb": "13f"
           },
-          "covers": "Open market operations, bank rate, reserve requirements, special deposits and moral suasion, expansionary and contractionary monetary policy, and their effects. A question that names a monetary instrument or stance goes here, even when its purpose is to control inflation; one that asks how inflation can be controlled without naming an instrument goes to inflation.effects-control. A question that asks which tool is fiscal and which monetary goes to public-finance.fiscal-policy."
+          "covers": "Open market operations, bank rate, reserve requirements, special deposits and moral suasion, expansionary and contractionary monetary policy, and their effects. A question that names a monetary instrument or stance goes here, even when its purpose is to control inflation; one that asks how inflation can be controlled without naming an instrument goes to inflation.effects-control. A question that asks which tool is fiscal and which monetary goes to public-finance.fiscal-policy.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T3",
+        "SS3 T1"
       ]
     },
     {
@@ -1068,7 +1359,11 @@
             "waec": "20",
             "jamb": "14a-b"
           },
-          "covers": "Meaning and objectives of public finance, fiscal policy and its instruments (taxation, spending, the budget), and telling fiscal from monetary tools (2024 UTME Q29)."
+          "covers": "Meaning and objectives of public finance, fiscal policy and its instruments (taxation, spending, the budget), and telling fiscal from monetary tools (2024 UTME Q29).",
+          "taught_in": [
+            "SS2 T2",
+            "SS2 T3"
+          ]
         },
         {
           "id": "public-finance.revenue",
@@ -1077,7 +1372,10 @@
             "waec": "20",
             "jamb": "14c, 14h"
           },
-          "covers": "Sources of government revenue (taxes, royalties, rents, fees, grants and aid), what hampers government's capacity to raise revenue, tax revenue included (evasion, corruption, a large informal sector, instability; 2018 UTME Q40), revenue allocation between tiers of government in Nigeria and its criteria, and resource control. A question on a specific tax goes to public-finance.taxation; a question on obstacles to raising tax revenue in general goes here."
+          "covers": "Sources of government revenue (taxes, royalties, rents, fees, grants and aid), what hampers government's capacity to raise revenue, tax revenue included (evasion, corruption, a large informal sector, instability; 2018 UTME Q40), revenue allocation between tiers of government in Nigeria and its criteria, and resource control. A question on a specific tax goes to public-finance.taxation; a question on obstacles to raising tax revenue in general goes here.",
+          "taught_in": [
+            "SS2 T3"
+          ]
         },
         {
           "id": "public-finance.taxation",
@@ -1086,7 +1384,10 @@
             "waec": "20",
             "jamb": "14d"
           },
-          "covers": "Direct and indirect taxes, their objectives, merits and demerits, the canons of taxation, and proportional, progressive and regressive rates, including calculating tax paid. A question on what hampers government's capacity to raise tax revenue in general goes to public-finance.revenue."
+          "covers": "Direct and indirect taxes, their objectives, merits and demerits, the canons of taxation, and proportional, progressive and regressive rates, including calculating tax paid. A question on what hampers government's capacity to raise tax revenue in general goes to public-finance.revenue.",
+          "taught_in": [
+            "SS2 T2"
+          ]
         },
         {
           "id": "public-finance.incidence",
@@ -1095,7 +1396,8 @@
             "waec": "20",
             "jamb": "14e"
           },
-          "covers": "Who bears the burden of a tax, how elasticity of demand and supply shifts it between buyer and seller, and the effects of taxes on production and consumption."
+          "covers": "Who bears the burden of a tax, how elasticity of demand and supply shifts it between buyer and seller, and the effects of taxes on production and consumption.",
+          "taught_in": []
         },
         {
           "id": "public-finance.expenditure",
@@ -1104,7 +1406,8 @@
             "waec": "20",
             "jamb": "14f"
           },
-          "covers": "Recurrent and capital expenditure, why public spending grows, and its effects on the economy."
+          "covers": "Recurrent and capital expenditure, why public spending grows, and its effects on the economy.",
+          "taught_in": []
         },
         {
           "id": "public-finance.budget-debt",
@@ -1113,8 +1416,16 @@
             "waec": "20",
             "jamb": "14g"
           },
-          "covers": "Balanced, surplus and deficit budgets, deficit financing and its effect on prices (2024 UTME Q9), and internal and external public debt, its causes and burden."
+          "covers": "Balanced, surplus and deficit budgets, deficit financing and its effect on prices (2024 UTME Q9), and internal and external public debt, its causes and burden.",
+          "taught_in": [
+            "SS2 T2",
+            "SS2 T3"
+          ]
         }
+      ],
+      "taught_in": [
+        "SS2 T2",
+        "SS2 T3"
       ]
     },
     {
@@ -1133,7 +1444,10 @@
             "waec": "22(a)",
             "jamb": "21a"
           },
-          "covers": "Differences between domestic and international trade, why countries trade, absolute and comparative advantage and working them out from a table, the theorists behind them (Smith, Ricardo, 2024 UTME Q5), and open and closed economies (whether a country trades with the rest of the world), which neither syllabus names but the 2020 UTME tested (Q38). Every question on whether an economy is open or closed goes here, even when the options include capitalist, socialist or mixed."
+          "covers": "Differences between domestic and international trade, why countries trade, absolute and comparative advantage and working them out from a table, the theorists behind them (Smith, Ricardo, 2024 UTME Q5), and open and closed economies (whether a country trades with the rest of the world), which neither syllabus names but the 2020 UTME tested (Q38). Every question on whether an economy is open or closed goes here, even when the options include capitalist, socialist or mixed.",
+          "taught_in": [
+            "SS3 T1"
+          ]
         },
         {
           "id": "trade.terms",
@@ -1142,7 +1456,8 @@
             "waec": "22(a)",
             "jamb": null
           },
-          "covers": "Meaning of terms of trade, calculating it from export and import price indices, and what favourable and unfavourable terms mean."
+          "covers": "Meaning of terms of trade, calculating it from export and import price indices, and what favourable and unfavourable terms mean.",
+          "taught_in": []
         },
         {
           "id": "trade.protection",
@@ -1151,7 +1466,10 @@
             "waec": "22(a)",
             "jamb": null
           },
-          "covers": "Objectives of commercial policy, tariffs and their types, quotas, embargoes and other direct controls, arguments for and against protection, dumping (2024 UTME Q7), and trade liberalisation and globalisation as the opposite of protection. Using exchange rate changes to protect industry goes to bop.exchange-rate."
+          "covers": "Objectives of commercial policy, tariffs and their types, quotas, embargoes and other direct controls, arguments for and against protection, dumping (2024 UTME Q7), and trade liberalisation and globalisation as the opposite of protection. Using exchange rate changes to protect industry goes to bop.exchange-rate.",
+          "taught_in": [
+            "SS3 T1"
+          ]
         },
         {
           "id": "trade.structure",
@@ -1160,8 +1478,12 @@
             "waec": "22(a)",
             "jamb": "21c"
           },
-          "covers": "What Nigeria and other West African countries export and import, and who their main trading partners are. Dependence on a single export as a feature or problem of a developing economy (a mono-product economy) goes to development.problems."
+          "covers": "What Nigeria and other West African countries export and import, and who their main trading partners are. Dependence on a single export as a feature or problem of a developing economy (a mono-product economy) goes to development.problems.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS3 T1"
       ]
     },
     {
@@ -1180,7 +1502,10 @@
             "waec": "22(b)",
             "jamb": "21b"
           },
-          "covers": "Visible and invisible trade, the balance of trade, and the current, capital and monetary accounts of the balance of payments, including calculating a balance from given figures."
+          "covers": "Visible and invisible trade, the balance of trade, and the current, capital and monetary accounts of the balance of payments, including calculating a balance from given figures.",
+          "taught_in": [
+            "SS3 T1"
+          ]
         },
         {
           "id": "bop.disequilibrium",
@@ -1189,7 +1514,8 @@
             "waec": "22(b)",
             "jamb": "21b"
           },
-          "covers": "Causes of balance of payments deficit and surplus, how a deficit is corrected (expenditure-reducing and switching policies, exchange control) and how it is financed (reserves, borrowing). Devaluation as a corrective measure goes to bop.exchange-rate."
+          "covers": "Causes of balance of payments deficit and surplus, how a deficit is corrected (expenditure-reducing and switching policies, exchange control) and how it is financed (reserves, borrowing). Devaluation as a corrective measure goes to bop.exchange-rate.",
+          "taught_in": []
         },
         {
           "id": "bop.exchange-rate",
@@ -1198,8 +1524,12 @@
             "waec": "22(b)",
             "jamb": "21d"
           },
-          "covers": "Meaning, types (fixed, floating, managed) and determination of exchange rates, appreciation, depreciation and devaluation, and the conditions for depreciation to work, such as import elasticity (2024 UTME Q3 and Q4)."
+          "covers": "Meaning, types (fixed, floating, managed) and determination of exchange rates, appreciation, depreciation and devaluation, and the conditions for depreciation to work, such as import elasticity (2024 UTME Q3 and Q4).",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS3 T1"
       ]
     },
     {
@@ -1218,7 +1548,8 @@
             "waec": "23",
             "jamb": null
           },
-          "covers": "Free trade area, customs union, common market and economic union: their features, and the objectives and benefits of integration."
+          "covers": "Free trade area, customs union, common market and economic union: their features, and the objectives and benefits of integration.",
+          "taught_in": []
         },
         {
           "id": "integration.ecowas",
@@ -1227,9 +1558,11 @@
             "waec": "23",
             "jamb": "22"
           },
-          "covers": "Formation, objectives, organs, achievements and problems of ECOWAS, and other African integration efforts. Every ECOWAS question goes here."
+          "covers": "Formation, objectives, organs, achievements and problems of ECOWAS, and other African integration efforts. Every ECOWAS question goes here.",
+          "taught_in": []
         }
-      ]
+      ],
+      "taught_in": []
     },
     {
       "id": "organisations",
@@ -1247,7 +1580,10 @@
             "waec": "24",
             "jamb": "22"
           },
-          "covers": "The IMF, IBRD (World Bank) and AfDB: when they were set up, what they do, and their relevance to Nigeria and West Africa. UNCTAD, though JAMB lists it beside these, goes to organisations.others."
+          "covers": "The IMF, IBRD (World Bank) and AfDB: when they were set up, what they do, and their relevance to Nigeria and West Africa. UNCTAD, though JAMB lists it beside these, goes to organisations.others.",
+          "taught_in": [
+            "SS3 T2"
+          ]
         },
         {
           "id": "organisations.others",
@@ -1256,8 +1592,12 @@
             "waec": "24",
             "jamb": "22"
           },
-          "covers": "UNCTAD, ECA, WTO, OECD, AU and the EU (EEC): functions and relevance, and telling regional from global bodies (2024 UTME Q28). Also the United Nations and its specialised agencies (such as WHO, FAO, ILO and UNESCO), which neither syllabus names but UTME papers test; every general UN question goes here. The IMF and World Bank go to organisations.finance, OPEC to natural-resources.oil and ECOWAS to integration.ecowas."
+          "covers": "UNCTAD, ECA, WTO, OECD, AU and the EU (EEC): functions and relevance, and telling regional from global bodies (2024 UTME Q28). Also the United Nations and its specialised agencies (such as WHO, FAO, ILO and UNESCO), which neither syllabus names but UTME papers test; every general UN question goes here. The IMF and World Bank go to organisations.finance, OPEC to natural-resources.oil and ECOWAS to integration.ecowas.",
+          "taught_in": []
         }
+      ],
+      "taught_in": [
+        "SS3 T2"
       ]
     }
   ],

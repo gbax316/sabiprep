@@ -2,5 +2,19 @@
   "slug": "chemistry-waec",
   "subject": "Chemistry",
   "source": "../../Exam Questions/WAEC QUESTIONS/WAEC QUESTIONS/2025-2015 WAEC CHEMISTRY QUESTIONS.docx",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/chemistry-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/chemistry-jamb.txt"
+    },
+    {
+      "exam": "SOW",
+      "path": "../syllabi/chemistry-sow.txt"
+    }
+  ]
 }

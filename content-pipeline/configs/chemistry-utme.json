@@ -2,5 +2,19 @@
   "slug": "chemistry-utme",
   "subject": "Chemistry",
   "source": "../../Exam Questions/UTME JAMB Questions/2025-2015 UTME CHEMISTRY.docx",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/chemistry-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/chemistry-jamb.txt"
+    },
+    {
+      "exam": "SOW",
+      "path": "../syllabi/chemistry-sow.txt"
+    }
+  ]
 }

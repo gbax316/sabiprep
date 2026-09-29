@@ -2,5 +2,19 @@
   "slug": "agricultural-science-waec",
   "subject": "Agricultural Science",
   "source": "../../Exam Questions/WAEC QUESTIONS/WAEC QUESTIONS/2025-2022 WAEC AGRICULTURAL SCIENCE QUESTIONS.docx",
-  "diagram_route": "trace"
+  "diagram_route": "trace",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/agricultural-science-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/agricultural-science-jamb.txt"
+    },
+    {
+      "exam": "SOW",
+      "path": "../syllabi/agricultural-science-sow.txt"
+    }
+  ]
 }

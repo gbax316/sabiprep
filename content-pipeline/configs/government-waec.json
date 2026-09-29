@@ -2,5 +2,15 @@
   "slug": "government-waec",
   "subject": "Government",
   "source": "../../Exam Questions/WAEC QUESTIONS/WAEC QUESTIONS/2025-2015 WAEC GOVERNMENT.docx",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/government-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/government-jamb.txt"
+    }
+  ]
 }

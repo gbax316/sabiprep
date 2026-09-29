@@ -1309,7 +1309,7 @@ def main():
     p = sub.add_parser('approve'); p.add_argument('slug'); p.add_argument('--note', default='')
     p = sub.add_parser('coverage'); p.add_argument('slug')
     p = sub.add_parser('revise'); p.add_argument('slug')
-    p = sub.add_parser('matchtest'); p.add_argument('slug'); p.add_argument('--sample', type=int, default=80)
+    p = sub.add_parser('matchtest'); p.add_argument('slug'); p.add_argument('--sample', type=int, default=80); p.add_argument('--seed', type=int, default=7)
     p = sub.add_parser('adopt'); p.add_argument('slug'); p.add_argument('--unit', required=True); p.add_argument('--note', required=True)
     a = ap.parse_args()
     if a.cmd == 'status':
@@ -1325,7 +1325,7 @@ def main():
     if a.cmd == 'revise':
         return cmd_revise(a.slug)
     if a.cmd == 'matchtest':
-        return cmd_matchtest(a.slug, a.sample)
+        return cmd_matchtest(a.slug, a.sample, a.seed)
     if a.cmd == 'adopt':
         return cmd_adopt(a.slug, a.unit, a.note)
 

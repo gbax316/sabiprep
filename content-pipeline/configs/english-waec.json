@@ -3,5 +3,15 @@
   "subject": "English Language",
   "source": "../../Exam Questions/WAEC QUESTIONS/WAEC QUESTIONS/WAEC ENGLISH LANGUAGE 2024-2016.docx",
   "keep_italic": true,
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/english-language-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/english-language-jamb.txt"
+    }
+  ]
 }

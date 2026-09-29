@@ -1,0 +1,195 @@
+{
+  "slug": "economics-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.19,
+  "agree_subtopic": 75,
+  "agree_topic": 78,
+  "nofit": 3,
+  "disagreements": [
+    {
+      "year": 2020,
+      "q_number": 36,
+      "stem": "Money would cease to be a good store of value when",
+      "sonnet": "money.nature",
+      "opus": "money.value",
+      "notes": [
+        "",
+        "also fits money.nature: store of value is a function of money, but the answer turns on rising prices eroding the value of money, which money.value holds."
+      ]
+    },
+    {
+      "year": 2025,
+      "q_number": 22,
+      "stem": "The curve labelled Z is",
+      "sonnet": "costs.concepts",
+      "opus": "costs.short-long-run",
+      "notes": [
+        "",
+        "also fits costs.concepts: naming a curve on a cost diagram needs the meaning of AC, MC, AVC, AFC (concepts) and the shapes of the short-run curves (short-long-run)."
+      ]
+    },
+    {
+      "year": 2020,
+      "q_number": 16,
+      "stem": "If a beef market is in equilibrium at $4.00 per kg, an increase in price to $6.00 per kg may cause",
+      "sonnet": "price.controls",
+      "opus": "price.equilibrium",
+      "notes": [
+        "Price rising above equilibrium and the surplus/shortage/black market/rationing options match a minimum-price scenario.",
+        "also fits price.controls: a price above equilibrium causing a surplus is excess supply (equilibrium) but is also the minimum price effect, and the distractors (black market, rationing) are price control content."
+      ]
+    },
+    {
+      "year": 2021,
+      "q_number": 6,
+      "stem": "An increase in rice harvest, all things being equal, may cause",
+      "sonnet": "agriculture.marketing-policy",
+      "opus": "price.changes",
+      "notes": [
+        "",
+        "a bumper harvest lowering price is a supply shift; agriculture.marketing-policy (unstable farm incomes) is adjacent but the answer asks only about price."
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 20,
+      "stem": "A firm that closes down will still incur",
+      "sonnet": "markets.profit-shutdown",
+      "opus": "costs.concepts",
+      "notes": [
+        "Also fits costs.concepts: the fact that fixed cost persists when a firm closes down is a cost-concept fact tested through a shutdown scenario.",
+        "tests the meaning of fixed cost; markets.profit-shutdown is adjacent."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "financial.types / financial.deposit-banks",
+        "detail": "A question asking what distinguishes development banks from commercial banks tests both subtopics at once. The covers lines only route bank-challenge questions to financial.types, leaving comparison questions unassigned."
+      },
+      {
+        "kind": "overlap",
+        "where": "production.scale / industry.location",
+        "detail": "External economies of scale gained specifically from sitting in an industrial estate sits on the border between economies-of-scale theory and industrial location theory, and neither covers line flags the other."
+      },
+      {
+        "kind": "missing",
+        "where": "agriculture.problems / labour.unemployment",
+        "detail": "No subtopic covers the labour-market effect of farm mechanization (technological displacement in agriculture). agriculture.problems is framed around low output and its remedies, and labour.unemployment is framed around general types of unemployment; neither names this specific content."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "markets.profit-shutdown",
+        "detail": "The generic necessary-versus-sufficient condition for a firm's equilibrium (MC=MR is necessary, MC cutting MR from below is sufficient) is theory-of-the-firm content taught independent of any one market structure, but the taxonomy only houses equilibrium conditions inside market-structure-specific coverage."
+      },
+      {
+        "kind": "overlap",
+        "where": "costs.concepts / markets.profit-shutdown",
+        "detail": "A question testing that fixed cost persists when a firm shuts down is simultaneously a cost-concept fact and a shutdown-condition fact; the covers lines do not say which wins when a cost concept is tested through a shutdown scenario."
+      },
+      {
+        "kind": "overlap",
+        "where": "demand.elasticity-uses / public-finance.taxation",
+        "detail": "A question on which goods government should tax more heavily to raise revenue (goods with inelastic demand) draws equally on elasticity's importance to government and on general tax objectives, and neither covers line names revenue-maximizing tax choice via elasticity."
+      },
+      {
+        "kind": "overlap",
+        "where": "business.public / systems.types",
+        "detail": "A question on why the public sector in a mixed economy is not always efficient can be read as a problem of public enterprises or as a disadvantage of the mixed economic system; the covers lines split these two topics but do not resolve a question framed at their intersection."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "overlap",
+        "where": "financial.monetary-policy",
+        "detail": "Two rules contradict: monetary-policy claims any question naming a monetary instrument, while it also sends 'which tool is fiscal and which monetary' to public-finance.fiscal-policy (Q33 does both). The inflation rule also does not say whether naming an instrument in the options, not the stem, counts (Q8)."
+      },
+      {
+        "kind": "overlap",
+        "where": "demand.types",
+        "detail": "demand.types claims how a price change of one good affects demand for a related good, which is the same content as 'prices of other goods' in demand.determinants (Q14). Needs a rule, e.g. types keeps naming the relationship, determinants keeps predicting the shift."
+      },
+      {
+        "kind": "overlap",
+        "where": "costs.short-long-run",
+        "detail": "Identifying a curve on a cost diagram (AC, MC, AVC, AFC) fits both costs.concepts and costs.short-long-run (Q6). Say which one owns reading cost curve diagrams."
+      },
+      {
+        "kind": "overlap",
+        "where": "price.equilibrium",
+        "detail": "A price set above equilibrium with no mention of legislation (Q25) is excess supply and also the minimum price effect. Add a rule: controls only when a legal price is stated."
+      },
+      {
+        "kind": "overlap",
+        "where": "industry.location",
+        "detail": "Benefits of firms clustering are both advantages of localisation and external economies of scale (production.scale) (Q29, Q40). Needs a sorting rule."
+      },
+      {
+        "kind": "overlap",
+        "where": "business.finance",
+        "detail": "Its name and covers include 'management and control of firms', which collides with company features in business.private (Q77, separation of ownership from control). Management probably belongs in business.private, or needs a rule."
+      },
+      {
+        "kind": "overlap",
+        "where": "financial.types",
+        "detail": "It claims 'role in development' for institutions generally, while commercial banks go to financial.deposit-banks; a comparison of commercial with development banks (Q39) has no home rule."
+      },
+      {
+        "kind": "overlap",
+        "where": "business.public",
+        "detail": "Inefficiency of the public sector in a mixed economy (Q37) fits both business.public (problems of public enterprises) and systems.types (disadvantages of a mixed economy)."
+      },
+      {
+        "kind": "overlap",
+        "where": "public-finance.revenue",
+        "detail": "Revenue names tax evasion as an obstacle; taxation holds taxes generally. The meaning of tax avoidance and evasion (Q48) has no stated home."
+      },
+      {
+        "kind": "overlap",
+        "where": "demand.elasticity-uses",
+        "detail": "Which goods to tax to raise revenue (Q62) uses elasticity but is not incidence; it fits elasticity-uses (importance to government), public-finance.incidence and public-finance.taxation."
+      },
+      {
+        "kind": "overlap",
+        "where": "basics.economic-activities",
+        "detail": "Which industry adds value to primary products (Q15) is both secondary production and a type of industry (industry.concepts). The existing rule only covers classifying manufacturing or construction as secondary."
+      },
+      {
+        "kind": "overlap",
+        "where": "money.value",
+        "detail": "Money failing as a store of value under inflation (Q1) fits money.nature (functions) and money.value (value of money and price level)."
+      },
+      {
+        "kind": "missing",
+        "where": "markets",
+        "detail": "No subtopic holds the general equilibrium or profit-maximising condition of the firm (MC equals MR, MC cutting MR from below) that applies across structures (Q45). Add markets.firm-equilibrium or widen markets.profit-shutdown."
+      },
+      {
+        "kind": "missing",
+        "where": "natural-resources.major",
+        "detail": "Renewable versus non-renewable resources is not named anywhere (Q64). Widen the covers line of natural-resources.major."
+      },
+      {
+        "kind": "missing",
+        "where": "agriculture",
+        "detail": "Mechanisation and modernisation of agriculture and their effects (e.g. on farm labour, Q41) have no named home. Widen agriculture.problems or agriculture.types."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "public-finance.taxation",
+        "detail": "Specific and ad valorem taxes (Q42) are not named in the covers line; placement is obvious but the line should list them."
+      }
+    ]
+  }
+}

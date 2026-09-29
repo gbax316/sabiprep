@@ -1,306 +1,1314 @@
 {
   "subject": "Biology",
-  "version": "2.1",
+  "version": "2.2",
   "status": "proposal",
-  "why": "Version 1 had 26 flat topics, several too broad and two joining topics the syllabus keeps apart. Version 2 moved to parent topics at the grain of the syllabus's numbered topics and subtopics at the grain of its sub-areas. Version 2.1 applies sixteen findings from placing all 46 settled 2025 questions into version 2 with a classifier that did not design it: a scope rule that was wrong, four missing subtopics, five overlapping pairs, five wrong syllabus references, and labels too narrow to show what a subtopic holds. Every one of the 106 legacy database topics is folded in. Nothing in the database is changed by this file.",
+  "why": "Version 1 had 26 flat topics, several too broad and two joining topics the syllabus keeps apart. Version 2 moved to parent topics at the grain of the syllabus's numbered topics and subtopics at the grain of its sub-areas. Version 2.1 applied sixteen findings from placing all 46 settled 2025 questions into version 2 with a classifier that did not design it. Version 2.2 applies the coverage map of the WAEC, JAMB and scheme-of-work sources and a placement test of 80 UTME and 80 WAEC questions from 2015 to 2025: thirteen subtopics added where content had no home, covers lines widened where content plainly belonged, and sorting rules written on every border the two models split. No id was merged or removed. Every one of the 106 legacy database topics is folded in. Nothing in the database is changed by this file.",
   "source": {
     "document": "WAEC Biology examination syllabus, WASSCE",
     "retrieved_from": "https://waecsyllabus.com/files/ssce/BIOLOGY.pdf",
     "retrieved_on": "2026-09-25",
     "provenance_note": "Third-party mirror, file dated 2015-09-24, author field awajis.com. The preamble is WAEC's own standard wording. Not fetched from a WAEC domain directly.",
-    "scope_rule": "The syllabus states that Paper 1, the objective paper, is drawn from Section A. The real 2025 paper also tested Section B content (endocytosis in Q11, DNA in Q45 and Q46) and Section C content (plant life cycles in Q20, population measurement in Q35). So Section A is the spine, and Section B cell biology and Section C content are placed as subtopics, because that is where real questions land. Section B material that no Nigerian paper has been seen to test is left out until one does."
+    "scope_rule": "The syllabus states that Paper 1, the objective paper, is drawn from Section A. The real 2025 paper also tested Section B content (endocytosis in Q11, DNA in Q45 and Q46) and Section C content (plant life cycles in Q20, population measurement in Q35). So Section A is the spine, and Section B cell biology and Section C content are placed as subtopics, because that is where real questions land. Section B material that no Nigerian paper has been seen to test is left out until one does. Version 2.2 adds three homes on the same rule, for content real papers test beyond the syllabus wording: the nerve impulse (WAEC placement sample Q26), homeostasis as a concept (WAEC sample Q48), and red cell breakdown by the liver and spleen (UTME sample Q73). Section B items marked \"Ghana only\" in the WAEC syllabus (protein synthesis, identification keys, drug abuse, first aid, fish farming) are left out: Nigerian candidates do not sit them, and no Nigerian paper seen tests them."
   },
   "how_to_use": "Place a question by what a student must know to answer it, not by words in the stem. A question that mentions a leaf but tests osmosis goes under osmosis. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins.",
   "topics": [
-    {"id": "classification", "name": "Classification of Living Things", "part": "Concept of Living", "syllabus": "A.I.1",
-     "subtopics": [
-      {"id": "classification.living-nonliving", "name": "Characteristics of living things", "syllabus": "A.I.1(a)",
-       "covers": "What separates living from non-living things: the characteristics of life."},
-      {"id": "classification.kingdoms", "name": "Classification and naming of organisms", "syllabus": "A.I.1(b)",
-       "covers": "Kingdoms and major groups, taxonomic ranks, binomial naming, and which group an organism belongs to."},
-      {"id": "classification.plants-animals", "name": "Differences between plants and animals", "syllabus": "A.I.1(c)",
-       "covers": "Features that distinguish plants from animals."}]},
-
-    {"id": "organisation", "name": "Organisation of Life", "part": "Concept of Living", "syllabus": "A.I.2-3",
-     "subtopics": [
-      {"id": "organisation.levels", "name": "Levels of organisation", "syllabus": "A.I.2(a)",
-       "covers": "Cell, tissue, organ and system levels, with examples of organisms at each."},
-      {"id": "organisation.complexity", "name": "Complexity of organisation", "syllabus": "A.I.2(b)",
-       "covers": "How complexity increases from single cells to multicellular organisms, and its advantages."},
-      {"id": "organisation.cell-forms", "name": "Forms in which living cells exist", "syllabus": "A.I.3",
-       "covers": "Single and free-living, colony, filament, and cells as part of an organism: Amoeba, Volvox, Spirogyra."}]},
-
-    {"id": "cell", "name": "Cell Structure and Function", "part": "Concept of Living", "syllabus": "A.I.4",
-     "subtopics": [
-      {"id": "cell.components", "name": "Cell components and their functions", "syllabus": "A.I.4(a)",
-       "covers": "Organelles and what each does: nucleus, mitochondria, ribosomes, vacuole, cell wall, chloroplast, membranes."},
-      {"id": "cell.plant-animal", "name": "Plant and animal cells compared", "syllabus": "A.I.4(b)",
-       "covers": "Structures found in one kind of cell and not the other."},
-      {"id": "cell.division", "name": "Cell division: mitosis and meiosis", "syllabus": "A.I.6(d)(i), B cell cycle",
-       "covers": "Stages of mitosis and meiosis, the cell cycle, and where and why each division happens."}]},
-
-    {"id": "cell-environment", "name": "The Cell and Its Environment", "part": "Concept of Living", "syllabus": "A.I.5, B cell biology 1",
-     "subtopics": [
-      {"id": "cell-environment.diffusion", "name": "Diffusion", "syllabus": "A.I.5(a)",
-       "covers": "Movement of particles down a concentration gradient, and factors that change its rate."},
-      {"id": "cell-environment.osmosis", "name": "Osmosis and plasmolysis", "syllabus": "A.I.5(b)",
-       "covers": "Water movement across a membrane; hypotonic, isotonic and hypertonic solutions; turgidity, plasmolysis, crenation and haemolysis."},
-      {"id": "cell-environment.active-transport", "name": "Active transport", "syllabus": "A.I.5(c)",
-       "covers": "Movement against a concentration gradient using energy from respiration."},
-      {"id": "cell-environment.endocytosis", "name": "Endocytosis and exocytosis", "syllabus": "B cell biology 1",
-       "covers": "Bulk movement through the membrane: phagocytosis, pinocytosis and exocytosis. Added after 2025 Q11 tested it."}]},
-
-    {"id": "support", "name": "Tissues and Supporting Systems", "part": "Concept of Living", "syllabus": "A.I.7",
-     "subtopics": [
-      {"id": "support.animal-skeleton", "name": "Skeleton and support in animals", "syllabus": "A.I.7(a)",
-       "covers": "Types of skeleton, skeletal materials, bones of the vertebral column and limbs, functions of the skeleton."},
-      {"id": "support.joints-movement", "name": "Joints, muscles and movement", "syllabus": "A.I.7(a)(vi)",
-       "covers": "Types of joint, antagonistic muscles, and how limbs move."},
-      {"id": "support.plant-tissues", "name": "Supporting tissues in plants", "syllabus": "A.I.7(b)",
-       "covers": "Parenchyma, collenchyma, sclerenchyma and xylem as supporting tissues, and where each is found. Xylem and phloem as transport vessels go under transport.plants."}]},
-
-    {"id": "transport", "name": "Transport System", "part": "Concept of Living", "syllabus": "A.I.8",
-     "subtopics": [
-      {"id": "transport.need", "name": "Need for transport", "syllabus": "A.I.8(a)",
-       "covers": "Why large organisms need a transport system: surface area to volume ratio and distance."},
-      {"id": "transport.heart-circulation", "name": "Heart, blood vessels and circulation", "syllabus": "A.I.8(b)(i)",
-       "covers": "Structure of the heart, arteries, veins and capillaries, and single and double circulation."},
-      {"id": "transport.blood", "name": "Blood and its functions", "syllabus": "A.I.8(b)(ii)",
-       "covers": "Composition of blood, what each component does, and the materials blood carries."},
-      {"id": "transport.plants", "name": "Transport in plants", "syllabus": "A.I.8(c)",
-       "covers": "Uptake and movement of water, xylem and phloem as vessels, translocation, and transpiration and the factors affecting it."}]},
-
-    {"id": "respiration", "name": "Respiration and Gaseous Exchange", "part": "Concept of Living", "syllabus": "A.I.9, A.I.6(b)",
-     "subtopics": [
-      {"id": "respiration.cellular", "name": "Aerobic and anaerobic respiration", "syllabus": "A.I.6(b)",
-       "covers": "Energy release in cells, aerobic against anaerobic respiration, products, fermentation and muscle fatigue."},
-      {"id": "respiration.surfaces", "name": "Respiratory surfaces and organs", "syllabus": "A.I.9(a)",
-       "covers": "Body surface, gills, lungs, tracheal system and leaves as surfaces for gaseous exchange, and their features."},
-      {"id": "respiration.mechanism", "name": "Mechanism of gaseous exchange", "syllabus": "A.I.9(b)",
-       "covers": "Breathing movements, how gases are exchanged at a surface, and the role of stomata."}]},
-
-    {"id": "excretion", "name": "Excretion and Homeostasis", "part": "Concept of Living", "syllabus": "A.I.10-11",
-     "subtopics": [
-      {"id": "excretion.organs", "name": "Excretory organs and waste products", "syllabus": "A.I.10, A.I.6(c)",
-       "covers": "Waste products of metabolism and the organs that remove them, in animals, plants and single cells."},
-      {"id": "excretion.kidney", "name": "The kidney", "syllabus": "A.I.11(a)",
-       "covers": "Kidney structure, the nephron, how urine is formed, water balance, and kidney disease."},
-      {"id": "excretion.liver", "name": "The liver", "syllabus": "A.I.11(b)",
-       "covers": "Liver functions, including making bile, deamination and storage."},
-      {"id": "excretion.skin", "name": "The skin and temperature control", "syllabus": "A.I.11(c)",
-       "covers": "Skin structure and how it regulates body temperature."}]},
-
-    {"id": "coordination", "name": "Nervous and Hormonal Coordination", "part": "Concept of Living", "syllabus": "A.I.12-13",
-     "subtopics": [
-      {"id": "coordination.cns", "name": "The central nervous system", "syllabus": "A.I.13(a)",
-       "covers": "Parts of the brain and their functions, and the spinal cord."},
-      {"id": "coordination.pns", "name": "Peripheral and autonomic nervous system", "syllabus": "A.I.13(b)",
-       "covers": "Somatic and autonomic systems, sympathetic and parasympathetic effects, and types of neurone."},
-      {"id": "coordination.reflex", "name": "Reflex and voluntary actions", "syllabus": "A.I.13(c)",
-       "covers": "The reflex arc, reflex against voluntary action, and conditioned reflexes."},
-      {"id": "coordination.hormones", "name": "Animal hormones and endocrine glands", "syllabus": "A.I.12(a)",
-       "covers": "Endocrine glands, the hormones they make, their effects, and deficiency or excess."}]},
-
-    {"id": "sense-organs", "name": "Sense Organs", "part": "Concept of Living", "syllabus": "A.I.14, C sense organs",
-     "subtopics": [
-      {"id": "sense-organs.eye", "name": "The eye", "syllabus": "A.I.14(a)",
-       "covers": "Structure of the eye, how it forms an image, accommodation, and eye defects and their correction."},
-      {"id": "sense-organs.ear", "name": "The ear", "syllabus": "A.I.14(b)",
-       "covers": "Structure of the ear, hearing and balance."},
-      {"id": "sense-organs.others", "name": "Nose, tongue and skin", "syllabus": "C, sense organs",
-       "covers": "Smell, taste and touch receptors."}]},
-
-    {"id": "plant-response", "name": "Plant Hormones and Responses", "part": "Concept of Living", "syllabus": "A.I.12(b), A.I.6(d)(v)",
-     "subtopics": [
-      {"id": "plant-response.hormones", "name": "Plant hormones", "syllabus": "A.I.12(b)",
-       "covers": "Auxins, gibberellins, cytokinins, abscisic acid and ethylene, and their effects."},
-      {"id": "plant-response.tropisms", "name": "Tropisms and nastic responses", "syllabus": "A.I.6(d)(v)",
-       "covers": "Growth responses to light, gravity, water and touch, and nastic movements."}]},
-
-    {"id": "reproduction", "name": "Reproduction", "part": "Concept of Living", "syllabus": "A.I.6(g), A.I reproduction",
-     "subtopics": [
-      {"id": "reproduction.asexual", "name": "Asexual reproduction", "syllabus": "A.I.6(g)(i)",
-       "covers": "Fission, budding, spore formation and vegetative propagation."},
-      {"id": "reproduction.human", "name": "Human reproduction", "syllabus": "reproduction (a)(i)-(v)",
-       "covers": "Male and female reproductive systems, gametes, fertilisation, development of the embryo, and birth control."},
-      {"id": "reproduction.animals-compared", "name": "Reproduction in animals compared", "syllabus": "reproduction (c), C courtship",
-       "covers": "Reproduction across animal groups, internal against external fertilisation, and courtship."},
-      {"id": "reproduction.flowers", "name": "Flowers and pollination", "syllabus": "reproduction (d)-(e)",
-       "covers": "Floral parts and their arrangement, types and agents of pollination, and placentation."},
-      {"id": "reproduction.fruits-seeds", "name": "Fertilisation, fruits and seed dispersal", "syllabus": "reproduction (f)-(h)",
-       "covers": "Fertilisation in flowering plants, types and structure of fruits, and agents of dispersal."}]},
-
-    {"id": "growth", "name": "Growth and Development", "part": "Concept of Living", "syllabus": "A.I.6(d)-(e)",
-     "subtopics": [
-      {"id": "growth.germination", "name": "Germination", "syllabus": "A.I.6(d)",
-       "covers": "Conditions for germination, epigeal and hypogeal germination, and seed structure."},
-      {"id": "growth.growth", "name": "Growth and its measurement", "syllabus": "A.I.6(d)(ii)-(iii)",
-       "covers": "Aspects of growth, regions of fastest growth, and how growth is measured."},
-      {"id": "growth.metamorphosis", "name": "Metamorphosis and life histories", "syllabus": "reproduction (b)",
-       "covers": "Complete and incomplete metamorphosis, nymphs and larvae, and life cycles of insects and other animals."}]},
-
-    {"id": "plant-nutrition", "name": "Plant Nutrition", "part": "Plant and Animal Nutrition", "syllabus": "A.II.1",
-     "subtopics": [
-      {"id": "plant-nutrition.photosynthesis", "name": "Photosynthesis", "syllabus": "A.II.1(a)",
-       "covers": "The process, light and dark reactions, materials and conditions, limiting factors, and experimental evidence."},
-      {"id": "plant-nutrition.leaf", "name": "Leaf structure", "syllabus": "A.II.1(a), B leaf morphology",
-       "covers": "External parts of a leaf (apex, margin, lamina, midrib, veins, petiole) and its internal tissues. The leaf is placed here as the organ of photosynthesis."},
-      {"id": "plant-nutrition.minerals", "name": "Mineral nutrition", "syllabus": "A.II.1(b)",
-       "covers": "Macro and micro nutrients, their uses and deficiency symptoms, and the soil and air as sources."}]},
-
-    {"id": "animal-nutrition", "name": "Animal Nutrition", "part": "Plant and Animal Nutrition", "syllabus": "A.II.2",
-     "subtopics": [
-      {"id": "animal-nutrition.food-classes", "name": "Food classes and balanced diet", "syllabus": "A.II.2(a)-(b)",
-       "covers": "Classes of food, their sources and uses, a balanced diet, and deficiency diseases."},
-      {"id": "animal-nutrition.food-tests", "name": "Food tests", "syllabus": "A.II.2(c)",
-       "covers": "Tests for starch, sugars, protein and fat, and what a positive result looks like."},
-      {"id": "animal-nutrition.enzymes", "name": "Digestive enzymes", "syllabus": "A.II.2(d)",
-       "covers": "Each enzyme, what it acts on, what it produces, where it acts, and the conditions it needs. Sorting rule: a question about what an enzyme does or where it works goes here, not under alimentary."},
-      {"id": "animal-nutrition.modes", "name": "Modes of nutrition", "syllabus": "A.II.2(e)",
-       "covers": "Autotrophic, holozoic, parasitic, saprophytic and symbiotic nutrition."},
-      {"id": "animal-nutrition.alimentary", "name": "The alimentary system", "syllabus": "A.II.2(f)",
-       "covers": "Organs of the gut and associated glands, their structure, and what happens in each region. Sorting rule: a question about an organ's structure or role goes here; one about an enzyme's action goes under enzymes."},
-      {"id": "animal-nutrition.teeth", "name": "Teeth and dental formula", "syllabus": "A.II.2(g)",
-       "covers": "Types of teeth, their structure and functions, and dental formulae of herbivores, carnivores and humans."},
-      {"id": "animal-nutrition.feeding", "name": "Feeding mechanisms", "syllabus": "A.II.2(h), C feeding habits",
-       "covers": "How protozoa, insects and mammals feed, and feeding habits."}]},
-
-    {"id": "ecosystem", "name": "Ecosystems and Habitats", "part": "Basic Ecological Concepts", "syllabus": "A.III.1, C habitats",
-     "subtopics": [
-      {"id": "ecosystem.components", "name": "Components of an ecosystem and ecological terms", "syllabus": "A.III.1",
-       "covers": "Biotic and abiotic components, and the terms population, community, habitat, niche, biosphere and ecosystem."},
-      {"id": "ecosystem.habitats", "name": "Habitats", "syllabus": "C, habitats",
-       "covers": "Aquatic habitats (marine, estuarine, freshwater) and terrestrial habitats, and the organisms typical of each."}]},
-
-    {"id": "ecological-factors", "name": "Ecological Factors", "part": "Basic Ecological Concepts", "syllabus": "A.III.2-3",
-     "subtopics": [
-      {"id": "ecological-factors.physical", "name": "Climatic, topographic and gaseous factors", "syllabus": "A.III.2(a)",
-       "covers": "Temperature, light, rainfall, humidity, wind, altitude, slope and gases, and their effect on where organisms live."},
-      {"id": "ecological-factors.edaphic", "name": "Soil (edaphic) factors", "syllabus": "A.III.2(b)",
-       "covers": "Soil composition, texture, water content, pH and air."},
-      {"id": "ecological-factors.measurement", "name": "Measuring ecological factors", "syllabus": "A.III.3",
-       "covers": "Instruments and methods for measuring temperature, humidity, light, turbidity, salinity, pH and rainfall, such as the Secchi disc, hygrometer and rain gauge."}]},
-
-    {"id": "energy-flow", "name": "Food Chains and Energy Flow", "part": "Basic Ecological Concepts", "syllabus": "A.III.4-5",
-     "subtopics": [
-      {"id": "energy-flow.producers-consumers", "name": "Producers, consumers and decomposers", "syllabus": "A.III.4(a)",
-       "covers": "Autotrophs and heterotrophs, the trophic roles, and decomposition in nature."},
-      {"id": "energy-flow.chains-webs", "name": "Food chains and food webs", "syllabus": "A.III.4(b)",
-       "covers": "Constructing and reading food chains and webs, and the effect of removing an organism."},
-      {"id": "energy-flow.pyramids", "name": "Ecological pyramids", "syllabus": "A.III.4(c)(ii)",
-       "covers": "Pyramids of numbers, biomass and energy: constructing them and explaining their shapes. Sorting rule: a question about a pyramid's shape or construction goes here."},
-      {"id": "energy-flow.energy", "name": "Energy transfer and loss", "syllabus": "A.III.5, C energy transformation",
-       "covers": "How energy passes between trophic levels and how much is lost at each step. Sorting rule: a question about the amount of energy transferred or lost goes here, even if it mentions a pyramid."}]},
-
-    {"id": "nutrient-cycles", "name": "Nutrient Cycling", "part": "Basic Ecological Concepts", "syllabus": "C, nutrient cycling",
-     "subtopics": [
-      {"id": "nutrient-cycles.carbon", "name": "Carbon cycle", "syllabus": "C, nutrient cycling (a)",
-       "covers": "Movement of carbon through photosynthesis, respiration, decay and combustion."},
-      {"id": "nutrient-cycles.water", "name": "Water cycle", "syllabus": "C, nutrient cycling",
-       "covers": "Evaporation, transpiration, condensation and precipitation."},
-      {"id": "nutrient-cycles.nitrogen", "name": "Nitrogen cycle", "syllabus": "C, nitrogen cycle",
-       "covers": "Nitrogen fixation, nitrification, denitrification and the bacteria involved."}]},
-
-    {"id": "associations", "name": "Biological Associations", "part": "Basic Ecological Concepts", "syllabus": "A.III.6(a), C adaptation for survival",
-     "subtopics": [
-      {"id": "associations.symbiosis", "name": "Symbiosis and mutualism", "syllabus": "A.III.6(a)",
-       "covers": "Associations in which both organisms benefit."},
-      {"id": "associations.parasitism", "name": "Parasitism and commensalism", "syllabus": "A.III.6(a)",
-       "covers": "Associations in which one benefits and the other is harmed, or unaffected."},
-      {"id": "associations.competition", "name": "Competition and predation", "syllabus": "C, adaptation for survival (a)-(b)",
-       "covers": "Factors that bring about competition, intra and inter-species competition, and predator and prey."}]},
-
-    {"id": "population", "name": "Population Ecology", "part": "Basic Ecological Concepts", "syllabus": "A.III.7, C population studies",
-     "subtopics": [
-      {"id": "population.growth", "name": "Population size and growth", "syllabus": "A.III.7",
-       "covers": "Factors that change population size, growth curves and carrying capacity. Sorting rule: a question about why a population changes goes here."},
-      {"id": "population.succession", "name": "Ecological succession", "syllabus": "A.III.7(a)",
-       "covers": "Primary and secondary succession, pioneer species and climax communities."},
-      {"id": "population.sampling", "name": "Estimating population size", "syllabus": "C, population studies by sampling",
-       "covers": "Quadrats, transects, capture and recapture, density, frequency and abundance. Sorting rule: a question about how a population is counted or measured goes here."}]},
-
-    {"id": "microorganisms", "name": "Microorganisms and Health", "part": "Basic Ecological Concepts", "syllabus": "A.III.8, C microorganisms",
-     "subtopics": [
-      {"id": "microorganisms.types", "name": "Microorganisms around us", "syllabus": "C, microorganisms (a)",
-       "covers": "Bacteria, viruses, fungi and protozoa, their structure and where they are found."},
-      {"id": "microorganisms.disease", "name": "Disease, its transmission and control", "syllabus": "A.III.8(a)",
-       "covers": "How diseases spread, carriers and vectors, common diseases, and controlling harmful microorganisms by heat, chemicals and ultraviolet light."},
-      {"id": "microorganisms.immunity", "name": "Immunity and vaccination", "syllabus": "A.III.8",
-       "covers": "Natural and artificial immunity, antibodies, and vaccines."},
-      {"id": "microorganisms.useful", "name": "Useful microorganisms", "syllabus": "A.III.8",
-       "covers": "Microorganisms in food production, industry, decay and nitrogen fixation."}]},
-
-    {"id": "conservation", "name": "Conservation and Pollution", "part": "Conservation of Natural Resources", "syllabus": "A.IV, A.III.6(c)-(d)",
-     "subtopics": [
-      {"id": "conservation.resources", "name": "Resources to be conserved", "syllabus": "A.IV.1",
-       "covers": "Soil, water, wildlife, forests and minerals as resources, renewable and non-renewable."},
-      {"id": "conservation.methods", "name": "Ways of ensuring conservation", "syllabus": "A.IV.2",
-       "covers": "Reserves, national parks, laws, afforestation, recycling and conservation agencies."},
-      {"id": "conservation.pollution", "name": "Pollution", "syllabus": "A.III.6(c)-(d)",
-       "covers": "Pollution of air, water and soil, its sources and effects, and noise. The syllabus places this under ecological management."}]},
-
-    {"id": "variation", "name": "Variation in Population", "part": "Variation", "syllabus": "A.V, C applications",
-     "subtopics": [
-      {"id": "variation.types", "name": "Continuous and discontinuous variation", "syllabus": "A.V",
-       "covers": "Variation that grades smoothly (height, weight) against variation in distinct classes (blood group, tongue rolling). Added after 2025 Q41 fell across two subtopics."},
-      {"id": "variation.morphological", "name": "Morphological variation", "syllabus": "A.V.1",
-       "covers": "Differences in visible features: height, colour, fingerprints, shape. Sorting rule: when a question asks whether a trait is continuous or discontinuous, use variation.types."},
-      {"id": "variation.physiological", "name": "Physiological variation", "syllabus": "A.V.2",
-       "covers": "Differences in body function: tongue rolling, tasting, blood group."},
-      {"id": "variation.applications", "name": "Uses of variation: crime detection, transfusion, paternity", "syllabus": "C, applications of variation",
-       "covers": "Fingerprints and blood groups used in crime detection, blood transfusion and paternity."}]},
-
-    {"id": "genetics", "name": "Genetics and Heredity", "part": "Biology of Heredity", "syllabus": "A.VI, B cell biology 2-4",
-     "subtopics": [
-      {"id": "genetics.terminology", "name": "Genetic terminology", "syllabus": "A.VI.1",
-       "covers": "Gene, allele, genotype, phenotype, dominant, recessive, homozygous and heterozygous."},
-      {"id": "genetics.mendel", "name": "Mendel's laws, crosses and ratios", "syllabus": "A.VI.2, A.VI.4",
-       "covers": "Mendel's laws, monohybrid crosses, Punnett squares, and the ratios and probabilities they give. Probability was merged here: the syllabus does not require probability as a separate calculation, and every cross ends in one."},
-      {"id": "genetics.chromosomes", "name": "Chromosomes, DNA and replication", "syllabus": "A.VI.3, B cell biology 2-3",
-       "covers": "Chromosome structure and number, genes on chromosomes, and DNA structure and replication. Tested in 2025 Q45 and Q46."},
-      {"id": "genetics.sex-linkage", "name": "Sex determination, linkage and sex-linked traits", "syllabus": "A.VI.5",
-       "covers": "How sex is determined, linkage, and sex-linked traits such as haemophilia and colour blindness."},
-      {"id": "genetics.applications", "name": "Applications of heredity", "syllabus": "A.VI.6",
-       "covers": "Heredity in agriculture and medicine, genetic disorders, mutation, and blood group inheritance."}]},
-
-    {"id": "adaptation", "name": "Adaptation for Survival", "part": "Adaptation and Evolution", "syllabus": "A.VII.1, C adaptation",
-     "subtopics": [
-      {"id": "adaptation.behavioural", "name": "Behavioural adaptation in social animals", "syllabus": "A.VII.1",
-       "covers": "Social organisation in termites, bees and ants, and castes."},
-      {"id": "adaptation.structural", "name": "Structural adaptation", "syllabus": "C, structural adaptation",
-       "covers": "Structures adapted for obtaining food, protection, securing mates and surviving harsh conditions."},
-      {"id": "adaptation.colouration", "name": "Adaptive colouration", "syllabus": "C, adaptive colouration",
-       "covers": "Camouflage, warning colouration and mimicry."}]},
-
-    {"id": "evolution", "name": "Evolution", "part": "Adaptation and Evolution", "syllabus": "A.VII.2",
-     "subtopics": [
-      {"id": "evolution.evidence", "name": "Evidence of evolution", "syllabus": "A.VII.2(a)",
-       "covers": "Fossils, comparative anatomy, embryology and geographical distribution."},
-      {"id": "evolution.theories", "name": "Theories of evolution and natural selection", "syllabus": "A.VII.2",
-       "covers": "Lamarck's use and disuse and inheritance of acquired characters, Darwin's natural selection, and speciation. Natural selection was merged here because Darwin's theory is natural selection."}]},
-
-    {"id": "practical", "name": "Practical Biology", "part": "Practical and Applied", "syllabus": "B skills, practical",
-     "subtopics": [
-      {"id": "practical.lab", "name": "Laboratory techniques and safety", "syllabus": "practical",
-       "covers": "Handling apparatus and specimens, preserving, and laboratory safety."},
-      {"id": "practical.microscope", "name": "The microscope", "syllabus": "B.5",
-       "covers": "Parts of the microscope, how to use it, and magnification."},
-      {"id": "practical.drawing", "name": "Biological drawing", "syllabus": "B.6",
-       "covers": "Rules of biological drawing, labelling and magnification of a drawing."},
-      {"id": "practical.experiments", "name": "Experiments and data handling", "syllabus": "practical",
-       "covers": "Experimental design, controls, reading tables and graphs, and drawing conclusions."}]},
-
-    {"id": "applied", "name": "Biology in Agriculture and Industry", "part": "Practical and Applied", "syllabus": "C relevance to agriculture, biotechnology",
-     "subtopics": [
-      {"id": "applied.plant-life-cycles", "name": "Classifying plants by life span", "syllabus": "C, relevance of biology to agriculture (a)",
-       "covers": "Annuals, biennials and perennials. Split out after 2025 Q20 was hidden inside a broad agriculture label."},
-      {"id": "applied.agriculture", "name": "Biology and agriculture", "syllabus": "C, relevance of biology to agriculture",
-       "covers": "Crop improvement, pests and their control, and farming practices."},
-      {"id": "applied.biotechnology", "name": "Biotechnology", "syllabus": "C, biotechnology",
-       "covers": "Genetic engineering, recombinant DNA, and applied uses of microorganisms."}]}
+    {
+      "id": "classification",
+      "name": "Classification of Living Things",
+      "part": "Concept of Living",
+      "syllabus": "A.I.1, JAMB A.2",
+      "subtopics": [
+        {
+          "id": "classification.living-nonliving",
+          "name": "Characteristics of living things",
+          "syllabus": "A.I.1(a)",
+          "covers": "What separates living from non-living things: the characteristics of life.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "classification.kingdoms",
+          "name": "Classification and naming of organisms",
+          "syllabus": "A.I.1(b), JAMB A.2",
+          "covers": "Kingdoms and major groups, taxonomic ranks, binomial naming, which group an organism belongs to, and the distinguishing features of each group: bacteria as prokaryotes, algae, mosses, ferns, conifers and flowering plants, and the animal phyla. Sorting rule: a feature that places an organism in a group, including a prokaryote and eukaryote comparison, goes here; the structure, shapes and habitats of bacteria go to microorganisms.types; how an alga, moss or fern reproduces goes to reproduction.lower-organisms; ordering groups from primitive to advanced goes to evolution.trends; which group of organisms feeds in a stated way goes to animal-nutrition.modes.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "classification.plants-animals",
+          "name": "Differences between plants and animals",
+          "syllabus": "A.I.1(c)",
+          "covers": "Features that distinguish plants from animals.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "organisation",
+      "name": "Organisation of Life",
+      "part": "Concept of Living",
+      "syllabus": "A.I.2-3, JAMB B.1(b)",
+      "subtopics": [
+        {
+          "id": "organisation.levels",
+          "name": "Levels of organisation",
+          "syllabus": "A.I.2(a), JAMB B.1(b)",
+          "covers": "Cell, tissue, organ and system levels, with examples of organisms at each, and the arrangement of the main organs in the body of a mammal. Sorting rule: where organs lie relative to one another goes here; the structure or work of one organ goes to that organ's subtopic.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "organisation.complexity",
+          "name": "Complexity of organisation",
+          "syllabus": "A.I.2(b)",
+          "covers": "How complexity increases from single cells to multicellular organisms, and its advantages. Sorting rule: ordering named groups of organisms from simple to advanced goes to evolution.trends, even when the stem speaks of complexity.",
+          "taught_in": []
+        },
+        {
+          "id": "organisation.cell-forms",
+          "name": "Forms in which living cells exist",
+          "syllabus": "A.I.3",
+          "covers": "Single and free-living, colony, filament, and cells as part of an organism: Amoeba, Volvox, Spirogyra. Sorting rule: which form an organism takes, or its size and form, such as Spirogyra as a microscopic filament, goes here, even when the stem uses the word biomass. How a single cell moves or responds goes to cell.properties; how it feeds, excretes or reproduces goes to that process's subtopic; whether an organism such as Plasmodium lives as a parasite goes to associations.parasitism.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "cell",
+      "name": "Cell Structure and Function",
+      "part": "Concept of Living",
+      "syllabus": "A.I.4, A.I.6",
+      "subtopics": [
+        {
+          "id": "cell.components",
+          "name": "Cell components and their functions",
+          "syllabus": "A.I.4(a)",
+          "covers": "The cell theory and its history (Hooke, Dujardin, Schleiden, Schwann), then organelles and what each does: nucleus, mitochondria, ribosomes, vacuole, cell wall, chloroplast, membranes. Sorting rule: how cilia, flagella or cytoplasmic streaming move a cell goes to cell.properties.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "cell.plant-animal",
+          "name": "Plant and animal cells compared",
+          "syllabus": "A.I.4(b)",
+          "covers": "Structures found in one kind of cell and not the other.",
+          "taught_in": []
+        },
+        {
+          "id": "cell.properties",
+          "name": "Movement and irritability in cells",
+          "syllabus": "A.I.6(f), SoW SS1 T1 W10, SoW SS2 T1 W7",
+          "covers": "How single cells and cells in organisms move and respond: cilia, flagella and pseudopodia, cytoplasmic streaming (cyclosis) as in Paramecium, and irritability, a cell's response to light, chemicals and touch. Sorting rule: how a single-celled organism moves or responds goes here, not under organisation.cell-forms or cell.components; growth responses of plants go to plant-response.tropisms.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "cell.division",
+          "name": "Cell division: mitosis and meiosis",
+          "syllabus": "A.I.6(d)(i), B cell cycle",
+          "covers": "Stages of mitosis and meiosis, the cell cycle, and where and why each division happens. Sorting rule: crossing over, and the number of chromosomes in a gamete, zygote or body cell worked out from haploid and diploid numbers, go here; chromosome structure, genes and DNA go to genetics.chromosomes; growth as a whole process of division, enlargement and differentiation goes to growth.growth.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "cell-environment",
+      "name": "The Cell and Its Environment",
+      "part": "Concept of Living",
+      "syllabus": "A.I.5, B cell biology 1",
+      "subtopics": [
+        {
+          "id": "cell-environment.diffusion",
+          "name": "Diffusion",
+          "syllabus": "A.I.5(a)",
+          "covers": "Movement of particles down a concentration gradient, and factors that change its rate.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "cell-environment.osmosis",
+          "name": "Osmosis and plasmolysis",
+          "syllabus": "A.I.5(b)",
+          "covers": "Water movement across a membrane; hypotonic, isotonic and hypertonic solutions; turgidity, plasmolysis, crenation and haemolysis.",
+          "taught_in": []
+        },
+        {
+          "id": "cell-environment.active-transport",
+          "name": "Active transport",
+          "syllabus": "A.I.5(c)",
+          "covers": "Movement against a concentration gradient using energy from respiration.",
+          "taught_in": []
+        },
+        {
+          "id": "cell-environment.endocytosis",
+          "name": "Endocytosis and exocytosis",
+          "syllabus": "B cell biology 1",
+          "covers": "Bulk movement through the membrane: phagocytosis, pinocytosis and exocytosis. Added after 2025 Q11 tested it.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "support",
+      "name": "Tissues and Supporting Systems",
+      "part": "Concept of Living",
+      "syllabus": "A.I.7, JAMB B.1(a)",
+      "subtopics": [
+        {
+          "id": "support.animal-skeleton",
+          "name": "Skeleton and support in animals",
+          "syllabus": "A.I.7(a)",
+          "covers": "Types of skeleton, skeletal materials, bones of the vertebral column and limbs, functions of the skeleton. Sorting rule: naming a bone or a part of a bone, including a surface or process where a muscle attaches, goes here; how muscles move a joint goes to support.joints-movement.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "support.joints-movement",
+          "name": "Joints, muscles and movement",
+          "syllabus": "A.I.7(a)(vi)",
+          "covers": "Types of joint, antagonistic muscles, and how limbs move. Sorting rule: naming a bone or a part of a bone goes to support.animal-skeleton, even when the part is named for the muscle that attaches there.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "support.plant-tissues",
+          "name": "Supporting tissues in plants",
+          "syllabus": "A.I.7(b)",
+          "covers": "Parenchyma, collenchyma, sclerenchyma and xylem as supporting tissues, and where each is found. Xylem and phloem as transport vessels go under transport.plants. Sorting rule: a tissue asked about for its supporting role goes here; the layers and arrangement of a root or stem go to support.plant-organs.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "support.plant-organs",
+          "name": "Roots and stems: form and internal structure",
+          "syllabus": "JAMB B.1(a), SoW plant morphology",
+          "covers": "Tap and fibrous roots, root hairs and the piliferous layer, kinds of stem, modified roots and stems including perennating organs, the internal layers of a root and a stem (cuticle, epidermis, cortex, endodermis, vascular bundles), and monocot and dicot plants compared across root, stem, leaf and seed. Real papers test it (UTME placement sample Q4 and Q62, WAEC sample Q5 and Q35). Sorting rule: a root or stem's form or layers, or a monocot and dicot comparison across organs, goes here; how water enters and moves through a plant goes to transport.plants; one leaf's own parts go to plant-nutrition.leaf; the parts of a seed alone go to growth.germination; a perennating organ used to propagate a plant goes to reproduction.asexual; a tissue's supporting role goes to support.plant-tissues.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Transport System",
+      "part": "Concept of Living",
+      "syllabus": "A.I.8",
+      "subtopics": [
+        {
+          "id": "transport.need",
+          "name": "Need for transport",
+          "syllabus": "A.I.8(a)",
+          "covers": "Why large organisms need a transport system: surface area to volume ratio and distance.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "transport.heart-circulation",
+          "name": "Heart, blood vessels and circulation",
+          "syllabus": "A.I.8(b)(i)",
+          "covers": "Structure of the heart, arteries, veins and capillaries, and single and double circulation. Sorting rule: a named vessel of an organ, such as the renal artery or hepatic portal vein, and what it carries goes here; the organ's own structure and work go to its subtopic, such as excretion.kidney or excretion.liver.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "transport.blood",
+          "name": "Blood and its functions",
+          "syllabus": "A.I.8(b)(ii)",
+          "covers": "Composition of blood, what each component does, and the materials blood carries. Sorting rule: where old red cells are destroyed goes to excretion.liver; blood groups go to variation.applications or genetics.applications, not here.",
+          "taught_in": []
+        },
+        {
+          "id": "transport.plants",
+          "name": "Transport in plants",
+          "syllabus": "A.I.8(c)",
+          "covers": "Uptake and movement of water, xylem and phloem as vessels, translocation, and transpiration and the factors affecting it. Sorting rule: how water enters a root and moves through the plant goes here; where root hairs arise and a root's layers go to support.plant-organs.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "respiration",
+      "name": "Respiration and Gaseous Exchange",
+      "part": "Concept of Living",
+      "syllabus": "A.I.9, A.I.6(b)",
+      "subtopics": [
+        {
+          "id": "respiration.cellular",
+          "name": "Aerobic and anaerobic respiration",
+          "syllabus": "A.I.6(b)",
+          "covers": "Energy release in cells, aerobic against anaerobic respiration, products, fermentation and muscle fatigue.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "respiration.surfaces",
+          "name": "Respiratory surfaces and organs",
+          "syllabus": "A.I.9(a)",
+          "covers": "Body surface, gills, lungs, tracheal system and leaves as surfaces for gaseous exchange, and their features.",
+          "taught_in": [
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "respiration.mechanism",
+          "name": "Mechanism of gaseous exchange",
+          "syllabus": "A.I.9(b)",
+          "covers": "Breathing movements, how gases are exchanged at a surface, and the role of stomata.",
+          "taught_in": [
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "excretion",
+      "name": "Excretion and Homeostasis",
+      "part": "Concept of Living",
+      "syllabus": "A.I.10-11, JAMB B.9(d)",
+      "subtopics": [
+        {
+          "id": "excretion.organs",
+          "name": "Excretory organs and waste products",
+          "syllabus": "A.I.10, A.I.6(c), JAMB B.5",
+          "covers": "Waste products of metabolism and the organs that remove them, in animals, plants and single cells: contractile vacuole, flame cell, nephridium, Malpighian tubule, kidney, stomata and lenticels, and plant excretory products (alkaloids, tannins, gums, resins, latex) with their economic uses. Sorting rule: the kidney's own structure and urine formation go to excretion.kidney.",
+          "taught_in": [
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "excretion.kidney",
+          "name": "The kidney",
+          "syllabus": "A.I.11(a)",
+          "covers": "Kidney structure, the nephron, how urine is formed, water balance, and kidney disease. Sorting rule: the renal artery and vein as vessels, and what they carry, go to transport.heart-circulation; the nephron and urine formation stay here; what homeostasis means goes to excretion.homeostasis.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "excretion.liver",
+          "name": "The liver",
+          "syllabus": "A.I.11(b)",
+          "covers": "Liver functions, including making bile, deamination and storage, the breakdown of old red blood cells by the liver and spleen, and liver diseases such as cirrhosis and hepatitis. Sorting rule: where old red cells are destroyed goes here; red cell structure and work go to transport.blood; the hepatic portal vein as a vessel goes to transport.heart-circulation.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "excretion.skin",
+          "name": "The skin and temperature control",
+          "syllabus": "A.I.11(c)",
+          "covers": "Skin structure and how it regulates body temperature. Sorting rule: what homeostasis means goes to excretion.homeostasis.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "excretion.homeostasis",
+          "name": "Homeostasis",
+          "syllabus": "JAMB B.9(d), SoW SS3 T1 W1",
+          "covers": "The meaning of homeostasis, the internal environment, negative feedback, and which organs take part. Real papers test it (WAEC placement sample Q48). Sorting rule: what homeostasis is, and which organs share in it, goes here; how the kidney balances water goes to excretion.kidney, how the skin controls temperature to excretion.skin, and blood sugar control by insulin and glucagon to coordination.hormones.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "coordination",
+      "name": "Nervous and Hormonal Coordination",
+      "part": "Concept of Living",
+      "syllabus": "A.I.12-13",
+      "subtopics": [
+        {
+          "id": "coordination.cns",
+          "name": "The central nervous system",
+          "syllabus": "A.I.13(a)",
+          "covers": "Parts of the brain and their functions, and the spinal cord.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "coordination.pns",
+          "name": "Peripheral and autonomic nervous system",
+          "syllabus": "A.I.13(b)",
+          "covers": "Somatic and autonomic systems, sympathetic and parasympathetic effects, and types of neurone. Sorting rule: how an impulse is started or crosses a synapse goes to coordination.impulse.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "coordination.impulse",
+          "name": "The nerve impulse and synapse",
+          "syllabus": "A.I.13",
+          "covers": "How a neurone carries an impulse: stimulus threshold, the all-or-none law, the refractory period, and transmission across a synapse. Real papers test it (WAEC placement sample Q26). Sorting rule: how an impulse is started or passed on goes here; the kinds and structure of neurones go to coordination.pns; the path of an impulse round a reflex arc goes to coordination.reflex.",
+          "taught_in": []
+        },
+        {
+          "id": "coordination.reflex",
+          "name": "Reflex and voluntary actions",
+          "syllabus": "A.I.13(c)",
+          "covers": "The reflex arc, reflex against voluntary action, and conditioned reflexes.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "coordination.hormones",
+          "name": "Animal hormones and endocrine glands",
+          "syllabus": "A.I.12(a)",
+          "covers": "Endocrine glands, the hormones they make, their effects, and deficiency or excess.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "sense-organs",
+      "name": "Sense Organs",
+      "part": "Concept of Living",
+      "syllabus": "A.I.14, C sense organs",
+      "subtopics": [
+        {
+          "id": "sense-organs.eye",
+          "name": "The eye",
+          "syllabus": "A.I.14(a)",
+          "covers": "Structure of the eye, how it forms an image, accommodation, and eye defects and their correction.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "sense-organs.ear",
+          "name": "The ear",
+          "syllabus": "A.I.14(b)",
+          "covers": "Structure of the ear, hearing and balance.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "sense-organs.others",
+          "name": "Nose, tongue and skin",
+          "syllabus": "C, sense organs",
+          "covers": "Smell, taste and touch receptors.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "plant-response",
+      "name": "Plant Hormones and Responses",
+      "part": "Concept of Living",
+      "syllabus": "A.I.12(b), A.I.6(d)(iv)-(v)",
+      "subtopics": [
+        {
+          "id": "plant-response.hormones",
+          "name": "Plant hormones",
+          "syllabus": "A.I.12(b), A.I.6(d)(iv)",
+          "covers": "Auxins, gibberellins, cytokinins, abscisic acid and ethylene, their effects, and their influence on growth.",
+          "taught_in": []
+        },
+        {
+          "id": "plant-response.tropisms",
+          "name": "Tropisms and nastic responses",
+          "syllabus": "A.I.6(d)(v)",
+          "covers": "Growth responses to light, gravity, water and touch, and nastic movements.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "reproduction",
+      "name": "Reproduction",
+      "part": "Concept of Living",
+      "syllabus": "A.I.6(g), A.I reproduction",
+      "subtopics": [
+        {
+          "id": "reproduction.asexual",
+          "name": "Asexual reproduction",
+          "syllabus": "A.I.6(g)(i)",
+          "covers": "Fission, budding, spore formation and vegetative propagation. Sorting rule: using a corm, bulb, rhizome or tuber to propagate a plant goes here; identifying the organ by its structure goes to support.plant-organs; spores within the life cycle of a moss or fern go to reproduction.lower-organisms.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "reproduction.lower-organisms",
+          "name": "Sexual reproduction in simple organisms and non-flowering plants",
+          "syllabus": "A.I.6(g)(ii), JAMB A.2",
+          "covers": "The general idea of sexual reproduction by the fusion of gametes, conjugation in Spirogyra and Paramecium, and the life cycles of mosses, ferns and conifers: alternation of generations, spores, and the need for water in fertilisation. Tested in UTME 2015 Q9 and 2018 Q10. Sorting rule: how an alga, moss, fern or conifer reproduces goes here, not under classification.kingdoms; spore formation as a kind of asexual reproduction goes to reproduction.asexual; human gametes and fertilisation go to reproduction.human; animal life histories go to growth.metamorphosis; annuals, biennials and perennials go to applied.plant-life-cycles.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "reproduction.human",
+          "name": "Human reproduction",
+          "syllabus": "reproduction (a)(i)-(v), SoW SS2 T1 W10, SoW SS3 T1 W8",
+          "covers": "Male and female reproductive systems, gametes, fertilisation, development of the embryo, birth control, family planning and reproductive health. Sorting rule: sexually transmitted infections as diseases go to microorganisms.disease.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T3",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "reproduction.animals-compared",
+          "name": "Reproduction in animals compared",
+          "syllabus": "reproduction (c), C courtship, C developing animal",
+          "covers": "Reproduction across animal groups, internal against external fertilisation, care of the young, yolk in eggs and the placenta as adaptations for the developing young, and courtship. Sorting rule: courtship and display behaviour, such as the lizard's gular fold or head nodding, goes here whether the answer is attracting a mate or warning off a rival; a body structure goes to adaptation.structural; territoriality, migration, hibernation and aestivation go to adaptation.behavioural.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "reproduction.flowers",
+          "name": "Flowers and pollination",
+          "syllabus": "reproduction (d)-(e)",
+          "covers": "Floral parts and their arrangement, types and agents of pollination, and placentation.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "reproduction.fruits-seeds",
+          "name": "Fertilisation, fruits and seed dispersal",
+          "syllabus": "reproduction (f)-(h)",
+          "covers": "Fertilisation in flowering plants, types and structure of fruits, and agents of dispersal. Sorting rule: how a seed forms after fertilisation goes here; the parts of a seed, including endospermous and non-endospermous seeds, go to growth.germination.",
+          "taught_in": [
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T1",
+        "SS2 T3",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "growth",
+      "name": "Growth and Development",
+      "part": "Concept of Living",
+      "syllabus": "A.I.6(d)-(e)",
+      "subtopics": [
+        {
+          "id": "growth.germination",
+          "name": "Germination",
+          "syllabus": "A.I.6(d)",
+          "covers": "Conditions for germination, epigeal and hypogeal germination, and seed structure, including endospermous and non-endospermous seeds. Sorting rule: the parts of a seed go here; fruit types, and how a seed forms after fertilisation, go to reproduction.fruits-seeds.",
+          "taught_in": []
+        },
+        {
+          "id": "growth.growth",
+          "name": "Growth and its measurement",
+          "syllabus": "A.I.6(d)(ii)-(iii), A.I.6(e)",
+          "covers": "Growth as cell division, enlargement and differentiation, development, aspects of growth, regions of fastest growth, and how growth is measured. Sorting rule: the stages of mitosis go to cell.division.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "growth.metamorphosis",
+          "name": "Metamorphosis and life histories",
+          "syllabus": "reproduction (b)",
+          "covers": "Complete and incomplete metamorphosis, nymphs and larvae, and life cycles of insects and other animals.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "plant-nutrition",
+      "name": "Plant Nutrition",
+      "part": "Plant and Animal Nutrition",
+      "syllabus": "A.II.1",
+      "subtopics": [
+        {
+          "id": "plant-nutrition.photosynthesis",
+          "name": "Photosynthesis",
+          "syllabus": "A.II.1(a)",
+          "covers": "The process, light and dark reactions, materials and conditions, limiting factors, and experimental evidence. Sorting rule: the process, its conditions and its products go here; which process adds or removes carbon (IV) oxide from the atmosphere goes to nutrient-cycles.carbon; energy change viewed across an ecosystem goes to energy-flow.energy.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "plant-nutrition.leaf",
+          "name": "Leaf structure",
+          "syllabus": "A.II.1(a), B leaf morphology",
+          "covers": "External parts of a leaf (apex, margin, lamina, midrib, veins, petiole) and its internal tissues. The leaf is placed here as the organ of photosynthesis. Sorting rule: a comparison of monocot and dicot plants across several organs goes to support.plant-organs.",
+          "taught_in": []
+        },
+        {
+          "id": "plant-nutrition.minerals",
+          "name": "Mineral nutrition",
+          "syllabus": "A.II.1(b)",
+          "covers": "Macro and micro nutrients, their uses and deficiency symptoms, and the soil and air as sources. Sorting rule: carnivorous plants that trap insects for nitrogen go to animal-nutrition.modes.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "animal-nutrition",
+      "name": "Animal Nutrition",
+      "part": "Plant and Animal Nutrition",
+      "syllabus": "A.II.2",
+      "subtopics": [
+        {
+          "id": "animal-nutrition.food-classes",
+          "name": "Food classes and balanced diet",
+          "syllabus": "A.II.2(a)-(b)",
+          "covers": "Classes of food, their sources and uses, what each is built from (glucose, fructose and sucrose; starch; amino acids; fatty acids and glycerol), a balanced diet, and deficiency diseases. Sorting rule: what a food is built from goes here; what an enzyme breaks it into goes to animal-nutrition.enzymes; how to test for it goes to animal-nutrition.food-tests.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "animal-nutrition.food-tests",
+          "name": "Food tests",
+          "syllabus": "A.II.2(c)",
+          "covers": "Tests for starch, sugars, protein and fat, and what a positive result looks like.",
+          "taught_in": []
+        },
+        {
+          "id": "animal-nutrition.enzymes",
+          "name": "Digestive enzymes",
+          "syllabus": "A.II.2(d)",
+          "covers": "Each enzyme, what it acts on, what it produces, where it acts, and the conditions it needs. Sorting rule: a question about what an enzyme does, or where in the gut the digestion of a named food begins, goes here, even when it is answered by picking a region on a gut diagram; naming or describing the parts of the gut goes under alimentary.",
+          "taught_in": []
+        },
+        {
+          "id": "animal-nutrition.modes",
+          "name": "Modes of nutrition",
+          "syllabus": "A.II.2(e), A.I.6(a), C modes of nutrition",
+          "covers": "Autotrophic (photosynthetic and chemosynthetic), holozoic, parasitic, saprophytic and symbiotic nutrition, with single-celled examples such as Euglena and Amoeba, and carnivorous (insectivorous) plants. Kept under Animal Nutrition so placements already made stay valid. Sorting rule: how an organism obtains its food, or which group of organisms feeds in a stated way, goes here; an organism's place in a food chain as producer, consumer or decomposer goes to energy-flow.producers-consumers; naming an organism as an endoparasite or ectoparasite, or its effect on its host, goes to associations.parasitism; insectivorous plants go here, not under plant-nutrition.minerals.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "animal-nutrition.alimentary",
+          "name": "The alimentary system",
+          "syllabus": "A.II.2(f)",
+          "covers": "Organs of the gut and associated glands, their structure, and what happens in each region. Sorting rule: a question about an organ's structure or role goes here; where the digestion of a named food begins, or an enzyme's action, goes under enzymes, even on a gut diagram.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "animal-nutrition.teeth",
+          "name": "Teeth and dental formula",
+          "syllabus": "A.II.2(g)",
+          "covers": "Types of teeth, their structure and functions, and dental formulae of herbivores, carnivores and humans.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "animal-nutrition.feeding",
+          "name": "Feeding mechanisms",
+          "syllabus": "A.II.2(h), C feeding habits",
+          "covers": "How protozoa, insects and mammals feed, and feeding habits.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "ecosystem",
+      "name": "Ecosystems and Habitats",
+      "part": "Basic Ecological Concepts",
+      "syllabus": "A.III.1, C habitats, JAMB C.1, JAMB C.3-4",
+      "subtopics": [
+        {
+          "id": "ecosystem.components",
+          "name": "Components of an ecosystem and ecological terms",
+          "syllabus": "A.III.1, C ecological components, JAMB C.1",
+          "covers": "Biotic and abiotic components, the lithosphere, hydrosphere and atmosphere, biotic factors such as food, predators and competitors as influences on where organisms live, and the terms population, community, habitat, niche, biosphere and ecosystem. Sorting rule: what a sealed or self-sustaining ecosystem, such as a balanced aquarium, needs goes here; the effect of a named physical factor goes to ecological-factors.physical; an organism's trophic role goes to energy-flow.producers-consumers.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "ecosystem.habitats",
+          "name": "Habitats",
+          "syllabus": "C, habitats, JAMB C.3-4",
+          "covers": "Aquatic habitats (marine, estuarine, freshwater) and terrestrial habitats, including Nigeria's biomes (tropical rainforest, Guinea savanna, Sudan savanna, Sahel and desert, montane highlands) with their climate, plants and animals, and the organisms typical of each. Sorting rule: which organisms and conditions characterise a habitat go here; how a factor such as salinity varies or affects life in a habitat goes to ecological-factors.physical.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T1",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "ecological-factors",
+      "name": "Ecological Factors",
+      "part": "Basic Ecological Concepts",
+      "syllabus": "A.III.2-3, C ecological management, JAMB C.6",
+      "subtopics": [
+        {
+          "id": "ecological-factors.physical",
+          "name": "Climatic, topographic and gaseous factors",
+          "syllabus": "A.III.2(a)",
+          "covers": "Temperature, light, rainfall, humidity, wind, altitude, slope and gases, and in water salinity, turbidity and pH, and their effect on where organisms live. Sorting rule: how a factor varies, or what it does to organisms, goes here, even in a named habitat such as an estuary; the instrument used to measure it goes to ecological-factors.measurement; the range an organism tolerates goes to ecological-factors.tolerance; what a sealed aquarium needs goes to ecosystem.components.",
+          "taught_in": []
+        },
+        {
+          "id": "ecological-factors.edaphic",
+          "name": "Soil (edaphic) factors",
+          "syllabus": "A.III.2(b), JAMB C.6",
+          "covers": "Soil composition, texture, water content, pH and air, and soil fertility: how it is lost (leaching, erosion, over-cropping, burning) and kept up or restored (crop rotation, manuring, fertilisers, contour ridging). Sorting rule: reading a soil condition from a plant's adaptation, such as pneumatophores, goes to adaptation.structural; how a practice changes soil fertility goes here; the wider ecological effects of a farming practice go to applied.agriculture.",
+          "taught_in": []
+        },
+        {
+          "id": "ecological-factors.measurement",
+          "name": "Measuring ecological factors",
+          "syllabus": "A.III.3",
+          "covers": "Instruments and methods for measuring temperature, humidity, light, turbidity, salinity, pH and rainfall, such as the Secchi disc, hygrometer and rain gauge. Sorting rule: the instrument or method goes here; how the factor varies goes to ecological-factors.physical.",
+          "taught_in": []
+        },
+        {
+          "id": "ecological-factors.tolerance",
+          "name": "Tolerance and limiting range",
+          "syllabus": "C, ecological management, SoW SS1 T2 W3",
+          "covers": "The range of a factor within which an organism survives, its minimum, optimum and maximum, and a factor as limiting where an organism can live. Sorting rule: the range an organism tolerates goes here; what a named factor does in general goes to ecological-factors.physical; limiting factors of photosynthesis go to plant-nutrition.photosynthesis.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "energy-flow",
+      "name": "Food Chains and Energy Flow",
+      "part": "Basic Ecological Concepts",
+      "syllabus": "A.III.4-5",
+      "subtopics": [
+        {
+          "id": "energy-flow.producers-consumers",
+          "name": "Producers, consumers and decomposers",
+          "syllabus": "A.III.4(a)",
+          "covers": "Autotrophs and heterotrophs, the trophic roles, and decomposition in nature. Sorting rule: an organism's trophic role goes here; how it obtains its food goes to animal-nutrition.modes; what a sealed aquarium needs goes to ecosystem.components.",
+          "taught_in": [
+            "SS1 T2",
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "energy-flow.chains-webs",
+          "name": "Food chains and food webs",
+          "syllabus": "A.III.4(b)",
+          "covers": "Constructing and reading food chains and webs, and the effect of removing an organism.",
+          "taught_in": []
+        },
+        {
+          "id": "energy-flow.pyramids",
+          "name": "Ecological pyramids",
+          "syllabus": "A.III.4(c)(ii)",
+          "covers": "Pyramids of numbers, biomass and energy: constructing them and explaining their shapes. Sorting rule: a question about a pyramid's shape or construction goes here; a question that uses the word biomass but asks only which organism is smallest goes to organisation.cell-forms.",
+          "taught_in": []
+        },
+        {
+          "id": "energy-flow.energy",
+          "name": "Energy transfer and loss",
+          "syllabus": "A.III.5, C energy transformation",
+          "covers": "Energy transformation in nature (the sun as the source, light to chemical energy in photosynthesis, chemical energy to heat and work in respiration), how energy passes between trophic levels, and how much is lost at each step. Sorting rule: a question about the amount of energy transferred or lost, or the forms energy takes as it moves through an ecosystem, goes here, even if it mentions a pyramid; the steps of photosynthesis itself go to plant-nutrition.photosynthesis.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "nutrient-cycles",
+      "name": "Nutrient Cycling",
+      "part": "Basic Ecological Concepts",
+      "syllabus": "C, nutrient cycling",
+      "subtopics": [
+        {
+          "id": "nutrient-cycles.carbon",
+          "name": "Carbon cycle",
+          "syllabus": "C, nutrient cycling (a)",
+          "covers": "Movement of carbon through photosynthesis, respiration, decay and combustion. Sorting rule: which process adds or removes carbon (IV) oxide from the atmosphere goes here, even when the answer is photosynthesis.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "nutrient-cycles.water",
+          "name": "Water cycle",
+          "syllabus": "C, nutrient cycling",
+          "covers": "Evaporation, transpiration, condensation and precipitation.",
+          "taught_in": []
+        },
+        {
+          "id": "nutrient-cycles.nitrogen",
+          "name": "Nitrogen cycle",
+          "syllabus": "C, nitrogen cycle",
+          "covers": "Nitrogen fixation, nitrification, denitrification and the bacteria involved, including Rhizobium in root nodules. Sorting rule: nitrogen-fixing bacteria go here, not under microorganisms.useful; a question asking what kind of association a root nodule shows goes to associations.symbiosis.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "associations",
+      "name": "Biological Associations",
+      "part": "Basic Ecological Concepts",
+      "syllabus": "A.III.6(a), C adaptation for survival",
+      "subtopics": [
+        {
+          "id": "associations.symbiosis",
+          "name": "Symbiosis and types of association",
+          "syllabus": "A.III.6(a)",
+          "covers": "Associations in which both organisms benefit (mutualism), and identifying which type of association a named pair shows: mutualism, commensalism, parasitism or saprophytism. Sorting rule: a question that names a pair, such as cattle and egret, and asks for the type of association goes here whatever the answer; questions about parasites themselves go to associations.parasitism.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "associations.parasitism",
+          "name": "Parasites and their hosts",
+          "syllabus": "A.III.6(a)",
+          "covers": "Associations in which one benefits and the other is harmed, or unaffected: parasites and commensals, endoparasites and ectoparasites, their adaptations and their effects on the host. Sorting rule: naming an organism as a parasite, endoparasite or ectoparasite, or saying what it does to its host, goes here, including a single-celled parasite such as Plasmodium; which type of association a named pair shows goes to associations.symbiosis; parasitic nutrition named as a mode goes to animal-nutrition.modes.",
+          "taught_in": []
+        },
+        {
+          "id": "associations.competition",
+          "name": "Competition and predation",
+          "syllabus": "C, adaptation for survival (a)-(b)",
+          "covers": "Factors that bring about competition, intra and inter-species competition, and predator and prey. Sorting rule: the effects of overcrowding on one population go to population.growth; competition as a driver of succession goes to population.succession.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "population",
+      "name": "Population Ecology",
+      "part": "Basic Ecological Concepts",
+      "syllabus": "A.III.7, C population studies, C balance in nature",
+      "subtopics": [
+        {
+          "id": "population.growth",
+          "name": "Population size and growth",
+          "syllabus": "A.III.7, C balance in nature",
+          "covers": "Factors that change population size, growth curves and carrying capacity, the effects of overcrowding, and balance in nature, the dynamic equilibrium of populations. Sorting rule: a question about why a population changes, or what overcrowding does to it, goes here, even when the answer is competition.",
+          "taught_in": [
+            "SS2 T3",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "population.succession",
+          "name": "Ecological succession",
+          "syllabus": "A.III.7(a), C competition and succession",
+          "covers": "Primary and secondary succession, pioneer species, dominance and climax communities, and how competition drives succession. Sorting rule: competition as the cause of one community replacing another goes here; types of competition in general go to associations.competition.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "population.sampling",
+          "name": "Estimating population size",
+          "syllabus": "C, population studies by sampling",
+          "covers": "Quadrats, transects, capture and recapture, density, frequency and abundance. Sorting rule: a question about how a population is counted or measured goes here.",
+          "taught_in": [
+            "SS1 T2",
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "microorganisms",
+      "name": "Microorganisms and Health",
+      "part": "Basic Ecological Concepts",
+      "syllabus": "A.III.8, C microorganisms, C public health, JAMB C.7",
+      "subtopics": [
+        {
+          "id": "microorganisms.types",
+          "name": "Microorganisms around us",
+          "syllabus": "C, microorganisms (a)",
+          "covers": "Bacteria, viruses, fungi and protozoa, their structure and where they are found. Sorting rule: the structure, shapes and habitats of bacteria go here; a feature that places bacteria in Monera, or a prokaryote and eukaryote comparison, goes to classification.kingdoms.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "microorganisms.culturing",
+          "name": "Culturing microorganisms",
+          "syllabus": "SoW SS1 T3 W2-3",
+          "covers": "Preparing culture media, sterilising, inoculating and incubating, and measuring the growth of a culture by colony counts or turbidity. Sorting rule: technique for growing and measuring a culture goes here; general handling of apparatus goes to practical.lab; killing microorganisms to prevent disease goes to microorganisms.disease.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "microorganisms.disease",
+          "name": "Disease, its transmission and control",
+          "syllabus": "A.III.8(a)",
+          "covers": "How diseases spread, carriers and vectors, common diseases, and controlling harmful microorganisms by heat, chemicals and ultraviolet light. Sorting rule: how a disease spreads, or how it or its vector is controlled, goes here; refuse, sewage, sanitation, food hygiene and health organisations go to microorganisms.public-health; methods of keeping food from spoiling go to applied.food-preservation.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "microorganisms.public-health",
+          "name": "Public health and sanitation",
+          "syllabus": "A.III.8(d)(i), C public health, JAMB C.7(b)(ii)",
+          "covers": "Refuse and sewage disposal, sanitation, safe water, food hygiene, and the work of health organisations such as the WHO and local health services. Sorting rule: disposal methods and their health purpose go here; sewage's effect on the life of a river goes to conservation.pollution; how a named disease spreads goes to microorganisms.disease.",
+          "taught_in": []
+        },
+        {
+          "id": "microorganisms.immunity",
+          "name": "Immunity and vaccination",
+          "syllabus": "A.III.8",
+          "covers": "Natural and artificial immunity, antibodies, and vaccines. Sorting rule: agglutination in a blood transfusion goes to variation.applications.",
+          "taught_in": []
+        },
+        {
+          "id": "microorganisms.useful",
+          "name": "Useful microorganisms",
+          "syllabus": "A.III.8",
+          "covers": "Microorganisms in food production, industry and decay. Sorting rule: nitrogen-fixing bacteria go to nutrient-cycles.nitrogen; growing and measuring a culture goes to microorganisms.culturing.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "conservation",
+      "name": "Conservation and Pollution",
+      "part": "Conservation of Natural Resources",
+      "syllabus": "A.IV, A.III.6(c)-(d)",
+      "subtopics": [
+        {
+          "id": "conservation.resources",
+          "name": "Resources to be conserved",
+          "syllabus": "A.IV.1",
+          "covers": "The meaning of conservation, as against preservation and use; soil, water, wildlife, forests and minerals as resources, renewable and non-renewable; and endangered and extinct species. Sorting rule: what conservation means, or which species are endangered, goes here; how resources are conserved goes to conservation.methods.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "conservation.methods",
+          "name": "Ways of ensuring conservation",
+          "syllabus": "A.IV.2",
+          "covers": "Reserves, national parks, laws, afforestation, recycling and conservation agencies. Sorting rule: the meaning of conservation goes to conservation.resources.",
+          "taught_in": []
+        },
+        {
+          "id": "conservation.pollution",
+          "name": "Pollution",
+          "syllabus": "A.III.6(c)-(d)",
+          "covers": "Pollution of air, water and soil, its sources and effects, and noise. The syllabus places this under ecological management. Sorting rule: a pollutant's effect on living things goes here; methods of disposing of refuse and sewage go to microorganisms.public-health; the wider effects of a named farming practice go to applied.agriculture.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "variation",
+      "name": "Variation in Population",
+      "part": "Variation",
+      "syllabus": "A.V, C applications",
+      "subtopics": [
+        {
+          "id": "variation.types",
+          "name": "Continuous and discontinuous variation",
+          "syllabus": "A.V",
+          "covers": "Variation that grades smoothly (height, weight) against variation in distinct classes (blood group, tongue rolling). Added after 2025 Q41 fell across two subtopics. Sorting rule: what causes a trait, inherited or environmental, goes to variation.causes.",
+          "taught_in": []
+        },
+        {
+          "id": "variation.causes",
+          "name": "Causes of variation: inherited and environmental",
+          "syllabus": "A.V, JAMB D.1",
+          "covers": "Whether a trait comes from genes, from the environment (acquired characters), or from both, and why individuals with the same genes can differ. Tested in WAEC 2016 Q41. Sorting rule: what causes a trait or a difference goes here; whether it is continuous or discontinuous goes to variation.types; Lamarck's inheritance of acquired characters as a theory goes to evolution.theories.",
+          "taught_in": []
+        },
+        {
+          "id": "variation.morphological",
+          "name": "Morphological variation",
+          "syllabus": "A.V.1",
+          "covers": "Differences in visible features: height, colour, fingerprints, shape. Sorting rule: when a question asks whether a trait is continuous or discontinuous, use variation.types.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "variation.physiological",
+          "name": "Physiological variation",
+          "syllabus": "A.V.2",
+          "covers": "Differences in body function: tongue rolling, tasting, blood group. Sorting rule: a blood group question goes here only when it asks what kind of variation a blood group is; transfusion goes to variation.applications and inheritance to genetics.applications.",
+          "taught_in": []
+        },
+        {
+          "id": "variation.applications",
+          "name": "Uses of variation: crime detection, transfusion, paternity",
+          "syllabus": "C, applications of variation",
+          "covers": "Fingerprints and blood groups used in crime detection, blood transfusion and paternity. Sorting rule for blood groups: donor and recipient compatibility, universal donor and recipient, and agglutination after transfusion go here; any question answered by a genetic cross, including a paternity cross, goes to genetics.applications; a blood group named as an example of variation goes to variation.physiological.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "genetics",
+      "name": "Genetics and Heredity",
+      "part": "Biology of Heredity",
+      "syllabus": "A.VI, B cell biology 2-4",
+      "subtopics": [
+        {
+          "id": "genetics.terminology",
+          "name": "Genetic terminology",
+          "syllabus": "A.VI.1",
+          "covers": "Gene, allele, genotype, phenotype, dominant, recessive, homozygous and heterozygous, and mutation defined, with gene and chromosome mutation as its kinds. Sorting rule: what a mutation is goes here; a mutation's effects in genetic disorders and breeding go to genetics.applications.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "genetics.mendel",
+          "name": "Mendel's laws, crosses and ratios",
+          "syllabus": "A.VI.2, A.VI.4",
+          "covers": "Mendel's laws, monohybrid crosses, Punnett squares, and the ratios and probabilities they give. Probability was merged here: the syllabus does not require probability as a separate calculation, and every cross ends in one.",
+          "taught_in": []
+        },
+        {
+          "id": "genetics.chromosomes",
+          "name": "Chromosomes, DNA and replication",
+          "syllabus": "A.VI.3, B cell biology 2-3",
+          "covers": "Chromosome structure, the chromosome number of a named species, genes on chromosomes, DNA and RNA structure, their bases and base pairing, and DNA replication. Tested in 2025 Q45 and Q46. Sorting rule: crossing over, and haploid and diploid numbers in gametes and zygotes, go to cell.division.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "genetics.sex-linkage",
+          "name": "Sex determination, linkage and sex-linked traits",
+          "syllabus": "A.VI.5",
+          "covers": "How sex is determined, linkage, and sex-linked traits such as haemophilia and colour blindness.",
+          "taught_in": []
+        },
+        {
+          "id": "genetics.applications",
+          "name": "Applications of heredity",
+          "syllabus": "A.VI.6",
+          "covers": "Heredity in agriculture and medicine, genetic disorders, the effects of mutation, and blood group inheritance. Sorting rule: what a mutation is goes to genetics.terminology. For blood groups, any question answered by a genetic cross, including a paternity cross, goes here; transfusion compatibility and agglutination go to variation.applications; a blood group named as an example of variation goes to variation.physiological.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "adaptation",
+      "name": "Adaptation for Survival",
+      "part": "Adaptation and Evolution",
+      "syllabus": "A.VII.1, C adaptation, JAMB A.3",
+      "subtopics": [
+        {
+          "id": "adaptation.behavioural",
+          "name": "Behavioural adaptation",
+          "syllabus": "A.VII.1, JAMB A.3(c)",
+          "covers": "Behaviour that helps an animal survive: social organisation and castes in termites, bees and ants, migration, hibernation, aestivation, basking and territoriality. Sorting rule: courtship and display behaviour, such as the lizard's gular fold, goes to reproduction.animals-compared; a body structure goes to adaptation.structural.",
+          "taught_in": [
+            "SS2 T1",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "adaptation.structural",
+          "name": "Structural adaptation",
+          "syllabus": "C, structural adaptation",
+          "covers": "Structures adapted for obtaining food, locomotion, protection, securing mates and surviving harsh conditions, and reading a habitat or soil condition from an adaptation, such as pneumatophores showing waterlogged soil. Sorting rule: a body structure goes here; a display behaviour goes to reproduction.animals-compared; soil properties asked for their own sake go to ecological-factors.edaphic.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "adaptation.colouration",
+          "name": "Adaptive colouration",
+          "syllabus": "C, adaptive colouration",
+          "covers": "Camouflage, warning colouration and mimicry.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T1",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "evolution",
+      "name": "Evolution",
+      "part": "Adaptation and Evolution",
+      "syllabus": "A.VII.2, JAMB A.2, JAMB E",
+      "subtopics": [
+        {
+          "id": "evolution.evidence",
+          "name": "Evidence of evolution",
+          "syllabus": "A.VII.2(a), JAMB E.2",
+          "covers": "Fossils, comparative anatomy, embryology, geographical distribution, and genetic studies.",
+          "taught_in": []
+        },
+        {
+          "id": "evolution.theories",
+          "name": "Theories of evolution and natural selection",
+          "syllabus": "A.VII.2",
+          "covers": "Lamarck's use and disuse and inheritance of acquired characters, Darwin's natural selection, the role of mutation, and speciation. Natural selection was merged here because Darwin's theory is natural selection. Sorting rule: ordering groups by advancement goes to evolution.trends.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "evolution.trends",
+          "name": "Evolutionary trends across groups",
+          "syllabus": "JAMB A.2",
+          "covers": "The order of groups from simple to complex and primitive to advanced, such as algae, mosses, ferns, conifers and flowering plants, or Hydra to mammals, and which group is most primitive. Tested in UTME 2021 Q23 and 2025 Q9 and WAEC 2022 Q50. Sorting rule: ordering groups or picking the most primitive goes here, not under classification.kingdoms, organisation.complexity or evolution.theories; the features that place an organism in a group go to classification.kingdoms.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "practical",
+      "name": "Practical Biology",
+      "part": "Practical and Applied",
+      "syllabus": "A introduction, B skills, practical",
+      "subtopics": [
+        {
+          "id": "practical.nature-of-biology",
+          "name": "Biology as a science",
+          "syllabus": "A, introduction 1 and 3",
+          "covers": "What biology is, its branches (botany, zoology, microbiology and others) and specialised fields, its importance in everyday life, and biology-related careers. Sorting rule: the scientific method and report writing go to practical.experiments.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "practical.lab",
+          "name": "Laboratory techniques and safety",
+          "syllabus": "practical",
+          "covers": "Handling apparatus and specimens, preserving, and laboratory safety. Sorting rule: growing and measuring a culture of microorganisms goes to microorganisms.culturing.",
+          "taught_in": []
+        },
+        {
+          "id": "practical.microscope",
+          "name": "The microscope",
+          "syllabus": "A, introduction 5",
+          "covers": "Parts of the microscope, how to use it, and magnification.",
+          "taught_in": []
+        },
+        {
+          "id": "practical.symmetry",
+          "name": "Symmetry, sectioning and orientation",
+          "syllabus": "A, introduction 4",
+          "covers": "Radial and bilateral symmetry, longitudinal, transverse and vertical sections, and orientation terms such as anterior, posterior, dorsal and ventral. Sorting rule: how to draw and label a section goes to practical.drawing; which group of animals shows a kind of symmetry goes to classification.kingdoms.",
+          "taught_in": []
+        },
+        {
+          "id": "practical.drawing",
+          "name": "Biological drawing",
+          "syllabus": "B.6",
+          "covers": "Rules of biological drawing, labelling and magnification of a drawing.",
+          "taught_in": []
+        },
+        {
+          "id": "practical.experiments",
+          "name": "Experiments and data handling",
+          "syllabus": "practical",
+          "covers": "Experimental design, controls, reading tables and graphs, and drawing conclusions.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "applied",
+      "name": "Biology in Agriculture and Industry",
+      "part": "Practical and Applied",
+      "syllabus": "C relevance to agriculture, C.7(e), B biology and industry",
+      "subtopics": [
+        {
+          "id": "applied.plant-life-cycles",
+          "name": "Classifying plants by life span",
+          "syllabus": "C, relevance of biology to agriculture (a)",
+          "covers": "Annuals, biennials and perennials. Split out after 2025 Q20 was hidden inside a broad agriculture label.",
+          "taught_in": []
+        },
+        {
+          "id": "applied.agriculture",
+          "name": "Biology and agriculture",
+          "syllabus": "C, relevance of biology to agriculture, C.7(f)",
+          "covers": "Crop improvement, pests and their control, including the life histories of pests such as weevils and cotton stainers, farming practices, and the effects of practices such as bush burning, tillage, fertilisers and herbicides on the ecosystem. Sorting rule: how a practice changes soil fertility goes to ecological-factors.edaphic; general sources of pollution go to conservation.pollution; methods of storing and preserving food go to applied.food-preservation.",
+          "taught_in": []
+        },
+        {
+          "id": "applied.food-preservation",
+          "name": "Food preservation and storage",
+          "syllabus": "C.7(e)",
+          "covers": "Drying, salting, smoking, cooling and freezing, canning and chemical preservatives, how each stops spoilage, and storing food and grain. Sorting rule: keeping food from spoiling goes here; hygiene in handling food goes to microorganisms.public-health; the life history and control of a storage pest such as the weevil go to applied.agriculture.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "applied.biotechnology",
+          "name": "Biotechnology",
+          "syllabus": "B, biology and industry 5",
+          "covers": "Genetic engineering, recombinant DNA, and applied uses of microorganisms.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    }
   ],
-
-  "legacy_note": "Each of the 106 legacy database topics is folded into a subtopic where its name is specific, or into a parent topic where it is generic. A question moved to a parent is correct but unplaced within it, and is flagged for reclassification rather than guessed into a subtopic.",
+  "legacy_note": "Each of the 106 legacy database topics is folded into a subtopic where its name is specific, or into a parent topic where it is generic. A question moved to a parent is correct but unplaced within it, and is flagged for reclassification rather than guessed into a subtopic. In version 2.2, Homeostasis and Plant morphology and anatomy moved to the new subtopics that now match their names.",
   "legacy_to": {
     "Agricultural practices": "applied.agriculture",
     "Animal nutrition": "animal-nutrition",
@@ -351,7 +1359,7 @@
     "Genetics and inheritance": "genetics",
     "Germination": "growth.germination",
     "Growth and development": "growth",
-    "Homeostasis": "excretion",
+    "Homeostasis": "excretion.homeostasis",
     "Hormonal and nervous coordination": "coordination",
     "Hormonal regulation": "coordination.hormones",
     "Human reproduction": "reproduction.human",
@@ -377,7 +1385,7 @@
     "Phototropism": "plant-response.tropisms",
     "Plant diseases": "microorganisms.disease",
     "Plant hormones": "plant-response.hormones",
-    "Plant morphology and anatomy": "support.plant-tissues",
+    "Plant morphology and anatomy": "support.plant-organs",
     "Plant nutrition": "plant-nutrition",
     "Plant nutrition and photosynthesis": "plant-nutrition.photosynthesis",
     "Plant reproduction": "reproduction.flowers",
@@ -409,7 +1417,6 @@
     "Variation": "variation",
     "Variation and evolution": "variation"
   },
-
   "v1_to_v2": {
     "characteristics-classification": "classification",
     "cell-biology": "cell.components",
@@ -437,5 +1444,6 @@
     "biology-agriculture": "applied.agriculture",
     "practical-biology": "practical",
     "biotechnology": "applied.biotechnology"
-  }
+  },
+  "merged_into": {}
 }

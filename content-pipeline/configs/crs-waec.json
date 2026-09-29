@@ -2,5 +2,15 @@
   "slug": "crs-waec",
   "subject": "Christian Religious Studies",
   "source": "../../Exam Questions/WAEC QUESTIONS/WAEC QUESTIONS/2025-2015 WAEC CRS.docx",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/christian-religious-studies-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/christian-religious-studies-jamb.txt"
+    }
+  ]
 }

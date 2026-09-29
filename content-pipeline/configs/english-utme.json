@@ -4,5 +4,15 @@
   "source": "../../Exam Questions/UTME JAMB Questions/2024 UTME ENGLISH 2024-2015.docx",
   "keep_italic": true,
   "notes": "Italics and underlining both carry meaning here: instructions say \"the word or phrase in italics\" and \"one underlined word and one gap\".",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/english-language-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/english-language-jamb.txt"
+    }
+  ]
 }

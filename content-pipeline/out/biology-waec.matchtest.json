@@ -1,0 +1,227 @@
+{
+  "slug": "biology-waec",
+  "taxonomy_version": "2.2",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.33,
+  "agree_subtopic": 73,
+  "agree_topic": 76,
+  "nofit": 2,
+  "disagreements": [
+    {
+      "year": 2021,
+      "q_number": 6,
+      "stem": "Which of the following statements about the structure labelled II is correct? It",
+      "sonnet": "animal-nutrition.modes",
+      "opus": "microorganisms.types",
+      "notes": [
+        "correct option describes a fungal structure secreting digestive enzymes into the substrate, which is saprophytic nutrition (animal-nutrition.modes) but also a fact about fungus structure (microorganisms.types)",
+        "Rhizoid of a fungus secreting enzymes into the substrate. Fungal structure fits microorganisms.types; the tested idea (extracellular digestion) is saprophytic nutrition under animal-nutrition.modes."
+      ]
+    },
+    {
+      "year": 2025,
+      "q_number": 27,
+      "stem": "The relationship between a bean plant and a Tridax plant on a farmland is",
+      "sonnet": "associations.competition",
+      "opus": "associations.symbiosis",
+      "notes": [
+        "",
+        "The named-pair rule sends it to associations.symbiosis whatever the answer, but the answer is competition, which associations.competition covers. Epiphytism, a distractor, has no home."
+      ]
+    },
+    {
+      "year": 2018,
+      "q_number": 22,
+      "stem": "One major difference between plant and animal nutrition is the ability of plants to synthesize",
+      "sonnet": "animal-nutrition.modes",
+      "opus": "classification.plants-animals",
+      "notes": [
+        "",
+        "A plant and animal difference, but the knowledge is autotrophic against heterotrophic nutrition, which animal-nutrition.modes covers."
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 36,
+      "stem": "The position occupied by each of organisms J, K, L, M and N in the food chain is known as the",
+      "sonnet": "energy-flow.producers-consumers",
+      "opus": "energy-flow.chains-webs",
+      "notes": [
+        "",
+        "The term trophic level. energy-flow.producers-consumers covers trophic roles and energy-flow.chains-webs covers reading chains; neither names trophic level."
+      ]
+    },
+    {
+      "year": 2016,
+      "q_number": 12,
+      "stem": "Lateral meristem in flowering plants is found in the",
+      "sonnet": "support.plant-organs",
+      "opus": "growth.growth",
+      "notes": [
+        "asks where the lateral meristem (cambium) is found; this could equally be filed under growth.growth as a region of fastest growth, and the word meristem appears in neither covers line",
+        "Lateral meristem in the cambium. Meristems are named nowhere; growth.growth (regions of growth) and support.plant-organs (internal layers of a stem) both partly fit."
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 48,
+      "stem": "What is the probability that a pregnancy would result in a male child?",
+      "sonnet": "genetics.mendel",
+      "opus": "genetics.sex-linkage",
+      "notes": [
+        "",
+        "Sex determination by XX and XY fits genetics.sex-linkage; genetics.mendel claims all probability from crosses."
+      ]
+    },
+    {
+      "year": 2017,
+      "q_number": 2,
+      "stem": "The structural similarities in Paramecium and Euglena are in the",
+      "sonnet": "excretion.organs",
+      "opus": "microorganisms.types",
+      "notes": [
+        "",
+        "Body structure of Paramecium and Euglena compared. microorganisms.types covers protozoan structure; organisation.cell-forms covers single free-living cells such as Amoeba. Neither owns whole-organism structure of protists."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "microorganisms.disease / respiration.surfaces",
+        "detail": "A vector-control question that asks why a method kills an insect (oil suffocating mosquito larvae) fits both how a vector is controlled (microorganisms.disease) and the respiratory mechanism that explains the mechanism of death (respiration.surfaces or respiration.mechanism); no sorting rule separates a control method from the physiology it exploits."
+      },
+      {
+        "kind": "overlap",
+        "where": "animal-nutrition.modes / microorganisms.types",
+        "detail": "A fungus-structure question whose correct option describes a feeding mechanism (rhizoid secreting digestive enzymes for saprophytic nutrition) can be filed as either fungus structure (microorganisms.types) or as the nutrition mode itself (animal-nutrition.modes); the two covers lines do not say which wins when a structure question is really testing feeding mode."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "genetics.mendel",
+        "detail": "The covers line names only monohybrid crosses and Punnett squares, but real papers test two-gene dihybrid crosses (e.g. RrTt x rrtt). The id and covers text should say dihybrid crosses belong here too."
+      },
+      {
+        "kind": "overlap",
+        "where": "support.plant-organs / growth.growth",
+        "detail": "A question on where the lateral meristem (cambium) is found does not sit cleanly under either the internal layers of a stem (support.plant-organs) or regions of fastest growth (growth.growth); the word meristem appears in neither covers line."
+      },
+      {
+        "kind": "overlap",
+        "where": "plant-nutrition.photosynthesis / energy-flow.energy",
+        "detail": "The sorting rule sends energy questions viewed across an ecosystem to energy-flow.energy, but that subtopic's own covers line explicitly names light to chemical energy in photosynthesis. A plain question asking what form of energy photosynthesis uses has no ecosystem framing yet is explicitly covered by energy-flow.energy's text, leaving the boundary unclear for the simplest form of this question."
+      },
+      {
+        "kind": "missing",
+        "where": "adaptation",
+        "detail": "No subtopic covers the general definition of adaptation as a term (special modifications that help an organism survive), only its three kinds (structural, behavioural, colouration). A subtopic such as adaptation.meaning, or a line in one of the three, would be needed to place a question that only asks for the definition and distinguishes it from tropism, camouflage or mineral transport."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "conservation.resources",
+        "detail": "The covers line lists soil, water, wildlife, forests and minerals as the resources this subtopic handles, but does not mention air, although sample questions test air directly as a natural resource under this same subtopic (which resource is most readily available, which cannot be conserved)."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "overlap",
+        "where": "associations.symbiosis",
+        "detail": "The named-pair rule sends every what-is-the-relationship question here whatever the answer, so competition (Q11) and predation (Q42) answers land in a subtopic named Symbiosis while associations.competition covers them. Either rename symbiosis to Types of association and list competition and predation in it, or let the answer decide. Epiphytism has no home."
+      },
+      {
+        "kind": "missing",
+        "where": "evolution",
+        "detail": "No subtopic for what organic evolution is (Q25). Add evolution.meaning, or widen evolution.theories to cover the definition."
+      },
+      {
+        "kind": "missing",
+        "where": "adaptation",
+        "detail": "No subtopic for what adaptation means (Q68); every child covers one kind. Add the concept to a child's covers line or add adaptation.meaning."
+      },
+      {
+        "kind": "missing",
+        "where": "growth.growth",
+        "detail": "Meristems (apical, lateral, intercalary), cambium and secondary growth are named nowhere (Q57, Q64). Widen growth.growth and add a rule against support.plant-organs."
+      },
+      {
+        "kind": "overlap",
+        "where": "animal-nutrition.feeding",
+        "detail": "Insect mouthparts (Q53) fit animal-nutrition.feeding and adaptation.structural (structures for obtaining food) equally. No rule on this border."
+      },
+      {
+        "kind": "overlap",
+        "where": "energy-flow.chains-webs",
+        "detail": "The term trophic level (Q52) is named in neither chains-webs nor producers-consumers; both partly fit."
+      },
+      {
+        "kind": "overlap",
+        "where": "energy-flow.energy",
+        "detail": "energy-flow.energy covers light to chemical energy in photosynthesis while plant-nutrition.photosynthesis covers the process; the form of energy used in photosynthesis (Q60) fits both. The existing rule speaks of energy across an ecosystem, which this question is not."
+      },
+      {
+        "kind": "overlap",
+        "where": "conservation.resources",
+        "detail": "A question asking which action counts as conservation (Q46) tests the meaning in resources and the actions in methods. Add a rule."
+      },
+      {
+        "kind": "overlap",
+        "where": "classification.plants-animals",
+        "detail": "Plant against animal nutrition (Q48) is both a plant-animal difference and autotrophic against heterotrophic nutrition in animal-nutrition.modes."
+      },
+      {
+        "kind": "overlap",
+        "where": "animal-nutrition.alimentary",
+        "detail": "The epiglottis and pharynx (Q9) serve both swallowing and breathing; no rule between alimentary and the respiration subtopics."
+      },
+      {
+        "kind": "overlap",
+        "where": "genetics.sex-linkage",
+        "detail": "The probability of a male child (Q75) is sex determination, yet genetics.mendel claims all probabilities. Add a rule that sex ratio goes to sex-linkage."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "genetics.mendel",
+        "detail": "Covers names only monohybrid crosses; dihybrid and test crosses (Q38, Q4 distractors) are unnamed. Codominance (Q34) is named in neither mendel nor terminology."
+      },
+      {
+        "kind": "missing",
+        "where": "transport.plants",
+        "detail": "Wilting (Q13) is named in no covers line and splits between transport.plants and cell-environment.osmosis."
+      },
+      {
+        "kind": "overlap",
+        "where": "microorganisms.types",
+        "detail": "Whole-organism structure of protists such as Paramecium and Euglena (Q80) is spread across microorganisms.types, organisation.cell-forms, cell.properties and excretion.organs, with no rule saying which owns a structural comparison."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "classification.kingdoms",
+        "detail": "The list of groups names bacteria, algae, mosses, ferns, conifers, flowering plants and animal phyla but not fungi or protists, so fungal structure (Q7) falls to microorganisms.types by default and competes with saprophytic nutrition in animal-nutrition.modes."
+      },
+      {
+        "kind": "misplaced",
+        "where": "animal-nutrition.enzymes",
+        "detail": "General enzyme properties such as pH and temperature effects (Q40) are housed under Digestive enzymes. Workable, but the name misleads; say in covers that general enzyme properties belong here."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "support.plant-organs",
+        "detail": "The monocot and dicot comparison lists root, stem, leaf and seed but not the flower, which Q78 tests (floral parts in threes)."
+      }
+    ]
+  }
+}

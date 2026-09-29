@@ -1,0 +1,364 @@
+{
+  "changes": [
+    {
+      "kind": "added",
+      "where": "cell.properties",
+      "evidence": "coverage waec A.6(f) missing (cilia, flagella, cyclosis); coverage sow SS1 T1 W10 missing (growth, irritability and movement); coverage sow SS2 T1 W7 missing (irritability); matchtest biology-waec opus missing at organisation (life processes of unicellular organisms, Q23, Q59); disagreement biology-waec 2018 Q4 (cyclosis in Paramecium, cell.components against organisation.cell-forms)",
+      "change": "Added Movement and irritability in cells under cell, the home the coverage map proposed, since WAEC A.6 treats these as properties of the living cell. Sorting rules added to it, to cell.components and to organisation.cell-forms: movement and response of a single cell go to cell.properties; feeding, excretion and reproduction of a single cell go to their process subtopics."
+    },
+    {
+      "kind": "added",
+      "where": "reproduction.lower-organisms",
+      "evidence": "coverage waec A.6(g)(ii) partial (conjugation, gametogenesis); coverage sow SS2 T1 W9 partial (sexual reproduction as a general concept); matchtest biology-utme opus missing at reproduction (non-flowering plant life cycles, Q23, Q70, Q36); matchtest biology-utme sonnet missing at classification (reproductive features of algae, mosses, ferns); disagreements biology-utme 2015 Q9 (water for fertilisation) and 2018 Q10 (alternation of generation), both split classification.kingdoms against reproduction",
+      "change": "Added Sexual reproduction in simple organisms and non-flowering plants: fusion of gametes, conjugation, alternation of generations, spores, water for fertilisation. Sorting rules against classification.kingdoms, reproduction.asexual, reproduction.human, growth.metamorphosis and applied.plant-life-cycles."
+    },
+    {
+      "kind": "added",
+      "where": "evolution.trends",
+      "evidence": "matchtest biology-utme opus missing at evolution (evolutionary trends across groups, Q33, Q40); matchtest biology-waec opus missing at evolution (algae to angiosperms, Hydra to owl, Q63, Q20); matchtest biology-waec sonnet overlap organisation.complexity / evolution.theories (Q63); disagreements biology-utme 2025 Q9 and 2021 Q23 (classification.kingdoms against evolution) and biology-waec 2022 Q50 (organisation.complexity against evolution)",
+      "change": "Added Evolutionary trends across groups, citing JAMB A.2. Sorting rule in it and in classification.kingdoms, organisation.complexity and evolution.theories: ordering groups or picking the most primitive goes to evolution.trends."
+    },
+    {
+      "kind": "added",
+      "where": "support.plant-organs",
+      "evidence": "matchtest biology-utme sonnet missing at support (cuticle and stem epidermis, q62); matchtest biology-utme opus missing at support.plant-tissues (stem and root structure, modified stems and roots, perennating organs, Q4, Q62); matchtest biology-waec opus missing at support (root and stem types, piliferous layer, Q5, Q35); matchtest biology-waec sonnet missing at classification or organisation (monocot and dicot comparison, Q5, Q11, Q35); coverage jamb B.1(a) note (internal structure of root and stem drawn on by two subtopics)",
+      "change": "Added Roots and stems: form and internal structure under support, including monocot and dicot comparison. Sorting rules in it and in support.plant-tissues, transport.plants, plant-nutrition.leaf and reproduction.asexual. Legacy topic Plant morphology and anatomy moved from support.plant-tissues to support.plant-organs, as the finding says the old home was too narrow."
+    },
+    {
+      "kind": "added",
+      "where": "coordination.impulse",
+      "evidence": "matchtest biology-waec sonnet missing at coordination (threshold, refractory period, all-or-none law, Q26); matchtest biology-waec opus missing at coordination (nerve impulse and synapse, Q26)",
+      "change": "Added The nerve impulse and synapse, stated as tested by a real paper and noted in source.scope_rule. Sorting rules against coordination.pns and coordination.reflex."
+    },
+    {
+      "kind": "added",
+      "where": "variation.causes",
+      "evidence": "matchtest biology-waec sonnet missing at variation (genetic against acquired basis of a trait, Q46); matchtest biology-waec opus missing at variation (causes of variation, Q32, Q46, Q56); disagreement biology-waec 2016 Q41 (variation.types against the parent variation)",
+      "change": "Added Causes of variation: inherited and environmental. Sorting rules in it and in variation.types, with Lamarck's theory sent to evolution.theories."
+    },
+    {
+      "kind": "added",
+      "where": "excretion.homeostasis",
+      "evidence": "matchtest biology-waec opus missing at excretion (no subtopic for the concept of homeostasis, Q48; legacy Homeostasis parked at the parent)",
+      "change": "Added Homeostasis under Excretion and Homeostasis, stated as tested by a real paper. Sorting rules in it and in excretion.kidney and excretion.skin: the concept goes here, each organ's mechanism to its own subtopic. Legacy topic Homeostasis moved from the parent excretion to excretion.homeostasis, since a specific name now has a matching subtopic."
+    },
+    {
+      "kind": "added",
+      "where": "ecological-factors.tolerance",
+      "evidence": "coverage waec C-SecC.5 missing (tolerance, minimum and maximum range); coverage sow SS1 T2 W3 missing (tolerance)",
+      "change": "Added Tolerance and limiting range. Sorting rules in it and in ecological-factors.physical, with photosynthesis limiting factors left under plant-nutrition.photosynthesis."
+    },
+    {
+      "kind": "added",
+      "where": "microorganisms.public-health",
+      "evidence": "coverage waec C.8(d)(i) missing (refuse and sewage disposal); coverage waec C-SecC.8(c) missing (food hygiene and health organisations); coverage jamb C.7(b)(ii) missing (sanitation and sewage)",
+      "change": "Added Public health and sanitation. Sorting rules in it and in microorganisms.disease and conservation.pollution."
+    },
+    {
+      "kind": "added",
+      "where": "microorganisms.culturing",
+      "evidence": "coverage sow SS1 T3 W2 missing (concept of culturing); coverage sow SS1 T3 W3 partial (measuring microbial growth by turbidity)",
+      "change": "Added Culturing microorganisms under microorganisms rather than practical, since the scheme of work teaches it in its microorganism weeks and the two items are one lab skill. Sorting rules in it and in practical.lab, microorganisms.disease and microorganisms.useful."
+    },
+    {
+      "kind": "added",
+      "where": "applied.food-preservation",
+      "evidence": "coverage waec C.7(e) missing (preservation and storage of foods)",
+      "change": "Added Food preservation and storage under applied. Sorting rules in it and in applied.agriculture and microorganisms.disease."
+    },
+    {
+      "kind": "added",
+      "where": "practical.nature-of-biology",
+      "evidence": "coverage waec Intro.1 missing (biology as a science, branches, specialised fields); coverage waec Intro.3 missing (importance of biology, careers)",
+      "change": "Added Biology as a science, holding both introduction items as one body of knowledge. Sorting rule sends the scientific method to practical.experiments."
+    },
+    {
+      "kind": "added",
+      "where": "practical.symmetry",
+      "evidence": "coverage waec Intro.4 missing (body symmetry, sectioning and orientation)",
+      "change": "Added Symmetry, sectioning and orientation. Sorting rules against practical.drawing and classification.kingdoms."
+    },
+    {
+      "kind": "widened",
+      "where": "classification.kingdoms",
+      "evidence": "matchtest biology-utme sonnet missing at classification (features of non-flowering plant groups such as rhizoids, q23, q33, q36, q40, q70)",
+      "change": "Covers now names the distinguishing features of each group, including algae, mosses, ferns, conifers and bacteria as prokaryotes. Reproduction and evolutionary order of those groups were given their own homes (reproduction.lower-organisms, evolution.trends), with sorting rules here."
+    },
+    {
+      "kind": "widened",
+      "where": "organisation.levels",
+      "evidence": "coverage jamb B.1(b) partial (internal structure of a mammal: arrangement of organs)",
+      "change": "Covers now includes the arrangement of the main organs in a mammal's body, with a sorting rule sending one organ's structure to that organ's subtopic."
+    },
+    {
+      "kind": "widened",
+      "where": "growth.growth",
+      "evidence": "coverage waec A.6(e) partial (development: enlargement and differentiation)",
+      "change": "Covers now names growth as cell division, enlargement and differentiation, and development; syllabus reference A.I.6(e) added; sorting rule sends mitosis stages to cell.division."
+    },
+    {
+      "kind": "widened",
+      "where": "plant-response.hormones",
+      "evidence": "coverage waec A.6(d)(iv) partial (influence of growth hormones and auxins filed under A.I.12(b) only)",
+      "change": "Syllabus reference A.I.6(d)(iv) added and covers now names the hormones' influence on growth."
+    },
+    {
+      "kind": "widened",
+      "where": "animal-nutrition.modes",
+      "evidence": "coverage waec A.6(a) partial (nutrition in the living cell, Euglena, Amoeba); coverage waec C-SecB.2 partial (chemosynthetic nutrition, carnivorous plants); matchtest biology-utme opus misplaced at animal-nutrition.modes (insectivorous plants, Q32)",
+      "change": "Covers now names chemosynthetic nutrition, single-celled examples and carnivorous plants, and says it stays under Animal Nutrition to keep placements valid. Sorting rule added here and in plant-nutrition.minerals: insectivorous plants go to modes."
+    },
+    {
+      "kind": "widened",
+      "where": "animal-nutrition.food-classes",
+      "evidence": "matchtest biology-utme sonnet too-narrow at animal-nutrition.food-classes (sucrose as glucose plus fructose, q44); matchtest biology-utme opus too-narrow at animal-nutrition.food-classes (chemistry of food molecules, Q44)",
+      "change": "Covers now names what each food is built from. Sorting rule against animal-nutrition.enzymes and animal-nutrition.food-tests."
+    },
+    {
+      "kind": "widened",
+      "where": "excretion.liver",
+      "evidence": "coverage waec A.11(b) partial (liver disease not named); matchtest biology-utme sonnet missing at excretion.liver (red cell breakdown by liver and spleen, q73); matchtest biology-utme opus overlap at excretion.liver (red cell breakdown, spleen has no home, Q73)",
+      "change": "Covers now names red cell breakdown by the liver and spleen, and liver diseases. Sorting rules here and in transport.blood (where red cells are destroyed goes to the liver) and against transport.heart-circulation for the hepatic portal vein. Stated in source.scope_rule as paper-driven."
+    },
+    {
+      "kind": "widened",
+      "where": "excretion.organs",
+      "evidence": "matchtest biology-utme opus too-narrow at excretion.organs (plant excretory products and their uses, Q1, Q20); coverage jamb B.5(a-c) note (contractile vacuole, flame cell, nephridium, Malpighian tubule not named)",
+      "change": "Covers now names the invertebrate and single-cell excretory structures and plant excretory products with their economic uses. Sorting rule against excretion.kidney."
+    },
+    {
+      "kind": "widened",
+      "where": "genetics.chromosomes",
+      "evidence": "matchtest biology-utme sonnet too-narrow at genetics.chromosomes (RNA base pairing, q19); matchtest biology-utme opus too-narrow at genetics.chromosomes (RNA bases, Q19)",
+      "change": "Covers now names RNA structure, bases and base pairing alongside DNA."
+    },
+    {
+      "kind": "widened",
+      "where": "reproduction.human",
+      "evidence": "coverage sow SS2 T1 W10 missing (reproductive health); coverage sow SS2 T3 W10 missing (family planning); coverage sow SS3 T1 W8 missing (family planning)",
+      "change": "Covers now names family planning and reproductive health, as the coverage map proposed. Sorting rule sends sexually transmitted infections to microorganisms.disease."
+    },
+    {
+      "kind": "widened",
+      "where": "reproduction.animals-compared",
+      "evidence": "coverage waec C-SecA.5(c) missing (adaptive features in a developing animal: yolk, placenta)",
+      "change": "Covers now names care of the young, yolk in eggs and the placenta as adaptations for the developing young."
+    },
+    {
+      "kind": "widened",
+      "where": "ecosystem.components",
+      "evidence": "coverage waec C-SecC.1 partial (lithosphere, hydrosphere, atmosphere); coverage jamb C.1 partial (biotic factors affecting distribution)",
+      "change": "Covers now names the three spheres and biotic factors as influences on where organisms live, with a sorting rule sending a named physical factor to ecological-factors.physical."
+    },
+    {
+      "kind": "widened",
+      "where": "ecosystem.habitats",
+      "evidence": "coverage jamb C.4(a-e) missing (local Nigerian biomes)",
+      "change": "Covers now names Nigeria's biomes as terrestrial habitats rather than adding a subtopic, since they are the same knowledge as terrestrial habitats and a new subtopic would create a border with no question to tell them apart."
+    },
+    {
+      "kind": "widened",
+      "where": "ecological-factors.physical",
+      "evidence": "matchtest biology-waec sonnet too-narrow at ecological-factors.physical (salinity, Q16); matchtest biology-waec opus too-narrow at ecological-factors.physical (salinity and turbidity, Q16); disagreement biology-waec 2019 Q29 (salinity of a brackish habitat, physical against habitats)",
+      "change": "Covers now names salinity, turbidity and pH of water. Sorting rule here and in ecosystem.habitats and ecological-factors.measurement: how a factor varies or acts goes to physical, even in a named habitat."
+    },
+    {
+      "kind": "widened",
+      "where": "ecological-factors.edaphic",
+      "evidence": "coverage jamb C.6(b) partial (soil fertility: loss, renewal, maintenance)",
+      "change": "Covers now names how soil fertility is lost and restored. Sorting rule against applied.agriculture."
+    },
+    {
+      "kind": "widened",
+      "where": "energy-flow.energy",
+      "evidence": "matchtest biology-waec opus misplaced at energy-flow.energy (energy transformation in photosynthesis and ecosystems, Q70, Q71)",
+      "change": "Covers now names energy transformation in nature, matching its C energy transformation reference. Sorting rule here and in plant-nutrition.photosynthesis."
+    },
+    {
+      "kind": "widened",
+      "where": "population.growth",
+      "evidence": "coverage waec C-SecC.6(c) partial (balance in nature); coverage sow SS2 T3 W9 partial (balance in nature)",
+      "change": "Covers now names balance in nature as the dynamic equilibrium of populations."
+    },
+    {
+      "kind": "widened",
+      "where": "population.succession",
+      "evidence": "coverage waec C-SecE.1(c) partial (relationship between competition and succession)",
+      "change": "Covers now names dominance and competition as a driver of succession, with sorting rules here and in associations.competition."
+    },
+    {
+      "kind": "widened",
+      "where": "conservation.resources",
+      "evidence": "matchtest biology-waec sonnet missing at conservation (definition of conservation, Q79); matchtest biology-waec opus missing at conservation (meaning of conservation, endangered and extinct species, Q7, Q79); disagreement biology-waec 2016 Q37 (conservation.methods against the parent conservation)",
+      "change": "Covers now names the meaning of conservation and endangered and extinct species, as the opus finding proposed. Sorting rule here and in conservation.methods."
+    },
+    {
+      "kind": "widened",
+      "where": "adaptation.behavioural",
+      "evidence": "coverage jamb A.3(c) partial (territoriality, hibernation, aestivation); coverage sow SS3 T1 W7 partial (territorial behaviour); matchtest biology-utme sonnet missing at adaptation.behavioural (bird migration, q43); matchtest biology-utme opus too-narrow at adaptation.behavioural (migration, hibernation, territorial display, Q43, Q67)",
+      "change": "Renamed Behavioural adaptation and widened to behaviour for survival generally, with social insects as one case: migration, hibernation, aestivation, basking and territoriality. Courtship display sorted to reproduction.animals-compared."
+    },
+    {
+      "kind": "widened",
+      "where": "adaptation.structural",
+      "evidence": "matchtest biology-waec sonnet too-narrow at adaptation.structural (locomotion structures such as a paddle-shaped foot, Q40)",
+      "change": "Covers now names structures for locomotion."
+    },
+    {
+      "kind": "widened",
+      "where": "applied.agriculture",
+      "evidence": "coverage waec C.7(f)(i) partial (life of weevils and cotton stainers); coverage waec C-SecC.7(b) partial (effects of agricultural practices on ecology)",
+      "change": "Covers now names the life histories of named pests and the ecological effects of farming practices. Sorting rules against ecological-factors.edaphic, conservation.pollution and applied.food-preservation."
+    },
+    {
+      "kind": "widened",
+      "where": "evolution.evidence",
+      "evidence": "coverage jamb E.2 partial (genetic studies and the role of mutation as evidence)",
+      "change": "Evidence covers now names genetic studies; evolution.theories covers now names the role of mutation, matching WAEC G.2(b)."
+    },
+    {
+      "kind": "widened",
+      "where": "practical.microscope",
+      "evidence": "coverage waec Intro.5 note (taxonomy labels this B.5; it is part of Section A for all candidates)",
+      "change": "Syllabus reference corrected to A, introduction 5. Covers unchanged. Logged as widened because the change kinds have no reference-fix kind."
+    },
+    {
+      "kind": "widened",
+      "where": "applied.biotechnology",
+      "evidence": "coverage waec SectionB.industry5 note (labelled C, biotechnology, but the content is Section B Biology and Industry item 5)",
+      "change": "Syllabus reference corrected to B, biology and industry 5. Covers unchanged. Logged as widened because the change kinds have no reference-fix kind."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "associations.symbiosis",
+      "evidence": "matchtest biology-utme sonnet overlap at associations.symbiosis (mutualism against commensalism, q75); matchtest biology-utme opus overlap at associations.symbiosis (cattle and egret, Q75; commensalism hidden in parasitism, Q71); coverage waec C.6(a)-2 note (saprophytism not itemised)",
+      "change": "Took the opus proposal that placement follows the pair named, not the answer: identifying the type of association a named pair shows, including commensalism and saprophytism, goes to associations.symbiosis (renamed Symbiosis and types of association); associations.parasitism (renamed Parasites and their hosts) holds parasites and commensals themselves. Rule written in both."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "nutrient-cycles.nitrogen",
+      "evidence": "matchtest biology-utme sonnet overlap at nutrient-cycles.nitrogen (Rhizobium, q68); matchtest biology-utme opus overlap at nutrient-cycles.nitrogen (nitrogen-fixing bacteria and root nodules, Q68)",
+      "change": "Nitrogen-fixing bacteria, including Rhizobium in root nodules, go to nutrient-cycles.nitrogen; nitrogen fixation removed from microorganisms.useful's list and replaced with the rule; the root nodule as a type of association goes to associations.symbiosis."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "variation.applications",
+      "evidence": "matchtest biology-utme opus overlap at variation.applications (blood groups with four homes, Q80); matchtest biology-waec opus overlap at variation.applications (blood groups, Q50, Q51, Q78)",
+      "change": "One blood group rule written into variation.applications, variation.physiological, genetics.applications, transport.blood and microorganisms.immunity: a question answered by a cross goes to genetics.applications; transfusion compatibility and agglutination go to variation.applications; a blood group as an example of variation goes to variation.physiological."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "transport.heart-circulation",
+      "evidence": "matchtest biology-utme opus overlap at transport.heart-circulation (renal artery, hepatic portal vein, Q17)",
+      "change": "A named vessel of an organ and what it carries goes to transport.heart-circulation; the organ's own structure and work go to its subtopic. Written in heart-circulation, excretion.kidney and excretion.liver."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "classification.kingdoms",
+      "evidence": "matchtest biology-utme opus overlap at classification.kingdoms (prokaryote features of bacteria, Q42)",
+      "change": "A feature that places bacteria in Monera, or a prokaryote and eukaryote comparison, goes to classification.kingdoms; bacterial structure, shapes and habitats go to microorganisms.types. Written in both."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "growth.germination",
+      "evidence": "matchtest biology-utme opus overlap at growth.germination (endospermous seeds, Q13)",
+      "change": "The parts of a seed, including endospermous and non-endospermous seeds, go to growth.germination; fruit types and seed formation after fertilisation go to reproduction.fruits-seeds. Written in both."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "reproduction.animals-compared",
+      "evidence": "matchtest biology-utme opus overlap at reproduction.animals-compared (courtship against securing mates, Q67); disagreement biology-utme 2015 Q24 (lizard gular fold, adaptation.structural against reproduction.animals-compared)",
+      "change": "Courtship and display behaviour, such as the gular fold, goes to reproduction.animals-compared whatever the answer; body structures go to adaptation.structural; territoriality, migration, hibernation and aestivation go to adaptation.behavioural. Written in all three."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "genetics.terminology",
+      "evidence": "matchtest biology-utme opus misplaced at genetics.applications (mutation questions Q6, Q10, Q74 are definitions)",
+      "change": "What a mutation is, and its kinds, goes to genetics.terminology; a mutation's effects in disorders and breeding stay in genetics.applications. Written in both. The legacy topic Mutation effects stays at genetics.applications, which matches the rule."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "associations.parasitism",
+      "evidence": "matchtest biology-waec sonnet overlap organisation.cell-forms / animal-nutrition.modes (Plasmodium, Q14); matchtest biology-waec opus overlap at organisation.cell-forms (free-living pulls Plasmodium from parasitism, Q14); matchtest biology-waec sonnet overlap associations.parasitism / animal-nutrition.modes (endo or ectoparasite, Q67)",
+      "change": "Naming an organism as a parasite, endoparasite or ectoparasite, or its effect on its host, goes to associations.parasitism, including Plasmodium; parasitic nutrition named as a mode goes to animal-nutrition.modes. Written in parasitism, modes and cell-forms."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "animal-nutrition.modes",
+      "evidence": "matchtest biology-waec sonnet overlap animal-nutrition.modes / classification.kingdoms (which group has no autotrophic members, Q69); matchtest biology-waec opus overlap at animal-nutrition.modes (autotrophs and heterotrophs also in energy-flow.producers-consumers, Q69)",
+      "change": "How an organism obtains food, or which group feeds in a stated way, goes to animal-nutrition.modes; an organism's trophic role goes to energy-flow.producers-consumers. Written in modes, producers-consumers and classification.kingdoms."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "ecosystem.components",
+      "evidence": "matchtest biology-waec sonnet overlap ecosystem.components / energy-flow.producers-consumers (sealed aquarium, Q70); disagreement biology-waec 2018 Q30 (air-tight aquarium, ecosystem.components against ecological-factors.physical)",
+      "change": "What a sealed or self-sustaining ecosystem such as a balanced aquarium needs goes to ecosystem.components. Written in components, producers-consumers and ecological-factors.physical."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "support.animal-skeleton",
+      "evidence": "matchtest biology-waec sonnet overlap support.animal-skeleton / support.joints-movement (bone surface for the triceps, Q25)",
+      "change": "Naming a bone or a part of a bone, including a muscle attachment surface, goes to support.animal-skeleton; how muscles move a joint goes to support.joints-movement. Written in both."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "cell.division",
+      "evidence": "matchtest biology-waec opus overlap at cell.division (chromosome number in gametes and zygote, crossing over, Q27, Q74)",
+      "change": "Crossing over and haploid and diploid numbers in gametes, zygotes and body cells go to cell.division; chromosome structure, a species' chromosome number, genes and DNA go to genetics.chromosomes. Written in both."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "population.growth",
+      "evidence": "matchtest biology-waec opus overlap at population.growth (overcrowding, Q21); disagreement biology-waec 2024 Q36 (overcrowded seedlings, associations.competition against population.growth)",
+      "change": "What overcrowding does to a population goes to population.growth, even when the answer is competition; types of competition in general go to associations.competition. Written in both."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "adaptation.structural",
+      "evidence": "matchtest biology-waec opus overlap at adaptation.structural (inferring soil condition from an adaptation, Q12); disagreement biology-waec 2015 Q34 (soil type from a plant, ecological-factors.edaphic against adaptation.structural)",
+      "change": "Reading a habitat or soil condition from an adaptation, such as pneumatophores, goes to adaptation.structural; soil properties asked for their own sake go to ecological-factors.edaphic. Written in both."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "nutrient-cycles.carbon",
+      "evidence": "disagreement biology-waec 2015 Q21 (which process removes carbon (IV) oxide from the atmosphere, plant-nutrition.photosynthesis against nutrient-cycles.carbon)",
+      "change": "Which process adds or removes carbon (IV) oxide from the atmosphere goes to nutrient-cycles.carbon, even when the answer is photosynthesis. Written in carbon and photosynthesis."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "animal-nutrition.enzymes",
+      "evidence": "disagreement biology-waec 2025 Q23 (where enzymatic digestion of protein begins on a gut diagram, alimentary against enzymes)",
+      "change": "The existing rule was sharpened: where in the gut the digestion of a named food begins goes to animal-nutrition.enzymes even when answered from a gut diagram; naming or describing the gut's parts goes to alimentary. Written in both."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "energy-flow.pyramids",
+      "evidence": "matchtest biology-utme sonnet too-narrow at energy-flow.pyramids (biomass of one individual across species, q79); disagreement biology-utme 2016 Q50 (energy-flow.pyramids against organisation.cell-forms)",
+      "change": "A question that uses the word biomass but asks only which organism is smallest goes to organisation.cell-forms, since it tests knowing Spirogyra is a microscopic filament. Written in pyramids and cell-forms. No new subtopic: see not_changed."
+    },
+    {
+      "kind": "widened",
+      "where": "cell.components",
+      "evidence": "coverage map on 2.2: WAEC C.A.1, cell theory (Hooke, Dujardin, Schleiden, Schwann), had no home",
+      "change": "covers line now opens with the cell theory and its history. Applied by the orchestrator after the post-revision coverage map."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "matchtest biology-utme opus misplaced at animal-nutrition.modes, and matchtest biology-waec opus overlap at animal-nutrition.modes: move modes of nutrition to a neutral parent because it covers autotrophs, fungi and parasites",
+      "reason": "Moving it would change its id and every placement already made under it. The finding's alternative, naming carnivorous plants explicitly, was taken, and sorting rules now settle its borders with plant-nutrition.minerals, energy-flow.producers-consumers, classification.kingdoms and associations.parasitism."
+    },
+    {
+      "finding": "matchtest biology-utme sonnet too-narrow at energy-flow.pyramids: comparing the biomass of individual organisms needs a subtopic of its own",
+      "reason": "One question in 160 shows it, and opus showed the word biomass is a lure: the skill is knowing the organism, which organisation.cell-forms holds. A sorting rule was added instead."
+    },
+    {
+      "finding": "coverage notes on covered items: waec A.7(a)(vi) (joints only in the notes column), waec SectionB.6, SectionB.cell1, SectionB.cell2-3, SectionB.cell5 (Ghana-only Section B items), waec C-SecC.4 (also maps to water cycle), and the 'also' notes on jamb B.2, B.3, B.4, B.6, B.7, B.8, B.9, C.2, C.5, D.1, D.2 and sow SS1 T2 W9-10, SS2 T1 W3, SS2 T3 W7, SS3 T2 W3",
+      "reason": "Each item is covered and the note records where else it draws or why it is included; none shows content without a home or a wrong placement."
+    },
+    {
+      "finding": "coverage map on 2.2: five WAEC Section B items marked Ghana only",
+      "reason": "Outside what a Nigerian candidate sits; recorded in source.scope_rule."
+    }
+  ]
+}

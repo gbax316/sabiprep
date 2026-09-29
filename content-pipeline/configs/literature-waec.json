@@ -2,5 +2,19 @@
   "slug": "literature-waec",
   "subject": "Literature in English",
   "source": "../../Exam Questions/2025 WAEC LITERTURE.docx",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/literature-in-english-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/literature-in-english-jamb.txt"
+    },
+    {
+      "exam": "SOW",
+      "path": "../syllabi/literature-in-english-sow.txt"
+    }
+  ]
 }

@@ -2,5 +2,15 @@
   "slug": "government-utme",
   "subject": "Government",
   "source": "../../Exam Questions/UTME JAMB Questions/2025-2016 UTME GOVERNMENT.docx",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/government-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/government-jamb.txt"
+    }
+  ]
 }

@@ -1,1413 +1,3757 @@
 {
-  "sources": {
-    "waec": {
-      "file": "syllabi/biology-waec.txt",
-      "items": 140
-    },
-    "jamb": {
-      "file": "syllabi/biology-jamb.txt",
-      "items": 32
-    },
-    "sow": {
-      "file": "syllabi/biology-sow.txt",
-      "items": 72
-    }
-  },
   "items": [
     {
-      "source": "waec",
-      "ref": "A.1(a)",
-      "text": "Living and non-living things",
+      "source": "wassce",
+      "ref": "A.I.1(a)",
+      "text": "Living and non-living things; viruses as a link",
       "subtopic_id": "classification.living-nonliving",
       "status": "covered",
-      "note": ""
+      "note": "Viruses as a link between living and non-living are not named, but the characteristics of life are.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.1(b)",
-      "text": "Classification into kingdoms: Monera, Protoctista, Fungi, Plantae, Animalia",
+      "source": "wassce",
+      "ref": "A.I.1(b)",
+      "text": "Classification into kingdoms Monera, Protoctista, Fungi, Plantae, Animalia; major phyla, divisions and classes; external features of named animals",
       "subtopic_id": "classification.kingdoms",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.1(c)",
+      "source": "wassce",
+      "ref": "A.I.1(c)",
       "text": "Differences between plants and animals",
       "subtopic_id": "classification.plants-animals",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.2(a)",
-      "text": "Levels of organization: cell, tissue, organ, system",
+      "source": "wassce",
+      "ref": "A.I.2(a)(i)",
+      "text": "Level of organisation: cell (Amoeba, Euglena, Paramecium)",
       "subtopic_id": "organisation.levels",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.2(b)",
-      "text": "Complexity of organization in higher organisms",
-      "subtopic_id": "organisation.complexity",
+      "source": "wassce",
+      "ref": "A.I.2(a)(ii)",
+      "text": "Level of organisation: tissue (Hydra)",
+      "subtopic_id": "organisation.levels",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.3",
-      "text": "Forms in which living cells exist: single, colony, filament, part of an organism",
+      "source": "wassce",
+      "ref": "A.I.2(a)(iii)",
+      "text": "Level of organisation: organ (bulb, rhizome, heart)",
+      "subtopic_id": "organisation.levels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.2(a)(iv)",
+      "text": "Level of organisation: system or organ system",
+      "subtopic_id": "organisation.levels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.2(b)",
+      "text": "Complexity of organisation in higher organisms: advantages and disadvantages",
+      "subtopic_id": "organisation.complexity",
+      "status": "partial",
+      "note": "Covers line names the advantages of complexity only; the disadvantages are not named. Surface area to volume ratio sits in transport.need.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.3(a)",
+      "text": "Single and free-living cells: Amoeba, Paramecium, Euglena, Chlamydomonas",
       "subtopic_id": "organisation.cell-forms",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.4(a)",
+      "source": "wassce",
+      "ref": "A.I.3(b)",
+      "text": "Colony: Volvox",
+      "subtopic_id": "organisation.cell-forms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.3(c)",
+      "text": "Filament: Spirogyra",
+      "subtopic_id": "organisation.cell-forms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.3(d)",
+      "text": "Cells as part of a living organism: cheek cells, onion root tip, epidermis",
+      "subtopic_id": "organisation.cell-forms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.4(a)",
       "text": "Cell structure and functions of cell components",
       "subtopic_id": "cell.components",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.4(b)",
+      "source": "wassce",
+      "ref": "A.I.4(b)",
       "text": "Similarities and differences between plant and animal cells",
       "subtopic_id": "cell.plant-animal",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.5(a)",
+      "source": "wassce",
+      "ref": "A.I.5(a)",
       "text": "Diffusion",
       "subtopic_id": "cell-environment.diffusion",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.5(b)",
-      "text": "Osmosis",
+      "source": "wassce",
+      "ref": "A.I.5(b)",
+      "text": "Osmosis; haemolysis, plasmolysis, turgidity, crenation",
       "subtopic_id": "cell-environment.osmosis",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.5(c)",
+      "source": "wassce",
+      "ref": "A.I.5(c)",
       "text": "Active transport",
       "subtopic_id": "cell-environment.active-transport",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(a)",
-      "text": "Nutrition in the living cell: autotrophic, heterotrophic",
+      "source": "wassce",
+      "ref": "A.I.6(a)(i)",
+      "text": "Autotrophic nutrition (photosynthesis) in Euglena, Chlamydomonas, Spirogyra",
       "subtopic_id": "animal-nutrition.modes",
-      "status": "partial",
-      "note": "covers general modes of nutrition but this item is specifically about unicellular organisms (Euglena, Amoeba); not named in any covers line"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(b)",
-      "text": "Cellular respiration: aerobic, anaerobic, energy release",
+      "source": "wassce",
+      "ref": "A.I.6(a)(ii)",
+      "text": "Heterotrophic (holozoic) nutrition in Amoeba and Paramecium",
+      "subtopic_id": "animal-nutrition.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.6(b)(i)",
+      "text": "Aerobic respiration; glycolysis and Krebs cycle outline, role of ATP",
       "subtopic_id": "respiration.cellular",
       "status": "covered",
-      "note": ""
+      "note": "Glycolysis, the Krebs cycle and ATP are not named but fall within aerobic respiration and energy release.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(c)",
-      "text": "Excretion in single-celled organisms; waste products of metabolism",
+      "source": "wassce",
+      "ref": "A.I.6(b)(ii)",
+      "text": "Anaerobic respiration; importance in food processing",
+      "subtopic_id": "respiration.cellular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.6(b)(iii)",
+      "text": "Energy release",
+      "subtopic_id": "respiration.cellular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.6(c)(i)",
+      "text": "Excretion in single-celled aquatic organisms: body surface and contractile vacuole",
       "subtopic_id": "excretion.organs",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(d)(i)",
-      "text": "Basis of growth: cell division (mitosis), enlargement, differentiation",
-      "subtopic_id": "cell.division",
+      "source": "wassce",
+      "ref": "A.I.6(c)(ii)",
+      "text": "Waste products of metabolism",
+      "subtopic_id": "excretion.organs",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(d)(ii-iii)",
-      "text": "Aspects of growth; regions of fastest growth",
+      "source": "wassce",
+      "ref": "A.I.6(d)(i)",
+      "text": "Basis of growth: cell division, enlargement, differentiation",
       "subtopic_id": "growth.growth",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(d)(iv)",
+      "source": "wassce",
+      "ref": "A.I.6(d)(ii)",
+      "text": "Aspects of growth: dry weight, irreversible increase in size, cell number",
+      "subtopic_id": "growth.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.6(d)(iii)",
+      "text": "Regions of fastest growth in plants",
+      "subtopic_id": "growth.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.6(d)(iv)",
       "text": "Influence of growth hormones and auxins",
       "subtopic_id": "plant-response.hormones",
-      "status": "partial",
-      "note": "content matches plant-response.hormones (auxins) but that subtopic is filed under A.I.12(b), not this item"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(d)(v)",
+      "source": "wassce",
+      "ref": "A.I.6(d)(v)",
       "text": "Growth curvatures (tropisms)",
       "subtopic_id": "plant-response.tropisms",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(e)",
-      "text": "Development: enlargement and differentiation",
+      "source": "wassce",
+      "ref": "A.I.6(e)",
+      "text": "Development: enlargement and differentiation; primary and secondary growth",
       "subtopic_id": "growth.growth",
       "status": "partial",
-      "note": "not explicitly named in growth.growth's covers line"
+      "note": "Development is covered; the processes of primary and secondary growth named in the notes are not.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(f)",
-      "text": "Movement: organelles for movement (cilia, flagella); cyclosis",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic addresses cell movement organelles or cytoplasmic streaming",
-      "proposed": "cell > Movement in cells: cilia, flagella and cyclosis"
+      "source": "wassce",
+      "ref": "A.I.6(f)(i)",
+      "text": "Organelles for movement: cilia and flagella",
+      "subtopic_id": "cell.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(g)(i)",
+      "source": "wassce",
+      "ref": "A.I.6(f)(ii)",
+      "text": "Cyclosis",
+      "subtopic_id": "cell.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.6(g)(i)",
       "text": "Asexual reproduction: fission, budding, vegetative propagation",
       "subtopic_id": "reproduction.asexual",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.6(g)(ii)",
-      "text": "Sexual reproduction: conjugation, gametogenesis, fertilization (basic concept)",
-      "subtopic_id": "reproduction.human",
-      "status": "partial",
-      "note": "reproduction.human covers human gametes/fertilisation but not the general concept of conjugation/gametogenesis in simple organisms"
+      "source": "wassce",
+      "ref": "A.I.6(g)(ii)",
+      "text": "Sexual reproduction: conjugation, gametogenesis, fusion of gametes",
+      "subtopic_id": "reproduction.lower-organisms",
+      "status": "covered",
+      "note": "Meiosis, mentioned in the notes, is in cell.division.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.7(a)(i-v)",
-      "text": "Skeleton and support in animals: types, materials, bones, mechanism of support",
+      "source": "wassce",
+      "ref": "A.I.7(a)(i)",
+      "text": "Biological significance of skeleton and support in animals",
       "subtopic_id": "support.animal-skeleton",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.7(a)(vi)",
-      "text": "Functions of skeleton: protection, support, locomotion, respiratory movement",
-      "subtopic_id": "support.joints-movement",
+      "source": "wassce",
+      "ref": "A.I.7(a)(ii)",
+      "text": "Skeletal materials: bone, cartilage, chitin",
+      "subtopic_id": "support.animal-skeleton",
       "status": "covered",
-      "note": "joints are mentioned only in the syllabus notes column, not as a lettered item"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.7(b)",
-      "text": "Supporting tissues in plants: features and functions",
+      "source": "wassce",
+      "ref": "A.I.7(a)(iii)",
+      "text": "Types of skeleton: exoskeleton, endoskeleton, hydrostatic",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.7(a)(iv)",
+      "text": "Bones of the vertebral column, girdles and long bones",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.7(a)(v)",
+      "text": "Mechanism of support in animals",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "Joints and muscle action from the notes go to support.joints-movement.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.7(a)(vi)",
+      "text": "Functions of skeleton: protection, support, locomotion, respiratory movement",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.7(b)(i)",
+      "text": "Main features of supporting tissues in plants",
       "subtopic_id": "support.plant-tissues",
       "status": "covered",
-      "note": ""
+      "note": "T.S. of stem and root in the notes goes to support.plant-organs.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.8(a)",
-      "text": "Need for transport",
+      "source": "wassce",
+      "ref": "A.I.7(b)(ii)",
+      "text": "Functions of supporting tissues in plants: strength, rigidity, flexibility, resilience",
+      "subtopic_id": "support.plant-tissues",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.8(a)(i)",
+      "text": "Need for transport: surface area to volume ratio",
       "subtopic_id": "transport.need",
       "status": "covered",
-      "note": ""
+      "note": "Media of transport named in the notes (cytoplasm, cell sap, latex, body fluid) are not named in any covers line.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.8(b)(i)",
-      "text": "Structure of heart, arteries, veins, capillaries",
-      "subtopic_id": "transport.heart-circulation",
+      "source": "wassce",
+      "ref": "A.I.8(a)(ii)",
+      "text": "Need for transport: greater distances",
+      "subtopic_id": "transport.need",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.8(b)(ii-iii)",
-      "text": "Composition/function of blood and lymph; materials for transport",
+      "source": "wassce",
+      "ref": "A.I.8(b)(i)",
+      "text": "Structure of heart, arteries, veins, capillaries; general and open circulatory systems",
+      "subtopic_id": "transport.heart-circulation",
+      "status": "partial",
+      "note": "Heart, vessels and single and double circulation are covered; open circulatory systems in invertebrates are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.8(b)(ii)",
+      "text": "Composition and function of blood and lymph",
+      "subtopic_id": "transport.blood",
+      "status": "partial",
+      "note": "Blood is covered; lymph is not named anywhere in the tree.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.8(b)(iii)",
+      "text": "Materials for transport: excretory products, gases, digested food, nutrients",
       "subtopic_id": "transport.blood",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.8(c)(i-iv)",
-      "text": "Transport in plants: uptake, translocation, transpiration, movement to apex",
+      "source": "wassce",
+      "ref": "A.I.8(c)(i)",
+      "text": "Uptake and movement of water and mineral salts in plants",
       "subtopic_id": "transport.plants",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.9(a)",
+      "source": "wassce",
+      "ref": "A.I.8(c)(ii)",
+      "text": "Translocation",
+      "subtopic_id": "transport.plants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.8(c)(iii)",
+      "text": "Transpiration: types, factors, rate",
+      "subtopic_id": "transport.plants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.8(c)(iv)",
+      "text": "Movement of water to the apex of trees and herbs",
+      "subtopic_id": "transport.plants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.9(a)",
       "text": "Respiratory surfaces: body surface, gills, lungs",
       "subtopic_id": "respiration.surfaces",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.9(b)",
-      "text": "Mechanism of gaseous exchange in fish, toad, mammals, plants",
+      "source": "wassce",
+      "ref": "A.I.9(b)",
+      "text": "Mechanisms of gaseous exchange in fish, toad, mammals and plants",
       "subtopic_id": "respiration.mechanism",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.10",
-      "text": "Excretory systems and mechanisms: kidney, stomata, lenticels",
+      "source": "wassce",
+      "ref": "A.I.10",
+      "text": "Excretory systems and mechanisms: kidney, stomata, lenticels; plant excretory products",
       "subtopic_id": "excretion.organs",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.11(a)",
+      "source": "wassce",
+      "ref": "A.I.11(a)",
       "text": "Kidney: structure and functions",
       "subtopic_id": "excretion.kidney",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.11(b)",
+      "source": "wassce",
+      "ref": "A.I.11(b)",
       "text": "Liver: functions",
       "subtopic_id": "excretion.liver",
-      "status": "partial",
-      "note": "liver disease is not named in excretion.liver's covers line"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.11(c)",
-      "text": "The skin: structure and function",
+      "source": "wassce",
+      "ref": "A.I.11(c)",
+      "text": "Skin: structure and function",
       "subtopic_id": "excretion.skin",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.12(a)",
-      "text": "Animal hormones: site, function, effects of over/under secretion",
+      "source": "wassce",
+      "ref": "A.I.12(a)",
+      "text": "Animal hormones: site of secretion, functions, over and under-secretion",
       "subtopic_id": "coordination.hormones",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.12(b)",
+      "source": "wassce",
+      "ref": "A.I.12(b)",
       "text": "Plant hormones",
       "subtopic_id": "plant-response.hormones",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.13(a)",
-      "text": "Central nervous system: components, brain, spinal cord",
+      "source": "wassce",
+      "ref": "A.I.13(a)(i)",
+      "text": "Components of the central nervous system",
       "subtopic_id": "coordination.cns",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.13(b)",
-      "text": "Peripheral nervous system: somatic, autonomic, neurone types",
+      "source": "wassce",
+      "ref": "A.I.13(a)(ii)",
+      "text": "Parts of the brain and their functions",
+      "subtopic_id": "coordination.cns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.13(a)(iii)",
+      "text": "Structure and function of the spinal cord",
+      "subtopic_id": "coordination.cns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.13(b)(i)",
+      "text": "Somatic nervous system",
       "subtopic_id": "coordination.pns",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.13(c)",
-      "text": "Reflex arc; reflex vs voluntary; conditioned reflex",
+      "source": "wassce",
+      "ref": "A.I.13(b)(ii)",
+      "text": "Autonomic nervous system",
+      "subtopic_id": "coordination.pns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.13(b)(iii)",
+      "text": "Structure and functions of the neurone",
+      "subtopic_id": "coordination.pns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.13(b)(iv)",
+      "text": "Classification of neurones",
+      "subtopic_id": "coordination.pns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.13(c)(i)",
+      "text": "The reflex arc",
       "subtopic_id": "coordination.reflex",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.14(a)",
-      "text": "The eye",
+      "source": "wassce",
+      "ref": "A.I.13(c)(ii)",
+      "text": "Reflex and voluntary actions",
+      "subtopic_id": "coordination.reflex",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.13(c)(iii)",
+      "text": "Differences between reflex and voluntary actions",
+      "subtopic_id": "coordination.reflex",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.13(c)(iv)",
+      "text": "Conditioned reflex and its role in behaviour",
+      "subtopic_id": "coordination.reflex",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.14(a)",
+      "text": "Eye: structure and function; defects and corrections",
       "subtopic_id": "sense-organs.eye",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.14(b)",
-      "text": "The ear",
+      "source": "wassce",
+      "ref": "A.I.14(b)",
+      "text": "Ear: structure and function",
       "subtopic_id": "sense-organs.ear",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.15(a)",
-      "text": "Reproductive system of mammals: structure, gametes, fertilization, birth control",
+      "source": "wassce",
+      "ref": "A.I.15(a)(i)",
+      "text": "Structure and function of male and female reproductive systems",
       "subtopic_id": "reproduction.human",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.15(b)",
-      "text": "Metamorphosis and life history of butterfly and cockroach",
+      "source": "wassce",
+      "ref": "A.I.15(a)(ii)",
+      "text": "Differences between male and female reproductive organs",
+      "subtopic_id": "reproduction.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.15(a)(iii)",
+      "text": "Structure of the gametes (sperm and ovum)",
+      "subtopic_id": "reproduction.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.15(a)(iv)",
+      "text": "Fertilisation, development of the embryo and birth",
+      "subtopic_id": "reproduction.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.15(a)(v)",
+      "text": "Birth control",
+      "subtopic_id": "reproduction.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.15(b)",
+      "text": "Metamorphosis in insects: life histories of butterfly and cockroach",
       "subtopic_id": "growth.metamorphosis",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.15(c)",
-      "text": "Comparison of reproduction across fish, amphibian, reptile, bird, mammal",
+      "source": "wassce",
+      "ref": "A.I.15(c)",
+      "text": "Comparison of reproduction in fish, amphibian, reptile, bird and mammal",
       "subtopic_id": "reproduction.animals-compared",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.15(d)",
-      "text": "Reproduction in flowering plants: floral parts",
+      "source": "wassce",
+      "ref": "A.I.15(d)(i)",
+      "text": "Arrangement of floral parts of insect and wind-pollinated flowers",
       "subtopic_id": "reproduction.flowers",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.15(e)",
-      "text": "Pollination: types, features, agents, placentation",
+      "source": "wassce",
+      "ref": "A.I.15(d)(ii)",
+      "text": "Structure and function of male and female parts of a flower",
       "subtopic_id": "reproduction.flowers",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.15(f)",
-      "text": "Fertilization and zygote development in flowering plants",
+      "source": "wassce",
+      "ref": "A.I.15(e)(i)",
+      "text": "Types of pollination",
+      "subtopic_id": "reproduction.flowers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.15(e)(ii)",
+      "text": "Features of cross-pollinated and self-pollinated flowers",
+      "subtopic_id": "reproduction.flowers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.15(e)(iii)",
+      "text": "Agents of pollination",
+      "subtopic_id": "reproduction.flowers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.15(e)(iv)",
+      "text": "Kinds of placentation: axile, marginal, parietal",
+      "subtopic_id": "reproduction.flowers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.I.15(f)",
+      "text": "Development of zygote in flowering plants: fertilisation",
       "subtopic_id": "reproduction.fruits-seeds",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.15(g)",
-      "text": "Types and structure of fruits",
+      "source": "wassce",
+      "ref": "A.I.15(g)(i)",
+      "text": "Types of fruits (classification)",
       "subtopic_id": "reproduction.fruits-seeds",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "A.15(h)",
-      "text": "Dispersal of fruits and seeds: agents",
+      "source": "wassce",
+      "ref": "A.I.15(g)(ii)",
+      "text": "Structure of fruits",
       "subtopic_id": "reproduction.fruits-seeds",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.1(a)",
-      "text": "Photosynthesis: process, light/dark reactions, materials, evidence",
+      "source": "wassce",
+      "ref": "A.I.15(h)",
+      "text": "Dispersal of fruits and seeds: agents of dispersal",
+      "subtopic_id": "reproduction.fruits-seeds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.II.1(a)(i)",
+      "text": "Process of photosynthesis and its chemical equation",
       "subtopic_id": "plant-nutrition.photosynthesis",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.1(b)",
-      "text": "Mineral requirements of plants: macro/micro nutrients",
+      "source": "wassce",
+      "ref": "A.II.1(a)(ii)",
+      "text": "Light and dark reactions",
+      "subtopic_id": "plant-nutrition.photosynthesis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.II.1(a)(iii)",
+      "text": "Materials and conditions necessary for photosynthesis",
+      "subtopic_id": "plant-nutrition.photosynthesis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.II.1(a)(iv)",
+      "text": "Evidence of photosynthesis",
+      "subtopic_id": "plant-nutrition.photosynthesis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.II.1(b)(i)",
+      "text": "Mineral nutrition: macro and micro-nutrients",
       "subtopic_id": "plant-nutrition.minerals",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.2(a)",
+      "source": "wassce",
+      "ref": "A.II.1(b)(ii)",
+      "text": "Soil and atmosphere as sources of mineral elements",
+      "subtopic_id": "plant-nutrition.minerals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.II.2(a)",
       "text": "Food substances: classes and sources",
       "subtopic_id": "animal-nutrition.food-classes",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.2(b)",
-      "text": "Balanced diet and its importance",
+      "source": "wassce",
+      "ref": "A.II.2(b)",
+      "text": "Balanced diet and its importance; malnutrition",
       "subtopic_id": "animal-nutrition.food-classes",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.2(c)",
+      "source": "wassce",
+      "ref": "A.II.2(c)",
       "text": "Food tests",
       "subtopic_id": "animal-nutrition.food-tests",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.2(d)",
-      "text": "Digestive enzymes: classes, characteristics, functions",
+      "source": "wassce",
+      "ref": "A.II.2(d)",
+      "text": "Digestive enzymes: classes, characteristics and functions",
       "subtopic_id": "animal-nutrition.enzymes",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.2(e)",
-      "text": "Modes of nutrition: autotrophic, heterotrophic",
+      "source": "wassce",
+      "ref": "A.II.2(e)(i)",
+      "text": "Autotrophic nutrition: photosynthesis",
       "subtopic_id": "animal-nutrition.modes",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.2(f)",
-      "text": "Alimentary system: tract of different animals",
+      "source": "wassce",
+      "ref": "A.II.2(e)(ii)",
+      "text": "Heterotrophic nutrition: holozoic, parasitic, symbiotic, saprophytic",
+      "subtopic_id": "animal-nutrition.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.II.2(f)",
+      "text": "Alimentary system: alimentary tract of different animals",
       "subtopic_id": "animal-nutrition.alimentary",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.2(g)",
-      "text": "Dental formula",
+      "source": "wassce",
+      "ref": "A.II.2(g)",
+      "text": "Dental formula; arrangement of teeth; importance of dental care in humans",
       "subtopic_id": "animal-nutrition.teeth",
-      "status": "covered",
-      "note": ""
+      "status": "partial",
+      "note": "Teeth and dental formulae are covered; dental care in humans is not named.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "B.2(h)",
+      "source": "wassce",
+      "ref": "A.II.2(h)",
       "text": "Feeding in protozoa and mammals",
       "subtopic_id": "animal-nutrition.feeding",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.1(a-b)",
-      "text": "Ecosystem: ecological components, biotic/abiotic",
+      "source": "wassce",
+      "ref": "A.III.1(a)",
+      "text": "Ecological components: environment, biosphere, habitat, population, community, ecosystem",
       "subtopic_id": "ecosystem.components",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.2",
+      "source": "wassce",
+      "ref": "A.III.1(b)",
+      "text": "Components of the ecosystem: biotic and abiotic",
+      "subtopic_id": "ecosystem.components",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.2",
       "text": "Ecological factors in aquatic and terrestrial ecosystems",
       "subtopic_id": "ecological-factors.physical",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.3(a)",
-      "text": "Simple measurement of ecological factors: physical (climatic, topographic, gaseous)",
+      "source": "wassce",
+      "ref": "A.III.3(a)",
+      "text": "Simple measurement of physical factors: climatic, topographic, gaseous",
       "subtopic_id": "ecological-factors.measurement",
       "status": "covered",
-      "note": ""
+      "note": "Wind speed, listed in the notes, is not among the named measurements.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.3(b)",
-      "text": "Simple measurement of ecological factors: edaphic",
+      "source": "wassce",
+      "ref": "A.III.3(b)",
+      "text": "Edaphic factors: composition, moisture content, soil texture",
       "subtopic_id": "ecological-factors.edaphic",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.4(a)",
-      "text": "Autotrophs, heterotrophs, decomposers",
+      "source": "wassce",
+      "ref": "A.III.4(a)(i)",
+      "text": "Producers: autotrophs",
       "subtopic_id": "energy-flow.producers-consumers",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.4(b)",
-      "text": "Food chain and food web",
+      "source": "wassce",
+      "ref": "A.III.4(a)(ii)",
+      "text": "Consumers: heterotrophs",
+      "subtopic_id": "energy-flow.producers-consumers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.4(a)(iii)",
+      "text": "Decomposers",
+      "subtopic_id": "energy-flow.producers-consumers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.4(b)(i)",
+      "text": "Food chain",
       "subtopic_id": "energy-flow.chains-webs",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.4(c)",
-      "text": "Energy flow; pyramid of energy and numbers",
+      "source": "wassce",
+      "ref": "A.III.4(b)(ii)",
+      "text": "Food web",
+      "subtopic_id": "energy-flow.chains-webs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.4(c)(i)",
+      "text": "Food and energy relationship in aquatic and terrestrial environments",
+      "subtopic_id": "energy-flow.energy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.4(c)(ii)",
+      "text": "Pyramid of energy and pyramid of numbers",
       "subtopic_id": "energy-flow.pyramids",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.4(d)",
-      "text": "Decomposition in nature: decomposers, gaseous products, role",
+      "source": "wassce",
+      "ref": "A.III.4(d)(i)",
+      "text": "Decomposers: micro and macro-decomposers",
       "subtopic_id": "energy-flow.producers-consumers",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.6(a)-1",
-      "text": "Biological associations: symbiosis, mutualism",
+      "source": "wassce",
+      "ref": "A.III.4(d)(ii)",
+      "text": "Gaseous products of decomposition",
+      "subtopic_id": "energy-flow.producers-consumers",
+      "status": "covered",
+      "note": "Covered as decomposition in nature; the products are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.4(d)(iii)",
+      "text": "Role of decomposers",
+      "subtopic_id": "energy-flow.producers-consumers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.6(a)",
+      "text": "Biological associations: parasitism, symbiosis, commensalism, saprophytism",
       "subtopic_id": "associations.symbiosis",
       "status": "covered",
-      "note": ""
+      "note": "Features of parasites themselves go to associations.parasitism.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.6(a)-2",
-      "text": "Biological associations: parasitism, commensalism, saprophytism",
-      "subtopic_id": "associations.parasitism",
-      "status": "covered",
-      "note": "saprophytism as an association type is not itemised, only implied"
-    },
-    {
-      "source": "waec",
-      "ref": "C.6(b)",
+      "source": "wassce",
+      "ref": "A.III.6(b)",
       "text": "Adaptation of organisms to habitats",
-      "subtopic_id": "ecosystem.habitats",
+      "subtopic_id": "adaptation.structural",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.6(c-d)",
-      "text": "Pollution of atmosphere, water and soil",
+      "source": "wassce",
+      "ref": "A.III.6(c)(i)",
+      "text": "Air pollutants: nature, names, sources and effects",
       "subtopic_id": "conservation.pollution",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.7(a)",
-      "text": "Ecological succession: structural changes, characteristics",
+      "source": "wassce",
+      "ref": "A.III.6(c)(ii)",
+      "text": "Effect of noise",
+      "subtopic_id": "conservation.pollution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.6(d)",
+      "text": "Water and soil pollution: types and effects of pollutants",
+      "subtopic_id": "conservation.pollution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.7(a)(i)",
+      "text": "Succession: structural changes in species composition and numbers",
       "subtopic_id": "population.succession",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.7(b)",
-      "text": "Primary succession",
+      "source": "wassce",
+      "ref": "A.III.7(a)(ii)",
+      "text": "General characteristics and outcomes of succession",
       "subtopic_id": "population.succession",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.7(c)",
-      "text": "Secondary succession and climax",
+      "source": "wassce",
+      "ref": "A.III.7(b)",
+      "text": "Primary succession in terrestrial and aquatic habitats",
       "subtopic_id": "population.succession",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.7(d)",
-      "text": "Factors affecting population size: natality, mortality, migration, food, predation, disease",
+      "source": "wassce",
+      "ref": "A.III.7(c)",
+      "text": "Secondary succession; climax community",
+      "subtopic_id": "population.succession",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.III.7(d)",
+      "text": "Factors that affect population size: natality, mortality, migration, food, predation, competition, disease",
       "subtopic_id": "population.growth",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.7(e)",
-      "text": "Preservation and storage of foods",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic addresses food preservation or storage methods",
-      "proposed": "applied > Food preservation and storage methods"
+      "source": "wassce",
+      "ref": "A.III.7(e)",
+      "text": "Preservation and storage of foods, including ionising radiation",
+      "subtopic_id": "applied.food-preservation",
+      "status": "partial",
+      "note": "Local and chemical methods are covered; preservation by ionising radiation is not named.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.7(f)(i)",
+      "source": "wassce",
+      "ref": "A.III.7(f)(i)",
       "text": "Life of selected insects: weevils and cotton stainers",
       "subtopic_id": "applied.agriculture",
-      "status": "partial",
-      "note": "applied.agriculture covers pest control generally but not the specific life history of these named pests"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.7(f)(ii)",
+      "source": "wassce",
+      "ref": "A.III.7(f)(ii)",
       "text": "Control of pests",
       "subtopic_id": "applied.agriculture",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.8(a)",
-      "text": "Carriers of microorganisms",
+      "source": "wassce",
+      "ref": "A.III.8(a)",
+      "text": "Carriers of microorganisms: housefly, mosquitoes, tsetse fly",
       "subtopic_id": "microorganisms.disease",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.8(b)(i)",
-      "text": "Beneficial effects of microorganisms",
+      "source": "wassce",
+      "ref": "A.III.8(b)(i)",
+      "text": "Beneficial effects of microorganisms in nature, medicine and industries",
       "subtopic_id": "microorganisms.useful",
-      "status": "covered",
-      "note": ""
+      "status": "partial",
+      "note": "Food production, industry and decay are covered; uses in medicine are not named.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.8(b)(ii)",
-      "text": "Harmful effects: diseases caused by microorganisms",
+      "source": "wassce",
+      "ref": "A.III.8(b)(ii)",
+      "text": "Harmful effects: cholera, measles, malaria, ringworm",
       "subtopic_id": "microorganisms.disease",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.8(c)(i)",
-      "text": "Methods of controlling harmful microorganisms",
+      "source": "wassce",
+      "ref": "A.III.8(c)(i)",
+      "text": "Controlling harmful microorganisms: high temperature, antibiotics, antiseptics, salinity, dehydration",
       "subtopic_id": "microorganisms.disease",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.8(c)(ii)",
-      "text": "Ways of controlling vectors",
+      "source": "wassce",
+      "ref": "A.III.8(c)(ii)",
+      "text": "Ways of controlling the vectors",
       "subtopic_id": "microorganisms.disease",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.8(d)(i)",
+      "source": "wassce",
+      "ref": "A.III.8(d)(i)",
       "text": "Refuse and sewage disposal",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic addresses sanitation, refuse or sewage disposal",
-      "proposed": "microorganisms > Public health: sanitation, refuse and sewage disposal"
+      "subtopic_id": "microorganisms.public-health",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C.8(d)(ii)",
-      "text": "Immunization, vaccination, inoculation",
+      "source": "wassce",
+      "ref": "A.III.8(d)(ii)",
+      "text": "Immunisation, vaccination and inoculation",
       "subtopic_id": "microorganisms.immunity",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "D.1",
-      "text": "Resources to be conserved: soil, water, wildlife, forest, minerals",
+      "source": "wassce",
+      "ref": "A.IV.1",
+      "text": "Resources to be conserved: soil, water, wildlife, forest, minerals; meaning, need and problems of conservation",
       "subtopic_id": "conservation.resources",
-      "status": "covered",
-      "note": ""
+      "status": "partial",
+      "note": "Resources and the meaning of conservation are covered; problems of conservation (development, overgrazing, poaching) are not named.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "D.2",
+      "source": "wassce",
+      "ref": "A.IV.2",
       "text": "Ways of ensuring conservation: agencies, education, laws, benefits",
       "subtopic_id": "conservation.methods",
-      "status": "covered",
-      "note": ""
+      "status": "partial",
+      "note": "Agencies and laws are covered; conservation education and the benefits of conservation are not named.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "E.1(a)",
-      "text": "Morphological variation: size, height, weight",
+      "source": "wassce",
+      "ref": "A.V.1(a)",
+      "text": "Morphological variation: size, height and weight",
       "subtopic_id": "variation.morphological",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "E.1(b)",
-      "text": "Morphological variation: colour",
+      "source": "wassce",
+      "ref": "A.V.1(b)",
+      "text": "Morphological variation: colour of skin, eye, hair, coat",
       "subtopic_id": "variation.morphological",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "E.1(c)",
+      "source": "wassce",
+      "ref": "A.V.1(c)",
       "text": "Morphological variation: fingerprints",
       "subtopic_id": "variation.morphological",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "E.2(a)",
+      "source": "wassce",
+      "ref": "A.V.2(a)",
       "text": "Physiological variation: ability to roll tongue",
       "subtopic_id": "variation.physiological",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "E.2(b)",
+      "source": "wassce",
+      "ref": "A.V.2(b)",
       "text": "Physiological variation: ability to taste PTC",
       "subtopic_id": "variation.physiological",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "E.2(c)",
-      "text": "Physiological variation: blood groups",
+      "source": "wassce",
+      "ref": "A.V.2(c)",
+      "text": "Physiological variation: ABO blood groups",
       "subtopic_id": "variation.physiological",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "F.1",
-      "text": "Genetic terminologies",
+      "source": "wassce",
+      "ref": "A.VI.1",
+      "text": "Genetic terminologies: gene, genotype, phenotype, dominant, recessive, allele, locus, test cross, back cross",
       "subtopic_id": "genetics.terminology",
-      "status": "covered",
-      "note": ""
+      "status": "partial",
+      "note": "Most terms are covered; locus, test cross and back cross are not named.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "F.2(a)",
-      "text": "Hereditary variation",
-      "subtopic_id": "genetics.terminology",
+      "source": "wassce",
+      "ref": "A.VI.2(a)",
+      "text": "Hereditary variation: characters transmitted between generations",
+      "subtopic_id": "variation.causes",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "F.2(b)",
-      "text": "Mendel's experiments, traits and laws",
+      "source": "wassce",
+      "ref": "A.VI.2(b)(i)",
+      "text": "Mendel's experiments, monohybrid and dihybrid",
+      "subtopic_id": "genetics.mendel",
+      "status": "partial",
+      "note": "Monohybrid crosses are covered; dihybrid inheritance is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.VI.2(b)(ii)",
+      "text": "Mendelian traits",
       "subtopic_id": "genetics.mendel",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "F.3",
-      "text": "Chromosomes: structure and transmission of hereditary characters",
+      "source": "wassce",
+      "ref": "A.VI.2(b)(iii)",
+      "text": "Mendelian laws",
+      "subtopic_id": "genetics.mendel",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.VI.3(a)",
+      "text": "Chromosomes: structure; DNA and gene replication",
       "subtopic_id": "genetics.chromosomes",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "F.4",
-      "text": "Probability in genetics",
+      "source": "wassce",
+      "ref": "A.VI.3(b)",
+      "text": "Transmission of hereditary characters: segregation at meiosis, recombination at fertilisation",
+      "subtopic_id": "genetics.mendel",
+      "status": "partial",
+      "note": "Split across topics: segregation as a law in genetics.mendel, meiosis in cell.division. No covers line names transmission of characters from parent to offspring as such.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.VI.4",
+      "text": "Probability in genetics (hybrid formation)",
       "subtopic_id": "genetics.mendel",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "F.5",
+      "source": "wassce",
+      "ref": "A.VI.5",
       "text": "Linkage, sex determination and sex-linked characters",
       "subtopic_id": "genetics.sex-linkage",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "F.6(a-b)",
-      "text": "Application of heredity in agriculture and medicine",
+      "source": "wassce",
+      "ref": "A.VI.6(a)",
+      "text": "Application of heredity in agriculture: cross-breeding, in and out-breeding",
       "subtopic_id": "genetics.applications",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "G.1(a-b)",
-      "text": "Behavioural adaptations in social animals: termites, bees",
+      "source": "wassce",
+      "ref": "A.VI.6(b)",
+      "text": "Application of heredity in medicine: marriage counselling, sickle cell, rhesus factor",
+      "subtopic_id": "genetics.applications",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.VII.1(a)",
+      "text": "Behavioural adaptation in social animals: termites; animal communication, group behaviour",
+      "subtopic_id": "adaptation.behavioural",
+      "status": "partial",
+      "note": "Castes, basking, territoriality, hibernation and aestivation are covered; communication among animals (contact notes, warning cries) in the notes is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.VII.1(b)",
+      "text": "Behavioural adaptation in social animals: bees",
       "subtopic_id": "adaptation.behavioural",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "G.2(a)",
-      "text": "Evidence of evolution",
+      "source": "wassce",
+      "ref": "A.VII.2(a)",
+      "text": "Evidence of evolution: fossils, comparative biochemistry, anatomy, physiology, embryology, distribution, adaptive radiation, systematics",
       "subtopic_id": "evolution.evidence",
-      "status": "covered",
-      "note": ""
+      "status": "partial",
+      "note": "Fossils, anatomy, embryology, distribution and genetic studies are covered; adaptive radiation and comparative physiology are not named.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "G.2(b)",
-      "text": "Theories of evolution: Lamarck, Darwin, mutation's role",
+      "source": "wassce",
+      "ref": "A.VII.2(b)",
+      "text": "Theories of evolution: Lamarck and Darwin; role of mutation",
       "subtopic_id": "evolution.theories",
       "status": "covered",
-      "note": ""
+      "note": "Evolutionary trends from the notes go to evolution.trends.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "Intro.1",
-      "text": "Biology as a science of life: branches, specialised fields",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic covers what biology is, its branches (botany/zoology) or specialised fields",
-      "proposed": "practical > Biology as a science: branches and specialised fields"
+      "source": "wassce",
+      "ref": "B.A.1",
+      "text": "Biology as a science of life; branches and specialised areas",
+      "subtopic_id": "practical.nature-of-biology",
+      "status": "covered",
+      "note": "Section B, Ghana only.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "Intro.2",
+      "source": "wassce",
+      "ref": "B.A.2",
       "text": "Procedure for biological work: scientific method, report writing",
       "subtopic_id": "practical.experiments",
       "status": "covered",
-      "note": ""
+      "note": "Section B, Ghana only. The practical.experiments covers line does not name the scientific method or report writing, but the sorting rule in practical.nature-of-biology sends both there.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "Intro.3",
+      "source": "wassce",
+      "ref": "B.A.3",
       "text": "Importance of biology; careers",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic covers the application of biology to everyday life or biology-related careers",
-      "proposed": "practical > Importance of biology and biology-related careers"
+      "subtopic_id": "practical.nature-of-biology",
+      "status": "covered",
+      "note": "Section B, Ghana only.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "Intro.4",
+      "source": "wassce",
+      "ref": "B.A.4",
       "text": "Body symmetry, sectioning and orientation",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic covers bilateral/radial symmetry, longitudinal/transverse/vertical sectioning, or body orientation terms (anterior, posterior, dorsal, ventral)",
-      "proposed": "practical > Body symmetry, sectioning and orientation"
+      "subtopic_id": "practical.symmetry",
+      "status": "covered",
+      "note": "Section B, Ghana only.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "Intro.5",
-      "text": "The microscope: parts, use, magnification",
+      "source": "wassce",
+      "ref": "B.A.5",
+      "text": "The microscope: parts, use, magnification, resolution, slide preparation",
       "subtopic_id": "practical.microscope",
       "status": "covered",
-      "note": "taxonomy labels this B.5; it is actually part of Section A, for all candidates"
+      "note": "Section B, Ghana only.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "SectionB.6",
+      "source": "wassce",
+      "ref": "B.A.6",
       "text": "Biological drawings",
       "subtopic_id": "practical.drawing",
       "status": "covered",
-      "note": "formally a Ghana-only (Section B) item, but a universal WAEC practical-paper skill"
+      "note": "Section B, Ghana only.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "SectionB.cell1",
+      "source": "wassce",
+      "ref": "B.B.1",
       "text": "Endocytosis and exocytosis",
       "subtopic_id": "cell-environment.endocytosis",
       "status": "covered",
-      "note": "Ghana-only Section B item, included because a real Nigerian paper tested it (2025 Q11)"
+      "note": "Section B, Ghana only.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "SectionB.cell2-3",
-      "text": "DNA structure and replication",
+      "source": "wassce",
+      "ref": "B.B.2",
+      "text": "Nucleic acids: DNA and RNA, their differences",
       "subtopic_id": "genetics.chromosomes",
       "status": "covered",
-      "note": "Ghana-only Section B item, included because a real Nigerian paper tested it (2025 Q45-46)"
+      "note": "Section B, Ghana only.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "SectionB.cell5",
-      "text": "Cell cycle: mitosis and meiosis",
+      "source": "wassce",
+      "ref": "B.B.3",
+      "text": "DNA structure and replication, RNA transcription",
+      "subtopic_id": "genetics.chromosomes",
+      "status": "partial",
+      "note": "Section B, Ghana only. DNA structure and replication are covered; RNA transcription is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.B.4",
+      "text": "Protein synthesis: roles of mRNA, tRNA, rRNA and ribosomes",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only. Nothing in the tree covers protein synthesis.",
+      "proposed": "genetics: new subtopic 'Protein synthesis: transcription and translation'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B.B.5",
+      "text": "Cell cycle: interphase, mitosis, meiosis",
       "subtopic_id": "cell.division",
       "status": "covered",
-      "note": "Ghana-only Section B item"
+      "note": "Section B, Ghana only.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "SectionB.industry5",
-      "text": "Biotechnology: concept, recombinant DNA, uses of micro-organisms in industry",
+      "source": "wassce",
+      "ref": "B.C.1",
+      "text": "Amoeba, Paramecium and Euglena: external structure and life processes",
+      "subtopic_id": "organisation.cell-forms",
+      "status": "partial",
+      "note": "Section B, Ghana only. Split across topics: form in organisation.cell-forms, movement in cell.properties, feeding in animal-nutrition.modes, excretion in excretion.organs, reproduction in reproduction.asexual. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.C.2",
+      "text": "Spirogyra and Rhizopus: structure, nutrition and reproduction",
+      "subtopic_id": "reproduction.lower-organisms",
+      "status": "partial",
+      "note": "Section B, Ghana only. Split across topics: conjugation in reproduction.lower-organisms, Spirogyra form in organisation.cell-forms, Rhizopus structure in microorganisms.types, saprophytic feeding in animal-nutrition.modes. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.C.3",
+      "text": "Mosses and ferns: structure, external features, nutrition and reproduction",
+      "subtopic_id": "reproduction.lower-organisms",
+      "status": "partial",
+      "note": "Section B, Ghana only. Split across topics: life cycles in reproduction.lower-organisms, distinguishing features in classification.kingdoms. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.D.1",
+      "text": "Characteristics of the orders of Class Insecta",
+      "subtopic_id": "classification.kingdoms",
+      "status": "partial",
+      "note": "Section B, Ghana only. Groups and phyla are covered; the orders of Insecta are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.D.2",
+      "text": "Identification of organisms using numbered and dichotomous keys",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only. No covers line names identification keys.",
+      "proposed": "classification: new subtopic 'Identification keys'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B.E",
+      "text": "Soil: identification of mineral salts in a soil sample, soil reclamation",
+      "subtopic_id": "ecological-factors.edaphic",
+      "status": "covered",
+      "note": "Section B, Ghana only. Soil composition and restoring fertility are covered; ion tests are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.F.1",
+      "text": "Dissection of a small mammal: arrangement of internal organs",
+      "subtopic_id": "organisation.levels",
+      "status": "covered",
+      "note": "Section B, Ghana only.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.F.2",
+      "text": "Structure of the mammalian heart; mechanism of the heartbeat (SAN, AVN, Purkinje tissue)",
+      "subtopic_id": "transport.heart-circulation",
+      "status": "partial",
+      "note": "Section B, Ghana only. Heart structure is covered; the mechanism of the heartbeat is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.F.3",
+      "text": "Cellular respiration: respiratory quotient",
+      "subtopic_id": "respiration.cellular",
+      "status": "partial",
+      "note": "Section B, Ghana only. Respiratory quotient is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.F.4(a)",
+      "text": "Muscles: smooth, striated, cardiac; sliding filament model",
+      "subtopic_id": "support.joints-movement",
+      "status": "partial",
+      "note": "Section B, Ghana only. Antagonistic muscles are covered; types of muscle and the sliding filament model are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.F.4(b)",
+      "text": "Skeletal tissues: structure of bone and cartilage",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "Section B, Ghana only.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.F.5(a)",
+      "text": "Secondary sexual characteristics; puberty and hormones",
+      "subtopic_id": "reproduction.human",
+      "status": "partial",
+      "note": "Section B, Ghana only. Puberty and secondary sexual characteristics are not named; hormones in general are in coordination.hormones.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.F.5(b)",
+      "text": "Prenatal and antenatal care",
+      "subtopic_id": "reproduction.human",
+      "status": "covered",
+      "note": "Section B, Ghana only. Falls under reproductive health.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.G.1",
+      "text": "Morphology of monocotyledonous and dicotyledonous plants; modified roots, stems and leaves",
+      "subtopic_id": "support.plant-organs",
+      "status": "covered",
+      "note": "Section B, Ghana only.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.G.2",
+      "text": "Transport: guttation",
+      "subtopic_id": "transport.plants",
+      "status": "partial",
+      "note": "Section B, Ghana only. Water movement is covered; guttation is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.G.3",
+      "text": "Reproduction: floral formula",
+      "subtopic_id": "reproduction.flowers",
+      "status": "partial",
+      "note": "Section B, Ghana only. Floral parts are covered; floral formulae are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.H.1",
+      "text": "Integrated water resources management",
+      "subtopic_id": "conservation.methods",
+      "status": "partial",
+      "note": "Section B, Ghana only. Water is a named resource; integrated water resources management is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.H.2",
+      "text": "Health and hygiene: definitions, personal cleanliness",
+      "subtopic_id": "microorganisms.public-health",
+      "status": "partial",
+      "note": "Section B, Ghana only. Sanitation and food hygiene are covered; personal hygiene and the definition of health are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.H.2(a)",
+      "text": "Drug abuse: meaning and consequences",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only. Nothing covers drug abuse.",
+      "proposed": "microorganisms: new subtopic 'Drug abuse and its effects on health'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B.H.2(b)",
+      "text": "Community health: town planning",
+      "subtopic_id": "microorganisms.public-health",
+      "status": "partial",
+      "note": "Section B, Ghana only. Community sanitation is covered; town planning is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.H.2(c)",
+      "text": "First aid",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only. Nothing covers first aid.",
+      "proposed": "microorganisms: new subtopic 'First aid'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B.I",
+      "text": "Evolution: recombinant DNA technology",
       "subtopic_id": "applied.biotechnology",
       "status": "covered",
-      "note": "taxonomy labels this 'C, biotechnology' but no biotechnology item exists in this copy's Section C; the actual content is Section B (Ghana-only) 'Biology and Industry' item 5"
+      "note": "Section B, Ghana only.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecA.4",
-      "text": "Sense organs: nose, tongue, skin",
+      "source": "wassce",
+      "ref": "B.J.1(a)",
+      "text": "Contamination of water: tests for bacterial contamination",
+      "subtopic_id": "microorganisms.public-health",
+      "status": "covered",
+      "note": "Section B, Ghana only. Covered as safe water.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.J.1(b)",
+      "text": "Identification of polluted water: biological oxygen demand",
+      "subtopic_id": "conservation.pollution",
+      "status": "partial",
+      "note": "Section B, Ghana only. Water pollution is covered; BOD as a measure is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.J.1(c)",
+      "text": "Waste water treatment: sewage purification, activated sludge",
+      "subtopic_id": "microorganisms.public-health",
+      "status": "covered",
+      "note": "Section B, Ghana only.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.J.2(a)",
+      "text": "Fish stock management; fish as a converter of plankton",
+      "subtopic_id": "conservation.methods",
+      "status": "partial",
+      "note": "Section B, Ghana only. Wildlife conservation is covered; fish stock management is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.J.2(b)",
+      "text": "Fish farming: importance, advantages and disadvantages",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only. applied.agriculture names only crop and land practices.",
+      "proposed": "applied: new subtopic 'Fish farming'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B.J.3",
+      "text": "Biology and food industry: food additives",
+      "subtopic_id": "applied.food-preservation",
+      "status": "partial",
+      "note": "Section B, Ghana only. Chemical preservatives are covered; other additives and their health implications are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.J.4",
+      "text": "Biology and agriculture: fertiliser, pesticides, selective breeding, disease resistance, irrigation",
+      "subtopic_id": "applied.agriculture",
+      "status": "covered",
+      "note": "Section B, Ghana only. Breeding also in genetics.applications.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.J.5",
+      "text": "Biotechnology: microorganisms in food, drink, pharmaceutical, tanning and mining industries",
+      "subtopic_id": "applied.biotechnology",
+      "status": "covered",
+      "note": "Section B, Ghana only.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.J.6",
+      "text": "Biological fuel generation: biogas, ethanol, hydrogen",
+      "subtopic_id": "applied.biotechnology",
+      "status": "partial",
+      "note": "Section B, Ghana only. Applied uses of microorganisms are covered; biofuels are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.1",
+      "text": "Cell theory: Hooke, Dujardin, Schleiden, Schwann",
+      "subtopic_id": "cell.components",
+      "status": "covered",
+      "note": "closed by widening cell.components after this map",
+      "proposed": "cell: new subtopic 'Cell theory'"
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.2(a)",
+      "text": "Irritability: types of responses, taxis and nastism",
+      "subtopic_id": "cell.properties",
+      "status": "partial",
+      "note": "Split across topics: cell responses in cell.properties, nastic movements in plant-response.tropisms. The term taxis is not named anywhere.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.2(b)",
+      "text": "Environmental factors that evoke responses: temperature, pH",
+      "subtopic_id": "cell.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.3(a)",
+      "text": "Diseases of the kidney: nephritis, kidney stone, diuresis",
+      "subtopic_id": "excretion.kidney",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.3(b)",
+      "text": "Diseases of the liver: hepatitis, cancer, gall stones",
+      "subtopic_id": "excretion.liver",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.4(a)",
+      "text": "Sense organs: nose",
       "subtopic_id": "sense-organs.others",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecA.5(a)",
-      "text": "Courtship behaviour in animals: pairing, display, territoriality, migration",
+      "source": "wassce",
+      "ref": "C.A.4(b)",
+      "text": "Sense organs: tongue",
+      "subtopic_id": "sense-organs.others",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.4(c)",
+      "text": "Sense organs: skin",
+      "subtopic_id": "sense-organs.others",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.5(a)(i)",
+      "text": "Courtship behaviour: pairing",
       "subtopic_id": "reproduction.animals-compared",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecA.5(b)",
+      "source": "wassce",
+      "ref": "C.A.5(a)(ii)",
+      "text": "Courtship behaviour: display",
+      "subtopic_id": "reproduction.animals-compared",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.5(a)(iii)",
+      "text": "Courtship behaviour: territoriality",
+      "subtopic_id": "adaptation.behavioural",
+      "status": "covered",
+      "note": "Placed by the sorting rule in reproduction.animals-compared.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.5(a)(iv)",
+      "text": "Seasonal migration associated with breeding",
+      "subtopic_id": "adaptation.behavioural",
+      "status": "covered",
+      "note": "Placed by the sorting rule in reproduction.animals-compared.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.5(b)",
       "text": "Metamorphosis and life history of housefly",
       "subtopic_id": "growth.metamorphosis",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecA.5(c)",
-      "text": "Adaptive features in a developing animal: yolk in eggs, placenta",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic covers yolk as embryonic nourishment or the placenta as an adaptive feature",
-      "proposed": "reproduction.animals-compared > add yolk and placenta as adaptive features, or new subtopic"
+      "source": "wassce",
+      "ref": "C.A.5(c)(i)",
+      "text": "Yolk in eggs of fish, toad and birds",
+      "subtopic_id": "reproduction.animals-compared",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecA.5(d)",
-      "text": "Germination of seeds: essential factors, types",
+      "source": "wassce",
+      "ref": "C.A.5(c)(ii)",
+      "text": "Placenta in animals",
+      "subtopic_id": "reproduction.animals-compared",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.A.5(d)(i)",
+      "text": "Germination: essential factors",
       "subtopic_id": "growth.germination",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecB.1",
+      "source": "wassce",
+      "ref": "C.A.5(d)(ii)",
+      "text": "Types of germination",
+      "subtopic_id": "growth.germination",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.B.1",
       "text": "Nitrogen cycle",
       "subtopic_id": "nutrient-cycles.nitrogen",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecB.2",
+      "source": "wassce",
+      "ref": "C.B.2",
       "text": "Modes of nutrition: autotrophic, chemosynthetic, carnivorous plants",
       "subtopic_id": "animal-nutrition.modes",
-      "status": "partial",
-      "note": "chemosynthetic nutrition and carnivorous plants are not named in animal-nutrition.modes' covers line"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecB.3",
+      "source": "wassce",
+      "ref": "C.B.3(a)",
       "text": "Alimentary tracts of different animals",
       "subtopic_id": "animal-nutrition.alimentary",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecB.4",
-      "text": "Feeding habits: categories, modifications",
+      "source": "wassce",
+      "ref": "C.B.3(b)",
+      "text": "Description and function of parts of the alimentary tract",
+      "subtopic_id": "animal-nutrition.alimentary",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.B.4(a)",
+      "text": "Feeding habits: carnivorous, herbivorous, omnivorous",
       "subtopic_id": "animal-nutrition.feeding",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.1",
+      "source": "wassce",
+      "ref": "C.B.4(b)",
+      "text": "Feeding modifications: filter, fluid, insect, saprophytic and parasitic feeding",
+      "subtopic_id": "animal-nutrition.feeding",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.1",
       "text": "Ecological components: lithosphere, hydrosphere, atmosphere, niche",
       "subtopic_id": "ecosystem.components",
-      "status": "partial",
-      "note": "lithosphere, hydrosphere and atmosphere are not named in ecosystem.components' covers line"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.2",
-      "text": "Population studies by sampling: size, dominance, density",
+      "source": "wassce",
+      "ref": "C.C.2(a)",
+      "text": "Population studies by sampling: population size",
       "subtopic_id": "population.sampling",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.3",
-      "text": "Energy transformation in nature",
+      "source": "wassce",
+      "ref": "C.C.2(b)",
+      "text": "Population studies by sampling: dominance",
+      "subtopic_id": "population.succession",
+      "status": "covered",
+      "note": "Dominance is named in population.succession, not in population.sampling.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.2(c)",
+      "text": "Population studies by sampling: density",
+      "subtopic_id": "population.sampling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.3(a)",
+      "text": "Energy loss in the ecosystem; laws of thermodynamics",
       "subtopic_id": "energy-flow.energy",
       "status": "covered",
-      "note": ""
+      "note": "Laws of thermodynamics and measuring primary production are not named but explain the energy loss that is.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.4",
-      "text": "Nutrient cycling: carbon cycle, water cycle",
+      "source": "wassce",
+      "ref": "C.C.3(b)",
+      "text": "Solar radiation: intake and loss at the earth's surface",
+      "subtopic_id": "energy-flow.energy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.3(c)",
+      "text": "Energy loss in the biosphere",
+      "subtopic_id": "energy-flow.energy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.4(a)(i)",
+      "text": "Process of carbon cycle",
       "subtopic_id": "nutrient-cycles.carbon",
       "status": "covered",
-      "note": "also maps to nutrient-cycles.water"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.5",
+      "source": "wassce",
+      "ref": "C.C.4(a)(ii)",
+      "text": "Importance of carbon in nature",
+      "subtopic_id": "nutrient-cycles.carbon",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.4(b)(i)",
+      "text": "Importance of water cycle",
+      "subtopic_id": "nutrient-cycles.water",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.4(b)(ii)",
+      "text": "Importance of water to living organisms",
+      "subtopic_id": "nutrient-cycles.water",
+      "status": "partial",
+      "note": "The water cycle processes are covered; the importance of water to living organisms is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.5",
       "text": "Ecological management: tolerance, minimum and maximum range",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic covers tolerance range or limiting range of an ecological factor",
-      "proposed": "ecological-factors > Tolerance and range of an ecological factor"
+      "subtopic_id": "ecological-factors.tolerance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.6(a-b)",
-      "text": "Habitats: aquatic (marine, estuarine, fresh water), terrestrial",
+      "source": "wassce",
+      "ref": "C.C.6(a)(i)",
+      "text": "Aquatic habitats (marine, estuarine, freshwater): characteristics",
       "subtopic_id": "ecosystem.habitats",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.6(c)",
-      "text": "Balance in nature: dynamic equilibrium of population and density",
+      "source": "wassce",
+      "ref": "C.C.6(a)(ii)",
+      "text": "Aquatic habitats: distribution of plants and animals",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.6(a)(iii)",
+      "text": "Aquatic habitats: adaptive features of plants and animals",
+      "subtopic_id": "adaptation.structural",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.6(b)(i)",
+      "text": "Terrestrial habitats (marsh, forest, grassland, arid land): characteristics",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.6(b)(ii)",
+      "text": "Terrestrial habitats: distribution of plants and animals",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.6(c)",
+      "text": "Balance in nature: dynamic equilibrium, population density",
       "subtopic_id": "population.growth",
-      "status": "partial",
-      "note": "balance in nature as a distinct concept is not named in population.growth's covers line"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.7(a)",
+      "source": "wassce",
+      "ref": "C.C.7(a)",
       "text": "Classification of plants based on life cycle",
       "subtopic_id": "applied.plant-life-cycles",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.7(b)",
-      "text": "Effects of agricultural practices on ecology: bush burning, tillage, fertilizer, herbicide, farming methods",
+      "source": "wassce",
+      "ref": "C.C.7(b)(i)",
+      "text": "Effects of agricultural practices: bush burning",
       "subtopic_id": "applied.agriculture",
-      "status": "partial",
-      "note": "applied.agriculture covers farming practices but not their ecological impact"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.8(a)",
-      "text": "Microorganisms around us: in air and water, groups",
+      "source": "wassce",
+      "ref": "C.C.7(b)(ii)",
+      "text": "Effects of agricultural practices: tillage",
+      "subtopic_id": "applied.agriculture",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.7(b)(iii)",
+      "text": "Effects of agricultural practices: fertiliser",
+      "subtopic_id": "applied.agriculture",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.7(b)(iv)",
+      "text": "Effects of agricultural practices: herbicide and pesticide",
+      "subtopic_id": "applied.agriculture",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.7(b)(v)",
+      "text": "Effects of agricultural practices: different farming methods",
+      "subtopic_id": "applied.agriculture",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.8(a)(i)",
+      "text": "Microorganisms in air and water",
       "subtopic_id": "microorganisms.types",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.8(b)",
+      "source": "wassce",
+      "ref": "C.C.8(a)(ii)",
+      "text": "Groups of microorganisms: bacteria, viruses, algae, protozoa, fungi",
+      "subtopic_id": "microorganisms.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.C.8(b)",
       "text": "Microorganisms in our bodies and food",
       "subtopic_id": "microorganisms.types",
       "status": "covered",
-      "note": ""
+      "note": "Observing colonies from the notes goes to microorganisms.culturing.",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecC.8(c)",
-      "text": "Public health: food hygiene and health organizations",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic covers food hygiene or the role of health organisations",
-      "proposed": "microorganisms > Public health: sanitation, refuse and sewage disposal"
+      "source": "wassce",
+      "ref": "C.C.8(c)",
+      "text": "Public health: food hygiene and health organisations",
+      "subtopic_id": "microorganisms.public-health",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecD.1-3",
-      "text": "Application of variation: crime detection, blood transfusion, paternity",
+      "source": "wassce",
+      "ref": "C.D.1",
+      "text": "Application of variation: crime detection",
       "subtopic_id": "variation.applications",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecE.1(a-b)",
-      "text": "Adaptation for survival: factors of competition, intra/inter-specific competition",
+      "source": "wassce",
+      "ref": "C.D.2",
+      "text": "Application of variation: blood transfusion",
+      "subtopic_id": "variation.applications",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.D.3",
+      "text": "Application of variation: determination of paternity",
+      "subtopic_id": "variation.applications",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.E.1(a)",
+      "text": "Factors that bring about competition",
       "subtopic_id": "associations.competition",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecE.1(c)",
+      "source": "wassce",
+      "ref": "C.E.1(b)",
+      "text": "Intra and inter-species competition",
+      "subtopic_id": "associations.competition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.E.1(c)",
       "text": "Relationship between competition and succession",
       "subtopic_id": "population.succession",
-      "status": "partial",
-      "note": "the competition-succession link is not named in population.succession's covers line"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecE.2",
-      "text": "Structural adaptation: food, protection, mates, temperature, water",
+      "source": "wassce",
+      "ref": "C.E.2(a)",
+      "text": "Structural adaptation for obtaining food",
       "subtopic_id": "adaptation.structural",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "waec",
-      "ref": "C-SecE.3",
+      "source": "wassce",
+      "ref": "C.E.2(b)",
+      "text": "Structural adaptation for protection and defence",
+      "subtopic_id": "adaptation.structural",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.E.2(c)",
+      "text": "Structural adaptation for securing mates",
+      "subtopic_id": "adaptation.structural",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.E.2(d)",
+      "text": "Structural adaptation for regulating body temperature",
+      "subtopic_id": "adaptation.structural",
+      "status": "covered",
+      "note": "Held by the wording 'surviving harsh conditions'; temperature regulation is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.E.2(e)",
+      "text": "Structural adaptation for conserving water",
+      "subtopic_id": "adaptation.structural",
+      "status": "covered",
+      "note": "Held by the wording 'surviving harsh conditions'; water conservation is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.E.3(a)",
       "text": "Adaptive colouration in plants and animals",
       "subtopic_id": "adaptation.colouration",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
+      "source": "wassce",
+      "ref": "C.E.3(b)",
+      "text": "Colouration and its functions",
+      "subtopic_id": "adaptation.colouration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
       "ref": "A.1(a)",
-      "text": "Characteristics of living things",
+      "text": "Living organisms: characteristics",
       "subtopic_id": "classification.living-nonliving",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
+      "source": "utme",
       "ref": "A.1(b)",
       "text": "Cell structure and functions of cell components",
       "subtopic_id": "cell.components",
       "status": "covered",
-      "note": ""
+      "note": "Plant and animal cells compared goes to cell.plant-animal.",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "A.1(c)",
-      "text": "Levels of organization: cell, tissue, organ, system, organism",
+      "source": "utme",
+      "ref": "A.1(c)(i)",
+      "text": "Level of organisation: cell (Euglena, Paramecium)",
       "subtopic_id": "organisation.levels",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "A.2(a-e)",
-      "text": "Evolution among Monera, Protista, Fungi, Plantae, Animalia (phyla and classes)",
+      "source": "utme",
+      "ref": "A.1(c)(ii)",
+      "text": "Level of organisation: tissue (epithelial tissue, Hydra)",
+      "subtopic_id": "organisation.levels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.1(c)(iii)",
+      "text": "Level of organisation: organ (onion bulb)",
+      "subtopic_id": "organisation.levels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.1(c)(iv)",
+      "text": "Level of organisation: systems",
+      "subtopic_id": "organisation.levels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.1(c)(v)",
+      "text": "Level of organisation: organisms (Chlamydomonas)",
+      "subtopic_id": "organisation.levels",
+      "status": "partial",
+      "note": "The covers line names cell, tissue, organ and system levels; the organism, the fifth level, is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(a)",
+      "text": "Monera: bacteria and blue-green algae",
       "subtopic_id": "classification.kingdoms",
       "status": "covered",
-      "note": ""
+      "note": "Advancement across groups goes to evolution.trends.",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "A.3(a,d)",
-      "text": "Structural/functional and behavioural adaptations; structural adaptations in organisms",
-      "subtopic_id": "adaptation.structural",
+      "source": "utme",
+      "ref": "A.2(b)",
+      "text": "Protista: Amoeba, Euglena, Paramecium",
+      "subtopic_id": "classification.kingdoms",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
+      "source": "utme",
+      "ref": "A.2(c)",
+      "text": "Fungi: mushroom and Rhizopus",
+      "subtopic_id": "classification.kingdoms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(d)(i)",
+      "text": "Plantae: Thallophyta (Spirogyra)",
+      "subtopic_id": "classification.kingdoms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(d)(ii)",
+      "text": "Plantae: Bryophyta (mosses and liverworts)",
+      "subtopic_id": "classification.kingdoms",
+      "status": "covered",
+      "note": "Life histories go to reproduction.lower-organisms.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(d)(iii)",
+      "text": "Plantae: Pteridophyta (ferns)",
+      "subtopic_id": "classification.kingdoms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(d)(iv)",
+      "text": "Plantae: Spermatophyta, gymnosperms and angiosperms",
+      "subtopic_id": "classification.kingdoms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(e)(i)",
+      "text": "Animalia: invertebrates from coelenterates to molluscs",
+      "subtopic_id": "classification.kingdoms",
+      "status": "covered",
+      "note": "Economic importance of insects is held only as pests in applied.agriculture.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(e)(ii)",
+      "text": "Animalia: vertebrates, pisces to mammalia",
+      "subtopic_id": "classification.kingdoms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.3(a)",
+      "text": "Structural, functional and behavioural adaptations of organisms",
+      "subtopic_id": "adaptation.structural",
+      "status": "partial",
+      "note": "Structural and behavioural adaptation are covered; functional (physiological) adaptation is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
       "ref": "A.3(b)",
       "text": "Adaptive colouration and its functions",
       "subtopic_id": "adaptation.colouration",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
+      "source": "utme",
       "ref": "A.3(c)",
-      "text": "Behavioural adaptations in social animals; territoriality; hibernation and aestivation",
+      "text": "Behavioural adaptations in social animals",
       "subtopic_id": "adaptation.behavioural",
-      "status": "partial",
-      "note": "hibernation, aestivation, basking and territorial behaviour are not named in adaptation.behavioural's covers line"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "B.1(a)",
-      "text": "Internal structure of root, stem, leaf",
+      "source": "utme",
+      "ref": "A.3(d)",
+      "text": "Structural adaptations in organisms",
+      "subtopic_id": "adaptation.structural",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.1(a)(i)",
+      "text": "Internal structure of a flowering plant: root",
+      "subtopic_id": "support.plant-organs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.1(a)(ii)",
+      "text": "Internal structure of a flowering plant: stem",
+      "subtopic_id": "support.plant-organs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.1(a)(iii)",
+      "text": "Internal structure of a flowering plant: leaf",
       "subtopic_id": "plant-nutrition.leaf",
       "status": "covered",
-      "note": "also draws on support.plant-tissues for supporting tissue distribution"
+      "note": "Distribution of supporting tissues goes to support.plant-tissues.",
+      "proposed": ""
     },
     {
-      "source": "jamb",
+      "source": "utme",
       "ref": "B.1(b)",
-      "text": "Internal structure of a mammal: arrangement of organs",
-      "subtopic_id": null,
-      "status": "partial",
-      "note": "no single subtopic covers gross arrangement of mammalian organs as one topic; coverage is distributed across excretion, alimentary and reproduction subtopics"
+      "text": "Internal structure of a mammal: arrangement of internal organs",
+      "subtopic_id": "organisation.levels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "B.2(a-d)",
-      "text": "Nutrition: modes, plant nutrition, animal nutrition (food classes, tests, tooth, alimentary canal)",
+      "source": "utme",
+      "ref": "B.2(a)(i)",
+      "text": "Modes of nutrition: autotrophic",
+      "subtopic_id": "animal-nutrition.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.2(a)(ii)",
+      "text": "Modes of nutrition: heterotrophic",
+      "subtopic_id": "animal-nutrition.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.2(b)",
+      "text": "Types of nutrition: holozoic, parasitic, saprophytic, carnivorous plants",
+      "subtopic_id": "animal-nutrition.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.2(c)(i)",
+      "text": "Plant nutrition: photosynthesis",
+      "subtopic_id": "plant-nutrition.photosynthesis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.2(c)(ii)",
+      "text": "Plant nutrition: mineral requirements",
+      "subtopic_id": "plant-nutrition.minerals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.2(d)(i)",
+      "text": "Classes of food substances",
       "subtopic_id": "animal-nutrition.food-classes",
       "status": "covered",
-      "note": "also plant-nutrition.photosynthesis, animal-nutrition.food-tests, .teeth, .alimentary"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "B.3(a-d)",
-      "text": "Transport: need, materials, channels, mechanism",
+      "source": "utme",
+      "ref": "B.2(d)(ii)",
+      "text": "Food tests",
+      "subtopic_id": "animal-nutrition.food-tests",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.2(d)(iii)",
+      "text": "The mammalian tooth: structures, types and functions",
+      "subtopic_id": "animal-nutrition.teeth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.2(d)(iv)",
+      "text": "Mammalian alimentary canal and accessory organs",
+      "subtopic_id": "animal-nutrition.alimentary",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.2(d)(v)",
+      "text": "Nutrition process: ingestion, digestion, absorption, assimilation",
+      "subtopic_id": "animal-nutrition.alimentary",
+      "status": "covered",
+      "note": "Held as what happens in each region of the gut; enzyme action goes to animal-nutrition.enzymes. Assimilation is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.3(a)",
+      "text": "Need for transportation",
       "subtopic_id": "transport.need",
       "status": "covered",
-      "note": "also transport.heart-circulation, .blood, .plants"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "B.4(a-e)",
-      "text": "Respiration: organs/surfaces, gaseous exchange, aerobic, anaerobic",
+      "source": "utme",
+      "ref": "B.3(b)",
+      "text": "Materials for transportation",
+      "subtopic_id": "transport.blood",
+      "status": "covered",
+      "note": "Plant materials are in transport.plants.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.3(c)(i)",
+      "text": "Mammalian circulatory system; named vessels",
+      "subtopic_id": "transport.heart-circulation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.3(c)(ii)",
+      "text": "Plant vascular system: phloem and xylem",
+      "subtopic_id": "transport.plants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.3(d)",
+      "text": "Media and processes of transportation: cytoplasm, cell sap, body fluid, blood, lymph; open circulation; transpiration pull, root pressure",
+      "subtopic_id": "transport.blood",
+      "status": "partial",
+      "note": "Split across topics: blood in transport.blood, diffusion and osmosis in cell-environment, plant mechanisms in transport.plants. Media of transport other than blood, lymph, and open circulatory systems are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.4(a)",
+      "text": "Respiration: significance, glycolysis and Krebs cycle outline",
+      "subtopic_id": "respiration.cellular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.4(b)",
+      "text": "Respiratory organs and surfaces: body surface, gill, trachea, lungs, stomata, lenticel",
       "subtopic_id": "respiration.surfaces",
       "status": "covered",
-      "note": "also respiration.mechanism, .cellular"
+      "note": "Lenticels are not named as a respiratory surface.",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "B.5(a-c)",
-      "text": "Excretion: structures (contractile vacuole, flame cell, nephridium, Malpighian tubule, kidney), mechanisms, plant products",
+      "source": "utme",
+      "ref": "B.4(c)(i)",
+      "text": "Mechanism of gaseous exchange in plants",
+      "subtopic_id": "respiration.mechanism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.4(c)(ii)",
+      "text": "Mechanism of gaseous exchange in mammals",
+      "subtopic_id": "respiration.mechanism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.4(d)",
+      "text": "Aerobic respiration",
+      "subtopic_id": "respiration.cellular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.4(e)",
+      "text": "Anaerobic respiration; fermentation, yeast",
+      "subtopic_id": "respiration.cellular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.5(a)(i)",
+      "text": "Excretory structure: contractile vacuole",
       "subtopic_id": "excretion.organs",
       "status": "covered",
-      "note": "specific invertebrate structure names are not individually listed in excretion.organs' covers line"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "B.6(a-c)",
-      "text": "Support and movement: plant movements, animal supporting tissues, skeleton types/functions",
-      "subtopic_id": "plant-response.tropisms",
+      "source": "utme",
+      "ref": "B.5(a)(ii)",
+      "text": "Excretory structure: flame cell",
+      "subtopic_id": "excretion.organs",
       "status": "covered",
-      "note": "also support.animal-skeleton"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "B.7(a-c)",
-      "text": "Reproduction: asexual, sexual in flowering plants, reproduction in mammals",
+      "source": "utme",
+      "ref": "B.5(a)(iii)",
+      "text": "Excretory structure: nephridium",
+      "subtopic_id": "excretion.organs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.5(a)(iv)",
+      "text": "Excretory structure: Malpighian tubule",
+      "subtopic_id": "excretion.organs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.5(a)(v)",
+      "text": "Excretory structure: kidney",
+      "subtopic_id": "excretion.organs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.5(a)(vi)",
+      "text": "Excretory structure: stoma and lenticel",
+      "subtopic_id": "excretion.organs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.5(b)(i)",
+      "text": "Excretory mechanism: kidneys",
+      "subtopic_id": "excretion.kidney",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.5(b)(ii)",
+      "text": "Excretory mechanism: lungs",
+      "subtopic_id": "excretion.organs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.5(b)(iii)",
+      "text": "Excretory mechanism: skin",
+      "subtopic_id": "excretion.skin",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.5(c)",
+      "text": "Excretory products of plants and their economic importance",
+      "subtopic_id": "excretion.organs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.6(a)",
+      "text": "Tropic, tactic, nastic and sleep movements in plants",
+      "subtopic_id": "plant-response.tropisms",
+      "status": "partial",
+      "note": "Tropic and nastic movements are covered; tactic movements are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.6(b)",
+      "text": "Supporting tissues in animals: chitin, cartilage, bone",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.6(c)(i)",
+      "text": "Exoskeleton",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.6(c)(ii)",
+      "text": "Endoskeleton",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "Types of joint go to support.joints-movement.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.6(c)(iii)",
+      "text": "Functions of the skeleton in animals",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(a)(i)",
+      "text": "Asexual reproduction: fission in Paramecium",
       "subtopic_id": "reproduction.asexual",
       "status": "covered",
-      "note": "also reproduction.flowers, reproduction.human"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "B.8(a-b)",
-      "text": "Growth: meaning; germination and its conditions",
+      "source": "utme",
+      "ref": "B.7(a)(ii)",
+      "text": "Asexual reproduction: budding in yeast",
+      "subtopic_id": "reproduction.asexual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(a)(iii)",
+      "text": "Natural vegetative propagation",
+      "subtopic_id": "reproduction.asexual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(a)(iv)",
+      "text": "Artificial vegetative propagation: grafting, budding, layering",
+      "subtopic_id": "reproduction.asexual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(b)(i)",
+      "text": "Floral parts and their functions",
+      "subtopic_id": "reproduction.flowers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(b)(ii)",
+      "text": "Pollination and fertilisation",
+      "subtopic_id": "reproduction.flowers",
+      "status": "covered",
+      "note": "Fertilisation is in reproduction.fruits-seeds, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(b)(iii)",
+      "text": "Products of sexual reproduction: fruits from placentation",
+      "subtopic_id": "reproduction.fruits-seeds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(c)(i)",
+      "text": "Structures and functions of male and female reproductive organs",
+      "subtopic_id": "reproduction.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(c)(ii)",
+      "text": "Fertilisation and development; mother's health and drugs; in-vitro fertilisation and birth control",
+      "subtopic_id": "reproduction.human",
+      "status": "partial",
+      "note": "Fertilisation, development and birth control are covered; in-vitro fertilisation is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.8(a)",
+      "text": "Meaning of growth",
+      "subtopic_id": "growth.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.8(b)",
+      "text": "Germination of seeds and conditions necessary",
       "subtopic_id": "growth.germination",
       "status": "covered",
-      "note": "also growth.growth"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "B.9(a-d)",
-      "text": "Coordination and control: nervous, sense organs, hormonal, homeostasis",
+      "source": "utme",
+      "ref": "B.9(a)(i)",
+      "text": "Central nervous system: components, structure, functions",
       "subtopic_id": "coordination.cns",
       "status": "covered",
-      "note": "also coordination.pns, sense-organs.eye/.ear/.others, coordination.hormones, plant-response.hormones, excretion.skin, excretion.kidney"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "C.1",
-      "text": "Factors affecting distribution: abiotic, biotic",
-      "subtopic_id": "ecological-factors.physical",
-      "status": "partial",
-      "note": "biotic factors affecting distribution (predation, competition) are not framed as a distribution topic in any covers line"
-    },
-    {
-      "source": "jamb",
-      "ref": "C.2(a-c)",
-      "text": "Symbiotic interactions, energy flow, nutrient cycling",
-      "subtopic_id": "associations.symbiosis",
+      "source": "utme",
+      "ref": "B.9(a)(ii)",
+      "text": "Peripheral nervous system: components and functions",
+      "subtopic_id": "coordination.pns",
       "status": "covered",
-      "note": "also energy-flow.chains-webs, .energy, nutrient-cycles.carbon/.water/.nitrogen"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "C.3(a-b)",
-      "text": "Natural habitats: aquatic, terrestrial/arboreal",
+      "source": "utme",
+      "ref": "B.9(a)(iii)",
+      "text": "Mechanism of transmission of impulses",
+      "subtopic_id": "coordination.impulse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(a)(iv)",
+      "text": "Reflex action",
+      "subtopic_id": "coordination.reflex",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(b)(i)",
+      "text": "Sense organ: skin (tactile)",
+      "subtopic_id": "sense-organs.others",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(b)(ii)",
+      "text": "Sense organ: nose (olfactory)",
+      "subtopic_id": "sense-organs.others",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(b)(iii)",
+      "text": "Sense organ: tongue (taste)",
+      "subtopic_id": "sense-organs.others",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(b)(iv)",
+      "text": "Sense organ: eye (sight)",
+      "subtopic_id": "sense-organs.eye",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(b)(v)",
+      "text": "Sense organ: ear (auditory)",
+      "subtopic_id": "sense-organs.ear",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(c)(i)",
+      "text": "Animal hormonal system: pituitary, thyroid, parathyroid, adrenal, pancreas, gonads",
+      "subtopic_id": "coordination.hormones",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(c)(ii)",
+      "text": "Plant hormones (phytohormones)",
+      "subtopic_id": "plant-response.hormones",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(d)(i)",
+      "text": "Homeostasis: body temperature regulation",
+      "subtopic_id": "excretion.skin",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9(d)(ii)",
+      "text": "Homeostasis: salt and water regulation",
+      "subtopic_id": "excretion.kidney",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.1(i)",
+      "text": "Abiotic factors affecting distribution; measuring equipment",
+      "subtopic_id": "ecological-factors.physical",
+      "status": "covered",
+      "note": "Equipment goes to ecological-factors.measurement, soil to ecological-factors.edaphic.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.1(ii)",
+      "text": "Biotic factors affecting distribution; human activities",
+      "subtopic_id": "ecosystem.components",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.2",
+      "text": "Symbiotic interactions: symbiosis, parasitism, saprophytism, commensalism, mutualism, amensalism, competition, predation, cooperation",
+      "subtopic_id": "associations.symbiosis",
+      "status": "partial",
+      "note": "Most kinds of association are covered in the associations topic; amensalism and cooperation are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.2(a)",
+      "text": "Energy flow in the ecosystem: food chains, food webs, trophic levels",
+      "subtopic_id": "energy-flow.chains-webs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.2(b)(i)",
+      "text": "Carbon cycle; oxygen and carbon (IV) oxide balance, global warming",
+      "subtopic_id": "nutrient-cycles.carbon",
+      "status": "covered",
+      "note": "Global warming is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.2(b)(ii)",
+      "text": "Water cycle",
+      "subtopic_id": "nutrient-cycles.water",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.2(b)(iii)",
+      "text": "Nitrogen cycle",
+      "subtopic_id": "nutrient-cycles.nitrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.3(a)",
+      "text": "Aquatic habitats: ponds, streams, lakes, seashores, mangrove swamps",
       "subtopic_id": "ecosystem.habitats",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "C.4(a-e)",
-      "text": "Local Nigerian biomes: rainforest, guinea savanna, sudan savanna, desert, highlands",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic covers Nigeria's named biomes",
-      "proposed": "ecosystem > Local Nigerian biomes: rainforest, savanna, desert and highlands"
+      "source": "utme",
+      "ref": "C.3(b)",
+      "text": "Terrestrial and arboreal habitats",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "C.5(a-d)",
-      "text": "Ecology of populations: density, competition, factors affecting size, succession",
+      "source": "utme",
+      "ref": "C.4(a)",
+      "text": "Nigerian biome: tropical rainforest",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(b)",
+      "text": "Nigerian biome: Guinea savanna",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(c)",
+      "text": "Nigerian biome: Sudan savanna",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(d)",
+      "text": "Nigerian biome: desert",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(e)",
+      "text": "Nigerian biome: montane forests and grasslands",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(a)",
+      "text": "Population density and overcrowding",
       "subtopic_id": "population.growth",
       "status": "covered",
-      "note": "also associations.competition, population.succession"
+      "note": "Computing density is in population.sampling, within the same topic.",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "C.6(a)",
-      "text": "Soil characteristics and components",
+      "source": "utme",
+      "ref": "C.5(b)(i)",
+      "text": "Factors that bring about competition",
+      "subtopic_id": "associations.competition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(b)(ii)",
+      "text": "Intra and inter-specific competition; niche differentiation",
+      "subtopic_id": "associations.competition",
+      "status": "covered",
+      "note": "Niche differentiation as a way to reduce competition is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(b)(iii)",
+      "text": "Relationship between competition and succession",
+      "subtopic_id": "population.succession",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(c)(i)",
+      "text": "Biotic factors affecting population size",
+      "subtopic_id": "population.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(c)(ii)",
+      "text": "Abiotic factors affecting population size",
+      "subtopic_id": "population.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(d)(i)",
+      "text": "Primary succession",
+      "subtopic_id": "population.succession",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(d)(ii)",
+      "text": "Secondary succession",
+      "subtopic_id": "population.succession",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.6(a)(i)",
+      "text": "Soil types (sandy, loamy, clayey): soil structure",
       "subtopic_id": "ecological-factors.edaphic",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "C.6(b)",
-      "text": "Soil fertility: loss, renewal and maintenance",
+      "source": "utme",
+      "ref": "C.6(a)(ii)",
+      "text": "Soil types: porosity, capillarity and humus content",
+      "subtopic_id": "ecological-factors.edaphic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.6(b)(i)",
+      "text": "Soil component: inorganic",
+      "subtopic_id": "ecological-factors.edaphic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.6(b)(ii)",
+      "text": "Soil component: organic",
+      "subtopic_id": "ecological-factors.edaphic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.6(b)(iii)",
+      "text": "Soil component: soil organisms",
       "subtopic_id": "ecological-factors.edaphic",
       "status": "partial",
-      "note": "fertility loss and renewal (contour ridging, crop rotation, fertiliser use) is not named in ecological-factors.edaphic's covers line"
+      "note": "Soil composition, air and water are named; soil organisms are not.",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "C.7(a)",
-      "text": "Diseases: common, endemic, transmissible (poliomyelitis, cholera, TB, STDs)",
+      "source": "utme",
+      "ref": "C.6(b)(iv)",
+      "text": "Soil component: soil air",
+      "subtopic_id": "ecological-factors.edaphic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.6(b)(v)",
+      "text": "Soil component: soil water",
+      "subtopic_id": "ecological-factors.edaphic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.6(c)(i)",
+      "text": "Loss of soil fertility",
+      "subtopic_id": "ecological-factors.edaphic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.6(c)(ii)",
+      "text": "Renewal and maintenance of soil fertility",
+      "subtopic_id": "ecological-factors.edaphic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.7(a)(i)",
+      "text": "Common and endemic diseases",
       "subtopic_id": "microorganisms.disease",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "C.7(b)(i)",
-      "text": "Pollution and its control",
-      "subtopic_id": "conservation.pollution",
+      "source": "utme",
+      "ref": "C.7(a)(ii)",
+      "text": "Easily transmissible diseases: poliomyelitis, cholera, tuberculosis, STDs",
+      "subtopic_id": "microorganisms.disease",
       "status": "covered",
-      "note": ""
+      "note": "Vaccination goes to microorganisms.immunity.",
+      "proposed": ""
     },
     {
-      "source": "jamb",
+      "source": "utme",
+      "ref": "C.7(b)(i)",
+      "text": "Pollution: sources, types, effects and methods of control",
+      "subtopic_id": "conservation.pollution",
+      "status": "partial",
+      "note": "Sources and effects are covered; methods of controlling pollution are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
       "ref": "C.7(b)(ii)",
-      "text": "Sanitation and sewage",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "no subtopic covers sanitation or sewage",
-      "proposed": "microorganisms > Public health: sanitation, refuse and sewage disposal"
+      "text": "Sanitation and sewage; health agencies",
+      "subtopic_id": "microorganisms.public-health",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "C.7(c-d)",
-      "text": "Conservation of natural resources; game reserves and national parks",
+      "source": "utme",
+      "ref": "C.7(c)",
+      "text": "Conservation of natural resources: methods, benefits, preventing desertification, bodies responsible",
+      "subtopic_id": "conservation.methods",
+      "status": "partial",
+      "note": "Methods and agencies are covered; the benefits of conservation and prevention of desertification are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.7(d)",
+      "text": "Game reserves and national parks",
       "subtopic_id": "conservation.methods",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "D.1(a-c)",
-      "text": "Variation: morphological, physiological, application in crime/transfusion/paternity",
+      "source": "utme",
+      "ref": "D.1(a)(i)",
+      "text": "Morphological variation: size (height, weight)",
       "subtopic_id": "variation.morphological",
       "status": "covered",
-      "note": "also variation.physiological, variation.applications"
+      "note": "Continuous and discontinuous variation from the objectives goes to variation.types.",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "D.2(a-e)",
-      "text": "Heredity: inheritance, chromosomes, probability/sex determination, applications, sex-linked characters",
-      "subtopic_id": "genetics.terminology",
+      "source": "utme",
+      "ref": "D.1(a)(ii)",
+      "text": "Morphological variation: colour",
+      "subtopic_id": "variation.morphological",
       "status": "covered",
-      "note": "also genetics.chromosomes, genetics.mendel, genetics.applications, genetics.sex-linkage"
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "E.1(a-c)",
-      "text": "Theories of evolution: Lamarck, Darwin, organic evolution",
+      "source": "utme",
+      "ref": "D.1(a)(iii)",
+      "text": "Morphological variation: fingerprints",
+      "subtopic_id": "variation.morphological",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.1(b)(i)",
+      "text": "Physiological variation: ability to roll tongue",
+      "subtopic_id": "variation.physiological",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.1(b)(ii)",
+      "text": "Physiological variation: ability to taste PTC",
+      "subtopic_id": "variation.physiological",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.1(b)(iii)",
+      "text": "Physiological variation: blood groups",
+      "subtopic_id": "variation.physiological",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.1(c)",
+      "text": "Application of discontinuous variation: crime detection, blood transfusion, paternity",
+      "subtopic_id": "variation.applications",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.2(a)(i)",
+      "text": "Heritable and non-heritable characters",
+      "subtopic_id": "variation.causes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.2(b)(i)",
+      "text": "Chromosomes: structure; simple structure of DNA",
+      "subtopic_id": "genetics.chromosomes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.2(b)(ii)",
+      "text": "Transmission of hereditary characters: segregation at meiosis, recombination at fertilisation",
+      "subtopic_id": "genetics.mendel",
+      "status": "partial",
+      "note": "Split across topics: segregation as a law in genetics.mendel, meiosis in cell.division. No covers line names transmission of characters from parent to offspring as such.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.2(c)",
+      "text": "Probability in genetics and sex determination",
+      "subtopic_id": "genetics.mendel",
+      "status": "covered",
+      "note": "Sex determination is in genetics.sex-linkage, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.2(d)(i)",
+      "text": "Application of heredity in agriculture; GMOs, gene therapy, biosafety",
+      "subtopic_id": "genetics.applications",
+      "status": "covered",
+      "note": "GMOs are held by genetic engineering in applied.biotechnology; biosafety is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.2(d)(ii)",
+      "text": "Application of heredity in medicine; recombinant DNA products",
+      "subtopic_id": "genetics.applications",
+      "status": "covered",
+      "note": "Recombinant DNA goes to applied.biotechnology.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.2(e)",
+      "text": "Sex-linked characters: baldness, haemophilia, colour blindness",
+      "subtopic_id": "genetics.sex-linkage",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "E.1(a)",
+      "text": "Lamarck's theory",
       "subtopic_id": "evolution.theories",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
-      "source": "jamb",
-      "ref": "E.2",
-      "text": "Evidence of evolution",
-      "subtopic_id": "evolution.evidence",
+      "source": "utme",
+      "ref": "E.1(b)",
+      "text": "Darwin's theory",
+      "subtopic_id": "evolution.theories",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "E.1(c)",
+      "text": "Organic theory: organic evolution as the sum of adaptive changes",
+      "subtopic_id": "evolution.theories",
       "status": "partial",
-      "note": "genetic studies and the role of mutation as evidence are not named in evolution.evidence's covers line"
+      "note": "The named theories are covered; organic evolution as a concept is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "E.2",
+      "text": "Evidence of evolution: fossils, comparative anatomy, physiology, embryology, genetic studies, trends",
+      "subtopic_id": "evolution.evidence",
+      "status": "covered",
+      "note": "Evolutionary trends go to evolution.trends, the role of mutation to evolution.theories.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 NERDC 1",
+      "text": "Biology and living things",
+      "subtopic_id": "practical.nature-of-biology",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 NERDC 2",
+      "text": "Living things and non-living things, classification",
+      "subtopic_id": "classification.living-nonliving",
+      "status": "covered",
+      "note": "Classification is in classification.kingdoms, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 NERDC 3",
+      "text": "Classification of living things",
+      "subtopic_id": "classification.kingdoms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 NERDC 4",
+      "text": "Classification of animals and organisation of life",
+      "subtopic_id": "classification.kingdoms",
+      "status": "partial",
+      "note": "Split across topics: classification.kingdoms and organisation.levels. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 NERDC 5",
+      "text": "The cell: definition, forms, structure, functions and theory",
+      "subtopic_id": "cell.components",
+      "status": "partial",
+      "note": "Structure and functions in cell.components, forms in organisation.cell-forms; the cell theory is not covered anywhere.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 NERDC 6",
+      "text": "The cell and its environment: osmosis, diffusion, biological significance",
+      "subtopic_id": "cell-environment.diffusion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 NERDC 7",
+      "text": "Properties and functions of the cell: cellular respiration",
+      "subtopic_id": "respiration.cellular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 NERDC 8-9",
+      "text": "Mode of nutrition and plant nutrition: photosynthesis and chemosynthesis",
+      "subtopic_id": "animal-nutrition.modes",
+      "status": "partial",
+      "note": "Split across topics: modes and chemosynthesis in animal-nutrition.modes, photosynthesis in plant-nutrition.photosynthesis. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 NERDC 10",
+      "text": "Growth: basis and aspects of growth",
+      "subtopic_id": "growth.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS1 T1 W1",
-      "text": "Recognizing living things",
+      "text": "Recognising living things",
       "subtopic_id": "classification.living-nonliving",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1415,7 +3759,8 @@
       "text": "Living things and non-living things",
       "subtopic_id": "classification.living-nonliving",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1423,15 +3768,17 @@
       "text": "Classification of living things",
       "subtopic_id": "classification.kingdoms",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS1 T1 W4",
-      "text": "Organization of life",
+      "text": "Organisation of life",
       "subtopic_id": "organisation.levels",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1439,7 +3786,8 @@
       "text": "Plant nutrition",
       "subtopic_id": "plant-nutrition.photosynthesis",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1447,7 +3795,8 @@
       "text": "Nutrient cycling in nature",
       "subtopic_id": "nutrient-cycles.carbon",
       "status": "covered",
-      "note": ""
+      "note": "Spans the nutrient-cycles topic.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1455,7 +3804,8 @@
       "text": "Nutrition in animals",
       "subtopic_id": "animal-nutrition.food-classes",
       "status": "covered",
-      "note": ""
+      "note": "Spans the animal-nutrition topic.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1463,7 +3813,8 @@
       "text": "Mode of nutrition",
       "subtopic_id": "animal-nutrition.modes",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1471,16 +3822,107 @@
       "text": "Basic ecological concept",
       "subtopic_id": "ecosystem.components",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS1 T1 W10",
       "text": "Growth, irritability and movement",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "irritability and movement as a cell/organism characteristic is not covered by any subtopic",
-      "proposed": "cell > Movement in cells: cilia, flagella and cyclosis"
+      "subtopic_id": "growth.growth",
+      "status": "partial",
+      "note": "Split across topics: growth in growth.growth, irritability and movement in cell.properties. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 1",
+      "text": "Reproduction: meaning, types and forms of asexual reproduction",
+      "subtopic_id": "reproduction.asexual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 2",
+      "text": "Sexual reproduction (conjugation, meiosis) and excretory organelles in living cells",
+      "subtopic_id": "reproduction.lower-organisms",
+      "status": "partial",
+      "note": "Split across topics: conjugation in reproduction.lower-organisms, meiosis in cell.division, excretory organelles in excretion.organs. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 3",
+      "text": "Reproduction in unicellular organisms and invertebrates",
+      "subtopic_id": "reproduction.lower-organisms",
+      "status": "covered",
+      "note": "Spans the reproduction topic: fission in reproduction.asexual, invertebrates in reproduction.animals-compared.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 4",
+      "text": "Irritability and movement",
+      "subtopic_id": "cell.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 5",
+      "text": "Nutrition in animals: food substances and digestive enzymes",
+      "subtopic_id": "animal-nutrition.food-classes",
+      "status": "covered",
+      "note": "Enzymes in animal-nutrition.enzymes, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 6",
+      "text": "Basic ecological concepts",
+      "subtopic_id": "ecosystem.components",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 7",
+      "text": "Biomes",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 8",
+      "text": "Population studies",
+      "subtopic_id": "population.sampling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 9",
+      "text": "Functioning ecosystem",
+      "subtopic_id": "energy-flow.producers-consumers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 NERDC 10",
+      "text": "Ecological management",
+      "subtopic_id": "associations.symbiosis",
+      "status": "covered",
+      "note": "Heading is ambiguous; in WASSCE A.III.6 ecological management opens with biological associations, and pollution and tolerance have their own weeks in this term.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1488,24 +3930,26 @@
       "text": "Basic ecological concept",
       "subtopic_id": "ecosystem.components",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS1 T2 W2",
       "text": "Ecological management",
-      "subtopic_id": "conservation.methods",
+      "subtopic_id": "associations.symbiosis",
       "status": "covered",
-      "note": ""
+      "note": "Same reading as SS1 T2 NERDC 10.",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS1 T2 W3",
       "text": "Tolerance",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "tolerance range of an ecological factor is not covered by any subtopic",
-      "proposed": "ecological-factors > Tolerance and range of an ecological factor"
+      "subtopic_id": "ecological-factors.tolerance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1513,7 +3957,8 @@
       "text": "Adaptation",
       "subtopic_id": "adaptation.structural",
       "status": "covered",
-      "note": ""
+      "note": "Spans the adaptation topic.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1521,7 +3966,8 @@
       "text": "Pollution",
       "subtopic_id": "conservation.pollution",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1529,7 +3975,8 @@
       "text": "Conservation of natural resources",
       "subtopic_id": "conservation.resources",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1537,7 +3984,8 @@
       "text": "Reproduction",
       "subtopic_id": "reproduction.asexual",
       "status": "covered",
-      "note": "also reproduction.human, .flowers"
+      "note": "Spans the reproduction topic.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1545,24 +3993,26 @@
       "text": "Micro-organisms around us",
       "subtopic_id": "microorganisms.types",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS1 T3 W2",
       "text": "Concept of culturing",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "the laboratory technique of culturing micro-organisms (media preparation, sterilisation, inoculation) is not covered by any subtopic",
-      "proposed": "practical > Culturing micro-organisms: technique and media"
+      "subtopic_id": "microorganisms.culturing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS1 T3 W3",
-      "text": "Micro-organisms in action: measuring growth (turbidity)",
-      "subtopic_id": "microorganisms.useful",
-      "status": "partial",
-      "note": "measuring microbial growth by turbidity is not named in any covers line"
+      "text": "Micro-organisms in action: growth and its measurement",
+      "subtopic_id": "microorganisms.culturing",
+      "status": "covered",
+      "note": "The lesson note teaches measuring growth of a culture.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1570,15 +4020,17 @@
       "text": "Sexually transmitted infections",
       "subtopic_id": "microorganisms.disease",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS1 T3 W5",
-      "text": "Towards better health: controlling harmful micro-organisms",
+      "text": "Towards better health: control of harmful micro-organisms",
       "subtopic_id": "microorganisms.disease",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1586,15 +4038,17 @@
       "text": "Population studies",
       "subtopic_id": "population.sampling",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS1 T3 W7",
-      "text": "Functioning ecosystem",
+      "text": "Functioning ecosystem: autotrophs, heterotrophs, decomposers",
       "subtopic_id": "energy-flow.producers-consumers",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1602,7 +4056,98 @@
       "text": "Energy transformation in nature",
       "subtopic_id": "energy-flow.energy",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 1",
+      "text": "Aquatic habitat",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 2",
+      "text": "Terrestrial habitat",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 3",
+      "text": "Food production and storage",
+      "subtopic_id": "applied.food-preservation",
+      "status": "covered",
+      "note": "Food production in applied.agriculture, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 4",
+      "text": "Nutrient cycling in nature",
+      "subtopic_id": "nutrient-cycles.carbon",
+      "status": "covered",
+      "note": "Spans the nutrient-cycles topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 5",
+      "text": "Nutrient cycling in nature (continued)",
+      "subtopic_id": "nutrient-cycles.nitrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 6",
+      "text": "Pollution",
+      "subtopic_id": "conservation.pollution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 7",
+      "text": "Conservation of natural resources",
+      "subtopic_id": "conservation.resources",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 8",
+      "text": "Ecological management and tolerance",
+      "subtopic_id": "ecological-factors.tolerance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 9",
+      "text": "Adaptation",
+      "subtopic_id": "adaptation.structural",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 NERDC 10",
+      "text": "Adaptation (continued)",
+      "subtopic_id": "adaptation.behavioural",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1610,7 +4155,8 @@
       "text": "The cells",
       "subtopic_id": "cell.components",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1618,7 +4164,8 @@
       "text": "Cell structure and functions of cell components",
       "subtopic_id": "cell.components",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1626,15 +4173,17 @@
       "text": "The cell and its environment: diffusion, osmosis",
       "subtopic_id": "cell-environment.diffusion",
       "status": "covered",
-      "note": "also cell-environment.osmosis"
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T1 W4",
-      "text": "Properties and function of the cell",
-      "subtopic_id": "cell.components",
-      "status": "covered",
-      "note": ""
+      "text": "Properties and functions of the cells",
+      "subtopic_id": "cell.properties",
+      "status": "partial",
+      "note": "Split across topics: the WASSCE A.I.6 list (nutrition, respiration, excretion, growth, movement, reproduction) lives in six topics. Nothing missing.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1642,49 +4191,143 @@
       "text": "Cellular respiration",
       "subtopic_id": "respiration.cellular",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T1 W6",
       "text": "Growth (mitosis)",
-      "subtopic_id": "cell.division",
+      "subtopic_id": "growth.growth",
       "status": "covered",
-      "note": ""
+      "note": "Stages of mitosis go to cell.division.",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T1 W7",
-      "text": "Irritability, cell reaction to its environment",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "irritability as a cell characteristic is not covered by any subtopic",
-      "proposed": "cell > Irritability: cell reaction to its environment"
+      "text": "Irritability: cell reaction to its environment",
+      "subtopic_id": "cell.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T1 W8",
-      "text": "Reproduction (asexual)",
+      "text": "Asexual reproduction",
       "subtopic_id": "reproduction.asexual",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T1 W9",
       "text": "Sexual reproduction",
-      "subtopic_id": "reproduction.human",
-      "status": "partial",
-      "note": "general concept of sexual reproduction (as distinct from human reproduction) is only loosely covered"
+      "subtopic_id": "reproduction.lower-organisms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T1 W10",
       "text": "Reproductive health",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "reproductive health and family planning as a topic distinct from birth control is not covered by any subtopic",
-      "proposed": "reproduction.human > add reproductive health and family planning"
+      "subtopic_id": "reproduction.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 1",
+      "text": "Tissue and supporting system",
+      "subtopic_id": "support.animal-skeleton",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 2",
+      "text": "Tissue and supporting system (continued)",
+      "subtopic_id": "support.plant-tissues",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 3",
+      "text": "Mammalian teeth",
+      "subtopic_id": "animal-nutrition.teeth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 4",
+      "text": "Digestive system",
+      "subtopic_id": "animal-nutrition.alimentary",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 5",
+      "text": "Digestive system (continued)",
+      "subtopic_id": "animal-nutrition.alimentary",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 6",
+      "text": "Transport system",
+      "subtopic_id": "transport.need",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 7",
+      "text": "Circulatory system",
+      "subtopic_id": "transport.heart-circulation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 8",
+      "text": "Transport system in higher plants",
+      "subtopic_id": "transport.plants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 9",
+      "text": "Respiratory system",
+      "subtopic_id": "respiration.surfaces",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 NERDC 10",
+      "text": "Respiratory system (continued)",
+      "subtopic_id": "respiration.mechanism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1692,15 +4335,17 @@
       "text": "Excretion",
       "subtopic_id": "excretion.organs",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T2 W2",
-      "text": "Tissues and supporting systems, skeleton",
+      "text": "Tissues and supporting systems; skeleton and supporting systems",
       "subtopic_id": "support.animal-skeleton",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1708,7 +4353,8 @@
       "text": "Components of the mammalian skeleton",
       "subtopic_id": "support.animal-skeleton",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1716,23 +4362,26 @@
       "text": "Joints",
       "subtopic_id": "support.joints-movement",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T2 W5",
-      "text": "Alimentary canals / digestive systems",
+      "text": "Alimentary canals, digestive systems, alimentary tracts of animals",
       "subtopic_id": "animal-nutrition.alimentary",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T2 W6",
-      "text": "Practical on digestion and skeletal system: dissection",
-      "subtopic_id": "practical.lab",
-      "status": "covered",
-      "note": ""
+      "text": "Practical on digestion and skeletal system; dissection of rabbit, rat or fowl",
+      "subtopic_id": "animal-nutrition.alimentary",
+      "status": "partial",
+      "note": "Split across topics: gut in animal-nutrition.alimentary, skeleton in support.animal-skeleton, dissection handling in practical.lab. Nothing missing.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1740,15 +4389,17 @@
       "text": "Feeding habits",
       "subtopic_id": "animal-nutrition.feeding",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS2 T2 W8",
-      "text": "Feeding in amoeba, hydra and man",
+      "text": "Feeding in Amoeba, Hydra and man",
       "subtopic_id": "animal-nutrition.feeding",
       "status": "covered",
-      "note": ""
+      "note": "Hydra is not among the named groups (protozoa, insects, mammals) but falls under feeding habits.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1756,7 +4407,8 @@
       "text": "Transport system",
       "subtopic_id": "transport.need",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1764,7 +4416,8 @@
       "text": "Circulatory system in mammals",
       "subtopic_id": "transport.heart-circulation",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1772,96 +4425,278 @@
       "text": "Mechanisms of transport in higher plants",
       "subtopic_id": "transport.plants",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
-      "ref": "SS2 T3 W1",
-      "text": "Respiratory system",
-      "subtopic_id": "respiration.surfaces",
-      "status": "covered",
-      "note": ""
-    },
-    {
-      "source": "sow",
-      "ref": "SS2 T3 W2",
-      "text": "Mechanism of respiration",
-      "subtopic_id": "respiration.mechanism",
-      "status": "covered",
-      "note": ""
-    },
-    {
-      "source": "sow",
-      "ref": "SS2 T3 W3",
-      "text": "Aquatic habitat: marine, estuarine, fresh water",
-      "subtopic_id": "ecosystem.habitats",
-      "status": "covered",
-      "note": ""
-    },
-    {
-      "source": "sow",
-      "ref": "SS2 T3 W4",
-      "text": "Terrestrial habitat: forest, grassland",
-      "subtopic_id": "ecosystem.habitats",
-      "status": "covered",
-      "note": ""
-    },
-    {
-      "source": "sow",
-      "ref": "SS2 T3 W5",
-      "text": "Ecology of population; overcrowding and food shortage",
-      "subtopic_id": "population.growth",
-      "status": "covered",
-      "note": ""
-    },
-    {
-      "source": "sow",
-      "ref": "SS2 T3 W6",
-      "text": "Excretion in lower organisms; excretory system in vertebrates and plants",
+      "ref": "SS2 T3 NERDC 1",
+      "text": "Excretion in lower organisms",
       "subtopic_id": "excretion.organs",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
-      "ref": "SS2 T3 W7",
-      "text": "Male and female reproductive structures; sexual reproduction in plants; pollination",
+      "ref": "SS2 T3 NERDC 2",
+      "text": "Excretory system in vertebrates and plants",
+      "subtopic_id": "excretion.organs",
+      "status": "covered",
+      "note": "The kidney in excretion.kidney, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 NERDC 3",
+      "text": "Male and female reproductive structures",
       "subtopic_id": "reproduction.human",
       "status": "covered",
-      "note": "also reproduction.flowers"
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
-      "ref": "SS2 T3 W8",
+      "ref": "SS2 T3 NERDC 4",
+      "text": "Sexual reproduction in plants",
+      "subtopic_id": "reproduction.flowers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 NERDC 5",
+      "text": "Pollination",
+      "subtopic_id": "reproduction.flowers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 NERDC 6",
       "text": "Ecological succession",
       "subtopic_id": "population.succession",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
-      "ref": "SS2 T3 W9",
+      "ref": "SS2 T3 NERDC 7",
+      "text": "Overcrowding and food shortage",
+      "subtopic_id": "population.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 NERDC 8",
       "text": "Balance in nature",
       "subtopic_id": "population.growth",
-      "status": "partial",
-      "note": "balance in nature is not named in population.growth's covers line"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
-      "ref": "SS2 T3 W10",
+      "ref": "SS2 T3 NERDC 9",
       "text": "Family planning",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "reproductive health and family planning is not covered by any subtopic",
-      "proposed": "reproduction.human > add reproductive health and family planning"
+      "subtopic_id": "reproduction.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 1",
+      "text": "Respiratory system",
+      "subtopic_id": "respiration.surfaces",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 2",
+      "text": "Mechanism of respiration",
+      "subtopic_id": "respiration.mechanism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 3",
+      "text": "Aquatic habitat (marine)",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 4",
+      "text": "Estuarine habitat",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 5",
+      "text": "Freshwater habitat",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 6",
+      "text": "Terrestrial habitat",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 7",
+      "text": "Forest",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 8",
+      "text": "Grassland",
+      "subtopic_id": "ecosystem.habitats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 9",
+      "text": "Ecology of population",
+      "subtopic_id": "population.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 Mod 10",
+      "text": "Food shortage",
+      "subtopic_id": "population.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 1",
+      "text": "Regulation of internal environment; kidney structure, function, diseases",
+      "subtopic_id": "excretion.kidney",
+      "status": "covered",
+      "note": "Homeostasis in excretion.homeostasis, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 2",
+      "text": "Liver: structure, functions, diseases; skin: structure, functions, diseases and care",
+      "subtopic_id": "excretion.liver",
+      "status": "partial",
+      "note": "Liver and skin structure and function are covered; skin diseases and care of the skin are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 3",
+      "text": "Hormones: location, secretion, function, over and under-secretion",
+      "subtopic_id": "coordination.hormones",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 4",
+      "text": "Nervous coordination: CNS, brain and spinal cord",
+      "subtopic_id": "coordination.cns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 5",
+      "text": "Peripheral nervous system and the neurone",
+      "subtopic_id": "coordination.pns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 6",
+      "text": "Reflex and voluntary actions, conditioned reflex",
+      "subtopic_id": "coordination.reflex",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 7",
+      "text": "Sensory organs: skin as a sense organ, the eye",
+      "subtopic_id": "sense-organs.eye",
+      "status": "covered",
+      "note": "Skin in sense-organs.others, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 8",
+      "text": "Organs of hearing, smell and taste",
+      "subtopic_id": "sense-organs.ear",
+      "status": "covered",
+      "note": "Smell and taste in sense-organs.others, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 9",
+      "text": "Development of new organisms: courtship behaviour, stages in development of toad and insects",
+      "subtopic_id": "reproduction.animals-compared",
+      "status": "partial",
+      "note": "Split across topics: courtship in reproduction.animals-compared, toad and insect development in growth.metamorphosis. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 NERDC 10",
+      "text": "Development of new organisms: seeds, fruits, germination",
+      "subtopic_id": "reproduction.fruits-seeds",
+      "status": "partial",
+      "note": "Split across topics: seeds and fruits in reproduction.fruits-seeds, germination in growth.germination. Nothing missing.",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS3 T1 W1",
       "text": "Regulation of internal environment",
-      "subtopic_id": "excretion.kidney",
+      "subtopic_id": "excretion.homeostasis",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1869,7 +4704,8 @@
       "text": "Endocrine gland",
       "subtopic_id": "coordination.hormones",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1877,7 +4713,8 @@
       "text": "The skin",
       "subtopic_id": "excretion.skin",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1885,7 +4722,8 @@
       "text": "The spinal cord",
       "subtopic_id": "coordination.cns",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1893,7 +4731,8 @@
       "text": "Reflex and voluntary action",
       "subtopic_id": "coordination.reflex",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1901,32 +4740,35 @@
       "text": "Ecology of population",
       "subtopic_id": "population.growth",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS3 T1 W7",
       "text": "Territorial behaviour in organisms",
       "subtopic_id": "adaptation.behavioural",
-      "status": "partial",
-      "note": "territorial behaviour is not named in adaptation.behavioural's covers line"
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS3 T1 W8",
       "text": "Family planning",
-      "subtopic_id": null,
-      "status": "missing",
-      "note": "reproductive health and family planning is not covered by any subtopic",
-      "proposed": "reproduction.human > add reproductive health and family planning"
+      "subtopic_id": "reproduction.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS3 T1 W9",
       "text": "Development of new seed",
-      "subtopic_id": "growth.germination",
+      "subtopic_id": "reproduction.fruits-seeds",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1934,7 +4776,71 @@
       "text": "Reproductive behaviour in animals",
       "subtopic_id": "reproduction.animals-compared",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 NERDC 1",
+      "text": "The fruit: structure, types, dispersal of fruits and seeds",
+      "subtopic_id": "reproduction.fruits-seeds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 NERDC 2",
+      "text": "Variation in population: morphological, physiological, application",
+      "subtopic_id": "variation.morphological",
+      "status": "covered",
+      "note": "Spans the variation topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 NERDC 3",
+      "text": "Adaptation for survival: competition",
+      "subtopic_id": "associations.competition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 NERDC 4",
+      "text": "Adaptive colouration and behavioural adaptation",
+      "subtopic_id": "adaptation.colouration",
+      "status": "covered",
+      "note": "Behavioural adaptation in adaptation.behavioural, within the same topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 NERDC 5",
+      "text": "Theories of evolution",
+      "subtopic_id": "evolution.theories",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 NERDC 6",
+      "text": "Biology of heredity (genetics)",
+      "subtopic_id": "genetics.terminology",
+      "status": "covered",
+      "note": "Spans the genetics topic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 NERDC 7",
+      "text": "Chromosomes: location, structure, roles; probability and application of genetics",
+      "subtopic_id": "genetics.chromosomes",
+      "status": "covered",
+      "note": "Probability in genetics.mendel, applications in genetics.applications, within the same topic.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1942,7 +4848,8 @@
       "text": "Heredity (genetics)",
       "subtopic_id": "genetics.terminology",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1950,15 +4857,17 @@
       "text": "The chromosome",
       "subtopic_id": "genetics.chromosomes",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS3 T2 W3",
       "text": "Variation and evolution",
-      "subtopic_id": "variation.types",
-      "status": "covered",
-      "note": "also evolution.theories"
+      "subtopic_id": "evolution.theories",
+      "status": "partial",
+      "note": "Split across topics: variation and evolution are separate topics. Nothing missing.",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1966,15 +4875,17 @@
       "text": "Adaptations",
       "subtopic_id": "adaptation.structural",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
       "ref": "SS3 T2 W5",
-      "text": "Different castes of termites and their roles",
+      "text": "Castes of termites and their roles",
       "subtopic_id": "adaptation.behavioural",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     },
     {
       "source": "sow",
@@ -1982,25 +4893,37 @@
       "text": "Theory of evolution",
       "subtopic_id": "evolution.theories",
       "status": "covered",
-      "note": ""
+      "note": "",
+      "proposed": ""
     }
   ],
-  "unmapped_subtopics": [],
+  "unmapped_subtopics": [
+    "associations.parasitism",
+    "variation.types",
+    "evolution.trends",
+    "practical.lab"
+  ],
   "summary": {
-    "waec": {
-      "covered": 120,
-      "partial": 11,
-      "missing": 9
+    "wassce": {
+      "covered": 228,
+      "partial": 34,
+      "missing": 6
     },
-    "jamb": {
-      "covered": 25,
-      "partial": 5,
-      "missing": 2
+    "utme": {
+      "covered": 128,
+      "partial": 11,
+      "missing": 0
     },
     "sow": {
-      "covered": 61,
-      "partial": 4,
-      "missing": 7
+      "covered": 126,
+      "partial": 11,
+      "missing": 0
     }
+  },
+  "taxonomy_version": "2.2",
+  "sources": {
+    "wassce": "syllabi\\biology-waec.txt",
+    "utme": "syllabi\\biology-jamb.txt",
+    "sow": "syllabi\\biology-sow.txt"
   }
 }

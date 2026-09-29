@@ -2,5 +2,15 @@
   "slug": "civic-education-waec",
   "subject": "Civic Education",
   "source": "../../Exam Questions/WAEC QUESTIONS/WAEC QUESTIONS/2025 - 2020 WAEC CIVIC EDUCATION.docx",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/civic-education-waec.txt"
+    },
+    {
+      "exam": "SOW",
+      "path": "../syllabi/civic-education-sow.txt"
+    }
+  ]
 }

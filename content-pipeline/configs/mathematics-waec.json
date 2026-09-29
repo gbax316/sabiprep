@@ -3,5 +3,15 @@
   "subject": "Mathematics",
   "source": "../../Exam Questions/WAEC QUESTIONS/WAEC QUESTIONS/2025 - 2015 WAEC MATHEMATICS QUESTIONS .docx",
   "diagram_root": "../../Exam Questions/Maths Waec Question Diagrams (2025-2015)",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/mathematics-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/mathematics-jamb.txt"
+    }
+  ]
 }

@@ -3,5 +3,15 @@
   "subject": "Mathematics",
   "source": "../../Exam Questions/UTME JAMB Questions/2024-2014 UTME MATHEMATICS.docx",
   "diagram_root": "../../Exam Questions/Maths UTME Diagram",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/mathematics-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/mathematics-jamb.txt"
+    }
+  ]
 }
