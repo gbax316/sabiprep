@@ -1,0 +1,191 @@
+{
+  "slug": "civic-education-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.29,
+  "agree_subtopic": 73,
+  "agree_topic": 78,
+  "nofit": 4,
+  "disagreements": [
+    {
+      "year": 2023,
+      "q_number": 39,
+      "stem": "The major aim of youth empowerment programmes is to",
+      "sonnet": "youth-empowerment.skills",
+      "opus": "youth-empowerment.importance",
+      "notes": [
+        "",
+        "Aim of youth empowerment programmes. Also fits youth-empowerment.government (programmes) and youth-empowerment.skills (answer names vocational skills). No subtopic owns the aims or objectives of the programmes."
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 38,
+      "stem": "Where you will likely not find the sign in Figure 1 in Nigeria",
+      "sonnet": "law-order.constituted-authority",
+      "opus": "traffic.regulations",
+      "notes": [
+        "Question depends on an image of a sign that is not included in this input, so its subject matter cannot be verified. The options (court, military zone, presidential villa, shopping mall) suggest a restricted-access or security sign rather than a traffic sign; law-order.constituted-authority is the best guess but this is an input gap, not a confirmed placement.",
+        "Image missing; the sign cannot be identified. The places (courts, barracks, villa, malls) suggest a restricted-area or no-photography sign, which has no home; traffic.regulations is the only subtopic that teaches signs. Unplaceable without the figure."
+      ]
+    },
+    {
+      "year": 2025,
+      "q_number": 48,
+      "stem": "Civil Society Organizations (CSOs) are not characterized by",
+      "sonnet": "civil-society.meaning-functions",
+      "opus": "civil-society.qualities-problems",
+      "notes": [
+        "",
+        "The qualities-problems rule claims what a CSO is or is not characterised by, but every option is a function or a difference from political parties, which civil-society.meaning-functions explicitly covers."
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 9,
+      "stem": "The youth who took part in the various building projects in Upe village are said to be",
+      "sonnet": "youth-empowerment.importance",
+      "opus": "values.meaning-types",
+      "notes": [
+        "Self-reliance is named as a benefit under youth-empowerment.importance's covers line, but the passage describes a community-service project, not an empowerment programme, so values.community-service also fits.",
+        "Naming the quality the youths show. Also fits values.community-service (values it builds), and the self-reliant option points to youth-empowerment.importance."
+      ]
+    },
+    {
+      "year": 2021,
+      "q_number": 29,
+      "stem": "The aim of those engaged in the activity captured in the image in Figure 2 is to",
+      "sonnet": "youth-empowerment.skills",
+      "opus": "youth-empowerment.importance",
+      "notes": [
+        "",
+        "Image missing. The aim of the pictured skill activity is to obtain skills, which also fits youth-empowerment.skills."
+      ]
+    },
+    {
+      "year": 2024,
+      "q_number": 13,
+      "stem": "Which of the following does a civil society advocate for?",
+      "sonnet": "civil-society.qualities-problems",
+      "opus": "civil-society.meaning-functions",
+      "notes": [
+        "Objectivity and non-partisanship are named as qualities under civil-society.qualities-problems, but advocacy is named as a function under civil-society.meaning-functions, and the stem asks what a CSO advocates for.",
+        "What a CSO advocates is a function (advocacy), but the answer, objectivity and respect for opposing views, is a quality listed under civil-society.qualities-problems (fairness, non-partisanship)."
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 28,
+      "stem": "According to the 1999 constitution as amended, sovereignty belongs to the",
+      "sonnet": "democracy.constitution",
+      "opus": "democracy.meaning-types",
+      "notes": [
+        "Framed as a constitutional provision (fits democracy.constitution), but popular sovereignty is also listed as a feature under democracy.meaning-types.",
+        "Popular sovereignty is a listed feature of democracy, but the stem asks what the 1999 constitution says, which also fits democracy.constitution."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "law-order.constituted-authority",
+        "detail": "The subtopic's covers line lists types of constituted authority as institutions (government, police, courts, traditional rulers, school authorities, parents). It has no place for the traditional/charismatic/legal-rational typology of the basis of authority, which a real question tests directly (charismatic authority)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "government.tiers",
+        "detail": "Covers functions and problems of federal, state and local government but never mentions revenue sources or funding, which a real question tests (a major source of local government funds)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "government.arms",
+        "detail": "Covers who belongs to each arm and its functions and powers, but not the internal structure of the legislature, such as bicameral versus unicameral composition or equal state representation in the Senate. Two separate real questions test this structural content with no closer home."
+      },
+      {
+        "kind": "overlap",
+        "where": "civil-society.meaning-functions / civil-society.qualities-problems",
+        "detail": "A question asking what a civil society organisation advocates for, answered with objectivity and respect for opposing views, sits on the border: advocacy is named as a function in meaning-functions, while objectivity and non-partisanship are named as qualities in qualities-problems."
+      },
+      {
+        "kind": "overlap",
+        "where": "democracy.constitution / democracy.meaning-types",
+        "detail": "A question that frames popular sovereignty as a constitutional provision fits both: democracy.constitution covers the constitution's content, and democracy.meaning-types names popular sovereignty as a feature of democracy."
+      },
+      {
+        "kind": "overlap",
+        "where": "human-rights.meaning / democracy.parties-elections",
+        "detail": "A question asking what enhances individual freedom in a democracy, answered with multi-party system, sits between liberty and its safeguards (human-rights.meaning) and party systems (democracy.parties-elections)."
+      },
+      {
+        "kind": "overlap",
+        "where": "values.community-service / youth-empowerment.importance",
+        "detail": "Self-reliance is named explicitly as a benefit under youth-empowerment.importance's covers line, but a question describing self-reliant youths in a community-service context, not an empowerment programme, has no single clear home."
+      },
+      {
+        "kind": "missing",
+        "where": "hiv-aids.prevention-stigma / human-trafficking.effects",
+        "detail": "A question lists several civic-education topics and asks which two involve experiences that require counselling. This cross-cutting idea (psychosocial support or trauma) is not named by any subtopic; the closest homes each cover only one of the two topics the question pairs together."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "law-order.constituted-authority",
+        "detail": "No home for the types or sources of authority (traditional, charismatic, legal-rational). The covers line's types of constituted authority are institutions, a different list. Widen the covers line or add law-order.authority-types (Q9)."
+      },
+      {
+        "kind": "overlap",
+        "where": "civil-society.qualities-problems",
+        "detail": "Its rule claims anything a CSO is or is not characterised by, but questions phrased that way list functions and the CSO versus party distinction, which civil-society.meaning-functions owns. Conversely, what a CSO advocates can be answered with a quality. Sort by the content of the options, not the verb in the stem (Q50, Q74)."
+      },
+      {
+        "kind": "overlap",
+        "where": "youth-empowerment.importance",
+        "detail": "The aims or objectives of youth empowerment programmes sit between importance (benefits), government (programmes) and skills. Name aims explicitly in one covers line (Q23, Q32, Q66)."
+      },
+      {
+        "kind": "missing",
+        "where": "democracy.importance-problems",
+        "detail": "Electoral malpractice and vote buying, with their consequences such as loss of legitimacy, are split across democracy.importance-problems, democracy.parties-elections and political-apathy.effects-remedies. Name them in one covers line or add a sorting rule (Q68)."
+      },
+      {
+        "kind": "overlap",
+        "where": "democracy.meaning-types",
+        "detail": "Constitutional democracy is listed as a type in democracy.meaning-types and defined in democracy.constitution; the rule resolves it only indirectly. Remove it from meaning-types. Popular sovereignty asked through the constitution has the same split (Q31, Q77)."
+      },
+      {
+        "kind": "overlap",
+        "where": "rule-of-law.meaning",
+        "detail": "Democracy being governed by laws (supremacy of law) fits both rule-of-law.meaning and democracy.meaning-types features; no sorting rule covers it (Q69)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "government.tiers",
+        "detail": "Local government revenue and sources of funds are tested but not named; add them to the covers line (Q4)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "cultism.meaning-origin",
+        "detail": "Where cult activity is found (campuses, motor parks, markets) has no stated home; add prevalence and settings to the covers line (Q38)."
+      },
+      {
+        "kind": "missing",
+        "where": "hiv-aids.prevention-stigma",
+        "detail": "Cross-topic questions on counselling or rehabilitation (HIV/AIDS, trafficking, drugs) cannot take one id; the tree needs a rule for items that span parents, such as placing by the first correct element or flagging as multi-topic (Q58)."
+      },
+      {
+        "kind": "overlap",
+        "where": "values.community-service",
+        "detail": "Naming the quality shown by people doing community service fits values.meaning-types and values.community-service equally; the community-service rule should say which wins (Q57)."
+      }
+    ]
+  }
+}

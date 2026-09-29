@@ -1,0 +1,4357 @@
+{
+  "items": [
+    {
+      "source": "wassce",
+      "ref": "Aims (i)",
+      "text": "use correct English",
+      "subtopic_id": "sentences.construction",
+      "status": "partial",
+      "note": "split: correct usage spans every word-classes, verbs, concord, sentences and mechanics subtopic; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (ii)",
+      "text": "write about incidents in English that are appropriate to specified audiences and situations",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "partial",
+      "note": "split: writing about incidents sits in essay.narrative-descriptive, writing for a stated audience in essay.letters and essay.speeches-articles; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (iii)",
+      "text": "organize material in paragraphs that are chronologically, spatially and logically coherent",
+      "subtopic_id": "essay.organisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (iv)",
+      "text": "control sentence structures accurately",
+      "subtopic_id": "sentences.construction",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (v)",
+      "text": "exhibit variety in the use of sentence patterns",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (vi)",
+      "text": "comply with the rules of grammar",
+      "subtopic_id": "sentences.construction",
+      "status": "partial",
+      "note": "split: grammar spans the word-classes, verbs, concord and sentences subtopics; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (vii) spell",
+      "text": "spell correctly",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (vii) punctuate",
+      "text": "punctuate correctly",
+      "subtopic_id": "mechanics.punctuation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (viii) written",
+      "text": "comprehend written English",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "with the other comprehension subtopics",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (viii) spoken",
+      "text": "comprehend spoken English",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "understanding spoken English (listening) has no home; the tree scopes out the Listening Comprehension Test, but this aim applies to all candidates and the scheme of work teaches listening",
+      "proposed": "comprehension: new subtopic 'Listening and oral comprehension'"
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (ix) implied meaning",
+      "text": "recognize implied meaning",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (ix) tones and attitudes",
+      "text": "recognize tones and attitudes",
+      "subtopic_id": "comprehension.tone",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (x)",
+      "text": "use an acceptable pronunciation that can be comprehended by others",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "partial",
+      "note": "split: pronunciation spans every sounds and stress subtopic; nothing examinable is missing (spoken production is not tested on paper)",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (xi)",
+      "text": "recognize the physical characteristics of English sounds and the letters that represent them",
+      "subtopic_id": "sounds.consonants",
+      "status": "partial",
+      "note": "split: consonants in sounds.consonants, vowels in sounds.pure-vowels and sounds.diphthongs; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (xii) pick out",
+      "text": "pick out relevant information from set passages",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (xii) summarize",
+      "text": "summarize relevant information from set passages",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A everyday",
+      "text": "vocabulary of everyday usage (home, social relationships, common core school subjects)",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(a)",
+      "text": "Building and Building Construction",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(b)",
+      "text": "Agriculture",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(c)",
+      "text": "Fishing",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(d)",
+      "text": "Stock exchange",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(e)",
+      "text": "Health",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(f)",
+      "text": "Environment",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(g)",
+      "text": "Culture, Institutions and Ceremonies",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(h)",
+      "text": "Law and Order",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(i)",
+      "text": "Motor Vehicles and Travelling",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(j)",
+      "text": "Government and Administration",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(k)",
+      "text": "Sports",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(l)",
+      "text": "Religion",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(m)",
+      "text": "Science and Technology",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(n)",
+      "text": "Animal husbandry",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(o)",
+      "text": "Advertising",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.I(p)",
+      "text": "Human Internal Body system and function",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "register",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.II idioms",
+      "text": "Idioms, idiomatic expressions whose total meaning cannot be arrived at from the dictionary meanings of the words",
+      "subtopic_id": "idioms.idioms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.II collocations",
+      "text": "collocations",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "non-literal fixed collocations such as 'hook, line and sinker' go to idioms.idioms by the tree's own rule",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.III sequence of tenses",
+      "text": "Structural elements: sequence of tenses",
+      "subtopic_id": "verbs.sequence",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.III pronouns",
+      "text": "Structural elements: matching of pronouns with their antecedents",
+      "subtopic_id": "concord.pronoun-antecedent",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.III prepositions",
+      "text": "Structural elements: correct use of prepositions",
+      "subtopic_id": "word-classes.prepositions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A.IV",
+      "text": "Figurative usage: recognize when an expression is used figuratively and not literally",
+      "subtopic_id": "idioms.figures-of-speech",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A sense relations (synonyms)",
+      "text": "sense relations: synonyms",
+      "subtopic_id": "vocabulary.synonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A sense relations (antonyms)",
+      "text": "sense relations: antonyms",
+      "subtopic_id": "vocabulary.antonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 A sense relations (homonyms)",
+      "text": "sense relations: homonyms",
+      "subtopic_id": "vocabulary.homonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 B(i) number",
+      "text": "changes in word-forms which indicate number",
+      "subtopic_id": "word-classes.nouns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 B(i) tense",
+      "text": "changes in word-forms which indicate tense",
+      "subtopic_id": "verbs.principal-parts",
+      "status": "covered",
+      "note": "choice of tense itself is in verbs.tenses",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 B(i) degree",
+      "text": "changes in word-forms which indicate degree",
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 B(ii) groups",
+      "text": "patterns in which categories of words combine to form groups (phrases)",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 B(ii) sentences",
+      "text": "patterns in which groups combine to form sentences",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 B(iii) conjunctions, determiners",
+      "text": "use of structural words: conjunctions, determiners",
+      "subtopic_id": "word-classes.conjunctions-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 B(iii) prepositions",
+      "text": "use of structural words: prepositions",
+      "subtopic_id": "word-classes.prepositions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(a)",
+      "text": "Building",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(b)",
+      "text": "Plumbing",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(c)",
+      "text": "Fishing",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(d)",
+      "text": "Finance: commerce, banking, stock exchange, insurance",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(e)",
+      "text": "Photography",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(f)",
+      "text": "Mineral exploration",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(g)",
+      "text": "Common manufacturing industries",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(h)",
+      "text": "Printing, publishing, the press and libraries",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(i)",
+      "text": "Sea, road, rail and air transport",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(j)",
+      "text": "Government and politics",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(k)",
+      "text": "Sports and entertainment",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(l)",
+      "text": "Religion",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(m)",
+      "text": "Science and Technology",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(n)",
+      "text": "Power production: hydro, thermal, solar",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(o)",
+      "text": "Education",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(p)",
+      "text": "Communication",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(q)",
+      "text": "Military",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.I(r)",
+      "text": "Journalism and Advertising",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper, scoped out by the tree; the content still has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.II idioms",
+      "text": "Idioms, idiomatic expressions",
+      "subtopic_id": "idioms.idioms",
+      "status": "covered",
+      "note": "Ghana-only paper; same as the Nigerian A.II",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.II collocations",
+      "text": "collocations",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "Ghana-only paper; same as the Nigerian A.II",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.III sequence of tenses",
+      "text": "Structural elements: sequence of tenses",
+      "subtopic_id": "verbs.sequence",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.III concord",
+      "text": "Structural elements: concord",
+      "subtopic_id": "concord.subject-verb",
+      "status": "covered",
+      "note": "Ghana-only paper; pronoun agreement is the separate item below",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.III prepositions",
+      "text": "Structural elements: use of correct prepositions",
+      "subtopic_id": "word-classes.prepositions",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.III pronouns",
+      "text": "Structural elements: matching of pronouns with their antecedents",
+      "subtopic_id": "concord.pronoun-antecedent",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A.IV",
+      "text": "Figurative usage",
+      "subtopic_id": "idioms.figures-of-speech",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A sense relations (synonyms)",
+      "text": "sense relations: synonyms",
+      "subtopic_id": "vocabulary.synonyms",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A sense relations (antonyms)",
+      "text": "sense relations: antonyms",
+      "subtopic_id": "vocabulary.antonyms",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana A sense relations (homonyms)",
+      "text": "sense relations: homonyms",
+      "subtopic_id": "vocabulary.homonyms",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana B(i) number",
+      "text": "changes in word-forms which indicate number",
+      "subtopic_id": "word-classes.nouns",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana B(i) tense",
+      "text": "changes in word-forms which indicate tense",
+      "subtopic_id": "verbs.principal-parts",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana B(i) degree",
+      "text": "changes in word-forms which indicate degree",
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana B(ii) groups",
+      "text": "patterns in which categories of words combine to form groups",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana B(ii) sentences",
+      "text": "patterns in which groups combine to form sentences",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana B(iii) conjunctions, determiners",
+      "text": "use of structural words: conjunctions, determiners",
+      "subtopic_id": "word-classes.conjunctions-articles",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana B(iii) prepositions",
+      "text": "use of structural words: prepositions",
+      "subtopic_id": "word-classes.prepositions",
+      "status": "covered",
+      "note": "Ghana-only paper",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana C drama",
+      "text": "Literature: 10 questions on Drama (one prescribed text)",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "outside the subject: Ghana-only literature part, Literature-in-English content, excluded by the tree's scope rule",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana C prose",
+      "text": "Literature: 10 questions on Prose (one prescribed text)",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "outside the subject: Ghana-only literature part, Literature-in-English content, excluded by the tree's scope rule",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P1 Ghana C poetry",
+      "text": "Literature: 10 questions on Poetry",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "outside the subject: Ghana-only literature part, Literature-in-English content, excluded by the tree's scope rule",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A(i)",
+      "text": "Essay: letter",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A(ii)",
+      "text": "Essay: speech",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A(iii)",
+      "text": "Essay: narration",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A(iv)",
+      "text": "Essay: description",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A(v)",
+      "text": "Essay: argument/debate",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A(vi)",
+      "text": "Essay: report",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A(vii)",
+      "text": "Essay: article",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A(viii)",
+      "text": "Essay: exposition",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A(ix)",
+      "text": "Essay: creative writing",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A marks (i)",
+      "text": "Content: relevance of ideas to the topic",
+      "subtopic_id": "essay.organisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A marks (ii)",
+      "text": "Organization: formal features, paragraphing, emphasis and arrangement of ideas",
+      "subtopic_id": "essay.organisation",
+      "status": "covered",
+      "note": "formal features of each kind also sit in that kind's subtopic",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A marks (iii)",
+      "text": "Expression: effective control of vocabulary and sentence structure",
+      "subtopic_id": "essay.organisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 A marks (iv)",
+      "text": "Mechanical accuracy: correct grammar, punctuation, spelling",
+      "subtopic_id": "essay.organisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 B(i)",
+      "text": "find appropriate equivalents for selected words or phrases",
+      "subtopic_id": "comprehension.words-in-context",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 B(ii)",
+      "text": "understand the factual content",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 B(iii)",
+      "text": "make inferences from the content of the passage",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 B(iv)",
+      "text": "understand the use of English expressions that reveal sentiments, emotions, attitudes",
+      "subtopic_id": "comprehension.tone",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 B(v)",
+      "text": "identify and label basic grammatical structures, words, phrases or clauses and explain their functions",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 B(vi)",
+      "text": "identify and explain basic literary terms and expressions",
+      "subtopic_id": "idioms.figures-of-speech",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 B(vii)",
+      "text": "recast phrases or sentences into grammatical alternatives",
+      "subtopic_id": "comprehension.words-in-context",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 C(i)",
+      "text": "extract relevant information",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 C(ii)",
+      "text": "summarize the points demanded in clear concise English, avoiding repetition and redundancy",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P2 C(iii)",
+      "text": "present a summary of specific aspects or portions of the passage",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S1",
+      "text": "word final voiced-voiceless consonants in isolated words",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "Listening Test is scoped out for Nigeria; content has a home",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S2",
+      "text": "vowel quality in isolated words",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "partial",
+      "note": "split: pure vowels here, diphthongs in sounds.diphthongs; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S3 vowels",
+      "text": "vowel quality in isolated words",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "partial",
+      "note": "split: pure vowels here, diphthongs in sounds.diphthongs; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S3 consonants",
+      "text": "consonant contrasts in isolated words",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S4(i)",
+      "text": "vowel and/or consonant contrasts in sentence contexts",
+      "subtopic_id": "sounds.consonants",
+      "status": "partial",
+      "note": "split across sounds.pure-vowels, sounds.diphthongs and sounds.consonants by target sound; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S4(ii)",
+      "text": "vowel and consonant contrasts in isolated words",
+      "subtopic_id": "sounds.consonants",
+      "status": "partial",
+      "note": "split across sounds.pure-vowels, sounds.diphthongs and sounds.consonants by target sound; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S4(iii)",
+      "text": "vowel and consonant contrasts through rhymes",
+      "subtopic_id": "sounds.rhymes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S5",
+      "text": "rhymes",
+      "subtopic_id": "sounds.rhymes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S6",
+      "text": "comprehension of emphatic stress",
+      "subtopic_id": "stress.emphatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Listening S7",
+      "text": "understanding of the content of longer dialogues and narratives",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "listening comprehension has no home; the Listening Test is scoped out for Nigeria, but the scheme of work teaches listening",
+      "proposed": "comprehension: new subtopic 'Listening and oral comprehension'"
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features I(a)",
+      "text": "single consonants: initial, medial and final contrasts",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features I(b)",
+      "text": "consonant clusters initially and finally in a syllable, in the right order",
+      "subtopic_id": "sounds.clusters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features II(a)",
+      "text": "pure vowels",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features II(b)",
+      "text": "diphthongs",
+      "subtopic_id": "sounds.diphthongs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features II(c)",
+      "text": "triphthongs",
+      "subtopic_id": "sounds.diphthongs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features III(a)",
+      "text": "word stress, including stress shift between noun and verb",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features III(b)",
+      "text": "sentence stress, stress-timing, strong and weak forms",
+      "subtopic_id": "stress.emphatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features III(c)",
+      "text": "emphatic stress",
+      "subtopic_id": "stress.emphatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features IV(a)",
+      "text": "intonation: falling pattern",
+      "subtopic_id": "stress.intonation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Features IV(b)",
+      "text": "intonation: rising pattern, combined patterns and tags",
+      "subtopic_id": "stress.intonation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Orals 1 pure vowels",
+      "text": "Vowels: pure vowels",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Orals 1 diphthongs",
+      "text": "Vowels: diphthongs",
+      "subtopic_id": "sounds.diphthongs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Orals 2 consonants",
+      "text": "Consonants",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Orals 2 clusters",
+      "text": "Consonant clusters",
+      "subtopic_id": "sounds.clusters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Orals 3",
+      "text": "Rhymes",
+      "subtopic_id": "sounds.rhymes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Orals 4",
+      "text": "Word stress/Syllable structure",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Orals 5 emphatic stress",
+      "text": "Emphatic stress",
+      "subtopic_id": "stress.emphatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Orals 5 intonation",
+      "text": "Intonation patterns",
+      "subtopic_id": "stress.intonation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "P3 Orals 6",
+      "text": "Phonetic symbols",
+      "subtopic_id": "sounds.phonetic-symbols",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S obj 1",
+      "text": "identify main points/topic sentences in passages",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S obj 2",
+      "text": "determine implied meaning",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S obj 3 grammatical functions",
+      "text": "identify the grammatical functions of words, phrases, clauses",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S obj 3 figurative",
+      "text": "identify figurative expressions",
+      "subtopic_id": "idioms.figures-of-speech",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S obj 3 idiomatic",
+      "text": "identify idiomatic expressions in passages",
+      "subtopic_id": "comprehension.words-in-context",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S obj 4",
+      "text": "deduce or infer the writer's intentions including mood, attitude to the subject matter and opinion",
+      "subtopic_id": "comprehension.tone",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 1",
+      "text": "Description",
+      "subtopic_id": "comprehension.factual",
+      "status": "partial",
+      "note": "reading a descriptive passage is covered by the comprehension subtopics; recognising the kind of passage is named in no covers line",
+      "proposed": "widen comprehension.tone to include the kind of passage (descriptive, narrative, expository, argumentative or persuasive)"
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 2",
+      "text": "Narration",
+      "subtopic_id": "comprehension.factual",
+      "status": "partial",
+      "note": "reading a narrative passage is covered by the comprehension subtopics; recognising the kind of passage is named in no covers line",
+      "proposed": "widen comprehension.tone to include the kind of passage (descriptive, narrative, expository, argumentative or persuasive)"
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 3",
+      "text": "Exposition",
+      "subtopic_id": "comprehension.factual",
+      "status": "partial",
+      "note": "reading an expository passage is covered by the comprehension subtopics; recognising the kind of passage is named in no covers line",
+      "proposed": "widen comprehension.tone to include the kind of passage (descriptive, narrative, expository, argumentative or persuasive)"
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 4",
+      "text": "Argumentation/Persuasion",
+      "subtopic_id": "comprehension.factual",
+      "status": "partial",
+      "note": "reading an argumentative passage is covered, and judging its support sits in comprehension.inference; recognising the kind of passage is named in no covers line",
+      "proposed": "widen comprehension.tone to include the kind of passage (descriptive, narrative, expository, argumentative or persuasive)"
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 5",
+      "text": "three passages of about 200 words, one of them a cloze test",
+      "subtopic_id": "comprehension.cloze",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 6",
+      "text": "Comprehension of the whole or part of each passage",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 7 words",
+      "text": "Comprehension of words, phrases, clauses, sentences and idioms as used in the passages",
+      "subtopic_id": "comprehension.words-in-context",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 7 figures",
+      "text": "Comprehension of figures of speech as used in the passages",
+      "subtopic_id": "idioms.figures-of-speech",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 8",
+      "text": "Coherence and logical reasoning (deductions, inferences)",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 9",
+      "text": "THE LIFE CHANGER (prescribed reading text)",
+      "subtopic_id": "comprehension.prescribed-text",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C/S content 10",
+      "text": "Synthesis of ideas from the passages",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S obj 1 ordinary",
+      "text": "identify words and expressions in their ordinary contexts",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S obj 1 figurative",
+      "text": "identify words and expressions in their figurative contexts",
+      "subtopic_id": "idioms.figures-of-speech",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S obj 1 idiomatic",
+      "text": "identify words and expressions in their idiomatic contexts",
+      "subtopic_id": "idioms.idioms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S obj 2 similar",
+      "text": "determine similar meaning of words",
+      "subtopic_id": "vocabulary.synonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S obj 2 opposite",
+      "text": "determine opposite meaning of words",
+      "subtopic_id": "vocabulary.antonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S obj 3 punctuation",
+      "text": "differentiate between correct and incorrect punctuation",
+      "subtopic_id": "mechanics.punctuation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S obj 3 spelling",
+      "text": "differentiate between correct and incorrect spelling",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S obj 4",
+      "text": "identify various grammatical patterns in use",
+      "subtopic_id": "sentences.construction",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S obj 5",
+      "text": "interpret information conveyed in sentences",
+      "subtopic_id": "idioms.sentence-interpretation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 1",
+      "text": "Synonyms",
+      "subtopic_id": "vocabulary.synonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 2",
+      "text": "Antonyms",
+      "subtopic_id": "vocabulary.antonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 3",
+      "text": "Homonyms",
+      "subtopic_id": "vocabulary.homonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 4",
+      "text": "Clause and sentence patterns",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 5",
+      "text": "Word classes and their functions",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "the forms of each class sit in the word-classes subtopics",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 6 mood",
+      "text": "Mood",
+      "subtopic_id": "verbs.mood-conditionals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 6 tense",
+      "text": "Tense",
+      "subtopic_id": "verbs.tenses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 6 aspect",
+      "text": "Aspect",
+      "subtopic_id": "verbs.tenses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 6 number",
+      "text": "Number",
+      "subtopic_id": "word-classes.nouns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 6 agreement",
+      "text": "Agreement/concord",
+      "subtopic_id": "concord.subject-verb",
+      "status": "partial",
+      "note": "split: subject and verb here, pronoun and antecedent in concord.pronoun-antecedent; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 6 degree",
+      "text": "Degree (positive, comparative and superlative)",
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 6 question tags",
+      "text": "Question tags",
+      "subtopic_id": "concord.question-tags",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 7 punctuation",
+      "text": "Punctuation",
+      "subtopic_id": "mechanics.punctuation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 7 spelling",
+      "text": "Spelling",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 8 ordinary",
+      "text": "Ordinary usage",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 8 figurative",
+      "text": "Figurative usage",
+      "subtopic_id": "idioms.figures-of-speech",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "L/S content 8 idiomatic",
+      "text": "Idiomatic usage (formal, standard British English)",
+      "subtopic_id": "idioms.idioms",
+      "status": "covered",
+      "note": "phrasal verbs sit in idioms.phrasal-verbs",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral obj 1",
+      "text": "make distinctions between vowel types",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "partial",
+      "note": "split: monophthongs here, diphthongs in sounds.diphthongs; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral obj 2",
+      "text": "differentiate between consonant types",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral obj 3 words",
+      "text": "identify correct accentuation in individual words",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral obj 3 connected speech",
+      "text": "identify correct accentuation in connected speech",
+      "subtopic_id": "stress.emphatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral content 1 monophthongs",
+      "text": "Vowels: monophthongs",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral content 1 diphthongs",
+      "text": "Vowels: diphthongs",
+      "subtopic_id": "sounds.diphthongs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral content 2 consonants",
+      "text": "Consonants",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral content 2 clusters",
+      "text": "Consonant clusters",
+      "subtopic_id": "sounds.clusters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral content 3",
+      "text": "Rhymes (including homophones)",
+      "subtopic_id": "sounds.rhymes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral content 4",
+      "text": "Word stress (monosyllabic and polysyllabic)",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral content 5 intonation",
+      "text": "Intonation",
+      "subtopic_id": "stress.intonation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Oral content 5 emphatic stress",
+      "text": "Emphatic stress",
+      "subtopic_id": "stress.emphatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam A(a)",
+      "text": "1 comprehension passage, 5 questions",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "questions spread over the comprehension subtopics",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam A(b)",
+      "text": "1 cloze passage, 10 questions",
+      "subtopic_id": "comprehension.cloze",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam A(c)",
+      "text": "1 reading text, 10 questions",
+      "subtopic_id": "comprehension.prescribed-text",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam B(a)",
+      "text": "Sentence interpretation, 5 questions",
+      "subtopic_id": "idioms.sentence-interpretation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam B(b)",
+      "text": "Antonyms, 5 questions",
+      "subtopic_id": "vocabulary.antonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam B(c)",
+      "text": "Synonyms, 5 questions",
+      "subtopic_id": "vocabulary.synonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam B(d)",
+      "text": "Basic Grammar, 10 questions",
+      "subtopic_id": "sentences.construction",
+      "status": "partial",
+      "note": "split: basic grammar spans the word-classes, verbs, concord, sentences and mechanics subtopics; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam C(a)",
+      "text": "Vowels, 2 questions",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "partial",
+      "note": "split: monophthongs here, diphthongs in sounds.diphthongs; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam C(b)",
+      "text": "Consonants, 2 questions",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam C(c)",
+      "text": "Rhymes, 2 questions",
+      "subtopic_id": "sounds.rhymes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam C(d)",
+      "text": "Word Stress, 2 questions",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Exam C(e)",
+      "text": "Emphatic Stress, 2 questions",
+      "subtopic_id": "stress.emphatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W1(b)",
+      "text": "review of word class/parts of speech (noun, pronoun, verb, adjective)",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W1(c)",
+      "text": "spelling: doubling of consonants",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2(a)",
+      "text": "comprehension and reading skills",
+      "subtopic_id": "comprehension.reading-skills",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2(b)",
+      "text": "word meanings in context",
+      "subtopic_id": "comprehension.words-in-context",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2(c)",
+      "text": "structure: phrasal verbs",
+      "subtopic_id": "idioms.phrasal-verbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2(d)",
+      "text": "parts of speech (adverb, conjunction, preposition)",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2(e)",
+      "text": "vocabulary: libraries",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3(a)",
+      "text": "essay writing: types of essays",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "partial",
+      "note": "split: an overview of every kind of essay, spread across the five essay subtopics; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3(b)",
+      "text": "speech work: monophthongs",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3(c)",
+      "text": "idioms",
+      "subtopic_id": "idioms.idioms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3(d)",
+      "text": "vocabulary: entertainment",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4(a)",
+      "text": "reading skills: skimming and scanning",
+      "subtopic_id": "comprehension.reading-skills",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4(b)",
+      "text": "structure: noun and verb phrases",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4(c)",
+      "text": "vocabulary: agriculture",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4(d)",
+      "text": "common spelling errors",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5(a)",
+      "text": "structure: kinds of sentences (simple, multiple, compound, complex, compound-complex)",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5(b)",
+      "text": "expository essay writing",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5(c)",
+      "text": "vocabulary: stock exchange and insurance",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6(a)",
+      "text": "comprehension/oral skills",
+      "subtopic_id": "comprehension.factual",
+      "status": "partial",
+      "note": "the comprehension part is covered; oral (listening and speaking) skills have no home",
+      "proposed": "comprehension: new subtopic 'Listening and oral comprehension'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6(b)",
+      "text": "figures of speech (simile, metaphor, irony, personification, rhetorical questions)",
+      "subtopic_id": "idioms.figures-of-speech",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6(c)",
+      "text": "descriptive essay writing",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6(d)",
+      "text": "speech work: diphthongs",
+      "subtopic_id": "sounds.diphthongs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7(a)",
+      "text": "vocabulary: transportation (aviation, rail, maritime)",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7(b)",
+      "text": "noun clause structures",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7(c)",
+      "text": "speech work: consonant sounds introduction",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7(d)",
+      "text": "narrative essay writing",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8(a)",
+      "text": "comprehension and reading skills",
+      "subtopic_id": "comprehension.reading-skills",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8(b)",
+      "text": "structure: adjective",
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8(c)",
+      "text": "structure: adjectival phrase",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8(d)",
+      "text": "argumentative essay on patriotism",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9(a)",
+      "text": "comprehension: question-answering technique",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "how to answer comprehension questions (own words, matching the form of the question) is not a reading strategy in comprehension.reading-skills and has no other home",
+      "proposed": "comprehension: new subtopic 'Answering comprehension questions'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9(b)",
+      "text": "vocabulary: religion",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9(c)",
+      "text": "speech work: emphatic stress",
+      "subtopic_id": "stress.emphatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10(a)",
+      "text": "summary writing introduction",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10(b)",
+      "text": "structure: prefixes and suffixes",
+      "subtopic_id": "vocabulary.word-formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10(c)",
+      "text": "adverbial and prepositional phrases",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W11(a)",
+      "text": "essay writing: informal letter",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W11(b)",
+      "text": "structure: definite and indefinite articles",
+      "subtopic_id": "word-classes.conjunctions-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W11(c)",
+      "text": "speech work: additional consonant sounds",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W1(b)",
+      "text": "homographs (words spelled the same)",
+      "subtopic_id": "vocabulary.homonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W1(c)",
+      "text": "more on spellings",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2(a)",
+      "text": "comprehension/listening skills",
+      "subtopic_id": "comprehension.factual",
+      "status": "partial",
+      "note": "the comprehension part is covered; listening skills have no home",
+      "proposed": "comprehension: new subtopic 'Listening and oral comprehension'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2(b)",
+      "text": "structure: present tense (simple, continuous, perfect, perfect continuous)",
+      "subtopic_id": "verbs.tenses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2(c)",
+      "text": "vocabulary: government and politics",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3(a)",
+      "text": "comprehension: word meanings in context",
+      "subtopic_id": "comprehension.words-in-context",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3(b)",
+      "text": "structure: auxiliaries will and would",
+      "subtopic_id": "verbs.modals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3(c)",
+      "text": "vocabulary: photography",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4(a)",
+      "text": "essay writing: formal letter",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4(b)",
+      "text": "speech work: contrasting /th/ voiceless and voiced, /t/ and /d/",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4(c)",
+      "text": "structure: participles (present and past)",
+      "subtopic_id": "verbs.non-finite",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W5(a)",
+      "text": "comprehension/writing skills: answering summary questions",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W5(b)",
+      "text": "structure: auxiliaries shall and should",
+      "subtopic_id": "verbs.modals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W5(c)",
+      "text": "descriptive essay: The Evil Effect of Peer Pressure",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6(a)",
+      "text": "comprehension: Yvonne and Yvette",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6(b)",
+      "text": "vocabulary: printing and mass media",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6(c)",
+      "text": "structure: auxiliaries can and could",
+      "subtopic_id": "verbs.modals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6(d)",
+      "text": "spelling: commonly misspelt words",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7(a)",
+      "text": "structure: past tense (simple, continuous, perfect, perfect continuous)",
+      "subtopic_id": "verbs.tenses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7(b)",
+      "text": "comprehension/writing skills: paraphrasing",
+      "subtopic_id": "comprehension.words-in-context",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7(c)",
+      "text": "essay writing: methods of introducing writing",
+      "subtopic_id": "essay.organisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8(a)",
+      "text": "argumentative essay: Child Abuse",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8(b)",
+      "text": "vocabulary: religion",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8(c)",
+      "text": "structure: future tense",
+      "subtopic_id": "verbs.tenses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9(a)",
+      "text": "comprehension",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9(b)",
+      "text": "speech work: introduction to syllable",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9(c)",
+      "text": "spelling: homophones",
+      "subtopic_id": "sounds.rhymes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9(d)",
+      "text": "structure: punctuation (question mark, apostrophe, exclamation mark)",
+      "subtopic_id": "mechanics.punctuation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W10(a)",
+      "text": "speech work: introduction to stress",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W10(b)",
+      "text": "essay writing: minutes of meetings",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W10(c)",
+      "text": "structure: punctuation (full stop, comma, dash, colon, semi-colon, quotation marks)",
+      "subtopic_id": "mechanics.punctuation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1(b)",
+      "text": "comprehension: reading to grasp word meanings in context",
+      "subtopic_id": "comprehension.words-in-context",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1(c)",
+      "text": "commonly misspelt words",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1(d)",
+      "text": "use of dictionary",
+      "subtopic_id": "vocabulary.dictionary",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2(a)",
+      "text": "practical approach to summary writing",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2(b)",
+      "text": "vocabulary: advertising",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2(c)",
+      "text": "comprehension: reading for the main point (Beauty)",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2(d)",
+      "text": "structure: adjuncts",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "an adjunct is the modifier-of-a-verb function named in the covers line",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2(e)",
+      "text": "writing: narrative essay",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3(a)",
+      "text": "comprehension: Fishing in Hausa Land",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3(b)",
+      "text": "summary writing: sample passage",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3(c)",
+      "text": "vocabulary: words associated with home and family life",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3(d)",
+      "text": "structure: introduction to clauses",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3(e)",
+      "text": "writing: expository essay",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4(a)",
+      "text": "speech work: rhymes",
+      "subtopic_id": "sounds.rhymes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4(b)",
+      "text": "essay writing: more on formal letter",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4(c)",
+      "text": "vocabulary: government and politics",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5(a)",
+      "text": "reading skills: more on scanning and skimming",
+      "subtopic_id": "comprehension.reading-skills",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5(b)",
+      "text": "speech work: contrasting /s/, /z/, /zh/, /f/, /v/",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5(c)",
+      "text": "introduction to nominalization",
+      "subtopic_id": "vocabulary.word-formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6(a)",
+      "text": "structure: prefixes and negation",
+      "subtopic_id": "vocabulary.word-formation",
+      "status": "covered",
+      "note": "read as negative prefixes, which the covers line names",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6(b)",
+      "text": "speech work: words of two syllables stressed on first or second syllable",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6(c)",
+      "text": "essay writing: story illustrating It is a man's world",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W7(a)",
+      "text": "comprehension: reading skill (entertainment)",
+      "subtopic_id": "comprehension.reading-skills",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W7(b)",
+      "text": "structure: sentence structure and formation",
+      "subtopic_id": "sentences.construction",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W7(c)",
+      "text": "spelling: dropping and retaining e",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8(a)",
+      "text": "summarizing in a specified number of sentences",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8(b)",
+      "text": "speech work: intonation for simple polite requests and greetings",
+      "subtopic_id": "stress.intonation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8(c)",
+      "text": "structure: functions of comparatives",
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9(a)",
+      "text": "comprehension: identifying topic, theme and key sentences",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9(b)",
+      "text": "vocabulary: journalism and advertising",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9(c)",
+      "text": "structure: antonyms",
+      "subtopic_id": "vocabulary.antonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10(a)",
+      "text": "comprehension/speaking skills",
+      "subtopic_id": "comprehension.factual",
+      "status": "partial",
+      "note": "the comprehension part is covered; speaking skills have no home",
+      "proposed": "comprehension: new subtopic 'Listening and oral comprehension'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10(b)",
+      "text": "speech work: contrasting /i/ and /i:/",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10(c)",
+      "text": "argumentative essay on indiscipline",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W11(a)",
+      "text": "summarizing in a specified number of words",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W11(b)",
+      "text": "vocabulary: words associated with building",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W11(c)",
+      "text": "structure: synonyms",
+      "subtopic_id": "vocabulary.synonyms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1(a)",
+      "text": "comprehension: reading for main points",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1(b)",
+      "text": "structure: nominalization of adjectives and verbs",
+      "subtopic_id": "vocabulary.word-formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1(c)",
+      "text": "speech work: consonants followed by /j/ and /u/ sounds",
+      "subtopic_id": "sounds.clusters",
+      "status": "covered",
+      "note": "a consonant plus /j/ or /w/ at the start of a syllable is a two-consonant cluster",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1(d)",
+      "text": "summary: revision of features of summary",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2(a)",
+      "text": "comprehension: main ideas (Basketball)",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2(b)",
+      "text": "comprehension: supporting details (Basketball)",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2(c)",
+      "text": "vocabulary: human body system",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2(d)",
+      "text": "speech work: clusters of two, three and four consonants",
+      "subtopic_id": "sounds.clusters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2(e)",
+      "text": "writing (expository): meaning, features and examples",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3(a)",
+      "text": "comprehension: following the writer's ideas (Insurance)",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "how the ideas of a passage hold together",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3(b)",
+      "text": "vocabulary: health",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3(c)",
+      "text": "structure: noun phrases (meaning, identification, functions)",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3(d)",
+      "text": "writing (narrative): meaning, features and examples",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4(a)",
+      "text": "summary: reading to summarize (Nnamdi Azikiwe)",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4(b)",
+      "text": "vocabulary: building and construction",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4(c)",
+      "text": "structure: relative pronouns",
+      "subtopic_id": "word-classes.pronouns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5(a)",
+      "text": "comprehension: reading for main points (Building)",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5(b)",
+      "text": "speech work: unstressed vowel sound schwa",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5(c)",
+      "text": "writing (argumentative): Corruption Should be Fought from the Top to the Bottom",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6(a)",
+      "text": "comprehension: reading to extract main points (On the Road)",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6(b)",
+      "text": "structure: sentence types",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6(c)",
+      "text": "speech work: stress of four-syllable words",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6(d)",
+      "text": "writing (descriptive): Valedictory Ceremony in My School",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7(a)",
+      "text": "comprehension: reading to take notes (Technology)",
+      "subtopic_id": "comprehension.reading-skills",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7(b)",
+      "text": "structure: adverb types (manner, place, time, frequency, degree)",
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7(c)",
+      "text": "summary: reading to summarize an argument",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8(a)",
+      "text": "structure: word modifiers (adjectives and adverbs)",
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8(b)",
+      "text": "vocabulary: colours, smell and taste",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8(c)",
+      "text": "comprehension (listening): Uganda's National Resistance Army",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "listening comprehension has no home",
+      "proposed": "comprehension: new subtopic 'Listening and oral comprehension'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8(d)",
+      "text": "writing: a report",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9(a)",
+      "text": "structure: plural forms of nouns",
+      "subtopic_id": "word-classes.nouns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9(b)",
+      "text": "speech work: stress of five-syllable words",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9(c)",
+      "text": "writing: creative writing, features of a short story",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9(d)",
+      "text": "summary writing: identifying topic sentences",
+      "subtopic_id": "summary.main-points",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W10(a)",
+      "text": "comprehension: reading to paraphrase (Nazruddin)",
+      "subtopic_id": "comprehension.words-in-context",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W10(b)",
+      "text": "structure: phrasal verbs",
+      "subtopic_id": "idioms.phrasal-verbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W10(c)",
+      "text": "writing: features and format of an informal letter",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W1(b)",
+      "text": "structure: use of possessive apostrophe",
+      "subtopic_id": "mechanics.punctuation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W1(c)",
+      "text": "comprehension: Stock Exchange",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W1(d)",
+      "text": "writing (narrative): My SS1 Experience",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2(a)",
+      "text": "comprehension: sentence/paragraph transition",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2(b)",
+      "text": "vocabulary: the press",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2(c)",
+      "text": "structure: punctuation marks (comma, semi-colon, question mark, colon)",
+      "subtopic_id": "mechanics.punctuation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3(a)",
+      "text": "formal letters: letter of complaint",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3(b)",
+      "text": "structure: sentence types according to function",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3(c)",
+      "text": "speech work: diphthongs",
+      "subtopic_id": "sounds.diphthongs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3(d)",
+      "text": "summary: how to answer summary questions",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W4(a)",
+      "text": "informal letters: letter to a friend in another town",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W4(b)",
+      "text": "speech work: diphthongs",
+      "subtopic_id": "sounds.diphthongs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W4(c)",
+      "text": "comprehension: reading for implied meaning",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W4(d)",
+      "text": "vocabulary: environment",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5(a)",
+      "text": "summary writing: Wole Soyinka",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5(b)",
+      "text": "structure: kinds of pronouns",
+      "subtopic_id": "word-classes.pronouns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5(c)",
+      "text": "speech work: rhyme scheme",
+      "subtopic_id": "sounds.rhymes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W6(a)",
+      "text": "comprehension: reading for critical evaluation",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W6(b)",
+      "text": "vocabulary: nation building",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W6(c)",
+      "text": "structure: introduction to sequence of tenses",
+      "subtopic_id": "verbs.sequence",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W6(d)",
+      "text": "speech work: diphthongs",
+      "subtopic_id": "sounds.diphthongs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7(a)",
+      "text": "structure: more on phrasal verbs",
+      "subtopic_id": "idioms.phrasal-verbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7(b)",
+      "text": "comprehension: Advancement in Technology",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7(c)",
+      "text": "vocabulary: technology",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7(d)",
+      "text": "speech work: consonant contrasts",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W8(a)",
+      "text": "essay writing: articles",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W8(b)",
+      "text": "structure: active and passive structures",
+      "subtopic_id": "verbs.voice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W8(c)",
+      "text": "vocabulary: cultural entertainment",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9(a)",
+      "text": "structure: making uncountable nouns countable",
+      "subtopic_id": "word-classes.nouns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9(b)",
+      "text": "summary: model summary passage",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9(c)",
+      "text": "vocabulary: commonly misspelt words",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9(d)",
+      "text": "writing: semi-formal letter",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W1(b)",
+      "text": "revision of tenses",
+      "subtopic_id": "verbs.tenses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W1(c)",
+      "text": "narrative: My Holiday Experience",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2(a)",
+      "text": "conditional clauses",
+      "subtopic_id": "verbs.mood-conditionals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2(b)",
+      "text": "complex sentence",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2(c)",
+      "text": "vocabulary: publishing",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2(d)",
+      "text": "essay writing: speech writing, meaning and features",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3(a)",
+      "text": "speech work: stress patterns",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3(b)",
+      "text": "structure: active and passive voice",
+      "subtopic_id": "verbs.voice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3(c)",
+      "text": "vocabulary: prefixes",
+      "subtopic_id": "vocabulary.word-formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3(d)",
+      "text": "essay writing: article writing, explanation and features",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4(a)",
+      "text": "structure: prepositional phrase",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4(b)",
+      "text": "vocabulary: use of dictionary",
+      "subtopic_id": "vocabulary.dictionary",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4(c)",
+      "text": "grammar: rules of concord",
+      "subtopic_id": "concord.subject-verb",
+      "status": "partial",
+      "note": "split: subject and verb here, pronoun and antecedent in concord.pronoun-antecedent; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4(d)",
+      "text": "comprehension: Bullying",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5(a)",
+      "text": "speech work: stress placement on two or more syllable words",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5(b)",
+      "text": "essay writing: story writing",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5(c)",
+      "text": "comprehension: reading for the writer's purpose",
+      "subtopic_id": "comprehension.tone",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5(d)",
+      "text": "vocabulary: manufacturing industry",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W6(a)",
+      "text": "summary writing: Agriculture Technical Aid to Africa",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W6(b)",
+      "text": "structure: adjectival clause",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W6(c)",
+      "text": "vocabulary: films and TV",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7(a)",
+      "text": "speech work: vowels /i/ and /i:/",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7(b)",
+      "text": "essay writing (expository): Raising a Total Child",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7(c)",
+      "text": "comprehension: identifying sentence types in a passage",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7(d)",
+      "text": "structure: adverbs",
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W8(a)",
+      "text": "vocabulary: hotel and catering",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W8(b)",
+      "text": "summary writing: summarizing to get implied meaning",
+      "subtopic_id": "summary.main-points",
+      "status": "partial",
+      "note": "summary.main-points names points a passage states; summarising what a passage implies is named in no summary covers line (comprehension.inference takes implied meaning only in comprehension questions)",
+      "proposed": "widen summary.main-points to include points the passage implies"
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W8(c)",
+      "text": "structure: prepositional phrases",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9(a)",
+      "text": "comprehension: African Plucked Lutes",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9(b)",
+      "text": "structure: idioms",
+      "subtopic_id": "idioms.idioms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9(c)",
+      "text": "vocabulary: politics and government",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9(d)",
+      "text": "essay writing (descriptive): A Festival I Like",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W10(a)",
+      "text": "structure: affixation, suffixes",
+      "subtopic_id": "vocabulary.word-formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W10(b)",
+      "text": "speech work: nasal sounds /m/ /n/ /ng/",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W10(c)",
+      "text": "register: vocabulary associated with transportation",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W11(a)",
+      "text": "structure: clauses (subordinate and coordinate)",
+      "subtopic_id": "sentences.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W11(b)",
+      "text": "speech work: stress on the fifth and sixth syllable",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W11(c)",
+      "text": "comprehension: reading for implied meaning and interpreting examples",
+      "subtopic_id": "comprehension.inference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W1",
+      "text": "spelling: British and American English",
+      "subtopic_id": "mechanics.spelling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2(a)",
+      "text": "comprehension: Prostration",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2(b)",
+      "text": "vocabulary: festivals",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2(c)",
+      "text": "noun phrases and noun clauses",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2(d)",
+      "text": "adjectival phrases and adjectival clauses",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2(e)",
+      "text": "narrative and descriptive essays",
+      "subtopic_id": "essay.narrative-descriptive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3(a)",
+      "text": "sentence intonation patterns",
+      "subtopic_id": "stress.intonation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3(b)",
+      "text": "argumentative essay",
+      "subtopic_id": "essay.argumentative-expository",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3(c)",
+      "text": "comprehension: Government",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3(d)",
+      "text": "summary: Party Systems",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4(a)",
+      "text": "comprehension: Business",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4(b)",
+      "text": "vocabulary: business",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4(c)",
+      "text": "nominalization",
+      "subtopic_id": "vocabulary.word-formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4(d)",
+      "text": "monophthongs",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4(e)",
+      "text": "diphthongs",
+      "subtopic_id": "sounds.diphthongs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5(a)",
+      "text": "formal and informal letters",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5(b)",
+      "text": "summary: novel extract",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5(c)",
+      "text": "adverbs",
+      "subtopic_id": "word-classes.adjectives-adverbs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5(d)",
+      "text": "adverbials",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6(a)",
+      "text": "comprehension: Irrigation",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6(b)",
+      "text": "vocabulary: technical words",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6(c)",
+      "text": "sequence of tenses",
+      "subtopic_id": "verbs.sequence",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6(d)",
+      "text": "consonant clusters",
+      "subtopic_id": "sounds.clusters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7(a)",
+      "text": "comprehension: novel extract",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7(b)",
+      "text": "vocabulary: French words",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7(c)",
+      "text": "articles",
+      "subtopic_id": "word-classes.conjunctions-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7(d)",
+      "text": "figures of speech",
+      "subtopic_id": "idioms.figures-of-speech",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W8(a)",
+      "text": "comprehension: Law Enforcement",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W8(b)",
+      "text": "vocabulary: justice",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W8(c)",
+      "text": "lexical and auxiliary verbs",
+      "subtopic_id": "verbs.modals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W8(d)",
+      "text": "consonants",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W9(a)",
+      "text": "comprehension: Law and Order",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W9(b)",
+      "text": "vocabulary: justice",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W9(c)",
+      "text": "modal auxiliaries",
+      "subtopic_id": "verbs.modals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W9(d)",
+      "text": "report writing",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W10(a)",
+      "text": "comprehension: Helping Addicts",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W10(b)",
+      "text": "vocabulary: addiction",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W10(c)",
+      "text": "stress in words and compound words",
+      "subtopic_id": "stress.word-stress",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W1(b)",
+      "text": "summary: Death and the King's Horseman",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2(a)",
+      "text": "structure: clauses",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2(b)",
+      "text": "writing: speech writing",
+      "subtopic_id": "essay.speeches-articles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2(c)",
+      "text": "comprehension: The Lion and the Jewel",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2(d)",
+      "text": "vocabulary: Latin expressions",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3(a)",
+      "text": "structure: direct and indirect speech",
+      "subtopic_id": "verbs.sequence",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3(b)",
+      "text": "speech work: contrastive stress",
+      "subtopic_id": "stress.emphatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3(c)",
+      "text": "comprehension: Meteors",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3(d)",
+      "text": "vocabulary: astronomy",
+      "subtopic_id": "vocabulary.word-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W4(a)",
+      "text": "comprehension: A Railway Journey",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W4(b)",
+      "text": "writing: formal and informal letters",
+      "subtopic_id": "essay.letters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W4(c)",
+      "text": "structure: nominalization of infinitives",
+      "subtopic_id": "verbs.non-finite",
+      "status": "covered",
+      "note": "the tree sends infinitives used as nouns to verbs.non-finite, not vocabulary.word-formation",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5(a)",
+      "text": "comprehension: The Dynasty of Ketu",
+      "subtopic_id": "comprehension.factual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5(b)",
+      "text": "summary: Transport in Nigeria",
+      "subtopic_id": "summary.writing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5(c)",
+      "text": "structure: restrictive and non-restrictive clauses",
+      "subtopic_id": "sentences.grammatical-function",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5(d)",
+      "text": "writing: hints on writing essays in the examination",
+      "subtopic_id": "essay.organisation",
+      "status": "partial",
+      "note": "planning and paragraphing are covered; handling the essay in the examination (choosing a question, timing, the 450-word minimum) is not",
+      "proposed": "new topic 'Examination technique', subtopic 'The essay paper'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6(a)",
+      "text": "speech work: learning the requirements of the examination on orals",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "the format and demands of the Test of Orals paper have no home; the sounds and stress subtopics cover only its content",
+      "proposed": "new topic 'Examination technique', subtopic 'The Test of Orals paper'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6(b)",
+      "text": "structure: hints on lexis and structure",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "technique for the objective lexis and structure paper has no home; its content is covered across the lexis and structure topics",
+      "proposed": "new topic 'Examination technique', subtopic 'The objective paper'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6(c)",
+      "text": "comprehension: hints on answering comprehension questions",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "answering technique has no home; comprehension.reading-skills covers reading strategies only",
+      "proposed": "comprehension: new subtopic 'Answering comprehension questions'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W7(a)",
+      "text": "speech work: reviewing vowels",
+      "subtopic_id": "sounds.pure-vowels",
+      "status": "partial",
+      "note": "split: pure vowels here, diphthongs in sounds.diphthongs; nothing is missing",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W7(b)",
+      "text": "speech work: reviewing consonants",
+      "subtopic_id": "sounds.consonants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W7(c)",
+      "text": "structure: review of tenses",
+      "subtopic_id": "verbs.tenses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W7(d)",
+      "text": "comprehension: further hints on how to answer comprehension questions",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "answering technique has no home; comprehension.reading-skills covers reading strategies only",
+      "proposed": "comprehension: new subtopic 'Answering comprehension questions'"
+    }
+  ],
+  "unmapped_subtopics": [],
+  "summary": {
+    "wassce": {
+      "covered": 125,
+      "partial": 9,
+      "missing": 5
+    },
+    "utme": {
+      "covered": 59,
+      "partial": 8,
+      "missing": 0
+    },
+    "sow": {
+      "covered": 261,
+      "partial": 8,
+      "missing": 6
+    }
+  },
+  "taxonomy_version": "1.1",
+  "sources": {
+    "wassce": "syllabi\\english-language-waec.txt",
+    "utme": "syllabi\\english-language-jamb.txt",
+    "sow": "syllabi\\english-language-sow.txt"
+  }
+}

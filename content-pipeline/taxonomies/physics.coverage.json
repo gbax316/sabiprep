@@ -1,0 +1,4774 @@
+{
+  "items": [
+    {
+      "source": "wassce",
+      "ref": "1",
+      "text": "Concepts of matter: simple structure, three states, Brownian motion, kinetic theory explaining states, gas pressure, evaporation and boiling, cohesion, adhesion, capillarity, crystalline and amorphous substances",
+      "subtopic_id": "matter.particles",
+      "status": "partial",
+      "note": "Split: kinetic theory and gas pressure in matter.kinetic-theory; cohesion, adhesion and capillarity in matter.surface; evaporation and boiling in change-of-state.evaporation. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "2(a)",
+      "text": "Fundamental quantities and units (m, kg, s, A, cd, K, mol)",
+      "subtopic_id": "measurement.quantities-units",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "2(b)",
+      "text": "Derived quantities and units (volume, density, speed)",
+      "subtopic_id": "measurement.quantities-units",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "3(a)",
+      "text": "Concept of position as location of a point, rectangular coordinates, X, Y, Z axes",
+      "subtopic_id": "vectors.position",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "3(b)",
+      "text": "Measurement of distance: string, metre rule, vernier calipers, micrometer screw gauge, degree of accuracy",
+      "subtopic_id": "measurement.instruments",
+      "status": "partial",
+      "note": "Split: degree of accuracy of the instruments in measurement.errors. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "3(c)",
+      "text": "Concept of direction as a way of locating a point: bearing, compass and protractor",
+      "subtopic_id": "vectors.position",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "3(d)",
+      "text": "Distinction between distance and displacement",
+      "subtopic_id": "vectors.position",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "4",
+      "text": "Mass and weight: lever, chemical/beam, spring and electronic balances, kg and N, distinction between mass and weight",
+      "subtopic_id": "measurement.instruments",
+      "status": "partial",
+      "note": "Split: distinction between mass and weight in gravitation.g-weight. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "5(a)",
+      "text": "Concept of time as interval between physical events",
+      "subtopic_id": "measurement.quantities-units",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "5(b)",
+      "text": "Measurement of time: heart-beat, sand-clock, ticker-timer, pendulum, stopwatch",
+      "subtopic_id": "measurement.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "6(a)",
+      "text": "Volume, density and relative density, experimental determination for solids and liquids",
+      "subtopic_id": "fluids.density",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "6(b)",
+      "text": "Pressure in fluids: definition, Pascal's principle, hydraulic press, car brakes, depth, atmospheric pressure, barometer, manometer, siphon, syringe, pump, U-tube and Hare's apparatus",
+      "subtopic_id": "fluids.liquid-pressure",
+      "status": "partial",
+      "note": "Split: atmospheric pressure, barometer, manometer, siphon, syringe and pump in fluids.atmospheric; U-tube and Hare's apparatus in fluids.density. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "6(c)(i)",
+      "text": "Archimedes' principle: forces on an immersed body, relative densities of solids and liquids",
+      "subtopic_id": "fluids.archimedes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "6(c)(ii)",
+      "text": "Law of flotation: conditions to float, hydrometer, balloons, boats, ships, submarines",
+      "subtopic_id": "fluids.flotation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "7(a)",
+      "text": "Types of motion: random, rectilinear, translational, rotational, circular, orbital, spin, oscillatory",
+      "subtopic_id": "motion.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "7(b)",
+      "text": "Relative motion, numerical problems on co-linear motion",
+      "subtopic_id": "vectors.relative-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "7(c)",
+      "text": "Cause of motion: force as cause of motion",
+      "subtopic_id": "newtons-laws.first-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "7(d)(i)",
+      "text": "Types of force: contact force (push and pull)",
+      "subtopic_id": "newtons-laws.first-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "7(d)(ii)",
+      "text": "Types of force: non-contact (field) force, electric, magnetic, gravitational",
+      "subtopic_id": "newtons-laws.first-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "7(e)",
+      "text": "Solid friction: static and dynamic, coefficient of limiting friction, advantages, disadvantages, methods of reducing friction",
+      "subtopic_id": "friction.solid",
+      "status": "partial",
+      "note": "Split: advantages, disadvantages and reduction in friction.effects. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "7(f)",
+      "text": "Viscosity (friction in fluids): definition, effects, terminal velocity and its determination",
+      "subtopic_id": "friction.viscosity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "7(g)",
+      "text": "Simple ideas of circular motion: whirled stone, angular speed and velocity, centripetal force, banking of roads",
+      "subtopic_id": "circular-motion.centripetal",
+      "status": "partial",
+      "note": "Split: angular speed and velocity in circular-motion.angular. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "8(a)",
+      "text": "Concept of speed as change of distance with time",
+      "subtopic_id": "motion.speed-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "8(b)",
+      "text": "Concept of velocity as change of displacement with time, ticker-timer",
+      "subtopic_id": "motion.speed-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "8(c)",
+      "text": "Uniform and non-uniform speed and velocity",
+      "subtopic_id": "motion.speed-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "8(d)",
+      "text": "Distance/displacement-time graph, instantaneous speed from the graph",
+      "subtopic_id": "motion.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "9(a)",
+      "text": "Concept of acceleration and deceleration, ticker-timer",
+      "subtopic_id": "motion.speed-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "9(b)",
+      "text": "Uniform and non-uniform acceleration",
+      "subtopic_id": "motion.speed-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "9(c)",
+      "text": "Velocity-time graph: acceleration and displacement from it",
+      "subtopic_id": "motion.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "9(d)",
+      "text": "Equations of motion with constant acceleration, motion under gravity as a special case",
+      "subtopic_id": "motion.equations",
+      "status": "partial",
+      "note": "Split: motion under gravity in motion.free-fall. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "10(a)",
+      "text": "Concept of scalars",
+      "subtopic_id": "vectors.scalars-vectors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "10(b)",
+      "text": "Concept of vectors",
+      "subtopic_id": "vectors.scalars-vectors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "10(c)",
+      "text": "Vector representation",
+      "subtopic_id": "vectors.addition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "10(d)",
+      "text": "Addition of vectors, force board to find the resultant of two forces",
+      "subtopic_id": "vectors.addition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "10(e)",
+      "text": "Resolution of vectors",
+      "subtopic_id": "vectors.resolution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "10(f)",
+      "text": "Resultant velocity using vector representation, analytically and graphically",
+      "subtopic_id": "vectors.relative-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "11(a)",
+      "text": "Principle of moments, torque, couple (tap, corkscrew, steering wheel)",
+      "subtopic_id": "equilibrium.moments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "11(b)",
+      "text": "Conditions for equilibrium of rigid bodies under parallel and non-parallel forces, resultant and equilibrant, parallelogram and triangle of forces",
+      "subtopic_id": "equilibrium.coplanar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "11(c)",
+      "text": "Centre of gravity and stability: stable, unstable and neutral equilibria",
+      "subtopic_id": "equilibrium.stability",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "12(a)",
+      "text": "Illustration, explanation and definition of SHM: loaded test-tube, simple pendulum, spiral spring, bifilar suspension",
+      "subtopic_id": "shm.describing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "12(b)",
+      "text": "Speed and acceleration of SHM, relating linear and angular speeds and accelerations",
+      "subtopic_id": "shm.speed-acceleration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "12(c)",
+      "text": "Period, frequency and amplitude of a body in SHM; determination of g with the simple pendulum and helical spring",
+      "subtopic_id": "shm.describing",
+      "status": "partial",
+      "note": "Split: period of the pendulum and spring and the determination of g in shm.pendulum-spring. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "12(d)",
+      "text": "Energy of SHM",
+      "subtopic_id": "shm.energy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "12(e)",
+      "text": "Forced vibration and resonance",
+      "subtopic_id": "shm.forced-resonance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "13(a)",
+      "text": "First law: inertia of rest and of motion, distinction between inertial mass and weight",
+      "subtopic_id": "newtons-laws.first-law",
+      "status": "partial",
+      "note": "Split: mass against weight in gravitation.g-weight. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "13(b)",
+      "text": "Second law: force, acceleration, momentum and impulse, conservation of linear momentum, elastic collisions, recoil, jet and rocket propulsion",
+      "subtopic_id": "newtons-laws.second-law",
+      "status": "partial",
+      "note": "Split: momentum and impulse in newtons-laws.momentum-impulse; conservation, collisions, recoil and rockets in newtons-laws.conservation. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "13(c)",
+      "text": "Third law: action and reaction",
+      "subtopic_id": "newtons-laws.third-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "14(a)",
+      "text": "Forms of energy",
+      "subtopic_id": "energy.forms-conservation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "14(b)",
+      "text": "World energy resources: renewable and non-renewable",
+      "subtopic_id": "energy.resources",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "14(c)",
+      "text": "Conservation of energy and energy transformations",
+      "subtopic_id": "energy.forms-conservation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "15(a)",
+      "text": "Concept of work as a measure of energy transfer, the joule",
+      "subtopic_id": "energy.work",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "15(b)",
+      "text": "Concept of energy as capability to do work, joule and kWh",
+      "subtopic_id": "energy.forms-conservation",
+      "status": "partial",
+      "note": "Split: kWh as the unit of electrical consumption in electrical-energy.cost. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "15(c)",
+      "text": "Work done in a gravitational field: lifting a body and falling bodies",
+      "subtopic_id": "energy.work",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "15(d)(i)",
+      "text": "Potential energy, derivation, identification of the energy a body has",
+      "subtopic_id": "energy.pe-ke",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "15(d)(ii)",
+      "text": "Kinetic energy, derivation",
+      "subtopic_id": "energy.pe-ke",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "15(e)",
+      "text": "Conservation of mechanical energy, verification",
+      "subtopic_id": "energy.pe-ke",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "15(f)",
+      "text": "Concept of power as time rate of doing work, the watt",
+      "subtopic_id": "energy.power",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "15(g)",
+      "text": "Machines: levers, pulleys, inclined plane, wedge, screw, wheel and axle, gears; FR, MA, VR, efficiency; bicycle; friction in machines",
+      "subtopic_id": "machines.ma-vr-efficiency",
+      "status": "partial",
+      "note": "Split: the kinds of machine and the bicycle in machines.types. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(a)",
+      "text": "Temperature and its measurement: degree of hotness, construction and graduation of a thermometer, thermometric liquids, types of thermometer, Celsius and absolute scales",
+      "subtopic_id": "temperature.thermometers",
+      "status": "partial",
+      "note": "Split: concept and scales in temperature.concept; construction and graduation in temperature.calibration. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(b)(i)",
+      "text": "Effects of heat: rise in temperature, explained by the kinetic theory",
+      "subtopic_id": "temperature.concept",
+      "status": "partial",
+      "note": "Rise in temperature is named as an effect of heat. Missing part: the kinetic theory explanation of a temperature rise (temperature as a measure of average molecular kinetic energy) is not named in temperature.concept or matter.kinetic-theory.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(b)(ii)",
+      "text": "Effects of heat: change of phase/state",
+      "subtopic_id": "temperature.concept",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(b)(iii)",
+      "text": "Effects of heat: expansion",
+      "subtopic_id": "temperature.concept",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(b)(iv)",
+      "text": "Effects of heat: change of resistance (also change of colour, thermionic emission, change in chemical properties)",
+      "subtopic_id": "temperature.concept",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(c)",
+      "text": "Thermal expansion: linear, area and volume expansivities, consequences and applications, real and apparent expansion of liquids, anomalous expansion of water",
+      "subtopic_id": "expansion.solids",
+      "status": "partial",
+      "note": "Split: consequences and applications in expansion.applications; liquids and water in expansion.liquids. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(d)",
+      "text": "Heat transfer: conduction, convection, radiation, kinetic theory, land and sea breezes, ventilation, cooling devices, vacuum flask",
+      "subtopic_id": "heat-transfer.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(e)",
+      "text": "Gas laws: Boyle's law, Charles' law, pressure law, general gas law, kinetic theory explanation, air bags",
+      "subtopic_id": "gas-laws.general",
+      "status": "partial",
+      "note": "Split: Boyle's law in gas-laws.boyle; Charles' and pressure laws in gas-laws.charles-pressure; kinetic explanation in matter.kinetic-theory. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(f)(i)",
+      "text": "Concept of heat capacity",
+      "subtopic_id": "heat-capacity.specific",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(f)(ii)",
+      "text": "Specific heat capacity: method of mixtures and electrical method, land and sea breezes and the specific heat capacity of water and land, J/kgK",
+      "subtopic_id": "heat-capacity.specific",
+      "status": "partial",
+      "note": "Split: method of mixtures in heat-capacity.mixtures; land and sea breezes in heat-transfer.modes. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(g)(i)",
+      "text": "Concept of latent heat, explanation and types",
+      "subtopic_id": "change-of-state.latent-heat",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(g)(ii)",
+      "text": "Melting point and boiling point: determination, effects of impurities and pressure, pressure cooker",
+      "subtopic_id": "change-of-state.melting-boiling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(g)(iii)",
+      "text": "Specific latent heat of fusion and of vaporization: mixtures and electrical methods, refrigerators and air conditioners",
+      "subtopic_id": "change-of-state.latent-heat",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(h)",
+      "text": "Evaporation and boiling: effect of temperature, humidity, surface area and draught",
+      "subtopic_id": "change-of-state.evaporation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(i)",
+      "text": "Vapour and vapour pressure, saturated vapour pressure and boiling",
+      "subtopic_id": "vapours.pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(j)",
+      "text": "Humidity, relative humidity and dew point, wet and dry bulb hygrometer",
+      "subtopic_id": "vapours.humidity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "16(k)",
+      "text": "Humidity and the weather: formation of dew, fog and rain",
+      "subtopic_id": "vapours.humidity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "17(a)",
+      "text": "Production and propagation of mechanical waves: ropes and springs",
+      "subtopic_id": "waves.production",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "17(b)",
+      "text": "Pulsating system: energy transmitted with definite speed, frequency and wavelength, ripple tank",
+      "subtopic_id": "waves.production",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "17(c)",
+      "text": "Waveform: amplitude, wavelength, frequency, period; sound and light as wave phenomena",
+      "subtopic_id": "waves.production",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "17(d)",
+      "text": "Relationship between f, wavelength, T and v: v = f lambda, T = 1/f",
+      "subtopic_id": "waves.equation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "18(a)",
+      "text": "Transverse and longitudinal waves",
+      "subtopic_id": "waves.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "18(b)",
+      "text": "Mathematical representation of wave motion: y = A sin(wt +/- 2 pi x / lambda)",
+      "subtopic_id": "waves.progressive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "19",
+      "text": "Properties of waves: reflection, refraction, diffraction, interference, superposition producing stationary waves",
+      "subtopic_id": "waves.properties",
+      "status": "partial",
+      "note": "Split: interference, superposition and stationary waves in waves.superposition. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "20(a)",
+      "text": "Sources of light: natural and artificial, luminous and non-luminous",
+      "subtopic_id": "light.sources",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "20(b)",
+      "text": "Rectilinear propagation: shadows, eclipse, pinhole camera",
+      "subtopic_id": "light.rectilinear",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "20(c)",
+      "text": "Reflection at a plane mirror: regular and irregular, laws, images, inclined and rotated mirrors, periscope, sextant, kaleidoscope",
+      "subtopic_id": "reflection.plane",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "20(d)",
+      "text": "Reflection at curved mirrors: images and their characteristics, mirror formula, magnification, focal length of a concave mirror, applications",
+      "subtopic_id": "reflection.curved",
+      "status": "partial",
+      "note": "Split: mirror formula, magnification and focal length experiment in reflection.mirror-formula. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "20(e)",
+      "text": "Refraction at plane surfaces: laws, real and apparent depth, critical angle and total internal reflection, lateral displacement, deviation, minimum deviation, periscope, binoculars, optical fibres, mirage",
+      "subtopic_id": "refraction.laws",
+      "status": "partial",
+      "note": "Split: depth and lateral displacement in refraction.depth; critical angle, TIR, fibres, binoculars and mirage in refraction.tir; deviation and minimum deviation in refraction.prism. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "20(f)",
+      "text": "Refraction at curved surfaces: converging and diverging lenses, images, lens formula, magnification, focal length, power in dioptres",
+      "subtopic_id": "lenses.images",
+      "status": "partial",
+      "note": "Split: lens formula, magnification, focal length experiment and power in lenses.formula. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "20(g)",
+      "text": "Optical instruments: camera, eye, projector, microscopes, telescopes, angular magnification, prism binoculars, eye defects",
+      "subtopic_id": "optical-instruments.instruments",
+      "status": "partial",
+      "note": "Split: the human eye, its comparison with the camera and its defects in optical-instruments.eye. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "20(h)",
+      "text": "Dispersion of white light by a prism: pure spectrum, recombination, colours of objects, mixing coloured lights",
+      "subtopic_id": "dispersion.spectrum",
+      "status": "partial",
+      "note": "Split: colours of objects and mixing coloured lights in dispersion.colour. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "21",
+      "text": "Electromagnetic waves: types of radiation in the spectrum, description and uses",
+      "subtopic_id": "em-waves.spectrum",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(a)",
+      "text": "Sources of sound",
+      "subtopic_id": "sound.transmission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(b)",
+      "text": "Transmission of sound waves: a material medium is required",
+      "subtopic_id": "sound.transmission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(c)",
+      "text": "Speed of sound in solid, liquid and air, dependence on temperature and pressure",
+      "subtopic_id": "sound.transmission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(d)",
+      "text": "Echoes and reverberation: mineral exploration, ocean depth, thunder",
+      "subtopic_id": "sound.echoes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(e)",
+      "text": "Noise and music",
+      "subtopic_id": "sound.characteristics",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(f)",
+      "text": "Characteristics of sound: pitch, loudness and quality",
+      "subtopic_id": "sound.characteristics",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(g)",
+      "text": "Vibration in strings: sonometer, f = (1/2l) sqrt(T/m), stringed instruments",
+      "subtopic_id": "sound.strings",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(h)(i)",
+      "text": "Forced vibration and resonance: resonance boxes and sonometer",
+      "subtopic_id": "sound.strings",
+      "status": "partial",
+      "note": "Split: resonance in air columns (the resonance tube) in sound.pipes. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(h)(ii)",
+      "text": "Harmonics and overtones: quality of a note, percussion instruments",
+      "subtopic_id": "sound.strings",
+      "status": "partial",
+      "note": "Split: overtones explaining quality in sound.characteristics; overtones of pipes in sound.pipes. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "22(i)",
+      "text": "Vibration of air in open and closed pipes: resonance tube, end correction, wind instruments",
+      "subtopic_id": "sound.pipes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "23(a)",
+      "text": "Concept of fields: gravitational, electric and magnetic; compass and iron filings to show field lines",
+      "subtopic_id": "gravitation.fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "23(b)",
+      "text": "Properties of a force field",
+      "subtopic_id": "gravitation.fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "24(a)",
+      "text": "Acceleration due to gravity, g = F/m as field intensity",
+      "subtopic_id": "gravitation.g-weight",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "24(b)",
+      "text": "Newton's law of gravitation, G, relationship between G and g",
+      "subtopic_id": "gravitation.newtons-law",
+      "status": "partial",
+      "note": "Split: relationship between G and g in gravitation.g-weight. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "24(c)",
+      "text": "Gravitational potential and escape velocity",
+      "subtopic_id": "gravitation.potential-escape",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(1)(a)",
+      "text": "Production of electric charges by friction, induction and contact",
+      "subtopic_id": "electrostatics.charges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(1)(b)",
+      "text": "Types of distribution of charges, electroscope on differently shaped bodies",
+      "subtopic_id": "electrostatics.charges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(1)(c)",
+      "text": "Storage of charges, application in lightning conductors",
+      "subtopic_id": "electrostatics.charges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(1)(d)",
+      "text": "Electric lines of force: properties and field patterns",
+      "subtopic_id": "electrostatics.field-potential",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(1)(e)",
+      "text": "Coulomb's law, permittivity of a medium",
+      "subtopic_id": "electrostatics.coulomb",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(1)(f)",
+      "text": "Electric field, field intensity (potential gradient) and electric potential",
+      "subtopic_id": "electrostatics.field-potential",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(1)(g)",
+      "text": "Capacitance: parallel-plate factors, farad, series and parallel, energy stored, uses",
+      "subtopic_id": "capacitors.capacitance",
+      "status": "partial",
+      "note": "Split: series and parallel in capacitors.combinations; energy stored in capacitors.energy. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(2)(a)",
+      "text": "Current from primary and secondary cells: simple cell and defects, Daniell, Leclanche, lead-acid, alkaline-cadmium, e.m.f.",
+      "subtopic_id": "electric-cells.types",
+      "status": "partial",
+      "note": "Split: e.m.f. of a cell in electric-cells.emf-internal. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(2)(b)",
+      "text": "Potential difference and electric current: Ohm's law, resistance, units",
+      "subtopic_id": "current-electricity.current-charge",
+      "status": "partial",
+      "note": "Split: Ohm's law and resistance in current-electricity.ohms-law. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(2)(c)",
+      "text": "Electric circuit: series and parallel cells and resistors, lost volts, internal resistance",
+      "subtopic_id": "current-electricity.resistors",
+      "status": "partial",
+      "note": "Split: cells in series and parallel, lost volts and internal resistance in electric-cells.emf-internal. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(2)(d)",
+      "text": "Electric conduction through materials: ohmic and non-ohmic conductors",
+      "subtopic_id": "current-electricity.ohms-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(2)(e)",
+      "text": "Electric energy and power: heating effect, electric motors, solar cells and solar heaters",
+      "subtopic_id": "electrical-energy.power",
+      "status": "partial",
+      "note": "Split: electrical to mechanical conversion in energy.forms-conservation; solar cells in electric-cells.types; solar heaters in heat-transfer.radiation. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(2)(f)",
+      "text": "Shunt and multiplier: converting a galvanometer into an ammeter and a voltmeter",
+      "subtopic_id": "current-electricity.meters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(2)(g)",
+      "text": "Resistivity and conductivity: factors affecting resistance",
+      "subtopic_id": "current-electricity.resistivity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "25(2)(h)",
+      "text": "Measurement of current, p.d., resistance, e.m.f. and internal resistance: ammeter, voltmeter, potentiometer, Wheatstone and metre bridge",
+      "subtopic_id": "current-electricity.bridges",
+      "status": "partial",
+      "note": "Split: ammeter and voltmeter in current-electricity.meters. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "26(a)",
+      "text": "Properties of magnets and magnetic materials: soft iron, steel, alloys",
+      "subtopic_id": "magnetism.magnets",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "26(b)",
+      "text": "Magnetization and demagnetization: temporary and permanent magnets, iron against steel",
+      "subtopic_id": "magnetism.magnets",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "26(c)",
+      "text": "Concept of magnetic field: flux and flux density, fields of a magnet, a conductor and a solenoid, neutral points, weber and tesla",
+      "subtopic_id": "magnetism.fields",
+      "status": "partial",
+      "note": "Split: field round a conductor and a solenoid in magnetism.current-fields. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "26(d)(i)",
+      "text": "Magnetic force on a current-carrying conductor in a field; electric motor and moving-coil galvanometer",
+      "subtopic_id": "magnetic-force.conductor",
+      "status": "partial",
+      "note": "Split: motor and moving-coil galvanometer in magnetic-force.motor. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "26(d)(ii)",
+      "text": "Magnetic force between two parallel current-carrying conductors",
+      "subtopic_id": "magnetic-force.conductor",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "26(e)",
+      "text": "Use of electromagnets: electric bell, telephone earpiece",
+      "subtopic_id": "magnetism.current-fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "26(f)",
+      "text": "The earth's magnetic field: mariner's compass, dip and declination",
+      "subtopic_id": "magnetism.earth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "26(g)",
+      "text": "Magnetic force on a moving charged particle, F = qvB sin theta",
+      "subtopic_id": "magnetic-force.moving-charge",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "27(a)",
+      "text": "Concept of electromagnetic field: Fleming's left-hand rule",
+      "subtopic_id": "magnetic-force.conductor",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "27(b)",
+      "text": "Electromagnetic induction: Faraday's and Lenz's laws, motor-generator effect, generators, induction coil, transformer, E = E0 sin wt",
+      "subtopic_id": "induction.laws",
+      "status": "partial",
+      "note": "Split: generators and E = E0 sin wt in induction.generators; induction coil and transformer in induction.transformers. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "27(c)",
+      "text": "Inductance: self and mutual, the henry, energy 1/2 LI^2, uses",
+      "subtopic_id": "induction.inductance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "27(d)",
+      "text": "Eddy currents: reduction, induction furnace, speedometer",
+      "subtopic_id": "induction.eddy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "27(e)",
+      "text": "Power transmission and distribution: high-tension losses, household wiring",
+      "subtopic_id": "electrical-energy.transmission",
+      "status": "partial",
+      "note": "Split: household wiring in electrical-energy.household. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "28(a)",
+      "text": "Graphical representation of e.m.f. and current in an a.c. circuit",
+      "subtopic_id": "ac-circuits.values",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "28(b)",
+      "text": "Peak and r.m.s. values; phase relationship of voltage and current in resistor, inductor and capacitor",
+      "subtopic_id": "ac-circuits.values",
+      "status": "partial",
+      "note": "Split: phase relationship in each element in ac-circuits.reactance. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "28(c)",
+      "text": "Series circuit containing resistor, inductor and capacitor",
+      "subtopic_id": "ac-circuits.rlc",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "28(d)",
+      "text": "Reactance and impedance, XL and XC",
+      "subtopic_id": "ac-circuits.reactance",
+      "status": "partial",
+      "note": "Split: impedance in ac-circuits.rlc. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "28(e)",
+      "text": "Vector diagrams",
+      "subtopic_id": "ac-circuits.rlc",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "28(f)",
+      "text": "Resonance in an a.c. circuit, tuning of radio and TV",
+      "subtopic_id": "ac-circuits.resonance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "28(g)",
+      "text": "Power in an a.c. circuit",
+      "subtopic_id": "ac-circuits.power",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "29(a)",
+      "text": "Models of the atom: Thomson, Rutherford, Bohr, electron-cloud, limitations, quantization of angular momentum (Bohr)",
+      "subtopic_id": "atom.models",
+      "status": "partial",
+      "note": "Models and their limitations covered. Missing part: quantization of angular momentum (Bohr) is not named in any covers line.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "29(b)",
+      "text": "Energy quantization: energy levels, colour and light frequency, Franck-Hertz, line and absorption spectra, discharge lamps",
+      "subtopic_id": "atom.energy-levels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "29(c)",
+      "text": "Photoelectric effect: dual nature of light, work function, threshold frequency, Einstein's equation, applications",
+      "subtopic_id": "atom.photoelectric",
+      "status": "partial",
+      "note": "Split: dual nature of light in atom.duality. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "29(d)",
+      "text": "Thermionic emission: explanation and applications",
+      "subtopic_id": "atom.thermionic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "29(e)",
+      "text": "X-rays: production, tube, types, properties, uses, hazards, safety",
+      "subtopic_id": "atom.x-rays",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "30(a)",
+      "text": "Composition of the nucleus: protons, neutrons, A, Z, N, nuclides, isotopes",
+      "subtopic_id": "nucleus.composition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "30 radioactivity",
+      "text": "Radioactivity, natural and artificial: emissions and properties, G-M counter, decay, half-life, decay constant, transformation of elements, applications",
+      "subtopic_id": "nucleus.radiations",
+      "status": "partial",
+      "note": "Printed as a second (a). Split: half-life and decay constant in nucleus.half-life; transformation of elements in nucleus.decay-equations. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "30 nuclear reactions",
+      "text": "Nuclear reactions, fusion and fission: binding energy, mass defect, E = mc^2, reactors, atomic bomb, hazards, peaceful uses",
+      "subtopic_id": "nucleus.fission-fusion",
+      "status": "partial",
+      "note": "Printed as (b). Split: binding energy, mass defect and E = mc^2 in nucleus.binding-energy; radiation hazards and safety in nucleus.radiations. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "31(a)",
+      "text": "Electron diffraction",
+      "subtopic_id": "atom.duality",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "31(b)",
+      "text": "Duality of matter, dual nature of light",
+      "subtopic_id": "atom.duality",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H1",
+      "text": "Derived quantities and dimensional analysis: fundamental and derived units, dimensions, checking equations, deriving relationships and units",
+      "subtopic_id": "measurement.dimensions",
+      "status": "partial",
+      "note": "Split: fundamental and derived quantities and units in measurement.quantities-units. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H2",
+      "text": "Projectile motion: range, maximum height, time of flight, uses in warfare and sport",
+      "subtopic_id": "motion.projectiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H3",
+      "text": "Satellites and rockets: natural and artificial, parking and geostationary orbits, period and speed, uses",
+      "subtopic_id": "gravitation.satellites",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H4 elasticity",
+      "text": "Elastic properties of solids: behaviour under stress, load-extension graph, Hooke's law, Young's modulus, work done in springs and strings",
+      "subtopic_id": "elasticity.behaviour",
+      "status": "partial",
+      "note": "Split: Hooke's law in elasticity.hookes-law; Young's modulus in elasticity.youngs-modulus; work done in elasticity.energy. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H4 thermal",
+      "text": "Thermal conductivity: solar energy collector and black body radiation, intensity against wavelength at different temperatures",
+      "subtopic_id": "heat-transfer.radiation",
+      "status": "partial",
+      "note": "Split: the heading thermal conductivity in heat-transfer.conductivity; the listed content (solar collector, black body) is all in heat-transfer.radiation. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H5",
+      "text": "Fibre optics: concept, transmission of light through a fibre, applications",
+      "subtopic_id": "refraction.tir",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H6",
+      "text": "Introduction to LASER: meaning, types, applications, dangers",
+      "subtopic_id": "em-waves.laser",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H7",
+      "text": "Magnetic materials: uses of magnets and ferromagnetic materials",
+      "subtopic_id": "magnetism.magnets",
+      "status": "partial",
+      "note": "Choice of material for an electromagnet core or permanent magnet covered. Missing part: the uses of magnets in general are not named in magnetism.magnets or elsewhere.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H8",
+      "text": "Electrical conduction through materials: band theory, intrinsic semiconductors, charge carriers, doping, p-type and n-type, junction diode, rectification",
+      "subtopic_id": "electronics.semiconductors",
+      "status": "partial",
+      "note": "Split: junction diode, biasing and rectification in electronics.diodes. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H9",
+      "text": "Structure of matter: kinetic theory to explain diffusion",
+      "subtopic_id": "matter.particles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H10",
+      "text": "Wave-particle paradox: electron diffraction, duality of matter, dual nature of light",
+      "subtopic_id": "atom.duality",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 1",
+      "text": "Length, area and volume: metre rule, vernier calipers, micrometer screw gauge",
+      "subtopic_id": "measurement.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 2",
+      "text": "Mass: unit of mass",
+      "subtopic_id": "measurement.quantities-units",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 3",
+      "text": "Mass: use of simple beam balance",
+      "subtopic_id": "measurement.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 4",
+      "text": "Time: unit of time",
+      "subtopic_id": "measurement.quantities-units",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 5",
+      "text": "Time: time-measuring devices",
+      "subtopic_id": "measurement.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 6",
+      "text": "Fundamental physical quantities",
+      "subtopic_id": "measurement.quantities-units",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 7",
+      "text": "Derived physical quantities and their units",
+      "subtopic_id": "measurement.quantities-units",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 8",
+      "text": "Combinations of fundamental quantities and determination of their units",
+      "subtopic_id": "measurement.dimensions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 9",
+      "text": "Dimensions: definition, units from dimensions, homogeneity of an equation",
+      "subtopic_id": "measurement.dimensions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 10",
+      "text": "Limitations of experimental measurements: accuracy of measuring instruments",
+      "subtopic_id": "measurement.errors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 11",
+      "text": "Simple estimation of errors",
+      "subtopic_id": "measurement.errors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1, item 12",
+      "text": "Significant figures",
+      "subtopic_id": "measurement.errors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2, item 1",
+      "text": "Definition of scalar and vector quantities",
+      "subtopic_id": "vectors.scalars-vectors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2, item 2",
+      "text": "Examples of scalar and vector quantities",
+      "subtopic_id": "vectors.scalars-vectors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2, item 3",
+      "text": "Relative velocity",
+      "subtopic_id": "vectors.relative-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2, item 4",
+      "text": "Resolution of vectors into two perpendicular directions including graphical methods",
+      "subtopic_id": "vectors.resolution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2, objective",
+      "text": "Determine the resultant of two or more vectors",
+      "subtopic_id": "vectors.addition",
+      "status": "covered",
+      "note": "Listed only among the objectives.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 1",
+      "text": "Types of motion: translational, oscillatory, rotational, spin and random",
+      "subtopic_id": "motion.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 2",
+      "text": "Linear motion",
+      "subtopic_id": "motion.speed-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 3",
+      "text": "Speed, velocity and acceleration",
+      "subtopic_id": "motion.speed-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 4",
+      "text": "Equations of uniformly accelerated motion",
+      "subtopic_id": "motion.equations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 5",
+      "text": "Motion under gravity",
+      "subtopic_id": "motion.free-fall",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 6",
+      "text": "Distance-time graph and velocity-time graph",
+      "subtopic_id": "motion.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 7",
+      "text": "Instantaneous velocity and acceleration",
+      "subtopic_id": "motion.speed-velocity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 8",
+      "text": "Projectiles: calculation of range, maximum height and time of flight",
+      "subtopic_id": "motion.projectiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 9",
+      "text": "Applications of projectile motion",
+      "subtopic_id": "motion.projectiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 10",
+      "text": "Newton's laws of motion: inertia, mass and force",
+      "subtopic_id": "newtons-laws.first-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 11",
+      "text": "Relationship between mass and acceleration",
+      "subtopic_id": "newtons-laws.second-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 12",
+      "text": "Impulse and momentum",
+      "subtopic_id": "newtons-laws.momentum-impulse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 13",
+      "text": "Conservation of linear momentum (coefficient of restitution not necessary)",
+      "subtopic_id": "newtons-laws.conservation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, objective",
+      "text": "Interpret Newton's laws of motion (the third law is not listed as its own sub-item)",
+      "subtopic_id": "newtons-laws.third-law",
+      "status": "covered",
+      "note": "Only the third law is not named among JAMB's listed sub-items; the others are mapped above.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 14",
+      "text": "Motion in a circle: angular velocity and angular acceleration",
+      "subtopic_id": "circular-motion.angular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 15",
+      "text": "Centripetal and centrifugal force",
+      "subtopic_id": "circular-motion.centripetal",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 16",
+      "text": "Motion in a circle: applications",
+      "subtopic_id": "circular-motion.centripetal",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 17",
+      "text": "SHM: definition and explanation",
+      "subtopic_id": "shm.describing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 18",
+      "text": "Examples of systems that execute SHM",
+      "subtopic_id": "shm.describing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 19",
+      "text": "Period, frequency and amplitude of SHM",
+      "subtopic_id": "shm.describing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 20",
+      "text": "Velocity and acceleration of SHM",
+      "subtopic_id": "shm.speed-acceleration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3, item 21",
+      "text": "Energy change in SHM",
+      "subtopic_id": "shm.energy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4, item 1",
+      "text": "Newton's law of universal gravitation",
+      "subtopic_id": "gravitation.newtons-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4, item 2",
+      "text": "Gravitational potential",
+      "subtopic_id": "gravitation.potential-escape",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4, item 3",
+      "text": "Conservative and non-conservative fields",
+      "subtopic_id": "gravitation.fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4, item 4",
+      "text": "Acceleration due to gravity (g = GM/R^2)",
+      "subtopic_id": "gravitation.g-weight",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4, item 5",
+      "text": "Variation of g on the earth's surface",
+      "subtopic_id": "gravitation.g-weight",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4, item 6",
+      "text": "Distinction between mass and weight",
+      "subtopic_id": "gravitation.g-weight",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4, item 7",
+      "text": "Escape velocity",
+      "subtopic_id": "gravitation.potential-escape",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4, item 8",
+      "text": "Parking orbit and weightlessness",
+      "subtopic_id": "gravitation.satellites",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 1",
+      "text": "Equilibrium of a particle",
+      "subtopic_id": "equilibrium.coplanar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 2",
+      "text": "Equilibrium of coplanar forces",
+      "subtopic_id": "equilibrium.coplanar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 3",
+      "text": "Triangle and polygon of forces",
+      "subtopic_id": "equilibrium.coplanar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 4",
+      "text": "Lami's theorem",
+      "subtopic_id": "equilibrium.coplanar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 5",
+      "text": "Principle of moments",
+      "subtopic_id": "equilibrium.moments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 6",
+      "text": "Moment of a force",
+      "subtopic_id": "equilibrium.moments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 7",
+      "text": "Simple treatment of moment of a couple (torque)",
+      "subtopic_id": "equilibrium.moments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 8",
+      "text": "Applications (of moments and couples)",
+      "subtopic_id": "equilibrium.moments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 9",
+      "text": "Conditions for equilibrium of rigid bodies under parallel and non-parallel forces",
+      "subtopic_id": "equilibrium.coplanar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 10",
+      "text": "Resolution and composition of forces in two perpendicular directions",
+      "subtopic_id": "equilibrium.coplanar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 11",
+      "text": "Resultant and equilibrant",
+      "subtopic_id": "equilibrium.coplanar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 12",
+      "text": "Centre of gravity and stability",
+      "subtopic_id": "equilibrium.stability",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5, item 13",
+      "text": "Stable, unstable and neutral equilibria",
+      "subtopic_id": "equilibrium.stability",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6, item 1",
+      "text": "Definition of work, energy and power",
+      "subtopic_id": "energy.work",
+      "status": "partial",
+      "note": "Split: energy in energy.forms-conservation; power in energy.power. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6, item 2",
+      "text": "Forms of energy",
+      "subtopic_id": "energy.forms-conservation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6, item 3",
+      "text": "Conservation of energy",
+      "subtopic_id": "energy.forms-conservation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6, item 4",
+      "text": "Qualitative treatment between different forms of energy",
+      "subtopic_id": "energy.forms-conservation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6, item 5",
+      "text": "Interpretation of area under the force-distance curve",
+      "subtopic_id": "energy.work",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "7, item 1",
+      "text": "Static and dynamic friction",
+      "subtopic_id": "friction.solid",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "7, item 2",
+      "text": "Coefficient of limiting friction and its determination",
+      "subtopic_id": "friction.solid",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "7, item 3",
+      "text": "Advantages and disadvantages of friction",
+      "subtopic_id": "friction.effects",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "7, item 4",
+      "text": "Reduction of friction",
+      "subtopic_id": "friction.effects",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "7, item 5",
+      "text": "Qualitative treatment of viscosity and terminal velocity",
+      "subtopic_id": "friction.viscosity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "7, item 6",
+      "text": "Stokes' law",
+      "subtopic_id": "friction.viscosity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "8, item 1",
+      "text": "Definition of machine",
+      "subtopic_id": "machines.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "8, item 2",
+      "text": "Types of machines",
+      "subtopic_id": "machines.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "8, item 3",
+      "text": "Mechanical advantage, velocity ratio and efficiency of machines",
+      "subtopic_id": "machines.ma-vr-efficiency",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "9, item 1",
+      "text": "Elastic limit, yield point, breaking point, Hooke's law and Young's modulus",
+      "subtopic_id": "elasticity.behaviour",
+      "status": "partial",
+      "note": "Split: Hooke's law in elasticity.hookes-law; Young's modulus in elasticity.youngs-modulus. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "9, item 2",
+      "text": "The spring balance as a device for measuring force",
+      "subtopic_id": "elasticity.hookes-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "9, item 3",
+      "text": "Work done in springs and elastic strings",
+      "subtopic_id": "elasticity.energy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10, item 1",
+      "text": "Atmospheric pressure: definition",
+      "subtopic_id": "fluids.atmospheric",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10, item 2",
+      "text": "Units of pressure (SI units)",
+      "subtopic_id": "fluids.atmospheric",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10, item 3",
+      "text": "Measurement of pressure",
+      "subtopic_id": "fluids.atmospheric",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10, item 4",
+      "text": "Simple mercury barometer, aneroid barometer and manometer",
+      "subtopic_id": "fluids.atmospheric",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10, item 5",
+      "text": "Variation of pressure with height",
+      "subtopic_id": "fluids.atmospheric",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10, item 6",
+      "text": "The use of the barometer as an altimeter",
+      "subtopic_id": "fluids.atmospheric",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10, item 7",
+      "text": "Pressure in liquids: relationship between pressure, depth and density (P = rho g h)",
+      "subtopic_id": "fluids.liquid-pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10, item 8",
+      "text": "Transmission of pressure in liquids (Pascal's principle)",
+      "subtopic_id": "fluids.liquid-pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10, item 9",
+      "text": "Application (of pressure in liquids)",
+      "subtopic_id": "fluids.liquid-pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11, item 1",
+      "text": "Determination of density of solids and liquids",
+      "subtopic_id": "fluids.density",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11, item 2",
+      "text": "Definition of relative density",
+      "subtopic_id": "fluids.density",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11, item 3",
+      "text": "Upthrust on a body immersed in a liquid",
+      "subtopic_id": "fluids.archimedes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11, item 4",
+      "text": "Archimedes' principle and law of floatation and applications, e.g. ships and hydrometers",
+      "subtopic_id": "fluids.flotation",
+      "status": "partial",
+      "note": "Split: Archimedes' principle in fluids.archimedes. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "12, item 1",
+      "text": "Concept of temperature",
+      "subtopic_id": "temperature.concept",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "12, item 2",
+      "text": "Thermometric properties",
+      "subtopic_id": "temperature.thermometers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "12, item 3",
+      "text": "Calibration of thermometers",
+      "subtopic_id": "temperature.calibration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "12, item 4",
+      "text": "Temperature scales: Celsius and Kelvin",
+      "subtopic_id": "temperature.concept",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "12, item 5",
+      "text": "Types of thermometers",
+      "subtopic_id": "temperature.thermometers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "12, item 6",
+      "text": "Conversion from one scale of temperature to another",
+      "subtopic_id": "temperature.concept",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13, item 1",
+      "text": "Solids: definition and determination of linear, volume and area expansivities",
+      "subtopic_id": "expansion.solids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13, item 2",
+      "text": "Effects and applications, e.g. expansion in buildings, strips and railway lines",
+      "subtopic_id": "expansion.applications",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13, item 3",
+      "text": "Relationship between different expansivities",
+      "subtopic_id": "expansion.solids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13, item 4",
+      "text": "Liquids: volume expansivity",
+      "subtopic_id": "expansion.liquids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13, item 5",
+      "text": "Real and apparent expansivities",
+      "subtopic_id": "expansion.liquids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13, item 6",
+      "text": "Determination of volume expansivity",
+      "subtopic_id": "expansion.liquids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13, item 7",
+      "text": "Anomalous expansion of water",
+      "subtopic_id": "expansion.liquids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14, item 1",
+      "text": "Boyle's law",
+      "subtopic_id": "gas-laws.boyle",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14, item 2",
+      "text": "Charles' law",
+      "subtopic_id": "gas-laws.charles-pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14, item 3",
+      "text": "Pressure law",
+      "subtopic_id": "gas-laws.charles-pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14, item 4",
+      "text": "Absolute zero of temperature",
+      "subtopic_id": "gas-laws.charles-pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14, item 5",
+      "text": "General gas equation",
+      "subtopic_id": "gas-laws.general",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14, item 6",
+      "text": "Ideal gas equation",
+      "subtopic_id": "gas-laws.general",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15, item 1",
+      "text": "Heat as a form of energy",
+      "subtopic_id": "heat-capacity.specific",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15, item 2",
+      "text": "Definition of heat capacity and specific heat capacity of solids and liquids",
+      "subtopic_id": "heat-capacity.specific",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15, item 3",
+      "text": "Determination of heat capacity and specific heat capacity by method of mixtures and electrical method",
+      "subtopic_id": "heat-capacity.mixtures",
+      "status": "partial",
+      "note": "Split: the electrical method in heat-capacity.specific. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16, item 1",
+      "text": "Latent heat",
+      "subtopic_id": "change-of-state.latent-heat",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16, item 2",
+      "text": "Specific latent heats of fusion and vaporization",
+      "subtopic_id": "change-of-state.latent-heat",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16, item 3",
+      "text": "Melting, evaporation and boiling",
+      "subtopic_id": "change-of-state.evaporation",
+      "status": "partial",
+      "note": "Split: melting and boiling points in change-of-state.melting-boiling. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16, item 4",
+      "text": "Influence of pressure and of dissolved substances on boiling and melting points",
+      "subtopic_id": "change-of-state.melting-boiling",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16, item 5",
+      "text": "Application in appliances",
+      "subtopic_id": "change-of-state.latent-heat",
+      "status": "partial",
+      "note": "Split: refrigerators and air conditioners in change-of-state.latent-heat; the pressure cooker in change-of-state.melting-boiling. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17, item 1",
+      "text": "Unsaturated and saturated vapours",
+      "subtopic_id": "vapours.pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17, item 2",
+      "text": "Relationship between saturated vapour pressure and boiling",
+      "subtopic_id": "vapours.pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17, item 3",
+      "text": "Determination of S.V.P. by barometer tube method",
+      "subtopic_id": "vapours.pressure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17, item 4",
+      "text": "Formation of dew, mist, fog and rain",
+      "subtopic_id": "vapours.humidity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17, item 5",
+      "text": "Study of dew point, humidity and relative humidity",
+      "subtopic_id": "vapours.humidity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17, item 6",
+      "text": "Hygrometry: wet and dry bulb hygrometers",
+      "subtopic_id": "vapours.humidity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "18, item 1",
+      "text": "Molecular nature of matter",
+      "subtopic_id": "matter.particles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "18, item 2",
+      "text": "Atoms and molecules",
+      "subtopic_id": "matter.particles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "18, item 3",
+      "text": "Molecular theory: Brownian motion, diffusion, surface tension, capillarity, adhesion, cohesion and angles of contact",
+      "subtopic_id": "matter.surface",
+      "status": "partial",
+      "note": "Split: Brownian motion and diffusion in matter.particles. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "18, item 4",
+      "text": "Examples and applications (of molecular theory)",
+      "subtopic_id": "matter.surface",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "18, item 5",
+      "text": "Kinetic theory: assumptions",
+      "subtopic_id": "matter.kinetic-theory",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "18, item 6",
+      "text": "Using the kinetic theory to explain gas pressure, Boyle's law, Charles' law, melting, boiling, vaporization, change in temperature, evaporation",
+      "subtopic_id": "matter.kinetic-theory",
+      "status": "partial",
+      "note": "Pressure, gas laws, melting and boiling covered; evaporation in change-of-state.evaporation. Missing part: the kinetic theory explanation of a change in temperature is not named in any covers line.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "19, item 1",
+      "text": "Conduction, convection and radiation as modes of heat transfer",
+      "subtopic_id": "heat-transfer.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "19, item 2",
+      "text": "Temperature gradient, thermal conductivity and heat flux",
+      "subtopic_id": "heat-transfer.conductivity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "19, item 3",
+      "text": "Effect of the nature of the surface on the energy radiated and absorbed",
+      "subtopic_id": "heat-transfer.radiation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "19, item 4",
+      "text": "The conductivities of common materials",
+      "subtopic_id": "heat-transfer.conductivity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "19, item 5",
+      "text": "The thermos flask",
+      "subtopic_id": "heat-transfer.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "19, item 6",
+      "text": "Land and sea breeze",
+      "subtopic_id": "heat-transfer.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 1",
+      "text": "Wave motion",
+      "subtopic_id": "waves.production",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 2",
+      "text": "Vibrating systems as source of waves",
+      "subtopic_id": "waves.production",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 3",
+      "text": "Waves as mode of energy transfer",
+      "subtopic_id": "waves.production",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 4",
+      "text": "Distinction between particle motion and wave motion",
+      "subtopic_id": "waves.production",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 5",
+      "text": "Relationship between frequency, wavelength and wave velocity (V = f lambda)",
+      "subtopic_id": "waves.equation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 6",
+      "text": "Phase difference",
+      "subtopic_id": "waves.progressive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 7",
+      "text": "Progressive wave (equation)",
+      "subtopic_id": "waves.progressive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 8",
+      "text": "Types of waves: mechanical and electromagnetic",
+      "subtopic_id": "waves.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 9",
+      "text": "Longitudinal and transverse waves",
+      "subtopic_id": "waves.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 10",
+      "text": "Stationary and progressive waves",
+      "subtopic_id": "waves.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 11",
+      "text": "Examples of waves from springs, ropes, stretched strings and the ripple tank",
+      "subtopic_id": "waves.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 12",
+      "text": "Reflection, refraction, diffraction and plane polarization",
+      "subtopic_id": "waves.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "20, item 13",
+      "text": "Superposition of waves, e.g. interference",
+      "subtopic_id": "waves.superposition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "21, item 1",
+      "text": "The necessity for a material medium",
+      "subtopic_id": "sound.transmission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "21, item 2",
+      "text": "Speed of sound in solids, liquids and air (effects of temperature and pressure)",
+      "subtopic_id": "sound.transmission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "21, item 3",
+      "text": "Reflection of sound: echoes, reverberation and their applications",
+      "subtopic_id": "sound.echoes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "21, item 4",
+      "text": "Disadvantages of echoes and reverberations",
+      "subtopic_id": "sound.echoes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "22, item 1",
+      "text": "Noise and musical notes",
+      "subtopic_id": "sound.characteristics",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "22, item 2",
+      "text": "Quality, pitch, intensity and loudness and their application to musical instruments",
+      "subtopic_id": "sound.characteristics",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "22, item 3",
+      "text": "Simple treatment of overtones produced by vibrating strings and air columns",
+      "subtopic_id": "sound.strings",
+      "status": "partial",
+      "note": "Split: overtones of air columns in sound.pipes. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "22, item 4",
+      "text": "Acoustic examples of resonance",
+      "subtopic_id": "sound.pipes",
+      "status": "partial",
+      "note": "Split: resonance boxes and the sonometer in sound.strings. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "22, item 5",
+      "text": "Frequency of a note emitted by air columns in closed and open pipes in relation to their lengths",
+      "subtopic_id": "sound.pipes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "23, item 1",
+      "text": "Natural and artificial sources of light",
+      "subtopic_id": "light.sources",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "23, item 2",
+      "text": "Luminous and non-luminous objects",
+      "subtopic_id": "light.sources",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "23, item 3",
+      "text": "Speed, frequency and wavelength of light",
+      "subtopic_id": "light.sources",
+      "status": "partial",
+      "note": "Split: calculations with c = f lambda in waves.equation. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "23, item 4",
+      "text": "Formation of shadows and eclipse",
+      "subtopic_id": "light.rectilinear",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "23, item 5",
+      "text": "The pin-hole camera",
+      "subtopic_id": "light.rectilinear",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "24, item 1",
+      "text": "Laws of reflection",
+      "subtopic_id": "reflection.plane",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "24, item 2",
+      "text": "Application of reflection of light (periscope, kaleidoscope, sextant)",
+      "subtopic_id": "reflection.plane",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "24, item 3",
+      "text": "Formation of images by plane, concave and convex mirrors and ray diagrams",
+      "subtopic_id": "reflection.curved",
+      "status": "partial",
+      "note": "Split: plane mirror images in reflection.plane. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "24, item 4",
+      "text": "Use of the mirror formula",
+      "subtopic_id": "reflection.mirror-formula",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "24, item 5",
+      "text": "Linear magnification",
+      "subtopic_id": "reflection.mirror-formula",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 1",
+      "text": "Explanation of refraction in terms of velocity of light in the media",
+      "subtopic_id": "refraction.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 2",
+      "text": "Laws of refraction",
+      "subtopic_id": "refraction.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 3",
+      "text": "Definition of refractive index of a medium",
+      "subtopic_id": "refraction.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 4",
+      "text": "Determination of refractive index of glass and liquid using Snell's law",
+      "subtopic_id": "refraction.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 5",
+      "text": "Real and apparent depth and lateral displacement",
+      "subtopic_id": "refraction.depth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 6",
+      "text": "Critical angle and total internal reflection",
+      "subtopic_id": "refraction.tir",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 7",
+      "text": "Refraction through a glass prism: minimum deviation formula",
+      "subtopic_id": "refraction.prism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 8",
+      "text": "Types of lenses",
+      "subtopic_id": "lenses.images",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 9",
+      "text": "Use of lens formula",
+      "subtopic_id": "lenses.formula",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "25, item 10",
+      "text": "Magnification",
+      "subtopic_id": "lenses.formula",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "26, item 1",
+      "text": "Principles of microscopes, telescopes, projectors, cameras and the human eye",
+      "subtopic_id": "optical-instruments.instruments",
+      "status": "partial",
+      "note": "Split: the human eye in optical-instruments.eye. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "26, item 2",
+      "text": "Power of a lens",
+      "subtopic_id": "lenses.formula",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "26, item 3",
+      "text": "Angular magnification",
+      "subtopic_id": "optical-instruments.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "26, item 4",
+      "text": "Near and far points",
+      "subtopic_id": "optical-instruments.eye",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "26, item 5",
+      "text": "Sight defects and their corrections",
+      "subtopic_id": "optical-instruments.eye",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "27(a)(i)",
+      "text": "Dispersion of white light by a triangular prism",
+      "subtopic_id": "dispersion.spectrum",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "27(a)(ii)",
+      "text": "Production of pure spectrum",
+      "subtopic_id": "dispersion.spectrum",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "27(a)(iii)",
+      "text": "Colour mixing by addition and subtraction",
+      "subtopic_id": "dispersion.colour",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "27(a)(iv)",
+      "text": "Colour of objects and colour filters",
+      "subtopic_id": "dispersion.colour",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "27(a)(v)",
+      "text": "Rainbow",
+      "subtopic_id": "dispersion.spectrum",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "27(b)(i)",
+      "text": "Electromagnetic spectrum: sources and uses of various types of radiation",
+      "subtopic_id": "em-waves.spectrum",
+      "status": "covered",
+      "note": "Objectives iv and v under 27 repeat topic 4 (gravitation) and are a copying error in the source, not dispersion content.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "28(i)",
+      "text": "Existence of positive and negative charges in matter",
+      "subtopic_id": "electrostatics.charges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "28(ii)",
+      "text": "Charging a body by friction, contact and induction",
+      "subtopic_id": "electrostatics.charges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "28(iii)",
+      "text": "Electroscope",
+      "subtopic_id": "electrostatics.charges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "28(iv)",
+      "text": "Coulomb's inverse square law, electric field and potential",
+      "subtopic_id": "electrostatics.coulomb",
+      "status": "partial",
+      "note": "Split: electric field and potential in electrostatics.field-potential. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "28(v)",
+      "text": "Electric field intensity and potential difference",
+      "subtopic_id": "electrostatics.field-potential",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "28(vi)",
+      "text": "Electric discharge and lightning",
+      "subtopic_id": "electrostatics.charges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "29(i)",
+      "text": "Types and functions of capacitors",
+      "subtopic_id": "capacitors.capacitance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "29(ii)",
+      "text": "Parallel plate capacitors",
+      "subtopic_id": "capacitors.capacitance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "29(iii)",
+      "text": "Capacitance of a capacitor",
+      "subtopic_id": "capacitors.capacitance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "29(iv)",
+      "text": "Relationship between capacitance, plate area, separation and medium (C = eA/d)",
+      "subtopic_id": "capacitors.capacitance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "29(v)",
+      "text": "Capacitors in series and parallel",
+      "subtopic_id": "capacitors.combinations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "29(vi)",
+      "text": "Energy stored in a capacitor",
+      "subtopic_id": "capacitors.energy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "30(i)",
+      "text": "Simple voltaic cell and its defects",
+      "subtopic_id": "electric-cells.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "30(ii)",
+      "text": "Daniell cell, Leclanche cell (wet and dry)",
+      "subtopic_id": "electric-cells.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "30(iii)",
+      "text": "Lead-acid accumulator, nickel-iron (NiFe), lithium iron and mercury cadmium",
+      "subtopic_id": "electric-cells.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "30(iv)",
+      "text": "Maintenance of cells and batteries",
+      "subtopic_id": "electric-cells.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "30(v)",
+      "text": "Arrangement of cells",
+      "subtopic_id": "electric-cells.emf-internal",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "30(vi)",
+      "text": "Efficiency of a cell",
+      "subtopic_id": "electric-cells.emf-internal",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "31(i)",
+      "text": "E.m.f., potential difference, current, internal resistance of a cell and lost volt",
+      "subtopic_id": "electric-cells.emf-internal",
+      "status": "partial",
+      "note": "Split: current and potential difference in current-electricity.current-charge. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "31(ii)",
+      "text": "Ohm's law",
+      "subtopic_id": "current-electricity.ohms-law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "31(iii)",
+      "text": "Measurement of resistance",
+      "subtopic_id": "current-electricity.bridges",
+      "status": "partial",
+      "note": "Bridge methods covered. Missing part: measuring resistance by the ammeter-voltmeter method is not named in any covers line (nearest are current-electricity.ohms-law and current-electricity.meters).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "31(iv)",
+      "text": "Meter bridge",
+      "subtopic_id": "current-electricity.bridges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "31(v)",
+      "text": "Resistance in series and in parallel and their combination",
+      "subtopic_id": "current-electricity.resistors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "31(vi)",
+      "text": "The potentiometer method of measuring e.m.f., current and internal resistance of a cell",
+      "subtopic_id": "current-electricity.bridges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "31(vii)",
+      "text": "Electrical networks (Kirchhoff's laws, objective viii)",
+      "subtopic_id": "current-electricity.resistors",
+      "status": "covered",
+      "note": "Printed as a second (v).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "31 objective v",
+      "text": "Determine the resistivity and the conductivity of a conductor",
+      "subtopic_id": "current-electricity.resistivity",
+      "status": "covered",
+      "note": "Listed only among the objectives.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "32(i)",
+      "text": "Concepts of electrical energy and power",
+      "subtopic_id": "electrical-energy.power",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "32(ii)",
+      "text": "Commercial unit of electric energy and power",
+      "subtopic_id": "electrical-energy.cost",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "32(iii)",
+      "text": "Electric power transmission",
+      "subtopic_id": "electrical-energy.transmission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "32(v)",
+      "text": "Heating effects of electric current",
+      "subtopic_id": "electrical-energy.power",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "32(vi)",
+      "text": "Electrical wiring of houses",
+      "subtopic_id": "electrical-energy.household",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "32(vii)",
+      "text": "Use of fuses",
+      "subtopic_id": "electrical-energy.household",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(i)",
+      "text": "Natural and artificial magnets",
+      "subtopic_id": "magnetism.magnets",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(ii)",
+      "text": "Magnetic properties of soft iron and steel",
+      "subtopic_id": "magnetism.magnets",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(iii)",
+      "text": "Methods of making magnets and demagnetization",
+      "subtopic_id": "magnetism.magnets",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(iv)",
+      "text": "Concept of magnetic field",
+      "subtopic_id": "magnetism.fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(v)",
+      "text": "Magnetic field of a permanent magnet",
+      "subtopic_id": "magnetism.fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(vi)",
+      "text": "Magnetic field round a straight current-carrying conductor, circular wire and solenoid",
+      "subtopic_id": "magnetism.current-fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(vii)",
+      "text": "Properties of the earth's magnetic field: poles, magnetic meridian, angle of dip and declination",
+      "subtopic_id": "magnetism.earth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(viii)",
+      "text": "Flux and flux density",
+      "subtopic_id": "magnetism.fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(ix)",
+      "text": "Variation of magnetic field intensity over the earth's surface",
+      "subtopic_id": "magnetism.earth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "33(x)",
+      "text": "Applications: earth's magnetic field in navigation and mineral exploration",
+      "subtopic_id": "magnetism.earth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "34(i)",
+      "text": "Quantitative treatment of force between two parallel current-carrying conductors",
+      "subtopic_id": "magnetic-force.conductor",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "34(ii)",
+      "text": "Force on a charge moving in a magnetic field",
+      "subtopic_id": "magnetic-force.moving-charge",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "34(iii)",
+      "text": "The d.c. motor",
+      "subtopic_id": "magnetic-force.motor",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "34(iv)",
+      "text": "Electromagnets",
+      "subtopic_id": "magnetism.current-fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "34(v)",
+      "text": "Carbon microphone",
+      "subtopic_id": "magnetic-force.motor",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "34(vi)",
+      "text": "Moving coil and moving iron instruments",
+      "subtopic_id": "current-electricity.meters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "34(vii)",
+      "text": "Conversion of galvanometers to ammeters and voltmeters using shunts and multipliers",
+      "subtopic_id": "current-electricity.meters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "34(viii)",
+      "text": "Sensitivity of a galvanometer",
+      "subtopic_id": "magnetic-force.motor",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(a)(i)",
+      "text": "Faraday's laws of electromagnetic induction",
+      "subtopic_id": "induction.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(a)(ii)",
+      "text": "Factors affecting induced e.m.f.",
+      "subtopic_id": "induction.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(a)(iii)",
+      "text": "Lenz's law as an illustration of conservation of energy",
+      "subtopic_id": "induction.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(a)(iv)",
+      "text": "A.C. and D.C. generators",
+      "subtopic_id": "induction.generators",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(a)(v)",
+      "text": "Transformers",
+      "subtopic_id": "induction.transformers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(a)(vi)",
+      "text": "The induction coil",
+      "subtopic_id": "induction.transformers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(b)(i)",
+      "text": "Explanation of inductance",
+      "subtopic_id": "induction.inductance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(b)(ii)",
+      "text": "Unit of inductance",
+      "subtopic_id": "induction.inductance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(b)(iii)",
+      "text": "Energy stored in an inductor, E = 1/2 I^2 L",
+      "subtopic_id": "induction.inductance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(b)(iv)",
+      "text": "Application and uses of inductors",
+      "subtopic_id": "induction.inductance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(c)(i)",
+      "text": "Eddy current: reduction",
+      "subtopic_id": "induction.eddy",
+      "status": "covered",
+      "note": "Printed as (ix).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "35(c)(ii)",
+      "text": "Eddy current: applications",
+      "subtopic_id": "induction.eddy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(i)",
+      "text": "Explanation of a.c. current and voltage",
+      "subtopic_id": "ac-circuits.values",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(ii)",
+      "text": "Peak and r.m.s. values",
+      "subtopic_id": "ac-circuits.values",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(iii)",
+      "text": "A.c. source connected to a resistor",
+      "subtopic_id": "ac-circuits.reactance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(iv)",
+      "text": "A.c. source connected to a capacitor: capacitive reactance",
+      "subtopic_id": "ac-circuits.reactance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(v)",
+      "text": "A.c. source connected to an inductor: inductive reactance",
+      "subtopic_id": "ac-circuits.reactance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(vi)",
+      "text": "Series R-L-C circuits",
+      "subtopic_id": "ac-circuits.rlc",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(vii)",
+      "text": "Vector diagram, phase angle and power factor",
+      "subtopic_id": "ac-circuits.rlc",
+      "status": "partial",
+      "note": "Split: power factor in ac-circuits.power. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(viii)",
+      "text": "Resistance and impedance",
+      "subtopic_id": "ac-circuits.rlc",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(ix)",
+      "text": "Effective voltage in an R-L-C circuit",
+      "subtopic_id": "ac-circuits.rlc",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36(x)",
+      "text": "Resonance and resonance frequency f0 = 1/(2 pi sqrt(LC))",
+      "subtopic_id": "ac-circuits.resonance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "36 objective ix",
+      "text": "Instantaneous power, average power and the power factor in a.c. circuits",
+      "subtopic_id": "ac-circuits.power",
+      "status": "covered",
+      "note": "Listed only among the objectives.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "37(a)(i)",
+      "text": "Electrolytes and non-electrolytes",
+      "subtopic_id": "conduction.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "37(a)(ii)",
+      "text": "Concept of electrolysis",
+      "subtopic_id": "conduction.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "37(a)(iii)",
+      "text": "Faraday's laws of electrolysis",
+      "subtopic_id": "conduction.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "37(a)(iv)",
+      "text": "Application of electrolysis, e.g. electroplating, calibration of ammeter",
+      "subtopic_id": "conduction.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "37(b)(i)",
+      "text": "Discharge through gases (qualitative)",
+      "subtopic_id": "conduction.gases",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "37(b)(ii)",
+      "text": "Application of conduction of electricity through gases",
+      "subtopic_id": "conduction.gases",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(i)",
+      "text": "Models of the atom and their limitations",
+      "subtopic_id": "atom.models",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(ii)",
+      "text": "Elementary structure of the atom",
+      "subtopic_id": "atom.models",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(iii)",
+      "text": "Energy levels and spectra",
+      "subtopic_id": "atom.energy-levels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(iv)",
+      "text": "Thermionic and photoelectric emissions",
+      "subtopic_id": "atom.photoelectric",
+      "status": "partial",
+      "note": "Split: thermionic emission in atom.thermionic. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(v)",
+      "text": "Einstein's equation and stopping potential",
+      "subtopic_id": "atom.photoelectric",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(vi)",
+      "text": "Applications of thermionic emissions and photoelectric effects",
+      "subtopic_id": "atom.thermionic",
+      "status": "partial",
+      "note": "Split: photocells and their uses in atom.photoelectric. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(vii)",
+      "text": "Simple method of production of X-rays",
+      "subtopic_id": "atom.x-rays",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(viii)",
+      "text": "Properties and applications of alpha, beta and gamma rays",
+      "subtopic_id": "nucleus.radiations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(xiii)",
+      "text": "Half-life and decay constant",
+      "subtopic_id": "nucleus.half-life",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(xiv)",
+      "text": "Simple ideas of production of energy by fusion and fission",
+      "subtopic_id": "nucleus.fission-fusion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(xv)",
+      "text": "Binding energy, mass defect and Einstein's energy equation",
+      "subtopic_id": "nucleus.binding-energy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(xvi)",
+      "text": "Wave-particle paradox (duality of matter)",
+      "subtopic_id": "atom.duality",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(xvii)",
+      "text": "Electron diffraction",
+      "subtopic_id": "atom.duality",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38(xviii)",
+      "text": "The uncertainty principle",
+      "subtopic_id": "atom.duality",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38 objective x",
+      "text": "Analyse elementary radioactivity",
+      "subtopic_id": "nucleus.radiations",
+      "status": "covered",
+      "note": "Listed only among the objectives.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "38 objectives xi-xii",
+      "text": "Stable and unstable nuclei, isotopes of an element",
+      "subtopic_id": "nucleus.composition",
+      "status": "covered",
+      "note": "Listed only among the objectives.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "39(i)",
+      "text": "Distinction between metals, semiconductors and insulators (band gap)",
+      "subtopic_id": "electronics.semiconductors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "39(ii)",
+      "text": "Intrinsic and extrinsic semiconductors",
+      "subtopic_id": "electronics.semiconductors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "39(iii)",
+      "text": "Uses of semiconductors and diodes in rectification and transistors in amplification",
+      "subtopic_id": "electronics.transistors",
+      "status": "partial",
+      "note": "Split: diodes in rectification in electronics.diodes. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "39(iv)",
+      "text": "n-type and p-type semiconductors",
+      "subtopic_id": "electronics.semiconductors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "39(v)",
+      "text": "Elementary knowledge of diodes and transistors",
+      "subtopic_id": "electronics.diodes",
+      "status": "partial",
+      "note": "Split: transistors in electronics.transistors. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W1",
+      "text": "Introduction to Physics",
+      "subtopic_id": "measurement.quantities-units",
+      "status": "covered",
+      "note": "Only the definition of physics (the study of matter and energy) is named; if the week also teaches the branches of physics or the scientific method, no covers line names them.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2",
+      "text": "Measurement of mass, weight, length and time",
+      "subtopic_id": "measurement.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3",
+      "text": "Motion in nature, force, circular motion, centripetal and centrifugal forces",
+      "subtopic_id": "circular-motion.centripetal",
+      "status": "partial",
+      "note": "Split: motion in nature in motion.types; force in newtons-laws.first-law. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4",
+      "text": "Friction",
+      "subtopic_id": "friction.solid",
+      "status": "partial",
+      "note": "Split: advantages, disadvantages and reduction in friction.effects. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5",
+      "text": "Vector and scalar quantity, distance/displacement, speed/velocity, acceleration, distance-time and speed-time graphs",
+      "subtopic_id": "motion.speed-velocity",
+      "status": "partial",
+      "note": "Split: scalars and vectors in vectors.scalars-vectors; distance and displacement in vectors.position; graphs in motion.graphs. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6",
+      "text": "Density and relative density",
+      "subtopic_id": "fluids.density",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7",
+      "text": "Upthrust, Archimedes' principle, law of floatation, pressure",
+      "subtopic_id": "fluids.archimedes",
+      "status": "partial",
+      "note": "Split: floatation in fluids.flotation; pressure in fluids.liquid-pressure. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8",
+      "text": "Work, energy and power",
+      "subtopic_id": "energy.work",
+      "status": "partial",
+      "note": "Split: energy in energy.forms-conservation; power in energy.power. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9",
+      "text": "Work done in a force field, types of energy and energy conversion",
+      "subtopic_id": "energy.forms-conservation",
+      "status": "partial",
+      "note": "Split: work done in a force field in energy.work; potential and kinetic energy in energy.pe-ke. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10",
+      "text": "Viscosity",
+      "subtopic_id": "friction.viscosity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W1",
+      "text": "Position, distance and displacement",
+      "subtopic_id": "vectors.position",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2",
+      "text": "Scalar and vector quantities: concept, vector representation",
+      "subtopic_id": "vectors.scalars-vectors",
+      "status": "partial",
+      "note": "Split: vector representation in vectors.addition. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3",
+      "text": "Derivation of equations of linear motion, motion under gravity, calculations",
+      "subtopic_id": "motion.equations",
+      "status": "partial",
+      "note": "Split: motion under gravity in motion.free-fall. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4",
+      "text": "Projectiles and their application",
+      "subtopic_id": "motion.projectiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W5",
+      "text": "Newton's laws of motion: conservation of linear momentum and collision energy",
+      "subtopic_id": "newtons-laws.conservation",
+      "status": "covered",
+      "note": "The week is scoped by its colon to momentum and collisions; the three laws themselves sit in the other newtons-laws subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6",
+      "text": "Equilibrium of forces: principle of moment, conditions for equilibrium of rigid bodies",
+      "subtopic_id": "equilibrium.moments",
+      "status": "partial",
+      "note": "Split: conditions for equilibrium in equilibrium.coplanar. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7",
+      "text": "Equilibrium of forces: centre of gravity and stability, couple",
+      "subtopic_id": "equilibrium.stability",
+      "status": "partial",
+      "note": "Split: couple in equilibrium.moments. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8",
+      "text": "SHM: definition, speed, amplitude, displacement, acceleration",
+      "subtopic_id": "shm.describing",
+      "status": "partial",
+      "note": "Split: speed, displacement and acceleration in shm.speed-acceleration. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9",
+      "text": "SHM: energy of SHM, forced vibration, resonance",
+      "subtopic_id": "shm.energy",
+      "status": "partial",
+      "note": "Split: forced vibration and resonance in shm.forced-resonance. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W10",
+      "text": "Machines: types and examples",
+      "subtopic_id": "machines.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W11",
+      "text": "Machines: calculations",
+      "subtopic_id": "machines.ma-vr-efficiency",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1",
+      "text": "Electromagnetic waves",
+      "subtopic_id": "em-waves.spectrum",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2",
+      "text": "Gravitational field, gravitational law, gravitational potential, escape velocity, potential energy in a gravitational field",
+      "subtopic_id": "gravitation.potential-escape",
+      "status": "partial",
+      "note": "Split: the gravitational law in gravitation.newtons-law; the field and g in gravitation.g-weight. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3",
+      "text": "Electric field, Coulomb's law, electric field intensity, electric potential, capacitor and capacitance",
+      "subtopic_id": "electrostatics.field-potential",
+      "status": "partial",
+      "note": "Split: Coulomb's law in electrostatics.coulomb; capacitor and capacitance in capacitors.capacitance. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4",
+      "text": "Electric cells: primary and secondary, defects of simple cells, cells in series and parallel",
+      "subtopic_id": "electric-cells.types",
+      "status": "partial",
+      "note": "Split: cells in series and parallel in electric-cells.emf-internal. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5",
+      "text": "Electrolysis: electrolytes, electrodes, ions, Faraday's law, electrochemical equivalent",
+      "subtopic_id": "conduction.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6",
+      "text": "Electric measurement: resistivity, conductivity, conversion of galvanometer to ammeter and voltmeter, measuring resistance by ammeter-voltmeter methods",
+      "subtopic_id": "current-electricity.resistivity",
+      "status": "partial",
+      "note": "Galvanometer conversion in current-electricity.meters. Missing part: measuring resistance by the ammeter-voltmeter method is not named in any covers line.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W7",
+      "text": "Magnetic field: magnets and magnetic materials, temporary and permanent magnets, magnetization and demagnetization, theory of magnetization, magnetic flux, earth's magnetic field",
+      "subtopic_id": "magnetism.magnets",
+      "status": "partial",
+      "note": "Split: magnetic flux in magnetism.fields; the earth's field in magnetism.earth. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8",
+      "text": "Magnetic field around a current-carrying conductor: straight, circular, solenoid, electromagnets, electric bell, telephone earpiece",
+      "subtopic_id": "magnetism.current-fields",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9",
+      "text": "Electromagnetic field: Fleming's left-hand rule, DC motor, moving-coil galvanometer",
+      "subtopic_id": "magnetic-force.conductor",
+      "status": "partial",
+      "note": "Split: DC motor and moving-coil galvanometer in magnetic-force.motor. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10",
+      "text": "Electromagnetic induction: induced current, laws, induction coil, AC and DC generators, transformer and power transmission",
+      "subtopic_id": "induction.laws",
+      "status": "partial",
+      "note": "Split: generators in induction.generators; induction coil and transformer in induction.transformers; power transmission in electrical-energy.transmission. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1",
+      "text": "Heat energy: concept of heat and temperature, effects of heat, sources and uses of heat",
+      "subtopic_id": "temperature.concept",
+      "status": "covered",
+      "note": "Labelled revision but lists content, so it is mapped.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2",
+      "text": "The manometer and its types, simple calculations",
+      "subtopic_id": "fluids.atmospheric",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3",
+      "text": "Expansivity: expansion of solids, effects and application of expansivity",
+      "subtopic_id": "expansion.applications",
+      "status": "partial",
+      "note": "Split: expansion of solids in expansion.solids. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4",
+      "text": "Expansivity: linear, area and volume; anomalous expansion of water; real and apparent expansion",
+      "subtopic_id": "expansion.solids",
+      "status": "partial",
+      "note": "Split: anomalous expansion and real and apparent expansion in expansion.liquids. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5",
+      "text": "Heat transfer: conduction, convection, radiation, applications, sea breeze, thermos flask",
+      "subtopic_id": "heat-transfer.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6",
+      "text": "Electric charges: production, types, distribution and storage",
+      "subtopic_id": "electrostatics.charges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7",
+      "text": "Gold leaf electroscope and its uses, lightning and lightning conductors",
+      "subtopic_id": "electrostatics.charges",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8",
+      "text": "Field concept and types of field, force of gravity, shape and dimensions of the earth",
+      "subtopic_id": "gravitation.fields",
+      "status": "partial",
+      "note": "Force of gravity and the shape of the earth in gravitation.g-weight. Missing part: the dimensions (size) of the earth are not named; only its shape is.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9",
+      "text": "Electric field: lines of force, their properties, description and properties of a force field",
+      "subtopic_id": "electrostatics.field-potential",
+      "status": "partial",
+      "note": "Split: properties of a force field in general in gravitation.fields. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W10",
+      "text": "Production of continuous electric current via chemical, heat, mechanical and solar energy",
+      "subtopic_id": "electric-cells.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W1",
+      "text": "Heat energy: temperature and its measurement",
+      "subtopic_id": "temperature.thermometers",
+      "status": "partial",
+      "note": "Labelled revision but lists content. Split: temperature and scales in temperature.concept. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2",
+      "text": "Heat capacity and specific heat capacity, methods to determine specific heat capacity",
+      "subtopic_id": "heat-capacity.specific",
+      "status": "partial",
+      "note": "Split: method of mixtures in heat-capacity.mixtures. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3",
+      "text": "Calculations on specific heat capacity",
+      "subtopic_id": "heat-capacity.specific",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W4",
+      "text": "Evaporation, boiling and melting points and their determination, effect of impurities and pressure",
+      "subtopic_id": "change-of-state.melting-boiling",
+      "status": "partial",
+      "note": "Split: evaporation in change-of-state.evaporation. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5",
+      "text": "Latent heat: fusion and vaporization, and its verification",
+      "subtopic_id": "change-of-state.latent-heat",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W6",
+      "text": "Vapour pressure: saturated and unsaturated, relation to boiling, humidity, relative humidity, dew point and weather",
+      "subtopic_id": "vapours.pressure",
+      "status": "partial",
+      "note": "Split: humidity, dew point and weather in vapours.humidity. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7",
+      "text": "Gas laws: Boyle's, Charles', pressure law and the general gas law",
+      "subtopic_id": "gas-laws.general",
+      "status": "partial",
+      "note": "Split: Boyle's law in gas-laws.boyle; Charles' and pressure laws in gas-laws.charles-pressure. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W8",
+      "text": "Production and propagation of waves: ripple tank, types of waves, general wave equation",
+      "subtopic_id": "waves.production",
+      "status": "partial",
+      "note": "Split: types in waves.types; wave equation in waves.equation. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9",
+      "text": "Properties of waves: reflection, refraction, diffraction, interference, polarization and applications",
+      "subtopic_id": "waves.properties",
+      "status": "partial",
+      "note": "Split: interference in waves.superposition. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W10",
+      "text": "Light waves: source, reflection in plane and curved mirrors",
+      "subtopic_id": "reflection.plane",
+      "status": "partial",
+      "note": "Split: sources in light.sources; curved mirrors in reflection.curved. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W11",
+      "text": "Refraction of light: refractive index and its determination, total internal reflection and critical angle",
+      "subtopic_id": "refraction.laws",
+      "status": "partial",
+      "note": "Split: critical angle and TIR in refraction.tir. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W1",
+      "text": "Reflection of light on plane surfaces: laws, image formation, applications",
+      "subtopic_id": "reflection.plane",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2",
+      "text": "Reflection on curved mirrors: types, images, uses and mirror formulae",
+      "subtopic_id": "reflection.curved",
+      "status": "partial",
+      "note": "Split: mirror formulae in reflection.mirror-formula. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3",
+      "text": "Refraction of light: laws, effects of refraction, refraction through a rectangular prism",
+      "subtopic_id": "refraction.laws",
+      "status": "partial",
+      "note": "Split: effects such as apparent depth and lateral displacement through a block in refraction.depth. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4",
+      "text": "Refraction through a triangular prism: angle of deviation and calculations, real and apparent depth",
+      "subtopic_id": "refraction.prism",
+      "status": "partial",
+      "note": "Split: real and apparent depth in refraction.depth. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5",
+      "text": "Refraction through lenses: types, image formation, lens formulae",
+      "subtopic_id": "lenses.images",
+      "status": "partial",
+      "note": "Split: lens formulae in lenses.formula. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W6",
+      "text": "Optical instruments: camera, projector, microscopes, telescope, human eye, defects and correction of vision",
+      "subtopic_id": "optical-instruments.instruments",
+      "status": "partial",
+      "note": "Split: human eye and its defects in optical-instruments.eye. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7",
+      "text": "Dispersion of white light: pure and impure spectrum, recombination, colour of objects, colours and paints, determination of refractive index",
+      "subtopic_id": "dispersion.spectrum",
+      "status": "partial",
+      "note": "Split: colour of objects and paints in dispersion.colour; refractive index of a prism in refraction.prism. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W8",
+      "text": "Sound waves: production, transmission, speed in solid, liquid and air, echo, reverberation, noise and music, effects of temperature and pressure",
+      "subtopic_id": "sound.transmission",
+      "status": "partial",
+      "note": "Split: echo and reverberation in sound.echoes; noise and music in sound.characteristics. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9",
+      "text": "Resonance: vibration in pipes and strings, musical instruments, harmonics and overtones",
+      "subtopic_id": "sound.pipes",
+      "status": "partial",
+      "note": "Split: strings in sound.strings. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 1",
+      "text": "Concept of electricity: current, p.d., e.m.f., resistance, units, Ohm's law and verification, non-ohmic conductors, factors affecting resistance, resistivity and conductivity",
+      "subtopic_id": "current-electricity.ohms-law",
+      "status": "partial",
+      "note": "Labelled revision but lists content. Split: current and p.d. in current-electricity.current-charge; e.m.f. in electric-cells.emf-internal; resistivity in current-electricity.resistivity. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 2",
+      "text": "Resistors in series and parallel, cells in series and parallel, calculations",
+      "subtopic_id": "current-electricity.resistors",
+      "status": "partial",
+      "note": "Split: cells in series and parallel in electric-cells.emf-internal. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 3",
+      "text": "Electrical energy and power, buying electric current",
+      "subtopic_id": "electrical-energy.power",
+      "status": "partial",
+      "note": "Split: buying electricity in electrical-energy.cost. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 4",
+      "text": "Safety devices, detecting faults in current",
+      "subtopic_id": "electrical-energy.household",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 5",
+      "text": "Particulate nature of matter, atomic structure, states of matter, diffusion, osmosis, Brownian motion",
+      "subtopic_id": "matter.particles",
+      "status": "partial",
+      "note": "Split: atomic structure in atom.models. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 6",
+      "text": "Crystal structure of matter: amorphous and crystalline structure",
+      "subtopic_id": "matter.particles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 7",
+      "text": "Surface tension: definition, effects, application and reduction, simple calculations",
+      "subtopic_id": "matter.surface",
+      "status": "partial",
+      "note": "Definition, effects and reduction covered. Missing part: surface tension calculations (force per unit length) are not named in matter.surface.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 8",
+      "text": "Capillarity: adhesion, cohesion and application",
+      "subtopic_id": "matter.surface",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 9",
+      "text": "Elasticity: Hooke's law, tensile stress, tensile strain and Young's modulus",
+      "subtopic_id": "elasticity.youngs-modulus",
+      "status": "partial",
+      "note": "Split: Hooke's law in elasticity.hookes-law. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 10",
+      "text": "Energy in elastic materials",
+      "subtopic_id": "elasticity.energy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W1",
+      "text": "Models of the atom: Rutherford, Bohr, electron-cloud, limitations of physical models",
+      "subtopic_id": "atom.models",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2",
+      "text": "Nucleus: radioactivity, nuclear reaction, nuclear power and atomic bombs, Nigeria's nuclear energy programme",
+      "subtopic_id": "nucleus.fission-fusion",
+      "status": "partial",
+      "note": "Split: radioactivity in nucleus.radiations. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3",
+      "text": "Energy quantization: energy levels, photoelectric effect, Einstein's equation, thermionic emission, X-rays, wave-particle duality",
+      "subtopic_id": "atom.energy-levels",
+      "status": "partial",
+      "note": "Split: photoelectric effect in atom.photoelectric; thermionic emission in atom.thermionic; X-rays in atom.x-rays; duality in atom.duality. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W4",
+      "text": "Battery: construction of a battery; electroplating; electromagnetic field transmission systems (transformer)",
+      "subtopic_id": "electric-cells.types",
+      "status": "partial",
+      "note": "Split: electroplating in conduction.electrolysis; transformer in induction.transformers. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5",
+      "text": "Use of machines: need, instances of use, repairs and maintenance; dams and production of electricity from dams in Nigeria",
+      "subtopic_id": "machines.types",
+      "status": "partial",
+      "note": "Split: dams and electricity from dams in energy.resources. Nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6",
+      "text": "Rockets and satellites: component parts and functions, NigeriaSat-1 and NigComSat-1",
+      "subtopic_id": "gravitation.satellites",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    }
+  ],
+  "unmapped_subtopics": [
+    "measurement.graphs",
+    "fluids.flow"
+  ],
+  "summary": {
+    "wassce": {
+      "covered": 115,
+      "partial": 47,
+      "missing": 0
+    },
+    "utme": {
+      "covered": 267,
+      "partial": 21,
+      "missing": 0
+    },
+    "sow": {
+      "covered": 27,
+      "partial": 50,
+      "missing": 0
+    }
+  },
+  "taxonomy_version": "1.1",
+  "sources": {
+    "wassce": "syllabi\\physics-waec.txt",
+    "utme": "syllabi\\physics-jamb.txt",
+    "sow": "syllabi\\physics-sow.txt"
+  }
+}

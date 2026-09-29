@@ -1,0 +1,127 @@
+{
+  "slug": "crs-utme",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.6,
+  "agree_subtopic": 77,
+  "agree_topic": 78,
+  "nofit": 3,
+  "disagreements": [
+    {
+      "year": 2019,
+      "q_number": 29,
+      "stem": "How many times did God call Abraham before he responded",
+      "sonnet": "covenant.abraham",
+      "opus": "obedience.rewards",
+      "notes": [
+        "",
+        "The double call 'Abraham, Abraham' is Genesis 22:11 at the offering of Isaac, so obedience.rewards; but the stem could be read as God's first call in Genesis 12, which is covenant.abraham. The stem, not the taxonomy, is the ambiguity."
+      ]
+    },
+    {
+      "year": 2017,
+      "q_number": 23,
+      "stem": "\"Blessed be you, my son David! You will do many things and will succeed in them”. In which occasion did Saul make the statement above to David?",
+      "sonnet": "david.early-life",
+      "opus": "david.submission",
+      "notes": [
+        "",
+        "Saul's blessing is 1 Samuel 26:25, after David spared him at Hachilah."
+      ]
+    },
+    {
+      "year": 2021,
+      "q_number": 32,
+      "stem": "Akeldama means",
+      "sonnet": "fellowship.communal",
+      "opus": "trials.jewish",
+      "notes": [
+        "",
+        "Akeldama, the field of blood bought with Judas's money. Judas's death is in trials.jewish (Matthew 27:3-10), but the name Akeldama is only in Acts 1:18-19, inside the Acts 1:15-26 passage that fellowship.communal covers. No sorting rule decides."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "covenant.abraham",
+        "detail": "Abraham and Lot parting over grazing strife (Genesis 13) is tested (Q24) but sits in no subtopic's covers line. It belongs in covenant.abraham, since Abraham's other Genesis 12-25 material lives there."
+      },
+      {
+        "kind": "missing",
+        "where": "obedience.wilderness",
+        "detail": "The death of Nadab and Abihu for offering unauthorised fire (Leviticus 10) is tested (Q34) but is not named in obedience.wilderness's covers line, which lists manna, the golden calf, Meribah, the bronze serpent and other murmurings but not this episode."
+      },
+      {
+        "kind": "missing",
+        "where": "leadership.gideon-samson",
+        "detail": "Abimelech's bid for kingship and Jotham's fable (Judges 9) are tested (Q78) but leadership.gideon-samson's covers line stops at Judges 6:11-40. There is no subtopic anywhere for Abimelech."
+      },
+      {
+        "kind": "overlap",
+        "where": "opposition.stephen / holy-spirit.mission",
+        "detail": "A question asking which event was the turning point in the spread of the gospel (Q4) can be read as testing the persecution itself (opposition.stephen, which covers Stephen's martyrdom) or the resulting spread (holy-spirit.mission, which is explicitly framed as the spread of the gospel after the persecution). The taxonomy gives no rule for this kind of cause-and-effect, survey-style question."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "civic.citizenship",
+        "detail": "The sorting rule assigns all of 1 Peter 2:13-17 to civic.citizenship on the stated ground that it is about duty to rulers, but verse 16 (living as free men without using freedom as a pretext for evil) is about the use of Christian freedom generally, not government duty. A question on verse 16 alone (Q63) lands here only by verse range, not by content match."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "covenant.abraham",
+        "detail": "Abram and Lot parting over grazing land (Genesis 13) has no home; Q24. Add Genesis 13 and 14 (Lot's separation and rescue) to covenant.abraham."
+      },
+      {
+        "kind": "missing",
+        "where": "leadership.gideon-samson",
+        "detail": "Abimelech's seizure of power, the seventy sons of Jerubbaal and Jotham's fable (Judges 9) have no home; Q78. Widen covers to Judges 8:29-9:57 or add leadership.judges for the other judges."
+      },
+      {
+        "kind": "missing",
+        "where": "obedience.wilderness",
+        "detail": "Nadab and Abihu's strange fire (Leviticus 10:1-3) has no home; Q34. Add it to obedience.wilderness as priestly disobedience and its punishment, or the tree has no place for Leviticus at all."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "leadership.joseph",
+        "detail": "Covers lists Genesis 37:1-28, 41 and 45:1-15 only, but papers test Potiphar's wife and prison (Genesis 39-40, Q45) and pasturing at Shechem (37:12-17, Q5). Widen to the whole Joseph story, Genesis 37-45, excluding 46 which goes to providence.guidance."
+      },
+      {
+        "kind": "overlap",
+        "where": "james.prayer",
+        "detail": "Covers cites James 1:2-8, but james.faith-works claims joy in trials (1:2-4) and its rule sends only 1:5-8 to prayer. Change the prayer citation to James 1:5-8 so the two covers lines agree; Q29."
+      },
+      {
+        "kind": "overlap",
+        "where": "trials.jewish",
+        "detail": "Judas's death sits in trials.jewish via Matthew 27:3-10, but Acts 1:18-19 (Akeldama) sits inside fellowship.communal's Acts 1:15-26. Add a rule: Judas's death and the field of blood go to trials.jewish in either account; Q56."
+      },
+      {
+        "kind": "overlap",
+        "where": "civic.citizenship",
+        "detail": "The 1 Peter 2:13-17 rule sorts duty to rulers versus witness to outsiders, but 1 Peter 2:16 (live as free men, not using freedom as a pretext for evil) is neither. Name 2:16 explicitly in one covers line; Q63."
+      },
+      {
+        "kind": "overlap",
+        "where": "fellowship.communal",
+        "detail": "The which-kind rule (place a survey question by its correct answer) fails when the input carries no settled answer, as here. Q4 on the turning point in the spread of the gospel could land in opposition.stephen, holy-spirit.pentecost or gentile-mission.saul. Either the pipeline must supply the answer for placement or the rule needs a default parent."
+      }
+    ]
+  }
+}

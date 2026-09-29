@@ -1,0 +1,1018 @@
+{
+  "subject": "English Language",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "This is the first English Language tree. The live database holds 16 broad topic names, most of them spanning a whole paper section (Grammar, Oral English, Vocabulary), so a student's score on one says little about what to practise. Version 1.0 puts parent topics at the grain of the JAMB content list and the WAEC paper sections, and subtopics at the grain of the skills a Nigerian teacher teaches as separate lessons in the SS1 to SS3 scheme of work. It was checked against all 129 questions of UTME 2024 and WASSCE 2024 Paper 1: every one lands on a subtopic, and four areas the syllabi barely name (the gapped passage, the UTME prescribed novel, phrasal verbs and question tags) have homes because those papers test them. Every one of the 16 legacy database topics is folded in. Nothing in the database is changed by this file. Version 1.1 revises 1.0 from its coverage map and its first placement test (UTME 75 of 80 and WASSCE 76 of 80 on the subtopic): it adds three subtopics (reading skills, using the dictionary, principal parts of verbs), widens covers lines where content had no home, and adds a sorting rule on every border the two models split. No id is removed or merged.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC English Language examination syllabus, WASSCE",
+        "retrieved_from": "https://waecsyllabus.com/files/ssce/ENGLISH%20LANGUAGE.pdf",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror, the same site used for Economics and Biology. Not fetched from a WAEC domain directly. Its structure (preamble, aims, scheme of examination, detailed syllabus by paper) matches WAEC's standard syllabus."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME English Language syllabus: Comprehension/Summary, Lexis and Structure, Oral Forms, and the structure of the examination",
+        "retrieved_from": "https://allschool.ng/jamb-syllabus-for-english-language/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party reproduction, cross-checked against https://kofastudy.com/jamb-syllabus-for-use-of-english/, which has the same three sections and content. One item under Comprehension/Summary reads only \"THE LIFE CHANGER.\"; it is read with the examination structure's \"1 reading text, 10 questions\" as the prescribed-novel requirement, which UTME 2024 Q41 to Q50 confirm."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Senior secondary English Language scheme of work, SS1 to SS3, term by term (NERDC-based, Lagos unified scheme)",
+        "retrieved_from": "https://www.ecolebooks.com/ (one page per class and term), cross-checked against https://edudelight.com/english-language-scheme-of-work-lagos-nappsss1-ss3/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror. Week titles were condensed from full lesson notes, so sub-bullet wording is not verbatim. SS3 Term 3 has no scheme; it is the WASSCE sitting itself."
+      }
+    ],
+    "scope_rule": "All three WASSCE papers taken by Nigerian candidates are in scope: Paper 1 (lexis and structure, objective), Paper 2 (essay, comprehension and summary, written) and Paper 3 (Test of Orals, objective). The whole UTME paper is in scope. Out of scope: the Ghana-only Paper 1 (its Part C literature questions and its own list of register fields) and the Listening Comprehension Test for Ghana, The Gambia and Sierra Leone. The Test of Orals names only six areas, so the detailed features list printed with the Listening Test (consonant and vowel contrasts, word, sentence and emphatic stress, intonation) is used as the detail of what those areas cover. Real papers override the stated scope in seven places. The WASSCE 2024 Paper 1 ended with a ten-gap passage on elections (Q71 to Q80) that the WAEC syllabus does not name; it goes to comprehension.cloze with the UTME cloze passage. WASSCE 2024 Q21 to Q30 asked what whole sentences mean, which only the JAMB syllabus names; they go to idioms.idioms and idioms.sentence-interpretation. Question tags are named only by JAMB but WASSCE 2024 tested them (Q54, Q63). Phrasal verbs are named by neither syllabus, but WASSCE 2024 tested five (Q47, Q53, Q55, Q61, Q65), so they have their own subtopic. The UTME prescribed novel is named only by a garbled line in the JAMB syllabus, yet UTME 2024 set ten questions on it (Q41 to Q50), and papers across years set questions on each year's prescribed novel. Sentence stress and strong and weak forms appear only in the WAEC features list; they are placed with emphatic stress. The principal parts of irregular verbs are named by neither syllabus beyond changes in word form for tense, yet both exams test them (UTME 2019 Q28, WASSCE 2018 Q70), so they have their own subtopic. The WAEC structure section (Paper 1 B(i) to B(iii)) is too broad to split on its own terms, so the structure subtopics follow the JAMB content list and the scheme of work, citing the WAEC clause each falls under."
+  },
+  "how_to_use": "Place a question by what a student must know to answer it, not by the words in its stem. A sentence that mentions an election but turns on the tense of its verb goes under verbs. There are two exceptions where the format is itself the skill: every gap in a gapped passage goes to comprehension.cloze, and every question on the UTME prescribed novel goes to comprehension.prescribed-text. Oral questions go by the target sound or stress, not by how the options are laid out. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins.",
+  "topics": [
+    {
+      "id": "comprehension",
+      "name": "Reading comprehension",
+      "part": "Comprehension and summary",
+      "syllabus": {
+        "waec": "Paper 2 Section B; Paper 1 gapped passage (real papers)",
+        "jamb": "Comprehension/Summary; examination Section A(a) to (c)"
+      },
+      "subtopics": [
+        {
+          "id": "comprehension.factual",
+          "name": "Understanding facts and details",
+          "syllabus": {
+            "waec": "Paper 2 B(ii)",
+            "jamb": "Comprehension/Summary: comprehension of the whole or part of each passage"
+          },
+          "covers": "What an unseen passage states: facts, details, who did what, when and why, as the passage gives them. Sorting rule: an answer found stated in the passage goes here; what the passage implies goes to comprehension.inference; the writer's attitude, tone or purpose goes to comprehension.tone; the main idea, topic sentence or best title of a paragraph or passage goes to summary.main-points.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T2",
+            "SS2 T3",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "comprehension.inference",
+          "name": "Inference and implied meaning",
+          "syllabus": {
+            "waec": "Paper 2 B(iii)",
+            "jamb": "Comprehension/Summary: determine implied meaning; coherence and logical reasoning; synthesis of ideas"
+          },
+          "covers": "Meaning a passage implies but does not state: deductions, conclusions, what can be inferred, cause and effect the reader must work out, and combining information from different parts of a passage or from more than one passage. Also how the sentences and paragraphs of a passage hold together, what a transition word or linking sentence signals, and evaluating a passage: telling fact from opinion and judging how well an argument is supported. Sorting rule: an answer stated in the passage goes to comprehension.factual; an inference about the writer's feelings, attitude, aim or own opinion goes to comprehension.tone; whether a statement in the passage is fact or opinion, or how well the writer supports a claim, goes here; how to link paragraphs in the student's own writing goes to essay.organisation; the implied meaning of a single stand-alone sentence, not taken from a passage, goes to idioms.sentence-interpretation.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "comprehension.tone",
+          "name": "Writer's mood, attitude and purpose",
+          "syllabus": {
+            "waec": "Paper 2 B(iv)",
+            "jamb": "Comprehension/Summary: deduce the writer's intentions, including mood, attitude to the subject matter and opinion"
+          },
+          "covers": "The writer's mood, tone, attitude, opinion and purpose, and the feelings that words in a passage reveal. Sorting rule: the writer's or a character's feelings, attitude or aim go here, even when they must be inferred; whether a statement is fact or opinion, and any other implied meaning, goes to comprehension.inference; naming a figure of speech used in the passage goes to idioms.figures-of-speech.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "comprehension.words-in-context",
+          "name": "Words and expressions in a passage",
+          "syllabus": {
+            "waec": "Paper 2 B(i), B(vii)",
+            "jamb": "Comprehension/Summary: comprehension of words, phrases, clauses, sentences, figures of speech and idioms as used in the passages"
+          },
+          "covers": "The meaning of a word, phrase or idiom as used in a passage, replacing it with a word or phrase that could fill the same place, and recasting a sentence from the passage in other words. Sorting rule: a word or idiom taken from a comprehension passage goes here, not to vocabulary.synonyms or idioms.idioms; naming a figure of speech from the passage goes to idioms.figures-of-speech; the grammatical name and function of an expression from the passage goes to sentences.grammatical-function.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "comprehension.reading-skills",
+          "name": "Reading skills: skimming, scanning and note-taking",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "The reading strategies the scheme of work teaches as their own lessons: skimming a passage for its gist, scanning it for a particular fact, reading at a speed that suits the task, and making notes from a passage in note form. Sorting rule: a question about how to read, or which strategy suits a stated reading task, goes here; a question answered from a particular passage goes to the comprehension or summary subtopic it tests; writing chosen points as summary sentences goes to summary.writing.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T3",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "comprehension.cloze",
+          "name": "Cloze passages",
+          "syllabus": {
+            "waec": "Paper 1 (real papers: WASSCE 2024 Q71 to Q80)",
+            "jamb": "Comprehension/Summary: one cloze test; examination Section A(b)"
+          },
+          "covers": "Choosing the word or phrase that fills a numbered gap in a passage, as in the UTME cloze passage and the WASSCE Paper 1 gapped passage (2024 Q71 to Q80, on an election). Sorting rule: every gap in a gapped passage goes here, whether it tests vocabulary, register or grammar, because it is answered from the passage around it; a gap in a single stand-alone sentence goes to the subtopic of what it tests. Sorting rule: every gap in a cloze passage goes here, whatever the gap tests (a word, a synonym, an idiom), because the skill is reading the passage for context.",
+          "taught_in": []
+        },
+        {
+          "id": "comprehension.prescribed-text",
+          "name": "The prescribed novel (UTME)",
+          "syllabus": {
+            "waec": null,
+            "jamb": "Comprehension/Summary: \"The Life Changer\"; examination Section A(c), 1 reading text, 10 questions"
+          },
+          "covers": "Questions on whichever novel JAMB prescribes for the UTME reading-text section in a given year, answered from prior reading with no passage supplied: The Life Changer (UTME 2024 Q41 to Q50), Sweet Sixteen, In Dependence, The Last Days at Forcados High School, The Lekki Headmaster and any later title. Plot, characters, setting, who said what to whom, the author, and inference, attitude and reference questions about the novel. Sorting rule: any question that can only be answered from knowledge of a prescribed novel goes here, including one that asks for an inference or a character's attitude, because the novel must have been read to answer it; a question on an unseen passage goes to the comprehension subtopic it tests.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "summary",
+      "name": "Summary",
+      "part": "Comprehension and summary",
+      "syllabus": {
+        "waec": "Paper 2 Section C",
+        "jamb": "Comprehension/Summary: identify main points and topic sentences"
+      },
+      "subtopics": [
+        {
+          "id": "summary.main-points",
+          "name": "Main points and topic sentences",
+          "syllabus": {
+            "waec": "Paper 2 C(i), C(iii)",
+            "jamb": "Comprehension/Summary: identify main points/topic sentences in passages"
+          },
+          "covers": "Finding the points a summary asks for: the main idea and topic sentence of a paragraph, the key points of a passage or of a stated part of it, the best title, and the option that best sums up the passage. Sorting rule: which sentence or option best states a main point or makes the best title goes here; a stated detail goes to comprehension.factual; how to write the points as clear summary sentences goes to summary.writing.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "summary.writing",
+          "name": "Writing the summary",
+          "syllabus": {
+            "waec": "Paper 2 C(ii)",
+            "jamb": null
+          },
+          "covers": "Writing the points once found: one point in one clear sentence, in the student's own words, within a stated number of sentences or words, without repetition, examples or whole sentences lifted from the passage. Sorting rule: choosing which points belong goes to summary.main-points; how the chosen points are expressed goes here.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T2",
+            "SS2 T3",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "vocabulary",
+      "name": "Vocabulary",
+      "part": "Lexis",
+      "syllabus": {
+        "waec": "Paper 1 A.I; A, sense relations",
+        "jamb": "Lexis and Structure: synonyms, antonyms, homonyms, ordinary usage"
+      },
+      "subtopics": [
+        {
+          "id": "vocabulary.synonyms",
+          "name": "Synonyms",
+          "syllabus": {
+            "waec": "Paper 1 A, sense relations (synonyms)",
+            "jamb": "Lexis and Structure: synonyms; examination Section B(c)"
+          },
+          "covers": "Choosing the word or phrase nearest in meaning to a marked word in a stand-alone sentence (WASSCE 2024 Q31 to Q40), including sentences where the gap must match a marked or earlier word (\"similarly\", \"equally\"; UTME 2024 Q7, Q9 to Q12). Sorting rule: decide by the relation the answer must have to the marked word, so a gap that must mean the opposite goes to vocabulary.antonyms; a word from a comprehension passage goes to comprehension.words-in-context; a marked idiom goes to idioms.idioms. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "vocabulary.antonyms",
+          "name": "Antonyms",
+          "syllabus": {
+            "waec": "Paper 1 A, sense relations (antonyms)",
+            "jamb": "Lexis and Structure: antonyms; examination Section B(b)"
+          },
+          "covers": "Choosing the word or phrase opposite in meaning to a marked word, usually in a sentence built on a contrast (\"but\", \"while\", \"unlike\"; WASSCE 2024 Q1 to Q10, UTME 2024 Q1 to Q6). Sorting rule: a gap that must mean the same as the marked word goes to vocabulary.synonyms, even when the options include its opposite. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "vocabulary.homonyms",
+          "name": "Homonyms and commonly confused words",
+          "syllabus": {
+            "waec": "Paper 1 A, sense relations (homonyms)",
+            "jamb": "Lexis and Structure: homonyms"
+          },
+          "covers": "Homonyms and homographs, one word with different meanings in different sentences, and pairs of words commonly confused in use, such as principal and principle, affect and effect, lose and loose. Sorting rule: telling words apart by their meaning in a sentence goes here when the options are a recognised confusable pair or set; options that merely look or sound somewhat alike, where the gap is decided by which word fits or goes with its neighbour (raging, ravaging, ravenous, ravishing: a ravishing beauty), go to vocabulary.word-choice; words that sound alike, asked about for their sound, go to sounds.rhymes; a misspelt form of one word goes to mechanics.spelling. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "vocabulary.word-choice",
+          "name": "Word choice, registers and collocation",
+          "syllabus": {
+            "waec": "Paper 1 A.I(a) to (p); A.II collocations",
+            "jamb": "Lexis and Structure: ordinary usage"
+          },
+          "covers": "Choosing the word that best completes a stand-alone sentence by its meaning: everyday vocabulary; the vocabulary of fields such as law, health, elections, building, agriculture, sport, the press and the stock exchange (registers; WASSCE 2024 Q11 to Q20); collective nouns (a herd of cattle); words that go together (a balanced diet, a dented boot, sell-by dates, a ravishing beauty, beyond belief); and borrowed French and Latin expressions. Sorting rule: a single-sentence gap filled by meaning goes here; a gap that turns on grammar (tense, number, pronoun, preposition) goes to that grammar subtopic; a verb and particle goes to idioms.phrasal-verbs; a choice between forms of one root goes to vocabulary.word-formation; a gap in a passage goes to comprehension.cloze. Collocation against idiom: a pairing of words each used in its ordinary meaning (a balanced diet, beyond belief) goes here; a phrase with a non-literal meaning, or a fixed frame whose small words cannot be changed (some excuse or other, next to nothing, none the worse for), goes to idioms.idioms. Options that merely look or sound alike go here unless they are a recognised confusable pair, which goes to vocabulary.homonyms. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T2",
+            "SS2 T3",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "vocabulary.word-formation",
+          "name": "Word formation: prefixes, suffixes and nominalisation",
+          "syllabus": {
+            "waec": "Paper 1 B(i), patterns of change in word forms",
+            "jamb": "Lexis and Structure: word classes and their functions"
+          },
+          "covers": "Forming words with prefixes and suffixes, negative prefixes (un-, in-, dis-, im-), changing a word's class with a suffix, and nominalisation, forming nouns from verbs and adjectives. Sorting rule: a choice between forms of the same root (construct, construction, constructive) goes here; a choice between different words goes to vocabulary.word-choice; the plural of a noun goes to word-classes.nouns; comparative and superlative forms go to word-classes.adjectives-adverbs; an infinitive or gerund used as a noun (To err is human) goes to verbs.non-finite; the past or past participle of a verb goes to verbs.principal-parts. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T3",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "vocabulary.dictionary",
+          "name": "Using the dictionary",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "Finding a word in a dictionary by alphabetical order and reading what its entry gives: the meanings, the word class, the pronunciation and the spelling. Taught as its own lesson in SS1 T3 and SS2 T3. Sorting rule: a question about finding or reading a dictionary entry goes here; the meaning of a word in a sentence goes to the vocabulary subtopic it tests; reading a word written in phonetic transcription goes to sounds.phonetic-symbols. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "idioms",
+      "name": "Idioms, figurative language and sentence meaning",
+      "part": "Lexis",
+      "syllabus": {
+        "waec": "Paper 1 A.II, A.IV; Paper 2 B(vi)",
+        "jamb": "Lexis and Structure: figurative and idiomatic usage; interpret information conveyed in sentences"
+      },
+      "subtopics": [
+        {
+          "id": "idioms.idioms",
+          "name": "Idioms and idiomatic expressions",
+          "syllabus": {
+            "waec": "Paper 1 A.II",
+            "jamb": "Lexis and Structure: idiomatic usage (formal, standard British English)"
+          },
+          "covers": "The meaning of idioms (let the cat out of the bag, under the weather, through thick and thin, generous to a fault) and completing a fixed expression (next to nothing, cannot but, a slap in the face, some excuse or other, none the worse for). Tested in UTME 2024 Q23, Q27 to Q30 and most of WASSCE 2024 Q21 to Q30. Sorting rule: a sentence whose meaning turns on an idiom goes here, including the WASSCE \"This means that\" format; a phrase with a non-literal meaning, or a fixed frame whose small words cannot be changed, goes here even when the options vary only a preposition, a determiner or a comparative form (in the face, some excuse or other, none the worse); a pairing of words each used in its ordinary meaning (a balanced diet, beyond belief) goes to vocabulary.word-choice; a sentence whose meaning turns on literal wording or carries an implied or ironic meaning with no idiom in it goes to idioms.sentence-interpretation; a verb and particle goes to idioms.phrasal-verbs; an idiom asked about inside a comprehension passage goes to comprehension.words-in-context. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "idioms.phrasal-verbs",
+          "name": "Phrasal verbs",
+          "syllabus": {
+            "waec": "Paper 1 A.II (real papers: WASSCE 2024 Q47, Q53, Q55, Q61, Q65)",
+            "jamb": "Lexis and Structure: idiomatic usage"
+          },
+          "covers": "Verbs with a particle whose meaning is more than the sum of the parts: choosing the particle (rustle up, fall through, break into, make do, play down) or the meaning of a phrasal verb, including three-part verbs (cash in on, put up with, look forward to). Sorting rule: a verb and particle with a new meaning goes here, and so does any particle of a three-part verb, including its final preposition; a single preposition after a verb, noun or adjective that keeps its ordinary meaning (deficiency in, judge by, depend on, dispose of) goes to word-classes.prepositions. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "idioms.figures-of-speech",
+          "name": "Figures of speech and figurative usage",
+          "syllabus": {
+            "waec": "Paper 1 A.IV; Paper 2 B(vi)",
+            "jamb": "Lexis and Structure: figurative usage; Comprehension/Summary: figures of speech"
+          },
+          "covers": "Telling figurative from literal use, and naming and explaining figures of speech and literary terms: simile, metaphor, personification, hyperbole, irony, euphemism, oxymoron, litotes, rhetorical question and others. Sorting rule: naming or explaining a figure of speech goes here wherever it appears, including in a comprehension passage; the meaning of a fixed idiom goes to idioms.idioms; what an ironic or sarcastic stand-alone sentence actually means, without naming the figure, goes to idioms.sentence-interpretation. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": [
+            "SS1 T1",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "idioms.sentence-interpretation",
+          "name": "Interpreting sentences",
+          "syllabus": {
+            "waec": "Paper 1 A (real papers: WASSCE 2024 Q24)",
+            "jamb": "Lexis and Structure: interpret information conveyed in sentences; examination Section B(a)"
+          },
+          "covers": "Working out what a whole stand-alone sentence means or implies, as in the WASSCE \"This means that\" format: when its meaning turns on its literal wording (word order, negation, modal verbs, comparison and quantity: the last but one, hardly had he, no sooner, not all), and when it carries an implied, ironic or sarcastic meaning with no idiom in it (Kola, you really worked hard to win half of it). Sorting rule: a sentence whose meaning turns on an idiom goes to idioms.idioms; one whose meaning turns on the stress on a word goes to stress.emphatic; naming the figure of speech (irony) goes to idioms.figures-of-speech; choosing the right reply to a question (Would you mind lifting the box? No, I would not) goes to concord.question-tags; an implied meaning in a comprehension passage goes to comprehension.inference. Sorting rule: a gap in a cloze passage goes to comprehension.cloze; questions here stand alone in a single sentence.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "word-classes",
+      "name": "Word classes and their use",
+      "part": "Structure",
+      "syllabus": {
+        "waec": "Paper 1 A.III; B(i); B(iii)",
+        "jamb": "Lexis and Structure: word classes and their functions; number; degree"
+      },
+      "subtopics": [
+        {
+          "id": "word-classes.nouns",
+          "name": "Nouns and number",
+          "syllabus": {
+            "waec": "Paper 1 B(i), number",
+            "jamb": "Lexis and Structure: number"
+          },
+          "covers": "Countable and uncountable nouns (some chalk, not chalks), regular and irregular plurals, nouns always plural or always singular (a crossroads, news, furniture, equipment), making uncountable nouns countable (a piece of advice), and a noun used as a modifier (price tag, not price's tag). WASSCE 2024 Q44, Q64, Q67. Sorting rule: the form of the noun goes here, even when the options differ in their determiner; whether the verb agrees with it goes to concord.subject-verb; the possessive apostrophe goes to mechanics.punctuation.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "word-classes.pronouns",
+          "name": "Pronouns",
+          "syllabus": {
+            "waec": "Paper 1 A.III, B(iii)",
+            "jamb": "Lexis and Structure: word classes and their functions"
+          },
+          "covers": "Kinds and forms of pronoun: personal pronouns as subject or object (between you and me), reflexive and emphatic pronouns, possessive pronouns, relative pronouns (who, whom, whose, which, that, in which; WASSCE 2024 Q51), and indefinite pronouns (anyone, someone, somebody, anything, nobody), including the some- or any- form after a negative or in a question (did not find anyone). Sorting rule: choosing the form of a pronoun, the relative pronoun or the indefinite pronoun goes here; whether a pronoun agrees with its antecedent in number, person or gender goes to concord.pronoun-antecedent; naming a relative clause or its function goes to sentences.grammatical-function; a relative pronoun that refers back to a noun goes here, while a word that opens a noun clause with no noun before it (forgot what the police said; whether, that) goes to word-classes.conjunctions-articles; some or any before a noun goes to word-classes.conjunctions-articles.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "word-classes.adjectives-adverbs",
+          "name": "Adjectives, adverbs and comparison",
+          "syllabus": {
+            "waec": "Paper 1 B(i), degree",
+            "jamb": "Lexis and Structure: degree (positive, comparative and superlative)"
+          },
+          "covers": "The order of adjectives before a noun (a new blue silk dress), comparison of adjectives and adverbs (positive, comparative, superlative), intensifiers and adverbs of degree (very, too, much, considerably, somewhat), kinds of adverb and where they go. WASSCE 2024 Q42, Q48, Q49, Q60, Q62. Sorting rule: choosing an adjective or adverb form, its order or an intensifier goes here; changing a word's class with a suffix goes to vocabulary.word-formation; a fixed expression built on a comparative (none the worse for) goes to idioms.idioms; a past participle used as an adjective (the man was drunk), where the options are forms of the verb, goes to verbs.principal-parts.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T3",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "word-classes.prepositions",
+          "name": "Prepositions",
+          "syllabus": {
+            "waec": "Paper 1 A.III, correct use of prepositions; B(iii)",
+            "jamb": "Lexis and Structure: word classes and their functions"
+          },
+          "covers": "Choosing the correct preposition after a noun, adjective or verb (deficiency in, judge by, congratulate on, different from, dispose of), and prepositions of time, place and direction. WASSCE 2024 Q59, Q70. Sorting rule: a verb and particle with a new meaning, or any particle of a three-part verb (cash in on), goes to idioms.phrasal-verbs; a preposition that belongs to a fixed idiom (a slap in the face) goes to idioms.idioms; a single preposition after a word that keeps its ordinary meaning goes here.",
+          "taught_in": []
+        },
+        {
+          "id": "word-classes.conjunctions-articles",
+          "name": "Conjunctions, articles and determiners",
+          "syllabus": {
+            "waec": "Paper 1 B(iii), conjunctions and determiners",
+            "jamb": "Lexis and Structure: word classes and their functions"
+          },
+          "covers": "Conjunctions and paired conjunctions (although, unless, either or, not only but also, no sooner than), the words that open a noun clause (that, whether, if, and what, why, when and how with no noun before them: The accused forgot what the police said), articles (a, an, the and no article), and determiners (few, a few, little, a little, much, many, each, every, and some or any before a noun). Sorting rule: whether a verb agrees with subjects joined by or, either or, neither nor goes to concord.subject-verb; whether a noun can be counted goes to word-classes.nouns; a relative pronoun that refers back to a noun, and an indefinite pronoun standing alone (anyone, something), go to word-classes.pronouns; naming a noun clause or its function goes to sentences.grammatical-function; a fixed expression such as cannot but or some excuse or other goes to idioms.idioms.",
+          "taught_in": [
+            "SS1 T1",
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "verbs",
+      "name": "Verbs: tense, mood and voice",
+      "part": "Structure",
+      "syllabus": {
+        "waec": "Paper 1 A.III, sequence of tenses; B(i), tense",
+        "jamb": "Lexis and Structure: mood, tense, aspect"
+      },
+      "subtopics": [
+        {
+          "id": "verbs.tenses",
+          "name": "Tense and aspect",
+          "syllabus": {
+            "waec": "Paper 1 B(i), tense",
+            "jamb": "Lexis and Structure: tense, aspect"
+          },
+          "covers": "Choosing the right tense and aspect: simple, continuous, perfect and perfect continuous forms in the present, past and future, fixed by time expressions and the order of events (by the time, for ten years, before I arrived); and stative verbs that do not take the continuous (know, own, believe, hear, see), including can with a verb of perception in place of the continuous (I can hear you, not I am hearing you). UTME 2024 Q18, Q20, Q22; WASSCE 2024 Q56. Sorting rule: a verb fixed by a time expression or by the order of events goes here; a verb in a clause governed by a past verb of saying, thinking, knowing or perceiving (said, realised, discovered, noticed, found), or kept in step with a past verb in a linked clause, goes to verbs.sequence, even when the order of events would fix the same form; can hear against am hearing goes here, not to verbs.modals; a verb after if or wish goes to verbs.mood-conditionals; a modal chosen for its meaning goes to verbs.modals; when the options are forms of one verb and the tense is not in question (drank or drunk, ground or grounded), the question goes to verbs.principal-parts; when the key is passive and aspect or tense decides between passive options (is considered against is being considered), it goes here.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T3",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "verbs.principal-parts",
+          "name": "Principal parts of verbs",
+          "syllabus": {
+            "waec": "Paper 1 B(i), changes in word forms indicating tense (real papers: WASSCE 2018 Q70)",
+            "jamb": "Lexis and Structure: tense (real papers: UTME 2019 Q28)"
+          },
+          "covers": "The base, past and past participle forms of verbs, regular and irregular (drink, drank, drunk; strike, struck, struck; grind, ground, ground; swim, swam, swum), and regular forms wrongly given to irregular verbs (grounded for ground). Sorting rule: when the options are different forms of the same verb and the sentence already fixes the tense and voice, so that only the correct form is in question (The beans have not been properly ground; The man was drunk at the party), the question goes here, including a past participle used as an adjective; when the options are different tenses, it goes to verbs.tenses; a choice between a participle, a gerund and an infinitive goes to verbs.non-finite.",
+          "taught_in": []
+        },
+        {
+          "id": "verbs.sequence",
+          "name": "Sequence of tenses and reported speech",
+          "syllabus": {
+            "waec": "Paper 1 A.III, sequence of tenses",
+            "jamb": "Lexis and Structure: tense"
+          },
+          "covers": "Keeping the tense of one clause in step with a past main clause: a that-clause or other subordinate clause after a past verb of saying, thinking, knowing or perceiving (he said that, she realised that, they discovered that), a coordinated clause that keeps the tense or modal of the first (tried several times but could not), and direct and indirect (reported) speech with its changes of tense, pronoun and time words (yesterday becomes the previous day, here becomes there). WASSCE 2024 Q41, Q45. Sorting rule: a tense or modal forced by a past verb of saying, thinking, knowing or perceiving, or by a past verb in a linked clause, goes here, even when the order of events would fix the same form (The doctor realised that the patient's legs had long decayed); a tense fixed only by a time expression, in a clause that no such verb governs, goes to verbs.tenses.",
+          "taught_in": [
+            "SS2 T2",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "verbs.modals",
+          "name": "Auxiliary and modal verbs",
+          "syllabus": {
+            "waec": "Paper 1 B(i), B(iii)",
+            "jamb": "Lexis and Structure: mood"
+          },
+          "covers": "Lexical (main) verbs against auxiliary verbs, and how to tell them apart; be, have and do as auxiliaries; the modals can, could, may, might, shall, should, will, would, must, ought to, need and dare, what each means, and their perfect forms (ought not to have walked, need not have come). WASSCE 2024 Q66. Sorting rule: would in the result clause of a conditional goes to verbs.mood-conditionals; will against would, or can against could, forced by a past verb in a reported or linked clause goes to verbs.sequence; can hear against am hearing, where the point is that a verb of perception does not take the continuous, goes to verbs.tenses.",
+          "taught_in": [
+            "SS1 T2",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "verbs.mood-conditionals",
+          "name": "Mood, conditionals and the subjunctive",
+          "syllabus": {
+            "waec": "Paper 1 B(i)",
+            "jamb": "Lexis and Structure: mood"
+          },
+          "covers": "The three moods of the verb, indicative, imperative and subjunctive, and what each is used for; conditional sentences of the three types (if it rains; if I had money; if I had known, I would have come) and the subjunctive (if I were, I wish he were, it is essential that he go). WASSCE 2024 Q43. Sorting rule: any verb choice inside an if or wish clause, or in the result clause it governs, goes here; naming the mood of a verb, or choosing its imperative or subjunctive form, goes here; what kind a whole sentence is by function (declarative, imperative, interrogative, exclamatory) goes to sentences.types.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "verbs.voice",
+          "name": "Active and passive voice",
+          "syllabus": {
+            "waec": "Paper 1 B(ii)",
+            "jamb": "Lexis and Structure: clause and sentence patterns"
+          },
+          "covers": "Forming the passive in each tense, changing active sentences to passive and back, and when the passive is used. Sorting rule: choosing between an active and a passive form goes here when voice alone decides the answer; when the key is passive and more than one passive option is offered, so that aspect or tense decides between them (considers, is considered, is being considered), the question goes to verbs.tenses; the tense of a passive verb, when voice is not in question, goes to verbs.tenses.",
+          "taught_in": [
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "verbs.non-finite",
+          "name": "Participles, gerunds and infinitives",
+          "syllabus": {
+            "waec": "Paper 1 B(i)",
+            "jamb": "Lexis and Structure: word classes and their functions"
+          },
+          "covers": "The correct non-finite form: present and past participles, perfect participles (having bought; WASSCE 2024 Q58), gerunds, infinitives with and without to, the form that follows verbs such as enjoy, avoid, stop, let and make, and infinitives and gerunds used as nouns (To err is human; Swimming is good exercise). Sorting rule: a choice between a participle, a gerund and an infinitive goes here; a participle as part of a finite tense goes to verbs.tenses when the tense is in question, and to verbs.principal-parts when only its form is (drank or drunk, ground or grounded), including a past participle used as an adjective; naming a non-finite clause or its function goes to sentences.grammatical-function; a dangling participle goes to sentences.construction.",
+          "taught_in": [
+            "SS1 T2",
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "concord",
+      "name": "Concord, question tags and short answers",
+      "part": "Structure",
+      "syllabus": {
+        "waec": "Paper 1 A.III, matching of pronouns with their antecedents",
+        "jamb": "Lexis and Structure: agreement/concord; question tags"
+      },
+      "subtopics": [
+        {
+          "id": "concord.subject-verb",
+          "name": "Subject and verb agreement",
+          "syllabus": {
+            "waec": "Paper 1 A.III",
+            "jamb": "Lexis and Structure: agreement/concord"
+          },
+          "covers": "Making the verb agree with its subject: collective nouns (the committee is or are), subjects joined by and, or, either or and neither nor, each, every, one of, a number of against the number of, a variety of, nouns ending in s (news, mathematics), and subjects separated from their verb. UTME 2024 Q13 to Q17. Sorting rule: whether the verb is singular or plural goes here; the verb's tense goes to verbs.tenses; the noun's own plural form goes to word-classes.nouns.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "concord.pronoun-antecedent",
+          "name": "Pronoun and antecedent agreement",
+          "syllabus": {
+            "waec": "Paper 1 A.III, matching of pronouns with their antecedents",
+            "jamb": "Lexis and Structure: agreement/concord"
+          },
+          "covers": "Making a pronoun agree with the noun it stands for in number, person and gender: one and one's, everybody and his or their, each and its. WASSCE 2024 Q68. Sorting rule: agreement with an antecedent goes here; the form of a pronoun on its own (I or me, who or whom) goes to word-classes.pronouns; the pronoun in a question tag goes to concord.question-tags.",
+          "taught_in": []
+        },
+        {
+          "id": "concord.question-tags",
+          "name": "Question tags and short answers",
+          "syllabus": {
+            "waec": "Paper 1 B(ii) (real papers: WASSCE 2024 Q54, Q63; WASSCE 2020 Q45)",
+            "jamb": "Lexis and Structure: question tags"
+          },
+          "covers": "Choosing the tag that matches a statement: a positive statement takes a negative tag and the reverse, with the right auxiliary and pronoun, and the special cases (I am, let's, everybody, you'd rather, statements with never, hardly or nobody). Also short answers and replies to questions, which echo the auxiliary in the same way, including the reply to a polite or negative question (Would you mind lifting the box? No, I would not). UTME 2024 Q24, Q26; WASSCE 2024 Q54, Q63; WASSCE 2020 Q45. Sorting rule: choosing a tag or a short reply that echoes the auxiliary goes here; what a stand-alone sentence means or implies goes to idioms.sentence-interpretation.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "sentences",
+      "name": "Phrases, clauses and sentences",
+      "part": "Structure",
+      "syllabus": {
+        "waec": "Paper 1 B(ii); Paper 2 B(v)",
+        "jamb": "Lexis and Structure: clause and sentence patterns; Comprehension/Summary: grammatical functions of words, phrases and clauses"
+      },
+      "subtopics": [
+        {
+          "id": "sentences.grammatical-function",
+          "name": "Grammatical names and functions",
+          "syllabus": {
+            "waec": "Paper 2 B(v); Paper 1 B(ii)",
+            "jamb": "Comprehension/Summary: identify the grammatical functions of words, phrases, clauses; Lexis and Structure: word classes and their functions"
+          },
+          "covers": "Naming a word, phrase or clause and giving its function in a sentence: the part of speech of a word as used; noun, verb, adjectival, adverbial and prepositional phrases; noun, adjectival (relative) and adverbial clauses, restrictive and non-restrictive; and functions such as subject, object, complement, qualifier of a noun and modifier of a verb. Sorting rule: a question that asks what a word or group of words is, or what it does, goes here, even when it comes from a comprehension passage; choosing the correct form to fill a gap goes to the subtopic of that form; what kind a whole sentence is goes to sentences.types.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T3",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "sentences.types",
+          "name": "Types of sentence",
+          "syllabus": {
+            "waec": "Paper 1 B(ii)",
+            "jamb": "Lexis and Structure: clause and sentence patterns"
+          },
+          "covers": "Kinds of sentence by structure (simple, compound, complex, compound-complex) and by function (declarative, interrogative, imperative, exclamatory), main and subordinate clauses as their building blocks, and joining or splitting sentences. Sorting rule: what kind a whole sentence is goes here; the name or function of one clause inside it goes to sentences.grammatical-function; the mood of a verb (indicative, imperative, subjunctive) or the choice of its imperative or subjunctive form goes to verbs.mood-conditionals.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1",
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "sentences.construction",
+          "name": "Sentence construction and common errors",
+          "syllabus": {
+            "waec": "Aims (iv), (v); Paper 1 B(ii)",
+            "jamb": "Lexis and Structure: identify various grammatical patterns in use"
+          },
+          "covers": "Choosing the correct or best-built sentence from several: word order, parallel structure, misplaced and dangling modifiers, double negatives, redundancy (return back, discuss about) and other common errors of usage. Sorting rule: when the options differ in one grammar point (a tense, a preposition, a pronoun), the question goes to that point's subtopic; this subtopic takes questions whose options differ in how the whole sentence is built, or where several kinds of error compete.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "mechanics",
+      "name": "Spelling and punctuation",
+      "part": "Structure",
+      "syllabus": {
+        "waec": "Aims (vii); Paper 2 A, mechanical accuracy",
+        "jamb": "Lexis and Structure: punctuation and spelling"
+      },
+      "subtopics": [
+        {
+          "id": "mechanics.spelling",
+          "name": "Spelling",
+          "syllabus": {
+            "waec": "Aims (vii); Paper 2 A, mechanical accuracy",
+            "jamb": "Lexis and Structure: spelling"
+          },
+          "covers": "Choosing the correctly spelt word (accommodate, conscientious; UTME 2024 Q19, Q21), doubling of consonants, dropping or keeping a final e, ie and ei, and British against American spelling. Sorting rule: telling apart two real words with different meanings goes to vocabulary.homonyms.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T2",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "mechanics.punctuation",
+          "name": "Punctuation",
+          "syllabus": {
+            "waec": "Aims (vii); Paper 2 A, mechanical accuracy",
+            "jamb": "Lexis and Structure: punctuation"
+          },
+          "covers": "The full stop, comma, semicolon, colon, question and exclamation marks, quotation marks, the apostrophe for possession and contraction, the dash, the hyphen and capital letters, and choosing the correctly punctuated sentence.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T2",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "sounds",
+      "name": "Speech sounds: vowels and consonants",
+      "part": "Oral English",
+      "syllabus": {
+        "waec": "Paper 3 Test of Orals 1, 2, 3, 6; features I and II",
+        "jamb": "Oral Forms: vowels, consonants, rhymes"
+      },
+      "subtopics": [
+        {
+          "id": "sounds.pure-vowels",
+          "name": "Pure vowels (monophthongs)",
+          "syllabus": {
+            "waec": "Paper 3 Test of Orals 1; features II(a); Aims (xi)",
+            "jamb": "Oral Forms: vowels (monophthongs)"
+          },
+          "covers": "The twelve pure vowels of English: which word has the same vowel sound as the marked letters (bluff and rough; UTME 2024 Q31), contrasts such as seat and sit, pull and pool, cot and caught, and the unstressed schwa; and describing a vowel by how it is made: front, central or back, close or open, long or short, with rounded or spread lips. Sorting rule: a question built on a vowel goes here or to sounds.diphthongs by the target sound, including one that describes a vowel and asks which word contains it; a question asking which word rhymes goes to sounds.rhymes; a question whose options are phonetic symbols goes to sounds.phonetic-symbols.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T3",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "sounds.diphthongs",
+          "name": "Diphthongs and triphthongs",
+          "syllabus": {
+            "waec": "Paper 3 Test of Orals 1; features II(b), II(c)",
+            "jamb": "Oral Forms: vowels (diphthongs)"
+          },
+          "covers": "The eight diphthongs and the triphthongs (as in fire and our): which word has the same diphthong as the marked letters, and contrasts between a diphthong and a pure vowel (let and late, cheer and chair). Sorting rule: decide by the target sound, as for sounds.pure-vowels.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T2",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "sounds.consonants",
+          "name": "Consonant sounds",
+          "syllabus": {
+            "waec": "Paper 3 Test of Orals 2; features I(a); Aims (xi)",
+            "jamb": "Oral Forms: consonants; differentiate between consonant types"
+          },
+          "covers": "The consonant sounds of English and their contrasts at the start, middle and end of words (they and day, ship and chip, fan and van, cup and cub), how letters are sounded in different words (ch in church and chaos, g in giant and goal; UTME 2024 Q33, Q34), silent letters, and classifying a consonant by how it is made: voiced or voiceless, its place of articulation (bilabial, labio-dental, dental, alveolar, palatal, velar, glottal) and its manner (plosive, fricative, affricate, nasal, lateral, approximant). Sorting rule: a question on one consonant sound goes here, including one that describes a consonant (a voiced bilabial plosive) and asks which word contains it; two or more consonants together in one syllable go to sounds.clusters; a question whose options are phonetic symbols goes to sounds.phonetic-symbols.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T2",
+            "SS2 T3",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "sounds.clusters",
+          "name": "Consonant clusters",
+          "syllabus": {
+            "waec": "Paper 3 Test of Orals 2; features I(b)",
+            "jamb": "Oral Forms: consonants (including clusters)"
+          },
+          "covers": "Clusters of two, three and four consonants at the start and end of syllables (play and pray, nest and next, lisp and lips), and the order of the sounds within a cluster. Sorting rule: a question on one consonant sound goes to sounds.consonants.",
+          "taught_in": [
+            "SS2 T1",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "sounds.rhymes",
+          "name": "Rhymes and homophones",
+          "syllabus": {
+            "waec": "Paper 3 Test of Orals 3",
+            "jamb": "Oral Forms: rhymes (including homophones)"
+          },
+          "covers": "Words that rhyme with a given word, rhyme in lines of verse and rhyme scheme, and homophones, words pronounced alike but spelt differently (sole and soul). Sorting rule: a question that asks for a rhyme or a homophone goes here; a question on one vowel or consonant sound goes to that sound's subtopic; telling homonyms apart by meaning goes to vocabulary.homonyms.",
+          "taught_in": [
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "sounds.phonetic-symbols",
+          "name": "Phonetic symbols",
+          "syllabus": {
+            "waec": "Paper 3 Test of Orals 6",
+            "jamb": null
+          },
+          "covers": "Matching phonetic symbols to sounds: choosing the symbol that stands for the marked sound in a word, and reading a word written in phonetic transcription. Sorting rule: a question whose options are symbols, or which asks the student to read a whole word in transcription, goes here; a question that gives one symbol and asks which word contains that sound goes to the vowel or consonant subtopic for that sound.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "stress",
+      "name": "Stress and intonation",
+      "part": "Oral English",
+      "syllabus": {
+        "waec": "Paper 3 Test of Orals 4, 5; features III and IV",
+        "jamb": "Oral Forms: word stress, intonation (emphatic stress)"
+      },
+      "subtopics": [
+        {
+          "id": "stress.word-stress",
+          "name": "Word stress and syllables",
+          "syllabus": {
+            "waec": "Paper 3 Test of Orals 4; features III(a)",
+            "jamb": "Oral Forms: word stress (monosyllabic and polysyllabic)"
+          },
+          "covers": "Which syllable carries the main stress in words of two to six syllables (UTME 2024 Q35 to Q37), words that shift stress between noun and verb (IMport and imPORT), stress in compound words, and syllable structure, including counting syllables. Sorting rule: stress on a syllable within one word goes here; stress on one word within a sentence goes to stress.emphatic.",
+          "taught_in": [
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T3",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "stress.emphatic",
+          "name": "Emphatic and sentence stress",
+          "syllabus": {
+            "waec": "Paper 3 Test of Orals 5; features III(b), III(c)",
+            "jamb": "Oral Forms: intonation (emphatic stress)"
+          },
+          "covers": "Emphatic (contrastive) stress: which question or meaning a sentence answers when one word is stressed (UTME 2024 Q38 to Q40), or which word to stress to give a stated meaning; also normal sentence stress, strong and weak forms, and English as a stress-timed language. Sorting rule: stress on a word within a sentence goes here; the rising or falling tune of the sentence goes to stress.intonation.",
+          "taught_in": [
+            "SS1 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "stress.intonation",
+          "name": "Intonation",
+          "syllabus": {
+            "waec": "Paper 3 Test of Orals 5; features IV",
+            "jamb": "Oral Forms: intonation"
+          },
+          "covers": "The falling and rising tunes and what each signals: statements, commands and wh- questions fall; yes or no questions, incomplete utterances and polite requests rise; tags said with a fall or a rise; and the two tunes combined in longer sentences.",
+          "taught_in": [
+            "SS1 T3",
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T3",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "essay",
+      "name": "Essay and letter writing",
+      "part": "Writing",
+      "syllabus": {
+        "waec": "Paper 2 Section A",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "essay.letters",
+          "name": "Formal, informal and semi-formal letters",
+          "syllabus": {
+            "waec": "Paper 2 A(i)",
+            "jamb": null
+          },
+          "covers": "Letters of each kind: the addresses, date, salutation, heading, closing and signature each needs, and the tone each calls for, such as a letter of complaint, an application or a letter to a friend. Sorting rule: a task set as a letter goes here, whatever its subject; how to paragraph or link its ideas goes to essay.organisation.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T2",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "essay.speeches-articles",
+          "name": "Speeches, articles and reports",
+          "syllabus": {
+            "waec": "Paper 2 A(ii), A(vi), A(vii)",
+            "jamb": null
+          },
+          "covers": "Writing for an audience or a publication: speeches (vocatives, opening and closing), articles for a newspaper or school magazine (title and writer's name), reports (heading, findings and recommendations) and minutes of a meeting. Sorting rule: a speech for a debate goes to essay.argumentative-expository; any other speech goes here.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1",
+            "SS2 T2",
+            "SS2 T3",
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "essay.narrative-descriptive",
+          "name": "Narrative, descriptive and creative writing",
+          "syllabus": {
+            "waec": "Paper 2 A(iii), A(iv), A(ix)",
+            "jamb": null
+          },
+          "covers": "Telling a story in order, describing a person, place or event, and short stories that illustrate a saying or end with a given sentence.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T2",
+            "SS2 T3",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "essay.argumentative-expository",
+          "name": "Argumentative and expository essays",
+          "syllabus": {
+            "waec": "Paper 2 A(v), A(viii)",
+            "jamb": null
+          },
+          "covers": "Argumentative essays and debates that take a side and defend it, and expository essays that explain a process, idea or issue. Sorting rule: a debate goes here even though it is written as a speech.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T3",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "essay.organisation",
+          "name": "Content, organisation and expression",
+          "syllabus": {
+            "waec": "Paper 2 A, marks for content, organisation, expression and mechanical accuracy",
+            "jamb": null
+          },
+          "covers": "What the marking scheme rewards in every kind of essay: relevant content, planning, paragraphing and topic sentences, introductions and conclusions, linking ideas, expression in continuous writing, and mechanical accuracy in continuous writing (correct grammar, spelling and punctuation throughout an essay). Sorting rule: a task set as one kind of essay goes to that kind; a question about how to plan, paragraph, open, close or link any essay, or about accuracy across a piece of continuous writing, goes here; a spelling or punctuation choice in isolation goes to mechanics.spelling or mechanics.punctuation.",
+          "taught_in": [
+            "SS1 T2",
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3",
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    }
+  ],
+  "legacy_note": "Each of the 16 legacy database topics is folded into a subtopic where its name matches one skill, or into a parent topic where it is generic or spans several subtopics. A question moved to a parent is correct but unplaced within it, and is flagged for reclassification rather than guessed into a subtopic. Most legacy names span a whole paper section, so 13 of the 16 go to parents. Three rules needed judgement. The bare grammar names (Grammar, Correct usage of English, Expression and sentence structure) span all four structure parents; they go to sentences, the parent for sentence-level correctness, and their questions will spread across word-classes, verbs, concord and sentences on reclassification. Oral English spans sounds and stress; it goes to sounds, the larger of the two. Basic literary appreciation spans figures of speech and, most likely, the UTME prescribed novel, whose questions had no other home in the old list; it goes to comprehension, and reclassification will move figure-of-speech questions to idioms.figures-of-speech.",
+  "legacy_to": {
+    "Basic literary appreciation": "comprehension",
+    "Comprehension": "comprehension",
+    "Content and organization of ideas": "essay.organisation",
+    "Correct usage of English": "sentences",
+    "Essay Writing": "essay",
+    "Expression and sentence structure": "sentences",
+    "Grammar": "sentences",
+    "Grammar (rules and concord)": "concord",
+    "Idioms figurative and literary language": "idioms",
+    "Oral English": "sounds",
+    "Pronunciation phonetics and sound contrasts": "sounds",
+    "Recognition of grammatical structures": "sentences.grammatical-function",
+    "Spelling and punctuation": "mechanics",
+    "Stress rhythm intonation and rhymes": "stress",
+    "Vocabulary": "vocabulary",
+    "Vocabulary and lexis in context": "vocabulary.word-choice"
+  },
+  "merged_into": {}
+}

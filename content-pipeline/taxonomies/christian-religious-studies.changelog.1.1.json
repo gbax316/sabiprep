@@ -1,0 +1,172 @@
+{
+  "changes": [
+    {
+      "kind": "added",
+      "where": "covenant.jacob",
+      "evidence": "matchtest crs-utme, sonnet, missing, covenant: Jacob's life between his birth and Joseph's story (Genesis 26-36: Isaac's blessing, Jacob at Laban's house, Peniel, Dinah at Shechem) has no subtopic anywhere in the tree. matchtest crs-utme, opus, missing, covenant: the patriarchal story beyond Abraham's covenant has no home: Jacob's family, Dinah and Shechem (Genesis 34), Q46.",
+      "change": "Added covenant.jacob, Isaac and Jacob: the birthright, God's promise renewed to Isaac, the stolen blessing, Laban, Leah and Rachel, Peniel and the name Israel, meeting Esau, Dinah and Shechem, and the covenant renewed at Bethel (Genesis 25:27-34, 26:1-5, 27, 29-35). A new subtopic rather than a widening because it is a separate story a student can know or not know, and covenant.abraham already holds a full story of its own. Syllabus cites are null for both exams; the covers line says a real paper tests it. Reciprocal sorting rules added to covenant.abraham (the birth of Esau and Jacob stays there, later life goes here) and providence.guidance (the Bethel dream stays there, the rest of Jacob's life goes here). scope_rule updated."
+    },
+    {
+      "kind": "widened",
+      "where": "covenant.abraham",
+      "evidence": "matchtest crs-utme, opus, missing, covenant: Genesis 16 (Hagar's introduction) is uncited in covenant.abraham, Q66.",
+      "change": "Widened covers to hold Genesis 16: Sarai giving Hagar to Abram, Hagar's flight, the angel at the spring and the naming of Ishmael. A close relative of the Abraham story already held, so widened rather than added."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "covenant.abraham",
+      "evidence": "matchtest crs-utme, opus, overlap, providence.provision: Genesis 21 is split at verse 13/14 between covenant.abraham and providence.provision; a quotation from 21:16 whose answer is the expulsion straddles the line, Q39. A rule should say whether the verse or the event named in the answer decides.",
+      "change": "Added the same rule to covenant.abraham and providence.provision: Genesis 21 is sorted by the event asked about, not the verse quoted. Why and how Hagar and Ishmael were sent away goes to covenant.abraham even when the stem quotes Genesis 21:14-16; how God saved them in the wilderness goes to providence.provision."
+    },
+    {
+      "kind": "widened",
+      "where": "covenant.sinai",
+      "evidence": "matchtest crs-utme, sonnet, missing, covenant.sinai: background questions about law codification (Code of Hammurabi, Torah, Talmud as terms) have no subtopic. matchtest crs-utme, opus, missing, covenant.sinai: no subtopic holds the meaning and names of Israel's law (Torah, Talmud); Q4 had nowhere to go.",
+      "change": "Widened covers to hold the names and meaning of Israel's law (Torah or Pentateuch, Decalogue, Talmud as later rabbinic commentary, set beside older codes such as Hammurabi's where a paper asks). The law given at Sinai is the nearest home, so widened rather than added. Added a sorting rule to both covenant.sinai and justification.law-grace: the law's names and meaning as terms go to covenant.sinai; Paul's teaching on the place of the law against grace goes to justification.law-grace."
+    },
+    {
+      "kind": "widened",
+      "where": "covenant.sinai",
+      "evidence": "matchtest crs-waec disagreement, 2020 Q17, The content of the Ark of the covenant was the: sonnet covenant.sinai, opus decisions.wisdom. matchtest crs-waec, sonnet, missing, covenant: no subtopic covers the Ark of the Covenant as an object (Q61); a subtopic such as covenant.ark or an explicit mention in covenant.sinai's covers line would close the gap. matchtest crs-waec, opus, missing, covenant.sinai: the ark as an object has no home; add a sorting rule naming one subtopic for questions on the ark itself (Q61).",
+      "change": "Widened covenant.sinai to hold the ark of the covenant as an object: its making, its contents (the two tablets) and what it stood for (Exodus 25:10-22, 40:20, 1 Kings 8:9), citing WASSCE 2020 Q17. Added a sorting rule to covenant.sinai, decisions.wisdom and parental.eli-samuel: a question on what the ark is or held goes to covenant.sinai; its capture in Eli's day stays in parental.eli-samuel; its bringing into the Temple stays in decisions.wisdom. Not a new covenant.ark subtopic, because one object with one tested fact is too narrow to track mastery on. WAEC cites no covenant theme, so covenant.sinai keeps waec null and scope_rule records that WASSCE tests the ark."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "leadership.joshua",
+      "evidence": "matchtest crs-waec disagreement, 2022 Q9, which tribe Joshua represented among the twelve spies: sonnet leadership.moses, opus leadership.joshua. matchtest crs-waec, opus, overlap, leadership.moses: Numbers 13 is split at verse 20, so the list of spies and their tribes falls under Moses even when the question is about Joshua; move the names of the spies (Numbers 13:1-16) to leadership.joshua or say where they go (Q74).",
+      "change": "Added the rule to leadership.moses and leadership.joshua: the list of the spies and their tribes (Numbers 13:4-16), including Joshua for Ephraim, Caleb for Judah and Hoshea renamed Joshua, goes to leadership.joshua, together with what the spies saw and reported; Moses choosing and sending them and his instructions (Numbers 13:1-3, 17-20) stay in leadership.moses. Joshua's covers citation now includes Numbers 13:4-16."
+    },
+    {
+      "kind": "widened",
+      "where": "parental.eli-samuel",
+      "evidence": "matchtest crs-utme, sonnet, missing, parental.eli-samuel: Hannah's barrenness, her prayer at Shiloh and the vow that led to Samuel's birth (1 Samuel 1) sit before the cited range and have no place. matchtest crs-utme, opus, missing, parental: no subtopic holds Hannah and the birth and dedication of Samuel (1 Samuel 1:1-2:10), Q27; add it to parental.eli-samuel or a new parental.hannah.",
+      "change": "Widened parental.eli-samuel to hold 1 Samuel 1:1-2:10: Hannah's barrenness, her prayer and vow at Shiloh, Eli taking her for drunk, Samuel's birth and dedication, and Hannah's song. Widened rather than a new parental.hannah, because it is the opening of the same Eli and Samuel story and is tested with it."
+    },
+    {
+      "kind": "widened",
+      "where": "obedience.saul",
+      "evidence": "matchtest crs-utme, sonnet, missing, obedience.saul: Saul's search for his father's lost asses and his servant's suggestion to consult Samuel (1 Samuel 9) precede the cited range and are unplaced. matchtest crs-utme, opus, missing, obedience: no place for Israel's demand for a king and the move from theocracy to monarchy (1 Samuel 8:6-22, 9), Q24 and Q44; extend obedience.saul to 1 Samuel 8-10 or add obedience.monarchy.",
+      "change": "Widened obedience.saul to hold 1 Samuel 8:6-22 and 9: the demand for a king, Samuel's warning of what a king would take, and Saul's search for the asses. Widened rather than a new obedience.monarchy, because it is the lead-in to Saul's anointing, already held here. Added a sorting rule to obedience.saul and parental.eli-samuel: Samuel's corrupt sons as the cause of the demand (1 Samuel 8:1-5) stay in parental.eli-samuel; the demand itself and what follows go to obedience.saul."
+    },
+    {
+      "kind": "widened",
+      "where": "obedience.wilderness",
+      "evidence": "matchtest crs-utme, sonnet, missing, obedience.wilderness: the bronze serpent (Numbers 21:4-9) is not in the cited range though it is the same kind of wilderness-disobedience story. matchtest crs-utme, opus, too-narrow, obedience.wilderness: the fiery serpents (Numbers 21:4-9) and other murmurings are unlisted though the name covers them, Q45.",
+      "change": "Widened covers to hold the people speaking against God and Moses, the fiery serpents and the bronze serpent (Numbers 21:4-9), and the other wilderness murmurings and their punishment."
+    },
+    {
+      "kind": "widened",
+      "where": "decisions.unwise",
+      "evidence": "matchtest crs-utme, sonnet, missing, decisions.unwise: Jeroboam's golden calves at Bethel and Dan (1 Kings 12:25-33) fall just past the cited range. matchtest crs-utme, opus, missing, decisions: Jeroboam's calves have no home, and the only calf in the tree is Aaron's in obedience.wilderness, which invites a wrong placement, Q34.",
+      "change": "Widened decisions.unwise to 1 Kings 12:1-33: Jeroboam's calves at Bethel and Dan, his new feast and his non-Levite priests. Added a sorting rule to decisions.unwise and obedience.wilderness: Jeroboam's calves go to decisions.unwise; Aaron's calf at Sinai goes to obedience.wilderness."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "supremacy.tension",
+      "evidence": "matchtest crs-waec, opus, overlap, supremacy.tension: supremacy.tension covers 1 Kings 16:29-18:19 and supremacy.carmel 18:17-19:18; verses 18:17-19 (Elijah meets Ahab, troubler of Israel, summons to Carmel) are in both. The ranges should not overlap.",
+      "change": "supremacy.tension now ends at 1 Kings 18:16. Added the rule to both covers lines: from Elijah's meeting with Ahab (18:17) onwards goes to supremacy.carmel; Obadiah and everything before goes to supremacy.tension, although WAEC cites 18:1-19 under the tension. supremacy.carmel's covers now names the meeting with Ahab and the summons."
+    },
+    {
+      "kind": "widened",
+      "where": "reforms.book",
+      "evidence": "matchtest crs-utme, sonnet, missing, reforms: the reign of Manasseh (2 Kings 21), between Hezekiah and Josiah, has no subtopic. matchtest crs-utme, opus, missing, reforms: the kings of Judah before Josiah (Hezekiah, Manasseh, Amon, 2 Kings 20:21-21:26) are not held, though Manasseh's apostasy is the background to the reforms, Q7.",
+      "change": "Widened reforms.book to hold 2 Kings 20:21-21:26 as the background to the reforms: Hezekiah's death, Manasseh's idolatry and God's judgement, and Amon's reign and murder, which brought Josiah to the throne. Renamed it The background to the reforms and the finding of the book of the law; the id is unchanged."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "reforms.book",
+      "evidence": "matchtest crs-waec, sonnet, overlap, reforms.book / reforms.renewal: Hilkiah links finding the book and the reforms that followed; a question naming him without a specific verse, such as Q13, can be read either way. matchtest crs-waec, opus, overlap, reforms.book: a question on Josiah's reforms naming a person active in both chapters (Hilkiah in 2 Kings 22 and 23:4) fits both; add a rule: people named in both chapters go by the act asked about, and the reforms as a whole go to renewal (Q13).",
+      "change": "Added the rule to reforms.book and reforms.renewal: a person named in both chapters, such as Hilkiah or Shaphan, goes by the act the question asks about. Finding and reading the book and consulting Huldah go to reforms.book; removing the idols goes to reforms.renewal; a question on Josiah's reforms as a whole goes to reforms.renewal."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "reforms.renewal",
+      "evidence": "matchtest crs-utme, opus, overlap, reforms.renewal: Josiah's death at Megiddo sits in reforms.renewal, but questions framing it as the start of Judah's decline also fit judah.fall, Q58. Needs a rule.",
+      "change": "Added the rule to reforms.renewal and judah.fall: Josiah's death at Megiddo goes to reforms.renewal even when framed as the start of Judah's decline; judah.fall begins with Jehoahaz."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "judah.ezra",
+      "evidence": "matchtest crs-utme disagreement, 2023 Q17, which Medo-Persian ruler first issued decrees supporting Nehemiah's rebuilding of the temple: sonnet judah.nehemiah, opus judah.ezra. matchtest crs-utme, opus, overlap, judah.ezra: Persian decrees are split, Cyrus and Darius in judah.ezra, Artaxerxes in judah.nehemiah; questions asking which Persian king decreed support for rebuilding fit both, Q18. Put all Persian decrees in one subtopic.",
+      "change": "Added the rule to judah.ezra and judah.nehemiah: a question on the Persian kings and their decrees as a set (Cyrus, Darius and Artaxerxes: which decreed support for rebuilding, which came first, in what order) goes to judah.ezra even when the stem names Nehemiah; Nehemiah's own request to Artaxerxes and the letters he carried stay in judah.nehemiah when the question is about Nehemiah's mission."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "birth.john",
+      "evidence": "matchtest crs-utme, opus, overlap, birth.john: birth.john and i-am.light both cite John 1:6-8 with no sorting rule; a question on John the Baptist as witness to the light fits both, Q13.",
+      "change": "Added the rule to birth.john and i-am.light: John as the man sent to bear witness to the light (John 1:6-8) goes to birth.john; what the light is and walking in it go to i-am.light."
+    },
+    {
+      "kind": "widened",
+      "where": "discipleship.call",
+      "evidence": "coverage utme C.1(a): John 1:35-37, two of John's disciples leaving him to follow Jesus, is named in no covers line; proposed: extend birth.john to John 1:19-37, or discipleship.call to John 1:35-42. matchtest crs-utme, sonnet, missing, discipleship.call: John's account of the first disciples, including Andrew's earlier discipleship under John the Baptist (John 1:35-51), is not cited. matchtest crs-utme, opus, too-narrow, discipleship.call: cites only the Synoptic calls; John 1:35-51 (Andrew and another disciple of John, Philip, Nathanael) is unheld, and its neighbour John 1:29-34 is in i-am.shepherd, Q54.",
+      "change": "Widened discipleship.call to John 1:35-51: Andrew and another disciple of John following Jesus, Andrew bringing Simon, and the call of Philip and Nathanael. Chose discipleship.call over birth.john because the passage is about following Jesus. Added sorting rules to discipleship.call, i-am.shepherd and birth.john: John's words naming Jesus the Lamb of God go to i-am.shepherd; the disciples who heard them and followed go to discipleship.call."
+    },
+    {
+      "kind": "widened",
+      "where": "miracles.healing",
+      "evidence": "matchtest crs-utme, sonnet, too-narrow, miracles.healing: the healing of the paralytic (Mark 2:1-12), often tested, is not among the named examples. matchtest crs-utme, opus, too-narrow, miracles.healing: the covers list omits the paralytic let down through the roof (Mark 2:1-12), a staple question on Jesus' authority to forgive sins, Q8.",
+      "change": "Widened covers to name the paralytic let down through the roof and Jesus' authority to forgive sins (Mark 2:1-12, Matthew 9:1-8, Luke 5:17-26), with a note that it and the man at the pool of Bethesda are two different miracles, both held here. Widened, not split: the finding shows a missing example, not two skills."
+    },
+    {
+      "kind": "widened",
+      "where": "miracles.healing",
+      "evidence": "coverage sow SS3 T2 W6: John 4:46-54, the healing of the official's son, is named in no covers line; proposed: add the official's son (John 4:46-54) to miracles.healing.",
+      "change": "Widened covers to name the official's son at Capernaum (John 4:46-54), and added SS3 T2 to taught_in for miracles.healing and its parent, since that scheme-of-work week teaches it."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "holy-spirit.pentecost",
+      "evidence": "matchtest crs-waec, sonnet, overlap, holy-spirit.pentecost / fellowship.communal: both cite Acts 2:41-47; a question on what happened right after the sermon and baptisms, such as Q32, has no rule telling it apart from communal life. matchtest crs-waec, opus, overlap, holy-spirit.pentecost: add a rule: Acts 2:1-41 to pentecost, Acts 2:42-47 to fellowship.communal (Q32, Q58).",
+      "change": "Added the rule to holy-spirit.pentecost and fellowship.communal: Acts 2 splits at verse 41. Peter's sermon and the three thousand baptised (2:1-41) go to holy-spirit.pentecost; the believers' common life that followed (2:42-47) goes to fellowship.communal, whose citation now reads 2:42-47, with a note that both syllabi cite 2:41-47 there."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "fellowship.communal",
+      "evidence": "matchtest crs-waec disagreement, 2017 Q42, The most fascinating aspect of what was going on in the early church was that: sonnet holy-spirit.pentecost, opus fellowship.communal. matchtest crs-waec, sonnet, too-broad, fellowship.communal: Q10 asks which trait was NOT true of the early church, with options from fellowship.communal, fellowship.problems and opposition.stephen across two parents; no subtopic or parent is built to hold such a synthesis question. matchtest crs-waec, opus, missing, fellowship: no rule or place for survey questions on the early Church as a whole (Q10, Q58); add a rule that such questions go to the subtopic of the correct answer, as how_to_use says for which-kind questions.",
+      "change": "Added the rule to fellowship.communal and holy-spirit.pentecost: a survey question on the early Church as a whole, whose options span Pentecost, communal living, its problems and persecution, goes to the subtopic of the correct answer. No survey subtopic or parent was added: what such a question tests is the content of its correct option, which already has a subtopic, and a catch-all subtopic would point a weak score at nothing specific."
+    },
+    {
+      "kind": "widened",
+      "where": "gentile-mission.saul",
+      "evidence": "matchtest crs-waec, opus, missing, gentile-mission.saul: Paul's background (born at Tarsus, Roman citizen, pupil of Gamaliel, a Pharisee) is not named in any covers line; it was placeable only because Acts 9:11 mentions Tarsus (Q27). Name it in gentile-mission.saul.",
+      "change": "Widened gentile-mission.saul to name Paul's background: born at Tarsus, a Roman citizen by birth, a Pharisee, a pupil of Gamaliel (Acts 21:39, 22:3, 22:25-28, 23:6, Philippians 3:5). Added a sorting rule to gentile-mission.saul and opposition.apostles: Gamaliel as Paul's teacher goes to gentile-mission.saul, his advice to the council to opposition.apostles."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "civic.citizenship",
+      "evidence": "matchtest crs-utme, opus, overlap, civic.citizenship: the verse rule sends all of 1 Peter 2:13-17 to civic.citizenship, but 2:15 (silencing foolish men by doing right) tests conduct among outsiders, community.non-christians, Q9.",
+      "change": "Replaced the verse-only rule in civic.citizenship and community.non-christians with a rule by what the question asks: duty to rulers and the state goes to civic.citizenship; good conduct as a witness to outsiders goes to community.non-christians, even when it quotes 1 Peter 2:15."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "community.relationships",
+      "evidence": "coverage utme D.14(a): 2 Peter 1:3-11 is also named in vices.corruption, with no sorting rule between the two.",
+      "change": "Added the rule to community.relationships and vices.corruption: in 2 Peter 1:3-11, the virtues added to faith go to community.relationships; escaping the corruption that is in the world goes to vices.corruption."
+    },
+    {
+      "kind": "widened",
+      "where": "justification.heirs",
+      "evidence": "coverage sow SS1 T1 W9: Jesus Christ as the Son of God, taught as its own point, is named in no covers line; proposed: extend justification.heirs to cover Jesus' own sonship as the ground of the Christian's.",
+      "change": "Widened justification.heirs to hold Jesus Christ as the Son of God as the ground of the Christian's sonship. Added a sorting rule so gospel scenes that name him Son (the baptism, the transfiguration, Peter's confession) stay in their own subtopics."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "coverage sow SS1 T3 W11 and SS2 T3 W11, HIV/AIDS: the medical content of the week (what it is, transmission, symptoms, prevention) has no home.",
+      "reason": "The moral side already sits in vices.sexual. The medical content is outside the subject, and no syllabus item or real paper tests it. The standard allows scheme-of-work items to be missing where they are outside the subject."
+    },
+    {
+      "finding": "coverage sow SS3 T2 W6, HIV/AIDS: meaning, infection and symptoms, prevention, cure.",
+      "reason": "The medical part is outside the subject, as for the SS1 and SS2 weeks. The part of this item that belongs to the subject, the official's son (John 4:46-54), was acted on under miracles.healing."
+    },
+    {
+      "finding": "coverage, every partial item whose note reads Split, nothing missing (for example WASSCE A.2(b) Moses, UTME C.6 Sermon on the Mount, sow SS3 T1 W6 trial of Jesus).",
+      "reason": "Each part of each item already has a named subtopic. These notes record a split, not a gap, so there is nothing to change."
+    },
+    {
+      "finding": "coverage unmapped_subtopics: empty.",
+      "reason": "Every subtopic has a source item behind it, so none needed keeping or merging. The one new subtopic, covenant.jacob, gives its reason for existing in its covers line."
+    }
+  ]
+}

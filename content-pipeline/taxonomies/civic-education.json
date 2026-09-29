@@ -1,0 +1,1053 @@
+{
+  "subject": "Civic Education",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "The first tree for Civic Education. Parent topics follow the seventeen numbered topics of the WAEC syllabus, in its order and under its three sections, with four of them split in two where one numbered topic holds two bodies of knowledge a teacher teaches in different terms: Citizenship and Nationalism (topic 2), Democracy, Rule of Law and National Development (topic 14), and Civil Society and Popular Participation (topic 16). Subtopics follow the syllabus's own numbered sub-items, grouped where no real question could tell them apart, and widened with the scheme of work where the SS1 to SS3 lessons teach content the syllabus leaves implicit, such as the arms of government, federalism and the legislative lists, the constitution, political parties, liberty and national symbols. Every subtopic was checked against the 50 questions of the WASSCE 2025 objective paper: every question that can be read without its missing diagram or list has a home, and the borders those questions sit on have sorting rules. JAMB does not set Civic Education at UTME, so there is no JAMB syllabus behind this tree and every JAMB reference is null. The live database holds no Civic Education topics, so there is nothing to fold. Nothing in the database is changed by this file. Version 1.1 revises the tree from the coverage map and the 80-question placement test (2021 to 2025): it adds one subtopic (majority rule and minority interests), widens covers lines where scheme-of-work content or tested content had no home (secession, rehabilitation of addicts, family efforts against trafficking, hindrances to values), and adds sorting rules on every border the two models split on. No subtopic is merged, so every 1.0 id stays valid.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC Civic Education examination syllabus, WASSCE",
+        "retrieved_from": "https://waecsyllabus.com/files/ssce/CIVIC%20EDUCATION.pdf, cross-checked against https://waecsyllabus.com/civic-education/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror, file dated 2015-09-24, author field awajis.com, not fetched from a WAEC domain directly. The same site's page, last reviewed 2026-01-02, reproduces the same 17 topics in the same order and wording, so the content is treated as unchanged."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Senior secondary Civic Education scheme of work, SS1 to SS3, Lagos State NAPPS unified scheme (NERDC-based)",
+        "retrieved_from": "https://edudelight.com/civic-education-scheme-of-work-lagos-napps-ss1-ss3/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Covers SS1 Term 1 to SS3 Term 2; SS3 Term 3 is the WASSCE sitting and has no scheme. An ecolebooks.com copy of SS1 Term 2 diverged and was found to duplicate its own Term 3 page, so it was used only as a discard-check."
+      }
+    ],
+    "jamb_note": "No JAMB syllabus exists for this subject: Civic Education is not a UTME subject, and no UTME syllabus or UTME questions were supplied. Every jamb field is null. If JAMB adds the subject, its syllabus is cited on the subtopics it shares, and new subtopics are added only for content it alone covers.",
+    "scope_rule": "WAEC states that Paper 1, the objective paper, is drawn from the entire syllabus, so all three sections are the spine and no section is left out. The syllabus wording is narrow in places, and the WASSCE 2025 paper tests content beyond it. Homes are given on that rule for: discipline and value clarification (Q1, Q2) under values; the reasons for studying Civic Education (Q4) under civic and citizenship education; naturalisation (Q3) under citizenship; national symbols (Q5) and nationalist newspapers (Q6) under nationalism; the number of articles in the UDHR (Q8); forfeiting rights on conviction and the offence of libel (Q9, Q10) under limitations of human rights; the organs of government and impeachment (Q26, Q29); the exclusive, concurrent and residual lists and the reasons for federalism (Q27, Q28, Q31); separation of powers and checks and balances (Q39, Q43, Q44); the immunity clause (Q40); direct and representative democracy and the multi-party system (Q32 to Q34); and the neutrality and anonymity of civil servants and their industrial action (Q41, Q49, Q50). Most of these are taught in the scheme of work. The scheme's lessons on community service, traditions and beliefs, liberty, capitalist and constitutional democracy, and employment and poverty are placed on the subtopic nearest in content rather than given parents of their own; its lesson on minority and majority interests has its own subtopic under democracy. The 2021 to 2025 papers also test the constitutional bar on secession (WASSCE 2023 Q5), placed under tiers of government and federalism, and the treatment and rehabilitation of drug addicts, placed under preventing drug abuse."
+  },
+  "how_to_use": "Place a question by what a student must know to answer it, not by words in the stem. A question that mentions youth empowerment but asks what a civil society organisation does goes under civil society. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins. The parent topics read top to bottom are the whole WAEC syllabus in its own order: Section A, national ethics, discipline, rights and obligations; Section B, emerging issues in the society; Section C, governmental system and processes.",
+  "topics": [
+    {
+      "id": "values",
+      "name": "Values",
+      "part": "National ethics, discipline, rights and obligations",
+      "syllabus": {
+        "waec": "A.1",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "values.meaning-types",
+          "name": "Meaning and types of values",
+          "syllabus": {
+            "waec": "A.1(1)-(2)",
+            "jamb": null
+          },
+          "covers": "What values are and where they come from, and the types of values: honesty, integrity, justice, discipline, self-control, faithfulness, contentment, commitment, dignity of labour and others, including value clarification and value reorientation. Tested in WASSCE 2025 Q1 and Q2. Sorting rule: naming the value a described behaviour shows, or defining a value term, goes here, even when the stem says the value is instilled by parents; why values matter to a society, or what hinders or promotes them, goes to values.importance; a quality asked as what fosters cooperation or good relations between people, such as tolerance or empathy, goes to relationships.interpersonal.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "values.importance",
+          "name": "Importance of values to society",
+          "syllabus": {
+            "waec": "A.1(3)",
+            "jamb": null
+          },
+          "covers": "Why values matter to the individual and society, the values society expects of its members, including the opportunity to defend oneself (fair hearing) as a societal value expectation, what hinders the building of national values (poor citizenship and followership, bad leadership) and ways of promoting them, what happens when values break down, and traditions and beliefs as carriers of values and how to preserve them. Sorting rule: what a value does for society, or what hinders or promotes values, goes here; which value a behaviour shows goes to values.meaning-types; community service goes to values.community-service; fair hearing asked as a societal value expectation goes here, asked as a principle of the rule of law goes to rule-of-law.meaning, and asked as a right a citizen holds goes to human-rights.meaning.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "values.community-service",
+          "name": "Community service",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "The meaning of community service, forms it takes (sanitation, road clearing, helping the aged), and the values it builds and its importance. Scheme of work only (SS1 T1 W4); kept because it is a full lesson and a stated value in practice. Sorting rule: service to one's community by individuals goes here; the duties of a citizen in general go to citizenship.duties; civic or electoral mobilisation, such as urging people to register or vote, goes to popular-participation.meaning-types even when the stem calls it community service.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "citizenship",
+      "name": "Citizenship",
+      "part": "National ethics, discipline, rights and obligations",
+      "syllabus": {
+        "waec": "A.2(1)-(4)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "citizenship.civic-education",
+          "name": "Civic and citizenship education",
+          "syllabus": {
+            "waec": "A.2(2)-(3)",
+            "jamb": null
+          },
+          "covers": "The meaning of civic education and citizenship education, their goals and objectives (knowledge, right attitudes, values, patriotism), and why they are taught in schools. Tested in WASSCE 2025 Q4. Sorting rule: the purpose of studying the subject goes here; the duties a citizen owes goes to citizenship.duties.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "citizenship.acquisition",
+          "name": "Meaning and acquisition of citizenship",
+          "syllabus": {
+            "waec": "A.2(1)",
+            "jamb": null
+          },
+          "covers": "Who a citizen is, citizen and alien compared, including the rights and privileges an alien does not have, such as voting, and how Nigerian citizenship is acquired and lost: by birth, registration, naturalisation and honorary citizenship, with the constitutional conditions such as age and years of residence, and dual citizenship. Tested in WASSCE 2025 Q3. Sorting rule: how a person becomes or stops being a citizen goes here; a right that turns on citizenship status, such as an alien being unable to vote, goes here rather than to human-rights.meaning; what a citizen must do goes to citizenship.duties.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "citizenship.duties",
+          "name": "Duties and obligations of citizens",
+          "syllabus": {
+            "waec": "A.2(4)",
+            "jamb": null
+          },
+          "covers": "The duties and obligations of citizens to the state and their community (obeying laws, paying taxes, voting, defending the nation, respecting the flag and anthem), a citizen's responsibilities in fostering democracy, and the consequences of not performing them. Sorting rule: what a citizen must do goes here; what a citizen is entitled to goes to human-rights.meaning; respecting and obeying those in authority goes to law-order.constituted-authority.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "nationalism",
+      "name": "Nationalism and national unity",
+      "part": "National ethics, discipline, rights and obligations",
+      "syllabus": {
+        "waec": "A.2(5)-(8)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "nationalism.meaning",
+          "name": "Meaning and significance of nationalism",
+          "syllabus": {
+            "waec": "A.2(5)",
+            "jamb": null
+          },
+          "covers": "What nationalism is, its significance to a country's development (allegiance, patriotism, self-rule), and its effects in Nigeria. Tested in WASSCE 2025 Q7. Sorting rule: what nationalism is or does in general goes here; what a named nationalist, group or newspaper did goes to nationalism.nationalists.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "nationalism.nationalists",
+          "name": "Nationalistic roles of individuals and groups",
+          "syllabus": {
+            "waec": "A.2(7)",
+            "jamb": null
+          },
+          "covers": "The roles of nationalists such as Herbert Macaulay, Nnamdi Azikiwe, Obafemi Awolowo, Ahmadu Bello, Funmilayo Ransome-Kuti, Queen Amina and Nelson Mandela, and of groups such as the Nigerian Youth Movement, trade unions, railway workers and the nationalist press. Tested in WASSCE 2025 Q6. Sorting rule: what a named person, group or newspaper did goes here.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "nationalism.national-unity",
+          "name": "National consciousness, integrity and unity",
+          "syllabus": {
+            "waec": "A.2(6)",
+            "jamb": null
+          },
+          "covers": "The meaning of national consciousness, national integrity and national unity, ways of promoting them (NYSC, unity schools, federal character, sports), and national symbols: the flag, anthem, pledge, coat of arms and currency. Tested in WASSCE 2025 Q5. Sorting rule: national symbols and ways of building unity go here; resolving conflict between communities goes to relationships.inter-communal-conflict; the constitutional bar on secession and the indivisibility of the federation go to government.tiers.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "nationalism.civic-problems",
+          "name": "Local and world civic problems",
+          "syllabus": {
+            "waec": "A.2(8)",
+            "jamb": null
+          },
+          "covers": "Identifying civic problems at home and in the world, such as corruption, examination malpractice, terrorism, insecurity, ethnic and religious crises, poor leadership and environmental degradation. Sorting rule: a problem named as a civic problem in general goes here; a problem with its own parent, such as cultism, drug abuse, human trafficking or HIV/AIDS, goes to that parent.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "human-rights",
+      "name": "Human rights",
+      "part": "National ethics, discipline, rights and obligations",
+      "syllabus": {
+        "waec": "A.3",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "human-rights.meaning",
+          "name": "Meaning, characteristics and categories of human rights",
+          "syllabus": {
+            "waec": "A.3(1)-(3)",
+            "jamb": null
+          },
+          "covers": "What human rights are, their characteristics (universal, inalienable, indivisible), their categories (civil, political, economic, social and cultural), the fundamental human rights in the Nigerian constitution and why they are important, the rights of the child, and liberty: its meaning, its types (individual, civic, political) and what safeguards it. Sorting rule: what a right is, which category it falls in, or why fundamental rights matter goes here; when a right may be taken away goes to human-rights.limitations; fair hearing and equality before the law as principles of the rule of law go to rule-of-law.meaning, and fair hearing as a societal value expectation goes to values.importance; a right a person holds or lacks because of citizenship status, such as an alien's lack of the vote, goes to citizenship.acquisition.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "human-rights.udhr",
+          "name": "The Universal Declaration of Human Rights",
+          "syllabus": {
+            "waec": "A.3(4)-(6)",
+            "jamb": null
+          },
+          "covers": "The history of human rights leading to the declaration, including earlier charters and declarations of rights, the meaning and historical background of the UDHR (the United Nations, 10 December 1948, its 30 articles), the seven core freedoms, and its importance. Tested in WASSCE 2025 Q8. Sorting rule: facts about the declaration itself or the history of human rights go here; who protects rights goes to human-rights.protection.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "human-rights.protection",
+          "name": "Roles and agencies in protecting human rights",
+          "syllabus": {
+            "waec": "A.3(7)",
+            "jamb": null
+          },
+          "covers": "The roles of individuals, groups and government in upholding the UDHR and human rights, and the agencies that protect them, such as the National Human Rights Commission, the courts, Amnesty International and the United Nations. Sorting rule: who protects rights and how goes here, including the courts or an independent judiciary asked as the guard against rights abuse; the judiciary named as a pillar of democracy goes to democracy.pillars; a weak judiciary that lets someone evade the law goes to rule-of-law.limitations; what the judiciary is and does as an organ goes to government.arms; agencies fighting drug abuse or human trafficking go to their own parents.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "human-rights.limitations",
+          "name": "Limitations to human rights",
+          "syllabus": {
+            "waec": "A.3(8)",
+            "jamb": null
+          },
+          "covers": "When and why rights may be limited or lost: conviction by a court, a state of emergency and war, public order, health and morality, and the rights of others, including defamation (libel and slander) and sedition as limits on free expression. Also the meaning of an emergency, what happens during one, and ways of reducing or avoiding a state of emergency. Tested in WASSCE 2025 Q9 and Q10. Sorting rule: a right forfeited or limited goes here; the immunity clause as a limit on the rule of law goes to rule-of-law.limitations.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T2",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "law-order",
+      "name": "Law and order",
+      "part": "National ethics, discipline, rights and obligations",
+      "syllabus": {
+        "waec": "A.4",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "law-order.meaning",
+          "name": "Meaning, features and importance of law and order",
+          "syllabus": {
+            "waec": "A.4(1)-(3)",
+            "jamb": null
+          },
+          "covers": "What law and order mean, their features, and why they matter to a society: security, peace, protection of life and property. Sorting rule: law and order in general goes here; the rule of law as a principle of government goes to rule-of-law.meaning.",
+          "taught_in": []
+        },
+        {
+          "id": "law-order.constituted-authority",
+          "name": "Constituted authority",
+          "syllabus": {
+            "waec": "A.4(4)-(6)",
+            "jamb": null
+          },
+          "covers": "The meaning of authority and constituted authority and how they differ, types of constituted authority (government, police, courts, traditional rulers, school authorities, parents), their roles and importance, and respect for constituted authority. Tested in WASSCE 2025 Q12. Sorting rule: authority and why it should be obeyed goes here; the police or armed forces as institutions of democracy go to democracy.pillars.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "parenthood",
+      "name": "Responsible parenthood",
+      "part": "National ethics, discipline, rights and obligations",
+      "syllabus": {
+        "waec": "A.5",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "parenthood.roles",
+          "name": "Meaning and roles of responsible parents",
+          "syllabus": {
+            "waec": "A.5(1)-(2)",
+            "jamb": null
+          },
+          "covers": "What responsible parenthood is, its types and patterns, and the roles of responsible parents: provision, care, moral training, education and family planning. Sorting rule: what parents do in general goes here; what their doing it gives the nation goes to parenthood.importance; the named value parents instil goes to values.meaning-types; parental care or its lack asked as the cause of, or safeguard against, a named social vice such as human trafficking, cultism or drug abuse goes to that vice's parent.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "parenthood.importance",
+          "name": "Importance of responsible parenthood",
+          "syllabus": {
+            "waec": "A.5(3)",
+            "jamb": null
+          },
+          "covers": "Why responsible parenthood matters to national development (fewer social vices, disciplined citizens), the factors that make it succeed, and the constraints on good parenthood. Tested in WASSCE 2025 Q13. Sorting rule: what good parenting gives society in general goes here; parental care or its lack asked as the cause of, or safeguard against, a named social vice such as human trafficking, cultism or drug abuse goes to that vice's parent.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "traffic",
+      "name": "Traffic regulations",
+      "part": "National ethics, discipline, rights and obligations",
+      "syllabus": {
+        "waec": "A.6",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "traffic.regulations",
+          "name": "Meaning and importance of traffic regulations",
+          "syllabus": {
+            "waec": "A.6(1)-(2)",
+            "jamb": null
+          },
+          "covers": "What traffic regulations are, traffic signs and their meanings, and why traffic regulations matter to society. Tested in WASSCE 2025 Q14. Sorting rule: what a rule or sign means goes here; what causes accidents goes to traffic.road-safety.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "traffic.road-safety",
+          "name": "Road accidents and road users",
+          "syllabus": {
+            "waec": "A.6(3)",
+            "jamb": null
+          },
+          "covers": "Causes of road accidents, the duties of pedestrians, drivers and other road users, and ways of reducing accidents. Sorting rule: what a road user should do goes here; what a named agency or official does goes to traffic.agencies.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "traffic.agencies",
+          "name": "Government and traffic agencies",
+          "syllabus": {
+            "waec": "A.6(3)",
+            "jamb": null
+          },
+          "covers": "The role of government in maintaining traffic regulations, and the functions of the Federal Road Safety Corps, traffic wardens, the police and vehicle inspection officers. Tested in WASSCE 2025 Q15.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "relationships",
+      "name": "Inter-personal and inter-communal relationships",
+      "part": "National ethics, discipline, rights and obligations",
+      "syllabus": {
+        "waec": "A.7",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "relationships.interpersonal",
+          "name": "Inter-personal relationships",
+          "syllabus": {
+            "waec": "A.7(1)-(3)",
+            "jamb": null
+          },
+          "covers": "The meaning, characteristics, stages and types of inter-personal relationships, friendship, the skills that promote them (tolerance, communication, trust, cooperation, empathy, understanding), and their importance. Tested in WASSCE 2025 Q17. Sorting rule: relations between individuals go here; relations between communities go to relationships.inter-communal; a quality asked as what fosters cooperation or good relations among people goes here even when it is also a value, while defining a value term or naming the value a behaviour shows goes to values.meaning-types.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "relationships.inter-communal",
+          "name": "Inter-communal relationships",
+          "syllabus": {
+            "waec": "A.7(4)-(5)",
+            "jamb": null
+          },
+          "covers": "The meaning and importance of good relations between communities: trade, intermarriage, cultural exchange and peace. Sorting rule: good relations between communities go here; conflict between them, its causes and its resolution go to relationships.inter-communal-conflict.",
+          "taught_in": []
+        },
+        {
+          "id": "relationships.inter-communal-conflict",
+          "name": "Inter-communal conflicts and their resolution",
+          "syllabus": {
+            "waec": "A.7(6)-(7)",
+            "jamb": null
+          },
+          "covers": "The meaning and causes of inter-communal conflicts, including boundary disputes in Nigeria, their challenges, and the skills and mechanisms for resolving them: dialogue, negotiation, mediation, arbitration and compromise. Tested in WASSCE 2025 Q16.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "cultism",
+      "name": "Cultism",
+      "part": "Emerging issues in the society",
+      "syllabus": {
+        "waec": "B.8",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "cultism.meaning-origin",
+          "name": "Meaning, origin and cult groups",
+          "syllabus": {
+            "waec": "B.8(1)-(2)",
+            "jamb": null
+          },
+          "covers": "What cultism is, its origin in Nigeria (the Pyrates Confraternity, 1952), the cult groups in Nigeria and their symbols. Sorting rule: what cultism is or where it came from goes here; why people join goes to cultism.causes-effects.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "cultism.causes-effects",
+          "name": "Causes and consequences of cultism",
+          "syllabus": {
+            "waec": "B.8(3)-(4)",
+            "jamb": null
+          },
+          "covers": "Why young people join cults (peer pressure, protection, poor parenting, quest for power) and the consequences of cultism for the member, the school and society.",
+          "taught_in": []
+        },
+        {
+          "id": "cultism.prevention",
+          "name": "Preventing cultism",
+          "syllabus": {
+            "waec": "B.8(5)",
+            "jamb": null
+          },
+          "covers": "Ways of preventing cultism in schools and society, and the efforts of government, schools and parents. Sorting rule: any measure against cultism goes here.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "drug-abuse",
+      "name": "Drugs and drug abuse",
+      "part": "Emerging issues in the society",
+      "syllabus": {
+        "waec": "B.9",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "drug-abuse.meaning",
+          "name": "Meaning of drug abuse and drugs abused",
+          "syllabus": {
+            "waec": "B.9(1)-(3)",
+            "jamb": null
+          },
+          "covers": "Drug use, misuse and abuse told apart, the drugs that can be abused (cannabis, cocaine, heroin, codeine, tramadol, alcohol, tobacco, inhalants), and how drugs are abused. Tested in WASSCE 2025 Q18. Sorting rule: whether an act is drug abuse, or which drugs are abused, goes here; why people abuse drugs goes to drug-abuse.causes-effects.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "drug-abuse.causes-effects",
+          "name": "Causes, signs and effects of drug abuse",
+          "syllabus": {
+            "waec": "B.9(4)-(5)",
+            "jamb": null
+          },
+          "covers": "Why people abuse drugs, how dependence develops, the signs and symptoms of drug abuse, the behaviour of addicts, and the effects on the user, the family and society. Sorting rule: how dependence develops and how an addict behaves goes here; how an existing addict is treated, counselled or rehabilitated goes to drug-abuse.prevention.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "drug-abuse.prevention",
+          "name": "Preventing drug abuse, rehabilitation, agencies and laws",
+          "syllabus": {
+            "waec": "B.9(6)-(8)",
+            "jamb": null
+          },
+          "covers": "Ways of preventing drug abuse, the treatment and rehabilitation of existing addicts (counselling, support, rehabilitation centres), the agencies that fight drug abuse and trafficking (NDLEA, NAFDAC) and their activities and achievements, and the laws against drug abuse. Sorting rule: any agency, law or measure against drugs goes here, including helping an addict recover.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "human-trafficking",
+      "name": "Human trafficking",
+      "part": "Emerging issues in the society",
+      "syllabus": {
+        "waec": "B.10",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "human-trafficking.meaning-causes",
+          "name": "Meaning, forms and causes of human trafficking",
+          "syllabus": {
+            "waec": "B.10(1)-(2)",
+            "jamb": null
+          },
+          "covers": "What human trafficking is, its stages (recruitment, transport, exploitation), its forms and purposes (sexual exploitation, forced labour, child labour, domestic servitude, organ harvesting), and its causes (poverty, greed, unemployment, ignorance, corruption, neglect or poor care by parents). Tested in WASSCE 2025 Q19 and Q20. Sorting rule: what trafficking is and why it happens goes here, including parental neglect as a cause; what it does to victims and society goes to human-trafficking.effects; what would have kept a victim safe goes to human-trafficking.efforts.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "human-trafficking.effects",
+          "name": "Effects of human trafficking",
+          "syllabus": {
+            "waec": "B.10(3)",
+            "jamb": null
+          },
+          "covers": "The effects and consequences of trafficking on victims, families and the nation: abuse, disease, death, stigmatisation and a damaged national image.",
+          "taught_in": []
+        },
+        {
+          "id": "human-trafficking.efforts",
+          "name": "Efforts to stop human trafficking",
+          "syllabus": {
+            "waec": "B.10(4)",
+            "jamb": null
+          },
+          "covers": "What government, families and individuals do to stop trafficking: NAPTIP, the laws against trafficking, NGOs such as WOTCLEF, public enlightenment, the rehabilitation of victims, and prevention by the family and the individual, such as parental care, moral upbringing and wariness of offers of work abroad. Sorting rule: any measure that stops trafficking or would have saved a victim goes here, including care by parents; what parents do in general goes to parenthood.roles.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "hiv-aids",
+      "name": "HIV/AIDS",
+      "part": "Emerging issues in the society",
+      "syllabus": {
+        "waec": "B.11",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "hiv-aids.meaning-transmission",
+          "name": "Meaning, cause and transmission of HIV/AIDS",
+          "syllabus": {
+            "waec": "B.11(1)-(2)",
+            "jamb": null
+          },
+          "covers": "What HIV and AIDS stand for and how they differ, what the virus does to the immune system, how it is transmitted (sexual contact, blood, sharp objects, and mother to child in pregnancy, birth and breastfeeding), and the drivers of its spread, such as poverty, ignorance, multiple sexual partners and drug abuse. Tested in WASSCE 2025 Q21 and Q22. Sorting rule: what the virus is, how it spreads and what drives its spread goes here; the signs of infection go to hiv-aids.symptoms-effects.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "hiv-aids.symptoms-effects",
+          "name": "Symptoms and effects of HIV/AIDS",
+          "syllabus": {
+            "waec": "B.11(3)",
+            "jamb": null
+          },
+          "covers": "The signs and symptoms of HIV infection and AIDS, and its effects on the person, the family and the nation.",
+          "taught_in": []
+        },
+        {
+          "id": "hiv-aids.prevention-stigma",
+          "name": "Prevention, care and stigmatisation",
+          "syllabus": {
+            "waec": "B.11(4)-(5)",
+            "jamb": null
+          },
+          "covers": "How HIV/AIDS is prevented (abstinence, faithfulness, condoms, screening blood, not sharing sharp objects), how to care for people living with HIV/AIDS, and stigmatisation and discrimination against them.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "youth-empowerment",
+      "name": "Youth empowerment",
+      "part": "Emerging issues in the society",
+      "syllabus": {
+        "waec": "B.12",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "youth-empowerment.skills",
+          "name": "Meaning of youth empowerment and its skills",
+          "syllabus": {
+            "waec": "B.12(1)-(2)",
+            "jamb": null
+          },
+          "covers": "What youth empowerment is, and the skills it builds: life-coping, manipulative, intellectual, communicative, artistic, leadership, vocational and ICT skills. Tested in WASSCE 2025 Q24 and Q25. Sorting rule: naming or identifying a skill goes here; what the skills give the youth and the nation goes to youth-empowerment.importance.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "youth-empowerment.importance",
+          "name": "Importance and problems of youth empowerment",
+          "syllabus": {
+            "waec": "B.12(3)",
+            "jamb": null
+          },
+          "covers": "The importance and benefits of youth empowerment skills (self-reliance, employment, less crime) and the problems that hold youth empowerment back.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "youth-empowerment.government",
+          "name": "Government efforts towards youth empowerment",
+          "syllabus": {
+            "waec": "B.12(4)",
+            "jamb": null
+          },
+          "covers": "Government programmes and agencies for youth empowerment, such as the NDE, NAPEP, SMEDAN, N-Power and YouWIN, and the means by which empowerment is enhanced, such as training, loans and start-up capital. Tested in WASSCE 2025 Q23. Sorting rule: a programme or means of empowering the young goes here; employment and poverty alleviation as goals of national development go to democracy.national-development; what a civil society organisation does goes to civil-society.meaning-functions.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "government",
+      "name": "Structure and functions of government",
+      "part": "Governmental system and processes",
+      "syllabus": {
+        "waec": "C.13",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "government.meaning-functions",
+          "name": "Meaning and functions of government",
+          "syllabus": {
+            "waec": "C.13(1), C.13(3)",
+            "jamb": null
+          },
+          "covers": "What government is, and its functions: maintaining law and order, defence, providing social services and infrastructure, and protecting rights. Sorting rule: what government in general does goes here; which tier of government does it goes to government.tiers; which organ does it goes to government.arms.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "government.arms",
+          "name": "Arms of government",
+          "syllabus": {
+            "waec": "C.13(2)",
+            "jamb": null
+          },
+          "covers": "The legislature, executive and judiciary: who belongs to each (ministers, commissioners and supervisory councillors in the executive), their types and functions, and powers such as impeachment. Tested in WASSCE 2025 Q26 and Q29. Sorting rule: which organ holds a power or a person goes here, such as which arm impeaches; how one arm uses a power to check another, such as impeachment asked as the legislature's check on the executive, goes to government.separation-of-powers; an independent judiciary as a pillar of democracy goes to democracy.pillars; the judiciary as the guard against rights abuse goes to human-rights.protection; a weak judiciary that lets someone evade the law goes to rule-of-law.limitations.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "government.separation-of-powers",
+          "name": "Separation of powers and checks and balances",
+          "syllabus": {
+            "waec": "C.13(2)",
+            "jamb": null
+          },
+          "covers": "Separation of powers, checks and balances, and fusion of powers: what each means, how each arm checks the others, including impeachment as the legislature's check on the executive, and which systems of government they are features of. No syllabus or scheme item maps here on its own; it is kept because real papers test it: WASSCE 2025 Q39, Q43 and Q44, and the legislature's check on the executive in the 2021 to 2025 placement sample. Sorting rule: a question about separation of powers or checks and balances goes here, even when it asks which system they belong to, such as constitutional democracy; how one arm checks another goes here, while which arm holds a power, such as who impeaches, goes to government.arms.",
+          "taught_in": []
+        },
+        {
+          "id": "government.tiers",
+          "name": "Tiers of government and federalism",
+          "syllabus": {
+            "waec": "C.13(2)",
+            "jamb": null
+          },
+          "covers": "Federal, state and local government, their functions and problems, federalism (its reasons, features, merits and demerits), the exclusive, concurrent and residual legislative lists, the indivisibility of the federation and the constitutional bar on any state seceding, and local government as grassroots government. Tested in WASSCE 2025 Q27, Q28, Q30 and Q31, and WASSCE 2023 Q5 (the right to secede). Sorting rule: which tier does what, why a country adopts federalism, or whether a part of the federation may secede goes here; what government in general does goes to government.meaning-functions; national symbols and unity programmes go to nationalism.national-unity.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "democracy",
+      "name": "Democracy and national development",
+      "part": "Governmental system and processes",
+      "syllabus": {
+        "waec": "C.14(1)-(4), C.14(9)-(10)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "democracy.meaning-types",
+          "name": "Meaning, types and features of democracy",
+          "syllabus": {
+            "waec": "C.14(1)",
+            "jamb": null
+          },
+          "covers": "What democracy is, its types (direct, representative or indirect, capitalist, constitutional as a type) with the characteristics of each, including those of capitalist democracy, and the merits and demerits of each type, such as representative democracy, and its features: periodic elections, majority rule, popular sovereignty and representative government. Tested in WASSCE 2025 Q32 and Q33. Sorting rule: what democracy is and how its types differ goes here, including the merits and demerits of one named type; the merits and problems of democracy in general go to democracy.importance-problems; majority rule as a feature goes here, while minority interests and how they are protected go to democracy.minority-interests; the institutions that hold it up go to democracy.pillars; the constitution itself goes to democracy.constitution.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "democracy.minority-interests",
+          "name": "Majority rule and minority interests",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "The meaning of majority and minority interests with examples, the reasons for protecting minority interests, and the ways of safeguarding them, such as constitutional guarantees of rights, federal character, proportional representation and the courts. Scheme of work (SS1 T2 W5); WAEC names majority rule with minority protection only as a feature of democracy. Sorting rule: what a minority interest is, why it is protected or how it is safeguarded goes here; majority rule asked only as a feature of democracy goes to democracy.meaning-types.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "democracy.pillars",
+          "name": "Pillars of democracy",
+          "syllabus": {
+            "waec": "C.14(3)",
+            "jamb": null
+          },
+          "covers": "The pillars and institutions that sustain democracy: an independent judiciary, a free press and the Freedom of Information Act, freedom as a pillar, the electoral body, and strong institutions such as the armed forces, the police, EFCC, the immigration and security services, trade unions and civil society. Sorting rule: an institution named as a pillar, or the role of the press or police in democracy, goes here; the judiciary goes here only when named as a pillar or feature of democracy, while the judiciary as the guard against rights abuse goes to human-rights.protection and a weak judiciary that lets someone evade the law goes to rule-of-law.limitations; the constitution as a document goes to democracy.constitution; political parties and elections go to democracy.parties-elections.",
+          "taught_in": [
+            "SS1 T2",
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "democracy.parties-elections",
+          "name": "Political parties and elections",
+          "syllabus": {
+            "waec": "C.14(3)",
+            "jamb": null
+          },
+          "covers": "The meaning, types and functions of political parties, party systems (one-party, two-party and multi-party), and how parties compete for power through campaigns, manifestos and elections. Tested in WASSCE 2025 Q34. Sorting rule: parties and party systems go here; a citizen's own act of voting or campaigning as participation goes to popular-participation.meaning-types.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "democracy.constitution",
+          "name": "Constitution and constitutional democracy",
+          "syllabus": {
+            "waec": "C.14(3)",
+            "jamb": null
+          },
+          "covers": "The meaning, sources and types of constitution (written and unwritten, rigid and flexible, federal and unitary) and their merits and demerits, the constitution as a pillar of democracy, and constitutional democracy: its meaning, features, functions, advantages and disadvantages. Sorting rule: the constitution or constitutional democracy in general goes here; separation of powers and checks and balances go to government.separation-of-powers even when asked as features of constitutional democracy; the immunity clause goes to rule-of-law.limitations; what the constitution says about secession and the indivisibility of the federation goes to government.tiers.",
+          "taught_in": [
+            "SS1 T2",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "democracy.importance-problems",
+          "name": "Importance and problems of democracy",
+          "syllabus": {
+            "waec": "C.14(2), C.14(4)",
+            "jamb": null
+          },
+          "covers": "Why democracy matters (freedom, participation, accountability, peaceful change of government) and the problems it faces in Nigeria: electoral malpractice, corruption, thuggery, military intervention, poverty and ignorance. Sorting rule: what democracy in general gives or what troubles it goes here; the merits and demerits of one named type, such as representative democracy, go to democracy.meaning-types; how democracy brings national development goes to democracy.national-development.",
+          "taught_in": []
+        },
+        {
+          "id": "democracy.national-development",
+          "name": "National development, employment and poverty",
+          "syllabus": {
+            "waec": "C.14(9)-(10)",
+            "jamb": null
+          },
+          "covers": "The meaning of national development, how democracy and the rule of law promote it through good governance, employment creation and poverty alleviation, the meaning and importance of employment, the causes and consequences of poverty, and agencies such as NAPEP and NDE in that role. Sorting rule: employment and poverty as parts of national development go here; programmes aimed at the skills of young people go to youth-empowerment.government.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "rule-of-law",
+      "name": "Rule of law",
+      "part": "Governmental system and processes",
+      "syllabus": {
+        "waec": "C.14(5)-(8)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "rule-of-law.meaning",
+          "name": "Meaning, features and importance of the rule of law",
+          "syllabus": {
+            "waec": "C.14(5)-(7)",
+            "jamb": null
+          },
+          "covers": "What the rule of law is, its history (A. V. Dicey), its principles and features (supremacy of the law, equality before the law, fair hearing, respect for rights), and its importance. Tested in WASSCE 2025 Q11. Sorting rule: a principle of the rule of law goes here, even when the principle is also a right, such as fair hearing; a right a citizen holds goes to human-rights.meaning; the opportunity to defend oneself asked as a value society expects of its members goes to values.importance.",
+          "taught_in": [
+            "SS1 T2",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "rule-of-law.limitations",
+          "name": "Problems and limitations of the rule of law",
+          "syllabus": {
+            "waec": "C.14(8)",
+            "jamb": null
+          },
+          "covers": "What limits the rule of law or hinders it: the immunity clause, diplomatic immunity, a state of emergency, military rule, delegated legislation, a weak or dependent judiciary that lets the powerful evade sanctions, corruption and ignorance, and the solutions to these problems. Tested in WASSCE 2025 Q40. Sorting rule: the immunity clause goes here; a weak judiciary that lets someone evade the law goes here; a right forfeited by a convicted person goes to human-rights.limitations; the judiciary as the guard against rights abuse goes to human-rights.protection.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "political-apathy",
+      "name": "Political apathy",
+      "part": "Governmental system and processes",
+      "syllabus": {
+        "waec": "C.15",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "political-apathy.meaning-causes",
+          "name": "Meaning, forms and causes of political apathy",
+          "syllabus": {
+            "waec": "C.15(1)-(2)",
+            "jamb": null
+          },
+          "covers": "What political apathy is, its forms (refusal to register, to vote, to join a party, to protest or give information, lack of interest), and its causes (bad governance, broken promises, rigging, thuggery, poverty, ignorance). Tested in WASSCE 2025 Q42. Sorting rule: what apathy is and why it happens goes here; what it leads to and how to discourage it goes to political-apathy.effects-remedies.",
+          "taught_in": [
+            "SS2 T1",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "political-apathy.effects-remedies",
+          "name": "Consequences of political apathy and ways of discouraging it",
+          "syllabus": {
+            "waec": "C.15(3), C.15(6)",
+            "jamb": null
+          },
+          "covers": "The consequences of political apathy (bad leaders, illegitimate government, rigging) and ways of fighting it (political education, free and fair elections, good governance, security at elections).",
+          "taught_in": []
+        },
+        {
+          "id": "political-apathy.leaders-followers",
+          "name": "Leaders and the interests of their followers",
+          "syllabus": {
+            "waec": "C.15(4)-(5)",
+            "jamb": null
+          },
+          "covers": "Why leaders fail to protect the interests of their followers (selfishness, party interest, tribalism, corruption), the effects of that failure, how leaders can protect those interests, and how followers can check irresponsible leaders through constitutional means. WASSCE 2025 Q38 is placed here. Sorting rule: the relation between leaders and the people they lead goes here.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "popular-participation",
+      "name": "Popular participation",
+      "part": "Governmental system and processes",
+      "syllabus": {
+        "waec": "C.16(1)-(5)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "popular-participation.meaning-types",
+          "name": "Meaning, types and modes of popular participation",
+          "syllabus": {
+            "waec": "C.16(1)-(2), C.16(4)",
+            "jamb": null
+          },
+          "covers": "What popular participation is, its types and forms (voting, campaigning, joining parties, contesting, protest, public debate, mobilising others to register and vote), the roles a citizen plays in taking part, such as voter, mobiliser or candidate, and its traditional and modern modes. Sorting rule: a way a citizen takes part, or the role a person plays by urging others to vote, goes here, even when the stem calls it community service; why participation is needed and the factors and bodies that promote or hinder it go to popular-participation.need; party systems go to democracy.parties-elections; refusing to take part goes to political-apathy.meaning-causes.",
+          "taught_in": []
+        },
+        {
+          "id": "popular-participation.need",
+          "name": "Need for popular participation and how to achieve it",
+          "syllabus": {
+            "waec": "C.16(3), C.16(5)",
+            "jamb": null
+          },
+          "covers": "Why popular participation is needed in society, the factors that promote or hinder it (economic, discrimination, illiteracy), how it is achieved in politics, and how popular organisations are formed and their roles in development. Sorting rule: why and how people are drawn to take part goes here, as factors, conditions or organisations; the role an individual plays in taking part or in mobilising others goes to popular-participation.meaning-types; named civil society groups and their work go to civil-society.meaning-functions.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "civil-society",
+      "name": "Civil society",
+      "part": "Governmental system and processes",
+      "syllabus": {
+        "waec": "C.16(6)-(9)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "civil-society.meaning-functions",
+          "name": "Meaning, examples and functions of civil society",
+          "syllabus": {
+            "waec": "C.16(6)-(7)",
+            "jamb": null
+          },
+          "covers": "What civil society is, examples of civil society organisations (trade unions, market women associations, student unions, professional bodies, NGOs, religious bodies) and how they differ from political parties and pressure groups, and their functions: checking government, advocacy, voter education, poverty alleviation. Tested in WASSCE 2025 Q37 and Q46. Sorting rule: what a CSO is or does goes here, even when the answer names youth empowerment or elections; how a CSO is run, funded or held back goes to civil-society.qualities-problems.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "civil-society.qualities-problems",
+          "name": "Qualities and problems of civil society",
+          "syllabus": {
+            "waec": "C.16(8)-(9)",
+            "jamb": null
+          },
+          "covers": "The qualities and characteristics of civil society (accountability, fairness, justice, equity, non-partisanship), its sources of funding, and its problems: bribery and corruption, inadequate funding, the overbearing influence of foreign donors. Tested in WASSCE 2025 Q45, Q47 and Q48. Sorting rule: what a CSO is or is not characterised by goes here.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "public-service",
+      "name": "Public service in democracy",
+      "part": "Governmental system and processes",
+      "syllabus": {
+        "waec": "C.17",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "public-service.meaning-features",
+          "name": "Meaning and features of the public service",
+          "syllabus": {
+            "waec": "C.17(1)",
+            "jamb": null
+          },
+          "covers": "What the public service is, the civil service and public corporations told apart with examples, the structure of the public service, and the characteristics of the civil service: permanence, neutrality, anonymity, impartiality, bureaucracy and security of tenure. Tested in WASSCE 2025 Q41 and Q50. Sorting rule: what a feature such as neutrality or anonymity means goes here; what the public service does goes to public-service.functions.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "public-service.functions",
+          "name": "Functions of the public service",
+          "syllabus": {
+            "waec": "C.17(2)",
+            "jamb": null
+          },
+          "covers": "The functions and importance of the public service: advising government, implementing policy, continuity, keeping records, drafting bills, and its achievements.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "public-service.problems-reforms",
+          "name": "Problems of the public service and ways of improving it",
+          "syllabus": {
+            "waec": "C.17(3)-(5)",
+            "jamb": null
+          },
+          "covers": "The problems and shortcomings of the public service (corruption, nepotism, political interference, colonial influence, inconsistent policies, poor pay and strikes by public servants) and ways of improving it, including the Code of Conduct Bureau and the Public Complaints Commission. WASSCE 2025 Q49, on industrial action by public servants, is placed here. Sorting rule: a problem or a remedy goes here.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    }
+  ],
+  "legacy_note": "The live database holds no Civic Education topics (legacy-topics.json is empty), so nothing is folded and legacy_to is empty. The rule for any legacy name that appears later is the Biology rule: a specific name goes to the subtopic it matches, and a generic one, a bare subject name or a name spanning several areas, goes to the parent topic it fits best, where its questions are correct but unplaced and are flagged for reclassification rather than guessed into a subtopic.",
+  "legacy_to": {},
+  "merged_into": {}
+}

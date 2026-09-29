@@ -1,0 +1,138 @@
+{
+  "slug": "physics-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.79,
+  "agree_subtopic": 77,
+  "agree_topic": 77,
+  "nofit": 4,
+  "disagreements": [
+    {
+      "year": 2021,
+      "q_number": 6,
+      "stem": "A heat sensitive resistor made of a semiconductor is called a?",
+      "sonnet": "electronics.semiconductors",
+      "opus": "current-electricity.resistivity",
+      "notes": [
+        "the thermistor as a named device is not covered anywhere; electronics.semiconductors covers band theory and doping, not named sensor devices, and current-electricity.resistivity covers resistance varying with temperature but not the device name. Placed in electronics.semiconductors as the closer parent.",
+        "Naming the thermistor. No subtopic names circuit components such as the thermistor or LDR. Resistivity covers resistance changing with temperature and electronics.semiconductors covers semiconductors, but neither covers the component."
+      ]
+    },
+    {
+      "year": 2020,
+      "q_number": 15,
+      "stem": "Two identical cups containing the same volume of water as 45 °C and 5 °C, are left in a room at 25 ℃. Which of the following graphs correctly illustrates the va",
+      "sonnet": "heat-transfer.modes",
+      "opus": "temperature.concept",
+      "notes": [
+        "two cups cooling toward room temperature over time is Newton's law of cooling / a cooling curve, which no subtopic covers. temperature.concept covers thermal equilibrium as a state, not the rate of approach to it, and heat-transfer.modes covers the three modes but not this graph type. Placed in heat-transfer.modes as the closer parent.",
+        "Both cups approach room temperature: thermal equilibrium. The shape of a cooling or warming curve is not named anywhere. Option graphs are missing."
+      ]
+    },
+    {
+      "year": 2015,
+      "q_number": 29,
+      "stem": "When an air column is set into vibrations, the distance between two consecutive nodes of the resultant wave is?",
+      "sonnet": "sound.pipes",
+      "opus": "waves.superposition",
+      "notes": [
+        "node spacing named for an air column specifically, which the waves.superposition sorting rule routes here",
+        "Node spacing is named in waves.superposition, but its rule also sends stationary waves in a pipe to sound.pipes. The question sets the stationary wave in an air column but tests only the general node spacing."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "electronics.semiconductors",
+        "detail": "no subtopic names common semiconductor sensor devices such as the thermistor (Q7) or the light-dependent resistor (Q23). electronics.semiconductors covers only band theory, band gap and doping; current-electricity.resistivity covers resistance varying with temperature but not the device name or its light-dependent counterpart. A subtopic or covers-line addition for named semiconductor devices, under the electronics parent, would close this."
+      },
+      {
+        "kind": "missing",
+        "where": "heat-transfer.modes",
+        "detail": "no subtopic covers cooling curves or Newton's law of cooling, that is, how a hot body's temperature falls toward the surrounding temperature over time, and how the rate depends on the temperature difference (Q17). temperature.concept covers thermal equilibrium as an end state, not the rate of approach to it, and heat-transfer.modes covers the three modes but not this graph-reading question type. This would need a subtopic or covers-line addition, most likely under temperature or heat-transfer."
+      },
+      {
+        "kind": "overlap",
+        "where": "energy.work / friction.solid",
+        "detail": "a question asking for the work done against friction over a stated distance (Q39) is not resolved by either subtopic's sorting rule. friction.solid's rule only routes questions that ask for the coefficient of friction or, via newtons-laws.second-law, for acceleration; energy.work's rule only addresses springs. A rule saying work done against a given or calculable friction force goes to energy.work would close this."
+      },
+      {
+        "kind": "overlap",
+        "where": "dispersion.spectrum / refraction.laws",
+        "detail": "a question asking why light of different colours travels at different speeds through the same medium (Q67) sits between dispersion.spectrum (which names the order of colours by wavelength) and refraction.laws (which covers speed of light in different media). Neither covers line nor sorting rule says which wins when a question needs both ideas together."
+      },
+      {
+        "kind": "misplaced",
+        "where": "nucleus.half-life",
+        "detail": "Q51 is about a bacteria culture doubling every 3 hours, which is biology and exponential-growth content, not physics. It was force-placed in nucleus.half-life only because the doubling-time arithmetic matches; the taxonomy correctly has no proper home for it because it does not belong in a physics topic tree at all. This is a sample-composition issue, not a taxonomy gap."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "current-electricity",
+        "detail": "No home for circuit components and their symbols: thermistor (Q7) and light-dependent resistor (Q23). Add current-electricity.components (resistors, rheostat, thermistor, LDR, fuse, switch and their symbols), or name them in the resistivity covers line."
+      },
+      {
+        "kind": "overlap",
+        "where": "reflection.curved",
+        "detail": "Lenses has a rule that a standard object position (2F, same-size image) goes to lenses.images, but mirrors have no matching rule, so an object at C asking for image height (Q10) splits between reflection.curved and reflection.mirror-formula."
+      },
+      {
+        "kind": "overlap",
+        "where": "measurement.quantities-units",
+        "detail": "Current is a fundamental quantity listed in this covers line, yet the sorting rule sends naming the unit of a quantity taught later to that topic. Naming the ampere or the kelvin (Q18) fits both measurement.quantities-units and current-electricity.current-charge. State that the seven base units stay here."
+      },
+      {
+        "kind": "overlap",
+        "where": "newtons-laws.conservation",
+        "detail": "No rule for a collision question that asks for kinetic energy after impact (Q20); it splits with energy.pe-ke. Suggest: momentum conservation is the key idea, so it stays here."
+      },
+      {
+        "kind": "overlap",
+        "where": "friction.solid",
+        "detail": "Rules cover the coefficient asked (friction.solid) and acceleration asked (newtons-laws.second-law) but not work done against friction with the coefficient given (Q39), which splits with energy.work."
+      },
+      {
+        "kind": "overlap",
+        "where": "current-electricity.resistivity",
+        "detail": "Reducing the heating of a cable by using a thicker wire (Q62) needs R = rho l / A and the I squared R heating effect in electrical-energy.power. Add a rule to one of them."
+      },
+      {
+        "kind": "overlap",
+        "where": "dispersion.spectrum",
+        "detail": "Why colours travel at different speeds in glass, or refractive index varying with colour (Q67), splits with refraction.laws. dispersion.spectrum should name refractive index varying with wavelength as the cause of dispersion."
+      },
+      {
+        "kind": "overlap",
+        "where": "waves.superposition",
+        "detail": "Its own rule sends node spacing here and stationary waves in a pipe to sound.pipes. Node spacing in an air column (Q78) matches both rules. Say which wins when only the general node spacing is tested."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "lenses.images",
+        "detail": "Covers line names converging and diverging lenses but not lens shapes (biconvex, plano-convex, converging and diverging meniscus), which Q48 tests. Placement still works but the wording should name them."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "temperature.concept",
+        "detail": "Bodies warming or cooling towards room temperature and the shape of the temperature-time curve (Q17) are covered only by thermal equilibrium; rate of cooling is named nowhere. Add it here or under heat-transfer."
+      }
+    ]
+  }
+}

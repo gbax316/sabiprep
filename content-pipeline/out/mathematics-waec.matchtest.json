@@ -1,0 +1,123 @@
+{
+  "slug": "mathematics-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.55,
+  "agree_subtopic": 77,
+  "agree_topic": 78,
+  "nofit": 3,
+  "disagreements": [
+    {
+      "year": 2019,
+      "q_number": 41,
+      "stem": "Calculate the value of x°.",
+      "sonnet": "angles.at-point",
+      "opus": "angles",
+      "notes": [
+        "stem is only 'Calculate the value of x degrees' with no diagram, passage or other clue in input.json, so no subtopic can be determined from the given data. Guessed the most common bucket for a bare unlabelled angle diagram.",
+        "input defect, not a taxonomy gap: stem is only 'Calculate the value of x' with no diagram or context, so the tested skill cannot be known; parent angles is a guess"
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 30,
+      "stem": "In the diagram, MNR is a tangent to the circle center O at N and ∠NOS = 108°. Find ∠OSN.",
+      "sonnet": "circles.angles",
+      "opus": "triangles.angle-properties",
+      "notes": [
+        "also fits triangles.angle-properties. The step needed is the isosceles triangle formed by two radii (OS = ON), which no circle subtopic's covers line names: circles.chords covers perpendiculars and distances from the centre, circles.angles covers the standard circle theorems, and circles.tangents covers tangent properties, none of which is 'two radii make an isosceles triangle'. Placed in circles.angles because the question sits inside a circle-theorem figure (companion to q30 on the same diagram), but this is a genuine gap",
+        "the only step is base angles of the isosceles triangle formed by two radii, (180 minus 108)/2; also fits circles.angles because the figure is a circle, and neither covers line says where 'radii are equal' belongs"
+      ]
+    },
+    {
+      "year": 2015,
+      "q_number": 19,
+      "stem": "Calculate the value of angle PRS",
+      "sonnet": "circles.angles",
+      "opus": "angles",
+      "notes": [
+        "no diagram is given, and the attached passage_text ('use the diagram to answer questions 19 and 20') refers to different question numbers than 78, a mismatch in input.json's passage pairing. Guessed circles.angles from the P, R, S point-labelling convention used elsewhere in this set for circle-theorem figures, but this is not reliable",
+        "input defect, not a taxonomy gap: shared passage says only 'use the diagram' and no diagram is given; parent angles is a guess"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "ratio.proportion / expressions.formulating",
+        "detail": "A question that gives a ratio such as x:y:z = 2:3:4 and asks for the value of an algebraic expression in x, y, z (q59) is not named by either covers line. ratio.proportion covers sharing, direct and inverse proportion and scales, not substituting ratio values into an expression; expressions.formulating covers evaluating an expression by substitution, but its examples are all plain given values, not a ratio. A sorting rule or a shared example on one of the two covers lines would settle this border."
+      },
+      {
+        "kind": "missing",
+        "where": "circles.angles / circles.chords / triangles.angle-properties",
+        "detail": "A question that uses two radii of a circle as the equal sides of an isosceles triangle, to find a base angle from the angle between the radii (q63), has no subtopic that names it. circles.chords is about perpendiculars from the centre and distances between chords, circles.angles is about the standard circle theorems (angle at centre, semicircle, same segment, cyclic quadrilateral), and triangles.angle-properties lists isosceles triangles but does not mention radii. This is a common WASSCE step (it appears together with the tangent-chord theorem in the same question set here) and could use either its own sorting rule or a one-line mention in circles.angles's covers text."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "coordinate-geometry.distance-midpoint",
+        "detail": "A question that gives three vertices as coordinates and asks what kind of triangle they form (scalene, isosceles, right-angled, q31) is answered with the distance formula, but the covers line only names finding a distance, midpoint or end point, not using distances to classify a triangle's type. The skill needed (compare three computed lengths, or check Pythagoras among them, to name the triangle) sits between this subtopic and triangles.angle-properties and is not named by either."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "misplaced",
+        "where": "solids.similar",
+        "detail": "Its sorting rules now pull in plane-shape scaling (Q27, rectangle with sides doubled) and map areas (Q2), but it sits under the parent 'Surface area and volume of solids'. A reviewer browsing by parent will not look there for a map-scale area. Move it to a parent that spans plane and solid figures (or under plane-mensuration) or rename the parent."
+      },
+      {
+        "kind": "missing",
+        "where": "circles.chords",
+        "detail": "Equal chords subtend equal angles at the centre (and equal arcs) has no home; Q4 (three equal chords on a semicircle, 60 degrees each) splits between circles.chords and circles.angles. Add it to the circles.chords covers line."
+      },
+      {
+        "kind": "overlap",
+        "where": "circles.angles",
+        "detail": "A circle question whose only step is the isosceles triangle formed by two radii (Q63, angle OSN from angle NOS) fits circles.angles and triangles.angle-properties equally. Add a rule: radii-equal isosceles steps in a circle figure go to circles.angles (or state the opposite)."
+      },
+      {
+        "kind": "overlap",
+        "where": "quadratic-equations.roots",
+        "detail": "'The truth set is {p, q}, evaluate p + q' (Q75) is a sum-of-roots question that most students answer by solving. Say whether an asked-for sum or product of roots stays in roots even when the equation factorises easily."
+      },
+      {
+        "kind": "overlap",
+        "where": "ratio.proportion",
+        "detail": "Evaluating an expression from a given ratio such as x : y : z = 2 : 3 : 4 (Q59) fits ratio.proportion and expressions.formulating; neither covers line names it."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "plane-mensuration.lengths",
+        "detail": "The place-by-quantity rule sends three rhombus or square diagonal questions (Q18 perimeter, Q20 side, Q53 area) to two subtopics though they test one skill, the diagonal property plus Pythagoras, and the diagonal property itself lives in triangles.quadrilaterals. The rule is usable, but coverage counts will scatter this skill; consider naming diagonals of a rhombus or square explicitly in one covers line."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "number-bases.modular",
+        "detail": "Daily-life uses list market days, clocks and shifts but not laps or repeated cycles of a distance (Q73, laps of a circular track), which could be misread as plane-mensuration.circles. Add laps of a track to the examples."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "coordinate-geometry.distance-midpoint",
+        "detail": "Naming a triangle (isosceles, right, scalene) from its vertices (Q31) is not mentioned anywhere; it can be done with lengths (distance-midpoint) or gradients (parallel-perpendicular). Name it in distance-midpoint with a rule for the gradient route."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "variation.direct-inverse",
+        "detail": "Combining two variation statements to relate the outer variables (Q80, x inversely as y, y directly as z) is not named; it fits here by the one-variable rule but should be stated."
+      }
+    ]
+  }
+}

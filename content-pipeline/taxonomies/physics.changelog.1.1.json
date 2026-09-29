@@ -1,0 +1,210 @@
+{
+  "changes": [
+    {
+      "kind": "widened",
+      "where": "measurement.instruments",
+      "evidence": "Coverage, WASSCE 4 (partial): the electronic/digital balance is not named in any covers line.",
+      "change": "Added electronic (digital) balances to the list of balances."
+    },
+    {
+      "kind": "widened",
+      "where": "measurement.quantities-units",
+      "evidence": "Coverage, WASSCE 5 and 5(a) (partial): the concept of time as the interval between physical events is not named.",
+      "change": "Added time as the interval between physical events."
+    },
+    {
+      "kind": "widened",
+      "where": "energy.forms-conservation",
+      "evidence": "Coverage, WASSCE 15 and 15(b), UTME 6 and 6 definitions (partial): no covers line defines energy as the capacity to do work.",
+      "change": "Added energy as the capacity to do work at the head of the covers line."
+    },
+    {
+      "kind": "widened",
+      "where": "energy.resources",
+      "evidence": "Coverage, WASSCE 14(b) note: biomass is in the WAEC note but not the covers line.",
+      "change": "Added biomass to the renewable sources."
+    },
+    {
+      "kind": "widened",
+      "where": "temperature.concept",
+      "evidence": "Coverage, WASSCE 16 and 16(b) (partial): change of colour and change in chemical properties are not named; scheme of work SS2 T1 W1 (partial): sources and uses of heat are not named.",
+      "change": "Added sources and uses of heat, and change of colour and change in chemical properties to the effects of heat."
+    },
+    {
+      "kind": "widened",
+      "where": "electric-cells.types",
+      "evidence": "Coverage, WASSCE 25(2) and 25(2)(a) (partial): the alkaline-cadmium cell is not named; UTME 30 and 30(iii) (partial): lithium and mercury-cadmium cells are not named.",
+      "change": "Added alkaline-cadmium accumulators and lithium and mercury-cadmium cells, and named NiFe."
+    },
+    {
+      "kind": "widened",
+      "where": "electric-cells.emf-internal",
+      "evidence": "Coverage, UTME 30 and 30(vi) (partial): the efficiency of a cell is not named.",
+      "change": "Added the efficiency of a cell."
+    },
+    {
+      "kind": "widened",
+      "where": "matter.particles",
+      "evidence": "Coverage, scheme of work SS3 T1 W5 (partial): osmosis is not named anywhere.",
+      "change": "Added osmosis to the evidence that matter is made of particles."
+    },
+    {
+      "kind": "widened",
+      "where": "machines.types",
+      "evidence": "Coverage, scheme of work SS3 T2 W5 (partial): the need for machines and their repairs and maintenance are not named.",
+      "change": "Added why machines are needed and the care and maintenance of machines."
+    },
+    {
+      "kind": "widened",
+      "where": "gravitation.satellites",
+      "evidence": "Coverage, scheme of work SS3 T2 W6 (partial): the component parts of a rocket and a satellite are not named.",
+      "change": "Added the parts of a rocket and of a satellite and what each does."
+    },
+    {
+      "kind": "widened",
+      "where": "heat-transfer.radiation",
+      "evidence": "Matchtest UTME, opus finding (missing, heat-transfer.radiation): detecting radiant heat (thermopile, Leslie cube) is named nowhere; UTME 2019 Q4 disagreement (sonnet temperature.thermometers, opus heat-transfer.radiation).",
+      "change": "Named the Leslie cube and detecting radiant heat with the thermopile."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "temperature.thermometers",
+      "evidence": "Matchtest UTME 2019 Q4 disagreement, 'Radiant heat can only be measured with a' (thermopile), split between temperature.thermometers and heat-transfer.radiation.",
+      "change": "Both covers lines now say: an instrument that detects radiant heat, such as the thermopile, goes to heat-transfer.radiation; a thermometer that measures the temperature of a body, including the thermocouple and pyrometer, goes to temperature.thermometers."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "lenses.images",
+      "evidence": "Matchtest UTME 2021 Q24 disagreement (object distance for a same-size real image, sonnet lenses.formula, opus lenses.images); opus finding (overlap, lenses.images): say which wins when no working is needed.",
+      "change": "Both covers lines now say: a question answered from the standard image positions, such as an object at 2F for a same-size image, goes to lenses.images even when f is given and a distance is asked; one that needs the lens formula or a worked magnification goes to lenses.formula."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "atom.energy-levels",
+      "evidence": "Matchtest UTME, sonnet finding (overlap, atom.photoelectric / atom.energy-levels) and opus finding (overlap, atom.energy-levels): a bare E = hc/lambda calculation set as light on a metal is routed to atom.photoelectric by a rule that contradicts how_to_use.",
+      "change": "Replaced the energy-levels rule: photon energy from E = hf or hc/lambda, with no work function, threshold or stopping potential needed, goes to atom.energy-levels whatever the setting; anything needing the photoelectric equation goes to atom.photoelectric. Added the mirror rule to atom.photoelectric."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "expansion.liquids",
+      "evidence": "Matchtest UTME, sonnet finding (overlap, expansion.solids / expansion.liquids): a question asking which expansivity does not apply to solids (apparent expansivity) needs both.",
+      "change": "expansion.liquids now names comparisons of solid and liquid expansivities; both covers lines say such a comparison goes to expansion.liquids."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "vectors.resolution",
+      "evidence": "Matchtest UTME, sonnet finding (overlap, vectors.resolution / equilibrium.coplanar): a single rope at an angle pulling a body along a smooth surface falls between the two.",
+      "change": "Both covers lines now say: a single force at an angle with nothing to balance it, where its component along the surface is asked, goes to vectors.resolution; the acceleration or work that follows goes to newtons-laws.second-law or energy.work."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "sound.strings",
+      "evidence": "Matchtest UTME, opus finding (overlap, sound.characteristics): how length, tension and thickness of a string set its pitch fits both.",
+      "change": "sound.strings now names how length, tension and mass per unit length set a string's frequency and pitch; both covers lines send that question to sound.strings and pitch in general to sound.characteristics."
+    },
+    {
+      "kind": "widened",
+      "where": "atom.models",
+      "evidence": "Matchtest UTME, opus finding (missing, atom.models): Dalton's atomic theory and general statements about atoms of elements have no named home and split between atom.models and matter.particles.",
+      "change": "Added Dalton's atomic theory and general statements about the atoms of an element to atom.models, and a rule in matter.particles sending them there."
+    },
+    {
+      "kind": "widened",
+      "where": "electrostatics.field-potential",
+      "evidence": "Matchtest UTME, opus finding (missing, electrostatics.field-potential): motion of a charged particle in a uniform electric field (F = qE, a = qE/m, deflection between plates) is not named.",
+      "change": "Added the motion of a charged particle in a uniform electric field; magnetic-force.moving-charge now sends a charge in an electric field alone here."
+    },
+    {
+      "kind": "widened",
+      "where": "refraction.laws",
+      "evidence": "Matchtest UTME, opus finding (too-narrow, refraction.laws): which wave quantities change and which stay constant (frequency) on crossing media is implied, not named, and could be read under waves.properties or waves.equation.",
+      "change": "Named which of speed, wavelength and frequency change on crossing a boundary, with a rule that this goes to refraction.laws for any wave; waves.properties now points there. waves.equation already sends calculations that need a refractive index to that subtopic."
+    },
+    {
+      "kind": "widened",
+      "where": "fluids.atmospheric",
+      "evidence": "Matchtest UTME, opus finding (misplaced, fluids.atmospheric): the manometer measures gas pressure, not atmospheric pressure, yet sits only under fluids.atmospheric, and gas pressure measurement has no clear single home.",
+      "change": "Renamed to 'Atmospheric pressure and measuring pressure' (id kept) and named the manometer as the gauge for a gas supply's pressure against atmospheric pressure, with a rule sending pressure changing with volume or temperature to gas-laws. The legacy 'Pressure in gases' stays on the gas-laws parent because it spans both topics; the legacy note now says its manometer questions belong to fluids.atmospheric."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "waves.progressive",
+      "evidence": "Matchtest WAEC 2021 Q42 disagreement ('not a characteristic of a plane progressive wave', sonnet waves.production, opus waves.progressive); sonnet finding (overlap, waves.production / waves.superposition); opus finding (overlap, waves.progressive): the defining features of a progressive wave have no home.",
+      "change": "waves.progressive is renamed 'Progressive waves: features, equation and phase difference' (id kept) and now holds the defining features, including which statement is or is not one. waves.production, waves.types and waves.superposition each gained a rule sending those features to waves.progressive; stationary-wave features stay in waves.superposition."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "motion.free-fall",
+      "evidence": "Matchtest WAEC 2022 Q45 disagreement (50 g object released, sonnet motion.free-fall, opus energy.pe-ke); opus finding (overlap, motion.free-fall).",
+      "change": "Both covers lines now say: the speed of a body dropped or thrown vertically, when only a speed, height or time is asked, goes to motion.free-fall even when its mass is given; it goes to energy.pe-ke when an energy is asked or the path is a slope, curve or pendulum."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "fluids.liquid-pressure",
+      "evidence": "Matchtest WAEC, sonnet finding (overlap, fluids.liquid-pressure / fluids.atmospheric) and opus finding (overlap, fluids.liquid-pressure): total pressure at a depth from a barometer reading plus h rho g has no rule.",
+      "change": "Both covers lines now send the total pressure at a depth, even when it starts from a barometer reading, to fluids.liquid-pressure; fluids.atmospheric also names converting a mercury-column reading to pascals."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "electric-cells.emf-internal",
+      "evidence": "Matchtest WAEC, sonnet finding (missing, electric-cells.types / electric-cells.emf-internal) and opus finding (overlap, electric-cells.types): what does and does not determine a cell's e.m.f. is named by neither.",
+      "change": "electric-cells.emf-internal now names what does and does not set a cell's e.m.f. (the materials of its plates and electrolyte, not its size); electric-cells.types has a rule sending that question there."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "nucleus.composition",
+      "evidence": "Matchtest WAEC, sonnet finding (missing, atom.models / nucleus.composition) and opus finding (overlap, atom.models): a neutral atom having equal numbers of protons and electrons, and counts of protons, electrons and neutrons, have no home.",
+      "change": "nucleus.composition now names the electron count of a neutral atom (equal to Z) and counting all three particles from nuclide notation; atom.models sends these to nucleus.composition, and nucleus.composition sends models back."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "energy.forms-conservation",
+      "evidence": "Matchtest WAEC, sonnet finding (overlap, energy.forms-conservation / magnetic-force.motor): a bare energy-conversion fact about a motor fits both.",
+      "change": "Both covers lines now say the energy change in a device goes to energy.forms-conservation even when the device has its own subtopic, and how the device works goes to that subtopic. The existing exception for the energy a cell stores (electric-cells.types) is kept."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "dispersion.spectrum",
+      "evidence": "Matchtest WAEC, opus finding (overlap, dispersion.spectrum): the order of wavelength among the visible colours has no rule.",
+      "change": "dispersion.spectrum now names the order of the colours by wavelength and frequency; both covers lines send order within the visible band to dispersion.spectrum and order across bands to em-waves.spectrum."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "magnetic-force.motor",
+      "evidence": "Matchtest WAEC, opus finding (overlap, current-electricity.meters): the galvanometer is split, with sensitivity in meters and the coil in magnetic-force.motor; why more turns raise sensitivity needs both.",
+      "change": "Moved galvanometer sensitivity out of current-electricity.meters into magnetic-force.motor with its construction; both covers lines say construction and sensitivity go to magnetic-force.motor, and choosing, connecting and converting meters stay in current-electricity.meters."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "measurement.dimensions",
+      "evidence": "Matchtest WAEC, opus finding (overlap, measurement.dimensions): two rules collide on expressing a named unit in base units (the joule as kg m^2 s^-2).",
+      "change": "Both covers lines now say a unit written in base units or in M, L and T goes to measurement.dimensions whatever topic the quantity belongs to; naming a unit such as the tesla still goes to the quantity's own subtopic."
+    },
+    {
+      "kind": "widened",
+      "where": "capacitors.capacitance",
+      "evidence": "Matchtest WAEC, opus finding (too-narrow, capacitors.capacitance): capacitor behaviour in a circuit (blocking d.c., passing or filtering a.c., charging and discharging) is named nowhere.",
+      "change": "Added charging and discharging, blocking d.c. while passing a.c., and smoothing and filtering, with a rule in both capacitors.capacitance and ac-circuits.reactance that reactance calculations and phase go to ac-circuits.reactance."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "nucleus.radiations",
+      "evidence": "Matchtest WAEC, opus finding (overlap, nucleus.radiations): deflection of alpha, beta and gamma in a magnetic or electric field could be read as magnetic-force.moving-charge.",
+      "change": "nucleus.radiations now names their deflection in fields; it, magnetic-force.moving-charge and electrostatics.field-potential all send that question to nucleus.radiations."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "Coverage, WASSCE 5(b) note: heart-beat and sand-clock are not named.",
+      "reason": "The coverage map marks the item covered: they fall under the time-measuring devices already in measurement.instruments, and no placement split on them."
+    },
+    {
+      "finding": "Coverage, unmapped subtopic measurement.graphs.",
+      "reason": "Kept. Its covers line already says why it exists: WAEC Paper 3, the practical paper, sets a graph of results with its gradient and intercept, and the legacy topic Graph slope interpretation holds such questions. Merging it would scatter those questions."
+    },
+    {
+      "finding": "Coverage, unmapped subtopic fluids.flow.",
+      "reason": "Kept. Its covers line already says a real paper tests it (WAEC 2025 Q40) and that the legacy topics Bernoulli's principle and Streamline vs turbulent flow fold into it."
+    }
+  ]
+}

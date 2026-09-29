@@ -1,0 +1,1788 @@
+{
+  "subject": "Chemistry",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "The 26 legacy Chemistry topics are broad bands, most spanning two or more syllabus topics (one covers every non-metal, another every metal from reactivity to corrosion), so a student's score on them cannot point at anything specific to practise. Version 1.0 rebuilds the tree on the syllabi: parent topics at the grain of the numbered topics of the WAEC and JAMB syllabi, merged where both name the same content, and subtopics at the grain of their sub-areas, checked against the SS1 to SS3 scheme of work for teaching order and against the 90 questions of the 2025 WASSCE and UTME objective papers for where real questions land. Where WAEC and JAMB file the same content under different topics (transition metals, halogen gradation, deliquescence, inorganic naming) it has one home and the covers line says so. Every one of the 26 legacy topics is folded in. Nothing in the database is changed by this file. Version 1.1 revises 1.0 from its coverage map and its placement test: it closes the syllabus and scheme-of-work gaps the map found, adds silicon and the history of chemistry because real papers tested them, adds sorting rules on every border the two models split, and merges practical.observation, which no source item or paper supported, into intro.scientific-method.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC Chemistry examination syllabus, WASSCE",
+        "retrieved_from": "https://waecsyllabus.com/files/ssce/CHEMISTRY.pdf",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror, the same one used for Biology and Economics. PDF dated 2015-09-24, author field awajis.com. Not fetched from a WAEC domain directly. Extracted verbatim with pypdf."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME Chemistry syllabus, 18 topics with sub-items and objectives",
+        "retrieved_from": "https://allschool.ng/jamb-syllabus-for-chemistry/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party reproduction labelled the 2026 version; the official copy is behind the jamb.gov.ng syllabus portal. Topic list confirmed against a second copy at https://kofastudy.com/jamb-syllabus-for-chemistry/, which lists the same 18 topics in the same order."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Nigerian senior secondary Chemistry scheme of work, SS1 to SS3 (NERDC-based, Lagos NAPPS unified scheme)",
+        "retrieved_from": "https://edudelight.com/chemistry-scheme-of-work-jss1-jss3-napps/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Cross-checked term by term against ecolebooks.com per-term pages. SS3 Term 3 has no new content in any source checked; it runs during the WASSCE sitting."
+      }
+    ],
+    "scope_rule": "WAEC references are to the syllabus's own sections: A is common to all candidates, B is for Ghana only, C is for Nigeria, Sierra Leone, Liberia and The Gambia. The syllabus says Paper 1, the objective paper, is drawn from Section A only, but the 2025 WASSCE objective paper also tested Section C content (aluminium extraction in Q3, carbon (IV) oxide in Q4, uses of sodium chloride in Q11, charcoal in Q44), so Section A and Section C together are the WAEC spine. Section B is left out except where a real Nigerian paper tests it: hybridisation (UTME 2025 Q10, also taught in SS3 Term 2 Week 3), sigma and pi bonds (WASSCE 2025 Q20), heats of formation combined by Hess's law (UTME 2025 Q39), the thermal stability of trioxocarbonates (WASSCE 2025 Q14, also within C 1.0(a)(iv)), and silicon, silicon (IV) oxide and glass (UTME 2022 Q39, under carbon.silicon). Concepts in neither syllabus are placed because a real paper tested them: colligative properties (UTME 2025 Q18, under states.liquids), adsorption by charcoal (WASSCE 2025 Q26, under carbon.allotropes), amides from esters and ammonia (UTME 2025 Q40, under functional-groups.esters), the history of chemistry (WASSCE 2022 Q49, under intro.nature), and decantation, centrifugation, X-ray diffraction of solids and polarisation in simple cells (UTME questions in the version 1.0 placement test, under matter.separation, states.solids and electrochemistry.cells). Nuclear chemistry is a JAMB topic and a Ghana-only WAEC topic, so it is in the tree for UTME with a null WAEC reference. Section B content no Nigerian paper has been seen to test is left out until one does: rate laws and order of reaction, Kp and Kc calculations, pKa and buffers, solubility products, double indicator and back titrations, lattice energy and the Born-Haber cycle, the Lewis definition of acids, shapes of complex ions, the mass spectrometer and quantum numbers, organic reaction mechanisms and Ghana's mineral industries.",
+    "sources_note": "The scheme of work is the third source. It is not an exam, so it is not a key in each syllabus field; where a subtopic rests on the scheme of work alone, its covers line says so."
+  },
+  "how_to_use": "Place a question by what a student must know to answer it, not by words in the stem. A question that names ammonia but asks for its oxidation number goes to oxidation numbers, not to ammonia. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins. Three rules run across the whole tree: a test or reagent that identifies an unknown ion or gas goes to practical.qualitative, but a test that tells one organic family from another goes to that family; the IUPAC name of an organic compound goes to organic-basics.naming whatever its family; and working out an oxidation number goes to redox.oxidation-numbers whatever the compound.",
+  "merged_into": {
+    "practical.observation": "intro.scientific-method"
+  },
+  "topics": [
+    {
+      "id": "intro",
+      "name": "Introduction to chemistry",
+      "part": "Foundations of chemistry",
+      "syllabus": {
+        "waec": "A 1.0",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "intro.nature",
+          "name": "Chemistry as a science and its history",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "What chemistry is, its branches, its importance in everyday life and industry, chemistry-related careers, and the history of chemistry: alchemy and the early chemists, such as Boyle, who first defined an element. Rests on the scheme of work (SS1 Term 1 Week 1); the history is placed here because WASSCE 2022 Q49 tested it. Sorting rule: who first did or defined something in chemistry goes here, unless it concerns the structure of the atom, which goes to atomic-structure.models; what an element is goes to matter.classification; the steps of the scientific method go to intro.scientific-method; laboratory apparatus and safety go to practical.lab.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "intro.measurement",
+          "name": "Measurement, units and significant figures",
+          "syllabus": {
+            "waec": "A 1.0(a)",
+            "jamb": null
+          },
+          "covers": "Measurement of mass, length, time, temperature and volume, SI units, significant figures, and precision against accuracy. Sorting rule: units, significant figures and accuracy go here; how to use a burette, pipette or balance goes to practical.lab.",
+          "taught_in": []
+        },
+        {
+          "id": "intro.scientific-method",
+          "name": "The scientific method, observation and inference",
+          "syllabus": {
+            "waec": "A 1.0(b), A 16.0(a), Paper 3",
+            "jamb": null
+          },
+          "covers": "Observation, hypothesis, experimentation, and the formulation of laws and theories, and what each term means; and, merged in from practical.observation, recording observations, tables and graphs of experimental results, drawing inferences and conclusions, and sources of error. Tested in WASSCE 2025 Q49. Sorting rule: the method, and handling data from an experiment in general, go here; a rate graph goes to kinetics.rate, a solubility curve to solutions.solubility and a titration curve to acids-bases.titration.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "matter",
+      "name": "Nature of matter and separation of mixtures",
+      "part": "Foundations of chemistry",
+      "syllabus": {
+        "waec": "A 2.0(b)(iii), A 2.0(c), A 3.0",
+        "jamb": "1"
+      },
+      "subtopics": [
+        {
+          "id": "matter.classification",
+          "name": "Elements, compounds and mixtures",
+          "syllabus": {
+            "waec": "A 2.0(b)(iii), A 3.0(a)",
+            "jamb": "1"
+          },
+          "covers": "Atoms, molecules and ions as the particles of matter; elements, compounds and mixtures and how they differ; kinds of mixture (solid-solid, solid-liquid, liquid-liquid, gas-gas). Sorting rule: whether a substance is an element, compound or mixture goes here; who first defined an element goes to intro.nature; air as a mixture goes to air.composition; how to separate a mixture goes to matter.separation.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "matter.changes",
+          "name": "Physical and chemical changes",
+          "syllabus": {
+            "waec": "A 2.0(c)",
+            "jamb": "1"
+          },
+          "covers": "Physical and chemical changes told apart, with examples such as melting, dissolving and magnetising iron against burning, rusting and decay. Sorting rule: whether a change is physical or chemical goes here; explaining a change of state by particle motion goes to states.kinetic-theory.",
+          "taught_in": []
+        },
+        {
+          "id": "matter.separation",
+          "name": "Separation techniques",
+          "syllabus": {
+            "waec": "A 3.0(b), A 13.0(b)",
+            "jamb": "1"
+          },
+          "covers": "Filtration, decantation, centrifugation, evaporation, crystallisation and fractional crystallisation, simple and fractional distillation, sublimation, precipitation, magnetic separation, separating funnel, and paper and column chromatography: which method suits a mixture and the principle behind it, including the separation and purification of organic compounds. Tested in WASSCE 2025 Q10; decantation and centrifugation are named because a UTME question in the version 1.0 placement test tested them. Sorting rule: choosing or explaining a separation method goes here; fractional distillation of crude oil goes to hydrocarbons.petroleum, of liquid air to air.composition.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "matter.purity",
+          "name": "Pure substances and tests of purity",
+          "syllabus": {
+            "waec": "A 3.0(c), A 7.0(f)",
+            "jamb": "1"
+          },
+          "covers": "Pure and impure substances, and sharp melting and boiling points as criteria of purity, including how an impurity changes them. Sorting rule: what a melting or boiling point shows about purity goes here; how vapour pressure sets a boiling point goes to states.liquids.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "atomic-structure",
+      "name": "Structure of the atom",
+      "part": "Foundations of chemistry",
+      "syllabus": {
+        "waec": "A 2.0",
+        "jamb": "4 (topic one)"
+      },
+      "subtopics": [
+        {
+          "id": "atomic-structure.models",
+          "name": "Atomic theory and models of the atom",
+          "syllabus": {
+            "waec": "A 2.0(a)",
+            "jamb": "4 (topic one)"
+          },
+          "covers": "Dalton's atomic theory and its limitations, Thomson's, Millikan's, Rutherford's alpha scattering, Moseley's and Bohr's work, the hydrogen spectrum, and what each scientist established. Sorting rule: which experiment or scientist established a fact about the atom goes here; the history of chemistry outside the atom, such as who first defined an element, goes to intro.nature; counting particles in an atom goes to atomic-structure.particles.",
+          "taught_in": []
+        },
+        {
+          "id": "atomic-structure.particles",
+          "name": "Sub-atomic particles, atomic number and isotopes",
+          "syllabus": {
+            "waec": "A 2.0(b)(i)",
+            "jamb": "4 (topic one)"
+          },
+          "covers": "Protons, neutrons and electrons, their charges and masses, nucleons, atomic number and mass number, isotopes, and counting the particles in an atom or ion from its symbol, including isoelectronic species. Tested in WASSCE 2025 Q7, Q34 and Q46. Sorting rule: counting particles, including electrons in an ion, goes here; arranging electrons in shells or orbitals goes to atomic-structure.configuration; calculating relative atomic mass from isotopes goes to atomic-structure.relative-mass.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "atomic-structure.relative-mass",
+          "name": "Relative atomic and molecular mass",
+          "syllabus": {
+            "waec": "A 2.0(b)(ii)",
+            "jamb": "2, 4 (topic one)"
+          },
+          "covers": "The carbon-12 scale and the atomic mass unit, relative atomic mass as the weighted average of isotopes, calculations such as that for chlorine, and relative molecular mass from a formula. Sorting rule: finding relative atomic mass from isotope abundances goes here; molar mass used in a mole calculation goes to stoichiometry.mole; relative molecular mass from vapour density or gas volume goes to states.molar-volume.",
+          "taught_in": []
+        },
+        {
+          "id": "atomic-structure.configuration",
+          "name": "Electron configuration and orbitals",
+          "syllabus": {
+            "waec": "A 2.0(d)",
+            "jamb": "4 (topic one)"
+          },
+          "covers": "Shells and s, p and d orbitals, shapes of s and p orbitals, degenerate orbitals, the Aufbau principle, Hund's rule and the Pauli exclusion principle, unpaired electrons, and the configurations of the first thirty elements in full and shortened form. Tested in WASSCE 2025 Q36 and Q42. Sorting rule: writing or reading a configuration goes here, including for a transition metal; reading an element's group or period from its configuration goes to periodic.table; reading a configuration to decide the kind of bond or compound the element forms goes to bonding.ionic.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "nuclear",
+      "name": "Nuclear chemistry",
+      "part": "Foundations of chemistry",
+      "syllabus": {
+        "waec": null,
+        "jamb": "4 (topic five)"
+      },
+      "subtopics": [
+        {
+          "id": "nuclear.radioactivity",
+          "name": "Radioactivity and its uses",
+          "syllabus": {
+            "waec": null,
+            "jamb": "4 (topic five)"
+          },
+          "covers": "Natural and artificial radioactivity, alpha, beta and gamma radiation compared by charge, mass and penetrating power, detection of radiation, and uses and hazards of radioactivity in medicine, agriculture, industry and carbon dating. Taught in SS3 Term 2 Weeks 1 and 2. Sorting rule: the nature, detection and uses of radiation go here; balancing a nuclear equation or a half-life calculation goes to nuclear.reactions.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "nuclear.reactions",
+          "name": "Nuclear reactions and half-life",
+          "syllabus": {
+            "waec": null,
+            "jamb": "4 (topic five)"
+          },
+          "covers": "Nuclear against ordinary chemical reactions, balancing nuclear equations, the particle emitted in a decay, half-life and calculations on it, and fission and fusion. Sorting rule: a calculation or an equation goes here; what a radiation is or is used for goes to nuclear.radioactivity.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "periodic",
+      "name": "Periodic table and periodicity",
+      "part": "Foundations of chemistry",
+      "syllabus": {
+        "waec": "A 4.0(a)-(d)",
+        "jamb": "4 (topic two)"
+      },
+      "subtopics": [
+        {
+          "id": "periodic.table",
+          "name": "The periodic table: periods, groups and families",
+          "syllabus": {
+            "waec": "A 4.0(a)-(c)",
+            "jamb": "4 (topic two)"
+          },
+          "covers": "The periodic law and its history, periods, groups and s, p and d blocks, families of elements (alkali metals, alkaline earth metals, halogens, noble gases, transition metals), metals, metalloids and non-metals, and reading an element's group and period from its configuration or valence electrons. Tested in WASSCE 2025 Q9 and Q45. Sorting rule: where an element sits, or which family it belongs to, goes here, and so does calling it a metal or non-metal from its configuration; a question that reads a configuration to decide the kind of bond or compound the element forms goes to bonding.ionic, even when metal or non-metal is among the options (UTME 2015 Q14); how a property changes along a period or down a group goes to periodic.trends.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "periodic.trends",
+          "name": "Periodic trends in atomic properties",
+          "syllabus": {
+            "waec": "A 4.0(c)(i)",
+            "jamb": "4 (topic two)"
+          },
+          "covers": "Atomic radius, ionic radius, ionisation energy, electron affinity, electronegativity and electropositivity across a period and down a group, the anomalies of beryllium, boron, nitrogen and oxygen, and ordering atoms or ions by size. Tested in UTME 2025 Q20, WASSCE 2025 Q25 and WASSCE 2022 Q43. Sorting rule: a trend named by a single property of the atom goes here, including electropositivity even though it tracks metallic character (WASSCE 2022 Q43); how the properties of elements or their oxides change from metallic to non-metallic, shown through their reactions or compounds, goes to periodic.gradation; the halogens compared with one another go to halogens.trends.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "periodic.gradation",
+          "name": "Gradation of properties across periods",
+          "syllabus": {
+            "waec": "A 4.0(c)(ii), A 4.0(d)",
+            "jamb": "4 (topic two)"
+          },
+          "covers": "The change from metallic to non-metallic character and from ionic to covalent compounds across the third period (Na to Ar), the reactions of Na, Mg, Al, K and Ca compared with water, acids and air, the pH of their oxide solutions, similarities between second and third period elements, and the diagonal relationship. Sorting rule: comparing two or more elements across a period through their reactions, compounds or oxides goes here; a trend named by electropositivity or another single atomic property goes to periodic.trends; the reaction or compound of one named metal goes to its common-metals subtopic; classifying an oxide as acidic, basic or amphoteric goes to hydrogen-oxygen.oxides.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "bonding",
+      "name": "Chemical bonding",
+      "part": "Foundations of chemistry",
+      "syllabus": {
+        "waec": "A 5.0, B 3.0(b)",
+        "jamb": "4 (topics three and four)"
+      },
+      "subtopics": [
+        {
+          "id": "bonding.ionic",
+          "name": "Ionic (electrovalent) bonding",
+          "syllabus": {
+            "waec": "A 5.0(a)-(b)",
+            "jamb": "4 (topic three)"
+          },
+          "covers": "What a chemical bond is and why atoms combine, how ions form by electron transfer to reach a noble gas structure, dot-and-cross diagrams of ionic compounds, factors favouring ionic bonding, and properties of ionic compounds (high melting point, solubility in water, conduction when molten or dissolved). Tested in WASSCE 2025 Q13 and Q31. Sorting rule: the meaning of a chemical bond in general goes here; deciding whether a named compound is ionic or covalent goes here, whichever way the stem is worded, and so does reading an element's electron configuration to decide the kind of bond or compound it forms, even when metal or non-metal is among the options (UTME 2015 Q14); the structure of an ionic solid as a type of solid goes to states.solids.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "bonding.covalent",
+          "name": "Covalent and dative bonding",
+          "syllabus": {
+            "waec": "A 5.0(d)-(e)",
+            "jamb": "4 (topic three)"
+          },
+          "covers": "Covalent bonds by electron sharing, the factors that favour covalent bond formation (electron affinity, ionisation energy, atomic size, electronegativity), single, double and triple bonds, dot-and-cross diagrams of molecules, polar and non-polar bonds, properties of covalent compounds, and coordinate (dative) bonds as in NH4+, H3O+ and complex ions. Tested in UTME 2025 Q36. Sorting rule: counting or describing the bonds in a species goes here; its shape, hybridisation, or its sigma and pi bonds go to bonding.shapes; the naming and properties of transition metal complexes go to metals.transition.",
+          "taught_in": []
+        },
+        {
+          "id": "bonding.metallic",
+          "name": "Metallic bonding",
+          "syllabus": {
+            "waec": "A 5.0(g)",
+            "jamb": "4 (topic three)"
+          },
+          "covers": "Metal ions in a sea of delocalised electrons, factors affecting the strength of the bond, and how it explains conductivity, lustre, malleability, ductility and hardness. Tested in WASSCE 2025 Q18 and Q39. Sorting rule: why metals conduct, shine or bend, explained by the bond, goes here; a named metal's use goes to its common-metals subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "bonding.intermolecular",
+          "name": "Intermolecular forces and hydrogen bonding",
+          "syllabus": {
+            "waec": "A 5.0(h)",
+            "jamb": "4 (topic three)"
+          },
+          "covers": "Van der Waals forces (dipole-dipole and dispersion forces), hydrogen bonding, how they explain the melting and boiling points of noble gases, halogens, alkanes and hydrides such as H2O against H2S, and the solubility of molecules such as ethanol in water, and all bond types compared. Tested in WASSCE 2025 Q12 and Q23. Sorting rule: a physical property (melting point, boiling point or solubility) explained by forces between molecules or by hydrogen bonding goes here whenever the question asks why, for any family, including why ethanol dissolves in water (UTME 2016 Q38); ordering members of one homologous series by melting or boiling point without asking why goes to organic-basics.carbon-classes (UTME 2015 Q21); the layers of graphite go to carbon.allotropes.",
+          "taught_in": []
+        },
+        {
+          "id": "bonding.shapes",
+          "name": "Shapes of molecules and hybridisation",
+          "syllabus": {
+            "waec": "A 5.0(f), B 3.0(b)",
+            "jamb": "4 (topic four)"
+          },
+          "covers": "Linear, bent, trigonal planar and tetrahedral shapes of molecules such as BeCl2, BF3, CH4, NH3, H2O and CO2, sp, sp2 and sp3 hybridisation, and sigma and pi bonds, including counting them in a molecule. Real papers test hybridisation and pi bonds beyond the Section A wording (UTME 2025 Q10, WASSCE 2025 Q20). Sorting rule: shape, bond angle, hybridisation, and sigma and pi bonds go here, even in an organic molecule; which bonds are covalent or dative goes to bonding.covalent.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "stoichiometry",
+      "name": "Formulae, equations and the mole concept",
+      "part": "Foundations of chemistry",
+      "syllabus": {
+        "waec": "A 6.0(a)-(c)",
+        "jamb": "2"
+      },
+      "subtopics": [
+        {
+          "id": "stoichiometry.formulae",
+          "name": "Symbols, valency, formulae and naming of inorganic compounds",
+          "syllabus": {
+            "waec": "A 6.0(a)(i)-(ii), A 5.0(c)",
+            "jamb": "2, 10 (IUPAC nomenclature)"
+          },
+          "covers": "Symbols of common elements, valency and radicals, writing formulae, and IUPAC names of inorganic compounds such as trioxonitrate (V) and tetraoxosulphate (VI). Sorting rule: naming an inorganic compound, even using oxidation numbers, goes here; working out an oxidation number alone goes to redox.oxidation-numbers; naming an organic compound goes to organic-basics.naming.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "stoichiometry.equations",
+          "name": "Chemical equations and types of reaction",
+          "syllabus": {
+            "waec": "A 6.0(a)(iv)",
+            "jamb": "2"
+          },
+          "covers": "Writing and balancing equations, state symbols, ionic equations, and reaction types: combination, decomposition, displacement, double decomposition, combustion, and thermal dissociation. Sorting rule: balancing or classifying an ordinary reaction goes here; balancing a redox equation by half-reactions goes to redox.balancing; a nuclear equation goes to nuclear.reactions; a calculation from an equation goes to stoichiometry.reacting-quantities.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "stoichiometry.laws",
+          "name": "Laws of chemical combination",
+          "syllabus": {
+            "waec": "A 6.0(a)(v)",
+            "jamb": "2"
+          },
+          "covers": "The laws of conservation of mass, constant composition (definite proportions) and multiple proportions, their experimental illustration, and deducing which law data illustrate. Sorting rule: Gay-Lussac's law of combining volumes and Avogadro's law go to states.molar-volume.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "stoichiometry.mole",
+          "name": "The mole and Avogadro's constant",
+          "syllabus": {
+            "waec": "A 6.0(b)",
+            "jamb": "2"
+          },
+          "covers": "The mole as a unit, Avogadro's constant, molar mass, and converting between mass, amount and number of atoms, molecules, ions or electrons. Sorting rule: moles from mass or number of particles go here; moles from a concentration and a volume go to solutions.concentration; moles from a gas volume go to states.molar-volume.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "stoichiometry.empirical",
+          "name": "Empirical and molecular formulae and percentage composition",
+          "syllabus": {
+            "waec": "A 6.0(a)(iii), A 13.0(d)",
+            "jamb": "2, 17"
+          },
+          "covers": "What empirical and molecular formulae are, finding them from masses or percentages, and the percentage by mass of an element or of water of crystallisation in a compound, for inorganic and organic compounds alike. Tested in WASSCE 2025 Q29 and Q50. Sorting rule: a formula or percentage worked out from composition goes here, even for an organic compound or a hydrated salt; finding water of crystallisation by titration goes to acids-bases.titration.",
+          "taught_in": []
+        },
+        {
+          "id": "stoichiometry.reacting-quantities",
+          "name": "Calculations from equations",
+          "syllabus": {
+            "waec": "A 6.0(c)",
+            "jamb": "2"
+          },
+          "covers": "Mole ratios from a balanced equation, reacting masses, the reagent in excess, and percentage yield. Sorting rule: a calculation driven by an equation's mole ratio goes here; reacting gas volumes go to states.molar-volume; titration results go to acids-bases.titration; mass or volume from a quantity of electricity goes to electrochemistry.faraday.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "states",
+      "name": "States of matter and the gas laws",
+      "part": "Physical chemistry",
+      "syllabus": {
+        "waec": "A 7.0",
+        "jamb": "3"
+      },
+      "subtopics": [
+        {
+          "id": "states.kinetic-theory",
+          "name": "Kinetic theory and changes of state",
+          "syllabus": {
+            "waec": "A 7.0(a)(i)-(ii)",
+            "jamb": "3"
+          },
+          "covers": "Postulates of the kinetic theory, solids, liquids and gases compared by particle arrangement and motion, melting, boiling, evaporation, sublimation and their reverse, Brownian motion, and explaining gas behaviour by particle motion. Tested in UTME 2025 Q24. Sorting rule: explaining a change or a gas's behaviour in terms of particles goes here; stating or calculating how P, V and T are related goes to states.gas-laws.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "states.diffusion",
+          "name": "Diffusion and Graham's law",
+          "syllabus": {
+            "waec": "A 7.0(a)(iii), A 7.0(b)(ii)",
+            "jamb": "3"
+          },
+          "covers": "Diffusion in gases, liquids and solids, experiments that show it (ammonia and hydrogen chloride in a tube), and Graham's law relating rate of diffusion to molar mass, with calculations. Tested in UTME 2025 Q16. Sorting rule: any question about diffusion or rates of diffusion goes here, not to states.gas-laws.",
+          "taught_in": []
+        },
+        {
+          "id": "states.gas-laws",
+          "name": "The gas laws",
+          "syllabus": {
+            "waec": "A 7.0(b)(i)-(ii)",
+            "jamb": "3"
+          },
+          "covers": "Boyle's, Charles' and the pressure law, the general gas equation, the ideal gas equation PV = nRT, Dalton's law of partial pressures, standard temperature and pressure, graphs of the laws, and ideal against real gases. Tested in UTME 2025 Q1 and Q12 and WASSCE 2025 Q6. Sorting rule: a relation between P, V, T and n goes here; molar volume, combining volumes and vapour density go to states.molar-volume; Graham's law goes to states.diffusion.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "states.molar-volume",
+          "name": "Molar volume, combining volumes and vapour density",
+          "syllabus": {
+            "waec": "A 7.0(b)(ii)",
+            "jamb": "2, 3"
+          },
+          "covers": "Avogadro's law, the molar volume of a gas at s.t.p., Gay-Lussac's law of combining volumes, volumes of reacting gases, atomicity, and vapour density and relative molecular mass. Tested in UTME 2025 Q31. Sorting rule: a calculation that uses 22.4 dm3 or combining volumes goes here; a calculation that uses PV = nRT goes to states.gas-laws.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "states.liquids",
+          "name": "Liquids, vapour pressure and boiling",
+          "syllabus": {
+            "waec": "A 7.0(c)",
+            "jamb": "3"
+          },
+          "covers": "Properties of liquids (viscosity, density, compressibility), vapour and gas distinguished, vapour pressure and saturated vapour pressure, evaporation against boiling, boiling at reduced pressure, and colligative properties such as boiling point elevation and freezing point depression. Colligative properties are in neither syllabus and are placed here because UTME 2025 Q18 tested them. Sorting rule: what sets or changes a boiling point goes here; a boiling point used as a test of purity goes to matter.purity.",
+          "taught_in": []
+        },
+        {
+          "id": "states.solids",
+          "name": "Types of solid",
+          "syllabus": {
+            "waec": "A 7.0(d)",
+            "jamb": null
+          },
+          "covers": "Ionic, metallic, giant covalent and molecular solids, how their particles are arranged, how their properties follow from the bonding, and X-ray diffraction as the way the arrangement of particles in a crystal lattice is studied. X-ray diffraction is named because a UTME question in the version 1.0 placement test tested it. Sorting rule: which kind of solid a substance forms, or how a lattice is studied, goes here; diamond and graphite in particular go to carbon.allotropes; a property explained by one bond type goes to that bonding subtopic.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "solutions",
+      "name": "Solutions and solubility",
+      "part": "Physical chemistry",
+      "syllabus": {
+        "waec": "A 6.0(d)-(e), A 10.0",
+        "jamb": "7"
+      },
+      "subtopics": [
+        {
+          "id": "solutions.concentration",
+          "name": "Concentration and standard solutions",
+          "syllabus": {
+            "waec": "A 6.0(d)-(e)",
+            "jamb": "2"
+          },
+          "covers": "Solute, solvent and solution, dilute against concentrated, concentration in g dm-3 and mol dm-3 and converting between them, moles in a given volume, primary and secondary standards, preparing a standard solution, and dilution. Tested in WASSCE 2025 Q22. Sorting rule: moles or mass from concentration and volume go here; concentration worked out from titration results goes to acids-bases.titration; how much solute a saturated solution holds goes to solutions.solubility.",
+          "taught_in": []
+        },
+        {
+          "id": "solutions.solubility",
+          "name": "Solubility and solubility curves",
+          "syllabus": {
+            "waec": "A 10.0(a)",
+            "jamb": "7"
+          },
+          "covers": "Saturated, unsaturated and supersaturated solutions, a saturated solution as an equilibrium between dissolved and undissolved solute, solubility in mol dm-3 and g dm-3, solubility calculations, solubility curves and the effect of temperature, and crystallisation from a saturated solution. Tested in WASSCE 2025 Q27. Sorting rule: how much of a solute dissolves, from masses or a curve, goes here; solubility found from titre values goes to acids-bases.titration; which salts are soluble or insoluble goes to acids-bases.salts; crystallisation as a separation method goes to matter.separation.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "solutions.colloids",
+          "name": "Suspensions, colloids and solvents",
+          "syllabus": {
+            "waec": null,
+            "jamb": "7"
+          },
+          "covers": "True solutions, suspensions and colloids compared, examples such as harmattan haze, fog, milk, aerosols and rubber solution, and solvents for fats, oils and paints. Sorting rule: telling a true solution from a false one goes here; colligative properties go to states.liquids.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "acids-bases",
+      "name": "Acids, bases and salts",
+      "part": "Physical chemistry",
+      "syllabus": {
+        "waec": "A 9.0",
+        "jamb": "9"
+      },
+      "subtopics": [
+        {
+          "id": "acids-bases.properties",
+          "name": "Acids and bases: definitions, properties and strength",
+          "syllabus": {
+            "waec": "A 9.0(a)-(d)",
+            "jamb": "9"
+          },
+          "covers": "Arrhenius and Bronsted-Lowry definitions, conjugate pairs, properties and reactions of acids and bases (with metals, oxides, trioxocarbonates and indicators), alkalis as soluble bases, basicity, organic and mineral acids, and strong against weak acids and bases judged by dissociation, conductance and enthalpy of neutralisation. Sorting rule: what an acid or base is, or how strong it is, goes here, including using the enthalpy of neutralisation as evidence of strength; calculating a heat of neutralisation goes to energetics.heats; ordering solutions by pH goes to acids-bases.ph; electrolytes in general, apart from acid or base strength, go to electrochemistry.electrolysis.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "acids-bases.ph",
+          "name": "pH, pOH and indicators",
+          "syllabus": {
+            "waec": "A 9.0(e), A 9.0(h)",
+            "jamb": "9"
+          },
+          "covers": "The pH and pOH scales, pH = -log[H3O+], calculating pH, pOH and ion concentrations, universal indicator and its colours, how indicators work, pH meters, and pH in everyday life (soil, blood, acid rain). Tested in UTME 2025 Q2 and WASSCE 2025 Q15. Sorting rule: an indicator's colour in a solution goes here; ordering solutions by pH goes here, including equimolar strong and weak acids, bases and salts compared in one list; judging which acid is stronger from its dissociation or conductance goes to acids-bases.properties; choosing the indicator for a titration goes to acids-bases.titration.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "acids-bases.salts",
+          "name": "Salts: types, preparation, solubility and uses",
+          "syllabus": {
+            "waec": "A 9.0(f)(i)-(ii), A 10.0(b)",
+            "jamb": "9"
+          },
+          "covers": "Normal, acid, basic, double and complex salts, alums, the colours of common salts, the solubility rules for common salts, preparing salts by neutralisation, action of acid on a metal, oxide or trioxocarbonate, direct combination, and precipitation (double decomposition), and the uses of salts. Tested in WASSCE 2025 Q32. Sorting rule: how to make a salt, whether it is soluble, its colour, or the uses of salts in general go here; the acidity of a salt's solution goes to acids-bases.hydrolysis; a named sodium, calcium or copper compound's industrial production or uses go to its common-metals subtopic.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "acids-bases.hydrolysis",
+          "name": "Hydrolysis of salts",
+          "syllabus": {
+            "waec": "A 9.0(f)(iii)",
+            "jamb": "9"
+          },
+          "covers": "Why solutions of salts such as NH4Cl, AlCl3, Na2CO3 and CH3COONa are acidic, alkaline or neutral, the charge density of the cation or anion as the cause of hydrolysis, and the equations for their hydrolysis. Sorting rule: predicting the pH of a salt solution goes here; a salt ranked among acid and base solutions in a pH ordering goes to acids-bases.ph; hydrolysis of esters, fats, sugars or proteins goes to those organic subtopics.",
+          "taught_in": []
+        },
+        {
+          "id": "acids-bases.titration",
+          "name": "Acid-base titration",
+          "syllabus": {
+            "waec": "A 9.0(i), A 16.0(b)",
+            "jamb": "9"
+          },
+          "covers": "Titration apparatus and procedure, choosing an indicator for strong and weak acids and bases (methyl orange, phenolphthalein), titration curves, and calculations of concentration, mole ratio, molar mass, percentage purity, solubility and water of crystallisation from titre values. Sorting rule: any calculation from an acid-base titration goes here, including solubility found from titre values; naming or choosing the apparatus of volumetric analysis goes here (WASSCE 2019 Q43); redox titrations go to redox.balancing; using a burette or pipette as general practice goes to practical.lab.",
+          "taught_in": [
+            "SS2 T3",
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T3",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "energetics",
+      "name": "Energy changes",
+      "part": "Physical chemistry",
+      "syllabus": {
+        "waec": "A 8.0, B 5.0(b)-(c)",
+        "jamb": "12"
+      },
+      "subtopics": [
+        {
+          "id": "energetics.enthalpy",
+          "name": "Exothermic and endothermic reactions",
+          "syllabus": {
+            "waec": "A 8.0(a)-(b)",
+            "jamb": "12"
+          },
+          "covers": "Energy and enthalpy, the total energy of a system as the sum of its kinetic, potential, electrical and other forms, exothermic and endothermic changes, the sign of the enthalpy change, standard conditions (298 K, 1 atm, 1 mol dm-3) and the standard enthalpy symbol, energy level diagrams, and bond breaking as endothermic and bond making as exothermic, reasoned without figures. Tested in WASSCE 2025 Q19 and Q40 and WASSCE 2020 Q28. Sorting rule: the sign or meaning of an enthalpy change goes here, and so does what standard conditions are; a numerical enthalpy calculation goes to energetics.heats; activation energy on an energy profile goes to kinetics.collision.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "energetics.heats",
+          "name": "Heats of reaction and their calculation",
+          "syllabus": {
+            "waec": "A 8.0(b)(3), B 5.0(b)-(c)",
+            "jamb": "12"
+          },
+          "covers": "Heats of combustion, neutralisation, solution and formation, their measurement, and calculations from experimental data, from heats of formation, from energy cycles by Hess's law, and from bond energies. Real papers test heats of formation and Hess's law beyond Section A (UTME 2025 Q39). Sorting rule: any enthalpy calculation goes here; the sign of an enthalpy change alone, or the definition of standard conditions, goes to energetics.enthalpy; the enthalpy of neutralisation used to compare acid strength goes to acids-bases.properties.",
+          "taught_in": []
+        },
+        {
+          "id": "energetics.entropy",
+          "name": "Entropy, free energy and spontaneity",
+          "syllabus": {
+            "waec": null,
+            "jamb": "12"
+          },
+          "covers": "The first and second laws of thermodynamics, entropy as disorder, how it changes with state, mixing and dissolving, free energy and the relation between the change in free energy, enthalpy and entropy, and the sign of the free energy change as the test of spontaneity and equilibrium. The laws of thermodynamics rest on the scheme of work (SS2 Term 2 Week 2). Sorting rule: any question on entropy, free energy or the laws of thermodynamics goes here.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "kinetics",
+      "name": "Rates of chemical reaction",
+      "part": "Physical chemistry",
+      "syllabus": {
+        "waec": "A 11.0(a)",
+        "jamb": "13"
+      },
+      "subtopics": [
+        {
+          "id": "kinetics.rate",
+          "name": "Measuring and interpreting reaction rates",
+          "syllabus": {
+            "waec": "A 11.0(a), A 11.0(a)(iii)",
+            "jamb": "13"
+          },
+          "covers": "What reaction rate means, how it is expressed, observable changes used to follow it (gas volume, mass, colour, precipitate), rate curves and what their shape and gradient show, and simple rate calculations. Tested in UTME 2025 Q22. Sorting rule: reading or calculating rate from data or a graph goes here; why a change speeds a reaction goes to kinetics.factors or kinetics.collision.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "kinetics.factors",
+          "name": "Factors affecting rates of reaction",
+          "syllabus": {
+            "waec": "A 11.0(a)(i)",
+            "jamb": "13"
+          },
+          "covers": "The effect of temperature, concentration or pressure, surface area, catalysts, light and the nature of reactants on rate, and the standard experiments for each (sodium thiosulphate and acid, marble and acid, hydrogen peroxide with manganese (IV) oxide). Sorting rule: which change speeds or slows a reaction goes here; an explanation that turns on activation energy or collisions goes to kinetics.collision.",
+          "taught_in": []
+        },
+        {
+          "id": "kinetics.collision",
+          "name": "Collision theory and activation energy",
+          "syllabus": {
+            "waec": "A 11.0(a)(ii)",
+            "jamb": "13"
+          },
+          "covers": "Collision and transition state theory treated qualitatively, effective collisions, activation energy, energy profiles showing activation energy and enthalpy change, and how a catalyst works by lowering activation energy. Tested in WASSCE 2025 Q2. Sorting rule: any question whose answer is activation energy or collision frequency goes here, including why a catalyst such as nickel is used; the sign of the enthalpy change goes to energetics.enthalpy.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "equilibrium",
+      "name": "Chemical equilibrium",
+      "part": "Physical chemistry",
+      "syllabus": {
+        "waec": "A 11.0(b)",
+        "jamb": "14"
+      },
+      "subtopics": [
+        {
+          "id": "equilibrium.constant",
+          "name": "Reversible reactions and the equilibrium constant",
+          "syllabus": {
+            "waec": "A 11.0(b)(i), A 16.0(a)(vii)",
+            "jamb": "14(a)-(c)"
+          },
+          "covers": "Reversible and irreversible reactions, dynamic equilibrium, the equilibrium constant expression treated qualitatively, the simple experimental determination of K for a system, what a large or small value of K means, and that K changes only with temperature. Tested in UTME 2025 Q21 and Q25. Sorting rule: what changes the value of K, how it is found by experiment, or what its size shows, goes here; which way the position shifts goes to equilibrium.le-chatelier.",
+          "taught_in": []
+        },
+        {
+          "id": "equilibrium.le-chatelier",
+          "name": "Le Chatelier's principle",
+          "syllabus": {
+            "waec": "A 11.0(b)(ii)",
+            "jamb": "14"
+          },
+          "covers": "Predicting how changes in concentration, pressure, temperature and a catalyst affect the position of equilibrium, with examples such as N2O4 and NO2, steam on iron, and the choice of conditions in the Haber and Contact processes. Sorting rule: a shift in position, or why industrial conditions are chosen, goes here; the steps and uses of the Haber or Contact process go to nitrogen.ammonia or sulphur.sulphuric-acid.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "redox",
+      "name": "Oxidation and reduction",
+      "part": "Physical chemistry",
+      "syllabus": {
+        "waec": "A 12.0(a)-(c)",
+        "jamb": "10"
+      },
+      "subtopics": [
+        {
+          "id": "redox.definitions",
+          "name": "Oxidation and reduction defined",
+          "syllabus": {
+            "waec": "A 12.0(a)",
+            "jamb": "10"
+          },
+          "covers": "Oxidation and reduction as gain or loss of oxygen or hydrogen, loss or gain of electrons, and change in oxidation number, and identifying which reactions are redox and which species is oxidised. Tested in UTME 2025 Q23. Sorting rule: whether a reaction is redox goes here; counting the electrons lost or gained in a change goes to redox.balancing; naming the oxidising or reducing agent goes to redox.agents.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "redox.oxidation-numbers",
+          "name": "Oxidation numbers",
+          "syllabus": {
+            "waec": "A 12.0(a)(2)",
+            "jamb": "10"
+          },
+          "covers": "Rules for oxidation numbers and working out the oxidation number of an element in a compound or ion. Tested in UTME 2025 Q33. Sorting rule: working out an oxidation number goes here, whatever the compound; using it to name an inorganic compound goes to stoichiometry.formulae.",
+          "taught_in": []
+        },
+        {
+          "id": "redox.agents",
+          "name": "Oxidising and reducing agents",
+          "syllabus": {
+            "waec": "A 12.0(b)",
+            "jamb": "10"
+          },
+          "covers": "Identifying oxidising and reducing agents, substances that can act as both, their relative strengths, and tests for them by colour change, such as acidified potassium heptaoxodichromate (VI) turning from orange to green and potassium tetraoxomanganate (VII) being decolourised. Tested in UTME 2025 Q3 and Q32 and WASSCE 2025 Q8. Sorting rule: naming or testing an oxidising or reducing agent goes here; a colour change of these reagents used to identify an unknown gas or ion, such as sulphur (IV) oxide, goes to practical.qualitative; whether an ion such as Na+ or K+ can be reduced, judged by its place in the electrochemical series, goes to electrochemistry.cells; the halogens ranked by oxidising power go to halogens.trends; a reducing agent's role in extracting a named metal goes to that metal's common-metals subtopic.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "redox.balancing",
+          "name": "Redox equations and redox titrations",
+          "syllabus": {
+            "waec": "A 12.0(c), A 16.0(b)",
+            "jamb": "10"
+          },
+          "covers": "Writing half-equations, balancing redox equations by electrons or oxidation number change in acid and alkaline solution, the number of electrons transferred, including per mole of ions changed, and redox titrations (tetraoxomanganate (VII) with iron (II) or ethanedioate, iodine with thiosulphate) and their calculations. Sorting rule: balancing a redox equation, counting the electrons lost or gained in a change such as iron (II) to iron (III) (WASSCE 2020 Q5), or a redox titration calculation goes here; half-reactions at electrodes go to electrochemistry.electrolysis or electrochemistry.cells.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "electrochemistry",
+      "name": "Electrolysis and electrochemical cells",
+      "part": "Physical chemistry",
+      "syllabus": {
+        "waec": "A 12.0(d)-(e)",
+        "jamb": "11"
+      },
+      "subtopics": [
+        {
+          "id": "electrochemistry.electrolysis",
+          "name": "Electrolytes and electrolysis",
+          "syllabus": {
+            "waec": "A 9.0(c), A 12.0(e)(i)-(iii)",
+            "jamb": "11"
+          },
+          "covers": "Conductors, electrolytes and non-electrolytes, strong and weak electrolytes, the electrolytic cell, electrodes, preferential discharge of ions, and the products and electrode reactions for molten PbBr2 and NaCl, dilute and concentrated NaCl, CuSO4, CuCl2, CaCl2, dilute H2SO4 and HCl, and NaOH. Tested in WASSCE 2025 Q24. Sorting rule: what forms at an electrode, and why, goes here; how much forms goes to electrochemistry.faraday; strong and weak acids go to acids-bases.properties.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "electrochemistry.faraday",
+          "name": "Faraday's laws of electrolysis",
+          "syllabus": {
+            "waec": "A 12.0(e)(iv)",
+            "jamb": "11"
+          },
+          "covers": "Faraday's first and second laws, the faraday (96 500 C) as a mole of electrons, and calculating mass deposited, gas volume, charge, current or time. Sorting rule: any calculation from a quantity of electricity goes here.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "electrochemistry.cells",
+          "name": "Electrochemical cells and electrode potentials",
+          "syllabus": {
+            "waec": "A 12.0(d)",
+            "jamb": "11"
+          },
+          "covers": "The electrochemical series and redox series, standard electrode potential and the hydrogen electrode, half-cells, cell diagrams and notation, e.m.f. calculations, where oxidation and reduction happen in a cell, electrolytic against electrochemical cells, primary and secondary cells (Daniell, dry, lead-acid, fuel cells), and polarisation in simple cells and the depolarisers that prevent it. Tested in UTME 2025 Q26 and WASSCE 2025 Q5; polarisation is named because a UTME question in the version 1.0 placement test tested it. Sorting rule: electrode potentials and cells go here, including whether an ion such as Na+ or K+ can be reduced or oxidised, judged by its place in the electrochemical series (WASSCE 2025 Q5); naming the oxidising or reducing agent in a reaction goes to redox.agents; the reactivity series used to predict displacement of a metal or reaction with acid goes to metals.general.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "electrochemistry.applications",
+          "name": "Uses of electrolysis",
+          "syllabus": {
+            "waec": "A 12.0(e)(v)",
+            "jamb": "11"
+          },
+          "covers": "Electroplating, purification of copper, and electrolysis as the way to obtain reactive elements and compounds such as sodium, aluminium, chlorine and sodium hydroxide from fused or aqueous salts. Tested in WASSCE 2025 Q38. Sorting rule: which elements are made by electrolysis, asked in general, goes here; the extraction of one named metal, such as aluminium from bauxite, goes to its common-metals subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "electrochemistry.corrosion",
+          "name": "Corrosion and rusting",
+          "syllabus": {
+            "waec": "A 12.0(e)(vi)",
+            "jamb": "11"
+          },
+          "covers": "Corrosion as a redox process, the conditions for rusting, its cost, and prevention by painting, oiling, galvanising, tinning, electroplating and sacrificial or cathodic protection. Sorting rule: rusting and its prevention go here, not to common-metals.iron.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "air",
+      "name": "Air",
+      "part": "Inorganic chemistry",
+      "syllabus": {
+        "waec": "C 1.0(i)",
+        "jamb": "5"
+      },
+      "subtopics": [
+        {
+          "id": "air.composition",
+          "name": "Composition of air",
+          "syllabus": {
+            "waec": null,
+            "jamb": "5"
+          },
+          "covers": "The constituents of air and their percentages, air as a mixture and the evidence for it, why its composition varies, separating its components by fractional distillation of liquid air, and flames (zones of the Bunsen and candle flame, from the scheme of work SS1 Term 2 Week 11). Sorting rule: air as a whole goes here; the preparation and properties of oxygen or nitrogen go to hydrogen-oxygen.oxygen or nitrogen.nitrogen; air pollutants go to pollution.air.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "air.noble-gases",
+          "name": "The noble gases",
+          "syllabus": {
+            "waec": "C 1.0(i)",
+            "jamb": "5"
+          },
+          "covers": "Properties of the noble gases, why they are unreactive, and uses of helium, neon and argon. Sorting rule: the uses and inertness of noble gases go here, including why a noble gas is used in place of another gas, such as helium instead of hydrogen in balloons: a comparison of use goes to the gas that is used; their boiling point trend explained by van der Waals forces goes to bonding.intermolecular.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "part": "Inorganic chemistry",
+      "syllabus": {
+        "waec": "C 1.0(d), A 9.0(g)",
+        "jamb": "6"
+      },
+      "subtopics": [
+        {
+          "id": "water.composition",
+          "name": "Composition of water and water as a solvent",
+          "syllabus": {
+            "waec": "C 1.0(d)(i)-(ii)",
+            "jamb": "6"
+          },
+          "covers": "Composition of water by volume and mass, water from burning hydrogen, electrolysis of acidified water as evidence, the test for water, sources and uses of water, water as a solvent, and gases dissolved in water and their importance to aquatic life. Sorting rule: what water is made of and how it dissolves things goes here; hardness goes to water.hardness; water pollution goes to pollution.water-soil.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "water.hardness",
+          "name": "Hard and soft water",
+          "syllabus": {
+            "waec": "C 1.0(d)(iii)",
+            "jamb": "6"
+          },
+          "covers": "Temporary and permanent hardness, the salts that cause each, removing hardness by boiling, washing soda, ion exchange and distillation, advantages and disadvantages of hard water, and comparing hardness of samples. Sorting rule: hardness goes here; how soap and soapless detergents behave in hard water goes to biomolecules.fats-soaps.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "water.treatment",
+          "name": "Treatment of water for town supply",
+          "syllabus": {
+            "waec": "C 1.0(d)(iv)",
+            "jamb": "6"
+          },
+          "covers": "Stages of town water treatment (screening, coagulation with alum, sedimentation, filtration, chlorination) and the purpose of each, and production of distilled water. Sorting rule: the purification stages go here; why charcoal is used in a filter bed, which turns on adsorption, goes to carbon.allotropes; chlorine as a sterilising agent asked about chlorine itself goes to halogens.chlorine.",
+          "taught_in": []
+        },
+        {
+          "id": "water.hygroscopy",
+          "name": "Water of crystallisation, deliquescence and drying agents",
+          "syllabus": {
+            "waec": "A 9.0(g)",
+            "jamb": "6"
+          },
+          "covers": "Water of crystallisation, hydrated and anhydrous salts, efflorescent, deliquescent and hygroscopic substances with examples, and hygroscopic substances as drying agents in general. Sorting rule: what a substance does on exposure to air, or what makes it a drying agent, goes here; choosing the drying agent for a named gas or for a kind of gas (acidic, basic or neutral) goes to practical.gas-preparation; the percentage of water of crystallisation goes to stoichiometry.empirical.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "hydrogen-oxygen",
+      "name": "Hydrogen, oxygen and oxides",
+      "part": "Inorganic chemistry",
+      "syllabus": {
+        "waec": "C 1.0(b)-(c)",
+        "jamb": "15(a), 15(c)1-2"
+      },
+      "subtopics": [
+        {
+          "id": "hydrogen-oxygen.hydrogen",
+          "name": "Hydrogen",
+          "syllabus": {
+            "waec": "C 1.0(c), A 7.0(b)(iii)",
+            "jamb": "15(a)"
+          },
+          "covers": "Hydrogen's position in the periodic table, its isotopes, laboratory preparation, industrial production from water gas and cracking, properties, and uses. Sorting rule: preparation, properties and uses of hydrogen go here; why helium is used instead of hydrogen, as in balloons, goes to air.noble-gases; the test for hydrogen goes to practical.qualitative; how to dry hydrogen goes to practical.gas-preparation.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "hydrogen-oxygen.oxygen",
+          "name": "Oxygen and ozone",
+          "syllabus": {
+            "waec": "C 1.0(b)(i)-(ii)",
+            "jamb": "15(c)1-2"
+          },
+          "covers": "Laboratory preparation of oxygen, industrial production from liquid air, its properties and uses, the group VI family, and ozone as an allotrope and its importance in the atmosphere. Sorting rule: oxygen and ozone as substances go here; ozone depletion as pollution goes to pollution.air; classifying oxides goes to hydrogen-oxygen.oxides.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "hydrogen-oxygen.oxides",
+          "name": "Acidic, basic, amphoteric and neutral oxides",
+          "syllabus": {
+            "waec": "C 1.0(b)(iii)",
+            "jamb": "15(c)2"
+          },
+          "covers": "Classifying oxides as acidic, basic, amphoteric or neutral, their reactions with water, acids and alkalis, and oxides that give more than one acid in water. Tested in WASSCE 2025 Q16 and Q43 and UTME 2025 Q35. Sorting rule: classifying an oxide or its reaction with water goes here, even for an oxide of nitrogen, sulphur or carbon; the preparation and other properties of a named oxide go to that element's subtopic.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "halogens",
+      "name": "The halogens",
+      "part": "Inorganic chemistry",
+      "syllabus": {
+        "waec": "A 4.0(e), C 1.0(e)-(f)",
+        "jamb": "15(b)"
+      },
+      "subtopics": [
+        {
+          "id": "halogens.trends",
+          "name": "Gradation in group VII",
+          "syllabus": {
+            "waec": "A 4.0(e)",
+            "jamb": "4 (topic two), 15(b)"
+          },
+          "covers": "Fluorine, chlorine, bromine and iodine compared: physical states, melting and boiling points, reactivity, variable oxidation states, reactions with water and with alkali, oxidising power and the reducing power of their ions, and displacement of one halogen by another. Tested in WASSCE 2025 Q35. Sorting rule: comparing the halogens goes here, including their oxidation states and their reactions with water and alkali across the group; the preparation, reactions and uses of chlorine alone go to halogens.chlorine.",
+          "taught_in": []
+        },
+        {
+          "id": "halogens.chlorine",
+          "name": "Chlorine, iodine and halogen compounds",
+          "syllabus": {
+            "waec": "C 1.0(e), C 1.0(f)(iii), A 7.0(e)",
+            "jamb": "15(b)"
+          },
+          "covers": "Laboratory and industrial preparation of chlorine, its reactions with water, alkalis, metals and hydrogen, its bleaching and sterilising action, its variable oxidation states in its compounds, the uses of iodine in everyday life (as an antiseptic and in iodised salt), and uses of halogen compounds such as silver halides in photography and sodium oxochlorate (I) as bleach. Tested in UTME 2025 Q32. Sorting rule: chlorine and its compounds, and the uses of iodine, go here; hydrogen chloride and hydrochloric acid go to halogens.hydrogen-chloride; working out chlorine's oxidation number goes to redox.oxidation-numbers.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "halogens.hydrogen-chloride",
+          "name": "Hydrogen chloride and hydrochloric acid",
+          "syllabus": {
+            "waec": "C 1.0(f)",
+            "jamb": "15(b)"
+          },
+          "covers": "Laboratory preparation of hydrogen chloride, its solubility and the fountain experiment, properties and uses of hydrochloric acid, and chlorides. Sorting rule: the gas and its acid go here; the test for chloride ions goes to practical.qualitative; electrolysis of hydrochloric acid goes to electrochemistry.electrolysis.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "name": "Nitrogen and its compounds",
+      "part": "Inorganic chemistry",
+      "syllabus": {
+        "waec": "C 1.0(g)",
+        "jamb": "15(d)"
+      },
+      "subtopics": [
+        {
+          "id": "nitrogen.nitrogen",
+          "name": "Nitrogen and the nitrogen cycle",
+          "syllabus": {
+            "waec": "C 1.0(g)(i)-(ii)",
+            "jamb": "15(d)1-2, 15(d)5"
+          },
+          "covers": "Laboratory preparation of nitrogen, production from liquid air, its properties and uses, the group V family, and the nitrogen cycle. Sorting rule: the element and its cycle go here; its compounds go to the other nitrogen subtopics.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "nitrogen.ammonia",
+          "name": "Ammonia and ammonium salts",
+          "syllabus": {
+            "waec": "C 1.0(g)(iii)I, A 7.0(b)(iii)",
+            "jamb": "15(d)3"
+          },
+          "covers": "Laboratory preparation of ammonia, the Haber process, its properties (basic gas, very soluble, fountain experiment, reducing agent, burning in oxygen), catalytic oxidation to nitrogen (IV) oxide, uses, and ammonium salts and their uses. Sorting rule: ammonia and ammonium salts go here, except that the action of heat on ammonium trioxonitrate (V) goes to nitrogen.nitric-acid; the test for ammonia or NH4+ goes to practical.qualitative; choosing Haber conditions by Le Chatelier's principle goes to equilibrium.le-chatelier.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "nitrogen.nitric-acid",
+          "name": "Trioxonitrate (V) acid and its salts",
+          "syllabus": {
+            "waec": "C 1.0(g)(iii)II-III",
+            "jamb": "15(d)4"
+          },
+          "covers": "Laboratory preparation and manufacture of trioxonitrate (V) acid, its properties as an acid and an oxidising agent, uses, and the trioxonitrate (V) salts, including the products of heating them, from potassium to ammonium trioxonitrate (V). Tested in UTME 2025 Q13 and Q15. Sorting rule: the acid and the action of heat on any trioxonitrate (V) goes here; the test for NO3- goes to practical.qualitative.",
+          "taught_in": []
+        },
+        {
+          "id": "nitrogen.oxides",
+          "name": "Oxides of nitrogen",
+          "syllabus": {
+            "waec": null,
+            "jamb": "15(d)5"
+          },
+          "covers": "Preparation and properties of dinitrogen (I) oxide, nitrogen (II) oxide and nitrogen (IV) oxide and how they are told apart. Sorting rule: a named oxide's preparation and properties go here; whether it is acidic or neutral goes to hydrogen-oxygen.oxides; oxides of nitrogen as pollutants go to pollution.air.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "sulphur",
+      "name": "Sulphur and its compounds",
+      "part": "Inorganic chemistry",
+      "syllabus": {
+        "waec": "C 1.0(h)",
+        "jamb": "15(c)3-4"
+      },
+      "subtopics": [
+        {
+          "id": "sulphur.element",
+          "name": "Sulphur and its allotropes",
+          "syllabus": {
+            "waec": "C 1.0(h)(i)",
+            "jamb": "15(c)3"
+          },
+          "covers": "Rhombic, monoclinic and plastic sulphur, the group VI family, the properties of sulphur, and its uses, including vulcanisation. Sorting rule: the element goes here; its compounds go to sulphur.compounds or sulphur.sulphuric-acid.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "sulphur.compounds",
+          "name": "Sulphur (IV) oxide, trioxosulphate (IV) and hydrogen sulphide",
+          "syllabus": {
+            "waec": "C 1.0(h)(ii)-(iii)",
+            "jamb": "15(c)3-4"
+          },
+          "covers": "Preparation, properties and uses of sulphur (IV) oxide, including its bleaching and reducing action and reaction with alkalis, trioxosulphate (IV) acid and its salts, and hydrogen sulphide as a weak acid, reducing agent and precipitating agent. Sorting rule: these compounds go here; sulphur (VI) oxide and tetraoxosulphate (VI) acid go to sulphur.sulphuric-acid; sulphur (IV) oxide as a pollutant goes to pollution.air.",
+          "taught_in": []
+        },
+        {
+          "id": "sulphur.sulphuric-acid",
+          "name": "Tetraoxosulphate (VI) acid and the Contact process",
+          "syllabus": {
+            "waec": "C 1.0(h)(iv)",
+            "jamb": "15(c)3"
+          },
+          "covers": "The Contact process, sulphur (VI) oxide and its reaction with water, and tetraoxosulphate (VI) acid as a dilute acid, an oxidising agent and a dehydrating agent, with its uses. Tested in UTME 2025 Q34. Sorting rule: the process and the acid go here; the choice of Contact process conditions by Le Chatelier's principle goes to equilibrium.le-chatelier; the test for SO4 2- goes to practical.qualitative.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "carbon",
+      "name": "Carbon, silicon and their compounds",
+      "part": "Inorganic chemistry",
+      "syllabus": {
+        "waec": "C 1.0(a), A 7.0(e), B 2.0(d)",
+        "jamb": "15(e)"
+      },
+      "subtopics": [
+        {
+          "id": "carbon.allotropes",
+          "name": "Allotropes of carbon",
+          "syllabus": {
+            "waec": "C 1.0(a)(i), A 7.0(e)",
+            "jamb": "15(e)1"
+          },
+          "covers": "Diamond, graphite and amorphous carbon (charcoal, lampblack, soot, coke), their structures, properties and uses related to structure, such as graphite conducting through delocalised electrons, their combustion, and adsorption by charcoal, as in decolourising sugar, a cigarette filter or a water filter bed. Adsorption is placed here because WASSCE 2025 Q26 tested it. Tested also in UTME 2025 Q28 and WASSCE 2025 Q44. Sorting rule: the forms of carbon go here, and so does why charcoal is used in any filter, including the filter bed of a town water supply; the order and purpose of the town treatment stages go to water.treatment; coal and coke as fuels go to carbon.coal.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "carbon.oxides",
+          "name": "Carbon (IV) oxide and carbon (II) oxide",
+          "syllabus": {
+            "waec": "C 1.0(a)(iv)I-II, A 7.0(b)(iii)",
+            "jamb": "15(e)2-3"
+          },
+          "covers": "Laboratory preparation, properties and uses of carbon (IV) oxide (fire extinguishers, drinks, dry ice) and of carbon (II) oxide, its sources and its effect on blood, and the two oxides compared. Tested in WASSCE 2025 Q4. Sorting rule: the oxides go here; carbon (II) oxide as a reducing agent in the blast furnace goes to common-metals.iron; carbon (IV) oxide and the greenhouse effect go to pollution.air; the lime-water test goes to practical.qualitative.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "carbon.carbonates",
+          "name": "Trioxocarbonates (IV) and hydrogentrioxocarbonates (IV)",
+          "syllabus": {
+            "waec": "C 1.0(a)(iv)III",
+            "jamb": "15(e)2"
+          },
+          "covers": "Trioxocarbonate (IV) acid, the occurrence and preparation of trioxocarbonates, the solubility of trioxocarbonates and hydrogentrioxocarbonates, their reaction with acids, the action of heat on them, including which ones do not decompose, and their uses. Tested in WASSCE 2025 Q14. Sorting rule: the action of heat on any trioxocarbonate, and the uses of trioxocarbonates as a class, go here; the test for CO3 2- goes to practical.qualitative; sodium trioxocarbonate (IV) by the Solvay process goes to common-metals.sodium.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "carbon.coal",
+          "name": "Coal, coke and fuel gases",
+          "syllabus": {
+            "waec": "C 1.0(a)(ii)-(iii)",
+            "jamb": "15(e)4-5"
+          },
+          "covers": "Types of coal (peat, lignite, bituminous, anthracite), destructive distillation of coal and wood and the uses of the products, coke and its uses, and water gas, producer gas and synthesis gas. Sorting rule: coal and gases made from coke go here; petroleum goes to hydrocarbons.petroleum.",
+          "taught_in": []
+        },
+        {
+          "id": "carbon.silicon",
+          "name": "Silicon, silicon (IV) oxide and glass",
+          "syllabus": {
+            "waec": "B 2.0(d)",
+            "jamb": null
+          },
+          "covers": "Silicon and its occurrence as silicon (IV) oxide (sand, quartz) and silicates, the giant covalent structure of silicon (IV) oxide compared with carbon (IV) oxide, uses of silicon and its compounds, and glass and ceramics made from silica, including what molten silicon (IV) oxide forms on cooling. WAEC names silicon only in Section B; it is placed here because UTME 2022 Q39 tested glass from silicon (IV) oxide. Sorting rule: silicon and its compounds, glass and ceramics go here; whether silicon (IV) oxide is acidic goes to hydrogen-oxygen.oxides; silicon's place as a metalloid goes to periodic.table.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "metals",
+      "name": "Metals: properties, extraction and alloys",
+      "part": "Inorganic chemistry",
+      "syllabus": {
+        "waec": "C 2.0(a)-(b), A 4.0(f)",
+        "jamb": "16"
+      },
+      "subtopics": [
+        {
+          "id": "metals.general",
+          "name": "General properties of metals and the reactivity series",
+          "syllabus": {
+            "waec": "A 4.0(d), A 5.0(g)(iii)",
+            "jamb": "16"
+          },
+          "covers": "Physical and chemical properties of metals as a class, the reactivity series, reactions of metals with oxygen, water and dilute acids, displacement of one metal by another, and occurrence of metals in nature. Tested in WASSCE 2025 Q41. Sorting rule: comparing metals by reactivity goes here; explaining properties by metallic bonding goes to bonding.metallic; electrode potentials go to electrochemistry.cells; one named metal goes to its common-metals subtopic.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "metals.extraction",
+          "name": "Principles of metal extraction",
+          "syllabus": {
+            "waec": "C 2.0(a)",
+            "jamb": "16"
+          },
+          "covers": "Ores, concentration of ores, roasting, reduction by carbon or carbon (II) oxide, electrolytic reduction, extraction as a reduction process, and how a metal's place in the reactivity series decides its method of extraction. Sorting rule: which method suits which kind of metal goes here, and so does a principle true of extraction in general, such as that extraction is reduction, even when a named metal illustrates it; the steps, reagents or conditions of the extraction of a named metal (aluminium, iron, copper, tin, sodium, calcium) go to its common-metals subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "metals.alloys",
+          "name": "Alloys",
+          "syllabus": {
+            "waec": "C 2.0(b)",
+            "jamb": "16"
+          },
+          "covers": "Common alloys (steel, stainless steel, brass, bronze, duralumin, soft solder, type metal), their constituents and uses, and why alloys are used instead of pure metals. Sorting rule: an alloy's make-up or use goes here; steel made from pig iron goes to common-metals.iron.",
+          "taught_in": []
+        },
+        {
+          "id": "metals.transition",
+          "name": "Transition metals",
+          "syllabus": {
+            "waec": "A 4.0(f)",
+            "jamb": "16"
+          },
+          "covers": "The first transition series (Sc to Zn): their reactivity with air, water and acids, variable oxidation states, coloured ions, complex ion formation, ligands and the central ion, and the IUPAC names of simple complexes, catalytic activity, paramagnetism and hardness, compared with s-block metals. WAEC files this under periodic chemistry, JAMB under metals; it is placed here. Sorting rule: properties common to transition metals go here; the configuration of a transition element goes to atomic-structure.configuration; iron or copper alone go to their common-metals subtopics.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "common-metals",
+      "name": "Common metals and their compounds",
+      "part": "Inorganic chemistry",
+      "syllabus": {
+        "waec": "C 2.0(a), C 2.0(c)-(f)",
+        "jamb": "16"
+      },
+      "subtopics": [
+        {
+          "id": "common-metals.sodium",
+          "name": "Sodium and its compounds",
+          "syllabus": {
+            "waec": "C 2.0(c), A 9.0(f)(ii)",
+            "jamb": "16"
+          },
+          "covers": "Extraction and properties of sodium, sodium hydroxide from the electrolysis of brine and its uses, sodium trioxocarbonate (IV) and hydrogentrioxocarbonate (IV) by the Solvay process, sodium chloride from sea water and from mined rock salt made into granulated salt, and its uses, and other sodium compounds. Tested in WASSCE 2025 Q11. Sorting rule: sodium and its compounds go here, including the uses of sodium hydroxide even when the use lies in another metal's process, such as purifying bauxite (UTME 2017 Q27); electrolysis of brine asked for the electrode products goes to electrochemistry.electrolysis.",
+          "taught_in": []
+        },
+        {
+          "id": "common-metals.calcium",
+          "name": "Calcium and its compounds",
+          "syllabus": {
+            "waec": "C 2.0(d)",
+            "jamb": "16"
+          },
+          "covers": "Extraction of calcium, properties of calcium and its reaction with water, calcium oxide from limestone or sea shells, calcium hydroxide, calcium trioxocarbonate (IV), calcium chloride and calcium tetraoxosulphate (VI), cement and the setting of mortar, and their uses. Extraction of calcium rests on the scheme of work (SS3 Term 1 Week 8). Tested in UTME 2025 Q9. Sorting rule: calcium and its compounds go here; the test for Ca2+ goes to practical.qualitative; calcium salts causing hard water go to water.hardness.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "common-metals.aluminium",
+          "name": "Aluminium and its compounds",
+          "syllabus": {
+            "waec": "C 2.0(a)(i), C 2.0(e)",
+            "jamb": "16"
+          },
+          "covers": "Purification of bauxite, electrolytic extraction of aluminium, its properties (lightness, protective oxide layer, amphoteric oxide) and uses, and its reactions with air, water and acids. Tested in WASSCE 2025 Q3 and UTME 2025 Q11. Sorting rule: aluminium and its compounds go here; a question on the uses of sodium hydroxide goes to common-metals.sodium even when purifying bauxite is the answer; duralumin goes to metals.alloys.",
+          "taught_in": []
+        },
+        {
+          "id": "common-metals.iron",
+          "name": "Iron and steel",
+          "syllabus": {
+            "waec": "C 2.0(a)(ii), C 2.0(e)",
+            "jamb": "16"
+          },
+          "covers": "Extraction of iron in the blast furnace, including the role of coke, carbon (II) oxide and limestone, cast iron, wrought iron and steel, the properties and uses of iron including its magnetic uses, and its reactions with air, water and acids. Tested in UTME 2025 Q14 and Q38. Sorting rule: iron and steel go here, including the steps, reagents and conditions of the blast furnace; a principle true of all extraction, such as that extraction is reduction, goes to metals.extraction even when iron illustrates it; rusting and its prevention go to electrochemistry.corrosion; the test for Fe2+ and Fe3+ goes to practical.qualitative.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "common-metals.copper-tin",
+          "name": "Copper and tin",
+          "syllabus": {
+            "waec": "C 2.0(a)(iii), C 2.0(f)",
+            "jamb": "16"
+          },
+          "covers": "Extraction of copper from sulphide and oxide ores, properties and uses of copper and its compounds (copper (II) tetraoxosulphate (VI), oxide and chloride), and extraction, properties and uses of tin. Sorting rule: copper and tin go here; purification of copper by electrolysis goes to electrochemistry.applications; brass and bronze go to metals.alloys.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "organic-basics",
+      "name": "Introduction to organic chemistry",
+      "part": "Organic chemistry",
+      "syllabus": {
+        "waec": "A 13.0(a)-(b), A 13.0(e)",
+        "jamb": "17 (introduction)"
+      },
+      "subtopics": [
+        {
+          "id": "organic-basics.carbon-classes",
+          "name": "Carbon compounds, functional groups and homologous series",
+          "syllabus": {
+            "waec": "A 13.0(a)-(b), A 13.0(e)(i)",
+            "jamb": "17 (introduction)"
+          },
+          "covers": "Tetravalency of carbon and catenation, straight chain, branched, alicyclic and aromatic compounds, functional groups and the classes they define, homologous series and their general formulae, and the gradation of physical properties along a series. Sorting rule: which class or series a compound belongs to goes here, including the family of a molecular formula such as CH2O2 (WASSCE 2016 Q34); ordering members of one series by melting or boiling point without asking why goes here (UTME 2015 Q21), but explaining the order by intermolecular forces goes to bonding.intermolecular; its name goes to organic-basics.naming; its isomers go to organic-basics.isomerism.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "organic-basics.naming",
+          "name": "IUPAC naming of organic compounds",
+          "syllabus": {
+            "waec": "A 13.0(b)",
+            "jamb": "17 (introduction)"
+          },
+          "covers": "Systematic names of alkanes, alkenes, alkynes, alkanols, phenols, alkanoic acids, alkanoates, amines and substituted compounds, and drawing a structure from a name. Tested in UTME 2025 Q5 and WASSCE 2025 Q33. Sorting rule: naming any organic compound, or matching name and structure, goes here whatever its family.",
+          "taught_in": []
+        },
+        {
+          "id": "organic-basics.isomerism",
+          "name": "Isomerism",
+          "syllabus": {
+            "waec": "A 13.0(e)(ii)",
+            "jamb": "17(a)1-2"
+          },
+          "covers": "Structural isomerism (chain, position, functional group) and geometric (cis-trans) isomerism, counting the isomers of a formula, and identifying which compounds are isomers. Tested in UTME 2025 Q8 and Q27. Sorting rule: any question on isomers goes here, whatever the family.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "hydrocarbons",
+      "name": "Hydrocarbons",
+      "part": "Organic chemistry",
+      "syllabus": {
+        "waec": "A 13.0(c), A 13.0(f)-(i)",
+        "jamb": "17(a)-(b)"
+      },
+      "subtopics": [
+        {
+          "id": "hydrocarbons.alkanes",
+          "name": "Alkanes",
+          "syllabus": {
+            "waec": "A 13.0(f)",
+            "jamb": "17(a)1"
+          },
+          "covers": "Sources and preparation of alkanes, their properties, combustion, substitution with halogens in light, and uses of alkanes and halogenoalkanes. Sorting rule: alkane reactions go here; cracking of large alkanes goes to hydrocarbons.petroleum; the effect of light on rate goes to kinetics.factors.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "hydrocarbons.alkenes",
+          "name": "Alkenes",
+          "syllabus": {
+            "waec": "A 13.0(g)",
+            "jamb": "17(a)2"
+          },
+          "covers": "Laboratory preparation of ethene, addition reactions with hydrogen, halogens, hydrogen halides and water, oxidation by potassium tetraoxomanganate (VII), the bromine water and tetraoxomanganate (VII) tests for unsaturation, and uses of alkenes (making plastics, ethanol and ethane-1,2-diol, and ripening fruit). Tested in UTME 2025 Q6 and Q37 and WASSCE 2025 Q21. Sorting rule: what an alkene gives in a reaction, the test that picks out an unsaturated compound, or what alkenes are used for, goes here; how alkenes are made industrially, by cracking, goes to hydrocarbons.petroleum; making ethanol, asked as a preparation of ethanol, goes to functional-groups.alkanols; the polymer formed goes to biomolecules.polymers.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "hydrocarbons.alkynes",
+          "name": "Alkynes",
+          "syllabus": {
+            "waec": "A 13.0(h)",
+            "jamb": "17(a)3"
+          },
+          "covers": "Ethyne from calcium carbide and water, industrial production, its reactions (halogenation, hydrogenation, hydration, combustion) and uses, and the test that tells terminal from non-terminal alkynes. Sorting rule: alkynes go here; a test that only shows a compound is unsaturated goes to hydrocarbons.alkenes.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "hydrocarbons.benzene",
+          "name": "Benzene and aromatic hydrocarbons",
+          "syllabus": {
+            "waec": "A 13.0(i)",
+            "jamb": "17(b)"
+          },
+          "covers": "Structure of benzene and resonance, its stability, substitution against addition reactions, benzene compared with alkenes, and its uses. Sorting rule: benzene's structure and reactions go here; phenol goes to functional-groups.alkanols; naming an aromatic compound goes to organic-basics.naming.",
+          "taught_in": []
+        },
+        {
+          "id": "hydrocarbons.petroleum",
+          "name": "Petroleum and petrochemicals",
+          "syllabus": {
+            "waec": "A 13.0(c)",
+            "jamb": "17(a)1"
+          },
+          "covers": "Crude oil and natural gas, their composition and origin, exploration and drilling, fractional distillation and the main fractions and uses, Nigerian refineries, cracking and reforming, octane number and petrol quality, and petrochemicals as starting materials. Sorting rule: crude oil and its processing go here, including cracking as the industrial source of alkenes; coal goes to carbon.coal; pollution from oil spillage goes to pollution.water-soil.",
+          "taught_in": [
+            "SS1 T3",
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T3",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "functional-groups",
+      "name": "Alkanols, alkanoic acids and other functional groups",
+      "part": "Organic chemistry",
+      "syllabus": {
+        "waec": "A 13.0(j)-(l)",
+        "jamb": "17(c)-(g)"
+      },
+      "subtopics": [
+        {
+          "id": "functional-groups.alkanols",
+          "name": "Alkanols",
+          "syllabus": {
+            "waec": "A 13.0(j)",
+            "jamb": "17(c)"
+          },
+          "covers": "Primary, secondary and tertiary alkanols, diols and triols such as glycerol, phenol, preparation of ethanol by hydration of ethene and by fermentation (including local gin), harmful impurities such as methanol in locally made ethanol and how it is purified, physical properties, reactions with sodium, phosphorus (V) chloride and concentrated tetraoxosulphate (VI) acid, oxidation, the Lucas and iodoform tests, and uses. Tested in WASSCE 2025 Q17 and Q37; the reaction with phosphorus (V) chloride is named because a UTME question in the version 1.0 placement test tested it. Sorting rule: alkanols and phenol go here; why an alkanol boils high or dissolves in water, explained by hydrogen bonding, goes to bonding.intermolecular; esterification goes to functional-groups.esters; fermentation as a biotechnology, and ethanol as a biofuel, go to industry.biotechnology; naming goes to organic-basics.naming.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "functional-groups.carbonyls",
+          "name": "Alkanals and alkanones",
+          "syllabus": {
+            "waec": null,
+            "jamb": "17(d)"
+          },
+          "covers": "The carbonyl group, alkanals and alkanones compared, and chemical tests that tell them apart (Fehling's, Tollens'), including that alkanals oxidise further. Tested in UTME 2025 Q29. Sorting rule: alkanals and alkanones go here; Fehling's test on a sugar goes to biomolecules.carbohydrates.",
+          "taught_in": []
+        },
+        {
+          "id": "functional-groups.alkanoic-acids",
+          "name": "Alkanoic acids",
+          "syllabus": {
+            "waec": "A 13.0(k)",
+            "jamb": "17(e)"
+          },
+          "covers": "Sources, structure and physical properties of alkanoic acids, why they are acidic, reactions with metals, bases and hydrogentrioxocarbonates, dioic acids such as ethanedioic acid, benzoic acid, and uses. Tested in UTME 2025 Q30. Sorting rule: the acid and its reactions go here; deciding from a molecular formula that a compound is an alkanoic acid goes to organic-basics.carbon-classes (WASSCE 2016 Q34); its reaction with an alkanol goes to functional-groups.esters.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "functional-groups.esters",
+          "name": "Alkanoates (esters)",
+          "syllabus": {
+            "waec": "A 13.0(l)",
+            "jamb": "17(f)"
+          },
+          "covers": "Esterification from an alkanoic acid and an alkanol with concentrated tetraoxosulphate (VI) acid and heat, naming and properties of esters, their hydrolysis, their reaction with ammonia to give amides, and uses as flavourings, perfumes, solvents and plasticisers. Tested in WASSCE 2025 Q30 and UTME 2025 Q40; amides are in neither syllabus and are placed here because UTME Q40 tested them. Sorting rule: making or reacting a simple ester goes here; fats and oils as esters, and soap-making, go to biomolecules.fats-soaps.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "functional-groups.amines",
+          "name": "Amines",
+          "syllabus": {
+            "waec": "A 13.0(b)",
+            "jamb": "17(g)"
+          },
+          "covers": "Primary, secondary and tertiary amines (alkanamines), their structure and basic character. Sorting rule: amines go here; amino acids go to biomolecules.proteins.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "biomolecules",
+      "name": "Fats, carbohydrates, proteins and polymers",
+      "part": "Organic chemistry",
+      "syllabus": {
+        "waec": "A 15.0",
+        "jamb": "17(f), 17(h)-(j)"
+      },
+      "subtopics": [
+        {
+          "id": "biomolecules.fats-soaps",
+          "name": "Fats, oils, soaps and detergents",
+          "syllabus": {
+            "waec": "A 15.0(c)",
+            "jamb": "17(f)"
+          },
+          "covers": "Fats and oils as esters of propane-1,2,3-triol, their sources and properties, hydrogenation to margarine, the test for fats, saponification and soap-making, and soaps against soapless detergents, including their action in hard water. Sorting rule: fats, oils and soaps go here, including a named enzyme acting on a fat; simple esters go to functional-groups.esters; what makes water hard goes to water.hardness.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "biomolecules.carbohydrates",
+          "name": "Carbohydrates",
+          "syllabus": {
+            "waec": "A 15.0(d)",
+            "jamb": "17(h)"
+          },
+          "covers": "Monosaccharides, disaccharides and polysaccharides, their components, hydrolysis of sucrose, maltose, starch and cellulose, including by named enzymes such as amylase, starch as a polymer of glucose, tests for reducing sugars and starch, reaction with concentrated tetraoxosulphate (VI) acid, and uses. Tested in UTME 2025 Q7. Sorting rule: carbohydrates go here, including a named enzyme acting on starch or a sugar; fermentation to alcohol goes to functional-groups.alkanols or industry.biotechnology.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "biomolecules.proteins",
+          "name": "Amino acids and proteins",
+          "syllabus": {
+            "waec": "A 15.0(a)-(b)",
+            "jamb": "17(i)"
+          },
+          "covers": "Amino acids and their dual nature, proteins as polymers joined by peptide links, hydrolysis of proteins, tests for protein (Biuret, Millon's, ninhydrin, xanthoproteic), enzymes as proteins and how they act as catalysts, and uses of protein. Sorting rule: amino acids and proteins go here, and so do enzymes in general; a named enzyme acting on a named substrate goes to the substrate's subtopic (starch or sugars to biomolecules.carbohydrates, fats to biomolecules.fats-soaps, proteins here); amines go to functional-groups.amines.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "biomolecules.polymers",
+          "name": "Polymers and plastics",
+          "syllabus": {
+            "waec": "A 15.0(e)",
+            "jamb": "17(a)2, 17(j)"
+          },
+          "covers": "Monomers, polymers and polymerisation, addition and condensation polymers and their monomers (polyethene, PVC, nylon, terylene), natural and synthetic rubber and vulcanisation, thermoplastics and thermosets, plastics and resins, how polymer properties are modified, the behaviour of plastics tested with heat, acids and alkalis, and uses. Tested in WASSCE 2025 Q48. Sorting rule: what polymer a monomer gives, or a polymer's type, properties or tests, goes here; starch and proteins as natural polymers go to their own subtopics.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "Chemistry and industry",
+      "part": "Chemistry in society",
+      "syllabus": {
+        "waec": "A 14.0(a), A 14.0(c)",
+        "jamb": "18"
+      },
+      "subtopics": [
+        {
+          "id": "industry.chemical-industry",
+          "name": "Chemical industries",
+          "syllabus": {
+            "waec": "A 14.0(a)",
+            "jamb": "18"
+          },
+          "covers": "Types of chemical industry and their raw materials, Nigeria's natural resources and chemical industries, fine and heavy chemicals, factors deciding where industries are sited, and their effects on the community. Sorting rule: industry as a whole goes here; a named process such as Haber, Contact or Solvay goes to its own subtopic; glass and ceramics go to carbon.silicon; petroleum refining goes to hydrocarbons.petroleum.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "industry.biotechnology",
+          "name": "Biotechnology",
+          "syllabus": {
+            "waec": "A 14.0(c)",
+            "jamb": "18"
+          },
+          "covers": "Using living things in industry: fermentation for bread, wine, beer and local gin, biofuels such as ethanol from fermented crops, garri production, food processing, and antibiotics. Tested in WASSCE 2025 Q28; biofuels are named because a WASSCE question in the version 1.0 placement test tested them. Sorting rule: which processes use biotechnology goes here, and so does ethanol as a biofuel made by fermentation; a list of ethanol's uses, or its chemistry, goes to functional-groups.alkanols; the chemistry of a named enzyme on its substrate goes to that substrate's biomolecules subtopic.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "pollution",
+      "name": "Environmental pollution",
+      "part": "Chemistry in society",
+      "syllabus": {
+        "waec": "A 14.0(b)",
+        "jamb": "8"
+      },
+      "subtopics": [
+        {
+          "id": "pollution.air",
+          "name": "Air pollution, the greenhouse effect and the ozone layer",
+          "syllabus": {
+            "waec": "A 14.0(b)",
+            "jamb": "8"
+          },
+          "covers": "Air pollutants (carbon (II) oxide, sulphur (IV) oxide, hydrogen sulphide, oxides of nitrogen, fluorocarbons, dust), their sources, effects on health and the environment, acid rain, the greenhouse effect and global warming, ozone depletion, and control. Tested in UTME 2025 Q4 and Q17. Sorting rule: a gas as a pollutant goes here; its preparation and chemistry go to its element's subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "pollution.water-soil",
+          "name": "Water and soil pollution",
+          "syllabus": {
+            "waec": "A 14.0(b)",
+            "jamb": "8"
+          },
+          "covers": "Sewage, industrial waste, oil spillage, fertiliser and pesticide run-off, biodegradable and non-biodegradable pollutants, their effects, and control. Sorting rule: pollution of water or soil goes here; treating water for town supply goes to water.treatment.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "practical",
+      "name": "Practical chemistry",
+      "part": "Practical chemistry",
+      "syllabus": {
+        "waec": "A 16.0, Paper 3",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "practical.lab",
+          "name": "Laboratory apparatus and safety",
+          "syllabus": {
+            "waec": "A 16.0(a)",
+            "jamb": null
+          },
+          "covers": "Common apparatus and what each is for, measuring mass and volume, heating, filtering, hazard symbols and laboratory safety. Taught in SS1 Term 1 Week 2. Sorting rule: naming or using apparatus goes here; significant figures and accuracy go to intro.measurement; titration procedure, and which apparatus belongs to volumetric analysis, go to acids-bases.titration; recording and interpreting results go to intro.scientific-method.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "practical.gas-preparation",
+          "name": "Preparing, collecting and drying gases",
+          "syllabus": {
+            "waec": "A 7.0(b)(iii)",
+            "jamb": "15"
+          },
+          "covers": "General set-ups for preparing gases, collection over water, by upward or downward delivery and by syringe according to density and solubility, and choosing a drying agent that does not react with the gas. Tested in UTME 2025 Q19. Sorting rule: how a named gas is collected or dried goes here, and so does which drying agent suits a kind of gas (acidic, basic or neutral) when no gas is named; the reagents that make a gas and its properties go to that gas's subtopic; what makes a substance a drying agent goes to water.hygroscopy.",
+          "taught_in": []
+        },
+        {
+          "id": "practical.qualitative",
+          "name": "Tests for ions and gases",
+          "syllabus": {
+            "waec": "A 16.0(d)",
+            "jamb": "15, 16"
+          },
+          "covers": "Tests for cations (NH4+, Ca2+, Pb2+, Cu2+, Fe2+, Fe3+, Al3+, Zn2+) with sodium hydroxide and ammonia solution, confirmatory tests, flame tests, tests for anions (Cl-, SO3 2-, SO4 2-, CO3 2-, NO3-, S2-), and tests for gases (H2, O2, CO2, NH3, HCl, SO2, Cl2). Tested in WASSCE 2025 Q47. Sorting rule: identifying an ion or gas from a test, or naming the test, goes here, including when the test is a colour change of acidified tetraoxomanganate (VII) or heptaoxodichromate (VI), as for sulphur (IV) oxide; the same colour change asked as evidence that a substance is an oxidising or reducing agent goes to redox.agents; tests that tell organic families apart go to those families.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS3 T2"
+      ]
+    }
+  ],
+  "legacy_note": "Each of the 26 legacy database topics is folded into a subtopic where its name is specific, or into a parent topic where it is generic or spans several subtopics. Most legacy names are broad bands, so most go to a parent. A question moved to a parent is correct but unplaced within it, and is flagged for reclassification rather than guessed into a subtopic. Where a name spans more than one parent it goes to the parent it fits best and is flagged the same way: 'Atomic structure, electronic configuration & periodic table' to atomic-structure, 'Non-metals and their compounds' to hydrogen-oxygen (it lists H and O first, and its questions will be spread across the seven inorganic non-metal parents on reclassification), 'Metals, reactivity series, extraction and corrosion' to metals, 'Nitrogen-containing and other selected organic compounds; polymers and macromolecules' to biomolecules, 'Petrochemicals and industrial chemistry' to industry, 'Quantitative analysis' (acid-base and redox titrations) to practical, and 'Water, hardness, purification and environmental chemistry' to water. In version 1.1 'Observation, recording, tables, graphs and inference' follows practical.observation into intro.scientific-method.",
+  "legacy_to": {
+    "Acids, bases, salts, pH and titrations": "acids-bases",
+    "Atomic structure, electronic configuration & periodic table": "atomic-structure",
+    "Chemical bonding and intermolecular forces": "bonding",
+    "Chemical equilibrium and Le Chatelier’s principle": "equilibrium",
+    "Electrochemistry: electrolysis and electrochemical cells": "electrochemistry",
+    "Energetics: heats of reaction, solution, neutralization, combustion": "energetics.heats",
+    "Hydrocarbons: alkanes, alkenes, alkynes, aromatic compounds": "hydrocarbons",
+    "Integrated practical activities across topics": "practical",
+    "Introduction to organic chemistry: bonding, functional groups, homologous series": "organic-basics.carbon-classes",
+    "Laboratory safety, apparatus, and basic operations": "practical.lab",
+    "Metals, reactivity series, extraction and corrosion": "metals",
+    "Mole concept, formulae, equations & stoichiometric calculations": "stoichiometry",
+    "Nature of matter, elements/compounds/mixtures & separation techniques": "matter",
+    "Nitrogen-containing and other selected organic compounds; polymers and macromolecules": "biomolecules",
+    "Non-metals and their compounds (e.g. H, O, halogens, N, S, C)": "hydrogen-oxygen",
+    "Observation, recording, tables, graphs and inference": "intro.scientific-method",
+    "Oxidation–reduction (redox) and oxidation numbers": "redox",
+    "Oxygen-containing organic compounds (alkanols, phenols, carbonyls, carboxylic acids, esters)": "functional-groups",
+    "Particulate nature of matter & gas laws": "states",
+    "Periodic chemistry of groups and periods": "periodic",
+    "Petrochemicals and industrial chemistry": "industry",
+    "Qualitative inorganic analysis (anions, cations, gases)": "practical.qualitative",
+    "Quantitative analysis (acid–base titrations, redox titrations)": "practical",
+    "Rates of reaction and factors affecting rate": "kinetics",
+    "Solutions, concentration and solubility": "solutions",
+    "Water, hardness, purification and environmental chemistry": "water"
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "changes": [
+    {
+      "kind": "added",
+      "where": "appreciation.method",
+      "evidence": "Coverage wassce aims(e), missing: 'Facility in responding imaginatively to literature through an effective and organised use of language', proposed home 'appreciation: new subtopic Answering essay and context questions'. Also coverage sow SS1 T1 W2, gap: 'the definition and method of literary appreciation (what to appreciate and how) is not in any covers line'.",
+      "change": "New subtopic 'Method of appreciation and answering questions' under appreciation, citing WAEC aim (e) and Papers 2 and 3, JAMB null, taught SS1 T1. It holds what literary appreciation is, how to approach a passage, and essay and context-answer technique. Sorting rule sends questions on a given passage to the other three appreciation subtopics. Added rather than widened because answer technique is a different skill from reading a passage. Appreciation topic's WAEC reference now also cites Aims (d)-(e)."
+    },
+    {
+      "kind": "widened",
+      "where": "literature.nature",
+      "evidence": "Coverage utme gen(b), gap: 'no covers line names the functions of language in literature'.",
+      "change": "Covers line now names the functions of language in literature (to inform, to express feeling, to persuade, to give pleasure); JAMB reference cites general objective (b)."
+    },
+    {
+      "kind": "widened",
+      "where": "literature.nature",
+      "evidence": "Coverage utme '4 relationship' and '4 obj(c)', both missing: relationship between literary terms and principles; differentiate between literary terms and principles. Proposed a new subtopic or adding it to literature.nature.",
+      "change": "Added to literature.nature's covers line: the relationship between terms and principles and how to tell a term from a principle. Widened rather than added because it is a close relative of the principles already held there. The citation moved from literature.genres's JAMB reference, whose covers line never held it, to literature.nature's."
+    },
+    {
+      "kind": "widened",
+      "where": "literature.genres",
+      "evidence": "Coverage wassce aims(c), gap: \"'modes of appeal' (how each genre reaches its audience) is not named in any covers line\".",
+      "change": "Covers line now names each genre's mode of appeal: drama through performance, prose through narration to a reader, poetry through sound, rhythm and compressed language."
+    },
+    {
+      "kind": "widened",
+      "where": "literature.history",
+      "evidence": "Coverage unmapped_subtopics: literature.history. Placement test UTME, sonnet, missing at literature.history: Q7 tests trilogy, and no subtopic names collective-work terms. Placement test UTME, opus, misplaced at literature.history: collection words (trilogy Q7, anthology) sit in a subtopic named for periods and movements; rename it or placers will not look there.",
+      "change": "Kept, because real papers test it (UTME 2025 Q32, WAEC 2025 Q13, and trilogy in the UTME placement test); the covers line now says no source item maps here and that is why it stays. Renamed 'Literary periods, movements, criticism and collections'. Covers widened with trilogy, collection and series, and anthology defined as works by several writers. Sorting rule extended to send the movement of a prescribed play or novel to set-drama.setting or set-prose.setting."
+    },
+    {
+      "kind": "widened",
+      "where": "figures.arrangement",
+      "evidence": "Placement test UTME, sonnet, missing at figures.arrangement: Q36 tests juxtaposition, named nowhere, borders arrangement and contrast. Placement test UTME, opus, missing at figures.arrangement: add juxtaposition to figures.arrangement or figures.contrast next to antithesis, and say which.",
+      "change": "Juxtaposition added to figures.arrangement. Sorting rule added to both figures.arrangement and figures.contrast: juxtaposition goes to arrangement even when the two things contrast; antithesis, opposed ideas in balanced phrases, stays in contrast."
+    },
+    {
+      "kind": "widened",
+      "where": "figures.comparison",
+      "evidence": "Placement test UTME, opus, missing at appreciation (second part): working out what a reference means with no passage (Q12, 'the wafer' as holy communion) has no home.",
+      "change": "Covers line now includes what a common allusion refers to, even with no passage, with Q12 as the example. Widened because allusion is already held here."
+    },
+    {
+      "kind": "widened",
+      "where": "terms.elements",
+      "evidence": "Placement test WAEC, sonnet, too-narrow at poetry.imagery: diction (Q30, vocabulary and syntax) is asked as a general term but is homed only under poetry. Placement test WAEC, opus, misplaced at poetry.imagery: name diction in terms.elements beside style or say general diction questions go to poetry.imagery.",
+      "change": "Diction as a general term, with its two parts vocabulary and syntax, added to terms.elements. Sorting rule added to terms.elements and poetry.imagery: diction asked in general goes to terms.elements; poetic diction and the special syntax of poetry stay in poetry.imagery."
+    },
+    {
+      "kind": "widened",
+      "where": "prose.narrative",
+      "evidence": "Coverage utme '2 techniques(language)', gap: 'language is covered only for prescribed texts (set-prose.style); prose.narrative has no language, diction or register as a general narrative device'.",
+      "change": "Covers line now includes language as a narrative technique: the narrator's register, dialogue against narration, and dialect, pidgin or proverbs used to tell a story. Sorting rule: diction in general goes to terms.elements; the language of a named prescribed text to set-prose.style."
+    },
+    {
+      "kind": "widened",
+      "where": "drama.types",
+      "evidence": "Coverage sow SS1 T1 W4, gap: 'playlet is not in the drama.types covers line'. Placement test WAEC, sonnet, too-narrow at drama.types: pantomime (Q60) and playlet (Q14) absent; pantomime confuses against mime in drama.techniques. Placement test WAEC, opus, too-narrow at drama.types: pantomime (Q60) and the one-act play or playlet (Q14) not listed; mime makes pantomime look split.",
+      "change": "Playlet, one-act play and pantomime added to drama.types. Sorting rule added to drama.types and drama.techniques: pantomime as a kind of play goes to drama.types, mime as a technique inside a play to drama.techniques."
+    },
+    {
+      "kind": "widened",
+      "where": "drama.theatre",
+      "evidence": "Coverage sow SS1 T1 W5, gap: 'prompt (prompter, prompt book) is not in any covers line'.",
+      "change": "Prompter and prompt book added to drama.theatre, with backdrop, which the same week names."
+    },
+    {
+      "kind": "widened",
+      "where": "drama.techniques",
+      "evidence": "Placement test WAEC, opus, missing at drama.theatre: dramatis personae (Q71) is named nowhere and sits between drama.techniques (script) and drama.theatre (cast); name it in one covers line.",
+      "change": "Dramatis personae, the list of characters printed in the script, added to drama.techniques. Sorting rule added to drama.techniques and drama.theatre: the dramatis personae goes to techniques, the cast who play those characters to theatre."
+    },
+    {
+      "kind": "widened",
+      "where": "poetry.types",
+      "evidence": "Placement test WAEC, sonnet, missing at poetry.types: epitaph (Q18) has no home; also suggests epigraph and dedication. Placement test WAEC, opus, missing at poetry.types: add epitaph and hymn (Q34).",
+      "change": "Epitaph and hymn added to poetry.types, each tested in the WAEC sample. Epigraph and dedication were not added: the finding itself says no question tested them, and the brief is to widen only where a real question shows it."
+    },
+    {
+      "kind": "widened",
+      "where": "set-drama.setting",
+      "evidence": "Placement test UTME, sonnet, missing at set-drama.setting: Q63 asks which literary movement (Kitchen Sink Drama, Angry Young Man) a prescribed play belongs to; only set-poems.background covers movements. Placement test UTME, opus, missing at set-drama.setting: add the movement of a prescribed play or novel to set-drama.setting and set-prose.setting, or say it goes to style.",
+      "change": "set-drama.setting now covers the play's period or literary movement. Sorting rules: a movement asked in general goes to literature.history; the kind of play goes to set-drama.style. set-drama.style's rule points the movement back here."
+    },
+    {
+      "kind": "widened",
+      "where": "set-prose.setting",
+      "evidence": "Placement test UTME, opus, missing at set-drama.setting (the novel half): the literary movement of a prescribed novel has no place. Placement test UTME, opus, overlap at set-prose.setting (second half): customs and ceremonies (Q59, Q62) are named in set-drama.setting but not in set-prose.setting, so the same question sorts differently by genre.",
+      "change": "set-prose.setting now covers the customs, ceremonies, objects and names of the story's world and its period or literary movement, matching set-drama.setting."
+    },
+    {
+      "kind": "widened",
+      "where": "set-drama.style",
+      "evidence": "Placement test UTME, opus, overlap at set-drama.style: set-poems.form names symbols; set-drama.style and set-prose.style do not.",
+      "change": "Symbols and symbolism added to set-drama.style, and a type-word applied to an extract from the play."
+    },
+    {
+      "kind": "widened",
+      "where": "set-prose.style",
+      "evidence": "Placement test UTME, opus, overlap at set-drama.style: set-drama.style and set-prose.style do not name symbols, unlike set-poems.form.",
+      "change": "Symbols and symbolism added to set-prose.style, with a sorting rule sending what a character stands for to set-prose.characters."
+    },
+    {
+      "kind": "widened",
+      "where": "set-poems.subject",
+      "evidence": "Placement test UTME, opus, missing at set-poems: narrative and allegorical poems have characters (Q52, the animals; Q67, the lady), and no set-poems subtopic covers anyone other than the persona.",
+      "change": "set-poems.subject now covers the figures in a narrative or allegorical poem other than the persona: who they are and what they do. Widened rather than added because reading who does what in a poem is the same skill as reading its subject. Sorting rule: what such a figure stands for goes to set-poems.form."
+    },
+    {
+      "kind": "widened",
+      "where": "shakespeare.setting",
+      "evidence": "Disagreement WAEC 2021 Q49 'The occasion is' (sonnet shakespeare.setting, opus shakespeare.plot). Placement test WAEC, opus, missing at shakespeare.plot: the occasion of an extract (Q62) has no home under shakespeare; add it to shakespeare.plot or shakespeare.setting.",
+      "change": "The occasion of an extract added to shakespeare.setting, matching set-poems.background, which already names occasion. Sorting rule added to shakespeare.setting and shakespeare.plot: the occasion goes to setting."
+    },
+    {
+      "kind": "widened",
+      "where": "shakespeare.plot",
+      "evidence": "Placement test WAEC, opus, too-narrow at shakespeare: covers name only Antony and Cleopatra and A Midsummer Night's Dream, while the sample includes Othello and The Tempest; the covers line should say it applies to whichever Shakespeare play a paper was set on.",
+      "change": "shakespeare.plot's opening now says the parent applies to whichever Shakespeare play a paper was set on, naming Othello and The Tempest from older papers, and that this holds for every shakespeare subtopic."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "figures.comparison",
+      "evidence": "Disagreement UTME 2023 Q36, 'Even the corpses thrown up by the Atlantic' (sonnet terms.modes, opus figures.comparison). Placement test UTME, sonnet, overlap at figures.comparison / terms.modes: an image readable as either metaphor or symbol has no tie-breaker.",
+      "change": "Rule added to figures.comparison and terms.modes: when a quoted image can be read as either, the answer key decides; metaphor, metonymy or allusion to figures.comparison, symbol to terms.modes."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "figures.arrangement",
+      "evidence": "Placement test WAEC, sonnet, overlap at figures.arrangement / terms.plot: climax is in both covers lines with no rule (Q26 rhetorical, Q79 plot). Placement test WAEC, opus, overlap at figures.arrangement: same, Q26 and Q79.",
+      "change": "Rule added to figures.arrangement and terms.plot: climax as a rising series within one sentence or list of images goes to figures.arrangement; climax as the turning point or peak of a story's events goes to terms.plot."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "set-drama.characters",
+      "evidence": "Disagreement UTME 2021 Q17, the import of Madman in the play (sonnet set-drama.characters, opus set-drama.style). Placement test UTME, opus, overlap at set-drama.style: what a character stands for or does in a play (Madman as symbolic or satirical) could go to characters or style.",
+      "change": "set-drama.characters now covers what a character stands for or the role they serve, with the Madman as the example. Rule added to set-drama.characters and set-drama.style: a character's function or what they symbolise goes to characters; a symbol that is an object, place or event goes to style. The same rule is written into set-prose.characters and set-prose.style."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "set-poems.background",
+      "evidence": "Disagreement UTME 2022 Q6, 'Black Woman is a Negritude poem for the following reasons except' (sonnet set-poems.subject, opus set-poems.background).",
+      "change": "Rule added to set-poems.background and set-poems.subject: why a named poem belongs to a movement goes to background, even when the reasons given are its themes."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "set-poems.form",
+      "evidence": "Disagreement UTME 2021 Q40, 'The reiteration of the word woman ... the theme of the poem' (sonnet set-poems.form, opus appreciation.technique).",
+      "change": "Rule added to set-poems.form and appreciation.technique: the effect of a device in a prescribed poem goes to set-poems.form even when the stem quotes it as an extract; appreciation.technique is for unseen poems only."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "appreciation.meaning",
+      "evidence": "Disagreement UTME 2016 Q44, extract from Okara's The Voice (sonnet set-prose.characters, opus appreciation.meaning). Placement test UTME, opus, overlap at appreciation.meaning: rule 2 treats any question naming a text or author as prescribed, but JAMB appreciation passages name their source (Q46, Q58); change rule 2 to 'on the prescribed list for that paper's year' and supply the list with the question.",
+      "change": "how_to_use rule 2 now defines a prescribed text as one on the prescribed list for that paper's year, and says a passage that only names its source is not prescribed unless its text is on that list. appreciation.meaning's covers line carries the same rule. Supplying the list with each question is a pipeline step, not a tree change, and is left to the placement input."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "drama.types",
+      "evidence": "Disagreement UTME 2020 Q18, 'The extract can be said to be' (sonnet set-drama.style, opus drama.types). Placement test UTME, sonnet, overlap at set-drama.style / drama.types: nothing says which wins when a type-word is applied to one text's extract rather than asked in general.",
+      "change": "Rule added to drama.types, set-drama.style and shakespeare.style: a type-word such as farcical applied to an unseen extract goes to drama.types; applied to an extract from a text on that paper's prescribed list, to set-drama.style or shakespeare.style."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "poetry.types",
+      "evidence": "Placement test WAEC, opus, overlap at terms.modes: the kind of an unseen poem named by mode or movement (Q74: didactic, allegoric, metaphysical, romantic) spreads over terms.modes, poetry.types and literature.history; unseen poems need a rule parallel to set-poems.form's. Placement test UTME, opus, missing at appreciation (first part): classifying an unseen extract by kind (Q61, farcical or tragic) sits between rule 1 (drama.types) and appreciation.tone-mood.",
+      "change": "Rule added to poetry.types, terms.modes and literature.history: the kind of an unseen poem goes to poetry.types however the options name it. appreciation.tone-mood's rule and how_to_use rule 3 now send the kind of any unseen text to drama.types, prose.types or poetry.types, which settles the unseen farcical-extract case."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "set-prose.characters",
+      "evidence": "Placement test UTME, sonnet, overlap at set-prose.characters / set-prose.setting: Q31 and Q48 ask where a named character lives or comes from. Placement test UTME, opus, overlap at set-prose.setting (first half): a character's home village (Q48) fits both.",
+      "change": "Rule added to set-prose.characters and set-prose.setting: a character's home or origin goes to characters; a place asked about in its own right goes to setting."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "set-poems.subject",
+      "evidence": "Placement test UTME, opus, overlap at set-poems.subject: a poet's view of the subject (Q29, death as welcome) is both theme and attitude; the options are neither pure feelings nor pure kinds.",
+      "change": "set-poems.subject now names the poet's view or judgement of the subject. Rule added to set-poems.subject and set-poems.tone-mood: a view stated as a judgement goes to subject; a feeling or attitude of the voice goes to tone-mood."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "set-prose.themes",
+      "evidence": "Placement test UTME, opus, overlap at set-prose.themes: a character's main problem (Q43) is at once a theme, an event and a character fact; set-prose.themes has no sorting rule.",
+      "change": "Rule added to set-prose.themes and set-prose.plot: a character's main problem goes to themes when the options name conditions or ideas, to plot when they name events, and to characters when they name traits."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "literature.nature",
+      "evidence": "Placement test UTME, opus, overlap at literature.nature: what makes non-fiction literary (Q72) fits literature.nature and prose.types equally.",
+      "change": "Rule added to literature.nature and prose.types: what makes any writing count as literature goes to literature.nature even when the example is a kind of prose; what defines that kind goes to prose.types."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "shakespeare.plot",
+      "evidence": "Disagreement WAEC 2018 Q43, 'In \"Who began this?\" this refers to the' (sonnet shakespeare.style, opus shakespeare.plot).",
+      "change": "shakespeare.plot now covers what a pronoun in an extract refers to when it points to an event or deed. Rule added to shakespeare.plot and shakespeare.style: a pronoun's referent goes to plot (or characters when it is a person); the meaning of an archaic or figurative word stays in style."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "appreciation.tone-mood",
+      "evidence": "Disagreement WAEC 2020 Q28, 'The two words that give hint of the poet's unhappiness are' (sonnet appreciation.tone-mood, opus appreciation.technique). Placement test WAEC, sonnet, overlap at appreciation.meaning / appreciation.tone-mood: the rule covers only options that name a tone, not evidence-for-mood questions (Q17). Placement test WAEC, opus, overlap at appreciation.technique: picking the words that signal a feeling (Q17) is diction but tests tone.",
+      "change": "Rule added to appreciation.tone-mood, appreciation.meaning and appreciation.technique: a question asking which words signal a feeling goes to tone-mood. tone-mood's covers line names it."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "shakespeare.style",
+      "evidence": "Disagreement WAEC 2021 Q45, 'Speaker X's speech can be described as a' (sonnet figures.comparison, opus shakespeare.style), options satire, parody, conceit, paradox.",
+      "change": "Rule added to shakespeare.style: a question asking what a quoted speech can be described as, with options that are figures or literary terms, goes by rule 1 to the correct answer's home. The placement still needs the key; see not_changed on the answer key."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "shakespeare.characters",
+      "evidence": "Disagreement WAEC 2025 Q39, 'The action of the speaker is directed at' (sonnet shakespeare.characters, opus shakespeare.plot). Placement test WAEC, opus, overlap at shakespeare.characters: addressee and 'to whom something happens' coincide when a speaker acts on the addressee (Q55); what a line reveals about the speaker (Q24) sits between characters and style.",
+      "change": "Rule added to shakespeare.characters and shakespeare.plot: when the speaker acts on the addressee, at whom the action is directed goes to plot and to whom the words are spoken goes to characters. shakespeare.characters now covers what a line reveals about its speaker, and shakespeare.style's rule sends that to characters."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "poetry.versification",
+      "evidence": "Placement test WAEC, opus, overlap at poetry.versification: the rhyme scheme of an unseen poem (Q16, Q40, Q56) falls under rule 3 (appreciation) and versification's covers; versification needs the line poetry.types and prose.narrative have.",
+      "change": "poetry.versification now says naming the rhyme scheme, metre or stanza form of an unseen poem goes here, and its effect to appreciation.technique. appreciation.technique and how_to_use rule 3 say the same."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "drama.techniques",
+      "evidence": "Placement test WAEC, opus, misplaced at drama.techniques: prologue and epilogue are homed only in drama, but Q5 asks for the opening of a play, novel or poem; move them to terms.plot or add a rule that they stay in drama.techniques whatever the genre.",
+      "change": "Kept prologue and epilogue in drama.techniques, whose covers line now includes them as the opening and closing of a novel or poem. Rule added to drama.techniques and terms.plot: prologue and epilogue stay in drama.techniques whatever genre the stem names; exposition as the opening stage of a plot stays in terms.plot."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "appreciation.meaning",
+      "evidence": "Placement test WAEC, opus, overlap at appreciation.tone-mood: the poet's intention or purpose (Q58) is meaning, but options that name attitudes trigger the tone-mood rule; state which wins.",
+      "change": "appreciation.meaning now covers the writer's intention or purpose. Rule added to appreciation.meaning and appreciation.tone-mood: a stem that asks for intention or purpose goes to meaning even when the options are attitude words."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "Placement test UTME, opus, overlap at figures.comparison: rule 1 places by the correct answer, but the input withholds it; Q20 crosses figures.comparison and terms.modes depending on the key. Placement needs the answer.",
+      "reason": "The tree is right to place by the key, and the tie-breaker for this image is now written in both covers lines. The fix the finding asks for is in the placement input, which must carry the answer key; that is a pipeline change, not a tree change."
+    },
+    {
+      "finding": "Placement test WAEC, opus, overlap at how_to_use: rule 1 places by the correct answer, but answers were withheld; for Q3, Q6, Q26, Q34, Q51 and Q79 placement cannot be settled without the key. The pipeline must pass the answer.",
+      "reason": "Same as above: a pipeline defect, not a tree defect. how_to_use rule 1 now says outright that it needs the answer key, and the matchtest should be re-run with keys supplied."
+    },
+    {
+      "finding": "Placement test UTME, opus, too-narrow at set-drama: the four prescribed-text parents split by genre slot, so a question that does not name its text (Q10, Q31, Q78, Q2, Q28) can be given a subtopic kind but not a parent; the ingest step needs to carry the title, or plot, characters, themes, setting and style should be shared facets.",
+      "reason": "Restructuring into shared facets would change every prescribed-text id and invalidate placements, and the slot split follows the syllabi. The tree already says the title belongs on the question record; the fix is for ingest to carry the title and the year's prescribed list, which the finding names as its first option."
+    },
+    {
+      "finding": "Coverage utme '3 appreciation(style)': the tree cites this item on set-poems.tone-mood, but the style content is in set-poems.form's covers line.",
+      "reason": "The coverage map marks the item covered, with no gap. Tone is part of a poem's style, so the citation on tone-mood is not wrong, and set-poems.form already cites the poetic devices that make up style."
+    }
+  ]
+}

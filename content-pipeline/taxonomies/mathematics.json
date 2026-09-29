@@ -1,0 +1,1984 @@
+{
+  "subject": "Mathematics",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "The first structured Mathematics tree. The live database holds 90 topic names from several rounds of tagging: some are whole syllabus sections (Algebra, Geometry, Statistics), some are single skills (pythagoras, cylinder, depreciation), two describe paper structure rather than content, and many say the same thing twice. Version 1.0 builds parent topics at the grain of the WAEC and JAMB numbered topics, merged where both name the same content, and subtopics at the grain of their sub-areas. It was checked against the 39 UTME 2024 and 50 WASSCE 2025 sample objective questions and the SS1 to SS3 scheme of work, with sorting rules written on every border a real question was seen to sit on. Every one of the 90 legacy database topics is folded in. Version 1.1 revises it from the coverage map and the placement test (80 UTME and 80 WASSCE questions, 2014 to 2025): it adds one subtopic, factorial notation, widens the covers lines where the coverage map or a placed question found content with no home, and adds a sorting rule on every border the two models split on or named as an overlap. No subtopic is merged and every 1.0 id is kept. Nothing in the database is changed by this file.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC General Mathematics/Mathematics (Core) examination syllabus, WASSCE",
+        "retrieved_from": "https://waecsyllabus.com/files/ssce/GENERAL%20MATHEMATICS%20OR%20MATHEMATICS%20(CORE).pdf",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror, the same site used for Biology and Economics. Text extracted with pypdf. Not fetched from a WAEC domain directly; the content matches WAEC's standard syllabus structure. References are section letter, topic letter and item, such as A(a)(i)."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME Mathematics syllabus, 2026 version",
+        "retrieved_from": "https://allschool.ng/jamb-syllabus-for-mathematics/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party reproduction, cross-checked against a second copy at kofastudy.com, which has the same sections and topics under a Part A, B numbering. References are section, topic and item, such as I.1(b)."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Senior secondary General Mathematics scheme of work, SS1 to SS3, NERDC-based (Lagos unified scheme)",
+        "retrieved_from": "https://www.ecolebooks.com/ (one scheme-of-work page per class and term), cross-checked against https://edudelight.com/second-term-scheme-of-work-for-mathematics-ss1/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror. Week and topic titles condensed by a summariser, checked by hand for two of the eight terms. SS3 Term 3 has no scheme (it runs during the WASSCE sitting). SS1 Term 2 is lower confidence: edudelight orders it differently. taught_in uses the ecolebooks order."
+      }
+    ],
+    "scope_rule": "WASSCE Paper 1, the objective paper, is drawn from 'the common areas of the syllabus', and the syllabus marks some content with symbols as not common to all member countries or as Paper 2 material: binary operations, completing the square, the gradient of a curve, graphical inequalities, longitude and latitude, the sine and cosine rules, the intercept theorem, construction, loci, bearings, calculus, grouped standard deviation, probability without replacement, and vectors and transformation. The tree includes all of it, because Nigerian candidates sit it in Paper 2 and the 2025 objective paper tested marked content (bearings in Q35). The UTME syllabus sets no objective-paper limit, but the 2024 paper tested past its wording in two places, and the covers lines include both: integration giving a natural logarithm, (2x + 1)/(2x) in Q16, beyond explicit algebraic functions, and a trigonometric identity in Q37, beyond ratios of angles. The WASSCE papers also test past their syllabus: parallel and perpendicular lines, which only the UTME syllabus lists, and three simultaneous linear equations in three unknowns, beyond the syllabus's two; both are in the covers lines. Where one syllabus sets a narrower limit than the other, the subtopic keeps the wider scope and its covers line names the difference: the sum of a GP and the sum to infinity (excluded by WASSCE, tested in UTME 2024 Q7), and determinants of 3 by 3 matrices (WASSCE restricts to 2 by 2, UTME 2024 Q36 tests 3 by 3). Content that only one exam lists has a subtopic citing only that exam: modular arithmetic, logical reasoning, integers and rational numbers, logarithm tables, algebraic fractions, functions and relations, linear programming, depreciation and annuities, similar solids, and vectors and transformation for WASSCE; polynomials and the factor and remainder theorems, quadratic inequalities, limits, trigonometric differentiation, factorial notation, and permutation and combination for UTME. Scheme-of-work content beyond both syllabi (integration by substitution and by parts, partial fractions as a method of integration, Simpson's rule) has no subtopic until a paper is seen to test it; a partial fractions question, if one appears, goes to algebraic-fractions.operations. The WASSCE list of units and currencies is not a topic: a unit conversion goes to the subtopic where it is used, such as litres in a tank to solids.volume.",
+    "part_order_note": "Parts follow the WASSCE sections. WAEC places sequences, matrices and variation under Number and Numeration; JAMB places them under Algebra. The tree follows JAMB here, because each is taught and tested as algebra, and the syllabus references for both exams are kept on the topic."
+  },
+  "how_to_use": "Place a question by the skill it is set to test, not by the words or the setting of the stem. A word problem goes where its mathematics goes: a question about money that is solved by a linear equation goes to linear equations, unless it tests a commercial idea such as profit, interest or tax. Where a question takes several steps, place it by the step that is the point of the question, usually the last step a student could get wrong; for a measurement, that means by the quantity asked for. A question that asks for a geometric proof goes to the subtopic whose theorem or property it proves. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins.",
+  "topics": [
+    {
+      "id": "number-bases",
+      "name": "Number bases and modular arithmetic",
+      "part": "Number and numeration",
+      "syllabus": {
+        "waec": "A(a), A(b)",
+        "jamb": "I.1"
+      },
+      "subtopics": [
+        {
+          "id": "number-bases.conversion",
+          "name": "Conversion between bases",
+          "syllabus": {
+            "waec": "A(a)(i)",
+            "jamb": "I.1(b)"
+          },
+          "covers": "Converting a number from one base to another, through base ten or directly, including fractional parts such as 10111.11 in base two, and finding an unknown base or digit from an equality such as 21 in base five equals 14 in base x. Sorting rule: a question that only converts, or equates numbers in two bases to find the base, goes here; one whose working is addition, subtraction, multiplication or division in a base goes to number-bases.operations. When the base is the unknown, look at the equality: if it sets one number equal to another with no operation, as in 21 in base five equals 14 in base x, it goes here; if it contains a sum, difference or product, as in 6244 minus 1621 = 4323 in base x, it goes to number-bases.operations.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "number-bases.operations",
+          "name": "Operations in number bases",
+          "syllabus": {
+            "waec": "A(a)(ii)",
+            "jamb": "I.1(a)"
+          },
+          "covers": "Adding, subtracting, multiplying and dividing numbers in bases two to ten, including binary arithmetic, finding a missing number in a base sum, such as 121 minus X equals 11 in base three, and finding an unknown base from a sum, difference or product, such as 6244 minus 1621 = 4323 in base x. Sorting rule: when the working is done in the base it goes here, even if the answer is then converted; a pure conversion goes to number-bases.conversion. An unknown base goes here when the equality contains a sum, difference or product, and to number-bases.conversion when it sets two numbers equal with no operation.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "number-bases.modular",
+          "name": "Modular arithmetic",
+          "syllabus": {
+            "waec": "A(b)",
+            "jamb": null
+          },
+          "covers": "The idea of arithmetic in a modulus, adding, subtracting and multiplying in a given modulus, solving simple equations such as 3x = 2 (mod 5), and daily-life uses: market days, days of the week, clocks and shift duty. Sorting rule: a table of a modular operation asked about for its identity, inverses or closure goes to binary-operations.properties; everything else modular goes here.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "fractions",
+      "name": "Fractions, decimals and approximation",
+      "part": "Number and numeration",
+      "syllabus": {
+        "waec": "A(c), A(i)",
+        "jamb": "I.2(a)-(c)"
+      },
+      "subtopics": [
+        {
+          "id": "fractions.rational-numbers",
+          "name": "Integers and rational numbers",
+          "syllabus": {
+            "waec": "A(i)",
+            "jamb": null
+          },
+          "covers": "Natural numbers, integers, rational and irrational numbers and their notation (N, Z, Q), placing numbers on the number line, and the four operations on positive and negative numbers. Sorting rule: operations on common fractions and decimals go to fractions.operations; simplifying a surd goes to surds.simplify; a word problem about consecutive integers solved by an equation goes to linear-equations.one-variable.",
+          "taught_in": [
+            "SS1 T1",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "fractions.operations",
+          "name": "Fractions and decimals",
+          "syllabus": {
+            "waec": "A(c)(i)",
+            "jamb": "I.2(a)"
+          },
+          "covers": "The four operations on common fractions, mixed numbers and decimals, the order of operations, as in 5½ minus (3⅓ × 2¼) + ½, converting between fractions and decimals, recurring decimals, and fractions of a quantity, including arithmetic on very small or very large decimals, such as (0.00045 × 2.50)/(0.00009 × 0.5), when the answer is asked for as an ordinary number. Sorting rule: expressing a quantity as a percentage goes to percentages.basic; rounding goes to fractions.approximation only when the rounding is what the question tests; decimal arithmetic whose numbers are given in standard form, or whose answer is asked for in standard form, goes to indices.standard-form.",
+          "taught_in": []
+        },
+        {
+          "id": "fractions.approximation",
+          "name": "Approximation, significant figures and decimal places",
+          "syllabus": {
+            "waec": "A(c)(ii)",
+            "jamb": "I.2(b)-(c)"
+          },
+          "covers": "Rounding to a given number of significant figures or decimal places, estimating, and realistic approximation of measurements. Sorting rule: a question that rounds and then writes the result in standard form, such as 0.0364891 to three significant figures in standard form, goes here, because the rounding is the skill tested; writing or calculating in standard form without rounding goes to indices.standard-form; the error of an approximation as a percentage goes to percentages.error.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "indices",
+      "name": "Indices and logarithms",
+      "part": "Number and numeration",
+      "syllabus": {
+        "waec": "A(d), A(e)",
+        "jamb": "I.3(a)-(f)"
+      },
+      "subtopics": [
+        {
+          "id": "indices.laws",
+          "name": "Laws of indices",
+          "syllabus": {
+            "waec": "A(d)(i)",
+            "jamb": "I.3(a)"
+          },
+          "covers": "Multiplying, dividing and raising powers, zero, negative and fractional indices, simplifying and evaluating index expressions, and equations solved by writing both sides to the same base, such as (x to the power minus n) to the fourth equals 1/x⁶, including equations that become quadratic in a power, such as 2^(2x) minus 5(2^x) + 4 = 0. Sorting rule: an equation in logarithms goes to indices.log-equations.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "indices.standard-form",
+          "name": "Standard form",
+          "syllabus": {
+            "waec": "A(d)(ii)",
+            "jamb": "I.3(b)"
+          },
+          "covers": "Writing large and small numbers in standard form (scientific notation), and multiplying, dividing, adding and subtracting numbers in standard form, including decimal arithmetic whose answer is asked for in standard form. Sorting rule: a question whose tested step is rounding to significant figures goes to fractions.approximation, even when the answer is in standard form; arithmetic on ordinary decimals, however small or large, goes here only when the numbers are given in standard form or the answer is asked for in standard form, and otherwise goes to fractions.operations.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "indices.log-laws",
+          "name": "Laws of logarithms",
+          "syllabus": {
+            "waec": "A(e)(i)-(ii)",
+            "jamb": "I.3(c)-(f)"
+          },
+          "covers": "The relationship between indices and logarithms (y = 10^k means log y = k), the laws for products, quotients and powers, logarithms to any base, change of base, and simplifying or evaluating log expressions or writing one log in terms of others, such as log 0.4 in terms of log 2 and log 5. Sorting rule: when the question asks for an unknown in an equation it goes to indices.log-equations; calculation with four-figure tables goes to indices.log-tables.",
+          "taught_in": [
+            "SS1 T1",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "indices.log-equations",
+          "name": "Logarithmic equations",
+          "syllabus": {
+            "waec": "A(e)(ii)",
+            "jamb": "I.3(c)-(f)"
+          },
+          "covers": "Solving for an unknown in an equation involving logarithms, including an unknown base, such as log₄ 16 = log_y 36, or 2 log_x of an expression equal to 0. Sorting rule: simplifying or evaluating with no unknown to find goes to indices.log-laws.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "indices.log-tables",
+          "name": "Calculations with logarithm and reciprocal tables",
+          "syllabus": {
+            "waec": "A(e)(iii)",
+            "jamb": null
+          },
+          "covers": "Using tables of logarithms and antilogarithms to multiply, divide and find powers and roots, for numbers greater and less than one, with bar notation, and reading and using tables of reciprocals, squares and square roots. Sorting rule: a calculation using the laws without tables goes to indices.log-laws; interest on bonds worked with tables goes to financial.shares-bonds.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "surds",
+      "name": "Surds",
+      "part": "Number and numeration",
+      "syllabus": {
+        "waec": "A(j)",
+        "jamb": "I.3(g)"
+      },
+      "subtopics": [
+        {
+          "id": "surds.simplify",
+          "name": "Simplifying surds and basic operations",
+          "syllabus": {
+            "waec": "A(j)",
+            "jamb": "I.3(g)"
+          },
+          "covers": "Writing a surd in its simplest form, such as √200 = 10√2, and adding, subtracting, multiplying and dividing surds where there is no surd denominator to remove, as in √200 minus √72. Sorting rule: any question where a surd in a denominator must be rationalised goes to surds.rationalise.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "surds.rationalise",
+          "name": "Rationalising the denominator",
+          "syllabus": {
+            "waec": "A(j)",
+            "jamb": "I.3(g)"
+          },
+          "covers": "Removing a surd from a denominator, including binomial denominators by the conjugate, such as (8 + √28)/(2 + √7). Sorting rule: an equation with an unknown under a square root that becomes a quadratic goes to quadratic-equations.solving; exact trigonometric ratios written as surds go to trigonometry.ratios.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "sets",
+      "name": "Sets",
+      "part": "Number and numeration",
+      "syllabus": {
+        "waec": "A(g)",
+        "jamb": "I.4"
+      },
+      "subtopics": [
+        {
+          "id": "sets.notation",
+          "name": "Types of sets and set operations",
+          "syllabus": {
+            "waec": "A(g)(i)",
+            "jamb": "I.4(a)-(b)"
+          },
+          "covers": "Universal, empty, finite, infinite and disjoint sets, subsets and the number of subsets, set-builder notation, cardinality, union, intersection and complement, listing the members of a combination of sets such as M' ∩ N', and set identities such as X' ∪ Y' = (X ∩ Y)'. Sorting rule: a word problem with numbers in the regions of a Venn diagram goes to sets.venn; describing or shading a region of a drawn Venn diagram goes to sets.venn, even when the answer is written in set notation; set notation with no diagram stays here.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "sets.venn",
+          "name": "Venn diagrams and word problems",
+          "syllabus": {
+            "waec": "A(g)(ii)",
+            "jamb": "I.4(c)"
+          },
+          "covers": "Solving problems on two or three sets with a Venn diagram, finding the number in a region, and shading or naming a region, including describing a shaded region in set notation. Sorting rule: a Venn diagram used to judge whether a conclusion is valid goes to logic.arguments; set notation with no diagram goes to sets.notation. When the number in a region must be worked out from given totals, the question goes here even if its last step turns that number into a probability; a probability read straight from a diagram or table whose region counts are given goes to probability.single-event.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "logic",
+      "name": "Logical reasoning",
+      "part": "Number and numeration",
+      "syllabus": {
+        "waec": "A(h)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "logic.statements",
+          "name": "Statements, connectives and truth tables",
+          "syllabus": {
+            "waec": "A(h)",
+            "jamb": null
+          },
+          "covers": "Simple and compound statements, true and false statements, negation, conjunction, disjunction, implication and the biconditional, their symbols, writing a sentence in symbols, as in 'the sun is shining if and only if the weather is warm', converse, inverse and contrapositive, and truth tables. Sorting rule: deciding which conclusion follows from given statements or a diagram goes to logic.arguments.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "logic.arguments",
+          "name": "Valid arguments and conclusions",
+          "syllabus": {
+            "waec": "A(h)",
+            "jamb": null
+          },
+          "covers": "Deciding whether a conclusion follows from given premises, chains of implication, indirect proof, and using a Venn diagram to test statements such as 'some of my friends are smart'. Sorting rule: a Venn diagram counting problem goes to sets.venn.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "ratio",
+      "name": "Ratio, proportion and rates",
+      "part": "Number and numeration",
+      "syllabus": {
+        "waec": "A(l)",
+        "jamb": "I.2(g)"
+      },
+      "subtopics": [
+        {
+          "id": "ratio.proportion",
+          "name": "Ratio and proportion",
+          "syllabus": {
+            "waec": "A(l)",
+            "jamb": "I.2(g)"
+          },
+          "covers": "Ratio between quantities, simplifying ratios, sharing in a given ratio, direct and inverse proportion by the unitary method, financial partnerships, and map and drawing scales for lengths and distances. Sorting rule: sharing after a percentage has been taken off, such as 20 percent to one person and the rest in the ratio 5 : 3, goes here; a relation set up with a constant k goes to variation; ratios of sides, areas or volumes of similar figures go to triangles.similar or solids.similar; an area on a map or scale drawing, which needs the square of the scale, goes to solids.similar.",
+          "taught_in": []
+        },
+        {
+          "id": "ratio.rates",
+          "name": "Rates, speed and foreign exchange",
+          "syllabus": {
+            "waec": "A(l)",
+            "jamb": "I.2(g)"
+          },
+          "covers": "Rates of work, average rates, speed, distance and time, average speed, density including population density, costs, and foreign exchange. Sorting rule: velocity or acceleration found by differentiation goes to differentiation.rates; taxes go to financial.taxes.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "percentages",
+      "name": "Percentages",
+      "part": "Number and numeration",
+      "syllabus": {
+        "waec": "A(m)",
+        "jamb": "I.2(d)-(f)"
+      },
+      "subtopics": [
+        {
+          "id": "percentages.basic",
+          "name": "Percentages, increase and decrease",
+          "syllabus": {
+            "waec": "A(m)",
+            "jamb": "I.2"
+          },
+          "covers": "Expressing one quantity as a percentage of another, finding a percentage of a quantity, a single percentage increase or decrease, and reverse percentages. Both syllabi name percentages as a topic heading (WASSCE A(m), UTME I.2) without a separate item for this skill, which every other percentages subtopic builds on. Sorting rule: a change in cost or selling price for profit or loss goes to percentages.profit-loss; growth or decline repeated year on year goes to percentages.interest; the percentage change in a quantity that varies with another goes to variation.",
+          "taught_in": []
+        },
+        {
+          "id": "percentages.profit-loss",
+          "name": "Profit and loss, discount and commission",
+          "syllabus": {
+            "waec": "A(m)",
+            "jamb": "I.2(f)"
+          },
+          "covers": "Cost price and selling price, profit and loss percent, finding the cost price from a selling price at a stated loss, the price needed for a new profit percent, discount, commission, and hire purchase. Sorting rule: a tax on a sale, such as VAT, goes to financial.taxes.",
+          "taught_in": []
+        },
+        {
+          "id": "percentages.interest",
+          "name": "Simple and compound interest",
+          "syllabus": {
+            "waec": "A(m)",
+            "jamb": "I.2(e)"
+          },
+          "covers": "Simple interest and finding the principal, rate or time, compound interest for up to three years, and compound growth of a population or amount at a fixed percent a year, such as a town growing 2 percent yearly. Sorting rule: an asset losing value goes to financial.depreciation, even when worked with the compound interest formula; interest on bonds and debentures goes to financial.shares-bonds.",
+          "taught_in": []
+        },
+        {
+          "id": "percentages.error",
+          "name": "Percentage error",
+          "syllabus": {
+            "waec": "A(m)",
+            "jamb": "I.2(d)"
+          },
+          "covers": "The error in a measurement or estimate as a percentage of the true value, and the greatest possible error of a rounded measurement. Sorting rule: the rounding itself goes to fractions.approximation.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "financial",
+      "name": "Financial arithmetic",
+      "part": "Number and numeration",
+      "syllabus": {
+        "waec": "A(n), A(l)",
+        "jamb": "I.2(h)"
+      },
+      "subtopics": [
+        {
+          "id": "financial.depreciation",
+          "name": "Depreciation and amortisation",
+          "syllabus": {
+            "waec": "A(n)(i)",
+            "jamb": null
+          },
+          "covers": "The meaning of depreciation, straight-line and reducing-balance depreciation of fixed assets, and amortisation of a loan or capitalised asset. Sorting rule: any question about an asset losing value goes here, whatever method it uses.",
+          "taught_in": []
+        },
+        {
+          "id": "financial.annuities",
+          "name": "Annuities",
+          "syllabus": {
+            "waec": "A(n)(ii)",
+            "jamb": null
+          },
+          "covers": "The meaning of an annuity and simple problems on a series of regular payments and their value. Sorting rule: a single sum growing at compound interest goes to percentages.interest.",
+          "taught_in": []
+        },
+        {
+          "id": "financial.shares-bonds",
+          "name": "Shares, stocks, bonds and debentures",
+          "syllabus": {
+            "waec": "A(n)(iii)",
+            "jamb": "I.2(h)"
+          },
+          "covers": "Shares and stocks, their price, dividends and yield, debentures and bonds, and interest on bonds and debentures. Sorting rule: partners sharing a profit in a ratio go to ratio.proportion.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "financial.taxes",
+          "name": "Taxes and value added tax",
+          "syllabus": {
+            "waec": "A(l)",
+            "jamb": "I.2(h)"
+          },
+          "covers": "Income tax, allowances and taxable income, value added tax, withholding tax, and rates and levies. Sorting rule: a discount or commission goes to percentages.profit-loss.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "expressions",
+      "name": "Algebraic expressions and polynomials",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "B(a), B(b)(i)-(ii), B(d)",
+        "jamb": "II.1(a)-(e)"
+      },
+      "subtopics": [
+        {
+          "id": "expressions.formulating",
+          "name": "Forming and evaluating expressions",
+          "syllabus": {
+            "waec": "B(a)",
+            "jamb": null
+          },
+          "covers": "Writing an expression for a stated situation, such as the cost of 4 pens at x naira and 3 oranges at y naira, or a present age from an age in x years' time, and evaluating an expression by substituting given values. Sorting rule: a word problem that ends in solving an equation goes to linear-equations or quadratic-equations; finding one letter of a formula after rearranging goes to expressions.change-of-subject.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "expressions.expansion-factorisation",
+          "name": "Expansion and factorisation",
+          "syllabus": {
+            "waec": "B(b)(i)-(ii)",
+            "jamb": "II.1(c)-(d)"
+          },
+          "covers": "Expanding brackets, including the product of any two polynomials, such as a quadratic times a linear factor, factorising by common factor, grouping, difference of two squares, perfect squares and quadratic trinomials such as 3 minus 2x minus x², and using factorisation to evaluate, such as 49² minus 47², or x² + 4xy + 3y² from given values of x + y and x + 3y. Sorting rule: multiplying polynomials goes here whatever their degree; dividing polynomials, the remainder and factor theorems, and factorising a cubic by the factor theorem go to expressions.polynomials; solving an equation by factorising goes to quadratic-equations.solving.",
+          "taught_in": []
+        },
+        {
+          "id": "expressions.change-of-subject",
+          "name": "Change of subject and substitution",
+          "syllabus": {
+            "waec": "B(d)",
+            "jamb": "II.1(a)"
+          },
+          "covers": "Making a stated letter the subject of a formula or relation, including those with fractions, squares and square roots, such as r from 1/p = b/t + c/r, and then finding its value from given values of the others. Sorting rule: evaluating an expression already written in terms of the given letters goes to expressions.formulating.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "expressions.polynomials",
+          "name": "Polynomials: factor and remainder theorems",
+          "syllabus": {
+            "waec": null,
+            "jamb": "II.1(b)-(e)"
+          },
+          "covers": "Dividing polynomials of degree up to three, the remainder theorem, as in finding q when y² + qy + 5 leaves remainder 9 on division by y minus 1, the factor theorem, factorising cubics, and roots of polynomials up to degree three. Sorting rule: multiplying or expanding a product of polynomials, such as a quadratic times a linear factor, goes to expressions.expansion-factorisation; a quadratic factorised without the factor theorem goes to expressions.expansion-factorisation; the graph of a cubic goes to graphs.curves.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "binary-operations",
+      "name": "Binary operations",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "B(b)(iii)",
+        "jamb": "II.5"
+      },
+      "subtopics": [
+        {
+          "id": "binary-operations.evaluating",
+          "name": "Evaluating binary operations",
+          "syllabus": {
+            "waec": "B(b)(iii)",
+            "jamb": "II.5"
+          },
+          "covers": "Carrying out an operation defined on real numbers, such as a * b = 2a + b minus ab, or a ∇ b = (b² minus a²)/(2ab), finding an unknown from a given result, and reading a table of an operation. Sorting rule: a question about closure, commutativity, associativity, distributivity, the identity or an inverse goes to binary-operations.properties.",
+          "taught_in": []
+        },
+        {
+          "id": "binary-operations.properties",
+          "name": "Properties, identity and inverse",
+          "syllabus": {
+            "waec": "A(g) notes, B(b)(iii)",
+            "jamb": "II.5(a)-(b)"
+          },
+          "covers": "Closure, commutativity, associativity and distributivity of an operation, and finding the identity element and the inverse of an element, from a rule or a table, including tables of modular operations.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "linear-equations",
+      "name": "Linear equations",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "B(c)",
+        "jamb": "II.1(f)"
+      },
+      "subtopics": [
+        {
+          "id": "linear-equations.one-variable",
+          "name": "Linear equations in one variable",
+          "syllabus": {
+            "waec": "B(c)(i)",
+            "jamb": null
+          },
+          "covers": "Solving linear equations in one unknown, including those with brackets and fractions, and word problems that lead to one, such as two consecutive odd integers where 5 times the smaller plus 3 times the bigger is 222. Sorting rule: an inequality goes to inequalities.linear.",
+          "taught_in": []
+        },
+        {
+          "id": "linear-equations.simultaneous",
+          "name": "Simultaneous linear equations",
+          "syllabus": {
+            "waec": "B(c)(ii)",
+            "jamb": "II.1(f)"
+          },
+          "covers": "Solving two linear equations in two unknowns by elimination, substitution or graphs, including equations with fractions, and word problems that lead to them, and three linear equations in three unknowns where a paper sets them, as in a WASSCE question where angles on a straight line give m + n = 110, n + r = 130 and m + r = 120. Sorting rule: one linear and one quadratic equation go to quadratic-equations.linear-quadratic; solving by a matrix inverse or by determinants goes to matrices.inverse; using the two equations only as a step to evaluate a factorised expression goes to expressions.expansion-factorisation. When a geometric figure only supplies two or more equations in two or more unknowns and the work is solving them together, the question goes here; when one angle fact gives the answer directly, it goes to the geometry subtopic, such as angles.at-point.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "quadratic-equations",
+      "name": "Quadratic equations",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "B(e), B(f)(ii)",
+        "jamb": "II.1(e)-(f)"
+      },
+      "subtopics": [
+        {
+          "id": "quadratic-equations.solving",
+          "name": "Solving quadratic equations",
+          "syllabus": {
+            "waec": "B(e)(i)",
+            "jamb": "II.1(e)"
+          },
+          "covers": "Solving by factorisation, completing the square and the formula, as in d² minus 4d minus 96 = 0, and equations that become quadratic after clearing fractions or square roots or after a substitution, such as √(k + 2) minus 6/√(k + 2) = 1. Sorting rule: an equation in indices goes to indices.laws; roots read from a drawn graph go to graphs.curves; a root shared by two quadratic equations, used to find an unknown coefficient, goes to quadratic-equations.roots, even though the first step is solving one of them; the maximum or minimum value of a quadratic function, even when found by completing the square, goes to graphs.curves.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "quadratic-equations.roots",
+          "name": "Sum and product of roots",
+          "syllabus": {
+            "waec": "B(e)(ii)",
+            "jamb": "II.1(e)"
+          },
+          "covers": "Forming a quadratic equation with given roots, the sum and product of the roots, expressions in the roots such as α² + β², the nature of the roots from the discriminant, and a root shared by two quadratic equations used to find an unknown coefficient, as when x² minus 5x + 6 = 0 and x² + px + 6 = 0 have a common root. Sorting rule: finding the roots themselves goes to quadratic-equations.solving; a common root used to find a coefficient stays here.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "quadratic-equations.word-problems",
+          "name": "Word problems leading to quadratic equations",
+          "syllabus": {
+            "waec": "B(e)(iii)",
+            "jamb": null
+          },
+          "covers": "Forming and solving a quadratic equation from a practical situation: numbers, ages, areas and dimensions, speed and cost. Sorting rule: when the equation is given, it goes to quadratic-equations.solving.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "quadratic-equations.linear-quadratic",
+          "name": "Simultaneous linear and quadratic equations",
+          "syllabus": {
+            "waec": "B(f)(ii)",
+            "jamb": "II.1(f)"
+          },
+          "covers": "Solving one linear and one quadratic equation together by substitution, and finding algebraically where a line meets a curve. Sorting rule: the same pair solved by reading intersections from drawn graphs goes to graphs.intersection.",
+          "taught_in": [
+            "SS2 T1",
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T1",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "graphs",
+      "name": "Graphs of functions",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "B(f)",
+        "jamb": "II.1(g)"
+      },
+      "subtopics": [
+        {
+          "id": "graphs.curves",
+          "name": "Linear, quadratic and cubic graphs and turning points",
+          "syllabus": {
+            "waec": "B(f)(i)",
+            "jamb": "II.1(g)"
+          },
+          "covers": "Tables of values, plotting graphs, reading roots where a curve cuts the x-axis, maximum and minimum points, the axis of symmetry, intercepts, recognising sketched graphs, and graphs of polynomials up to degree three, and the maximum or minimum value and turning point of a quadratic function with no drawn graph, found by completing the square or from x = minus b/2a, as with the minimum value of y = x² minus 6x + 5. Sorting rule: the gradient or equation of a straight line from coordinates goes to coordinate-geometry; plotting or reading a single point goes to coordinate-geometry.distance-midpoint; sine and cosine graphs go to trigonometry.graphs. The maximum or minimum of a quadratic goes here whatever method the student uses, unless the stem asks for differentiation, dy/dx or stationary points, or the function is not a quadratic, or it is a practical optimisation problem, which go to differentiation.max-min.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "graphs.intersection",
+          "name": "Graphical solution of equations",
+          "syllabus": {
+            "waec": "B(f)(ii)",
+            "jamb": "II.1(g)"
+          },
+          "covers": "Using a drawn graph to solve a related equation, such as the graph of y = x² + 5x + 6 to solve x² + 5x + 4 = 0, finding which line to draw, and reading where a line and a curve meet. Sorting rule: solving the same pair algebraically goes to quadratic-equations.linear-quadratic; a straight line drawn on a sine, cosine or tangent graph goes to trigonometry.graphs.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "graphs.gradient",
+          "name": "Gradient of a curve by drawing a tangent",
+          "syllabus": {
+            "waec": "B(f)(iii)",
+            "jamb": null
+          },
+          "covers": "Drawing a tangent to a curve at a point and finding its gradient from a triangle drawn on it. Sorting rule: a gradient found by differentiation goes to differentiation.rates; the gradient of a straight line goes to coordinate-geometry.gradient.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "inequalities",
+      "name": "Inequalities",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "B(g)",
+        "jamb": "II.3"
+      },
+      "subtopics": [
+        {
+          "id": "inequalities.linear",
+          "name": "Linear inequalities in one variable",
+          "syllabus": {
+            "waec": "B(g)(i)",
+            "jamb": "II.3(a)"
+          },
+          "covers": "Solving linear inequalities in one unknown, including those with fractions such as ⅓(k minus 4) minus ½(k + 1) < ⅙, and double inequalities, the solution (truth) set, and showing it on a number line. Sorting rule: an inequality with a squared term goes to inequalities.quadratic.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "inequalities.quadratic",
+          "name": "Quadratic inequalities",
+          "syllabus": {
+            "waec": null,
+            "jamb": "II.3(b)"
+          },
+          "covers": "Finding the range of values that satisfy a quadratic inequality with integral roots, such as x² + 5x > minus 6, tested in UTME 2024 Q34.",
+          "taught_in": []
+        },
+        {
+          "id": "inequalities.graphical",
+          "name": "Graphs of inequalities in two variables",
+          "syllabus": {
+            "waec": "B(g)(ii)-(iii)",
+            "jamb": "II.3(a)"
+          },
+          "covers": "Drawing a linear inequality in two variables, shading the wanted or unwanted region, and naming the inequalities that define a shaded region. Sorting rule: finding a maximum or minimum value over the region goes to inequalities.linear-programming.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "inequalities.linear-programming",
+          "name": "Linear programming",
+          "syllabus": {
+            "waec": "B(g)(iii)",
+            "jamb": null
+          },
+          "covers": "Forming inequalities from a practical situation and finding the maximum profit or minimum cost at the corners of the feasible region.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "algebraic-fractions",
+      "name": "Algebraic fractions",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "B(h)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "algebraic-fractions.operations",
+          "name": "Operations on algebraic fractions",
+          "syllabus": {
+            "waec": "B(h)(i)-(ii)",
+            "jamb": null
+          },
+          "covers": "Simplifying algebraic fractions and adding, subtracting, multiplying and dividing them with monomial and binomial denominators, and resolving into partial fractions where a paper asks it. Sorting rule: an equation containing fractions goes to linear-equations or quadratic-equations; the value that makes a fraction undefined goes to algebraic-fractions.undefined.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "algebraic-fractions.undefined",
+          "name": "Undefined fractions",
+          "syllabus": {
+            "waec": "B(h)",
+            "jamb": null
+          },
+          "covers": "The value of x for which an algebraic fraction is undefined, such as (3x + 2)/(2x + 1), tested in WASSCE 2025 Q50, or for which it equals zero.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "functions",
+      "name": "Functions and relations",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "B(i)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "functions.types",
+          "name": "Types of mapping",
+          "syllabus": {
+            "waec": "B(i)",
+            "jamb": null
+          },
+          "covers": "Relations and functions as mappings, domain, codomain and range, and one-to-one, one-to-many, many-to-one and many-to-many mappings. Sorting rule: finding the rule, an image or an inverse goes to functions.rules.",
+          "taught_in": []
+        },
+        {
+          "id": "functions.rules",
+          "name": "Rule of a function",
+          "syllabus": {
+            "waec": "B(i)",
+            "jamb": null
+          },
+          "covers": "Finding the rule of a given mapping, evaluating f(x) at a value, finding the value mapped to a given image, and composite and inverse functions where a paper asks them. Sorting rule: an operation on two numbers goes to binary-operations.evaluating.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "variation",
+      "name": "Variation",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "A(o)",
+        "jamb": "II.2"
+      },
+      "subtopics": [
+        {
+          "id": "variation.direct-inverse",
+          "name": "Direct and inverse variation",
+          "syllabus": {
+            "waec": "A(o)",
+            "jamb": "II.2(a)-(b), II.2(e)"
+          },
+          "covers": "Expressing direct and inverse variation, including with squares and square roots, finding the constant and a missing value, as in P varies inversely as the square of Q, and the percentage change in one quantity when the other changes. Sorting rule: a relation with two or more variables on the right, or with a fixed part, goes to variation.joint-partial.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "variation.joint-partial",
+          "name": "Joint and partial variation",
+          "syllabus": {
+            "waec": "A(o)",
+            "jamb": "II.2(c)-(d)"
+          },
+          "covers": "Joint variation with two or more variables, including a mix of direct and inverse, as in M varies directly as n and inversely as the square of p, and partial variation, part fixed and part varying, where two conditions give two equations for the constants. Sorting rule: any relation with two or more variables on the right goes here, even when each part is described as direct or inverse; a relation with one variable on the right and no fixed part goes to variation.direct-inverse.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "sequences",
+      "name": "Sequences and series",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "A(f)",
+        "jamb": "II.4"
+      },
+      "subtopics": [
+        {
+          "id": "sequences.patterns",
+          "name": "Number patterns and the general term",
+          "syllabus": {
+            "waec": "A(f)(i)",
+            "jamb": "II.4(a)"
+          },
+          "covers": "Continuing a pattern, finding a stated term from a formula for the nth term, and finding the nth term of a sequence that is neither an AP nor a GP. Sorting rule: any question on an arithmetic or geometric progression goes to sequences.ap or sequences.gp.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "sequences.ap",
+          "name": "Arithmetic progression",
+          "syllabus": {
+            "waec": "A(f)(ii)",
+            "jamb": "II.4(a)-(b)"
+          },
+          "covers": "Common difference, the nth term, finding terms from two given terms, as with third and ninth terms 9 and minus 27, the sum of n terms, the arithmetic mean, and word problems.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "sequences.gp",
+          "name": "Geometric progression",
+          "syllabus": {
+            "waec": "A(f)(ii)",
+            "jamb": "II.4(a)-(b)"
+          },
+          "covers": "Common ratio, the nth term, finding the ratio from two given terms, the geometric mean, the sum of n terms, and the sum to infinity. WASSCE excludes the sum of a GP; the UTME tests it, as in 2024 Q7, so it belongs here.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "matrices",
+      "name": "Matrices and determinants",
+      "part": "Algebraic processes",
+      "syllabus": {
+        "waec": "A(k)",
+        "jamb": "II.6"
+      },
+      "subtopics": [
+        {
+          "id": "matrices.operations",
+          "name": "Types of matrix and operations",
+          "syllabus": {
+            "waec": "A(k)(i)-(ii)",
+            "jamb": "II.6(a)"
+          },
+          "covers": "Order, notation and types of matrix, equality, transpose, addition, subtraction, scalar multiplication and multiplication of matrices up to 3 by 3. Sorting rule: determinants go to matrices.determinants.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "matrices.determinants",
+          "name": "Determinants",
+          "syllabus": {
+            "waec": "A(k)(iii)",
+            "jamb": "II.6(b)"
+          },
+          "covers": "The determinant of a 2 by 2 or 3 by 3 matrix, finding an unknown entry from a given determinant, and singular matrices. WASSCE restricts determinants to 2 by 2; the UTME goes to 3 by 3, as in 2024 Q36. Sorting rule: a determinant used to find an inverse goes to matrices.inverse.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "matrices.inverse",
+          "name": "Inverse matrix and simultaneous equations",
+          "syllabus": {
+            "waec": "A(k)(iii)",
+            "jamb": "II.6(c)"
+          },
+          "covers": "The inverse of a 2 by 2 matrix, and solving two simultaneous linear equations by the matrix method or by determinants.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "plane-mensuration",
+      "name": "Lengths, perimeters and areas of plane shapes",
+      "part": "Mensuration",
+      "syllabus": {
+        "waec": "C(a)(i)-(ii), C(b)(i)-(ii)",
+        "jamb": "III.2(a)-(c)"
+      },
+      "subtopics": [
+        {
+          "id": "plane-mensuration.lengths",
+          "name": "Pythagoras' theorem and lengths",
+          "syllabus": {
+            "waec": "C(a)(i)",
+            "jamb": "III.2(a)"
+          },
+          "covers": "Using Pythagoras' theorem to find a side, a diagonal or a distance, and Pythagorean triples. Sorting rule: place by the quantity asked, so a perimeter or area found through a diagonal, as with a square of diagonal 10 cm, goes to plane-mensuration.perimeter-area; lengths from coordinates go to coordinate-geometry.distance-midpoint; lengths from the sine or cosine rule go to trigonometry.sine-cosine-rules; heights from an angle of elevation go to trigonometry.elevation-depression.",
+          "taught_in": []
+        },
+        {
+          "id": "plane-mensuration.perimeter-area",
+          "name": "Perimeter and area of plane figures",
+          "syllabus": {
+            "waec": "C(b)(i)",
+            "jamb": "III.2(a)"
+          },
+          "covers": "Perimeters and areas of triangles (half base times height), rectangles, squares, parallelograms, trapeziums, rhombuses and compound shapes, and units of area such as the hectare. Sorting rule: a shape with a circle or part of one goes to plane-mensuration.circles; the area of a triangle from two sides and the included angle goes to trigonometry.sine-cosine-rules; the ratio of areas of similar figures goes to solids.similar, and so does the new area of a plane shape whose every length is scaled by the same factor, as with a rectangle whose sides are doubled; a shape whose sides change by different amounts stays here.",
+          "taught_in": []
+        },
+        {
+          "id": "plane-mensuration.circles",
+          "name": "Circles: arcs, sectors and segments",
+          "syllabus": {
+            "waec": "C(a)(ii), C(b)(ii)",
+            "jamb": "III.2(b)-(c)"
+          },
+          "covers": "Circumference and area of a circle, the length of an arc, the perimeter and area of a sector and of a segment, the length of a chord from the angle it subtends, and practical cases such as the area a tethered goat grazes. Sorting rule: angles in a circle found by the circle theorems go to circles; a sector folded into a cone goes to solids.surface-area.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "solids",
+      "name": "Surface area and volume of solids",
+      "part": "Mensuration",
+      "syllabus": {
+        "waec": "C(b)(iii), C(c)",
+        "jamb": "III.2(d)"
+      },
+      "subtopics": [
+        {
+          "id": "solids.surface-area",
+          "name": "Surface area of solids",
+          "syllabus": {
+            "waec": "C(b)(iii)",
+            "jamb": "III.2(d)"
+          },
+          "covers": "Curved and total surface areas of cubes, cuboids, cylinders open or closed, cones, pyramids, prisms, spheres and hemispheres, and a cone made from a sector. Sorting rule: when both surface area and volume appear, place by the quantity asked for; the ratio of surface areas of similar solids goes to solids.similar.",
+          "taught_in": [
+            "SS1 T3",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "solids.volume",
+          "name": "Volume and capacity of solids",
+          "syllabus": {
+            "waec": "C(c)(i)",
+            "jamb": "III.2(d)"
+          },
+          "covers": "Volumes of cubes, cuboids, prisms, cylinders, cones, pyramids, frustums, spheres and compound solids, capacity in litres, as in the water level in a cylindrical tank, and solids of equal volume, such as a cylinder and a cone of the same volume. Sorting rule: the ratio of volumes of similar solids goes to solids.similar.",
+          "taught_in": [
+            "SS1 T3",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "solids.similar",
+          "name": "Similar figures and solids",
+          "syllabus": {
+            "waec": "C(b)(i), C(c)(ii)",
+            "jamb": null
+          },
+          "covers": "Length, area and volume scale factors of similar plane figures and solids: if lengths are in the ratio k, areas are in k² and volumes in k³, as with two ball bearings of volumes 1.6 and 5.4 cubic cm. This includes the new area of a plane shape whose every length is scaled by the same factor, as with a rectangle whose sides are doubled, and an area on a map or scale drawing found with the square of the scale. Sorting rule: the ratio of sides of similar triangles, or finding a side from it, goes to triangles.similar; the area of an image under enlargement goes to transformation.enlargement; a length or distance from a map scale goes to ratio.proportion; a plane shape whose sides change by different amounts goes to plane-mensuration.perimeter-area.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "earth",
+      "name": "Longitude and latitude",
+      "part": "Mensuration",
+      "syllabus": {
+        "waec": "C(a)(iii)",
+        "jamb": "III.2(e)"
+      },
+      "subtopics": [
+        {
+          "id": "earth.great-circles",
+          "name": "Latitude, longitude and great circles",
+          "syllabus": {
+            "waec": "C(a)(iii)",
+            "jamb": "III.2(e)"
+          },
+          "covers": "The earth as a sphere, meridians, the equator and parallels of latitude, locating a place by latitude and longitude, differences in latitude or longitude, and distances along a meridian or the equator. Sorting rule: distance along a parallel of latitude other than the equator goes to earth.parallels.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "earth.parallels",
+          "name": "Distance along a parallel of latitude",
+          "syllabus": {
+            "waec": "C(a)(iii)",
+            "jamb": "III.2(e)"
+          },
+          "covers": "The radius of a parallel of latitude (R cos θ), the length of a parallel, and the distance between two places on the same latitude, or the longitude reached after travelling a stated distance along it.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "angles",
+      "name": "Angles and parallel lines",
+      "part": "Plane geometry",
+      "syllabus": {
+        "waec": "D(a), D(b)",
+        "jamb": "III.1(a)"
+      },
+      "subtopics": [
+        {
+          "id": "angles.at-point",
+          "name": "Angles at a point and on a straight line",
+          "syllabus": {
+            "waec": "D(a)",
+            "jamb": "III.1(a)"
+          },
+          "covers": "Types of angle (acute, obtuse, reflex), angles at a point, adjacent angles on a straight line, vertically opposite angles, and complementary and supplementary angles. Sorting rule: when a transversal crosses parallel lines and that is the step needed, it goes to angles.parallel-lines; when the angle facts only set up two or more equations in two or more unknowns and the work is solving them together, as with m + n = 110, n + r = 130 and m + r = 120, it goes to linear-equations.simultaneous.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "angles.parallel-lines",
+          "name": "Angles on parallel lines",
+          "syllabus": {
+            "waec": "D(b)(i)-(iii)",
+            "jamb": "III.1(a)"
+          },
+          "covers": "Alternate, corresponding and co-interior (interior opposite) angles on a transversal, and unknown angles in figures with parallel lines, including triangles set between parallels when the parallel property is the step needed. Sorting rule: the intercept theorem and proportional division go to triangles.similar.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "triangles",
+      "name": "Triangles and polygons",
+      "part": "Plane geometry",
+      "syllabus": {
+        "waec": "D(b)(iv), D(c)",
+        "jamb": "III.1(b)"
+      },
+      "subtopics": [
+        {
+          "id": "triangles.angle-properties",
+          "name": "Angle properties of triangles",
+          "syllabus": {
+            "waec": "D(c)(i)-(ii), D(c)(iv)",
+            "jamb": "III.1(b)"
+          },
+          "covers": "The angle sum of a triangle, the exterior angle equal to the sum of the interior opposite angles, and the deductive proofs of both, properties of isosceles, equilateral and right-angled triangles, and angles in a given ratio such as 2 : 5 : 8. Sorting rule: congruence goes to triangles.congruent; a side of a right-angled triangle by Pythagoras goes to plane-mensuration.lengths; a proof goes to the subtopic whose theorem it proves.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "triangles.congruent",
+          "name": "Congruent triangles",
+          "syllabus": {
+            "waec": "D(c)(iii)",
+            "jamb": "III.1(b)"
+          },
+          "covers": "The conditions for congruence (SSS, SAS, ASA, RHS), using congruence to show that sides or angles are equal, and deductive proofs that rest on congruent triangles, such as proving the properties of a parallelogram. Sorting rule: a proof of the angle sum or exterior angle of a triangle goes to triangles.angle-properties; a proof of a circle theorem goes to the circles subtopic that holds the theorem.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "triangles.similar",
+          "name": "Similar triangles and the intercept theorem",
+          "syllabus": {
+            "waec": "D(c)(vi), D(b)(iv)",
+            "jamb": "III.1(b)"
+          },
+          "covers": "Equiangular triangles, the ratio of corresponding sides, finding an unknown side, and the intercept theorem with proportional division of a line. Sorting rule: the ratio of areas or volumes of similar figures goes to solids.similar.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "triangles.quadrilaterals",
+          "name": "Properties of quadrilaterals",
+          "syllabus": {
+            "waec": "D(c)(v), D(c)(ix)",
+            "jamb": "III.1(b)"
+          },
+          "covers": "Properties of the parallelogram, rhombus, square, rectangle, kite and trapezium, angles in a quadrilateral, and parallelograms on the same base and between the same parallels being equal in area. Sorting rule: a cyclic quadrilateral goes to circles.angles; the area of a quadrilateral goes to plane-mensuration.perimeter-area.",
+          "taught_in": []
+        },
+        {
+          "id": "triangles.polygons",
+          "name": "Angles of polygons",
+          "syllabus": {
+            "waec": "D(c)(vii)-(viii)",
+            "jamb": "III.1(b)"
+          },
+          "covers": "The sum of interior angles, (n minus 2) × 180°, exterior angles summing to 360°, regular polygons, finding the number of sides from an interior or exterior angle or from their ratio, such as 1 : 19, and a missing angle in an irregular polygon such as a hexagon.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "circles",
+      "name": "Circle theorems",
+      "part": "Plane geometry",
+      "syllabus": {
+        "waec": "D(d)",
+        "jamb": "III.1(c)"
+      },
+      "subtopics": [
+        {
+          "id": "circles.chords",
+          "name": "Chords",
+          "syllabus": {
+            "waec": "D(d)(i)",
+            "jamb": "III.1(c)"
+          },
+          "covers": "The perpendicular from the centre bisects a chord, equal chords are equidistant from the centre, finding a chord length or its distance from the centre, and intersecting chords. Sorting rule: an arc or chord length from the angle at the centre goes to plane-mensuration.circles.",
+          "taught_in": []
+        },
+        {
+          "id": "circles.angles",
+          "name": "Angles in a circle and cyclic quadrilaterals",
+          "syllabus": {
+            "waec": "D(d)(ii)-(v)",
+            "jamb": "III.1(c)"
+          },
+          "covers": "The angle at the centre is twice the angle at the circumference, the angle in a semicircle, angles in the same segment, and opposite angles of a cyclic quadrilateral, and the deductive proofs of these theorems. Sorting rule: when a tangent is in the figure and the tangent property or the alternate segment theorem is the step needed, it goes to circles.tangents; a proof of a chord or tangent theorem goes to circles.chords or circles.tangents.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "circles.tangents",
+          "name": "Tangents and the alternate segment",
+          "syllabus": {
+            "waec": "D(d)(vi)-(vii)",
+            "jamb": "III.1(c)"
+          },
+          "covers": "A tangent is perpendicular to the radius, two tangents from an external point are equal, and the angle between a tangent and a chord equals the angle in the alternate segment.",
+          "taught_in": [
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "construction",
+      "name": "Construction and loci",
+      "part": "Plane geometry",
+      "syllabus": {
+        "waec": "D(e), D(f)",
+        "jamb": "III.1(d), III.3"
+      },
+      "subtopics": [
+        {
+          "id": "construction.constructions",
+          "name": "Geometric constructions",
+          "syllabus": {
+            "waec": "D(e)",
+            "jamb": "III.1(d)"
+          },
+          "covers": "Bisecting lines and angles, constructing parallel and perpendicular lines, angles of 90, 60, 45 and 30 degrees and combinations such as 75, 105 and 135 degrees, triangles and quadrilaterals from given data, and which steps or instruments a construction needs. Sorting rule: the set of points that satisfies a condition goes to construction.loci.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "construction.loci",
+          "name": "Loci",
+          "syllabus": {
+            "waec": "D(f)",
+            "jamb": "III.3"
+          },
+          "covers": "The locus of points at a fixed distance from a point or a line, equidistant from two points or from two lines, and intersections of loci, in real-life settings. Sorting rule: constructing a bisector as a drawing step goes to construction.constructions; the locus it represents goes here.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "coordinate-geometry",
+      "name": "Coordinate geometry of straight lines",
+      "part": "Coordinate geometry",
+      "syllabus": {
+        "waec": "E",
+        "jamb": "III.4"
+      },
+      "subtopics": [
+        {
+          "id": "coordinate-geometry.distance-midpoint",
+          "name": "Coordinates, distance and midpoint",
+          "syllabus": {
+            "waec": "E(i)-(ii)",
+            "jamb": "III.4(a)-(b)"
+          },
+          "covers": "The x-y (Cartesian) plane, plotting a point and reading the coordinates of a point, the distance between two points, the midpoint of a line segment, finding an end point or an unknown coordinate from a given midpoint or distance, and the perimeter of a figure from the coordinates of its vertices. Sorting rule: when coordinates are given, lengths go here, not to plane-mensuration.lengths; plotting a table of values to draw a line or curve goes to graphs.curves, while placing or reading a single point goes here.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "coordinate-geometry.gradient",
+          "name": "Gradient and intercepts",
+          "syllabus": {
+            "waec": "E(ii)",
+            "jamb": "III.4(a)"
+          },
+          "covers": "The gradient of a line through two points or from its equation, as in 7x minus 5y + 3 = 0, and the x and y intercepts. Sorting rule: the gradient of a curve goes to graphs.gradient or differentiation.rates; conditions for parallel or perpendicular lines go to coordinate-geometry.parallel-perpendicular.",
+          "taught_in": [
+            "SS2 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "coordinate-geometry.equations",
+          "name": "Equation of a straight line",
+          "syllabus": {
+            "waec": "E(ii)",
+            "jamb": "III.4(d)"
+          },
+          "covers": "The equation of a line from two points, a point and the gradient, or the gradient and intercept, in the forms y = mx + c, y minus y1 = m(x minus x1) and the general form, and whether a point lies on a line. Sorting rule: a line required to be parallel or perpendicular to another goes to coordinate-geometry.parallel-perpendicular.",
+          "taught_in": []
+        },
+        {
+          "id": "coordinate-geometry.parallel-perpendicular",
+          "name": "Parallel and perpendicular lines",
+          "syllabus": {
+            "waec": null,
+            "jamb": "III.4(c)"
+          },
+          "covers": "Parallel lines have equal gradients and perpendicular lines have gradients whose product is minus 1, the equation of a line through a point parallel or perpendicular to a given line, as in UTME 2024 Q22, the perpendicular bisector of a segment, and the angle between two lines. The WASSCE syllabus lists no item for it, but WASSCE papers test it anyway, as with a line through a given point parallel to a given line in the placement test's WASSCE sample.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "trigonometry",
+      "name": "Trigonometry",
+      "part": "Trigonometry",
+      "syllabus": {
+        "waec": "F, C(a)(i)",
+        "jamb": "III.5"
+      },
+      "subtopics": [
+        {
+          "id": "trigonometry.ratios",
+          "name": "Trigonometric ratios",
+          "syllabus": {
+            "waec": "F(a)(i)-(iii)",
+            "jamb": "III.5(a)"
+          },
+          "covers": "Sine, cosine and tangent of acute angles in a right-angled triangle, exact values for 30, 45 and 60 degrees in surd form, exact values for 75 and 105 degrees found by writing them as sums of 30, 45 and 60 degrees, the use of tables, complementary angles such as sin (x minus 46)° = cos 62°, finding one ratio from another, and simple identities such as sin²θ + cos²θ = 1, tested in UTME 2024 Q37. Sorting rule: angles beyond 90 degrees go to trigonometry.general-angles, except the exact value of 105 degrees built from a sum of special angles, which stays here; a height or distance from an angle of elevation or depression goes to trigonometry.elevation-depression.",
+          "taught_in": [
+            "SS1 T2",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "trigonometry.general-angles",
+          "name": "Angles from 0 to 360 degrees",
+          "syllabus": {
+            "waec": "F(a)(iv)",
+            "jamb": "III.5(a)"
+          },
+          "covers": "The signs and values of the ratios in the four quadrants, the unit circle, angles from minus 360 to 360 degrees, exact values of angles such as 120, 135 and 150 degrees from their related acute angle, and solving simple trigonometric equations within a range. Sorting rule: a value read from a sine, cosine or tangent graph goes to trigonometry.graphs; the exact value of 75 or 105 degrees built from a sum of special angles goes to trigonometry.ratios.",
+          "taught_in": []
+        },
+        {
+          "id": "trigonometry.graphs",
+          "name": "Graphs of trigonometric functions",
+          "syllabus": {
+            "waec": "F(a)(v)-(vi)",
+            "jamb": "III.5(e)"
+          },
+          "covers": "Tables and graphs of y = a sin x, y = b cos x, y = a sin x + b cos x and y = tan x from 0 to 360 degrees, their maximum and minimum values, solving equations from the graphs, and drawing a straight line on the same axes as a trigonometric graph to solve a linear and a trigonometric equation together. Sorting rule: a straight line drawn on a trigonometric graph goes here, not to graphs.intersection; a value found by calculation with no graph goes to trigonometry.general-angles.",
+          "taught_in": [
+            "SS1 T2",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "trigonometry.sine-cosine-rules",
+          "name": "Sine rule, cosine rule and area of a triangle",
+          "syllabus": {
+            "waec": "C(a)(i), C(b)(i)",
+            "jamb": "III.5(d), III.5(f)"
+          },
+          "covers": "Solving triangles that are not right-angled by the sine rule and the cosine rule, and the area of a triangle as ½ab sin C. Sorting rule: a bearings problem solved with these rules goes to trigonometry.bearings.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "trigonometry.elevation-depression",
+          "name": "Angles of elevation and depression",
+          "syllabus": {
+            "waec": "F(b)",
+            "jamb": "III.5(b)"
+          },
+          "covers": "Calculating angles of elevation and depression and using them to find heights and distances, such as a ladder against a wall or a tower seen from two points.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "trigonometry.bearings",
+          "name": "Bearings and distances",
+          "syllabus": {
+            "waec": "F(c)",
+            "jamb": "III.5(c)"
+          },
+          "covers": "Three-figure and compass bearings, the bearing of one point from another and the reverse bearing, as in 064° giving 244°, and distances and bearings on a journey by right-angled triangles or the sine and cosine rules.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "differentiation",
+      "name": "Differentiation",
+      "part": "Calculus",
+      "syllabus": {
+        "waec": "G(i)",
+        "jamb": "IV.1, IV.2"
+      },
+      "subtopics": [
+        {
+          "id": "differentiation.limits",
+          "name": "Limits of functions",
+          "syllabus": {
+            "waec": null,
+            "jamb": "IV.1(a)"
+          },
+          "covers": "The limit of a function as x approaches a value, including by factorising to remove a zero denominator. Sorting rule: differentiation from first principles goes to differentiation.algebraic.",
+          "taught_in": []
+        },
+        {
+          "id": "differentiation.algebraic",
+          "name": "Differentiation of algebraic functions",
+          "syllabus": {
+            "waec": "G(i)",
+            "jamb": "IV.1(b)"
+          },
+          "covers": "The meaning of dy/dx, differentiation from first principles, standard derivatives of powers of x, and the sum, product, quotient and chain rules. Sorting rule: trigonometric functions go to differentiation.trigonometric; using a derivative for a gradient, a rate or a turning point goes to differentiation.rates or differentiation.max-min.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "differentiation.trigonometric",
+          "name": "Differentiation of trigonometric functions",
+          "syllabus": {
+            "waec": null,
+            "jamb": "IV.1(b)"
+          },
+          "covers": "Derivatives of sine, cosine and tangent, including of multiple angles, such as y = sin 2x minus cos 2x in UTME 2024 Q1.",
+          "taught_in": []
+        },
+        {
+          "id": "differentiation.rates",
+          "name": "Gradients and rates of change",
+          "syllabus": {
+            "waec": "G(i)",
+            "jamb": "IV.2(a)"
+          },
+          "covers": "The derivative as the gradient of a curve at a point, finding an unknown coefficient from a given gradient, as in UTME 2024 Q27, the equation of a tangent, velocity and acceleration from displacement, and rates of change. Sorting rule: turning points and maximum and minimum values go to differentiation.max-min.",
+          "taught_in": []
+        },
+        {
+          "id": "differentiation.max-min",
+          "name": "Maximum and minimum values",
+          "syllabus": {
+            "waec": "G(i)",
+            "jamb": "IV.2(b)"
+          },
+          "covers": "Stationary points, deciding whether each is a maximum or a minimum, and practical maximum and minimum problems. Sorting rule: turning points read from a drawn graph go to graphs.curves; the maximum or minimum value of a quadratic function goes to graphs.curves unless the stem asks for differentiation, dy/dx or stationary points; a function that is not a quadratic, or a practical optimisation problem, stays here.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "integration",
+      "name": "Integration",
+      "part": "Calculus",
+      "syllabus": {
+        "waec": "G(ii)",
+        "jamb": "IV.3"
+      },
+      "subtopics": [
+        {
+          "id": "integration.indefinite",
+          "name": "Integration of functions",
+          "syllabus": {
+            "waec": "G(ii)",
+            "jamb": "IV.3(a)"
+          },
+          "covers": "Integration as the reverse of differentiation, integrating powers of x and sums of terms, 1/x giving ln x as in UTME 2024 Q16, simple sine and cosine functions, the constant of integration, and finding a curve from its gradient function. Sorting rule: an integral with limits goes to integration.definite-area.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "integration.definite-area",
+          "name": "Definite integrals and area under a curve",
+          "syllabus": {
+            "waec": "G(ii)",
+            "jamb": "IV.3(b)"
+          },
+          "covers": "Evaluating definite integrals of simple functions, and the area bounded by a curve and the x-axis between two limits.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "data-presentation",
+      "name": "Presentation of data",
+      "part": "Statistics and probability",
+      "syllabus": {
+        "waec": "H(a)(i)-(ii)",
+        "jamb": "V.1"
+      },
+      "subtopics": [
+        {
+          "id": "data-presentation.frequency-tables",
+          "name": "Frequency distribution tables",
+          "syllabus": {
+            "waec": "H(a)(i)",
+            "jamb": "V.1(a)"
+          },
+          "covers": "Collecting data and constructing and reading frequency tables for ungrouped and grouped data, tallies, class intervals, class boundaries, class marks and class width. Sorting rule: an average calculated from a table goes to averages; a chart drawn from it goes to data-presentation.charts or data-presentation.histograms.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "data-presentation.charts",
+          "name": "Pie charts and bar charts",
+          "syllabus": {
+            "waec": "H(a)(ii)",
+            "jamb": "V.1(b)"
+          },
+          "covers": "Drawing and reading pie charts, bar charts and pictograms, the angle of a sector and the amount it stands for, as in a household's monthly spending. Sorting rule: histograms and frequency polygons go to data-presentation.histograms. Place by the kind of data, not the name the stem uses: a chart of categories, such as days of the week or colours, goes here even when the stem calls it a histogram.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "data-presentation.histograms",
+          "name": "Histograms and frequency polygons",
+          "syllabus": {
+            "waec": "H(a)(ii)",
+            "jamb": "V.1(b)"
+          },
+          "covers": "Drawing and reading histograms with equal class intervals and frequency polygons. Sorting rule: the mode estimated from a histogram goes to averages.median-mode; a cumulative frequency curve goes to averages.ogive. Place by the kind of data, not the name the stem uses: a chart of numerical data in continuous class intervals goes here, and a chart of categories, such as days of the week, goes to data-presentation.charts even when the stem calls it a histogram.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "averages",
+      "name": "Measures of location",
+      "part": "Statistics and probability",
+      "syllabus": {
+        "waec": "H(a)(iii)-(iv)",
+        "jamb": "V.2"
+      },
+      "subtopics": [
+        {
+          "id": "averages.mean",
+          "name": "Mean",
+          "syllabus": {
+            "waec": "H(a)(iii)",
+            "jamb": "V.2(a)"
+          },
+          "covers": "The mean of ungrouped data and of grouped data from a frequency table, using an assumed mean, finding a missing value from a given mean, and the mean of combined groups, as with 4 teachers averaging 40 and 8 averaging 25. Sorting rule: a mean found only as a step to a deviation goes to dispersion.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "averages.median-mode",
+          "name": "Median, mode and quartiles",
+          "syllabus": {
+            "waec": "H(a)(iii)",
+            "jamb": "V.2(a)"
+          },
+          "covers": "The median and mode of ungrouped data and of a frequency table, the modal class, the mode estimated from a histogram, and the quartiles and percentiles of listed or tabulated data, such as the first quartile of ten values. Sorting rule: a median, quartile or percentile read from a cumulative frequency curve goes to averages.ogive; the interquartile or semi-interquartile range of listed data goes to dispersion.range-deviation.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "averages.ogive",
+          "name": "Cumulative frequency and quartiles",
+          "syllabus": {
+            "waec": "H(a)(iv)",
+            "jamb": "V.2(b)"
+          },
+          "covers": "Cumulative frequency tables and curves (ogives), and reading the median, quartiles, percentiles and deciles, and the interquartile and semi-interquartile range, from them. Sorting rule: a quartile of a short listed set goes to averages.median-mode; a quartile range of a short listed set goes to dispersion.range-deviation.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "dispersion",
+      "name": "Measures of dispersion",
+      "part": "Statistics and probability",
+      "syllabus": {
+        "waec": "H(a)(v)",
+        "jamb": "V.3"
+      },
+      "subtopics": [
+        {
+          "id": "dispersion.range-deviation",
+          "name": "Range, quartile range and mean deviation",
+          "syllabus": {
+            "waec": "H(a)(v)",
+            "jamb": "V.3"
+          },
+          "covers": "The range, the interquartile and semi-interquartile range of listed data, and the mean deviation as the mean of absolute deviations from the mean, as in UTME 2024 Q11. Sorting rule: ranges read from an ogive go to averages.ogive; a single quartile asked for on its own, with no range, goes to averages.median-mode.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "dispersion.variance-sd",
+          "name": "Variance and standard deviation",
+          "syllabus": {
+            "waec": "H(a)(v)",
+            "jamb": "V.3"
+          },
+          "covers": "Variance and standard deviation of ungrouped and grouped data, and finding an unknown from a given standard deviation, as in UTME 2024 Q21.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "permutations",
+      "name": "Permutation and combination",
+      "part": "Statistics and probability",
+      "syllabus": {
+        "waec": null,
+        "jamb": "V.4"
+      },
+      "subtopics": [
+        {
+          "id": "permutations.factorials",
+          "name": "Factorial notation and nPr, nCr expressions",
+          "syllabus": {
+            "waec": null,
+            "jamb": "V.4"
+          },
+          "covers": "The meaning of n factorial, evaluating and simplifying expressions in factorials, nPr and nCr, and solving an equation whose terms are factorials, nPr or nCr, with no counting situation, such as n over 9 factorial plus 1 over 8 factorial equal to a given value, or nP2 = 20. The UTME tests it, as in the placement test's UTME sample, and it is the lesson taught before arrangements and selections. Sorting rule: when the question describes objects to arrange or choose, it goes to permutations.arrangements or permutations.selections, even though the working uses factorials.",
+          "taught_in": []
+        },
+        {
+          "id": "permutations.arrangements",
+          "name": "Permutations: arrangements",
+          "syllabus": {
+            "waec": null,
+            "jamb": "V.4(a)-(b)"
+          },
+          "covers": "Arranging objects in a line or a circle, arrangements with repeated letters, and arrangements with conditions, such as the letters of MATRIX with the vowels kept together, using nPr and factorials. Sorting rule: where order does not matter it goes to permutations.selections; an expression or equation in factorials or nPr with no objects to arrange goes to permutations.factorials.",
+          "taught_in": []
+        },
+        {
+          "id": "permutations.selections",
+          "name": "Combinations: selections",
+          "syllabus": {
+            "waec": null,
+            "jamb": "V.4"
+          },
+          "covers": "Choosing objects when order does not matter, using nCr, including a committee drawn from two groups and choosing two balls of the same colour. Sorting rule: a probability worked out by counting selections goes to probability.combined-events; an expression or equation in nCr with no objects to choose goes to permutations.factorials.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "probability",
+      "name": "Probability",
+      "part": "Statistics and probability",
+      "syllabus": {
+        "waec": "H(b)",
+        "jamb": "V.5"
+      },
+      "subtopics": [
+        {
+          "id": "probability.single-event",
+          "name": "Probability of a single event",
+          "syllabus": {
+            "waec": "H(b)(i)",
+            "jamb": "V.5(a)"
+          },
+          "covers": "Experimental and theoretical probability, equally likely outcomes, and one trial with a coin, a die, cards, a bag of marbles or a group of people, including an event described with 'or', such as red or green, or odd or prime, when it is answered by counting outcomes, and probabilities read from a Venn diagram or a table whose region counts are given. Sorting rule: two or more trials or draws go to probability.combined-events; when the number in a Venn region must first be worked out from given totals, the question goes to sets.venn, even though the last step is a probability.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "probability.combined-events",
+          "name": "Combined events: addition and multiplication rules",
+          "syllabus": {
+            "waec": "H(b)(ii)-(iii)",
+            "jamb": "V.5(b)"
+          },
+          "covers": "Mutually exclusive, independent and complementary events, the addition and multiplication rules, two dice or two coins, as with the sum of two dice being a factor of 12, draws with and without replacement, and probabilities found by counting selections with nCr.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "vectors",
+      "name": "Vectors in a plane",
+      "part": "Vectors and transformation",
+      "syllabus": {
+        "waec": "I(a)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "vectors.representation",
+          "name": "Representing vectors",
+          "syllabus": {
+            "waec": "I(a)",
+            "jamb": null
+          },
+          "covers": "A vector as a directed line segment, column (Cartesian) components, magnitude and direction, vectors given in bearing form such as (5, 060°), and changing between the forms. Sorting rule: adding, subtracting or scaling vectors goes to vectors.operations.",
+          "taught_in": []
+        },
+        {
+          "id": "vectors.operations",
+          "name": "Operations on vectors",
+          "syllabus": {
+            "waec": "I(a)",
+            "jamb": null
+          },
+          "covers": "Equal, zero and parallel vectors, addition and subtraction, multiplication by a scalar, the resultant, and position vectors in a figure. Sorting rule: moving a shape by a vector goes to transformation.translation.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "transformation",
+      "name": "Transformations in the Cartesian plane",
+      "part": "Vectors and transformation",
+      "syllabus": {
+        "waec": "I(b)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "transformation.reflection",
+          "name": "Reflection",
+          "syllabus": {
+            "waec": "I(b)",
+            "jamb": null
+          },
+          "covers": "Reflecting points and shapes in the x and y axes and in the lines x = k, y = k, y = x and y = kx, and finding the mirror line (line of symmetry).",
+          "taught_in": []
+        },
+        {
+          "id": "transformation.rotation",
+          "name": "Rotation",
+          "syllabus": {
+            "waec": "I(b)",
+            "jamb": null
+          },
+          "covers": "Rotating points and shapes about the origin or another point through angles from minus 180 to 180 degrees, and finding the centre and angle of a rotation.",
+          "taught_in": []
+        },
+        {
+          "id": "transformation.translation",
+          "name": "Translation",
+          "syllabus": {
+            "waec": "I(b)",
+            "jamb": null
+          },
+          "covers": "Translating points and shapes by a translation vector, and finding the vector from an object and its image.",
+          "taught_in": []
+        },
+        {
+          "id": "transformation.enlargement",
+          "name": "Enlargement",
+          "syllabus": {
+            "waec": "I(b)",
+            "jamb": null
+          },
+          "covers": "Enlarging a figure from a given centre by a scale factor, including fractional and negative factors, finding the centre and scale factor, and the area of the image. Sorting rule: area and volume ratios of similar figures with no enlargement in the question go to solids.similar.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    }
+  ],
+  "merged_into": {},
+  "legacy_note": "Each of the 90 legacy database topics is folded in: 29 names that match one subtopic go to it, and 61 that name a whole topic, span several topics, or name no content go to a parent. A question moved to a parent is correct but unplaced within it, and is flagged for reclassification rather than guessed into a subtopic. A name equal to a topic, such as Circles or surds, goes to that topic even when it sounds specific, because it covers several subtopics. A name that spans several topics goes to the first topic it names, as with 'Fractions, decimals, approximations and indices/logarithms' to fractions and 'Vectors and transformations in the plane' to vectors. A bare section name goes to the first topic in that section: Algebra to expressions, Geometry and 'Plane geometry and constructions' to angles, Calculus to differentiation, Statistics to data-presentation, Number Systems to number-bases, and the mensuration names that span plane shapes and solids to plane-mensuration. The two names that describe paper structure, 'Paper 1 (Objective) coverage and difficulty mix' and 'Paper 2 (Theory) structure and depth', name no content; they go to number-bases only so the fold is complete, and every question on them needs reclassifying.",
+  "legacy_to": {
+    "Algebra": "expressions",
+    "Algebraic expressions": "expressions",
+    "Algebraic fractions": "algebraic-fractions",
+    "Algebraic processes and equations (linear, simultaneous, quadratic)": "linear-equations",
+    "Angles and parallel lines": "angles",
+    "Angles of elevation and depression": "trigonometry.elevation-depression",
+    "Approximations": "fractions.approximation",
+    "Areas": "plane-mensuration",
+    "Bearings, distances, heights and distances": "trigonometry",
+    "Calculus": "differentiation",
+    "Change of subject": "expressions.change-of-subject",
+    "Circles": "circles",
+    "Coordinate geometry in 2D": "coordinate-geometry",
+    "Data presentation, averages and dispersion": "data-presentation",
+    "Elementary probability": "probability",
+    "Financial arithmetic": "financial",
+    "Fractions and decimals": "fractions.operations",
+    "Fractions, decimals, approximations and indices/logarithms": "fractions",
+    "Functions and relations": "functions",
+    "Functions, relations, and change of subject": "functions",
+    "Geometry": "angles",
+    "Graphs of functions": "graphs",
+    "Graphs of linear and quadratic functions, and simple inequalities": "graphs",
+    "Indices": "indices.laws",
+    "Integers and rational numbers": "fractions.rational-numbers",
+    "Introductory calculus": "differentiation",
+    "Lengths and perimeters": "plane-mensuration",
+    "Linear inequalities": "inequalities",
+    "Logical reasoning": "logic",
+    "Matrices and determinants": "matrices",
+    "Mensuration: perimeter, area, volume and surface area": "plane-mensuration",
+    "Modular arithmetic": "number-bases.modular",
+    "Number Systems": "number-bases",
+    "Number bases and modular arithmetic": "number-bases",
+    "Paper 1 (Objective) coverage and difficulty mix": "number-bases",
+    "Paper 2 (Theory) structure and depth": "number-bases",
+    "Percentages": "percentages",
+    "Plane geometry and constructions (angles, triangles, polygons, loci)": "angles",
+    "Ratio and proportions": "ratio.proportion",
+    "Ratios, proportions, percentages and financial arithmetic": "ratio",
+    "Sequence and series": "sequences",
+    "Sequences and series (AP and GP)": "sequences",
+    "Statistics": "data-presentation",
+    "Transformation": "transformation",
+    "Triangles and polygons": "triangles",
+    "Trigonometric ratios in 2D and plane triangles": "trigonometry",
+    "Trigonometry": "trigonometry",
+    "Trigonometry - basic ratios": "trigonometry.ratios",
+    "Variation (direct, inverse, joint, partial)": "variation",
+    "Vectors": "vectors",
+    "Vectors and transformations in the plane": "vectors",
+    "Volumes": "solids.volume",
+    "angles": "angles",
+    "bearings": "trigonometry.bearings",
+    "circle-geometry": "circles",
+    "circle-mensuration": "plane-mensuration.circles",
+    "circle-theorems": "circles",
+    "coordinate-geometry": "coordinate-geometry",
+    "cylinder": "solids",
+    "depreciation": "financial.depreciation",
+    "factorization": "expressions.expansion-factorisation",
+    "fractions": "fractions.operations",
+    "geometric-progression": "sequences.gp",
+    "inequalities": "inequalities",
+    "linear-equations": "linear-equations",
+    "logarithms": "indices",
+    "logic": "logic",
+    "mensuration": "plane-mensuration",
+    "number-bases": "number-bases",
+    "parallel-lines": "angles.parallel-lines",
+    "percentage": "percentages",
+    "percentage-error": "percentages.error",
+    "perimeter": "plane-mensuration.perimeter-area",
+    "polygons": "triangles.polygons",
+    "probability": "probability",
+    "pythagoras": "plane-mensuration.lengths",
+    "quadratic-equations": "quadratic-equations",
+    "ratio": "ratio.proportion",
+    "rational-expressions": "algebraic-fractions",
+    "scientific-notation": "indices.standard-form",
+    "sequences": "sequences",
+    "sets": "sets",
+    "similar-triangles": "triangles.similar",
+    "simple-interest": "percentages.interest",
+    "simultaneous-equations": "linear-equations.simultaneous",
+    "speed-time": "ratio.rates",
+    "surds": "surds",
+    "surface-area": "solids.surface-area",
+    "variation": "variation",
+    "volume-ratios": "solids.similar"
+  }
+}

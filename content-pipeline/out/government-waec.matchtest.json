@@ -1,0 +1,144 @@
+{
+  "slug": "government-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.48,
+  "agree_subtopic": 76,
+  "agree_topic": 76,
+  "nofit": 3,
+  "disagreements": [
+    {
+      "year": 2021,
+      "q_number": 17,
+      "stem": "One of the following French West African colonies was the first to gain independence.",
+      "sonnet": "colonial.french",
+      "opus": "nationalism.meaning",
+      "notes": [
+        "tests which French West African colony gained independence first, a fact of French decolonisation chronology. No subtopic covers this the way pre-independence covers British constitutions. Closest is colonial.french, which covers assimilation and the Loi Cadre but not the independence timeline itself.",
+        "tests the order of independence in French West Africa (Guinea, 1958). No subtopic covers decolonisation or independence of West African states; nationalism.meaning is closest because it mentions nationalism in French colonies, colonial.french second"
+      ]
+    },
+    {
+      "year": 2015,
+      "q_number": 40,
+      "stem": "Casting vote' was one of the ways the governor in British West Africa controlled the",
+      "sonnet": "colonial.british-structure",
+      "opus": "pre-independence.compared",
+      "notes": [
+        "governor's casting vote over the Legislative Council",
+        "governor's casting vote over the Legislative Council across British West Africa fits pre-independence.compared (governor's wide powers) and colonial.british-structure (direct rule through governor and Legislative Council)"
+      ]
+    },
+    {
+      "year": 2019,
+      "q_number": 49,
+      "stem": "Which of the following features of Indirect Rule contributed immensely to Nationalism in British West Africa?",
+      "sonnet": "colonial.indirect-rule",
+      "opus": "nationalism.meaning",
+      "notes": [
+        "also fits nationalism.meaning, because the correct answer is a feature of indirect rule (its content lives at colonial.indirect-rule) but the question tests it as a cause behind nationalism's rise (content that nationalism.meaning owns). No sorting rule resolves this direction, only the reverse (constitution features asked via nationalist pressure go to the constitution).",
+        "a factor behind nationalism (nationalism.meaning), but every option is a feature of indirect rule and the student must know indirect rule excluded the educated elite (colonial.indirect-rule)"
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 17,
+      "stem": "Press control is necessary for a state particularly in the area of",
+      "sonnet": "citizenship.rights",
+      "opus": "pressure-opinion.media",
+      "notes": [
+        "also fits pressure-opinion.media, since press control for state security is both a limit on the right to press freedom and a question of the media's role. No sorting rule covers restricting the press for security reasons.",
+        "limits on press freedom; pressure-opinion.media covers roles and impact only, citizenship.rights covers limits of rights; neither names press freedom or control"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "colonial",
+        "detail": "No subtopic covers the chronology or process of French West African decolonisation and independence (Q29, which French colony gained independence first). British West Africa gets a full pre-independence topic of named constitutions; the French side only has colonial.french, which covers administrative policy (assimilation, association, Loi Cadre) but not the sequence of independence itself."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "forms.rule-by-few",
+        "detail": "Kleptocracy (Q54, corrupt rulers exploiting people and resources for personal wealth) is a commonly tested term but is not named in the covers line alongside aristocracy, oligarchy, plutocracy, gerontocracy, autocracy and dictatorship."
+      },
+      {
+        "kind": "missing",
+        "where": "foreign-policy.concepts",
+        "detail": "The functions of a diplomatic mission or embassy (Q64) are not covered. The subtopic lists diplomacy only as one term among several (interdependence, globalisation, international law) with no detail on what missions actually do."
+      },
+      {
+        "kind": "overlap",
+        "where": "colonial.indirect-rule / nationalism.meaning",
+        "detail": "A question that asks which feature of indirect rule fuelled nationalism (Q38) sits on the border: the correct answer is content that belongs to colonial.indirect-rule, but the question frames it as a cause of nationalism's rise, which is content nationalism.meaning owns. Existing sorting rules resolve the reverse direction (a constitutional feature won by nationalist pressure goes to the constitution) but not this one."
+      },
+      {
+        "kind": "overlap",
+        "where": "citizenship.rights / constitution.types",
+        "detail": "Entrenched clauses (Q43, rights explicitly protected by the constitution) are not named in either subtopic. citizenship.rights covers the constitution as a safeguard of rights; constitution.types covers how constitutions are amended, which is the mechanism that makes a clause entrenched. Neither covers line resolves which wins."
+      },
+      {
+        "kind": "overlap",
+        "where": "citizenship.rights / pressure-opinion.media",
+        "detail": "Press control for reasons of state security (Q74) sits between citizenship.rights (limits on the right to press freedom) and pressure-opinion.media (the media's own role and impact). No sorting rule addresses restricting the press."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "nationalism",
+        "detail": "No home for decolonisation itself: how and when West African states, especially French colonies, gained independence (Guinea 1958, the de Gaulle referendum). Add nationalism.decolonisation, or widen colonial.french to cover independence of French West Africa (Q29)."
+      },
+      {
+        "kind": "overlap",
+        "where": "nationalism.meaning",
+        "detail": "Border with nationalism.movements is unclear when the effect of nationalism is the formation of parties: meaning owns effects, movements owns the rise of nationalist parties. Add a rule saying which wins (Q16, Q62)."
+      },
+      {
+        "kind": "overlap",
+        "where": "colonial.indirect-rule",
+        "detail": "A feature of indirect rule asked as a cause of nationalism (exclusion of the educated elite) fits both colonial.indirect-rule and nationalism.meaning; neither covers line has a rule for colonial policy as a cause of nationalism (Q38)."
+      },
+      {
+        "kind": "overlap",
+        "where": "pre-independence.compared",
+        "detail": "The governor's control of the Legislative Council across British West Africa (casting vote, official majority) fits both pre-independence.compared and colonial.british-structure; the rule should say which owns the governor's powers over the LegCo (Q34)."
+      },
+      {
+        "kind": "missing",
+        "where": "constitution.types",
+        "detail": "Entrenched clauses and entrenchment are not named anywhere; they sit between rigid constitutions and the constitutional safeguarding of rights in citizenship.rights. Name them in one covers line (Q43)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "forms.rule-by-few",
+        "detail": "The list of forms omits kleptocracy (and similar terms like theocracy), and principles.accountability owns corruption, so a form of government defined by corruption has two homes. Add kleptocracy to rule-by-few with a rule against accountability (Q54)."
+      },
+      {
+        "kind": "missing",
+        "where": "pressure-opinion.media",
+        "detail": "Press freedom and its limits, including state control of the press for security, has no named home; media covers roles and impact, citizenship.rights covers rights generally. Add press freedom and censorship to pressure-opinion.media (Q74)."
+      },
+      {
+        "kind": "too-broad",
+        "where": "foreign-policy.concepts",
+        "detail": "Diplomatic missions and their functions (embassies, high commissions, intelligence, attracting investment) are only implied by the word diplomacy; name them so they are not split with foreign-policy.nigeria (Q64)."
+      }
+    ]
+  }
+}

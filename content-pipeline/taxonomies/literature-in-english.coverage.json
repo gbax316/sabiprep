@@ -1,0 +1,2244 @@
+{
+  "items": [
+    {
+      "source": "wassce",
+      "ref": "Aims (a)",
+      "text": "Critical response to, and awareness of, how literature functions",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes the functions and importance of literature.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (b)",
+      "text": "Familiarity with the terms and concepts necessary for the appreciation of Literature",
+      "subtopic_id": "terms.elements",
+      "also_subtopic_ids": [
+        "terms.character",
+        "terms.plot",
+        "terms.modes",
+        "figures.comparison",
+        "figures.contrast",
+        "figures.sound",
+        "figures.arrangement",
+        "drama.techniques",
+        "prose.narrative",
+        "poetry.versification",
+        "poetry.imagery"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the terms are spread over the terms, figures and genre subtopics by design.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (c)",
+      "text": "Ability to distinguish between types of Literature, their techniques of composition and modes of appeal",
+      "subtopic_id": "literature.genres",
+      "also_subtopic_ids": [
+        "drama.types",
+        "prose.types",
+        "poetry.types",
+        "drama.techniques",
+        "prose.narrative",
+        "poetry.versification"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: genres and modes of appeal in literature.genres, kinds within each genre in the three types subtopics, techniques of composition in the technique subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (d)",
+      "text": "Competence in understanding literary texts at their various levels of meaning (surface, implied)",
+      "subtopic_id": "appreciation.meaning",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes what a passage says and what can be inferred.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Aims (e)",
+      "text": "Facility in responding imaginatively to literature through an effective and organised use of language",
+      "subtopic_id": "appreciation.method",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line cites aim (e): planning and organising an essay, supporting points with reference and quotation.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 1",
+      "text": "Multiple-choice objective test, fifty questions",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [
+        "appreciation.meaning",
+        "shakespeare.characters"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: umbrella for the four sections itemised below.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 1 (a)",
+      "text": "Twenty questions on General Knowledge of Literature",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [
+        "literature.genres",
+        "literature.history",
+        "figures.comparison",
+        "figures.contrast",
+        "figures.sound",
+        "figures.arrangement",
+        "terms.character",
+        "terms.plot",
+        "terms.elements",
+        "terms.modes",
+        "drama.types",
+        "drama.techniques",
+        "drama.theatre",
+        "prose.types",
+        "prose.narrative",
+        "poetry.types",
+        "poetry.versification",
+        "poetry.imagery"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the syllabus itemises no content for this section; the tree splits it over the literature, figures, terms and genre topics.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 1 (b)",
+      "text": "Five questions on an unseen prose passage (about 120 to 150 words)",
+      "subtopic_id": "appreciation.meaning",
+      "also_subtopic_ids": [
+        "appreciation.tone-mood",
+        "appreciation.technique",
+        "prose.narrative"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: meaning, tone and technique of the passage, and its point of view in prose.narrative.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 1 (c)",
+      "text": "Five questions on an unseen poem",
+      "subtopic_id": "appreciation.meaning",
+      "also_subtopic_ids": [
+        "appreciation.tone-mood",
+        "appreciation.technique",
+        "poetry.types",
+        "poetry.versification"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: meaning, tone and technique of the poem, its kind in poetry.types and its rhyme scheme or metre in poetry.versification.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 1 (d)",
+      "text": "Twenty context questions on the prescribed Shakespearean text",
+      "subtopic_id": "shakespeare.characters",
+      "also_subtopic_ids": [
+        "shakespeare.plot",
+        "shakespeare.themes",
+        "shakespeare.setting",
+        "shakespeare.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the five shakespeare subtopics divide the text by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 2",
+      "text": "Essay test on African Prose (Section A) and Non-African Prose (Section B)",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [
+        "set-prose.characters",
+        "set-prose.themes",
+        "set-prose.setting",
+        "set-prose.style",
+        "appreciation.method"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: content over the five set-prose subtopics, essay technique in appreciation.method.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 2 Section A",
+      "text": "African Prose",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [
+        "set-prose.characters",
+        "set-prose.themes",
+        "set-prose.setting",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the set-prose subtopics divide each text by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 2 Section B",
+      "text": "Non-African Prose",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [
+        "set-prose.characters",
+        "set-prose.themes",
+        "set-prose.setting",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the set-prose subtopics divide each text by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 3",
+      "text": "Drama and poetry components: Sections A to D",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [
+        "set-drama.characters",
+        "set-drama.themes",
+        "set-drama.setting",
+        "set-drama.style",
+        "set-poems.subject",
+        "set-poems.tone-mood",
+        "set-poems.form",
+        "set-poems.background",
+        "appreciation.method"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: umbrella for the four sections below.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 3 Section A",
+      "text": "African Drama",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [
+        "set-drama.characters",
+        "set-drama.themes",
+        "set-drama.setting",
+        "set-drama.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the set-drama subtopics divide each play by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 3 Section B",
+      "text": "Non-African Drama",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [
+        "set-drama.characters",
+        "set-drama.themes",
+        "set-drama.setting",
+        "set-drama.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the set-drama subtopics divide each play by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 3 Section C",
+      "text": "African Poetry",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [
+        "set-poems.tone-mood",
+        "set-poems.form",
+        "set-poems.background"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the set-poems subtopics divide each poem by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Paper 3 Section D",
+      "text": "Non-African Poetry",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [
+        "set-poems.tone-mood",
+        "set-poems.form",
+        "set-poems.background"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the set-poems subtopics divide each poem by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Texts: African Prose",
+      "text": "So the Path Does not Die (Pede Hollist); Redemption Road (Elma Shaw)",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [
+        "set-prose.characters",
+        "set-prose.themes",
+        "set-prose.setting",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: both titles named in set-prose.plot covers; each text split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Texts: Non-African Prose",
+      "text": "To Kill a Mockingbird (Harper Lee); Path of Lucas: The Journey He Endured (Susanne Bellefeuille)",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [
+        "set-prose.characters",
+        "set-prose.themes",
+        "set-prose.setting",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: both titles named in set-prose.plot covers; each text split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Texts: Shakespearean Text",
+      "text": "Antony and Cleopatra (William Shakespeare)",
+      "subtopic_id": "shakespeare.plot",
+      "also_subtopic_ids": [
+        "shakespeare.characters",
+        "shakespeare.themes",
+        "shakespeare.setting",
+        "shakespeare.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: title named in shakespeare.plot covers; text split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Texts: African Drama",
+      "text": "Once Upon an Elephant (Bosede Ademilua-Afolayan); The Marriage of Anansewa (Efua Sutherland)",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [
+        "set-drama.characters",
+        "set-drama.themes",
+        "set-drama.setting",
+        "set-drama.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: both titles named in set-drama.plot covers; each play split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Texts: Non-African Drama",
+      "text": "An Inspector Calls (J. B. Priestley); A Man for All Seasons (Robert Bolt)",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [
+        "set-drama.characters",
+        "set-drama.themes",
+        "set-drama.setting",
+        "set-drama.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: both titles named in set-drama.plot covers; each play split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Texts: African Poetry",
+      "text": "Once Upon a Time (Okara); New Tongue (Kamara); Night (Soyinka); Not my Business (Osundare); Hearty Garlands (Afriyie-Vidza); The Breast of the Sea (Cheney-Coker)",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [
+        "set-poems.tone-mood",
+        "set-poems.form",
+        "set-poems.background"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the twelve prescribed poems are named as a set in set-poems.subject covers; each poem split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Texts: Non-African Poetry",
+      "text": "She Walks in Beauty (Byron); The Nun's Priest's Tale, shortened (Chaucer); Digging (Heaney); Still I Rise (Angelou); The Telephone Call (Adcock); The Stone (Gibson)",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [
+        "set-poems.tone-mood",
+        "set-poems.form",
+        "set-poems.background"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: as for African poetry.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Note (theme)",
+      "text": "Context questions on the Shakespearean text test theme",
+      "subtopic_id": "shakespeare.themes",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Note (characterization)",
+      "text": "Context questions on the Shakespearean text test characterization",
+      "subtopic_id": "shakespeare.characters",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Note (style)",
+      "text": "Context questions on the Shakespearean text test style",
+      "subtopic_id": "shakespeare.style",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "Note (setting)",
+      "text": "Context questions on the Shakespearean text test setting",
+      "subtopic_id": "shakespeare.setting",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "GO(a)",
+      "text": "Stimulate and sustain candidates' interest in Literature in English",
+      "subtopic_id": null,
+      "also_subtopic_ids": [],
+      "status": "missing",
+      "note": "An attitude aim with no testable content; no covers line addresses it.",
+      "proposed": "No subtopic needed; if recorded at all, as a note on the literature topic."
+    },
+    {
+      "source": "utme",
+      "ref": "GO(b)",
+      "text": "Create an awareness of the general principles of Literature and the functions of language",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line names both the functions of language and JAMB's general principles.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "GO(c)",
+      "text": "Appreciate literary works of all genres and across all cultures",
+      "subtopic_id": "appreciation.meaning",
+      "also_subtopic_ids": [
+        "appreciation.tone-mood",
+        "appreciation.technique",
+        "set-drama.themes",
+        "set-prose.themes",
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: unseen appreciation plus the prescribed-text parents, which carry the African and non-African slots.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "GO(d)",
+      "text": "Apply the knowledge of Literature in English to the analysis of social, political and economic events in the society",
+      "subtopic_id": "appreciation.meaning",
+      "also_subtopic_ids": [
+        "set-drama.themes",
+        "set-prose.themes",
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Covered: relating a passage or text to life and its lessons. Missing: using literature to analyse present-day social, political and economic events; covers lines name only a text's own socio-political context.",
+      "proposed": "Add analysis of present-day social, political and economic events to the appreciation.meaning covers line."
+    },
+    {
+      "source": "utme",
+      "ref": "1",
+      "text": "Drama",
+      "subtopic_id": "drama.types",
+      "also_subtopic_ids": [
+        "drama.techniques",
+        "drama.theatre",
+        "set-drama.plot",
+        "set-drama.characters",
+        "set-drama.themes",
+        "set-drama.setting",
+        "set-drama.style",
+        "shakespeare.plot",
+        "shakespeare.themes",
+        "shakespeare.setting",
+        "shakespeare.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: umbrella for the items below.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: types",
+      "text": "Types of drama: tragedy, comedy, tragicomedy, melodrama, farce, opera",
+      "subtopic_id": "drama.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (characterization)",
+      "text": "Dramatic techniques: characterization",
+      "subtopic_id": "terms.character",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes the ways a writer reveals character.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (dialogue)",
+      "text": "Dramatic techniques: dialogue",
+      "subtopic_id": "drama.techniques",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (flashback)",
+      "text": "Dramatic techniques: flashback",
+      "subtopic_id": "terms.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "drama.techniques sends flashback to terms.plot.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (mime)",
+      "text": "Dramatic techniques: mime",
+      "subtopic_id": "drama.techniques",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (costume)",
+      "text": "Dramatic techniques: costume",
+      "subtopic_id": "drama.theatre",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (music/dance)",
+      "text": "Dramatic techniques: music/dance",
+      "subtopic_id": "drama.techniques",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (decor/scenery)",
+      "text": "Dramatic techniques: decor/scenery",
+      "subtopic_id": "drama.theatre",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (acts/scenes)",
+      "text": "Dramatic techniques: acts/scenes",
+      "subtopic_id": "drama.techniques",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (soliloquy/aside)",
+      "text": "Dramatic techniques: soliloquy/aside",
+      "subtopic_id": "drama.techniques",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: techniques (figures of speech)",
+      "text": "Dramatic techniques: figures of speech",
+      "subtopic_id": "figures.comparison",
+      "also_subtopic_ids": [
+        "figures.contrast",
+        "figures.sound",
+        "figures.arrangement"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: figures are divided over the four figures subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: interpretation (theme)",
+      "text": "Interpretation of the prescribed texts: theme",
+      "subtopic_id": "set-drama.themes",
+      "also_subtopic_ids": [
+        "shakespeare.themes"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: JAMB's non-African drama is Antony and Cleopatra, which sits under shakespeare.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: interpretation (plot)",
+      "text": "Interpretation of the prescribed texts: plot",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [
+        "shakespeare.plot"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: set-drama for the African play, shakespeare for the non-African one.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: interpretation (socio-political context)",
+      "text": "Interpretation of the prescribed texts: socio-political context",
+      "subtopic_id": "set-drama.setting",
+      "also_subtopic_ids": [
+        "shakespeare.setting"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: set-drama and shakespeare.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 contents: interpretation (setting)",
+      "text": "Interpretation of the prescribed texts: setting",
+      "subtopic_id": "set-drama.setting",
+      "also_subtopic_ids": [
+        "shakespeare.setting"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: set-drama and shakespeare.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 objectives (a)",
+      "text": "Identify the various types of drama",
+      "subtopic_id": "drama.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 objectives (b)",
+      "text": "Analyse the contents of the various types of drama",
+      "subtopic_id": "drama.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes their features.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 objectives (c)",
+      "text": "Compare and contrast the features of different dramatic types",
+      "subtopic_id": "drama.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes how they differ.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 objectives (d)",
+      "text": "Demonstrate adequate knowledge of dramatic techniques used in each prescribed text",
+      "subtopic_id": "set-drama.style",
+      "also_subtopic_ids": [
+        "shakespeare.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: set-drama and shakespeare.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 objectives (e)",
+      "text": "Differentiate between the styles of selected playwrights",
+      "subtopic_id": "set-drama.style",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes the playwright's style.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 objectives (f)",
+      "text": "Determine the theme of any prescribed text",
+      "subtopic_id": "set-drama.themes",
+      "also_subtopic_ids": [
+        "shakespeare.themes"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: set-drama and shakespeare.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 objectives (g)",
+      "text": "Identify the plot of the play",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [
+        "shakespeare.plot"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: set-drama and shakespeare.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 objectives (h)",
+      "text": "Apply the lessons of the play to everyday living",
+      "subtopic_id": "set-drama.themes",
+      "also_subtopic_ids": [
+        "shakespeare.themes"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: both covers lines include the play's lessons.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1 objectives (i)",
+      "text": "Identify the spatial and temporal setting of the play",
+      "subtopic_id": "set-drama.setting",
+      "also_subtopic_ids": [
+        "shakespeare.setting"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: set-drama and shakespeare.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2",
+      "text": "Prose",
+      "subtopic_id": "prose.types",
+      "also_subtopic_ids": [
+        "prose.narrative",
+        "terms.character",
+        "set-prose.plot",
+        "set-prose.characters",
+        "set-prose.themes",
+        "set-prose.setting",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: umbrella for the items below.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: types (fiction)",
+      "text": "Fiction: novel, novella/novelette, short story",
+      "subtopic_id": "prose.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: types (non-fiction)",
+      "text": "Non-fiction: biography, autobiography, memoir",
+      "subtopic_id": "prose.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: types (faction)",
+      "text": "Faction (a combination of fact and fiction)",
+      "subtopic_id": "prose.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: narrative techniques (point of view)",
+      "text": "Point of view: omniscient/third person, first person",
+      "subtopic_id": "prose.narrative",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: narrative techniques (characterisation)",
+      "text": "Characterisation: round, flat, foil, hero, antihero",
+      "subtopic_id": "terms.character",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: narrative techniques (language)",
+      "text": "Language",
+      "subtopic_id": "prose.narrative",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes language as a narrative technique.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: textual analysis (theme)",
+      "text": "Textual analysis: theme",
+      "subtopic_id": "set-prose.themes",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: textual analysis (plot)",
+      "text": "Textual analysis: plot",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: textual analysis (setting)",
+      "text": "Textual analysis: setting (temporal/spatial)",
+      "subtopic_id": "set-prose.setting",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 contents: textual analysis (socio-political context)",
+      "text": "Textual analysis: socio-political context",
+      "subtopic_id": "set-prose.setting",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (a)",
+      "text": "Differentiate between types of prose",
+      "subtopic_id": "prose.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (b)",
+      "text": "Identify the category that each prescribed text belongs to",
+      "subtopic_id": "set-prose.style",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (c)",
+      "text": "Analyse the components of each type of prose",
+      "subtopic_id": "prose.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line: what defines a kind of prose.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (d)",
+      "text": "Identify the narrative techniques used in each of the prescribed texts",
+      "subtopic_id": "set-prose.style",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (e)",
+      "text": "Determine an author's narrative style",
+      "subtopic_id": "set-prose.style",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (f)",
+      "text": "Distinguish one type of character from another",
+      "subtopic_id": "terms.character",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (g)",
+      "text": "Determine the thematic pre-occupation of the author of the prescribed text",
+      "subtopic_id": "set-prose.themes",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (h)",
+      "text": "Indicate the plot of the novel",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (i)",
+      "text": "Identify the temporal and spatial setting of the novel",
+      "subtopic_id": "set-prose.setting",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2 objectives (j)",
+      "text": "Relate the prescribed text to real-life situations",
+      "subtopic_id": "set-prose.themes",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3",
+      "text": "Poetry",
+      "subtopic_id": "poetry.types",
+      "also_subtopic_ids": [
+        "poetry.versification",
+        "poetry.imagery",
+        "figures.sound",
+        "figures.arrangement",
+        "set-poems.subject",
+        "set-poems.tone-mood",
+        "set-poems.form",
+        "set-poems.background"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: umbrella for the items below.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: types",
+      "text": "Types: sonnet, ode, lyrics, elegy, ballad, panegyric, epic, blank verse",
+      "subtopic_id": "poetry.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: devices (structure)",
+      "text": "Poetic devices: structure",
+      "subtopic_id": "poetry.versification",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Stanza forms, lines, enjambment.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: devices (imagery)",
+      "text": "Poetic devices: imagery",
+      "subtopic_id": "poetry.imagery",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: devices (sound: rhyme/rhythm)",
+      "text": "Sound: rhyme/rhythm",
+      "subtopic_id": "poetry.versification",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: devices (sound: repetition)",
+      "text": "Sound: repetition",
+      "subtopic_id": "figures.arrangement",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: devices (sound: pun, onomatopoeia)",
+      "text": "Sound: pun, onomatopoeia",
+      "subtopic_id": "figures.sound",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: devices (diction)",
+      "text": "Poetic devices: diction",
+      "subtopic_id": "poetry.imagery",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: devices (persona)",
+      "text": "Poetic devices: persona",
+      "subtopic_id": "poetry.imagery",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: appreciation (thematic preoccupation)",
+      "text": "Appreciation: thematic preoccupation",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: appreciation (socio-political relevance)",
+      "text": "Appreciation: socio-political relevance",
+      "subtopic_id": "set-poems.background",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 contents: appreciation (style)",
+      "text": "Appreciation: style",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [
+        "set-poems.tone-mood"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: devices and kind in set-poems.form, tone in set-poems.tone-mood.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 objectives (a)",
+      "text": "Identify different types of poetry",
+      "subtopic_id": "poetry.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 objectives (b)",
+      "text": "Compare and contrast the features of different poetic types",
+      "subtopic_id": "poetry.types",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 objectives (c)",
+      "text": "Determine the devices used by various poets",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 objectives (d)",
+      "text": "Show how poetic devices are used for aesthetic effect in each poem",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes the effect of each device.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 objectives (e)",
+      "text": "Deduce the poet's preoccupation from the poem",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3 objectives (f)",
+      "text": "Appraise poetry as an art with moral values",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [
+        "literature.nature"
+      ],
+      "status": "partial",
+      "note": "Covered: a poem's message and lessons (set-poems.subject), aesthetic value as a general principle (literature.nature). Missing: judging a poem's artistic merit is not named in any covers line.",
+      "proposed": "Add appraising a prescribed poem's artistic and moral worth to the set-poems.subject covers line."
+    },
+    {
+      "source": "utme",
+      "ref": "3 objectives (g)",
+      "text": "Apply the lessons from the poem to real-life situations",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4",
+      "text": "General Literary Principles",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [
+        "terms.plot",
+        "terms.character",
+        "terms.modes",
+        "terms.elements",
+        "drama.theatre",
+        "drama.techniques",
+        "prose.narrative",
+        "figures.comparison"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: umbrella for the items below.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: terms (foreshadowing, suspense)",
+      "text": "Literary terms: foreshadowing, suspense",
+      "subtopic_id": "terms.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: terms (theatre)",
+      "text": "Literary terms: theatre",
+      "subtopic_id": "drama.theatre",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: terms (monologue, dialogue, soliloquy)",
+      "text": "Literary terms: monologue, dialogue, soliloquy",
+      "subtopic_id": "drama.techniques",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: terms (symbolism)",
+      "text": "Literary terms: symbolism",
+      "subtopic_id": "terms.modes",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: terms (protagonist, antagonist)",
+      "text": "Literary terms: protagonist, antagonist",
+      "subtopic_id": "terms.character",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: terms (figures of speech)",
+      "text": "Literary terms: figures of speech",
+      "subtopic_id": "figures.comparison",
+      "also_subtopic_ids": [
+        "figures.contrast",
+        "figures.sound",
+        "figures.arrangement"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the four figures subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: terms (satire)",
+      "text": "Literary terms: satire",
+      "subtopic_id": "terms.modes",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: terms (stream of consciousness)",
+      "text": "Literary terms: stream of consciousness",
+      "subtopic_id": "prose.narrative",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: principles (imitation)",
+      "text": "Literary principles: direct imitation in play",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: principles (versification)",
+      "text": "Literary principles: versification in drama and poetry",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "As a principle; the mechanics of verse sit in poetry.versification.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: principles (narration)",
+      "text": "Literary principles: narration of people's experiences",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: principles (aesthetic value)",
+      "text": "Literary principles: achievement of aesthetic value",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 contents: relationship",
+      "text": "Relationship between literary terms and principles",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 objectives (a)",
+      "text": "Identify literary terms in drama, prose, and poetry",
+      "subtopic_id": "terms.elements",
+      "also_subtopic_ids": [
+        "terms.character",
+        "terms.plot",
+        "terms.modes",
+        "drama.techniques",
+        "prose.narrative",
+        "poetry.versification",
+        "poetry.imagery"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: terms sit in the terms topic and in each genre's technique subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 objectives (b)",
+      "text": "Identify the general principles of Literature",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 objectives (c)",
+      "text": "Differentiate between literary terms and principles",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 objectives (d)",
+      "text": "Use literary terms appropriately",
+      "subtopic_id": "terms.elements",
+      "also_subtopic_ids": [
+        "terms.character",
+        "terms.plot",
+        "terms.modes",
+        "figures.comparison",
+        "figures.contrast",
+        "figures.sound",
+        "figures.arrangement"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: every term subtopic holds what its terms mean.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5",
+      "text": "Literary Appreciation",
+      "subtopic_id": "appreciation.meaning",
+      "also_subtopic_ids": [
+        "appreciation.tone-mood",
+        "appreciation.technique"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: umbrella for the items below.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5 contents",
+      "text": "Unseen passages/extracts drawn from Drama, Prose, and Poetry",
+      "subtopic_id": "appreciation.meaning",
+      "also_subtopic_ids": [
+        "appreciation.tone-mood",
+        "appreciation.technique"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: meaning, tone and technique; unseen drama extracts are placed here by the scope rule.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5 objectives (a)",
+      "text": "Determine the literary devices used in a given passage/extract",
+      "subtopic_id": "appreciation.technique",
+      "also_subtopic_ids": [
+        "figures.comparison",
+        "figures.contrast",
+        "figures.sound",
+        "figures.arrangement",
+        "poetry.versification"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: effect of a device in appreciation.technique, naming the device in its term's home by the sorting rule.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5 objectives (b)",
+      "text": "Provide a meaningful interpretation of the given passage/extract",
+      "subtopic_id": "appreciation.meaning",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5 objectives (c)",
+      "text": "Relate the extract to true-life experiences",
+      "subtopic_id": "appreciation.meaning",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Texts: Drama, African",
+      "text": "Efua Sutherland, The Marriage of Anansewa",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [
+        "set-drama.characters",
+        "set-drama.themes",
+        "set-drama.setting",
+        "set-drama.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: title named in set-drama.plot covers; split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Texts: Drama, Non-African",
+      "text": "William Shakespeare, Antony and Cleopatra",
+      "subtopic_id": "shakespeare.plot",
+      "also_subtopic_ids": [
+        "shakespeare.characters",
+        "shakespeare.themes",
+        "shakespeare.setting",
+        "shakespeare.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: title named in shakespeare.plot covers; split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Texts: Prose, African",
+      "text": "Pede Hollist, So the Path Does not Die; Elma Shaw, Redemption Road",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [
+        "set-prose.characters",
+        "set-prose.themes",
+        "set-prose.setting",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: titles named in set-prose.plot covers; split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Texts: Prose, Non-African",
+      "text": "Susanna Bellefeuille, Path of Lucas: The Journey He Endured",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [
+        "set-prose.characters",
+        "set-prose.themes",
+        "set-prose.setting",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: title named in set-prose.plot covers; split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Texts: Poetry, African",
+      "text": "Once Upon a Time; New Tongue; Night; Not my Business; Hearty (Hungry) Garlands; The Breast of the Sea",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [
+        "set-poems.tone-mood",
+        "set-poems.form",
+        "set-poems.background"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: the prescribed poems as a set in set-poems.subject covers; split by aspect.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "Texts: Poetry, Non-African",
+      "text": "She Walks in Beauty; The Nun's Priest's Tale (shortened); The Telephone Call; The Stone",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [
+        "set-poems.tone-mood",
+        "set-poems.form",
+        "set-poems.background"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: as for African poetry.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W1",
+      "text": "Introduction to Literature: definitions, functions, Literature in English vs English Literature, literary terms, figures of speech (simile, metaphor, personification, oxymoron, onomatopoeia, litotes, pun, alliteration, assonance, paradox, irony, euphemism, hyperbole, synecdoche, metonymy, malapropism)",
+      "subtopic_id": "literature.nature",
+      "also_subtopic_ids": [
+        "figures.comparison",
+        "figures.contrast",
+        "figures.sound"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: every listed figure is named in a figures covers line.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2",
+      "text": "Literary Appreciation I: definition, what to appreciate and how, background and setting of poet/poem, subject matter, themes and style, relating themes to life",
+      "subtopic_id": "appreciation.method",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3",
+      "text": "Literary Appreciation II: imagery/symbolism, poetic devices, analysing style, terms used in appreciation (theme, style, setting, tone, mood, symbolism)",
+      "subtopic_id": "appreciation.technique",
+      "also_subtopic_ids": [
+        "terms.elements",
+        "terms.modes",
+        "poetry.imagery"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: effect of devices in appreciation.technique, the terms in terms.elements and terms.modes.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4",
+      "text": "Drama: definition, features, types (tragedy, comedy, tragi-comedy, farce, melodrama, playlet), elements (mime, prologue, action, comic relief, soliloquy, suspense, epilogue, conflict, antagonist)",
+      "subtopic_id": "drama.types",
+      "also_subtopic_ids": [
+        "literature.genres",
+        "drama.techniques",
+        "terms.plot",
+        "terms.character"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: 'action' is not named as a term but is served by terms.plot.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5",
+      "text": "Terms used in drama: stage, audience, dialogue, soliloquy, aside, character, flashback, foreshadowing, prologue, epilogue, prompt, script, backdrop, costume",
+      "subtopic_id": "drama.theatre",
+      "also_subtopic_ids": [
+        "drama.techniques",
+        "terms.plot",
+        "terms.character"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: 'script' is not named but is implied by drama.techniques (what is written into a play).",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6",
+      "text": "African Drama: The Lion and the Jewel, reading, summary and analysis",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "2021-2025 text; the subtopics are title-free.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7",
+      "text": "The Lion and the Jewel continued: analysis, interpretation, themes, setting, language, characterization",
+      "subtopic_id": "set-drama.themes",
+      "also_subtopic_ids": [
+        "set-drama.setting",
+        "set-drama.style",
+        "set-drama.characters"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8",
+      "text": "Prose: definition, features, types (epistolary, sociological, political, gothic), fiction and non-fiction, biography and autobiography, elements (plot, setting, narrative technique, characters, themes), first/third person",
+      "subtopic_id": "prose.types",
+      "also_subtopic_ids": [
+        "literature.genres",
+        "prose.narrative",
+        "terms.plot",
+        "terms.elements",
+        "terms.character"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9",
+      "text": "African Prose: Second Class Citizen, reading, interpretation, themes, setting, language, style, characterization",
+      "subtopic_id": "set-prose.themes",
+      "also_subtopic_ids": [
+        "set-prose.plot",
+        "set-prose.setting",
+        "set-prose.style",
+        "set-prose.characters"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W1",
+      "text": "Poetry: definitions, types (ballad, epic, lullaby, sonnet, ode, pastoral, dirge or elegy, panegyric), features",
+      "subtopic_id": "poetry.types",
+      "also_subtopic_ids": [
+        "literature.genres"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing: what poetry is against the other genres in literature.genres, its kinds in poetry.types.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2",
+      "text": "Elements of poetry: theme, subject matter, rhyme, rhythm, stanza, metre, poetic licence, persona, tone/mood, figures of speech (irony, metaphor, simile, personification, assonance, synecdoche, euphemism, onomatopoeia, rhetorical question, allusion), special syntax of poetry",
+      "subtopic_id": "poetry.versification",
+      "also_subtopic_ids": [
+        "poetry.imagery",
+        "terms.elements",
+        "figures.comparison",
+        "figures.contrast",
+        "figures.sound",
+        "figures.arrangement"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3",
+      "text": "African Poetry: Black Woman (Senghor), reading, meaning, interpretation",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4",
+      "text": "Black Woman continued: poetic devices, analysis, themes",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W5",
+      "text": "Non-African Poetry: Caged Bird (Angelou), reading, meaning, interpretation",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6",
+      "text": "Caged Bird continued: themes, analysis, poetic devices",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7",
+      "text": "Non-African Drama: Look Back in Anger, reading and summary",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8",
+      "text": "Look Back in Anger continued: analysis, themes, character and characterization",
+      "subtopic_id": "set-drama.themes",
+      "also_subtopic_ids": [
+        "set-drama.characters"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9",
+      "text": "Poetry: The Grieved Lands of Africa (Neto), reading, meaning, interpretation",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "The scheme labels this Angolan poem non-African; the tree does not split by region, so no effect.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W10",
+      "text": "The Grieved Lands of Africa continued: themes, analysis, poetic devices",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1",
+      "text": "General overview of the genres: distinct features, differences and similarities of drama, prose and poetry",
+      "subtopic_id": "literature.genres",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2",
+      "text": "Plot: definition, plot and story",
+      "subtopic_id": "terms.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3",
+      "text": "Poetry: The Journey of the Magi (Eliot), reading, meaning, interpretation",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4",
+      "text": "The Journey of the Magi continued: themes, analysis, poetic devices",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5",
+      "text": "Non-African Prose: The Invisible Man, reading, analysis, interpretation",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6",
+      "text": "The Invisible Man continued: themes, setting, language",
+      "subtopic_id": "set-prose.themes",
+      "also_subtopic_ids": [
+        "set-prose.setting",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W7",
+      "text": "The Invisible Man continued: style, character and characterization",
+      "subtopic_id": "set-prose.style",
+      "also_subtopic_ids": [
+        "set-prose.characters"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8",
+      "text": "African Poetry: Raider of the Treasure Trove (Wosornu), reading, interpretation",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9",
+      "text": "Raider of the Treasure Trove continued: themes, analysis, poetic devices",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1",
+      "text": "Shakespearean Drama: A Midsummer Night's Dream, first half, meaning, plot summary, analysis",
+      "subtopic_id": "shakespeare.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2",
+      "text": "A Midsummer Night's Dream, second half, plot summary, analysis",
+      "subtopic_id": "shakespeare.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3",
+      "text": "A Midsummer Night's Dream, final reading, summary, analysis",
+      "subtopic_id": "shakespeare.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4",
+      "text": "A Midsummer Night's Dream: quotations to be used in answering context questions",
+      "subtopic_id": "appreciation.method",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes supporting points with quotation and answering context questions on an extract.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5",
+      "text": "African Poetry: The Song of the Women of my Land (Sesay), background and setting of poet and poem, subject matter",
+      "subtopic_id": "set-poems.background",
+      "also_subtopic_ids": [
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6",
+      "text": "The Song of the Women of my Land continued: poetic devices, imagery/symbolism",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7",
+      "text": "The Song of the Women of my Land continued: mood, tone, imagery, symbolism",
+      "subtopic_id": "set-poems.tone-mood",
+      "also_subtopic_ids": [
+        "set-poems.form"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8",
+      "text": "Non-African Poetry: Bats (Lawrence), background and setting of poet and poem, subject matter",
+      "subtopic_id": "set-poems.background",
+      "also_subtopic_ids": [
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9",
+      "text": "Bats continued: poetic devices, imagery/symbolism",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W10",
+      "text": "Bats continued: mood, tone, imagery, symbolism",
+      "subtopic_id": "set-poems.tone-mood",
+      "also_subtopic_ids": [
+        "set-poems.form"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W1",
+      "text": "African Drama: Let Me Die Alone, background of playwright, background and setting of play, first half, plot summary",
+      "subtopic_id": "set-drama.setting",
+      "also_subtopic_ids": [
+        "set-drama.plot"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2",
+      "text": "Let Me Die Alone, second half, plot summary, theme, setting, style",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [
+        "set-drama.themes",
+        "set-drama.setting",
+        "set-drama.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3",
+      "text": "Let Me Die Alone: characterization, major and minor characters, roles, relationships, role play",
+      "subtopic_id": "set-drama.characters",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W4",
+      "text": "African Poetry: A Government Driver on His Retirement (Chibuike), reading, meaning, analysis",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5",
+      "text": "A Government Driver on His Retirement continued: theme, setting, style, mood, tone, imagery, symbolism",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [
+        "set-poems.subject",
+        "set-poems.tone-mood",
+        "set-poems.background"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W6",
+      "text": "Non-African Poetry: The Good Morrow (Donne), reading, meaning, analysis",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7",
+      "text": "The Good Morrow continued: theme, setting, style, mood, tone, imagery, symbolism",
+      "subtopic_id": "set-poems.form",
+      "also_subtopic_ids": [
+        "set-poems.subject",
+        "set-poems.tone-mood",
+        "set-poems.background"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W8",
+      "text": "Non-African Drama: Fences, first half, plot summary, analysis",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9",
+      "text": "Fences, second half, plot summary, analysis",
+      "subtopic_id": "set-drama.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W10",
+      "text": "Fences, final reading, summary, thematic preoccupation, character and characterization",
+      "subtopic_id": "set-drama.themes",
+      "also_subtopic_ids": [
+        "set-drama.plot",
+        "set-drama.characters"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W1",
+      "text": "African Prose: Unexpected Joy at Dawn, background of the novelist, background and setting of the novel",
+      "subtopic_id": "set-prose.setting",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "Covers line includes the author's life and background.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2",
+      "text": "Unexpected Joy at Dawn continued: plot, themes, style",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [
+        "set-prose.themes",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3",
+      "text": "Unexpected Joy at Dawn continued: character analysis, major and minor characters, roles, relationships",
+      "subtopic_id": "set-prose.characters",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4",
+      "text": "African Poetry: The Leader and the Led (Osundare), reading, meaning, interpretation",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5",
+      "text": "The Leader and the Led continued: background, analysis, themes",
+      "subtopic_id": "set-poems.background",
+      "also_subtopic_ids": [
+        "set-poems.subject"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W6",
+      "text": "Non-African Poetry: Binsey Poplars (Hopkins), reading, meaning, interpretation",
+      "subtopic_id": "set-poems.subject",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7",
+      "text": "Binsey Poplars continued: background, analysis, themes, poetic devices",
+      "subtopic_id": "set-poems.background",
+      "also_subtopic_ids": [
+        "set-poems.subject",
+        "set-poems.form"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W8",
+      "text": "Non-African Prose: Wuthering Heights, first half, summary, analysis",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9",
+      "text": "Wuthering Heights, second half, summary, analysis",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [],
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W10",
+      "text": "Wuthering Heights: plot, background, theme, characterization, setting, style",
+      "subtopic_id": "set-prose.plot",
+      "also_subtopic_ids": [
+        "set-prose.themes",
+        "set-prose.characters",
+        "set-prose.setting",
+        "set-prose.style"
+      ],
+      "status": "partial",
+      "note": "Split, nothing missing.",
+      "proposed": ""
+    }
+  ],
+  "unmapped_subtopics": [
+    "literature.history"
+  ],
+  "unmapped_note": "literature.history is reached by no item, not even inside a split. figures.contrast and appreciation.tone-mood are never a primary subtopic_id but are reached through also_subtopic_ids on split items (figures.contrast: UTME 1 figures of speech, UTME 4 figures of speech, SOW SS1 T1 W1 and SS1 T2 W2; appreciation.tone-mood: WASSCE Paper 1 (b) and (c), UTME 5).",
+  "skipped": "UTME recommended anthologies and approved critical texts (reading lists, not content); the full text of the WASSCE prescribed poems (the titles are itemised); WASSCE format notes on passage length and no Shakespeare essay; SOW review, revision and examination weeks, and all of SS3, which is revision and past questions.",
+  "summary": {
+    "wassce": {
+      "covered": 7,
+      "partial": 22,
+      "missing": 0
+    },
+    "utme": {
+      "covered": 67,
+      "partial": 30,
+      "missing": 1
+    },
+    "sow": {
+      "covered": 28,
+      "partial": 30,
+      "missing": 0
+    }
+  },
+  "taxonomy_version": "1.1",
+  "sources": {
+    "wassce": "syllabi\\literature-in-english-waec.txt",
+    "utme": "syllabi\\literature-in-english-jamb.txt",
+    "sow": "syllabi\\literature-in-english-sow.txt"
+  }
+}

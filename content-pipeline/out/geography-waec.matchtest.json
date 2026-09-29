@@ -1,0 +1,94 @@
+{
+  "slug": "geography-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.45,
+  "agree_subtopic": 79,
+  "agree_topic": 79,
+  "nofit": 2,
+  "disagreements": [
+    {
+      "year": 2024,
+      "q_number": 7,
+      "stem": "Which part of the mapped area can coastal fishing be practiced?",
+      "sonnet": "map-reading.human",
+      "opus": "maps.direction",
+      "notes": [
+        "passage_text is null in input but the stem refers to 'the mapped area', so this belongs with the other map-based questions.",
+        "answer is a part of the map, so the maps.direction rule applies; the item has no passage_text though it is a map question"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "tectonics.faulting / tectonics.mountains",
+        "detail": "Horst appears explicitly as a faulting landform in tectonics.faulting's covers line, while tectonics.mountains' sorting rule claims any naming of a mountain's type or example. A question that only asks which mountain type a horst belongs to (WASSCE-style, Q51) sits on this border and the rule does not say which wins for a bare terminology match."
+      },
+      {
+        "kind": "missing",
+        "where": "settlement.types",
+        "detail": "No subtopic covers a settlement's situation or relative location (its position with respect to other places), as distinct from site. settlement.types' covers line lists only site factors (water, defence, relief). A question asking what 'relative location of settlement' means (Q29) has no clean home."
+      },
+      {
+        "kind": "missing",
+        "where": "africa-economy",
+        "detail": "africa-economy has subtopics for irrigation, plantation farming, lumbering, mining and oil, but none for power or energy resources, even though Nigeria gets its own nigeria-resources.power. A question on why Tropical Africa should build more hydroelectric power (Q78) has no specific home; environment.resources is the only general fallback and does not mention the region."
+      },
+      {
+        "kind": "too-broad",
+        "where": "earth.latitude / earth.longitude-time / earth.movements",
+        "detail": "A 'which of the following is accurate' question format (Q17) draws its four options from three different subtopics of the earth topic (a latitude distance fact, a longitude time-difference fact, a great-circle fact, and a solstice date fact). The how_to_use rules cover single-fact questions but not this multi-option format, so placement has to rest on which option is correct rather than the topic the stem touches."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "africa-economy",
+        "detail": "No home for power or energy development outside Nigeria (Q78, hydroelectric power in tropical Africa). Add africa-economy.power (HEP schemes such as Kainji, Akosombo, Kariba, Aswan, Inga: factors, importance, problems), or widen environment.resources to cover energy demand and development in tropical Africa."
+      },
+      {
+        "kind": "overlap",
+        "where": "tectonics.faulting",
+        "detail": "Horst and block mountain sit in two covers lines at once: faulting lists block mountains (horsts) while tectonics.mountains claims naming a mountain's type (Q51). Add a rule: matching a fault feature such as a horst to its mountain type goes to tectonics.faulting."
+      },
+      {
+        "kind": "overlap",
+        "where": "settlement.types",
+        "detail": "Three subtopics claim classification: settlement.types (rural and urban, by size), settlement.rural (how rural settlements are classified) and settlement.urban (towns classified by function). The criterion that separates rural from urban (Q42) has no clear owner. State that telling rural from urban goes to settlement.types."
+      },
+      {
+        "kind": "overlap",
+        "where": "earth.latitude",
+        "detail": "No rule for a which-statement-is-true item whose options span sibling subtopics (Q17: latitude distance, longitude time, great circles, overhead sun). Add a general rule to how_to_use, for example place it by the correct option."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "settlement.types",
+        "detail": "Covers names site but not situation or relative location (Q29). Add situation and relative location to the covers line."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "map-reading.drainage",
+        "detail": "Covers omits the stage of a river (youthful, mature, old) judged from a map (Q74), which a student would otherwise send to denudation.rivers. Add river stage read from the map."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "industry.classification",
+        "detail": "Covers says naming which class an industry belongs to, but not the features of heavy and light industry (Q34, capital intensive). Add the characteristics of heavy and light industry."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "industry.development",
+        "detail": "Covers does not name investment or capital as a problem, so a question on hindrances to foreign investment in tropical Africa (Q5) is a judgement call. Add foreign investment and its hindrances (political instability, capital) to the problems listed."
+      }
+    ]
+  }
+}

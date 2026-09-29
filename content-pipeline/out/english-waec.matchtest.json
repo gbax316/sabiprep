@@ -1,0 +1,122 @@
+{
+  "slug": "english-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "cost_usd": 1.39,
+  "agree_subtopic": 76,
+  "agree_topic": 77,
+  "nofit": 1,
+  "disagreements": [
+    {
+      "year": 2016,
+      "q_number": 43,
+      "stem": "We arrived just …… time for the formal opening.",
+      "sonnet": "idioms.idioms",
+      "opus": "word-classes.prepositions",
+      "notes": [
+        "fixed phrase just in time, only the preposition varies across options",
+        "also fits idioms.idioms: just in time is a fixed phrase whose preposition cannot change, which the idioms rule claims, though its meaning is literal. Input instruction text is the synonym instruction, a data error"
+      ]
+    },
+    {
+      "year": 2021,
+      "q_number": 14,
+      "stem": "His thoughtlessness is simply beyond …….",
+      "sonnet": "idioms.idioms",
+      "opus": "vocabulary.word-choice",
+      "notes": [
+        "",
+        "beyond belief is named as a collocation example in the covers line"
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 63,
+      "stem": "A meeting was called …… the instance of the chairman.",
+      "sonnet": "word-classes.prepositions",
+      "opus": "idioms.idioms",
+      "notes": [
+        "at the instance of, noun plus preposition",
+        "at the instance of is a fixed frame whose preposition cannot change, so the idioms rule claims it, but it is taught as preposition usage and word-classes.prepositions fits equally"
+      ]
+    },
+    {
+      "year": 2024,
+      "q_number": 26,
+      "stem": "That nonchalant attitude of Jonah’s attitude ……",
+      "sonnet": "idioms.sentence-interpretation",
+      "opus": "idioms.idioms",
+      "notes": [
+        "also fits vocabulary.word-choice: the gap is filled by the implied reaction to a described attitude, not a full This means that sentence and not a marked-word synonym, so it sits between the two sorting rules",
+        "stem is garbled in the source (the idiom being interpreted is lost), so what it tests cannot be read. Best guess is an idiom interpretation item; this is a data problem, not a taxonomy gap"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "word-classes.conjunctions-articles",
+        "detail": "Connector-choice questions that pit a subordinating conjunction against a compound preposition before the same kind of complement (although vs in spite of vs despite vs though) are common in these papers, but the covers lines for conjunctions-articles and prepositions never name this contrast, so which subtopic owns it is a guess."
+      },
+      {
+        "kind": "overlap",
+        "where": "idioms.sentence-interpretation",
+        "detail": "The sorting rules for idioms.sentence-interpretation and vocabulary.word-choice only cover two shapes: a full This means that sentence, and a single marked word needing its nearest synonym. A fill-in-the-blank that asks for the implied reaction to a described attitude or situation (neither a full sentence to paraphrase nor a marked word to match) falls between them."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "idioms.phrasal-verbs",
+        "detail": "The phrasal-verbs sorting rule says a verb and particle always wins over the This means that format in idioms.idioms, but several real idioms in this sample (sitting on the fence, maintained his ground, at the drop of a hat) are also verb-plus-words expressions that are not simple two-word particle verbs; a rule of thumb for telling a phrasal verb from a longer idiomatic verb phrase would help, since palm off and make out could otherwise be misread as idioms.idioms by a less careful classifier."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "overlap",
+        "where": "word-classes.prepositions",
+        "detail": "Border with idioms.idioms: the idioms rule claims any fixed frame whose small words cannot be changed even when options vary only a preposition, but almost every preposition collocation is fixed in that sense (privy to, prefer to, in time, at the instance of, by heart). Needs a test that does not depend on fixedness, for example: literal meaning of the whole phrase goes to prepositions, non-literal to idioms."
+      },
+      {
+        "kind": "overlap",
+        "where": "word-classes.conjunctions-articles",
+        "detail": "Border with word-classes.prepositions for concessive and causal connectors: in spite of, despite, because of, but for are prepositions tested against the conjunctions although and because. No covers line names them; add connectors of both kinds to conjunctions-articles or add a sorting rule."
+      },
+      {
+        "kind": "overlap",
+        "where": "word-classes.pronouns",
+        "detail": "Quantifiers used without a noun (say very little; most are guilty; many, none, much) sit between the determiners list in conjunctions-articles and the indefinite pronouns in pronouns. The existing rule covers only some or any and anyone type words; extend it to all quantifiers standing alone."
+      },
+      {
+        "kind": "misplaced",
+        "where": "word-classes.conjunctions-articles",
+        "detail": "Quantifiers (few, little, much, many, most) live here but the name says conjunctions, articles and determiners; a reader looking for quantity words will not find them. Name quantifiers in the subtopic name or give them their own subtopic."
+      },
+      {
+        "kind": "overlap",
+        "where": "sentences.construction",
+        "detail": "Its rule takes items where several kinds of error compete, which collides with gap-fill items whose options mix two grammar points (Neither he nor I: pronoun case plus correlative pair). State that a gap-fill goes to the grammar point most distractors fail on, and construction only takes whole-sentence choices."
+      },
+      {
+        "kind": "too-broad",
+        "where": "vocabulary.word-choice",
+        "detail": "Took 15 of 80 items mixing general vocabulary, collocation (strained relationship, book launch) and field registers (law, stock exchange, transport). Workable, but a student score here says little; consider splitting registers from collocation and general vocabulary."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "comprehension.cloze",
+        "detail": "Covers line repeats the same sorting rule twice in different words; merge them. Also, nine cloze items in this set arrived with no stem and no passage, so they could only be placed by format; the format exception in how_to_use makes that possible, but the pipeline should carry the passage."
+      }
+    ]
+  }
+}

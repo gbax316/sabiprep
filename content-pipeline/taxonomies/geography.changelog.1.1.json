@@ -1,0 +1,184 @@
+{
+  "changes": [
+    {
+      "kind": "added",
+      "where": "industry.world-regions",
+      "evidence": "Coverage: UTME 3(b)(c) distribution, 'Manufacturing industries: distribution', status missing. Matchtest sonnet finding (missing, industry.location / industry.development): Q73 on why Japan's industrial sector developed has no case-study slot outside Africa. Matchtest opus finding (missing, industry): no home for world industrial regions outside tropical Africa (Japan, USA, Western Europe), Q73.",
+      "change": "New subtopic 'World industrial regions' under industry, JAMB 3(b)(c), covering the world distribution of manufacturing and why industry grew in named regions outside Africa, with Japan as the worked case. It is a different skill from the general location factors (regional knowledge of named places), so it is added rather than widened into industry.location. Reciprocal sorting rules added to industry.location and industry.development. scope_rule notes why it is placed."
+    },
+    {
+      "kind": "widened",
+      "where": "nigeria-economy.industry",
+      "evidence": "Coverage: WASSCE RGN (h), status partial; importance of Nigerian industry not named in the covers line.",
+      "change": "Added the importance of Nigeria's industry (employment, revenue, foreign exchange, use of local raw materials), with a sorting rule sending importance and problems asked in general to industry.development."
+    },
+    {
+      "kind": "widened",
+      "where": "vulcanicity.earthquakes",
+      "evidence": "Coverage: UTME 2(j) objective ii, 'Describe the landforms associated with earthquakes', status partial.",
+      "change": "Added landforms associated with earthquakes (fissures and cracks, fault scarps, raised and sunken land, landslides set off by shaking) and cited 2(j) objective ii in the JAMB reference."
+    },
+    {
+      "kind": "widened",
+      "where": "nigeria.vegetation-soils",
+      "evidence": "Coverage: UTME 4(a)(d) soils, 'Natural resources: soils (distribution, uses, conservation)', status partial; the uses of Nigeria's soils as a resource named nowhere.",
+      "change": "Added where Nigeria's soil zones occur and their uses as a natural resource, cited 4(a)(d) soils, and added a sorting rule: soils as a resource here, erosion and conservation to soils.erosion. Widened rather than a new nigeria-resources subtopic, because soil zones and their uses are one lesson (SoW SS1 T3 W5)."
+    },
+    {
+      "kind": "widened",
+      "where": "nigeria-economy.trade",
+      "evidence": "Coverage: UTME 4(b)(d), 'Trade: regional and international trade, advantages and disadvantages', status partial.",
+      "change": "Added the advantages and disadvantages of regional and international trade to Nigeria, with a sorting rule sending why countries trade in general to trade.types."
+    },
+    {
+      "kind": "widened",
+      "where": "population.characteristics",
+      "evidence": "Coverage: SoW SS2 T2 W7 and SS2 T2 W8, 'World population (size, distribution patterns and structure)', status partial; world population size not named in any covers line.",
+      "change": "Added the size of the world's population and of its most populous countries, and cited SoW SS2 T2 W7-8."
+    },
+    {
+      "kind": "widened",
+      "where": "statistical.maps",
+      "evidence": "Matchtest sonnet finding (too-narrow, statistical.maps): reading or computing a value from a dot map (Q25, a dot-map export question) is not stated, though graphs states it for bar, line and pie charts.",
+      "change": "Added drawing, reading and computing values from dot maps, proportional circles, choropleth and isopleth maps, with a sorting rule; added the reciprocal rule to statistical.graphs that a value read from one of these maps goes to statistical.maps."
+    },
+    {
+      "kind": "widened",
+      "where": "environment.resources",
+      "evidence": "Matchtest opus finding (too-narrow, environment.resources): no subtopic covers energy sources compared by environmental impact (clean or renewable energy in general), Q38.",
+      "change": "Added energy sources (solar, wind, hydroelectric, geothermal, biomass, fossil fuels, nuclear) compared as renewable or non-renewable and by how clean they are. Sorting rule on both sides: choosing the cleanest or most renewable source goes here; renewable energy as a remedy for climate change goes to climate-change.effects, whose covers line now says so."
+    },
+    {
+      "kind": "widened",
+      "where": "africa-economy.mining",
+      "evidence": "Matchtest disagreement 2024 Q38 (diamonds in West Africa: sonnet africa-economy.mining, opus africa.physical). Sonnet finding (missing, africa-economy): no home for other West African mineral resources such as Sierra Leone's diamonds. Opus finding (misplaced, africa.physical): mineral distribution is reachable only through africa.physical; move it to africa-economy.mining and widen that beyond gold and copper.",
+      "change": "Renamed to 'Mining and minerals in Africa' (id kept) and widened to where Africa's other minerals are found and which countries are known for them (diamonds, iron ore, bauxite, manganese, with named countries). Added WAEC RGA (a) distribution of minerals to its references. Sorting rule: any non-oil mineral in an African country outside Nigeria goes here; oil to africa-economy.oil; Nigeria's to nigeria-resources.minerals, whose covers line now sends other African countries' minerals here."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "africa.physical / africa-economy.mining",
+      "evidence": "Matchtest opus finding (misplaced, africa.physical), Q7; disagreement 2024 Q38.",
+      "change": "Removed 'where its minerals are found' from africa.physical's covers line and its WAEC reference, and added the rule that where a mineral is found or mined in Africa, and which country is known for it, goes to africa-economy.mining."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "earth.latitude / earth.longitude-time",
+      "evidence": "Matchtest disagreement 2023 Q34, 'Which of the following is an important line of longitude?' (sonnet earth.longitude-time, opus earth.latitude). Opus finding (overlap, earth.latitude), Q50.",
+      "change": "Both lines now say: a question asking which option is a named line of longitude (Prime Meridian, International Date Line) goes to earth.longitude-time even when the options mix latitude and longitude; a named line of latitude, or defining and comparing the two kinds of line in general, stays in earth.latitude."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "vegetation.human / environment.hazards",
+      "evidence": "Matchtest disagreement 2024 Q45, activities that initiate deforestation (sonnet vegetation.human, opus environment.hazards). Opus finding (overlap, environment.hazards), Q31.",
+      "change": "Both lines now say: any question on deforestation itself, including which activities cause it, goes to environment.hazards, whether or not it sits in a list of hazards; human effects on vegetation not named as deforestation, and the uses and conservation of vegetation, stay in vegetation.human."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "settlement.urban / transport.development",
+      "evidence": "Matchtest disagreement 2022 Q47, 'The best way of solving transportation problems in a cosmopolitan city' (sonnet transport.development, opus settlement.urban). Opus finding (overlap, transport.development), Q37.",
+      "change": "Both lines now say: transport problems inside a town or city (congestion and its relief by mass transit, ring roads, flyovers, staggered hours) go to settlement.urban; transport problems across a country or region go to transport.development. transport.development's scope now reads 'in general and in tropical Africa', matching the WAEC item EHG (iii) problems, so a non-African, non-city question has a home."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "weather-climate.elements / weather-climate.rainfall",
+      "evidence": "Matchtest sonnet finding (overlap, weather-climate.elements / weather-climate.rainfall) and opus finding (overlap, weather-climate.elements): cloud types sit in both; Q1 on cumulonimbus and thunderstorms.",
+      "change": "Both lines now say: naming or identifying a cloud type and the weather it brings, including the cumulonimbus of thunderstorms, goes to weather-climate.elements; cloud as a form of condensation and how it forms goes to weather-climate.rainfall."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "weather-climate.instruments / weather-climate.elements",
+      "evidence": "Matchtest opus finding (overlap, weather-climate.instruments): interpreting a wet and dry bulb reading as relative humidity fits both, Q61.",
+      "change": "Both lines now say: reading relative humidity from wet and dry bulb readings, or what the difference between the bulbs shows, goes to weather-climate.instruments; what humidity is and how it varies stays in weather-climate.elements. Instruments' covers line now includes interpreting readings."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "maps.direction / map-reading.human",
+      "evidence": "Matchtest opus finding (overlap, maps.direction): 'in which part of the map a feature lies' collides with map-reading.human's 'any inference about activity drawn from a map', Q15.",
+      "change": "Both lines now say: when the answer asked for is a location on the map (direction, bearing, grid reference, part of the map) the question goes to maps.direction even if the student must first infer the activity; when the answer is the activity, settlement or land use itself it goes to map-reading.human."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "agriculture.systems / africa-economy.commercial-farming",
+      "evidence": "Matchtest opus finding (overlap, agriculture.systems): plantation agriculture in general (its crops, its disadvantages) falls between the two; the rule only settles 'defined as a system', Q55, Q70.",
+      "change": "Both lines now say: plantation agriculture asked about in general (features, typical crops, advantages and disadvantages) with no African region named goes to agriculture.systems; a question naming West Africa, East Africa or an African country goes to africa-economy.commercial-farming."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "population.characteristics / population.growth",
+      "evidence": "Matchtest opus finding (overlap, population.characteristics): advantages and disadvantages of a large population split between 'population as a resource' and over and under population, Q79.",
+      "change": "Both lines now say: the advantages and disadvantages of a large or small population go to population.growth, whose covers line now names them; population.characteristics keeps population as a resource only as its quality (skills, education, health) and the measures of a population."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "vulcanicity.earthquakes / tectonics.faulting / denudation.mass-movement",
+      "evidence": "Coverage: UTME 2(j) objective ii, status partial; the note says fault landforms sit in tectonics.faulting without reference to earthquakes. Widening vulcanicity.earthquakes to landforms (fault scarps, landslides) created borders with both neighbours.",
+      "change": "All three lines now say: a landform asked about as the product of an earthquake goes to vulcanicity.earthquakes; a fault landform asked about as the work of tensional or compressional forces goes to tectonics.faulting; a landslide asked about as a kind of mass movement goes to denudation.mass-movement."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "Coverage unmapped_subtopics: earth-structure.atmosphere has no syllabus item mapped to it alone.",
+      "reason": "Kept, not merged: a real paper tests it (WASSCE 2025 Q25, the ozone layer) and the scheme of work teaches it (SS1 T1 W6). Its covers line now states that this is its reason for existing; no content or border changed."
+    },
+    {
+      "finding": "Coverage: 13 WASSCE items for the regional geography of Ghana, RG Ghana (a) to (i, second), status missing.",
+      "reason": "Outside the tree by its scope rule: set only for candidates in Ghana. The standard allows items genuinely outside the subject as served here; this is a scope decision for Orezi at the gate, not a hole in the tree."
+    },
+    {
+      "finding": "Coverage: 10 WASSCE items for the regional geography of Sierra Leone, RG Sierra Leone (a) to (g), status missing.",
+      "reason": "Outside the tree by its scope rule: set only for candidates in Sierra Leone. Sierra Leone's diamonds as asked on the Nigerian paper (2024 Q38) now have a home in africa-economy.mining."
+    },
+    {
+      "finding": "Coverage: 12 WASSCE items for the regional geography of Liberia, RG Liberia (a) to (l), status missing.",
+      "reason": "Outside the tree by its scope rule: set only for candidates in Liberia."
+    },
+    {
+      "finding": "Coverage: 13 WASSCE items for the regional geography of Senegambia, RG Senegambia (a) to (m), status missing.",
+      "reason": "Outside the tree by its scope rule: set only for candidates in The Gambia."
+    },
+    {
+      "finding": "Coverage notes on the Ghana, Sierra Leone, Liberia and Senegambia fishing items: the tree has no general fishing subtopic anywhere.",
+      "reason": "Fishing appears only in the country-specific sections left out by the scope rule; no WAEC common item, JAMB item, scheme-of-work week or placement-test question needs it. Adding it would go beyond the evidence."
+    },
+    {
+      "finding": "Coverage: WASSCE EHG (ii) growth of settlements, status partial.",
+      "reason": "The note says no content is missing: urban growth is in settlement.urban and rural growth in settlement.rural."
+    },
+    {
+      "finding": "Coverage: UTME 2(h)(c), tectonic forces and resultant landforms, status partial.",
+      "reason": "The note says no content is missing: compressional forces in tectonics.folding, tensional in tectonics.faulting. No placement-test question split on this border."
+    },
+    {
+      "finding": "Coverage: UTME 2(l)(b), elements of weather and climate, status partial.",
+      "reason": "The note says no content is missing: split across weather-climate.elements, rainfall and pressure-winds by element."
+    },
+    {
+      "finding": "Coverage: UTME 2(l)(c), factors controlling weather and climate including pressure, status partial.",
+      "reason": "The note says no content is missing: pressure sits in weather-climate.pressure-winds. No placement-test question split on this border."
+    },
+    {
+      "finding": "Coverage: SoW SS1 T1 W3, shape, size, sphericity, rotation and revolution, status partial.",
+      "reason": "The note says no content is missing: split between earth.shape-size and earth.movements."
+    },
+    {
+      "finding": "Coverage: SoW SS1 T1 W5, latitude and longitude, time zones, distances, Date Line, status partial.",
+      "reason": "The note says no content is missing: split between earth.longitude-time and earth.latitude. The border itself is now sorted (see the earth.latitude / earth.longitude-time change)."
+    },
+    {
+      "finding": "Coverage: SoW SS1 T2 W1, formation of fold, block, volcanic and residual mountains, status partial.",
+      "reason": "The note says no content is missing: tectonics.mountains' existing sorting rule sends each formation process to its subtopic."
+    },
+    {
+      "finding": "Coverage: SoW SS1 T3 W5, Nigeria's vegetation belts, soil zones and soil erosion, status partial.",
+      "reason": "The note says no content is missing: soil erosion goes to soils.erosion by the tree's rule."
+    },
+    {
+      "finding": "Coverage: SoW SS1 T3 W6, Nigeria's transport and industries, status partial.",
+      "reason": "The note says no content is missing: split across nigeria-economy.transport, industry.classification and nigeria-economy.industry."
+    },
+    {
+      "finding": "Coverage: SoW SS2 T3 W5, mining in Africa: copper, gold and petroleum, status partial.",
+      "reason": "The note says no content is missing: petroleum is in africa-economy.oil. africa-economy.mining was widened for a different reason (2024 Q38), recorded above."
+    }
+  ]
+}

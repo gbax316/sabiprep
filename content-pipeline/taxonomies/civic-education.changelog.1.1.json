@@ -1,0 +1,214 @@
+{
+  "changes": [
+    {
+      "kind": "added",
+      "where": "democracy.minority-interests",
+      "evidence": "coverage SS1 T2 W5 (partial): Minority and majority interest: definition with examples; reasons for protecting minority interest; ways of safeguarding it. Only majority rule with minority protection as a feature of democracy had a home.",
+      "change": "Added subtopic democracy.minority-interests (Majority rule and minority interests), taught SS1 T2, WAEC null. It is its own lesson with its own body of knowledge (reasons for protection and safeguards), not a feature to name. Sorting rule on it and on democracy.meaning-types: majority rule as a feature goes to meaning-types, minority interests and their protection go to minority-interests."
+    },
+    {
+      "kind": "widened",
+      "where": "values.importance",
+      "evidence": "coverage SS1 T1 W3 (partial): opportunity to defend oneself (fair hearing) as a societal value expectation had no values home.",
+      "change": "Named the opportunity to defend oneself (fair hearing) as a societal value expectation, with a sorting rule: as a value expectation to values.importance, as a rule-of-law principle to rule-of-law.meaning, as a right to human-rights.meaning."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "rule-of-law.meaning",
+      "evidence": "coverage SS1 T1 W3 (partial): fair hearing sits in values, rule of law and human rights.",
+      "change": "Added the matching rule: fair hearing asked as a value society expects of its members goes to values.importance."
+    },
+    {
+      "kind": "widened",
+      "where": "values.importance",
+      "evidence": "matchtest opus too-narrow values.importance: what hinders building national values (Q19, poor citizenship or followership) is not named.",
+      "change": "Added what hinders the building of national values (poor citizenship and followership, bad leadership) and ways of promoting them; the sorting rule now sends hindrances and promotion here."
+    },
+    {
+      "kind": "widened",
+      "where": "hiv-aids.meaning-transmission",
+      "evidence": "coverage SS1 T1 W5 (partial): the social drivers of the spread of HIV/AIDS are not named.",
+      "change": "Added the drivers of its spread (poverty, ignorance, multiple sexual partners, drug abuse) and named them in the sorting rule."
+    },
+    {
+      "kind": "widened",
+      "where": "democracy.meaning-types",
+      "evidence": "coverage SS1 T2 W2 (partial): merits and demerits of representative democracy not in any covers line.",
+      "change": "Added the merits and demerits of each type of democracy, such as representative democracy."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "democracy.importance-problems",
+      "evidence": "coverage SS1 T2 W2 (partial): democracy.importance-problems covers democracy in general, not one type; the widening above creates a border.",
+      "change": "Rule on both lines: merits and demerits of one named type go to democracy.meaning-types; of democracy in general to democracy.importance-problems."
+    },
+    {
+      "kind": "widened",
+      "where": "democracy.meaning-types",
+      "evidence": "coverage SS2 T1 W5 (partial): the characteristics of capitalist democracy are not in any covers line.",
+      "change": "Added the characteristics of each type, including those of capitalist democracy."
+    },
+    {
+      "kind": "widened",
+      "where": "human-rights.meaning",
+      "evidence": "coverage SS1 T3 W4 (partial): importance of fundamental human rights not in any covers line.",
+      "change": "Added why fundamental human rights are important, and named it in the sorting rule; added SS1 T3 to taught_in."
+    },
+    {
+      "kind": "widened",
+      "where": "human-rights.udhr",
+      "evidence": "coverage SS2 T2 W3 (partial): the general history of human rights before 1948 is not named; only the UDHR's background is.",
+      "change": "Added the history of human rights leading to the declaration, including earlier charters and declarations, to the sorting rule as well; added SS2 T2 to taught_in."
+    },
+    {
+      "kind": "widened",
+      "where": "human-rights.limitations",
+      "evidence": "coverage SS2 T2 W4 (partial): ways of reducing emergencies not in any covers line.",
+      "change": "Added ways of reducing or avoiding a state of emergency."
+    },
+    {
+      "kind": "widened",
+      "where": "government.tiers",
+      "evidence": "matchtest disagreement 2023 Q5 (the right to secede; sonnet nationalism.national-unity, opus government.tiers); sonnet missing at nationalism.national-unity; opus missing at government.tiers (Q18).",
+      "change": "Named the indivisibility of the federation and the constitutional bar on any state seceding, cited WASSCE 2023 Q5, and added a sorting rule sending secession here and unity programmes and symbols to nationalism.national-unity. Chose widening over a new subtopic: it is a close relative of federalism and one fact, not a separate skill. Recorded in source.scope_rule."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "nationalism.national-unity",
+      "evidence": "matchtest disagreement 2023 Q5; sonnet missing at nationalism.national-unity.",
+      "change": "Added: the constitutional bar on secession and the indivisibility of the federation go to government.tiers."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "democracy.constitution",
+      "evidence": "matchtest opus missing at government.tiers: secession sits between federalism in government.tiers and the constitution in democracy.constitution.",
+      "change": "Added: what the constitution says about secession and the indivisibility of the federation goes to government.tiers."
+    },
+    {
+      "kind": "widened",
+      "where": "drug-abuse.prevention",
+      "evidence": "matchtest sonnet missing at drug-abuse.prevention and opus missing at drug-abuse (Q74): no home for treatment and rehabilitation of an existing addict.",
+      "change": "Added the treatment and rehabilitation of existing addicts (counselling, support, rehabilitation centres); renamed to Preventing drug abuse, rehabilitation, agencies and laws (id unchanged). Chose widening over drug-abuse.rehabilitation: it is a close relative of the measures and agencies already held. Recorded in source.scope_rule."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "drug-abuse.causes-effects",
+      "evidence": "matchtest sonnet missing at drug-abuse.prevention: causes-effects covers how dependence develops, which borders recovery.",
+      "change": "Added: how dependence develops and how an addict behaves goes here; how an existing addict is treated, counselled or rehabilitated goes to drug-abuse.prevention."
+    },
+    {
+      "kind": "widened",
+      "where": "human-trafficking.efforts",
+      "evidence": "matchtest opus too-narrow human-trafficking.efforts (Q51, parental care); disagreement 2021 Q20 (Chalyn; sonnet parenthood.importance, opus human-trafficking.efforts).",
+      "change": "Added prevention by families and individuals (parental care, moral upbringing, wariness of offers of work abroad), and a sorting rule: any measure that stops trafficking or would have saved a victim goes here, including care by parents; parenting in general goes to parenthood.roles."
+    },
+    {
+      "kind": "widened",
+      "where": "human-trafficking.meaning-causes",
+      "evidence": "matchtest disagreement 2021 Q20, sonnet note: poor parenting is not named among the causes of trafficking.",
+      "change": "Added neglect or poor care by parents to the causes, with a sorting rule: parental neglect as a cause goes here, what would have kept a victim safe goes to human-trafficking.efforts."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "parenthood.roles",
+      "evidence": "matchtest opus overlap parenthood.roles (Q29 values inculcated by parents, Q51 trafficking victim, Q57 child lacking parental care); sonnet overlap parenthood.roles and values.meaning-types; disagreement 2021 Q20.",
+      "change": "Added: the named value parents instil goes to values.meaning-types; parental care or its lack asked as the cause of, or safeguard against, a named social vice goes to that vice's parent; parenting in general stays here."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "parenthood.importance",
+      "evidence": "matchtest opus overlap parenthood.roles; disagreement 2021 Q20 (sonnet placed it in parenthood.importance).",
+      "change": "Added: what good parenting gives society in general goes here; parental care as cause of or safeguard against a named social vice goes to that vice's parent."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "values.meaning-types",
+      "evidence": "matchtest sonnet overlap parenthood.roles and values.meaning-types (a value said to be inculcated by parents); opus overlap relationships.interpersonal and values.meaning-types (Q24).",
+      "change": "Added: naming or defining a value goes here even when the stem says parents instil it; a quality asked as what fosters cooperation or good relations between people goes to relationships.interpersonal; hindrances to values go to values.importance."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "relationships.interpersonal",
+      "evidence": "matchtest opus overlap relationships.interpersonal: skills that promote relationships overlap the values list (Q24, fostering cooperation: discipline, empathy, maturity, understanding).",
+      "change": "Named empathy and understanding among the skills, and added: a quality asked as what fosters cooperation or good relations among people goes here even when it is also a value; defining a value term goes to values.meaning-types."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "human-rights.protection",
+      "evidence": "matchtest sonnet overlap human-rights.protection and democracy.pillars (independent judiciary preventing rights abuse); opus overlap democracy.pillars (judiciary claimed by four subtopics; Q38, Q46).",
+      "change": "Added: the courts or an independent judiciary asked as the guard against rights abuse go here; the judiciary named as a pillar of democracy goes to democracy.pillars; a weak judiciary letting someone evade the law goes to rule-of-law.limitations; the judiciary as an organ goes to government.arms."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "democracy.pillars",
+      "evidence": "matchtest opus overlap democracy.pillars (Q38, Q46); sonnet overlap human-rights.protection.",
+      "change": "Added: the judiciary goes here only when named as a pillar or feature of democracy; as the guard against rights abuse to human-rights.protection; a weak judiciary undermining legality to rule-of-law.limitations."
+    },
+    {
+      "kind": "widened",
+      "where": "rule-of-law.limitations",
+      "evidence": "matchtest opus overlap democracy.pillars: Q46 (weak judiciary lets a chief evade sanctions) should go to rule-of-law.limitations, which did not name it.",
+      "change": "Added a weak or dependent judiciary that lets the powerful evade sanctions to the hindrances, with a sorting rule sending it here and the judiciary as rights guard to human-rights.protection."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "government.arms",
+      "evidence": "matchtest opus overlap government.arms (Q3 how the legislature checks the executive, Q45 who impeaches); opus overlap democracy.pillars (judiciary claimed by four subtopics).",
+      "change": "Added: which arm holds a power, such as who impeaches, goes here; how one arm uses a power to check another, such as impeachment as the legislature's check on the executive, goes to government.separation-of-powers; the judiciary as rights guard goes to human-rights.protection; a weak judiciary to rule-of-law.limitations."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "government.separation-of-powers",
+      "evidence": "matchtest opus overlap government.arms (Q3, Q45).",
+      "change": "Named impeachment as the legislature's check on the executive, and added: how one arm checks another goes here; which arm holds a power goes to government.arms. Also stated why the subtopic exists (see not_changed on the unmapped subtopic)."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "popular-participation.meaning-types",
+      "evidence": "matchtest sonnet overlap popular-participation.meaning-types and popular-participation.need (a person who reminds another to vote acts as a mobiliser); opus overlap values.community-service (Q16, mobilising voters called community service).",
+      "change": "Named mobilising others and the roles a citizen plays (voter, mobiliser, candidate) among the forms, and added: the role a person plays by urging others to vote goes here even when the stem calls it community service; factors and bodies that promote participation go to popular-participation.need."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "popular-participation.need",
+      "evidence": "matchtest sonnet overlap popular-participation.meaning-types and popular-participation.need (mobiliser).",
+      "change": "Added: factors, conditions and organisations that draw people in go here; the role an individual plays in taking part or mobilising others goes to popular-participation.meaning-types."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "values.community-service",
+      "evidence": "matchtest opus overlap values.community-service (Q16 calls mobilising voters an essential community service).",
+      "change": "Added: civic or electoral mobilisation goes to popular-participation.meaning-types even when the stem calls it community service."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "citizenship.acquisition",
+      "evidence": "matchtest opus overlap citizenship.acquisition (Q34, the vote an alien lacks, also a political right under human-rights.meaning).",
+      "change": "Named the rights and privileges an alien does not have, and added: a right that turns on citizenship status goes here rather than to human-rights.meaning."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "human-rights.meaning",
+      "evidence": "matchtest opus overlap citizenship.acquisition (Q34).",
+      "change": "Added the matching rule: a right a person holds or lacks because of citizenship status goes to citizenship.acquisition."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "coverage unmapped_subtopics: government.separation-of-powers",
+      "reason": "Kept, not merged. Real papers test it: WASSCE 2025 Q39, Q43 and Q44, and Q3 of the placement sample (how the legislature checks the executive). Its covers line now says so; that wording change is logged with its sorting rule above."
+    },
+    {
+      "finding": "matchtest sonnet overlap public-service.problems-reforms and government.separation-of-powers (cartoon caption about a change in public conduct), and disagreement 2021 Q47 (the music has changed; sonnet public-service.problems-reforms, opus public-service.meaning-features)",
+      "reason": "Cartoon Figure 3 is missing, so what the caption refers to cannot be read. Both models say so, and opus says it is not a taxonomy gap. The borders it could fall on already have rules (a problem goes to problems-reforms, checks and balances to separation-of-powers). Accepted as unplaceable without its figure."
+    },
+    {
+      "finding": "matchtest disagreement 2022 Q45 (occupiers of portion x in Fig. 2; sonnet government.tiers, opus government.arms)",
+      "reason": "Diagram Fig. 2 is missing. The existing rules already decide it once the figure is read: which organ holds a power goes to government.arms, which tier does what goes to government.tiers. Accepted as figure-dependent, not a tree defect."
+    },
+    {
+      "finding": "coverage partial items marked No content is missing: WASSCE 6(3); SOW SS1 T1 W9, SS1 T1 W10, SS1 T1 W11, SS1 T2 W3, SS1 T2 W9, SS1 T2 W11, SS1 T3 W8, SS1 T3 W9, SS2 T1 W2, SS2 T2 W1, SS2 T2 W5, SS2 T2 W7, SS2 T2 W8, SS2 T3 W5, SS2 T3 W6, SS2 T3 W8, SS3 T1 W1, SS3 T1 W2, SS3 T1 W3, SS3 T1 W4, SS3 T1 W5, SS3 T1 W6, SS3 T2 W1, SS3 T2 W6",
+      "reason": "Each is a source item that spans two or three subtopics, all of which already hold their part. The split is correct and nothing is missing, so there is nothing to change."
+    }
+  ]
+}

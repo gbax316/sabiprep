@@ -1,0 +1,86 @@
+{
+  "slug": "english-utme",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "cost_usd": 1.27,
+  "agree_subtopic": 78,
+  "agree_topic": 79,
+  "nofit": 0,
+  "disagreements": [
+    {
+      "year": 2016,
+      "q_number": 10,
+      "stem": "Teacher Bade earned the nickname ‘Cane because he was",
+      "sonnet": "comprehension.factual",
+      "opus": "comprehension.prescribed-text",
+      "notes": [
+        "No passage text and no This question is based on line is given. A plain stated fact about a character (Teacher Bade/Cane) fits comprehension.factual if from an unseen passage, but the same shape (named minor character, single trait) also matches the prescribed-novel items elsewhere in this set, so comprehension.prescribed-text fits equally. Cannot resolve without the source passage or novel attribution.",
+        "No novel is named in the stem or instruction and no passage is given, so it can only be answered from a prescribed novel (Teacher Bade)."
+      ]
+    },
+    {
+      "year": 2015,
+      "q_number": 28,
+      "stem": "The young girl was taken ⟪aback⟫ by her father's gift of a car.",
+      "sonnet": "vocabulary.synonyms",
+      "opus": "idioms.idioms",
+      "notes": [
+        "",
+        "Synonym format with one marked word, but the word is aback inside the fixed phrase taken aback; the meaning comes from the idiom, not from aback alone. Also fits vocabulary.synonyms, whose rule sends a marked idiom to idioms.idioms but is silent when only part of the idiom is marked."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "comprehension.prescribed-text",
+        "detail": "Three items in this sample (Q2, Q46, Q56) need prior knowledge of a specific character, object or scene, with no passage text and no This question is based on line. The taxonomy's own definition of comprehension.prescribed-text depends on knowing the passage was not supplied, and the sorting rules for comprehension.factual and comprehension.tone assume an unseen passage was supplied. A question with neither cue attached is genuinely undecidable between prescribed-text and factual or tone from its text alone. A worked fix would be an index of character and setting names per prescribed novel, so a classifier without exam-day context could still route these questions correctly."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "word-classes.conjunctions-articles",
+        "detail": "The covers line's determiner examples are few, a few, little, a little, much, many, each, every, some, any. It does not mention all, both, whole or neither, though real papers test them directly against each other (Q68: All the guests vs Every of the guests vs The whole guests; Q72: whether both/either/each/neither Ola and her sister). Both fit the subtopic by function, but a reader checking only the listed examples could reasonably send them to word-classes.nouns instead."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "too-broad",
+        "where": "comprehension.prescribed-text",
+        "detail": "19 of 80 questions land here, across five different novels (The Life Changer, In Dependence, Sweet Sixteen, The Last Days at Forcados High School, and one with Teacher Bade). A score on this subtopic mixes books a student may never have read and changes meaning every year. It needs a per-title tag (a field, not a subtopic) so practice can be filtered to the current year's novel; three items here (2, 46, 56) name no novel at all and had to be placed by character names."
+      },
+      {
+        "kind": "overlap",
+        "where": "vocabulary.homonyms",
+        "detail": "The rule turns on a recognised confusable pair or set, but recognised is never defined. through, thorough, though (Q74) is a classic taught confusable set yet its gap is decided by which word fits, which the rule sends to vocabulary.word-choice. Give a closed list of confusable sets, or decide by whether the options share most of their spelling."
+      },
+      {
+        "kind": "overlap",
+        "where": "vocabulary.synonyms",
+        "detail": "The rule sends a marked idiom to idioms.idioms but says nothing when only one word of a fixed phrase is marked (taken aback, Q11). Add: when the marked word only has its meaning inside a fixed phrase, place under idioms.idioms."
+      },
+      {
+        "kind": "missing",
+        "where": "word-classes.adjectives-adverbs",
+        "detail": "Compound adjectives, especially number plus noun before a noun (a five-day conference, a ten-year-old boy), have no named home. The singular noun points to word-classes.nouns, the hyphen to mechanics.punctuation (Q28). Name them in one covers line, most naturally adjectives-adverbs, and point the other two there."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "verbs.tenses",
+        "detail": "The present simple for future time after when, before, until, as soon as (when the rain stops, Q25) is not named. It is a staple item and sits next to verbs.mood-conditionals, whose rule claims any verb in an if clause; state that time clauses go to verbs.tenses."
+      }
+    ]
+  }
+}

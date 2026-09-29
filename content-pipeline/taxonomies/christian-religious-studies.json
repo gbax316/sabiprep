@@ -1,0 +1,1806 @@
+{
+  "subject": "Christian Religious Studies",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "Version 1.0 is the first tree for Christian Religious Studies. Both syllabi are built as themes, each resting on named Bible passages, but they differ in reach: WAEC has 22 themes across the Old Testament, the Synoptic Gospels and Acts, and two epistles (James and 1 Peter); JAMB has 52 across the same ground plus the covenant, divine providence, Jonah, miracles, parables, the Sermon on the Mount, John's Gospel and sixteen epistle themes. Parents follow the numbered themes, merged where the two syllabi name the same one. Small JAMB themes that a teacher teaches as one block are joined in one parent so that no parent holds a single subtopic: the great confession with the transfiguration, the triumphal entry with the Last Supper, the mission of the disciples with discipleship, holiness and divine call with punishment and hope, and justification, law and grace, joint heirs and new life in Christ. Subtopics follow the syllabi's lettered sub-areas, which in this subject are mostly one person or one passage, because a student who knows the story of Josiah may not know the story of Nehemiah, and a question on one never tests the other. All 90 questions of the 2025 UTME and WASSCE papers in the sample were placed on the tree while building it, and each found a subtopic; the passages they tested beyond the syllabus wording are listed in source.scope_rule. Nothing in the database is changed by this file. Version 1.1 revises 1.0 from its coverage map and its two placement tests (80 UTME and 80 WASSCE questions, 79 and 77 agreeing on the subtopic): it adds one subtopic, covenant.jacob, for the story of Isaac and Jacob, widens covers lines where tested passages had no home, and adds a sorting rule on every border where the two models split or named an overlap. No subtopic is merged and every 1.0 id is kept.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC Christian Religious Studies examination syllabus, WASSCE",
+        "retrieved_from": "https://waecsyllabus.com/files/ssce/CHRISTIAN%20RELIGIOUS%20STUDIES%20(NEW).pdf",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror, PDF dated 2015-09-24, author field awajis.com, same file family as the Biology, Economics and Government syllabi. Not fetched from a WAEC domain directly. Extracted verbatim."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME Christian Religious Studies syllabus, Sections A to D, topics and objectives",
+        "retrieved_from": "https://allschool.ng/jamb-syllabus-for-christian-religious-studies/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party reproduction labelled the 2026 version. A second copy was sought at kofastudy.com and myschool.ng and not found, so this rests on one copy; the section structure and Bible references match the JAMB CRS syllabus as widely quoted elsewhere."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Senior secondary Christian Religious Studies scheme of work, SS1 to SS3, NERDC-based (Lagos State scheme)",
+        "retrieved_from": "https://enote.edudelight.com/ (eight term pages, SS1 Term 1 to SS3 Term 2)",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "One copy only; no second copy found at ecolebooks.com or passnownow.com. The SS2 Term 3 page repeats SS1 Term 3 word for word and is treated as unconfirmed. SS3 Term 3 has no page, consistent with it being WASSCE revision time."
+      }
+    ],
+    "scope_rule": "WAEC Paper 1, the objective paper, draws on all three sections of its syllabus, and the UTME on all four of JAMB's, so every theme of both syllabi is in the tree. Where one syllabus covers a theme the other does not, its subtopics cite only that one: JAMB alone covers the covenant, divine providence, Gideon and Samson, David as a parent and Asa, Jonah, the prophets' calls, the birth of Jesus, miracles, parables, the Sermon on the Mount, John's Gospel, Philip's mission in Acts 8, Paul's persecution and journeys, and most epistle themes; WAEC alone covers James on faith and works. Real papers test passages next to, and a little beyond, the cited verses, and these are placed where the story sits: the tower of Babel (Genesis 11, UTME 2025 Q13) under God as controller, Jehoahaz taken to Egypt (2 Kings 23:31-34, UTME 2025 Q18) under the fall of Jerusalem, Paul and Barnabas's quarrel over John Mark and Paul's shipwreck at Malta (Acts 15:36-41, 27-28, UTME 2025 Q39 and Q27) under Paul's journeys, Paul as a tentmaker (Acts 18:3, UTME 2025 Q38) under dignity of labour, and the heroes of faith in Hebrews 11 (UTME 2025 Q37) under justification by faith. The 1.0 placement tests found more such passages in real papers, and version 1.1 places them the same way: Hagar in Genesis 16 under covenant.abraham; Jacob's life from the birthright to Dinah at Shechem (Genesis 25:27-34, 26:1-5, 27, 29-35) in a new subtopic, covenant.jacob, which neither syllabus cites; the names of Israel's law (Torah, Decalogue, Talmud) and the ark of the covenant as an object under covenant.sinai, the ark because WASSCE 2020 Q17 asked what it contained, although WAEC cites no covenant theme; Hannah and the birth of Samuel (1 Samuel 1:1-2:10) under parental.eli-samuel; Israel's demand for a king and Saul's search for the asses (1 Samuel 8:6-22, 9) under obedience.saul; the bronze serpent (Numbers 21:4-9) under obedience.wilderness; Jeroboam's calves at Bethel and Dan (1 Kings 12:25-33) under decisions.unwise; Manasseh and Amon (2 Kings 21) under reforms.book; John's account of the first disciples (John 1:35-51) under discipleship.call; the paralytic let down through the roof (Mark 2:1-12) under miracles.healing; and Paul's birth, citizenship and training under gentile-mission.saul. Scheme-of-work weeks with no syllabus theme behind them (skill acquisition, social vices, HIV and AIDS) are placed in the nearest epistle theme. Because the SS2 Term 3 page is unconfirmed, taught_in cites SS1 T3 alone for those weeks."
+  },
+  "how_to_use": "Place a question by the Bible passage and event it tests, not by a name in the stem. A question that names Elijah may be about the drought, the contest on Carmel, or James's teaching on prayer; the covers line says which passage each subtopic holds. Where two themes cite the same passage, the covers line gives the sorting rule. A question that asks which kind something is (which miracle is a nature miracle, which parable is about prayer) goes to the subtopic of the correct answer. Syllabus references use each exam's own numbering: WAEC section A, B or C with item number and letter; JAMB section A to D with topic number and letter.",
+  "topics": [
+    {
+      "id": "sovereignty",
+      "name": "The sovereignty of God",
+      "part": "Old Testament: creation to the division of the kingdom",
+      "syllabus": {
+        "waec": "A.1",
+        "jamb": "A.1"
+      },
+      "subtopics": [
+        {
+          "id": "sovereignty.creation",
+          "name": "God the Creator",
+          "syllabus": {
+            "waec": "A.1(a)",
+            "jamb": "A.1"
+          },
+          "covers": "The two creation accounts in Genesis 1 and 2: what God made on each day and in what order, the firmament and the lights, man made in God's image and blessed to multiply and subdue the earth, the Sabbath rest, man formed from dust and woman from his rib, the Garden of Eden and its rivers (Pishon, Gihon, Tigris and Euphrates), man's role in God's purpose, and the two accounts compared. Sorting rule: a question on what God made, when or why goes here even when the stem speaks of sovereignty; the tree of the knowledge of good and evil and God's command about it (Genesis 2:15-17) go to obedience.fall; God's rule over nature and nations after creation goes to sovereignty.controller.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "sovereignty.controller",
+          "name": "God the controller of the universe",
+          "syllabus": {
+            "waec": "A.1(b)",
+            "jamb": "A.1"
+          },
+          "covers": "What sovereignty means, and God's control over nature and nations: the heavens declaring his glory (Psalm 19:1-6), Amos 9:5-6, Isaiah 45:5-12, and the scattering of the builders of Babel (Genesis 11:1-9), which UTME 2025 Q13 tested. Sorting rule: the meaning of sovereignty, and God's power over nature and nations, go here; the acts of creation themselves go to sovereignty.creation.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "covenant",
+      "name": "The covenant",
+      "part": "Old Testament: creation to the division of the kingdom",
+      "syllabus": {
+        "waec": null,
+        "jamb": "A.2"
+      },
+      "subtopics": [
+        {
+          "id": "covenant.noah",
+          "name": "The flood and God's covenant with Noah",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.2(a)"
+          },
+          "covers": "The wickedness before the flood, Noah's obedience in building the ark, the flood, and God's covenant with Noah and its sign, the rainbow (Genesis 6, 7, 9:1-17).",
+          "taught_in": []
+        },
+        {
+          "id": "covenant.abraham",
+          "name": "God's covenant with Abraham",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.2(b)"
+          },
+          "covers": "God's call and promises to Abraham, Sarai giving Hagar to Abram, Hagar's flight, the angel at the spring and the naming of Ishmael (Genesis 16, outside the JAMB verses but tested in the UTME placement sample), the covenant of circumcision and the change of names, the birth of Isaac and the sending away of Hagar and Ishmael, and the birth of Esau and Jacob (Genesis 11:31-12:9, 16, 17, 21:1-13, 25:19-26). Sorting rule: Genesis 21 is sorted by the event the question asks about, not by the verse it quotes: why and how Hagar and Ishmael were sent away goes here, even when the stem quotes their time in the wilderness (Genesis 21:14-16); how God saved them there goes to providence.provision. Abraham's offering of Isaac goes to obedience.rewards, and the ram God provided to providence.provision; Jacob's dream at Bethel goes to providence.guidance; Jacob's life from the sale of the birthright onwards goes to covenant.jacob.",
+          "taught_in": []
+        },
+        {
+          "id": "covenant.jacob",
+          "name": "Isaac and Jacob",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "The covenant line after Abraham: Esau selling his birthright, God renewing the promise to Isaac (Genesis 25:27-34, 26:1-5), Jacob taking Esau's blessing by deceit, his years with Laban and his marriages to Leah and Rachel, his wrestling at Peniel and his new name Israel, his meeting with Esau, the defilement of Dinah and her brothers' revenge on Shechem, and God renewing the covenant with Jacob at Bethel (Genesis 27, 29-35). Neither syllabus cites these chapters; the subtopic exists because real papers test the story, and the UTME placement sample asked about Dinah and Shechem (Genesis 34). Sorting rule: the birth of Esau and Jacob goes to covenant.abraham; Jacob's dream at Bethel on his flight from Esau (Genesis 28:10-22) goes to providence.guidance; Joseph's story from Genesis 37 goes to leadership.joseph.",
+          "taught_in": []
+        },
+        {
+          "id": "covenant.sinai",
+          "name": "God's covenant with Israel at Sinai",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.2(c)"
+          },
+          "covers": "The people's preparation at Mount Sinai, the Ten Commandments, the sealing of the covenant with blood, and the blessings of obedience and curses of disobedience (Exodus 19, 20, 24:1-11, Deuteronomy 28:1-19); the names and meaning of Israel's law, such as the Torah or Pentateuch, the Decalogue, and the Talmud as the later rabbinic commentary on it, set beside older law codes such as Hammurabi's where a paper asks, which the UTME placement sample tested; and the ark of the covenant as an object: its making, its contents, the two tablets of the covenant, and what it stood for (Exodus 25:10-22, 40:20, 1 Kings 8:9), which WASSCE 2020 Q17 tested. Sorting rule: the golden calf goes to obedience.wilderness; Josiah's renewal of the covenant goes to reforms.renewal; Joshua's covenant at Shechem goes to leadership.joshua; a question on what the ark is or what it held goes here, while the ark's capture in Eli's day goes to parental.eli-samuel and its bringing into Solomon's Temple to decisions.wisdom; Paul's teaching on the place of the law against grace goes to justification.law-grace.",
+          "taught_in": []
+        },
+        {
+          "id": "covenant.new",
+          "name": "The new covenant and the covenants compared",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.2(d)"
+          },
+          "covers": "The new covenant promised in Jeremiah 31:31-34 and Ezekiel 36:25-28, the meaning of covenant, and the old and new covenants compared. Sorting rule: a question defining covenant, or comparing the covenants with Noah, Abraham and Israel, goes here.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership",
+      "part": "Old Testament: creation to the division of the kingdom",
+      "syllabus": {
+        "waec": "A.2",
+        "jamb": "A.3"
+      },
+      "subtopics": [
+        {
+          "id": "leadership.joseph",
+          "name": "Joseph as a leader",
+          "syllabus": {
+            "waec": "A.2(a)",
+            "jamb": "A.3(a)"
+          },
+          "covers": "Joseph's dreams and his brothers' jealousy, his sale into Egypt, the interpretation of Pharaoh's dreams and his advice to store food against the famine, his rise to power, and his reconciliation with his brothers (Genesis 37:1-28, 41, 45:1-15), and the qualities these show. Sorting rule: Jacob's journey down to Egypt (Genesis 46) goes to providence.guidance.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "leadership.moses",
+          "name": "Moses as a leader",
+          "syllabus": {
+            "waec": "A.2(b)",
+            "jamb": "A.3(b)"
+          },
+          "covers": "Israel's oppression in Egypt, Moses' birth and upbringing, his killing of the Egyptian and flight to Midian, the call at the burning bush and his excuses, Aaron as his spokesman, his confrontation with Pharaoh, the plagues and the Passover, his sending of the twelve spies, and his plea for the people when they rebelled at the spies' report (Exodus 1-7, 12, Numbers 13:1-20, 14:1-19), and the qualities of his leadership. Sorting rule: the Hebrew midwives go to obedience.rewards; the crossing of the Red Sea and the pillar of cloud go to providence.guidance; the golden calf, including Moses' plea for the people then, and Moses' own disobedience at Meribah and death go to obedience.wilderness; Moses choosing and sending the spies and his instructions to them (Numbers 13:1-3, 17-20) stay here, but the list of the spies and their tribes (Numbers 13:4-16), such as Joshua for Ephraim and Caleb for Judah, and what the spies saw and reported go to leadership.joshua.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "leadership.joshua",
+          "name": "Joshua as a leader",
+          "syllabus": {
+            "waec": "A.2(c)",
+            "jamb": "A.3(c)"
+          },
+          "covers": "The spies, their tribes and their reports, the majority afraid of the giants and Joshua and Caleb for going up (Numbers 13:4-16, 21-33, 14:6-10), Joshua's appointment to succeed Moses, God's charge to be strong and meditate on the book of the law, the fall of Jericho, Achan's sin, and the covenant at Shechem where Joshua said he and his house would serve the Lord (Numbers 27:15-23, Joshua 1, 6, 7, 24:1-31). Sorting rule: the names of the spies and their tribes (Numbers 13:4-16), including Joshua for Ephraim and Hoshea renamed Joshua, and what the spies saw and said go here, although both syllabi cite Numbers 13:1-20 under Moses; Moses choosing and sending them and his instructions go to leadership.moses.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "leadership.deborah",
+          "name": "Deborah as a leader",
+          "syllabus": {
+            "waec": "A.2(d)",
+            "jamb": "A.3(d)"
+          },
+          "covers": "Israel's oppression by Jabin and Sisera for twenty years as punishment for its sin, Deborah as prophetess and judge, her call to Barak and his condition that she go with him, the defeat of Sisera, and Jael (Judges 4), and the qualities Deborah showed.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "leadership.gideon-samson",
+          "name": "Gideon and Samson",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.3(d)"
+          },
+          "covers": "Gideon's call, the sign of the fleece and his leadership (Judges 6:11-40), and Samson's birth as a Nazirite, Delilah and his death (Judges 13:1-7, 13:21-25, 16:4-31).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "providence",
+      "name": "Divine providence, guidance and protection",
+      "part": "Old Testament: creation to the division of the kingdom",
+      "syllabus": {
+        "waec": "A.2(b), Exodus 14 only",
+        "jamb": "A.4"
+      },
+      "subtopics": [
+        {
+          "id": "providence.guidance",
+          "name": "God's guidance and protection",
+          "syllabus": {
+            "waec": "A.2(b), Exodus 14",
+            "jamb": "A.4(a)"
+          },
+          "covers": "How God guided and protected his people: the finding of a wife for Isaac (Genesis 24), Jacob's dream at Bethel (Genesis 28:10-22), Jacob's journey down to Egypt (Genesis 46:1-7), the pillar of cloud and fire, and the crossing of the Red Sea (Exodus 13:17-14:31). Sorting rule: the Red Sea crossing goes here, even when the question is about Moses' part in it; food and water God gave go to providence.provision; the rest of Jacob's life, from the birthright to Peniel and Dinah, goes to covenant.jacob.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "providence.provision",
+          "name": "God's provision for his people",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.4(b)"
+          },
+          "covers": "How God provided for his people: Hagar and Ishmael in the wilderness, the ram in place of Isaac, manna and quails, and water from the rock at Rephidim and Meribah (Genesis 21:14-18, 22:1-14, Exodus 16:1-21, 17:1-7, Numbers 20:1-13). Sorting rule: Genesis 21 is sorted by the event the question asks about, not by the verse it quotes: how God saved Hagar and Ishmael in the wilderness goes here; why and how they were sent away goes to covenant.abraham, even when the stem quotes Genesis 21:14-16. Abraham's obedience and its reward go to obedience.rewards; gathering manna on the Sabbath, and Moses striking the rock and losing Canaan, go to obedience.wilderness; JAMB also cites 1 Kings 17:1-16 here, but Elijah fed at the brook Cherith and by the widow of Zarephath goes to supremacy.tension with the rest of Elijah's story.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "parental",
+      "name": "Parental responsibility",
+      "part": "Old Testament: creation to the division of the kingdom",
+      "syllabus": {
+        "waec": "A.3",
+        "jamb": "A.5"
+      },
+      "subtopics": [
+        {
+          "id": "parental.eli-samuel",
+          "name": "Eli and Samuel as parents",
+          "syllabus": {
+            "waec": "A.3",
+            "jamb": "A.5(a)"
+          },
+          "covers": "Hannah's barrenness and Peninnah's taunts, her prayer and vow at Shiloh, Eli taking her for drunk, the birth of Samuel and his dedication to the Lord, and Hannah's song (1 Samuel 1:1-2:10), which sit just before both syllabi's verses and which the UTME placement sample tested; Eli's sons Hophni and Phinehas and their abuse of the offerings, Eli's weak warning, the man of God's message, the call of the boy Samuel, the capture of the ark and the deaths of Eli and his sons, and Samuel's sons whose corruption led Israel to ask for a king (1 Samuel 1:1-2:10, 2:11-36, 3, 4:10-22, 8:1-5). Sorting rule: Samuel's sons as the cause of Israel's demand for a king (1 Samuel 8:1-5) go here; the demand itself, Samuel's warning about the ways of a king, and Saul's anointing go to obedience.saul; the ark's capture goes here, but a question on what the ark is or held goes to covenant.sinai.",
+          "taught_in": []
+        },
+        {
+          "id": "parental.david",
+          "name": "David as a parent",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.5(b)"
+          },
+          "covers": "David and his children: Amnon and Tamar, Absalom's revenge, rebellion and death, and David's grief (2 Samuel 13, 15:1-29, 18, 19:1-8). Sorting rule: David's sin with Bathsheba and the death of their child go to david.sin-repentance.",
+          "taught_in": []
+        },
+        {
+          "id": "parental.asa",
+          "name": "Asa and teaching on raising children",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.5(c)"
+          },
+          "covers": "Asa and Jehoshaphat as kings who pleased God (1 Kings 15:9-15, 22:41-44), and the teaching on training children in Deuteronomy 6:4-9 and Proverbs.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "obedience",
+      "name": "Obedience and disobedience",
+      "part": "Old Testament: creation to the division of the kingdom",
+      "syllabus": {
+        "waec": "A.4",
+        "jamb": "A.6"
+      },
+      "subtopics": [
+        {
+          "id": "obedience.rewards",
+          "name": "Obedience and its rewards",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.6(i)"
+          },
+          "covers": "Abraham's willingness to offer Isaac, the Hebrew midwives who would not kill the boys, and David's recovery of all that the Amalekites took from Ziklag (Genesis 22:1-19, Exodus 1:8-22, 1 Samuel 30:1-20). Sorting rule: the ram God provided goes to providence.provision.",
+          "taught_in": []
+        },
+        {
+          "id": "obedience.fall",
+          "name": "The disobedience of Adam and Eve",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.6(ii)(a)"
+          },
+          "covers": "God's command about the tree of the knowledge of good and evil and why he gave it, the serpent, the eating of the fruit, God's questioning, the curses and the expulsion from Eden (Genesis 2:15-25, 3). Sorting rule: the command and the tree go here even though they sit in Genesis 2; the rest of Genesis 1 and 2 goes to sovereignty.creation.",
+          "taught_in": []
+        },
+        {
+          "id": "obedience.wilderness",
+          "name": "Disobedience in the wilderness",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.6(ii)(b)-(d)"
+          },
+          "covers": "Gathering manna on the Sabbath, the golden calf with Aaron's part and Moses' plea for the people, Moses striking the rock at Meribah and dying outside Canaan, and the people speaking against God and Moses, the fiery serpents and the bronze serpent, with the other murmurings of the wilderness and their punishment (Exodus 16:22-30, 32, Numbers 20:7-12, 21:4-9, Deuteronomy 34:1-6), with the reasons for each disobedience and its consequences. The bronze serpent is outside the JAMB verses; the UTME placement sample tested it. WAEC cites Exodus 32:1-14 under Moses; it is placed here so the whole golden calf story sits in one subtopic. Sorting rule: Aaron's golden calf at Sinai goes here; Jeroboam's golden calves at Bethel and Dan go to decisions.unwise.",
+          "taught_in": []
+        },
+        {
+          "id": "obedience.saul",
+          "name": "Saul's disobedience and its consequences",
+          "syllabus": {
+            "waec": "A.4",
+            "jamb": "A.6(ii)(e)"
+          },
+          "covers": "Israel's demand for a king like the nations and Samuel's warning of what a king would take (1 Samuel 8:6-22), Saul's search for his father's lost asses and his servant's advice to consult the seer Samuel (1 Samuel 9), which sit before both syllabi's verses and which the UTME placement sample tested; Saul's anointing, his disobedience over the Amalekites and Samuel's word that to obey is better than sacrifice, his rejection, the evil spirit and David playing the lyre for him, and his death with his sons on Mount Gilboa at the hands of the Philistines (1 Samuel 8:6-22, 9, 10:1-16, 15, 16:14-23, 31). Sorting rule: Samuel's corrupt sons as the cause of the demand for a king (1 Samuel 8:1-5) go to parental.eli-samuel; Saul's jealousy and pursuit of David go to david.early-life, except the night David spared him at Hachilah, which goes to david.submission; his consulting the medium at Endor goes to decisions.medium.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "david",
+      "name": "David, a man after God's own heart",
+      "part": "Old Testament: creation to the division of the kingdom",
+      "syllabus": {
+        "waec": "A.5",
+        "jamb": "A.7"
+      },
+      "subtopics": [
+        {
+          "id": "david.early-life",
+          "name": "The early life of David",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.7(a)"
+          },
+          "covers": "David's anointing by Samuel, his victory over Goliath, Saul's jealousy and David's marriage to Michal, his flight and the cave of Adullam, his sparing of Saul in the cave at En-gedi, his anointing as king at Hebron, and Abner's death (1 Samuel 16:1-13, 17, 18:17-30, 22:1-5, 24, 2 Samuel 2:1-7, 3). Sorting rule: David playing for Saul goes to obedience.saul; the second sparing of Saul, when David took the spear and the jar, goes to david.submission.",
+          "taught_in": []
+        },
+        {
+          "id": "david.submission",
+          "name": "David's submission to the will of God",
+          "syllabus": {
+            "waec": "A.5(a)",
+            "jamb": "A.7(b)"
+          },
+          "covers": "David and Abishai finding Saul and his men asleep, David's refusal to harm the Lord's anointed, the taking of the spear and water jar, and what it shows of submission to God's will (1 Samuel 26).",
+          "taught_in": []
+        },
+        {
+          "id": "david.sin-repentance",
+          "name": "David's sin, repentance and forgiveness",
+          "syllabus": {
+            "waec": "A.5(b)",
+            "jamb": "A.7(b)-(c)"
+          },
+          "covers": "David's adultery with Bathsheba and the killing of Uriah, Nathan's parable and rebuke, David's confession and Psalm 51, the illness and death of the child, David's fasting and acceptance, and the birth of Solomon (2 Samuel 11, 12). JAMB lists 2 Samuel 12:15-25 under submission; it is placed here because the child's death follows from the sin and cannot be understood apart from it.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "decisions",
+      "name": "Decision making",
+      "part": "Old Testament: creation to the division of the kingdom",
+      "syllabus": {
+        "waec": "A.6",
+        "jamb": "A.8"
+      },
+      "subtopics": [
+        {
+          "id": "decisions.medium",
+          "name": "Saul and the medium at Endor",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.8(a)"
+          },
+          "covers": "Saul's decision to consult the medium at Endor when God did not answer him by dreams, Urim or prophets, and Samuel's message (1 Samuel 28:3-25), and Saul's and Solomon's ways of deciding compared.",
+          "taught_in": []
+        },
+        {
+          "id": "decisions.wisdom",
+          "name": "The wisdom of Solomon",
+          "syllabus": {
+            "waec": "A.6(a)",
+            "jamb": "A.8(b)"
+          },
+          "covers": "Solomon's dream at Gibeon and his request for wisdom, God's condition that he walk in his ways, the judgement between the two women, the fame of his wisdom, his alliance with Hiram, and the building and dedication of the Temple (1 Kings 3:3-28, 4:29-34, 5:1-12, 8). Sorting rule: forced labour for his building works goes to decisions.unwise; the bringing of the ark into the Temple goes here, but a question on what the ark is or what it held goes to covenant.sinai, even though 1 Kings 8:9 names its contents.",
+          "taught_in": []
+        },
+        {
+          "id": "decisions.unwise",
+          "name": "The unwise decisions of Solomon and Rehoboam",
+          "syllabus": {
+            "waec": "A.6(b)",
+            "jamb": "A.8(c)"
+          },
+          "covers": "Solomon's forced labour, his many foreign wives and their gods, Jeroboam's rise and flight, Rehoboam's rejection of the elders' advice when Jeroboam led the people to ask for a lighter yoke, the revolt of the northern tribes, and Jeroboam's golden calves at Bethel and Dan, his new feast and his priests who were not Levites (1 Kings 9:15-23, 11, 12:1-33), and the consequences of these decisions. Jeroboam's calves (1 Kings 12:25-33) sit just past both syllabi's verses; the UTME placement sample tested them. Sorting rule: Jeroboam's calves go here; Aaron's golden calf at Sinai goes to obedience.wilderness.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "supremacy",
+      "name": "The supremacy of God",
+      "part": "Old Testament: the divided kingdom, the exile and the prophets",
+      "syllabus": {
+        "waec": "A.7",
+        "jamb": "B.2"
+      },
+      "subtopics": [
+        {
+          "id": "supremacy.tension",
+          "name": "Religious tension in Ahab's reign",
+          "syllabus": {
+            "waec": "A.7(a)",
+            "jamb": "B.2"
+          },
+          "covers": "Ahab's marriage to Jezebel and Baal worship in Israel, Elijah's prophecy of drought as punishment, his stay at the brook Cherith and with the widow of Zarephath, and his meeting with Obadiah (1 Kings 16:29-18:16). Sorting rule: God feeding Elijah during the drought goes here, not to providence.provision; Elijah's meeting with Ahab, who called him the troubler of Israel, and his summons to Carmel (1 Kings 18:17-19) go to supremacy.carmel, although WAEC cites 18:1-19 here.",
+          "taught_in": []
+        },
+        {
+          "id": "supremacy.carmel",
+          "name": "Elijah at Mount Carmel",
+          "syllabus": {
+            "waec": "A.7(b)",
+            "jamb": "B.2"
+          },
+          "covers": "The contest on Mount Carmel: Elijah's meeting with Ahab as the troubler of Israel and his summons to Carmel, the prophets of Baal and Asherah and their number, Elijah's mocking of Baal, the fire from heaven, the killing of the prophets of Baal, the return of rain, and Elijah's flight to Horeb after Jezebel's threat (1 Kings 18:17-19:18), and God's power set against Baal's. Sorting rule: from Elijah's meeting with Ahab (1 Kings 18:17) onwards goes here; Obadiah and everything before him goes to supremacy.tension.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "greed",
+      "name": "Greed and its effects",
+      "part": "Old Testament: the divided kingdom, the exile and the prophets",
+      "syllabus": {
+        "waec": "A.8",
+        "jamb": "B.1"
+      },
+      "subtopics": [
+        {
+          "id": "greed.ahab",
+          "name": "Ahab and Naboth's vineyard",
+          "syllabus": {
+            "waec": "A.8(a)",
+            "jamb": "B.1(a)"
+          },
+          "covers": "The meaning of greed, Ahab's desire for Naboth's vineyard, Jezebel's letters to the elders of Jezreel, Naboth's death, Elijah's judgement and Ahab's repentance, Ahab's death at Ramoth-gilead, and Jezebel's end (1 Kings 21, 22:1-40, 2 Kings 9:30-37).",
+          "taught_in": []
+        },
+        {
+          "id": "greed.gehazi",
+          "name": "Naaman and Gehazi",
+          "syllabus": {
+            "waec": "A.8(b)",
+            "jamb": "B.1(b)"
+          },
+          "covers": "The healing of Naaman: the captive maid, the king of Israel's alarm at the Syrian king's letter, Elisha's instruction to wash in the Jordan, Naaman's cure and gifts, and Gehazi's greed and leprosy (2 Kings 5), and Ahab's and Gehazi's greed compared. Sorting rule: any part of the Naaman story goes here; Achan's sin goes to leadership.joshua.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "reforms",
+      "name": "Religious reforms in Judah",
+      "part": "Old Testament: the divided kingdom, the exile and the prophets",
+      "syllabus": {
+        "waec": "A.9",
+        "jamb": "B.3"
+      },
+      "subtopics": [
+        {
+          "id": "reforms.book",
+          "name": "The background to the reforms and the finding of the book of the law",
+          "syllabus": {
+            "waec": "A.9",
+            "jamb": "B.3(a)"
+          },
+          "covers": "The background to Josiah's reforms: Hezekiah's death, Manasseh's idolatry and bloodshed and God's judgement on Judah for it, and Amon's short reign and murder, which brought the boy Josiah to the throne (2 Kings 20:21-21:26), outside both syllabi's verses but tested in the UTME placement sample; and the repair and cleansing of the Temple, Hilkiah the high priest finding the book of the law, Josiah tearing his clothes, Huldah's prophecy, and the promise that Josiah would not see the disaster (2 Kings 22). Sorting rule: a person named in both chapters, such as Hilkiah or Shaphan, goes by the act the question asks about: finding and reading the book and consulting Huldah go here; removing the idols and cleansing the land go to reforms.renewal; a question on Josiah's reforms as a whole goes to reforms.renewal.",
+          "taught_in": []
+        },
+        {
+          "id": "reforms.renewal",
+          "name": "Josiah's renewal of the covenant",
+          "syllabus": {
+            "waec": "A.9",
+            "jamb": "B.3(b)"
+          },
+          "covers": "The reading of the law and renewal of the covenant, the destruction of idols, high places and Asherah, the Passover, and Josiah's death at Megiddo fighting Pharaoh Neco (2 Kings 23:1-30), and the significance of the reforms. Sorting rule: a question on Josiah's reforms as a whole goes here, and a person named in both chapters, such as Hilkiah, goes by the act the question asks about, with the finding of the book in reforms.book; Josiah's death at Megiddo goes here even when the question frames it as the start of Judah's decline, and judah.fall begins with Jehoahaz.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "judah",
+      "name": "Concern for Judah",
+      "part": "Old Testament: the divided kingdom, the exile and the prophets",
+      "syllabus": {
+        "waec": "A.10",
+        "jamb": "B.4"
+      },
+      "subtopics": [
+        {
+          "id": "judah.fall",
+          "name": "The fall of Jerusalem and the exile",
+          "syllabus": {
+            "waec": "A.10(a)",
+            "jamb": "B.4(a)"
+          },
+          "covers": "The last kings of Judah and the fall of Jerusalem: Jehoahaz taken to Egypt, Jehoiakim, Jehoiachin's deportation, Zedekiah, Nebuchadnezzar's siege, Nebuzaradan burning the city and Temple, who was taken into exile and who was left, and the reasons for the fall (2 Kings 23:31-25:17). Jehoahaz sits just outside both syllabi's verses; UTME 2025 Q18 tested him. Sorting rule: events of the fall and the exile go here, even when a prophet such as Jeremiah is named as witness; the prophets' messages of punishment and hope go to prophets.punishment-hope; Josiah's death at Megiddo goes to reforms.renewal even when the question frames it as the start of the decline, since this subtopic begins with Jehoahaz.",
+          "taught_in": []
+        },
+        {
+          "id": "judah.nehemiah",
+          "name": "Nehemiah and the rebuilding of the walls",
+          "syllabus": {
+            "waec": "A.10(b)",
+            "jamb": "B.4(b)-(c)"
+          },
+          "covers": "Nehemiah hearing of the condition of Jerusalem, his prayer and request to Artaxerxes, his night inspection of the ruined walls, the rebuilding, and his response to Sanballat, Tobiah and Geshem (Nehemiah 1, 2, 4). Sorting rule: Nehemiah's own request to Artaxerxes and the letters he carried go here when the question is about Nehemiah's mission; a question on the Persian kings and their decrees as a set (which king decreed support for rebuilding, which came first, or in what order) goes to judah.ezra, even when the stem names Nehemiah.",
+          "taught_in": []
+        },
+        {
+          "id": "judah.ezra",
+          "name": "Ezra and the return from exile",
+          "syllabus": {
+            "waec": "A.10(b)",
+            "jamb": "B.4(b)-(c)"
+          },
+          "covers": "Cyrus's decree and the return from exile, the rebuilding of the Temple under Zerubbabel and Jeshua, the opposition and Darius's decree, the dedication, and Ezra's return to teach the law (Ezra 1, 3-7). Sorting rule: a question comparing Nehemiah's and Ezra's responses to opposition goes here; so does any question on the Persian kings and their decrees as a set (Cyrus, Darius and Artaxerxes: which decreed support for rebuilding, which came first, or in what order), even when the stem names Nehemiah; Nehemiah's own request to Artaxerxes goes to judah.nehemiah.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "faith",
+      "name": "Faith, courage and protection",
+      "part": "Old Testament: the divided kingdom, the exile and the prophets",
+      "syllabus": {
+        "waec": "A.11",
+        "jamb": "B.5"
+      },
+      "subtopics": [
+        {
+          "id": "faith.furnace",
+          "name": "The three Hebrews and the fiery furnace",
+          "syllabus": {
+            "waec": "A.11(a)",
+            "jamb": "B.5"
+          },
+          "covers": "Daniel and his three friends refusing the king's food (Daniel 1), and Shadrach, Meshach and Abednego refusing to worship the golden image, the Chaldeans' accusation, Nebuchadnezzar's anger, the fiery furnace and the fourth man, and the king's decree (Daniel 3).",
+          "taught_in": []
+        },
+        {
+          "id": "faith.lions",
+          "name": "Daniel in the lions' den",
+          "syllabus": {
+            "waec": "A.11(b)",
+            "jamb": "B.5"
+          },
+          "covers": "The plot of the presidents and satraps, Darius's decree, Daniel praying three times a day, the den of lions, and Darius's decree honouring Daniel's God (Daniel 6).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "jonah",
+      "name": "God's message to Nineveh",
+      "part": "Old Testament: the divided kingdom, the exile and the prophets",
+      "syllabus": {
+        "waec": null,
+        "jamb": "B.6"
+      },
+      "subtopics": [
+        {
+          "id": "jonah.call",
+          "name": "Jonah's call and flight",
+          "syllabus": {
+            "waec": null,
+            "jamb": "B.6"
+          },
+          "covers": "God's call to Jonah, his flight towards Tarshish, the storm and the casting of lots, the great fish and Jonah's prayer (Jonah 1, 2), and the consequences of his disobedience.",
+          "taught_in": []
+        },
+        {
+          "id": "jonah.nineveh",
+          "name": "Nineveh's repentance",
+          "syllabus": {
+            "waec": null,
+            "jamb": "B.6"
+          },
+          "covers": "Jonah's preaching in Nineveh, the fast and repentance of the king and people, God's mercy, Jonah's anger, and the lesson of the plant (Jonah 3, 4).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "justice-love",
+      "name": "Social justice, true religion and divine love",
+      "part": "Old Testament: the divided kingdom, the exile and the prophets",
+      "syllabus": {
+        "waec": "A.12",
+        "jamb": "B.7"
+      },
+      "subtopics": [
+        {
+          "id": "justice-love.amos",
+          "name": "Amos: true religion and social justice",
+          "syllabus": {
+            "waec": "A.12(a)",
+            "jamb": "B.7(a)"
+          },
+          "covers": "Amos the herdsman of Tekoa, the injustice and empty worship he condemned, justice rolling down like waters, his visions, the threat of exile, and Amaziah the priest of Bethel who told him to leave the king's sanctuary (Amos 2:6-8, 4, 5, 6, 7:10-17, 8). Sorting rule: James's teaching on true religion (James 1:19-27) goes to james.faith-works.",
+          "taught_in": []
+        },
+        {
+          "id": "justice-love.hosea",
+          "name": "Hosea: God's divine love",
+          "syllabus": {
+            "waec": "A.12(b)",
+            "jamb": "B.7(b)"
+          },
+          "covers": "Hosea's marriage to Gomer, the names of his children (Jezreel, Lo-ruhamah and Lo-ammi) and their meanings, the buying back of his wife, Israel's unfaithfulness, and God's love and call to return (Hosea 1-4, 6, 14).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "prophets",
+      "name": "Holiness, divine call, punishment and hope",
+      "part": "Old Testament: the divided kingdom, the exile and the prophets",
+      "syllabus": {
+        "waec": null,
+        "jamb": "B.8-9"
+      },
+      "subtopics": [
+        {
+          "id": "prophets.call",
+          "name": "The call of Isaiah, Jeremiah and Ezekiel",
+          "syllabus": {
+            "waec": null,
+            "jamb": "B.8"
+          },
+          "covers": "Isaiah's vision in the Temple, the seraphim and the burning coal; Jeremiah called before birth and too young; Ezekiel addressed as son of man and given the scroll; their tasks compared, and the call to holiness (Isaiah 6, Jeremiah 1:4-10, Ezekiel 2, 3:1-11). Sorting rule: a question about a prophet's call or title goes here; his message to the nation goes to prophets.punishment-hope.",
+          "taught_in": []
+        },
+        {
+          "id": "prophets.punishment-hope",
+          "name": "Punishment and hope",
+          "syllabus": {
+            "waec": null,
+            "jamb": "B.9"
+          },
+          "covers": "Why Israel and Judah were punished and the promise of restoration: Jeremiah's message of both punishment and hope (Jeremiah 3:11-18, 32:26-35), individual responsibility (Ezekiel 18), the valley of dry bones (Ezekiel 37:1-14), and good tidings to the afflicted (Isaiah 61). Sorting rule: the new covenant of Jeremiah 31 and Ezekiel 36 goes to covenant.new.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "birth",
+      "name": "The birth and early life of Jesus",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": null,
+        "jamb": "C.1"
+      },
+      "subtopics": [
+        {
+          "id": "birth.john",
+          "name": "John the Baptist, the forerunner",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.1(a)"
+          },
+          "covers": "The announcement to Zechariah, John's birth and naming, his preaching of repentance, his witness to Jesus, his question from prison, and his death under Herod (Luke 1:5-25, 57-66, 3:1-20, 7:18-35, Mark 1:1-8, 6:14-29, Matthew 3:1-12, 11:2-19, John 1:6-8, 19-28, 3:22-36). Sorting rule: John baptising Jesus goes to baptism.baptism; John calling Jesus the Lamb of God goes to i-am.shepherd; John as the man sent to bear witness to the light (John 1:6-8) goes here, while what the light is and walking in it go to i-am.light; two of John's disciples leaving him to follow Jesus (John 1:35-37) go to discipleship.call.",
+          "taught_in": []
+        },
+        {
+          "id": "birth.jesus",
+          "name": "The birth and boyhood of Jesus",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.1(b)"
+          },
+          "covers": "The annunciation to Mary, her visit to Elizabeth, Joseph's dream, the birth at Bethlehem, the shepherds, the wise men and Herod, the flight to Egypt, the presentation with Simeon and the prophetess Anna, and the boy Jesus in the Temple (Matthew 1:18-25, 2, Luke 1:26-2:52), and the births of John and Jesus compared.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "baptism",
+      "name": "The baptism and temptation of Jesus",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": "B.1",
+        "jamb": "C.2"
+      },
+      "subtopics": [
+        {
+          "id": "baptism.baptism",
+          "name": "The baptism of Jesus",
+          "syllabus": {
+            "waec": "B.1(a)",
+            "jamb": "C.2"
+          },
+          "covers": "John's reluctance and Jesus' insistence, what his request showed, the Spirit descending as a dove, the voice from heaven, and the meaning and purpose of the baptism (Matthew 3:13-17, Mark 1:9-11, Luke 3:21-22).",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "baptism.temptation",
+          "name": "The temptation of Jesus",
+          "syllabus": {
+            "waec": "B.1(b)",
+            "jamb": "C.2"
+          },
+          "covers": "The three temptations in the wilderness, the pinnacle of the Temple and the high mountain, Jesus' answers from scripture, the order in Matthew and Luke, and their significance (Matthew 4:1-11, Mark 1:12-13, Luke 4:1-13).",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "discipleship",
+      "name": "Discipleship and the mission of the disciples",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": "B.2",
+        "jamb": "C.3, C.7"
+      },
+      "subtopics": [
+        {
+          "id": "discipleship.call",
+          "name": "The call of the first disciples",
+          "syllabus": {
+            "waec": "B.2",
+            "jamb": "C.3(a)"
+          },
+          "covers": "The call of Simon, Andrew, James and John, the miraculous catch of fish and Peter's cry that he was a sinful man, and the call of Levi (Matthew) and the meal with tax collectors and sinners (Matthew 4:18-25, 9:9-13, Mark 1:16-20, 2:13-17, Luke 5:1-11, 27-32); and John's account of the first disciples: Andrew and another disciple of John the Baptist following Jesus, Andrew bringing his brother Simon, and the call of Philip and Nathanael (John 1:35-51), which JAMB cites in part under John the Baptist and the UTME placement sample tested. Sorting rule: the disciples who followed Jesus after hearing John's words go here; John naming Jesus the Lamb of God goes to i-am.shepherd.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "discipleship.demands",
+          "name": "The demands of discipleship",
+          "syllabus": {
+            "waec": "B.2",
+            "jamb": "C.3(b)"
+          },
+          "covers": "The would-be followers told to let the dead bury their dead and not to look back, counting the cost, putting Jesus before family and bearing the cross (Matthew 8:18-22, Luke 9:57-62, 14:25-33), and the lessons these teach, such as determination and self-denial.",
+          "taught_in": []
+        },
+        {
+          "id": "discipleship.mission",
+          "name": "The mission of the twelve and the seventy",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.7"
+          },
+          "covers": "The sending of the twelve and of the seventy, the instructions given them, their return and report (Matthew 10:5-15, Mark 6:7-13, Luke 9:1-6, 10:1-24), and the two missions compared.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "miracles",
+      "name": "Miracles of Jesus",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": null,
+        "jamb": "C.4"
+      },
+      "subtopics": [
+        {
+          "id": "miracles.nature",
+          "name": "Nature miracles",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.4(a)"
+          },
+          "covers": "Stilling the storm, feeding the five thousand, walking on the sea, and changing water into wine at Cana, with the occasion and significance of each. Sorting rule: the catch of fish at Peter's call goes to discipleship.call.",
+          "taught_in": []
+        },
+        {
+          "id": "miracles.resuscitation",
+          "name": "Miracles of raising the dead",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.4(b)"
+          },
+          "covers": "Raising Lazarus at Bethany, Jairus' daughter, and the widow's son at Nain, with the words Jesus spoke and the place of each. Sorting rule: the woman healed of bleeding on the way to Jairus' house goes to miracles.healing; Jesus as the resurrection and the life goes to i-am.vine-resurrection.",
+          "taught_in": []
+        },
+        {
+          "id": "miracles.healing",
+          "name": "Healing miracles",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.4(c)"
+          },
+          "covers": "Healing the lepers, including the one Samaritan who returned, the man at the pool of Bethesda, the paralytic let down through the roof and Jesus' authority to forgive sins (Mark 2:1-12, Matthew 9:1-8, Luke 5:17-26), which the UTME placement sample tested, the centurion's servant, the official's son at Capernaum (John 4:46-54), which the scheme of work teaches, the woman with the flow of blood, and the blind, including Bartimaeus and the man born blind (John 9:1-12). Sorting rule: Jesus' saying that he is the light of the world goes to i-am.light; the man at the pool of Bethesda (John 5) and the paralytic let down through the roof (Mark 2) are two different miracles, both held here.",
+          "taught_in": []
+        },
+        {
+          "id": "miracles.exorcism",
+          "name": "Casting out demons",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.4(d)"
+          },
+          "covers": "The Gerasene (Gadarene) demoniac and the swine, and the epileptic boy the disciples could not heal, with the lessons on faith and prayer.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "parables",
+      "name": "Parables of Jesus",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": null,
+        "jamb": "C.5"
+      },
+      "subtopics": [
+        {
+          "id": "parables.kingdom",
+          "name": "Parables of the kingdom",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.5(a)"
+          },
+          "covers": "The sower, the weeds, the dragnet and the wedding garment, their meanings, and why Jesus taught in parables (Matthew 13, 22:1-14, Mark 4:1-20).",
+          "taught_in": []
+        },
+        {
+          "id": "parables.love-of-god",
+          "name": "Parables about God's love",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.5(b)"
+          },
+          "covers": "The lost sheep, the lost coin and the prodigal son (Matthew 18:12-14, Luke 15).",
+          "taught_in": []
+        },
+        {
+          "id": "parables.neighbour-wealth",
+          "name": "Parables about love of neighbour and wealth",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.5(c)-(d)"
+          },
+          "covers": "The good Samaritan, the rich man and Lazarus, and the rich fool (Luke 10:25-37, 16:19-31, 12:13-21), on love for one another and the right use of wealth. Sorting rule: the unmerciful servant goes to sermon.forgiveness.",
+          "taught_in": []
+        },
+        {
+          "id": "parables.prayer",
+          "name": "Parables about prayer",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.5(e)"
+          },
+          "covers": "The unjust judge and the persistent widow, and the Pharisee and the tax collector (Luke 18:1-14).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "sermon",
+      "name": "The Sermon on the Mount and forgiveness",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": "B.3",
+        "jamb": "C.6"
+      },
+      "subtopics": [
+        {
+          "id": "sermon.beatitudes",
+          "name": "The Beatitudes",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.6"
+          },
+          "covers": "The Beatitudes and their rewards, the salt of the earth and the light of the world, and Luke's blessings and woes (Matthew 5:1-16, Luke 6:17-26).",
+          "taught_in": []
+        },
+        {
+          "id": "sermon.law",
+          "name": "Jesus and the law",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.6"
+          },
+          "covers": "Jesus fulfilling the law, and his teaching on anger, adultery, divorce, oaths, retaliation and love of enemies (Matthew 5:17-48).",
+          "taught_in": []
+        },
+        {
+          "id": "sermon.piety",
+          "name": "Almsgiving, prayer, fasting and wealth",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.6"
+          },
+          "covers": "Giving alms in secret, prayer and the Lord's Prayer, fasting, treasure in heaven, serving God or mammon, and anxiety about food and clothing (Matthew 6). Sorting rule: the forgiveness lines of the Lord's Prayer (Matthew 6:12, 14-15) go to sermon.forgiveness; Paul on Christian giving goes to virtues.giving; James on prayer goes to james.prayer.",
+          "taught_in": []
+        },
+        {
+          "id": "sermon.forgiveness",
+          "name": "Jesus' teaching on forgiveness",
+          "syllabus": {
+            "waec": "B.3",
+            "jamb": "C.6, Matthew 6:12, 14-15 only"
+          },
+          "covers": "Forgiving others as the condition of being forgiven (Matthew 6:12, 14-15), forgiving seventy times seven, and the parable of the unmerciful servant (Matthew 18:21-35). Sorting rule: Paul's teaching on forgiveness in Philemon and 2 Corinthians goes to virtues.forgiveness.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "confession",
+      "name": "The great confession and the transfiguration",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": null,
+        "jamb": "C.8-9"
+      },
+      "subtopics": [
+        {
+          "id": "confession.confession",
+          "name": "The great confession",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.8"
+          },
+          "covers": "Peter's confession at Caesarea Philippi, Jesus' reply about the rock and the keys, the command to tell no one, and the prediction of the passion that followed (Matthew 16:13-20, Mark 8:27-30, Luke 9:18-22).",
+          "taught_in": []
+        },
+        {
+          "id": "confession.transfiguration",
+          "name": "The transfiguration",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.9"
+          },
+          "covers": "Peter, James and John on the mountain, Moses and Elijah, the voice from the cloud, Peter's offer of booths, and the question about Elijah coming first (Matthew 17:1-13, Mark 9:2-13, Luke 9:28-36), and its significance to the disciples.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "last-week",
+      "name": "The triumphal entry and the Last Supper",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": null,
+        "jamb": "C.10-11"
+      },
+      "subtopics": [
+        {
+          "id": "last-week.entry",
+          "name": "The triumphal entry and the cleansing of the Temple",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.10"
+          },
+          "covers": "The entry into Jerusalem on a colt and the crowd's hosanna, the cleansing of the Temple, a house of prayer made a den of robbers, and the hostility it stirred in the chief priests and scribes (Matthew 21:1-17, Mark 11:1-19, Luke 19:29-48).",
+          "taught_in": []
+        },
+        {
+          "id": "last-week.supper",
+          "name": "The Last Supper",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.11"
+          },
+          "covers": "Judas's bargain with the chief priests, the preparation of the Passover, the bread and the cup, the washing of the disciples' feet, and the predictions of betrayal and of Peter's denial (Matthew 26:17-30, Mark 14:10-26, Luke 22:7-23, John 13), and the significance of the Supper. Sorting rule: the betrayal kiss and the arrest go to trials.gethsemane; Peter's denials themselves go to trials.denial.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "trials",
+      "name": "The trials of Jesus",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": "B.4",
+        "jamb": "C.12(a)"
+      },
+      "subtopics": [
+        {
+          "id": "trials.gethsemane",
+          "name": "Jesus at Gethsemane",
+          "syllabus": {
+            "waec": "B.4(a)",
+            "jamb": "C.12(a)(i)"
+          },
+          "covers": "Jesus' prayer in Gethsemane, the sleeping disciples and his charge to watch and pray, Judas's kiss, the arrest, the cutting off of the servant's ear, and the young man who fled (Matthew 26:36-56, Mark 14:32-52).",
+          "taught_in": []
+        },
+        {
+          "id": "trials.denial",
+          "name": "Peter's denials",
+          "syllabus": {
+            "waec": "B.4(b)",
+            "jamb": "C.12(a)(i)"
+          },
+          "covers": "Peter's three denials in the high priest's courtyard, the cock crowing and his weeping (Matthew 26:69-75, Mark 14:66-72, Luke 22:54-62).",
+          "taught_in": []
+        },
+        {
+          "id": "trials.jewish",
+          "name": "The trial before the high priest",
+          "syllabus": {
+            "waec": "B.4(c)",
+            "jamb": "C.12(a)(i)"
+          },
+          "covers": "The trial before Caiaphas and the council: the false witnesses, the charge about destroying the Temple, the question whether he was the Christ, and the charge of blasphemy (Matthew 26:57-68, Mark 14:53-65, Luke 22:66-71), and Judas's remorse and death (Matthew 27:3-10).",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "trials.roman",
+          "name": "The trials before Pilate and Herod",
+          "syllabus": {
+            "waec": "B.4(c)",
+            "jamb": "C.12(a)(ii)-(iii)"
+          },
+          "covers": "The charges before Pilate, Jesus sent to Herod, Pilate's wife's dream, Barabbas, Pilate washing his hands, and the sentence (Matthew 27:11-26, Mark 15:1-15, Luke 23:1-25, John 18:28-19:16). Sorting rule: the soldiers' mocking after the sentence goes to death-resurrection.crucifixion.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "death-resurrection",
+      "name": "The crucifixion, burial and resurrection of Jesus",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": "B.5",
+        "jamb": "C.12(b), C.13"
+      },
+      "subtopics": [
+        {
+          "id": "death-resurrection.crucifixion",
+          "name": "The crucifixion and burial",
+          "syllabus": {
+            "waec": "B.5(a)",
+            "jamb": "C.12(b)"
+          },
+          "covers": "The soldiers' mocking, Simon of Cyrene, Golgotha, the inscription, the two thieves, the words from the cross, the darkness, the torn curtain, the earthquake and opened tombs, the centurion's words, the burial by Joseph of Arimathea, and the guard at the tomb (Matthew 27:27-66, Mark 15:16-47, Luke 23:26-56, John 19:17-42), and the lessons of Jesus' death.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "death-resurrection.resurrection",
+          "name": "The resurrection",
+          "syllabus": {
+            "waec": "B.5(b)",
+            "jamb": "C.13"
+          },
+          "covers": "The empty tomb, the women at the tomb, the angels' message, the report of the guards, and the meaning of the resurrection (Matthew 28:1-15, Mark 16:1-8, Luke 24:1-12, John 20:1-10). Sorting rule: appearances of the risen Jesus go to death-resurrection.appearances.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "death-resurrection.appearances",
+          "name": "The appearances and the ascension",
+          "syllabus": {
+            "waec": "B.5(b)",
+            "jamb": "C.13"
+          },
+          "covers": "The appearances of the risen Jesus: to Mary Magdalene, to Cleopas and his companion on the road to Emmaus and his recognition in the breaking of bread, to the disciples and Thomas, by the Sea of Tiberias, the Great Commission, and the ascension (Matthew 28:16-20, Mark 16:9-20, Luke 24:13-53, John 20:11-31, 21, Acts 1:1-11). Sorting rule: the promise of the Spirit in Acts 1:8 goes to holy-spirit.pentecost.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "i-am",
+      "name": "Jesus' teachings about himself",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": null,
+        "jamb": "C.14"
+      },
+      "subtopics": [
+        {
+          "id": "i-am.bread-water",
+          "name": "The bread of life and the living water",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.14(a)"
+          },
+          "covers": "Jesus as the living water, told to the Samaritan woman at the well (John 4:7-15), and as the bread of life (John 6:25-58). Sorting rule: the feeding of the five thousand as a miracle goes to miracles.nature.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "i-am.light",
+          "name": "The light of the world",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.14(b)"
+          },
+          "covers": "Jesus as the light of the world, and walking in the light (John 1:4-8, 3:19-21, 8:12, 9:1-5, 12:35-36, 1 John 1:5-7). Sorting rule: what the light is and walking in it go here; John the Baptist as the man sent to bear witness to the light (John 1:6-8) goes to birth.john.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "i-am.shepherd",
+          "name": "The Lamb, the door and the good shepherd",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.14(c)"
+          },
+          "covers": "Jesus named the Lamb of God by John the Baptist, and Jesus as the door of the sheep and the good shepherd who lays down his life (John 1:29-34, 10:1-18). Sorting rule: John's words naming Jesus the Lamb of God go here; the two disciples who heard them and followed Jesus (John 1:35-42) go to discipleship.call.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "i-am.vine-resurrection",
+          "name": "The true vine and the resurrection and the life",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.14(d)-(e)"
+          },
+          "covers": "Jesus as the true vine and his disciples as branches (John 15:1-11), and as the resurrection and the life (John 11:25). Sorting rule: the raising of Lazarus as an event goes to miracles.resuscitation.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "love",
+      "name": "Love",
+      "part": "The Gospels",
+      "syllabus": {
+        "waec": null,
+        "jamb": "C.15"
+      },
+      "subtopics": [
+        {
+          "id": "love.god",
+          "name": "God's love for man",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.15(a)"
+          },
+          "covers": "God's love in giving his Son so that whoever believes should not perish (John 3:16-18), and what it asks in response.",
+          "taught_in": []
+        },
+        {
+          "id": "love.one-another",
+          "name": "Love for one another",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.15(b)"
+          },
+          "covers": "The new commandment to love one another, laying down one's life for friends, love as the mark of a disciple, love in 1 John 4:7-21 and 3:17-18, and love as the greater way in 1 Corinthians 13, and the significance of love. Sorting rule: parables about love go to their parables subtopic.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "fellowship",
+      "name": "Fellowship in the early Church",
+      "part": "The Acts of the Apostles",
+      "syllabus": {
+        "waec": "B.6",
+        "jamb": "C.16"
+      },
+      "subtopics": [
+        {
+          "id": "fellowship.communal",
+          "name": "Communal living",
+          "syllabus": {
+            "waec": "B.6",
+            "jamb": "C.16(a)"
+          },
+          "covers": "The choice of Matthias to replace Judas, the believers' common life after Pentecost, the sharing of goods and Barnabas's gift of his field (Acts 1:15-26, 2:42-47, 4:32-37), and how communal living helped the Church grow. Sorting rule: Acts 2 is split at verse 41: Peter's sermon and the three thousand baptised (Acts 2:1-41) go to holy-spirit.pentecost, and the believers' common life that followed (Acts 2:42-47) goes here, although both syllabi cite Acts 2:41-47 here. A survey question on the early Church as a whole, whose options span Pentecost, communal living, its problems and persecution, goes to the subtopic of the correct answer, as how_to_use says for which-kind questions.",
+          "taught_in": []
+        },
+        {
+          "id": "fellowship.problems",
+          "name": "Problems of communal living and their solutions",
+          "syllabus": {
+            "waec": "B.6",
+            "jamb": "C.16(b)"
+          },
+          "covers": "Ananias and Sapphira and their deaths, and the neglect of the Hellenist widows that led to the appointment of the seven deacons (Acts 5:1-11, 6:1-6). Sorting rule: Stephen's ministry and martyrdom go to opposition.stephen.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "holy-spirit",
+      "name": "The Holy Spirit and the mission of the Church",
+      "part": "The Acts of the Apostles",
+      "syllabus": {
+        "waec": "B.7(a)",
+        "jamb": "C.17"
+      },
+      "subtopics": [
+        {
+          "id": "holy-spirit.pentecost",
+          "name": "The Holy Spirit at Pentecost",
+          "syllabus": {
+            "waec": "B.7(a)",
+            "jamb": "C.17(a)"
+          },
+          "covers": "The promise of the Spirit (Acts 1:8), the coming of the Holy Spirit at Pentecost, the tongues and the crowd's response, Peter's sermon, and the outcome: the birth of the Church, the beginning of evangelism and three thousand baptised (Acts 1:8, 2:1-41). Sorting rule: Acts 2:1-41 goes here; the believers' common life after it (Acts 2:42-47) goes to fellowship.communal. A survey question on the early Church as a whole goes to the subtopic of the correct answer.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "holy-spirit.mission",
+          "name": "Philip and the spread of the gospel",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.17(b)"
+          },
+          "covers": "The spread of the gospel after the persecution: Philip in Samaria, Simon the magician, Peter and John laying on hands, and the Ethiopian eunuch (Acts 8:4-40).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "opposition",
+      "name": "Opposition to the gospel message",
+      "part": "The Acts of the Apostles",
+      "syllabus": {
+        "waec": "B.8",
+        "jamb": "C.18"
+      },
+      "subtopics": [
+        {
+          "id": "opposition.apostles",
+          "name": "The arrest of Peter and John and Herod's persecution",
+          "syllabus": {
+            "waec": "B.8",
+            "jamb": "C.18(a)"
+          },
+          "covers": "The healing of the lame man at the Beautiful Gate, the arrest of Peter and John by the priests and the Sadducees, who denied the resurrection, the council's warnings, the apostles' escape from prison, Gamaliel's advice citing Theudas and Judas the Galilean, and Herod's persecution: the killing of James, Peter's escape, and Herod's death after the people of Tyre and Sidon hailed him as a god (Acts 3, 4:1-31, 5:17-42, 12:1-24). Sorting rule: a question on the Jewish groups who opposed the apostles, or what the Sadducees believed, goes here; Gamaliel's advice to the council goes here, but Gamaliel as Paul's teacher goes to gentile-mission.saul.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "opposition.stephen",
+          "name": "Stephen and Saul the persecutor",
+          "syllabus": {
+            "waec": "B.8",
+            "jamb": "C.18(b)-(c)"
+          },
+          "covers": "Stephen's arrest, his speech, his martyrdom, and the persecution of the Church led by Saul that followed (Acts 6:8-7:60, 8:1-3, 9:1-2, Galatians 1:11-17). Sorting rule: Saul's conversion goes to gentile-mission.saul.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "opposition.paul",
+          "name": "The persecution of Paul",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.18(d)"
+          },
+          "covers": "The beating and imprisonment of Paul and Silas at Philippi, the riot of Demetrius and the silversmiths at Ephesus, Paul's arrest in the Temple at Jerusalem, and his list of sufferings (Acts 16:11-40, 19:23-41, 21:27-36, 2 Corinthians 11:23-33), and the importance of persecution to the growth of the Church. Sorting rule: opposition on Paul's first journey, such as Elymas and the stoning at Lystra, goes to gentile-mission.paul.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "gentile-mission",
+      "name": "Mission to the Gentiles",
+      "part": "The Acts of the Apostles",
+      "syllabus": {
+        "waec": "B.7(b)",
+        "jamb": "C.19"
+      },
+      "subtopics": [
+        {
+          "id": "gentile-mission.saul",
+          "name": "The conversion of Saul",
+          "syllabus": {
+            "waec": "B.7(b)",
+            "jamb": "C.19(a)"
+          },
+          "covers": "Paul's background: born at Tarsus in Cilicia, a Roman citizen by birth, a Pharisee, and brought up at the feet of Gamaliel (Acts 21:39, 22:3, 22:25-28, 23:6, Philippians 3:5), which the WASSCE placement sample tested; Saul's conversion on the Damascus road, Ananias, his blindness and baptism, why he was called (to carry Christ's name to the Gentiles and to suffer for it), the Jews' reaction, and Barnabas bringing him to the apostles (Acts 9:1-30, 26:9-18), and the conversions of Saul and Cornelius compared. Sorting rule: Gamaliel as Paul's teacher goes here; Gamaliel's advice to the council goes to opposition.apostles; Saul's persecution of the Church before his conversion goes to opposition.stephen.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "gentile-mission.cornelius",
+          "name": "Peter and the conversion of Cornelius",
+          "syllabus": {
+            "waec": "B.7(b)",
+            "jamb": "C.19(b)"
+          },
+          "covers": "Peter at Lydda and Joppa (Aeneas and Dorcas), the vision of the sheet, Cornelius the centurion at Caesarea, the Spirit falling on the Gentiles, and Peter's defence at Jerusalem for eating with the uncircumcised (Acts 9:32-11:18).",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "gentile-mission.paul",
+          "name": "The commissioning and journeys of Paul",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.19(c)"
+          },
+          "covers": "Paul and Barnabas commissioned at Antioch, the first missionary journey (Cyprus and the blinding of Elymas, Pisidian Antioch, Lystra), the quarrel over John Mark, his later journeys and companions, and his voyage to Rome with the shipwreck and snakebite at Malta (Acts 13, 14:1-20, 15:36-41, 27, 28), and Paul's role in the mission to the Gentiles. The quarrel and the voyage are outside both syllabi's verses; UTME 2025 Q39 and Q27 tested them. Sorting rule: persecution at Philippi, Ephesus and Jerusalem goes to opposition.paul; Paul's trade as a tentmaker goes to civic.labour.",
+          "taught_in": []
+        },
+        {
+          "id": "gentile-mission.council",
+          "name": "The Council of Jerusalem",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.19(d)"
+          },
+          "covers": "The dispute over circumcision, the Council of Jerusalem, the speeches of Peter and James, the decisions and the letter to the Gentile believers, and Paul's account in Galatians 2 (Acts 15:1-35, Galatians 2:1-21), and the relevance of the decisions.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "justification",
+      "name": "Justification and new life in Christ",
+      "part": "The Epistles",
+      "syllabus": {
+        "waec": null,
+        "jamb": "D.1-4"
+      },
+      "subtopics": [
+        {
+          "id": "justification.faith",
+          "name": "Justification by faith",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.1"
+          },
+          "covers": "What justification by faith means, that all have sinned, faith in Christ as its condition, salvation, and its fruits such as peace with God (Romans 3:21-24, 5:1-11, 10:1-13), and the heroes of faith in Hebrews 11, which UTME 2025 Q37 tested. Sorting rule: faith shown by works in James goes to james.faith-works; the place of the law goes to justification.law-grace.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "justification.law-grace",
+          "name": "The law and grace",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.2"
+          },
+          "covers": "Abraham justified by faith and not by the law, the curse of the law and Christ redeeming us from it, the law as a custodian until Christ came, and grace abounding over sin (Romans 4:13-25, 5:18-21, Galatians 3:10-14, 19-25), and the place of the law among the Jews. Sorting rule: the law as custodian goes here; sonship and inheritance go to justification.heirs; the names and meaning of Israel's law as terms (Torah, Decalogue, Talmud) go to covenant.sinai.",
+          "taught_in": []
+        },
+        {
+          "id": "justification.heirs",
+          "name": "Christians as joint heirs with Christ",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.4"
+          },
+          "covers": "Jesus Christ as the Son of God, whose sonship is the ground of the Christian's, as the scheme of work teaches it; Christians as sons of God through faith, no longer slaves but sons who cry Abba, Father, and heirs with Christ (Galatians 3:26-29, 4:1-7, Romans 8), and the benefits of being heirs. Sorting rule: the voice from heaven calling Jesus his Son goes to baptism.baptism or confession.transfiguration, and Peter's confession to confession.confession; Jesus' sonship as the ground of the Christian's goes here.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "justification.new-life",
+          "name": "New life in Christ",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.3"
+          },
+          "covers": "The old life of sin and the works of the flesh, dying and rising with Christ in baptism, the new creation, the fruit of the Spirit, putting off the old nature, holiness, and presenting the body as a living sacrifice (Romans 6:1-14, 12:1-2, Colossians 3:1-17, Galatians 5:16-26, 2 Corinthians 5:16-19, 1 Thessalonians 4:1-8). Sorting rule: Romans 12:3-8 on gifts goes to spiritual-gifts.gifts; Romans 12:9-21 goes to community.relationships.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "virtues",
+      "name": "Humility, forgiveness and Christian giving",
+      "part": "The Epistles",
+      "syllabus": {
+        "waec": null,
+        "jamb": "D.5, D.6, D.8"
+      },
+      "subtopics": [
+        {
+          "id": "virtues.humility",
+          "name": "Humility",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.5"
+          },
+          "covers": "The meaning of humility, the example of Christ who emptied himself (Philippians 2:1-11), the call to clothe oneself with humility because God opposes the proud and gives grace to the humble (1 Peter 5:5-7), and what humility needs and its rewards. Sorting rule: a question on humility itself goes here even when the verse is in 1 Peter 5; elders tending the flock and the young submitting to them go to community.relationships.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "virtues.forgiveness",
+          "name": "Paul's teaching on forgiveness",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.6"
+          },
+          "covers": "Paul's plea to Philemon to receive back Onesimus, the theme of forgiveness and reconciliation in Philemon, and forgiving the offender at Corinth (Philemon, 2 Corinthians 2:5-11), and the benefits of forgiveness. Sorting rule: Jesus' teaching on forgiveness goes to sermon.forgiveness.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "virtues.giving",
+          "name": "Christian giving",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.8"
+          },
+          "covers": "The Macedonians' generosity in poverty, the cheerful giver, sowing and reaping, and the Philippians' gifts to Paul (Philippians 4:14-20, 2 Corinthians 8:1-5, 9), and the importance of giving. Sorting rule: almsgiving in the Sermon on the Mount (Matthew 6:2-4) goes to sermon.piety.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "spiritual-gifts",
+      "name": "Spiritual gifts",
+      "part": "The Epistles",
+      "syllabus": {
+        "waec": null,
+        "jamb": "D.7"
+      },
+      "subtopics": [
+        {
+          "id": "spiritual-gifts.gifts",
+          "name": "The gifts and the one body",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.7"
+          },
+          "covers": "The varieties of gifts from one Spirit, the list of gifts, the Church as one body with many members, the order of apostles, prophets and teachers (1 Corinthians 12, Romans 12:3-8), and the benefit of the gifts to the person and the Church. Sorting rule: love as the greater way (1 Corinthians 13) goes to love.one-another.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "spiritual-gifts.tongues",
+          "name": "Tongues, prophecy and order in worship",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.7"
+          },
+          "covers": "Speaking in tongues and prophecy compared, interpretation, building up the Church, and order in worship (1 Corinthians 14).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "civic",
+      "name": "Civic responsibility and dignity of labour",
+      "part": "The Epistles",
+      "syllabus": {
+        "waec": "C.2(a)",
+        "jamb": "D.9-10"
+      },
+      "subtopics": [
+        {
+          "id": "civic.citizenship",
+          "name": "Civic responsibility and good citizenship",
+          "syllabus": {
+            "waec": "C.2(a)",
+            "jamb": "D.9"
+          },
+          "covers": "Obedience to governing authorities as ordained by God, paying taxes, praying for rulers, and good citizenship (Romans 13, 1 Timothy 2:1-4, 1 Peter 2:13-17). Sorting rule: 1 Peter 2:13-17 goes here when the question is about duty to rulers and the state; a question on good conduct as a witness to outsiders goes to community.non-christians, even when it quotes 1 Peter 2:15 on silencing the ignorance of foolish men by doing right; the rest of 1 Peter 2 goes to community.non-christians or community.persecution.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "civic.labour",
+          "name": "Dignity of labour",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.10"
+          },
+          "covers": "Working quietly and earning one's own living, if anyone will not work let him not eat, working heartily as for the Lord (2 Thessalonians 3:6-15, Colossians 3:23-25), Paul's own trade as a tentmaker (Acts 18:3, UTME 2025 Q38), the Christian attitude to work, and skill acquisition as the scheme of work teaches it.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "second-coming",
+      "name": "The second coming of Christ",
+      "part": "The Epistles",
+      "syllabus": {
+        "waec": null,
+        "jamb": "D.11"
+      },
+      "subtopics": [
+        {
+          "id": "second-coming.signs",
+          "name": "The signs of Christ's coming",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.11(a)"
+          },
+          "covers": "What will happen at his coming: the dead in Christ rising first and the living caught up to meet the Lord, the rebellion and the man of lawlessness before the day (1 Thessalonians 4:13-18, 2 Thessalonians 2:1-12), and the importance of his coming. Sorting rule: how Christians should get ready goes to second-coming.preparation.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "second-coming.preparation",
+          "name": "Preparation for Christ's coming",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.11(b)"
+          },
+          "covers": "The day of the Lord coming like a thief, staying awake and sober, the breastplate of faith and love and the helmet of hope, God's patience with scoffers, and new heavens and a new earth (1 Thessalonians 5:1-11, 2 Peter 3:1-13).",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "james",
+      "name": "James: faith and works, impartiality and prayer",
+      "part": "The Epistles",
+      "syllabus": {
+        "waec": "C.1",
+        "jamb": "D.12-13"
+      },
+      "subtopics": [
+        {
+          "id": "james.faith-works",
+          "name": "Faith and works",
+          "syllabus": {
+            "waec": "C.1(a)",
+            "jamb": null
+          },
+          "covers": "Joy in trials and steadfastness, temptation, being doers of the word and not hearers only, true religion as caring for orphans and widows, and faith without works being dead, with Abraham and Rahab as examples (James 1:2-27, 2:14-26). Sorting rule: asking God for wisdom in faith without doubting (James 1:5-8) goes to james.prayer; Paul's teaching on faith goes to justification.faith.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "james.impartiality",
+          "name": "Impartiality",
+          "syllabus": {
+            "waec": "C.1(b)",
+            "jamb": "D.12"
+          },
+          "covers": "Favouring the rich over the poor in the assembly, the royal law to love your neighbour as yourself, and judgement with mercy (James 2:1-13, with Acts 10:34-35 and Matthew 7:1-5), and the causes and consequences of partiality.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "james.prayer",
+          "name": "Effective prayer",
+          "syllabus": {
+            "waec": "C.1(c)",
+            "jamb": "D.13"
+          },
+          "covers": "Asking in faith without doubting, asking wrongly to spend on passions, prayer by those who suffer, the elders praying over and anointing the sick, confession, and Elijah as the example of a righteous man's prayer (James 1:2-8, 4:1-3, 5:13-18), and effective and ineffective prayer compared. Sorting rule: the Lord's Prayer and Jesus' teaching on prayer go to sermon.piety; parables on prayer go to parables.prayer.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "community",
+      "name": "Christian living in the community",
+      "part": "The Epistles",
+      "syllabus": {
+        "waec": "C.2(b)-(c)",
+        "jamb": "D.14"
+      },
+      "subtopics": [
+        {
+          "id": "community.relationships",
+          "name": "Relationships among Christians",
+          "syllabus": {
+            "waec": "C.2(c)",
+            "jamb": "D.14(a)"
+          },
+          "covers": "Elders tending the flock willingly and eagerly, the young submitting to the elders, love, hospitality and living in harmony (1 Peter 5:1-5, Romans 12:9-21, 2 Peter 1:3-11, Hebrews 13:1-21), and the importance of good relationships. Sorting rule: humility itself goes to virtues.humility; standing firm in suffering (1 Peter 5:8-10) goes to community.persecution; 2 Peter 1:3-11 is sorted by what the question asks: the virtues added to faith (goodness, knowledge, self-control, steadfastness, godliness, brotherly affection and love) go here, and escaping the corruption that is in the world goes to vices.corruption.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "community.non-christians",
+          "name": "Christians living among non-Christians",
+          "syllabus": {
+            "waec": "C.2(b)",
+            "jamb": "D.14(b)"
+          },
+          "covers": "Putting away malice, craving spiritual milk like newborn babies in order to grow up to salvation, living stones and a royal priesthood, good conduct among the Gentiles, bearing with the weak (1 Peter 2:1-12, Romans 15:1-2), and witnessing to Christ. Sorting rule: submitting to rulers and honouring the king (1 Peter 2:13-17) go to civic.citizenship, but a question on doing right to silence the ignorance of foolish men (1 Peter 2:15) as a witness to outsiders goes here; enduring unjust suffering (1 Peter 2:18-25) goes to community.persecution.",
+          "taught_in": []
+        },
+        {
+          "id": "community.persecution",
+          "name": "Christian attitude to persecution",
+          "syllabus": {
+            "waec": "C.2(b)-(c), where 1 Peter speaks of suffering",
+            "jamb": "D.14(c)"
+          },
+          "covers": "Faith tested like gold, servants enduring unjust masters as Christ suffered for us, suffering for doing right, sharing Christ's sufferings, and eternal glory after suffering a little while (1 Peter 1:5-9, 2:18-25, 3:13-22, 4, 5:8-10). Sorting rule: any question on why or how a Christian should endure suffering goes here, wherever the verse sits in 1 Peter.",
+          "taught_in": []
+        },
+        {
+          "id": "community.family",
+          "name": "Relationships in the Christian family",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.14(d)"
+          },
+          "covers": "Wives and husbands, children and parents, and slaves and masters in the household (Ephesians 6:1-9, Colossians 3:18-21, 1 Peter 3:1-7), and the rights and obligations of family members. Sorting rule: slaves enduring unjust masters in 1 Peter 2 go to community.persecution.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "vices",
+      "name": "Corruption and sexual immorality",
+      "part": "The Epistles",
+      "syllabus": {
+        "waec": null,
+        "jamb": "D.15-16"
+      },
+      "subtopics": [
+        {
+          "id": "vices.corruption",
+          "name": "Corruption",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.15"
+          },
+          "covers": "The meaning, causes and effects of corruption and ways of curbing it: the love of money as a root of evil, the rich who defraud their workers (1 Timothy 6:6-11, 2 Timothy 3:8, 2 Peter 1:4-11, James 5:1-6), and social vices in general as the scheme of work teaches them. Sorting rule: greed in the stories of Ahab and Gehazi goes to greed; in 2 Peter 1:3-11, escaping the corruption that is in the world goes here, and the virtues added to faith go to community.relationships.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "vices.sexual",
+          "name": "Sexual immorality",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.16"
+          },
+          "covers": "Prostitution, adultery and fornication, and homosexuality (1 Corinthians 6:16-20, Hebrews 13:4, Ephesians 5:3-10, Romans 1:24-32), their causes, effects and ways of curbing them, and HIV and AIDS as the scheme of work teaches them. Sorting rule: David's adultery goes to david.sin-repentance.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3",
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T3",
+        "SS3 T2"
+      ]
+    }
+  ],
+  "legacy_note": "legacy-topics.json, as supplied for this build, is an empty list: it names no Christian Religious Studies topics in the live database, so legacy_to is empty and no question moves. This is flagged for the gate: if the database does hold CRS topics, the list should be pulled again and folded before approval. The rule for folding is the one used for Biology: a name that matches one subtopic goes to that subtopic; a generic name (General questions, the bare subject name, or a name spanning several themes, such as Old Testament themes) goes to the parent topic it fits best and is flagged for reclassification rather than guessed into a subtopic; a name spanning whole parts, where no one parent fits, is listed for Orezi to decide.",
+  "legacy_to": {},
+  "merged_into": {}
+}

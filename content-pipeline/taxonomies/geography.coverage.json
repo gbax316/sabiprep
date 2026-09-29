@@ -1,0 +1,3738 @@
+{
+  "items": [
+    {
+      "source": "wassce",
+      "ref": "PPG Map work",
+      "text": "Maps: meaning, types and uses",
+      "subtopic_id": "maps.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: scale",
+      "text": "Scale",
+      "subtopic_id": "maps.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: distances",
+      "text": "Measurement of distances",
+      "subtopic_id": "maps.measurement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: direction",
+      "text": "Direction and bearing",
+      "subtopic_id": "maps.direction",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: reduction",
+      "text": "Map reduction and enlargement",
+      "subtopic_id": "maps.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: physical features",
+      "text": "Identification of physical features such as spurs, valleys",
+      "subtopic_id": "map-reading.relief",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: cultural features",
+      "text": "Cultural features such as city walls, settlements, communication routes",
+      "subtopic_id": "map-reading.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: gradients",
+      "text": "Measurement of gradients",
+      "subtopic_id": "map-reading.gradient-profiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: cross profiles",
+      "text": "Drawing of cross profiles",
+      "subtopic_id": "map-reading.gradient-profiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: inter-visibility",
+      "text": "Inter-visibility",
+      "subtopic_id": "map-reading.gradient-profiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: drainage",
+      "text": "Description and explanation of drainage characteristics and pattern",
+      "subtopic_id": "map-reading.drainage",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Map reading: patterns",
+      "text": "Patterns of communication, settlement and land use",
+      "subtopic_id": "map-reading.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Surveying: terms",
+      "text": "Definitions of terms",
+      "subtopic_id": "surveying.chain",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Surveying: instruments",
+      "text": "Instruments",
+      "subtopic_id": "surveying.chain",
+      "status": "partial",
+      "note": "Split: surveying.chain covers chain, tape, ranging poles, arrows and offset staff; surveying.prismatic covers the prismatic compass. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Surveying: chain",
+      "text": "Chain",
+      "subtopic_id": "surveying.chain",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Surveying: prismatic compass",
+      "text": "Prismatic compass",
+      "subtopic_id": "surveying.prismatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Surveying: traverse",
+      "text": "Plotting of traverse",
+      "subtopic_id": "surveying.prismatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Surveying: obstacles",
+      "text": "Avoiding obstacles in the field",
+      "subtopic_id": "surveying.chain",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG GIS: concepts",
+      "text": "GIS: basic concepts",
+      "subtopic_id": "gis.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG GIS: components",
+      "text": "Components (hardware, software, data, procedures and experts)",
+      "subtopic_id": "gis.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG GIS: sources",
+      "text": "Sources of data (land surveying, remote sensing, map digitizing, map scanning, field investigation, tabular data)",
+      "subtopic_id": "gis.data",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG GIS: uses",
+      "text": "Uses (defence, agriculture, urban development, mapping, surveying, transportation, census)",
+      "subtopic_id": "gis.uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG GIS: problems",
+      "text": "Problems (power, personnel, capital)",
+      "subtopic_id": "gis.uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Statistical: bar graphs",
+      "text": "Bar graphs",
+      "subtopic_id": "statistical.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Statistical: line graphs",
+      "text": "Line graphs",
+      "subtopic_id": "statistical.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Statistical: flow charts",
+      "text": "Flow charts",
+      "subtopic_id": "statistical.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Statistical: dot maps",
+      "text": "Dot maps",
+      "subtopic_id": "statistical.maps",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Statistical: proportional circles",
+      "text": "Proportional circles",
+      "subtopic_id": "statistical.maps",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Statistical: density maps",
+      "text": "Density maps",
+      "subtopic_id": "statistical.maps",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Statistical: isopleth maps",
+      "text": "Isopleth maps",
+      "subtopic_id": "statistical.maps",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Physical: earth and sun",
+      "text": "The earth as a planet in relation to the sun",
+      "subtopic_id": "earth.solar-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Physical: latitude",
+      "text": "Latitude and distance",
+      "subtopic_id": "earth.latitude",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Physical: longitude",
+      "text": "Longitude and time",
+      "subtopic_id": "earth.longitude-time",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Physical: rotation and revolution",
+      "text": "Earth's rotation and revolution and their effects",
+      "subtopic_id": "earth.movements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Physical: structure (internal)",
+      "text": "Structure of the earth (internal)",
+      "subtopic_id": "earth-structure.interior",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Physical: structure (external)",
+      "text": "Structure of the earth (external)",
+      "subtopic_id": "earth-structure.spheres",
+      "status": "covered",
+      "note": "The four spheres as the outer zone.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Hydrosphere: ocean basins",
+      "text": "Ocean basins",
+      "subtopic_id": "water.oceans",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Hydrosphere: salinity",
+      "text": "Salinity",
+      "subtopic_id": "water.oceans",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Hydrosphere: ocean currents",
+      "text": "Ocean current (causes, types and their effects on the temperature of adjacent coastlands)",
+      "subtopic_id": "water.currents",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Hydrosphere: lakes",
+      "text": "Lakes",
+      "subtopic_id": "water.lakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Hydrosphere: rivers",
+      "text": "Rivers",
+      "subtopic_id": "water.lakes",
+      "status": "covered",
+      "note": "Rivers as water bodies; river action is under denudation.rivers.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Hydrosphere: lagoons",
+      "text": "Lagoons",
+      "subtopic_id": "water.lakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Hydrosphere: water as a resource",
+      "text": "Water as an environmental resource",
+      "subtopic_id": "water.lakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (i) Rocks",
+      "text": "Rocks: types, characteristics, formation",
+      "subtopic_id": "rocks.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (i) Rocks: uses",
+      "text": "Rocks: uses",
+      "subtopic_id": "rocks.uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (ii) Tectonic processes",
+      "text": "Tectonic processes (heading: folding and faulting)",
+      "subtopic_id": "tectonics.folding",
+      "status": "partial",
+      "note": "Split: tectonics.folding covers compressional folding; tectonics.faulting covers faulting. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (ii) Vulcanicity",
+      "text": "Vulcanicity",
+      "subtopic_id": "vulcanicity.volcanoes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (ii) Earthquake",
+      "text": "Earthquake",
+      "subtopic_id": "vulcanicity.earthquakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (ii) Landforms: mountains",
+      "text": "Mountains (formation, characteristics and importance)",
+      "subtopic_id": "tectonics.mountains",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (ii) Landforms: plains",
+      "text": "Plains (formation, characteristics and importance)",
+      "subtopic_id": "tectonics.plains",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (ii) Landforms: karsts",
+      "text": "Karsts (formation, characteristics and importance)",
+      "subtopic_id": "denudation.karst",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (ii) Landforms: coastal",
+      "text": "Coastal landforms (formation, characteristics and importance)",
+      "subtopic_id": "denudation.coast",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (iii) Weathering",
+      "text": "Weathering",
+      "subtopic_id": "denudation.weathering",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (iii) Mass movement",
+      "text": "Mass movement",
+      "subtopic_id": "denudation.mass-movement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (iii) Running water",
+      "text": "Running water",
+      "subtopic_id": "denudation.rivers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (iii) Underground water",
+      "text": "Underground water",
+      "subtopic_id": "denudation.karst",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (iii) Wind",
+      "text": "Wind",
+      "subtopic_id": "denudation.wind",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (iii) Waves",
+      "text": "Waves",
+      "subtopic_id": "denudation.coast",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (iv) Weather study",
+      "text": "Simple weather study based on local observation",
+      "subtopic_id": "weather-climate.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (iv) Stevenson screen",
+      "text": "Description of the Stevenson's screen",
+      "subtopic_id": "weather-climate.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (iv) Instruments",
+      "text": "Uses of basic weather instruments e.g. rain gauge, thermometer, barometer, wind vane",
+      "subtopic_id": "weather-climate.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Rainfall",
+      "text": "Rainfall",
+      "subtopic_id": "weather-climate.rainfall",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Sunshine",
+      "text": "Sunshine",
+      "subtopic_id": "weather-climate.elements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Air pressure",
+      "text": "Air pressure",
+      "subtopic_id": "weather-climate.pressure-winds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Wind",
+      "text": "Wind",
+      "subtopic_id": "weather-climate.pressure-winds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Humidity",
+      "text": "Humidity",
+      "subtopic_id": "weather-climate.elements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Temperature",
+      "text": "Temperature",
+      "subtopic_id": "weather-climate.elements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Cloud",
+      "text": "Cloud",
+      "subtopic_id": "weather-climate.elements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Factors",
+      "text": "Factors affecting climatic elements e.g. altitude, latitude, ocean currents, continentality, aspect",
+      "subtopic_id": "weather-climate.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Land and sea breezes",
+      "text": "Land and sea breezes",
+      "subtopic_id": "weather-climate.pressure-winds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(a) Climatic data",
+      "text": "Interpretation of climatic charts and data",
+      "subtopic_id": "weather-climate.data",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(b) Hot climates",
+      "text": "Hot climate: Equatorial, Tropical Continental, Desert",
+      "subtopic_id": "climate-types.hot",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(b) Temperate climates",
+      "text": "Temperate climate: warm and cool",
+      "subtopic_id": "climate-types.temperate",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(b) Classification",
+      "text": "Classification of climate based on Greek and Koppen",
+      "subtopic_id": "climate-types.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(c) Climate change: meaning, causes",
+      "text": "Climate change: meaning, causes",
+      "subtopic_id": "climate-change.causes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (v)(c) Climate change: effects, remedies",
+      "text": "Climate change: effects and remedies",
+      "subtopic_id": "climate-change.effects",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vi) Vegetation: major types",
+      "text": "Major types (Tropical Rainforest, cool/warm temperate woodland, Tropical Grassland); characteristics, distribution",
+      "subtopic_id": "vegetation.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vi) Vegetation: factors",
+      "text": "Factors affecting their distribution",
+      "subtopic_id": "vegetation.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vi) Vegetation: plant communities",
+      "text": "Plant communities",
+      "subtopic_id": "vegetation.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vi) Vegetation: resource",
+      "text": "Vegetation as an environmental resource",
+      "subtopic_id": "vegetation.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vi) Vegetation: conservation",
+      "text": "Conservation of vegetation resources",
+      "subtopic_id": "vegetation.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vii) Soil: definition",
+      "text": "Definition",
+      "subtopic_id": "soils.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vii) Soil: local types",
+      "text": "Local types and characteristics",
+      "subtopic_id": "soils.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vii) Soil: formation",
+      "text": "Factors and processes of soil formation",
+      "subtopic_id": "soils.formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vii) Soil: profile",
+      "text": "Soil profile",
+      "subtopic_id": "soils.formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vii) Soil: importance",
+      "text": "Importance to man",
+      "subtopic_id": "soils.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vii) Soil: human activities",
+      "text": "The effects of human activities on soil",
+      "subtopic_id": "soils.erosion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG (vii) Soil: erosion",
+      "text": "Soil erosion and conservation",
+      "subtopic_id": "soils.erosion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Environment (a)",
+      "text": "Environmental resources: meaning, classification (renewable and non renewable), types, importance of each",
+      "subtopic_id": "environment.resources",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Environment (b) soil erosion",
+      "text": "Hazards: soil erosion (causes, effects, prevention)",
+      "subtopic_id": "soils.erosion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Environment (b) drought",
+      "text": "Hazards: drought (causes, effects, prevention)",
+      "subtopic_id": "environment.hazards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Environment (b) desert encroachment",
+      "text": "Hazards: desert encroachment (causes, effects, prevention)",
+      "subtopic_id": "environment.hazards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Environment (b) flooding",
+      "text": "Hazards: flooding (causes, effects, prevention)",
+      "subtopic_id": "environment.hazards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Environment (b) pollution",
+      "text": "Hazards: pollution (causes, effects, prevention)",
+      "subtopic_id": "environment.pollution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "PPG Environment (c)",
+      "text": "Environmental conservation: meaning, importance, methods, problems and solutions",
+      "subtopic_id": "environment.conservation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (i) growth",
+      "text": "World population: factors and patterns of growth",
+      "subtopic_id": "population.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (i) distribution",
+      "text": "World population: distribution",
+      "subtopic_id": "population.distribution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (i) movement",
+      "text": "World population: movement",
+      "subtopic_id": "population.migration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (i) growth rate problems",
+      "text": "Growth rate problems",
+      "subtopic_id": "population.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (ii) types",
+      "text": "Settlement types (rural and urban)",
+      "subtopic_id": "settlement.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (ii) patterns and location",
+      "text": "Patterns and factors affecting location",
+      "subtopic_id": "settlement.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (ii) growth and size",
+      "text": "Growth and size",
+      "subtopic_id": "settlement.types",
+      "status": "partial",
+      "note": "Split: size and hierarchy in settlement.types; factors of growth in settlement.rural and settlement.urban. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (ii) rural functions",
+      "text": "Functions of rural settlements",
+      "subtopic_id": "settlement.rural",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (ii) urban functions",
+      "text": "Functions of urban settlements",
+      "subtopic_id": "settlement.urban",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (ii) interaction",
+      "text": "Interaction patterns (urban-rural, rural-urban, urban-urban, rural-rural)",
+      "subtopic_id": "settlement.interaction",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (ii) migration",
+      "text": "Migration",
+      "subtopic_id": "population.migration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (iii) modes",
+      "text": "Modes (roads, railways, water, air, pipeline, cables, ropeways)",
+      "subtopic_id": "transport.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (iii) development",
+      "text": "Transportation and economic development (movement of people and commodities, trade, diffusion of ideas and technology, national integration)",
+      "subtopic_id": "transport.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (iii) problems",
+      "text": "Problems of transportation and their solutions",
+      "subtopic_id": "transport.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (iv) classification",
+      "text": "Classification (primary, secondary and tertiary)",
+      "subtopic_id": "industry.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (iv) types",
+      "text": "Types (heavy and light industry)",
+      "subtopic_id": "industry.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (iv) location",
+      "text": "Factors of industrial location",
+      "subtopic_id": "industry.location",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (iv) contributions",
+      "text": "Contributions to development",
+      "subtopic_id": "industry.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (iv) problems",
+      "text": "Problems/solutions",
+      "subtopic_id": "industry.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (v) Trade",
+      "text": "Meaning, types (national and international), reasons for trade, importance",
+      "subtopic_id": "trade.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (vi) Tourism: meaning",
+      "text": "Meaning, centres, reasons (leisure, recreation, education)",
+      "subtopic_id": "tourism.meaning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "EHG (vi) Tourism: importance",
+      "text": "Importance, problems and solutions",
+      "subtopic_id": "tourism.importance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (a)",
+      "text": "Nigeria on broad outline: location, position, size, distance and political divisions",
+      "subtopic_id": "nigeria.location",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (b) relief, drainage",
+      "text": "Physical setting: relief, drainage",
+      "subtopic_id": "nigeria.relief-drainage",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (b) climate",
+      "text": "Physical setting: climate",
+      "subtopic_id": "nigeria.climate",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (b) vegetation",
+      "text": "Physical setting: vegetation",
+      "subtopic_id": "nigeria.vegetation-soils",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (c)",
+      "text": "Population: size, distribution, structure, population quality, population movement, population data (sources and problems/solutions)",
+      "subtopic_id": "nigeria.population",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (d) mineral",
+      "text": "Mineral (petroleum, gas, coal, tin/columbite, iron ore, limestone): distribution, methods of extraction, problems and solutions",
+      "subtopic_id": "nigeria-resources.minerals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (d) power",
+      "text": "Power (petroleum, gas, coal, HEP, solar energy)",
+      "subtopic_id": "nigeria-resources.power",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (d) water",
+      "text": "Water (rivers, lakes, dams, sea, underground water)",
+      "subtopic_id": "nigeria-resources.water",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (d) vegetation",
+      "text": "Vegetation (trees, food and cash crops; timber): forest, savanna, biosphere",
+      "subtopic_id": "nigeria-resources.vegetation",
+      "status": "partial",
+      "note": "Split: timber, forest, savanna and biosphere reserves in nigeria-resources.vegetation; food and cash crops in nigeria-economy.agriculture. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (e)",
+      "text": "Agriculture: types of agricultural practices, food and cash crops, importance, problems and solutions",
+      "subtopic_id": "nigeria-economy.agriculture",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (f)",
+      "text": "Transportation: mode, advantages and disadvantages, problems and solutions, influence on human activities",
+      "subtopic_id": "nigeria-economy.transport",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (g)",
+      "text": "Communication networks, advantages and disadvantages, importance, problems and solutions",
+      "subtopic_id": "nigeria-economy.transport",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (h)",
+      "text": "Industry: definition, types, major industrial zones, factors of location, importance, problems and solutions",
+      "subtopic_id": "nigeria-economy.industry",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (i)",
+      "text": "Trade: meaning, types, stock exchange, capital market, forex, major commercial areas, importance of commercial activities",
+      "subtopic_id": "nigeria-economy.trade",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (j)",
+      "text": "Tourism: meaning, centres, reasons, importance, problems and solutions",
+      "subtopic_id": "nigeria-economy.tourism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (k) development",
+      "text": "Rural and regional development",
+      "subtopic_id": "nigeria-development.regional",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (k) resource management",
+      "text": "Resource management and conservation",
+      "subtopic_id": "nigeria-development.regional",
+      "status": "partial",
+      "note": "Split: resource management in nigeria-development.regional; conservation in general in environment.conservation, and of named resources in their own subtopics. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (k) pollution",
+      "text": "Environmental pollution e.g. air, water, soil, noise",
+      "subtopic_id": "environment.pollution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (k) waste disposal",
+      "text": "Waste disposal",
+      "subtopic_id": "environment.pollution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (l) meaning",
+      "text": "ECOWAS: meaning, member countries, purposes/mandate",
+      "subtopic_id": "ecowas.members",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (l) prospects",
+      "text": "ECOWAS: advantages/benefits, disadvantages, problems and solutions",
+      "subtopic_id": "ecowas.prospects",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGN (m)",
+      "text": "Geo-political issues: land reclamation",
+      "subtopic_id": "nigeria-development.land-reclamation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (a) outline",
+      "text": "Africa: location, size, position, political divisions and associated islands",
+      "subtopic_id": "africa.outline",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (a) physical",
+      "text": "Physical features and their economic importance (relief, drainage, climate and vegetation)",
+      "subtopic_id": "africa.physical",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (a) minerals",
+      "text": "Distribution of minerals",
+      "subtopic_id": "africa-economy.mining",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (b)(i)",
+      "text": "Irrigation agriculture in the Nile Basin and the Niger Basin",
+      "subtopic_id": "africa-economy.irrigation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (b)(ii)",
+      "text": "Plantation agriculture in West and East Africa",
+      "subtopic_id": "africa-economy.commercial-farming",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (b)(iii)",
+      "text": "Oil production in Nigeria, Ghana and Libya",
+      "subtopic_id": "africa-economy.oil",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (b)(iv)",
+      "text": "Lumbering in Equatorial Africa (Cote d'Ivoire and Zaire)",
+      "subtopic_id": "africa-economy.lumbering",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (b)(v)",
+      "text": "Gold mining in South Africa",
+      "subtopic_id": "africa-economy.mining",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (b)(vi)",
+      "text": "Copper mining in Zambia and Zaire",
+      "subtopic_id": "africa-economy.mining",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (b)(vii)",
+      "text": "Population distribution in West Africa",
+      "subtopic_id": "africa.population",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (b)(viii) meaning",
+      "text": "ECOWAS: meaning, member countries, purposes/mandate",
+      "subtopic_id": "ecowas.members",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGA (b)(viii) prospects",
+      "text": "ECOWAS: advantages/benefits, disadvantages, problems and solutions",
+      "subtopic_id": "ecowas.prospects",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "FW (i)",
+      "text": "Land use (rural or urban)",
+      "subtopic_id": "fieldwork.local",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "FW (ii)",
+      "text": "Market survey, rural or urban",
+      "subtopic_id": "fieldwork.local",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "FW (iii)",
+      "text": "Traffic flow, rural or urban",
+      "subtopic_id": "fieldwork.local",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "FW (iv)",
+      "text": "Patterns of journey to work, rural or urban",
+      "subtopic_id": "fieldwork.local",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "FW (v)",
+      "text": "Rate of erosion in the locality",
+      "subtopic_id": "fieldwork.local",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (a)",
+      "text": "Ghana on broad outline: location, position, size, distance and political divisions",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (b)",
+      "text": "Ghana physical setting (geology, relief, drainage, climate, vegetation and soils)",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (c)",
+      "text": "Ghana population: size, growth, distribution and density, age/sex structure, fertility, morbidity and mortality, migration",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (d)",
+      "text": "Ghana settlement: origin, types, characteristics, hierarchy, land use, urbanization",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (e)(i)",
+      "text": "Ghana agriculture: subsistence, commercial, plantation",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (e)(ii)",
+      "text": "Ghana fishing: inland and ocean, methods, types of fish, storage and marketing",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule. No fishing subtopic exists anywhere in the tree.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (e)(iii)",
+      "text": "Ghana lumbering: sources of timber, methods, species, conservation",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (e)(iv)",
+      "text": "Ghana mining: types, distribution of minerals, methods of extraction",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (f)",
+      "text": "Ghana manufacturing: types, distribution, location factors, problems",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (g)",
+      "text": "Ghana trade and commerce: services, transport and communication, recreation and tourism, administration",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (h)",
+      "text": "Ghana tourism: meaning, centres, reasons, importance, problems and solutions",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (i) energy",
+      "text": "Ghana energy and power: Akosombo and Kpong HEP, fuel wood, petroleum and gas (Saltpond), solar, wave and wind, biogas",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGG (i) issues",
+      "text": "Ghana issues on development and environmental concerns (second item lettered (i) in the source)",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Ghana; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Ghana, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (a)",
+      "text": "Sierra Leone on broad outline: size and location, physical environment, people and settlements",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (b)(i)",
+      "text": "Sierra Leone agriculture",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (b)(ii)",
+      "text": "Sierra Leone fishing",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (b)(iii)",
+      "text": "Sierra Leone lumbering",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (b)(iv)",
+      "text": "Sierra Leone mining",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (c)",
+      "text": "Sierra Leone manufacturing, energy and power (Dodo, Guma, Bumbuna HEP)",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (d)",
+      "text": "Sierra Leone transport and communication",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (e)",
+      "text": "Sierra Leone trade",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (f)",
+      "text": "Sierra Leone population",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGSL (g)",
+      "text": "Sierra Leone tourism",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Sierra Leone; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Sierra Leone, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (a)",
+      "text": "Liberia on broad outline",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (b)",
+      "text": "Liberia physical setting",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (c)",
+      "text": "Liberia population",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (d)",
+      "text": "Liberia resources",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (e)",
+      "text": "Liberia agriculture",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (f)",
+      "text": "Liberia transportation",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (g)",
+      "text": "Liberia communication",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (h)",
+      "text": "Liberia industry",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (i)",
+      "text": "Liberia trade",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (j)",
+      "text": "Liberia tourism",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (k)",
+      "text": "Liberia fishing",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGL (l)",
+      "text": "Liberia mining",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in Liberia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Liberia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (a)",
+      "text": "Senegambia on broad outline",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (b)",
+      "text": "Senegambia physical setting",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (c)",
+      "text": "Senegambia population",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (d)",
+      "text": "Senegambia resources",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (e)",
+      "text": "Senegambia agriculture",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (f)",
+      "text": "Senegambia transportation",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (g)",
+      "text": "Senegambia communication",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (h)",
+      "text": "Senegambia industry",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (i)",
+      "text": "Senegambia mining",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (j)",
+      "text": "Senegambia fishing",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (k)",
+      "text": "Senegambia issues on development and environmental concerns",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (l)",
+      "text": "Senegambia trade",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "wassce",
+      "ref": "RGS (m)",
+      "text": "Senegambia tourism",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Set only for candidates in The Gambia; left out by the tree's scope_rule.",
+      "proposed": "New topic: Regional geography of Senegambia, only if the tree is extended to candidates outside Nigeria"
+    },
+    {
+      "source": "utme",
+      "ref": "1(a)(a) chain",
+      "text": "Elementary surveying: chain",
+      "subtopic_id": "surveying.chain",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(a)(a) prismatic",
+      "text": "Elementary surveying: prismatic",
+      "subtopic_id": "surveying.prismatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(a)(b)",
+      "text": "Open and close traverse",
+      "subtopic_id": "surveying.prismatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(a)(c)",
+      "text": "Procedure",
+      "subtopic_id": "surveying.chain",
+      "status": "partial",
+      "note": "Split: chain survey procedure in surveying.chain; traverse procedure in surveying.prismatic. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(a)(d)",
+      "text": "Problems",
+      "subtopic_id": "surveying.prismatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(a)(e)",
+      "text": "Advantages and disadvantages",
+      "subtopic_id": "surveying.prismatic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(b)(a)",
+      "text": "GIS: components",
+      "subtopic_id": "gis.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(b)(b)",
+      "text": "GIS: techniques",
+      "subtopic_id": "gis.concepts",
+      "status": "covered",
+      "note": "Capture, storage, analysis and display of spatial data.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(b)(c)",
+      "text": "GIS: data",
+      "subtopic_id": "gis.data",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(b)(d)",
+      "text": "GIS: sources",
+      "subtopic_id": "gis.data",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(b)(e)",
+      "text": "GIS: applications",
+      "subtopic_id": "gis.uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(b) obj iii",
+      "text": "Express locations through the use of latitudes, longitudes, zipcodes",
+      "subtopic_id": "gis.data",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(b) obj vi",
+      "text": "Identify problems with GIS in Nigeria",
+      "subtopic_id": "gis.uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(c) diagrams",
+      "text": "Interpretation of statistical data and diagrams",
+      "subtopic_id": "statistical.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(c) maps",
+      "text": "Interpretation of statistical maps",
+      "subtopic_id": "statistical.maps",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(d)(a)",
+      "text": "Drawing of cross profiles",
+      "subtopic_id": "map-reading.gradient-profiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(d)(b)",
+      "text": "Recognition of intervisibility",
+      "subtopic_id": "map-reading.gradient-profiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(d)(c)",
+      "text": "Recognition and description of physical and human features and relationship as depicted on topographical maps",
+      "subtopic_id": "map-reading.relief",
+      "status": "partial",
+      "note": "Split: relief features in map-reading.relief, rivers in map-reading.drainage, human features and their relationship to relief in map-reading.human. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(e)",
+      "text": "Maps: define and identify different types and uses",
+      "subtopic_id": "maps.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(f) scale",
+      "text": "Scale",
+      "subtopic_id": "maps.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(f) distances",
+      "text": "Measurement of distances",
+      "subtopic_id": "maps.measurement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(f)(a) areas",
+      "text": "Areas",
+      "subtopic_id": "maps.measurement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(f)(a) reduction",
+      "text": "Reduction and enlargement",
+      "subtopic_id": "maps.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(f)(b)",
+      "text": "Directions",
+      "subtopic_id": "maps.direction",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(f)(c) bearings",
+      "text": "Bearings with reference to topographical maps",
+      "subtopic_id": "maps.direction",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(f)(c) gradients",
+      "text": "Gradients with reference to topographical maps",
+      "subtopic_id": "map-reading.gradient-profiles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(a)(a)",
+      "text": "Soils: definition and properties",
+      "subtopic_id": "soils.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(a)(b)",
+      "text": "Factors and processes of formation",
+      "subtopic_id": "soils.formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(a)(c)",
+      "text": "Soil profiles",
+      "subtopic_id": "soils.formation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(a)(d)",
+      "text": "Major tropical types, their characteristics, distribution and uses",
+      "subtopic_id": "soils.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(a)(e)",
+      "text": "Impact of human activities on soils",
+      "subtopic_id": "soils.erosion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(b)(a)",
+      "text": "Denudation in the tropics: weathering",
+      "subtopic_id": "denudation.weathering",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(b)(b)",
+      "text": "Erosion",
+      "subtopic_id": "denudation.weathering",
+      "status": "partial",
+      "note": "Split: erosion in general in denudation.weathering; erosion by each agent in denudation.rivers, denudation.wind and denudation.coast. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(b)(c)",
+      "text": "Mass movement",
+      "subtopic_id": "denudation.mass-movement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(b)(d)",
+      "text": "Deposition",
+      "subtopic_id": "denudation.rivers",
+      "status": "partial",
+      "note": "Split: deposition by rivers in denudation.rivers, by wind in denudation.wind, by waves in denudation.coast. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(b) obj i",
+      "text": "Identify the agents of denudation",
+      "subtopic_id": "denudation.weathering",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(c)",
+      "text": "Environmental conservation: examples, methods, need/importance",
+      "subtopic_id": "environment.conservation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(d) natural",
+      "text": "Natural hazards (droughts, earthquakes, volcanic eruptions, flooding)",
+      "subtopic_id": "environment.hazards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(d) man-induced: soil erosion",
+      "text": "Man-induced hazard: soil erosion",
+      "subtopic_id": "soils.erosion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(d) man-induced: deforestation",
+      "text": "Man-induced hazard: deforestation",
+      "subtopic_id": "environment.hazards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(d) man-induced: pollution",
+      "text": "Man-induced hazard: pollution",
+      "subtopic_id": "environment.pollution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(d) man-induced: flooding, desertification",
+      "text": "Man-induced hazards: flooding and desertification",
+      "subtopic_id": "environment.hazards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(d) effects",
+      "text": "Effects, prevention and control of hazards",
+      "subtopic_id": "environment.hazards",
+      "status": "partial",
+      "note": "Split: most hazards in environment.hazards; control of soil erosion in soils.erosion and of pollution in environment.pollution. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(e)(a)",
+      "text": "Land ecosystem",
+      "subtopic_id": "environment.ecosystem",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(e)(b)",
+      "text": "Environmental balance and human interaction",
+      "subtopic_id": "environment.ecosystem",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(f)(a)",
+      "text": "Types of resources (atmospheric, land, soil, vegetation and minerals)",
+      "subtopic_id": "environment.resources",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(f)(b)",
+      "text": "Renewable and non-renewable resources",
+      "subtopic_id": "environment.resources",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(g)(a) solar system",
+      "text": "The earth in the solar system",
+      "subtopic_id": "earth.solar-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(g)(a) rotation",
+      "text": "Rotation and revolution",
+      "subtopic_id": "earth.movements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(g)(b)",
+      "text": "The shape and size of the earth",
+      "subtopic_id": "earth.shape-size",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(g)(c) latitude",
+      "text": "Latitudes and distances",
+      "subtopic_id": "earth.latitude",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(g)(c) longitude",
+      "text": "Longitudes and time",
+      "subtopic_id": "earth.longitude-time",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(a) internal",
+      "text": "Structure of the earth (internal)",
+      "subtopic_id": "earth-structure.interior",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(a) external",
+      "text": "Structure of the earth (external); relationships among the four spheres",
+      "subtopic_id": "earth-structure.spheres",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h) obj ii",
+      "text": "Relationship among atmosphere, biosphere in terms of energy balance and water cycle",
+      "subtopic_id": "earth-structure.spheres",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(b) types",
+      "text": "Rocks: types, characteristics, modes of formation",
+      "subtopic_id": "rocks.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(b) uses",
+      "text": "Rocks: uses",
+      "subtopic_id": "rocks.uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(c)",
+      "text": "Earth's movement: tectonic forces",
+      "subtopic_id": "tectonics.folding",
+      "status": "partial",
+      "note": "Split: compressional folding in tectonics.folding; faulting in tectonics.faulting. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h) obj vi",
+      "text": "Differentiate between tensional and compressional forces and the resultant landforms",
+      "subtopic_id": "tectonics.faulting",
+      "status": "partial",
+      "note": "Split: tensional forces and fault landforms in tectonics.faulting; compressional forces and folds in tectonics.folding. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(d) mountains",
+      "text": "Major landforms: mountains",
+      "subtopic_id": "tectonics.mountains",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(d) plateaux",
+      "text": "Major landforms: plateaux",
+      "subtopic_id": "tectonics.plateaux",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(d) plains",
+      "text": "Major landforms: plains",
+      "subtopic_id": "tectonics.plains",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(d) coastal",
+      "text": "Major landforms: coastal landforms",
+      "subtopic_id": "denudation.coast",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(d) karst",
+      "text": "Major landforms: karst topography",
+      "subtopic_id": "denudation.karst",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)(d) desert",
+      "text": "Major landforms: desert landforms",
+      "subtopic_id": "denudation.wind",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(i)(a)",
+      "text": "Factors controlling growth of plants",
+      "subtopic_id": "vegetation.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(i)(b)",
+      "text": "The concept of vegetation e.g. plant communities and succession",
+      "subtopic_id": "vegetation.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(i)(c)",
+      "text": "Major types of vegetation, their characteristics and distribution",
+      "subtopic_id": "vegetation.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(i)(d)",
+      "text": "Impact of human activities on vegetation",
+      "subtopic_id": "vegetation.human",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(j)(a)",
+      "text": "Landforms associated with volcanic activities",
+      "subtopic_id": "vulcanicity.landforms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(j)(b)",
+      "text": "Landforms of igneous rocks",
+      "subtopic_id": "vulcanicity.landforms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(j)(c)",
+      "text": "Origin and types of volcanoes",
+      "subtopic_id": "vulcanicity.volcanoes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(j)(d) eruptions",
+      "text": "Some volcanic eruptions",
+      "subtopic_id": "vulcanicity.volcanoes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(j)(d) earthquakes",
+      "text": "Some earthquakes",
+      "subtopic_id": "vulcanicity.earthquakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(j) obj ii",
+      "text": "Landforms associated with earthquakes",
+      "subtopic_id": "vulcanicity.earthquakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(k)(a)",
+      "text": "Oceans and seas (world distribution, salinity and uses)",
+      "subtopic_id": "water.oceans",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(k)(b)",
+      "text": "Ocean currents: types, distribution, causes and effects",
+      "subtopic_id": "water.currents",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(k)(c)",
+      "text": "Lakes: types, distribution and uses",
+      "subtopic_id": "water.lakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(k)(d)",
+      "text": "Rivers: action of running water",
+      "subtopic_id": "denudation.rivers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(l)(a)",
+      "text": "Concept of weather and climate",
+      "subtopic_id": "weather-climate.elements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(l)(b)",
+      "text": "Elements of weather and climate",
+      "subtopic_id": "weather-climate.elements",
+      "status": "partial",
+      "note": "Split: temperature, sunshine, humidity and cloud in weather-climate.elements; rainfall in weather-climate.rainfall; pressure and wind in weather-climate.pressure-winds. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(l)(c)",
+      "text": "Factors controlling weather and climate (pressure, air mass, altitude, continentality and winds)",
+      "subtopic_id": "weather-climate.factors",
+      "status": "partial",
+      "note": "Split: air mass, altitude, continentality and winds in weather-climate.factors; pressure and the pressure belts in weather-climate.pressure-winds. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(l)(d)",
+      "text": "Classification of climate (Greek and Koppen)",
+      "subtopic_id": "climate-types.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(l)(e)",
+      "text": "Major climate types (Koppen), their characteristics and distribution",
+      "subtopic_id": "climate-types.hot",
+      "status": "partial",
+      "note": "Split: hot climates in climate-types.hot; temperate and cold climates in climate-types.temperate. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(l)(f)",
+      "text": "Measuring and recording weather parameters and instruments used",
+      "subtopic_id": "weather-climate.instruments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(l)(g)",
+      "text": "The basic science of climate change (meaning, causes)",
+      "subtopic_id": "climate-change.causes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(l) obj",
+      "text": "Understand the effects and remedies of climate change",
+      "subtopic_id": "climate-change.effects",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(a)(a)",
+      "text": "World population with particular reference to the Amazon Basin, N.E.U.S.A., India, Japan and the West Coast of Southern Africa",
+      "subtopic_id": "population.distribution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(a)(b)",
+      "text": "Characteristics: birth and death rates, age/sex structure",
+      "subtopic_id": "population.characteristics",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(a)(c)",
+      "text": "Factors and patterns of population distribution",
+      "subtopic_id": "population.distribution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(a)(d)",
+      "text": "Factors and problems of population growth",
+      "subtopic_id": "population.growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(a) obj v",
+      "text": "Relate the types of migration to their causes and effects",
+      "subtopic_id": "population.migration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(a) obj vi",
+      "text": "Account for the ways population constitute a resource",
+      "subtopic_id": "population.characteristics",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(a)",
+      "text": "Types of economic activities: primary, secondary, tertiary and quaternary",
+      "subtopic_id": "industry.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(b) types",
+      "text": "Agriculture: types, system",
+      "subtopic_id": "agriculture.systems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(b) factors",
+      "text": "Agriculture: factors and problems",
+      "subtopic_id": "agriculture.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(c) types",
+      "text": "Manufacturing industries: types",
+      "subtopic_id": "industry.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(c) location",
+      "text": "Manufacturing industries: locational factors",
+      "subtopic_id": "industry.location",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(c) distribution",
+      "text": "Manufacturing industries: distribution",
+      "subtopic_id": "industry.world-regions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(c) importance",
+      "text": "Socio-economic importance and problems of industrialization in tropical Africa",
+      "subtopic_id": "industry.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(d) transport types",
+      "text": "Transportation: types",
+      "subtopic_id": "transport.modes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(d) communication types",
+      "text": "Communication: types",
+      "subtopic_id": "transport.communication",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(d) roles",
+      "text": "Transportation and communication: roles in economic development",
+      "subtopic_id": "transport.development",
+      "status": "partial",
+      "note": "Split: roles of transport in transport.development; roles of communication in transport.communication. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(d) tropical Africa",
+      "text": "Communication in tropical Africa",
+      "subtopic_id": "transport.communication",
+      "status": "covered",
+      "note": "The covers line is general and does not name tropical Africa, but its content applies.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b) obj",
+      "text": "Give reasons for the problems of transportation in tropical Africa",
+      "subtopic_id": "transport.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(e)",
+      "text": "World trade: factors and pattern of world trade, major commodities (origin, routes and destinations)",
+      "subtopic_id": "trade.world",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(f) meaning",
+      "text": "Tourism: definition, location",
+      "subtopic_id": "tourism.meaning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)(f) importance",
+      "text": "Tourism: importance, problems and solutions",
+      "subtopic_id": "tourism.importance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(c)(a)",
+      "text": "Settlement types and patterns: rural and urban, dispersed, nucleated and linear",
+      "subtopic_id": "settlement.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(c)(b)",
+      "text": "Rural settlement: classification, factors of growth and functions",
+      "subtopic_id": "settlement.rural",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(c)(c)",
+      "text": "Urban settlement: classification, factors of growth and functions",
+      "subtopic_id": "settlement.urban",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(c)(d)",
+      "text": "Problems of urban centres",
+      "subtopic_id": "settlement.urban",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(c)(e)",
+      "text": "Interrelationship between rural and urban settlements",
+      "subtopic_id": "settlement.interaction",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(a)",
+      "text": "Nigeria: location, position, size, political division (states) and peoples",
+      "subtopic_id": "nigeria.location",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(b) relief",
+      "text": "Physical setting: geology, relief, landform",
+      "subtopic_id": "nigeria.relief-drainage",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(b) climate",
+      "text": "Physical setting: climate",
+      "subtopic_id": "nigeria.climate",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(b) drainage",
+      "text": "Physical setting: drainage",
+      "subtopic_id": "nigeria.relief-drainage",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(b) vegetation",
+      "text": "Physical setting: vegetation and soils",
+      "subtopic_id": "nigeria.vegetation-soils",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a) obj iii",
+      "text": "Relate the components of physical settings to their effects on human activities",
+      "subtopic_id": "nigeria.relief-drainage",
+      "status": "partial",
+      "note": "Only the importance of Nigerian rivers is named; the effects of Nigeria's relief, climate and vegetation on human activities are not in any covers line.",
+      "proposed": "Widen nigeria.relief-drainage, nigeria.climate and nigeria.vegetation-soils with the effects of each on human activities"
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(c)",
+      "text": "Population: size, distribution, migration (types, problems and effects)",
+      "subtopic_id": "nigeria.population",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(d) minerals",
+      "text": "Natural resources: minerals",
+      "subtopic_id": "nigeria-resources.minerals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(d) soils",
+      "text": "Natural resources: soils",
+      "subtopic_id": "nigeria.vegetation-soils",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(d) water",
+      "text": "Natural resources: water",
+      "subtopic_id": "nigeria-resources.water",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(d) vegetation",
+      "text": "Natural resources: vegetation",
+      "subtopic_id": "nigeria-resources.vegetation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(a)(d) conservation",
+      "text": "Natural resources: distribution, uses and conservation",
+      "subtopic_id": "nigeria-resources.minerals",
+      "status": "partial",
+      "note": "Distribution and uses are covered across nigeria-resources; forest conservation is in nigeria-resources.vegetation and soil conservation in soils.erosion, but conservation of Nigeria's mineral and water resources is not in any covers line.",
+      "proposed": "Widen nigeria-resources.minerals and nigeria-resources.water with conservation of the resource"
+    },
+    {
+      "source": "utme",
+      "ref": "4(b)(a)",
+      "text": "Agricultural systems: the major crops produced, problems of agricultural development in Nigeria",
+      "subtopic_id": "nigeria-economy.agriculture",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(b)(b)",
+      "text": "Manufacturing industries: factors of location, types of products, marketing and problems",
+      "subtopic_id": "nigeria-economy.industry",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(b)(c)",
+      "text": "Transportation and communication: modes and their relative advantages and disadvantages",
+      "subtopic_id": "nigeria-economy.transport",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(b)(d)",
+      "text": "Trade: regional and international trade, advantages and disadvantages",
+      "subtopic_id": "nigeria-economy.trade",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(b)(e)",
+      "text": "Tourism: types, importance, problems and solutions",
+      "subtopic_id": "nigeria-economy.tourism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(c)(a)",
+      "text": "ECOWAS: meaning and objectives",
+      "subtopic_id": "ecowas.members",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(c)(b)",
+      "text": "ECOWAS: member states",
+      "subtopic_id": "ecowas.members",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(c)(c)",
+      "text": "ECOWAS: advantages and benefits",
+      "subtopic_id": "ecowas.prospects",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4(c)(d)",
+      "text": "ECOWAS: disadvantages, problems and solutions",
+      "subtopic_id": "ecowas.prospects",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W1",
+      "text": "Introduction to Geography: meaning, nature, scope and value of Geography",
+      "subtopic_id": "fieldwork.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2",
+      "text": "The solar system: the universe, the planets, the earth",
+      "subtopic_id": "earth.solar-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3",
+      "text": "The earth as a planet: shape and size, proof of sphericity; rotation and revolution",
+      "subtopic_id": "earth.shape-size",
+      "status": "partial",
+      "note": "Split: shape, size and proofs in earth.shape-size; rotation and revolution in earth.movements. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4",
+      "text": "Latitude and longitude: definition, uses, similarities and differences, great and small circles",
+      "subtopic_id": "earth.latitude",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5",
+      "text": "Latitude and longitude: standard time zone, calculation of distances, local time, International Date Line",
+      "subtopic_id": "earth.longitude-time",
+      "status": "partial",
+      "note": "Split: time zones, local time and the Date Line in earth.longitude-time; calculation of distances in earth.latitude. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6",
+      "text": "The structure of the earth: the outer zone",
+      "subtopic_id": "earth-structure.spheres",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7",
+      "text": "The structure of the earth: the interior zone",
+      "subtopic_id": "earth-structure.interior",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8",
+      "text": "Rocks of the earth: types and characteristics",
+      "subtopic_id": "rocks.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9",
+      "text": "Basic concept of Geographic Information System (GIS)",
+      "subtopic_id": "gis.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10",
+      "text": "Major landform features: types of landforms, mountains",
+      "subtopic_id": "tectonics.mountains",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W1",
+      "text": "Mode of formation (fold, block, volcanic and residual mountains)",
+      "subtopic_id": "tectonics.mountains",
+      "status": "partial",
+      "note": "Split: kinds of mountain and residual mountains in tectonics.mountains; formation of fold mountains in tectonics.folding, block mountains in tectonics.faulting, volcanic mountains in vulcanicity.landforms. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2",
+      "text": "Plateaux",
+      "subtopic_id": "tectonics.plateaux",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3",
+      "text": "Low lands",
+      "subtopic_id": "tectonics.plains",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4",
+      "text": "Low lands (continued)",
+      "subtopic_id": "tectonics.plains",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W5",
+      "text": "The environment",
+      "subtopic_id": "environment.ecosystem",
+      "status": "covered",
+      "note": "Week title only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6",
+      "text": "Weather and climate",
+      "subtopic_id": "weather-climate.elements",
+      "status": "covered",
+      "note": "Week title only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7",
+      "text": "Weather and climate (continued)",
+      "subtopic_id": "weather-climate.elements",
+      "status": "covered",
+      "note": "Week title only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8",
+      "text": "Components of Geographic Information System",
+      "subtopic_id": "gis.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9",
+      "text": "Introduction to basic concepts in map reading",
+      "subtopic_id": "maps.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W10",
+      "text": "Map distances",
+      "subtopic_id": "maps.measurement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1",
+      "text": "Local geography",
+      "subtopic_id": "fieldwork.local",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2",
+      "text": "Nigeria: location, position and size; political division",
+      "subtopic_id": "nigeria.location",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3",
+      "text": "Nigeria: relief and drainage (highlands and lowlands, examples, areas, importance and disadvantages; major rivers, lakes, river basins, characteristics of Nigerian rivers)",
+      "subtopic_id": "nigeria.relief-drainage",
+      "status": "partial",
+      "note": "Highlands, lowlands, rivers, lakes and basins are covered; the importance and disadvantages of Nigeria's highlands and lowlands are not named.",
+      "proposed": "Widen nigeria.relief-drainage with the importance and disadvantages of highlands and lowlands"
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4",
+      "text": "Nigeria: climate (two seasons, characteristics, local winds, tropical maritime and continental air masses, equatorial easterlies, land and sea breezes)",
+      "subtopic_id": "nigeria.climate",
+      "status": "covered",
+      "note": "Equatorial easterlies are not named but sit within the air masses over Nigeria.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5",
+      "text": "Nigeria: vegetation and soils (belts, soil zones; soil erosion, areas prone, effects, control)",
+      "subtopic_id": "nigeria.vegetation-soils",
+      "status": "partial",
+      "note": "Split: vegetation belts and soil zones in nigeria.vegetation-soils; soil erosion and its control in soils.erosion. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6",
+      "text": "Nigeria: transportation (road, rail, water, air, pipeline) and industries (primary, secondary, tertiary and quaternary, in Nigeria and elsewhere)",
+      "subtopic_id": "nigeria-economy.transport",
+      "status": "partial",
+      "note": "Split: Nigeria's transport in nigeria-economy.transport; classes of industry in industry.classification. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W7",
+      "text": "Nigeria population: size, distribution, structure, quality, growth rate and HIV/AIDS, movement, data sources",
+      "subtopic_id": "nigeria.population",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8",
+      "text": "Agriculture in Nigeria: cash and food crops, areas, importance, problems and solutions",
+      "subtopic_id": "nigeria-economy.agriculture",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9",
+      "text": "Mineral resources in Nigeria: minerals and methods of mining, importance, problems and solutions",
+      "subtopic_id": "nigeria-resources.minerals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10",
+      "text": "Power resources in Nigeria: types, locations, importance, problems and solutions",
+      "subtopic_id": "nigeria-resources.power",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2",
+      "text": "Soil",
+      "subtopic_id": "soils.properties",
+      "status": "covered",
+      "note": "Week title only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3",
+      "text": "Soil (continued)",
+      "subtopic_id": "soils.formation",
+      "status": "covered",
+      "note": "Week title only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4",
+      "text": "Earthquake",
+      "subtopic_id": "vulcanicity.earthquakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5",
+      "text": "Volcanicity",
+      "subtopic_id": "vulcanicity.volcanoes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6",
+      "text": "Action of underground water",
+      "subtopic_id": "denudation.karst",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7",
+      "text": "Weathering",
+      "subtopic_id": "denudation.weathering",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8",
+      "text": "Action of running water",
+      "subtopic_id": "denudation.rivers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9",
+      "text": "Action of wind",
+      "subtopic_id": "denudation.wind",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W10",
+      "text": "Action of wave",
+      "subtopic_id": "denudation.coast",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W1",
+      "text": "Environmental conservation",
+      "subtopic_id": "environment.conservation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2",
+      "text": "Transportation in Nigeria",
+      "subtopic_id": "nigeria-economy.transport",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3",
+      "text": "Communication in Nigeria",
+      "subtopic_id": "nigeria-economy.transport",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5",
+      "text": "Commercial activities in Nigeria",
+      "subtopic_id": "nigeria-economy.trade",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W6",
+      "text": "Representation of relief forms",
+      "subtopic_id": "map-reading.relief",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7",
+      "text": "World population (size, distribution patterns and structure)",
+      "subtopic_id": "population.characteristics",
+      "status": "partial",
+      "note": "Split: size and structure in population.characteristics; distribution patterns in population.distribution. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W8",
+      "text": "World population (continued)",
+      "subtopic_id": "population.characteristics",
+      "status": "partial",
+      "note": "Continues W7. Split: size and structure in population.characteristics; distribution patterns in population.distribution. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9",
+      "text": "Settlement",
+      "subtopic_id": "settlement.types",
+      "status": "covered",
+      "note": "Week title only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W10",
+      "text": "Settlement (continued)",
+      "subtopic_id": "settlement.urban",
+      "status": "covered",
+      "note": "Week title only; rural settlement, if taught here, is in settlement.rural.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W1",
+      "text": "Tourism",
+      "subtopic_id": "tourism.meaning",
+      "status": "covered",
+      "note": "Week title only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2",
+      "text": "Satellite remote sensing",
+      "subtopic_id": "gis.data",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3",
+      "text": "GIS application",
+      "subtopic_id": "gis.uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4",
+      "text": "Bush fallowing in West Africa",
+      "subtopic_id": "agriculture.systems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5",
+      "text": "Mining in Africa: copper, gold and petroleum",
+      "subtopic_id": "africa-economy.mining",
+      "status": "partial",
+      "note": "Split: copper and gold in africa-economy.mining; petroleum in africa-economy.oil. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W6",
+      "text": "Population distribution in West Africa",
+      "subtopic_id": "africa.population",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W1",
+      "text": "Earthquakes",
+      "subtopic_id": "vulcanicity.earthquakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2",
+      "text": "Earthquakes (continued)",
+      "subtopic_id": "vulcanicity.earthquakes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3",
+      "text": "Volcanicity",
+      "subtopic_id": "vulcanicity.volcanoes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4",
+      "text": "Karst (limestone) topography",
+      "subtopic_id": "denudation.karst",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5",
+      "text": "Denudational processes",
+      "subtopic_id": "denudation.weathering",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6",
+      "text": "Weathering",
+      "subtopic_id": "denudation.weathering",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7",
+      "text": "Mass movement",
+      "subtopic_id": "denudation.mass-movement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W8",
+      "text": "Climatic change",
+      "subtopic_id": "climate-change.causes",
+      "status": "covered",
+      "note": "Week title only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W9",
+      "text": "ECOWAS",
+      "subtopic_id": "ecowas.members",
+      "status": "covered",
+      "note": "Week title only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W10",
+      "text": "Trade (world)",
+      "subtopic_id": "trade.world",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W1",
+      "text": "Settlement interactions: types (commercial, cultural, administrative); patterns; interaction with respect to migration",
+      "subtopic_id": "settlement.interaction",
+      "status": "partial",
+      "note": "Split: kinds and patterns of interaction in settlement.interaction; migration in population.migration. No content missing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2",
+      "text": "Geo-political issues (land reclamation): methods and importance",
+      "subtopic_id": "nigeria-development.land-reclamation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3",
+      "text": "GIS: data sources and collection of data",
+      "subtopic_id": "gis.data",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W4",
+      "text": "Africa: location, size, position and political division",
+      "subtopic_id": "africa.outline",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5",
+      "text": "Africa: relief and drainage",
+      "subtopic_id": "africa.physical",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6",
+      "text": "Africa: climate and vegetation",
+      "subtopic_id": "africa.physical",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W7",
+      "text": "Lumbering in equatorial Africa: Zaire and Nigeria",
+      "subtopic_id": "africa-economy.lumbering",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W8",
+      "text": "Irrigation agriculture in the Nile Basin and the Niger Basin",
+      "subtopic_id": "africa-economy.irrigation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W9",
+      "text": "Plantation agriculture in West and East Africa",
+      "subtopic_id": "africa-economy.commercial-farming",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W10",
+      "text": "Fruit farming in the Mediterranean regions of Africa",
+      "subtopic_id": "africa-economy.commercial-farming",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    }
+  ],
+  "unmapped_subtopics": [
+    "earth-structure.atmosphere"
+  ],
+  "summary": {
+    "wassce": {
+      "covered": 151,
+      "partial": 5,
+      "missing": 48
+    },
+    "utme": {
+      "covered": 121,
+      "partial": 13,
+      "missing": 0
+    },
+    "sow": {
+      "covered": 64,
+      "partial": 10,
+      "missing": 0
+    }
+  },
+  "taxonomy_version": "1.1",
+  "sources": {
+    "wassce": "syllabi\\geography-waec.txt",
+    "utme": "syllabi\\geography-jamb.txt",
+    "sow": "syllabi\\geography-sow.txt"
+  }
+}

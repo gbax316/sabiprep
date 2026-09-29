@@ -1,0 +1,131 @@
+{
+  "slug": "government-utme",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.39,
+  "agree_subtopic": 78,
+  "agree_topic": 78,
+  "nofit": 2,
+  "disagreements": [
+    {
+      "year": 2019,
+      "q_number": 39,
+      "stem": "Which of the following commission is responsible for sharing revenue based on agreed formula in Nigeria?",
+      "sonnet": "public-admin.commissions",
+      "opus": "federalism.problems",
+      "notes": [
+        "",
+        "also fits public-admin.commissions: RMAFC is a constitutional commission and the commissions rule sends only FEDECO/INEC and the Federal Character Commission elsewhere, so by the letter it lands in public-admin.commissions; but what is tested is revenue allocation, which federalism.problems names"
+      ]
+    },
+    {
+      "year": 2017,
+      "q_number": 1,
+      "stem": "The Northern and Southern protectorates were made provinces under the",
+      "sonnet": "pre-independence.clifford",
+      "opus": "colonial.british-structure",
+      "notes": [
+        "",
+        "the constitution rule sends it to whichever constitution is the correct answer, but the answer is withheld and none of the options is historically right (the protectorates became Northern and Southern Provinces at the 1914 amalgamation); if the key says Clifford or Richards it goes to pre-independence.clifford or pre-independence.richards"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "concepts.power-authority",
+        "detail": "concepts.power-authority and concepts.sovereignty both cover near-synonymous textbook definitions (power, authority, legitimacy versus sovereignty). Real papers ask isolated definition questions like right to enforce obedience in citizens, which do not clearly say whether the target is internal enforcement (power/authority) or supreme, externally free control (sovereignty). A sorting rule naming enforce obedience in citizens specifically would help."
+      },
+      {
+        "kind": "overlap",
+        "where": "nationalism.meaning",
+        "detail": "A question can test a feature of Indirect Rule (colonial.indirect-rule) purely for its effect on the rise of nationalism (nationalism.meaning), and neither subtopic's sorting rule says which one owns that combination."
+      },
+      {
+        "kind": "overlap",
+        "where": "types.presidential",
+        "detail": "types.presidential's sorting rule only resolves presidential-versus-parliamentary contrast questions. A plain merit-of-presidential-system question whose answer is checks and balances also fits principles.separation, which owns that mechanism, and there is no rule for this case."
+      },
+      {
+        "kind": "missing",
+        "where": "colonial.acquisition",
+        "detail": "Real papers ask general pan-African colonization trivia, such as which African country was never colonized. The scope rule confines the colonial parent to Nigeria and British West Africa, so this content has no clear home; either widen colonial.acquisition's covers line or add a subtopic for general African colonization facts."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "public-admin.civil-service",
+        "detail": "Named civil service administrative systems, such as IPPIS, are tested in real papers but the covers line lists only meaning, characteristics, structure, the permanent secretary, functions and control, with no mention of named reform tools or systems."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "public-admin",
+        "detail": "No home for public service reforms and e-government tools such as IPPIS, TSA and BVN (Q35). Add public-admin.reforms, or widen public-admin.civil-service to name service-wide reforms."
+      },
+      {
+        "kind": "overlap",
+        "where": "public-admin.commissions",
+        "detail": "RMAFC and revenue sharing (Q4): the commissions rule diverts only the electoral body and the Federal Character Commission, so RMAFC lands in public-admin.commissions by the letter while revenue allocation sits in federalism.problems. Add RMAFC to the diverted list."
+      },
+      {
+        "kind": "overlap",
+        "where": "colonial.indirect-rule",
+        "detail": "A colonial policy feature asked as a cause of nationalism (Q19) fits both colonial.indirect-rule and nationalism.meaning; no rule decides. Suggest: causes of nationalism go to nationalism.meaning even when the answer is a feature of colonial policy."
+      },
+      {
+        "kind": "overlap",
+        "where": "forms.classification",
+        "detail": "A form defined by Aristotle's own criteria without naming him (Q41, few for the interest of the few; Q25, rule by the best) fits both forms.classification and forms.rule-by-few. The rule keys on whether the scheme is asked about, which a definition question leaves unclear."
+      },
+      {
+        "kind": "overlap",
+        "where": "pre-colonial.compared",
+        "detail": "A typology term such as acephalous with options listing several societies (Q46) falls between the one-society and several-society rule. Say whether the answer's society or the typology wins."
+      },
+      {
+        "kind": "overlap",
+        "where": "principles.separation",
+        "detail": "Executive powers touching the judiciary, such as the prerogative of mercy (Q34), are not in the listed checking powers and could be read as either organs.executive or a check. Name it."
+      },
+      {
+        "kind": "overlap",
+        "where": "types.presidential",
+        "detail": "Checks and balances asked as a merit of the presidential system (Q62) fits both types.presidential and principles.separation, which says it covers how checks operate in presidential systems."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "military.regimes",
+        "detail": "The coups themselves, their dates and who led them (Q18), are not named in any covers line; military.causes is about reasons and military.regimes about ruling bodies and heads. Add coup chronology to military.regimes."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "colonial.acquisition",
+        "detail": "The covers line is written for British acquisition of Nigeria; the scramble for Africa, the Berlin Conference and the states that were never colonised (Q42, Ethiopia) are not named."
+      },
+      {
+        "kind": "overlap",
+        "where": "federalism.tiers",
+        "detail": "Legislative lists (Q61) are named in types.federal, but federalism.tiers claims how powers are shared among Nigeria's tiers; a Nigerian-framed exclusive or concurrent list question would split. State that the lists go to types.federal."
+      },
+      {
+        "kind": "misplaced",
+        "where": "pre-independence.clifford",
+        "detail": "Several rules decide by the correct answer (which constitution did something, fascism versus dictatorship), but the input withholds answers as not needed for placement. Q72 cannot be placed by the rule, and its stem is also historically wrong. Either supply answers or write rules that decide from the stem."
+      }
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "slug": "literature-utme",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.42,
+  "agree_subtopic": 78,
+  "agree_topic": 78,
+  "nofit": 2,
+  "disagreements": [
+    {
+      "year": 2020,
+      "q_number": 17,
+      "stem": "It is evident from the extract that Sculptor is……",
+      "sonnet": "appreciation.meaning",
+      "opus": "set-drama.characters",
+      "notes": [
+        "no title or author cited for this extract, so treated as unseen; what the speaker (Sculptor) is like",
+        "Sculptor and Kamini extract from Once Upon an Elephant, prescribed 2026-2030; a trait of the speaker. The record has no paper year, so if the play was not on that year's list it is an unseen extract and goes to appreciation.meaning"
+      ]
+    },
+    {
+      "year": 2020,
+      "q_number": 20,
+      "stem": "The dominant mood in the passage above is one of",
+      "sonnet": "appreciation.tone-mood",
+      "opus": "set-drama.style",
+      "notes": [
+        "same uncredited extract as Q50, treated as unseen",
+        "mood of an extract from Once Upon an Elephant. If prescribed, set-drama has no tone or mood subtopic (set-poems does); set-drama.style is the nearest. If unseen for that year it is appreciation.tone-mood"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "drama.types",
+        "detail": "Dramatic movements and schools such as Theatre of Cruelty, Theatre of the Absurd or Epic Theatre have no clear home. drama.types covers structural kinds of play (tragedy, comedy, farce, melodrama, opera, playlet, pantomime) and drama.theatre covers staging and performance materials, but neither covers a movement defined by its aesthetic philosophy (subordinating words to action, gesture and sound to overwhelm the audience). A dedicated subtopic or an extended covers line under drama.types is needed for these."
+      },
+      {
+        "kind": "overlap",
+        "where": "set-drama.plot / set-drama.themes",
+        "detail": "When a quoted extract from a prescribed play has a character voice an abstract judgement (e.g. answer options like 'a necessity', 'an acknowledgement', 'an impossibility') rather than naming a figure of speech or a plain event, it is unclear whether the question tests plot (what is being said or done at this point) or theme (the idea the line expresses). The covers lines for both subtopics only disambiguate events vs conflicts vs figures, not this kind of interpretive judgement extracted from dialogue."
+      },
+      {
+        "kind": "overlap",
+        "where": "set-poems.form / poetry.types",
+        "detail": "The how_to_use rule for telling a prescribed poem from an unseen one depends on checking the poem's title against that year's prescribed list. When a question gives only a bare title with no passage and no anthology citation (unlike the sample questions that explicitly cite the JAMB-recommended anthology list), a placer has no way to perform that check. The taxonomy assumes this metadata is always available to the placer, but real question records sometimes carry only the title."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "set-drama",
+        "detail": "No tone or mood subtopic for prescribed plays (and none for set-prose or shakespeare), though set-poems has one; the mood of a prescribed drama extract (Q72) has no home. Add set-drama.tone-mood, or name tone and mood in set-drama.style covers."
+      },
+      {
+        "kind": "missing",
+        "where": "set-drama.style",
+        "detail": "No home for what a quoted line from a prescribed play or novel means (Q37); shakespeare.style covers it for Shakespeare only. Add the meaning of a line or extract to set-drama.style and set-prose.style."
+      },
+      {
+        "kind": "missing",
+        "where": "drama.types",
+        "detail": "Theatre movements and staging forms (theatre of cruelty, theatre of the absurd, theatre-in-the-round, epic theatre; Q34) are absent. Add them to drama.types covers, with in-the-round in drama.theatre."
+      },
+      {
+        "kind": "overlap",
+        "where": "set-drama.themes",
+        "detail": "Which characters embody a clash of ideas (Q64) and how a character's act is read culturally (Q65) fit both set-drama.themes and set-drama.characters; the themes rule says clashes win even with character options, the characters rule says what a character stands for wins. Say which wins when the options are characters."
+      },
+      {
+        "kind": "missing",
+        "where": "shakespeare.characters",
+        "detail": "Unlike set-drama.characters and set-prose.characters, it does not say where what a character stands for or their type (archetypal, symbolic; Q18) goes, so shakespeare.style competes."
+      },
+      {
+        "kind": "missing",
+        "where": "how_to_use",
+        "detail": "The prescribed-text rule needs the paper year and the text title, and a sample-across-years unit carries neither reliably (Q12, Q23, Q29, Q55, Q63 name no text; Q50 and Q72 are on a 2026-2030 text in an unknown year). Placement between set-*, appreciation and even set-prose against set-drama depends on metadata the question record should hold."
+      },
+      {
+        "kind": "overlap",
+        "where": "set-prose.setting",
+        "detail": "A superstition or ceremony of the story's world (Q14, Q28) sits in setting as a custom, but superstitious beliefs are also listed as a theme (Q60) and the timing of a ceremony reads as plot; state that the belief or custom itself is setting and its significance is theme."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "poetry.types",
+        "detail": "Covers lines omit forms the papers use as options: jeremiad, chanson, eulogy, threnody (Q42, Q43, Q76), and prose.types omits apologue (Q9). Placement still works but the covers lines should list them."
+      }
+    ]
+  }
+}

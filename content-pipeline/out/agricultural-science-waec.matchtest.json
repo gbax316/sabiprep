@@ -1,0 +1,185 @@
+{
+  "slug": "agricultural-science-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.93,
+  "agree_subtopic": 73,
+  "agree_topic": 76,
+  "nofit": 4,
+  "disagreements": [
+    {
+      "year": 2023,
+      "q_number": 29,
+      "stem": "Post planting operations in cocoa plantation include I, rogueing II. stumping III. mulching",
+      "sonnet": "cultivation.cultural-practices",
+      "opus": "cash-crops.beverages",
+      "notes": [
+        "Rogueing and mulching are general post-planting practices, but stumping is defined under cultivation.tillage as a land-clearing operation, so this list of cocoa operations sits across both subtopics.",
+        "also fits cultivation.cultural-practices; rogueing, stumping and mulching are general practices, and the rule that a named crop used only as the example stays general does not say whether a cocoa plantation is only an example"
+      ]
+    },
+    {
+      "year": 2024,
+      "q_number": 33,
+      "stem": "The biological process that would mostly be affected in the leaf is",
+      "sonnet": "crop-pests.field-pests",
+      "opus": "crop-pests.classification",
+      "notes": [
+        "Question tests which plant process (photosynthesis) is affected by leaf damage from an insect pest. No subtopic covers basic plant physiological processes; placed under the pest-damage context as the closest home.",
+        "tests which plant process (photosynthesis) suffers when leaf tissue is eaten; that is crop plant physiology, which has no subtopic; crop-pests.classification is the nearest home through general economic importance of pests"
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 45,
+      "stem": "A pest bf honeybee is",
+      "sonnet": "apiculture.bees",
+      "opus": "apiculture.methods",
+      "notes": [
+        "Question asks for a pest of the honeybee. apiculture.bees covers the bees, castes and products, and apiculture.methods covers hives and equipment; neither names predators or pests of bees.",
+        "pests and enemies of honeybees (ants, lizards, birds, wax moth) are named in no apiculture covers line; apiculture.methods is the nearest parent-level home"
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 44,
+      "stem": "Which of the following farm enterprise could host be combined with fish farming for mutual benefits? I. Vegetable production II. Beekeeping III. Poultry product",
+      "sonnet": "ecology.agro-ecosystem",
+      "opus": "fisheries.aquaculture",
+      "notes": [
+        "Also fits fisheries.pond, since the question is about combining fish farming with other enterprises for mutual benefit; ecology.agro-ecosystem is the only subtopic that names a fish pond as an example of interacting components, but neither subtopic names integrated multi-enterprise farming directly.",
+        "integrated fish farming (fish with poultry or vegetables) has no named home; fisheries.aquaculture, fisheries.pond, ecology.agro-ecosystem and agriculture.farming-systems each touch it"
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 40,
+      "stem": "Which bf the following farm animals will browse more on plants in a pasture?",
+      "sonnet": "pasture.types",
+      "opus": "livestock-management.ruminants",
+      "notes": [
+        "Question tests that goats browse more than cattle or sheep on pasture. No subtopic names the browsing versus grazing distinction among livestock; placed under the pasture-livestock relationship subtopic as the closest home.",
+        "browsing versus grazing habit; covered only loosely by feeding and grazing"
+      ]
+    },
+    {
+      "year": 2024,
+      "q_number": 16,
+      "stem": "An example of a crop with the illustrated root system is",
+      "sonnet": "crop-plants.monocot-dicot",
+      "opus": "crop-plants.classification",
+      "notes": [
+        "",
+        "picking the legume from a nodulated root diagram; also fits ecology.biotic (Rhizobium in legume nodules) and, if the diagram is read as a tap root, crop-plants.monocot-dicot; no rule covers identifying a crop from its root system"
+      ]
+    },
+    {
+      "year": 2024,
+      "q_number": 3,
+      "stem": "Which of the following agricultural programmes as mainly established to provide agricultural extension services?",
+      "sonnet": "extension.meaning",
+      "opus": "government.programmes",
+      "notes": [
+        "Asks which programme was established to provide extension services (the ADP); the sorting rule sends an ADP asked about as an extension-carrying agency here rather than to government.programmes.",
+        "also fits extension.meaning; government.programmes says what a named programme aimed at goes there, while its own rule sends an ADP asked about as an agency that carries extension to extension.meaning, and this stem is both"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "crop-plants",
+        "detail": "No subtopic covers basic plant physiological processes (photosynthesis, respiration, transpiration) as a student must know them to answer a question about which process is disrupted by leaf damage (Q15). Nothing under crop-plants or crop-pests names this content."
+      },
+      {
+        "kind": "missing",
+        "where": "apiculture",
+        "detail": "No subtopic covers pests or enemies of honeybees. apiculture.bees covers the bees, castes and products, and apiculture.methods covers hives, equipment and safety, but neither names what preys on or damages a hive (Q22)."
+      },
+      {
+        "kind": "missing",
+        "where": "pasture",
+        "detail": "No subtopic names the browsing versus grazing distinction among livestock species (for example, goats browse more than cattle or sheep). pasture.types covers rangeland's importance to livestock in general, not feeding-habit differences by species (Q57)."
+      },
+      {
+        "kind": "overlap",
+        "where": "cultivation.tillage / cultivation.cultural-practices",
+        "detail": "Stumping is defined only under cultivation.tillage as a land-clearing operation, but a real question lists it together with rogueing and mulching as post-planting operations for a named crop (cocoa), so the question sits across both subtopics with no sorting rule to settle it (Q10)."
+      },
+      {
+        "kind": "missing",
+        "where": "ecology.agro-ecosystem / fisheries",
+        "detail": "No subtopic names which farm enterprises (poultry, vegetables, beekeeping) integrate well with fish farming for mutual benefit. ecology.agro-ecosystem names a fish pond only as an example of an aquatic agro-ecosystem, and fisheries.pond covers only siting, construction and management of one pond, not combining it with other enterprises (Q42)."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "crop-plants",
+        "detail": "No home for crop plant physiology (photosynthesis, transpiration, respiration) as affected by damage or conditions; Q15 asks which process a leaf-eating pest impairs. Add crop-plants.physiology or name it in a covers line."
+      },
+      {
+        "kind": "missing",
+        "where": "apiculture",
+        "detail": "Pests and enemies of bees (ants, lizards, birds, wax moth) have no named home; Q22. Add them to apiculture.methods or a new apiculture.pests subtopic."
+      },
+      {
+        "kind": "missing",
+        "where": "fisheries.aquaculture",
+        "detail": "Integrated fish farming (fish with poultry, pigs or vegetables for mutual benefit) is named nowhere; Q42 could go to aquaculture, pond, agro-ecosystem or farming-systems."
+      },
+      {
+        "kind": "overlap",
+        "where": "crop-diseases.general",
+        "detail": "Lacks the cross-pathogen rule that animal-health.general has, so a question sorting options from several pathogen groups (Q8 by control chemical, Q73 by host crop) is placed by its answer rather than by the skill tested, and the placement cannot be made without knowing the answer."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "animal-health.general",
+        "detail": "Its cross-pathogen rule covers only which organism causes a disease; comparing diseases across pathogen groups by route of infection (Q34, inhalation) is not covered, and the covers line omits modes of transmission, which crop-diseases.general includes."
+      },
+      {
+        "kind": "overlap",
+        "where": "ecology.climatic",
+        "detail": "Borders ecology.zones with no rule: which crops thrive under high rainfall (Q37) is both rainfall's effect on crop distribution and crops typical of the forest zone."
+      },
+      {
+        "kind": "overlap",
+        "where": "government.programmes",
+        "detail": "Its two rules conflict for Q79 (which programme was set up to provide extension, answer ADP): what a programme aimed at goes here, but an ADP as an extension agency goes to extension.meaning."
+      },
+      {
+        "kind": "overlap",
+        "where": "soil.composition",
+        "detail": "Decomposition of organic matter by microbes (Q49) fits soil.composition (what an organism does to the soil) and soil-fertility.cycles (decay, mineralisation, organisms involved); neither rule names decomposition."
+      },
+      {
+        "kind": "overlap",
+        "where": "cultivation.cultural-practices",
+        "detail": "The test of whether a named crop is only the example is not operable for plantation-crop operations such as rogueing and mulching in cocoa (Q10); state whether operations listed for a named plantation go to its husbandry subtopic."
+      },
+      {
+        "kind": "missing",
+        "where": "crop-plants.classification",
+        "detail": "No rule for identifying a crop from its root system (nodulated legume, tap versus fibrous) in Q63; classification, monocot-dicot and ecology.biotic all compete."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "processing-storage.processing",
+        "detail": "Covers line does not name the post-harvest operations threshing, winnowing, shelling and dehusking (Q62), though tools.machinery names their machines; add them so the operation and the machine are clearly split."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "processing-storage.storage",
+        "detail": "Drying a crop in the field before harvest to cut fungal contamination (Q44) is only implied; the covers line speaks of drying produce in store."
+      }
+    ]
+  }
+}

@@ -1,0 +1,3979 @@
+{
+  "items": [
+    {
+      "source": "wassce",
+      "ref": "A 1.0(a)(i)",
+      "text": "Measurement of physical quantities: mass, length, time, temperature and volume",
+      "subtopic_id": "intro.measurement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 1.0(a)(ii)",
+      "text": "Scientific measurements and their importance: SI units, significant figures, precision and accuracy",
+      "subtopic_id": "intro.measurement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 1.0(b)",
+      "text": "Scientific methods: observation, hypothesis, experimentation, laws and theories",
+      "subtopic_id": "intro.scientific-method",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 2.0(a)",
+      "text": "Gross features of the atom: Dalton, Thomson, Bohr, Rutherford alpha scattering",
+      "subtopic_id": "atomic-structure.models",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 2.0(b)(i)",
+      "text": "Atomic number, number of neutrons, isotopes, atomic mass, mass number; symbols of atoms and sub-atomic particles",
+      "subtopic_id": "atomic-structure.particles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 2.0(b)(ii)",
+      "text": "Relative atomic mass and relative molecular mass on the carbon-12 scale; chlorine calculation; atomic mass unit",
+      "subtopic_id": "atomic-structure.relative-mass",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 2.0(b)(iii)",
+      "text": "Characteristics and nature of matter: atoms, molecules and ions as building blocks",
+      "subtopic_id": "matter.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 2.0(c)",
+      "text": "Particulate nature of matter: physical and chemical changes with examples",
+      "subtopic_id": "matter.changes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 2.0(d)(i)",
+      "text": "Electron configuration (s, p, d) of the first thirty elements",
+      "subtopic_id": "atomic-structure.configuration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 2.0(d)(ii)",
+      "text": "Orbitals: s, p and d as sub-energy levels; shapes of s and p orbitals",
+      "subtopic_id": "atomic-structure.configuration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 2.0(d)(iii)",
+      "text": "Rules for filling electrons: Aufbau, Hund, Pauli; abbreviated and detailed configurations",
+      "subtopic_id": "atomic-structure.configuration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 3.0(a)",
+      "text": "Classification of mixtures: solid-solid, solid-liquid, liquid-liquid, gas-gas",
+      "subtopic_id": "matter.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 3.0(b)",
+      "text": "Separation techniques: crystallisation, distillation, precipitation, magnetisation, chromatography, sublimation",
+      "subtopic_id": "matter.separation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 3.0(c)",
+      "text": "Criteria for purity: boiling and melting points",
+      "subtopic_id": "matter.purity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 4.0(a)",
+      "text": "Periodicity of the elements: configurations leading to group and period",
+      "subtopic_id": "periodic.table",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 4.0(b)",
+      "text": "Categories of elements: metals, semi-metals, non-metals, halogens, alkali, alkaline earth and transition metals",
+      "subtopic_id": "periodic.table",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 4.0(c)",
+      "text": "Periodic law: explanation of the periodic law",
+      "subtopic_id": "periodic.table",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 4.0(c)(i)",
+      "text": "Trends: atomic size, ionic size, ionisation energy, electron affinity, electronegativity; Be, B, N, O discrepancies",
+      "subtopic_id": "periodic.trends",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 4.0(c)(ii)",
+      "text": "Periodic gradation in the third period (Na to Ar): metallic to non-metallic, ionic to covalent; second and third period compared",
+      "subtopic_id": "periodic.gradation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 4.0(d)",
+      "text": "Reactions of acids with Na, Mg, Al, K, Ca, their oxides and trioxocarbonates; pH of oxide and trioxocarbonate solutions",
+      "subtopic_id": "periodic.gradation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 4.0(e)",
+      "text": "Periodic gradation of the halogens F, Cl, Br, I: states, oxidation states, redox, displacement, reaction with water and alkali",
+      "subtopic_id": "halogens.trends",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 4.0(f)",
+      "text": "First transition series Sc to Zn: configuration, properties, reactivity, oxidation states, coloured compounds, complexes, catalysis, paramagnetism, hardness",
+      "subtopic_id": "metals.transition",
+      "status": "covered",
+      "note": "Configuration of the elements sorts to atomic-structure.configuration by rule.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(a)",
+      "text": "Interatomic bonding: meaning of chemical bonding; Lewis dot structures for ionic and covalent compounds",
+      "subtopic_id": "bonding.ionic",
+      "status": "partial",
+      "note": "Split, nothing missing: meaning of bonding and ionic dot structures in bonding.ionic, covalent dot structures in bonding.covalent.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(b)(i)",
+      "text": "Formation of ionic bonds and compounds; factors: ionisation energy, electron affinity, electronegativity difference",
+      "subtopic_id": "bonding.ionic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(b)(ii)",
+      "text": "Properties of ionic compounds: solubility, conductivity, hardness, melting point",
+      "subtopic_id": "bonding.ionic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(c)",
+      "text": "Naming of ionic compounds: IUPAC system",
+      "subtopic_id": "stoichiometry.formulae",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(d)",
+      "text": "Formation of covalent bonds and compounds; factors influencing formation",
+      "subtopic_id": "bonding.covalent",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(e)(i)",
+      "text": "Properties of covalent compounds",
+      "subtopic_id": "bonding.covalent",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(e)(ii)",
+      "text": "Coordinate (dative) covalent bonding",
+      "subtopic_id": "bonding.covalent",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(f)",
+      "text": "Shapes of molecular compounds: linear, planar, tetrahedral (BeCl2, BF3, CH4, NH3, CO2)",
+      "subtopic_id": "bonding.shapes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(g)(i)",
+      "text": "Metallic bonding",
+      "subtopic_id": "bonding.metallic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(g)(ii)",
+      "text": "Factors influencing metallic bond formation: atomic radius, ionisation energy, valence electrons",
+      "subtopic_id": "bonding.metallic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(g)(iii)",
+      "text": "Properties of metals: conductivity, malleability, lustre, ductility, sonority, hardness",
+      "subtopic_id": "bonding.metallic",
+      "status": "covered",
+      "note": "Sonority is not named but falls under the same explanation.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(h)(i)",
+      "text": "Intermolecular bonding: relative physical properties of polar and non-polar compounds",
+      "subtopic_id": "bonding.intermolecular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(h)(ii)",
+      "text": "Intermolecular forces in covalent compounds",
+      "subtopic_id": "bonding.intermolecular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(h)(iii) hydrogen bonding",
+      "text": "Hydrogen bonding: formation and nature; boiling points of H2O and H2S",
+      "subtopic_id": "bonding.intermolecular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(h)(iii) van der Waals",
+      "text": "Van der Waals forces: dipole-dipole and induced dipole forces; melting and boiling points of noble gases, halogens, alkanes",
+      "subtopic_id": "bonding.intermolecular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 5.0(h)(iv)",
+      "text": "Comparison of all bond types",
+      "subtopic_id": "bonding.intermolecular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(a)(i)",
+      "text": "Symbols, formulae and equations",
+      "subtopic_id": "stoichiometry.formulae",
+      "status": "partial",
+      "note": "Split, nothing missing: symbols and formulae in stoichiometry.formulae, equations in stoichiometry.equations.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(a)(ii)",
+      "text": "Chemical symbols of the first thirty and other common elements",
+      "subtopic_id": "stoichiometry.formulae",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(a)(iii)",
+      "text": "Empirical and molecular formulae; calculations from formulae; percentage composition",
+      "subtopic_id": "stoichiometry.empirical",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(a)(iv)",
+      "text": "Chemical equations and IUPAC names: combustion, synthesis, displacement, decomposition, ionic reactions",
+      "subtopic_id": "stoichiometry.equations",
+      "status": "partial",
+      "note": "Split, nothing missing: equations and reaction types in stoichiometry.equations, IUPAC names in stoichiometry.formulae.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(a)(v)",
+      "text": "Laws of chemical combination: conservation of mass, constant composition, multiple proportions",
+      "subtopic_id": "stoichiometry.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(b)",
+      "text": "Amount of substance: the mole, Avogadro's constant, molar quantities, moles of entities",
+      "subtopic_id": "stoichiometry.mole",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(c)",
+      "text": "Mole ratios: stoichiometry, entities, mass, concentration, volume and percentage yield",
+      "subtopic_id": "stoichiometry.reacting-quantities",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(d)(i)",
+      "text": "Solutions: solvent and solute, dilute and concentrated, basic, acidic and neutral solutions",
+      "subtopic_id": "solutions.concentration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(d)(ii)",
+      "text": "Concentration terms: g dm-3 and mol dm-3",
+      "subtopic_id": "solutions.concentration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(d)(iii)",
+      "text": "Standard solutions: primary and secondary standards",
+      "subtopic_id": "solutions.concentration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 6.0(e)",
+      "text": "Preparation of solutions from liquid solutes by dilution",
+      "subtopic_id": "solutions.concentration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(a)(i)",
+      "text": "Kinetic theory of matter: postulates and use to explain melting, boiling, evaporation, dissolution, Brownian motion, diffusion",
+      "subtopic_id": "states.kinetic-theory",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(a)(ii)",
+      "text": "Changes of state explained by particle movement; Brownian motion experiments",
+      "subtopic_id": "states.kinetic-theory",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(a)(iii)",
+      "text": "Diffusion: of gases and of solutes in liquids; speed against particle mass",
+      "subtopic_id": "states.diffusion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(b)(i)",
+      "text": "Characteristics and nature of gases: particles, density, shape, compressibility",
+      "subtopic_id": "states.kinetic-theory",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(b)(ii)",
+      "text": "Gas laws: Charles, Boyle, Dalton, Graham, Avogadro, ideal gas equation, ideal and real gases",
+      "subtopic_id": "states.gas-laws",
+      "status": "partial",
+      "note": "Split, nothing missing: Boyle, Charles, Dalton, PV = nRT and real gases in states.gas-laws, Graham in states.diffusion, Avogadro in states.molar-volume.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(b)(iii)",
+      "text": "Laboratory preparation and properties of H2, NH3 and CO2; purification and collection of gases",
+      "subtopic_id": "practical.gas-preparation",
+      "status": "partial",
+      "note": "Split, nothing missing: collection and purification in practical.gas-preparation, each gas in hydrogen-oxygen.hydrogen, nitrogen.ammonia and carbon.oxides.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(c)(i)",
+      "text": "Liquids: arrangement of particles, shape, volume, compressibility, density, viscosity",
+      "subtopic_id": "states.liquids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(c)(ii)",
+      "text": "Vapour and gases: vapour pressure, saturated vapour pressure, boiling, evaporation, boiling at reduced pressure",
+      "subtopic_id": "states.liquids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(d)(i)",
+      "text": "Solids: characteristics and nature",
+      "subtopic_id": "states.solids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(d)(ii)",
+      "text": "Types and structures of solids: ionic, metallic, covalent network, molecular",
+      "subtopic_id": "states.solids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(d)(iii)",
+      "text": "Properties of solids related to bonding",
+      "subtopic_id": "states.solids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(e)",
+      "text": "Structures, properties and uses of diamond and graphite; use of iodine in everyday life",
+      "subtopic_id": "carbon.allotropes",
+      "status": "partial",
+      "note": "Split, nothing missing: diamond and graphite in carbon.allotropes, uses of iodine in halogens.chlorine.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 7.0(f)",
+      "text": "Determination of melting points of covalent solids as an indicator of purity",
+      "subtopic_id": "matter.purity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 8.0(a)",
+      "text": "Energy and enthalpy: energy changes in chemical processes",
+      "subtopic_id": "energetics.enthalpy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 8.0(b)",
+      "text": "Exothermic and endothermic processes; total energy of a system; enthalpy of combustion, dissolution and neutralisation",
+      "subtopic_id": "energetics.enthalpy",
+      "status": "partial",
+      "note": "Split, nothing missing: exo and endo and total energy in energetics.enthalpy, heats of combustion, solution and neutralisation in energetics.heats.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(a)",
+      "text": "Definitions of acids and bases: Arrhenius; effect on indicators, Zn, Fe, trioxocarbonates",
+      "subtopic_id": "acids-bases.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(b)",
+      "text": "Physical and chemical properties of acids and bases",
+      "subtopic_id": "acids-bases.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(c)",
+      "text": "Acids, bases and salts as electrolytes: strong and weak electrolytes, evidence from conductivity and enthalpy of neutralisation",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "partial",
+      "note": "Split, nothing missing: electrolytes in electrochemistry.electrolysis, acid and base strength evidence in acids-bases.properties.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(d)",
+      "text": "Classification of acids and bases: strong and weak, dissociation, weak acids as equilibria",
+      "subtopic_id": "acids-bases.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(e)",
+      "text": "Concept of pH: pH scale, measurement, significance in everyday life",
+      "subtopic_id": "acids-bases.ph",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(f)",
+      "text": "Salts: meaning; normal, acidic, basic, double and complex salts",
+      "subtopic_id": "acids-bases.salts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(f)(i)",
+      "text": "Laboratory and industrial preparation of salts; mining of sodium chloride; preparation of NaOH, Cl2 and H2",
+      "subtopic_id": "acids-bases.salts",
+      "status": "partial",
+      "note": "Split: laboratory preparation in acids-bases.salts, rock salt and NaOH in common-metals.sodium, Cl2 in halogens.chlorine. Missing: industrial production of salts in general is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(f)(ii)",
+      "text": "Uses of salts",
+      "subtopic_id": "acids-bases.salts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(f)(iii)",
+      "text": "Hydrolysis of salts: NH4Cl, AlCl3, Na2CO3, CH3COONa; charge density",
+      "subtopic_id": "acids-bases.hydrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(g)",
+      "text": "Deliquescent, efflorescent and hygroscopic compounds; drying agents",
+      "subtopic_id": "water.hygroscopy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(h)",
+      "text": "Acid-base indicators: how they work, weak organic acids or bases, working pH ranges of methyl orange and phenolphthalein",
+      "subtopic_id": "acids-bases.ph",
+      "status": "covered",
+      "note": "Working ranges for titration choice also sit in acids-bases.titration.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 9.0(i)",
+      "text": "Acid-base titration: apparatus, indicators, strong and weak combinations, quantitative determinations",
+      "subtopic_id": "acids-bases.titration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 10.0(a)",
+      "text": "Solubility general principles: saturated solutions, units, curves, temperature, crystallisation, soluble and insoluble salts, calculations",
+      "subtopic_id": "solutions.solubility",
+      "status": "covered",
+      "note": "Soluble and insoluble salts sort to acids-bases.salts and recrystallisation as purification to matter.separation by rule.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 10.0(b)",
+      "text": "Practical application of solubility: solubility rules and their use in qualitative analysis",
+      "subtopic_id": "acids-bases.salts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 11.0(a)",
+      "text": "Rate of reactions: definition, observable changes",
+      "subtopic_id": "kinetics.rate",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 11.0(a)(i)",
+      "text": "Factors affecting rates, with experimental demonstration of each",
+      "subtopic_id": "kinetics.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 11.0(a)(ii)",
+      "text": "Theories of reaction rates: collision and transition state, activation energy, energy profile",
+      "subtopic_id": "kinetics.collision",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 11.0(a)(iii)",
+      "text": "Analysis and interpretation of graphs",
+      "subtopic_id": "kinetics.rate",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 11.0(b)(i)",
+      "text": "Equilibrium general principle: reversible reactions, dynamic equilibrium, K qualitatively",
+      "subtopic_id": "equilibrium.constant",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 11.0(b)(ii)",
+      "text": "Le Chatelier's principle: effects of concentration, temperature, pressure, volume",
+      "subtopic_id": "equilibrium.le-chatelier",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(a)",
+      "text": "Oxidation and reduction process; determination of oxidation numbers",
+      "subtopic_id": "redox.definitions",
+      "status": "partial",
+      "note": "Split, nothing missing: definitions in redox.definitions, determining oxidation numbers in redox.oxidation-numbers.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(b)",
+      "text": "Oxidising and reducing agents",
+      "subtopic_id": "redox.agents",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(c)",
+      "text": "Redox equations: balancing by electrons, oxidation number, half reactions",
+      "subtopic_id": "redox.balancing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(d)(i)",
+      "text": "Standard electrode potential; standard hydrogen electrode",
+      "subtopic_id": "electrochemistry.cells",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(d)(ii)",
+      "text": "Drawing of cell diagram and writing cell notation",
+      "subtopic_id": "electrochemistry.cells",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(d)(iii)",
+      "text": "e.m.f. of cells: two half-cells, meaning of magnitude and sign",
+      "subtopic_id": "electrochemistry.cells",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(d)(iv)",
+      "text": "Application of electrochemical cells: primary and secondary, Daniell, lead-acid, dry and fuel cells",
+      "subtopic_id": "electrochemistry.cells",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(e)(i)",
+      "text": "Electrolytic cells: comparison with electrochemical cells; weak and strong electrolytes",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(e)(ii)",
+      "text": "Principles of electrolysis: mechanism",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(e)(iii)",
+      "text": "Factors influencing discharge of species; named electrolytes",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(e)(iv)",
+      "text": "Faraday's laws: calculations with 1 F = 96 500 C",
+      "subtopic_id": "electrochemistry.faraday",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(e)(v)",
+      "text": "Practical application: electroplating, extraction and purification of metals",
+      "subtopic_id": "electrochemistry.applications",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 12.0(e)(vi)",
+      "text": "Corrosion of metals: redox process, rusting and its cost, prevention",
+      "subtopic_id": "electrochemistry.corrosion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(a)",
+      "text": "Classification: straight chain, branched, aromatic and alicyclic compounds",
+      "subtopic_id": "organic-basics.carbon-classes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(b)",
+      "text": "Functional group: systematic nomenclature of alkanes to amines",
+      "subtopic_id": "organic-basics.naming",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(b) second",
+      "text": "Separation and purification of organic compounds: distillation, crystallisation, drying, chromatography",
+      "subtopic_id": "matter.separation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(c)",
+      "text": "Petroleum: composition, fractional distillation, cracking and reforming, petrochemicals, octane number",
+      "subtopic_id": "hydrocarbons.petroleum",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(d)",
+      "text": "Determination of empirical and molecular formulae and structures of organic compounds",
+      "subtopic_id": "stoichiometry.empirical",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(e)(i)",
+      "text": "Homologous series: gradation in physical properties, effect of active groups",
+      "subtopic_id": "organic-basics.carbon-classes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(e)(ii)",
+      "text": "Isomerism: structural and geometric, up to five carbons",
+      "subtopic_id": "organic-basics.isomerism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(f)(i)",
+      "text": "Alkanes: sources, preparation, nomenclature, combustion, substitution, cracking",
+      "subtopic_id": "hydrocarbons.alkanes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(f)(ii)",
+      "text": "Alkanes: uses as fuels and starting materials; haloalkanes and pollution",
+      "subtopic_id": "hydrocarbons.alkanes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(g)(i)",
+      "text": "Alkenes: laboratory preparation, structure, addition reactions, hydroxylation, polymerisation",
+      "subtopic_id": "hydrocarbons.alkenes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(g)(ii)",
+      "text": "Alkenes: uses",
+      "subtopic_id": "hydrocarbons.alkenes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(g)(iii)",
+      "text": "Alkenes: laboratory detection with bromine water and KMnO4",
+      "subtopic_id": "hydrocarbons.alkenes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(h)(i)",
+      "text": "Alkynes: sources, industrial production of ethyne, uses, tests",
+      "subtopic_id": "hydrocarbons.alkynes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(h)(ii)",
+      "text": "Alkynes: halogenation, combustion, hydration, hydrogenation",
+      "subtopic_id": "hydrocarbons.alkynes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(i)(i)",
+      "text": "Benzene: structure, resonance, stability, physical properties",
+      "subtopic_id": "hydrocarbons.benzene",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(i)(ii)",
+      "text": "Benzene: addition reactions compared with alkenes",
+      "subtopic_id": "hydrocarbons.benzene",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(j)(i)",
+      "text": "Alkanols: sources, preparation, industrial and local ethanol, impurities, mono-, di- and triols",
+      "subtopic_id": "functional-groups.alkanols",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(j)(ii)",
+      "text": "Alkanols: primary, secondary and tertiary",
+      "subtopic_id": "functional-groups.alkanols",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(j)(iii)",
+      "text": "Alkanols: boiling point and solubility, hydrogen bonding",
+      "subtopic_id": "functional-groups.alkanols",
+      "status": "covered",
+      "note": "The why, by hydrogen bonding, sorts to bonding.intermolecular.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(j)(iv)",
+      "text": "Alkanols: reactions with Na, alkanoic acids, conc. H2SO4; oxidation by KMnO4, K2Cr2O7, I2 in NaOH",
+      "subtopic_id": "functional-groups.alkanols",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(j)(v)",
+      "text": "Alkanols: laboratory test for ethanol",
+      "subtopic_id": "functional-groups.alkanols",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(j)(vi)",
+      "text": "Alkanols: uses",
+      "subtopic_id": "functional-groups.alkanols",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(k)(i)",
+      "text": "Alkanoic acids: sources, nomenclature, structure, mono and dioic acids",
+      "subtopic_id": "functional-groups.alkanoic-acids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(k)(ii)",
+      "text": "Alkanoic acids: physical properties, hydrogen bonding",
+      "subtopic_id": "functional-groups.alkanoic-acids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(k)(iii)",
+      "text": "Alkanoic acids: acid properties with H2O, NaOH, NH3, NaHCO3, Zn, Mg",
+      "subtopic_id": "functional-groups.alkanoic-acids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(k)(iv) test",
+      "text": "Alkanoic acids: laboratory test with NaHCO3, Na2CO3",
+      "subtopic_id": "functional-groups.alkanoic-acids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(k)(iv) uses",
+      "text": "Alkanoic acids: uses of ethanoic and benzoic acids",
+      "subtopic_id": "functional-groups.alkanoic-acids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(l)(i)",
+      "text": "Alkanoates: sources, nomenclature, preparation from alkanoic acids, structure",
+      "subtopic_id": "functional-groups.esters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(l)(ii)",
+      "text": "Alkanoates: solubility, boiling and melting point",
+      "subtopic_id": "functional-groups.esters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(l)(iii)",
+      "text": "Alkanoates: hydrolysis",
+      "subtopic_id": "functional-groups.esters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 13.0(l)(iv)",
+      "text": "Alkanoates: uses in soap, flavouring, plasticisers, solvents, perfumes",
+      "subtopic_id": "functional-groups.esters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 14.0(a)",
+      "text": "Chemical industry: natural resources, industries and raw materials, fine and heavy chemicals, location, effects on community",
+      "subtopic_id": "industry.chemical-industry",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 14.0(b)",
+      "text": "Pollution: air, water and soil; greenhouse effect, ozone layer, biodegradable pollutants",
+      "subtopic_id": "pollution.air",
+      "status": "partial",
+      "note": "Split, nothing missing: air, greenhouse and ozone in pollution.air, water, soil and biodegradability in pollution.water-soil.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 14.0(c)",
+      "text": "Biotechnology: food processing, fermentation, gari, bread, alcoholic beverages",
+      "subtopic_id": "industry.biotechnology",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(a)(i)",
+      "text": "Proteins: polymers of amino acids, solubility, hydrolysis, Ninhydrin, Biuret, Millon's tests",
+      "subtopic_id": "biomolecules.proteins",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(a)(ii)",
+      "text": "Uses of protein",
+      "subtopic_id": "biomolecules.proteins",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(b)",
+      "text": "Amino acids: nomenclature, general structure, difunctional nature",
+      "subtopic_id": "biomolecules.proteins",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(c)(i)",
+      "text": "Fats and oils: sources, solubility, hydrolysis, hydrogenation, test",
+      "subtopic_id": "biomolecules.fats-soaps",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(c)(ii)",
+      "text": "General structure of fats and oils as esters of glycerol",
+      "subtopic_id": "biomolecules.fats-soaps",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(c)(iii)",
+      "text": "Preparation of soap; soapless detergents in soft and hard water",
+      "subtopic_id": "biomolecules.fats-soaps",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(c)(iv)",
+      "text": "Uses of fats and oils",
+      "subtopic_id": "biomolecules.fats-soaps",
+      "status": "partial",
+      "note": "Missing: the uses of fats and oils are not named in the covers line beyond margarine and soap-making.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(d)(i)",
+      "text": "Carbohydrates: sources, nomenclature, mono-, di- and polysaccharides and their components",
+      "subtopic_id": "biomolecules.carbohydrates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(d)(ii)",
+      "text": "Carbohydrates: solubility, hydrolysis of disaccharides, tests for reducing sugars",
+      "subtopic_id": "biomolecules.carbohydrates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(d)(iii)",
+      "text": "Carbohydrates as polymers: starch from glucose, condensation",
+      "subtopic_id": "biomolecules.carbohydrates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(d)(iv)",
+      "text": "Carbohydrates: uses",
+      "subtopic_id": "biomolecules.carbohydrates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(e)",
+      "text": "Synthetic polymers: monomers, polymerisation, addition and condensation, classification and preparation",
+      "subtopic_id": "biomolecules.polymers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(e)(i)",
+      "text": "Polymer properties: thermoplastics and thermosets, modification, plastics and resins, tests with heat, acids, alkalis",
+      "subtopic_id": "biomolecules.polymers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 15.0(e)(ii)",
+      "text": "Uses of polymers",
+      "subtopic_id": "biomolecules.polymers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(a)(i)",
+      "text": "Practical skills: measurement of mass and volume",
+      "subtopic_id": "practical.lab",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(a)(ii)",
+      "text": "Practical skills: preparation and dilution of standard solutions",
+      "subtopic_id": "solutions.concentration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(a)(iii)",
+      "text": "Practical skills: filtration, recrystallisation and melting point determination",
+      "subtopic_id": "matter.separation",
+      "status": "partial",
+      "note": "Split, nothing missing: filtration and recrystallisation in matter.separation, melting point determination in matter.purity.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(a)(iv)",
+      "text": "Practical skills: measurement of heats of neutralisation and solution",
+      "subtopic_id": "energetics.heats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(a)(v)",
+      "text": "Practical skills: pH of solutions by colorimetry",
+      "subtopic_id": "acids-bases.ph",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(a)(vi)",
+      "text": "Practical skills: rates of reaction from concentration against time curves",
+      "subtopic_id": "kinetics.rate",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(a)(vii)",
+      "text": "Practical skills: equilibrium constants for a simple system",
+      "subtopic_id": "equilibrium.constant",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(b) acid-base (i)-(iv), (vi)",
+      "text": "Acid-base titrations: concentrations, molar masses, water of crystallisation, solubility, percentage purity, stoichiometry",
+      "subtopic_id": "acids-bases.titration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(b) acid-base (v)",
+      "text": "Analysis of Na2CO3/NaHCO3 mixture by double indicator methods (Ghanaians only)",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Ghana only; the scope_rule leaves double indicator titrations out until a Nigerian paper tests them.",
+      "proposed": "acids-bases: new subtopic 'Double indicator and back titrations'"
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(b) redox (i)-(iii)",
+      "text": "Redox titrations: MnO4- with Fe2+ and C2O4 2-, I2 with S2O3 2-",
+      "subtopic_id": "redox.balancing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(d)(i)",
+      "text": "Tests for cations with NaOH and NH3: NH4+, Ca2+, Pb2+, Cu2+, Fe2+, Fe3+, Al3+, Zn2+",
+      "subtopic_id": "practical.qualitative",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(d)(ii)",
+      "text": "Confirmatory tests for the cations",
+      "subtopic_id": "practical.qualitative",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(d)(iii)",
+      "text": "Reactions of dilute HCl and conc. H2SO4 on Cl-, SO3 2-, CO3 2-, NO3-, SO4 2-",
+      "subtopic_id": "practical.qualitative",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(d)(iv)",
+      "text": "Confirmatory tests for the anions",
+      "subtopic_id": "practical.qualitative",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(d)(v)",
+      "text": "Comparative study of the halogens; displacement reactions",
+      "subtopic_id": "halogens.trends",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(d)(vi)",
+      "text": "Tests for gases: H2, NH3, CO2, HCl, SO2",
+      "subtopic_id": "practical.qualitative",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A 16.0(d)(vii)",
+      "text": "Test tube reactions of alkenes, alkanols, alkanoic acids, sugars, starch and proteins",
+      "subtopic_id": "hydrocarbons.alkenes",
+      "status": "partial",
+      "note": "Split, nothing missing: by the tree's rule each family's test sits with the family (hydrocarbons.alkenes, functional-groups.alkanols, functional-groups.alkanoic-acids, biomolecules.carbohydrates, biomolecules.proteins).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 1.0(a)",
+      "text": "Mass spectrometer; wave nature of electrons; quantum numbers (Ghana only)",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; the scope_rule leaves the mass spectrometer and quantum numbers out.",
+      "proposed": "atomic-structure: new subtopic 'Mass spectrometer and quantum numbers'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 1.0(b)(i)",
+      "text": "Nuclear chemistry: nucleons, nuclide",
+      "subtopic_id": "atomic-structure.particles",
+      "status": "partial",
+      "note": "Nucleons covered in atomic-structure.particles. Missing: the term nuclide is not named anywhere.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 1.0(b)(ii)",
+      "text": "Types of radiation: alpha, beta, gamma; charge, mass, penetrating power; spontaneous and induced reactions",
+      "subtopic_id": "nuclear.radioactivity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 1.0(b)(iii)",
+      "text": "Radioactivity: natural and artificial; Geiger-Muller counter",
+      "subtopic_id": "nuclear.radioactivity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 1.0(b)(iv)",
+      "text": "Nuclear reactions: fission and fusion, ordinary against nuclear reactions, balanced nuclear equations",
+      "subtopic_id": "nuclear.reactions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 1.0(b)(v)",
+      "text": "Effects and application of radioactivity: carbon dating, uses, hazards; stability of nuclides: binding energy, neutron-proton ratio, half-life calculations",
+      "subtopic_id": "nuclear.radioactivity",
+      "status": "partial",
+      "note": "Uses and hazards in nuclear.radioactivity, half-life in nuclear.reactions. Missing: nuclear stability, binding energy and neutron-proton ratio.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 2.0(a)",
+      "text": "Reactions between acids and metals, their oxides and trioxocarbonates (Na, Mg, Al, K, Ca)",
+      "subtopic_id": "periodic.gradation",
+      "status": "covered",
+      "note": "Same content as A 4.0(d).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 2.0(b)",
+      "text": "Acidic properties of oxides of non-metals: C, N, S, P, Cl; pH of their solutions",
+      "subtopic_id": "hydrogen-oxygen.oxides",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 2.0(c)",
+      "text": "Period 3 elements and their hydrides, oxides, hydroxides and chlorides compared; thermal stability of carbonates and nitrates",
+      "subtopic_id": "periodic.gradation",
+      "status": "partial",
+      "note": "Elements and oxides in periodic.gradation; thermal stability in carbon.carbonates and nitrogen.nitric-acid. Missing: comparison of period 3 hydrides, hydroxides and chlorides.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 2.0(d)",
+      "text": "Silicon: SiO2 against CO2 structures, uses of silicon compounds",
+      "subtopic_id": "carbon.silicon",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 2.0(e)",
+      "text": "Halogens: interatomic bond energies, hydrides and Ka of hydrogen halides, variable oxidation states",
+      "subtopic_id": "halogens.trends",
+      "status": "partial",
+      "note": "Oxidation states covered. Missing: halogen bond energies and acid strength (Ka) of the hydrogen halides.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 2.0(f)",
+      "text": "Bonding in complex compounds: ligands, central ions, coordination compounds, nomenclature",
+      "subtopic_id": "metals.transition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 2.0(g)",
+      "text": "Shapes of complex compounds: tetrahedral, square planar, octahedral",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; the scope_rule leaves shapes of complex ions out.",
+      "proposed": "metals: new subtopic 'Shapes of complex ions'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 2.0(h)",
+      "text": "Elements of the first transition series: reactivity, comparison with s-block",
+      "subtopic_id": "metals.transition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 3.0(a)(i)",
+      "text": "Factors that influence ionic bond formation, including lattice energy",
+      "subtopic_id": "bonding.ionic",
+      "status": "partial",
+      "note": "Factors covered. Missing: lattice energy (excluded by the scope_rule).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 3.0(a)(ii)",
+      "text": "Covalent character in ionic bonds and its effect on solubility, thermal stability and boiling point",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; no covers line mentions polarisation or covalent character in ionic bonds.",
+      "proposed": "bonding: new subtopic 'Covalent character in ionic bonds'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 3.0(a)(iii)",
+      "text": "Polar covalent bonds: ionic character from electronegativity difference",
+      "subtopic_id": "bonding.covalent",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 3.0(b)(i)",
+      "text": "Hybridisation of atomic orbitals",
+      "subtopic_id": "bonding.shapes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 3.0(b)(ii)",
+      "text": "Formation of hybrid orbitals: sp, sp2, sp3 and sp3d2 (CH4, H2O, NH3, BCl3, C2H2, BeCl2, C2H4, SF6)",
+      "subtopic_id": "bonding.shapes",
+      "status": "partial",
+      "note": "sp, sp2, sp3 covered. Missing: sp3d2 hybridisation and octahedral SF6.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 3.0(b)(iii)",
+      "text": "Formation of sigma and pi bonds (C2H2, C6H6)",
+      "subtopic_id": "bonding.shapes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 4.0(a)",
+      "text": "Preparation of solutions by dilution; concentration of stock solutions from density, w/v, w/w, specific gravity, % purity",
+      "subtopic_id": "solutions.concentration",
+      "status": "partial",
+      "note": "Dilution and standards covered. Missing: concentration of a stock solution from density, specific gravity and percentage purity.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 5.0(a)",
+      "text": "Energy changes in physical and isolated systems: system, surroundings, open and closed; enthalpies of combustion, atomisation, sublimation, hydration, dissolution",
+      "subtopic_id": "energetics.enthalpy",
+      "status": "partial",
+      "note": "Missing: system, surroundings, open and closed systems, and enthalpies of atomisation, sublimation and hydration. Combustion and solution are in energetics.heats.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 5.0(b)",
+      "text": "Hess's law of heat summation and Born-Haber cycle",
+      "subtopic_id": "energetics.heats",
+      "status": "partial",
+      "note": "Hess's law covered. Missing: Born-Haber cycle (excluded by the scope_rule).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 5.0(c)",
+      "text": "Bond energy: bond dissociation energy, enthalpy of reaction from bond energies",
+      "subtopic_id": "energetics.heats",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 6.0(a)",
+      "text": "Bronsted-Lowry and Lewis concepts of acids and bases; conjugate pairs",
+      "subtopic_id": "acids-bases.properties",
+      "status": "partial",
+      "note": "Bronsted-Lowry and conjugate pairs covered. Missing: the Lewis definition (excluded by the scope_rule).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 6.0(b)",
+      "text": "pH, pOH and pKw: ionic product of water, calculations of [H+], [OH-], pH and pOH",
+      "subtopic_id": "acids-bases.ph",
+      "status": "covered",
+      "note": "Kw is not named but pH, pOH and ion concentration calculations are.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 6.0(c)",
+      "text": "Partial ionisation of weak acids and bases: Ka, pKa, Kb, pKb calculations",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; the scope_rule leaves pKa out.",
+      "proposed": "acids-bases: new subtopic 'Dissociation constants and buffer solutions'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 6.0(d)",
+      "text": "Buffer solutions: definition, examples, preparation",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; the scope_rule leaves buffers out.",
+      "proposed": "acids-bases: new subtopic 'Dissociation constants and buffer solutions'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 6.0(e)",
+      "text": "Acid-base titrations: double indicator and back titrations; titration curves",
+      "subtopic_id": "acids-bases.titration",
+      "status": "partial",
+      "note": "Titration curves covered. Missing: double indicator and back titrations (excluded by the scope_rule).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 7.0(a)",
+      "text": "Solubility and solubility product (Ksp) and calculations",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; the scope_rule leaves solubility products out.",
+      "proposed": "solutions: new subtopic 'Solubility product'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 7.0(c)",
+      "text": "Crystallisation and recrystallisation: effect of lattice and hydration energy",
+      "subtopic_id": "solutions.solubility",
+      "status": "partial",
+      "note": "Crystallisation covered. Missing: the role of lattice energy and hydration energy.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 8.0(a)",
+      "text": "Rate law and order of reaction: zero, first, second order, half-life, rate constant",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; the scope_rule leaves rate laws out.",
+      "proposed": "kinetics: new subtopic 'Rate laws and order of reaction'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 8.0(b)",
+      "text": "Rate determining step of a multi-step reaction",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; not in any covers line.",
+      "proposed": "kinetics: new subtopic 'Rate laws and order of reaction'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 8.0(c)-(d)",
+      "text": "Equilibrium law of mass action: expression for K, Kp and Kc and their calculation, homogeneous and heterogeneous equilibria",
+      "subtopic_id": "equilibrium.constant",
+      "status": "partial",
+      "note": "K expression and its constancy covered. Missing: Kp and Kc calculations and homogeneous against heterogeneous equilibria.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 9.0(a)",
+      "text": "Separation and purification of organic compounds: solvent extraction, melting point determination",
+      "subtopic_id": "matter.separation",
+      "status": "partial",
+      "note": "Melting point in matter.purity. Missing: solvent extraction is not named (separating funnel is).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 9.0(b)",
+      "text": "Empirical and molecular formulae: detection of N, S and halogens; estimation of C, H and O",
+      "subtopic_id": "stoichiometry.empirical",
+      "status": "partial",
+      "note": "Formula calculation covered. Missing: qualitative detection of N, S and halogens and estimation of C, H and O.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 9.0(c)",
+      "text": "Reactivity of organic compounds: inductive and mesomeric effects, resonance, nucleophiles, electrophiles, free radicals, homolytic and heterolytic fission",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; the scope_rule leaves organic reaction mechanisms out. Resonance in benzene alone is in hydrocarbons.benzene.",
+      "proposed": "organic-basics: new subtopic 'Organic reaction mechanisms'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 9.0(d)",
+      "text": "Alkanes: halogenation by free radical mechanism",
+      "subtopic_id": "hydrocarbons.alkanes",
+      "status": "partial",
+      "note": "Substitution with halogens covered. Missing: the free radical mechanism.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 9.0(e)(i)",
+      "text": "Reactions of benzene: monosubstituted benzenes toluene, phenol, aniline, benzoic acid, nitrobenzene",
+      "subtopic_id": "hydrocarbons.benzene",
+      "status": "partial",
+      "note": "Substitution covered in general. Missing: the named monosubstituted derivatives (toluene, aniline, nitrobenzene); phenol and benzoic acid are elsewhere.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 9.0(e)(ii)",
+      "text": "Benzene and alkenes compared; uses of benzene hexachloride",
+      "subtopic_id": "hydrocarbons.benzene",
+      "status": "partial",
+      "note": "Comparison covered. Missing: benzene hexachloride and its uses.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B 10.0(a)",
+      "text": "Sources of raw materials, mining of minerals, mineral deposits and metal extraction in Ghana",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Section B, Ghana only; the scope_rule leaves Ghana's mineral industries out.",
+      "proposed": "industry: new subtopic 'Mineral resources and mining'"
+    },
+    {
+      "source": "wassce",
+      "ref": "B 10.0(b)",
+      "text": "Cement: raw materials, production process, uses, environmental impact",
+      "subtopic_id": "common-metals.calcium",
+      "status": "partial",
+      "note": "Cement composition and setting covered. Missing: raw materials, production process and environmental impact of cement.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(a)(i)",
+      "text": "Allotropes of carbon: graphite, diamond, amorphous; structures, properties, uses, combustion",
+      "subtopic_id": "carbon.allotropes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(a)(ii)",
+      "text": "Coal: types (anthracite, peat, lignite), destructive distillation and uses of products",
+      "subtopic_id": "carbon.coal",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(a)(iii)",
+      "text": "Coke: classification and uses; synthetic gas (water gas, producer gas)",
+      "subtopic_id": "carbon.coal",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(a)(iv)I",
+      "text": "Carbon (IV) oxide: laboratory preparation, properties, uses, test",
+      "subtopic_id": "carbon.oxides",
+      "status": "covered",
+      "note": "The test sorts to practical.qualitative by rule.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(a)(iv)II",
+      "text": "Carbon (II) oxide: properties and uses",
+      "subtopic_id": "carbon.oxides",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(a)(iv)III",
+      "text": "Trioxocarbonate (IV) salts: solubility, action of heat, reaction with acid, uses",
+      "subtopic_id": "carbon.carbonates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(b)(i)",
+      "text": "Oxygen: laboratory and industrial preparation",
+      "subtopic_id": "hydrogen-oxygen.oxygen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(b)(ii)",
+      "text": "Oxygen: properties and uses; test for oxygen",
+      "subtopic_id": "hydrogen-oxygen.oxygen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(b)(iii)",
+      "text": "Binary compounds of oxygen: acidic, basic, amphoteric and neutral oxides",
+      "subtopic_id": "hydrogen-oxygen.oxides",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(c)(i)",
+      "text": "Hydrogen: laboratory preparations",
+      "subtopic_id": "hydrogen-oxygen.hydrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(c)(ii)",
+      "text": "Hydrogen: properties and uses; test for hydrogen",
+      "subtopic_id": "hydrogen-oxygen.hydrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(d)(i)",
+      "text": "Composition of water; test for water; electrolysis of acidified water",
+      "subtopic_id": "water.composition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(d)(ii)",
+      "text": "Water as a solvent",
+      "subtopic_id": "water.composition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(d)(iii)",
+      "text": "Hardness of water: causes, removal, advantages and disadvantages, comparing samples",
+      "subtopic_id": "water.hardness",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(d)(iv)",
+      "text": "Treatment of water for town supply",
+      "subtopic_id": "water.treatment",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(e)",
+      "text": "Halogens: redox properties; displacement of one halogen by another",
+      "subtopic_id": "halogens.trends",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(e)(i)",
+      "text": "Chlorine: laboratory preparation; properties and reactions, oxidation states, reaction with water and alkali",
+      "subtopic_id": "halogens.chlorine",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(f)(i)",
+      "text": "Hydrogen chloride gas: laboratory preparation",
+      "subtopic_id": "halogens.hydrogen-chloride",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(f)(ii)",
+      "text": "Hydrogen chloride: properties and uses; test for HCl; fountain experiment",
+      "subtopic_id": "halogens.hydrogen-chloride",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(f)(iii)",
+      "text": "Uses of halogen compounds: silver halides in photography, sodium oxochlorate (I) as bleach",
+      "subtopic_id": "halogens.chlorine",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(g)(i)",
+      "text": "Nitrogen: laboratory and industrial preparation (liquefied air), properties",
+      "subtopic_id": "nitrogen.nitrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(g)(ii)",
+      "text": "Uses of nitrogen",
+      "subtopic_id": "nitrogen.nitrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(g)(iii)I",
+      "text": "Ammonia: laboratory and industrial preparation, properties, uses, test, fountain experiment",
+      "subtopic_id": "nitrogen.ammonia",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(g)(iii)II",
+      "text": "Trioxonitrate (V) acid: laboratory preparation, properties and uses",
+      "subtopic_id": "nitrogen.nitric-acid",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(g)(iii)III",
+      "text": "Trioxonitrate (V) salts: action of heat; test for NO3-",
+      "subtopic_id": "nitrogen.nitric-acid",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(h)(i)",
+      "text": "Sulphur: allotropes and uses",
+      "subtopic_id": "sulphur.element",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(h)(ii)",
+      "text": "Compounds of sulphur",
+      "subtopic_id": "sulphur.compounds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(h)(iii)",
+      "text": "Trioxosulphate (IV) acid and its salts",
+      "subtopic_id": "sulphur.compounds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(h)(iv)",
+      "text": "Tetraoxosulphate (VI) acid: Contact process, reactions and uses",
+      "subtopic_id": "sulphur.sulphuric-acid",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 1.0(i)",
+      "text": "The noble gases: properties and uses",
+      "subtopic_id": "air.noble-gases",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 2.0(a)",
+      "text": "Extraction of metals: raw materials, processing, main products and by-products, uses of metals",
+      "subtopic_id": "metals.extraction",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 2.0(a)(i)",
+      "text": "Extraction of aluminium",
+      "subtopic_id": "common-metals.aluminium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 2.0(a)(ii)",
+      "text": "Extraction of iron",
+      "subtopic_id": "common-metals.iron",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 2.0(a)(iii)",
+      "text": "Extraction of tin",
+      "subtopic_id": "common-metals.copper-tin",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 2.0(b)",
+      "text": "Alloys of Cu, Al, Pb, Fe, Sn and their uses",
+      "subtopic_id": "metals.alloys",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 2.0(c)",
+      "text": "Sodium and its compounds: NaCl, NaOH, Na2CO3, NaNO3, Na2SO4, NaClO",
+      "subtopic_id": "common-metals.sodium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 2.0(d)",
+      "text": "Calcium and its compounds: CaCO3, CaO, CaSO4, CaCl2, Ca(OH)2",
+      "subtopic_id": "common-metals.calcium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 2.0(e)",
+      "text": "Reactivity of iron and aluminium with air, water and acids",
+      "subtopic_id": "common-metals.iron",
+      "status": "partial",
+      "note": "Split, nothing missing: iron in common-metals.iron, aluminium in common-metals.aluminium.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C 2.0(f)",
+      "text": "Copper and its compounds: CuSO4, CuO, CuCl2",
+      "subtopic_id": "common-metals.copper-tin",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(a)",
+      "text": "Pure and impure substances",
+      "subtopic_id": "matter.purity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(b)",
+      "text": "Boiling and melting points as criteria of purity",
+      "subtopic_id": "matter.purity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(c)",
+      "text": "Elements, compounds and mixtures",
+      "subtopic_id": "matter.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(d)",
+      "text": "Chemical and physical changes",
+      "subtopic_id": "matter.changes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "1(e)",
+      "text": "Separation processes: evaporation, distillation, sublimation, filtration, crystallisation, chromatography",
+      "subtopic_id": "matter.separation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(a)",
+      "text": "Stoichiometry",
+      "subtopic_id": "stoichiometry.reacting-quantities",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(b)",
+      "text": "Laws of definite and multiple proportions",
+      "subtopic_id": "stoichiometry.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(c)",
+      "text": "Law of conservation of matter",
+      "subtopic_id": "stoichiometry.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(d)",
+      "text": "Gay-Lussac's law of combining volumes",
+      "subtopic_id": "states.molar-volume",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(e)",
+      "text": "Avogadro's law",
+      "subtopic_id": "states.molar-volume",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(f)",
+      "text": "Chemical symbols, formulae, equations and their uses",
+      "subtopic_id": "stoichiometry.formulae",
+      "status": "partial",
+      "note": "Split, nothing missing: symbols and formulae in stoichiometry.formulae, equations in stoichiometry.equations.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(g)",
+      "text": "Relative atomic mass based on 12C = 12, the mole concept and Avogadro's number",
+      "subtopic_id": "stoichiometry.mole",
+      "status": "partial",
+      "note": "Split, nothing missing: relative atomic mass in atomic-structure.relative-mass, mole and Avogadro's number in stoichiometry.mole.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "2(h)",
+      "text": "The mole concept and Avogadro's number (repeated line)",
+      "subtopic_id": "stoichiometry.mole",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(a)",
+      "text": "Kinetic theory of matter; melting, vaporisation and reverse processes; Brownian movement",
+      "subtopic_id": "states.kinetic-theory",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(b)",
+      "text": "Laws of Boyle, Charles, Graham and Dalton; combined gas law; molar volume and atomicity",
+      "subtopic_id": "states.gas-laws",
+      "status": "partial",
+      "note": "Split, nothing missing: Boyle, Charles, Dalton and combined law in states.gas-laws, Graham in states.diffusion, molar volume and atomicity in states.molar-volume.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(c)",
+      "text": "The ideal gas equation PV = nRT",
+      "subtopic_id": "states.gas-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "3(d)",
+      "text": "Vapour density and relative molecular mass",
+      "subtopic_id": "states.molar-volume",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic one (a)",
+      "text": "Atoms, molecules and ions; works of Dalton, Millikan, Rutherford, Moseley, Thomson, Bohr; hydrogen spectrum; ionisation of gases",
+      "subtopic_id": "atomic-structure.models",
+      "status": "partial",
+      "note": "Split, nothing missing: the scientists and hydrogen spectrum in atomic-structure.models, atoms, molecules and ions in matter.classification.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic one (b)",
+      "text": "Atomic structure, electron configuration, atomic number, mass number, isotopes (Z = 1 to 20)",
+      "subtopic_id": "atomic-structure.particles",
+      "status": "partial",
+      "note": "Split, nothing missing: particles and isotopes in atomic-structure.particles, configuration in atomic-structure.configuration.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic one (c)",
+      "text": "Shapes of s and p orbitals",
+      "subtopic_id": "atomic-structure.configuration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic two (a)",
+      "text": "The periodic table and periodicity of elements",
+      "subtopic_id": "periodic.table",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic two (b)",
+      "text": "Families of elements: alkali metals, halogens, noble gases, transition metals",
+      "subtopic_id": "periodic.table",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic two (c)",
+      "text": "Variation of ionisation energy, ionic radii, electron affinity, electronegativity",
+      "subtopic_id": "periodic.trends",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic three (a)",
+      "text": "Electrovalency and covalency; tendency to attain the noble gas structure",
+      "subtopic_id": "bonding.ionic",
+      "status": "partial",
+      "note": "Split, nothing missing: electrovalency in bonding.ionic, covalency in bonding.covalent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic three (b)",
+      "text": "Hydrogen bonding and metallic bonding as special types",
+      "subtopic_id": "bonding.intermolecular",
+      "status": "partial",
+      "note": "Split, nothing missing: hydrogen bonding in bonding.intermolecular, metallic bonding in bonding.metallic.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic three (c)",
+      "text": "Coordinate bond in complexes [Fe(CN)6]3-, [Cu(NH3)4]2+, [Ag(NH3)2]+; van der Waals forces",
+      "subtopic_id": "bonding.covalent",
+      "status": "partial",
+      "note": "Split, nothing missing: coordinate bonds in bonding.covalent, van der Waals forces in bonding.intermolecular.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic four",
+      "text": "Shapes of simple molecules: linear, non-linear, tetrahedral",
+      "subtopic_id": "bonding.shapes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic five (a)",
+      "text": "Radioactivity (elementary treatment)",
+      "subtopic_id": "nuclear.radioactivity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "4 topic five (b)",
+      "text": "Nuclear reactions: simple equations, uses and applications of natural and artificial radioactivity",
+      "subtopic_id": "nuclear.reactions",
+      "status": "partial",
+      "note": "Split, nothing missing: equations and half-life in nuclear.reactions, uses and natural against artificial in nuclear.radioactivity.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5(a)",
+      "text": "Natural gaseous constituents of air",
+      "subtopic_id": "air.composition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "5(b)",
+      "text": "Air as a mixture and some uses of the noble gases",
+      "subtopic_id": "air.composition",
+      "status": "partial",
+      "note": "Split, nothing missing: air as a mixture in air.composition, noble gas uses in air.noble-gases.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6(a)",
+      "text": "Composition of water by volume",
+      "subtopic_id": "water.composition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6(b)",
+      "text": "Water as a solvent; dissolved atmospheric gases and their biological significance",
+      "subtopic_id": "water.composition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6(c)",
+      "text": "Water as a product of the combustion of hydrogen",
+      "subtopic_id": "water.composition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6(d)",
+      "text": "Hard and soft water: temporary and permanent hardness, softening",
+      "subtopic_id": "water.hardness",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6(e)",
+      "text": "Purification of town water supplies",
+      "subtopic_id": "water.treatment",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "6(f)",
+      "text": "Water of crystallisation, efflorescence, deliquescence and hygroscopy; examples and uses",
+      "subtopic_id": "water.hygroscopy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "7(a)",
+      "text": "Unsaturated, saturated and supersaturated solutions; solubility curves; calculations",
+      "subtopic_id": "solutions.solubility",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "7(b)",
+      "text": "Solvents for fats, oils and paints and their uses",
+      "subtopic_id": "solutions.colloids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "7(c)",
+      "text": "False solutions: suspensions and colloids",
+      "subtopic_id": "solutions.colloids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "8(a)",
+      "text": "Sources and effects of pollutants",
+      "subtopic_id": "pollution.air",
+      "status": "partial",
+      "note": "Split, nothing missing: air pollutants in pollution.air, water and soil pollutants in pollution.water-soil.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "8(b)",
+      "text": "Air pollution: H2S, CO, SO2, oxides of nitrogen, fluorocarbons, dust",
+      "subtopic_id": "pollution.air",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "8(c)",
+      "text": "Water pollution: sewage and oil",
+      "subtopic_id": "pollution.water-soil",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "8(d)",
+      "text": "Soil pollution: oil spillage, biodegradable and non-biodegradable pollutants",
+      "subtopic_id": "pollution.water-soil",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "9(a)",
+      "text": "General properties of acids, bases and salts; indicators; basicity; types of salts; organic acids; alums; preparation of salts",
+      "subtopic_id": "acids-bases.properties",
+      "status": "partial",
+      "note": "Split, nothing missing: acids, bases and basicity in acids-bases.properties, salt types, alums and preparation in acids-bases.salts, indicators in acids-bases.ph.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "9(b)",
+      "text": "Conductances of strong and weak acids and bases; ions and their mobilities",
+      "subtopic_id": "acids-bases.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "9(c)",
+      "text": "pH and pOH scale",
+      "subtopic_id": "acids-bases.ph",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "9(d)",
+      "text": "pH defined as -log[H3O+]",
+      "subtopic_id": "acids-bases.ph",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "9(e)",
+      "text": "Acid/base titrations",
+      "subtopic_id": "acids-bases.titration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "9(f)",
+      "text": "Hydrolysis of salts: NH4Cl, AlCl3, Na2CO3, CH3COONa",
+      "subtopic_id": "acids-bases.hydrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10(a)",
+      "text": "Oxidation as addition of oxygen or removal of hydrogen",
+      "subtopic_id": "redox.definitions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10(b)",
+      "text": "Reduction as removal of oxygen or addition of hydrogen",
+      "subtopic_id": "redox.definitions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10(c)",
+      "text": "Oxidation and reduction in terms of electron transfer",
+      "subtopic_id": "redox.definitions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10(d)",
+      "text": "Use of oxidation numbers; redox as change in oxidation number; balancing simple equations",
+      "subtopic_id": "redox.oxidation-numbers",
+      "status": "partial",
+      "note": "Split, nothing missing: oxidation numbers in redox.oxidation-numbers, balancing in redox.balancing.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10(e)",
+      "text": "IUPAC nomenclature of inorganic compounds",
+      "subtopic_id": "stoichiometry.formulae",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "10(f)",
+      "text": "Tests for oxidising and reducing agents",
+      "subtopic_id": "redox.agents",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11(a)",
+      "text": "Electrolytes and non-electrolytes; Faraday's laws of electrolysis",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "partial",
+      "note": "Split, nothing missing: electrolytes in electrochemistry.electrolysis, Faraday's laws in electrochemistry.faraday.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11(b)",
+      "text": "Electrolysis of dilute H2SO4, CuSO4, CuCl2, dilute and concentrated NaCl, fused NaCl",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11(c)",
+      "text": "Factors affecting discharge of ions at the electrodes",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11(d)",
+      "text": "Uses of electrolysis: purification of copper; production of Al, Na, O2, Cl2, NaOH",
+      "subtopic_id": "electrochemistry.applications",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11(e)",
+      "text": "Electrochemical cells: redox series",
+      "subtopic_id": "electrochemistry.cells",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11(f)",
+      "text": "Half-cell reactions and electrode potentials; simple calculations",
+      "subtopic_id": "electrochemistry.cells",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "11(g)",
+      "text": "Corrosion as an electrolytic process; cathodic protection, painting, electroplating, greasing",
+      "subtopic_id": "electrochemistry.corrosion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "12(a)",
+      "text": "Energy changes in physical and chemical changes; dissolution; endothermic and exothermic reactions",
+      "subtopic_id": "energetics.enthalpy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "12(b)",
+      "text": "Entropy as an order-disorder phenomenon",
+      "subtopic_id": "energetics.entropy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "12(c)",
+      "text": "Spontaneity of reactions: sign of delta G",
+      "subtopic_id": "energetics.entropy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13(a)",
+      "text": "Effect of temperature on rate",
+      "subtopic_id": "kinetics.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13(b)",
+      "text": "Effect of concentration (and pressure) on rate; iodine clock",
+      "subtopic_id": "kinetics.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13(c)",
+      "text": "Effect of surface area on rate",
+      "subtopic_id": "kinetics.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13(d)",
+      "text": "Effect of catalysts: H2O2 or KClO3 with MnO2",
+      "subtopic_id": "kinetics.factors",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13(e)",
+      "text": "Reaction rate curves",
+      "subtopic_id": "kinetics.rate",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "13(f)",
+      "text": "Activation energy; qualitative Arrhenius' law and collision theory; effect of light",
+      "subtopic_id": "kinetics.collision",
+      "status": "partial",
+      "note": "Activation energy and collision theory in kinetics.collision, light in kinetics.factors. Missing: Arrhenius' law is not named.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14(a)",
+      "text": "Reversible reactions and factors governing the equilibrium position",
+      "subtopic_id": "equilibrium.le-chatelier",
+      "status": "partial",
+      "note": "Split, nothing missing: reversible reactions in equilibrium.constant, factors on position in equilibrium.le-chatelier.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14(b)",
+      "text": "Dynamic equilibrium",
+      "subtopic_id": "equilibrium.constant",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14(c)",
+      "text": "Le Chatelier's principle and equilibrium constant",
+      "subtopic_id": "equilibrium.le-chatelier",
+      "status": "partial",
+      "note": "Split, nothing missing: principle in equilibrium.le-chatelier, constant in equilibrium.constant.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "14(d)",
+      "text": "Examples: steam on iron, N2O4 and NO2",
+      "subtopic_id": "equilibrium.le-chatelier",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(a)",
+      "text": "Hydrogen: commercial production, laboratory preparation, properties, uses, test",
+      "subtopic_id": "hydrogen-oxygen.hydrogen",
+      "status": "covered",
+      "note": "The test sorts to practical.qualitative by rule.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(b)",
+      "text": "Chlorine: preparation, properties, uses; hydrogen chloride and hydrochloric acid; chlorides and test for chlorides",
+      "subtopic_id": "halogens.chlorine",
+      "status": "partial",
+      "note": "Split, nothing missing: chlorine in halogens.chlorine, HCl and chlorides in halogens.hydrogen-chloride, chloride test in practical.qualitative.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(c)1",
+      "text": "Oxygen: laboratory preparation, properties, uses, production from liquid air",
+      "subtopic_id": "hydrogen-oxygen.oxygen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(c)2",
+      "text": "Oxides: acidic, basic, amphoteric, neutral; ozone as an allotrope and its importance",
+      "subtopic_id": "hydrogen-oxygen.oxides",
+      "status": "partial",
+      "note": "Split, nothing missing: oxide classes in hydrogen-oxygen.oxides, ozone in hydrogen-oxygen.oxygen.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(c)3",
+      "text": "Sulphur: allotropes, uses; SO2; trioxosulphate (IV) acid and salts; tetraoxosulphate (VI) acid and Contact process; test for SO4 2-",
+      "subtopic_id": "sulphur.compounds",
+      "status": "partial",
+      "note": "Split, nothing missing: allotropes in sulphur.element, SO2 and trioxosulphates in sulphur.compounds, H2SO4 in sulphur.sulphuric-acid, SO4 2- test in practical.qualitative.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(c)4",
+      "text": "Hydrogen sulphide: preparation; weak acid, reducing agent, precipitating agent",
+      "subtopic_id": "sulphur.compounds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(d)1",
+      "text": "Nitrogen: laboratory preparation",
+      "subtopic_id": "nitrogen.nitrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(d)2",
+      "text": "Nitrogen: production from liquid air",
+      "subtopic_id": "nitrogen.nitrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(d)3",
+      "text": "Ammonia: laboratory and Haber preparation, properties, uses, ammonium salts, oxidation to NO2 and HNO3, test for NH4+",
+      "subtopic_id": "nitrogen.ammonia",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(d)4",
+      "text": "Trioxonitrate (V) acid: preparation, properties, uses; salts and action of heat; test for NO3-",
+      "subtopic_id": "nitrogen.nitric-acid",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(d)5",
+      "text": "Oxides of nitrogen: properties; the nitrogen cycle",
+      "subtopic_id": "nitrogen.oxides",
+      "status": "partial",
+      "note": "Split, nothing missing: oxides in nitrogen.oxides, nitrogen cycle in nitrogen.nitrogen.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(e)1",
+      "text": "Carbon allotropes: uses and properties",
+      "subtopic_id": "carbon.allotropes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(e)2",
+      "text": "Carbon (IV) oxide: preparation, properties, uses; action of heat on trioxocarbonates; test for CO3 2-",
+      "subtopic_id": "carbon.oxides",
+      "status": "partial",
+      "note": "Split, nothing missing: CO2 in carbon.oxides, action of heat in carbon.carbonates, CO3 2- test in practical.qualitative.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(e)3",
+      "text": "Carbon (II) oxide: preparation, properties, effect on blood, sources",
+      "subtopic_id": "carbon.oxides",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(e)4",
+      "text": "Coal: types; destructive distillation of wood and coal",
+      "subtopic_id": "carbon.coal",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "15(e)5",
+      "text": "Coke: gasification and uses; synthetic gas",
+      "subtopic_id": "carbon.coal",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(a)",
+      "text": "General properties of metals",
+      "subtopic_id": "metals.general",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(b)",
+      "text": "Alkali metals, e.g. sodium",
+      "subtopic_id": "common-metals.sodium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(c)",
+      "text": "Sodium hydroxide: electrolysis of brine, action on Al, Zn, Pb ions, uses",
+      "subtopic_id": "common-metals.sodium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(d)",
+      "text": "Sodium trioxocarbonate (IV) and hydrogentrioxocarbonate (IV): Solvay process, properties, uses",
+      "subtopic_id": "common-metals.sodium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(e)",
+      "text": "Sodium chloride: occurrence in sea water, uses, recovery",
+      "subtopic_id": "common-metals.sodium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(f)",
+      "text": "Alkaline-earth metals, e.g. calcium: CaO, Ca(OH)2, CaCO3, cement, mortar, test for Ca2+",
+      "subtopic_id": "common-metals.calcium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(g)",
+      "text": "Aluminium: purification of bauxite, electrolytic extraction, properties, uses, test for Al3+",
+      "subtopic_id": "common-metals.aluminium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(h)",
+      "text": "Tin: extraction, properties and uses",
+      "subtopic_id": "common-metals.copper-tin",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(i)",
+      "text": "First transition series: configuration, oxidation states, complex ions, coloured ions",
+      "subtopic_id": "metals.transition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(j)",
+      "text": "Iron: extraction, properties, uses, forms of iron, steel; test for Fe2+ and Fe3+",
+      "subtopic_id": "common-metals.iron",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(k)",
+      "text": "Copper: extraction, copper salts, preparation and uses of CuSO4; test for Cu2+",
+      "subtopic_id": "common-metals.copper-tin",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "16(l)",
+      "text": "Alloys: steel, stainless steel, brass, bronze, type-metal, duralumin, soft solder",
+      "subtopic_id": "metals.alloys",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17 introduction",
+      "text": "Tetravalency of carbon, general formula, IUPAC nomenclature, empirical formula of each class",
+      "subtopic_id": "organic-basics.carbon-classes",
+      "status": "partial",
+      "note": "Split, nothing missing: tetravalency and general formulae in organic-basics.carbon-classes, naming in organic-basics.naming, empirical formula in stoichiometry.empirical.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(a)1(i)",
+      "text": "Alkanes: homologous series and physical properties, substitution, halogenated products and uses",
+      "subtopic_id": "hydrocarbons.alkanes",
+      "status": "partial",
+      "note": "Split, nothing missing: substitution and halogenoalkanes in hydrocarbons.alkanes, homologous series and physical property gradation in organic-basics.carbon-classes.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(a)1(ii)",
+      "text": "Isomerism: structural only, up to six carbons",
+      "subtopic_id": "organic-basics.isomerism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(a)1(iii)",
+      "text": "Petroleum: composition, fractional distillation, cracking, reforming, petrochemicals, octane number",
+      "subtopic_id": "hydrocarbons.petroleum",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(a)2",
+      "text": "Alkenes: structural and geometric isomerism, addition and polymerisation, polythene, synthetic rubber, vulcanisation",
+      "subtopic_id": "hydrocarbons.alkenes",
+      "status": "partial",
+      "note": "Split, nothing missing: addition in hydrocarbons.alkenes, isomerism in organic-basics.isomerism, polymers and rubber in biomolecules.polymers.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(a)3",
+      "text": "Alkynes: ethyne from carbides, reactions and properties",
+      "subtopic_id": "hydrocarbons.alkynes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(b)",
+      "text": "Aromatic hydrocarbons: benzene structure, properties, uses",
+      "subtopic_id": "hydrocarbons.benzene",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(c)",
+      "text": "Alkanols: classes, ethanol by fermentation and from petroleum, local gin, glycerol, oxidation, Lucas test",
+      "subtopic_id": "functional-groups.alkanols",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(d)",
+      "text": "Alkanals and alkanones: distinguishing test",
+      "subtopic_id": "functional-groups.carbonyls",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(e)",
+      "text": "Alkanoic acids: neutralisation, esterification, ethanedioic and benzoic acids",
+      "subtopic_id": "functional-groups.alkanoic-acids",
+      "status": "covered",
+      "note": "Esterification sorts to functional-groups.esters by rule.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(f)",
+      "text": "Alkanoates: formation, fats and oils as alkanoates, saponification, soap and margarine, detergents and soaps",
+      "subtopic_id": "functional-groups.esters",
+      "status": "partial",
+      "note": "Split, nothing missing: ester formation in functional-groups.esters, fats, soap, margarine and detergents in biomolecules.fats-soaps.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(g)",
+      "text": "Amines: primary, secondary and tertiary",
+      "subtopic_id": "functional-groups.amines",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(h)",
+      "text": "Carbohydrates: classification, tests, conc. H2SO4, hydrolysis of cellulose and starch, uses",
+      "subtopic_id": "biomolecules.carbohydrates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(i)",
+      "text": "Proteins: primary structure, hydrolysis, tests, enzymes",
+      "subtopic_id": "biomolecules.proteins",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "17(j)",
+      "text": "Polymers: natural and synthetic rubber, addition and condensation, thermoplastics and thermosets",
+      "subtopic_id": "biomolecules.polymers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "18(a)",
+      "text": "Chemical industries: types, raw materials and relevance; fine and heavy chemicals",
+      "subtopic_id": "industry.chemical-industry",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "18(b)",
+      "text": "Biotechnology",
+      "subtopic_id": "industry.biotechnology",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W1",
+      "text": "Introduction to chemistry",
+      "subtopic_id": "intro.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2",
+      "text": "Laboratory familiarisation",
+      "subtopic_id": "practical.lab",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3",
+      "text": "Nature of matter",
+      "subtopic_id": "matter.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4",
+      "text": "Elements and symbols, valency",
+      "subtopic_id": "stoichiometry.formulae",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5",
+      "text": "Compounds and mixtures",
+      "subtopic_id": "matter.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6",
+      "text": "Standard separation techniques for mixtures",
+      "subtopic_id": "matter.separation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7",
+      "text": "Particulate nature of matter",
+      "subtopic_id": "matter.classification",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8",
+      "text": "IUPAC nomenclature of chemical compounds",
+      "subtopic_id": "stoichiometry.formulae",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9",
+      "text": "Atomic number, mass number, isotopes and calculations",
+      "subtopic_id": "atomic-structure.particles",
+      "status": "partial",
+      "note": "Split, nothing missing: particles and isotopes in atomic-structure.particles, relative atomic mass calculations in atomic-structure.relative-mass.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10",
+      "text": "Structure of the atom: orbitals and electronic structure",
+      "subtopic_id": "atomic-structure.configuration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W1",
+      "text": "Mole concept: molar mass, relative molecular mass, calculation in terms of formula",
+      "subtopic_id": "stoichiometry.mole",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2",
+      "text": "Mole concept: Avogadro's constant, molar volume, percentage composition, empirical and molecular formulae",
+      "subtopic_id": "stoichiometry.mole",
+      "status": "partial",
+      "note": "Split, nothing missing: Avogadro's constant in stoichiometry.mole, molar volume in states.molar-volume, percentage and formulae in stoichiometry.empirical.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3",
+      "text": "Writing and balancing equations; calculation from chemical equations",
+      "subtopic_id": "stoichiometry.equations",
+      "status": "partial",
+      "note": "Split, nothing missing: balancing in stoichiometry.equations, calculations in stoichiometry.reacting-quantities.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4-5",
+      "text": "Chemical laws: conservation, constant composition, multiple proportions, calculations",
+      "subtopic_id": "stoichiometry.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6",
+      "text": "Chemical bonding: ionic, covalent, dative, metallic, hydrogen bonds, van der Waals forces",
+      "subtopic_id": "bonding.ionic",
+      "status": "partial",
+      "note": "Split, nothing missing: across bonding.ionic, bonding.covalent, bonding.metallic and bonding.intermolecular.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8",
+      "text": "Kinetic theory of matter: postulates, solids, liquids, gases, changes of state",
+      "subtopic_id": "states.kinetic-theory",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9",
+      "text": "Gas laws and calculations",
+      "subtopic_id": "states.gas-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W10",
+      "text": "Gay-Lussac's law, Graham's law, Avogadro's number, molar volume, experiments",
+      "subtopic_id": "states.molar-volume",
+      "status": "partial",
+      "note": "Split, nothing missing: Gay-Lussac and molar volume in states.molar-volume, Graham in states.diffusion.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W11",
+      "text": "Air: constituents, composition, properties; flame zones",
+      "subtopic_id": "air.composition",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1",
+      "text": "Acids: definition, organic and inorganic acids, practical with fruits and milk",
+      "subtopic_id": "acids-bases.properties",
+      "status": "covered",
+      "note": "Labelled revision but carries new content, so mapped.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2",
+      "text": "Concentrated and dilute acids: weak and strong, properties, preparation and uses",
+      "subtopic_id": "acids-bases.properties",
+      "status": "partial",
+      "note": "Strength and properties covered. Missing: preparation and uses of acids are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3",
+      "text": "Bases: soluble and insoluble, alkalis, properties, preparation and uses",
+      "subtopic_id": "acids-bases.properties",
+      "status": "partial",
+      "note": "Bases and alkalis covered. Missing: preparation and uses of bases are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4",
+      "text": "Salts: classification, colours, types, preparation, recovery from solution, hydrolysis",
+      "subtopic_id": "acids-bases.salts",
+      "status": "partial",
+      "note": "Split, nothing missing: salts in acids-bases.salts, hydrolysis in acids-bases.hydrolysis.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5",
+      "text": "pH scale, pH and pOH calculations, indicators; exposure to air, hygroscopy, deliquescence, efflorescence, drying agents",
+      "subtopic_id": "acids-bases.ph",
+      "status": "partial",
+      "note": "Split, nothing missing: pH and indicators in acids-bases.ph, hygroscopy and drying agents in water.hygroscopy.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6",
+      "text": "Carbon: allotropes, diamond and graphite, coal, coke",
+      "subtopic_id": "carbon.allotropes",
+      "status": "partial",
+      "note": "Split, nothing missing: allotropes in carbon.allotropes, coal and coke in carbon.coal.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W7",
+      "text": "Oxides of carbon: preparation, properties, uses, differences, test for CO2",
+      "subtopic_id": "carbon.oxides",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8",
+      "text": "Trioxocarbonates (IV) and trioxocarbonate (IV) acid; test for the ion",
+      "subtopic_id": "carbon.carbonates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9",
+      "text": "Hydrocarbons: introduction, sources and classes, crude oil and natural gas fractions",
+      "subtopic_id": "hydrocarbons.petroleum",
+      "status": "partial",
+      "note": "Split, nothing missing: crude oil and natural gas in hydrocarbons.petroleum, classes of hydrocarbon in organic-basics.carbon-classes.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10",
+      "text": "Chemical industries: types, importance, excursion",
+      "subtopic_id": "industry.chemical-industry",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1",
+      "text": "The periodic table: history, periodic law, blocks and families",
+      "subtopic_id": "periodic.table",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2",
+      "text": "Periodic trends; diagonal relationship",
+      "subtopic_id": "periodic.trends",
+      "status": "partial",
+      "note": "Split, nothing missing: trends in periodic.trends, diagonal relationship in periodic.gradation.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3",
+      "text": "Redox reactions: oxidation and reduction; oxidation number and IUPAC naming",
+      "subtopic_id": "redox.definitions",
+      "status": "partial",
+      "note": "Split, nothing missing: definitions in redox.definitions, oxidation number in naming in stoichiometry.formulae and redox.oxidation-numbers.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4",
+      "text": "Oxidising and reducing agents; balancing redox equations in acid and alkaline medium",
+      "subtopic_id": "redox.agents",
+      "status": "partial",
+      "note": "Split, nothing missing: agents in redox.agents, balancing in redox.balancing.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5",
+      "text": "Ionic theory: electrovalent and covalent compounds, electrolytes, conductors",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "partial",
+      "note": "Split, nothing missing: electrolytes and conductors in electrochemistry.electrolysis, ionic against covalent in bonding.ionic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6",
+      "text": "Electrolysis: meaning, terms, preferential discharge",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7",
+      "text": "Electrolysis of acidified water, brine, CuSO4; uses of electrolysis",
+      "subtopic_id": "electrochemistry.electrolysis",
+      "status": "partial",
+      "note": "Split, nothing missing: named electrolytes in electrochemistry.electrolysis, uses in electrochemistry.applications.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8",
+      "text": "Faraday's laws: verification and calculations",
+      "subtopic_id": "electrochemistry.faraday",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9",
+      "text": "Electrochemical cells: electrode potential, cell diagrams, e.m.f.",
+      "subtopic_id": "electrochemistry.cells",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W10",
+      "text": "Application of electrochemical cells: primary and secondary cells",
+      "subtopic_id": "electrochemistry.cells",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W1",
+      "text": "Rates of reaction: rate curve, collision theory, factors",
+      "subtopic_id": "kinetics.rate",
+      "status": "partial",
+      "note": "Split, nothing missing: across kinetics.rate, kinetics.collision and kinetics.factors.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2",
+      "text": "Endothermic and exothermic reactions; other reaction types; first and second laws of thermodynamics",
+      "subtopic_id": "energetics.enthalpy",
+      "status": "partial",
+      "note": "Split, nothing missing: enthalpy in energetics.enthalpy, reaction types in stoichiometry.equations, laws of thermodynamics in energetics.entropy.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3",
+      "text": "Chemical equilibrium: Le Chatelier's principle, factors",
+      "subtopic_id": "equilibrium.le-chatelier",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W4",
+      "text": "Hydrogen: isotopes, position in the periodic table, preparation, properties, uses, test",
+      "subtopic_id": "hydrogen-oxygen.hydrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5",
+      "text": "Oxygen: group VI family, preparation, properties and uses",
+      "subtopic_id": "hydrogen-oxygen.oxygen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W6",
+      "text": "Halogens: configuration, properties, chlorine preparation, halogen compounds, test for chloride",
+      "subtopic_id": "halogens.chlorine",
+      "status": "partial",
+      "note": "Split, nothing missing: chlorine and compounds in halogens.chlorine, group properties in halogens.trends, chloride test in practical.qualitative.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7",
+      "text": "Nitrogen: group VA family, preparation, properties, uses, nitrogen cycle",
+      "subtopic_id": "nitrogen.nitrogen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W8",
+      "text": "Compounds of nitrogen: oxides of nitrogen, ammonia",
+      "subtopic_id": "nitrogen.ammonia",
+      "status": "partial",
+      "note": "Split, nothing missing: ammonia in nitrogen.ammonia, oxides in nitrogen.oxides.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9",
+      "text": "Sulphur: group VIA family, allotropes, uses",
+      "subtopic_id": "sulphur.element",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W10",
+      "text": "Compounds of sulphur: oxidation numbers of sulphur, H2SO4 and the Contact process",
+      "subtopic_id": "sulphur.sulphuric-acid",
+      "status": "partial",
+      "note": "Split, nothing missing: H2SO4 in sulphur.sulphuric-acid, oxidation numbers in redox.oxidation-numbers.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W1",
+      "text": "Water: sources, types, water pollution, uses",
+      "subtopic_id": "water.composition",
+      "status": "partial",
+      "note": "Split, nothing missing: sources and uses in water.composition, pollution in pollution.water-soil.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2",
+      "text": "Water: structure, hardness, preparation and test, municipal purification, distilled water",
+      "subtopic_id": "water.hardness",
+      "status": "partial",
+      "note": "Split, nothing missing: hardness in water.hardness, composition and test in water.composition, purification and distilled water in water.treatment.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3",
+      "text": "Solubility: saturated, unsaturated, supersaturated, calculations, uses",
+      "subtopic_id": "solutions.solubility",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4",
+      "text": "Mass/volume relationships: relative density, relative molecular mass, s.t.p.",
+      "subtopic_id": "states.molar-volume",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5",
+      "text": "Acid/base titration, indicators and pH ranges, heat of neutralisation",
+      "subtopic_id": "acids-bases.titration",
+      "status": "partial",
+      "note": "Split, nothing missing: titration in acids-bases.titration, heat of neutralisation in energetics.heats.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W6",
+      "text": "Hydrocarbon: valency of carbon, classification, catenation, homologous series, isomerism",
+      "subtopic_id": "organic-basics.carbon-classes",
+      "status": "partial",
+      "note": "Split, nothing missing: classes in organic-basics.carbon-classes, isomerism in organic-basics.isomerism.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7",
+      "text": "Alkanes: nomenclature, preparation, properties, uses",
+      "subtopic_id": "hydrocarbons.alkanes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W8",
+      "text": "Alkenes: nomenclature, preparation, properties, uses",
+      "subtopic_id": "hydrocarbons.alkenes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9",
+      "text": "Alkynes; aromatic hydrocarbons, benzene",
+      "subtopic_id": "hydrocarbons.alkynes",
+      "status": "partial",
+      "note": "Split, nothing missing: alkynes in hydrocarbons.alkynes, benzene in hydrocarbons.benzene.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W10",
+      "text": "Alkanol: types, properties, preparation, fermentation",
+      "subtopic_id": "functional-groups.alkanols",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W1",
+      "text": "Alkanoic acids: sources, structure, properties, test, uses",
+      "subtopic_id": "functional-groups.alkanoic-acids",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2",
+      "text": "Alkanoates: preparation, nomenclature, properties, hydrolysis",
+      "subtopic_id": "functional-groups.esters",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3",
+      "text": "Fats and oils: saponification, hardening, soap and detergents, test for fats",
+      "subtopic_id": "biomolecules.fats-soaps",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4",
+      "text": "Amino acids and proteins: properties, tests, uses",
+      "subtopic_id": "biomolecules.proteins",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5",
+      "text": "Natural and synthetic polymers: addition and condensation, plastics, resins, thermoplastics, thermosets",
+      "subtopic_id": "biomolecules.polymers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6",
+      "text": "Carbohydrates: sources, classes, glucose from starch, tests; synthetic polymers such as nylon; garri production",
+      "subtopic_id": "biomolecules.carbohydrates",
+      "status": "partial",
+      "note": "Split, nothing missing: carbohydrates in biomolecules.carbohydrates, nylon in biomolecules.polymers, garri in industry.biotechnology.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7",
+      "text": "Metals: general characteristics, abundance, principles of extraction, sodium",
+      "subtopic_id": "metals.general",
+      "status": "partial",
+      "note": "Split, nothing missing: characteristics in metals.general, extraction principles in metals.extraction, sodium in common-metals.sodium.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W8",
+      "text": "Calcium and aluminium: extraction, properties, compounds, uses",
+      "subtopic_id": "common-metals.calcium",
+      "status": "partial",
+      "note": "Split, nothing missing: calcium in common-metals.calcium, aluminium in common-metals.aluminium.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W9",
+      "text": "Tin; transition metals; extraction and uses of copper",
+      "subtopic_id": "metals.transition",
+      "status": "partial",
+      "note": "Split, nothing missing: transition metals in metals.transition, tin and copper in common-metals.copper-tin.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W10",
+      "text": "Iron: properties, extraction, rusting and prevention, alloys",
+      "subtopic_id": "common-metals.iron",
+      "status": "partial",
+      "note": "Split, nothing missing: iron in common-metals.iron, rusting in electrochemistry.corrosion, alloys in metals.alloys.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W1",
+      "text": "Nuclear chemistry: nuclear against chemical reactions, half-life",
+      "subtopic_id": "nuclear.reactions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2",
+      "text": "Nuclear reaction: fission and fusion, natural and artificial radioactivity, detection, effects and applications",
+      "subtopic_id": "nuclear.radioactivity",
+      "status": "partial",
+      "note": "Split, nothing missing: radioactivity, detection and uses in nuclear.radioactivity, fission and fusion in nuclear.reactions.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3",
+      "text": "Shapes of molecules: hybridisation, sigma and pi bonds, simple shapes",
+      "subtopic_id": "bonding.shapes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W4",
+      "text": "Petroleum: origin, exploration, fractional distillation, refineries, cracking, reforming",
+      "subtopic_id": "hydrocarbons.petroleum",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5",
+      "text": "Volumetric analysis: indicators, pH ranges, titration determinations",
+      "subtopic_id": "acids-bases.titration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6",
+      "text": "Qualitative analysis: cations and anions, gases, flame test, tests for starch, sugar, protein, fats; hydrolysis of salts",
+      "subtopic_id": "practical.qualitative",
+      "status": "partial",
+      "note": "Split, nothing missing: ions, gases and flame test in practical.qualitative, food tests in biomolecules.carbohydrates, biomolecules.proteins and biomolecules.fats-soaps, hydrolysis in acids-bases.hydrolysis.",
+      "proposed": ""
+    }
+  ],
+  "unmapped_subtopics": [],
+  "summary": {
+    "wassce": {
+      "covered": 198,
+      "partial": 34,
+      "missing": 11
+    },
+    "utme": {
+      "covered": 95,
+      "partial": 26,
+      "missing": 0
+    },
+    "sow": {
+      "covered": 42,
+      "partial": 33,
+      "missing": 0
+    }
+  },
+  "taxonomy_version": "1.1",
+  "sources": {
+    "wassce": "syllabi\\chemistry-waec.txt",
+    "utme": "syllabi\\chemistry-jamb.txt",
+    "sow": "syllabi\\chemistry-sow.txt"
+  }
+}

@@ -1,0 +1,683 @@
+{
+  "subject": "Literature in English",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "First tree for Literature in English. Parent topics follow JAMB's five numbered topics (Drama, Prose, Poetry, General Literary Principles, Literary Appreciation) and the sections of WAEC's three papers (general knowledge, unseen prose and poem, the Shakespearean text, African and non-African prose, drama and poetry), merged where the two name the same content, in the order the SS1 to SS3 scheme of work teaches them. The general knowledge that WAEC Paper 1 gives twenty questions to is split into introduction to literature, figures of speech and general literary terms, because each is a separate block of lessons in SS1 and a student can be strong in one and weak in another. Prescribed texts are the design choice that matters most. The text lists change every five years: the 2025 papers were set on the 2021-2025 list (The Lion and the Jewel, Look Back in Anger, A Midsummer Night's Dream, Wuthering Heights, Second Class Citizen, Unexpected Joy at Dawn), none of which is on the 2026-2030 list. So no subtopic is named for a title. Prescribed texts sit under four parents by the syllabus's own slots (plays, the Shakespearean text, prose, poems), and each parent splits by what a question asks of the text: plot, characters, themes, setting and background, and style. Those are the headings both syllabi name for textual analysis, and they are the headings a teacher revises a set book under, so the tree stays valid when the list changes and mastery on 'characters in the prescribed novels' means the same thing in 2025 and 2030. The title a question is set on belongs on the question record, not in the tree. Version 1.1 revises 1.0 from its coverage map and its placement test on 80 UTME and 80 WAEC questions: one subtopic added (appreciation.method), missing terms added to existing covers lines, and sorting rules added on every border the two placers split on. No id is removed or merged. The live database has no Literature in English topics, so there is nothing to fold. Nothing in the database is changed by this file.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC Literature-in-English examination syllabus, WASSCE: aims and objectives, scheme of examination (Papers 1 to 3), and the harmonized list of prescribed texts and poems for 2026-2030",
+        "retrieved_from": "https://waecsyllabus.com/download/ssce/LITERATURE%20IN%20ENGLISH.pdf, with aims and scheme of examination from https://waecsyllabus.com/literature-in-english/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party hosted. The PDF carries WAEC's Test Development Division letterhead but was reached through waecsyllabus.com, which states it is not affiliated with WAEC. The paper structure matches an older 2021-2025 copy on myschoolgist.com in near-identical wording. The syllabus gives no itemised content for Paper 1's general knowledge questions, so WAEC references for general subtopics cite the paper section and the aims."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME Literature in English syllabus: general objectives, five topics with contents and objectives, prescribed texts, recommended anthologies and critical texts",
+        "retrieved_from": "https://jambsyllabus.com/literature-in-english/ for topic contents and objectives; https://allschool.ng/jamb-syllabus-for-literature-in-english/ for the prescribed texts",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Two third-party copies of the IBASS syllabus, matching near word for word on objectives and the five topics. The prescribed-text list is from one source only and matches the WAEC 2026-2030 list closely."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Senior secondary Literature in English scheme of work, SS1 to SS3, term by term (NERDC-based, Lagos-area)",
+        "retrieved_from": "https://edudelight.com/literature-in-english-scheme-of-work-ss1-ss2-ss3-first-term-to-third-term/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Eight of nine terms found; SS3 is revision and past questions. Its set texts are the 2021-2025 cycle's, which is how the 2025 sample questions line up with it. Used for teaching order and the taught_in fields."
+      }
+    ],
+    "scope_rule": "WAEC's objective paper tests only general knowledge of literature, an unseen prose passage, an unseen poem and the Shakespearean text; the other prescribed prose, drama and poetry are examined by WAEC only in the essay Papers 2 and 3. JAMB's objective paper tests all prescribed texts, and the 2025 UTME paper did (Q1 to Q30). So all four prescribed-text parents are in the tree, and they cite WAEC Papers 2 and 3 as the WAEC reference. Real papers also test content neither syllabus lists, and it is placed where it lands: literary periods and movements (UTME 2025 Q29 Modernist, Q32 Romantic poetry) and the canon (WAEC 2025 Q13) under literature.history; the limerick (UTME 2025 Q31), which is missing from JAMB's list of types, under poetry.types; parts of the stage (WAEC 2025 Q5 proscenium) and the cast (UTME 2025 Q38) under drama.theatre; peripeteia (UTME 2025 Q33) under drama.types; pathos (UTME 2025 Q39) under terms.elements; zeugma and chiasmus (WAEC 2025 Q2 options) under figures.arrangement; and a prescribed author's life (UTME 2025 Q12, Emily Bronte's age at death) under set-prose.setting. The 1.1 placement test found more of the same, placed the same way: trilogy under literature.history; juxtaposition under figures.arrangement; epitaph and hymn under poetry.types; playlet and pantomime under drama.types; dramatis personae under drama.techniques; the literary movement of a prescribed play or novel under set-drama.setting and set-prose.setting; and the occasion of a Shakespeare extract under shakespeare.setting. WAEC sets unseen prose and poetry only; JAMB also sets unseen drama extracts, which go under the same appreciation subtopics because the skill is the same.",
+    "provenance_note": "All three sources are third-party copies. See each document's note."
+  },
+  "how_to_use": "Place a question by what a student must know to answer it, not by words in the stem. Apply these in order. First: a question that quotes a line or gives a short example and asks which figure of speech or literary term it illustrates goes to the subtopic of the correct answer (under figures, terms, drama, prose or poetry), whatever passage or prescribed text the line comes from; this rule needs the answer key. Second: a question about a prescribed text, meaning a text on the prescribed list for that paper's year, goes to set-drama, shakespeare, set-prose or set-poems, with the subtopic chosen by what is asked, whether the question names the text, its author or its characters or is set on an extract from it. A passage that only names its source, as JAMB appreciation extracts often do, is not prescribed unless its text is on that year's list. Third: any other question on an unseen passage goes to appreciation, except that naming the kind of an unseen text (a sonnet, an elegy, a farcical or tragic extract, a didactic or Romantic poem) goes to drama.types, prose.types or poetry.types, and naming its rhyme scheme, metre, stanza form or point of view goes to poetry.versification or prose.narrative. Fourth: a question that asks what a term means, standalone, goes to that term's home. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins. Record the title a prescribed-text question is set on with the question, since the tree does not name titles.",
+  "topics": [
+    {
+      "id": "literature",
+      "name": "Introduction to literature",
+      "part": "Foundations",
+      "syllabus": {
+        "waec": "Aims (a)-(c); Paper 1, general knowledge of literature",
+        "jamb": "Topic 4, General literary principles"
+      },
+      "subtopics": [
+        {
+          "id": "literature.nature",
+          "name": "What literature is and what it does",
+          "syllabus": {
+            "waec": "Aims (a)-(b); Paper 1, general knowledge of literature",
+            "jamb": "General objective (b), the functions of language; Topic 4, literary principles: direct imitation in play, versification in drama and poetry, narration of people's experiences, achievement of aesthetic value; relationship between literary terms and principles; differentiate between literary terms and principles"
+          },
+          "covers": "Definitions of literature, its functions and importance, Literature in English against English literature, oral and written literature, the functions of language in literature (to inform, to express feeling, to persuade, to give pleasure), and JAMB's general principles of literature: imitation in drama, versification in poetry and drama, narration of experience in prose, and aesthetic value, including what aesthetics is concerned with (UTME 2025 Q34) and what makes a work of non-fiction literary (UTME placement test Q72). Also the relationship between literary terms and literary principles, and how to tell a term (a named device or element, such as metaphor, soliloquy or plot) from a principle (a general truth about how literature works, such as imitation or aesthetic value). Sorting rule: a principle asked as a principle goes here; the features that tell the three genres apart go to literature.genres; periods, movements, the canon and criticism go to literature.history; what makes any writing count as literature goes here even when the example is a kind of prose such as autobiography, while what defines that kind goes to prose.types.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "literature.genres",
+          "name": "The genres of literature compared",
+          "syllabus": {
+            "waec": "Aims (c); Paper 1, general knowledge of literature",
+            "jamb": "Topic 4, literary terms in drama, prose and poetry"
+          },
+          "covers": "The distinct features of drama, prose and poetry, how they are alike and how they differ, the mode of appeal of each (drama reaches its audience through performance, prose through narration to a reader, poetry through sound, rhythm and compressed language), and the unit each is built from: act and scene, chapter, stanza and line, as in 'chapter is to prose as stanza is to poetry' (WAEC 2025 Q17). Sorting rule: a comparison across genres, or matching a unit to its genre, goes here; the kinds within one genre go to drama.types, prose.types or poetry.types.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "literature.history",
+          "name": "Literary periods, movements, criticism and collections",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature",
+            "jamb": null
+          },
+          "covers": "Periods and movements and what marks each: Renaissance, Neoclassical, Romantic, Victorian, Modernist, Negritude, such as the Romantic poets' love of nature (UTME 2025 Q32); the vocabulary of criticism: canon (WAEC 2025 Q13), critic and criticism; and the words for collections and groups of works: anthology (works by several writers gathered in one book), collection, trilogy (three related works, UTME placement test Q7) and series. No item of either syllabus or the scheme of work maps here; the subtopic is kept because real papers test it. Sorting rule: a movement's general features go here; the period or movement of a named prescribed poem goes to set-poems.background, of a prescribed play to set-drama.setting, and of a prescribed novel to set-prose.setting; the kind of an unseen poem goes to poetry.types even when the options name movements such as metaphysical or romantic (WAEC placement test Q74).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "figures",
+      "name": "Figures of speech",
+      "part": "Foundations",
+      "syllabus": {
+        "waec": "Aims (b); Paper 1, general knowledge of literature, unseen prose and unseen poem",
+        "jamb": "Topic 4, literary terms (figures of speech); Topic 1, dramatic techniques (figures of speech); Topic 3, poetic devices (sound)"
+      },
+      "subtopics": [
+        {
+          "id": "figures.comparison",
+          "name": "Figures of comparison and association",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature, unseen prose and unseen poem",
+            "jamb": "Topic 4, literary terms (figures of speech)"
+          },
+          "covers": "Simile, metaphor, personification, apostrophe, conceit, pathetic fallacy, transferred epithet, allusion, metonymy and synecdoche: what each is and recognising it in a line, and what a common allusion refers to even with no passage, such as the wafer as holy communion (UTME placement test Q12). Tested in WAEC 2025 Q6, Q15, Q20 and Q44. Sorting rule: a question that asks which figure a quoted line illustrates goes to the subtopic of the correct answer, even when the line comes from an unseen passage or a prescribed text; when a quoted image can be read either as a figure of comparison or as a symbol, as in 'Even the corpses thrown up by the Atlantic' (UTME 2023 Q36), the answer key decides: metaphor, metonymy or allusion comes here, symbol goes to terms.modes; what the image means in its passage goes to appreciation or to the prescribed text's subtopic; images grouped by sense (sight, hearing) go to poetry.imagery.",
+          "taught_in": []
+        },
+        {
+          "id": "figures.contrast",
+          "name": "Figures of contrast, exaggeration and understatement",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature, unseen prose and unseen poem",
+            "jamb": "Topic 4, literary terms (figures of speech)"
+          },
+          "covers": "Verbal and situational irony, sarcasm, paradox, oxymoron, antithesis, hyperbole, litotes, meiosis and euphemism. Tested in WAEC 2025 Q12 and Q22 and UTME 2025 Q35. Sorting rule: the figure a quoted line illustrates goes to the subtopic of the correct answer; dramatic irony goes to drama.techniques; satire and parody as modes go to terms.modes; antithesis, opposed ideas set in balanced phrases, stays here, but juxtaposition, placing two things side by side, goes to figures.arrangement even when the two things contrast.",
+          "taught_in": []
+        },
+        {
+          "id": "figures.sound",
+          "name": "Sound and word play",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature, unseen poem",
+            "jamb": "Topic 3, poetic devices: sound (pun, onomatopoeia); Topic 4, figures of speech"
+          },
+          "covers": "Alliteration, assonance, consonance, onomatopoeia, pun and malapropism. Tested in WAEC 2025 Q2 and Q4. Sorting rule: rhyme, rhythm and metre go to poetry.versification; repetition of words or sentence patterns goes to figures.arrangement.",
+          "taught_in": []
+        },
+        {
+          "id": "figures.arrangement",
+          "name": "Figures of repetition and arrangement",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature, unseen prose and unseen poem",
+            "jamb": "Topic 3, poetic devices: sound (repetition); Topic 4, figures of speech"
+          },
+          "covers": "Repetition, anaphora, parallelism, juxtaposition (placing two things side by side for effect, UTME placement test Q36), chiasmus, zeugma, rhetorical question, climax as rhetorical gradation (a rising series of words, clauses or images within a sentence or passage, WAEC placement test Q26) and anticlimax, inversion and epigram. Tested in WAEC 2025 Q16, Q23 and Q28. Sorting rule: the figure a quoted line illustrates goes to the subtopic of the correct answer; a refrain as part of a poem's form goes to poetry.versification; climax as the turning point or peak of a story's events goes to terms.plot; juxtaposition comes here even when the two things contrast, while antithesis goes to figures.contrast.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "terms",
+      "name": "General literary terms",
+      "part": "Foundations",
+      "syllabus": {
+        "waec": "Aims (b); Paper 1, general knowledge of literature",
+        "jamb": "Topic 4, literary terms; Topic 2, characterisation"
+      },
+      "subtopics": [
+        {
+          "id": "terms.character",
+          "name": "Character and characterisation",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature",
+            "jamb": "Topic 2, characterisation (round, flat, foil, hero, antihero); Topic 4, protagonist, antagonist"
+          },
+          "covers": "Protagonist, antagonist, hero, antihero, foil (WAEC 2025 Q11), round and flat, static and dynamic, stock character, caricature and confidant, and the ways a writer reveals character. Sorting rule: the tragic hero and his flaw go to drama.types; a character against an actor in performance goes to drama.theatre; what a named character in a prescribed text is like goes to that text's characters subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "terms.plot",
+          "name": "Plot and structure",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature",
+            "jamb": "Topic 4, foreshadowing, suspense; Topic 1, dramatic techniques (flashback)"
+          },
+          "covers": "Plot against story, exposition, conflict, rising action, climax, falling action, denouement and resolution (UTME 2025 Q40), suspense, foreshadowing, flashback, in medias res, subplot, linear, episodic and cyclic plots, and deus ex machina. Sorting rule: these terms go here even when the stem speaks of a play or a novel; climax as the turning point or peak of a story's events (WAEC placement test Q79) comes here, while climax as a rising series within one sentence or one list of images goes to figures.arrangement; prologue and epilogue go to drama.techniques whatever genre the stem names, while exposition as the opening stage of a plot stays here; peripeteia and the other terms of tragedy go to drama.types; the plot of a named prescribed text goes to that text's plot subtopic, and its kind of plot to its style subtopic.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "terms.elements",
+          "name": "Theme, setting, tone and mood",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature",
+            "jamb": "Topic 1 and Topic 2, theme, setting (temporal and spatial); Topic 3, appreciation (style)"
+          },
+          "covers": "The terms a student analyses with: theme and subject matter, setting in time, place and society, atmosphere, tone as the writer's or speaker's attitude (WAEC 2025 Q3), mood, pathos (UTME 2025 Q39), bathos, style, and diction as a general term, the writer's choice of words and its two parts, vocabulary and syntax (WAEC placement test Q30). Includes naming setting as the term an example illustrates (WAEC 2025 Q7). Sorting rule: what the term means goes here; the tone or mood of a given unseen passage goes to appreciation.tone-mood, and of a prescribed poem to set-poems.tone-mood; diction asked as a general term comes here, while the special diction and syntax of poetry go to poetry.imagery.",
+          "taught_in": []
+        },
+        {
+          "id": "terms.modes",
+          "name": "Satire, symbolism, allegory and other modes",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature",
+            "jamb": "Topic 4, symbolism, satire"
+          },
+          "covers": "Satire, lampoon, parody, burlesque, allegory, symbolism and symbol, motif, didacticism, realism, poetic justice and anachronism. Includes naming a symbol as symbolic in a passage (UTME 2025 Q37). Sorting rule: irony and sarcasm as figures go to figures.contrast; fable, parable and folktale as kinds of story go to prose.types; what a symbol means in its passage goes to appreciation.meaning or the prescribed text's subtopic; when a quoted image can be read either as a symbol or as a figure of comparison (UTME 2023 Q36), the answer key decides: symbol comes here, metaphor, metonymy or allusion goes to figures.comparison; the kind of an unseen poem goes to poetry.types even when the options are modes such as didactic or allegorical (WAEC placement test Q74).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "drama",
+      "name": "Drama",
+      "part": "The genres",
+      "syllabus": {
+        "waec": "Paper 1, general knowledge of literature; Paper 3, Sections A-B",
+        "jamb": "Topic 1, Drama"
+      },
+      "subtopics": [
+        {
+          "id": "drama.types",
+          "name": "Types of drama",
+          "syllabus": {
+            "waec": "Aims (c); Paper 1, general knowledge of literature",
+            "jamb": "Topic 1, types of drama: tragedy, comedy, tragicomedy, melodrama, farce, opera"
+          },
+          "covers": "Tragedy, comedy, tragicomedy, melodrama, farce, opera, masque, closet drama, the playlet or one-act play (WAEC placement test Q14) and pantomime, a play told entirely through gesture (WAEC placement test Q60), their features and how they differ, and the terms of tragedy: tragic hero, hamartia, hubris, catharsis, peripeteia (UTME 2025 Q33) and anagnorisis. Sorting rule: peripeteia and catharsis go here even when the stem says literary criticism; the other plot terms go to terms.plot; pantomime as a kind of play comes here, while mime as a technique inside a play goes to drama.techniques; a type-word such as farcical or tragic applied to an unseen extract comes here, but applied to an extract from a text on that paper's prescribed list (UTME 2020 Q18) it goes to set-drama.style or shakespeare.style, as does the type of a named prescribed play.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "drama.techniques",
+          "name": "Dramatic techniques",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature",
+            "jamb": "Topic 1, dramatic techniques: dialogue, flashback, mime, music and dance, acts and scenes, soliloquy and aside; Topic 4, monologue, dialogue, soliloquy"
+          },
+          "covers": "The devices written into a play: dialogue, monologue, soliloquy, aside (WAEC 2025 Q9), dramatic irony, comic relief, chorus, play within a play, mime, music and dance, prologue and epilogue, including as the opening and closing section of a novel or poem (WAEC placement test Q5), acts and scenes, interlude, curtain raiser, stage directions (WAEC 2025 Q10), and the dramatis personae, the list of characters printed at the head of the script (WAEC placement test Q71). Sorting rule: what is written in the script goes here; the stage, the people who stage a play and the materials of performance go to drama.theatre; the dramatis personae comes here, while the cast who play those characters go to drama.theatre; mime as a technique comes here, pantomime as a kind of play goes to drama.types; prologue and epilogue stay here whatever genre the stem names; flashback and foreshadowing go to terms.plot.",
+          "taught_in": []
+        },
+        {
+          "id": "drama.theatre",
+          "name": "The theatre and performance",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature",
+            "jamb": "Topic 1, dramatic techniques: costume, decor and scenery"
+          },
+          "covers": "Parts of the stage and theatre: proscenium (WAEC 2025 Q5), apron, wings, backstage, upstage and downstage; the people: playwright, director, producer, prompter, cast (UTME 2025 Q38), actors and audience, including characters in a script against the actors who play them (WAEC 2025 Q8); and the materials: props, costume, decor and scenery, backdrop, lighting, the prompt book, rehearsal and curtain call. Sorting rule: stage directions, asides and the dramatis personae, as parts of the script, go to drama.techniques.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "prose",
+      "name": "Prose",
+      "part": "The genres",
+      "syllabus": {
+        "waec": "Paper 1, general knowledge of literature; Paper 2",
+        "jamb": "Topic 2, Prose"
+      },
+      "subtopics": [
+        {
+          "id": "prose.types",
+          "name": "Types of prose",
+          "syllabus": {
+            "waec": "Aims (c); Paper 1, general knowledge of literature",
+            "jamb": "Topic 2, types: fiction (novel, novella, short story), non-fiction (biography, autobiography, memoir), faction"
+          },
+          "covers": "Fiction and non-fiction, the novel, novella and short story, biography, autobiography and memoir, faction, kinds of novel (epistolary, picaresque, gothic, historical, sociological, political, science fiction), and fable, parable, folktale, myth and legend. Sorting rule: the category a named prescribed text belongs to goes to set-prose.style; allegory as a mode goes to terms.modes; what defines a kind of prose comes here, while what makes non-fiction count as literature at all (UTME placement test Q72) goes to literature.nature.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "prose.narrative",
+          "name": "Narrative techniques and point of view",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature, unseen prose",
+            "jamb": "Topic 2, narrative techniques: point of view (omniscient or third person, first person), language; Topic 4, stream of consciousness"
+          },
+          "covers": "Point of view (first person, third person, omniscient, limited), the narrator and narrative voice, reliable and unreliable narrators, stream of consciousness, interior monologue and the frame story, including naming the point of view of an unseen passage; and language as a narrative technique: the narrator's register, dialogue against narration, and the use of dialect, pidgin or proverbs to tell a story. Sorting rule: an epistolary novel as a kind goes to prose.types; flashback and foreshadowing go to terms.plot; what diction means in general goes to terms.elements; the narrative technique or language of a named prescribed text goes to set-prose.style.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "poetry",
+      "name": "Poetry",
+      "part": "The genres",
+      "syllabus": {
+        "waec": "Paper 1, general knowledge of literature, unseen poem; Paper 3, Sections C-D",
+        "jamb": "Topic 3, Poetry"
+      },
+      "subtopics": [
+        {
+          "id": "poetry.types",
+          "name": "Types of poetry",
+          "syllabus": {
+            "waec": "Aims (c); Paper 1, general knowledge of literature, unseen poem",
+            "jamb": "Topic 3, types: sonnet, ode, lyric, elegy, ballad, panegyric, epic, blank verse"
+          },
+          "covers": "Sonnet, ode, lyric, elegy and dirge, epitaph (WAEC placement test Q18), hymn (WAEC placement test Q34), ballad, panegyric, epic and its themes (WAEC 2025 Q1), blank verse, free verse, limerick (UTME 2025 Q31), pastoral, lullaby, dramatic monologue and haiku: their features and how they differ, including naming the kind of an unseen poem (WAEC 2025 Q26). Sorting rule: the parts of a form, such as the octave of a sonnet, go to poetry.versification; the kind of an unseen poem comes here however the options name it, by form, by mode (didactic, allegorical) or by movement (metaphysical, romantic) (WAEC placement test Q74); the kind of a named prescribed poem goes to set-poems.form.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "poetry.versification",
+          "name": "Rhyme, rhythm, metre and stanza",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature, unseen poem",
+            "jamb": "Topic 3, poetic devices: structure; sound (rhyme, rhythm)"
+          },
+          "covers": "Rhyme and rhyme scheme, internal rhyme, rhythm, metre and feet (iamb, trochee, pentameter), scansion, stanza forms (couplet, tercet, quatrain, octave, sestet), refrain, enjambment, caesura, and run-on and end-stopped lines, including naming the rhyme scheme, metre or stanza form of an unseen poem (WAEC placement test Q16, Q40 and Q56). Sorting rule: alliteration, assonance and other sound figures go to figures.sound; blank verse and free verse as kinds of poem go to poetry.types; naming the rhyme scheme or metre of an unseen poem comes here, while the effect of that rhyme or rhythm in the poem goes to appreciation.technique.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "poetry.imagery",
+          "name": "Imagery, diction and persona",
+          "syllabus": {
+            "waec": "Paper 1, general knowledge of literature, unseen poem",
+            "jamb": "Topic 3, poetic devices: imagery, diction, persona"
+          },
+          "covers": "Kinds of imagery by sense (visual, auditory, tactile, olfactory, gustatory), poetic diction, the persona or poetic speaker, poetic licence and the special syntax of poetry. Sorting rule: a named figure such as a simile or metaphor goes to figures.comparison; a symbol goes to terms.modes; diction asked as a general literary term, not tied to poetry (WAEC placement test Q30), goes to terms.elements; which images dominate a given unseen poem goes to appreciation.technique.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "set-drama",
+      "name": "Prescribed drama texts",
+      "part": "Prescribed texts",
+      "syllabus": {
+        "waec": "Paper 3, Section A (African drama) and Section B (non-African drama)",
+        "jamb": "Topic 1, interpretation of the prescribed texts"
+      },
+      "subtopics": [
+        {
+          "id": "set-drama.plot",
+          "name": "Plot and events",
+          "syllabus": {
+            "waec": "Paper 3, Sections A-B",
+            "jamb": "Topic 1, interpretation of the prescribed texts: plot"
+          },
+          "covers": "For the prescribed African and non-African plays other than the Shakespearean text (for 2026-2030, The Marriage of Anansewa, Once Upon an Elephant, An Inspector Calls and A Man for All Seasons): what happens, in what order, why and with what result, what happens in or just before or after an extract, and who does a deed or to whom something happens. Sorting rule: who a character is or what they are like goes to set-drama.characters; the kind of plot goes to set-drama.style; a clash of ideas or forces goes to set-drama.themes.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "set-drama.characters",
+          "name": "Characters and relationships",
+          "syllabus": {
+            "waec": "Paper 3, Sections A-B",
+            "jamb": "Topic 1, dramatic techniques: characterisation"
+          },
+          "covers": "Who each character is (name, nickname, age, job, family), their traits, feelings and motives, their relationships, what one character says of another, the speaker or addressee of an extract, and what a character stands for or the role they serve in the play, such as the Madman as a symbolic, ironical or satirical figure (UTME 2021 Q17). Tested in UTME 2025 Q5, Q7 and Q8. Sorting rule: what a character does or what happens to them goes to set-drama.plot; the meaning of a character-type term goes to terms.character; what a character stands for or their function in the play comes here, while a symbol that is an object, place or event goes to set-drama.style.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "set-drama.themes",
+          "name": "Themes and lessons",
+          "syllabus": {
+            "waec": "Paper 3, Sections A-B",
+            "jamb": "Topic 1, interpretation of the prescribed texts: theme; apply the lessons of the play to everyday living"
+          },
+          "covers": "The themes of the play, its central conflict as a clash of ideas or forces, the playwright's message and its lessons for everyday life. Tested in UTME 2025 Q1, Q3 and Q6. Sorting rule: a struggle between two ideas or forces, such as the old and the new, goes here even when the options name characters; a quarrel between characters as an event goes to set-drama.plot.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "set-drama.setting",
+          "name": "Setting and background",
+          "syllabus": {
+            "waec": "Paper 3, Sections A-B",
+            "jamb": "Topic 1, interpretation of the prescribed texts: setting, socio-political context; spatial and temporal setting"
+          },
+          "covers": "Where and when the play and its scenes take place, its social, political and cultural background, the customs, objects and names of the play's world, such as the drums in UTME 2025 Q4, the playwright's life and background, and the period or literary movement the play belongs to, such as Kitchen Sink drama or the Angry Young Men (UTME placement test Q63). Sorting rule: where an event happens goes here; what happens there goes to set-drama.plot; the movement of a named prescribed play comes here, while a movement's features asked in general go to literature.history; what kind of play it is (tragedy, farce) goes to set-drama.style.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "set-drama.style",
+          "name": "Type, technique and language",
+          "syllabus": {
+            "waec": "Paper 3, Sections A-B",
+            "jamb": "Topic 1, demonstrate knowledge of dramatic techniques used in each prescribed text; differentiate the styles of selected playwrights"
+          },
+          "covers": "What kind of play it is (UTME 2025 Q2), including a type-word such as farcical applied to an extract from the play, the dramatic techniques the playwright uses, its symbols and symbolism, its structure, its language and humour, and the playwright's style. Sorting rule: the figure a quoted line illustrates goes to figures; what a type of drama is, asked in general or of an unseen extract, goes to drama.types; what a character stands for or their function in the play (UTME 2021 Q17) goes to set-drama.characters; the play's period or movement goes to set-drama.setting.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "shakespeare",
+      "name": "The Shakespearean text",
+      "part": "Prescribed texts",
+      "syllabus": {
+        "waec": "Paper 1, twenty context questions on the prescribed Shakespearean text; Note (context questions only, testing theme, characterisation, style and setting)",
+        "jamb": "Topic 1, interpretation of the prescribed texts (the Shakespearean play is JAMB's non-African drama for 2026)"
+      },
+      "subtopics": [
+        {
+          "id": "shakespeare.plot",
+          "name": "Plot and events",
+          "syllabus": {
+            "waec": "Paper 1, Shakespearean text context questions",
+            "jamb": "Topic 1, interpretation of the prescribed texts: plot"
+          },
+          "covers": "For whichever Shakespeare play a paper was set on (Antony and Cleopatra for 2026-2030; A Midsummer Night's Dream in the 2025 papers; Othello, The Tempest and others in older papers), and the same for every shakespeare subtopic: what happens and in what order, what the speaker is doing in an extract, what has just happened or happens next, who speaks next, who does a deed or to whom something happens, the person or thing at whom a speaker's action is directed (WAEC 2025 Q39), and what a word such as 'this' or 'it' in an extract refers to when it points to an event or deed (WAEC 2018 Q43). Tested in WAEC 2025 Q34, Q37, Q39, Q43, Q45 and Q47. Sorting rule: who speaks or is addressed in a quoted extract goes to shakespeare.characters; who speaks after it goes here; when the speaker acts on the addressee, at whom the action is directed comes here and to whom the words are spoken goes to shakespeare.characters; what a pronoun refers to comes here when it is an event, while what an archaic or figurative word means goes to shakespeare.style; the occasion of an extract goes to shakespeare.setting.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "shakespeare.characters",
+          "name": "Characters and relationships",
+          "syllabus": {
+            "waec": "Paper 1, Shakespearean text context questions (characterisation)",
+            "jamb": "Topic 1, dramatic techniques: characterisation"
+          },
+          "covers": "Identifying the speaker and addressee of an extract, who each character is, their family ties, other names and the roles they play, their traits and motives, what a line reveals about its speaker (WAEC placement test Q24), and their relationships. Tested in WAEC 2025 Q31, Q32, Q35, Q36, Q38, Q40 to Q42, Q46 and Q48 to Q50, and UTME 2025 Q9 and Q10. Sorting rule: what a character does in the extract, or what happens to them, goes to shakespeare.plot; why they do it goes here; when the speaker acts on the addressee, to whom the words are spoken comes here and at whom the action is directed (WAEC 2025 Q39) goes to shakespeare.plot; what a line reveals about the speaker's nature comes here, not to shakespeare.style.",
+          "taught_in": []
+        },
+        {
+          "id": "shakespeare.themes",
+          "name": "Themes and ideas",
+          "syllabus": {
+            "waec": "Paper 1, Shakespearean text context questions (theme)",
+            "jamb": "Topic 1, interpretation of the prescribed texts: theme"
+          },
+          "covers": "The play's themes and ideas, such as reality and illusion (UTME 2025 Q11), what an extract shows about a theme, and the play's lessons. Sorting rule: the kind of play goes to shakespeare.style.",
+          "taught_in": []
+        },
+        {
+          "id": "shakespeare.setting",
+          "name": "Setting and background",
+          "syllabus": {
+            "waec": "Paper 1, Shakespearean text context questions (setting)",
+            "jamb": "Topic 1, interpretation of the prescribed texts: setting, socio-political context"
+          },
+          "covers": "Where and when the play and each extract are set (WAEC 2025 Q33), the occasion of an extract, such as the royal wedding celebration (WAEC 2021 Q49), its historical and social background, and Shakespeare's life and theatre. Sorting rule: where an extract takes place, and the occasion it belongs to, go here; what happens in it goes to shakespeare.plot.",
+          "taught_in": []
+        },
+        {
+          "id": "shakespeare.style",
+          "name": "Type, language and style",
+          "syllabus": {
+            "waec": "Paper 1, Shakespearean text context questions (style)",
+            "jamb": "Topic 1, dramatic techniques used in each prescribed text"
+          },
+          "covers": "The kind of play, including a type-word applied to an extract from it, verse and prose in the play, the meaning of an archaic or figurative word or line in Shakespeare's English, imagery, and techniques such as the play within a play. Sorting rule: naming the figure a quoted line illustrates goes to figures, as in WAEC 2025 Q44, and a question asking what a quoted speech can be described as, with options that are figures or literary terms (satire, parody, conceit, paradox; WAEC 2021 Q45), goes by the same rule to the correct answer's home; what a line means comes here; what a pronoun such as 'this' refers to goes to shakespeare.plot or shakespeare.characters; what a line reveals about its speaker goes to shakespeare.characters.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "set-prose",
+      "name": "Prescribed prose texts",
+      "part": "Prescribed texts",
+      "syllabus": {
+        "waec": "Paper 2, Section A (African prose) and Section B (non-African prose)",
+        "jamb": "Topic 2, textual analysis and narrative techniques of the prescribed texts"
+      },
+      "subtopics": [
+        {
+          "id": "set-prose.plot",
+          "name": "Plot and events",
+          "syllabus": {
+            "waec": "Paper 2, Sections A-B",
+            "jamb": "Topic 2, textual analysis: plot"
+          },
+          "covers": "For the prescribed African and non-African prose texts (for 2026-2030, So the Path Does Not Die, Redemption Road, To Kill a Mockingbird and Path of Lucas): what happens, in what order, why and with what result, and who does a deed or to whom something happens. Tested in UTME 2025 Q14, Q16 and Q17. Sorting rule: who a character is or what they are like goes to set-prose.characters; the kind of plot, such as linear or episodic, goes to set-prose.style; a character's main problem comes here only when the options name events, and otherwise goes to set-prose.themes or set-prose.characters.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "set-prose.characters",
+          "name": "Characters and relationships",
+          "syllabus": {
+            "waec": "Paper 2, Sections A-B",
+            "jamb": "Topic 2, characterisation; distinguish one type of character from another"
+          },
+          "covers": "Who each character is (name, nickname, age, job, family, and where they live or come from), their traits, feelings and motives, their relationships, their type (round, flat, foil) in the text, and what a character stands for. Tested in UTME 2025 Q15 and Q19. Sorting rule: what a character does or what happens to them goes to set-prose.plot; a character's home or origin (UTME placement test Q31 and Q48) comes here, while a place asked about in its own right, where the story opens or where an event happens, goes to set-prose.setting; what a character stands for comes here, while a symbol that is an object, place or event goes to set-prose.style.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "set-prose.themes",
+          "name": "Themes and lessons",
+          "syllabus": {
+            "waec": "Paper 2, Sections A-B",
+            "jamb": "Topic 2, textual analysis: theme; relate the prescribed text to real-life situations"
+          },
+          "covers": "The themes of the text and its dominant theme (UTME 2025 Q13), the author's message, its lessons for real life, and a character's main problem or struggle as a condition or idea, such as poverty or injustice (UTME placement test Q43). Sorting rule: a character's main problem comes here when the options name conditions or ideas, goes to set-prose.plot when they name events, and to set-prose.characters when they name traits.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "set-prose.setting",
+          "name": "Setting and background",
+          "syllabus": {
+            "waec": "Paper 2, Sections A-B",
+            "jamb": "Topic 2, textual analysis: setting (temporal and spatial), socio-political context"
+          },
+          "covers": "Where and when the story takes place, including where and when it opens (UTME 2025 Q20) and the places it names (Q21), the customs, ceremonies, objects and names of the story's world (UTME placement test Q59 and Q62), its social and political background, the period or literary movement it belongs to, and the author's life and background (UTME 2025 Q12). Sorting rule: where an event happens goes here; what happens there goes to set-prose.plot; where a named character lives or comes from goes to set-prose.characters; a movement's features asked in general go to literature.history.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "set-prose.style",
+          "name": "Type, narrative technique and language",
+          "syllabus": {
+            "waec": "Paper 2, Sections A-B",
+            "jamb": "Topic 2, identify the category of each prescribed text; narrative techniques used in each prescribed text; the author's narrative style"
+          },
+          "covers": "What kind of prose text it is, its point of view and narrator, its kind of plot (UTME 2025 Q18), its symbols and symbolism, its structure, language and the author's style. Sorting rule: the figure a quoted line illustrates goes to figures; what happens in the plot goes to set-prose.plot; what a character stands for goes to set-prose.characters.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T3",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "set-poems",
+      "name": "Prescribed poems",
+      "part": "Prescribed texts",
+      "syllabus": {
+        "waec": "Paper 3, Section C (African poetry) and Section D (non-African poetry)",
+        "jamb": "Topic 3, appreciation of the prescribed poems: thematic preoccupation, socio-political relevance, style"
+      },
+      "subtopics": [
+        {
+          "id": "set-poems.subject",
+          "name": "Subject matter and themes",
+          "syllabus": {
+            "waec": "Paper 3, Sections C-D",
+            "jamb": "Topic 3, appreciation: thematic preoccupation; deduce the poet's preoccupation"
+          },
+          "covers": "For the prescribed African and non-African poems (twelve for 2026-2030, from Once Upon a Time to The Stone): what the poem is about, the persona's situation, what happens in it, the figures in a narrative or allegorical poem other than the persona, such as the animals in an allegorical poem or the lady a serenade is sung to (UTME placement test Q52 and Q67), who they are and what they do, the poet's view or judgement of the subject, such as death as welcome (UTME placement test Q29), its themes and message, and its lessons. Tested in UTME 2025 Q27 and Q30. Sorting rule: the feeling or attitude the poem's voice carries goes to set-poems.tone-mood, while the poet's view of the subject, when the options state a judgement rather than a feeling, comes here; what a figure in an allegorical poem stands for goes to set-poems.form; why a named poem belongs to a movement, even when the reasons given are its themes (UTME 2022 Q6), goes to set-poems.background.",
+          "taught_in": [
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "set-poems.tone-mood",
+          "name": "Tone and mood",
+          "syllabus": {
+            "waec": "Paper 3, Sections C-D",
+            "jamb": "Topic 3, appreciation: style"
+          },
+          "covers": "The poem's tone, mood and the persona's attitude, and the note it ends on. Tested in UTME 2025 Q22 and Q26. Sorting rule: words that name a feeling or attitude (lamenting, reflective, optimistic, nostalgic) go here; words that name a kind of poem or its purpose (satirical, didactic, allegorical, symbolic) go to set-poems.form; the poet's view of the subject stated as a judgement, such as death as welcome (UTME placement test Q29), goes to set-poems.subject.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "set-poems.form",
+          "name": "Form, kind and devices",
+          "syllabus": {
+            "waec": "Paper 3, Sections C-D",
+            "jamb": "Topic 3, poetic devices: structure, imagery, sound, diction, persona; show how devices are used for effect in each poem"
+          },
+          "covers": "What kind of poem it is, including satirical, didactic or allegorical (UTME 2025 Q24 and Q25), its structure, rhyme and rhythm (Q23), its imagery, symbols (Q28) and diction, and the effect of each device, such as the repetition of a key word to stress the theme (UTME 2021 Q40). Sorting rule: naming the figure a quoted line illustrates goes to figures; the poem's period or movement goes to set-poems.background; the effect of a device in a prescribed poem comes here even when the stem quotes the lines as an extract, since appreciation.technique is for unseen poems only.",
+          "taught_in": [
+            "SS1 T2",
+            "SS1 T3",
+            "SS2 T1",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "set-poems.background",
+          "name": "The poet and background",
+          "syllabus": {
+            "waec": "Paper 3, Sections C-D",
+            "jamb": "Topic 3, appreciation: socio-political relevance"
+          },
+          "covers": "The poet's life and country, the period or movement the poem belongs to (UTME 2025 Q29) and the reasons it belongs there, such as what makes a poem a Negritude poem (UTME 2022 Q6), the occasion of the poem, and its social and political context. Sorting rule: a movement's features asked in general go to literature.history; why a named poem belongs to a movement comes here even when the reasons given are its themes, which otherwise go to set-poems.subject.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS1 T3",
+        "SS2 T1",
+        "SS2 T2",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "appreciation",
+      "name": "Literary appreciation: unseen passages",
+      "part": "Literary appreciation",
+      "syllabus": {
+        "waec": "Paper 1, five questions on an unseen prose passage (120-150 words) and five on an unseen poem; Aims (d)-(e)",
+        "jamb": "Topic 5, Literary appreciation: unseen passages and extracts from drama, prose and poetry"
+      },
+      "subtopics": [
+        {
+          "id": "appreciation.meaning",
+          "name": "Meaning and ideas in a passage",
+          "syllabus": {
+            "waec": "Paper 1, unseen prose and unseen poem",
+            "jamb": "Topic 5, provide a meaningful interpretation of the passage; relate it to true-life experiences"
+          },
+          "covers": "What an unseen passage or poem says, its subject and theme, the writer's intention or purpose, what the speaker or narrator is like, believes, wants or is doing (WAEC 2025 Q14), what can be inferred, and how it relates to life. Sorting rule: a question that asks for tone, mood or attitude, or whose options name a tone or feeling, or that asks which words signal a feeling (WAEC 2020 Q28), goes to appreciation.tone-mood; a question that asks for the writer's intention or purpose (WAEC placement test Q58) stays here even when the options are attitude words; naming the figure or term a quoted line illustrates goes to that term's home; a passage that names its source author or title, as JAMB extracts often do (UTME 2016 Q44), is unseen and stays here unless its text is on that paper's prescribed list, in which case it goes to the prescribed text's subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "appreciation.tone-mood",
+          "name": "Tone and mood in a passage",
+          "syllabus": {
+            "waec": "Paper 1, unseen prose and unseen poem",
+            "jamb": "Topic 5, determine the literary devices used in the passage"
+          },
+          "covers": "The tone of an unseen passage or poem, the speaker's or narrator's attitude and voice, the feeling it rouses in the reader, and which words in it signal a feeling, such as the two words that hint at the poet's unhappiness (WAEC 2020 Q28). Tested in WAEC 2025 Q19, Q21, Q24, Q25, Q27 and Q30 and UTME 2025 Q36. Sorting rule: what tone and mood mean, asked in general, goes to terms.elements; words picked because they carry a feeling come here, not to appreciation.technique; the writer's intention or purpose goes to appreciation.meaning even when the options are attitude words; the kind of an unseen text, such as a farcical extract or a didactic poem, goes to drama.types, prose.types or poetry.types.",
+          "taught_in": []
+        },
+        {
+          "id": "appreciation.technique",
+          "name": "Imagery and technique in a passage",
+          "syllabus": {
+            "waec": "Paper 1, unseen prose and unseen poem",
+            "jamb": "Topic 5, determine the literary devices used in the passage"
+          },
+          "covers": "Which images dominate a passage and which sense they appeal to (WAEC 2025 Q29), why a writer uses a word, image or structure, and what effect a device has in the passage. Sorting rule: naming which figure or term a quoted line illustrates goes to that term's home (figures, terms, drama, prose or poetry), and naming the rhyme scheme, metre or stanza form of an unseen poem goes to poetry.versification; the effect of a device in this passage goes here; words picked because they signal a feeling (WAEC 2020 Q28) go to appreciation.tone-mood; the effect of a device in a prescribed poem goes to set-poems.form.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "appreciation.method",
+          "name": "Method of appreciation and answering questions",
+          "syllabus": {
+            "waec": "Aims (e); Papers 2 and 3, essay questions; Paper 1, context questions",
+            "jamb": null
+          },
+          "covers": "What literary appreciation is, what to appreciate in a passage or text and how to go about it (subject matter, theme, setting, tone, technique and relevance to life), and how to answer Literature questions: reading the question, planning and organising an essay, supporting each point from the text with reference and quotation, and answering context questions on an extract. Taught in SS1 T1 week 2 and revised in SS3. The objective papers rarely test this directly; it exists for WAEC aim (e) and the essay Papers 2 and 3. Sorting rule: a question on a given passage goes to appreciation.meaning, appreciation.tone-mood or appreciation.technique; what literary appreciation is, or how to approach a passage or essay, asked in general, goes here.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1"
+      ]
+    }
+  ],
+  "legacy_note": "legacy-topics.json is empty: the live database holds no Literature in English topics, so there is nothing to fold and legacy_to is empty. When topics appear, the rule is the same as for other subjects. A specific name goes to the subtopic it matches, such as 'Figures of speech: metaphor' to figures.comparison. A generic name goes to its parent and is flagged for reclassification rather than guessed into a subtopic: 'Literature' or 'General questions' to literature, 'Drama', 'Prose' or 'Poetry' to that genre's parent, 'Unseen poetry' to appreciation. A name that is a prescribed title goes to the parent for its slot (set-drama, shakespeare, set-prose or set-poems), since the question could be on any aspect of the text.",
+  "legacy_to": {},
+  "merged_into": {}
+}

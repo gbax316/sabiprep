@@ -1,0 +1,2577 @@
+{
+  "items": [
+    {
+      "source": "wassce",
+      "ref": "A.1",
+      "text": "The Sovereignty of God (Gen. 1; 2)",
+      "subtopic_id": "sovereignty.creation",
+      "status": "covered",
+      "note": "Headline; sub-items map to sovereignty.creation and sovereignty.controller.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.1(a)",
+      "text": "God, the Creator (Gen. 1; 2)",
+      "subtopic_id": "sovereignty.creation",
+      "status": "partial",
+      "note": "Genesis 1 and 2 are held by sovereignty.creation, except Genesis 2:15-25 (the command about the tree of knowledge), which the sorting rule sends to obedience.fall, a subtopic with no WAEC reference. WAEC cites Genesis 2 nowhere else. Nothing is missing; the split crosses topics.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.1(b)",
+      "text": "God, the Controller of the universe",
+      "subtopic_id": "sovereignty.controller",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.2",
+      "text": "Leadership roles",
+      "subtopic_id": "leadership.joseph",
+      "status": "covered",
+      "note": "Headline; sub-items map to leadership.joseph, leadership.moses, leadership.joshua and leadership.deborah.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.2(a)",
+      "text": "Joseph (Gen. 37:1-28; 41:1-57; 45:1-15)",
+      "subtopic_id": "leadership.joseph",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.2(b)",
+      "text": "Moses (Exodus 1; 2; 3; 4:1-17; 5:1-5, 22-23; 6:28-30; 7:1-7; 14; 32:1-14; Numbers 13:1-33; 14:1-19)",
+      "subtopic_id": "leadership.moses",
+      "status": "partial",
+      "note": "Exodus 1-7 and Numbers 13:1-20, 14:1-19 are in leadership.moses and Numbers 13:21-33 in leadership.joshua, but Exodus 14 (the Red Sea) goes to providence.guidance and Exodus 32:1-14 (the golden calf and Moses' plea) to obedience.wilderness, a subtopic with no WAEC reference. WAEC cites both passages only here. Nothing is missing; the item is split across three topics.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.2(c)",
+      "text": "Joshua (Numbers 27:15-23; Joshua 1:1-9)",
+      "subtopic_id": "leadership.joshua",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.2(d)",
+      "text": "Deborah (Judges 4)",
+      "subtopic_id": "leadership.deborah",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.3",
+      "text": "Parental Responsibility: Eli and Samuel (1 Sam 2:11-36; 3:1-18; 4:10-22; 8:1-5)",
+      "subtopic_id": "parental.eli-samuel",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.4",
+      "text": "Consequences of Saul's disobedience (1 Samuel 15:1-26; 16:14-23; 31:1-13)",
+      "subtopic_id": "obedience.saul",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.5",
+      "text": "Submission to the will of God",
+      "subtopic_id": "david.submission",
+      "status": "covered",
+      "note": "Headline; sub-items map to david.submission and david.sin-repentance.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.5(a)",
+      "text": "David's submission to the will of God (1 Sam 26)",
+      "subtopic_id": "david.submission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.5(b)",
+      "text": "David's sin, repentance and forgiveness (2 Sam 12:15-25)",
+      "subtopic_id": "david.sin-repentance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.6",
+      "text": "Making Decisions",
+      "subtopic_id": "decisions.wisdom",
+      "status": "covered",
+      "note": "Headline; sub-items map to decisions.wisdom and decisions.unwise.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.6(a)",
+      "text": "Solomon's wisdom (1 Kings 3:3-28; 4:29-34; 5:1-12; 8)",
+      "subtopic_id": "decisions.wisdom",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.6(b)",
+      "text": "The unwise decision of Solomon and Rehoboam (1 Kings 9:15-23; 11:1-13; 12:1-20)",
+      "subtopic_id": "decisions.unwise",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.7",
+      "text": "Supremacy of God",
+      "subtopic_id": "supremacy.tension",
+      "status": "covered",
+      "note": "Headline; sub-items map to supremacy.tension and supremacy.carmel.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.7(a)",
+      "text": "Religious tensions during Ahab's reign (1 Kings 16:29-34; 17:1-7; 18:1-19)",
+      "subtopic_id": "supremacy.tension",
+      "status": "covered",
+      "note": "1 Kings 18:17-19 goes to supremacy.carmel under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.7(b)",
+      "text": "Elijah at Mount Carmel (1 Kings 18:17-46)",
+      "subtopic_id": "supremacy.carmel",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.8",
+      "text": "Greed and its effects",
+      "subtopic_id": "greed.ahab",
+      "status": "covered",
+      "note": "Headline; sub-items map to greed.ahab and greed.gehazi.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.8(a)",
+      "text": "Ahab (1 Kings 21:1-29)",
+      "subtopic_id": "greed.ahab",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.8(b)",
+      "text": "Gehazi (2 Kings 5)",
+      "subtopic_id": "greed.gehazi",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.9",
+      "text": "Religious reforms: the reign of King Josiah (2 Kings 22; 23:1-30)",
+      "subtopic_id": "reforms.renewal",
+      "status": "covered",
+      "note": "2 Kings 22 is in reforms.book and 2 Kings 23:1-30 in reforms.renewal, under the same parent; a question on the reforms as a whole goes to reforms.renewal.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.10",
+      "text": "Concern for one's Nation",
+      "subtopic_id": "judah.fall",
+      "status": "covered",
+      "note": "Headline; sub-items map to judah.fall, judah.nehemiah and judah.ezra.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.10(a)",
+      "text": "The condition of the nation (2 Kings 24; 25:1-17)",
+      "subtopic_id": "judah.fall",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.10(b)",
+      "text": "Response to the state of the nation (Nehemiah 1; 2:9-20; 4; Ezra 1; 4; 5:1-2; 6:13-22; 7:1-10)",
+      "subtopic_id": "judah.nehemiah",
+      "status": "covered",
+      "note": "The Nehemiah passages are in judah.nehemiah and the Ezra passages in judah.ezra, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.11",
+      "text": "Faith in God",
+      "subtopic_id": "faith.furnace",
+      "status": "covered",
+      "note": "Headline; sub-items map to faith.furnace and faith.lions.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.11(a)",
+      "text": "Faith and courage (Daniel 3)",
+      "subtopic_id": "faith.furnace",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.11(b)",
+      "text": "Faith and power (Daniel 6)",
+      "subtopic_id": "faith.lions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.12",
+      "text": "Nature of God",
+      "subtopic_id": "justice-love.amos",
+      "status": "covered",
+      "note": "Headline; sub-items map to justice-love.amos and justice-love.hosea.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.12(a)",
+      "text": "True religion and social justice: Amos (Amos 2:6-8; 4; 5:1-24; 7:10-17; 8)",
+      "subtopic_id": "justice-love.amos",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A.12(b)",
+      "text": "God's divine love: Hosea (Hosea 1; 2; 3; 6)",
+      "subtopic_id": "justice-love.hosea",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.1",
+      "text": "Baptism and Temptation of Jesus",
+      "subtopic_id": "baptism.baptism",
+      "status": "covered",
+      "note": "Headline; sub-items map to baptism.baptism and baptism.temptation.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.1(a)",
+      "text": "The Baptism (Matthew 3:13-17; Mark 1:9-11; Luke 3:21-22)",
+      "subtopic_id": "baptism.baptism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.1(b)",
+      "text": "The Temptation (Matthew 4:1-11; Mark 1:12-13; Luke 4:1-13)",
+      "subtopic_id": "baptism.temptation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.2",
+      "text": "The Call and Demands of Discipleship (Matthew 4:18-25; 8:18-22; 9:9-13; Mark 1:16-20; 2:13-17; Luke 5:1-11; 9:57-63; 14:25-33)",
+      "subtopic_id": "discipleship.call",
+      "status": "covered",
+      "note": "The call passages are in discipleship.call and the demands passages in discipleship.demands, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.3",
+      "text": "Jesus' Teaching on forgiveness (Matthew 6:12, 14-15; 18:21-35)",
+      "subtopic_id": "sermon.forgiveness",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.4",
+      "text": "The Trials of Jesus",
+      "subtopic_id": "trials.gethsemane",
+      "status": "covered",
+      "note": "Headline; sub-items map to trials.gethsemane, trials.denial, trials.jewish and trials.roman.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.4(a)",
+      "text": "Jesus at Gethsemane (Matthew 26:36-56; Mark 14:32-52)",
+      "subtopic_id": "trials.gethsemane",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.4(b)",
+      "text": "Peter's Denials (Matthew 26:69-75; Mark 14:66-72; Luke 22:54-62)",
+      "subtopic_id": "trials.denial",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.4(c)",
+      "text": "Condemnation of Jesus (Matthew 26:47-75; Mark 14:53-72; Luke 22:66-71; 23:1-12)",
+      "subtopic_id": "trials.jewish",
+      "status": "covered",
+      "note": "The trial before the council is in trials.jewish and Luke 23:1-12 (Pilate and Herod) in trials.roman; the arrest (Matthew 26:47-56) and denials in the cited range sit in trials.gethsemane and trials.denial, all under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.5",
+      "text": "The Crucifixion, Burial and Resurrection of Jesus",
+      "subtopic_id": "death-resurrection.crucifixion",
+      "status": "covered",
+      "note": "Headline; sub-items map to death-resurrection.crucifixion, death-resurrection.resurrection and death-resurrection.appearances.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.5(a)",
+      "text": "Crucifixion and burial (Matthew 27:32-66; Mark 15:16-47; Luke 23:26-56)",
+      "subtopic_id": "death-resurrection.crucifixion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.5(b)",
+      "text": "The Resurrection (Matthew 28:1-10; Mark 16:1-14; Luke 24:1-35)",
+      "subtopic_id": "death-resurrection.resurrection",
+      "status": "covered",
+      "note": "The empty tomb is in death-resurrection.resurrection; Mark 16:9-14 and the Emmaus road (Luke 24:13-35) are in death-resurrection.appearances, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.6",
+      "text": "Fellowship in the Early Church (Acts 1:15-26; 2:41-47; 4:32-37; 5:1-11; 6:2-6)",
+      "subtopic_id": "fellowship.communal",
+      "status": "covered",
+      "note": "Communal living is in fellowship.communal and Ananias and Sapphira and the seven in fellowship.problems, under the same parent. Acts 2:41 goes to holy-spirit.pentecost, which WAEC also cites under B.7(a).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.7",
+      "text": "The Holy Spirit and the Mission to the Gentiles",
+      "subtopic_id": "holy-spirit.pentecost",
+      "status": "covered",
+      "note": "Headline; the tree splits this theme into two parents: (a) maps to holy-spirit.pentecost, (b) to gentile-mission.saul and gentile-mission.cornelius.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.7(a)",
+      "text": "The Holy Spirit at Pentecost (Acts 2)",
+      "subtopic_id": "holy-spirit.pentecost",
+      "status": "covered",
+      "note": "Acts 2:42-47 goes to fellowship.communal, which WAEC also cites under B.6.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.7(b)",
+      "text": "Mission to the Gentiles (Acts 9; 11:1-18)",
+      "subtopic_id": "gentile-mission.saul",
+      "status": "covered",
+      "note": "Acts 9:1-30 is in gentile-mission.saul; Acts 9:32-43 and 11:1-18 are in gentile-mission.cornelius, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B.8",
+      "text": "Opposition to the Gospel Message (Acts 4:1-31; 5:17-42; 6:8-9; 7:1-10; 12:1-24)",
+      "subtopic_id": "opposition.apostles",
+      "status": "covered",
+      "note": "Acts 4, 5 and 12 are in opposition.apostles and Stephen (Acts 6:8-7:10) in opposition.stephen, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.1",
+      "text": "The Epistles of James",
+      "subtopic_id": "james.faith-works",
+      "status": "covered",
+      "note": "Headline; sub-items map to james.faith-works, james.impartiality and james.prayer.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.1(a)",
+      "text": "Faith and Works (James 1:2-27; 2:14-26)",
+      "subtopic_id": "james.faith-works",
+      "status": "covered",
+      "note": "James 1:5-8 goes to james.prayer under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.1(b)",
+      "text": "Impartiality (James 2:1-13)",
+      "subtopic_id": "james.impartiality",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.1(c)",
+      "text": "Effective Prayers (James 1:2-8; 5:13-18)",
+      "subtopic_id": "james.prayer",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.2",
+      "text": "The Epistle of 1 Peter",
+      "subtopic_id": "civic.citizenship",
+      "status": "covered",
+      "note": "Headline; the tree spreads it over two parents: (a) to civic.citizenship, (b) and (c) to community subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.2(a)",
+      "text": "Good Citizenship (1 Peter 2:13-17)",
+      "subtopic_id": "civic.citizenship",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.2(b)",
+      "text": "Christians Living among non-Christians (1 Peter 2:1-25)",
+      "subtopic_id": "community.non-christians",
+      "status": "covered",
+      "note": "1 Peter 2:1-12 is in community.non-christians and 2:18-25 in community.persecution, under the same parent; 2:13-17 goes to civic.citizenship, which WAEC also cites under C.2(a).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C.2(c)",
+      "text": "Interpersonal Relationship among Christians (1 Peter 5:1-11)",
+      "subtopic_id": "community.relationships",
+      "status": "partial",
+      "note": "1 Peter 5:1-5 is in community.relationships and 5:8-10 in community.persecution, but the call to humility (5:5-7) goes by sorting rule to virtues.humility, a subtopic with no WAEC reference. WAEC cites 1 Peter 5 only here. Nothing is missing; the split crosses topics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.1",
+      "text": "The Sovereignty of God: God as Creator and Controller of the Universe (Gen. 1 and 2; Amos 9:5-6; Is. 45:5-12; Ps. 19:1-6)",
+      "subtopic_id": "sovereignty.creation",
+      "status": "covered",
+      "note": "Creation is in sovereignty.creation; the meaning of sovereignty, Amos, Isaiah and Psalm 19 are in sovereignty.controller, under the same parent. Genesis 2:15-25 goes to obedience.fall, which JAMB also cites under A.6(ii)(a).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2",
+      "text": "The Covenant",
+      "subtopic_id": "covenant.noah",
+      "status": "covered",
+      "note": "Headline; sub-items map to covenant.noah, covenant.abraham, covenant.sinai and covenant.new.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(a)",
+      "text": "The flood and God's covenant with Noah (Gen. 6:1-22; 7:1-24; 9:1-17)",
+      "subtopic_id": "covenant.noah",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(b)",
+      "text": "God's covenant with Abraham (Gen. 11:31-32; 12:1-9; 17:1-21; 21:1-13; 25:19-26)",
+      "subtopic_id": "covenant.abraham",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(c)",
+      "text": "God's covenant with Israel (Ex. 19; 20; 24:1-11; cf. Deut. 28:1-19)",
+      "subtopic_id": "covenant.sinai",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.2(d)",
+      "text": "The New Covenant (Jer. 31:31-34; Ezek. 36:25-28)",
+      "subtopic_id": "covenant.new",
+      "status": "covered",
+      "note": "The objectives on the concept of covenant and comparing the covenants are also held here.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.3",
+      "text": "Leadership qualities",
+      "subtopic_id": "leadership.joseph",
+      "status": "covered",
+      "note": "Headline; sub-items map to the five leadership subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.3(a)",
+      "text": "Joseph (Gen. 37:1-28; 41:1-57; 45:1-15)",
+      "subtopic_id": "leadership.joseph",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.3(b)",
+      "text": "Moses (Ex. 1; 2; 3; 4:1-17; 5; 12; Num. 13:1-20; 14:1-19)",
+      "subtopic_id": "leadership.moses",
+      "status": "covered",
+      "note": "The list of spies (Numbers 13:4-16) goes to leadership.joshua under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.3(c)",
+      "text": "Joshua (Num. 13:21-33; 27:15-23; Josh. 1:1-15; 6; 7; 24:1-31)",
+      "subtopic_id": "leadership.joshua",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.3(d)",
+      "text": "Judges: Deborah (Judges 4:1-24), Gideon (Judges 6:11-40), Samson (Judges 13:1-7, 21-25; 16:4-31)",
+      "subtopic_id": "leadership.gideon-samson",
+      "status": "covered",
+      "note": "Gideon and Samson are in leadership.gideon-samson and Deborah in leadership.deborah, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.4",
+      "text": "Divine providence, Guidance and Protection",
+      "subtopic_id": "providence.guidance",
+      "status": "covered",
+      "note": "Headline; sub-items map to providence.guidance and providence.provision.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.4(a)",
+      "text": "Guidance and Protection (Gen. 24:1-61; 28:10-22; 46:1-7; Ex. 13:17-22; 14:1-4, 10-31)",
+      "subtopic_id": "providence.guidance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.4(b)",
+      "text": "Provision (Gen. 21:14-18; 22:1-14; Ex. 16:1-21; 17:1-7; Num. 20:1-13; 1 Kings 17:1-16)",
+      "subtopic_id": "providence.provision",
+      "status": "partial",
+      "note": "All but one passage is in providence.provision; 1 Kings 17:1-16 (Elijah fed at Cherith and by the widow of Zarephath) goes by sorting rule to supremacy.tension. JAMB cites 17:1-7 again under B.2 but the widow of Zarephath (17:8-16) only here. Nothing is missing; the split crosses topics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.5",
+      "text": "Parental responsibility",
+      "subtopic_id": "parental.eli-samuel",
+      "status": "covered",
+      "note": "Headline; sub-items map to parental.eli-samuel, parental.david and parental.asa.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.5(a)",
+      "text": "Eli and Samuel (1 Sam. 2:11-36; 3:2-18; 4:10-22; 8:1-5, printed as 8:15)",
+      "subtopic_id": "parental.eli-samuel",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.5(b)",
+      "text": "David (2 Sam. 13; 15:1-29; 18; 19:1-8)",
+      "subtopic_id": "parental.david",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.5(c)",
+      "text": "Asa (1 Kings 15:9-15; 22:41-44; cf. Deut. 6:4-9; Prov. 4:1-10; 13:1, 24; 22:6; 23:13-14; 31:10-31)",
+      "subtopic_id": "parental.asa",
+      "status": "covered",
+      "note": "The covers line names Proverbs only as teaching on training children; Proverbs 31:10-31 (the capable wife) is not named but sits in the same cited list.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6",
+      "text": "Obedience and Disobedience",
+      "subtopic_id": "obedience.rewards",
+      "status": "covered",
+      "note": "Headline; sub-items map to the four obedience subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(i)",
+      "text": "Obedience and Rewards",
+      "subtopic_id": "obedience.rewards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(i)(a)",
+      "text": "Abraham (Gen. 22:1-19)",
+      "subtopic_id": "obedience.rewards",
+      "status": "covered",
+      "note": "The ram goes to providence.provision, which JAMB also cites under A.4(b).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(i)(b)",
+      "text": "Hebrew Midwives (Ex. 1:8-22)",
+      "subtopic_id": "obedience.rewards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(i)(c)",
+      "text": "David (1 Sam. 30:1-20)",
+      "subtopic_id": "obedience.rewards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(ii)",
+      "text": "Disobedience and Consequences",
+      "subtopic_id": "obedience.wilderness",
+      "status": "covered",
+      "note": "Sub-list header; its items map to obedience.fall, obedience.wilderness and obedience.saul.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(ii)(a)",
+      "text": "Adam (Gen. 2:15-25; 3)",
+      "subtopic_id": "obedience.fall",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(ii)(b)",
+      "text": "Collection of Manna (Ex. 16:22-30)",
+      "subtopic_id": "obedience.wilderness",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(ii)(c)",
+      "text": "The Golden Calf (Ex. 32)",
+      "subtopic_id": "obedience.wilderness",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(ii)(d)",
+      "text": "Moses (Num. 20:7-12; Deut. 34:1-6)",
+      "subtopic_id": "obedience.wilderness",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.6(ii)(e)",
+      "text": "Saul (1 Sam. 10:1-16; 15:1-25; 16:14-23; 31:1-13)",
+      "subtopic_id": "obedience.saul",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.7",
+      "text": "A man after God's own heart",
+      "subtopic_id": "david.early-life",
+      "status": "covered",
+      "note": "Headline; sub-items map to the three david subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.7(a)",
+      "text": "The early life of David (1 Sam. 16:1-13; 17; 18:17-30; 22:1-5; 24:1-23; 2 Sam. 2:1-7; 3:1-39)",
+      "subtopic_id": "david.early-life",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.7(b)",
+      "text": "David's submission to the will of God (1 Sam. 26:1-25; 2 Sam. 12:15-25)",
+      "subtopic_id": "david.submission",
+      "status": "covered",
+      "note": "1 Samuel 26 is in david.submission; 2 Samuel 12:15-25 is placed in david.sin-repentance under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.7(c)",
+      "text": "David's repentance and forgiveness (2 Sam. 11; 12:1-15; cf. Ps. 51)",
+      "subtopic_id": "david.sin-repentance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.8",
+      "text": "Decision-Making",
+      "subtopic_id": "decisions.medium",
+      "status": "covered",
+      "note": "Headline; sub-items map to the three decisions subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.8(a)",
+      "text": "Reliance on a medium (1 Sam. 28:3-25)",
+      "subtopic_id": "decisions.medium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.8(b)",
+      "text": "The wisdom of Solomon (1 Kings 3:3-28; 4:29-34; 5:1-12; 8:1-53)",
+      "subtopic_id": "decisions.wisdom",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "A.8(c)",
+      "text": "Unwise policies of Solomon and Rehoboam (1 Kings 9:15-23; 11:1-40; 12:1-20)",
+      "subtopic_id": "decisions.unwise",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.1",
+      "text": "Greed and its effects",
+      "subtopic_id": "greed.ahab",
+      "status": "covered",
+      "note": "Headline; sub-items map to greed.ahab and greed.gehazi.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.1(a)",
+      "text": "Ahab (1 Kings 21:1-29; 22:1-40; 2 Kings 9:30-37)",
+      "subtopic_id": "greed.ahab",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.1(b)",
+      "text": "Gehazi (2 Kings 5:1-27; cf. Josh. 7)",
+      "subtopic_id": "greed.gehazi",
+      "status": "covered",
+      "note": "Achan (Joshua 7) goes to leadership.joshua, which JAMB also cites under A.3(c).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.2",
+      "text": "The Supremacy of God: religious tension and the power of God on Mount Carmel (1 Kings 16:29-34; 17:1-7; 18; 19:1-18)",
+      "subtopic_id": "supremacy.tension",
+      "status": "covered",
+      "note": "The tension to Obadiah is in supremacy.tension and Carmel to Horeb in supremacy.carmel, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.3",
+      "text": "Religious reforms in Judah",
+      "subtopic_id": "reforms.renewal",
+      "status": "covered",
+      "note": "Headline; sub-items map to reforms.book and reforms.renewal.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.3(a)",
+      "text": "Cleansing of the Temple (2 Kings 22)",
+      "subtopic_id": "reforms.book",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.3(b)",
+      "text": "Renewal of the Covenant (2 Kings 23:1-30)",
+      "subtopic_id": "reforms.renewal",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.4",
+      "text": "Concern for Judah",
+      "subtopic_id": "judah.fall",
+      "status": "covered",
+      "note": "Headline; sub-items map to judah.fall, judah.nehemiah and judah.ezra.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.4(a)",
+      "text": "The fall of Jerusalem (2 Kings 24; 25:1-17)",
+      "subtopic_id": "judah.fall",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.4(b)",
+      "text": "Condition of Judah (Neh. 1:1-11; Ezra 1:1-11)",
+      "subtopic_id": "judah.nehemiah",
+      "status": "covered",
+      "note": "Nehemiah 1 is in judah.nehemiah and Ezra 1 in judah.ezra, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.4(c)",
+      "text": "Response to the state of Judah (Neh. 2; 4:1-23; Ezra 3-7)",
+      "subtopic_id": "judah.ezra",
+      "status": "covered",
+      "note": "The Ezra passages and the comparison of responses to opposition are in judah.ezra; Nehemiah 2 and 4 are in judah.nehemiah, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.5",
+      "text": "Faith, Courage and Protection: Daniel, Shadrach, Meshach and Abednego (Dan. 1; 3:1-30; 6:1-28)",
+      "subtopic_id": "faith.furnace",
+      "status": "covered",
+      "note": "Daniel 1 and 3 are in faith.furnace and Daniel 6 in faith.lions, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.6",
+      "text": "God's message to Nineveh: Jonah and his message (Jonah 1; 2; 3; 4)",
+      "subtopic_id": "jonah.call",
+      "status": "covered",
+      "note": "Jonah 1 and 2 are in jonah.call and Jonah 3 and 4 in jonah.nineveh, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7",
+      "text": "Social justice, True religion and Divine love",
+      "subtopic_id": "justice-love.amos",
+      "status": "covered",
+      "note": "Headline; sub-items map to justice-love.amos and justice-love.hosea.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(a)",
+      "text": "Social justice and true religion (Amos 2:6-8; 4; 5:1-25; 6:1-14; 7:10-17; 8:4-14; cf. James 1:19-27)",
+      "subtopic_id": "justice-love.amos",
+      "status": "partial",
+      "note": "Amos is in justice-love.amos, but James 1:19-27 on true religion goes by sorting rule to james.faith-works, a subtopic with no JAMB reference. JAMB cites James 1:19-27 only here. Nothing is missing; the split crosses topics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.7(b)",
+      "text": "Divine love and human response (Hosea 1; 2; 3; 4; 6:1-11; 14)",
+      "subtopic_id": "justice-love.hosea",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.8",
+      "text": "Holiness and Divine call (Isaiah 6:1-13; Ezek. 2; 3:1-11; Jer. 1:4-10)",
+      "subtopic_id": "prophets.call",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "B.9",
+      "text": "Punishment and Hope (Jer. 3:11-18; 32:26-35; Ezek. 18; 37:1-14; Isaiah 61)",
+      "subtopic_id": "prophets.punishment-hope",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.1",
+      "text": "The birth and early life of Jesus",
+      "subtopic_id": "birth.jesus",
+      "status": "covered",
+      "note": "Headline; sub-items map to birth.john and birth.jesus.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.1(a)",
+      "text": "John, the forerunner of Jesus (Lk. 1:5-25, 57-66; 3:1-20; 7:18-35; Mk. 1:1-8; 6:14-29; Mt. 3:1-12; 11:2-19; Jn. 1:6-8, 19-37; 3:22-36)",
+      "subtopic_id": "birth.john",
+      "status": "partial",
+      "note": "Held by birth.john except John 1:29-37: the Lamb of God (1:29-34) goes to i-am.shepherd, which JAMB also cites under C.14(c), and the two disciples following Jesus (1:35-37) go to discipleship.call; JAMB cites 1:35-37 only here. Nothing is missing; the split crosses topics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.1(b)",
+      "text": "The birth and boyhood of Jesus (Mt. 1:18-25; 2; Lk. 1:26-2:52)",
+      "subtopic_id": "birth.jesus",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.2",
+      "text": "The baptism and temptation of Jesus (Mt. 3:13-17; 4:1-11; Mk. 1:9-13; Lk. 3:21-22; 4:1-13)",
+      "subtopic_id": "baptism.baptism",
+      "status": "covered",
+      "note": "The temptation is in baptism.temptation under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.3",
+      "text": "Discipleship",
+      "subtopic_id": "discipleship.call",
+      "status": "covered",
+      "note": "Headline; sub-items map to discipleship.call and discipleship.demands.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.3(a)",
+      "text": "The call of the first disciples (Mt. 4:18-22; 9:9-13; Mk. 1:16-20; 2:13-17; Lk. 5:1-11, 27-32)",
+      "subtopic_id": "discipleship.call",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.3(b)",
+      "text": "The demands of discipleship (Mt. 8:19-22; Lk. 9:57-63; 14:25-33)",
+      "subtopic_id": "discipleship.demands",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4",
+      "text": "Miracles",
+      "subtopic_id": "miracles.nature",
+      "status": "covered",
+      "note": "Headline; sub-items map to the four miracles subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(a)",
+      "text": "Nature miracles",
+      "subtopic_id": "miracles.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(a)(i)",
+      "text": "Stilling the storm (Mt. 8:23-27; Mk. 4:35-41; Lk. 8:22-25)",
+      "subtopic_id": "miracles.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(a)(ii)",
+      "text": "Feeding of the five thousand (Mt. 14:13-24; Mk. 6:30-44; Lk. 9:10-17; Jn. 6:1-13)",
+      "subtopic_id": "miracles.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(a)(iii)",
+      "text": "Walking on the sea (Mt. 14:22-26; Mk. 6:45-52; Jn. 6:16-21)",
+      "subtopic_id": "miracles.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(a)(iv)",
+      "text": "Changing water to wine (Jn. 2:1-11)",
+      "subtopic_id": "miracles.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(b)",
+      "text": "Miracles of resuscitation",
+      "subtopic_id": "miracles.resuscitation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(b)(i)",
+      "text": "The raising of Lazarus (Jn. 11:1-45)",
+      "subtopic_id": "miracles.resuscitation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(b)(ii)",
+      "text": "The raising of Jairus' daughter (Lk. 8:41-42, 49-56; Mk. 5:21-43)",
+      "subtopic_id": "miracles.resuscitation",
+      "status": "covered",
+      "note": "The woman with the flow of blood inside Mark 5:21-43 goes to miracles.healing under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(b)(iii)",
+      "text": "The raising of the widow's son at Nain (Lk. 7:11-17)",
+      "subtopic_id": "miracles.resuscitation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(c)",
+      "text": "Healing miracles",
+      "subtopic_id": "miracles.healing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(c)(i)",
+      "text": "The lepers (Mt. 8:1-4; Mk. 1:40-45; Lk. 5:12-16; 17:11-19)",
+      "subtopic_id": "miracles.healing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(c)(ii)",
+      "text": "The paralytic at the pool (Jn. 5:1-17)",
+      "subtopic_id": "miracles.healing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(c)(iii)",
+      "text": "The centurion's servant (Mt. 8:5-13; Lk. 7:1-10)",
+      "subtopic_id": "miracles.healing",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(c)(iv)",
+      "text": "The blind (Jn. 9:1-12; Mk. 10:46-52; Lk. 18:35-43)",
+      "subtopic_id": "miracles.healing",
+      "status": "covered",
+      "note": "John 9:1-5 on the light of the world goes to i-am.light, which JAMB also cites under C.14(b).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(d)",
+      "text": "Exorcism",
+      "subtopic_id": "miracles.exorcism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(d)(i)",
+      "text": "The Gerasene (Gadarene) demoniac (Mt. 8:28-34; Mk. 5:1-20; Lk. 8:26-39)",
+      "subtopic_id": "miracles.exorcism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.4(d)(ii)",
+      "text": "The epileptic boy (Mk. 9:14-29; Lk. 9:37-43a; Mt. 17:14-21)",
+      "subtopic_id": "miracles.exorcism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5",
+      "text": "The Parables",
+      "subtopic_id": "parables.kingdom",
+      "status": "covered",
+      "note": "Headline; sub-items map to the four parables subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(a)",
+      "text": "Parables of the kingdom",
+      "subtopic_id": "parables.kingdom",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(a)(i)",
+      "text": "The sower (Mt. 13:1-23; Mk. 4:1-20)",
+      "subtopic_id": "parables.kingdom",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(a)(ii)",
+      "text": "The weeds (Mt. 13:24-30, 36-43)",
+      "subtopic_id": "parables.kingdom",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(a)(iii)",
+      "text": "The drag-net (Mt. 13:47-50)",
+      "subtopic_id": "parables.kingdom",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(a)(iv)",
+      "text": "The wedding garment (Mt. 22:1-14)",
+      "subtopic_id": "parables.kingdom",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(b)",
+      "text": "Parables about love of God (Mt. 18:12-14; Lk. 15:1-32)",
+      "subtopic_id": "parables.love-of-god",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(c)",
+      "text": "Parables about love for one another (Lk. 10:25-37; 16:19-31)",
+      "subtopic_id": "parables.neighbour-wealth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(d)",
+      "text": "Parable about wealth: the rich fool (Lk. 12:13-21)",
+      "subtopic_id": "parables.neighbour-wealth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.5(e)",
+      "text": "Parables on prayer (Lk. 18:2-14)",
+      "subtopic_id": "parables.prayer",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.6",
+      "text": "Sermon on the Mount (Mt. 5; 6; Lk. 6:17-26)",
+      "subtopic_id": "sermon.beatitudes",
+      "status": "covered",
+      "note": "Matthew 5:1-16 and Luke 6 are in sermon.beatitudes, Matthew 5:17-48 in sermon.law, Matthew 6 in sermon.piety and Matthew 6:12, 14-15 in sermon.forgiveness, all under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.7",
+      "text": "Mission of the disciples",
+      "subtopic_id": "discipleship.mission",
+      "status": "covered",
+      "note": "Headline; both sub-items map to discipleship.mission.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.7(a)",
+      "text": "The mission of the twelve (Mt. 10:5-15; Mk. 6:7-13; Lk. 9:1-6)",
+      "subtopic_id": "discipleship.mission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.7(b)",
+      "text": "The mission of the seventy (Lk. 10:1-24)",
+      "subtopic_id": "discipleship.mission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.8",
+      "text": "The Great Confession (Mt. 16:13-20; Mk. 8:27-30; Lk. 9:18-22)",
+      "subtopic_id": "confession.confession",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.9",
+      "text": "The Transfiguration (Mt. 17:1-13; Mk. 9:2-13; Lk. 9:28-36)",
+      "subtopic_id": "confession.transfiguration",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.10",
+      "text": "The Triumphal Entry and the cleansing of the Temple (Mt. 21:1-17; Mk. 11:1-19; Lk. 19:29-48)",
+      "subtopic_id": "last-week.entry",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.11",
+      "text": "The Last Supper (Mt. 26:17-30; Mk. 14:10-26; Lk. 22:7-23; Jn. 13:2-38)",
+      "subtopic_id": "last-week.supper",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.12",
+      "text": "The trials and the death of Jesus",
+      "subtopic_id": "trials.jewish",
+      "status": "covered",
+      "note": "Headline; the tree splits it over two parents: (a) to the trials subtopics, (b) to death-resurrection.crucifixion.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.12(a)",
+      "text": "The trials of Jesus",
+      "subtopic_id": "trials.jewish",
+      "status": "covered",
+      "note": "Sub-list header; its items map to the four trials subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.12(a)(i)",
+      "text": "Before the High Priest (Mt. 26:36-75; Mk. 14:53-72; Lk. 22:66-71)",
+      "subtopic_id": "trials.jewish",
+      "status": "covered",
+      "note": "Gethsemane (Matthew 26:36-56) and the denials in the cited range sit in trials.gethsemane and trials.denial, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.12(a)(ii)",
+      "text": "Before Pilate (Mt. 27:11-26; Mk. 15:1-15; Lk. 23:1-5, 13-25; Jn. 18:28-40; 19:1-16)",
+      "subtopic_id": "trials.roman",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.12(a)(iii)",
+      "text": "Before Herod (Lk. 23:6-12)",
+      "subtopic_id": "trials.roman",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.12(b)",
+      "text": "Crucifixion and burial of Jesus (Mt. 27:32-66; Lk. 23:26-56; Mk. 15:16-47; Jn. 19:17-42)",
+      "subtopic_id": "death-resurrection.crucifixion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.13",
+      "text": "Resurrection, appearances and ascension of Jesus (Mt. 28:1-20; Mk. 16:1-20; Lk. 24:1-53; Jn. 20:1-31; Acts 1:1-11)",
+      "subtopic_id": "death-resurrection.appearances",
+      "status": "covered",
+      "note": "The empty tomb is in death-resurrection.resurrection and the appearances and ascension in death-resurrection.appearances, under the same parent; Acts 1:8 goes to holy-spirit.pentecost, which JAMB also cites under C.17(a).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.14",
+      "text": "Jesus' teachings about Himself",
+      "subtopic_id": "i-am.bread-water",
+      "status": "covered",
+      "note": "Headline; sub-items map to the four i-am subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.14(a)",
+      "text": "The Bread of Life and the Living Water (Jn. 4:7-15; 6:25-58)",
+      "subtopic_id": "i-am.bread-water",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.14(b)",
+      "text": "The Light of the World (Jn. 1:4-8; 3:19-21; 8:12; 9:1-5; 12:35-36; 1 Jn. 1:5-7)",
+      "subtopic_id": "i-am.light",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.14(c)",
+      "text": "The Door, the Lamb and the Good Shepherd (Jn. 1:29-34; 10:1-18)",
+      "subtopic_id": "i-am.shepherd",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.14(d)",
+      "text": "The True Vine (Jn. 15:1-11)",
+      "subtopic_id": "i-am.vine-resurrection",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.14(e)",
+      "text": "The resurrection (Jn. 11:25)",
+      "subtopic_id": "i-am.vine-resurrection",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.15",
+      "text": "Love",
+      "subtopic_id": "love.god",
+      "status": "covered",
+      "note": "Headline; sub-items map to love.god and love.one-another.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.15(a)",
+      "text": "God's love for man (Jn. 3:16-18)",
+      "subtopic_id": "love.god",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.15(b)",
+      "text": "Love for one another (Jn. 13:34-35; 15:12-13; cf. 1 Jn. 4:7-21)",
+      "subtopic_id": "love.one-another",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.16",
+      "text": "Fellowship in the Early Church",
+      "subtopic_id": "fellowship.communal",
+      "status": "covered",
+      "note": "Headline; sub-items map to fellowship.communal and fellowship.problems.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.16(a)",
+      "text": "Communal living (Acts 1:15-26; 2:41-47; 4:32-37)",
+      "subtopic_id": "fellowship.communal",
+      "status": "covered",
+      "note": "Acts 2:41 goes to holy-spirit.pentecost, which JAMB also cites under C.17(a).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.16(b)",
+      "text": "Problems of communal living and solutions (Acts 5:1-11; 6:1-6)",
+      "subtopic_id": "fellowship.problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.17",
+      "text": "The Holy Spirit and the mission of the Church",
+      "subtopic_id": "holy-spirit.pentecost",
+      "status": "covered",
+      "note": "Headline; sub-items map to holy-spirit.pentecost and holy-spirit.mission.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.17(a)",
+      "text": "The pentecost (Acts 1:8; 2:1-41)",
+      "subtopic_id": "holy-spirit.pentecost",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.17(b)",
+      "text": "The mission of the Church (Acts 8:4-40)",
+      "subtopic_id": "holy-spirit.mission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.18",
+      "text": "Opposition to the Gospel message",
+      "subtopic_id": "opposition.apostles",
+      "status": "covered",
+      "note": "Headline; sub-items map to the three opposition subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.18(a)",
+      "text": "The arrest and imprisonment of Peter and John (Acts 3; 4:1-22; 5:17-42; 12:1-24)",
+      "subtopic_id": "opposition.apostles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.18(b)",
+      "text": "The martyrdom of Stephen (Acts 6:8-15; 7)",
+      "subtopic_id": "opposition.stephen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.18(c)",
+      "text": "Persecution by Saul (Acts 8:1-3; 9:1-2; cf. Gal. 1:11-17)",
+      "subtopic_id": "opposition.stephen",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.18(d)",
+      "text": "Persecution of Paul (Acts 16:11-40; 19:23-41; 21:27-36; cf. 2 Cor. 11:23-33)",
+      "subtopic_id": "opposition.paul",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.19",
+      "text": "Mission to the Gentiles",
+      "subtopic_id": "gentile-mission.saul",
+      "status": "covered",
+      "note": "Headline; sub-items map to the four gentile-mission subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.19(a)",
+      "text": "Conversion of Saul (Acts 26:9-18)",
+      "subtopic_id": "gentile-mission.saul",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.19(b)",
+      "text": "Conversion of Cornelius (Acts 10:1-48)",
+      "subtopic_id": "gentile-mission.cornelius",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.19(c)",
+      "text": "The commissioning and mission of Paul (Acts 13; 14:1-20)",
+      "subtopic_id": "gentile-mission.paul",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "C.19(d)",
+      "text": "The Council of Jerusalem (Acts 15:1-35; Gal. 2:1-21)",
+      "subtopic_id": "gentile-mission.council",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.1",
+      "text": "Justification by Faith (Rom. 3:21-24; 5:1-11; 10:1-13)",
+      "subtopic_id": "justification.faith",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.2",
+      "text": "The Law and Grace (Rom. 4:13-25; 5:18-21; Gal. 3:10-14, 19-29)",
+      "subtopic_id": "justification.law-grace",
+      "status": "covered",
+      "note": "Galatians 3:26-29 is in justification.heirs under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.3",
+      "text": "New life in Christ (Rom. 6:1-4, 12-14; Col. 3:1-17; Gal. 5:16-26; 2 Cor. 5:16-19; 1 Thess. 4:1-8; Rom. 12)",
+      "subtopic_id": "justification.new-life",
+      "status": "covered",
+      "note": "Romans 12:3-8 goes to spiritual-gifts.gifts and 12:9-21 to community.relationships; JAMB also cites both ranges under D.7 and D.14(a).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.4",
+      "text": "Christians as joint heirs with Christ (Gal. 3:23-29; 4:1-7)",
+      "subtopic_id": "justification.heirs",
+      "status": "covered",
+      "note": "Galatians 3:23-25 (the law as custodian) goes to justification.law-grace under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.5",
+      "text": "Humility (Phil. 2:1-11; 1 Pet. 5:5-11)",
+      "subtopic_id": "virtues.humility",
+      "status": "partial",
+      "note": "Philippians 2 and 1 Peter 5:5-7 are in virtues.humility, but 1 Peter 5:8-10 (resisting the devil, glory after suffering) goes by sorting rule to community.persecution; JAMB cites those verses only here. Nothing is missing; the split crosses topics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.6",
+      "text": "Forgiveness (Philemon; 2 Cor. 2:5-11)",
+      "subtopic_id": "virtues.forgiveness",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.7",
+      "text": "Spiritual gifts (1 Cor. 12; Rom. 12:3-18; 1 Cor. 14)",
+      "subtopic_id": "spiritual-gifts.gifts",
+      "status": "covered",
+      "note": "1 Corinthians 14 is in spiritual-gifts.tongues under the same parent; Romans 12:9-18 goes to community.relationships, which JAMB also cites under D.14(a).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.8",
+      "text": "Christian Giving (Phil. 4:14-20; 2 Cor. 8:1-5; 9; cf. Matt. 6:2-4)",
+      "subtopic_id": "virtues.giving",
+      "status": "covered",
+      "note": "Matthew 6:2-4 goes to sermon.piety, which JAMB also cites under C.6.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.9",
+      "text": "Civic responsibility (Rom. 13; 1 Tim. 2:1-4)",
+      "subtopic_id": "civic.citizenship",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.10",
+      "text": "Dignity of labour (2 Thess. 3:6-15; Col. 3:23-25)",
+      "subtopic_id": "civic.labour",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.11",
+      "text": "The second coming of Christ",
+      "subtopic_id": "second-coming.signs",
+      "status": "covered",
+      "note": "Headline; sub-items map to second-coming.signs and second-coming.preparation.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.11(a)",
+      "text": "The signs of the Coming of Christ (1 Thess. 4:13-18; 2 Thess. 2:1-12)",
+      "subtopic_id": "second-coming.signs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.11(b)",
+      "text": "Preparation for His coming (1 Thess. 5:1-11; 2 Pet. 3:1-13)",
+      "subtopic_id": "second-coming.preparation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.12",
+      "text": "Impartiality (James 2:1-13; cf. Acts 10:34-35; Matt. 7:1-5)",
+      "subtopic_id": "james.impartiality",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.13",
+      "text": "Effective Prayer (James 1:2-8; 4:1-3; 5:13-18; cf. Matt. 6:5-13)",
+      "subtopic_id": "james.prayer",
+      "status": "covered",
+      "note": "Matthew 6:5-13 goes to sermon.piety, which JAMB also cites under C.6.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.14",
+      "text": "Christian living in the community",
+      "subtopic_id": "community.relationships",
+      "status": "covered",
+      "note": "Headline; sub-items map to the four community subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.14(a)",
+      "text": "Interpersonal relationships among Christians (1 Pet. 5:1-4; Rom. 12:3-21; 2 Pet. 1:3-11; Heb. 13:1-21)",
+      "subtopic_id": "community.relationships",
+      "status": "covered",
+      "note": "Romans 12:3-8 goes to spiritual-gifts.gifts (also cited under D.7) and the corruption strand of 2 Peter 1 to vices.corruption (also cited under D.15).",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.14(b)",
+      "text": "Christians living among non-Christians (1 Pet. 2:3-25; Rom. 15:1-2)",
+      "subtopic_id": "community.non-christians",
+      "status": "partial",
+      "note": "1 Peter 2:3-12 and Romans 15:1-2 are in community.non-christians and 2:18-25 in community.persecution, but 1 Peter 2:13-17 (submitting to rulers) goes by sorting rule to civic.citizenship; JAMB cites 1 Peter 2 only here. Nothing is missing; the split crosses topics.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.14(c)",
+      "text": "Christian attitude to persecution (1 Pet. 1:5-9; 4:1-19; 3:13-22)",
+      "subtopic_id": "community.persecution",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.14(d)",
+      "text": "Relationship in the Christian family (Eph. 6:1-9; Col. 3:18-21; 1 Pet. 3:1-7)",
+      "subtopic_id": "community.family",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.15",
+      "text": "Corruption (1 Tim. 6:6-11; 2 Tim. 3:8; 2 Pet. 1:4-11; James 5:1-6)",
+      "subtopic_id": "vices.corruption",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.16",
+      "text": "Sexual Immorality",
+      "subtopic_id": "vices.sexual",
+      "status": "covered",
+      "note": "Headline; all sub-items map to vices.sexual.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.16(a)",
+      "text": "Prostitution (1 Cor. 6:16-20; cf. Prov. 7:10-27; 23:27-28)",
+      "subtopic_id": "vices.sexual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.16(b)",
+      "text": "Adultery and Fornication (Heb. 13:4; Eph. 5:3-10; cf. Matt. 5:28-32; Deut. 22:22; Lev. 20:10)",
+      "subtopic_id": "vices.sexual",
+      "status": "covered",
+      "note": "Matthew 5:28-32 goes to sermon.law, which JAMB also cites under C.6.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "D.16(c)",
+      "text": "Homosexuality (Rom. 1:24-32; cf. Lev. 18:21-30; 20:13)",
+      "subtopic_id": "vices.sexual",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W1",
+      "text": "Jesus as the Lamb of God (John 1:29-34); Jesus as the Door and the Good Shepherd (John 10:1-18)",
+      "subtopic_id": "i-am.shepherd",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2",
+      "text": "Jesus as the Light of the World (John 3:19; 9:4-5; 12:35-36)",
+      "subtopic_id": "i-am.light",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3",
+      "text": "Jesus as the Living Bread and Water (John 15:1-11; 1 John 1:5-7; John 6:25-40; 4:7-15)",
+      "subtopic_id": "i-am.bread-water",
+      "status": "covered",
+      "note": "John 6 and 4 are in i-am.bread-water; the week also cites John 15:1-11 (i-am.vine-resurrection) and 1 John 1:5-7 (i-am.light), all under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4",
+      "text": "Love: God's love for man and man's love for one another (John 4:7-8, read as 1 John 4:7-8; 1 Cor 13:1-3; 1 John 3:17-18)",
+      "subtopic_id": "love.one-another",
+      "status": "covered",
+      "note": "God's love for man is in love.god under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5",
+      "text": "Justification by faith: meaning and need; works and law do not justify (Rom 4:1-5; Gal 2:16-21)",
+      "subtopic_id": "justification.faith",
+      "status": "covered",
+      "note": "Why the law does not justify is in justification.law-grace under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6",
+      "text": "Faith in Jesus as a condition for justification; fruits of justification",
+      "subtopic_id": "justification.faith",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7",
+      "text": "New Life in Christ: the old life and its characteristics; need for change (Gal 5:19-21; Col 3:5-7; Rom 6:1-4)",
+      "subtopic_id": "justification.new-life",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8",
+      "text": "Characteristics of the new life; need to stick to the new life (Gal 5:22-24; Rom 6:12-19)",
+      "subtopic_id": "justification.new-life",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9",
+      "text": "Sonship: Jesus Christ the Son of God; Christians are also children of God (Rom 8)",
+      "subtopic_id": "justification.heirs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W1",
+      "text": "Revision of last term / meaning of faith and work",
+      "subtopic_id": "james.faith-works",
+      "status": "covered",
+      "note": "Only the faith and work part is content; the revision part is skipped.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2",
+      "text": "Salvation",
+      "subtopic_id": "justification.faith",
+      "status": "covered",
+      "note": "The covers line names salvation as part of justification by faith.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3",
+      "text": "The fruits of the Spirit",
+      "subtopic_id": "justification.new-life",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4",
+      "text": "Spiritual gifts",
+      "subtopic_id": "spiritual-gifts.gifts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W5",
+      "text": "Forgiveness",
+      "subtopic_id": "virtues.forgiveness",
+      "status": "covered",
+      "note": "Placed with Paul's teaching because the term is epistle themes; if the week teaches Jesus' teaching it sits in sermon.forgiveness.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6",
+      "text": "Rights and obligation of family members",
+      "subtopic_id": "community.family",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7",
+      "text": "Humility",
+      "subtopic_id": "virtues.humility",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8",
+      "text": "Civic responsibility",
+      "subtopic_id": "civic.citizenship",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9",
+      "text": "Good citizenship",
+      "subtopic_id": "civic.citizenship",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2",
+      "text": "James's teaching on prayer",
+      "subtopic_id": "james.prayer",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3",
+      "text": "Christians living in the community",
+      "subtopic_id": "community.relationships",
+      "status": "covered",
+      "note": "Theme-level week; the community parent holds it across its subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4",
+      "text": "Social vices and witnessing to Christ",
+      "subtopic_id": "vices.corruption",
+      "status": "partial",
+      "note": "Social vices are held by vices.corruption, whose covers line names social vices as the scheme of work teaches them; witnessing to Christ is in community.non-christians. Nothing is missing; the week is split across two topics.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5",
+      "text": "Skill acquisition and empowerment",
+      "subtopic_id": "civic.labour",
+      "status": "covered",
+      "note": "Held only because the covers line names skill acquisition as the scheme of work teaches it; no syllabus cites it.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6",
+      "text": "Dignity of labour",
+      "subtopic_id": "civic.labour",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W7",
+      "text": "Christian attitude towards work",
+      "subtopic_id": "civic.labour",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8",
+      "text": "Impartiality",
+      "subtopic_id": "james.impartiality",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9",
+      "text": "Resurrection and second coming of Christ",
+      "subtopic_id": "second-coming.signs",
+      "status": "covered",
+      "note": "Read as the rising of the dead at his coming (1 Thessalonians 4:13-18); if the week teaches Jesus' own resurrection that sits in death-resurrection.resurrection.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10",
+      "text": "Preparation for the second coming",
+      "subtopic_id": "second-coming.preparation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W11",
+      "text": "HIV/AIDS",
+      "subtopic_id": "vices.sexual",
+      "status": "covered",
+      "note": "Held only because the covers line names HIV and AIDS as the scheme of work teaches them; the medical content (infection, symptoms, prevention) has no Bible passage in either syllabus and a reviewer may judge it outside the subject.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1",
+      "text": "The Sovereignty of God: God the Creator (Gen 1 and 2)",
+      "subtopic_id": "sovereignty.creation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2",
+      "text": "God the Controller of the Universe (Gen 1:26-31; Amos 9:6-7; Isaiah 49:1-12)",
+      "subtopic_id": "sovereignty.controller",
+      "status": "covered",
+      "note": "Genesis 1:26-31 is in sovereignty.creation under the same parent; Isaiah 49:1-12 is probably a misprint for Isaiah 45:5-12.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3",
+      "text": "Leadership I: Joseph as a leader (Gen 37:1-28; 41:1-57; 45:1-15)",
+      "subtopic_id": "leadership.joseph",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4",
+      "text": "Leadership II: Moses as a leader (Ex 1-7; 14:1-31; 32; Num 13:1-33; 14:1-19)",
+      "subtopic_id": "leadership.moses",
+      "status": "partial",
+      "note": "Moses' leadership is in leadership.moses, but Exodus 32 (the golden calf) goes to obedience.wilderness, a subtopic the scheme of work never teaches; Exodus 14 goes to providence.guidance, taught again in W7. Nothing is missing; the split crosses topics.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5",
+      "text": "Leadership III: Joshua as a leader (Num 13:16-34; 14:1-10; 27:15-23; Josh 1:1-15; 6; 24:1-31)",
+      "subtopic_id": "leadership.joshua",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6",
+      "text": "Leadership IV: Deborah as a leader",
+      "subtopic_id": "leadership.deborah",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7",
+      "text": "God cares for His people: guidance (Ex 14)",
+      "subtopic_id": "providence.guidance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8",
+      "text": "God cares for His people: provision (Ex 16:1-22; 17:1-7)",
+      "subtopic_id": "providence.provision",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9",
+      "text": "God cares for His people: protection",
+      "subtopic_id": "providence.guidance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W1",
+      "text": "Sovereignty of God",
+      "subtopic_id": "sovereignty.controller",
+      "status": "covered",
+      "note": "The meaning of sovereignty is in sovereignty.controller.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2",
+      "text": "First creation story/second creation story",
+      "subtopic_id": "sovereignty.creation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3",
+      "text": "God the controller of the universe",
+      "subtopic_id": "sovereignty.controller",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W4",
+      "text": "Leadership: Joseph as a leader",
+      "subtopic_id": "leadership.joseph",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5",
+      "text": "Leadership: Moses as a leader",
+      "subtopic_id": "leadership.moses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W6",
+      "text": "Leadership: Joshua as a leader",
+      "subtopic_id": "leadership.joshua",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7",
+      "text": "Leadership: Deborah as a leader",
+      "subtopic_id": "leadership.deborah",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W8",
+      "text": "God's care for His people",
+      "subtopic_id": "providence.guidance",
+      "status": "covered",
+      "note": "Three unlabelled weeks on one theme; the providence parent holds them across its two subtopics.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9",
+      "text": "God's care for His people",
+      "subtopic_id": "providence.provision",
+      "status": "covered",
+      "note": "Unlabelled; see W8.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W10",
+      "text": "God's care for His people",
+      "subtopic_id": "providence.guidance",
+      "status": "covered",
+      "note": "Unlabelled; see W8.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2",
+      "text": "James's teaching on prayer",
+      "subtopic_id": "james.prayer",
+      "status": "covered",
+      "note": "SS2 Term 3 repeats SS1 Term 3 word for word and is unconfirmed.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3",
+      "text": "Christians living in the community",
+      "subtopic_id": "community.relationships",
+      "status": "covered",
+      "note": "Unconfirmed duplicate of SS1 T3 W3.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4",
+      "text": "Social vices and witnessing to Christ",
+      "subtopic_id": "vices.corruption",
+      "status": "partial",
+      "note": "Unconfirmed duplicate of SS1 T3 W4: social vices in vices.corruption, witnessing to Christ in community.non-christians. Nothing is missing; the week is split across two topics.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5",
+      "text": "Skill acquisition and empowerment",
+      "subtopic_id": "civic.labour",
+      "status": "covered",
+      "note": "Unconfirmed duplicate of SS1 T3 W5; held only by the covers line's explicit mention.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W6",
+      "text": "Dignity of labour",
+      "subtopic_id": "civic.labour",
+      "status": "covered",
+      "note": "Unconfirmed duplicate of SS1 T3 W6.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7",
+      "text": "Christian attitude towards work",
+      "subtopic_id": "civic.labour",
+      "status": "covered",
+      "note": "Unconfirmed duplicate of SS1 T3 W7.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W8",
+      "text": "Impartiality",
+      "subtopic_id": "james.impartiality",
+      "status": "covered",
+      "note": "Unconfirmed duplicate of SS1 T3 W8.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9",
+      "text": "Resurrection and second coming of Christ",
+      "subtopic_id": "second-coming.signs",
+      "status": "covered",
+      "note": "Unconfirmed duplicate of SS1 T3 W9.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W10",
+      "text": "Preparation for the second coming",
+      "subtopic_id": "second-coming.preparation",
+      "status": "covered",
+      "note": "Unconfirmed duplicate of SS1 T3 W10.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W11",
+      "text": "HIV/AIDS",
+      "subtopic_id": "vices.sexual",
+      "status": "covered",
+      "note": "Unconfirmed duplicate of SS1 T3 W11; held only by the covers line's explicit mention, and the medical content may be judged outside the subject.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W1",
+      "text": "The birth of Jesus",
+      "subtopic_id": "birth.jesus",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2",
+      "text": "The baptism of Jesus",
+      "subtopic_id": "baptism.baptism",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3",
+      "text": "The temptation of Jesus",
+      "subtopic_id": "baptism.temptation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4",
+      "text": "Discipleship",
+      "subtopic_id": "discipleship.call",
+      "status": "covered",
+      "note": "The call and the demands are both under the discipleship parent.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5",
+      "text": "The mission of the disciples",
+      "subtopic_id": "discipleship.mission",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6",
+      "text": "The trial of Jesus",
+      "subtopic_id": "trials.jewish",
+      "status": "covered",
+      "note": "The trials before Pilate and Herod are in trials.roman under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7",
+      "text": "The crucifixion, death and burial of Jesus",
+      "subtopic_id": "death-resurrection.crucifixion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W8",
+      "text": "The resurrection of Jesus",
+      "subtopic_id": "death-resurrection.resurrection",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W1",
+      "text": "The Holy Spirit at Pentecost: the promise (Acts 1:8), the coming (Acts 2:1-13), Peter's sermon (Acts 2:14-41)",
+      "subtopic_id": "holy-spirit.pentecost",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2",
+      "text": "Mission to the Gentiles: Saul's conversion (Acts 9:1-19), the Jews' reaction (Acts 9:20-30), its significance",
+      "subtopic_id": "gentile-mission.saul",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3",
+      "text": "Mission to the Gentiles: Peter in Lydda and Joppa (Acts 9:32-42); Peter and the Gentile converts (Acts 10:1-48; 11:1-18)",
+      "subtopic_id": "gentile-mission.cornelius",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W4",
+      "text": "Opposition to the Gospel: arrest and imprisonment of the apostles (Acts 4:1-31; 5:17-42); opposition against Stephen (Acts 6:8-15; 7:1-10)",
+      "subtopic_id": "opposition.apostles",
+      "status": "covered",
+      "note": "Stephen is in opposition.stephen under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5",
+      "text": "Opposition to the Gospel: Saul's opposition (Acts 9:1-3); Herod's opposition (Acts 12:1-24); how the Church prevailed",
+      "subtopic_id": "opposition.stephen",
+      "status": "covered",
+      "note": "Saul's persecution is in opposition.stephen and Herod's in opposition.apostles, under the same parent.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6",
+      "text": "HIV/AIDS: meaning, infection and symptoms, prevention, cure; Jesus cared for the sick (John 4:46-54; 5:1-8; 9:1-7)",
+      "subtopic_id": "vices.sexual",
+      "status": "partial",
+      "note": "HIV and AIDS are held by vices.sexual only through its explicit mention, and the medical content may be judged outside the subject; the three healings cited (the official's son, the pool of Bethesda, the man born blind) are in miracles.healing. Split across two topics.",
+      "proposed": ""
+    }
+  ],
+  "unmapped_subtopics": [
+    "covenant.jacob"
+  ],
+  "summary": {
+    "wassce": {
+      "covered": 54,
+      "partial": 3,
+      "missing": 0
+    },
+    "utme": {
+      "covered": 150,
+      "partial": 5,
+      "missing": 0
+    },
+    "sow": {
+      "covered": 67,
+      "partial": 4,
+      "missing": 0
+    }
+  },
+  "taxonomy_version": "1.1",
+  "sources": {
+    "wassce": "syllabi\\christian-religious-studies-waec.txt",
+    "utme": "syllabi\\christian-religious-studies-jamb.txt",
+    "sow": "syllabi\\christian-religious-studies-sow.txt"
+  }
+}

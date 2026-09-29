@@ -1,0 +1,308 @@
+{
+  "from_version": "1.0",
+  "to_version": "1.1",
+  "changes": [
+    {
+      "kind": "widened",
+      "where": "tools.machinery",
+      "evidence": "Coverage WASSCE C.2(a)(v) Incubators, partial: the incubator is named only inside a sorting rule, not in the covers list.",
+      "change": "Named incubators in the covers list of machines, and reworded the sorting rule so identifying an incubator and its parts stays here while the conditions it keeps go to animal-reproduction.eggs."
+    },
+    {
+      "kind": "widened",
+      "where": "pasture.types",
+      "evidence": "Coverage WASSCE D.3(e) Factors affecting the distribution and productivity of pasture, partial, and scheme of work SS2 T2 W1-2: factors affecting the distribution of pasture are not named anywhere.",
+      "change": "Added the factors that govern where pasture grows (rainfall, temperature, soil, topography, grazing pressure, bush burning), added D.3(e) to its WAEC references, and added a sorting rule: distribution here, productivity of an established pasture to pasture.management."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "pasture.management",
+      "evidence": "Coverage WASSCE D.3(e): the item is now split between pasture.types (distribution) and pasture.management (productivity).",
+      "change": "Added the matching rule: what governs where pasture grows goes to pasture.types."
+    },
+    {
+      "kind": "widened",
+      "where": "crop-diseases.fungal",
+      "evidence": "Coverage WASSCE G.1(c)(v) Fruits: citrus gummosis, dieback, partial: dieback is not named in any covers line.",
+      "change": "Added dieback of citrus to the list of fungal diseases."
+    },
+    {
+      "kind": "widened",
+      "where": "tools.maintenance",
+      "evidence": "Coverage WASSCE Practical B.2, UTME E.3(b) and scheme of work SS2 T1 W3, all partial: maintenance of implements is not named; tools.maintenance names farm machines only.",
+      "change": "Widened to reasons for maintaining machines and implements, and routine maintenance of tractor-coupled and animal-drawn implements (cleaning, greasing, tightening bolts, replacing worn discs, shares and tines, storing under cover); added Practical B.2 and B.4 to its WAEC references and a rule sending care of hand tools to tools.simple-tools."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "tools.implements",
+      "evidence": "Coverage WASSCE Practical B.2: implements now have their maintenance named in tools.maintenance, which creates a border.",
+      "change": "Added: maintaining an implement goes to tools.maintenance."
+    },
+    {
+      "kind": "widened",
+      "where": "tools.simple-tools",
+      "evidence": "Coverage WASSCE Practical B.3, partial: scythe and groundnut lifter are not named in any covers line.",
+      "change": "Added scythe and groundnut lifter to the list of simple tools and Practical B.3 to its WAEC references."
+    },
+    {
+      "kind": "widened",
+      "where": "crop-plants.monocot-dicot",
+      "evidence": "Coverage WASSCE Practical C.1, partial: identifying the fruits of crop plants is not named in any covers line.",
+      "change": "Widened identifying seeds and seedlings of common crops to seeds, seedlings and fruits."
+    },
+    {
+      "kind": "widened",
+      "where": "pasture.management",
+      "evidence": "Coverage UTME B.10(a), partial: methods of propagating pasture grasses and legumes are not named in any covers line.",
+      "change": "Added propagating pasture grasses and legumes by seed, root splits, stolons and stem cuttings."
+    },
+    {
+      "kind": "widened",
+      "where": "anatomy.external",
+      "evidence": "Coverage UTME C.3(a) Functions of tissues and organs of farm animals, partial: animal tissues are not named in any covers line.",
+      "change": "Added the main tissues of the animal body (epithelial, connective including bone and blood, muscle, nervous) and their functions."
+    },
+    {
+      "kind": "widened",
+      "where": "livestock-management.systems",
+      "evidence": "Coverage WASSCE Practical B.6 and scheme of work SS2 T3 W9-10: feeders and waterers are named only for poultry, so feeding equipment for other stock has no home.",
+      "change": "Added feeding and watering equipment for livestock (feeders, feed troughs, hay racks, water troughs, drinkers), Practical B.6 to its WAEC references, and a rule: general or non-poultry feeders and drinkers here, poultry ones to livestock-management.poultry."
+    },
+    {
+      "kind": "widened",
+      "where": "cultivation.cultural-practices",
+      "evidence": "Coverage scheme of work SS1 T2 W1-2, partial: harvesting as a general term is not named outside the crop husbandry subtopics.",
+      "change": "Added harvesting (its meaning, signs of maturity and timing) to the general practices."
+    },
+    {
+      "kind": "widened",
+      "where": "soil.composition",
+      "evidence": "Coverage scheme of work SS2 T1 W1-2, partial: the meaning of soil is not named in any covers line.",
+      "change": "Added the meaning of soil, and extended the sorting rule so what soil is goes here."
+    },
+    {
+      "kind": "widened",
+      "where": "ecology.climatic",
+      "evidence": "Matchtest finding (sonnet, missing): day-neutral, short-day and long-day crops (photoperiodism) are tested but no covers line names them.",
+      "change": "Widened light to intensity, quality and day length, naming photoperiodism and short-day, long-day and day-neutral crops, and extended the sorting rule so a crop's flowering response to day length goes here."
+    },
+    {
+      "kind": "widened",
+      "where": "processing-storage.processing",
+      "evidence": "Matchtest disagreement WASSCE 2024 Q22 (molasses: sonnet cash-crops.fibre-latex-sugar, opus processing-storage.processing); findings sonnet missing and opus overlap on sugar cane products and by-products.",
+      "change": "Added sugar cane into sugar with molasses and bagasse as by-products, and products and by-products of processing generally; added a rule that a product or by-product of processing a crop goes here, not to the husbandry subtopic or agriculture.agro-industry."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "cash-crops.fibre-latex-sugar",
+      "evidence": "Matchtest disagreement WASSCE 2024 Q22 (molasses) and the sonnet and opus findings on sugar cane by-products.",
+      "change": "Added: processing sugar cane and its products and by-products (sugar, molasses, bagasse) go to processing-storage.processing."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "agriculture.agro-industry",
+      "evidence": "Matchtest finding (opus, overlap, processing-storage.processing): molasses could also go to agriculture.agro-industry.",
+      "change": "Added: a product or by-product obtained by processing a crop, such as molasses, goes to processing-storage.processing."
+    },
+    {
+      "kind": "widened",
+      "where": "soil-fertility.maintenance",
+      "evidence": "Matchtest disagreement WASSCE 2023 Q30 (Examples of cover crops: sonnet pasture.species, opus soil-fertility.maintenance); findings sonnet missing and opus missing: no subtopic lists cover crop species.",
+      "change": "Added cover crops themselves, their features and species (Centrosema pubescens, Mucuna utilis, Calopogonium mucunoides, Pueraria phaseoloides), and a rule: naming cover crop species goes here whatever the stem mentions; a legume asked about as pasture goes to pasture.species."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "pasture.species",
+      "evidence": "Matchtest disagreement WASSCE 2023 Q30 (cover crops) and the sonnet finding that pasture.species was the only legume list.",
+      "change": "Added: a legume asked about as pasture or forage stays here; the same legume asked about as a cover crop, or a request for examples of cover crops, goes to soil-fertility.maintenance."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "weeds.control",
+      "evidence": "Matchtest findings (sonnet and opus, missing): cover crops appear as a practice in weed control with no species home.",
+      "change": "Added: naming cover crop species goes to soil-fertility.maintenance."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "soil-fertility.erosion",
+      "evidence": "Matchtest finding (opus, missing): cover crops appear as a practice in erosion control with no species home.",
+      "change": "Added: naming cover crop species goes to soil-fertility.maintenance."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "soil-fertility.fertilizers",
+      "evidence": "Matchtest disagreement WASSCE 2024 Q18 (fertilizer not required by a nodulated legume: sonnet soil-fertility.nutrients, opus soil-fertility.fertilizers); findings sonnet overlap ecology.biotic / soil-fertility.cycles / soil-fertility.nutrients and opus overlap soil-fertility.fertilizers.",
+      "change": "Named choosing the fertilizer a crop or crop type needs or does not need, and added the rule: choosing or ruling out a fertilizer for a named crop or crop type goes here, such as no nitrogen for a nodulated legume, even though the reasoning passes through ecology.biotic and soil-fertility.cycles; a question starting from a symptom stays in soil-fertility.nutrients."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "soil-fertility.nutrients",
+      "evidence": "Matchtest disagreement WASSCE 2024 Q18 and the sonnet and opus overlap findings on fertilizer choice for a legume.",
+      "change": "Added: a question that starts from a crop or crop type, such as which fertilizer a nodulated legume does not need, goes to soil-fertility.fertilizers."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "soil-fertility.cycles",
+      "evidence": "Matchtest disagreement WASSCE 2024 Q18 (both models noted it also fits soil-fertility.cycles).",
+      "change": "Added: the fertilizer a nodulated legume does not need goes to soil-fertility.fertilizers."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "ecology.biotic",
+      "evidence": "Matchtest disagreement WASSCE 2024 Q18 (both models noted it also fits ecology.biotic).",
+      "change": "Added: a question that shows nodulated legume roots and asks which fertilizer the crop does not need goes to soil-fertility.fertilizers."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "food-crops.cereals",
+      "evidence": "Matchtest findings (opus): overlap soil-fertility.fertilizers (fertilizer choice sits between fertilizers and the husbandry subtopic, Q19, Q45); misplaced cultivation.cultural-practices (the named-crop rule pulls generic practices such as thinning maize seedlings into husbandry, Q74); missing crop-plants.classification (botanical names across crop groups land in whichever husbandry subtopic, Q65).",
+      "change": "Extended the shared husbandry sorting rule, which every husbandry subtopic inherits: a general cultural practice asked with the crop only as the example goes to cultivation.cultural-practices; choosing a fertilizer for a crop goes to soil-fertility.fertilizers; matching botanical names across crop groups goes to crop-plants.classification."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "cultivation.cultural-practices",
+      "evidence": "Matchtest finding (opus, misplaced): the named-crop rule sends a generic definition like thinning maize seedlings (Q74) to husbandry; it should apply only when the practice is specific to that crop.",
+      "change": "Replaced the rule: a practice specific to a named crop (detasseling maize, tapping rubber) goes to that crop's husbandry subtopic; a general practice asked with a named crop only as the example stays here."
+    },
+    {
+      "kind": "widened",
+      "where": "crop-plants.classification",
+      "evidence": "Matchtest finding (opus, missing): identifying a crop by botanical name when options span crop groups (Q65) has no general home.",
+      "change": "Added matching crops to botanical names when the options span several crop groups, with examples, and a rule: across groups here, within one group or with that crop's husbandry to the husbandry subtopic."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "government.programmes",
+      "evidence": "Matchtest disagreement WASSCE 2023 Q3 (farming system recommended for farm settlement schemes: sonnet agriculture.farming-systems, opus government.programmes); finding opus overlap government.programmes (Q14).",
+      "change": "Named the farming system or practice each programme promoted, and added: the farming system a named programme promoted goes here, not to agriculture.farming-systems, because the student must know the programme."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "agriculture.farming-systems",
+      "evidence": "Matchtest disagreement WASSCE 2023 Q3 and the opus overlap finding on government.programmes.",
+      "change": "Added: the farming system a named government programme promoted, such as mixed farming in farm settlement schemes, goes to government.programmes."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "anatomy.environmental-physiology",
+      "evidence": "Matchtest disagreement WASSCE 2023 Q9 (high relative humidity in a brooder house: sonnet anatomy.environmental-physiology, opus livestock-management.poultry); finding opus overlap: the subtopic claims all humidity effects on animals, yet wet litter and disease in a brooder house is housing management (Q54).",
+      "change": "Limited the rule to a factor's effect on the animal's body or output; conditions in a pen, brooder or poultry house that lead to wet litter, pests or disease go to the species subtopic in livestock-management."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "livestock-management.poultry",
+      "evidence": "Matchtest disagreement WASSCE 2023 Q9 and the opus overlap finding on anatomy.environmental-physiology.",
+      "change": "Added temperature, ventilation and humidity in the brooder or pen and their effect on litter and disease, with the rule: humidity or poor ventilation causing wet litter or disease here, its effect on the bird's growth and laying to anatomy.environmental-physiology."
+    },
+    {
+      "kind": "widened",
+      "where": "livestock-management.poultry",
+      "evidence": "Matchtest findings sonnet too-narrow (egg-yield and tray-conversion sums, Q10) and opus missing (egg output per week, trays from daily lay, hen-day production, feed required per flock, Q10, Q21).",
+      "change": "Widened poultry arithmetic from floor space and stocking sums to egg production sums (eggs per day to trays per week, hen-day production) and the feed a flock needs over a period, with rules sending ration formulation to animal-nutrition.rations and money sums to farm-management.accounts. Chosen over a new calculations subtopic because the sums need the same poultry knowledge and occur only for poultry in the evidence."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "animal-nutrition.rations",
+      "evidence": "Matchtest finding (opus, missing): feed required per flock (Q21) needed a home, which borders ration formulation.",
+      "change": "Added: what goes into a ration and in what proportion goes here; the total feed a poultry flock needs over a period goes to livestock-management.poultry."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "soil.ph",
+      "evidence": "Matchtest finding (sonnet, overlap soil.ph / soil-fertility.availability): a question about ash raising soil pH (Q51) fits both.",
+      "change": "Added: the effect of burning or of ash on soil pH goes here; burning as a cause of nutrient loss goes to soil-fertility.availability."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "soil-fertility.availability",
+      "evidence": "Matchtest finding (sonnet, overlap soil.ph / soil-fertility.availability, Q51).",
+      "change": "Added: burning as a cause of nutrient loss goes here, but the effect of burning or of ash on soil pH goes to soil.ph."
+    },
+    {
+      "kind": "widened",
+      "where": "marketing.agents",
+      "evidence": "Matchtest findings sonnet overlap marketing.agents / demand-supply.price-policy (farm gate price, Q27) and opus missing (no subtopic for farm gate, wholesale and retail price and marketing margins, Q27).",
+      "change": "Added price levels along the channel (farm gate, wholesale, retail) and marketing margins with the simple sums, and a rule: price at a point in the channel or the margin between points here; how demand and supply set price, and price control or support, to demand-supply.price-policy. Chosen over a new marketing.prices subtopic because the content is the channel itself read in prices."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "demand-supply.price-policy",
+      "evidence": "Matchtest finding (sonnet, overlap marketing.agents / demand-supply.price-policy, Q27).",
+      "change": "Added: the price at a point in the marketing channel (farm gate, wholesale, retail) and marketing margins go to marketing.agents."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "tools.machinery",
+      "evidence": "Matchtest finding (opus, overlap mechanization.farm-power): what a tractor can power (planters, dryers, sprayers, Q18) fits farm-power and tools.machinery.",
+      "change": "Named what the tractor can drive or operate among its uses, and added: that question goes here; the tractor compared with other sources of power goes to mechanization.farm-power."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "mechanization.farm-power",
+      "evidence": "Matchtest finding (opus, overlap mechanization.farm-power, Q18).",
+      "change": "Added: the tractor as a source of mechanical power, compared with other sources, goes here; what a tractor can drive or operate, and its parts, go to tools.machinery."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "development.institutes",
+      "evidence": "Matchtest finding (opus, overlap development.institutes): why research matters is routed here, but the options are crop improvement aims (Q36).",
+      "change": "Added: a question whose options are the aims of improving a crop goes to crop-improvement.aims even when the stem asks why research matters."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "crop-improvement.aims",
+      "evidence": "Matchtest finding (opus, overlap development.institutes, Q36).",
+      "change": "Added: a question whose options are aims of improving crops goes here even when the stem asks why research matters; the roles of research institutes and research in general go to development.institutes."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "crop-pests.classification",
+      "evidence": "Matchtest finding (opus, overlap crop-pests.classification): identifying the pest from a damage pattern (Q67) tests mouthpart type but answers with a named pest; the two rules point opposite ways.",
+      "change": "Added: a damage pattern that points to a mouthpart type, with options of different mouthpart types, goes here even though the answer is a named pest; one named pest asked about for itself goes to field-pests or storage-pests."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "crop-pests.field-pests",
+      "evidence": "Matchtest finding (opus, overlap crop-pests.classification, Q67).",
+      "change": "Added the matching rule: the damage, life cycle or control of one named pest here; picking the pest from a mouthpart-type damage pattern to crop-pests.classification."
+    },
+    {
+      "kind": "widened",
+      "where": "animal-health.general",
+      "evidence": "Matchtest finding (opus, too-narrow): the disease rule handles one named disease, not questions that sort several diseases by pathogen group (Q59), whose options span every pathogen subtopic.",
+      "change": "Added sorting named diseases by the kind of organism that causes them, and rewrote the rule: which of several named diseases a given kind of organism causes, with options from more than one pathogen subtopic, goes here; a question about one named disease still goes to its pathogen subtopic."
+    },
+    {
+      "kind": "widened",
+      "where": "extension.meaning",
+      "evidence": "Matchtest finding (opus, too-narrow): covers the qualities of an extension worker but not their roles and duties (Q70).",
+      "change": "Added the roles and duties of an extension worker, and a rule sending how the worker reaches farmers to extension.methods."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "Coverage WASSCE B.5(c) Edaphic factors, partial: no subtopic treats edaphic factors together as ecology.climatic does climatic ones.",
+      "reason": "The coverage map marks it split with nothing missing: classifying a factor as edaphic is in ecology.agro-ecosystem and each property is in soil.ph, soil.texture or soil.physical. No question in the placement test split on it."
+    },
+    {
+      "finding": "Coverage WASSCE G.2(f)(iii) Cultural: harmful effects of burning, covered with a note that burning is not named in crop-pests.control.",
+      "reason": "Marked covered: crop-pests.control covers the side effects of control methods in general, and burning's effect on soil now has its own rule between soil.ph and soil-fertility.availability."
+    },
+    {
+      "finding": "Coverage UTME A.6(e) National programmes, covered with a note that NCRPs is not named in government.programmes.",
+      "reason": "Marked covered: the programme list in the covers line is illustrative and a question about NCRPs has one obvious home."
+    },
+    {
+      "finding": "Coverage WASSCE Practical A.6, partial: drainage equipment as such is not named.",
+      "reason": "Marked split with nothing missing: every item the syllabus lists (watering can, sprinkler, pump, pipes) is irrigation equipment, already named in irrigation.irrigation."
+    },
+    {
+      "finding": "Coverage items marked partial with the note 'Split, nothing missing' (among them WASSCE D.2(h), G.1(c)(ii)-(iv), G.1(c)(vii), H.2(c), H.3(d), H.5(b), H.9(e)(iii), H.9(f)(iii), Practical A.1, B.1, B.4, C.2-4, C.6-7, D.1-2, D.4-5, and the scheme-of-work weeks that span several subtopics).",
+      "reason": "Each part of each item already has a named subtopic; the item is partial only because it spans more than one. Nothing is missing, so no change."
+    },
+    {
+      "finding": "Matchtest nofit count of 6 questions.",
+      "reason": "The test file gives no per-question detail for these beyond the findings above, and every finding naming a missing concept has been acted on. There is nothing more specific to change."
+    }
+  ]
+}

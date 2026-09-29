@@ -1,0 +1,214 @@
+{
+  "from_version": "1.0",
+  "to_version": "1.1",
+  "changes": [
+    {
+      "kind": "added",
+      "where": "verbs.principal-parts",
+      "evidence": "Matchtest english-utme, opus missing (verbs.tenses): irregular verb principal parts (struck, drank against drunk; Q61, Q75) named in no covers line. Matchtest english-waec, opus missing (verbs): no home for principal parts of irregular verbs (grind, ground; swim, swam, swum; Q66, Q78). Disagreements UTME 2019 Q28 (verbs.non-finite against verbs.tenses) and WASSCE 2018 Q70 (verbs.non-finite against verbs.tenses).",
+      "change": "Added a subtopic for the base, past and past participle forms of regular and irregular verbs, with a sorting rule: options that are forms of one verb, where the sentence already fixes tense and voice, go here; options that are different tenses go to verbs.tenses; participle against gerund against infinitive goes to verbs.non-finite. Found independently in both tests by one model each and behind two disagreements, and a student weak on verb forms needs a different drill from one weak on choosing a tense, so it is a subtopic rather than a line in verbs.tenses. The scope_rule records that real papers put it in."
+    },
+    {
+      "kind": "added",
+      "where": "comprehension.reading-skills",
+      "evidence": "Coverage, missing: SS1 T1 W4(a) Comprehension/reading skills: skimming and scanning; SS1 T3 W5(a) more on scanning and skimming; SS2 T1 W7(a) Comprehension: reading to take notes. Proposed home: comprehension, new subtopic 'Reading skills: skimming, scanning and note-taking'.",
+      "change": "Added the subtopic as proposed, taught SS1 T1, SS1 T3 and SS2 T1, with a sorting rule sending questions answered from a particular passage to the subtopic they test and summary sentences to summary.writing. These are English content the standard does not allow to stay missing, and they are a different skill from answering questions on a passage."
+    },
+    {
+      "kind": "added",
+      "where": "vocabulary.dictionary",
+      "evidence": "Coverage, missing: SS1 T3 W1(d) Use of dictionary; SS2 T3 W4(b) Vocabulary: use of dictionary. Proposed home: vocabulary, new subtopic 'Using the dictionary'.",
+      "change": "Added the subtopic as proposed, taught SS1 T3 and SS2 T3: finding a word by alphabetical order and reading the meanings, word class, pronunciation and spelling in its entry. Sorting rule sends a word's meaning in a sentence to the vocabulary subtopic it tests and reading a transcription to sounds.phonetic-symbols."
+    },
+    {
+      "kind": "widened",
+      "where": "comprehension.prescribed-text",
+      "evidence": "Matchtest english-utme, sonnet too-narrow and opus too-narrow (comprehension.prescribed-text): covers names only The Life Changer and The Lekki Headmaster, but the sample tests Sweet Sixteen (6 questions), In Dependence (7), The Last Days at Forcados High School and another novel; the rule also absorbs inference, attitude and referent questions on the novel (Q4, Q24, Q53).",
+      "change": "The covers line now takes whichever novel JAMB prescribes in any year, names the titles seen in the sample, and says outright that inference, attitude and reference questions on the novel go here because the novel must have been read. waec stays null because only UTME papers test it."
+    },
+    {
+      "kind": "widened",
+      "where": "word-classes.pronouns",
+      "evidence": "Matchtest english-utme, sonnet missing (word-classes) and opus missing (word-classes.pronouns): indefinite pronouns (anyone, someone, somebody, anything) and some against any after a negative (did not find anyone, Q32) are named in neither pronouns nor conjunctions-articles.",
+      "change": "Added indefinite pronouns and the some- or any- form after a negative or in a question to the pronouns covers line. Added a sorting rule to both pronouns and conjunctions-articles: an indefinite pronoun standing alone goes to pronouns; some or any before a noun goes to conjunctions-articles."
+    },
+    {
+      "kind": "widened",
+      "where": "word-classes.conjunctions-articles",
+      "evidence": "Matchtest english-waec, sonnet missing (word-classes.pronouns): no subtopic names the fused relative what introducing a noun clause (forgot what the police said). Opus missing (sentences): no home for choosing the word that introduces a noun clause (that, what, whether, if, why; Q8).",
+      "change": "Added the words that open a noun clause (that, whether, if, and what, why, when, how with no noun before them) to conjunctions-articles, as opus proposed. Added a sorting rule to both conjunctions-articles and pronouns: a relative pronoun referring back to a noun goes to pronouns; a word opening a noun clause with no noun before it goes to conjunctions-articles; naming the clause goes to sentences.grammatical-function. Widened rather than adding sentences.clause-introducers because choosing the introducer is the same skill as choosing a subordinating conjunction, already held here."
+    },
+    {
+      "kind": "widened",
+      "where": "verbs.tenses",
+      "evidence": "Matchtest english-utme, opus missing (verbs.tenses): stative verbs that resist the continuous (I can hear you, not I am hearing you; Q66) are named nowhere. Disagreement UTME 2020 Q29 (verbs.tenses against verbs.modals), both notes naming the stative rule.",
+      "change": "Added stative verbs and can with a verb of perception in place of the continuous to verbs.tenses, with a sorting rule in both verbs.tenses and verbs.modals that can hear against am hearing goes to verbs.tenses."
+    },
+    {
+      "kind": "widened",
+      "where": "verbs.sequence",
+      "evidence": "Matchtest english-utme, opus missing (verbs.sequence): keeping tense or modal consistent across coordinated clauses (tried several times but could not, Q51) has no home.",
+      "change": "Widened verbs.sequence to tense and modal consistency in any clause linked to a past main clause, including coordinated clauses, and extended the verbs.modals sorting rule so can against could forced by a past verb in a linked clause goes to verbs.sequence."
+    },
+    {
+      "kind": "widened",
+      "where": "idioms.sentence-interpretation",
+      "evidence": "Matchtest english-waec, sonnet too-narrow (idioms.sentence-interpretation): This means that items also test plain pragmatic inference from an ordinary sentence with no idiom and none of the listed devices. Opus too-narrow (idioms.sentence-interpretation): sentences whose meaning turns on irony or sarcasm (Kola, you really worked hard to win half of it; Q12) have no home.",
+      "change": "Widened the covers line to implied, ironic and sarcastic meaning of a stand-alone sentence with no idiom in it. Added sorting rules to both idioms.sentence-interpretation and idioms.figures-of-speech: naming the figure goes to figures-of-speech, what the ironic sentence means goes to sentence-interpretation; an implied meaning in a passage goes to comprehension.inference."
+    },
+    {
+      "kind": "widened",
+      "where": "concord.question-tags",
+      "evidence": "Matchtest english-waec, sonnet missing (idioms.sentence-interpretation): no subtopic covers the correct response to a negative or polite yes or no question (Would you mind lifting the box? No, I don't). Opus missing (concord): no home for short answers and replies to questions (Q59); widen concord.question-tags. Disagreement WASSCE 2020 Q45 (idioms.sentence-interpretation against concord.question-tags).",
+      "change": "Widened concord.question-tags to short answers and replies that echo the auxiliary, including the reply to a polite or negative question, and renamed it Question tags and short answers (the parent topic name follows). Added a sorting rule to both concord.question-tags and idioms.sentence-interpretation: choosing a reply that echoes the auxiliary goes to question-tags; what a stand-alone sentence means goes to sentence-interpretation."
+    },
+    {
+      "kind": "widened",
+      "where": "verbs.mood-conditionals",
+      "evidence": "Coverage, partial: UTME Lexis and Structure content: Mood. Mood as a category (indicative, imperative, subjunctive) is not named. Proposed: widen the verbs.mood-conditionals covers line to name the indicative, imperative and subjunctive moods.",
+      "change": "Named the three moods in the covers line and the subtopic name (Mood, conditionals and the subjunctive). Added a sorting rule to both verbs.mood-conditionals and sentences.types: the mood of a verb goes to mood-conditionals; what kind a whole sentence is by function goes to sentences.types."
+    },
+    {
+      "kind": "widened",
+      "where": "verbs.modals",
+      "evidence": "Coverage, partial: SS3 T1 W8(c) Lexical and auxiliary verbs. Lexical (main) verbs and how they differ from auxiliaries are not named. Proposed: widen the verbs.modals covers line.",
+      "change": "Added lexical verbs against auxiliary verbs, and how to tell them apart, to the verbs.modals covers line."
+    },
+    {
+      "kind": "widened",
+      "where": "verbs.non-finite",
+      "evidence": "Coverage, partial: SS3 T2 W4(c) Structure: nominalization of infinitives. The infinitive used as a noun (To err is human) is not named. Proposed: widen the verbs.non-finite covers line to name infinitives and gerunds used as nouns.",
+      "change": "Added infinitives and gerunds used as nouns to verbs.non-finite, added SS3 T2 to its taught_in, and added a matching sorting rule to vocabulary.word-formation sending them to verbs.non-finite."
+    },
+    {
+      "kind": "widened",
+      "where": "comprehension.inference",
+      "evidence": "Coverage, partial: SS2 T2 W2(a) Comprehension: sentence/paragraph transition. Recognising transitions and paragraph links while reading is not named in any comprehension covers line. Proposed: widen the comprehension.inference covers line to name coherence and transitions.",
+      "change": "Added how the sentences and paragraphs of a passage hold together and what a transition signals, with a sorting rule sending linking paragraphs in the student's own writing to essay.organisation."
+    },
+    {
+      "kind": "widened",
+      "where": "comprehension.inference",
+      "evidence": "Coverage, partial: SS2 T2 W6(a) Comprehension: reading for critical evaluation. Evaluating a passage (fact against opinion, strength of an argument) is not named. Proposed: widen comprehension.inference or add 'Evaluating a passage'.",
+      "change": "Widened comprehension.inference to telling fact from opinion and judging how well an argument is supported, and added a sorting rule to both comprehension.inference and comprehension.tone: fact against opinion goes to inference; the writer's own opinion and attitude go to tone. Widened rather than added because it is the same reasoning from the text that inference already holds."
+    },
+    {
+      "kind": "widened",
+      "where": "sounds.consonants",
+      "evidence": "Coverage, partial: WASSCE Aims (xi) Recognize the physical characteristics of English sounds; describing sounds by voicing, place and manner is not named anywhere. Coverage, partial: UTME Oral Forms objective 2, Differentiate between consonant types; classifying consonants is not named. Proposed: widen sounds.consonants.",
+      "change": "Added classifying a consonant as voiced or voiceless and by place and manner of articulation, cited Aims (xi) and the JAMB objective, and added a sorting rule: a question that describes a consonant and asks which word contains it goes here; symbol options go to sounds.phonetic-symbols."
+    },
+    {
+      "kind": "widened",
+      "where": "sounds.pure-vowels",
+      "evidence": "Coverage, partial: WASSCE Aims (xi); describing vowels by height and lip rounding is not named anywhere. Proposed: widen sounds.pure-vowels.",
+      "change": "Added describing a vowel as front, central or back, close or open, long or short, with rounded or spread lips, cited Aims (xi), and extended the sorting rule to questions that describe a vowel."
+    },
+    {
+      "kind": "widened",
+      "where": "sentences.grammatical-function",
+      "evidence": "Coverage, partial: SS1 T1 W4(b) Structure: noun and verb phrases. The verb phrase is not among the phrases listed. Proposed: add the verb phrase.",
+      "change": "Added the verb phrase to the list of phrases."
+    },
+    {
+      "kind": "widened",
+      "where": "mechanics.punctuation",
+      "evidence": "Coverage, partial: SS1 T2 W10(c) Punctuation (full stop, comma, dash, colon, semi-colon, quotation marks). Only the hyphen is named. Proposed: add the dash.",
+      "change": "Added the dash."
+    },
+    {
+      "kind": "widened",
+      "where": "essay.organisation",
+      "evidence": "Coverage, partial: WASSCE P2 A marks (iv) Mechanical accuracy: correct grammar, punctuation, spelling. essay.organisation does not name mechanical accuracy in continuous writing. Proposed: add it to the essay.organisation covers line.",
+      "change": "Added mechanical accuracy in continuous writing to the covers line and its sorting rule; isolated spelling and punctuation choices still go to mechanics."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "verbs.tenses, verbs.sequence",
+      "evidence": "Matchtest english-utme, sonnet overlap (verbs.tenses / verbs.sequence): the rule names only reporting verbs, so a past cognition or perception verb (realised, discovered, noticed, found) governing a that-clause could land in either. Opus overlap (verbs.sequence): after realised (Q68) both rules are true; needs a tie-break. Disagreement UTME 2022 Q19 (verbs.tenses against verbs.sequence).",
+      "change": "Both covers lines now say: a verb in a clause governed by a past verb of saying, thinking, knowing or perceiving, or kept in step with a past verb in a linked clause, goes to verbs.sequence even when the order of events would fix the same form; a tense fixed only by a time expression in a clause no such verb governs goes to verbs.tenses. The Q19 sentence is given as the worked example. Took sonnet's wider reading over opus's narrower present-against-past test, because it decides every case by one question about the governing verb."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "word-classes.prepositions, idioms.idioms",
+      "evidence": "Matchtest english-utme, opus overlap (word-classes.prepositions): a preposition inside a fixed expression (a slap in the face, Q38) is claimed by both. Disagreement UTME 2022 Q21 (word-classes.prepositions against idioms.idioms).",
+      "change": "Both covers lines now say a preposition that belongs to a fixed idiom goes to idioms.idioms, with a slap in the face as the example."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "vocabulary.homonyms, vocabulary.word-choice",
+      "evidence": "Disagreement UTME 2020 Q5, The lady is a ...... beauty (vocabulary.homonyms against vocabulary.word-choice): options raging, ravaging, ravenous, ravishing, read as commonly confused words by one model and as the collocation ravishing beauty by the other.",
+      "change": "Both covers lines now say homonyms takes a recognised confusable pair or set; options that merely look or sound somewhat alike, where the gap is decided by which word fits or goes with its neighbour, go to vocabulary.word-choice. The Q5 options are the worked example."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "idioms.idioms, vocabulary.word-choice",
+      "evidence": "Matchtest english-waec, sonnet overlap (vocabulary.word-choice): a fixed quantifier phrase such as one excuse or another is both a collocation and a fixed expression; nothing separates them. Opus overlap (idioms.idioms): fixed collocations such as beyond belief (Q42) fit both; proposed test: non-literal meaning makes it an idiom. Disagreement WASSCE 2018 Q58, He always gives ...... for coming late (vocabulary.word-choice against idioms.idioms).",
+      "change": "Both covers lines now carry one test: a pairing of words each used in its ordinary meaning (a balanced diet, beyond belief) is a collocation and goes to vocabulary.word-choice; a phrase with a non-literal meaning, or a fixed frame whose small words cannot be changed (some excuse or other, next to nothing, none the worse for), goes to idioms.idioms. Opus's non-literal test alone would have sent some excuse or other to word-choice while the other half of the same disagreement pulled it to idioms, so the fixed-frame clause is added and the three named items are placed by example."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "idioms.idioms, word-classes.adjectives-adverbs",
+      "evidence": "Matchtest english-waec, sonnet overlap (idioms.idioms): a fixed idiom built on a comparative, none the worse for, fits idioms.idioms and word-classes.adjectives-adverbs. Opus overlap (word-classes.adjectives-adverbs): fixed expressions whose options vary a grammar form (none the worse, Q6; some excuse or other, Q21) sit between idioms.idioms and the grammar subtopic; only conjunctions-articles has a rule sending them to idioms.",
+      "change": "idioms.idioms now says a fixed expression goes there even when the options vary only a preposition, a determiner or a comparative form. word-classes.adjectives-adverbs now sends a fixed expression built on a comparative to idioms.idioms, and word-classes.conjunctions-articles names some excuse or other in its existing rule. Placed in covers lines rather than how_to_use so the rule sits where the placing model reads it."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "verbs.voice, verbs.tenses",
+      "evidence": "Matchtest english-waec, opus overlap (verbs.voice): when options mix active and passive and also different passive aspects (Q58: considers, is considered, is being considered) the voice and tenses rules both apply; state which wins when the deciding contrast is aspect.",
+      "change": "Both covers lines now say: voice goes to verbs.voice only when voice alone decides the answer; when the key is passive and more than one passive option is offered, so aspect or tense decides between them, the question goes to verbs.tenses."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "idioms.phrasal-verbs, word-classes.prepositions",
+      "evidence": "Matchtest english-waec, opus overlap (idioms.phrasal-verbs): three-part verbs where the gap is the final preposition (cash in on, Q40) fall between phrasal-verbs and prepositions; add a rule that any particle of a multi-word verb goes to phrasal-verbs. Disagreement WASSCE 2022 Q69, to dispose ...... useless items (idioms.phrasal-verbs against word-classes.prepositions).",
+      "change": "Both covers lines now say any particle of a three-part verb, including its final preposition, goes to idioms.phrasal-verbs; a single preposition after a verb that keeps its ordinary meaning goes to word-classes.prepositions, with dispose of named in the prepositions examples to settle Q69. Opus's wider wording (any particle of any multi-word verb) was not taken because it would pull depend on and judge by, which the tree already places under prepositions, and reopen a settled border."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "verbs.non-finite, word-classes.adjectives-adverbs",
+      "evidence": "Matchtest english-utme, sonnet overlap (verbs.non-finite / word-classes.adjectives-adverbs): a participle that has become a predicate adjective (the man was drunk at the party) is tested for the correct verb form and for state description; nothing says which wins. Disagreement UTME 2019 Q28.",
+      "change": "verbs.non-finite, word-classes.adjectives-adverbs and the new verbs.principal-parts all now say a past participle used as an adjective, where the options are forms of the verb, goes to verbs.principal-parts. verbs.non-finite splits its old participle rule: a participle in a finite tense goes to verbs.tenses when the tense is in question and to verbs.principal-parts when only its form is."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "comprehension.cloze, vocabulary.synonyms, vocabulary.antonyms, vocabulary.homonyms, vocabulary.word-choice, vocabulary.word-formation, vocabulary.dictionary, idioms.idioms, idioms.phrasal-verbs, idioms.figures-of-speech, idioms.sentence-interpretation",
+      "evidence": "fresh placement test on WAEC, 87/88: all ten disagreements were cloze gaps split between a vocabulary subtopic and comprehension.cloze",
+      "change": "cloze gaps go to comprehension.cloze; vocabulary and idiom subtopics hold standalone sentences. Applied by the orchestrator after the one revision."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "Matchtest english-utme, opus too-narrow (comprehension.prescribed-text), second half: the rule absorbs inference, attitude and referent questions on the novel (Q4, Q24, Q53), so scores cannot separate recall from reading skill; acceptable only if intended.",
+      "reason": "It is intended, and the covers line now says so. The how_to_use makes the prescribed novel a format exception because every question on it needs the novel read first; splitting it by reading skill would give each part a handful of questions a year and scatter a single preparation task (reading the set book) across subtopics."
+    },
+    {
+      "finding": "Coverage, missing: WASSCE Aims (viii) Comprehend spoken English; P3 LT Section 7 understanding longer dialogues and narratives; SS1 T2 W2(a) Comprehension/listening skills (partial); SS2 T1 W8(c) Comprehension (listening). Proposed: a 'Listening comprehension' subtopic only if listening comes into scope.",
+      "reason": "The scope_rule excludes the Listening Comprehension Test, which Nigerian candidates do not sit, and no Nigerian paper or UTME tests listening. The coverage map makes its own proposal conditional on a scope change, which is Orezi's decision at the gate, not a revision to make from this evidence."
+    },
+    {
+      "finding": "Coverage, partial: SS1 T1 W6(a) Comprehension/oral skills; SS1 T3 W10(a) Comprehension/speaking skills. Speaking skills beyond pronunciation are not named. Proposed: only if kept, an essay subtopic 'Spoken presentation and conversation'.",
+      "reason": "Neither exam tests speaking; the Test of Orals is objective recognition of sounds and stress, which the sounds and stress topics hold. The proposal is conditional and nothing in the placement tests calls for it. Left for the gate."
+    },
+    {
+      "finding": "Coverage, missing: SS1 T1 W9(a) question-answering technique; SS3 T2 W5(d) hints on writing essays in the examination; SS3 T2 W6(a) requirements of the examination on orals; SS3 T2 W6(b) hints on lexis and structure; SS3 T2 W6(c) and W7(c) hints on answering comprehension questions. Proposed: a topic 'Examination technique', or record as non-content.",
+      "reason": "Recorded as non-content. These weeks teach how to sit the paper, not English a question can test, so a subtopic for them could never hold a placed question or a mastery score. The standard allows scheme-of-work items to stay missing when they are outside the subject's content."
+    },
+    {
+      "finding": "Coverage, missing: WASSCE P1 Ghana C drama, prose and poetry (literature questions on prescribed texts).",
+      "reason": "Ghana-only Paper 1 Part C, excluded by the scope_rule; the coverage map itself proposes nothing for the Nigerian tree."
+    },
+    {
+      "finding": "Coverage, partial: WASSCE Aims (x) Use an acceptable pronunciation that can be comprehended by others. Producing pronunciation is not named.",
+      "reason": "No proposal was made and no objective paper can test production; recognising sounds and stress, which the papers do test, is held by the sounds and stress subtopics."
+    },
+    {
+      "finding": "Coverage, partial: WASSCE P3 LT Section 4(i) vowel and consonant contrasts in sentence contexts; hearing the contrast inside a sentence is not named.",
+      "reason": "Listening Test only, outside the declared scope, and no proposal was made. The contrasts themselves are held by the vowel and consonant subtopics."
+    },
+    {
+      "finding": "Coverage, unmapped_subtopics: none listed.",
+      "reason": "Nothing to keep or merge; no id is merged and merged_into is empty."
+    }
+  ]
+}

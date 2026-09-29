@@ -1,0 +1,152 @@
+{
+  "slug": "chemistry-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.65,
+  "agree_subtopic": 78,
+  "agree_topic": 78,
+  "nofit": 2,
+  "disagreements": [
+    {
+      "year": 2021,
+      "q_number": 6,
+      "stem": "If humid air is polluted by chlorine discharge, the air can be restored by sprinkling",
+      "sonnet": "redox.agents",
+      "opus": "halogens.chlorine",
+      "notes": [
+        "also fits halogens.chlorine because it is chlorine specifically being removed, but the skill tested is picking a reducing agent (FeSO4) that will react with an oxidising gas",
+        "removing chlorine with a reducing agent (acidified FeSO4); also fits redox.agents, since the student must spot the reducing agent, and pollution.air is named in the stem but its covers line does not list chlorine"
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 18,
+      "stem": "Before a reaction could take place, there should be",
+      "sonnet": "energetics.enthalpy",
+      "opus": "kinetics.collision",
+      "notes": [
+        "matches the covers line's bond breaking/making reasoning without figures; also borders kinetics.collision",
+        "reactant bonds must break before a reaction happens; this is the basis of activation energy (kinetics.collision) but bond breaking is named in energetics.enthalpy"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "redox.agents",
+        "detail": "Several real questions test a named substance's redox behaviour in a practical setting rather than agent identification in the abstract: removing chlorine pollution with acidified FeSO4 (Q7), ranking Na, K, Ag and Cu as reducing agents (Q34), and chlorine water's bleaching action as evidence it is an oxidiser (Q60, Q68). Each sits equally under redox.agents (naming or ranking oxidising and reducing agents) and the named substance's own subtopic (halogens.chlorine, metals.general). Neither subtopic's sorting rule says which wins when the question names one specific element or compound rather than asking about agents in general."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "periodic.trends",
+        "detail": "Q72 asks which pair of alkali metal properties decreases down the group, and the correct pair (first ionisation energy and melting point) needs melting point as a group trend. periodic.trends' covers line names only atomic radius, ionic radius, ionisation energy, electron affinity, electronegativity and electropositivity as the properties it owns. Melting point is not listed anywhere under periodic, so a real exam pairing it with ionisation energy has no exact home."
+      },
+      {
+        "kind": "overlap",
+        "where": "biomolecules.polymers",
+        "detail": "Q10 asks which of rubber, starch, proteins and fats is not a polymer, a cross-family classification question. biomolecules.polymers' own sorting rule sends starch and protein classification to biomolecules.carbohydrates and biomolecules.proteins respectively, so no single subtopic is written to own a question that asks the reader to sort substances from several different biomolecule families by whether each is a polymer."
+      },
+      {
+        "kind": "overlap",
+        "where": "states.molar-volume",
+        "detail": "Q64 asks which of a list of gases is less dense than air, a bare recall fact with no calculation. states.molar-volume covers vapour density as a calculated quantity (relative molecular mass from measured density), and practical.gas-preparation covers density only as the reason for choosing a collection method. Neither subtopic's covers line clearly claims a plain density-comparison recall question that does neither."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "overlap",
+        "where": "periodic.trends",
+        "detail": "The periodic.trends and halogens.trends rules contradict each other for a single atomic property compared across the halogens, such as electronegativity of F to I (Q28). Add a rule: an atomic property down group VII goes to periodic.trends, and chemical behaviour to halogens.trends."
+      },
+      {
+        "kind": "missing",
+        "where": "periodic",
+        "detail": "No home for group trends of the alkali and alkaline earth metals (melting point, reactivity and ionisation energy down group I, Q72). periodic.gradation only covers periods. Either widen periodic.gradation to groups or add periodic.group-trends."
+      },
+      {
+        "kind": "overlap",
+        "where": "halogens.chlorine",
+        "detail": "Chlorine's bleaching as oxidation, or chlorine as an oxidising agent (Q60, Q68), and removing chlorine with a reducing agent (Q7), sit between halogens.chlorine and redox.agents. Neither rule settles it."
+      },
+      {
+        "kind": "overlap",
+        "where": "redox.agents",
+        "detail": "Ranking metals by reducing power (Q34) is claimed by redox.agents (relative strengths), metals.general (reactivity series) and electrochemistry.cells (electrochemical series). Name which one wins for metals."
+      },
+      {
+        "kind": "overlap",
+        "where": "acids-bases.ph",
+        "detail": "Litmus colour as a property of bases (Q54) is claimed by acids-bases.properties (reactions with indicators) and acids-bases.ph (an indicator's colour in a solution)."
+      },
+      {
+        "kind": "misplaced",
+        "where": "bonding.ionic",
+        "detail": "The rule sending any configuration-to-compound question to bonding.ionic also catches covalent cases where the task is valency and formula, such as Si with S giving XY2 (Q78). Limit it to ionic against covalent decisions, and send formula-from-valency to stoichiometry.formulae."
+      },
+      {
+        "kind": "missing",
+        "where": "states.molar-volume",
+        "detail": "Density of a gas relative to air (Q64) has no named home. Add it to states.molar-volume alongside vapour density, and send it there from practical.gas-preparation."
+      },
+      {
+        "kind": "missing",
+        "where": "organic-basics.carbon-classes",
+        "detail": "The effect of chain branching on boiling point (Q5, (CH3)3CH against C4H10) is in neither covers line. The ordering rule covers members of one series, not isomers. Name it in one place."
+      },
+      {
+        "kind": "overlap",
+        "where": "kinetics.collision",
+        "detail": "The idea that reactant bonds must break before a reaction happens (Q74) is claimed by both energetics.enthalpy (bond breaking) and kinetics.collision (activation energy)."
+      },
+      {
+        "kind": "overlap",
+        "where": "bonding.covalent",
+        "detail": "A bond between H and a highly electronegative atom (Q20) sits between polar bonds (bonding.covalent) and hydrogen bonding (bonding.intermolecular). Say which one takes a question about bond polarity when hydrogen bonding is the context."
+      },
+      {
+        "kind": "overlap",
+        "where": "stoichiometry.mole",
+        "detail": "Terms for molar quantities, such as molar mass against molarity and mass concentration (Q50), are split between stoichiometry.mole and solutions.concentration with no rule."
+      },
+      {
+        "kind": "misplaced",
+        "where": "acids-bases.titration",
+        "detail": "The scope_rule says double indicator titrations are left out, but Q62 (Na2CO3 and HCl with methyl orange against phenolphthalein) tests exactly that. It fits under acids-bases.titration, so update the scope_rule and name it in the covers line."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "matter.separation",
+        "detail": "Solvent extraction is not named, though it is a standard option (Q75). Only separating funnel is listed."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "equilibrium.constant",
+        "detail": "The subtopic's name is about K, but it is also the only home for what dynamic equilibrium is (Q24). Rename it to something like reversible reactions and dynamic equilibrium, so placers find it."
+      },
+      {
+        "kind": "overlap",
+        "where": "biomolecules.polymers",
+        "detail": "A question asking which of several substances are polymers, mixing rubber, starch, proteins and fats (Q10), has no rule. The polymers covers line sends starch and proteins elsewhere, so a list comparing them has no clear home."
+      },
+      {
+        "kind": "missing",
+        "where": "pollution",
+        "detail": "Sources of pollution asked in general, across media (Q59), have no home. Both subtopics split by medium."
+      }
+    ]
+  }
+}

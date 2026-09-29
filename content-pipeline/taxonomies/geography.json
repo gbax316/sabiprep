@@ -1,0 +1,1763 @@
+{
+  "subject": "Geography",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "The first Geography tree, built to the taxonomy standard from all three sources: the WAEC (WASSCE) syllabus, the JAMB (UTME) syllabus and the SS1 to SS3 scheme of work. Parent topics follow the syllabi's own headings, merged where WAEC and JAMB name the same content, in the order a teacher meets them: practical geography, physical geography, the environment, human and economic geography, then the regional geography of Nigeria, ECOWAS and Africa. Subtopics follow the syllabi's sub-areas at the grain of one lesson and one skill. Every one of the 50 questions of the WASSCE 2025 objective paper was checked against the tree and has one home; the covers lines carry sorting rules on every border those questions sit near. No UTME paper was supplied, so the UTME side rests on the syllabus alone until the placement test. The legacy topic list supplied for Geography was empty, so nothing in the database moves. Nothing in the database is changed by this file. Version 1.1 revises 1.0 from its coverage map and its placement test on 80 WASSCE questions from 2022 to 2025: one subtopic added (world industrial regions), eight covers lines widened where content had no home, and sorting rules added on the ten borders where the two models split or named an overlap. No id is removed or merged.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC Geography examination syllabus, WASSCE",
+        "retrieved_from": "https://waecsyllabus.com/download/ssce/GEOGRAPHY.pdf",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror, not fetched from a WAEC domain. Text extracted with pypdf; the two-column layout was scrambled in extraction, so the placement of the asterisks that mark country-specific topics is less certain than the topic wording."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME Geography syllabus, topics and objectives",
+        "retrieved_from": "https://allschool.ng/jamb-syllabus-for-geography/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party reproduction labelled the 2026 version; the official copy sits behind the jamb.gov.ng portal. Topic list and order confirmed against a second copy at kofastudy.com."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Geography scheme of work SS1 to SS3, Lagos NAPPS unified scheme (NERDC-based)",
+        "retrieved_from": "https://edudelight.com/geography-scheme-of-work-ss1-ss3-lagos-napps/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Cross-checked against passnownow.com's per-term SS1 pages. SS2 Term 2 week 4 is missing in the source, and SS3 Term 3 has no new content because it runs during the WASSCE sitting."
+      }
+    ],
+    "reference_key": "WAEC references use the syllabus's own headings: PPG is Elements of Practical and Physical Geography, EHG is Economic and Human Geography, RGN is Regional Geography of Nigeria, RGA is Regional Geography of Africa, FW is Field Work, with the syllabus's roman or letter numbering after it. JAMB references use its numbering: 2(h)(b) is topic 2, sub-topic (h), focus (b). Scheme-of-work citations in covers lines read SoW SS1 T1 W3 for SS1, first term, week 3.",
+    "scope_rule": "WAEC Paper 1, the objective paper, is drawn from the topics common to all member countries. The syllabus places map reading in Paper 3 and climatic chart interpretation under climate, but the real 2025 Paper 1 gave Q1 to Q10 to a topographical map and Q11 to Q13 to a climate chart, so map work and climatic data are subtopics here. Content the papers test beyond the syllabus wording is also placed: eclipses (2025 Q24), the ozone layer (2025 Q25) and the lapse rate calculation (2025 Q19). In the extracted WAEC text, elementary surveying, the hydrosphere, vegetation and soil carry the single asterisk that marks topics for candidates outside Nigeria; all four are kept, because JAMB examines every one of them and 2025 Q16 tested vegetation on the Nigerian objective paper. GIS and climate change, marked for Nigeria only, are kept. The regional geography of Ghana, Sierra Leone, Liberia and Senegambia is left out, because it is set only for candidates in those countries. The regional geography of Africa, set by WAEC only for candidates outside Nigeria, is kept because the scheme of work teaches it in SS2 Term 3 and SS3 Term 2, JAMB examines industry and transport in tropical Africa, and the 2025 paper asked about Africa (Q39, Q47). Mining in Africa is widened beyond the gold and copper case studies because a real paper asked which West African country is known for diamonds (2024 Q38). World industrial regions outside Africa are placed because JAMB 3(b)(c) names the distribution of manufacturing industry and a real WASSCE question asked why Japan's industry developed. Field work is examined by WAEC only through continuous assessment; it is kept as one subtopic so the scheme of work has a home, and flagged as likely to hold few questions."
+  },
+  "how_to_use": "Place a question by what a student must know to answer it, not by words in the stem. A question that mentions a river but asks the time at a longitude goes under longitude and time. Three rules settle most borders. First, a question read off a topographical map in front of the student goes under Maps, scale and measurement or Map reading and interpretation, even when the answer names a landform or an occupation. Second, a question about Nigeria goes to the Nigeria subtopic that matches it; the same content asked in general, or about the world or tropical Africa, goes to the general topic. Two exceptions: soil erosion goes to soils.erosion and pollution to environment.pollution wherever they happen. Third, read the covers line before choosing; where two subtopics look close, the covers line says which one wins.",
+  "topics": [
+    {
+      "id": "maps",
+      "name": "Maps, scale and measurement",
+      "part": "Practical geography",
+      "syllabus": {
+        "waec": "PPG Map work",
+        "jamb": "1(e), 1(f)"
+      },
+      "subtopics": [
+        {
+          "id": "maps.types",
+          "name": "Maps: meaning, types and uses",
+          "syllabus": {
+            "waec": "PPG Map work: maps, meaning, types and uses",
+            "jamb": "1(e)"
+          },
+          "covers": "What a map is, the kinds of map (topographical, atlas, wall, cadastral, thematic and sketch maps), the parts of a map (title, key, scale, north point, grid, margin), conventional signs, and what maps are used for. Taught in SoW SS1 T2 W9. Sorting rule: what a conventional sign means goes here, except a relief sign such as a spot height or trigonometrical station, which goes to map-reading.relief.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "maps.scale",
+          "name": "Scale and its conversion",
+          "syllabus": {
+            "waec": "PPG Map work: scale, map reduction and enlargement",
+            "jamb": "1(f)(a)"
+          },
+          "covers": "Statement, representative fraction and linear scale, converting one form to another, and the new scale of a map that is reduced or enlarged. Tested in WASSCE 2025 Q1 and Q3. Sorting rule: stating or converting a scale, or finding the scale of a reduced or enlarged map, goes here; using a scale to find a distance or area goes to maps.measurement; using it in a gradient goes to map-reading.gradient-profiles.",
+          "taught_in": []
+        },
+        {
+          "id": "maps.measurement",
+          "name": "Measuring distance and area",
+          "syllabus": {
+            "waec": "PPG Map work: measurement of distances",
+            "jamb": "1(f)"
+          },
+          "covers": "Straight line distance (as the crow flies), curved distance along a road, railway or river, and the area of the mapped region or of a feature, by counting squares or by length and breadth, converted to ground units. Taught in SoW SS1 T2 W10. Tested in WASSCE 2025 Q6 and Q7. Sorting rule: any ground distance or area worked out from a map goes here, even when the scale must first be converted.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "maps.direction",
+          "name": "Direction, bearing and location on a map",
+          "syllabus": {
+            "waec": "PPG Map work: direction and bearing",
+            "jamb": "1(f)(b)-(c)"
+          },
+          "covers": "Cardinal and compass points, true, magnetic and grid north, whole circle bearings and back bearings between two places, grid references, and in which part of the map a feature lies. Tested in WASSCE 2025 Q2 and Q9. Sorting rule: where a feature lies on a map, by direction, bearing or grid reference, goes here; a question whose answer is a location on the map goes here even when the student must first infer the activity or feature from the map, while a question whose answer is the activity, settlement or land use itself goes to map-reading.human; latitude and longitude on the globe go to earth.latitude and earth.longitude-time; bearings taken in a field survey go to surveying.prismatic.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "map-reading",
+      "name": "Map reading and interpretation",
+      "part": "Practical geography",
+      "syllabus": {
+        "waec": "PPG Map work",
+        "jamb": "1(d)"
+      },
+      "subtopics": [
+        {
+          "id": "map-reading.relief",
+          "name": "Relief on maps",
+          "syllabus": {
+            "waec": "PPG Map work: identification of physical features such as spurs, valleys",
+            "jamb": "1(d)(c)"
+          },
+          "covers": "How relief is shown (contours and contour interval, spot heights, trigonometrical stations, benchmarks, hachures, layer tinting, hill shading) and recognising relief features from contours: hills, spurs, valleys, ridges, saddles, cols, escarpments, plateaux, and concave, convex and even slopes. Taught in SoW SS2 T2 W6. Tested in WASSCE 2025 Q10. Sorting rule: naming a relief symbol, or a landform shown by contours, goes here; the steepness of a slope as a number, or a section across it, goes to map-reading.gradient-profiles; a landform asked about away from a map goes to its physical geography subtopic.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "map-reading.gradient-profiles",
+          "name": "Gradient, cross profiles and intervisibility",
+          "syllabus": {
+            "waec": "PPG Map work: measurement of gradients, drawing of cross profiles, inter-visibility",
+            "jamb": "1(d)(a)-(b), 1(f)(c)"
+          },
+          "covers": "Working out a gradient from vertical interval and horizontal equivalent, drawing and reading a cross profile or section, vertical exaggeration, and whether one point can be seen from another. Sorting rule: any gradient, section or intervisibility question goes here, even when the answer names a relief feature.",
+          "taught_in": []
+        },
+        {
+          "id": "map-reading.drainage",
+          "name": "Drainage on maps",
+          "syllabus": {
+            "waec": "PPG Map work: description and explanation of drainage characteristics and pattern",
+            "jamb": "1(d)(c)"
+          },
+          "covers": "Rivers as shown on a map: direction of flow, tributaries, confluences, the watershed, marshes and seasonal streams, and the drainage pattern the map shows (dendritic, trellis, radial, parallel). Tested in WASSCE 2025 Q4. Sorting rule: a question about the rivers on a map in front of the student goes here; drainage patterns and river landforms asked without a map go to denudation.rivers.",
+          "taught_in": []
+        },
+        {
+          "id": "map-reading.human",
+          "name": "Settlement, communication and land use on maps",
+          "syllabus": {
+            "waec": "PPG Map work: cultural features, patterns of communication, settlement and land use",
+            "jamb": "1(d)(c)"
+          },
+          "covers": "Cultural features on a map (settlements, city walls, roads, railways, footpaths, bridges, markets), the size, site and pattern of settlements, the pattern of communication, land use, the likely occupation of the people, and how relief and drainage shape human features. Tested in WASSCE 2025 Q5 and Q8. Sorting rule: any inference about people, settlement or activity drawn from a map goes here, unless the answer asked for is where on the map the activity or feature lies (a direction, bearing, grid reference or part of the map), which goes to maps.direction; settlement types and patterns asked without a map go to settlement.types.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "statistical",
+      "name": "Statistical maps and diagrams",
+      "part": "Practical geography",
+      "syllabus": {
+        "waec": "PPG Statistical maps and diagrams",
+        "jamb": "1(c)"
+      },
+      "subtopics": [
+        {
+          "id": "statistical.graphs",
+          "name": "Graphs, charts and diagrams",
+          "syllabus": {
+            "waec": "PPG Statistical maps and diagrams: bar graphs, line graphs, flow charts",
+            "jamb": "1(c)"
+          },
+          "covers": "Simple, compound and multiple bar graphs, line graphs, pie charts, flow charts and population pyramids as diagrams: drawing them, reading values from them and computing from them. Sorting rule: how to draw or read the diagram goes here; a value read from a dot map, proportional circle, choropleth or isopleth map goes to statistical.maps; a climate graph or table for a weather station goes to weather-climate.data; what a population pyramid says about a population goes to population.characteristics.",
+          "taught_in": []
+        },
+        {
+          "id": "statistical.maps",
+          "name": "Distribution maps and isolines",
+          "syllabus": {
+            "waec": "PPG Statistical maps and diagrams: dot maps, proportional circles, density maps, isopleth maps",
+            "jamb": "1(c)"
+          },
+          "covers": "Dot maps, proportional circles and spheres, choropleth (density shading) maps and isopleth maps: drawing them, reading values from them and computing from them (such as a total from the number of dots and the dot value, or a quantity from a circle's size), their merits and limits, and the names of isolines: isobar, isotherm, isohyet, isohaline, isoneph, isohel. Tested in WASSCE 2025 Q17. Sorting rule: any value read or worked out from one of these maps goes here, whatever the commodity or population it shows; naming an isoline goes here, whichever weather or ocean element it joins; what the element is and how it is measured go to its own subtopic; bar, line and pie charts go to statistical.graphs.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "surveying",
+      "name": "Elementary surveying",
+      "part": "Practical geography",
+      "syllabus": {
+        "waec": "PPG Principles of elementary surveying (marked for candidates outside Nigeria)",
+        "jamb": "1(a)"
+      },
+      "subtopics": [
+        {
+          "id": "surveying.chain",
+          "name": "Chain surveying",
+          "syllabus": {
+            "waec": "PPG Principles of elementary surveying: definitions of terms, instruments, chain",
+            "jamb": "1(a)(a), 1(a)(c)"
+          },
+          "covers": "Survey terms, the chain, tape, ranging poles, arrows and offset staff, the base line and offsets, booking a chain survey in the field book, and avoiding obstacles in the field. Sorting rule: a comparison of chain and prismatic compass surveying goes to surveying.prismatic.",
+          "taught_in": []
+        },
+        {
+          "id": "surveying.prismatic",
+          "name": "Prismatic compass surveying and traverse",
+          "syllabus": {
+            "waec": "PPG Principles of elementary surveying: prismatic compass, plotting of traverse",
+            "jamb": "1(a)(a)-(e)"
+          },
+          "covers": "The prismatic compass and its parts, forward and back bearings taken in the field, open and closed traverse, plotting a traverse, closing error and its correction, the problems of surveying, and the advantages and disadvantages of chain and prismatic compass surveying compared. Sorting rule: bearings measured on a topographical map go to maps.direction.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "gis",
+      "name": "Geographic information system (GIS)",
+      "part": "Practical geography",
+      "syllabus": {
+        "waec": "PPG Geographic Information System (Nigeria only)",
+        "jamb": "1(b)"
+      },
+      "subtopics": [
+        {
+          "id": "gis.concepts",
+          "name": "GIS: meaning and components",
+          "syllabus": {
+            "waec": "PPG GIS: basic concepts, components (hardware, software, data, procedures and experts)",
+            "jamb": "1(b)(a)-(b)"
+          },
+          "covers": "What GIS is, its components (hardware, software, data, procedures and people), and how a computer captures, stores, analyses and displays spatial data, including data held as layers. Taught in SoW SS1 T1 W9 and SS1 T2 W8. Sorting rule: where GIS data come from goes to gis.data; what GIS is used for goes to gis.uses.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "gis.data",
+          "name": "GIS data sources and remote sensing",
+          "syllabus": {
+            "waec": "PPG GIS: sources of data (land surveying, remote sensing, map digitizing, map scanning, field investigation, tabular data)",
+            "jamb": "1(b)(c)-(d)"
+          },
+          "covers": "Sources of GIS data (land surveying, remote sensing, map digitising, map scanning, field investigation, tabular data), satellite remote sensing and aerial photographs, GPS, and expressing a location by coordinates such as latitude and longitude. Taught in SoW SS2 T3 W2 and SS3 T2 W3.",
+          "taught_in": [
+            "SS2 T3",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "gis.uses",
+          "name": "Uses and problems of GIS",
+          "syllabus": {
+            "waec": "PPG GIS: uses (defence, agriculture, urban development, mapping, surveying, transportation, census), problems (power, personnel, capital)",
+            "jamb": "1(b)(e)"
+          },
+          "covers": "Uses of GIS in defence, agriculture, urban and rural development, mapping, surveying, transport, census and disaster management, and the problems of GIS in Nigeria such as power supply, trained personnel and capital. Taught in SoW SS2 T3 W3.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T3",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "fieldwork",
+      "name": "Geography and fieldwork",
+      "part": "Practical geography",
+      "syllabus": {
+        "waec": "FW Field work",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "fieldwork.nature",
+          "name": "Geography as a subject",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "The meaning, nature and scope of geography, its branches (physical, human, regional and practical geography), and its value. From the scheme of work only, SoW SS1 T1 W1; kept so the first lesson of the course has a home, though questions on it are rare. Sorting rule: a question on a tool of practical geography goes to that tool's subtopic.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "fieldwork.local",
+          "name": "Fieldwork and local geography",
+          "syllabus": {
+            "waec": "FW Field work (i)-(v)",
+            "jamb": null
+          },
+          "covers": "Planning and carrying out a field study of the local area (land use survey, market survey, traffic flow, journey to work, rate of erosion), collecting and recording field data, and local geography. Taught in SoW SS1 T3 W1. WAEC examines it through continuous assessment, not in Papers 1 to 3. Sorting rule: how to present field data as a graph or map goes to statistical.graphs or statistical.maps.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "earth",
+      "name": "The earth as a planet",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG Elements of Physical Geography: the earth as a planet",
+        "jamb": "2(g)"
+      },
+      "subtopics": [
+        {
+          "id": "earth.solar-system",
+          "name": "The solar system",
+          "syllabus": {
+            "waec": "PPG the earth as a planet in relation to the sun",
+            "jamb": "2(g)(a)"
+          },
+          "covers": "The universe, the sun and the planets in order from the sun, their relative sizes and positions, the moon and its phases, and eclipses of the sun and the moon. Taught in SoW SS1 T1 W2. Tested in WASSCE 2025 Q24 and Q27; eclipses are tested though neither syllabus names them. Sorting rule: the earth's own rotation and revolution and their effects go to earth.movements; an eclipse shadow offered as proof of the earth's shape goes to earth.shape-size.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "earth.shape-size",
+          "name": "Shape and size of the earth",
+          "syllabus": {
+            "waec": null,
+            "jamb": "2(g)(b)"
+          },
+          "covers": "The earth as an oblate spheroid, its circumference and diameter, and the proofs of its sphericity: the ship's mast on the horizon, the circular horizon, the curved shadow in a lunar eclipse, sunrise at different times, and photographs from space. Taught in SoW SS1 T1 W3.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "earth.movements",
+          "name": "Rotation and revolution",
+          "syllabus": {
+            "waec": "PPG earth's rotation and revolution and their effects",
+            "jamb": "2(g)(a)"
+          },
+          "covers": "Rotation and its effects (day and night, the deflection of winds and currents, the difference in time between places), revolution and its effects (the seasons, the changing altitude of the midday sun, varying lengths of day and night), the tilt of the axis, solstices, equinoxes, perihelion and aphelion, and where the sun is overhead on a given date. Taught in SoW SS1 T1 W3. Tested in WASSCE 2025 Q18 and Q20. Sorting rule: calculating local time from longitude goes to earth.longitude-time; the deflection of winds within the planetary wind system goes to weather-climate.pressure-winds.",
+          "taught_in": []
+        },
+        {
+          "id": "earth.latitude",
+          "name": "Latitude and distance",
+          "syllabus": {
+            "waec": "PPG latitude and distance",
+            "jamb": "2(g)(c)"
+          },
+          "covers": "Lines of latitude, the Equator, the tropics and the polar circles, great and small circles, latitude and longitude compared, and calculating the distance between places on the same meridian. Taught in SoW SS1 T1 W4-5. Sorting rule: a question that defines or compares lines of latitude and longitude in general goes here, and so does one asking for a named line of latitude (the Equator, a tropic, a polar circle); a question asking which option is a named line of longitude (the Prime Meridian, the International Date Line) goes to earth.longitude-time, even when the options mix lines of latitude and longitude; a time calculation goes to earth.longitude-time; a grid reference on a topographical map goes to maps.direction.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "earth.longitude-time",
+          "name": "Longitude and time",
+          "syllabus": {
+            "waec": "PPG longitude and time",
+            "jamb": "2(g)(c)"
+          },
+          "covers": "Lines of longitude, the Prime Meridian, four minutes of time for each degree, calculating the local time of a place east or west, Greenwich Mean Time, standard time zones and the International Date Line. Taught in SoW SS1 T1 W5. Tested in WASSCE 2025 Q28. Sorting rule: any calculation of time from longitude, or of longitude from time, goes here; so does identifying a named line of longitude such as the Prime Meridian or the International Date Line, even when the options mix lines of latitude and longitude; defining or comparing lines of latitude and longitude in general goes to earth.latitude.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "earth-structure",
+      "name": "Structure of the earth",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG structure of the earth (internal and external)",
+        "jamb": "2(h)(a)"
+      },
+      "subtopics": [
+        {
+          "id": "earth-structure.interior",
+          "name": "Internal structure of the earth",
+          "syllabus": {
+            "waec": "PPG structure of the earth (internal)",
+            "jamb": "2(h)(a)"
+          },
+          "covers": "The crust (sial and sima), the mantle and the core (outer and inner), the discontinuities between them, and their composition, thickness and temperature. Taught in SoW SS1 T1 W7. Tested in WASSCE 2025 Q26.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "earth-structure.atmosphere",
+          "name": "The atmosphere",
+          "syllabus": {
+            "waec": "PPG structure of the earth (external)",
+            "jamb": "2(h)(a)"
+          },
+          "covers": "The composition of the atmosphere, its layers (troposphere, stratosphere, mesosphere, thermosphere), the ozone layer and its work, and how insolation heats the atmosphere. Taught in SoW SS1 T1 W6. Kept as its own subtopic though no syllabus item maps to it alone, because a real paper tests it: WASSCE 2025 Q25 asked about the ozone layer. Sorting rule: the ozone layer's normal work goes here; its depletion as part of climate change goes to climate-change.causes; temperature at a height worked out from the lapse rate goes to weather-climate.factors.",
+          "taught_in": []
+        },
+        {
+          "id": "earth-structure.spheres",
+          "name": "The four spheres and their relationships",
+          "syllabus": {
+            "waec": "PPG structure of the earth (external)",
+            "jamb": "2(h)(a)"
+          },
+          "covers": "The lithosphere, hydrosphere, atmosphere and biosphere as the earth's outer zone, how they interact, the earth's energy balance, and the water (hydrological) cycle. Taught in SoW SS1 T1 W6. Sorting rule: the layers of the atmosphere go to earth-structure.atmosphere; forms of condensation and types of rainfall go to weather-climate.rainfall.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "rocks",
+      "name": "Rocks",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG (i) Rocks",
+        "jamb": "2(h)(b)"
+      },
+      "subtopics": [
+        {
+          "id": "rocks.types",
+          "name": "Types of rock and their formation",
+          "syllabus": {
+            "waec": "PPG (i) Rocks: types, characteristics, formation",
+            "jamb": "2(h)(b)"
+          },
+          "covers": "Igneous rocks (intrusive and extrusive, acid and basic), sedimentary rocks (mechanically, organically and chemically formed) and metamorphic rocks: how each forms, its characteristics, named examples such as granite, basalt, gabbro, sandstone, limestone, coal, marble, slate and quartzite, what each changes into, and the rock cycle. Taught in SoW SS1 T1 W8. Tested in WASSCE 2025 Q33. Sorting rule: intrusive landforms such as dykes, sills and batholiths go to vulcanicity.landforms; limestone landforms go to denudation.karst.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "rocks.uses",
+          "name": "Uses of rocks",
+          "syllabus": {
+            "waec": "PPG (i) Rocks: uses",
+            "jamb": "2(h)(b)"
+          },
+          "covers": "Rocks used for building, road making, industry (cement, glass), fuel, and as sources of minerals and of soil. Sorting rule: where a mineral is mined in Nigeria goes to nigeria-resources.minerals.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "tectonics",
+      "name": "Earth movements and major landforms",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG (ii) Tectonic processes: landforms, mountains, plains",
+        "jamb": "2(h)(c)-(d)"
+      },
+      "subtopics": [
+        {
+          "id": "tectonics.folding",
+          "name": "Folding",
+          "syllabus": {
+            "waec": "PPG (ii) Tectonic processes",
+            "jamb": "2(h)(c)"
+          },
+          "covers": "Compressional forces, anticlines and synclines, kinds of fold (simple, asymmetrical, overfold, recumbent, overthrust, nappe), and fold mountains with named examples. Sorting rule: which landform a compressional force produces goes here; the kinds of mountain compared goes to tectonics.mountains.",
+          "taught_in": []
+        },
+        {
+          "id": "tectonics.faulting",
+          "name": "Faulting",
+          "syllabus": {
+            "waec": "PPG (ii) Tectonic processes",
+            "jamb": "2(h)(c)"
+          },
+          "covers": "Tensional and compressional forces that break rock, kinds of fault (normal, reverse, tear, thrust), and the landforms of faulting: rift valleys, block mountains (horsts), fault scarps and escarpments, with named examples. Tested in WASSCE 2025 Q22. Sorting rule: which landform a fault produces goes here; a landform asked about as the product of an earthquake goes to vulcanicity.earthquakes; the kinds of mountain compared goes to tectonics.mountains.",
+          "taught_in": []
+        },
+        {
+          "id": "tectonics.mountains",
+          "name": "Mountains",
+          "syllabus": {
+            "waec": "PPG (ii) landforms: mountains",
+            "jamb": "2(h)(d)"
+          },
+          "covers": "The kinds of mountain (fold, block, volcanic and residual) compared, named examples of each, how residual mountains are left by denudation, and the importance of mountains to people. Taught in SoW SS1 T1 W10 and SS1 T2 W1. Sorting rule: naming a mountain's type or example, or its importance, goes here; the detailed process that forms a fold, block or volcanic mountain goes to tectonics.folding, tectonics.faulting or vulcanicity.landforms.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "tectonics.plateaux",
+          "name": "Plateaux",
+          "syllabus": {
+            "waec": null,
+            "jamb": "2(h)(d)"
+          },
+          "covers": "Kinds of plateau (intermontane, piedmont, tectonic, volcanic or lava, dissected, continental), how they form, named examples, and their importance. Taught in SoW SS1 T2 W2. Sorting rule: a plateau asked about as a kind of plateau goes here; a lava plateau asked about as a product of fissure eruption goes to vulcanicity.landforms; a plateau recognised from contours goes to map-reading.relief.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "tectonics.plains",
+          "name": "Plains and lowlands",
+          "syllabus": {
+            "waec": "PPG (ii) landforms: plains",
+            "jamb": "2(h)(d)"
+          },
+          "covers": "Kinds of plain and lowland (structural, depositional and erosional plains, peneplains), how they form, named examples, and their importance to people. Taught in SoW SS1 T2 W3-4. Sorting rule: a flood plain or delta asked about as the work of a river goes to denudation.rivers; plains as a class of lowland and their use to people go here.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "vulcanicity",
+      "name": "Vulcanicity and earthquakes",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG (ii) Tectonic processes: vulcanicity, earthquake",
+        "jamb": "2(j)"
+      },
+      "subtopics": [
+        {
+          "id": "vulcanicity.volcanoes",
+          "name": "Volcanoes and eruptions",
+          "syllabus": {
+            "waec": "PPG (ii) vulcanicity",
+            "jamb": "2(j)(c)-(d)"
+          },
+          "covers": "Magma and lava, how volcanoes originate, active, dormant and extinct volcanoes, kinds of eruption, world distribution, named eruptions, and the effects of eruptions. Taught in SoW SS2 T1 W5 and SS3 T1 W3. Sorting rule: a landform built by volcanic activity goes to vulcanicity.landforms; a volcanic eruption in a list of hazards to be sorted as natural or man-induced goes to environment.hazards.",
+          "taught_in": [
+            "SS2 T1",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "vulcanicity.landforms",
+          "name": "Volcanic landforms",
+          "syllabus": {
+            "waec": "PPG (ii) vulcanicity, landforms",
+            "jamb": "2(j)(a)-(b)"
+          },
+          "covers": "Extrusive landforms (ash, cinder, lava and composite cones, craters, calderas, crater lakes, lava plateaux, geysers and hot springs) and intrusive landforms (batholith, laccolith, lopolith, phacolith, sill, dyke), and telling extrusive from intrusive. Tested in WASSCE 2025 Q30. Sorting rule: any volcanic landform, including a volcanic mountain's form, goes here.",
+          "taught_in": []
+        },
+        {
+          "id": "vulcanicity.earthquakes",
+          "name": "Earthquakes",
+          "syllabus": {
+            "waec": "PPG (ii) earthquake",
+            "jamb": "2(j)(d), 2(j) objective ii"
+          },
+          "covers": "Causes of earthquakes, focus and epicentre, seismic waves, the seismograph and the Richter scale, world earthquake belts, effects including tsunamis, named earthquakes, and the landforms associated with earthquakes (fissures and cracks, fault scarps, raised and sunken land, landslides set off by shaking). Taught in SoW SS2 T1 W4 and SS3 T1 W1-2. Sorting rule: a landform asked about as the product of an earthquake goes here; a fault landform (rift valley, horst, fault scarp) asked about as the work of tensional or compressional forces goes to tectonics.faulting; a landslide asked about as a kind of mass movement goes to denudation.mass-movement; an earthquake in a list of hazards to be sorted as natural or man-induced goes to environment.hazards.",
+          "taught_in": [
+            "SS2 T1",
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "denudation",
+      "name": "Denudation processes and landforms",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG (iii) Denudational processes; PPG (ii) karst and coastal landforms",
+        "jamb": "2(b), 2(h)(d), 2(k)(d)"
+      },
+      "subtopics": [
+        {
+          "id": "denudation.weathering",
+          "name": "Weathering and denudation",
+          "syllabus": {
+            "waec": "PPG (iii) weathering",
+            "jamb": "2(b)(a)"
+          },
+          "covers": "The meaning of denudation and its agents; physical weathering (exfoliation, block disintegration, granular disintegration, frost action, salt wedging), chemical weathering (hydrolysis, oxidation, carbonation, solution, hydration) and biological weathering; the factors that control weathering and its products. Taught in SoW SS2 T1 W7 and SS3 T1 W5-6. Tested in WASSCE 2025 Q21. Sorting rule: a general question on erosion, transport and deposition that names no agent goes here; carbonation producing limestone features goes to denudation.karst.",
+          "taught_in": [
+            "SS2 T1",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "denudation.mass-movement",
+          "name": "Mass movement",
+          "syllabus": {
+            "waec": "PPG (iii) mass movement",
+            "jamb": "2(b)(c)"
+          },
+          "covers": "Slow movements (soil creep, solifluction) and fast movements (earthflow, mudflow, landslide, slump, rockfall), their causes, and their effects on people. Taught in SoW SS3 T1 W7. Sorting rule: a landslide asked about as a kind of mass movement goes here; a landslide asked about as an effect or landform of an earthquake goes to vulcanicity.earthquakes.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "denudation.rivers",
+          "name": "Action of running water",
+          "syllabus": {
+            "waec": "PPG (iii) running water",
+            "jamb": "2(k)(d), 2(b)(b)-(d)"
+          },
+          "covers": "River erosion (hydraulic action, corrasion, corrosion, attrition; vertical, lateral and headward erosion), transport and deposition, the stages of a river course and their landforms (V-shaped valleys, gorges, waterfalls, rapids, meanders, ox-bow lakes, flood plains, levees, deltas), river capture, rejuvenation, and drainage patterns. Taught in SoW SS2 T1 W8. Tested in WASSCE 2025 Q29. Sorting rule: the rivers on a topographical map go to map-reading.drainage; the uses of rivers go to water.lakes.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "denudation.karst",
+          "name": "Underground water and karst landforms",
+          "syllabus": {
+            "waec": "PPG (iii) underground water; PPG (ii) karsts",
+            "jamb": "2(h)(d)"
+          },
+          "covers": "The water table, springs, wells and artesian basins, the solution of limestone, and karst landforms: clints, grikes, swallow holes, caves and caverns, stalactites, stalagmites, pillars, dolines, uvalas and poljes. Taught in SoW SS2 T1 W6 and SS3 T1 W4. Tested in WASSCE 2025 Q32.",
+          "taught_in": [
+            "SS2 T1",
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "denudation.wind",
+          "name": "Action of wind and desert landforms",
+          "syllabus": {
+            "waec": "PPG (iii) wind",
+            "jamb": "2(h)(d), 2(b)"
+          },
+          "covers": "Wind erosion (deflation, abrasion, attrition), erosional landforms (zeugen, yardangs, mushroom or pedestal rocks, deflation hollows, inselbergs), wind deposits (barchans, seif dunes, loess), and landforms of water in deserts (wadis, bajadas, playas). Taught in SoW SS2 T1 W9. Tested in WASSCE 2025 Q23 and Q34. Sorting rule: an erosion process named for wind goes here even when the same word (abrasion, attrition) is used for rivers or waves.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "denudation.coast",
+          "name": "Action of waves and coastal landforms",
+          "syllabus": {
+            "waec": "PPG (iii) waves; PPG (ii) coastal landforms",
+            "jamb": "2(h)(d)"
+          },
+          "covers": "Constructive and destructive waves, wave erosion processes, longshore drift, erosional features (cliffs, wave-cut platforms, caves, arches, stacks, stumps, blowholes, geos, bays and headlands), depositional features (beaches, spits, bars, tombolos, lagoons behind bars), and kinds of coast. Taught in SoW SS2 T1 W10. Tested in WASSCE 2025 Q15. Sorting rule: how a lagoon forms goes here; a lagoon as a water body and its uses goes to water.lakes.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water bodies",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG Hydrosphere (marked for candidates outside Nigeria)",
+        "jamb": "2(k)(a)-(c)"
+      },
+      "subtopics": [
+        {
+          "id": "water.oceans",
+          "name": "Oceans and seas",
+          "syllabus": {
+            "waec": "PPG Hydrosphere: ocean basins, salinity",
+            "jamb": "2(k)(a)"
+          },
+          "covers": "The world's oceans and seas and where they lie, the relief of the ocean floor (continental shelf and slope, deep sea plain, trenches, ridges), salinity and why it varies, tides, and the uses of oceans and seas. Sorting rule: ocean currents go to water.currents.",
+          "taught_in": []
+        },
+        {
+          "id": "water.currents",
+          "name": "Ocean currents",
+          "syllabus": {
+            "waec": "PPG Hydrosphere: ocean currents (causes, types and effects on adjacent coastlands)",
+            "jamb": "2(k)(b)"
+          },
+          "covers": "Causes of ocean currents, warm and cold currents, named currents and their distribution (such as the Gulf Stream, Canary, Benguela, Guinea and Labrador currents), and their effects on the temperature, rainfall, fishing and navigation of nearby coasts. Sorting rule: a named current and its effect go here; ocean currents as one item in a list of climate controls go to weather-climate.factors.",
+          "taught_in": []
+        },
+        {
+          "id": "water.lakes",
+          "name": "Lakes, rivers and lagoons as water bodies",
+          "syllabus": {
+            "waec": "PPG Hydrosphere: lakes, rivers, lagoons, water as an environmental resource",
+            "jamb": "2(k)(c)"
+          },
+          "covers": "Kinds of lake by origin (tectonic, volcanic, glacial, erosional, depositional, man-made), the major lakes and rivers of the world and where they lie, lagoons, and the uses of lakes and rivers, with water as an environmental resource. Sorting rule: how a river erodes and the landforms it makes go to denudation.rivers; Nigeria's rivers go to nigeria.relief-drainage and its water resources to nigeria-resources.water.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "weather-climate",
+      "name": "Weather and climate",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG (iv) Weather and climate; PPG (v)(a) Elements",
+        "jamb": "2(l)(a)-(c), 2(l)(f)"
+      },
+      "subtopics": [
+        {
+          "id": "weather-climate.elements",
+          "name": "Weather, climate and their elements",
+          "syllabus": {
+            "waec": "PPG (v)(a) Elements: sunshine, humidity, temperature, cloud",
+            "jamb": "2(l)(a)-(b)"
+          },
+          "covers": "Weather and climate told apart, and the elements: temperature (daily and annual range, mean), sunshine, humidity (absolute and relative) and cloud types. Taught in SoW SS1 T2 W6-7. Sorting rule: naming or identifying a cloud type (cirrus, cumulus, stratus, nimbostratus, cumulonimbus) and the weather it brings, including the cumulonimbus of thunderstorms, goes here; how condensation forms cloud, and rainfall, go to weather-climate.rainfall; what humidity is and how it varies goes here, but relative humidity worked out from wet and dry bulb readings goes to weather-climate.instruments; pressure and wind go to weather-climate.pressure-winds; a value worked out from a climate chart goes to weather-climate.data.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "weather-climate.rainfall",
+          "name": "Condensation and rainfall",
+          "syllabus": {
+            "waec": "PPG (v)(a) Elements: rainfall",
+            "jamb": "2(l)(b)"
+          },
+          "covers": "Evaporation, condensation and dew point, forms of condensation (dew, fog, mist, frost, cloud) and of precipitation, convectional, relief (orographic) and frontal (cyclonic) rainfall, and the rain shadow. Tested in WASSCE 2025 Q14. Sorting rule: cloud as a form of condensation, and how it forms, goes here; identifying a cloud type, including the cumulonimbus of thunderstorms, goes to weather-climate.elements.",
+          "taught_in": []
+        },
+        {
+          "id": "weather-climate.pressure-winds",
+          "name": "Pressure, winds and air masses",
+          "syllabus": {
+            "waec": "PPG (v)(a) Elements: air pressure, wind; land and sea breezes",
+            "jamb": "2(l)(c)"
+          },
+          "covers": "Air pressure and how it varies, the pressure belts, planetary winds (trade winds, westerlies, polar easterlies), deflection by the earth's rotation (Ferrel's law), the shift of the belts with the overhead sun, monsoons, local winds, land and sea breezes, air masses and fronts, and cyclones and anticyclones. Sorting rule: the air masses, the harmattan and the seasons over Nigeria go to nigeria.climate; the isobar as a line goes to statistical.maps.",
+          "taught_in": []
+        },
+        {
+          "id": "weather-climate.factors",
+          "name": "Factors controlling weather and climate",
+          "syllabus": {
+            "waec": "PPG (v)(a) Factors affecting climatic elements: altitude, latitude, ocean currents, continentality, aspect",
+            "jamb": "2(l)(c)"
+          },
+          "covers": "Latitude, altitude and the lapse rate (a fall of about 6.5 degrees Celsius for every 1,000 metres), continentality and distance from the sea, ocean currents, aspect, relief, prevailing winds and air masses as controls of climate, and calculating temperature at a height. Tested in WASSCE 2025 Q19. Sorting rule: any lapse rate calculation goes here; a named ocean current and its effect goes to water.currents.",
+          "taught_in": []
+        },
+        {
+          "id": "weather-climate.instruments",
+          "name": "Weather station and instruments",
+          "syllabus": {
+            "waec": "PPG (iv) simple weather study, Stevenson's screen, basic weather instruments",
+            "jamb": "2(l)(f)"
+          },
+          "covers": "Simple weather study by local observation, the Stevenson screen, and the instruments of a weather station (rain gauge, maximum and minimum thermometer, wet and dry bulb thermometer or hygrometer, barometer, wind vane, anemometer, sunshine recorder): what each measures, how it works and how readings are recorded and interpreted. Sorting rule: reading relative humidity from wet and dry bulb readings, or what a difference between the two bulbs shows, goes here; what humidity is and how it varies goes to weather-climate.elements; the name of the isoline joining equal readings goes to statistical.maps.",
+          "taught_in": []
+        },
+        {
+          "id": "weather-climate.data",
+          "name": "Reading climatic data",
+          "syllabus": {
+            "waec": "PPG (v)(a) Interpretation of climatic charts and data",
+            "jamb": "2(l)(b)"
+          },
+          "covers": "Working with a climate table or graph for a station: mean monthly and annual temperature, annual range of temperature, total annual rainfall, and the number of wet and dry months. Tested in WASSCE 2025 Q11, Q12 and Q13. Sorting rule: a value computed or read from the data goes here; naming the climate type the data show goes to climate-types.hot or climate-types.temperate.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "climate-types",
+      "name": "Climate classification and climate types",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG (v)(b) Classification",
+        "jamb": "2(l)(d)-(e)"
+      },
+      "subtopics": [
+        {
+          "id": "climate-types.classification",
+          "name": "Classifying climate: Greek and Koppen",
+          "syllabus": {
+            "waec": "PPG (v)(b) classification of climate based on Greek and Koppen",
+            "jamb": "2(l)(d)"
+          },
+          "covers": "The Greek zones (torrid, temperate, frigid), Koppen's scheme and its basis in temperature and rainfall, its letter symbols (such as Af, Aw, BWh, Cs), and the two schemes compared, with their strengths and weaknesses. Sorting rule: the features of one climate type go to climate-types.hot or climate-types.temperate, even when named by its Koppen letters.",
+          "taught_in": []
+        },
+        {
+          "id": "climate-types.hot",
+          "name": "Hot climates",
+          "syllabus": {
+            "waec": "PPG (v)(b) hot climate: equatorial, tropical continental, desert",
+            "jamb": "2(l)(e)"
+          },
+          "covers": "Equatorial, tropical continental (Sudan or savanna), tropical monsoon, tropical marine and hot desert climates: their temperature and rainfall, where they occur, and naming a hot climate from its data. Sorting rule: Nigeria's own climate goes to nigeria.climate.",
+          "taught_in": []
+        },
+        {
+          "id": "climate-types.temperate",
+          "name": "Temperate and cold climates",
+          "syllabus": {
+            "waec": "PPG (v)(b) temperate climate: warm and cool",
+            "jamb": "2(l)(e)"
+          },
+          "covers": "Warm temperate climates (Mediterranean, warm temperate eastern margin or China type), cool temperate climates (western margin or British type, continental, eastern margin), and cold climates (tundra, polar): their temperature and rainfall, where they occur, and naming one from its data. Tested in WASSCE 2025 Q31.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "climate-change",
+      "name": "Climate change",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG (v)(c) Climate change (Nigeria only)",
+        "jamb": "2(l)(g)"
+      },
+      "subtopics": [
+        {
+          "id": "climate-change.causes",
+          "name": "Meaning and causes of climate change",
+          "syllabus": {
+            "waec": "PPG (v)(c) meaning, causes",
+            "jamb": "2(l)(g)"
+          },
+          "covers": "What climate change is, the greenhouse effect and greenhouse gases, global warming, ozone depletion, and natural and human causes such as burning fossil fuels, gas flaring and deforestation. Taught in SoW SS3 T1 W8. Sorting rule: the ozone layer's normal work goes to earth-structure.atmosphere.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "climate-change.effects",
+          "name": "Effects and remedies of climate change",
+          "syllabus": {
+            "waec": "PPG (v)(c) effects and remedies",
+            "jamb": "2(l)(g)"
+          },
+          "covers": "Effects of climate change (rising sea level, flooding, drought, desertification, effects on farming and health) and remedies (mitigation and adaptation, afforestation, renewable energy, international agreements). Sorting rule: drought, flooding or desertification asked about as a hazard in its own right goes to environment.hazards; here only when tied to climate change. Renewable energy goes here only when asked about as a remedy for climate change; energy sources compared by how clean or renewable they are go to environment.resources.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "vegetation",
+      "name": "Vegetation",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG (vi) Vegetation (marked for candidates outside Nigeria)",
+        "jamb": "2(i)"
+      },
+      "subtopics": [
+        {
+          "id": "vegetation.factors",
+          "name": "Plant growth, plant communities and succession",
+          "syllabus": {
+            "waec": "PPG (vi) factors affecting distribution, plant communities",
+            "jamb": "2(i)(a)-(b)"
+          },
+          "covers": "Climatic, edaphic, topographic and biotic factors controlling plant growth and the distribution of vegetation, plant communities, and succession to a climax vegetation. Sorting rule: why one named vegetation type is found where it is goes to vegetation.types.",
+          "taught_in": []
+        },
+        {
+          "id": "vegetation.types",
+          "name": "Major vegetation types",
+          "syllabus": {
+            "waec": "PPG (vi) major types: tropical rainforest, temperate woodland, tropical grassland; characteristics, distribution",
+            "jamb": "2(i)(c)"
+          },
+          "covers": "Tropical rainforest, savanna, hot desert, Mediterranean, temperate forests and grasslands, coniferous forest, tundra and montane vegetation: their characteristics, where they occur, and how their plants adapt to the climate. Tested in WASSCE 2025 Q16. Sorting rule: Nigeria's vegetation belts go to nigeria.vegetation-soils.",
+          "taught_in": []
+        },
+        {
+          "id": "vegetation.human",
+          "name": "Vegetation as a resource and human impact",
+          "syllabus": {
+            "waec": "PPG (vi) vegetation as an environmental resource, conservation of vegetation resources",
+            "jamb": "2(i)(d)"
+          },
+          "covers": "Uses of vegetation, the effects of human activities on it (bush burning, farming, grazing, lumbering, urban growth), and conserving vegetation. Sorting rule: any question on deforestation itself (its causes, such as lumbering, grazing, farming and excavation, its effects or its prevention) goes to environment.hazards, whether or not it sits in a list of hazards; human effects on vegetation not named as deforestation, and the uses and conservation of vegetation, stay here; lumbering in equatorial Africa goes to africa-economy.lumbering; Nigeria's forest resources go to nigeria-resources.vegetation.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "soils",
+      "name": "Soils",
+      "part": "Physical geography",
+      "syllabus": {
+        "waec": "PPG (vii) Soil (marked for candidates outside Nigeria)",
+        "jamb": "2(a)"
+      },
+      "subtopics": [
+        {
+          "id": "soils.properties",
+          "name": "Soil: meaning, composition and properties",
+          "syllabus": {
+            "waec": "PPG (vii) definition, characteristics",
+            "jamb": "2(a)(a)"
+          },
+          "covers": "What soil is, its components (mineral matter, humus, water, air, living things), and its properties: texture, structure, colour, porosity, permeability and pH. Taught in SoW SS2 T1 W2. Sorting rule: how the components come together over time goes to soils.formation.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "soils.formation",
+          "name": "Soil formation and the soil profile",
+          "syllabus": {
+            "waec": "PPG (vii) factors and processes of soil formation, soil profile",
+            "jamb": "2(a)(b)-(c)"
+          },
+          "covers": "Factors of soil formation (parent rock, climate, relief, living things, time), processes (leaching, laterisation, podzolisation, calcification, humification, eluviation, illuviation), and the soil profile and its horizons. Taught in SoW SS2 T1 W3.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "soils.types",
+          "name": "Soil types",
+          "syllabus": {
+            "waec": "PPG (vii) local types and characteristics, importance to man",
+            "jamb": "2(a)(d)"
+          },
+          "covers": "Zonal, azonal and intrazonal soils, the major tropical soils (ferralitic, laterite, ferruginous, hydromorphic, alluvial, desert soils) and local soil types: their characteristics, where they occur and their uses. Sorting rule: Nigeria's soil zones go to nigeria.vegetation-soils.",
+          "taught_in": []
+        },
+        {
+          "id": "soils.erosion",
+          "name": "Soil erosion, conservation and human impact",
+          "syllabus": {
+            "waec": "PPG (vii) effects of human activities on soil, soil erosion and conservation",
+            "jamb": "2(a)(e)"
+          },
+          "covers": "The effects of human activities on soil, kinds of soil erosion (sheet, rill, gully, wind), their causes and effects, areas prone to them including Nigeria's gully areas, and control and conservation (contour ploughing, terracing, cover crops, mulching, afforestation). Sorting rule: any question on soil erosion itself goes here, in Nigeria or elsewhere, even when framed as a hazard; a question sorting several hazards into natural and man-induced goes to environment.hazards.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "The environment",
+      "part": "The environment",
+      "syllabus": {
+        "waec": "PPG (vii) The environment (a)-(c)",
+        "jamb": "2(c)-(f)"
+      },
+      "subtopics": [
+        {
+          "id": "environment.ecosystem",
+          "name": "Environmental interaction and balance",
+          "syllabus": {
+            "waec": null,
+            "jamb": "2(e)"
+          },
+          "covers": "The land ecosystem and its components, how they depend on one another, environmental balance, and the effects of human activities on the land ecosystem. Taught in SoW SS1 T2 W5. Sorting rule: a named hazard or pollutant goes to environment.hazards or environment.pollution.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "environment.resources",
+          "name": "Environmental resources",
+          "syllabus": {
+            "waec": "PPG (vii)(a) Environmental resources: meaning, classification, types, importance",
+            "jamb": "2(f)"
+          },
+          "covers": "What an environmental resource is, renewable and non-renewable resources, the types (atmospheric, water, land, soil, vegetation, mineral and energy resources) and the importance of each, including energy sources (solar, wind, hydroelectric, geothermal, biomass, fossil fuels, nuclear) compared as renewable or non-renewable and by how clean they are for the environment. Tested in WASSCE 2025 Q48. Sorting rule: resources asked about in general go here, and so does choosing the cleanest or most renewable energy source; renewable energy asked about as a remedy for climate change goes to climate-change.effects; Nigeria's own resources, including its power stations, go to nigeria-resources.",
+          "taught_in": []
+        },
+        {
+          "id": "environment.hazards",
+          "name": "Environmental hazards",
+          "syllabus": {
+            "waec": "PPG (vii)(b) Environmental problems/hazards: drought, desert encroachment, flooding",
+            "jamb": "2(d)"
+          },
+          "covers": "Natural and man-induced hazards (drought, flooding, desertification and desert encroachment, deforestation, and volcanic eruptions and earthquakes as hazards), their causes, effects and prevention, and the areas where they are common. Sorting rule: any question on deforestation itself, including which activities cause it, goes here; human effects on vegetation not named as deforestation go to vegetation.human; soil erosion goes to soils.erosion; pollution goes to environment.pollution; how an earthquake or eruption happens goes to vulcanicity.",
+          "taught_in": []
+        },
+        {
+          "id": "environment.pollution",
+          "name": "Pollution and waste disposal",
+          "syllabus": {
+            "waec": "PPG (vii)(b) pollution; RGN (k) environmental pollution, waste disposal",
+            "jamb": "2(d)"
+          },
+          "covers": "What pollution is, air, water, land and noise pollution, their sources (including gas flaring and oil spills in Nigeria), effects and control, and methods of waste disposal. Tested in WASSCE 2025 Q35. Sorting rule: any pollution question goes here, in Nigeria or elsewhere.",
+          "taught_in": []
+        },
+        {
+          "id": "environment.conservation",
+          "name": "Environmental conservation",
+          "syllabus": {
+            "waec": "PPG (vii)(c) Environmental conservation: meaning, importance, methods, problems and solutions",
+            "jamb": "2(c)"
+          },
+          "covers": "What conservation is, why it matters, its methods (afforestation, game reserves and national parks, laws, recycling, public education), its problems and their solutions. Taught in SoW SS2 T2 W1. Sorting rule: conserving soil goes to soils.erosion and conserving vegetation to vegetation.human; conservation in general goes here.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "population",
+      "name": "World population",
+      "part": "Human and economic geography",
+      "syllabus": {
+        "waec": "EHG (i) World Population",
+        "jamb": "3(a)"
+      },
+      "subtopics": [
+        {
+          "id": "population.characteristics",
+          "name": "Population concepts and structure",
+          "syllabus": {
+            "waec": "EHG (i) World Population",
+            "jamb": "3(a)(b)"
+          },
+          "covers": "The size of the world's population and of its most populous countries, the census, birth rate, death rate, natural increase, fertility, life expectancy, dependency ratio, age and sex structure, what a population pyramid shows, and population as a resource through its quality (skills, education, health). Taught in SoW SS2 T2 W7-8. Sorting rule: how to draw a pyramid goes to statistical.graphs; the advantages and disadvantages of a large or small population, and over, under and optimum population, go to population.growth.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "population.distribution",
+          "name": "Population distribution and density",
+          "syllabus": {
+            "waec": "EHG (i) patterns of distribution",
+            "jamb": "3(a)(a), 3(a)(c)"
+          },
+          "covers": "Physical and human factors of population distribution, dense and sparse regions of the world (including the Amazon Basin, north-east USA, India, Japan and the west coast of southern Africa), and calculating population density. Taught in SoW SS2 T2 W8. Tested in WASSCE 2025 Q46. Sorting rule: West Africa's distribution goes to africa.population; Nigeria's goes to nigeria.population.",
+          "taught_in": []
+        },
+        {
+          "id": "population.growth",
+          "name": "Population growth and its problems",
+          "syllabus": {
+            "waec": "EHG (i) factors of growth, growth rate problems",
+            "jamb": "3(a)(d)"
+          },
+          "covers": "Factors of population growth, over, under and optimum population, the advantages and disadvantages of a large or rapidly growing population, the problems of rapid growth, and their solutions such as family planning and education. Tested in WASSCE 2025 Q40. Sorting rule: the advantages and disadvantages of a large or small population go here; population quality as a resource, and the measures of a population (rates, ratios, structure), go to population.characteristics.",
+          "taught_in": []
+        },
+        {
+          "id": "population.migration",
+          "name": "Migration",
+          "syllabus": {
+            "waec": "EHG (i) movement; EHG (ii) migration",
+            "jamb": "3(a), objective v"
+          },
+          "covers": "Kinds of migration (internal and international, rural-urban, seasonal, forced), push and pull factors, and the effects on the places people leave and reach. Sorting rule: movement of people goes here; the exchange of goods, services and administration between town and country goes to settlement.interaction; migration within Nigeria goes to nigeria.population.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "settlement",
+      "name": "Settlement",
+      "part": "Human and economic geography",
+      "syllabus": {
+        "waec": "EHG (ii) Settlement",
+        "jamb": "3(c)"
+      },
+      "subtopics": [
+        {
+          "id": "settlement.types",
+          "name": "Types, patterns and sites of settlement",
+          "syllabus": {
+            "waec": "EHG (ii) types (rural and urban), patterns and factors affecting location, growth and size",
+            "jamb": "3(c)(a)"
+          },
+          "covers": "Rural and urban settlements, dispersed, nucleated and linear patterns, classification by size (farmstead, hamlet, village, town, city, conurbation, megalopolis) and the settlement hierarchy, and site factors such as water, defence and relief. Taught in SoW SS2 T2 W9. Tested in WASSCE 2025 Q41. Sorting rule: a settlement pattern seen on a topographical map goes to map-reading.human.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "settlement.rural",
+          "name": "Rural settlement",
+          "syllabus": {
+            "waec": "EHG (ii) functions of rural settlements",
+            "jamb": "3(c)(b)"
+          },
+          "covers": "How rural settlements are classified, the factors of their growth, their functions (farming, fishing, lumbering, mining), and the problems of rural areas.",
+          "taught_in": []
+        },
+        {
+          "id": "settlement.urban",
+          "name": "Urban settlement and its problems",
+          "syllabus": {
+            "waec": "EHG (ii) functions of urban settlements",
+            "jamb": "3(c)(c)-(d)"
+          },
+          "covers": "Towns classified by function (administrative, port, mining, commercial, industrial), factors of urban growth, urbanisation, land use zones in a town, and the problems of urban centres (congestion, slums, pollution, unemployment, crime) with their solutions, with examples from Western Europe, the USA, the Middle East and West Africa. Taught in SoW SS2 T2 W10. Sorting rule: transport problems inside a town or city (traffic congestion, and solutions such as mass transit, ring roads, flyovers and staggered working hours) go here; the problems of transport across a country or region go to transport.development.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "settlement.interaction",
+          "name": "Rural and urban interaction",
+          "syllabus": {
+            "waec": "EHG (ii) interaction patterns (urban-rural, rural-urban, urban-urban, rural-rural)",
+            "jamb": "3(c)(e)"
+          },
+          "covers": "How rural and urban settlements depend on each other, kinds of interaction (commercial, cultural, administrative), the four interaction patterns, and what each kind of settlement provides for the other. Taught in SoW SS3 T2 W1. Tested in WASSCE 2025 Q36. Sorting rule: what one kind of settlement gives another goes here; the causes and effects of people moving go to population.migration.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "part": "Human and economic geography",
+      "syllabus": {
+        "waec": "RGN (e) Agriculture: types of agricultural practices",
+        "jamb": "3(b)(b)"
+      },
+      "subtopics": [
+        {
+          "id": "agriculture.systems",
+          "name": "Types and systems of agriculture",
+          "syllabus": {
+            "waec": "RGN (e) types of agricultural practices",
+            "jamb": "3(b)(b)"
+          },
+          "covers": "Subsistence and commercial farming, shifting cultivation and bush fallowing, mixed farming, pastoral nomadism, livestock and dairy farming, commercial grain farming, plantation agriculture as a system, and intensive and extensive farming: the features of each. Taught in SoW SS2 T3 W4. Tested in WASSCE 2025 Q49. Sorting rule: the features of a farming system go here, and so does plantation agriculture asked about in general (its features, its typical crops, its advantages and disadvantages) when no African region is named; plantations in West or East Africa and the factors favouring them there go to africa-economy.commercial-farming; Nigeria's crops and where they grow go to nigeria-economy.agriculture; irrigation in the Nile and Niger basins goes to africa-economy.irrigation.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "agriculture.factors",
+          "name": "Factors and problems of agriculture",
+          "syllabus": {
+            "waec": "RGN (e) importance, problems and solutions",
+            "jamb": "3(b)(b)"
+          },
+          "covers": "Physical, economic, social and political factors that shape farming, the problems of agriculture in the tropics, and their solutions. Sorting rule: problems of farming in Nigeria go to nigeria-economy.agriculture.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "Manufacturing industry",
+      "part": "Human and economic geography",
+      "syllabus": {
+        "waec": "EHG (iv) Industry",
+        "jamb": "3(b)(a), 3(b)(c)"
+      },
+      "subtopics": [
+        {
+          "id": "industry.classification",
+          "name": "Classes and types of economic activity and industry",
+          "syllabus": {
+            "waec": "EHG (iv) classification (primary, secondary and tertiary); types (heavy and light industry)",
+            "jamb": "3(b)(a), 3(b)(c)"
+          },
+          "covers": "Primary, secondary, tertiary and quaternary activities, heavy and light industry, and naming which class a given activity or industry belongs to. Taught in SoW SS1 T3 W6. Tested in WASSCE 2025 Q38 and Q50.",
+          "taught_in": []
+        },
+        {
+          "id": "industry.location",
+          "name": "Factors of industrial location",
+          "syllabus": {
+            "waec": "EHG (iv) factors of industrial location",
+            "jamb": "3(b)(c)"
+          },
+          "covers": "Raw materials, power, labour, market, transport, capital, water, government policy and industrial inertia as factors in siting an industry, including siting in tropical Africa. Tested in WASSCE 2025 Q47. Sorting rule: the factors asked about in general, or for tropical Africa, go here; why industry grew in a named country or region outside Africa, such as Japan, goes to industry.world-regions; why a Nigerian industry is sited where it is goes to nigeria-economy.industry.",
+          "taught_in": []
+        },
+        {
+          "id": "industry.world-regions",
+          "name": "World industrial regions",
+          "syllabus": {
+            "waec": null,
+            "jamb": "3(b)(c)"
+          },
+          "covers": "The distribution of manufacturing industry in the world and its major industrial regions outside Africa (north-east USA and the Great Lakes, Western Europe including the Ruhr, Japan, China and other newly industrialised countries), and why industry developed in each, such as Japan's skilled and disciplined labour, capital and technology despite few raw materials. From the JAMB syllabus (distribution of manufacturing industries) and tested in a real WASSCE question on why Japan's industry developed (placement test Q73). Sorting rule: where industry is concentrated in the world, or why it grew in a named country or region outside Africa, goes here; the location factors asked about in general go to industry.location; industry in tropical Africa and its problems go to industry.development; Nigeria's industry goes to nigeria-economy.industry.",
+          "taught_in": []
+        },
+        {
+          "id": "industry.development",
+          "name": "Industry and development: importance and problems",
+          "syllabus": {
+            "waec": "EHG (iv) contributions to development; problems/solutions",
+            "jamb": "3(b)(c)"
+          },
+          "covers": "What industry contributes (employment, revenue, foreign exchange, use of raw materials), reasons for setting up industries, and the problems of industrialisation in tropical Africa with their solutions. Tested in WASSCE 2025 Q42. Sorting rule: how industry developed in a named country or region outside Africa goes to industry.world-regions; the importance and problems of Nigeria's own industry go to nigeria-economy.industry.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "transport",
+      "name": "Transport and communication",
+      "part": "Human and economic geography",
+      "syllabus": {
+        "waec": "EHG (iii) Transportation",
+        "jamb": "3(b)(d)"
+      },
+      "subtopics": [
+        {
+          "id": "transport.modes",
+          "name": "Modes of transport",
+          "syllabus": {
+            "waec": "EHG (iii) modes (roads, railways, water, air, pipeline, cables, ropeways)",
+            "jamb": "3(b)(d)"
+          },
+          "covers": "Road, rail, water, air, pipeline, cable and ropeway transport, what each carries best, and the advantages and disadvantages of each. Tested in WASSCE 2025 Q39. Sorting rule: a named mode's merits or drawbacks go here, even when set in Africa; the problems of transport as a whole go to transport.development; Nigeria's transport network goes to nigeria-economy.transport.",
+          "taught_in": []
+        },
+        {
+          "id": "transport.development",
+          "name": "Transport and development",
+          "syllabus": {
+            "waec": "EHG (iii) transportation and economic development; problems and solutions",
+            "jamb": "3(b)(d)"
+          },
+          "covers": "The roles of transport in development (moving people and goods, trade, spreading ideas and technology, national integration), and the problems of transport in general and in tropical Africa with their solutions. Sorting rule: the problems of transport across a country or region go here; transport problems inside a town or city, such as traffic congestion and how to relieve it, go to settlement.urban; Nigeria's transport problems go to nigeria-economy.transport.",
+          "taught_in": []
+        },
+        {
+          "id": "transport.communication",
+          "name": "Communication",
+          "syllabus": {
+            "waec": "EHG (iii) cables",
+            "jamb": "3(b)(d)"
+          },
+          "covers": "Kinds of communication (postal, telephone, radio, television, internet, satellite), their roles in development, the relationship between transport and communication, and their problems. Sorting rule: communication in Nigeria goes to nigeria-economy.transport.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "trade",
+      "name": "Trade",
+      "part": "Human and economic geography",
+      "syllabus": {
+        "waec": "EHG (v) Trade",
+        "jamb": "3(b)(e)"
+      },
+      "subtopics": [
+        {
+          "id": "trade.types",
+          "name": "Trade: meaning, types and reasons",
+          "syllabus": {
+            "waec": "EHG (v) meaning, types (national and international), reasons for trade, importance",
+            "jamb": "3(b)(e)"
+          },
+          "covers": "What trade is, internal (national), regional and international trade, why countries trade, its importance, and the barriers to trade between neighbouring countries. Tested in WASSCE 2025 Q37. Sorting rule: why trade between West African countries is low goes here unless the question names ECOWAS, when it goes to ecowas.prospects.",
+          "taught_in": []
+        },
+        {
+          "id": "trade.world",
+          "name": "World trade: pattern and commodities",
+          "syllabus": {
+            "waec": null,
+            "jamb": "3(b)(e)"
+          },
+          "covers": "Factors that shape the pattern of world trade, the major commodities and their origins, routes and destinations, and what developing and developed countries sell. Taught in SoW SS3 T1 W10. Tested in WASSCE 2025 Q43.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "tourism",
+      "name": "Tourism",
+      "part": "Human and economic geography",
+      "syllabus": {
+        "waec": "EHG (vi) Tourism",
+        "jamb": "3(b)(f)"
+      },
+      "subtopics": [
+        {
+          "id": "tourism.meaning",
+          "name": "Tourism: meaning, reasons and centres",
+          "syllabus": {
+            "waec": "EHG (vi) meaning, centres, reasons (leisure, recreation, education)",
+            "jamb": "3(b)(f)"
+          },
+          "covers": "What tourism is, kinds of tourism, reasons for it (leisure, recreation, education, health, religion), attractions, resorts and world tourist centres. Taught in SoW SS2 T3 W1. Tested in WASSCE 2025 Q44. Sorting rule: Nigeria's tourist centres go to nigeria-economy.tourism.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "tourism.importance",
+          "name": "Importance and problems of tourism",
+          "syllabus": {
+            "waec": "EHG (vi) importance, problems and solutions",
+            "jamb": "3(b)(f)"
+          },
+          "covers": "What tourism brings (revenue, foreign exchange, jobs, cultural exchange), its problems, and their solutions.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "nigeria",
+      "name": "Nigeria: location, physical setting and population",
+      "part": "Regional geography of Nigeria",
+      "syllabus": {
+        "waec": "RGN (a)-(c)",
+        "jamb": "4(a)(a)-(c)"
+      },
+      "subtopics": [
+        {
+          "id": "nigeria.location",
+          "name": "Location, size, political divisions and peoples",
+          "syllabus": {
+            "waec": "RGN (a) location, position, size, distance and political divisions",
+            "jamb": "4(a)(a)"
+          },
+          "covers": "Nigeria's latitude and longitude, boundaries and neighbours, size and distances north to south and east to west, states and capitals, the FCT and local governments, and the main ethnic groups and where they live. Taught in SoW SS1 T3 W2.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "nigeria.relief-drainage",
+          "name": "Relief and drainage of Nigeria",
+          "syllabus": {
+            "waec": "RGN (b) relief, drainage",
+            "jamb": "4(a)(b)"
+          },
+          "covers": "Nigeria's geology, highlands (Jos Plateau, eastern highlands, western uplands, Udi Plateau) and lowlands (Niger-Benue trough, Sokoto plains, Chad basin, coastal lowlands), its rivers, lakes and river basins, and the characteristics and importance of Nigerian rivers. Taught in SoW SS1 T3 W3. Sorting rule: dams for hydroelectric power go to nigeria-resources.power; rivers and lakes as water supply go to nigeria-resources.water.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "nigeria.climate",
+          "name": "Climate of Nigeria",
+          "syllabus": {
+            "waec": "RGN (b) climate",
+            "jamb": "4(a)(b)"
+          },
+          "covers": "Nigeria's two seasons, the tropical maritime and tropical continental air masses, the inter-tropical discontinuity, the harmattan, land and sea breezes on the coast, the distribution of rainfall and temperature, and the climatic regions. Taught in SoW SS1 T3 W4.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "nigeria.vegetation-soils",
+          "name": "Vegetation and soils of Nigeria",
+          "syllabus": {
+            "waec": "RGN (b) vegetation",
+            "jamb": "4(a)(b), 4(a)(d) soils"
+          },
+          "covers": "Nigeria's vegetation belts (mangrove swamp, rainforest, Guinea, Sudan and Sahel savanna, montane) and their characteristics, and its soil zones: their characteristics, where they occur, and their uses as a natural resource (the crops and activities each soil supports). Taught in SoW SS1 T3 W5. Sorting rule: Nigeria's soils as a resource go here; soil erosion and soil conservation go to soils.erosion; timber and forest reserves as resources go to nigeria-resources.vegetation.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "nigeria.population",
+          "name": "Population of Nigeria",
+          "syllabus": {
+            "waec": "RGN (c) size, distribution, structure, population quality, population movement, population data",
+            "jamb": "4(a)(c)"
+          },
+          "covers": "Nigeria's population size, distribution and density, structure, quality and growth rate (including the effect of HIV and AIDS), migration within Nigeria (kinds, problems, effects), and the census and other population data, their problems and solutions. Taught in SoW SS1 T3 W7.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "nigeria-resources",
+      "name": "Nigeria: natural resources",
+      "part": "Regional geography of Nigeria",
+      "syllabus": {
+        "waec": "RGN (d) Resources",
+        "jamb": "4(a)(d)"
+      },
+      "subtopics": [
+        {
+          "id": "nigeria-resources.minerals",
+          "name": "Mineral resources and mining in Nigeria",
+          "syllabus": {
+            "waec": "RGN (d) mineral (petroleum, gas, coal, tin/columbite, iron ore, limestone)",
+            "jamb": "4(a)(d)"
+          },
+          "covers": "Petroleum, natural gas, coal, tin and columbite, iron ore, limestone and other minerals: where they are found, how they are mined, their importance, and the problems of mining with solutions. Taught in SoW SS1 T3 W9. Sorting rule: oil production compared across Nigeria, Ghana and Libya goes to africa-economy.oil; minerals of other African countries go to africa-economy.mining; oil spills and gas flaring as pollution go to environment.pollution.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "nigeria-resources.power",
+          "name": "Power resources in Nigeria",
+          "syllabus": {
+            "waec": "RGN (d) power (petroleum, gas, coal, HEP, solar energy)",
+            "jamb": "4(a)(d)"
+          },
+          "covers": "Petroleum, gas and coal as fuels, hydroelectric power stations (Kainji, Jebba, Shiroro) and thermal stations, and solar energy: where they are, their importance, and their problems with solutions. Taught in SoW SS1 T3 W10. Sorting rule: renewable and non-renewable energy asked about in general goes to environment.resources.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "nigeria-resources.water",
+          "name": "Water resources of Nigeria",
+          "syllabus": {
+            "waec": "RGN (d) water (rivers, lakes, dams, sea, underground water)",
+            "jamb": "4(a)(d)"
+          },
+          "covers": "Rivers, lakes, dams, the sea and underground water as resources, and their uses for domestic supply, irrigation, fishing and transport. Sorting rule: hydroelectric power goes to nigeria-resources.power; the courses and basins of rivers go to nigeria.relief-drainage.",
+          "taught_in": []
+        },
+        {
+          "id": "nigeria-resources.vegetation",
+          "name": "Forest and vegetation resources of Nigeria",
+          "syllabus": {
+            "waec": "RGN (d) vegetation (trees, timber) forest, savanna, biosphere",
+            "jamb": "4(a)(d)"
+          },
+          "covers": "Timber and other forest products, forest and savanna as resources, forest and biosphere reserves, and their conservation. Sorting rule: food and cash crops go to nigeria-economy.agriculture; the vegetation belts themselves go to nigeria.vegetation-soils.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "nigeria-economy",
+      "name": "Nigeria: economic and human geography",
+      "part": "Regional geography of Nigeria",
+      "syllabus": {
+        "waec": "RGN (e)-(j)",
+        "jamb": "4(b)"
+      },
+      "subtopics": [
+        {
+          "id": "nigeria-economy.agriculture",
+          "name": "Agriculture in Nigeria",
+          "syllabus": {
+            "waec": "RGN (e) Agriculture",
+            "jamb": "4(b)(a)"
+          },
+          "covers": "Farming systems in Nigeria, the major food and cash crops and the areas they come from, the importance of agriculture, and its problems with solutions. Taught in SoW SS1 T3 W8.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "nigeria-economy.industry",
+          "name": "Manufacturing industry in Nigeria",
+          "syllabus": {
+            "waec": "RGN (h) Industry",
+            "jamb": "4(b)(b)"
+          },
+          "covers": "Types of industry in Nigeria, the major industrial zones and centres, factors of their location, their products and marketing, their importance to Nigeria (employment, revenue, foreign exchange, use of local raw materials), and their problems with solutions. Taught in SoW SS1 T3 W6. Sorting rule: the importance and problems of industry asked about in general or for tropical Africa go to industry.development.",
+          "taught_in": []
+        },
+        {
+          "id": "nigeria-economy.transport",
+          "name": "Transport and communication in Nigeria",
+          "syllabus": {
+            "waec": "RGN (f) Transportation; RGN (g) Communication",
+            "jamb": "4(b)(c)"
+          },
+          "covers": "Roads, railways, inland waterways, seaports, airports and pipelines in Nigeria, communication networks, their advantages and disadvantages, their influence on human activities, and their problems with solutions. Taught in SoW SS1 T3 W6 and SS2 T2 W2-3.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "nigeria-economy.trade",
+          "name": "Trade and commerce in Nigeria",
+          "syllabus": {
+            "waec": "RGN (i) Trade",
+            "jamb": "4(b)(d)"
+          },
+          "covers": "Internal and external trade, regional and international trade and their advantages and disadvantages to Nigeria, the major commodities, the stock exchange, capital market and foreign exchange, major commercial areas, and the importance of commerce. Taught in SoW SS2 T2 W5. Sorting rule: ECOWAS as an organisation goes to ecowas; why countries trade, asked in general, goes to trade.types.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "nigeria-economy.tourism",
+          "name": "Tourism in Nigeria",
+          "syllabus": {
+            "waec": "RGN (j) Tourism",
+            "jamb": "4(b)(e)"
+          },
+          "covers": "Nigeria's tourist centres (such as Yankari, Obudu, Olumo Rock, Ikogosi), reasons for visiting them, the importance of tourism to Nigeria, and its problems with solutions.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "nigeria-development",
+      "name": "Nigeria: development and environmental issues",
+      "part": "Regional geography of Nigeria",
+      "syllabus": {
+        "waec": "RGN (k), (m)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "nigeria-development.regional",
+          "name": "Rural and regional development",
+          "syllabus": {
+            "waec": "RGN (k) rural and regional development, resource management and conservation",
+            "jamb": null
+          },
+          "covers": "Rural and regional development in Nigeria, resource management, and issues of development. Sorting rule: pollution and waste disposal go to environment.pollution; conserving a named resource goes to that resource's subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "nigeria-development.land-reclamation",
+          "name": "Land reclamation",
+          "syllabus": {
+            "waec": "RGN (m) Geo-political issues: land reclamation",
+            "jamb": null
+          },
+          "covers": "Land reclamation as a geo-political issue, its methods (afforestation, barriers, sand filling, drainage, control of erosion heads) and its importance. Taught in SoW SS3 T2 W2.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "ecowas",
+      "name": "ECOWAS",
+      "part": "Regional geography of Nigeria",
+      "syllabus": {
+        "waec": "RGN (l) ECOWAS; RGA (b)(viii)",
+        "jamb": "4(c)"
+      },
+      "subtopics": [
+        {
+          "id": "ecowas.members",
+          "name": "Meaning, objectives and member states",
+          "syllabus": {
+            "waec": "RGN (l) meaning, member countries, purposes/mandate",
+            "jamb": "4(c)(a)-(b)"
+          },
+          "covers": "What ECOWAS is, when and where it was founded, its aims and institutions, and its member states, their number and location. Taught in SoW SS3 T1 W9. Tested in WASSCE 2025 Q45.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "ecowas.prospects",
+          "name": "Benefits and problems of ECOWAS",
+          "syllabus": {
+            "waec": "RGN (l) advantages/benefits, disadvantages, problems and solutions",
+            "jamb": "4(c)(c)-(d)"
+          },
+          "covers": "What ECOWAS has brought its members, its disadvantages, its problems (language, currency, political instability, similar products, poor links) and their solutions. Sorting rule: low trade between West African countries asked without naming ECOWAS goes to trade.types.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "africa",
+      "name": "Africa: broad outline",
+      "part": "Regional geography of Africa",
+      "syllabus": {
+        "waec": "RGA (a), (b)(vii)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "africa.outline",
+          "name": "Location, size and political divisions of Africa",
+          "syllabus": {
+            "waec": "RGA (a) location, size, position, political divisions and associated islands",
+            "jamb": null
+          },
+          "covers": "Africa's latitude, longitude and position, its size in land area and population, its countries and capitals, and its associated islands. Taught in SoW SS3 T2 W4.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "africa.physical",
+          "name": "Physical setting of Africa",
+          "syllabus": {
+            "waec": "RGA (a) physical features and their economic importance (relief, drainage, climate and vegetation)",
+            "jamb": null
+          },
+          "covers": "Africa's relief regions, highlands and lowlands, major rivers and lakes, climate and vegetation, and their economic importance. Taught in SoW SS3 T2 W5-6. Sorting rule: a climate or vegetation type asked about in general goes to climate-types or vegetation.types; its location or role in Africa goes here; where a mineral is found or mined in Africa, and which country is known for it, goes to africa-economy.mining.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "africa.population",
+          "name": "Population distribution in West Africa",
+          "syllabus": {
+            "waec": "RGA (b)(vii) population distribution in West Africa",
+            "jamb": null
+          },
+          "covers": "The densely and sparsely populated areas of West Africa and the reasons for them. Taught in SoW SS2 T3 W6. Sorting rule: world patterns go to population.distribution; Nigeria's pattern goes to nigeria.population.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "africa-economy",
+      "name": "Africa: selected economic activities",
+      "part": "Regional geography of Africa",
+      "syllabus": {
+        "waec": "RGA (b)(i)-(vi)",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "africa-economy.irrigation",
+          "name": "Irrigation agriculture in the Nile and Niger basins",
+          "syllabus": {
+            "waec": "RGA (b)(i) irrigation agriculture in the Nile Basin and the Niger Basin",
+            "jamb": null
+          },
+          "covers": "Irrigation schemes in the Nile Basin (such as Gezira and the Aswan High Dam) and the Niger Basin (such as the Office du Niger and Nigerian schemes): factors favouring them, methods of irrigation, crops, contribution to development, and problems with solutions. Taught in SoW SS3 T2 W8.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "africa-economy.commercial-farming",
+          "name": "Plantation agriculture and fruit farming",
+          "syllabus": {
+            "waec": "RGA (b)(ii) plantation agriculture in West and East Africa",
+            "jamb": null
+          },
+          "covers": "Plantation agriculture in West Africa (cocoa, oil palm, rubber) and East Africa (tea, coffee, sisal), its features, favourable factors, importance and problems, and fruit farming in the Mediterranean lands of Africa. Taught in SoW SS3 T2 W9-10; fruit farming is from the scheme of work only. Sorting rule: a question that names West Africa, East Africa or an African country goes here; plantation agriculture asked about in general (its features, typical crops, advantages and disadvantages) with no African region named goes to agriculture.systems.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "africa-economy.lumbering",
+          "name": "Lumbering in equatorial Africa",
+          "syllabus": {
+            "waec": "RGA (b)(iv) lumbering in equatorial Africa (Cote d'Ivoire and Zaire)",
+            "jamb": null
+          },
+          "covers": "Lumbering in Cote d'Ivoire, the Democratic Republic of Congo (formerly Zaire) and Nigeria: lumbering areas, favourable factors, methods, species, economic importance, and problems with solutions. Taught in SoW SS3 T2 W7.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "africa-economy.mining",
+          "name": "Mining and minerals in Africa",
+          "syllabus": {
+            "waec": "RGA (b)(v)-(vi) gold mining in South Africa, copper mining in Zambia and Zaire; RGA (a) distribution of minerals",
+            "jamb": null
+          },
+          "covers": "Gold mining in South Africa (the Witwatersrand) and copper mining in Zambia and the Democratic Republic of Congo (the Copperbelt and Katanga): factors, methods, importance and problems; and where Africa's other minerals are found and which countries are known for them, such as diamonds in Sierra Leone, Botswana, South Africa and the Democratic Republic of Congo, iron ore in Liberia and Mauritania, bauxite in Guinea and Ghana, and manganese in Ghana and Gabon. Taught in SoW SS2 T3 W5. Tested in WASSCE 2024 Q38 (diamonds in West Africa). Sorting rule: any mineral other than oil found or mined in an African country outside Nigeria goes here; oil production goes to africa-economy.oil; Nigeria's own minerals go to nigeria-resources.minerals.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "africa-economy.oil",
+          "name": "Oil production in Africa",
+          "syllabus": {
+            "waec": "RGA (b)(iii) oil production in Nigeria, Ghana and Libya",
+            "jamb": null
+          },
+          "covers": "Oil production in Nigeria, Ghana and Libya compared: where it is produced, its importance and its problems. Taught in SoW SS2 T3 W5. Sorting rule: a question about Nigeria's oil alone goes to nigeria-resources.minerals.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3",
+        "SS3 T2"
+      ]
+    }
+  ],
+  "legacy_note": "The legacy topic list supplied for Geography (legacy-topics.json) is empty, so no database topic is folded here and no question moves. If Geography topics are later found in the live database, the rule is the one Biology used: a specific name goes to the subtopic it matches; a generic name (a bare subject name, General questions, or a name that spans several areas such as Physical geography) goes to the parent topic it fits best, and questions moved to a parent are flagged for reclassification rather than guessed into a subtopic.",
+  "legacy_to": {},
+  "merged_into": {}
+}

@@ -1,0 +1,89 @@
+{
+  "slug": "crs-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.87,
+  "agree_subtopic": 80,
+  "agree_topic": 80,
+  "nofit": 1,
+  "disagreements": [],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "discipleship",
+        "detail": "No subtopic holds the twelve apostles as a named set. Q31 tests that Nathanael was also called Bartholomew, a fact that belongs to no covers line; only piecemeal call narratives exist (discipleship.call, birth.john). A subtopic such as discipleship.twelve, for the list of apostles, their names and any name changes, would give this kind of trivia a home."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "supremacy.tension",
+        "detail": "The covers line names Ahab's marriage, Baal worship and Elijah's drought prophecy but not Hiel of Bethel's rebuilding of Jericho (1 Kings 16:34, Q49), even though that verse sits inside the cited range 1 Kings 16:29-18:16. A classifier has to notice the verse falls in-range by number alone, since the prose gives no cue; naming it explicitly would remove that guesswork."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "discipleship",
+        "detail": "No subtopic holds the choosing and names of the Twelve (Mark 3:13-19, Matthew 10:1-4, Luke 6:12-16). Q31 (Bartholomew) only lands in discipleship.call because the answer is Nathanael. Add discipleship.twelve or widen discipleship.call to include the appointment and lists of the apostles."
+      },
+      {
+        "kind": "overlap",
+        "where": "death-resurrection.crucifixion",
+        "detail": "The women witnesses (Mary Magdalene, Mary mother of James and Joses, Salome) show up at the cross, the burial and the empty tomb. No rule says where a question on who they were goes (Q23). Add one, for example: questions on who the women were go by the scene the stem sets."
+      },
+      {
+        "kind": "overlap",
+        "where": "sermon.piety",
+        "detail": "The rule sends only the forgiveness lines of the Lord's Prayer (Matthew 6:12, 14-15) to sermon.forgiveness. A question on the theme of the prayer as a whole, answered 'forgiveness' (Q24), fits both. Also, sermon.piety cites no WAEC item, so WAEC questions on the Lord's Prayer have no WAEC-cited home."
+      },
+      {
+        "kind": "overlap",
+        "where": "opposition.apostles",
+        "detail": "The Gamaliel rule sorts by his advice to the council or his role as Paul's teacher. A bare identity question (which party he belonged to, Q34) fits both opposition.apostles and gentile-mission.saul. Add a default."
+      },
+      {
+        "kind": "overlap",
+        "where": "obedience.rewards",
+        "detail": "obedience.rewards cites Exodus 1:8-22, and leadership.moses covers Israel's oppression in Egypt (Exodus 1-7). The Moses rule only moves the midwives out. Pharaoh's forced labour and the order to drown the boys in the Nile (Q13) have no rule. Narrow obedience.rewards to Exodus 1:15-21, or state that the oppression goes to leadership.moses."
+      },
+      {
+        "kind": "misplaced",
+        "where": "virtues.humility",
+        "detail": "It has waec: null, but WAEC tests 1 Peter 5:5-6 on humility under C.2(c) (Q52, Q78). The rule moves those questions out of community.relationships, where WAEC cites them, and into a subtopic that says WAEC does not cover it. Add a WAEC reference to virtues.humility or reverse the rule for 1 Peter 5."
+      },
+      {
+        "kind": "misplaced",
+        "where": "covenant.sinai",
+        "detail": "The whole covenant parent has waec: null, yet the ark's contents is a recurring WASSCE question (Q17 here, WASSCE 2020 Q17). Its syllabus reference should record that WAEC tests it, or coverage reports will show a WAEC question sitting outside the WAEC syllabus."
+      },
+      {
+        "kind": "overlap",
+        "where": "second-coming.preparation",
+        "detail": "'The day of the Lord' is in the second-coming.preparation covers line but not in justice-love.amos, although Amos 5:18-20 is a staple (Q27, Q79). Name Amos's day of the Lord in the Amos covers line and add a rule to second-coming.preparation."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "supremacy.tension",
+        "detail": "Hiel of Bethel rebuilding Jericho (1 Kings 16:34, Q49) is inside the cited range but missing from the covers line. A classifier reading the covers line only could send it to leadership.joshua because of the Jericho curse. Name it."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "community.family",
+        "detail": "The rule sends 1 Peter 2:18 on servants to community.persecution, but Q73 tests submission to masters rather than enduring suffering, which is what community.family describes. The rule works, but it pulls against the covers line. Make it explicit that every question on 1 Peter 2:18-25 goes to persecution, whatever it asks."
+      }
+    ]
+  }
+}

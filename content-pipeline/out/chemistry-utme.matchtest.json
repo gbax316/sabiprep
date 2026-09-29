@@ -1,0 +1,128 @@
+{
+  "slug": "chemistry-utme",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.64,
+  "agree_subtopic": 77,
+  "agree_topic": 77,
+  "nofit": 0,
+  "disagreements": [
+    {
+      "year": 2018,
+      "q_number": 31,
+      "stem": "The process involved in the conversion of starch to alcohol is",
+      "sonnet": "industry.biotechnology",
+      "opus": "functional-groups.alkanols",
+      "notes": [
+        "fermentation as a biotechnology process; see taxonomy finding on this boundary",
+        "also fits industry.biotechnology. The carbohydrates rule sends fermentation to alcohol to 'functional-groups.alkanols or industry.biotechnology' without saying which."
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 34,
+      "stem": "CxHy + 40₂ = 3CO₂ + 2H₂O. The hydrocarbon, CxHy, in the reaction above is?",
+      "sonnet": "organic-basics.carbon-classes",
+      "opus": "stoichiometry.equations",
+      "notes": [
+        "matching a molecular formula derived from a combustion equation to its family",
+        "also fits organic-basics.carbon-classes: the student balances the equation to get the formula, then matches it to a family. Data problem: the equation gives C3H4, so none of the options (all C4) is correct."
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 17,
+      "stem": "An example of homogenous mixture is",
+      "sonnet": "solutions.colloids",
+      "opus": "matter.classification",
+      "notes": [
+        "true solution versus colloid versus suspension",
+        "also fits solutions.colloids, which tells true solutions from colloids and emulsions. Neither covers line names homogeneous or heterogeneous mixtures."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "functional-groups.alkanols / industry.biotechnology",
+        "detail": "The alkanols covers line lists preparation of ethanol by fermentation, including local gin, but the very same subtopic's own sorting rule then sends fermentation as a biotechnology and ethanol as a biofuel to industry.biotechnology. A question like q26, the conversion of starch to alcohol by fermentation, is resolvable only by reading past the covers line into the sorting rule; a classifier that stops at the covers line will misplace it. Worth moving the fermentation mention out of the alkanols covers line entirely, or naming the boundary in both directions."
+      },
+      {
+        "kind": "overlap",
+        "where": "sulphur.element / biomolecules.polymers",
+        "detail": "Both subtopics list vulcanisation in their covers line (sulphur.element: uses including vulcanisation; biomolecules.polymers: natural and synthetic rubber and vulcanisation) and neither sorting rule mentions the other. A question asking which element is used to vulcanise rubber (q60) fits both equally; the taxonomy needs a rule such as the element used in vulcanisation goes to sulphur.element, the process and its effect on rubber properties go to biomolecules.polymers."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "energetics.enthalpy / energetics.entropy",
+        "detail": "A diagram question offering exothermic/endothermic alongside spontaneous/non-spontaneous as options (q57) cannot be placed with certainty without seeing the diagram, because the taxonomy keeps the sign of an enthalpy change and the test of spontaneity in two separate subtopics with no rule covering a single diagram or question that invites both readings at once, which is a common real-paper distractor pattern."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "energetics.heats",
+        "detail": "Lattice energy and hydration energy as the two terms that set the sign of a heat of solution are in no covers line, and the scope rule excludes lattice energy as Born-Haber content. Q24 tests it qualitatively. Name it in energetics.heats (or energetics.enthalpy) and narrow the scope-rule exclusion to Born-Haber calculations."
+      },
+      {
+        "kind": "overlap",
+        "where": "sulphur.element",
+        "detail": "Vulcanisation is named in both sulphur.element and biomolecules.polymers with no sorting rule. Suggest: which element is used goes to sulphur.element; what vulcanisation does to rubber goes to biomolecules.polymers (Q60)."
+      },
+      {
+        "kind": "overlap",
+        "where": "biomolecules.carbohydrates",
+        "detail": "Its sorting rule sends fermentation to alcohol to 'functional-groups.alkanols or industry.biotechnology', which is two destinations, not a rule. Naming the process that turns starch to alcohol (Q26) lands on both. Pick one: the chemistry of the conversion to functional-groups.alkanols, the industrial use to industry.biotechnology."
+      },
+      {
+        "kind": "overlap",
+        "where": "matter.classification",
+        "detail": "Homogeneous against heterogeneous mixtures is named nowhere; a question picking the homogeneous mixture from solution, colloid, sol and emulsion (Q52) fits matter.classification (kinds of mixture) and solutions.colloids (true against false solutions) equally. Add the term to one covers line and route the other."
+      },
+      {
+        "kind": "overlap",
+        "where": "hydrogen-oxygen.hydrogen",
+        "detail": "The balloon rule is circular: hydrogen's covers line sends balloon questions to air.noble-gases, while air.noble-gases says a use comparison goes to the gas that is used. A question on what limits hydrogen's use in balloons, with no helium named (Q7), has no clear home. State that hydrogen's own property limiting its use goes to hydrogen."
+      },
+      {
+        "kind": "missing",
+        "where": "practical.gas-preparation",
+        "detail": "Washing or purifying a prepared gas (passing ethene through NaOH to remove SO2 and CO2, chlorine through water to remove HCl) is not covered; the subtopic lists collecting and drying only (Q63). Add purification to its covers line and say whether a named gas's purification step goes here or to that gas."
+      },
+      {
+        "kind": "overlap",
+        "where": "stoichiometry.equations",
+        "detail": "Deducing an unknown hydrocarbon's formula from a balanced combustion equation (Q42) sits between stoichiometry.equations, stoichiometry.empirical and organic-basics.carbon-classes. Add a rule, for example: a formula found by balancing goes to stoichiometry.equations."
+      },
+      {
+        "kind": "overlap",
+        "where": "metals.extraction",
+        "detail": "The ore of a named metal (bauxite for aluminium, Q32) could go to metals.extraction (ores), metals.general (occurrence in nature) or the common-metals subtopic. The general rule 'one named metal goes to its common-metals subtopic' decides it, but none of the three covers lines says ores of a named metal explicitly."
+      },
+      {
+        "kind": "overlap",
+        "where": "energetics.enthalpy",
+        "detail": "Energy diagrams whose options mix exothermic and endothermic with spontaneous and non-spontaneous (Q57) straddle energetics.enthalpy and energetics.entropy. Add a rule: reading an energy level diagram goes to energetics.enthalpy even when spontaneity is among the options."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "hydrogen-oxygen.oxides",
+        "detail": "The covers line does not use the term acid anhydride and does not say where the strength of the acid an oxide gives belongs (Q14, CO2 giving a weak acid). It went here by the reaction-with-water rule, but acids-bases.properties also claims acid strength. Name acid anhydrides and route the strength of the resulting acid here."
+      }
+    ]
+  }
+}

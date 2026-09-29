@@ -1,0 +1,1606 @@
+{
+  "subject": "Government",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "The live database holds 20 broad Government topics, most of them spanning two or more syllabus topics, so a weak score on one cannot tell a student what to practise. Version 1.0 builds the tree from the WAEC and JAMB syllabi and the SS1 to SS3 scheme of work: parent topics at the grain of the syllabi's numbered topics, merged where WAEC and JAMB name the same content, and subtopics at the grain of their sub-areas. It was checked against the 40 UTME 2025 and 50 WASSCE 2025 objective questions in the sample: every one has a home, and the borders they fell across carry sorting rules. Every one of the 20 legacy database topics is folded in. Nothing in the database is changed by this file. Version 1.1 revises it from the coverage map and the placement test: five subtopics added for content real papers test, partial syllabus items widened into their subtopics, and sorting rules added on every border the two models split.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC Government examination syllabus, WASSCE",
+        "retrieved_from": "https://waecsyllabus.com/files/ssce/GOVERNMENT.pdf",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror, file dated 2015-09-24, author field awajis.com. Not fetched from a WAEC domain directly."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME Government syllabus, Parts I to IV",
+        "retrieved_from": "https://allschool.ng/jamb-syllabus-for-government/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party reproduction labelled the 2026 version, topic list cross-checked against https://kofastudy.com/jamb-syllabus-for-government/, which matches its numbering and order exactly."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Senior secondary Government scheme of work, SS1 to SS3, Lagos State and Modified variants",
+        "retrieved_from": "https://enote.edudelight.com/ (SS1 to SS3, first and second terms) and https://passnownow.com/ (SS1 and SS2 third term)",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirrors. SS3 third term is not found and is read as revision time, as in every other subject."
+      }
+    ],
+    "scope_rule": "WAEC Paper 1 is drawn from the entire syllabus, so every WAEC topic is in scope. WAEC Section B is written for five countries; SabiPrep serves Nigerian candidates, so the tree keeps the Nigerian content (Hausa/Fulani, Yoruba and Igbo pre-colonial systems, the Nigerian constitutions, parties, military rule, federalism and foreign policy) and leaves out the Ghana, Sierra Leone, Gambia and Liberia lists. Questions framed across West Africa, such as military intervention in West African states (WASSCE 2025 Q31 and Q32) or the pre-independence constitutions of British West Africa (Q30), go to the matching subtopic, which covers the West African framing. Real papers test content beyond the syllabus wording, and it is placed where they land: the meaning of Government as a field of study, which only WAEC lists, in UTME 2025 Q17; governance and e-governance (WASSCE 2025 Q2 and Q37) under government.meaning and principles.accountability; civil society organisations (WASSCE 2025 Q50) under pressure-opinion.pressure-groups; Nigeria and Ghana relations (UTME 2025 Q8) and Nigeria and France (Q4) under foreign policy; the meaning of imperialism and colonialism (UTME 2025 Q12) under colonial.acquisition; UN specialised agencies, which only the scheme of work lists, under intl-orgs.un-agencies. Version 1.1 adds more content the placement test found in real papers: the meaning of politics under government.meaning; theories of the origin of the state under concepts.origin-of-state; Aristotle's classification of governments under forms.classification; types of party, manifestos and campaigning under parties.types; international organisations in general and Nigeria's memberships under intl-orgs.general; features shared by the independence constitutions of West African states (WASSCE 2024 Q42) under post-independence.compared; corruption and weak state institutions (WASSCE 2024 Q9) under principles.accountability; and Nigeria's relations with the Middle East under foreign-policy.major-powers. The scheme of work's week on conflict resolution and peace education (SS2 T3 W7) is left out as Civic Education content until a Government paper is seen to test it."
+  },
+  "how_to_use": "Place a question by what a student must know to answer it, not by words in the stem. A question that names a military ruler but asks when the 19 states were created goes under state creation. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins. A general principle goes to the Elements of government topics; how it worked in Nigeria goes to the Nigerian topic where one exists, as the covers lines say.",
+  "topics": [
+    {
+      "id": "government",
+      "name": "Meaning and scope of government",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "1",
+        "jamb": null
+      },
+      "subtopics": [
+        {
+          "id": "government.meaning",
+          "name": "Meaning of government",
+          "syllabus": {
+            "waec": "1(i)-(iii)",
+            "jamb": null
+          },
+          "covers": "Government as an institution of the state, as a process or art of governing, and as an academic field of study; why we study Government; what the subject covers; the meaning of governance; and the meaning of politics and political science and their key terms, such as the Greek polis. Real papers test it (UTME 2025 Q17, WASSCE 2025 Q2, and the meaning of politics in the UTME placement test, Q76). Sorting rule: what government, governance or politics means goes here; good governance, accountability and e-governance go to principles.accountability; what a state is goes to concepts.state-nation.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "government.functions",
+          "name": "Features and functions of government",
+          "syllabus": {
+            "waec": "1(i)",
+            "jamb": null
+          },
+          "covers": "The features of government and what every government does: maintaining law and order, defence, providing services, protecting rights. Sorting rule: functions of government as a whole go here; the functions of one arm go to that arm under organs; the structure and functions of the state, as distinct from its government, go to concepts.state-nation.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "concepts",
+      "name": "Basic concepts of government",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "2(i)",
+        "jamb": "I.1"
+      },
+      "subtopics": [
+        {
+          "id": "concepts.state-nation",
+          "name": "State, nation and society",
+          "syllabus": {
+            "waec": "1(i), 2(i)",
+            "jamb": "I.1(b)"
+          },
+          "covers": "The meaning and features of the state (population, territory, government, sovereignty), the structure of the state and its functions, the nation, the nation-state and society, and how they differ. Sorting rule: which feature of a state makes it independent, or what sovereignty means, goes to concepts.sovereignty; the other features of a state go here; how the state came to exist goes to concepts.origin-of-state; what the state does as a whole goes here, while the functions of government go to government.functions and the state's obligations to its citizens go to citizenship.duties.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "concepts.origin-of-state",
+          "name": "Theories of the origin of the state",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "Theories of how the state came to be: the force theory, the divine right theory, the social contract theory (Hobbes, Locke, Rousseau), the organic theory and the evolutionary or historical theory, and the thinkers linked with each. Neither syllabus names it, but real papers test it (UTME placement test, Q36). Sorting rule: how the state arose goes here, including divine right asked as a theory of the state's origin; what a state is and its features go to concepts.state-nation.",
+          "taught_in": []
+        },
+        {
+          "id": "concepts.power-authority",
+          "name": "Power, authority and legitimacy",
+          "syllabus": {
+            "waec": "2(i)",
+            "jamb": "I.1(a)"
+          },
+          "covers": "Power, its forms and sources; authority, its types (traditional, charismatic, legal-rational) and how it differs from power; legitimacy and what gives or removes it. Tested in UTME 2025 Q10. Sorting rule: the supreme power of a state over its territory, free of outside control, goes to concepts.sovereignty.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "concepts.sovereignty",
+          "name": "Sovereignty",
+          "syllabus": {
+            "waec": "2(i)",
+            "jamb": "I.1(a)"
+          },
+          "covers": "The meaning of sovereignty, its characteristics, types (legal, political, de jure, de facto), where it is located, and its limits, and sovereignty as what makes a state independent. Tested in UTME 2025 Q15 and Q21 and WASSCE 2025 Q3.",
+          "taught_in": []
+        },
+        {
+          "id": "concepts.culture-socialisation",
+          "name": "Political culture and political socialisation",
+          "syllabus": {
+            "waec": "2(i)",
+            "jamb": "I.1(c)"
+          },
+          "covers": "Political culture, its types and determinants, and political socialisation, its meaning and agents (family, school, peer group, media, religion, parties). Tested in WASSCE 2025 Q11 and Q12. Sorting rule: how people come to learn political values goes here; how they take part in politics goes to concepts.participation.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "concepts.participation",
+          "name": "Political participation",
+          "syllabus": {
+            "waec": "2(ii)",
+            "jamb": "I.1(c)"
+          },
+          "covers": "The meaning of political participation, its forms (voting, contesting, campaigning, joining parties and groups), its purposes, political apathy, and the factors that raise or lower it. Sorting rule: a question whose answer is voter turnout, voting or civic engagement as the life of democracy goes here (WASSCE 2025 Q1); the conditions and indicators of democracy as a whole go to forms.democracy; how military rule removes participation goes to military.impact.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "forms",
+      "name": "Forms of government",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "2(i), 2(ii), 5",
+        "jamb": "I.2, I.8"
+      },
+      "subtopics": [
+        {
+          "id": "forms.classification",
+          "name": "Classification of governments",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "Aristotle's classification of governments by the number who rule and whether they rule for the common good: monarchy and tyranny, aristocracy and oligarchy, polity and democracy, the good and the perverted forms, and other bases for classifying governments. Neither syllabus names it, but real papers test it (UTME placement test, Q15). Sorting rule: a question about the scheme itself, such as which form is the perverted version of another, goes here; the features, merits and demerits of one form go to that form's subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "forms.democracy",
+          "name": "Democracy and representative government",
+          "syllabus": {
+            "waec": "2(i), 2(ii)",
+            "jamb": "I.2, I.8"
+          },
+          "covers": "Democracy: its meaning, types (direct and indirect or representative), features, merits and demerits, and the conditions and indicators it needs to work, such as rule of law and free and fair elections; representative government, its features and conditions. Tested in WASSCE 2025 Q43. Sorting rule: what democracy is or needs goes here; the rule of law or separation of powers asked about for its own sake goes to that principle; voting and turnout as participation go to concepts.participation.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "forms.monarchy-republic",
+          "name": "Monarchy and republicanism",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "I.2, I.5"
+          },
+          "covers": "Monarchy, absolute and constitutional, its features, merits and demerits; the monarchical system; republican government and its features; and how a republic differs from a monarchy. Sorting rule: the features of military government go to military.regimes.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "forms.rule-by-few",
+          "name": "Aristocracy, oligarchy and autocracy",
+          "syllabus": {
+            "waec": "2(i)",
+            "jamb": "I.2"
+          },
+          "covers": "Government by a few or by one: aristocracy, oligarchy, plutocracy, gerontocracy, autocracy and dictatorship, their features, merits and demerits. Sorting rule: totalitarianism and fascism as ideologies go to ideologies.totalitarianism; a question about rule by a dictator goes here unless its correct answer is fascism, Nazism or totalitarianism, which go to ideologies.totalitarianism; where these forms sit in Aristotle's scheme goes to forms.classification.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "ideologies",
+      "name": "Political ideologies",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "2(i)",
+        "jamb": "I.6"
+      },
+      "subtopics": [
+        {
+          "id": "ideologies.communalism-feudalism",
+          "name": "Communalism and feudalism",
+          "syllabus": {
+            "waec": "2(i)",
+            "jamb": "I.6"
+          },
+          "covers": "Communalism and feudalism as modes of production and ways of organising society: their features, the lord and vassal relationship, merits and demerits.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "ideologies.capitalism-socialism",
+          "name": "Capitalism, liberalism, socialism and communism",
+          "syllabus": {
+            "waec": "2(i)",
+            "jamb": "I.6"
+          },
+          "covers": "Capitalism and liberalism, socialism, and communism (Marxism): their features, merits and demerits, who owns the means of production under each, and how they differ.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "ideologies.totalitarianism",
+          "name": "Fascism, Nazism and totalitarianism",
+          "syllabus": {
+            "waec": "2(i)",
+            "jamb": "I.6"
+          },
+          "covers": "Fascism, Nazism and totalitarianism, their features and leaders, and signs of totalitarian tendencies in a state. Tested in WASSCE 2025 Q13. Sorting rule: a question whose correct answer is fascism, Nazism or totalitarianism goes here, even when the stem describes rule by a dictator; dictatorship or autocracy as a form of government goes to forms.rule-by-few.",
+          "taught_in": [
+            "SS1 T1",
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "principles",
+      "name": "Principles of democratic government",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "2(ii)",
+        "jamb": "I.8"
+      },
+      "subtopics": [
+        {
+          "id": "principles.rule-of-law",
+          "name": "Rule of law",
+          "syllabus": {
+            "waec": "2(ii)",
+            "jamb": "I.8"
+          },
+          "covers": "The meaning of the rule of law, Dicey's principles (supremacy of law, equality before the law, rights), limits to its application, and what ensures it works. Sorting rule: what the rule of law needs goes here, even when the correct answer is an independent judiciary; judicial independence asked about for its own sake, such as what secures it, goes to organs.judiciary.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "principles.separation",
+          "name": "Separation of powers and checks and balances",
+          "syllabus": {
+            "waec": "2(ii)",
+            "jamb": "I.3(d), I.8"
+          },
+          "covers": "Separation of powers (Montesquieu), checks and balances, their purpose, merits and demerits, how they operate in presidential and parliamentary systems, and how the three arms relate to and check one another, including the checking powers: veto and veto override, legislative oversight, confirming appointments, impeachment and judicial review. Tested in UTME 2025 Q34. Sorting rule: how one arm checks another goes here, and so does a question whose correct answer is a checking power, even when the stem asks what one arm can do; what one arm does apart from checking another goes to its subtopic under organs; assent and veto as stages in a bill's passage go to legislation.law-making; judicial independence goes to organs.judiciary.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "principles.accountability",
+          "name": "Accountability, good governance and its challenges",
+          "syllabus": {
+            "waec": null,
+            "jamb": "I.8"
+          },
+          "covers": "Ethics and accountability in public office, transparency, the code of conduct for public officers, individual and collective responsibility as ideas, good governance, including e-governance and bringing government to all citizens, and the challenges of governance: corruption and the weak performance of state institutions in general, in Nigeria and West African states. Real papers test it (WASSCE 2025 Q37, WASSCE 2024 Q9). Sorting rule: the meaning of governance goes to government.meaning; collective responsibility as a feature of the parliamentary system goes to types.parliamentary; corruption or weakness across state institutions in general goes here, while a problem of one institution goes to that institution (public-admin.civil-service, local-government.problems) and corruption as a cause of coups goes to military.causes.",
+          "taught_in": []
+        },
+        {
+          "id": "principles.decentralisation",
+          "name": "Centralisation and decentralisation",
+          "syllabus": {
+            "waec": "2(ii)",
+            "jamb": null
+          },
+          "covers": "Centralisation and decentralisation, deconcentration and devolution: meaning, reasons for adoption, merits and demerits. Sorting rule: delegated legislation goes to legislation.delegated; local government as a tier goes to local-government; how power is shared in a federal or unitary state goes to types.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "constitution",
+      "name": "Constitutions and constitutionalism",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "3, 2(ii)",
+        "jamb": "I.7, I.8"
+      },
+      "subtopics": [
+        {
+          "id": "constitution.meaning",
+          "name": "Meaning and functions of a constitution",
+          "syllabus": {
+            "waec": "3(i)-(ii)",
+            "jamb": "I.7"
+          },
+          "covers": "What a constitution is, its supremacy as the highest law, and its functions: setting up the organs of government, limiting power, protecting rights and giving stability. Tested in UTME 2025 Q33 and WASSCE 2025 Q5 and Q42. Sorting rule: where a constitution comes from goes to constitution.sources; a general principle such as constitutional supremacy goes here even when the stem names a Nigerian constitution as its example, and the named constitution's subtopic under pre-independence or post-independence wins only when the correct answer is a feature of that constitution alone; features shared by the pre-independence or independence constitutions of Nigeria and West Africa go to pre-independence.compared or post-independence.compared.",
+          "taught_in": []
+        },
+        {
+          "id": "constitution.sources",
+          "name": "Sources of a constitution",
+          "syllabus": {
+            "waec": "3(i)",
+            "jamb": "I.7"
+          },
+          "covers": "Where constitutions come from: statutes, conventions, judicial precedents, customs, historical documents, the works of learned authors, and constituent assemblies.",
+          "taught_in": []
+        },
+        {
+          "id": "constitution.types",
+          "name": "Types of constitution",
+          "syllabus": {
+            "waec": "3(iii)",
+            "jamb": "I.7"
+          },
+          "covers": "Written and unwritten, rigid and flexible, and unitary, federal and confederal constitutions: their features, merits and demerits, and how each is amended. Sorting rule: a question that classifies a constitution goes here; the features of a unitary, federal or confederal state go to types.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "constitution.constitutionalism",
+          "name": "Constitutionalism",
+          "syllabus": {
+            "waec": "2(ii)",
+            "jamb": "I.8"
+          },
+          "covers": "The meaning of constitutionalism, government limited by and working within a constitution, and what supports or undermines it.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "organs",
+      "name": "Organs of government",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "4",
+        "jamb": "I.3, II.6"
+      },
+      "subtopics": [
+        {
+          "id": "organs.legislature",
+          "name": "The legislature",
+          "syllabus": {
+            "waec": "4",
+            "jamb": "I.3(a), II.6(a)"
+          },
+          "covers": "The legislature's types (unicameral and bicameral), structure, membership, functions, powers and limits, parliamentary supremacy, its officers, such as the Speaker, the Senate President, the clerk, the majority and minority leaders and the whips, and symbols such as the mace, named legislatures such as the US Congress and the National Assembly. Tested in UTME 2025 Q24 and Q39 and WASSCE 2025 Q4. Sorting rule: how a bill becomes law goes to legislation.law-making; how the legislature checks the other arms, including oversight and impeachment, goes to principles.separation; whips and house leaders go here, even when the stem asks about party discipline, while a party's organisation outside the legislature goes to parties.parties.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "organs.executive",
+          "name": "The executive",
+          "syllabus": {
+            "waec": "4",
+            "jamb": "I.3(b), II.6(b)"
+          },
+          "covers": "The executive's types (single and plural, nominal and real), structure, functions, powers and limits, including the powers of the Nigerian President, ministers, and agencies such as the police and the armed forces. Tested in UTME 2025 Q18. Sorting rule: the civil service goes to public-admin.civil-service; the President's role in a presidential system compared with a prime minister goes to types.presidential or types.parliamentary.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "organs.judiciary",
+          "name": "The judiciary",
+          "syllabus": {
+            "waec": "4",
+            "jamb": "I.3(c), II.6(c)"
+          },
+          "covers": "The judiciary's functions, powers and components, the hierarchy of courts, the appointment and removal of judges, and judicial independence and what secures it. Tested in UTME 2025 Q35 and WASSCE 2025 Q14. Sorting rule: judicial independence asked about for its own sake goes here, but a rule-of-law question whose correct answer is an independent judiciary goes to principles.rule-of-law; judicial review as a check on the other arms goes to principles.separation; court remedies available to an aggrieved person, such as habeas corpus, mandamus, certiorari and injunction, go to citizenship.rights.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "legislation",
+      "name": "Processes of legislation",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "2(ii)",
+        "jamb": "I.9"
+      },
+      "subtopics": [
+        {
+          "id": "legislation.law-making",
+          "name": "Bills and law-making",
+          "syllabus": {
+            "waec": null,
+            "jamb": "I.9"
+          },
+          "covers": "Bills and their types (public, private, money bills), the stages by which a bill becomes law, assent and veto as stages in that process, and the kinds of law: acts, edicts and decrees. Sorting rule: laws made by a body other than the legislature under its authority, including bye-laws, go to legislation.delegated; a veto or override asked about as one arm checking another goes to principles.separation.",
+          "taught_in": []
+        },
+        {
+          "id": "legislation.delegated",
+          "name": "Delegated legislation",
+          "syllabus": {
+            "waec": "2(ii)",
+            "jamb": "I.9"
+          },
+          "covers": "Delegated legislation: its meaning, forms (orders, rules, regulations, bye-laws), reasons for it, its demerits, and how it is controlled. Tested in WASSCE 2025 Q21. Sorting rule: every question on bye-laws goes here, including which body makes them.",
+          "taught_in": [
+            "SS1 T2",
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "types",
+      "name": "State structure and systems of government",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "5",
+        "jamb": "I.4, I.5"
+      },
+      "subtopics": [
+        {
+          "id": "types.unitary",
+          "name": "Unitary system",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "I.4(a)"
+          },
+          "covers": "The unitary system: power concentrated at the centre, its features, reasons for adoption, merits and demerits. Tested in UTME 2025 Q28. Sorting rule: a question that describes a structure and asks for its name goes to the structure described; a quasi-federal system goes to types.federal; the 1966 Unification Decree goes to military.impact.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "types.federal",
+          "name": "Federal system",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "I.4(b)"
+          },
+          "covers": "The federal system in general: division of powers between levels, its features, reasons for adoption, merits and demerits, exclusive, concurrent and residual lists, and quasi-federalism, a federal constitution with a dominant centre. Tested in WASSCE 2025 Q20. Sorting rule: federalism in general, including quasi-federalism, goes here; how Nigeria's federation came about, works, and its problems go to federalism.",
+          "taught_in": []
+        },
+        {
+          "id": "types.confederal",
+          "name": "Confederal system",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "I.4(c)"
+          },
+          "covers": "The confederal system: sovereign units with a weak centre, its features, reasons for adoption, merits and demerits, and how it differs from a federation.",
+          "taught_in": []
+        },
+        {
+          "id": "types.presidential",
+          "name": "Presidential system",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "I.5"
+          },
+          "covers": "The presidential or non-parliamentary system: the president as head of state and government, fixed terms, separation of the executive from the legislature, merits and demerits. Sorting rule: a question contrasting the presidential and parliamentary systems goes to the system that owns the feature being tested: in a positive question, the system whose feature is the correct answer; in a negative question, such as which system does not practise collective responsibility, the system that has the feature named in the stem. Impeachment goes to principles.separation.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "types.parliamentary",
+          "name": "Parliamentary system",
+          "syllabus": {
+            "waec": "5",
+            "jamb": "I.5"
+          },
+          "covers": "The parliamentary or cabinet system: the prime minister and cabinet, nominal and real executives, fusion of powers, collective and individual ministerial responsibility, the opposition and shadow cabinet, merits and demerits. Sorting rule: a question contrasting the two systems goes to the system that owns the feature being tested, as types.presidential sets out, so which system does not practise collective responsibility goes here; the opposition as a feature of parliamentary systems in general goes here, but who led the opposition in Nigeria's First Republic goes to post-independence.first-republic.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "citizenship",
+      "name": "Citizenship",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "6, 2(ii)",
+        "jamb": "I.10"
+      },
+      "subtopics": [
+        {
+          "id": "citizenship.acquisition",
+          "name": "Acquiring and losing citizenship",
+          "syllabus": {
+            "waec": "6",
+            "jamb": "I.10(a), I.10(c)"
+          },
+          "covers": "The meaning of citizenship and the ways it is acquired (birth, registration, naturalisation, honorary) and lost (renunciation, deprivation), and dual citizenship.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "citizenship.rights",
+          "name": "Rights of citizens and their safeguards",
+          "syllabus": {
+            "waec": "6, 2(ii)",
+            "jamb": "I.10(b)"
+          },
+          "covers": "Fundamental human rights, civil, political, social and economic rights, their limits, and the means of safeguarding them: the constitution, the courts and the remedies they grant (habeas corpus, mandamus, certiorari, prohibition, injunction, damages), the rule of law, the press, the ombudsman. Sorting rule: the rule of law asked about for its own sake goes to principles.rule-of-law; every question on court remedies for an aggrieved person goes here, not to organs.judiciary.",
+          "taught_in": []
+        },
+        {
+          "id": "citizenship.duties",
+          "name": "Duties of citizens and of the state",
+          "syllabus": {
+            "waec": "6",
+            "jamb": "I.10(d)-(e)"
+          },
+          "covers": "The duties and obligations of citizens (paying taxes, obeying laws, voting, protecting public property) and the obligations of the state to its citizens, and the citizen's role in national development. Tested in WASSCE 2025 Q6, Q10 and Q41.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "parties",
+      "name": "Political parties and party systems",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "7",
+        "jamb": "I.12"
+      },
+      "subtopics": [
+        {
+          "id": "parties.parties",
+          "name": "Political parties",
+          "syllabus": {
+            "waec": "7(i)",
+            "jamb": "I.12(a)"
+          },
+          "covers": "The definition of a political party, its organisation and structure, its functions, and how parties are financed. Tested in WASSCE 2025 Q16. Sorting rule: a named Nigerian party goes to nigeria-parties; how a party differs from a pressure group goes to pressure-opinion.vs-parties; kinds of party, manifestos and campaigning go to parties.types; whips and house leaders in the legislature go to organs.legislature.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "parties.types",
+          "name": "Types of party, manifestos and campaigning",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "Types of political party (mass, elite or cadre, ideological, broker or catch-all, and charismatic or personality parties), the party manifesto, and how parties campaign and reach voters. Neither syllabus names these, but real papers test them (WASSCE placement test, Q3, Q18, Q39, Q45 and Q79). Sorting rule: what a party is, how it is organised and funded, and its functions go to parties.parties; how many parties compete goes to parties.systems; how an election is conducted goes to elections.elections.",
+          "taught_in": []
+        },
+        {
+          "id": "parties.systems",
+          "name": "Party systems",
+          "syllabus": {
+            "waec": "7(ii)",
+            "jamb": "I.12(b)"
+          },
+          "covers": "One-party, two-party and multi-party systems: their definition, features, merits and demerits. Tested in WASSCE 2025 Q38 and Q44. Sorting rule: which Nigerian republic ran which party system goes to that republic under nigeria-parties.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "pressure-opinion",
+      "name": "Pressure groups, public opinion and mass media",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "8",
+        "jamb": "I.13, I.14"
+      },
+      "subtopics": [
+        {
+          "id": "pressure-opinion.pressure-groups",
+          "name": "Pressure groups: types and functions",
+          "syllabus": {
+            "waec": "8(i)",
+            "jamb": "I.13(a)"
+          },
+          "covers": "The definition of a pressure group, its types (interest, promotional, institutional, anomic), its functions, and civil society organisations. Real papers test civil society (WASSCE 2025 Q50). Sorting rule: how a group works to get what it wants goes to pressure-opinion.methods.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "pressure-opinion.methods",
+          "name": "How pressure groups operate",
+          "syllabus": {
+            "waec": "8(i)",
+            "jamb": "I.13(a)"
+          },
+          "covers": "Modes of operation (lobbying, strikes, demonstrations, propaganda, litigation, boycotts) and the factors that make pressure groups succeed or fail. Tested in WASSCE 2025 Q8. Sorting rule: a question answered by a method such as lobbying goes here, even when the stem asks how pressure groups contribute.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "pressure-opinion.vs-parties",
+          "name": "Pressure groups and political parties compared",
+          "syllabus": {
+            "waec": null,
+            "jamb": "I.13(b)"
+          },
+          "covers": "How pressure groups differ from political parties in aims, membership, organisation and methods, above all that pressure groups do not seek to form a government.",
+          "taught_in": []
+        },
+        {
+          "id": "pressure-opinion.public-opinion",
+          "name": "Public opinion",
+          "syllabus": {
+            "waec": "8(ii)",
+            "jamb": "I.14"
+          },
+          "covers": "The meaning of public opinion, how it is formed and measured (polls, referendums, elections, the media), its functions and its limits. Tested in WASSCE 2025 Q9 and Q40. Sorting rule: the media as an agent that shapes opinion goes here; the media's own roles and impact go to pressure-opinion.media.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "pressure-opinion.media",
+          "name": "Mass media",
+          "syllabus": {
+            "waec": "8(iii)",
+            "jamb": null
+          },
+          "covers": "The meaning of the mass media, its roles in governance such as informing, educating and acting as a watchdog, and its impact. Tested in WASSCE 2025 Q7.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "elections",
+      "name": "Electoral process",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "9",
+        "jamb": "I.11, II.7"
+      },
+      "subtopics": [
+        {
+          "id": "elections.franchise",
+          "name": "Franchise and suffrage",
+          "syllabus": {
+            "waec": "9(a)(ii)",
+            "jamb": "I.11(a)"
+          },
+          "covers": "The meaning of franchise and suffrage, the electorate as the body of people entitled to vote, how the franchise evolved, its types (universal adult, limited, male), and its limits such as age and citizenship. Tested in UTME 2025 Q29.",
+          "taught_in": []
+        },
+        {
+          "id": "elections.elections",
+          "name": "Elections and voting",
+          "syllabus": {
+            "waec": "9(a)(i)",
+            "jamb": "I.11(b)"
+          },
+          "covers": "The meaning and purposes of elections, their types (general, bye-election, primary, referendum), methods of voting, constituencies, and the conditions for a free and fair election. Sorting rule: the method used to turn votes into seats, and indirect election through an electoral college, go to elections.systems; what the electoral body does goes to elections.commission.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "elections.systems",
+          "name": "Electoral systems",
+          "syllabus": {
+            "waec": "9(a)(iii)",
+            "jamb": "I.11(c)"
+          },
+          "covers": "Simple majority (first past the post), absolute majority, proportional representation, indirect election through an electoral college, and other electoral systems, with their advantages and disadvantages.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "elections.commission",
+          "name": "Electoral management bodies",
+          "syllabus": {
+            "waec": "9(b)",
+            "jamb": "I.11(d), II.7"
+          },
+          "covers": "The electoral commission, such as INEC: its meaning, composition, functions, independence and problems, and how it can win the trust of political actors. Tested in UTME 2025 Q37 and WASSCE 2025 Q15 and Q39. Sorting rule: every question on the electoral body goes here, not to public-admin.commissions, including which constitution set it up, such as FEDECO under the 1979 Constitution.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "public-admin",
+      "name": "Public administration",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "10(i)-(iii)",
+        "jamb": "I.15, II.7, II.10"
+      },
+      "subtopics": [
+        {
+          "id": "public-admin.civil-service",
+          "name": "The civil service",
+          "syllabus": {
+            "waec": "10(i)",
+            "jamb": "I.15"
+          },
+          "covers": "The civil service: meaning, characteristics (anonymity, neutrality, permanence), structure and classes, the permanent secretary, functions, control and problems, and how it differs from the public service. Tested in UTME 2025 Q30 and WASSCE 2025 Q18. Sorting rule: the civil service commission goes to public-admin.commissions; corruption or weak performance across state institutions in general goes to principles.accountability.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "public-admin.commissions",
+          "name": "Public commissions",
+          "syllabus": {
+            "waec": "10(ii)",
+            "jamb": "II.7"
+          },
+          "covers": "The Civil or Public Service Commission, the Public Complaints Commission (ombudsman), the National Boundary Commission and other commissions set up by the 1979 and later constitutions: objectives, functions and problems. Sorting rule: a question asking which commission a constitution set up goes to the subtopic of the commission that is the correct answer: the electoral commission (FEDECO, NEC, INEC) to elections.commission, the Federal Character Commission to federalism.problems, and any other commission here, not to the constitution's own subtopic.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "public-admin.corporations",
+          "name": "Public corporations and parastatals",
+          "syllabus": {
+            "waec": "10(iii)",
+            "jamb": "II.10(a)-(b), II.10(d)"
+          },
+          "covers": "Public corporations and parastatals: definition, types, purposes, functions, finance, control, problems and how to improve them, and how they differ from the civil service and from each other. Tested in WASSCE 2025 Q17. Sorting rule: selling or commercialising them goes to public-admin.privatisation.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "public-admin.privatisation",
+          "name": "Privatisation, commercialisation and deregulation",
+          "syllabus": {
+            "waec": "10(iii)",
+            "jamb": "II.10(c)"
+          },
+          "covers": "Deregulation, privatisation and commercialisation: objectives, features, merits and demerits, and the case for and against them. Tested in UTME 2025 Q25 and WASSCE 2025 Q45.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "local-government",
+      "name": "Local government",
+      "part": "Elements of government",
+      "syllabus": {
+        "waec": "10(iv)",
+        "jamb": "II.11"
+      },
+      "subtopics": [
+        {
+          "id": "local-government.structure",
+          "name": "Meaning, structure and functions of local government",
+          "syllabus": {
+            "waec": "10(iv)",
+            "jamb": "II.11(b)"
+          },
+          "covers": "The meaning and purposes of local government, reasons for creating it, its types (single-tier and multi-tier), its structure (council, chairman, councillors) and its functions, and how it differs from local administration. Sorting rule: how it is funded and controlled goes to local-government.finance-control; bye-laws made by councils go to legislation.delegated.",
+          "taught_in": [
+            "SS2 T1",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "local-government.finance-control",
+          "name": "Local government finance and control",
+          "syllabus": {
+            "waec": "10(iv)",
+            "jamb": "II.11(b)"
+          },
+          "covers": "Sources of local government revenue (statutory allocation, rates, fees, licences), and how state and federal governments control local governments. Sorting rule: lack of funds or corruption named as a problem goes to local-government.problems.",
+          "taught_in": []
+        },
+        {
+          "id": "local-government.reforms",
+          "name": "Local government reforms in Nigeria",
+          "syllabus": {
+            "waec": null,
+            "jamb": "II.11(a)-(b)"
+          },
+          "covers": "Local government in Nigeria before 1976 (native authorities), the 1976 reform and its features, the 1989 reform, and inter-governmental relations. Tested in UTME 2025 Q32.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "local-government.traditional-rulers",
+          "name": "Traditional rulers in modern government",
+          "syllabus": {
+            "waec": null,
+            "jamb": "II.11(c)"
+          },
+          "covers": "The role of traditional rulers and institutions in local government and democratic governance today. Tested in WASSCE 2025 Q22. Sorting rule: the role of an Emir, Oba or Obi in the pre-colonial system goes to that system under pre-colonial; the role of chiefs under indirect rule goes to colonial.indirect-rule.",
+          "taught_in": []
+        },
+        {
+          "id": "local-government.problems",
+          "name": "Problems of local government",
+          "syllabus": {
+            "waec": "10(iv)",
+            "jamb": "II.11(d)"
+          },
+          "covers": "The problems of local government administration in Nigeria and West Africa, such as poor funding, corruption, lack of transparency, interference and shortage of skilled staff, and suggested solutions. Tested in WASSCE 2025 Q19.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "pre-colonial",
+      "name": "Pre-colonial political systems",
+      "part": "Political development in Nigeria",
+      "syllabus": {
+        "waec": "11(a)",
+        "jamb": "II.1"
+      },
+      "subtopics": [
+        {
+          "id": "pre-colonial.hausa-fulani",
+          "name": "Hausa/Fulani political system",
+          "syllabus": {
+            "waec": "11(a)",
+            "jamb": "II.1"
+          },
+          "covers": "The pre-jihad Hausa states and the emirate system after the jihad of Usman dan Fodio: the Emir, the Sokoto and Gwandu caliphates, officials such as the Waziri, Galadima, Madawaki, Sarkin Pawa and Alkali, sharia and the functions of these institutions. Tested in UTME 2025 Q2 and Q31.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "pre-colonial.yoruba",
+          "name": "Yoruba political system",
+          "syllabus": {
+            "waec": "11(a)",
+            "jamb": "II.1"
+          },
+          "covers": "The Oyo empire and Yoruba kingdoms: the Alaafin or Oba, the Oyo Mesi and Bashorun, the Ogboni, the Are Ona Kakanfo, checks on the Oba's power, and the functions of these institutions.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "pre-colonial.igbo",
+          "name": "Igbo political system",
+          "syllabus": {
+            "waec": "11(a)",
+            "jamb": "II.1"
+          },
+          "covers": "The acephalous Igbo system: the family and village assembly, the Ofo title holders, council of elders, age grades, the Umuada, title societies such as Ozo, oracles and dibia, and the functions of these institutions.",
+          "taught_in": []
+        },
+        {
+          "id": "pre-colonial.tiv",
+          "name": "Tiv political system",
+          "syllabus": {
+            "waec": null,
+            "jamb": "II.1"
+          },
+          "covers": "The segmentary Tiv system: lineage, the Tor and elders, and how order was kept without a central ruler.",
+          "taught_in": []
+        },
+        {
+          "id": "pre-colonial.compared",
+          "name": "Pre-colonial systems compared",
+          "syllabus": {
+            "waec": "11",
+            "jamb": "II.1"
+          },
+          "covers": "Centralised and acephalous systems compared, features shared by pre-colonial systems, and their strengths and weaknesses. Sorting rule: a question about one named society, or an office within it, goes to that society; a question about two or more, or about pre-colonial systems in general, goes here.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "colonial",
+      "name": "Colonial administration",
+      "part": "Political development in Nigeria",
+      "syllabus": {
+        "waec": "12",
+        "jamb": "II.2"
+      },
+      "subtopics": [
+        {
+          "id": "colonial.acquisition",
+          "name": "Colonial acquisition and imperialism",
+          "syllabus": {
+            "waec": null,
+            "jamb": "II.2(a)"
+          },
+          "covers": "The meaning of imperialism, colonialism and neo-colonialism, the reasons Europeans came to Africa, and the British process of acquisition in Nigeria: trade, missionaries, company rule (the Royal Niger Company) and treaties. Real papers test the meanings (UTME 2025 Q12). Sorting rule: the crown colony and protectorate as forms of rule go to colonial.british-structure.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "colonial.british-structure",
+          "name": "Crown colony, protectorate and amalgamation",
+          "syllabus": {
+            "waec": "12(i)",
+            "jamb": "II.2(a)"
+          },
+          "covers": "The crown colony and the protectorate and how they differed, the colony of Lagos, the Northern and Southern Protectorates, and the 1914 amalgamation. Tested in WASSCE 2025 Q23 and Q24. Sorting rule: how a crown colony or protectorate was governed, including direct rule through the governor and Legislative Council in the colony, goes here; direct and indirect rule compared as policies go to colonial.indirect-rule.",
+          "taught_in": []
+        },
+        {
+          "id": "colonial.indirect-rule",
+          "name": "British colonial policy and indirect rule",
+          "syllabus": {
+            "waec": "12(i)",
+            "jamb": "II.2(b)"
+          },
+          "covers": "British colonial administrative policy as a whole, including divide and rule and the features of British administration; direct and indirect rule, Lugard, why indirect rule was adopted, its features, how it used and limited the chiefs, and its success in the North and failure in the West and East, with the warrant chiefs. Sorting rule: comparing British and French policy goes to colonial.french; a question on British colonial strategy as a whole, such as one whose options bundle divide and rule, indirect rule and economic exploitation, goes here; direct rule as a policy contrasted with indirect rule goes here, but how a crown colony or protectorate was set up and governed goes to colonial.british-structure; how British policy used or limited the chiefs at the time goes here, while the lasting effects of colonial rule go to colonial.impact.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "colonial.french",
+          "name": "French colonial policy",
+          "syllabus": {
+            "waec": "12(ii)",
+            "jamb": "II.2(c), II.2(e)"
+          },
+          "covers": "Assimilation and association, the Loi Cadre, why assimilation failed, and British and French colonial administration compared. Tested in WASSCE 2025 Q25. Sorting rule: any question comparing British and French policy goes here.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "colonial.impact",
+          "name": "Impact of colonial rule",
+          "syllabus": {
+            "waec": "12(iii)",
+            "jamb": "II.2(d)"
+          },
+          "covers": "The political, economic and socio-cultural effects of colonial rule, its advantages and disadvantages, such as the disruption of traditional authority. Tested in WASSCE 2025 Q29. Sorting rule: a lasting effect of colonial rule, such as economic exploitation or the weakening of traditional authority, goes here; how British policy used or limited the chiefs at the time, and British strategy as a whole, go to colonial.indirect-rule.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T1",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "nationalism",
+      "name": "Nationalism and decolonisation",
+      "part": "Political development in Nigeria",
+      "syllabus": {
+        "waec": "13",
+        "jamb": "II.3"
+      },
+      "subtopics": [
+        {
+          "id": "nationalism.meaning",
+          "name": "Nationalism: meaning, causes and effects",
+          "syllabus": {
+            "waec": "13(i)",
+            "jamb": "II.3(a), II.3(e)"
+          },
+          "covers": "The meaning and types of nationalism, the factors behind its rise in Nigeria and West Africa, external influences (the Second World War, Pan-Africanism, the Back-to-Africa movement, the Atlantic Charter), why it grew after 1945 and was slower in French colonies, and its effects and lessons. Tested in WASSCE 2025 Q26 and Q28. Sorting rule: why nationalism arose and what it achieved in general go here; the goals, strategies and activities of a named movement or party, including the nationalist press, go to nationalism.movements.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "nationalism.movements",
+          "name": "Nationalist movements and parties",
+          "syllabus": {
+            "waec": "13(ii)",
+            "jamb": "II.3(b), II.3(d)"
+          },
+          "covers": "The emergence, goals and strategies of nationalist movements such as the National Congress of British West Africa, the NNDP, the Nigerian Youth Movement and the West African Students' Union, the nationalist press, such as the West African Pilot, as a strategy, and the rise of nationalist parties before independence. Sorting rule: a party's place in a named republic goes to nigeria-parties; the causes and general effects of nationalism go to nationalism.meaning; a question whose correct answer is a feature of a named constitution, such as the elective principle, goes to that constitution under pre-independence, even when the stem asks what nationalist pressure won.",
+          "taught_in": []
+        },
+        {
+          "id": "nationalism.leaders",
+          "name": "Nationalist leaders",
+          "syllabus": {
+            "waec": "13(ii)",
+            "jamb": "II.3(c)"
+          },
+          "covers": "Key nationalist leaders and their contributions: Herbert Macaulay, Nnamdi Azikiwe, Obafemi Awolowo, Ahmadu Bello, Ladipo Solanke, Aminu Kano, J. S. Tarka, Tafawa Balewa and others. Tested in WASSCE 2025 Q27. Sorting rule: what a leader did in office after independence goes to the topic of that office or regime.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "pre-independence",
+      "name": "Pre-independence constitutions",
+      "part": "Political development in Nigeria",
+      "syllabus": {
+        "waec": "14(i)",
+        "jamb": "II.4"
+      },
+      "subtopics": [
+        {
+          "id": "pre-independence.clifford",
+          "name": "Nigerian Council and the Clifford Constitution, 1922",
+          "syllabus": {
+            "waec": "14(i)(a)",
+            "jamb": "II.4(a)"
+          },
+          "covers": "The Nigerian Council of 1914 and the Clifford Constitution of 1922: the elective principle, the Legislative Council, features, merits and demerits. Tested in UTME 2025 Q22. Sorting rule for every constitution in this topic: a question asking which constitution did something goes to the constitution that is the correct answer, even when the stem asks what nationalist activity won, so the elective principle goes here.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "pre-independence.richards",
+          "name": "Richards Constitution, 1946",
+          "syllabus": {
+            "waec": "14(i)(a)",
+            "jamb": "II.4(b)"
+          },
+          "covers": "The Richards Constitution: regionalism, the regional houses, the House of Chiefs in the North, its objectives, features, merits and criticism.",
+          "taught_in": []
+        },
+        {
+          "id": "pre-independence.macpherson",
+          "name": "Macpherson Constitution, 1951",
+          "syllabus": {
+            "waec": "14(i)(a)",
+            "jamb": "II.4(c)"
+          },
+          "covers": "The Macpherson Constitution: consultation before it was made, the Council of Ministers, bicameral legislatures in the North and the West, with a House of Chiefs added in the West, features, achievements and weaknesses, and the 1953 self-government crisis and London conference.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "pre-independence.lyttelton",
+          "name": "Lyttelton Constitution, 1954, and the road to independence",
+          "syllabus": {
+            "waec": "14(i)(a)",
+            "jamb": "II.4(d)"
+          },
+          "covers": "The Lyttelton Constitution and true federalism, the 1954 Lagos conference that finalised it, its features, achievements and weaknesses, regional self-government from 1957, the 1957 London and 1958 Lagos conferences, and the Willink Commission on minorities.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "pre-independence.compared",
+          "name": "Colonial constitutions compared",
+          "syllabus": {
+            "waec": "14(i)",
+            "jamb": "II.4"
+          },
+          "covers": "Features shared by the pre-independence constitutions of Nigeria and British West Africa, such as the governor's wide powers and centralised control, and the trend across them towards self-government. No syllabus item maps to it alone; it is kept because real papers test it (WASSCE 2025 Q30). Sorting rule: a question about what they had in common, or how they changed over time, goes here; one that picks out one constitution goes to that constitution; features shared by the independence and later constitutions go to post-independence.compared; the functions of a constitution in general go to constitution.meaning.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "post-independence",
+      "name": "Post-independence constitutions",
+      "part": "Political development in Nigeria",
+      "syllabus": {
+        "waec": "14(ii)(a)",
+        "jamb": "II.4(e), II.5"
+      },
+      "subtopics": [
+        {
+          "id": "post-independence.first-republic",
+          "name": "Independence and Republican Constitutions, 1960 and 1963",
+          "syllabus": {
+            "waec": "14(ii)(a)",
+            "jamb": "II.4(e), II.5"
+          },
+          "covers": "The Independence Constitution of 1960 and the Republican Constitution of 1963: the Governor-General and then a ceremonial President, the Prime Minister, the parliamentary system, the Privy Council and then the Supreme Court as final court, features, merits and demerits, and how they differ. Sorting rule for every constitution in this topic: who held an office created by a constitution, or which constitution did something, goes to that constitution, so who was Prime Minister, President or Leader of the Opposition in the First Republic goes here; the First Republic parties, their coalitions and crises such as the 1962 Western Region crisis go to nigeria-parties.first-republic; features shared by the independence constitutions of West African states go to post-independence.compared.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "post-independence.1979-1989",
+          "name": "1979 and 1989 Constitutions",
+          "syllabus": {
+            "waec": "14(ii)(a)",
+            "jamb": "II.5"
+          },
+          "covers": "The 1979 Constitution, which brought the executive presidential system to Nigeria, its background, features, merits and demerits, how it differed from 1963, and the 1989 Constitution of the planned Third Republic. Real papers test who held its offices (UTME 2025 Q36, the first executive President). Sorting rule: which commission the 1979 Constitution set up goes to the subtopic of the commission that is the correct answer, as public-admin.commissions sets out; a feature of the constitution itself goes here.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "post-independence.1999",
+          "name": "1999 Constitution",
+          "syllabus": {
+            "waec": "14(ii)(a)",
+            "jamb": "II.5"
+          },
+          "covers": "The 1999 Constitution: its origin, features, strengths and weaknesses, and amendments. Sorting rule: the powers of the President or National Assembly under it go to organs; a general principle such as constitutional supremacy goes to constitution.meaning even when the question names the 1999 Constitution; the constitution's own features go here.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "post-independence.compared",
+          "name": "Independence constitutions compared",
+          "syllabus": {
+            "waec": "14(ii)",
+            "jamb": null
+          },
+          "covers": "Features shared by the independence and post-independence constitutions of Nigeria and other West African states, such as a ceremonial head of state, a parliamentary system on the Westminster model, entrenched rights and the Privy Council as final court of appeal, and how they changed after independence. Real papers test it (WASSCE 2024 Q42). Sorting rule: a question about what these constitutions had in common goes here; one that picks out one constitution goes to that constitution; the pre-independence constitutions go to pre-independence.compared.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "nigeria-parties",
+      "name": "Political parties in Nigeria",
+      "part": "Political development in Nigeria",
+      "syllabus": {
+        "waec": "15",
+        "jamb": "II.8"
+      },
+      "subtopics": [
+        {
+          "id": "nigeria-parties.first-republic",
+          "name": "First Republic parties",
+          "syllabus": {
+            "waec": "15",
+            "jamb": "II.8(a)"
+          },
+          "covers": "The major parties from the colonial era to 1966, including the NPC, NCNC, AG, NEPU and UMBC: their formation, leaders, objectives, finance, regional bases, alliances and coalitions, crises such as the 1962 Western Region crisis, achievements and failures. Tested in UTME 2025 Q40. Sorting rule for every subtopic here: a party goes to the republic in which it contested elections; who held an office such as Leader of the Opposition or Prime Minister goes to post-independence.first-republic.",
+          "taught_in": [
+            "SS1 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "nigeria-parties.second-republic",
+          "name": "Second Republic parties",
+          "syllabus": {
+            "waec": "15",
+            "jamb": "II.8(b)"
+          },
+          "covers": "The NPN, UPN, NPP, GNPP and PRP of 1979 to 1983: formation, leaders, spread, objectives, sources of finance, achievements and failures.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "nigeria-parties.third-republic",
+          "name": "Third Republic parties",
+          "syllabus": {
+            "waec": "15",
+            "jamb": "II.8(c)"
+          },
+          "covers": "The government-created two-party system of the SDP and NRC: their formation, objectives, funding by government, achievements and failures, and the 1993 election and its annulment. Tested in UTME 2025 Q6.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "nigeria-parties.fourth-republic",
+          "name": "Fourth Republic parties",
+          "syllabus": {
+            "waec": "15",
+            "jamb": "II.8(d)"
+          },
+          "covers": "Parties since 1999, such as the PDP, APP, AD and APC: their evolution, objectives, membership spread, structure, sources of finance, mergers, achievements and failures.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "military",
+      "name": "Military rule",
+      "part": "Political development in Nigeria",
+      "syllabus": {
+        "waec": "16",
+        "jamb": "II.12"
+      },
+      "subtopics": [
+        {
+          "id": "military.causes",
+          "name": "Causes of military intervention",
+          "syllabus": {
+            "waec": "16",
+            "jamb": "II.12(a)"
+          },
+          "covers": "The reasons given for military intervention in Nigeria and West African states, such as insecurity, political instability, corruption and election crises, and how intervention can be prevented. Tested in WASSCE 2025 Q31.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "military.regimes",
+          "name": "Military regimes and their structure",
+          "syllabus": {
+            "waec": "16",
+            "jamb": "II.12(b)"
+          },
+          "covers": "The features of military government, the ruling bodies of each regime (Supreme Military Council, Armed Forces Ruling Council, Provisional Ruling Council), and the regimes and their heads from Ironsi to Abubakar. Tested in UTME 2025 Q3. Sorting rule: when states were created goes to federalism.states, even when the answer is a military ruler; a named programme or campaign of a regime, such as WAI, MAMSER, DFRRI, NYSC or SAP, goes to military.impact, even when the question asks which regime introduced it.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "military.impact",
+          "name": "Impact of military rule",
+          "syllabus": {
+            "waec": "16",
+            "jamb": "II.12(c)"
+          },
+          "covers": "Political effects (suspension of the constitution and legislature, rule by decree, the Unification Decree No. 34 of 1966, loss of participation), economic effects (SAP), the programmes and campaigns of military regimes, such as the NYSC, War Against Indiscipline, MAMSER and DFRRI, and the achievements and weaknesses of military rule, in Nigeria and in West African states in general. Tested in UTME 2025 Q19 and WASSCE 2025 Q32. Sorting rule: a named regime programme or campaign goes here, even when the question asks which regime introduced it; the structure and heads of each regime go to military.regimes.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "military.disengagement",
+          "name": "Military disengagement and transition",
+          "syllabus": {
+            "waec": null,
+            "jamb": "II.12(d)"
+          },
+          "covers": "How and why the military handed over power: the 1979 handover by Obasanjo, the Babangida transition programme, and the 1999 handover by Abubakar. Tested in UTME 2025 Q38.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "federalism",
+      "name": "Nigerian federalism",
+      "part": "Political development in Nigeria",
+      "syllabus": {
+        "waec": "17",
+        "jamb": "II.9"
+      },
+      "subtopics": [
+        {
+          "id": "federalism.origin",
+          "name": "Origin and features of Nigerian federalism",
+          "syllabus": {
+            "waec": "17",
+            "jamb": "II.9(a)"
+          },
+          "covers": "Why Nigeria adopted a federal system, how it evolved from 1946 and 1954, and its features. Sorting rule: federalism in general goes to types.federal; Nigeria's own federation goes here.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "federalism.tiers",
+          "name": "Tiers of government and their relationship",
+          "syllabus": {
+            "waec": "17",
+            "jamb": "II.9(b)"
+          },
+          "covers": "The federal, state and local tiers in Nigeria, how powers are shared among them, and inter-governmental relations. Sorting rule: local government's own structure and functions go to local-government.",
+          "taught_in": []
+        },
+        {
+          "id": "federalism.states",
+          "name": "State creation",
+          "syllabus": {
+            "waec": "17",
+            "jamb": "II.9(c)"
+          },
+          "covers": "The creation of states and regions: the Mid-West in 1963, 12 states in 1967, 19 in 1976, 21 in 1987, 30 in 1991 and 36 in 1996, who created them, and the reasons and effects. Tested in UTME 2025 Q5, Q14 and Q20.",
+          "taught_in": []
+        },
+        {
+          "id": "federalism.problems",
+          "name": "Problems of Nigerian federalism and solutions",
+          "syllabus": {
+            "waec": "17",
+            "jamb": "II.9(d)"
+          },
+          "covers": "Census disputes, revenue allocation, minority fears, secession, ethnic and religious conflict, and the remedies used: federal character, the Federal Character Commission, quota system and resource control debates. Tested in UTME 2025 Q11.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "foreign-policy",
+      "name": "Foreign policy",
+      "part": "Foreign policy and international relations",
+      "syllabus": {
+        "waec": "18",
+        "jamb": "III.1-3"
+      },
+      "subtopics": [
+        {
+          "id": "foreign-policy.concepts",
+          "name": "Foreign policy and international relations: concepts",
+          "syllabus": {
+            "waec": "18",
+            "jamb": "III.1"
+          },
+          "covers": "The meaning and purpose of foreign policy, its determinants (national interest, security, economy, geography), how it is formulated and implemented and by whom, and the terms of international relations: diplomacy, interdependence, globalisation and international law. Tested in UTME 2025 Q9, Q13 and Q16 and WASSCE 2025 Q33 and Q34. Sorting rule: who formulates Nigeria's foreign policy goes here; its objectives and principles go to foreign-policy.nigeria; what an international organisation is, and its types, go to intl-orgs.general.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "foreign-policy.nigeria",
+          "name": "Nigeria's foreign policy objectives and principles",
+          "syllabus": {
+            "waec": "18",
+            "jamb": "III.2"
+          },
+          "covers": "The objectives and guiding principles of Nigeria's foreign policy since independence, its features, its advantages and disadvantages for Nigeria, and how it changed under successive governments, such as citizen and economic diplomacy. Sorting rule: Africa as centrepiece goes to foreign-policy.africa; non-alignment goes to foreign-policy.non-alignment.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "foreign-policy.major-powers",
+          "name": "Relations with major powers and other non-African states",
+          "syllabus": {
+            "waec": null,
+            "jamb": "III.2(a)-(b)"
+          },
+          "covers": "Nigeria's relations with Britain, the United States, France, the former Soviet Union and China, such as the break with France over atomic tests in the Sahara, with developing countries outside Africa, including the Technical Aid Corps, and with other states outside Africa, including the Middle East, such as the 1973 break with Israel. Tested in UTME 2025 Q4. Sorting rule: relations with a state outside Africa go here, even when the motive was African solidarity; relations with African states go to foreign-policy.africa.",
+          "taught_in": []
+        },
+        {
+          "id": "foreign-policy.non-alignment",
+          "name": "Non-alignment",
+          "syllabus": {
+            "waec": null,
+            "jamb": "III.2(c)"
+          },
+          "covers": "The Non-Aligned Movement: its origin, meaning, aims and problems, and Nigeria's non-aligned posture.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "foreign-policy.africa",
+          "name": "Africa as the centrepiece of Nigeria's foreign policy",
+          "syllabus": {
+            "waec": "18",
+            "jamb": "III.3(a)"
+          },
+          "covers": "Why Africa is the centrepiece, how Nigeria has shown it (decolonisation, the fight against apartheid, peacekeeping, aid), and Nigeria's relations with African states, such as the 1983 expulsion of aliens remembered as Ghana Must Go. Tested in UTME 2025 Q8 and Q27. Sorting rule: NEPAD goes to intl-orgs.oau-au; ECOMOG goes to intl-orgs.ecowas; relations with a state outside Africa, such as the 1973 break with Israel, go to foreign-policy.major-powers.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "intl-orgs",
+      "name": "International organisations",
+      "part": "Foreign policy and international relations",
+      "syllabus": {
+        "waec": "19",
+        "jamb": "III.3(b), III.4, IV"
+      },
+      "subtopics": [
+        {
+          "id": "intl-orgs.general",
+          "name": "International organisations in general",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "III.1, IV"
+          },
+          "covers": "The meaning, types (global and regional, political and economic, governmental and non-governmental) and examples of international organisations, the organisations Nigeria belongs to, and well-known bodies it does not belong to, such as NATO. Real papers test it (UTME placement test, Q28 and Q30). Sorting rule: a question on one named organisation goes to that organisation's subtopic; a question spanning several, such as which of them Nigeria is not a member of, goes here.",
+          "taught_in": []
+        },
+        {
+          "id": "intl-orgs.un",
+          "name": "The United Nations",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "III.4(a), IV(e)"
+          },
+          "covers": "The UN's origin, aims, principles, organs (General Assembly, Security Council and its permanent and non-permanent members, Secretariat, International Court of Justice), achievements such as the Universal Declaration of Human Rights, problems, and Nigeria's role in it. Tested in UTME 2025 Q1 and Q23 and WASSCE 2025 Q35, Q36 and Q47. Sorting rule: a named specialised agency goes to intl-orgs.un-agencies.",
+          "taught_in": [
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "intl-orgs.un-agencies",
+          "name": "UN specialised agencies",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "The specialised agencies such as the ILO, FAO, UNESCO, WHO, UNICEF and IMF, and their aims. Taught in the scheme of work (SS3 T2 W6-7) though neither syllabus names them.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "intl-orgs.commonwealth",
+          "name": "The Commonwealth of Nations",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "III.4(b), IV(c)"
+          },
+          "covers": "The Commonwealth's origin, membership, aims, organs, achievements and problems, and why Nigeria is a member, including its suspension in 1995. Tested in WASSCE 2025 Q48.",
+          "taught_in": [
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "intl-orgs.oau-au",
+          "name": "OAU, AU and NEPAD",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "III.3(b), III.4(c)-(d), IV(b)"
+          },
+          "covers": "The Organisation of African Unity and the African Union: origin, aims, principles, organs, achievements and problems, the change from OAU to AU, NEPAD's origin and objectives, and Nigeria's role. Tested in WASSCE 2025 Q49.",
+          "taught_in": [
+            "SS3 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "intl-orgs.ecowas",
+          "name": "ECOWAS and regional integration",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "III.4(e), IV(a)"
+          },
+          "covers": "ECOWAS: origin, aims, organs, achievements such as ECOMOG and free movement, problems of regional integration in West Africa, and Nigeria's role. Tested in WASSCE 2025 Q46.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "intl-orgs.opec",
+          "name": "OPEC and APPA",
+          "syllabus": {
+            "waec": null,
+            "jamb": "III.4(f), IV(d), IV(f)"
+          },
+          "covers": "The Organisation of the Petroleum Exporting Countries and the African Petroleum Producers Association: origin, members, aims, achievements and problems, and Nigeria's membership. Tested in UTME 2025 Q7 and Q26.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1",
+        "SS3 T2"
+      ]
+    }
+  ],
+  "legacy_note": "Each of the 20 legacy database topics is folded into a subtopic where its name is specific, or into a parent topic where it is generic. The legacy names are broad: 18 of them span two or more subtopics, so they go to a parent, and only two name one subtopic's content. Where a name spans two parent topics (Basic political concepts and ideologies; Nationalism and constitutional developments; Contemporary issues in governance and international relations; Post-independence political development and party evolution), it goes to the parent of the area it names first. A question moved to a parent is correct but unplaced within it, and is flagged for reclassification rather than guessed into a subtopic.",
+  "legacy_to": {
+    "Basic political concepts and ideologies": "concepts",
+    "Citizenship, rights and duties": "citizenship",
+    "Colonial administration and policies": "colonial",
+    "Concepts of international relations and diplomacy": "foreign-policy.concepts",
+    "Constitutions and constitutionalism": "constitution",
+    "Contemporary issues in governance and international relations": "principles",
+    "Electoral process and electoral systems": "elections",
+    "Foreign policies of candidates’ countries": "foreign-policy",
+    "Local government and decentralization in West Africa": "local-government",
+    "Major international organizations (UNO, AU/OAU, Commonwealth, ECOWAS, etc.)": "intl-orgs",
+    "Meaning, scope and functions of government": "government",
+    "Nationalism and constitutional developments": "nationalism",
+    "Organs/institutions of government (legislature, executive, judiciary)": "organs",
+    "Political parties and party systems": "parties",
+    "Post-independence political development and party evolution": "post-independence",
+    "Pre-colonial political systems in West Africa": "pre-colonial",
+    "Pressure groups and public opinion": "pressure-opinion",
+    "Public administration: civil service, public corporations, local government": "public-admin",
+    "Regional integration and challenges in West Africa": "intl-orgs.ecowas",
+    "Systems of government in West Africa (unitary, federal, presidential, parliamentary)": "types"
+  },
+  "merged_into": {}
+}

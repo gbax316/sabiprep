@@ -1,0 +1,169 @@
+{
+  "slug": "physics-utme",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.73,
+  "agree_subtopic": 76,
+  "agree_topic": 79,
+  "nofit": 1,
+  "disagreements": [
+    {
+      "year": 2015,
+      "q_number": 2,
+      "stem": "In the diagram above, the direction of the force between N and S in the magnetic field is",
+      "sonnet": "magnetic-force.conductor",
+      "opus": "magnetism.fields",
+      "notes": [
+        "the stem refers to a diagram not present in the input, placed as a Fleming's left-hand rule item on a conductor between N and S poles based on the option letters",
+        "diagram missing from input; if it shows field lines between two poles this is magnetism.fields, if it shows a current-carrying wire between the poles it is magnetic-force.conductor. A data problem, not a taxonomy one"
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 13,
+      "stem": "The power factor of a series R.L.C circuit at resonance is",
+      "sonnet": "ac-circuits.resonance",
+      "opus": "ac-circuits.power",
+      "notes": [
+        "also fits ac-circuits.power, the fact that power factor is unity at resonance sits on the border between the resonance condition and the power factor idea, and no sorting rule covers it",
+        "also fits ac-circuits.resonance: the answer needs the resonance condition (impedance equals R) to give the power factor; no rule decides"
+      ]
+    },
+    {
+      "year": 2021,
+      "q_number": 37,
+      "stem": "Neutrons are used to induce artificial radioactivity because they",
+      "sonnet": "nucleus",
+      "opus": "nucleus.radiations",
+      "notes": [
+        "why neutrons are effective at inducing artificial radioactivity (no charge, so no repulsion from the nucleus) is not covered by any subtopic under nucleus, composition and radiations cover the particles themselves, fission-fusion covers only those two reaction types, and decay-equations covers spontaneous decay, not induced transmutation. A subtopic such as nucleus.reactions for induced nuclear reactions and artificial transmutation is missing",
+        "artificial radioactivity is named, but why neutrons are the bombarding particle (no charge, so no repulsion by the nucleus) is not described anywhere"
+      ]
+    },
+    {
+      "year": 2017,
+      "q_number": 34,
+      "stem": "Which of the following is correct about an electric cell?",
+      "sonnet": "electric-cells.emf-internal",
+      "opus": "electric-cells.types",
+      "notes": [
+        "",
+        "also fits electric-cells.emf-internal because the options turn on internal resistance; the question compares primary and secondary cells, which neither covers line names"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "overlap",
+        "where": "shm.forced-resonance",
+        "detail": "The legacy_note sends generic resonance questions to the sound parent, but shm.forced-resonance's own covers line names a swing, a bridge and Barton's pendulums as its examples. A mechanical resonance question that names a bridge (Q3) therefore has a clear specific home even though the legacy guidance points elsewhere, worth a note so future classifiers do not default to the parent."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "ac-circuits.power",
+        "detail": "Its covers line and the whole ac-circuits parent are written only for alternating current, but a WAEC-style question can ask about the power factor of a d.c. circuit as a conceptual contrast (Q8). There is no subtopic that names this cross-over case, so the placement is a stretch."
+      },
+      {
+        "kind": "overlap",
+        "where": "waves.properties",
+        "detail": "waves.properties covers reflection, refraction, diffraction and polarisation while interference sits under waves.superposition. A question asking which properties are common to all waves, when it lists refraction, interference and diffraction together (Q14), has no single subtopic that owns the whole answer."
+      },
+      {
+        "kind": "overlap",
+        "where": "ac-circuits.resonance",
+        "detail": "Neither ac-circuits.resonance nor ac-circuits.power mentions that the power factor of a series R-L-C circuit is unity at resonance. This is a natural exam question (Q31) that sits exactly on the border between the two subtopics with no sorting rule to settle it."
+      },
+      {
+        "kind": "overlap",
+        "where": "expansion.applications",
+        "detail": "expansion.applications' covers line names railway line gaps as its own worked example, but a numeric question that uses the linear expansivity formula to find the temperature at which such gaps close (Q32) is, by the general calculation-goes-where-taught rule, a match for expansion.solids instead. The named example and the actual classification rule point in different directions."
+      },
+      {
+        "kind": "missing",
+        "where": "nucleus",
+        "detail": "No subtopic covers induced nuclear reactions or artificial transmutation by bombarding particles, such as why neutrons are effective at inducing artificial radioactivity (Q40). nucleus.decay-equations only covers spontaneous decay, and nucleus.fission-fusion only covers those two named reaction types. A subtopic such as nucleus.reactions is missing."
+      },
+      {
+        "kind": "overlap",
+        "where": "measurement.instruments",
+        "detail": "The sorting rule under measurement.quantities-units and measurement.instruments treats the word accuracy as the trigger to send a question to measurement.errors, but WAEC-style items titled the measuring accuracy of the micrometer (Q56) are usually just asking for the scale reading, which belongs to measurement.instruments. The wording of the sorting rule does not anticipate this common phrasing."
+      },
+      {
+        "kind": "overlap",
+        "where": "magnetism.current-fields",
+        "detail": "magnetism.current-fields names the electric bell and telephone earpiece as its uses of the magnetic effect of current, but the moving-coil galvanometer, a very common option in the same style of question (Q57), is homed under magnetic-force.motor. A which of these does not use the magnetic effect of current question can draw its wrong options from both subtopics at once."
+      },
+      {
+        "kind": "overlap",
+        "where": "matter.kinetic-theory",
+        "detail": "matter.kinetic-theory covers using the kinetic theory to explain change of state, while matter.particles names diffusion and osmosis as the evidence of particle nature. A question asking which of change of state, diffusion, radiation and osmosis are explained by the kinetic theory (Q79) needs both subtopics to answer in full."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "electric-cells.types",
+        "detail": "The covers line never says primary and secondary cells, the most common framing in real questions (Q37, Q58); it only lists cells by name. Add the primary against secondary distinction, and a rule that comparing their internal resistance or current output stays here rather than in electric-cells.emf-internal."
+      },
+      {
+        "kind": "overlap",
+        "where": "expansion.liquids",
+        "detail": "A liquid's density at a new temperature from its cubic expansivity (Q60) fits expansion.liquids and fluids.density; neither names it. Add a rule sending density change with temperature to expansion.liquids."
+      },
+      {
+        "kind": "overlap",
+        "where": "induction.eddy",
+        "detail": "Laminating a transformer core (Q64) is named in induction.eddy, while transformer energy losses are named in induction.transformers. Add a rule: which loss lamination reduces goes to induction.eddy; listing or comparing the losses of a transformer goes to induction.transformers."
+      },
+      {
+        "kind": "overlap",
+        "where": "ac-circuits.power",
+        "detail": "The power factor of an R-L-C circuit at resonance (Q31) fits ac-circuits.power and ac-circuits.resonance with no rule. Add one to ac-circuits.power."
+      },
+      {
+        "kind": "overlap",
+        "where": "newtons-laws.second-law",
+        "detail": "The acceleration from two forces at right angles (Q28) needs vectors.addition and then F = ma. vectors.resolution has a rule for the acceleration after resolving; vectors.addition has no matching rule for the acceleration after adding."
+      },
+      {
+        "kind": "overlap",
+        "where": "waves.properties",
+        "detail": "Which properties all waves share (Q14) lists refraction and diffraction (waves.properties) with interference (waves.superposition). Either move interference as a named wave property into waves.properties or add a rule for property lists that span both."
+      },
+      {
+        "kind": "overlap",
+        "where": "matter.kinetic-theory",
+        "detail": "Which processes the kinetic theory explains (Q79) spans diffusion and osmosis, which are in matter.particles, and change of state, which is in matter.kinetic-theory. Add a rule that questions asking what the theory explains go to kinetic-theory whatever the processes listed."
+      },
+      {
+        "kind": "missing",
+        "where": "nucleus.radiations",
+        "detail": "Artificial radioactivity is named but not how it is produced: neutron bombardment, why neutrons are used, and artificial transmutation (Q40). Add these to nucleus.radiations or nucleus.decay-equations."
+      },
+      {
+        "kind": "overlap",
+        "where": "magnetism.current-fields",
+        "detail": "Uses of the magnetic effect of a current (Q57) are split: the bell and telephone earpiece sit here, the galvanometer in magnetic-force.motor. Add a rule that a question sorting devices by whether they use the magnetic effect goes here."
+      },
+      {
+        "kind": "overlap",
+        "where": "expansion.applications",
+        "detail": "A railway-gap expansion calculation (Q32) names a use from expansion.applications but tests expansion.solids. how_to_use settles it, but expansion.applications has no rule sending calculations in an applied setting to expansion.solids."
+      }
+    ]
+  }
+}

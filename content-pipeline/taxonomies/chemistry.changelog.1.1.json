@@ -1,0 +1,490 @@
+{
+  "changes": [
+    {
+      "kind": "added",
+      "where": "carbon.silicon",
+      "evidence": "Matchtest UTME 2022 Q39 (silicon (IV) oxide melted forms glass), placed apart by the two models; Sonnet finding 'missing: hydrogen-oxygen, no subtopic covers silicon or silicates'; Opus finding 'missing: industry, no home for silicon (IV) oxide, glass or ceramics (Q74)'; coverage WASSCE B 2.0(d) missing, proposed 'Topic carbon: new subtopic Silicon and silicon (IV) oxide'.",
+      "change": "Added carbon.silicon, 'Silicon, silicon (IV) oxide and glass', covering silica and silicates, SiO2 against CO2, uses of silicon, and glass and ceramics, with sorting rules to hydrogen-oxygen.oxides and periodic.table. Renamed the carbon topic 'Carbon, silicon and their compounds', added B 2.0(d) to its WAEC references, and moved silicon in scope_rule from the left-out list to the placed list."
+    },
+    {
+      "kind": "merged",
+      "where": "practical.observation",
+      "evidence": "Coverage unmapped_subtopics: practical.observation. No source item maps to it and no question in either placement test was cited for it.",
+      "change": "Merged into intro.scientific-method, whose covers line already sent recording results, tables, graphs and inferences there. Moved its content and its sorting rules (rate graph, solubility curve, titration curve) into intro.scientific-method, renamed that subtopic 'The scientific method, observation and inference', added A 16.0(a) and Paper 3 to its WAEC references, recorded the merge in merged_into, and repointed the legacy topic 'Observation, recording, tables, graphs and inference' to intro.scientific-method."
+    },
+    {
+      "kind": "widened",
+      "where": "intro.nature",
+      "evidence": "Matchtest WASSCE 2022 Q49 ('The first definition of an element was made by'), split between matter.classification and intro.nature; Sonnet finding 'missing: matter.classification or intro.scientific-method, no subtopic for who first defined an element'; Opus finding 'missing: intro, no home for the history of chemistry (Q52), add intro.history or widen intro.nature'.",
+      "change": "Widened intro.nature to the history of chemistry (alchemy, early chemists, Boyle's first definition of an element), renamed it 'Chemistry as a science and its history', and added the rule that who first did or defined something goes here unless it concerns the atom. Widening chosen over a new subtopic because it is recall about chemistry as a discipline, the same skill the subtopic already holds."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "matter.classification",
+      "evidence": "Matchtest WASSCE 2022 Q49, split between matter.classification and intro.nature.",
+      "change": "Added: who first defined an element goes to intro.nature."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "atomic-structure.models",
+      "evidence": "Matchtest WASSCE 2022 Q49; Sonnet finding noting atomic-structure.models scopes itself to atomic theory history only.",
+      "change": "Added: the history of chemistry outside the atom goes to intro.nature."
+    },
+    {
+      "kind": "widened",
+      "where": "matter.separation",
+      "evidence": "Opus UTME finding 'too-narrow: matter.separation, decantation and centrifugation are missing from the method list (Q31)'.",
+      "change": "Added decantation and centrifugation to the methods, with a note that a real UTME question tested them."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "bonding.ionic",
+      "evidence": "Matchtest UTME 2015 Q14 (configuration 1s2 2s2 2p6 3s2, keyed 'ionic in nature'), split between bonding.ionic and periodic.table; Sonnet finding 'overlap: bonding.ionic / atomic-structure.configuration'; Opus finding 'overlap: periodic.table, deducing bonding behaviour from configuration (Q12)'.",
+      "change": "Added: reading an element's configuration to decide the kind of bond or compound it forms goes here, even when metal or non-metal is among the options."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "periodic.table",
+      "evidence": "Matchtest UTME 2015 Q14; Opus finding 'overlap: periodic.table (Q12)'.",
+      "change": "Added: calling an element a metal or non-metal from its configuration stays here; reading it to decide the kind of bond goes to bonding.ionic."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "atomic-structure.configuration",
+      "evidence": "Sonnet UTME finding 'overlap: bonding.ionic / atomic-structure.configuration', the configuration rule names group and period but not bonding character.",
+      "change": "Added: a configuration read to decide the kind of bond or compound goes to bonding.ionic."
+    },
+    {
+      "kind": "widened",
+      "where": "bonding.ionic",
+      "evidence": "Coverage WASSCE A 5.0(a) partial: 'the meaning of chemical bonding in general is in no covers line', proposed 'Add the meaning of chemical bonding to bonding.ionic or bonding.covalent'.",
+      "change": "Added what a chemical bond is and why atoms combine, with the rule that the meaning of a bond in general goes here."
+    },
+    {
+      "kind": "widened",
+      "where": "bonding.covalent",
+      "evidence": "Coverage WASSCE A 5.0(d) partial, proposed 'Add factors influencing covalent bond formation to bonding.covalent'.",
+      "change": "Added the factors that favour covalent bond formation (electron affinity, ionisation energy, atomic size, electronegativity)."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "bonding.intermolecular",
+      "evidence": "Matchtest UTME 2016 Q38 (ethanol soluble in water), split with functional-groups.alkanols, and UTME 2015 Q21 (least melting point), split with organic-basics.carbon-classes; Sonnet finding 'overlap: bonding.intermolecular / functional-groups.alkanols'; Opus finding 'overlap: bonding.intermolecular, the asks-why condition should apply to every family (Q1, Q68)'.",
+      "change": "Made the 'asks why' condition apply to every family and to solubility as well as melting and boiling points; added solubility of molecules such as ethanol to the covers; added that ordering one homologous series by melting or boiling point without asking why goes to organic-basics.carbon-classes."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "organic-basics.carbon-classes",
+      "evidence": "Matchtest UTME 2015 Q21 and WASSCE 2016 Q34 (CH2O2 is), each split with another subtopic; Opus finding 'carbon-classes should say it takes the which-is-higher form'.",
+      "change": "Added: ordering members of one series by melting or boiling point without asking why goes here; the family of a molecular formula such as CH2O2 goes here."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "functional-groups.alkanols",
+      "evidence": "Matchtest UTME 2016 Q38; Sonnet finding 'overlap: bonding.intermolecular / functional-groups.alkanols'.",
+      "change": "Added: why an alkanol boils high or dissolves in water, explained by hydrogen bonding, goes to bonding.intermolecular."
+    },
+    {
+      "kind": "widened",
+      "where": "functional-groups.alkanols",
+      "evidence": "Coverage WASSCE A 13.0(j)(i) partial, proposed 'Add harmful impurities and purification of ethanol'; Opus UTME finding 'too-narrow: functional-groups.alkanols, reaction with phosphorus (V) chloride is not in the reaction list (Q76)'.",
+      "change": "Added harmful impurities such as methanol in locally made ethanol and its purification, and the reaction with phosphorus (V) chloride."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "functional-groups.alkanoic-acids",
+      "evidence": "Matchtest WASSCE 2016 Q34 (CH2O2 is), split between functional-groups.alkanoic-acids and organic-basics.carbon-classes.",
+      "change": "Added: deciding from a molecular formula that a compound is an alkanoic acid goes to organic-basics.carbon-classes."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "periodic.trends",
+      "evidence": "Matchtest WASSCE 2022 Q43 (electropositivity across the periodic table), split between periodic.trends and periodic.gradation; Sonnet finding 'overlap: periodic.trends / periodic.gradation, electropositivity named in neither'; Opus finding 'overlap: periodic.trends, name electropositivity in one covers line (Q63)'.",
+      "change": "Named electropositivity in periodic.trends and added: a trend named by a single atomic property, including electropositivity, goes here even though it tracks metallic character."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "periodic.gradation",
+      "evidence": "Matchtest WASSCE 2022 Q43; Sonnet and Opus electropositivity findings.",
+      "change": "Added: metallic character shown through reactions, compounds or oxides goes here; electropositivity named as such goes to periodic.trends."
+    },
+    {
+      "kind": "widened",
+      "where": "states.solids",
+      "evidence": "Opus UTME finding 'too-narrow: states.solids, nothing covers how lattice structure is studied (X-ray diffraction, Q46)'.",
+      "change": "Added X-ray diffraction as the way a crystal lattice is studied, noted as tested by a real UTME question."
+    },
+    {
+      "kind": "widened",
+      "where": "solutions.solubility",
+      "evidence": "Coverage WASSCE A 10.0(a) partial, proposed 'Add saturated solution as an equilibrium to solutions.solubility'.",
+      "change": "Added a saturated solution as an equilibrium between dissolved and undissolved solute, and a rule that solubility found from titre values goes to acids-bases.titration."
+    },
+    {
+      "kind": "widened",
+      "where": "acids-bases.properties",
+      "evidence": "Coverage WASSCE A 9.0(c) partial, proposed 'Add enthalpy of neutralisation as evidence of acid strength to acids-bases.properties'.",
+      "change": "Added enthalpy of neutralisation as evidence of strength, with rules that calculating a heat of neutralisation goes to energetics.heats and ordering solutions by pH goes to acids-bases.ph."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "acids-bases.ph",
+      "evidence": "Opus WASSCE finding 'overlap: acids-bases.ph, comparing the pH of equimolar strong acid, weak acid and salt solutions (Q71)'.",
+      "change": "Added: ordering solutions by pH, including equimolar strong and weak acids, bases and salts in one list, goes here; judging strength by dissociation or conductance goes to acids-bases.properties."
+    },
+    {
+      "kind": "widened",
+      "where": "acids-bases.salts",
+      "evidence": "Coverage WASSCE A 9.0(f)(ii) partial, proposed 'Add uses of salts to acids-bases.salts'; scheme of work SS1 T3 W4 partial, proposed 'Add colours of common salts to acids-bases.salts'.",
+      "change": "Added the uses of salts and the colours of common salts, renamed it 'Salts: types, preparation, solubility and uses', and added that a named sodium, calcium or copper compound's uses go to its common-metals subtopic."
+    },
+    {
+      "kind": "widened",
+      "where": "acids-bases.hydrolysis",
+      "evidence": "Coverage WASSCE A 9.0(f)(iii) partial, proposed 'Add charge density as the cause of hydrolysis'; Opus WASSCE finding on pH ordering (Q71).",
+      "change": "Added the charge density of the cation or anion as the cause of hydrolysis, and the rule that a salt ranked among acids and bases in a pH ordering goes to acids-bases.ph."
+    },
+    {
+      "kind": "widened",
+      "where": "acids-bases.titration",
+      "evidence": "Coverage WASSCE A 16.0(b) acid-base (iii) partial, proposed 'Add solubility determined by titration to acids-bases.titration'.",
+      "change": "Added solubility to the quantities calculated from titre values."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "acids-bases.titration",
+      "evidence": "Matchtest WASSCE 2019 Q43 (apparatus not used in volumetric analysis), split between practical.lab and acids-bases.titration; Opus finding 'overlap: acids-bases.titration, which apparatus belongs to volumetric analysis has two homes (Q27)'.",
+      "change": "Added: naming or choosing the apparatus of volumetric analysis goes here."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "practical.lab",
+      "evidence": "Matchtest WASSCE 2019 Q43; Opus finding 'overlap: acids-bases.titration (Q27)'.",
+      "change": "Added: which apparatus belongs to volumetric analysis goes to acids-bases.titration; recording and interpreting results go to intro.scientific-method (replacing the pointer to the merged practical.observation)."
+    },
+    {
+      "kind": "widened",
+      "where": "energetics.enthalpy",
+      "evidence": "Matchtest WASSCE 2020 Q28 (standard conditions for energy changes), split between energetics.heats and energetics.enthalpy; Sonnet finding 'too-narrow: energetics.enthalpy / energetics.heats, standard conditions named in neither'; Opus finding 'too-narrow: energetics.enthalpy (Q17)'; coverage WASSCE A 8.0(b) partial, proposed 'Add total energy of a system as a sum of forms to energetics.enthalpy'.",
+      "change": "Added standard conditions (298 K, 1 atm, 1 mol dm-3) and the standard enthalpy symbol, with the rule that what standard conditions are goes here, and added the total energy of a system as the sum of its forms."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "energetics.heats",
+      "evidence": "Matchtest WASSCE 2020 Q28; coverage WASSCE A 9.0(c) (enthalpy of neutralisation as evidence of strength).",
+      "change": "Added: the definition of standard conditions goes to energetics.enthalpy; the enthalpy of neutralisation used to compare acid strength goes to acids-bases.properties."
+    },
+    {
+      "kind": "widened",
+      "where": "energetics.entropy",
+      "evidence": "Scheme of work SS2 T2 W2 partial, proposed 'Add the laws of thermodynamics to energetics.entropy'.",
+      "change": "Added the first and second laws of thermodynamics, noted as resting on the scheme of work, and set taught_in to SS2 T2."
+    },
+    {
+      "kind": "widened",
+      "where": "equilibrium.constant",
+      "evidence": "Coverage WASSCE A 16.0(a)(vii) partial, proposed 'Add simple experimental determination of K to equilibrium.constant'.",
+      "change": "Added the simple experimental determination of K and A 16.0(a)(vii) to its WAEC references."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "redox.balancing",
+      "evidence": "Matchtest WASSCE 2020 Q5 (electrons lost when one mole of iron ions is oxidised to iron (III)), split between redox.definitions and redox.balancing.",
+      "change": "Added: counting the electrons lost or gained in a change, including per mole of ions, goes here."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "redox.definitions",
+      "evidence": "Matchtest WASSCE 2020 Q5.",
+      "change": "Added: counting the electrons lost or gained in a change goes to redox.balancing."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "redox.agents",
+      "evidence": "Matchtest WASSCE 2025 Q5 (Both Na+ and K+ have), split between redox.agents and electrochemistry.cells; Sonnet finding 'overlap: redox.agents / electrochemistry.cells'; Opus finding 'overlap: practical.qualitative, a gas identified by decolourising KMnO4 (SO2) has two homes (Q41)'.",
+      "change": "Added: whether an ion such as Na+ or K+ can be reduced, judged by the electrochemical series, goes to electrochemistry.cells; a colour change of these reagents used to identify an unknown gas or ion goes to practical.qualitative."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "electrochemistry.cells",
+      "evidence": "Matchtest WASSCE 2025 Q5; Sonnet finding 'overlap: redox.agents / electrochemistry.cells'.",
+      "change": "Added: whether an ion such as Na+ or K+ can be reduced or oxidised, judged by its place in the electrochemical series, goes here; naming the oxidising or reducing agent in a reaction goes to redox.agents."
+    },
+    {
+      "kind": "widened",
+      "where": "electrochemistry.cells",
+      "evidence": "Opus UTME finding 'too-narrow: electrochemistry.cells, polarisation and depolarisers in simple cells are not named (Q13)'.",
+      "change": "Added polarisation in simple cells and the depolarisers that prevent it, noted as tested by a real UTME question."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "practical.qualitative",
+      "evidence": "Opus WASSCE finding 'overlap: practical.qualitative, a gas identified by decolourising KMnO4 (SO2) has two homes (Q41)'.",
+      "change": "Replaced 'colour changes of oxidising and reducing agents go to redox.agents' with: a colour change of acidified tetraoxomanganate (VII) or heptaoxodichromate (VI) used to identify an unknown gas or ion goes here; the same change asked as evidence of an oxidising or reducing agent goes to redox.agents."
+    },
+    {
+      "kind": "widened",
+      "where": "electrochemistry.electrolysis",
+      "evidence": "Coverage WASSCE A 12.0(e)(iii) partial, proposed 'Add CaCl2(aq)'; coverage UTME 11(iii) partial, proposed 'Add CuCl2(aq)'.",
+      "change": "Added CuCl2 and CaCl2 to the electrolytes listed."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "air.noble-gases",
+      "evidence": "Sonnet UTME finding 'overlap: air.noble-gases / hydrogen-oxygen.hydrogen, why helium and not hydrogen fills balloons'; Opus finding 'overlap: air.noble-gases (Q50), say whether a comparison of use goes to the gas used or the gas rejected'.",
+      "change": "Added: why a noble gas is used in place of another gas goes here; a comparison of use goes to the gas that is used."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "hydrogen-oxygen.hydrogen",
+      "evidence": "Sonnet and Opus helium-balloon findings.",
+      "change": "Added: why helium is used instead of hydrogen goes to air.noble-gases."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "carbon.allotropes",
+      "evidence": "Sonnet UTME finding 'overlap: water.treatment / carbon.allotropes, charcoal in a water filter bed'; Opus finding 'overlap: water.treatment (Q43), state which wins'.",
+      "change": "Added a water filter bed to the adsorption examples and the rule that why charcoal is used in any filter goes here; the order and purpose of the town treatment stages go to water.treatment."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "water.treatment",
+      "evidence": "Sonnet and Opus charcoal filter-bed findings.",
+      "change": "Added: why charcoal is used in a filter bed, which turns on adsorption, goes to carbon.allotropes."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "practical.gas-preparation",
+      "evidence": "Opus WASSCE finding 'overlap: practical.gas-preparation, which kind of gas a drying agent suits, with no named gas, fits neither rule (Q31)'.",
+      "change": "Added: which drying agent suits a kind of gas (acidic, basic or neutral) goes here even when no gas is named; what makes a substance a drying agent goes to water.hygroscopy."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "water.hygroscopy",
+      "evidence": "Opus WASSCE drying-agent finding (Q31).",
+      "change": "Added: what makes a substance a drying agent goes here; choosing one for a named gas or a kind of gas goes to practical.gas-preparation."
+    },
+    {
+      "kind": "widened",
+      "where": "halogens.trends",
+      "evidence": "Coverage WASSCE A 4.0(e) partial, proposed 'Widen halogens.trends to the variable oxidation states of the halogens and their reactions with water and alkali'.",
+      "change": "Added variable oxidation states and reactions with water and alkali across the group, with the rule that these compared across the group go here."
+    },
+    {
+      "kind": "widened",
+      "where": "halogens.chlorine",
+      "evidence": "Coverage WASSCE A 7.0(e) partial: 'the use of iodine in everyday life is in no covers line', proposed 'Add uses of iodine to halogens.trends or halogens.chlorine'.",
+      "change": "Added the uses of iodine (antiseptic, iodised salt), A 7.0(e) to its WAEC references, and renamed it 'Chlorine, iodine and halogen compounds'."
+    },
+    {
+      "kind": "widened",
+      "where": "metals.transition",
+      "evidence": "Coverage WASSCE A 4.0(f) partial, proposed 'Widen metals.transition to the reactivity of the first-row metals with air, water and acids'; B 2.0(h) 'As for A 4.0(f)'; B 2.0(f) partial, proposed 'Add ligands and central ions to metals.transition'.",
+      "change": "Added the series' reactivity with air, water and acids, and ligands and the central ion within complex ion formation, which Section A already names."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "metals.extraction",
+      "evidence": "Opus WASSCE finding 'overlap: common-metals.iron, extraction of iron is a reduction tests the general principle in metals.extraction but the rule sends it to iron (Q59)'.",
+      "change": "Added extraction as a reduction process to the covers and the rule that a principle true of all extraction goes here even when a named metal illustrates it; the steps, reagents or conditions of a named metal's extraction go to common-metals."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "common-metals.iron",
+      "evidence": "Opus WASSCE finding on iron extraction as reduction (Q59).",
+      "change": "Added: the steps, reagents and conditions of the blast furnace go here; a principle true of all extraction goes to metals.extraction even when iron illustrates it."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "common-metals.sodium",
+      "evidence": "Matchtest UTME 2017 Q27 ('Sodium hydroxide can be used', keyed to purifying bauxite), split between common-metals.aluminium and common-metals.sodium.",
+      "change": "Added: the uses of sodium hydroxide go here even when the use lies in another metal's process, such as purifying bauxite."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "common-metals.aluminium",
+      "evidence": "Matchtest UTME 2017 Q27.",
+      "change": "Added: a question on the uses of sodium hydroxide goes to common-metals.sodium even when purifying bauxite is the answer."
+    },
+    {
+      "kind": "widened",
+      "where": "common-metals.sodium",
+      "evidence": "Coverage WASSCE A 9.0(f)(i) partial, proposed 'Add mining of rock salt to common-metals.sodium'.",
+      "change": "Added sodium chloride from mined rock salt made into granulated salt."
+    },
+    {
+      "kind": "widened",
+      "where": "common-metals.calcium",
+      "evidence": "Scheme of work SS3 T1 W8 partial, proposed 'Add extraction of calcium to common-metals.calcium'.",
+      "change": "Added the extraction of calcium, noted as resting on the scheme of work; added calcium to the named-metal list in metals.extraction."
+    },
+    {
+      "kind": "widened",
+      "where": "carbon.carbonates",
+      "evidence": "Coverage WASSCE C 1.0(a)(iv)III partial, proposed 'Add uses of trioxocarbonates to carbon.carbonates'; scheme of work SS1 T3 W8 partial, proposed 'Add occurrence, preparation and uses to carbon.carbonates'.",
+      "change": "Added the occurrence, preparation and uses of trioxocarbonates, with the rule that their uses as a class go here."
+    },
+    {
+      "kind": "widened",
+      "where": "hydrocarbons.alkenes",
+      "evidence": "Coverage WASSCE A 13.0(g)(ii) missing ('Uses of alkenes'), proposed 'widen hydrocarbons.alkenes to include uses of alkenes'; scheme of work SS2 T3 W8 partial, same proposal.",
+      "change": "Added the uses of alkenes (plastics, ethanol, ethane-1,2-diol, ripening fruit)."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "hydrocarbons.alkenes",
+      "evidence": "Opus WASSCE finding 'too-narrow: hydrocarbons.alkenes, industrial manufacture of alkenes by cracking is only reachable through hydrocarbons.petroleum; add a rule (Q20)'.",
+      "change": "Added: how alkenes are made industrially, by cracking, goes to hydrocarbons.petroleum."
+    },
+    {
+      "kind": "widened",
+      "where": "hydrocarbons.petroleum",
+      "evidence": "Scheme of work SS3 T2 W4 partial, proposed 'Add exploration and drilling to hydrocarbons.petroleum'; Opus WASSCE alkenes finding (Q20).",
+      "change": "Added exploration and drilling, and the rule that cracking as the industrial source of alkenes goes here."
+    },
+    {
+      "kind": "widened",
+      "where": "functional-groups.esters",
+      "evidence": "Coverage WASSCE A 13.0(l)(iv) partial, proposed 'Add plasticisers to the uses in functional-groups.esters'.",
+      "change": "Added plasticisers to the uses of esters."
+    },
+    {
+      "kind": "widened",
+      "where": "biomolecules.polymers",
+      "evidence": "Coverage WASSCE A 15.0(e)(i) partial, proposed 'Add modification of properties, resins and tests on plastics to biomolecules.polymers'.",
+      "change": "Added plastics and resins, how polymer properties are modified, and tests on plastics with heat, acids and alkalis."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "biomolecules.proteins",
+      "evidence": "Opus UTME finding 'overlap: biomolecules.proteins, enzymes under proteins, enzyme hydrolysis of starch under carbohydrates, enzyme use in food under biotechnology (Q80); add a rule that a named enzyme's substrate decides'.",
+      "change": "Named enzymes as proteins acting as catalysts, and added: enzymes in general go here; a named enzyme acting on a named substrate goes to the substrate's subtopic."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "biomolecules.carbohydrates",
+      "evidence": "Opus UTME enzyme finding (Q80).",
+      "change": "Added hydrolysis by named enzymes such as amylase and the rule that a named enzyme acting on starch or a sugar goes here."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "biomolecules.fats-soaps",
+      "evidence": "Opus UTME enzyme finding (Q80).",
+      "change": "Added: a named enzyme acting on a fat goes here."
+    },
+    {
+      "kind": "widened",
+      "where": "industry.biotechnology",
+      "evidence": "Opus WASSCE finding 'overlap: industry.biotechnology, ethanol as a fuel from fermentation; name biofuels in one of them (Q67)'; Opus UTME enzyme finding (Q80).",
+      "change": "Added biofuels such as ethanol from fermented crops, with rules that ethanol as a biofuel goes here, a list of ethanol's uses goes to functional-groups.alkanols, and a named enzyme on its substrate goes to that substrate's subtopic. Added the matching rule to functional-groups.alkanols."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "industry.chemical-industry",
+      "evidence": "Opus UTME finding 'missing: industry, no home for glass or ceramics (Q74)'.",
+      "change": "Added: glass and ceramics go to carbon.silicon."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "Matchtest UTME 2015 Q42 ('The degree from'), placed at states.kinetic-theory and energetics.entropy.",
+      "reason": "Both models say the stem is truncated. The split comes from damaged source text, not from a border in the tree; the question needs repair before it can be placed."
+    },
+    {
+      "finding": "Opus WASSCE finding 'overlap: kinetics.collision, energy profiles appear in both energetics.enthalpy and kinetics.collision (Q29, Q51)'.",
+      "reason": "Opus itself says the existing rules resolve it by what is asked, and neither question split between the models. Both covers lines already carry the rule (activation energy to kinetics.collision, the sign of the enthalpy change to energetics.enthalpy)."
+    },
+    {
+      "finding": "Coverage WASSCE A 16.0(b) acid-base (v) and B 6.0(e): double indicator and back titrations.",
+      "reason": "Ghana only, and the proposal itself is conditional on a Nigerian paper testing it; none in the evidence does. Added to the scope_rule's left-out list."
+    },
+    {
+      "finding": "Coverage WASSCE B 1.0(a): mass spectrometer, wave nature of electrons, quantum numbers.",
+      "reason": "Ghana only and excluded by the scope_rule until a Nigerian paper tests it; no question in either placement test did."
+    },
+    {
+      "finding": "Coverage WASSCE B 1.0(b)(i): the term nuclide, proposed for nuclear.radioactivity.",
+      "reason": "Section B, Ghana only; no Nigerian paper in the evidence tests it."
+    },
+    {
+      "finding": "Coverage WASSCE B 1.0(b)(v): nuclear stability, binding energy and neutron-proton ratio, proposed for nuclear.reactions.",
+      "reason": "Section B, Ghana only; no Nigerian paper in the evidence tests it."
+    },
+    {
+      "finding": "Coverage WASSCE B 2.0(c): period 3 hydrides, hydroxides and chlorides, proposed for periodic.gradation.",
+      "reason": "Section B, Ghana only; no Nigerian paper in the evidence tests it."
+    },
+    {
+      "finding": "Coverage WASSCE B 2.0(e): halogen bond energies and Ka of the hydrogen halides, proposed for halogens.trends.",
+      "reason": "Section B, Ghana only; no Nigerian paper tests it. The group's variable oxidation states, the third part of this item, were added under A 4.0(e)."
+    },
+    {
+      "finding": "Coverage WASSCE B 2.0(g): shapes of complex compounds, proposed as a new metals subtopic.",
+      "reason": "Ghana only and excluded by the scope_rule until a Nigerian paper tests it."
+    },
+    {
+      "finding": "Coverage WASSCE B 3.0(a)(i): lattice energy, proposed for bonding.ionic.",
+      "reason": "Section B, Ghana only; no Nigerian paper in the evidence tests it. Added to the scope_rule's left-out list."
+    },
+    {
+      "finding": "Coverage WASSCE B 3.0(a)(ii): covalent character in ionic bonds, proposed as a new bonding subtopic or a widening.",
+      "reason": "Ghana only; no Nigerian paper in the evidence tests polarisation of ionic bonds."
+    },
+    {
+      "finding": "Coverage WASSCE B 3.0(b)(ii): sp3d2 hybridisation and the octahedral shape.",
+      "reason": "The proposal is conditional on a Nigerian paper testing it; none in the evidence does."
+    },
+    {
+      "finding": "Coverage WASSCE B 4.0(a): stock concentration from density, specific gravity and percentage purity, proposed for solutions.concentration.",
+      "reason": "Section B, Ghana only; no Nigerian paper in the evidence tests it."
+    },
+    {
+      "finding": "Coverage WASSCE B 5.0(a): system and surroundings, enthalpies of atomisation, sublimation and hydration.",
+      "reason": "Section B, Ghana only; no Nigerian paper in the evidence tests it."
+    },
+    {
+      "finding": "Coverage WASSCE B 5.0(b): the Born-Haber cycle.",
+      "reason": "The proposal is conditional on a Nigerian paper testing it; none in the evidence does."
+    },
+    {
+      "finding": "Coverage WASSCE B 6.0(a): the Lewis definition of acids and bases, proposed for acids-bases.properties.",
+      "reason": "Section B, Ghana only; no Nigerian paper in the evidence tests it. Added to the scope_rule's left-out list."
+    },
+    {
+      "finding": "Coverage WASSCE B 6.0(c) and B 6.0(d): Ka, pKa, Kb and buffers, proposed as a new acids-bases subtopic.",
+      "reason": "Ghana only and excluded by the scope_rule until a Nigerian paper tests them."
+    },
+    {
+      "finding": "Coverage WASSCE B 7.0(a): solubility product, proposed as a new solutions subtopic.",
+      "reason": "Ghana only and excluded by the scope_rule until a Nigerian paper tests it."
+    },
+    {
+      "finding": "Coverage WASSCE B 7.0(c): lattice and hydration energy in crystallisation.",
+      "reason": "The proposal is conditional on a Nigerian paper testing it; none in the evidence does."
+    },
+    {
+      "finding": "Coverage WASSCE B 8.0(a) and B 8.0(b): rate laws, order of reaction and the rate-determining step, proposed as a new kinetics subtopic.",
+      "reason": "Ghana only and excluded by the scope_rule until a Nigerian paper tests them."
+    },
+    {
+      "finding": "Coverage WASSCE B 8.0(c)-(d): Kc and Kp calculations, proposed as a new equilibrium subtopic.",
+      "reason": "The proposal is conditional on a Nigerian paper testing it, and the scope_rule excludes Kp and Kc; none in the evidence does."
+    },
+    {
+      "finding": "Coverage WASSCE B 9.0(b): detection of N, S and halogens and estimation of C, H and O.",
+      "reason": "The proposal is conditional on a Nigerian paper testing it; none in the evidence does."
+    },
+    {
+      "finding": "Coverage WASSCE B 9.0(c) and B 9.0(d): organic reaction mechanisms and free radical halogenation, proposed as a new organic-basics subtopic.",
+      "reason": "Ghana only and excluded by the scope_rule until a Nigerian paper tests them."
+    },
+    {
+      "finding": "Coverage WASSCE B 9.0(e)(i) and B 9.0(e)(ii): mono-substituted benzenes and benzene hexachloride, proposed for hydrocarbons.benzene.",
+      "reason": "Section B, Ghana only; no Nigerian paper in the evidence tests them."
+    },
+    {
+      "finding": "Coverage WASSCE B 10.0(a)(ii), B 10.0(a)(iii) and B 10.0(b): Ghana's mineral deposits and cement manufacture.",
+      "reason": "Ghana's mineral industries are excluded by the scope_rule, the coverage map proposes nothing for (a)(ii) and (a)(iii), and the cement proposal is conditional on a Nigerian paper testing it; none in the evidence does."
+    }
+  ]
+}

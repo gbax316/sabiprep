@@ -1,0 +1,2499 @@
+{
+  "subject": "Physics",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "The live database holds 133 Physics topic names made up question by question, some bare subject areas (Mechanics, Electricity, Waves), some one calculation (Kinetic energy calculation), and none tied to a syllabus. Version 1.0 replaces them with parent topics at the grain of the syllabi's numbered topics and subtopics at the grain of their sub-areas, built from the WAEC and JAMB syllabi and the SS1 to SS3 scheme of work. WAEC's five parts give the order; where WAEC keeps heat and light as one numbered topic each and JAMB splits them into several, the tree follows JAMB's split, because one heat topic would hold more than fifteen subtopics. Every subtopic was checked against the 90 questions of the 2025 UTME and WASSCE papers, and every one of those questions has a home. Sorting rules are written on the borders a placement is likely to split. Every one of the 133 legacy database topics is folded in. Version 1.1 revises 1.0 from its coverage map (no item missing from any source; the partial items with a gap are now named) and its placement tests on 80 UTME and 80 WASSCE questions (78 of 80 each on subtopic, 79 of 80 on topic): the gaps are named in covers lines and every split border now has a sorting rule. No subtopic was merged or removed, so every placement made on 1.0 stays valid. Nothing in the database is changed by this file.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC Physics examination syllabus, WASSCE, including the harmonised topics for short structured questions",
+        "retrieved_from": "https://waecsyllabus.com/files/ssce/PHYSICS.pdf",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror, PDF dated 2015-09-24, author field awajis.com, the same mirror used for Biology and Economics. Not fetched from a WAEC domain directly. Extracted verbatim with pypdf."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME Physics syllabus, 39 topics with sub-items and objectives",
+        "retrieved_from": "https://allschool.ng/utme-jamb-syllabus-physics/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party reproduction, confirmed against a second copy at kofastudy.com, which lists the same 39 topics in the same order."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Physics scheme of work, SS1 to SS3, Lagos NAPPS unified scheme (NERDC-based)",
+        "retrieved_from": "https://edudelight.com/physics-scheme-of-work-lagos-napps-ss1-ss3/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Cross-checked term by term against ecolebooks.com. The source's 'Third Term SS3' section is SS2 Term 3 content and is treated as such. No SS3 Term 3 content exists; that term is WASSCE time."
+      }
+    ],
+    "citation_note": "WAEC references use the syllabus's own topic numbers 1 to 31 with their lettered sub-areas, such as 20(e); H1 to H10 are the harmonised topics for short structured questions. JAMB references use its topic numbers 1 to 39, with the sub-item named or numbered where the syllabus numbers it.",
+    "scope_rule": "WAEC states that Paper 1 is set on the topics of the detailed syllabus, and lists harmonised topics for the short structured questions of Paper 2. The 2025 WASSCE objective paper tested harmonised content (ductility of platinum in Q49, de Broglie wavelength in Q44), so the harmonised topics are placed as full subtopics: dimensions, projectiles, satellites, elasticity, black body radiation, fibre optics, the laser and semiconductors. The 2025 WASSCE paper also tested content neither syllabus names: the zeroth law of thermodynamics (Q11, placed in temperature.concept), the speed and pressure of a flowing fluid (Q40, given its own home, fluids.flow), a velocity selector in crossed fields (Q6, placed in magnetic-force.moving-charge) and apparent weight in a lift (Q39, placed in newtons-laws.second-law). Content only JAMB lists is kept and cited to JAMB alone: Lami's theorem, Stokes' law, Kirchhoff's laws, phase difference, the uncertainty principle, electrolysis, discharge through gases and the transistor. WAEC says it does not set phase difference; JAMB sets it (UTME 2025 Q26), so phase difference sits in waves.progressive with that noted. Content only WAEC lists is kept and cited to WAEC alone: world energy resources, crystalline structure, the laser, and position and bearing."
+  },
+  "how_to_use": "Place a question by what a student must know to answer it, not by words in the stem. A question that uses a pulley but asks for power goes under power; a question about a coloured shirt that asks which absorbs heat goes under radiation, not colour. Naming the SI unit of a quantity goes to the subtopic where that quantity is taught. A calculation that could be worked in several topics goes where its key idea is taught. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins.",
+  "topics": [
+    {
+      "id": "measurement",
+      "name": "Measurement and units",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "2, 3(b), 4, 5, H1",
+        "jamb": "1"
+      },
+      "subtopics": [
+        {
+          "id": "measurement.quantities-units",
+          "name": "Fundamental and derived quantities and units",
+          "syllabus": {
+            "waec": "2(a)-(b), H1",
+            "jamb": "1 fundamental and derived quantities"
+          },
+          "covers": "Physics as the study of matter and energy; the fundamental quantities (length, mass, time, electric current, temperature, luminous intensity, amount of substance) and their SI units; time as the interval between physical events; derived quantities such as volume, density and speed and their units; prefixes, and converting between multiples and sub-multiples of a unit. Sorting rule: working out the unit of a quantity from a formula by dimensions, or writing a named unit such as the joule or the watt in base units (kg, m, s, A), goes to measurement.dimensions; naming the unit of a quantity taught in a later topic, such as the tesla or the henry, goes to that topic's subtopic.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "measurement.dimensions",
+          "name": "Dimensions",
+          "syllabus": {
+            "waec": "H1",
+            "jamb": "1 dimensions"
+          },
+          "covers": "The dimensions of a quantity in terms of M, L and T, using dimensions to find a unit or the powers in a formula, expressing a named unit in base units, such as the joule as kg m² s⁻², and testing whether an equation is dimensionally correct. Sorting rule: a question whose answer is a unit written in base units or in M, L and T goes here, whatever topic the quantity belongs to; a question that asks only for the name of a quantity's unit, such as the tesla or the henry, goes to that quantity's subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "measurement.instruments",
+          "name": "Measuring length, mass and time",
+          "syllabus": {
+            "waec": "3(b), 4, 5(b)",
+            "jamb": "1 length, area and volume, mass, time"
+          },
+          "covers": "The metre rule, vernier calipers and micrometer screw gauge and how to read them; finding lengths, areas and volumes of regular and irregular bodies; beam, chemical, lever, spring and electronic (digital) balances; and time-measuring devices such as the stopwatch, pendulum and ticker-timer. Sorting rule: reading an instrument goes here; its accuracy, or the error in a reading, goes to measurement.errors; the difference between mass and weight goes to gravitation.g-weight; finding speed or acceleration from a ticker-tape goes to motion.speed-velocity.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "measurement.errors",
+          "name": "Accuracy, errors and significant figures",
+          "syllabus": {
+            "waec": "Assessment objectives 3(c), 3(g)",
+            "jamb": "1 limitations of experimental measurements"
+          },
+          "covers": "Accuracy against precision, the accuracy of a measuring instrument, sources of error and simple estimation of errors, significant figures, and the precautions taken in an experiment to get accurate results. Sorting rule: how to take a reading from an instrument goes to measurement.instruments; reading a graph of results goes to measurement.graphs.",
+          "taught_in": []
+        },
+        {
+          "id": "measurement.graphs",
+          "name": "Graphs and gradients from experiments",
+          "syllabus": {
+            "waec": "Assessment objectives 2(c), 3(d); Paper 3",
+            "jamb": null
+          },
+          "covers": "Plotting and reading a graph of experimental results, what its gradient and intercept stand for, and what a straight line through the origin shows. It exists because the practical paper tests it and two legacy topics hold such questions. Sorting rule: a graph that belongs to a named topic, such as a velocity-time, load-extension or current-voltage graph, goes to that topic's subtopic; a graph given only as data, where the skill is reading its gradient or intercept, goes here.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "vectors",
+      "name": "Position, scalars and vectors",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "3, 10",
+        "jamb": "2"
+      },
+      "subtopics": [
+        {
+          "id": "vectors.position",
+          "name": "Position, distance and displacement",
+          "syllabus": {
+            "waec": "3(a), 3(c)-(d)",
+            "jamb": null
+          },
+          "covers": "Locating a point with rectangular coordinates, direction given as a bearing, and distance against displacement. Sorting rule: finding how far a body ends up from its start after two or more legs of a journey goes to vectors.addition.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "vectors.scalars-vectors",
+          "name": "Scalar and vector quantities",
+          "syllabus": {
+            "waec": "10(a)-(b)",
+            "jamb": "2 definition and examples of scalars and vectors"
+          },
+          "covers": "What makes a quantity scalar or vector, and sorting quantities such as mass, speed, energy, weight, displacement, velocity and acceleration into the two.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "vectors.addition",
+          "name": "Adding vectors and finding the resultant",
+          "syllabus": {
+            "waec": "10(c)-(d)",
+            "jamb": "2 resultant of two or more vectors, graphical methods"
+          },
+          "covers": "Representing vectors by lines, the parallelogram and triangle methods, and the resultant of two or more vectors by scale drawing or by calculation, including a displacement after a journey in several directions (UTME 2025 Q5). Sorting rule: the resultant velocity of a boat, swimmer or plane moving in a current or wind goes to vectors.relative-velocity; forces holding a body at rest go to equilibrium.coplanar.",
+          "taught_in": []
+        },
+        {
+          "id": "vectors.resolution",
+          "name": "Resolving vectors into components",
+          "syllabus": {
+            "waec": "10(e)",
+            "jamb": "2 resolution of vectors into two perpendicular directions"
+          },
+          "covers": "Splitting a vector into two perpendicular components, and adding vectors by their components. Sorting rule: resolving a weight along an inclined plane to find an acceleration goes to newtons-laws.second-law, or to friction.solid when the question asks for the coefficient of friction; resolving forces to find a tension in equilibrium goes to equilibrium.coplanar; a single force at an angle pulling a body along a level surface, where the question asks for its component along the surface, goes here, and the acceleration or work that follows goes to newtons-laws.second-law or energy.work.",
+          "taught_in": []
+        },
+        {
+          "id": "vectors.relative-velocity",
+          "name": "Relative velocity",
+          "syllabus": {
+            "waec": "7(b), 10(f)",
+            "jamb": "2 relative velocity"
+          },
+          "covers": "The velocity of one body as seen from another, and the resultant velocity of a body moving through a moving medium, such as a boat crossing a river or a plane flying in a wind.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "motion",
+      "name": "Motion in a straight line",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "7(a), 8, 9, H2",
+        "jamb": "3"
+      },
+      "subtopics": [
+        {
+          "id": "motion.types",
+          "name": "Types of motion",
+          "syllabus": {
+            "waec": "7(a)",
+            "jamb": "3 types of motion"
+          },
+          "covers": "Random, rectilinear, translational, rotational, circular, orbital, spin and oscillatory motion, with examples of each. Sorting rule: naming the type of a motion goes here; any calculation on circular motion goes to circular-motion, and on oscillation to shm.",
+          "taught_in": []
+        },
+        {
+          "id": "motion.speed-velocity",
+          "name": "Speed, velocity and acceleration",
+          "syllabus": {
+            "waec": "8(a)-(c), 9(a)-(b)",
+            "jamb": "3 speed, velocity and acceleration, instantaneous velocity"
+          },
+          "covers": "Speed against velocity, uniform and non-uniform motion, average and instantaneous speed, acceleration and deceleration, and finding them from a ticker-tape. Sorting rule: reading any of these from a graph goes to motion.graphs; using the equations of motion goes to motion.equations.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "motion.graphs",
+          "name": "Distance-time and velocity-time graphs",
+          "syllabus": {
+            "waec": "8(d), 9(c)",
+            "jamb": "3 distance-time and velocity-time graphs"
+          },
+          "covers": "Drawing and reading displacement-time and velocity-time graphs: velocity from the gradient of a displacement-time graph, and acceleration from the gradient and distance from the area under a velocity-time graph.",
+          "taught_in": []
+        },
+        {
+          "id": "motion.equations",
+          "name": "Equations of uniformly accelerated motion",
+          "syllabus": {
+            "waec": "9(d)",
+            "jamb": "3 equations of uniformly accelerated motion"
+          },
+          "covers": "Using v = u + at, s = ut + ½at², v² = u² + 2as and s = ½(u + v)t for motion along a line, such as a car speeding up or braking. Sorting rule: a body dropped or thrown straight up or down goes to motion.free-fall; a body thrown at an angle or horizontally goes to motion.projectiles.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "motion.free-fall",
+          "name": "Motion under gravity",
+          "syllabus": {
+            "waec": "9(d)",
+            "jamb": "3 motion under gravity"
+          },
+          "covers": "Free fall, and bodies thrown vertically up or down: time to reach the highest point, maximum height, total time of flight, speed on return, and the speed of a dropped body after it has fallen a given height, whether worked by v² = u² + 2gh or by energy. Sorting rule: a question that asks for kinetic or potential energy, or a body moving down a slope, along a curve or on a pendulum, goes to energy.pe-ke.",
+          "taught_in": []
+        },
+        {
+          "id": "motion.projectiles",
+          "name": "Projectiles",
+          "syllabus": {
+            "waec": "H2",
+            "jamb": "3 projectiles"
+          },
+          "covers": "Bodies launched at an angle or horizontally: time of flight, maximum height, range and the angle for maximum range, and uses in sport and warfare.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "friction",
+      "name": "Friction and viscosity",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "7(e)-(f)",
+        "jamb": "7"
+      },
+      "subtopics": [
+        {
+          "id": "friction.solid",
+          "name": "Static and dynamic friction",
+          "syllabus": {
+            "waec": "7(e)",
+            "jamb": "7 static and dynamic friction, coefficient of limiting friction"
+          },
+          "covers": "Static, limiting and dynamic friction, the coefficient of friction and its determination, including a body moving at constant speed on a level floor or down an inclined plane (UTME 2025 Q17, WAEC 2025 Q48). Sorting rule: a question that asks for the coefficient of friction goes here even when it needs an inclined plane; a question that asks for the acceleration of a body on a plane, with friction given, goes to newtons-laws.second-law.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "friction.effects",
+          "name": "Advantages, disadvantages and reduction of friction",
+          "syllabus": {
+            "waec": "7(e)",
+            "jamb": "7 advantages and disadvantages, reduction of friction"
+          },
+          "covers": "Where friction helps (walking, brakes, belts, grindstones) and where it harms (wear, heating, lower efficiency), and ways of reducing it: ball bearings, rollers, lubrication and streamlining. Sorting rule: friction lowering a machine's efficiency in a calculation goes to machines.ma-vr-efficiency.",
+          "taught_in": []
+        },
+        {
+          "id": "friction.viscosity",
+          "name": "Viscosity and terminal velocity",
+          "syllabus": {
+            "waec": "7(f)",
+            "jamb": "7 viscosity, terminal velocity, Stokes' law"
+          },
+          "covers": "Viscosity as friction in fluids and the factors that change it, terminal velocity of a body falling through a fluid and its determination, and Stokes' law (JAMB). Sorting rule: how the speed and pressure of a flowing fluid are linked goes to fluids.flow.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "newtons-laws",
+      "name": "Newton's laws of motion",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "7(c)-(d), 13",
+        "jamb": "3 Newton's laws of motion"
+      },
+      "subtopics": [
+        {
+          "id": "newtons-laws.first-law",
+          "name": "Force, inertia and the first law",
+          "syllabus": {
+            "waec": "7(c)-(d), 13(a)",
+            "jamb": "3 inertia, mass and force"
+          },
+          "covers": "Force as the cause of motion, contact and field forces, inertia of rest and of motion, and Newton's first law, as when passengers jerk forward when a bus stops. Sorting rule: the difference between mass and weight goes to gravitation.g-weight.",
+          "taught_in": []
+        },
+        {
+          "id": "newtons-laws.second-law",
+          "name": "The second law: force and acceleration",
+          "syllabus": {
+            "waec": "13(b)",
+            "jamb": "3 relationship between mass and acceleration"
+          },
+          "covers": "F = ma, the newton, resultant force, connected bodies, a body accelerating on an inclined plane, and apparent weight in a lift moving up or down with an acceleration (WAEC 2025 Q39). Sorting rule: impulse and change of momentum go to newtons-laws.momentum-impulse; weightlessness in orbit goes to gravitation.satellites; the coefficient of friction goes to friction.solid.",
+          "taught_in": []
+        },
+        {
+          "id": "newtons-laws.momentum-impulse",
+          "name": "Momentum and impulse",
+          "syllabus": {
+            "waec": "13(b)",
+            "jamb": "3 impulse and momentum"
+          },
+          "covers": "Linear momentum, impulse as force times time and as change of momentum, force as rate of change of momentum, and the area under a force-time graph. Sorting rule: momentum shared between two bodies in a collision or explosion goes to newtons-laws.conservation.",
+          "taught_in": []
+        },
+        {
+          "id": "newtons-laws.conservation",
+          "name": "Conservation of momentum and collisions",
+          "syllabus": {
+            "waec": "13(b)",
+            "jamb": "3 conservation of linear momentum"
+          },
+          "covers": "The principle of conservation of linear momentum, elastic and inelastic collisions in a straight line, bodies that stick together, and the recoil of a gun and rocket propulsion worked as calculations. Sorting rule: naming the law that explains a rocket or a recoil goes to newtons-laws.third-law.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "newtons-laws.third-law",
+          "name": "Action and reaction",
+          "syllabus": {
+            "waec": "13(c)",
+            "jamb": "3 Newton's laws of motion"
+          },
+          "covers": "Newton's third law, action and reaction pairs, and situations that show it, such as a rocket, a gun's recoil, walking and swimming (WAEC 2025 Q36). Sorting rule: calculating a recoil or rocket speed goes to newtons-laws.conservation.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "circular-motion",
+      "name": "Circular motion",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "7(g)",
+        "jamb": "3 motion in a circle"
+      },
+      "subtopics": [
+        {
+          "id": "circular-motion.angular",
+          "name": "Angular speed and velocity",
+          "syllabus": {
+            "waec": "7(g)(i)",
+            "jamb": "3 angular velocity and angular acceleration"
+          },
+          "covers": "Angle in radians, angular speed and angular acceleration, period and frequency of rotation, and v = ωr. Sorting rule: any force towards the centre goes to circular-motion.centripetal.",
+          "taught_in": []
+        },
+        {
+          "id": "circular-motion.centripetal",
+          "name": "Centripetal force and acceleration",
+          "syllabus": {
+            "waec": "7(g)(ii)",
+            "jamb": "3 centripetal and centrifugal force"
+          },
+          "covers": "Centripetal acceleration and force, mv²/r and mω²r, the tension in a string whirling a body in a horizontal or vertical circle (WAEC 2025 Q22), centrifugal effects, and banking of roads. Sorting rule: the orbit of a satellite or planet goes to gravitation.satellites.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "equilibrium",
+      "name": "Equilibrium of forces",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "11",
+        "jamb": "5"
+      },
+      "subtopics": [
+        {
+          "id": "equilibrium.moments",
+          "name": "Moments and the principle of moments",
+          "syllabus": {
+            "waec": "11(a)",
+            "jamb": "5 principle of moments, moment of a force, couple"
+          },
+          "covers": "Moment of a force, the principle of moments applied to beams, see-saws and a balanced metre rule, and couples and torque, as in turning a tap or a steering wheel. Sorting rule: the class of a lever and its mechanical advantage go to machines.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "equilibrium.coplanar",
+          "name": "Equilibrium of coplanar forces",
+          "syllabus": {
+            "waec": "11(b)",
+            "jamb": "5 equilibrium of a particle, coplanar forces, triangle and polygon of forces, Lami's theorem"
+          },
+          "covers": "Conditions for equilibrium under parallel and non-parallel forces, resultant and equilibrant, the triangle, polygon and parallelogram of forces, Lami's theorem (JAMB), and tensions in strings holding a body at rest. Sorting rule: turning effects about a pivot go to equilibrium.moments; a single force at an angle with nothing to balance it, such as a rope pulling a body along a smooth floor, goes to vectors.resolution.",
+          "taught_in": []
+        },
+        {
+          "id": "equilibrium.stability",
+          "name": "Centre of gravity and stability",
+          "syllabus": {
+            "waec": "11(c)",
+            "jamb": "5 centre of gravity and stability"
+          },
+          "covers": "Centre of gravity and how to find it, stable, unstable and neutral equilibrium, and what makes a body or vehicle more or less stable (UTME 2025 Q18).",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "shm",
+      "name": "Simple harmonic motion",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "12",
+        "jamb": "3 simple harmonic motion"
+      },
+      "subtopics": [
+        {
+          "id": "shm.describing",
+          "name": "Nature of simple harmonic motion",
+          "syllabus": {
+            "waec": "12(a), 12(c)",
+            "jamb": "3 definition, examples, period, frequency and amplitude"
+          },
+          "covers": "What simple harmonic motion is, systems that perform it, and period, frequency and amplitude and how they are related. Sorting rule: working out a period from the length of a pendulum or the stiffness of a spring goes to shm.pendulum-spring.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "shm.speed-acceleration",
+          "name": "Speed and acceleration in simple harmonic motion",
+          "syllabus": {
+            "waec": "12(b)",
+            "jamb": "3 velocity and acceleration of S.H.M."
+          },
+          "covers": "Displacement, velocity and acceleration in simple harmonic motion, acceleration proportional to displacement and towards the centre, maximum speed and maximum acceleration, and linear and angular speed related (v = ωr, a = ω²x).",
+          "taught_in": []
+        },
+        {
+          "id": "shm.pendulum-spring",
+          "name": "The simple pendulum and loaded spring",
+          "syllabus": {
+            "waec": "12, 13 notes on determining g",
+            "jamb": "3 examples of systems that execute S.H.M."
+          },
+          "covers": "The period of a simple pendulum and of a mass on a spring, and finding g from a pendulum or spring (WAEC 2025 Q8). Sorting rule: g found from a pendulum goes here, not to gravitation.g-weight.",
+          "taught_in": []
+        },
+        {
+          "id": "shm.energy",
+          "name": "Energy in simple harmonic motion",
+          "syllabus": {
+            "waec": "12(d)",
+            "jamb": "3 energy change in S.H.M."
+          },
+          "covers": "How kinetic and potential energy change during an oscillation, and the total energy of a body in simple harmonic motion.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "shm.forced-resonance",
+          "name": "Forced vibration and resonance",
+          "syllabus": {
+            "waec": "12(e)",
+            "jamb": null
+          },
+          "covers": "Natural frequency, forced and damped vibration, and resonance in mechanical systems such as a swing, a bridge or Barton's pendulums. Sorting rule: resonance in an air column goes to sound.pipes, in a string or resonance box to sound.strings, and in an a.c. circuit to ac-circuits.resonance.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "fluids",
+      "name": "Density, pressure and flotation",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "6",
+        "jamb": "10, 11"
+      },
+      "subtopics": [
+        {
+          "id": "fluids.density",
+          "name": "Density and relative density",
+          "syllabus": {
+            "waec": "6(a)",
+            "jamb": "11 density, relative density"
+          },
+          "covers": "Density and relative density of solids and liquids and how they are found, including by the U-tube and Hare's apparatus, densities of mixtures, and volume changes when density changes, as when ice melts (UTME 2025 Q4). Sorting rule: relative density found by weighing a body in air and in water goes to fluids.archimedes.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "fluids.liquid-pressure",
+          "name": "Pressure in liquids and Pascal's principle",
+          "syllabus": {
+            "waec": "6(b)",
+            "jamb": "10 pressure in liquids, Pascal's principle"
+          },
+          "covers": "Pressure as force per unit area, pressure and depth (P = hρg), transmission of pressure and Pascal's principle, and the hydraulic press, jack and car brakes. Sorting rule: atmospheric pressure and the instruments that measure it go to fluids.atmospheric; the total pressure at a depth in a liquid, found by adding the atmospheric pressure (often given as a barometer reading) to hρg, goes here.",
+          "taught_in": []
+        },
+        {
+          "id": "fluids.atmospheric",
+          "name": "Atmospheric pressure and measuring pressure",
+          "syllabus": {
+            "waec": "6(b)",
+            "jamb": "10 atmospheric pressure, measurement of pressure"
+          },
+          "covers": "Atmospheric pressure, the mercury and aneroid barometers, converting a barometer reading in mm or cm of mercury to pascals, the manometer and the pressure of a gas supply measured with it against atmospheric pressure, equal pressures from columns of different liquids (UTME 2025 Q19), variation of pressure with height and the barometer as an altimeter, and devices that depend on it: the siphon, syringe and pump. Sorting rule: the total pressure at a depth in a liquid, even when it starts from a barometer reading, goes to fluids.liquid-pressure; how a gas's pressure changes with its volume or temperature goes to gas-laws.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "fluids.archimedes",
+          "name": "Upthrust and Archimedes' principle",
+          "syllabus": {
+            "waec": "6(c)(i)",
+            "jamb": "11 upthrust, Archimedes' principle"
+          },
+          "covers": "Upthrust on a body partly or wholly immersed in a fluid, apparent loss of weight, and relative density found by weighing in air and in a liquid. Sorting rule: a body that floats goes to fluids.flotation.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "fluids.flotation",
+          "name": "Law of flotation",
+          "syllabus": {
+            "waec": "6(c)(ii)",
+            "jamb": "11 law of floatation, ships and hydrometers"
+          },
+          "covers": "The conditions for a body to float, a floating body displacing its own weight of fluid (UTME 2025 Q11), and uses in hydrometers, ships, balloons and submarines.",
+          "taught_in": []
+        },
+        {
+          "id": "fluids.flow",
+          "name": "Fluid flow and Bernoulli's principle",
+          "syllabus": {
+            "waec": null,
+            "jamb": null
+          },
+          "covers": "Streamline and turbulent flow, and the link between the speed and pressure of a moving fluid (Bernoulli's principle), with uses such as the aerofoil and spray gun. Neither syllabus names it; WAEC 2025 Q40 tests it and two legacy topics hold it. Sorting rule: viscosity and terminal velocity go to friction.viscosity.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "matter",
+      "name": "Structure of matter and kinetic theory",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "1, H9",
+        "jamb": "18"
+      },
+      "subtopics": [
+        {
+          "id": "matter.particles",
+          "name": "Particle nature and states of matter",
+          "syllabus": {
+            "waec": "1, H9",
+            "jamb": "18 molecular nature of matter, atoms and molecules, Brownian motion, diffusion"
+          },
+          "covers": "Atoms and molecules, evidence that matter is made of particles (Brownian motion, diffusion, osmosis), the three states of matter and how their particles are arranged, and crystalline against amorphous solids, including face-centred and body-centred arrangements. Sorting rule: the assumptions of the kinetic theory, and how it explains gas pressure, go to matter.kinetic-theory; the parts of an atom, Dalton's atomic theory and general statements about the atoms of an element go to atom.models.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "matter.surface",
+          "name": "Surface tension and capillarity",
+          "syllabus": {
+            "waec": "1",
+            "jamb": "18 surface tension, capillarity, adhesion, cohesion, angle of contact"
+          },
+          "covers": "Cohesion and adhesion, surface tension, its effects and how it is reduced, capillarity, and angle of contact, such as why water wets glass and rises in a narrow tube and mercury does not.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "matter.kinetic-theory",
+          "name": "Kinetic theory",
+          "syllabus": {
+            "waec": "1",
+            "jamb": "18 kinetic theory"
+          },
+          "covers": "The assumptions of the kinetic theory, and its use to explain gas pressure as the rate of change of momentum of molecules striking the walls (UTME 2025 Q10), melting and boiling, and the gas laws in molecular terms. Sorting rule: a calculation with a gas law goes to gas-laws; evaporation and its cooling effect go to change-of-state.evaporation, even when answered in molecular terms.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "elasticity",
+      "name": "Elasticity",
+      "part": "Interaction of matter, space and time",
+      "syllabus": {
+        "waec": "H4",
+        "jamb": "9"
+      },
+      "subtopics": [
+        {
+          "id": "elasticity.behaviour",
+          "name": "Behaviour of materials under stress",
+          "syllabus": {
+            "waec": "H4",
+            "jamb": "9 elastic limit, yield point, breaking point"
+          },
+          "covers": "Load-extension curves, elastic limit, yield point and breaking point, elastic and plastic behaviour, and properties of solids such as ductility, brittleness and malleability (WAEC 2025 Q49). Sorting rule: a calculation with Hooke's law goes to elasticity.hookes-law.",
+          "taught_in": []
+        },
+        {
+          "id": "elasticity.hookes-law",
+          "name": "Hooke's law and springs",
+          "syllabus": {
+            "waec": "H4",
+            "jamb": "9 Hooke's law, the spring balance"
+          },
+          "covers": "Hooke's law, the spring constant, calculating extension, springs in series and in parallel, and the spring balance as a force meter. Sorting rule: stress, strain and Young's modulus go to elasticity.youngs-modulus; energy stored in a stretched spring goes to elasticity.energy; the period of a mass on a spring goes to shm.pendulum-spring.",
+          "taught_in": []
+        },
+        {
+          "id": "elasticity.youngs-modulus",
+          "name": "Stress, strain and Young's modulus",
+          "syllabus": {
+            "waec": "H4",
+            "jamb": "9 Young's modulus"
+          },
+          "covers": "Tensile stress, tensile strain and Young's modulus of a wire, their units, and calculations with them.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "elasticity.energy",
+          "name": "Energy stored in springs and strings",
+          "syllabus": {
+            "waec": "H4",
+            "jamb": "9 work done in springs and elastic strings"
+          },
+          "covers": "Work done in stretching a spring or elastic string, ½Fe and ½ke², and the area under a force-extension graph. Sorting rule: the area under a force-distance graph for a body being pushed goes to energy.work.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "energy",
+      "name": "Work, energy and power",
+      "part": "Energy: mechanical and heat",
+      "syllabus": {
+        "waec": "14, 15(a)-(f)",
+        "jamb": "6"
+      },
+      "subtopics": [
+        {
+          "id": "energy.forms-conservation",
+          "name": "Forms of energy and conservation of energy",
+          "syllabus": {
+            "waec": "14(a), 14(c)",
+            "jamb": "6 forms of energy, conservation of energy"
+          },
+          "covers": "Energy as the capacity to do work, forms of energy, the principle of conservation of energy, and the energy change in a device or event, such as a microphone turning sound into electrical energy (WAEC 2025 Q34) or a motor turning electrical into mechanical energy. Sorting rule: the energy change in a device goes here even when the device has its own subtopic, such as the motor, generator or loudspeaker, while how the device works goes to that subtopic; the energy a cell stores goes to electric-cells.types; potential energy turning into kinetic energy in a calculation goes to energy.pe-ke.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "energy.resources",
+          "name": "Energy resources",
+          "syllabus": {
+            "waec": "14(b)",
+            "jamb": null
+          },
+          "covers": "Renewable sources (solar, wind, tides, hydro, ocean waves, biomass) and non-renewable sources (petroleum, coal, nuclear) and their use, and electricity from dams in Nigeria (scheme of work SS3 term 2).",
+          "taught_in": []
+        },
+        {
+          "id": "energy.work",
+          "name": "Work",
+          "syllabus": {
+            "waec": "15(a), 15(c)",
+            "jamb": "6 definition of work, area under the force-distance curve"
+          },
+          "covers": "Work as force times distance moved in the direction of the force, the joule, work done against gravity in lifting, and work from the area under a force-displacement graph (WAEC 2025 Q2). Sorting rule: work done in stretching a spring goes to elasticity.energy.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "energy.pe-ke",
+          "name": "Potential and kinetic energy",
+          "syllabus": {
+            "waec": "15(b), 15(d)-(e)",
+            "jamb": "6 forms of energy, conservation of energy"
+          },
+          "covers": "Gravitational potential energy mgh, kinetic energy ½mv², the kind of energy a body has in a given state, and conservation of mechanical energy, such as a falling body or a body sliding down a slope. Sorting rule: energy in an oscillation goes to shm.energy; the principle stated in words, or the energy change in a device, goes to energy.forms-conservation; gravitational potential far from the earth goes to gravitation.potential-escape; the speed of a body dropped or thrown vertically, when the question asks only for a speed, height or time, goes to motion.free-fall even when its mass is given, and comes here when the question asks for an energy or the body moves down a slope, along a curve or on a pendulum.",
+          "taught_in": []
+        },
+        {
+          "id": "energy.power",
+          "name": "Power",
+          "syllabus": {
+            "waec": "15(f)",
+            "jamb": "6 definition of power"
+          },
+          "covers": "Power as the rate of doing work, the watt, P = Fv, and power in lifting a load (UTME 2025 Q6, WAEC 2025 Q37). Sorting rule: electrical power goes to electrical-energy.power; useful and wasted power in a machine's efficiency goes to machines.ma-vr-efficiency.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "machines",
+      "name": "Simple machines",
+      "part": "Energy: mechanical and heat",
+      "syllabus": {
+        "waec": "15(g)",
+        "jamb": "8"
+      },
+      "subtopics": [
+        {
+          "id": "machines.types",
+          "name": "Types of machines",
+          "syllabus": {
+            "waec": "15(g)",
+            "jamb": "8 definition and types of machines"
+          },
+          "covers": "What a machine is and why machines are needed; levers and their three classes, pulleys, the inclined plane, wedge, screw, wheel and axle and gears; naming the class of a lever from where the effort, load and fulcrum lie (WAEC 2025 Q16); the simple machines in a complex one such as a bicycle; and the care and maintenance of machines.",
+          "taught_in": [
+            "SS1 T2",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "machines.ma-vr-efficiency",
+          "name": "Mechanical advantage, velocity ratio and efficiency",
+          "syllabus": {
+            "waec": "15(g)",
+            "jamb": "8 mechanical advantage, velocity ratio and efficiency"
+          },
+          "covers": "Mechanical advantage (force ratio), velocity ratio and efficiency, the velocity ratio of each machine (pulley systems, an inclined plane at a given angle, the screw jack, wheel and axle), and how friction lowers efficiency (WAEC 2025 Q1 and Q38).",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T2",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "temperature",
+      "name": "Temperature and its measurement",
+      "part": "Energy: mechanical and heat",
+      "syllabus": {
+        "waec": "16(a)-(b)",
+        "jamb": "12"
+      },
+      "subtopics": [
+        {
+          "id": "temperature.concept",
+          "name": "Temperature, thermal equilibrium and scales",
+          "syllabus": {
+            "waec": "16(a)-(b)",
+            "jamb": "12 concept of temperature, temperature scales, conversion"
+          },
+          "covers": "Temperature as degree of hotness, heat against temperature, sources and uses of heat, thermal equilibrium and the zeroth law of thermodynamics (WAEC 2025 Q11), the Celsius and Kelvin scales and converting between them, and the effects of heat on matter (rise in temperature, change of state, expansion, change of resistance, change of colour, change in chemical properties, thermionic emission). Sorting rule: working out a temperature from a thermometer's readings at the fixed points goes to temperature.calibration.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "temperature.thermometers",
+          "name": "Thermometric properties and types of thermometer",
+          "syllabus": {
+            "waec": "16(a)",
+            "jamb": "12 thermometric properties, types of thermometers"
+          },
+          "covers": "Thermometric properties and thermometric liquids; liquid-in-glass, clinical, maximum and minimum, constant-volume gas and resistance thermometers, the thermocouple and pyrometer; and which thermometer suits which job (UTME 2025 Q20 and Q21). Sorting rule: an instrument that measures the temperature of a body, including the thermocouple and pyrometer, goes here; an instrument that detects radiant heat falling on it, such as the thermopile, goes to heat-transfer.radiation.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "temperature.calibration",
+          "name": "Calibrating a thermometer",
+          "syllabus": {
+            "waec": "16(a) construction and graduation",
+            "jamb": "12 calibration of thermometers"
+          },
+          "covers": "Fixed points, graduating a thermometer, and working out a temperature from the length of a liquid thread, a resistance or another property measured at the ice and steam points (WAEC 2025 Q42). Sorting rule: how the resistance of a conductor changes with temperature, outside a thermometer, goes to current-electricity.resistivity.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1",
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "expansion",
+      "name": "Thermal expansion",
+      "part": "Energy: mechanical and heat",
+      "syllabus": {
+        "waec": "16(b)(iii), 16(c)",
+        "jamb": "13"
+      },
+      "subtopics": [
+        {
+          "id": "expansion.solids",
+          "name": "Expansion of solids",
+          "syllabus": {
+            "waec": "16(c)",
+            "jamb": "13 linear, area and volume expansivities"
+          },
+          "covers": "Linear, area and volume expansivities, their determination and the relation between them, and calculating a change in length, area or volume. Sorting rule: the uses and problems of expansion go to expansion.applications; a question that sets the expansivities of solids against those of liquids, such as which expansivity does not apply to a solid, goes to expansion.liquids.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "expansion.applications",
+          "name": "Effects and uses of expansion",
+          "syllabus": {
+            "waec": "16(c)",
+            "jamb": "13 effects and applications"
+          },
+          "covers": "Gaps and expansion joints in bridges and railway lines (UTME 2025 Q16), sagging overhead cables, the force set up when expansion is prevented, bimetallic strips and thermostats, and fitting rivets and tyres.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "expansion.liquids",
+          "name": "Expansion of liquids and anomalous expansion of water",
+          "syllabus": {
+            "waec": "16(c)",
+            "jamb": "13 liquids, real and apparent expansivities, anomalous expansion of water"
+          },
+          "covers": "Real and apparent expansivity of liquids and their determination, questions that compare them with the linear, area and volume expansivities of solids, such as which expansivity does not apply to a solid, and the anomalous expansion of water between 0 °C and 4 °C and its effects on water life and pipes. Sorting rule: a comparison across solid and liquid expansivities goes here; the volume change when ice melts, worked from densities, goes to fluids.density.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "heat-transfer",
+      "name": "Heat transfer",
+      "part": "Energy: mechanical and heat",
+      "syllabus": {
+        "waec": "16(d), H4",
+        "jamb": "19"
+      },
+      "subtopics": [
+        {
+          "id": "heat-transfer.modes",
+          "name": "Conduction, convection and radiation",
+          "syllabus": {
+            "waec": "16(d)",
+            "jamb": "19 modes of heat transfer, thermos flask, land and sea breeze"
+          },
+          "covers": "The three modes of heat transfer told apart and explained by the kinetic theory, convection currents, land and sea breezes, ventilation, and the vacuum flask, which reduces all three. Sorting rule: the rate of heat flow through a conductor goes to heat-transfer.conductivity; the effect of a surface's colour or texture goes to heat-transfer.radiation.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "heat-transfer.conductivity",
+          "name": "Thermal conductivity",
+          "syllabus": {
+            "waec": "16(d), H4",
+            "jamb": "19 temperature gradient, thermal conductivity, heat flux"
+          },
+          "covers": "Temperature gradient, thermal conductivity, the rate of heat flow through a slab or rod, and comparing the conductivities of common materials.",
+          "taught_in": []
+        },
+        {
+          "id": "heat-transfer.radiation",
+          "name": "Radiation and surfaces",
+          "syllabus": {
+            "waec": "16(d), H4",
+            "jamb": "19 effect of the nature of the surface"
+          },
+          "covers": "How the colour and texture of a surface change the heat it absorbs and gives out (UTME 2025 Q15), shown with the Leslie cube, detecting radiant heat with the thermopile, the best clothing for a hot day (WAEC 2025 Q4), black body radiation and how its intensity varies with wavelength and temperature, and solar collectors and heaters. Sorting rule: heat absorbed by a coloured surface goes here; which colours of light a surface reflects goes to dispersion.colour; an instrument that detects radiant heat, such as the thermopile, goes here, while a thermometer that measures the temperature of a body, including the thermocouple and pyrometer, goes to temperature.thermometers.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "gas-laws",
+      "name": "Gas laws",
+      "part": "Energy: mechanical and heat",
+      "syllabus": {
+        "waec": "16(e)",
+        "jamb": "14"
+      },
+      "subtopics": [
+        {
+          "id": "gas-laws.boyle",
+          "name": "Boyle's law",
+          "syllabus": {
+            "waec": "16(e)",
+            "jamb": "14 Boyle's law"
+          },
+          "covers": "Pressure and volume at constant temperature, pV constant, its graphs and verification, and problems such as a bubble rising through water or air trapped in a tube.",
+          "taught_in": []
+        },
+        {
+          "id": "gas-laws.charles-pressure",
+          "name": "Charles' law, the pressure law and absolute zero",
+          "syllabus": {
+            "waec": "16(e)",
+            "jamb": "14 Charles' law, pressure law, absolute zero"
+          },
+          "covers": "Volume against temperature at constant pressure and pressure against temperature at constant volume, the Kelvin scale as the one that gives a straight line through the origin (UTME 2025 Q3), and absolute zero from the graph.",
+          "taught_in": []
+        },
+        {
+          "id": "gas-laws.general",
+          "name": "General gas law and ideal gas equation",
+          "syllabus": {
+            "waec": "16(e)",
+            "jamb": "14 general gas equation, ideal gas equation"
+          },
+          "covers": "pV/T constant with all three quantities changing, the ideal gas equation pV = nRT, and uses such as vehicle air bags. Sorting rule: a question that holds one quantity constant goes to gas-laws.boyle or gas-laws.charles-pressure.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "heat-capacity",
+      "name": "Quantity of heat",
+      "part": "Energy: mechanical and heat",
+      "syllabus": {
+        "waec": "16(f)",
+        "jamb": "15"
+      },
+      "subtopics": [
+        {
+          "id": "heat-capacity.specific",
+          "name": "Heat capacity and specific heat capacity",
+          "syllabus": {
+            "waec": "16(f)",
+            "jamb": "15 heat capacity, specific heat capacity, electrical method"
+          },
+          "covers": "Heat as a form of energy, heat capacity against specific heat capacity, Q = mcθ, the electrical method, and heating by an electric heater of stated power (UTME 2025 Q12). Sorting rule: mixing hot and cold bodies goes to heat-capacity.mixtures; anything that includes a change of state goes to change-of-state.latent-heat.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "heat-capacity.mixtures",
+          "name": "Method of mixtures",
+          "syllabus": {
+            "waec": "16(f)",
+            "jamb": "15 method of mixtures"
+          },
+          "covers": "Heat lost equals heat gained, and finding a final temperature or a specific heat capacity by mixing, with or without a calorimeter (WAEC 2025 Q9). Sorting rule: a mixture in which ice melts or steam condenses goes to change-of-state.latent-heat.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "change-of-state",
+      "name": "Change of state",
+      "part": "Energy: mechanical and heat",
+      "syllabus": {
+        "waec": "16(g)-(h)",
+        "jamb": "16"
+      },
+      "subtopics": [
+        {
+          "id": "change-of-state.latent-heat",
+          "name": "Latent heat",
+          "syllabus": {
+            "waec": "16(g)(i), 16(g)(iii)",
+            "jamb": "16 latent heat, specific latent heats of fusion and vaporization"
+          },
+          "covers": "Latent heat against specific latent heat, fusion and vaporisation, their determination by mixtures and by the electrical method, calculations that take a substance through a change of state (UTME 2025 Q22 and Q23), and uses in refrigerators and air conditioners.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "change-of-state.melting-boiling",
+          "name": "Melting and boiling points",
+          "syllabus": {
+            "waec": "16(g)(ii)",
+            "jamb": "16 influence of pressure and dissolved substances"
+          },
+          "covers": "Finding melting and boiling points, and the effect of pressure and impurities on them, as in the pressure cooker and salt on ice. Sorting rule: why raising the pressure raises the boiling point goes here even when it is answered through vapour pressure (UTME 2025 Q24); what vapour pressure is and what changes it goes to vapours.pressure.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "change-of-state.evaporation",
+          "name": "Evaporation and boiling compared",
+          "syllabus": {
+            "waec": "16(h)",
+            "jamb": "16 melting, evaporation and boiling"
+          },
+          "covers": "Evaporation against boiling, the factors that change the rate of evaporation (temperature, humidity, surface area, draught), and cooling by evaporation with its molecular explanation.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "vapours",
+      "name": "Vapours and humidity",
+      "part": "Energy: mechanical and heat",
+      "syllabus": {
+        "waec": "16(i)-(k)",
+        "jamb": "17"
+      },
+      "subtopics": [
+        {
+          "id": "vapours.pressure",
+          "name": "Saturated vapour pressure",
+          "syllabus": {
+            "waec": "16(i)",
+            "jamb": "17 saturated and unsaturated vapours, S.V.P. and boiling"
+          },
+          "covers": "Saturated and unsaturated vapours, saturated vapour pressure and what does and does not change it (UTME 2025 Q14), its measurement by the barometer tube method, and boiling as the point where saturated vapour pressure equals the external pressure.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "vapours.humidity",
+          "name": "Humidity, dew point and the weather",
+          "syllabus": {
+            "waec": "16(j)-(k)",
+            "jamb": "17 dew point, humidity, relative humidity, hygrometry"
+          },
+          "covers": "Humidity, relative humidity and dew point, the wet and dry bulb hygrometer, and how dew, mist, fog and rain form.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "waves",
+      "name": "Waves",
+      "part": "Waves",
+      "syllabus": {
+        "waec": "17, 18, 19",
+        "jamb": "20"
+      },
+      "subtopics": [
+        {
+          "id": "waves.production",
+          "name": "Production and propagation of waves",
+          "syllabus": {
+            "waec": "17(a)-(c)",
+            "jamb": "20 production and propagation"
+          },
+          "covers": "Vibrating systems as sources, waves as a transfer of energy without transfer of matter, particle motion against wave motion, and amplitude, wavelength, frequency, period, crest and trough read from a waveform. Sorting rule: a calculation with v = fλ or T = 1/f goes to waves.equation; the defining features of a progressive wave, as against a stationary one, go to waves.progressive.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "waves.equation",
+          "name": "Wave speed, frequency and wavelength",
+          "syllabus": {
+            "waec": "17(d)",
+            "jamb": "20 V = fλ"
+          },
+          "covers": "v = fλ and T = 1/f, including ripple tank readings (WAEC 2025 Q13), and applied to sound, light and radio waves (WAEC 2025 Q15). Sorting rule: a calculation that needs an idea belonging to one kind of wave, such as an echo, a resonance tube or a refractive index, goes to that subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "waves.progressive",
+          "name": "Progressive waves: features, equation and phase difference",
+          "syllabus": {
+            "waec": "18(b)",
+            "jamb": "20 phase difference, progressive wave equation"
+          },
+          "covers": "The defining features of a progressive wave (it carries energy forward, every particle vibrates with the same amplitude and frequency, and the phase changes from point to point along it), questions that ask which statement is or is not a feature of a progressive wave, the equation y = A sin(ωt ± 2πx/λ), reading amplitude, frequency, wavelength and speed from it, and the phase difference between two points on a wave (UTME 2025 Q26). WAEC explains the equation but does not set phase difference; JAMB does. Sorting rule: the features of a stationary wave go to waves.superposition; naming progressive and stationary as kinds of wave goes to waves.types.",
+          "taught_in": []
+        },
+        {
+          "id": "waves.types",
+          "name": "Types of waves",
+          "syllabus": {
+            "waec": "18(a)",
+            "jamb": "20 classification"
+          },
+          "covers": "Transverse and longitudinal waves, mechanical and electromagnetic waves, and progressive and stationary waves as kinds, with examples from springs, ropes, strings and the ripple tank (UTME 2025 Q7). Sorting rule: naming the kind goes here; the features of a stationary wave, such as the spacing of nodes, go to waves.superposition, and the features of a progressive wave to waves.progressive.",
+          "taught_in": []
+        },
+        {
+          "id": "waves.properties",
+          "name": "Reflection, refraction, diffraction and polarisation",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "20 reflection, refraction, diffraction and plane polarization"
+          },
+          "covers": "The wave properties shown in a ripple tank with plane and circular waves, diffraction through gaps and round edges, and polarisation as a test for transverse waves. Sorting rule: reflection and refraction of light as optics go to the reflection and refraction topics; the reflection of sound goes to sound.echoes; which of speed, wavelength and frequency change when a wave crosses into another medium goes to refraction.laws.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "waves.superposition",
+          "name": "Superposition, interference and stationary waves",
+          "syllabus": {
+            "waec": "19",
+            "jamb": "20 superposition, interference, stationary waves"
+          },
+          "covers": "The principle of superposition, constructive and destructive interference and path difference (WAEC 2025 Q29), and stationary waves: nodes, antinodes, their spacing and the phase of particles between them (WAEC 2025 Q26). Sorting rule: the features of a progressive wave, including a question that asks which statement is not one, go to waves.progressive; stationary waves in a pipe or string as sources of sound go to sound.pipes or sound.strings.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "light",
+      "name": "Sources and propagation of light",
+      "part": "Waves",
+      "syllabus": {
+        "waec": "20(a)-(b)",
+        "jamb": "23"
+      },
+      "subtopics": [
+        {
+          "id": "light.sources",
+          "name": "Sources of light, rays and beams",
+          "syllabus": {
+            "waec": "20(a)",
+            "jamb": "23 sources of light, luminous and non-luminous objects"
+          },
+          "covers": "Natural and artificial sources, luminous and non-luminous bodies, rays and beams (parallel, convergent and divergent, WAEC 2025 Q46), and the speed of light. Sorting rule: a calculation with c = fλ goes to waves.equation.",
+          "taught_in": []
+        },
+        {
+          "id": "light.rectilinear",
+          "name": "Rectilinear propagation, shadows and eclipses",
+          "syllabus": {
+            "waec": "20(b)",
+            "jamb": "23 shadows and eclipse, the pin-hole camera"
+          },
+          "covers": "Light travelling in straight lines, umbra and penumbra, eclipses of the sun and moon, and the pinhole camera and its magnification.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "reflection",
+      "name": "Reflection of light",
+      "part": "Waves",
+      "syllabus": {
+        "waec": "20(c)-(d)",
+        "jamb": "24"
+      },
+      "subtopics": [
+        {
+          "id": "reflection.plane",
+          "name": "Plane mirrors",
+          "syllabus": {
+            "waec": "20(c)",
+            "jamb": "24 laws of reflection, plane mirrors, periscope, kaleidoscope, sextant"
+          },
+          "covers": "Regular and irregular reflection, the laws of reflection, images in a plane mirror, the number of images in inclined mirrors, rotation of a mirror, and the periscope, kaleidoscope and sextant.",
+          "taught_in": [
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "reflection.curved",
+          "name": "Curved mirrors and their images",
+          "syllabus": {
+            "waec": "20(d)",
+            "jamb": "24 images formed by concave and convex mirrors, ray diagrams"
+          },
+          "covers": "Concave and convex mirrors, ray diagrams, the nature and position of images, and uses such as driving, shaving, surveillance, searchlight and headlamp mirrors (WAEC 2025 Q25). Sorting rule: a calculation with the mirror formula goes to reflection.mirror-formula.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "reflection.mirror-formula",
+          "name": "Mirror formula and magnification",
+          "syllabus": {
+            "waec": "20(d)",
+            "jamb": "24 mirror formula, linear magnification"
+          },
+          "covers": "1/u + 1/v = 1/f, r = 2f, linear magnification v/u, sign conventions, and finding the focal length of a concave mirror by experiment.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "refraction",
+      "name": "Refraction of light",
+      "part": "Waves",
+      "syllabus": {
+        "waec": "20(e), H5",
+        "jamb": "25"
+      },
+      "subtopics": [
+        {
+          "id": "refraction.laws",
+          "name": "Laws of refraction and refractive index",
+          "syllabus": {
+            "waec": "20(e)",
+            "jamb": "25 laws of refraction, refractive index, Snell's law"
+          },
+          "covers": "Refraction explained by the change in the speed of light, which of speed, wavelength and frequency change when light or any other wave crosses into another medium (the frequency stays the same), Snell's law, refractive index and n = c/v, bending towards or away from the normal (UTME 2025 Q29), and the speed of light in different media (WAEC 2025 Q14). Sorting rule: real and apparent depth goes to refraction.depth; the critical angle goes to refraction.tir; what changes and what stays constant when a wave crosses a boundary goes here for any kind of wave, including water waves in a ripple tank.",
+          "taught_in": [
+            "SS2 T2",
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "refraction.depth",
+          "name": "Real and apparent depth and lateral displacement",
+          "syllabus": {
+            "waec": "20(e)",
+            "jamb": "25 real and apparent depth, lateral displacement"
+          },
+          "covers": "Real and apparent depth, refractive index found from them, the apparent rise of a coin in water, and lateral displacement through a glass block.",
+          "taught_in": []
+        },
+        {
+          "id": "refraction.tir",
+          "name": "Critical angle and total internal reflection",
+          "syllabus": {
+            "waec": "20(e), H5",
+            "jamb": "25 critical angle and total internal reflection"
+          },
+          "covers": "The critical angle and its link to refractive index, total internal reflection, the mirage, prism periscopes and binoculars, and optical fibres and their uses.",
+          "taught_in": []
+        },
+        {
+          "id": "refraction.prism",
+          "name": "Refraction through a triangular prism",
+          "syllabus": {
+            "waec": "20(e)",
+            "jamb": "25 minimum deviation formula"
+          },
+          "covers": "Angle of deviation, minimum deviation, and the refractive index from n = sin((A + D)/2) / sin(A/2). Sorting rule: splitting white light into colours goes to dispersion.spectrum.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2",
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "lenses",
+      "name": "Lenses",
+      "part": "Waves",
+      "syllabus": {
+        "waec": "20(f)",
+        "jamb": "25 lenses, 26 power of a lens"
+      },
+      "subtopics": [
+        {
+          "id": "lenses.images",
+          "name": "Types of lenses and image formation",
+          "syllabus": {
+            "waec": "20(f)",
+            "jamb": "25 types of lenses"
+          },
+          "covers": "Converging and diverging lenses, principal focus and focal length, ray diagrams, and the nature and position of the image for each object position (UTME 2025 Q1, WAEC 2025 Q5). Sorting rule: a question answered from the standard image positions, such as an object at 2F giving a real, inverted image of the same size, goes here even when the focal length is given and a distance is asked for; a question that needs the lens formula, or a magnification worked from numbers, goes to lenses.formula.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "lenses.formula",
+          "name": "Lens formula, magnification and power",
+          "syllabus": {
+            "waec": "20(f)",
+            "jamb": "25 lens formula, magnification; 26 power of a lens"
+          },
+          "covers": "1/u + 1/v = 1/f, magnification, sign conventions, lenses in contact, the power of a lens in dioptres, and finding the focal length of a converging lens by experiment. Sorting rule: an object or image distance that follows from a standard position, such as 2F for a same-size image, with no working, goes to lenses.images; the lens used to correct an eye defect goes to optical-instruments.eye.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "optical-instruments",
+      "name": "Optical instruments",
+      "part": "Waves",
+      "syllabus": {
+        "waec": "20(g)",
+        "jamb": "26"
+      },
+      "subtopics": [
+        {
+          "id": "optical-instruments.eye",
+          "name": "The human eye and its defects",
+          "syllabus": {
+            "waec": "20(g)",
+            "jamb": "26 the human eye, near and far points, sight defects"
+          },
+          "covers": "The eye as an optical instrument and compared with the camera, accommodation, near and far points, short sight, long sight, presbyopia and astigmatism, and correcting them with lenses (WAEC 2025 Q23).",
+          "taught_in": []
+        },
+        {
+          "id": "optical-instruments.instruments",
+          "name": "Cameras, microscopes, telescopes and projectors",
+          "syllabus": {
+            "waec": "20(g)",
+            "jamb": "26 microscopes, telescopes, projectors, cameras, angular magnification"
+          },
+          "covers": "The simple camera, film projector, simple and compound microscopes, astronomical and terrestrial telescopes and prism binoculars: how each works, and angular magnification.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "dispersion",
+      "name": "Dispersion of light and colours",
+      "part": "Waves",
+      "syllabus": {
+        "waec": "20(h)",
+        "jamb": "27(a)"
+      },
+      "subtopics": [
+        {
+          "id": "dispersion.spectrum",
+          "name": "Dispersion and the spectrum",
+          "syllabus": {
+            "waec": "20(h)",
+            "jamb": "27(a)(i)-(ii), (v)"
+          },
+          "covers": "Dispersion of white light by a triangular prism, the pure and impure spectrum, recombining the colours, the rainbow (WAEC 2025 Q3), and the order of the colours by wavelength and frequency, red to violet. Sorting rule: the order of colours within the visible band goes here; the order of bands across the whole electromagnetic spectrum, with visible light as one band, goes to em-waves.spectrum.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "dispersion.colour",
+          "name": "Colours of objects and mixing colours",
+          "syllabus": {
+            "waec": "20(h)",
+            "jamb": "27(a)(iii)-(iv)"
+          },
+          "covers": "Primary, secondary and complementary colours, adding coloured lights and mixing pigments (WAEC 2025 Q24), why an object looks the colour it does under white or coloured light (UTME 2025 Q30), and colour filters. Sorting rule: which colour of clothing absorbs more heat goes to heat-transfer.radiation.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "em-waves",
+      "name": "Electromagnetic waves",
+      "part": "Waves",
+      "syllabus": {
+        "waec": "21, H6",
+        "jamb": "27(b)"
+      },
+      "subtopics": [
+        {
+          "id": "em-waves.spectrum",
+          "name": "The electromagnetic spectrum",
+          "syllabus": {
+            "waec": "21",
+            "jamb": "27(b)"
+          },
+          "covers": "Radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays in order of wavelength, their shared properties, and their sources, detection and uses (UTME 2025 Q13). Sorting rule: how X-rays are produced in a tube goes to atom.x-rays; the order of the colours within visible light goes to dispersion.spectrum.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "em-waves.laser",
+          "name": "The laser",
+          "syllabus": {
+            "waec": "H6",
+            "jamb": null
+          },
+          "covers": "What a laser is, the kinds of laser (solid-state, gas, liquid, semiconductor), its uses in research, communication, medicine, the military and holograms, and its dangers.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "sound",
+      "name": "Sound waves",
+      "part": "Waves",
+      "syllabus": {
+        "waec": "22",
+        "jamb": "21, 22"
+      },
+      "subtopics": [
+        {
+          "id": "sound.transmission",
+          "name": "Production and transmission of sound",
+          "syllabus": {
+            "waec": "22(a)-(c)",
+            "jamb": "21 material medium, speed of sound in solids, liquids and air"
+          },
+          "covers": "Sources of sound, the need for a material medium, the speed of sound in solids, liquids and air, and how temperature, pressure and humidity change the speed of sound (UTME 2025 Q8).",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "sound.echoes",
+          "name": "Echoes and reverberation",
+          "syllabus": {
+            "waec": "22(d)",
+            "jamb": "21 echoes, reverberation and their applications"
+          },
+          "covers": "Reflection of sound, echo calculations, uses in finding ocean depth and in mineral exploration, and reverberation and how it is reduced in halls (WAEC 2025 Q21).",
+          "taught_in": []
+        },
+        {
+          "id": "sound.characteristics",
+          "name": "Pitch, loudness and quality",
+          "syllabus": {
+            "waec": "22(e)-(f)",
+            "jamb": "22 noise and musical notes, quality, pitch, intensity and loudness"
+          },
+          "covers": "Noise against musical notes (WAEC 2025 Q47), pitch and frequency, loudness, intensity and amplitude (UTME 2025 Q27, WAEC 2025 Q7), and quality (timbre) explained by overtones. Sorting rule: working out the frequency of an overtone in a string or pipe goes to sound.strings or sound.pipes, and so does how the length, tension or thickness of a string changes its pitch.",
+          "taught_in": []
+        },
+        {
+          "id": "sound.strings",
+          "name": "Vibration in strings",
+          "syllabus": {
+            "waec": "22(g)-(h)",
+            "jamb": "22 overtones produced by vibrating strings"
+          },
+          "covers": "The fundamental and overtones of a stretched string, how its length, tension and mass per unit length set its frequency and pitch, f = (1/2l)√(T/m), the sonometer, forced vibration and resonance boxes, and stringed and percussion instruments. Sorting rule: what pitch is and how it depends on frequency in general goes to sound.characteristics; how a string's length, tension or thickness changes its pitch goes here.",
+          "taught_in": []
+        },
+        {
+          "id": "sound.pipes",
+          "name": "Vibration of air in pipes",
+          "syllabus": {
+            "waec": "22(h)-(i)",
+            "jamb": "22 air columns in closed and open pipes, acoustic resonance"
+          },
+          "covers": "Stationary waves in closed and open pipes, the fundamental and overtones (odd harmonics only in a closed pipe, WAEC 2025 Q27), the resonance tube to find the speed of sound or a frequency (UTME 2025 Q25), end correction, and wind instruments.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "gravitation",
+      "name": "Fields and gravitation",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "4, 23, 24, H3",
+        "jamb": "4"
+      },
+      "subtopics": [
+        {
+          "id": "gravitation.fields",
+          "name": "The idea of a field",
+          "syllabus": {
+            "waec": "23",
+            "jamb": "4 conservative and non-conservative fields"
+          },
+          "covers": "Gravitational, electric and magnetic fields compared, the properties of a force field, field lines, and conservative and non-conservative fields. Sorting rule: a question about one kind of field alone goes to that field's topic.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "gravitation.newtons-law",
+          "name": "Newton's law of universal gravitation",
+          "syllabus": {
+            "waec": "24(b)",
+            "jamb": "4 Newton's law of universal gravitation"
+          },
+          "covers": "F = Gm₁m₂/r², the universal constant G, and how the force changes with mass and distance. Sorting rule: g = GM/R² and the link between G and g go to gravitation.g-weight.",
+          "taught_in": []
+        },
+        {
+          "id": "gravitation.g-weight",
+          "name": "Acceleration due to gravity, mass and weight",
+          "syllabus": {
+            "waec": "4, 24(a)-(b)",
+            "jamb": "4 acceleration due to gravity, variation of g, mass and weight"
+          },
+          "covers": "g as field strength (g = F/m), g = GM/R², how g varies over the earth's surface and with height, the shape of the earth, and mass against weight, including weight on the moon or another planet.",
+          "taught_in": []
+        },
+        {
+          "id": "gravitation.potential-escape",
+          "name": "Gravitational potential and escape velocity",
+          "syllabus": {
+            "waec": "24(c)",
+            "jamb": "4 gravitational potential, escape velocity"
+          },
+          "covers": "Gravitational potential and potential energy in a field (-GM/r), and escape velocity from the earth. Sorting rule: potential energy as mgh near the surface goes to energy.pe-ke.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "gravitation.satellites",
+          "name": "Satellites and rockets",
+          "syllabus": {
+            "waec": "H3",
+            "jamb": "4 parking orbit and weightlessness"
+          },
+          "covers": "Natural and artificial satellites, orbital speed and period, parking (geostationary) orbits, weightlessness in orbit, the parts of a rocket and of a satellite and what each does, the uses of satellites and rockets, and Nigerian satellites such as NigeriaSat-1 and NigComSat-1. Sorting rule: apparent weight in a lift goes to newtons-laws.second-law.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "electrostatics",
+      "name": "Electrostatics",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "25(1)(a)-(f)",
+        "jamb": "28"
+      },
+      "subtopics": [
+        {
+          "id": "electrostatics.charges",
+          "name": "Charges, charging and the electroscope",
+          "syllabus": {
+            "waec": "25(1)(a)-(c)",
+            "jamb": "28(i)-(iii), (vi)"
+          },
+          "covers": "Positive and negative charges, charging by friction, contact and induction, the gold-leaf electroscope, how charge spreads on conductors of different shapes, point action, and lightning and lightning conductors.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "electrostatics.coulomb",
+          "name": "Coulomb's law",
+          "syllabus": {
+            "waec": "25(1)(e)",
+            "jamb": "28(iv)"
+          },
+          "covers": "The force between two point charges, F = q₁q₂/4πεr², permittivity, and how the force changes with charge, distance and medium.",
+          "taught_in": []
+        },
+        {
+          "id": "electrostatics.field-potential",
+          "name": "Electric field and potential",
+          "syllabus": {
+            "waec": "25(1)(d), 25(1)(f)",
+            "jamb": "28(iv)-(v)"
+          },
+          "covers": "Electric lines of force and field patterns, field intensity E = F/q, potential and potential difference, E = V/d between plates, work done moving a charge, and the motion of a charged particle in a uniform electric field (F = qE, a = qE/m, and its deflection between charged plates). Sorting rule: a charge moving through crossed electric and magnetic fields goes to magnetic-force.moving-charge; the deflection of alpha, beta and gamma radiation, used to tell them apart, goes to nucleus.radiations.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "capacitors",
+      "name": "Capacitors",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "25(1)(g)",
+        "jamb": "29"
+      },
+      "subtopics": [
+        {
+          "id": "capacitors.capacitance",
+          "name": "Capacitance and the parallel-plate capacitor",
+          "syllabus": {
+            "waec": "25(1)(g)",
+            "jamb": "29(i)-(iv)"
+          },
+          "covers": "Q = CV, the farad, types and uses of capacitors, how area, plate separation and the medium between the plates change the capacitance of a parallel-plate capacitor (UTME 2025 Q2), and how a capacitor behaves in a circuit: charging and discharging, blocking d.c. while passing a.c., and smoothing and filtering. Sorting rule: a calculation of capacitive reactance, or the phase between current and voltage, goes to ac-circuits.reactance.",
+          "taught_in": []
+        },
+        {
+          "id": "capacitors.combinations",
+          "name": "Capacitors in series and parallel",
+          "syllabus": {
+            "waec": "25(1)(g)",
+            "jamb": "29(v)"
+          },
+          "covers": "Effective capacitance of capacitors in series, in parallel and in mixed arrangements, and the charge and voltage on each.",
+          "taught_in": []
+        },
+        {
+          "id": "capacitors.energy",
+          "name": "Energy stored in a capacitor",
+          "syllabus": {
+            "waec": "25(1)(g)",
+            "jamb": "29(vi)"
+          },
+          "covers": "Energy stored in a charged capacitor, ½CV², ½QV and Q²/2C.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "electric-cells",
+      "name": "Electric cells",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "25(2)(a)",
+        "jamb": "30"
+      },
+      "subtopics": [
+        {
+          "id": "electric-cells.types",
+          "name": "Types of cells and their defects",
+          "syllabus": {
+            "waec": "25(2)(a), 25(2)(e)",
+            "jamb": "30(i)-(iv)"
+          },
+          "covers": "The simple voltaic cell and its defects (polarisation and local action) and their cure, the Daniell and Leclanche cells, lead-acid, nickel-iron (NiFe) and alkaline-cadmium accumulators and their care, lithium and mercury-cadmium cells, the energy a cell stores (WAEC 2025 Q33), the solar cell, and producing a current from chemical, heat, mechanical and solar energy. Sorting rule: what does and does not set the e.m.f. of a cell goes to electric-cells.emf-internal.",
+          "taught_in": [
+            "SS1 T3",
+            "SS2 T1",
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "electric-cells.emf-internal",
+          "name": "E.m.f., internal resistance and arrangement of cells",
+          "syllabus": {
+            "waec": "25(2)(a), 25(2)(c)",
+            "jamb": "30(v)-(vi), 31(i)"
+          },
+          "covers": "E.m.f. against terminal p.d., what does and does not set the e.m.f. of a cell (the materials of its plates and electrolyte set it; its size does not), internal resistance and lost volts, E = I(R + r), the efficiency of a cell, and cells in series and in parallel (UTME 2025 Q31, WAEC 2025 Q18). Sorting rule: any circuit question whose answer depends on a cell's internal resistance goes here; circuits with ideal cells go to current-electricity.resistors; measuring e.m.f. with a potentiometer goes to current-electricity.bridges.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T1",
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "current-electricity",
+      "name": "Current electricity",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "25(2)(b)-(d), 25(2)(f)-(h)",
+        "jamb": "31, 34(vi)-(viii)"
+      },
+      "subtopics": [
+        {
+          "id": "current-electricity.current-charge",
+          "name": "Charge, current and potential difference",
+          "syllabus": {
+            "waec": "25(2)(b)",
+            "jamb": "31(i)"
+          },
+          "covers": "Current as the rate of flow of charge, Q = It, the number of electrons passing a point, conventional current against electron flow, and potential difference as work done per unit charge. Sorting rule: V = IR goes to current-electricity.ohms-law.",
+          "taught_in": []
+        },
+        {
+          "id": "current-electricity.ohms-law",
+          "name": "Ohm's law and resistance",
+          "syllabus": {
+            "waec": "25(2)(b), 25(2)(d)",
+            "jamb": "31(ii)"
+          },
+          "covers": "Ohm's law and its verification, resistance and the ohm, current-voltage graphs, and ohmic and non-ohmic conductors.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "current-electricity.resistors",
+          "name": "Resistors in series and parallel",
+          "syllabus": {
+            "waec": "25(2)(c)",
+            "jamb": "31(v), electrical networks"
+          },
+          "covers": "Effective resistance of series, parallel and mixed arrangements, how current and voltage share out in a circuit (WAEC 2025 Q17), and Kirchhoff's laws for networks (JAMB). Sorting rule: a circuit whose answer depends on a cell's internal resistance goes to electric-cells.emf-internal.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "current-electricity.resistivity",
+          "name": "Resistivity and conductivity",
+          "syllabus": {
+            "waec": "25(2)(g)",
+            "jamb": "31 objective v, resistivity and conductivity"
+          },
+          "covers": "What changes a conductor's resistance (length, cross-sectional area, material and temperature), R = ρl/A, conductivity, and resistance changing with temperature. Sorting rule: a resistance thermometer read at its fixed points goes to temperature.calibration.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "current-electricity.meters",
+          "name": "Ammeters, voltmeters and galvanometers",
+          "syllabus": {
+            "waec": "25(2)(f), 25(2)(h)",
+            "jamb": "34(vi)-(viii)"
+          },
+          "covers": "How ammeters and voltmeters are connected, converting a galvanometer into an ammeter with a shunt or into a voltmeter with a multiplier, and moving-coil and moving-iron meters compared. Sorting rule: why the coil of a galvanometer turns, how it is built and what raises its sensitivity go to magnetic-force.motor; choosing and connecting a meter, or converting it with a shunt or multiplier, stays here.",
+          "taught_in": []
+        },
+        {
+          "id": "current-electricity.bridges",
+          "name": "Wheatstone bridge, metre bridge and potentiometer",
+          "syllabus": {
+            "waec": "25(2)(h)",
+            "jamb": "31(iii)-(iv), (vi)"
+          },
+          "covers": "Measuring resistance with the Wheatstone and metre bridges, the balance condition, and the potentiometer for comparing and measuring e.m.f.s, current and internal resistance, with its advantages.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "electrical-energy",
+      "name": "Electrical energy and power",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "25(2)(e), 27(e)",
+        "jamb": "32"
+      },
+      "subtopics": [
+        {
+          "id": "electrical-energy.power",
+          "name": "Electrical energy and power",
+          "syllabus": {
+            "waec": "25(2)(e)",
+            "jamb": "32(i), (v)"
+          },
+          "covers": "Energy W = VIt, power P = IV = I²R = V²/R, the heating effect of a current and its uses, and the power rating of appliances. Sorting rule: the cost of electricity in kilowatt-hours goes to electrical-energy.cost.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "electrical-energy.cost",
+          "name": "The kilowatt-hour and cost of electricity",
+          "syllabus": {
+            "waec": "15 notes on the kWh",
+            "jamb": "32(ii)"
+          },
+          "covers": "The kilowatt-hour as the commercial unit of electrical energy, the house meter as a measure of energy (WAEC 2025 Q32), and working out a bill.",
+          "taught_in": []
+        },
+        {
+          "id": "electrical-energy.household",
+          "name": "House wiring, fuses and safety",
+          "syllabus": {
+            "waec": "27(e)",
+            "jamb": "32(vi)-(vii)"
+          },
+          "covers": "Parallel wiring in houses and its advantages, live, neutral and earth wires, fuse rating, circuit breakers and other safety devices, and finding faults.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "electrical-energy.transmission",
+          "name": "Power transmission and distribution",
+          "syllabus": {
+            "waec": "27(e)",
+            "jamb": "32(iii)"
+          },
+          "covers": "Sending power at high voltage to cut I²R losses in cables, and the path from power station to consumer. Sorting rule: a transformer's turns ratio and efficiency go to induction.transformers.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "conduction",
+      "name": "Conduction through liquids and gases",
+      "part": "Fields",
+      "syllabus": {
+        "waec": null,
+        "jamb": "37"
+      },
+      "subtopics": [
+        {
+          "id": "conduction.electrolysis",
+          "name": "Electrolysis",
+          "syllabus": {
+            "waec": null,
+            "jamb": "37(a)"
+          },
+          "covers": "Electrolytes and non-electrolytes, electrodes and ions, Faraday's laws of electrolysis, electrochemical equivalent and m = zIt, and uses such as electroplating. JAMB only; the scheme of work teaches it in SS1.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "conduction.gases",
+          "name": "Discharge through gases",
+          "syllabus": {
+            "waec": null,
+            "jamb": "37(b)"
+          },
+          "covers": "How gases conduct at low pressure, treated qualitatively, and uses such as fluorescent and neon lamps. Sorting rule: line spectra from discharge lamps go to atom.energy-levels.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "magnetism",
+      "name": "Magnets and magnetic fields",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "26(a)-(c), 26(e)-(f), H7",
+        "jamb": "33, 34(iv)"
+      },
+      "subtopics": [
+        {
+          "id": "magnetism.magnets",
+          "name": "Magnets and magnetic materials",
+          "syllabus": {
+            "waec": "26(a)-(b), H7",
+            "jamb": "33(i)-(iii)"
+          },
+          "covers": "Properties of magnets, natural and artificial magnets, soft iron against steel, making magnets and demagnetising them, the domain theory, and keeping magnets. Sorting rule: why a material is chosen for an electromagnet's core or a permanent magnet goes here (UTME 2025 Q33).",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "magnetism.fields",
+          "name": "Magnetic fields and flux",
+          "syllabus": {
+            "waec": "26(c)",
+            "jamb": "33(iv)-(v), (viii)"
+          },
+          "covers": "Field lines round magnets, plotting fields and finding neutral points, magnetic flux and flux density, and their units, the weber and the tesla (WAEC 2025 Q31). Sorting rule: the field made by a current goes to magnetism.current-fields.",
+          "taught_in": []
+        },
+        {
+          "id": "magnetism.current-fields",
+          "name": "Magnetic effect of a current",
+          "syllabus": {
+            "waec": "26(c), 26(e)",
+            "jamb": "33(vi), 34(iv)"
+          },
+          "covers": "The field round a straight wire, a circular coil and a solenoid, the right-hand grip rule, the polarity of a solenoid, the combined field of two current-carrying wires (UTME 2025 Q32), and electromagnets and their uses in the electric bell and telephone earpiece. Sorting rule: the force between two parallel wires goes to magnetic-force.conductor.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "magnetism.earth",
+          "name": "The earth's magnetic field",
+          "syllabus": {
+            "waec": "26(f)",
+            "jamb": "33(vii), (ix)-(x)"
+          },
+          "covers": "The magnetic meridian, angles of dip and declination, the mariner's compass, variation of the earth's field over its surface, and uses in navigation and mineral exploration.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "magnetic-force",
+      "name": "Force in a magnetic field",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "26(d), 26(g), 27(a)",
+        "jamb": "34"
+      },
+      "subtopics": [
+        {
+          "id": "magnetic-force.conductor",
+          "name": "Force on a current-carrying conductor",
+          "syllabus": {
+            "waec": "26(d), 27(a)",
+            "jamb": "34(i)"
+          },
+          "covers": "The motor effect, F = BIl sin θ, Fleming's left-hand rule, and the force between two parallel current-carrying conductors. Sorting rule: how a d.c. motor or meter uses the force goes to magnetic-force.motor.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "magnetic-force.moving-charge",
+          "name": "Force on a moving charge",
+          "syllabus": {
+            "waec": "26(g)",
+            "jamb": "34(ii)"
+          },
+          "covers": "F = qvB sin θ, the path of a charged particle in a magnetic field, and crossed electric and magnetic fields as a velocity selector, v = E/B (WAEC 2025 Q6 and Q45). Sorting rule: a charged particle in an electric field alone goes to electrostatics.field-potential; the deflection of alpha, beta and gamma radiation in a magnetic field, used to tell them apart, goes to nucleus.radiations.",
+          "taught_in": []
+        },
+        {
+          "id": "magnetic-force.motor",
+          "name": "The d.c. motor and moving-coil devices",
+          "syllabus": {
+            "waec": "26(d)",
+            "jamb": "34(iii), (v)-(vi)"
+          },
+          "covers": "How the d.c. motor works and the role of the commutator, the moving-coil galvanometer, how it is built and what raises its sensitivity (more turns, a stronger field, a larger coil, weaker hair springs), the loudspeaker, and the carbon microphone. Sorting rule: converting a galvanometer into a meter, or connecting a meter in a circuit, goes to current-electricity.meters; the energy change in a motor, microphone or loudspeaker goes to energy.forms-conservation.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "induction",
+      "name": "Electromagnetic induction",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "27(b)-(e)",
+        "jamb": "35"
+      },
+      "subtopics": [
+        {
+          "id": "induction.laws",
+          "name": "Faraday's and Lenz's laws",
+          "syllabus": {
+            "waec": "27(b)",
+            "jamb": "35(a)(i)-(iii)"
+          },
+          "covers": "Induced e.m.f. and current, Faraday's laws and the factors that change the induced e.m.f., Lenz's law and the direction of an induced current (WAEC 2025 Q10), Fleming's right-hand rule, and flux linkage. Sorting rule: a coil rotating in a field goes to induction.generators.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "induction.generators",
+          "name": "A.c. and d.c. generators",
+          "syllabus": {
+            "waec": "27(b)",
+            "jamb": "35(a)(iv)"
+          },
+          "covers": "How a.c. and d.c. generators work, slip rings and commutator, E = E₀ sin ωt, and what raises the peak e.m.f. of a rotating coil: turns, field, area and speed (UTME 2025 Q34). Sorting rule: peak and r.m.s. values read from an a.c. graph or equation go to ac-circuits.values.",
+          "taught_in": []
+        },
+        {
+          "id": "induction.transformers",
+          "name": "Transformers and the induction coil",
+          "syllabus": {
+            "waec": "27(b)",
+            "jamb": "35(a)(v)-(vi)"
+          },
+          "covers": "Step-up and step-down transformers (WAEC 2025 Q30), turns and voltage ratios, transformer efficiency and energy losses, and the induction coil. Sorting rule: why power is sent at high voltage goes to electrical-energy.transmission; how eddy currents arise goes to induction.eddy.",
+          "taught_in": []
+        },
+        {
+          "id": "induction.inductance",
+          "name": "Inductance",
+          "syllabus": {
+            "waec": "27(c)",
+            "jamb": "35(b)"
+          },
+          "covers": "Self and mutual inductance, the henry (WAEC 2025 Q50), energy stored in an inductor ½LI², inductors in series and parallel, and uses in radio and television.",
+          "taught_in": []
+        },
+        {
+          "id": "induction.eddy",
+          "name": "Eddy currents",
+          "syllabus": {
+            "waec": "27(d)",
+            "jamb": "35 eddy current"
+          },
+          "covers": "What causes eddy currents (UTME 2025 Q35), reducing eddy current losses by laminating a core, and uses such as the induction furnace and speedometer.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "ac-circuits",
+      "name": "Simple a.c. circuits",
+      "part": "Fields",
+      "syllabus": {
+        "waec": "28",
+        "jamb": "36"
+      },
+      "subtopics": [
+        {
+          "id": "ac-circuits.values",
+          "name": "A.c. graphs, peak and r.m.s. values",
+          "syllabus": {
+            "waec": "28(a)-(b)",
+            "jamb": "36(i)-(ii)"
+          },
+          "covers": "Graphs of I = I₀ sin ωt and E = E₀ sin ωt, the frequency and period of a.c., and peak and r.m.s. values.",
+          "taught_in": []
+        },
+        {
+          "id": "ac-circuits.reactance",
+          "name": "Resistors, inductors and capacitors in a.c.",
+          "syllabus": {
+            "waec": "28(b), 28(d)",
+            "jamb": "36(iii)-(v)"
+          },
+          "covers": "A.c. through a resistor, an inductor and a capacitor alone, the phase between current and voltage in each, and inductive and capacitive reactance, X = 2πfL and X = 1/2πfC. Sorting rule: a circuit with two or more kinds of element goes to ac-circuits.rlc; a capacitor blocking d.c. and passing a.c., stated without reactance, goes to capacitors.capacitance.",
+          "taught_in": []
+        },
+        {
+          "id": "ac-circuits.rlc",
+          "name": "Series R-L-C circuits and impedance",
+          "syllabus": {
+            "waec": "28(c)-(e)",
+            "jamb": "36(vi)-(ix)"
+          },
+          "covers": "Series circuits of resistor, inductor and capacitor, impedance, vector (phasor) diagrams, phase angle, and the voltages across each part and the supply (WAEC 2025 Q12).",
+          "taught_in": []
+        },
+        {
+          "id": "ac-circuits.resonance",
+          "name": "Resonance in a.c. circuits",
+          "syllabus": {
+            "waec": "28(f)",
+            "jamb": "36(x)"
+          },
+          "covers": "The condition for resonance, the resonant frequency f₀ = 1/(2π√(LC)), and tuning of radio and television.",
+          "taught_in": []
+        },
+        {
+          "id": "ac-circuits.power",
+          "name": "Power in a.c. circuits",
+          "syllabus": {
+            "waec": "28(g)",
+            "jamb": "36(vii), objective ix"
+          },
+          "covers": "Instantaneous and average power, power factor, and why a pure inductor or capacitor uses no power.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "atom",
+      "name": "The atom and quantum physics",
+      "part": "Atomic and nuclear physics",
+      "syllabus": {
+        "waec": "29, 31, H10",
+        "jamb": "38"
+      },
+      "subtopics": [
+        {
+          "id": "atom.models",
+          "name": "Models of the atom",
+          "syllabus": {
+            "waec": "29(a)",
+            "jamb": "38(i)-(ii)"
+          },
+          "covers": "The Thomson, Rutherford, Bohr and electron-cloud models and their limitations, Dalton's atomic theory and general statements about the atoms of an element, Rutherford's alpha particle scattering, and the simple structure of the atom. Sorting rule: what the nucleus contains, and counting the protons, neutrons and electrons of an atom, including that a neutral atom has as many electrons as protons, go to nucleus.composition; evidence that matter is made of particles goes to matter.particles.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "atom.energy-levels",
+          "name": "Energy levels, photons and spectra",
+          "syllabus": {
+            "waec": "29(b)",
+            "jamb": "38(iii)"
+          },
+          "covers": "Energy levels in the atom, excitation and ionisation, the photon and its energy E = hf, the photon given out in a transition between levels, line emission and absorption spectra, and the Franck-Hertz experiment. Sorting rule: the energy of a photon from E = hf or E = hc/λ, with no work function, threshold frequency or stopping potential needed, goes here whatever the setting, even when the light falls on a metal; a question that needs the photoelectric equation, a work function, a threshold frequency or a stopping potential goes to atom.photoelectric.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "atom.photoelectric",
+          "name": "The photoelectric effect",
+          "syllabus": {
+            "waec": "29(c)",
+            "jamb": "38(iv)-(vi)"
+          },
+          "covers": "The photoelectric effect, work function and threshold frequency, Einstein's photoelectric equation, stopping potential (UTME 2025 Q9), what does and does not change the energy of the photoelectrons (UTME 2025 Q28), and photocells and their uses. Sorting rule: a bare photon energy calculation, E = hf or E = hc/λ, goes to atom.energy-levels even when the light falls on a metal.",
+          "taught_in": []
+        },
+        {
+          "id": "atom.thermionic",
+          "name": "Thermionic emission",
+          "syllabus": {
+            "waec": "29(d)",
+            "jamb": "38(iv), (vi)"
+          },
+          "covers": "Electrons given off by a heated metal, and uses in the cathode ray tube and diode valve. Sorting rule: how an X-ray tube works goes to atom.x-rays.",
+          "taught_in": []
+        },
+        {
+          "id": "atom.x-rays",
+          "name": "X-rays",
+          "syllabus": {
+            "waec": "29(e)",
+            "jamb": "38(vii)"
+          },
+          "covers": "Production of X-rays and the X-ray tube, hard and soft X-rays, their properties, uses and hazards, and safety precautions.",
+          "taught_in": []
+        },
+        {
+          "id": "atom.duality",
+          "name": "Wave-particle duality",
+          "syllabus": {
+            "waec": "31, H10",
+            "jamb": "38(xvi)-(xviii)"
+          },
+          "covers": "The dual nature of light and of matter, the de Broglie wavelength λ = h/mv (WAEC 2025 Q44), electron diffraction, and the uncertainty principle (JAMB).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "nucleus",
+      "name": "The nucleus and radioactivity",
+      "part": "Atomic and nuclear physics",
+      "syllabus": {
+        "waec": "30",
+        "jamb": "38"
+      },
+      "subtopics": [
+        {
+          "id": "nucleus.composition",
+          "name": "Composition of the nucleus and isotopes",
+          "syllabus": {
+            "waec": "30(a)",
+            "jamb": "38 objectives xi-xii"
+          },
+          "covers": "Protons and neutrons, nucleon number A, proton number Z and neutron number N with A = Z + N (WAEC 2025 Q41), the number of electrons in a neutral atom equal to Z, counting the protons, neutrons and electrons of an atom from its nuclide notation, isotopes, and stable and unstable nuclei (WAEC 2025 Q19). Sorting rule: models of the atom go to atom.models.",
+          "taught_in": []
+        },
+        {
+          "id": "nucleus.radiations",
+          "name": "Alpha, beta and gamma radiation",
+          "syllabus": {
+            "waec": "30 radioactivity",
+            "jamb": "38(viii)"
+          },
+          "covers": "Natural and artificial radioactivity, the properties of alpha, beta and gamma radiation compared, including their deflection in magnetic and electric fields, detection by G-M counter and photographic plate, uses in medicine, agriculture, industry and dating, and radiation hazards and safety. Sorting rule: what an emission does to A and Z goes to nucleus.decay-equations; the deflection of alpha, beta and gamma in a magnetic or electric field goes here, not to magnetic-force.moving-charge or electrostatics.field-potential.",
+          "taught_in": []
+        },
+        {
+          "id": "nucleus.decay-equations",
+          "name": "Radioactive decay equations",
+          "syllabus": {
+            "waec": "30 radioactivity, transformation of elements",
+            "jamb": "38 objective x"
+          },
+          "covers": "How alpha, beta and gamma emission change the nucleon and proton numbers, balancing a decay equation and finding the daughter nuclide (WAEC 2025 Q43), and the transformation of one element into another.",
+          "taught_in": []
+        },
+        {
+          "id": "nucleus.half-life",
+          "name": "Half-life and decay constant",
+          "syllabus": {
+            "waec": "30 radioactivity",
+            "jamb": "38(xiii)"
+          },
+          "covers": "Half-life, the number of half-lives, the mass, fraction, number of atoms or activity left (WAEC 2025 Q20, Q28 and Q35, UTME 2025 Q37), decay curves, and the decay constant.",
+          "taught_in": []
+        },
+        {
+          "id": "nucleus.fission-fusion",
+          "name": "Nuclear fission and fusion",
+          "syllabus": {
+            "waec": "30 nuclear reactions",
+            "jamb": "38(xiv)"
+          },
+          "covers": "Fission and fusion told apart, chain reactions, nuclear reactors and the atomic bomb, peaceful uses of nuclear energy, and Nigeria's nuclear energy programme. Sorting rule: energy from a mass defect worked as a number goes to nucleus.binding-energy.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "nucleus.binding-energy",
+          "name": "Mass defect and binding energy",
+          "syllabus": {
+            "waec": "30 nuclear reactions",
+            "jamb": "38(xv)"
+          },
+          "covers": "Mass defect, binding energy, E = Δmc², and converting between atomic mass units and energy (UTME 2025 Q36).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "electronics",
+      "name": "Introductory electronics",
+      "part": "Electronics",
+      "syllabus": {
+        "waec": "H8, 25(2)(d)",
+        "jamb": "39"
+      },
+      "subtopics": [
+        {
+          "id": "electronics.semiconductors",
+          "name": "Conductors, semiconductors and insulators",
+          "syllabus": {
+            "waec": "H8",
+            "jamb": "39(i)-(ii), (iv)"
+          },
+          "covers": "Conductors, semiconductors and insulators told apart by band theory and the band gap (UTME 2025 Q38), intrinsic semiconductors such as silicon and germanium, electrons and holes as charge carriers, doping, and n-type and p-type semiconductors. Sorting rule: ohmic and non-ohmic conductors on a current-voltage graph go to current-electricity.ohms-law.",
+          "taught_in": []
+        },
+        {
+          "id": "electronics.diodes",
+          "name": "The junction diode and rectification",
+          "syllabus": {
+            "waec": "H8",
+            "jamb": "39(iii), (v)"
+          },
+          "covers": "The p-n junction, forward and reverse bias, the depletion layer (UTME 2025 Q39), diode characteristics, and half-wave and full-wave rectification.",
+          "taught_in": []
+        },
+        {
+          "id": "electronics.transistors",
+          "name": "The transistor",
+          "syllabus": {
+            "waec": null,
+            "jamb": "39(iii), (v)"
+          },
+          "covers": "The transistor, its three terminals, and its use as a switch and as an amplifier (UTME 2025 Q40).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    }
+  ],
+  "legacy_note": "Each of the 133 legacy database topics is folded into a subtopic where its name is specific, or into a parent topic where it is generic: a bare subject area (Mechanics, Electricity, Waves, Modern Physics), a name that repeats a parent (Heat transfer, Thermal expansion, Optical instruments), or a name that spans two or more subtopics (Equilibrium and moments, Refraction and critical angle, Radioactive decay). A question moved to a parent is correct but unplaced within it, and is flagged for reclassification rather than guessed into a subtopic. Four calls need a reviewer's eye. Doppler effect is specific but neither syllabus nor the 2025 papers name it, so it goes to the sound parent and no subtopic was made for it until a real paper tests it. Resonance spans mechanical, sound and a.c. resonance; it goes to the sound parent, where most Nigerian resonance questions (the resonance tube) land. Pressure in gases goes to the gas-laws parent, though some of its questions may be atmospheric pressure or a gas pressure read on a manometer, which since 1.1 belong to fluids.atmospheric. Radiation types comparison goes to nucleus.radiations on the reading that it means alpha, beta and gamma; any electromagnetic spectrum questions under it will need moving.",
+  "legacy_to": {
+    "AC circuit basics": "ac-circuits",
+    "Alpha particle scattering": "atom.models",
+    "Alternating current": "ac-circuits",
+    "Anomalous expansion of water": "expansion.liquids",
+    "Archimedes' principle": "fluids.archimedes",
+    "Atomic emission spectra": "atom.energy-levels",
+    "Atomic structure": "atom",
+    "Bernoulli's principle": "fluids.flow",
+    "Binding energy": "nucleus.binding-energy",
+    "Boyle's law application": "gas-laws.boyle",
+    "Calorimetry mixing": "heat-capacity.mixtures",
+    "Capacitance": "capacitors.capacitance",
+    "Capacitors in series": "capacitors.combinations",
+    "Centripetal force": "circular-motion.centripetal",
+    "Circular motion": "circular-motion",
+    "Combined gas law": "gas-laws.general",
+    "Conservation of energy": "energy.forms-conservation",
+    "Convection currents": "heat-transfer.modes",
+    "Critical angle and TIR": "refraction.tir",
+    "Current and charge": "current-electricity.current-charge",
+    "Current electricity": "current-electricity",
+    "Diffraction": "waves.properties",
+    "Diode characteristics": "electronics.diodes",
+    "Distance vs displacement": "vectors.position",
+    "Doppler effect": "sound",
+    "Dynamics and Newton's laws": "newtons-laws",
+    "Efficiency of machines": "machines.ma-vr-efficiency",
+    "Electric circuits": "current-electricity",
+    "Electric field strength": "electrostatics.field-potential",
+    "Electric power dissipation": "electrical-energy.power",
+    "Electrical power": "electrical-energy.power",
+    "Electricity": "current-electricity",
+    "Electromagnetic induction": "induction",
+    "Electromagnetic spectrum": "em-waves.spectrum",
+    "Electromagnetism": "magnetic-force",
+    "Electronics": "electronics",
+    "Electrostatics": "electrostatics",
+    "Energy in capacitors": "capacitors.energy",
+    "Equations of motion": "motion.equations",
+    "Equilibrium and moments": "equilibrium",
+    "Experimental error analysis": "measurement.errors",
+    "Experimental techniques": "measurement",
+    "Friction and Newton's laws": "friction",
+    "Gas law applications": "gas-laws",
+    "Graph analysis": "measurement",
+    "Graph slope interpretation": "measurement.graphs",
+    "Gravitational field": "gravitation",
+    "Gravitational potential energy": "energy.pe-ke",
+    "Half-life with activity": "nucleus.half-life",
+    "Heat capacity": "heat-capacity.specific",
+    "Heat transfer": "heat-transfer",
+    "Heat transfer rate": "heat-transfer.conductivity",
+    "Hooke's Law and elasticity": "elasticity.hookes-law",
+    "Hydraulic press": "fluids.liquid-pressure",
+    "Impulse and momentum change": "newtons-laws.momentum-impulse",
+    "Induced current direction": "induction.laws",
+    "Interference": "waves.superposition",
+    "Isotopes": "nucleus.composition",
+    "Kinematics of linear motion": "motion",
+    "Kinetic energy calculation": "energy.pe-ke",
+    "Kinetic theory of gases": "matter.kinetic-theory",
+    "Kirchhoff's current law": "current-electricity.resistors",
+    "Laws of reflection": "reflection.plane",
+    "Lens combinations": "lenses.formula",
+    "Lens magnification": "lenses.formula",
+    "Lenz's Law": "induction.laws",
+    "Light and reflection": "reflection",
+    "Magnetic fields": "magnetism.fields",
+    "Magnetic flux": "magnetism.fields",
+    "Mechanical advantage": "machines.ma-vr-efficiency",
+    "Mechanics": "motion",
+    "Mirror formula application": "reflection.mirror-formula",
+    "Modern Physics": "atom",
+    "Moment of force": "equilibrium.moments",
+    "Momentum and collisions": "newtons-laws.conservation",
+    "Motor effect": "magnetic-force.conductor",
+    "Newton's laws with inclined plane": "newtons-laws.second-law",
+    "Newton's third law": "newtons-laws.third-law",
+    "Nuclear radiation properties": "nucleus.radiations",
+    "Nuclear reactions": "nucleus.fission-fusion",
+    "Ohm's Law applications": "current-electricity.ohms-law",
+    "Optical instruments": "optical-instruments",
+    "Pendulum period": "shm.pendulum-spring",
+    "Photoelectric effect": "atom.photoelectric",
+    "Photoelectric effect threshold": "atom.photoelectric",
+    "Photon energy": "atom.energy-levels",
+    "Physical quantities and units": "measurement.quantities-units",
+    "Power and energy": "energy",
+    "Precision and accuracy": "measurement.errors",
+    "Pressure in fluids": "fluids",
+    "Pressure in gases": "gas-laws",
+    "Principle of moments": "equilibrium.moments",
+    "Projectile motion": "motion.projectiles",
+    "Radiation types comparison": "nucleus.radiations",
+    "Radioactive decay": "nucleus",
+    "Radioactivity": "nucleus",
+    "Refraction and critical angle": "refraction",
+    "Refraction and lenses": "refraction",
+    "Relative density": "fluids.density",
+    "Relative velocity": "vectors.relative-velocity",
+    "Resistance and temperature": "current-electricity.resistivity",
+    "Resistivity": "current-electricity.resistivity",
+    "Resonance": "sound",
+    "SI units conversion": "measurement.quantities-units",
+    "Satellite orbital velocity": "gravitation.satellites",
+    "Series circuits": "current-electricity.resistors",
+    "Series vs parallel circuits": "current-electricity.resistors",
+    "Simple harmonic motion": "shm",
+    "Simple harmonic motion energy": "shm.energy",
+    "Sound intensity": "sound.characteristics",
+    "Sound properties": "sound",
+    "Sound waves": "sound",
+    "Specific latent heat": "change-of-state.latent-heat",
+    "States of matter properties": "matter.particles",
+    "Streamline vs turbulent flow": "fluids.flow",
+    "Superposition of waves": "waves.superposition",
+    "Thermal conductivity": "heat-transfer.conductivity",
+    "Thermal equilibrium": "temperature.concept",
+    "Thermal expansion": "expansion",
+    "Thermal stress and expansion": "expansion.applications",
+    "Thermodynamics": "temperature",
+    "Transformer efficiency": "induction.transformers",
+    "Transistor as switch": "electronics.transistors",
+    "Uniform circular motion": "circular-motion",
+    "Vectors": "vectors",
+    "Velocity ratio and efficiency": "machines.ma-vr-efficiency",
+    "Vernier caliper reading": "measurement.instruments",
+    "Wave properties": "waves.properties",
+    "Wave speed in media": "waves",
+    "Wave types identification": "waves.types",
+    "Waves": "waves",
+    "Wheatstone bridge": "current-electricity.bridges",
+    "Work energy and power": "energy"
+  },
+  "merged_into": {}
+}

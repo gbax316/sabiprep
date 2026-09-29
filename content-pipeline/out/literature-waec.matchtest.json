@@ -1,0 +1,153 @@
+{
+  "slug": "literature-waec",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cost_usd": 1.64,
+  "agree_subtopic": 77,
+  "agree_topic": 78,
+  "nofit": 2,
+  "disagreements": [
+    {
+      "year": 2020,
+      "q_number": 19,
+      "stem": "Which of the following is written by an African playwright?",
+      "sonnet": "literature.history",
+      "opus": "set-drama.setting",
+      "notes": [
+        "tests recognition of a play's authorship/nationality (which title is by an African playwright); no subtopic covers general knowledge of works and authors outside the prescribed lists. literature.history's 'canon' language is the closest parent but does not cover this.",
+        "Tests which listed play has an African playwright, across four titles from different lists and genres (Lonely Days is a novel). Placed under the playwright's background; also fits literature.history as general knowledge of authors and works. No subtopic holds knowledge of the prescribed list itself."
+      ]
+    },
+    {
+      "year": 2020,
+      "q_number": 15,
+      "stem": "A short poem with a witty or sarcastic ending is a/an",
+      "sonnet": "poetry.types",
+      "opus": "figures.arrangement",
+      "notes": [
+        "naming epigram as a short poem type; see taxonomy finding on epigram's missing entry in poetry.types covers",
+        "Epigram asked as a kind of short poem. Epigram is listed only under figures.arrangement; as a kind of poem it would belong in poetry.types, which does not list it."
+      ]
+    },
+    {
+      "year": 2020,
+      "q_number": 5,
+      "stem": "The underlined words illustrate",
+      "sonnet": "figures.comparison",
+      "opus": "figures.contrast",
+      "notes": [
+        "metonymy (pen/words standing for power)",
+        "Answer inferred as hyperbole; if metonymy it moves to figures.comparison."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "literature.history",
+        "detail": "Q6 tests recognition of a literary work's authorship and nationality (which title is by an African playwright), general literary knowledge that real papers test but no subtopic covers. literature.history's canon language is the closest parent, but its covers line is about the vocabulary of criticism, not identifying specific works or authors. A subtopic for general knowledge of major authors and works outside the prescribed lists is missing under the literature parent."
+      },
+      {
+        "kind": "missing",
+        "where": "prose.types",
+        "detail": "Q40 tests utopia (an ideal society) as a kind of fiction, the same category of thing as the gothic, historical, sociological, political and science fiction novel kinds already listed in prose.types' covers line, but utopia/dystopia is absent from it and from terms.modes."
+      },
+      {
+        "kind": "missing",
+        "where": "shakespeare",
+        "detail": "The shakespeare parent has no tone-mood subtopic, unlike set-poems (set-poems.tone-mood) and unlike appreciation (appreciation.tone-mood). Questions asking a Shakespearean extract's speaker's attitude toward the addressee (Q5) or the cause of a speaker's mood (Q20, Q33) have no clean home and must be folded into shakespeare.characters under motives, blurring a boundary that is kept sharp for prescribed poems and unseen passages."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "poetry.types",
+        "detail": "Q17 asks for epigram as a short poem type (options ballad, allegory, epigram, panegyric, all poem-type words). Epigram is listed only under figures.arrangement, as a rhetorical device, and is absent from poetry.types' covers line even though epigram is also a recognised short poetic form alongside epitaph, hymn and ballad, which are listed there. The covers lines do not say which subtopic wins when epigram is tested as a poem type versus as a quoted device (Q75, correctly figures.arrangement)."
+      },
+      {
+        "kind": "overlap",
+        "where": "figures.comparison",
+        "detail": "Q65 ('in the poem, cupid is') mixes a figure-recognition option (allusion, metonymy) with content-reading options (the persona's mistress, the persona's rival). The taxonomy's own how_to_use rule says a quoted-line figure question 'needs the answer key' to place correctly, but no answer key was available for this placement, so figures.comparison and appreciation.meaning are equally defensible without it."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "how_to_use",
+        "detail": "The first placement rule sends a figure question to the correct answer's home, but the input carries no answer key. Q14, Q15, Q18, Q29, Q61 and Q77 were placed on inferred answers, and Q29, Q61 and Q77 change parent (comparison or contrast) if the inference is wrong. The rule cannot run without the key."
+      },
+      {
+        "kind": "overlap",
+        "where": "figures.arrangement",
+        "detail": "Epigram is listed only as a figure of arrangement, but Q17 asks for it as a kind of short witty poem, which is poetry.types by that subtopic's own logic. Add epigram to poetry.types and a rule: a saying inside a text stays in figures.arrangement, a kind of poem goes to poetry.types."
+      },
+      {
+        "kind": "missing",
+        "where": "poetry.versification",
+        "detail": "Terza rima (Q7) is in no covers line, and the border between stanza forms (versification: couplet, quatrain) and fixed forms (types: haiku, limerick, sonnet) is not ruled for forms defined by their rhyme scheme, such as terza rima, heroic couplet and ottava rima."
+      },
+      {
+        "kind": "missing",
+        "where": "prose.types",
+        "detail": "Utopia and dystopia (Q40) have no home. Add them to prose.types as kinds of fiction, with a rule excluding terms.modes."
+      },
+      {
+        "kind": "overlap",
+        "where": "shakespeare.plot",
+        "detail": "The speaker rules cover who speaks the extract (characters) and who speaks next (plot), but not who speaks before it (Q31). Say whether the previous speaker is plot or characters."
+      },
+      {
+        "kind": "overlap",
+        "where": "terms.plot",
+        "detail": "Naming the plot stage an extract from a prescribed play belongs to (Q50, Othello Act V) goes to terms.plot by rule one, but the skill tested is knowing where the extract sits in the play. Add a rule for 'this stage of the play is' questions."
+      },
+      {
+        "kind": "overlap",
+        "where": "drama.techniques",
+        "detail": "Q67 calls a Tempest situation 'ironical'. Dramatic irony lives in drama.techniques, verbal irony in figures.contrast, and shakespeare.style claims descriptions of an extract. The answer-home rule fails when the answer word does not say which irony; add a rule that an ironical situation in a play is dramatic irony."
+      },
+      {
+        "kind": "overlap",
+        "where": "appreciation.tone-mood",
+        "detail": "Q53 asks what the poet is being across a whole unseen poem, with figure adjectives as options (ironic, hyperbolic, sarcastic). The figure rule needs a quoted line, the tone rule needs feeling words; neither decides. Add a rule for manner-of-writing questions with no quoted line."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "appreciation.meaning",
+        "detail": "No appreciation subtopic mentions the setting of an unseen passage (Q56, time of day), though shakespeare, set-drama and set-prose all have setting subtopics. Add setting to appreciation.meaning's covers line."
+      },
+      {
+        "kind": "overlap",
+        "where": "figures.arrangement",
+        "detail": "The climax rule splits a rising series inside one sentence (figures.arrangement) from the peak of a story's events (terms.plot). Q18 is both: one long sentence whose last clause is the peak of the narrated events. Say which wins."
+      },
+      {
+        "kind": "missing",
+        "where": "set-drama",
+        "detail": "Q6 asks which of four titles has an African playwright; the titles are from different lists, and one is a novel. No subtopic holds knowledge of authors and titles across the prescribed list; set-drama.setting (playwright's background) and literature.history both half-fit."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "poetry.imagery",
+        "detail": "Persona is homed only under poetry, but Q13 asks for 'the character assumed by the author in his writing' with no genre. Either widen the covers line to say persona in any genre comes here, or give it a general home in terms.character."
+      },
+      {
+        "kind": "missing",
+        "where": "shakespeare",
+        "detail": "No shakespeare subtopic covers tone, mood or a speaker's attitude, though set-poems and appreciation each have one. Q5 (attitude toward addressee) went to shakespeare.characters as a relationship; the covers line should say so explicitly."
+      }
+    ]
+  }
+}

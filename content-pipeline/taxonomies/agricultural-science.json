@@ -1,0 +1,2273 @@
+{
+  "subject": "Agricultural Science",
+  "version": "1.1",
+  "status": "proposal",
+  "why": "First tree for Agricultural Science. Parent topics follow the WAEC syllabus's own numbered topics, which are finer than JAMB's, and JAMB topics are merged into them where both name the same content. JAMB-only topics (ecological zones, genetics and cell division, farm inputs, plant reproduction, cropping systems, tillage, terminology, wildlife, processing and storage, biotechnology, ICT, research and statistics) have their own subtopics citing JAMB alone. Subtopics follow each syllabus's sub-areas at the grain of one lesson with one skill; crop husbandry, crop diseases and animal diseases are split by crop group or pathogen group because that is how both syllabi and the scheme of work list them and how real questions are answered. All 50 items of the WASSCE 2025 objective paper were placed against the tree while building it, and sorting rules were written on every border those items touched. No UTME paper was supplied, so JAMB placements are untested. The live database holds no Agricultural Science topics, so there is nothing to fold. Nothing in the database is changed by this file. Version 1.1 revises 1.0 from its coverage map and from a placement test of 80 WASSCE questions (2022 to 2025): it widens covers lines where coverage items or real questions had no named home, and adds sorting rules on every border the two models split on. No subtopic is added or merged, so every 1.0 id and placement stays valid; changelog 1.1 lists each change and its evidence.",
+  "source": {
+    "documents": [
+      {
+        "exam": "WASSCE",
+        "document": "WAEC Agricultural Science examination syllabus, WASSCE, theory sections A to I and the practical syllabus",
+        "retrieved_from": "https://waecsyllabus.com/download/ssce/AGRICULTURAL%20SCIENCE.pdf",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party mirror, not fetched from a WAEC domain. References such as B.8(d) are to the theory syllabus; references beginning Practical are to the practical syllabus that follows it."
+      },
+      {
+        "exam": "UTME",
+        "document": "JAMB UTME Agricultural Science syllabus, sections A to E, labelled 2026/2027",
+        "retrieved_from": "https://allschool.ng/jamb-syllabus-for-agriculture/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Third-party reproduction, topic list confirmed against jamb-gov.org's copy with the same five sections and numbering."
+      },
+      {
+        "exam": "Scheme of work",
+        "document": "Senior secondary Agricultural Science scheme of work, SS1 to SS3, NAPPS unified scheme (NERDC-based)",
+        "retrieved_from": "https://edudelight.com/agricultural-science-scheme-of-work-napps-ss1-ss3/",
+        "retrieved_on": "2026-09-29",
+        "provenance_note": "Cross-checked against ecolebooks.com. SS3 Term 3 has no new content; SS2 Term 1 ends at week 10 in the source."
+      }
+    ],
+    "scope_rule": "The WAEC syllabus draws all three papers from the whole syllabus, but its practical syllabus is written as separate content. The real 2025 objective paper tested practical content directly: soil moisture content worked from masses (Q11 to Q13), a sieve used for texture (Q15 and Q16), parts of the hand fork (Q7), and a brooding heater (Q5 and Q6). So the practical syllabus is placed in the tree alongside the theory. The same paper also tested content the WAEC syllabus does not name but real questions need a home for: a hygrometer for relative humidity (Q4), plantation agriculture (Q27), seasonality of produce (Q2), seed dormancy (Q30), brooding and poultry floor space (Q5, Q6, Q41) and the area of a farm plot (Q28). Each has a home, some citing JAMB, whose syllabus names them, and the covers line says a real paper tests it. Scabies is listed by WAEC among fungal livestock diseases; it is caused by mites, so it is placed with ectoparasites, and the covers line says so. The 2022 to 2025 papers used in the placement test also tested photoperiodism, sugar cane by-products (2024 Q22), cover crop species (2023 Q30), egg and tray sums, and farm gate prices, none of which version 1.0 named in a covers line; each now has a named home."
+  },
+  "how_to_use": "Place a question by what a student must know to answer it, not by words in the stem. A question that shows a maize cob but asks which fungus spoils damp grain in store goes under storage, not under cereals. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins. Where a question names a crop, pest, disease or animal, the named thing usually decides the subtopic, and the covers lines say where it does not.",
+  "topics": [
+    {
+      "id": "agriculture",
+      "name": "Meaning and importance of agriculture",
+      "part": "General agriculture",
+      "syllabus": {
+        "waec": "A.1, A.3, B.4",
+        "jamb": "A.1, A.2, A.6(a)"
+      },
+      "subtopics": [
+        {
+          "id": "agriculture.meaning",
+          "name": "Definition and branches of agriculture",
+          "syllabus": {
+            "waec": "A.1(a)",
+            "jamb": "A.1(a)-(b)"
+          },
+          "covers": "What agriculture and agricultural science are, and the branches: crop science, animal science, soil science, agricultural economics and extension, agricultural engineering, forestry, fisheries and others. Sorting rule: which branch a named activity belongs to goes here.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "agriculture.importance",
+          "name": "Importance of agriculture",
+          "syllabus": {
+            "waec": "A.1(b)",
+            "jamb": "A.2"
+          },
+          "covers": "What agriculture gives the individual, the community and the nation: food, employment, income, foreign exchange, raw materials, rural development. Sorting rule: the named raw material an industry uses, and how agriculture and industry depend on each other, go to agriculture.agro-industry; the importance of exporting produce goes to marketing.export.",
+          "taught_in": []
+        },
+        {
+          "id": "agriculture.subsistence-commercial",
+          "name": "Subsistence and commercial agriculture",
+          "syllabus": {
+            "waec": "A.3",
+            "jamb": "A.1(c)"
+          },
+          "covers": "The meaning of subsistence and commercial agriculture, their characteristics and differences, their advantages, disadvantages and problems. Sorting rule: plantation agriculture, shifting cultivation and other named farming systems go to agriculture.farming-systems, even when they are commercial.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "agriculture.farming-systems",
+          "name": "Farming systems",
+          "syllabus": {
+            "waec": "B.1 notes",
+            "jamb": "A.6(a)"
+          },
+          "covers": "Shifting cultivation, bush fallowing, continuous cropping, mixed farming, pastoral and nomadic herding, ley farming and plantation agriculture, with their features, advantages and disadvantages. Real papers test it (WASSCE 2025 Q27, plantation agriculture). Sorting rule: a whole system of farming goes here; how crops are arranged on the land (sole, mixed, inter, relay, strip cropping, crop rotation) goes to cultivation.cropping-systems; taungya and alley cropping go to forestry.agroforestry; the farming system a named government programme promoted, such as mixed farming in farm settlement schemes, goes to government.programmes.",
+          "taught_in": []
+        },
+        {
+          "id": "agriculture.agro-industry",
+          "name": "Agro-allied industries",
+          "syllabus": {
+            "waec": "B.4",
+            "jamb": "A.2(i)"
+          },
+          "covers": "Agro-based industries and their raw materials (paper and pulpwood, beverages and cocoa, textiles and cotton, soap and oil seeds, leather and hides, canning and meat or fish), and how agriculture and industry depend on each other. Sorting rule: which raw material feeds which industry goes here; general importance of agriculture goes to agriculture.importance; a product or by-product obtained by processing a crop, such as molasses from sugar cane, goes to processing-storage.processing.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "development",
+      "name": "Agricultural development",
+      "part": "General agriculture",
+      "syllabus": {
+        "waec": "A.2",
+        "jamb": "A.5, A.6(b)-(c)"
+      },
+      "subtopics": [
+        {
+          "id": "development.problems",
+          "name": "Problems of agricultural development and solutions",
+          "syllabus": {
+            "waec": "A.2",
+            "jamb": "A.6(b)"
+          },
+          "covers": "Problems of land tenure, basic amenities, finance, transport, storage and processing, education and extension, tools and machinery, farm inputs, marketing, environmental degradation, pests and diseases, weather, labour and government policy, and their possible solutions. Sorting rule: a problem asked as a problem of agricultural development in general goes here; problems of one area asked for their own sake go to that area, such as extension.problems, marketing.problems, finance.credit-problems or mechanization.mechanization.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "development.institutes",
+          "name": "Agricultural research institutes and science in agriculture",
+          "syllabus": {
+            "waec": "A.5 notes",
+            "jamb": "A.6(c)"
+          },
+          "covers": "The roles of science, technology and research in agricultural development, and national and international research institutes (NCRI, IAR, IAR&T, CRIN, NIFOR, FRIN, RRIN, NRCRI, NIHORT, LCRI, IITA, ILRI, ICRISAT, WARDA), their mandate crops or animals and where they are. Real papers test it (WASSCE 2025 Q3). Sorting rule: which institute researches which crop, or why research matters, goes here; the role of NGOs in general goes to government.ngos, even though WAEC lists IITA and WARDA among NGOs; how an experiment is designed goes to agric-research.experiments; a question whose options are the aims of improving a crop (higher yield, resistance, early maturity) goes to crop-improvement.aims even when the stem asks why research matters.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "development.farm-inputs",
+          "name": "Farm inputs",
+          "syllabus": {
+            "waec": "A.2(a)(viii)",
+            "jamb": "A.5"
+          },
+          "covers": "Classifying farm inputs (planting materials, agrochemicals, fertilizers, feeds, tools, machinery, labour) and their uses. Sorting rule: what counts as a farm input and what it is for goes here; the high cost or scarcity of inputs as a problem goes to development.problems; a named fertilizer or pesticide goes to its own subtopic.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "government",
+      "name": "Roles of government and NGOs",
+      "part": "General agriculture",
+      "syllabus": {
+        "waec": "A.4, A.5",
+        "jamb": "A.6(d)-(e), A.7"
+      },
+      "subtopics": [
+        {
+          "id": "government.roles",
+          "name": "Roles of government in agricultural development",
+          "syllabus": {
+            "waec": "A.4(a)-(c)",
+            "jamb": "A.7(a), A.7(c)-(d)"
+          },
+          "covers": "What government does for agriculture: credit and subsidy, agricultural education, extension services, fiscal policies such as import duties and bans on importation, and infrastructure such as roads and communication. Sorting rule: a named programme or project goes to government.programmes; how a subsidy changes price and output goes to demand-supply.price-policy; sources and classes of credit go to finance.credit; land laws go to land.land-use-act.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "government.programmes",
+          "name": "Agricultural policies and programmes",
+          "syllabus": {
+            "waec": "A.4(d)",
+            "jamb": "A.6(d)-(e)"
+          },
+          "covers": "Past and present national programmes and projects: OFN, NAFPP, Green Revolution, NALDA, NARP, ASRP, farm settlements, River Basin Development Authorities, ADPs, RTEP, FADAMA and the PCU, what each set out to do, the farming system or practice each promoted, and their contributions. Sorting rule: what a named programme is or aimed at goes here; the farming system a named programme promoted, such as mixed farming in farm settlement schemes, goes here, not to agriculture.farming-systems, because the student must know the programme (WASSCE 2023 Q3); an ADP asked about as an agency that carries extension to farmers goes to extension.meaning.",
+          "taught_in": []
+        },
+        {
+          "id": "government.ngos",
+          "name": "Non-governmental organisations in agriculture",
+          "syllabus": {
+            "waec": "A.5",
+            "jamb": "A.7(e)"
+          },
+          "covers": "The meaning of NGOs and their roles in agricultural development: funding, training, research, input supply. Sorting rule: an organisation asked about as an NGO goes here; which crop a research institute works on goes to development.institutes.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "land",
+      "name": "Land, land tenure and land laws",
+      "part": "General agriculture",
+      "syllabus": {
+        "waec": "A.7, B.2, B.3",
+        "jamb": "A.7(b), D.1(a)"
+      },
+      "subtopics": [
+        {
+          "id": "land.uses",
+          "name": "Meaning, characteristics and uses of land",
+          "syllabus": {
+            "waec": "B.2",
+            "jamb": "D.1(a) objectives i, iv"
+          },
+          "covers": "The meaning of land, its characteristics (free gift of nature, immobile, fixed in supply, varied in quality), and its agricultural uses (crops, livestock, aquaculture, forestry, apiculture, wildlife) and non-agricultural uses (industry, housing, transport, schools, markets, worship, recreation, mining). Sorting rule: the characteristics of land go here even when land is called a factor of production; land listed among the factors of production, or its reward, goes to economics.factors; game reserves as wildlife management go to fisheries.wildlife.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "land.availability",
+          "name": "Factors affecting land availability",
+          "syllabus": {
+            "waec": "B.3",
+            "jamb": null
+          },
+          "covers": "Physical factors (soil type, topography, land degradation, soil pollution), economic factors (population pressure, industry, mining, tourism) and socio-cultural factors (land tenure, religious use) that limit land for farming. Sorting rule: land tenure as a limit on the land a farmer can get goes here only when the question asks what limits land availability; the kinds of tenure go to land.tenure.",
+          "taught_in": []
+        },
+        {
+          "id": "land.tenure",
+          "name": "Land tenure systems",
+          "syllabus": {
+            "waec": "A.7(a)",
+            "jamb": "D.1(a)(i)"
+          },
+          "covers": "Ways land is held in West Africa: communal, inheritance, leasehold, freehold, gift, pledge, rent, purchase, tenancy and government ownership, with the advantages and disadvantages of each and their effect on farming. Sorting rule: the Land Use Act and the certificate of occupancy go to land.land-use-act.",
+          "taught_in": []
+        },
+        {
+          "id": "land.land-use-act",
+          "name": "Land Use Act and land reforms",
+          "syllabus": {
+            "waec": "A.7(b)-(c)",
+            "jamb": "A.7(b)"
+          },
+          "covers": "Government laws on land use in West Africa, the Land Use Act (Decree) of 1978, the certificate of occupancy and its term, land reforms, and their advantages and disadvantages. Real papers test it (WASSCE 2025 Q1).",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "ecology",
+      "name": "Agricultural ecology",
+      "part": "Agricultural ecology and soil",
+      "syllabus": {
+        "waec": "B.1, B.5, B.12",
+        "jamb": "A.3"
+      },
+      "subtopics": [
+        {
+          "id": "ecology.agro-ecosystem",
+          "name": "Agro-ecosystem and its components",
+          "syllabus": {
+            "waec": "B.1",
+            "jamb": "A.3(c) objective iii"
+          },
+          "covers": "The meaning of agricultural ecology and ecosystem, biotic and abiotic components, autotrophs and heterotrophs, and how crops and animals interact with other components in terrestrial and aquatic agro-ecosystems such as a sole crop, mixed crops, mixed farming, a fish pond and a forest. Sorting rule: classifying a factor as biotic, abiotic, climatic or edaphic goes here; what a named climatic factor does goes to ecology.climatic; what a soil property is goes to its soil subtopic.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "ecology.zones",
+          "name": "Ecological zones of West Africa",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.3(a)-(b)"
+          },
+          "covers": "The ecological zones (mangrove swamp, rain forest, derived savanna, Guinea, Sudan and Sahel savanna, montane), their features, and the crops and animals typical of each. Sorting rule: which crop or animal belongs to a zone goes here; natural grasslands and their dominant pasture species go to pasture.types.",
+          "taught_in": []
+        },
+        {
+          "id": "ecology.climatic",
+          "name": "Climatic factors in crop and animal production",
+          "syllabus": {
+            "waec": "B.5(a)",
+            "jamb": "A.3(c)"
+          },
+          "covers": "Rainfall, temperature, light (intensity, quality and day length, including photoperiodism: short-day, long-day and day-neutral crops and how day length controls flowering), wind and relative humidity: how each affects the distribution and production of crops, and the instruments that measure them (rain gauge, thermometer, hygrometer, wind vane, anemometer, sunshine recorder). Real papers test the instruments (WASSCE 2025 Q4) and photoperiodism. Sorting rule: a climatic factor's effect on crops, including a crop's flowering response to day length, or the instrument that measures it, goes here; its effect on an animal's growth, reproduction, milk or egg output goes to anatomy.environmental-physiology; the edaphic factors WAEC lists in B.5(c) go to their soil subtopics.",
+          "taught_in": [
+            "SS1 T1",
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "ecology.biotic",
+          "name": "Biotic factors and interrelationships",
+          "syllabus": {
+            "waec": "B.5(b)",
+            "jamb": "A.3(c)"
+          },
+          "covers": "Predators, parasites, soil organisms, pests, pathogens and weeds as factors affecting production, and interrelationships among them: competition, parasitism, mutualism (symbiosis) and commensalism, such as Rhizobium in legume nodules. Sorting rule: a relationship between organisms goes here; a named pest, disease or weed goes to its crop protection subtopic; nitrogen fixation as a stage of the cycle goes to soil-fertility.cycles; soil organisms' role in fertility goes to soil.composition; a question that shows nodulated legume roots and asks which fertilizer the crop does not need goes to soil-fertility.fertilizers.",
+          "taught_in": []
+        },
+        {
+          "id": "ecology.pollution",
+          "name": "Agricultural pollution",
+          "syllabus": {
+            "waec": "B.12",
+            "jamb": "A.6(b)"
+          },
+          "covers": "The meaning of agricultural pollution, its sources (excess agrochemicals, oil spillage, livestock waste and dung), its effects on farmers, land and fish ponds, and ways of preventing or reducing it, including organic farming. Real papers test it (WASSCE 2025 Q19). Sorting rule: a question whose stem is about pollution goes here whatever the answer; side effects of a pesticide or control method named as crop protection go to crop-pests.control; the meaning and importance of organic agriculture as a way of keeping soil fertile go to soil-fertility.maintenance.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1",
+        "SS1 T2",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "soil-formation",
+      "name": "Rocks and soil formation",
+      "part": "Agricultural ecology and soil",
+      "syllabus": {
+        "waec": "B.6, B.7, Practical A.2-3",
+        "jamb": "B.1(a), B.1(b)(i)"
+      },
+      "subtopics": [
+        {
+          "id": "soil-formation.rocks",
+          "name": "Types and formation of rocks",
+          "syllabus": {
+            "waec": "B.6, Practical A.3",
+            "jamb": "B.1(a)"
+          },
+          "covers": "Igneous, sedimentary and metamorphic rocks, how each forms, their features (such as strata in sedimentary rock), and examples (granite, basalt, gabbro, limestone, sandstone, marble, quartzite, slate). Real papers test it (WASSCE 2025 Q9). Sorting rule: which rock a feature or example belongs to goes here; how rock breaks down into soil goes to soil-formation.weathering.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "soil-formation.weathering",
+          "name": "Weathering and factors of soil formation",
+          "syllabus": {
+            "waec": "B.7(a)-(b)",
+            "jamb": "B.1(a)"
+          },
+          "covers": "Physical, chemical and biological weathering and their agents (temperature change, water, wind, hydrolysis, oxidation, carbonation, organisms), and the factors of soil formation: parent material, climate, organisms, topography and time, with the role each plays.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "soil-formation.profile",
+          "name": "Soil profile",
+          "syllabus": {
+            "waec": "B.7(c), Practical A.2",
+            "jamb": "B.1(b)(i)"
+          },
+          "covers": "The meaning and importance of the soil profile, and the identification and features of each horizon (O, A, B, C and bedrock): topsoil, subsoil, parent material, organic matter and structure at each level. Real papers test it (WASSCE 2025 Q14). Sorting rule: in which horizon a feature is found goes here, even when the feature is a structure or texture.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "soil",
+      "name": "Soil types, composition and properties",
+      "part": "Agricultural ecology and soil",
+      "syllabus": {
+        "waec": "B.8, Practical A.1, A.4, A.5(a)",
+        "jamb": "B.1(b)-(c), B.2(a)"
+      },
+      "subtopics": [
+        {
+          "id": "soil.texture",
+          "name": "Soil types and texture",
+          "syllabus": {
+            "waec": "B.8(a), B.8(d)(i), Practical A.1, A.4(a)",
+            "jamb": "B.1(b)(ii)"
+          },
+          "covers": "Sandy, clay and loamy soils and their properties, particle sizes of sand, silt and clay, texture by feel, and mechanical analysis by sedimentation, sieves and the hydrometer, including computing the proportion of each fraction. Real papers test it (WASSCE 2025 Q15 and Q16). Sorting rule: particle size, soil type or separating soil into fractions goes here; how particles are grouped into aggregates goes to soil.physical.",
+          "taught_in": []
+        },
+        {
+          "id": "soil.physical",
+          "name": "Soil structure and other physical properties",
+          "syllabus": {
+            "waec": "B.8(d)(ii), Practical A.4(b), A.4(f)",
+            "jamb": "B.1(b)(ii)"
+          },
+          "covers": "Soil structure (crumb, granular, platy, prismatic, blocky), porosity, bulk density and total pore space, capillarity, consistency and colour, how each is determined, and their effect on crops. Sorting rule: how much water a soil holds, or its moisture content, goes to soil.water; where in a profile a structure occurs goes to soil-formation.profile.",
+          "taught_in": []
+        },
+        {
+          "id": "soil.water",
+          "name": "Soil water",
+          "syllabus": {
+            "waec": "B.8(b)(ii), Practical A.4(c)-(e)",
+            "jamb": "B.2(a)"
+          },
+          "covers": "Sources, importance and movement of soil water; gravitational, capillary and hygroscopic water, and which is available to plants; field capacity, water holding capacity, wilting point, and available and unavailable water; determining and calculating moisture content from fresh and dry masses; and managing and conserving soil water. Real papers test it (WASSCE 2025 Q10 to Q13). Sorting rule: supplying water by irrigation or removing it by drainage goes to the irrigation topic.",
+          "taught_in": []
+        },
+        {
+          "id": "soil.composition",
+          "name": "Soil composition, organic matter and soil organisms",
+          "syllabus": {
+            "waec": "B.8(b)(iii)-(v)",
+            "jamb": "B.1(c)(ii), B.3(b)"
+          },
+          "covers": "The meaning of soil, the four components of soil (mineral matter, organic matter, water, air), chemical components such as silicates, humus and its importance, soil air, and soil macro-organisms and microbes (earthworms, termites, bacteria, fungi) with their roles in soil fertility. Sorting rule: what soil is, or what a soil organism does to the soil, goes here; the nitrogen-fixing step in the nitrogen cycle goes to soil-fertility.cycles; the nutrients themselves go to soil-fertility.nutrients.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "soil.ph",
+          "name": "Soil pH, acidity and alkalinity",
+          "syllabus": {
+            "waec": "B.8(c), Practical A.5(a)",
+            "jamb": "B.1(c)(i)"
+          },
+          "covers": "The meaning of soil pH, how it is measured (pH meter, indicators), causes of soil acidity and alkalinity, their effects on crops, and their correction by liming or by gypsum and other amendments. Sorting rule: correcting an acid or alkaline soil goes here, even when the answer is liming; the effect of burning or of ash on soil pH goes here; pH listed among the factors that make nutrients unavailable goes to soil-fertility.availability, and burning as a cause of nutrient loss goes there too.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "soil-fertility",
+      "name": "Plant nutrients and soil fertility",
+      "part": "Agricultural ecology and soil",
+      "syllabus": {
+        "waec": "B.9, B.3(a)(iii), Practical A.5(b)-(d)",
+        "jamb": "B.2(b), B.3"
+      },
+      "subtopics": [
+        {
+          "id": "soil-fertility.nutrients",
+          "name": "Plant nutrients and deficiency symptoms",
+          "syllabus": {
+            "waec": "B.9(a)",
+            "jamb": "B.3(a), B.3(d)"
+          },
+          "covers": "Macro-nutrients (N, P, K, Ca, Mg, S) and micro-nutrients (Zn, Fe, Mo, Co, B, Cu, Mn), their functions in crops, their deficiency symptoms (chlorosis, purpling, stunting, sickle leaves, apical necrosis), and the remedy for a deficiency. Real papers test it (WASSCE 2025 Q17). Sorting rule: a question that starts from a symptom or a nutrient's function goes here, even when the answer is a fertilizer; a question that starts from a crop or crop type, such as which fertilizer a nodulated legume does not need, goes to soil-fertility.fertilizers; the kinds of fertilizer and how to apply them go to soil-fertility.fertilizers.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "soil-fertility.availability",
+          "name": "Factors affecting nutrient availability",
+          "syllabus": {
+            "waec": "B.9(b)",
+            "jamb": "B.3(a) objective ii, B.2(b)"
+          },
+          "covers": "What makes nutrients unavailable or lost: soil pH, excess of other nutrients, leaching, crop removal, oxidation of organic matter, burning and continuous cropping. Sorting rule: leaching goes here; burning as a cause of nutrient loss goes here, but the effect of burning or of ash on soil pH goes to soil.ph; erosion by water or wind and its control go to soil-fertility.erosion; correcting an acid soil goes to soil.ph.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "soil-fertility.erosion",
+          "name": "Soil erosion and conservation",
+          "syllabus": {
+            "waec": "B.3(a)(iii)",
+            "jamb": "B.2(b)"
+          },
+          "covers": "The meaning and importance of soil conservation, agents and types of erosion (sheet, rill, gully, splash, wind), their causes and effects, and control by contour ploughing, terracing, strip cropping, cover crops, mulching, windbreaks and afforestation. Sorting rule: erosion or a practice asked about for preventing it goes here; leaching goes to soil-fertility.availability; naming cover crop species goes to soil-fertility.maintenance.",
+          "taught_in": []
+        },
+        {
+          "id": "soil-fertility.maintenance",
+          "name": "Maintaining soil fertility",
+          "syllabus": {
+            "waec": "B.9(c), B.9(e)",
+            "jamb": "B.3(c)"
+          },
+          "covers": "Methods of maintaining and replenishing soil fertility compared: crop rotation, fallowing, cover cropping, manuring, fertilizer use, liming and mulching, and organic agriculture, its meaning and importance. Cover crops themselves: their features and common species (Centrosema pubescens, Mucuna utilis, Calopogonium mucunoides, Pueraria phaseoloides). Real papers test the species (WASSCE 2023 Q30). Sorting rule: a question asking which practice restores or maintains fertility goes here, even when the answer is crop rotation or manure; naming or identifying cover crop species goes here, whether the stem mentions fertility, erosion or weeds; a legume asked about as pasture or forage goes to pasture.species; the sequence and principles of a rotation go to cultivation.cropping-systems; a named fertilizer or manure and how it is made or applied go to soil-fertility.fertilizers.",
+          "taught_in": []
+        },
+        {
+          "id": "soil-fertility.fertilizers",
+          "name": "Fertilizers and manures",
+          "syllabus": {
+            "waec": "B.9 notes, Practical A.5(b), A.5(d)",
+            "jamb": "B.3(c) objectives ii-iii"
+          },
+          "covers": "Organic manures (green manure, farmyard manure, compost, and how compost is made) and inorganic fertilizers (straight and compound, such as urea, ammonium sulphate, single superphosphate, muriate of potash, NPK), fertilizer ratios and grades, methods of application (broadcasting, side placement, ring, band, foliar, top dressing), fertilizer rate calculations, and choosing the fertilizer a crop or crop type needs or does not need. Sorting rule: which fertilizer corrects a named symptom goes to soil-fertility.nutrients; choosing or ruling out a fertilizer for a named crop or crop type goes here, such as no nitrogen fertilizer for a nodulated legume because Rhizobium fixes its nitrogen (WASSCE 2024 Q18), even though the reasoning passes through ecology.biotic and soil-fertility.cycles.",
+          "taught_in": []
+        },
+        {
+          "id": "soil-fertility.cycles",
+          "name": "Nutrient cycles",
+          "syllabus": {
+            "waec": "B.9(d)",
+            "jamb": "B.3(a)"
+          },
+          "covers": "The nitrogen, carbon, water and phosphorus cycles, their stages (fixation, nitrification, denitrification, mineralisation, photosynthesis, respiration, decay), the organisms involved, and their importance to agriculture. Sorting rule: a step of a cycle goes here, including Rhizobium fixing nitrogen; the legume and Rhizobium relationship asked for as a type of association goes to ecology.biotic; the fertilizer a nodulated legume does not need goes to soil-fertility.fertilizers.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "irrigation",
+      "name": "Irrigation and drainage",
+      "part": "Agricultural ecology and soil",
+      "syllabus": {
+        "waec": "B.10, B.11, Practical A.6",
+        "jamb": "B.2(c)"
+      },
+      "subtopics": [
+        {
+          "id": "irrigation.irrigation",
+          "name": "Irrigation",
+          "syllabus": {
+            "waec": "B.10, Practical A.6",
+            "jamb": "B.2(c)"
+          },
+          "covers": "The meaning of irrigation, its types (overhead such as sprinkler; surface such as flooding, furrow, basin and border; underground and drip), their advantages and disadvantages, the importance and problems of irrigation (salinity, waterlogging, cost), and irrigation equipment (watering can, sprinkler, pump, pipes). Real papers test it (WASSCE 2025 Q18).",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "irrigation.drainage",
+          "name": "Drainage",
+          "syllabus": {
+            "waec": "B.11, Practical A.6",
+            "jamb": "B.2(c)"
+          },
+          "covers": "The meaning and importance of drainage, surface drainage (open channels, furrows) and subsurface drainage (tile and pipe drains), and their advantages and disadvantages.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Farm tools, machinery and implements",
+      "part": "Agricultural engineering",
+      "syllabus": {
+        "waec": "C.1, C.2, C.3, Practical B.1-5",
+        "jamb": "E.2, E.3"
+      },
+      "subtopics": [
+        {
+          "id": "tools.simple-tools",
+          "name": "Simple farm and garden tools",
+          "syllabus": {
+            "waec": "C.1, Practical B.1, B.3, B.5",
+            "jamb": "E.2"
+          },
+          "covers": "Identification, parts, uses and maintenance of simple farm and horticultural tools: cutlass, hoe, spade, shovel, rake, hand fork, hand trowel, sickle, scythe, groundnut lifter, secateurs, shears, dibber, pruning and budding knife, wheelbarrow, watering can, and their advantages and disadvantages. Real papers test it (WASSCE 2025 Q7). Sorting rule: care of a simple tool goes here; maintenance of a machine goes to tools.maintenance; equipment for livestock, fish or bees goes to the subtopic of the practice it serves.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "tools.machinery",
+          "name": "Farm machinery",
+          "syllabus": {
+            "waec": "C.2(a), Practical B.3-4",
+            "jamb": "E.3(a)(i)"
+          },
+          "covers": "Identification, main parts and uses of farm machines: the tractor and its components and what it can drive or operate, bulldozer, combine harvester, incubators, and harvesting, processing and storage machines such as shellers, dehuskers, winnowers, graters, dryers and milking machines. Sorting rule: implements pulled by a tractor or animal go to tools.implements; servicing a machine goes to tools.maintenance; identifying an incubator and its parts goes here, but the conditions an incubator must keep go to animal-reproduction.eggs; what a tractor can drive or operate (planters, sprayers, dryers and other machines) goes here as a use of the tractor, while the tractor compared with human, animal and other sources of power goes to mechanization.farm-power.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "tools.implements",
+          "name": "Tractor-coupled and animal-drawn implements",
+          "syllabus": {
+            "waec": "C.2(b), Practical B.2",
+            "jamb": "E.3(a)(ii)"
+          },
+          "covers": "Ploughs (disc and mouldboard), harrows, ridgers, planters, cultivators, harvesters and sprayers: identification, main parts and their functions, and which farm operation each performs. Sorting rule: the order of tillage operations and why they are done go to cultivation.tillage; maintaining an implement goes to tools.maintenance.",
+          "taught_in": []
+        },
+        {
+          "id": "tools.maintenance",
+          "name": "Maintenance of farm machinery and safety",
+          "syllabus": {
+            "waec": "C.3, Practical B.2, B.4",
+            "jamb": "E.3(b)"
+          },
+          "covers": "Reasons for maintaining farm machines and implements, routine maintenance of machines (checking oil, water and tyre pressure, greasing, servicing, cleaning, proper storage), maintenance of tractor-coupled and animal-drawn implements (cleaning after use, greasing moving parts, tightening bolts, replacing worn discs, shares and tines, storing under cover), and precautions in operating farm machinery. Real papers test it (WASSCE 2025 Q8). Sorting rule: depreciation and salvage value as sums go to farm-management.accounts; care of a simple hand tool goes to tools.simple-tools.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3",
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "mechanization",
+      "name": "Agricultural mechanization and farm power",
+      "part": "Agricultural engineering",
+      "syllabus": {
+        "waec": "C.4, C.5, C.6",
+        "jamb": "E.4"
+      },
+      "subtopics": [
+        {
+          "id": "mechanization.mechanization",
+          "name": "Agricultural mechanization",
+          "syllabus": {
+            "waec": "C.4, C.5",
+            "jamb": "E.4(b)-(c)"
+          },
+          "covers": "The meaning of mechanization, mechanized operations (ploughing, harrowing, planting, spraying, harvesting, milking), its advantages, disadvantages and limitations in West Africa, and its prospects and ways of improving it. Sorting rule: a named machine and its parts go to tools.machinery; sources of power go to mechanization.farm-power.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "mechanization.farm-power",
+          "name": "Sources of farm power",
+          "syllabus": {
+            "waec": "C.6",
+            "jamb": "E.4(a)"
+          },
+          "covers": "Human, animal, mechanical, electrical, solar, wind and water power on the farm, and the advantages and disadvantages of each. Sorting rule: the tractor as a source of mechanical power, compared with other sources, goes here; what a tractor can drive or operate, and its parts, go to tools.machinery.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "survey",
+      "name": "Farm surveying and planning",
+      "part": "Agricultural engineering",
+      "syllabus": {
+        "waec": "C.7, C.8, C.9, Practical B.7",
+        "jamb": "E.1"
+      },
+      "subtopics": [
+        {
+          "id": "survey.surveying",
+          "name": "Farm surveying",
+          "syllabus": {
+            "waec": "C.7, Practical B.7",
+            "jamb": "E.1(a)-(c)"
+          },
+          "covers": "The meaning and importance of farm surveying, survey equipment and its use and care (measuring tape, ranging poles, pins or arrows, Gunter's chain, offset staff, plumb bob, prismatic compass, theodolite, pegs), survey methods (chain, compass, levelling), and calculating the area of a surveyed plot. Real papers test the area sum (WASSCE 2025 Q28). Sorting rule: the number of plants a plot will hold goes to cultivation.planting-patterns.",
+          "taught_in": [
+            "SS2 T1"
+          ]
+        },
+        {
+          "id": "survey.farm-planning",
+          "name": "Farm planning",
+          "syllabus": {
+            "waec": "C.8",
+            "jamb": null
+          },
+          "covers": "The meaning and importance of farm planning, and the factors a farmer weighs in deciding what to produce and how (land, capital, labour, market, climate, the farmer's skill). Sorting rule: where buildings go on the farm goes to survey.farmstead.",
+          "taught_in": []
+        },
+        {
+          "id": "survey.farmstead",
+          "name": "Farmstead planning and layout",
+          "syllabus": {
+            "waec": "C.9",
+            "jamb": "E.1(d)"
+          },
+          "covers": "The meaning of a farmstead, the importance of farmstead planning, factors in siting it and its structures (drainage, water, wind direction, access, security), and sketching a farmstead layout.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T1"
+      ]
+    },
+    {
+      "id": "crop-plants",
+      "name": "Crop plants: classification, forms and reproduction",
+      "part": "Crop production",
+      "syllabus": {
+        "waec": "D.1, Practical C.1",
+        "jamb": "B.5, B.6"
+      },
+      "subtopics": [
+        {
+          "id": "crop-plants.classification",
+          "name": "Classification of crops",
+          "syllabus": {
+            "waec": "D.1(a)-(b)",
+            "jamb": "B.9 groups"
+          },
+          "covers": "Classifying crops by use (cereals, pulses, roots and tubers, vegetables, fruits, beverages, spices, oils, fibres, latex, sugars) and by life cycle (annual, biennial, perennial, ephemeral), and matching crops to their botanical names when the options span several crop groups (such as Zea mays, Manihot esculenta, Theobroma cacao, Elaeis guineensis). Sorting rule: which group a crop belongs to goes here; a botanical name asked with options spanning crop groups goes here, but one asked within a single crop group or with that crop's husbandry goes to its husbandry subtopic; whether it is a monocot or dicot goes to crop-plants.monocot-dicot; how a named crop is grown goes to its husbandry subtopic.",
+          "taught_in": [
+            "SS1 T1"
+          ]
+        },
+        {
+          "id": "crop-plants.monocot-dicot",
+          "name": "Parts of crop plants, monocots and dicots",
+          "syllabus": {
+            "waec": "D.1(c), Practical C.1",
+            "jamb": "B.5(a)"
+          },
+          "covers": "Parts of monocot and dicot crop plants and their functions, distinguishing monocots from dicots (seed leaves, venation, roots, vascular bundles), and identifying the seeds, seedlings and fruits of common crops. Sorting rule: general plant parts, or whether a crop is a monocot or dicot, go here; the labelled parts of a named crop, such as the tassel and silk of maize, go to that crop's husbandry subtopic; storage organs go to crop-plants.storage-organs.",
+          "taught_in": []
+        },
+        {
+          "id": "crop-plants.storage-organs",
+          "name": "Storage organs of crop plants",
+          "syllabus": {
+            "waec": "Practical C.1",
+            "jamb": "B.5(b)"
+          },
+          "covers": "The morphology and anatomy of storage organs: root tubers (cassava, sweet potato), stem tubers (yam, Irish potato), corms (cocoyam), bulbs (onion), rhizomes (ginger), and which kind of organ a crop stores food in. Real papers test it (WASSCE 2025 Q20). Sorting rule: which organ stores the food goes here; using a sett, corm or cutting to propagate goes to propagation.vegetative.",
+          "taught_in": []
+        },
+        {
+          "id": "crop-plants.pollination",
+          "name": "Pollination in crop plants",
+          "syllabus": {
+            "waec": null,
+            "jamb": "B.6(b)"
+          },
+          "covers": "Self and cross pollination, agents of pollination (insects, wind, water, man), features of flowers suited to each, and why each type occurs in named crops. Sorting rule: bees valued as pollinators goes to apiculture.bees; hand pollination of a named crop as a husbandry step goes to that crop's husbandry subtopic.",
+          "taught_in": []
+        },
+        {
+          "id": "crop-plants.fertilization",
+          "name": "Gamete formation, fertilization and seed development",
+          "syllabus": {
+            "waec": null,
+            "jamb": "B.6(a), B.6(c)-(d)"
+          },
+          "covers": "Formation of pollen and ovules, double fertilization in flowering plants, and the development of the embryo into seed and fruit. Sorting rule: mitosis and meiosis as types of cell division go to genetics.cell-division; germination of the seed goes to propagation.seeds.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T1"
+      ]
+    },
+    {
+      "id": "propagation",
+      "name": "Plant propagation",
+      "part": "Crop production",
+      "syllabus": {
+        "waec": "D.2, Practical C.3-4, C.6",
+        "jamb": "B.7"
+      },
+      "subtopics": [
+        {
+          "id": "propagation.seeds",
+          "name": "Propagation by seed and germination",
+          "syllabus": {
+            "waec": "D.2, Practical C.3-4",
+            "jamb": "B.7(a)"
+          },
+          "covers": "Crops raised from seed, seed quality, seed viability and viability and germination tests, conditions for germination, epigeal and hypogeal germination, and seed dormancy and ways of breaking it (scarification, soaking, heat treatment). Real papers test dormancy (WASSCE 2025 Q30). Sorting rule: seed rate and plant population sums go to cultivation.planting-patterns.",
+          "taught_in": []
+        },
+        {
+          "id": "propagation.vegetative",
+          "name": "Vegetative propagation",
+          "syllabus": {
+            "waec": "D.2, Practical C.4, C.6",
+            "jamb": "B.7(b)"
+          },
+          "covers": "Cuttings, setts, suckers, crowns, slips, tubers, corms, layering, marcotting, budding and grafting (scion and rootstock), which crops are raised by each, and the advantages and disadvantages of vegetative propagation. Sorting rule: budding or grafting done to prevent a named disease goes to that disease's subtopic in crop-diseases; propagating ornamentals goes to ornamentals.cultivation; tissue culture goes to genetics.biotechnology.",
+          "taught_in": []
+        },
+        {
+          "id": "propagation.nursery",
+          "name": "Nursery and nursery management",
+          "syllabus": {
+            "waec": "D.2",
+            "jamb": "B.7(c)"
+          },
+          "covers": "Types of nursery, choosing a nursery site, nursery practices (shading, watering, pricking out, hardening off), crops raised in nurseries, advantages and disadvantages of nurseries, and transplanting seedlings.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "cultivation",
+      "name": "Land preparation, cultural practices and cropping systems",
+      "part": "Crop production",
+      "syllabus": {
+        "waec": "D.2, Practical C.3-4",
+        "jamb": "B.4, B.8"
+      },
+      "subtopics": [
+        {
+          "id": "cultivation.tillage",
+          "name": "Land preparation and tillage",
+          "syllabus": {
+            "waec": "D.2",
+            "jamb": "B.4"
+          },
+          "covers": "Bush clearing, stumping, ploughing, harrowing and ridging, primary and secondary tillage, zero, minimum and conventional tillage, factors in choosing a tillage method, and the advantages and disadvantages of tillage. Sorting rule: the implement that does an operation goes to tools.implements when the question asks about the implement itself.",
+          "taught_in": []
+        },
+        {
+          "id": "cultivation.cultural-practices",
+          "name": "Cultural practices in crop production",
+          "syllabus": {
+            "waec": "D.2",
+            "jamb": "B.9"
+          },
+          "covers": "The terms and purposes of practices after planting when asked in general: planting date, sowing depth, supplying, thinning, weeding, rouging, mulching, staking, pruning, earthing up, and harvesting (its meaning, signs of maturity and timing). Sorting rule: a practice specific to a named crop, such as detasseling maize or tapping rubber, goes to that crop's husbandry subtopic; a general practice asked with a named crop only as the example, such as thinning maize seedlings, stays here; mulching or weeding asked about for weed control goes to weeds.control; fertilizer application methods go to soil-fertility.fertilizers.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "cultivation.cropping-systems",
+          "name": "Cropping systems",
+          "syllabus": {
+            "waec": "B.1 notes",
+            "jamb": "B.8(a)"
+          },
+          "covers": "Monocropping (sole cropping), mixed cropping, multiple cropping, intercropping, relay cropping, strip cropping and crop rotation, with their principles, advantages and disadvantages. Sorting rule: how crops are arranged in a field or a sequence goes here; whole farming systems such as shifting cultivation or plantation go to agriculture.farming-systems; a question asking which practice restores soil fertility goes to soil-fertility.maintenance even when the answer is crop rotation.",
+          "taught_in": []
+        },
+        {
+          "id": "cultivation.planting-patterns",
+          "name": "Planting patterns, plant population and seed rate",
+          "syllabus": {
+            "waec": "D.2, Practical C.3",
+            "jamb": "B.7(a), B.8(b)-(c)"
+          },
+          "covers": "Broadcasting, drilling and row planting, single, double and multiple stands, spacing, and calculating plant population per plot or per hectare and seed rate. Real papers test it (WASSCE 2025 Q29). Sorting rule: the area of the plot alone goes to survey.surveying; any sum that ends in a number of plants or amount of seed goes here.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "food-crops",
+      "name": "Husbandry of food crops",
+      "part": "Crop production",
+      "syllabus": {
+        "waec": "D.2(a)-(e), D.2(g)",
+        "jamb": "B.9 groups 1-5"
+      },
+      "subtopics": [
+        {
+          "id": "food-crops.cereals",
+          "name": "Cereals",
+          "syllabus": {
+            "waec": "D.2(a)",
+            "jamb": "B.9 group 1"
+          },
+          "covers": "Husbandry of maize, rice, guinea corn and millet: common and botanical names, varieties, climate and soil, land preparation, planting, spacing, cultural practices such as detasseling, harvesting and yield, and the labelled parts of the plant or cob. Real papers test it (WASSCE 2025 Q21 and Q22). This sorting rule holds for every husbandry subtopic: a named pest goes to crop-pests, a named disease to crop-diseases, processing such as rice polishing or gari making to processing-storage.processing, and storage methods to processing-storage.storage; a general cultural practice asked with the crop only as the example goes to cultivation.cultural-practices; choosing the fertilizer a crop or crop type needs goes to soil-fertility.fertilizers; matching botanical names when the options span crop groups goes to crop-plants.classification.",
+          "taught_in": [
+            "SS1 T2"
+          ]
+        },
+        {
+          "id": "food-crops.legumes",
+          "name": "Legumes (pulses)",
+          "syllabus": {
+            "waec": "D.2(b), D.2(h)",
+            "jamb": "B.9 group 2"
+          },
+          "covers": "Husbandry of cowpea, groundnut, soya bean and pigeon pea: names, varieties, requirements, planting, cultural practices, harvesting and uses. Groundnut goes here, as JAMB groups it, although WAEC lists it among oil crops. Sorting rule: as for food-crops.cereals.",
+          "taught_in": []
+        },
+        {
+          "id": "food-crops.roots-tubers",
+          "name": "Roots and tubers",
+          "syllabus": {
+            "waec": "D.2(c)",
+            "jamb": "B.9 group 3"
+          },
+          "covers": "Husbandry of yam, cassava, sweet potato, Irish potato and cocoyam: names, varieties, requirements, planting materials such as setts and stem cuttings, staking, harvesting and uses. Sorting rule: which organ stores the food goes to crop-plants.storage-organs; otherwise as for food-crops.cereals.",
+          "taught_in": []
+        },
+        {
+          "id": "food-crops.vegetables-spices",
+          "name": "Vegetables and spices",
+          "syllabus": {
+            "waec": "D.2(d), D.2(g)",
+            "jamb": "B.9 group 4"
+          },
+          "covers": "Husbandry of tomato, onion, okro, amaranthus, eggplant, cabbage, cauliflower, spinach, pepper and ginger: names, varieties, nursery and transplanting, requirements, cultural practices, harvesting and uses. Sorting rule: as for food-crops.cereals.",
+          "taught_in": []
+        },
+        {
+          "id": "food-crops.fruits",
+          "name": "Fruit crops",
+          "syllabus": {
+            "waec": "D.2(e)",
+            "jamb": "B.9 group 5"
+          },
+          "covers": "Husbandry of citrus, banana, plantain, pineapple and pawpaw: names, varieties, propagation, requirements, cultural practices, harvesting and uses. Sorting rule: budding citrus on a resistant stock to prevent a disease goes to crop-diseases; otherwise as for food-crops.cereals.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T2"
+      ]
+    },
+    {
+      "id": "cash-crops",
+      "name": "Husbandry of beverage, oil and industrial crops",
+      "part": "Crop production",
+      "syllabus": {
+        "waec": "D.2(f), D.2(h)-(k)",
+        "jamb": "B.9 groups 6-10"
+      },
+      "subtopics": [
+        {
+          "id": "cash-crops.beverages",
+          "name": "Beverage crops",
+          "syllabus": {
+            "waec": "D.2(f)",
+            "jamb": "B.9 group 6"
+          },
+          "covers": "Husbandry of cocoa, kola, coffee and tea: names, varieties, nursery, shade, requirements, cultural practices, harvesting, fermenting and drying beans, and uses. Sorting rule: as for food-crops.cereals, except that fermenting and drying cocoa beans stays here as part of the crop's husbandry.",
+          "taught_in": []
+        },
+        {
+          "id": "cash-crops.oil-crops",
+          "name": "Oil crops",
+          "syllabus": {
+            "waec": "D.2(h)",
+            "jamb": "B.9 group 7"
+          },
+          "covers": "Husbandry of oil palm, coconut, shea butter, sunflower and beniseed: names, varieties (such as Dura, Pisifera and Tenera), nursery, requirements, harvesting and uses. Sorting rule: groundnut and soya bean go to food-crops.legumes; extracting palm oil goes to processing-storage.processing; otherwise as for food-crops.cereals.",
+          "taught_in": []
+        },
+        {
+          "id": "cash-crops.fibre-latex-sugar",
+          "name": "Fibre, latex and sugar crops",
+          "syllabus": {
+            "waec": "D.2(i)-(k)",
+            "jamb": "B.9 groups 8-10"
+          },
+          "covers": "Husbandry of cotton, jute, sisal hemp, para rubber, gum arabic, sugar cane and sugar beet: names, varieties, requirements, cultural practices, tapping rubber, harvesting and uses. Sorting rule: processing sugar cane and the products and by-products it gives (sugar, molasses, bagasse) go to processing-storage.processing (WASSCE 2024 Q22); otherwise as for food-crops.cereals.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "pasture",
+      "name": "Pasture, forage and rangeland",
+      "part": "Crop production",
+      "syllabus": {
+        "waec": "D.3, H.7",
+        "jamb": "B.10, C.5(b)"
+      },
+      "subtopics": [
+        {
+          "id": "pasture.types",
+          "name": "Types of pasture and rangeland",
+          "syllabus": {
+            "waec": "D.3(a)-(c), D.3(e), H.7(a)",
+            "jamb": "B.10(b)-(c)"
+          },
+          "covers": "The meaning of pasture, forage and rangeland, natural and artificial (sown) pastures, the uses of forage crops, the characteristics and importance of rangeland to livestock, the natural grasslands of West Africa and their distribution, and the factors that govern where pasture grows (rainfall, temperature, soil, topography, grazing pressure, bush burning). Sorting rule: naming or describing a grass or legume species goes to pasture.species; what governs where pasture grows goes here, and what raises or lowers the yield of an established pasture goes to pasture.management.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "pasture.species",
+          "name": "Common pasture grasses and legumes",
+          "syllabus": {
+            "waec": "D.3(d), H.7(b), Practical C.1",
+            "jamb": "B.10(a)"
+          },
+          "covers": "Common and botanical names, features and uses of pasture grasses (guinea grass, elephant grass, giant star grass, Andropogon, Cynodon, Pennisetum, Panicum) and legumes (Centrosema, Calopogonium, Stylosanthes, Pueraria). Sorting rule: a legume named or asked about as pasture or forage goes here; the same legume asked about as a cover crop, or a question asking for examples of cover crops, goes to soil-fertility.maintenance.",
+          "taught_in": []
+        },
+        {
+          "id": "pasture.management",
+          "name": "Pasture establishment, management and improvement",
+          "syllabus": {
+            "waec": "D.3(e)-(g), H.7(c)-(d)",
+            "jamb": "B.10(a), B.10(c)"
+          },
+          "covers": "Establishing a pasture, propagating pasture grasses and legumes (by seed, root splits, stolons and stem cuttings), factors affecting pasture productivity and herbage production (rainfall, grass and legume mix, grazing), management practices, and rangeland improvement: controlled stocking, rotational grazing, fertilizer, introducing legumes, reseeding, weed control, burning, pest and disease control. Sorting rule: preserving forage as hay or silage goes to pasture.conservation; what governs where pasture grows goes to pasture.types.",
+          "taught_in": []
+        },
+        {
+          "id": "pasture.conservation",
+          "name": "Hay and silage",
+          "syllabus": {
+            "waec": null,
+            "jamb": "B.10(a), C.5(b)"
+          },
+          "covers": "Conserving forage: hay making, silage making and the silo, standing hay, and their advantages. Sorting rule: feeding conserved forage within a ration goes to animal-nutrition.rations.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "genetics",
+      "name": "Genetics and biotechnology",
+      "part": "Crop production",
+      "syllabus": {
+        "waec": "D.4(c)",
+        "jamb": "A.4, E.6"
+      },
+      "subtopics": [
+        {
+          "id": "genetics.terms",
+          "name": "Genetic terms",
+          "syllabus": {
+            "waec": "D.4 notes",
+            "jamb": "A.4(c)"
+          },
+          "covers": "Characters or traits, chromosomes, genes, locus, alleles, genotype, phenotype, dominance and recessiveness, homozygous and heterozygous, and F1 and F2. Sorting rule: working out the result of a cross goes to genetics.mendel.",
+          "taught_in": []
+        },
+        {
+          "id": "genetics.mendel",
+          "name": "Mendel's laws and genetic crosses",
+          "syllabus": {
+            "waec": "D.4(c)",
+            "jamb": "A.4(a)"
+          },
+          "covers": "Mendel's first and second laws, monohybrid and dihybrid crosses with homozygous and heterozygous parents, and the genotypic and phenotypic ratios and simple probabilities they give.",
+          "taught_in": []
+        },
+        {
+          "id": "genetics.cell-division",
+          "name": "Cell division",
+          "syllabus": {
+            "waec": null,
+            "jamb": "A.4(b)"
+          },
+          "covers": "Mitosis and meiosis, their stages, where each occurs, and how they differ. Sorting rule: pollen and ovule formation in a flower goes to crop-plants.fertilization; gamete formation in farm animals goes to animal-reproduction.systems.",
+          "taught_in": []
+        },
+        {
+          "id": "genetics.biotechnology",
+          "name": "Biotechnology",
+          "syllabus": {
+            "waec": null,
+            "jamb": "E.6"
+          },
+          "covers": "Basic terms and uses of biotechnology in agriculture: tissue culture, anther culture, in vitro fertilization, genetic engineering and genetically modified crops and animals. Sorting rule: conventional selection and breeding go to crop-improvement.methods or animal-improvement; artificial insemination goes to animal-improvement.ai.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "crop-improvement",
+      "name": "Crop improvement",
+      "part": "Crop production",
+      "syllabus": {
+        "waec": "D.4",
+        "jamb": "B.16"
+      },
+      "subtopics": [
+        {
+          "id": "crop-improvement.aims",
+          "name": "Meaning and aims of crop improvement",
+          "syllabus": {
+            "waec": "D.4(a), D.4(d)",
+            "jamb": "B.16 objective i"
+          },
+          "covers": "The meaning of crop improvement, its aims (higher yield, quality, resistance to pests, diseases and drought, early maturity, adaptation), and its advantages and disadvantages. Sorting rule: how improvement is done goes to crop-improvement.methods; a question whose options are aims of improving crops goes here even when the stem asks why agricultural research matters; the roles of research institutes and of research in general go to development.institutes.",
+          "taught_in": []
+        },
+        {
+          "id": "crop-improvement.methods",
+          "name": "Methods of crop improvement",
+          "syllabus": {
+            "waec": "D.4(b)",
+            "jamb": "B.16"
+          },
+          "covers": "Introduction, selection (mass and pure line), hybridization and crossing, quarantine, mutation and polyploidy breeding, and how each method works. Sorting rule: genetic engineering and tissue culture go to genetics.biotechnology; the laws behind a cross go to genetics.mendel.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "forestry",
+      "name": "Forestry",
+      "part": "Forestry and ornamental plants",
+      "syllabus": {
+        "waec": "E.1, E.2, Practical C.5",
+        "jamb": "B.15"
+      },
+      "subtopics": [
+        {
+          "id": "forestry.importance",
+          "name": "Forests and forest products",
+          "syllabus": {
+            "waec": "E.1(a)-(b), Practical C.5",
+            "jamb": "B.15(a)"
+          },
+          "covers": "The meaning of forest and forestry, the importance of forests, and forest products and by-products (timber, pulp, fibre, fuelwood, gums, resins, latex, medicine, bushmeat) and their uses.",
+          "taught_in": []
+        },
+        {
+          "id": "forestry.management",
+          "name": "Forest management and regulation",
+          "syllabus": {
+            "waec": "E.1(c)-(e)",
+            "jamb": "B.15(b)"
+          },
+          "covers": "Forest regulations and reserves, management practices (selective exploitation, regeneration, afforestation, reforestation), and the causes and implications of deforestation. Sorting rule: growing trees with crops on the same land goes to forestry.agroforestry.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "forestry.agroforestry",
+          "name": "Agro-forestry",
+          "syllabus": {
+            "waec": "E.2",
+            "jamb": "B.15(b)"
+          },
+          "covers": "The meaning of agro-forestry, the taungya system, alley cropping, and tree species suited to agro-forestry such as Leucaena, Gliricidia and Cassia. Real papers test it (WASSCE 2025 Q31). Ley farming, which WAEC lists here, goes to agriculture.farming-systems, because it rotates crops with pasture and has no trees.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "ornamentals",
+      "name": "Ornamental plants and floriculture",
+      "part": "Forestry and ornamental plants",
+      "syllabus": {
+        "waec": "F.1-5",
+        "jamb": "B.11"
+      },
+      "subtopics": [
+        {
+          "id": "ornamentals.types",
+          "name": "Types and uses of ornamental plants",
+          "syllabus": {
+            "waec": "F.1, F.2, F.3",
+            "jamb": "B.11"
+          },
+          "covers": "The meaning and importance of ornamental plants, types by use (bedding, hedging, lawn grasses, shade trees) and by form (trees, shrubs, flowers), examples with common and botanical names (such as Allamanda, Hibiscus, Ixora, Bougainvillea, Croton, Delonix, Cynodon), and where they are planted. Real papers test it (WASSCE 2025 Q32). Sorting rule: how they are raised and cared for goes to ornamentals.cultivation.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "ornamentals.cultivation",
+          "name": "Propagation and maintenance of ornamental plants",
+          "syllabus": {
+            "waec": "F.4, F.5",
+            "jamb": "B.11"
+          },
+          "covers": "Raising ornamentals by seed and vegetative means, which ornamentals are raised by each, and maintenance: watering, mulching, pruning, trimming and weeding. Sorting rule: a propagation method asked about in general, not for an ornamental, goes to propagation.vegetative.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "crop-diseases",
+      "name": "Diseases of crops",
+      "part": "Crop protection",
+      "syllabus": {
+        "waec": "G.1, Practical C.2",
+        "jamb": "B.13"
+      },
+      "subtopics": [
+        {
+          "id": "crop-diseases.general",
+          "name": "Crop disease: meaning, causes and general control",
+          "syllabus": {
+            "waec": "G.1(a)-(b)",
+            "jamb": "B.13(a)"
+          },
+          "covers": "The meaning of disease, its general effects on crop production, kinds of causal organism, field and storage diseases, modes of transmission, and general prevention and control (resistant varieties, rotation, sanitation, quarantine, fungicides). Sorting rule: a question about one named disease, or whose correct answer is one named disease, goes to that disease's pathogen subtopic; side effects of control chemicals go to crop-pests.control.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "crop-diseases.fungal",
+          "name": "Fungal diseases of crops",
+          "syllabus": {
+            "waec": "G.1(c)",
+            "jamb": "B.13(b)"
+          },
+          "covers": "Causal organism, crops attacked, symptoms, transmission, economic importance and control of fungal diseases: smut, rice blast, leaf rust, cercospora leaf spot, cocoa black pod, coffee leaf rust, citrus gummosis, dieback of citrus, damping off, sigatoka of banana, and moulds of stored produce. Real papers test it (WASSCE 2025 Q26 and Q33). Sorting rule: budding citrus on a resistant stock against gummosis goes here; keeping stored produce dry to prevent mould goes to processing-storage.storage.",
+          "taught_in": []
+        },
+        {
+          "id": "crop-diseases.viral",
+          "name": "Viral diseases of crops",
+          "syllabus": {
+            "waec": "G.1(c)",
+            "jamb": "B.13(b)"
+          },
+          "covers": "Causal virus, vector, crops attacked, symptoms, economic importance and control of viral diseases: cassava mosaic, cocoa swollen shoot, groundnut rosette, maize streak, onion twister, cotton leaf curl. Sorting rule: the insect vector as a pest in its own right goes to crop-pests.field-pests.",
+          "taught_in": []
+        },
+        {
+          "id": "crop-diseases.bacterial-nematode",
+          "name": "Bacterial and nematode diseases of crops",
+          "syllabus": {
+            "waec": "G.1(c)",
+            "jamb": "B.13(b)"
+          },
+          "covers": "Causal organism, crops attacked, symptoms, economic importance and control of bacterial diseases (black arm or bacterial blight of cotton, cassava bacterial blight, bacterial wilt, citrus canker) and nematode diseases (root knot of tomato and okro). Real papers test it (WASSCE 2025 Q24).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "crop-pests",
+      "name": "Pests of crops",
+      "part": "Crop protection",
+      "syllabus": {
+        "waec": "G.2, Practical C.2",
+        "jamb": "B.13(c), B.14"
+      },
+      "subtopics": [
+        {
+          "id": "crop-pests.classification",
+          "name": "Meaning and classification of pests",
+          "syllabus": {
+            "waec": "G.2(a)-(c), G.2(g)",
+            "jamb": "B.14(a)"
+          },
+          "covers": "The meaning of pests, insect and non-insect pests, field and storage pests, insect pests by mouthparts (biting and chewing, piercing and sucking, boring) with examples, and the general economic importance of pests. Sorting rule: which mouthpart type a pest has goes here; a question that describes a damage pattern and asks which pest caused it, when the options are pests of different mouthpart types and the damage points to the mouthpart, goes here even though the answer is a named pest; the life cycle, damage or control of one named pest asked about for itself goes to crop-pests.field-pests or crop-pests.storage-pests.",
+          "taught_in": []
+        },
+        {
+          "id": "crop-pests.field-pests",
+          "name": "Field insect pests",
+          "syllabus": {
+            "waec": "G.2(d)(i)-(vi)",
+            "jamb": "B.14(a)-(b)"
+          },
+          "covers": "Life cycle, nature of damage, economic importance and control of field insect pests: stem borer, army worm, ear worm, pod borer, aphids, sucking bugs, leaf beetle, cocoa mirid (capsid), yam beetle, cassava mealybug, green spider mite, variegated grasshopper, cotton stainer, bollworm, thrips, leaf roller and scale insects. Sorting rule: the damage, life cycle or control of one named pest goes here; picking the pest from a damage pattern that points to a mouthpart type, with options of different mouthpart types, goes to crop-pests.classification.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        },
+        {
+          "id": "crop-pests.storage-pests",
+          "name": "Storage pests",
+          "syllabus": {
+            "waec": "G.2(d)(vii)",
+            "jamb": "B.14(a)-(b)"
+          },
+          "covers": "Life cycle, damage and control of storage pests: grain weevils, bean beetle (bruchid), and rodents in stores. Sorting rule: storage structures and drying produce go to processing-storage.storage.",
+          "taught_in": []
+        },
+        {
+          "id": "crop-pests.non-insect",
+          "name": "Non-insect pests",
+          "syllabus": {
+            "waec": "G.2(e)",
+            "jamb": "B.14(a)"
+          },
+          "covers": "Birds, rodents, monkeys, grasscutters, snails, millipedes and nematodes as pests: the damage they cause, their economic importance and their control. Sorting rule: rodents in stores go to crop-pests.storage-pests; root knot as a disease goes to crop-diseases.bacterial-nematode.",
+          "taught_in": []
+        },
+        {
+          "id": "crop-pests.control",
+          "name": "Pest control methods and pesticides",
+          "syllabus": {
+            "waec": "G.2(f)",
+            "jamb": "B.13(c), B.14(a), B.14(c)"
+          },
+          "covers": "General methods of preventing and controlling pests (physical, cultural, biological, chemical, integrated), common pesticides and their mode of action (contact, systemic, stomach poisons, fumigants), and the side effects of control methods, including those used against diseases: pollution, poisoning and disruption of the ecosystem. Sorting rule: how one named pest is controlled goes to that pest's subtopic; herbicides go to weeds.control.",
+          "taught_in": [
+            "SS2 T2"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T2"
+      ]
+    },
+    {
+      "id": "weeds",
+      "name": "Weeds",
+      "part": "Crop protection",
+      "syllabus": {
+        "waec": "G.3, Practical C.7",
+        "jamb": "B.12"
+      },
+      "subtopics": [
+        {
+          "id": "weeds.identification",
+          "name": "Types, features and dispersal of weeds",
+          "syllabus": {
+            "waec": "G.3(a)-(b), G.3(d), Practical C.7",
+            "jamb": "B.12(a)"
+          },
+          "covers": "The meaning of weeds, types (annual and perennial; grasses, sedges and broadleaves), characteristic features that make them successful, common weeds with their botanical names (such as Talinum triangulare, Imperata cylindrica, Tridax procumbens, Chromolaena odorata, Striga), and their reproduction and mode of dispersal. Real papers test it (WASSCE 2025 Q34).",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "weeds.effects",
+          "name": "Effects of weeds",
+          "syllabus": {
+            "waec": "G.3(c)",
+            "jamb": "B.12(a)"
+          },
+          "covers": "Harmful effects of weeds on crops and the economy (competition, harbouring pests, reducing quality, raising cost) and their uses (food, medicine, soil cover, fodder).",
+          "taught_in": []
+        },
+        {
+          "id": "weeds.control",
+          "name": "Weed control",
+          "syllabus": {
+            "waec": "G.3(e)",
+            "jamb": "B.12(b)"
+          },
+          "covers": "Cultural, biological, chemical, physical and mechanical control: hand weeding, mulching, cover cropping, tillage, trap cropping, and herbicides (selective, non-selective, pre and post-emergence), with their advantages and disadvantages. Sorting rule: mulching or cover cropping asked about for weed control goes here, for soil fertility to soil-fertility.maintenance, and for erosion to soil-fertility.erosion; naming cover crop species goes to soil-fertility.maintenance.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "farm-animals",
+      "name": "Farm animals: types, breeds and products",
+      "part": "Animal production",
+      "syllabus": {
+        "waec": "H.1, Practical D.1, D.3",
+        "jamb": "C.1, C.2"
+      },
+      "subtopics": [
+        {
+          "id": "farm-animals.classification",
+          "name": "Types and classification of farm animals",
+          "syllabus": {
+            "waec": "H.1",
+            "jamb": "C.1(a)"
+          },
+          "covers": "Types of farm animal (cattle, sheep, goat, pig, rabbit, poultry, fish) and their classification by habitat, use, size and stomach (ruminant and non-ruminant). Sorting rule: whether an animal is a ruminant goes here; how its gut works goes to anatomy.digestive.",
+          "taught_in": []
+        },
+        {
+          "id": "farm-animals.breeds",
+          "name": "Breeds of farm animals",
+          "syllabus": {
+            "waec": "Practical D.1",
+            "jamb": "C.1"
+          },
+          "covers": "Local, exotic and cross breeds of cattle (Muturu, N'dama, Keteku, White Fulani, Red Bororo, Sokoto Gudali, Friesian, Jersey), sheep, goats, pigs, rabbits and poultry: where they are found, their external features and their main use (beef, dairy, dual-purpose, egg, meat). Real papers test it (WASSCE 2025 Q35). Sorting rule: naming a part of the body goes to anatomy.external; why crossing breeds improves performance goes to animal-improvement.breeding-systems.",
+          "taught_in": []
+        },
+        {
+          "id": "farm-animals.terminology",
+          "name": "Terms used in animal husbandry",
+          "syllabus": {
+            "waec": null,
+            "jamb": "C.2"
+          },
+          "covers": "Names for the male, female, young and castrate of each species (bull, cow, calf, steer; ram, ewe, lamb, wether; buck, doe, kid; boar, sow, gilt, piglet, barrow; cock, hen, capon, pullet), for giving birth (calving, lambing, kidding, farrowing, kindling), and for meats (beef, veal, mutton, chevon, pork). Sorting rule: the meaning of a term asked for itself goes here; which animal gives a product, even when the options are husbandry terms, goes to farm-animals.products.",
+          "taught_in": []
+        },
+        {
+          "id": "farm-animals.products",
+          "name": "Animal products and by-products",
+          "syllabus": {
+            "waec": "H.1(b)(ii), Practical D.3",
+            "jamb": "C.1"
+          },
+          "covers": "Products of farm animals (meat, milk, eggs, wool, honey) and by-products (hides and skins, fur, feathers, horns, hooves, bones, blood, dung), which come from a living and which from a slaughtered animal, and which animal gives which. Real papers test it (WASSCE 2025 Q36 and Q43). Sorting rule: bee products go to apiculture.bees; fish processing goes to fisheries.processing.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "anatomy",
+      "name": "Anatomy and physiology of farm animals",
+      "part": "Animal production",
+      "syllabus": {
+        "waec": "H.2, H.4, Practical D.2",
+        "jamb": "C.3"
+      },
+      "subtopics": [
+        {
+          "id": "anatomy.external",
+          "name": "External parts and organs of farm animals",
+          "syllabus": {
+            "waec": "H.2(a)-(b), Practical D.2",
+            "jamb": "C.3(a)"
+          },
+          "covers": "Drawing and labelling the external parts of farm animals (poll, dewlap, hump, udder, hock, comb, wattle, shank), the main tissues of the animal body (epithelial, connective including bone and blood, muscle, nervous) and their functions, and the main internal organs (heart, liver, lungs, kidney) and their functions. Sorting rule: an organ asked about as part of one body system goes to that system's subtopic; features that identify a breed go to farm-animals.breeds.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "anatomy.digestive",
+          "name": "Digestive systems of farm animals",
+          "syllabus": {
+            "waec": "H.2(c) notes",
+            "jamb": "C.3(b)"
+          },
+          "covers": "The digestive system of ruminants (rumen, reticulum, omasum, abomasum, rumination and microbial fermentation), of monogastric animals such as the pig and rabbit, and of poultry (crop, proventriculus, gizzard, caeca), what each part does, and the differences between them. Real papers test it (WASSCE 2025 Q37 and Q38). Sorting rule: what feeds supply goes to animal-nutrition.",
+          "taught_in": []
+        },
+        {
+          "id": "anatomy.body-systems",
+          "name": "Circulatory, respiratory, excretory and nervous systems",
+          "syllabus": {
+            "waec": "H.2(c)",
+            "jamb": "C.3(b)"
+          },
+          "covers": "The circulatory, respiratory, urinary (excretory) and nervous systems of farm animals, their organs and functions, compared across species. Sorting rule: the reproductive system goes to animal-reproduction.systems.",
+          "taught_in": []
+        },
+        {
+          "id": "anatomy.environmental-physiology",
+          "name": "Environmental physiology",
+          "syllabus": {
+            "waec": "H.4",
+            "jamb": "C.3(c)"
+          },
+          "covers": "The meaning of environmental physiology, and how temperature, relative humidity, light and climate change affect the growth, feed and water intake, reproduction, milk production and egg production of farm animals, including heat stress. Real papers test it (WASSCE 2025 Q40). Sorting rule: a factor's effect on the animal's body or output goes here; the same factor's effect on crops goes to ecology.climatic; conditions in a pen, brooder or poultry house that lead to wet litter, pests or disease are housing management and go to the species subtopic in livestock-management, such as livestock-management.poultry for high humidity in a brooder house (WASSCE 2023 Q9).",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "animal-reproduction",
+      "name": "Reproduction in farm animals",
+      "part": "Animal production",
+      "syllabus": {
+        "waec": "H.3",
+        "jamb": "C.4"
+      },
+      "subtopics": [
+        {
+          "id": "animal-reproduction.systems",
+          "name": "Reproductive systems and hormones",
+          "syllabus": {
+            "waec": "H.3(a)-(c)",
+            "jamb": "C.4(a)"
+          },
+          "covers": "The male and female reproductive organs of farm animals and their functions, gamete formation, secondary sexual characters, and reproductive hormones (FSH, LH, oestrogen, progesterone, testosterone, oxytocin, prolactin) and what each does.",
+          "taught_in": []
+        },
+        {
+          "id": "animal-reproduction.oestrus",
+          "name": "Oestrus cycle, heat and mating",
+          "syllabus": {
+            "waec": "H.3(d)",
+            "jamb": "C.4(a)"
+          },
+          "covers": "The oestrus cycle and its length in each species, signs of heat, heat period, ovulation, mating and fertilization. Sorting rule: bringing semen to the female artificially goes to animal-improvement.ai.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "animal-reproduction.pregnancy",
+          "name": "Pregnancy, birth and lactation",
+          "syllabus": {
+            "waec": "H.3(d)",
+            "jamb": "C.4(a)-(b)"
+          },
+          "covers": "Development and nourishment of the young, gestation periods of each species, signs of approaching birth, parturition, mammary glands, lactation, colostrum and care of the newborn. Sorting rule: management of the young after birth, such as weaning, goes to the species subtopic in livestock-management.",
+          "taught_in": []
+        },
+        {
+          "id": "animal-reproduction.eggs",
+          "name": "Egg formation, incubation and hatching",
+          "syllabus": {
+            "waec": "H.3(e)",
+            "jamb": "C.4(c)"
+          },
+          "covers": "Egg formation along the hen's oviduct, parts of the egg, selecting eggs for hatching, candling, natural and artificial incubation, the conditions an incubator keeps, incubation period and hatching. Sorting rule: brooding chicks after hatching goes to livestock-management.poultry.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "livestock-management",
+      "name": "Livestock management",
+      "part": "Animal production",
+      "syllabus": {
+        "waec": "H.5, Practical D.1, D.6-7",
+        "jamb": "C.6"
+      },
+      "subtopics": [
+        {
+          "id": "livestock-management.systems",
+          "name": "Systems of livestock management",
+          "syllabus": {
+            "waec": "H.5(a)-(c), Practical B.6",
+            "jamb": "C.6"
+          },
+          "covers": "The meaning and importance of livestock management, the extensive, semi-intensive and intensive systems with their advantages and disadvantages, the general requirements of housing, feeding, hygiene and finishing, and feeding and watering equipment for livestock (feeders, feed troughs, hay racks, water troughs, drinkers). Sorting rule: management of one species goes to that species' subtopic; feeders and drinkers asked about in general, or for stock other than poultry, go here, and poultry feeders and drinkers go to livestock-management.poultry; keeping livestock records goes to farm-management.records.",
+          "taught_in": []
+        },
+        {
+          "id": "livestock-management.poultry",
+          "name": "Poultry management",
+          "syllabus": {
+            "waec": "H.5(b), Practical D.6",
+            "jamb": "C.6"
+          },
+          "covers": "Rearing poultry from day-old chick to market or lay: brooding and brooder heat sources (hover, kerosene stove, lamp, coal pot), temperature, ventilation and humidity in the brooder or pen and their effect on litter and disease, housing systems (deep litter, battery cage, free range) and their design, feeders, drinkers, lighting, and layers and broilers; and poultry arithmetic: floor space and stocking sums, egg production sums (eggs per day to trays per week, hen-day production) and the feed a flock needs over a period. Real papers test it (WASSCE 2025 Q5, Q6, Q41 and Q42; WASSCE 2023 Q9). Sorting rule: debeaking goes to livestock-management.routine-practices; poultry diseases go to animal-health; incubation goes to animal-reproduction.eggs; high humidity or poor ventilation in a poultry house causing wet litter or disease goes here, while the effect of humidity or heat on the bird's own growth and laying goes to anatomy.environmental-physiology; formulating a ration goes to animal-nutrition.rations; a sum that ends in cost, revenue or profit goes to farm-management.accounts; feeders and drinkers for other stock go to livestock-management.systems.",
+          "taught_in": []
+        },
+        {
+          "id": "livestock-management.ruminants",
+          "name": "Management of cattle, sheep and goats",
+          "syllabus": {
+            "waec": "H.5(b)",
+            "jamb": "C.6"
+          },
+          "covers": "Rearing cattle, sheep and goats from birth to market weight: housing, feeding and grazing, water, hygiene, care of the young, weaning, milking and finishing.",
+          "taught_in": [
+            "SS1 T3"
+          ]
+        },
+        {
+          "id": "livestock-management.pigs-rabbits",
+          "name": "Management of pigs and rabbits",
+          "syllabus": {
+            "waec": "H.5(b)",
+            "jamb": "C.6"
+          },
+          "covers": "Rearing pigs and rabbits: pens and hutches, feeding, farrowing and kindling, care of piglets and kits (iron injection, clipping needle teeth, creep feeding), hygiene and finishing. Sorting rule: castration goes to livestock-management.routine-practices.",
+          "taught_in": []
+        },
+        {
+          "id": "livestock-management.routine-practices",
+          "name": "Routine management practices",
+          "syllabus": {
+            "waec": "Practical D.1, D.7",
+            "jamb": "C.6"
+          },
+          "covers": "Practices common to many species and the tools used: restraint, handling and grooming, identification by ear notching, tattooing, tagging and branding, castration (burdizzo, elastrator), dehorning and disbudding, debeaking, hoof trimming, culling and selecting stock. Sorting rule: a practice named here goes here whatever the species.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS1 T3"
+      ]
+    },
+    {
+      "id": "animal-nutrition",
+      "name": "Animal nutrition",
+      "part": "Animal production",
+      "syllabus": {
+        "waec": "H.6, Practical D.4",
+        "jamb": "C.5"
+      },
+      "subtopics": [
+        {
+          "id": "animal-nutrition.nutrients",
+          "name": "Feed nutrients: sources and functions",
+          "syllabus": {
+            "waec": "H.6(a), H.6(c)",
+            "jamb": "C.5(a)"
+          },
+          "covers": "The meaning of animal nutrition, and carbohydrates, proteins, fats and oils, minerals, vitamins and water: their sources and functions in farm animals. Sorting rule: what goes wrong when a nutrient is lacking goes to animal-nutrition.malnutrition.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "animal-nutrition.feeds",
+          "name": "Classification of feeds and feedstuffs",
+          "syllabus": {
+            "waec": "H.6(b), Practical D.4",
+            "jamb": "C.5(b)"
+          },
+          "covers": "Roughages and concentrates, energy and protein concentrates, supplements and additives, and identifying local feedstuffs and their use (maize, fish meal, groundnut cake, blood meal, bone meal, rice bran, palm kernel cake, brewers' grain). Sorting rule: combining feeds into a ration goes to animal-nutrition.rations; hay and silage making go to pasture.conservation.",
+          "taught_in": []
+        },
+        {
+          "id": "animal-nutrition.rations",
+          "name": "Rations and ration formulation",
+          "syllabus": {
+            "waec": "H.6(d)",
+            "jamb": "C.5(b)"
+          },
+          "covers": "Balanced ration, maintenance and production rations, rations for each class of animal (starter, grower, finisher, layer, creep), supplementary feeding, and simple ration formulation, including the Pearson square. Sorting rule: what goes into a ration and in what proportion goes here; the total feed a poultry flock needs over a period goes to livestock-management.poultry.",
+          "taught_in": []
+        },
+        {
+          "id": "animal-nutrition.malnutrition",
+          "name": "Malnutrition and nutrient deficiencies",
+          "syllabus": {
+            "waec": "H.6(e)",
+            "jamb": "C.5(c)"
+          },
+          "covers": "Causes, symptoms and correction of malnutrition in farm animals: rickets, ketosis, milk fever, piglet anaemia, grass tetany, curled toe paralysis and other deficiency conditions. Sorting rule: a disease caused by an organism goes to animal-health.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3",
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "animal-improvement",
+      "name": "Animal improvement",
+      "part": "Animal production",
+      "syllabus": {
+        "waec": "H.8",
+        "jamb": "C.10"
+      },
+      "subtopics": [
+        {
+          "id": "animal-improvement.aims-methods",
+          "name": "Meaning, aims and methods of animal improvement",
+          "syllabus": {
+            "waec": "H.8(a)-(c)",
+            "jamb": "C.10"
+          },
+          "covers": "The meaning and aims of animal improvement, and introduction, selection and quarantine as methods. Sorting rule: mating systems go to animal-improvement.breeding-systems; artificial insemination goes to animal-improvement.ai.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "animal-improvement.breeding-systems",
+          "name": "Breeding systems",
+          "syllabus": {
+            "waec": "H.8(c)(iii) notes",
+            "jamb": "C.10"
+          },
+          "covers": "Inbreeding, line breeding, outbreeding, crossbreeding and upgrading, hybrid vigour, and the performance of local, exotic and cross breeds compared. Sorting rule: which breed has a named feature or use goes to farm-animals.breeds.",
+          "taught_in": []
+        },
+        {
+          "id": "animal-improvement.ai",
+          "name": "Artificial insemination",
+          "syllabus": {
+            "waec": "H.8(d)",
+            "jamb": "C.10"
+          },
+          "covers": "The meaning of artificial insemination, methods of collecting semen (artificial vagina, electro-ejaculation, massage), storing and inseminating, and its advantages and disadvantages. Real papers test it (WASSCE 2025 Q39).",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "animal-health",
+      "name": "Animal health",
+      "part": "Animal production",
+      "syllabus": {
+        "waec": "H.9, Practical D.5-6",
+        "jamb": "C.7"
+      },
+      "subtopics": [
+        {
+          "id": "animal-health.general",
+          "name": "Animal disease: meaning, causes and general control",
+          "syllabus": {
+            "waec": "H.9(a)-(d), H.9(g), Practical D.6",
+            "jamb": "C.7(a)(i)"
+          },
+          "covers": "The meaning of disease, signs of health and ill-health, kinds of causal organism, predisposing factors, susceptibility and resistance, sorting named diseases by the kind of organism that causes them, and general prevention and control: quarantine, vaccination, hygiene, farm sanitation, breeding for resistance, and drug treatment. Sorting rule: a question about one named disease goes to that disease's pathogen subtopic; a question that asks which of several named diseases is caused by a given kind of organism, with options drawn from more than one pathogen subtopic, goes here even though the answer is one named disease; dipping and spraying go to animal-health.ectoparasites and deworming and drenching to animal-health.endoparasites.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "animal-health.viral",
+          "name": "Viral diseases of livestock",
+          "syllabus": {
+            "waec": "H.9(e)(i)",
+            "jamb": "C.7(a)"
+          },
+          "covers": "Causal organism, animals affected, symptoms, transmission, effects, prevention and control of viral diseases: foot and mouth disease, rinderpest, Newcastle disease, fowl pox, Gumboro, PPR, African swine fever.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "animal-health.bacterial",
+          "name": "Bacterial diseases of livestock",
+          "syllabus": {
+            "waec": "H.9(e)(ii)",
+            "jamb": "C.7(a)"
+          },
+          "covers": "Causal organism, symptoms, transmission, effects, prevention and control of bacterial diseases: anthrax, brucellosis, tuberculosis, mastitis, fowl typhoid, pneumonia.",
+          "taught_in": []
+        },
+        {
+          "id": "animal-health.fungal-protozoan",
+          "name": "Fungal and protozoan diseases of livestock",
+          "syllabus": {
+            "waec": "H.9(e)(iii)-(iv)",
+            "jamb": "C.7(a)"
+          },
+          "covers": "Causal organism, symptoms, transmission, effects, prevention and control of fungal diseases (aspergillosis, ringworm) and protozoan diseases (trypanosomiasis, coccidiosis, babesiosis), including the drugs used such as sulpha drugs for coccidiosis. Real papers test it (WASSCE 2025 Q44). Sorting rule: scabies or mange, which WAEC lists among fungal diseases, goes to animal-health.ectoparasites because it is caused by mites; the tsetse fly as a vector goes to animal-health.ectoparasites.",
+          "taught_in": []
+        },
+        {
+          "id": "animal-health.endoparasites",
+          "name": "Endoparasites of livestock",
+          "syllabus": {
+            "waec": "H.9(f), Practical D.5",
+            "jamb": "C.7(b)"
+          },
+          "covers": "The meaning and types of parasite, and the life cycle, transmission, damage, economic importance and control of internal parasites: tapeworm, liver fluke and roundworm, with deworming and drenching. Sorting rule: what a parasite is, asked in general, goes here.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "animal-health.ectoparasites",
+          "name": "Ectoparasites and disease vectors",
+          "syllabus": {
+            "waec": "H.9(f), Practical D.5",
+            "jamb": "C.7(b)"
+          },
+          "covers": "Life cycle, damage, economic importance and control of external parasites and vectors: ticks, lice, mites (mange and scabies), fleas, tsetse fly and biting flies, with dipping and spraying.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "fisheries",
+      "name": "Fisheries and wildlife",
+      "part": "Animal production",
+      "syllabus": {
+        "waec": "H.10, Practical D.6, D.8",
+        "jamb": "C.8"
+      },
+      "subtopics": [
+        {
+          "id": "fisheries.aquaculture",
+          "name": "Aquaculture and fish culture systems",
+          "syllabus": {
+            "waec": "H.10(a)-(c)",
+            "jamb": "C.8(a), C.8(a)(i)-(ii)"
+          },
+          "covers": "The meaning of aquaculture, fish, shrimp and crab farming, the importance of fish farming, common fishes of West Africa (tilapia, catfish, Heterotis), and extensive, semi-intensive and intensive culture systems. Sorting rule: building and running a pond goes to fisheries.pond.",
+          "taught_in": []
+        },
+        {
+          "id": "fisheries.pond",
+          "name": "Fish pond establishment and management",
+          "syllabus": {
+            "waec": "H.10(d)-(e)",
+            "jamb": "C.8(a)(iii)"
+          },
+          "covers": "Conditions for siting a fish pond, constructing and establishing it, and managing it: liming, fertilization, aeration, desilting, stocking, feeding and predator control.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "fisheries.fishing",
+          "name": "Fishing methods and fishery regulations",
+          "syllabus": {
+            "waec": "H.10(f)-(g), Practical D.6",
+            "jamb": "C.8(b)(i), C.8(b)(iii)"
+          },
+          "covers": "Fishing methods and tools (drag net, cast net, gill net, hook and line, traps), and the meaning and content of fishery regulations (close season, mesh size, catch quota, restocking). Sorting rule: what is done to fish after catching goes to fisheries.processing.",
+          "taught_in": []
+        },
+        {
+          "id": "fisheries.processing",
+          "name": "Fish processing and preservation",
+          "syllabus": {
+            "waec": "H.10 notes, Practical D.8",
+            "jamb": "C.8(b)(ii)"
+          },
+          "covers": "Processing and preserving fish: curing, salting, sun drying, smoking, freezing and canning, and the advantages and disadvantages of each.",
+          "taught_in": []
+        },
+        {
+          "id": "fisheries.wildlife",
+          "name": "Wildlife management",
+          "syllabus": {
+            "waec": "B.2(c)(i)",
+            "jamb": "C.8(c)"
+          },
+          "covers": "Game reserves and national parks of West Africa and the animals in them, reasons for establishing them, habitat conservation, domestication, feeding, harvesting and processing of wildlife, and wildlife regulations. Sorting rule: forest reserves as forest management go to forestry.management.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "apiculture",
+      "name": "Bee keeping (apiculture)",
+      "part": "Animal production",
+      "syllabus": {
+        "waec": "H.11",
+        "jamb": "C.9"
+      },
+      "subtopics": [
+        {
+          "id": "apiculture.bees",
+          "name": "Bees and the importance of bee keeping",
+          "syllabus": {
+            "waec": "H.11(a)-(c)",
+            "jamb": "C.9(a)-(b)"
+          },
+          "covers": "The meaning of apiculture, indigenous and exotic bees, the castes of the colony (queen, drone, worker) and their work, bee products (honey, beeswax, propolis, royal jelly), and the importance of bees and bee keeping, including pollination. Real papers test it (WASSCE 2025 Q45).",
+          "taught_in": []
+        },
+        {
+          "id": "apiculture.methods",
+          "name": "Methods, equipment and safety in bee keeping",
+          "syllabus": {
+            "waec": "H.11(d)-(f)",
+            "jamb": "C.9(c)-(d)"
+          },
+          "covers": "Traditional and modern bee keeping, hives (Langstroth, Kenya top bar, traditional), equipment (smoker, veil, bee suit, hive tool, boots, brush, honey extractor), and precautions such as siting apiaries away from homes and warning signs.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "economics",
+      "name": "Basic economic principles and factors of production",
+      "part": "Agricultural economics and extension",
+      "syllabus": {
+        "waec": "I.1, I.2",
+        "jamb": "D.1, D.2(b), D.4"
+      },
+      "subtopics": [
+        {
+          "id": "economics.principles",
+          "name": "Scarcity, choice and scale of preference",
+          "syllabus": {
+            "waec": "I.1(a)-(c)",
+            "jamb": "D.2(b)"
+          },
+          "covers": "Scarcity, choice, scale of preference and opportunity cost, applied to farm decisions. Sorting rule: diminishing returns goes to economics.production-function.",
+          "taught_in": []
+        },
+        {
+          "id": "economics.production-function",
+          "name": "Production function and diminishing returns",
+          "syllabus": {
+            "waec": "I.1(d)",
+            "jamb": "D.2(b)"
+          },
+          "covers": "The production function, input-input, output-output and input-output relationships, total, average and marginal product, the stages of production, and the law of diminishing returns, read from tables and graphs.",
+          "taught_in": []
+        },
+        {
+          "id": "economics.factors",
+          "name": "Factors of production",
+          "syllabus": {
+            "waec": "I.2",
+            "jamb": "D.1"
+          },
+          "covers": "Land, labour, capital and management (entrepreneur) as factors of production, their rewards, the types and sources of capital and its problems, and the entrepreneur's role. Sorting rule: which item is a factor, or what a factor earns, goes here; the characteristics and uses of land go to land.uses; types of labour and labour management go to economics.labour; the functions of a farm manager go to farm-management.manager.",
+          "taught_in": []
+        },
+        {
+          "id": "economics.labour",
+          "name": "Labour and labour management",
+          "syllabus": {
+            "waec": "I.2(c)",
+            "jamb": "D.1(b), D.4"
+          },
+          "covers": "Characteristics and classification of labour (family, hired, permanent, casual, communal), sources of labour, labour efficiency and supervision, labour relations, national labour laws, and rural-urban migration and its effect on farm labour.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "demand-supply",
+      "name": "Demand, supply and agricultural prices",
+      "part": "Agricultural economics and extension",
+      "syllabus": {
+        "waec": "I.3, I.4, I.5",
+        "jamb": "D.2(a), D.3"
+      },
+      "subtopics": [
+        {
+          "id": "demand-supply.demand",
+          "name": "Demand",
+          "syllabus": {
+            "waec": "I.3",
+            "jamb": "D.2(a)"
+          },
+          "covers": "The meaning of demand, the law of demand, factors affecting demand for agricultural produce, movement along the demand curve and shifts of the curve.",
+          "taught_in": []
+        },
+        {
+          "id": "demand-supply.supply",
+          "name": "Supply",
+          "syllabus": {
+            "waec": "I.4",
+            "jamb": "D.2(a)"
+          },
+          "covers": "The meaning of supply, the law of supply, factors affecting the supply of agricultural produce, movement along the supply curve and shifts of the curve. Sorting rule: seasonality and other features of farm production go to demand-supply.features.",
+          "taught_in": []
+        },
+        {
+          "id": "demand-supply.price-policy",
+          "name": "Market price, price control and price support",
+          "syllabus": {
+            "waec": "I.5",
+            "jamb": "D.2(a)"
+          },
+          "covers": "How demand and supply together set price, equilibrium, and the implications for agriculture of price support, price control and subsidies. Sorting rule: how a subsidy changes price or output goes here; a subsidy listed as one of government's roles goes to government.roles; the price at a point in the marketing channel (farm gate, wholesale, retail) and marketing margins go to marketing.agents.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "demand-supply.features",
+          "name": "Features of agricultural production and produce",
+          "syllabus": {
+            "waec": null,
+            "jamb": "D.3"
+          },
+          "covers": "Small farm holdings, biological limits, dependence on climate, seasonality of production and how it can be evened out, perishability and bulkiness of produce, and price elasticity of demand and supply of agricultural produce and its computation. Real papers test it (WASSCE 2025 Q2). Sorting rule: a feature asked for itself goes here; a feature asked as a problem of marketing goes to marketing.problems.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "farm-management",
+      "name": "Farm management, records and accounts",
+      "part": "Agricultural economics and extension",
+      "syllabus": {
+        "waec": "I.6, I.7, I.9",
+        "jamb": "D.5(a)-(c)"
+      },
+      "subtopics": [
+        {
+          "id": "farm-management.manager",
+          "name": "The farm manager",
+          "syllabus": {
+            "waec": "I.6, I.7",
+            "jamb": "D.5(a)"
+          },
+          "covers": "The meaning of farm management, and the qualities, functions and problems of a farm manager. Sorting rule: planning what the farm will produce goes to survey.farm-planning.",
+          "taught_in": []
+        },
+        {
+          "id": "farm-management.records",
+          "name": "Farm records",
+          "syllabus": {
+            "waec": "I.9(a)-(c)",
+            "jamb": "D.5(b)"
+          },
+          "covers": "The importance of farm records, their types (inventory, production, livestock, income and expenditure, farm diary, cash book, supplementary records), and designing a record. Sorting rule: working out cost, profit or depreciation from records goes to farm-management.accounts.",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        },
+        {
+          "id": "farm-management.accounts",
+          "name": "Farm accounts and stock valuation",
+          "syllabus": {
+            "waec": "I.9(d)",
+            "jamb": "D.5(c)"
+          },
+          "covers": "Purchases and sales accounts, profit and loss account, balance sheet, farm budget, cost of production, gross and net margin and profit, and appreciation, depreciation and salvage value, with the calculations. Real papers test it (WASSCE 2025 Q47 to Q49).",
+          "taught_in": [
+            "SS2 T3"
+          ]
+        }
+      ],
+      "taught_in": [
+        "SS2 T3"
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "Agricultural finance and insurance",
+      "part": "Agricultural economics and extension",
+      "syllabus": {
+        "waec": "I.8, I.11",
+        "jamb": "A.7(c), D.1(c), D.5(d)"
+      },
+      "subtopics": [
+        {
+          "id": "finance.credit",
+          "name": "Sources and classes of farm credit",
+          "syllabus": {
+            "waec": "I.8(a)-(d)",
+            "jamb": "D.1(c), A.7(c)"
+          },
+          "covers": "The meaning and importance of agricultural finance, sources of farm finance (savings, relatives, moneylenders, cooperatives, commercial banks, the Bank of Agriculture, government schemes), and classes of credit by time (short, medium, long term), by source (institutional, non-institutional) and by liquidity (cash, kind). Sorting rule: difficulties in getting or giving loans go to finance.credit-problems.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "finance.credit-problems",
+          "name": "Problems of agricultural credit",
+          "syllabus": {
+            "waec": "I.8(e)-(f)",
+            "jamb": "D.1(c)"
+          },
+          "covers": "Problems farmers face in getting credit (high interest, lack of collateral, delays) and problems lenders face in granting loans to farmers (no records, default, risk).",
+          "taught_in": []
+        },
+        {
+          "id": "finance.capital-market",
+          "name": "Capital market",
+          "syllabus": {
+            "waec": "I.8(g)",
+            "jamb": null
+          },
+          "covers": "The meaning of the capital market, the institutions in it, its sources of funds (bonds, insurance companies, merchant banks, the stock exchange), its role in agricultural business, and the meaning of agri-business.",
+          "taught_in": []
+        },
+        {
+          "id": "finance.insurance",
+          "name": "Agricultural insurance",
+          "syllabus": {
+            "waec": "I.11",
+            "jamb": "D.5(d)"
+          },
+          "covers": "The meaning and importance of agricultural insurance, types of policy (crop, livestock, farm vehicle, fire and buildings, life assurance), the premium, and problems of agricultural insurance.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing of agricultural produce",
+      "part": "Agricultural economics and extension",
+      "syllabus": {
+        "waec": "I.10",
+        "jamb": "D.6"
+      },
+      "subtopics": [
+        {
+          "id": "marketing.functions",
+          "name": "Meaning, importance and functions of marketing",
+          "syllabus": {
+            "waec": "I.10(a), I.10(c)",
+            "jamb": "D.6(a)"
+          },
+          "covers": "The meaning and importance of marketing agricultural produce, and marketing functions: assembling, grading, standardisation, processing, storage, packaging, transportation, advertising and financing. Real papers test it (WASSCE 2025 Q50). Sorting rule: who carries produce to the consumer goes to marketing.agents.",
+          "taught_in": [
+            "SS3 T2"
+          ]
+        },
+        {
+          "id": "marketing.agents",
+          "name": "Marketing agents and channels",
+          "syllabus": {
+            "waec": "I.10(b)",
+            "jamb": "D.6(b)"
+          },
+          "covers": "Marketing agents (producers, middlemen, wholesalers, retailers, cooperatives, commodity boards) and their functions, advantages and disadvantages, marketing channels from farmer to consumer, and the price levels along a channel (farm gate, wholesale and retail price) and marketing margins, with the simple sums. Real papers test farm gate price. Sorting rule: the price at a point in the channel, or the margin between two points, goes here; how demand and supply set a market price, and price control or support, go to demand-supply.price-policy.",
+          "taught_in": []
+        },
+        {
+          "id": "marketing.export",
+          "name": "Export of agricultural produce",
+          "syllabus": {
+            "waec": "I.10(d)-(h)",
+            "jamb": null
+          },
+          "covers": "Export crops of West Africa (cocoa, rubber, cotton, oil palm produce, groundnut, coffee, cashew), guidelines for exporting, bodies engaged in export such as ANCE, and the importance of exporting produce. Real papers test it (WASSCE 2025 Q46).",
+          "taught_in": []
+        },
+        {
+          "id": "marketing.problems",
+          "name": "Problems of marketing agricultural produce",
+          "syllabus": {
+            "waec": "I.10(i)",
+            "jamb": "D.6(b)-(c)"
+          },
+          "covers": "Problems of marketing produce: perishability, bulkiness, seasonality, poor storage and transport, price fluctuation, exploitation by middlemen, poor grading, and possible solutions. Sorting rule: a feature of produce asked as a marketing problem goes here; the feature asked for itself goes to demand-supply.features.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T2"
+      ]
+    },
+    {
+      "id": "extension",
+      "name": "Agricultural extension",
+      "part": "Agricultural economics and extension",
+      "syllabus": {
+        "waec": "I.12, A.4(c)",
+        "jamb": "D.7"
+      },
+      "subtopics": [
+        {
+          "id": "extension.meaning",
+          "name": "Meaning, importance and agencies of extension",
+          "syllabus": {
+            "waec": "I.12(a), I.12(c), A.4(c)",
+            "jamb": "D.7(a)-(b)"
+          },
+          "covers": "The meaning and importance of agricultural extension, the qualities of a good extension worker and the roles and duties of an extension worker (carrying research findings to farmers, teaching new practices, organising farmers, carrying farmers' problems back to research, linking farmers to credit and inputs), and the agencies that carry it out: ADPs, NDE, agro-service centres, state ministries, universities, research institutes and farmers' organisations such as cooperative societies. Sorting rule: what a national programme set out to do goes to government.programmes; a cooperative as a source of credit goes to finance.credit, and as a marketing agent to marketing.agents; how an extension worker reaches farmers (visits, demonstrations, radio) goes to extension.methods.",
+          "taught_in": []
+        },
+        {
+          "id": "extension.methods",
+          "name": "Extension methods",
+          "syllabus": {
+            "waec": "I.12(b)",
+            "jamb": "D.7(c)"
+          },
+          "covers": "Individual contact methods (farm and home visits, office calls), group methods (demonstrations, field days, meetings, demonstration plots) and mass methods (radio, television, posters, visual aids), and their advantages and disadvantages.",
+          "taught_in": [
+            "SS3 T1"
+          ]
+        },
+        {
+          "id": "extension.problems",
+          "name": "Problems of agricultural extension",
+          "syllabus": {
+            "waec": "I.12(d)",
+            "jamb": "D.7(d)"
+          },
+          "covers": "Problems of extension in West Africa (illiteracy, too few extension workers, poor transport, poor funding, farmers' resistance to change) and possible solutions.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": [
+        "SS3 T1"
+      ]
+    },
+    {
+      "id": "processing-storage",
+      "name": "Processing and storage of farm produce",
+      "part": "Agricultural technology",
+      "syllabus": {
+        "waec": "D.2, Practical B.3",
+        "jamb": "E.5"
+      },
+      "subtopics": [
+        {
+          "id": "processing-storage.processing",
+          "name": "Processing of farm produce",
+          "syllabus": {
+            "waec": "D.2",
+            "jamb": "E.5(a)"
+          },
+          "covers": "The importance of processing, and traditional and modern methods of processing produce and the products and by-products they give: cassava into gari and flour, rice parboiling, milling and polishing and their effect on the grain, groundnut into oil and cake, palm oil extraction, and sugar cane into sugar with molasses and bagasse as by-products. Real papers test it (WASSCE 2025 Q25; WASSCE 2024 Q22, molasses). Sorting rule: a product or by-product of processing a crop goes here, not to the crop's husbandry subtopic or to agriculture.agro-industry; fermenting and drying cocoa beans goes to cash-crops.beverages; fish processing goes to fisheries.processing; identifying a processing machine goes to tools.machinery.",
+          "taught_in": []
+        },
+        {
+          "id": "processing-storage.storage",
+          "name": "Storage of farm produce",
+          "syllabus": {
+            "waec": "D.2, G.1(c)(viii)",
+            "jamb": "E.5(b)"
+          },
+          "covers": "Storage methods and structures (barns, cribs, rhumbus, silos, cold stores), conditions for safe storage, and drying produce to a safe moisture content to prevent moulds, rot and insect attack. Real papers test it (WASSCE 2025 Q23). Sorting rule: keeping produce dry or cool in store goes here; the life cycle and control of a named storage pest go to crop-pests.storage-pests.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    },
+    {
+      "id": "agric-research",
+      "name": "Agricultural research, statistics and ICT",
+      "part": "Agricultural technology",
+      "syllabus": {
+        "waec": null,
+        "jamb": "E.7, E.8"
+      },
+      "subtopics": [
+        {
+          "id": "agric-research.experiments",
+          "name": "Planning agricultural experiments",
+          "syllabus": {
+            "waec": null,
+            "jamb": "E.8(a)"
+          },
+          "covers": "Basic concepts of an agricultural experiment: hypothesis, treatment, control, replication, randomisation, experimental plot and experimental error. Sorting rule: which institute researches a crop, or why research matters to farmers, goes to development.institutes.",
+          "taught_in": []
+        },
+        {
+          "id": "agric-research.statistics",
+          "name": "Interpreting results and simple statistics",
+          "syllabus": {
+            "waec": null,
+            "jamb": "E.8(b)"
+          },
+          "covers": "Drawing inferences from experimental results, and computing mean, median and mode from farm data. Sorting rule: profit, cost and depreciation sums go to farm-management.accounts; plant population sums go to cultivation.planting-patterns.",
+          "taught_in": []
+        },
+        {
+          "id": "agric-research.ict",
+          "name": "ICT in agriculture",
+          "syllabus": {
+            "waec": null,
+            "jamb": "E.7"
+          },
+          "covers": "Parts and features of a computer, uses of computers in agriculture (disease and weather forecasting, ration formulation, databases, simulation, record keeping), and phones and the internet in farming and marketing.",
+          "taught_in": []
+        }
+      ],
+      "taught_in": []
+    }
+  ],
+  "legacy_note": "The live database holds no Agricultural Science topics (legacy-topics.json is an empty list), so there is nothing to fold and legacy_to is empty. When legacy names appear, the rule is the one used for Biology: a specific name goes to the subtopic it matches, and a generic name (a bare subject name, General questions, or a name spanning several areas) goes to the parent topic it fits best, where the question is correct but unplaced and is flagged for reclassification rather than guessed into a subtopic.",
+  "legacy_to": {},
+  "merged_into": {}
+}

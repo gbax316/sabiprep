@@ -1,0 +1,3487 @@
+{
+  "items": [
+    {
+      "source": "wassce",
+      "ref": "A(a)(i)",
+      "text": "Conversion of numbers from one base to another, to and from base 10",
+      "subtopic_id": "number-bases.conversion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(a)(ii)",
+      "text": "Basic operations on number bases: addition, subtraction and multiplication",
+      "subtopic_id": "number-bases.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(b)(i)",
+      "text": "Concept of modulo arithmetic, e.g. 6 + 4 = k (mod 7), m = 2 (mod 3)",
+      "subtopic_id": "number-bases.modular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(b)(ii)",
+      "text": "Addition, subtraction and multiplication operations in modulo arithmetic",
+      "subtopic_id": "number-bases.modular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(b)(iii)",
+      "text": "Application of modulo arithmetic to daily life: market days, clock, shift duty",
+      "subtopic_id": "number-bases.modular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(c)(i)",
+      "text": "Basic operations on fractions and decimals",
+      "subtopic_id": "fractions.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(c)(ii)",
+      "text": "Approximations and significant figures, realistic approximation",
+      "subtopic_id": "fractions.approximation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(d)(i)",
+      "text": "Laws of indices, including negative and fractional indices",
+      "subtopic_id": "indices.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(d)(ii)",
+      "text": "Numbers in standard form (scientific notation); use of tables of squares, square roots and reciprocals",
+      "subtopic_id": "indices.standard-form",
+      "status": "covered",
+      "note": "Tables of squares, square roots and reciprocals sit in indices.log-tables.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(e)(i)",
+      "text": "Relationship between indices and logarithms, y = 10^k implies log y = k",
+      "subtopic_id": "indices.log-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(e)(ii)",
+      "text": "Basic rules of logarithms for products, quotients and powers",
+      "subtopic_id": "indices.log-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(e)(iii)",
+      "text": "Use of tables of logarithms and antilogarithms for multiplication, division, powers and roots",
+      "subtopic_id": "indices.log-tables",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(f)(i)",
+      "text": "Patterns of sequences; determine any term of a given sequence, Un notation",
+      "subtopic_id": "sequences.patterns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(f)(ii) A.P.",
+      "text": "Arithmetic progression, simple cases and word problems, including the sum",
+      "subtopic_id": "sequences.ap",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(f)(ii) G.P.",
+      "text": "Geometric progression, simple cases and word problems, excluding the sum",
+      "subtopic_id": "sequences.gp",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(g)(i)",
+      "text": "Idea of sets: universal, finite, infinite, empty and disjoint sets, subsets; notation for union, intersection and complement",
+      "subtopic_id": "sets.notation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(g)(ii)",
+      "text": "Practical problems of classification using Venn diagrams, at most 3 sets",
+      "subtopic_id": "sets.venn",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(g) notes",
+      "text": "Properties of set operations: commutative, associative and distributive",
+      "subtopic_id": "sets.notation",
+      "status": "covered",
+      "note": "Covered through 'set identities'; the three laws are not named.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(h) statements",
+      "text": "Simple statements; true and false statements",
+      "subtopic_id": "logic.statements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(h) negation",
+      "text": "Negation of statements",
+      "subtopic_id": "logic.statements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(h) implications",
+      "text": "Implications and the symbols for implies and is implied by",
+      "subtopic_id": "logic.statements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(h) Venn",
+      "text": "Use of Venn diagrams in logical reasoning",
+      "subtopic_id": "logic.arguments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(i) numbers",
+      "text": "Positive and negative integers, rational numbers; notation N, Z, Q",
+      "subtopic_id": "fractions.rational-numbers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(i) operations",
+      "text": "The four basic operations on rational numbers",
+      "subtopic_id": "fractions.rational-numbers",
+      "status": "covered",
+      "note": "Arithmetic on common fractions is sorted to fractions.operations.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(i) number line",
+      "text": "Match rational numbers with points on the number line",
+      "subtopic_id": "fractions.rational-numbers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(j) simplification",
+      "text": "Simplification of simple surds of the forms a root b and a plus or minus root b",
+      "subtopic_id": "surds.simplify",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(j) rationalisation",
+      "text": "Rationalisation of simple surds",
+      "subtopic_id": "surds.rationalise",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(j) operations",
+      "text": "Basic operations on surds",
+      "subtopic_id": "surds.simplify",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(k)(i)",
+      "text": "Identification of order, notation and types of matrices, not more than 3 x 3",
+      "subtopic_id": "matrices.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(k)(ii)",
+      "text": "Addition, subtraction, scalar multiplication and multiplication of matrices",
+      "subtopic_id": "matrices.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(k)(iii)",
+      "text": "Determinant of a matrix, restricted to 2 x 2",
+      "subtopic_id": "matrices.determinants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(k)(iii) notes",
+      "text": "Application of determinants to solving simultaneous linear equations in two variables",
+      "subtopic_id": "matrices.inverse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(l) ratio",
+      "text": "Ratio between two similar quantities",
+      "subtopic_id": "ratio.proportion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(l) proportion",
+      "text": "Proportion between two or more similar quantities",
+      "subtopic_id": "ratio.proportion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(l) partnerships",
+      "text": "Financial partnerships",
+      "subtopic_id": "ratio.proportion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(l) rates of work",
+      "text": "Rates of work and average rates",
+      "subtopic_id": "ratio.rates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(l) costs",
+      "text": "Costs",
+      "subtopic_id": "ratio.rates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(l) taxes",
+      "text": "Taxes, e.g. VAT and withholding tax",
+      "subtopic_id": "financial.taxes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(l) foreign exchange",
+      "text": "Foreign exchange",
+      "subtopic_id": "ratio.rates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(l) density",
+      "text": "Density, e.g. population density",
+      "subtopic_id": "ratio.rates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(l) speed",
+      "text": "Mass, distance, time and speed",
+      "subtopic_id": "ratio.rates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(m) simple interest",
+      "text": "Simple interest",
+      "subtopic_id": "percentages.interest",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(m) commission",
+      "text": "Commission",
+      "subtopic_id": "percentages.profit-loss",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(m) discount",
+      "text": "Discount",
+      "subtopic_id": "percentages.profit-loss",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(m) depreciation",
+      "text": "Depreciation (as a percentage topic)",
+      "subtopic_id": "financial.depreciation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(m) profit and loss",
+      "text": "Profit and loss",
+      "subtopic_id": "percentages.profit-loss",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(m) compound interest",
+      "text": "Compound interest, limited to a maximum of 3 years",
+      "subtopic_id": "percentages.interest",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(m) hire purchase",
+      "text": "Hire purchase",
+      "subtopic_id": "percentages.profit-loss",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(m) percentage error",
+      "text": "Percentage error",
+      "subtopic_id": "percentages.error",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(n)(i)",
+      "text": "Depreciation and amortization: meaning, depreciation on fixed assets, amortization on capitalized assets",
+      "subtopic_id": "financial.depreciation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(n)(ii)",
+      "text": "Annuities: meaning and simple problems",
+      "subtopic_id": "financial.annuities",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(n)(iii)",
+      "text": "Capital market instruments: shares, stocks, debentures, bonds, interest on bonds and debentures",
+      "subtopic_id": "financial.shares-bonds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(o) direct and inverse",
+      "text": "Direct and inverse variation, expressed in symbols, with simple practical problems",
+      "subtopic_id": "variation.direct-inverse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "A(o) partial and joint",
+      "text": "Partial and joint variation, expressed in symbols, with simple practical problems",
+      "subtopic_id": "variation.joint-partial",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(a)(i)",
+      "text": "Formulating algebraic expressions from given situations",
+      "subtopic_id": "expressions.formulating",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(a)(ii)",
+      "text": "Evaluation of algebraic expressions",
+      "subtopic_id": "expressions.formulating",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(b)(i)",
+      "text": "Expansion, e.g. (a + b)(c + d)",
+      "subtopic_id": "expressions.expansion-factorisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(b)(ii)",
+      "text": "Factorization: common factor, grouping, difference of two squares, quadratic trinomials; application of difference of two squares",
+      "subtopic_id": "expressions.expansion-factorisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(b)(iii)",
+      "text": "Binary operations on real numbers, e.g. a*b = 2a + b - ab",
+      "subtopic_id": "binary-operations.evaluating",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(c)(i)",
+      "text": "Linear equations in one variable, finding the truth set",
+      "subtopic_id": "linear-equations.one-variable",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(c)(ii)",
+      "text": "Simultaneous linear equations in two variables by elimination, substitution and graphs; word problems",
+      "subtopic_id": "linear-equations.simultaneous",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(d)(i)",
+      "text": "Change of subject of a formula or relation",
+      "subtopic_id": "expressions.change-of-subject",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(d)(ii)",
+      "text": "Substitution: finding the value of a variable from given values",
+      "subtopic_id": "expressions.change-of-subject",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(e)(i)",
+      "text": "Solution of quadratic equations by factorization, completing the square and formula",
+      "subtopic_id": "quadratic-equations.solving",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(e)(ii)",
+      "text": "Forming a quadratic equation with given roots",
+      "subtopic_id": "quadratic-equations.roots",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(e)(iii)",
+      "text": "Application of quadratic equations in practical problems",
+      "subtopic_id": "quadratic-equations.word-problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(f)(i)",
+      "text": "Interpretation of graphs, table of values, drawing quadratic graphs, roots, maximum and minimum points, intercepts, axis of symmetry, sketched graphs",
+      "subtopic_id": "graphs.curves",
+      "status": "covered",
+      "note": "Reading a single point's coordinates is sorted to coordinate-geometry.distance-midpoint.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(f)(ii)",
+      "text": "Graphical solution of y = ax^2 + bx + c and y = mx + k; quadratic graphs to solve related equations",
+      "subtopic_id": "graphs.intersection",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(f)(iii)",
+      "text": "Drawing tangents to curves to determine the gradient at a point",
+      "subtopic_id": "graphs.gradient",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(g)(i)",
+      "text": "Linear inequalities in one variable, number line, truth set, simple practical problems",
+      "subtopic_id": "inequalities.linear",
+      "status": "partial",
+      "note": "Solving, truth set and number line are covered; simple practical problems that form a one-variable inequality from a situation are not named in any covers line (linear-programming forms inequalities only for two-variable optimisation).",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(g)(ii)",
+      "text": "Graphical solution of linear inequalities in two variables",
+      "subtopic_id": "inequalities.graphical",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(g)(iii)",
+      "text": "Graphical solution of simultaneous linear inequalities in two variables",
+      "subtopic_id": "inequalities.graphical",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(g)(iii) notes",
+      "text": "Maximum and minimum values; minimum cost, maximum profit, linear programming",
+      "subtopic_id": "inequalities.linear-programming",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(h)(i)",
+      "text": "Operations on algebraic fractions with monomial denominators",
+      "subtopic_id": "algebraic-fractions.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(h)(ii)",
+      "text": "Operations on algebraic fractions with binomial denominators",
+      "subtopic_id": "algebraic-fractions.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(h) notes",
+      "text": "Values for which a fraction is undefined",
+      "subtopic_id": "algebraic-fractions.undefined",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(i) types",
+      "text": "Types of functions: one-to-one, one-to-many, many-to-one, many-to-many",
+      "subtopic_id": "functions.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(i) mapping",
+      "text": "Functions as a mapping",
+      "subtopic_id": "functions.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "B(i) rule",
+      "text": "Determination of the rule of a given mapping or function",
+      "subtopic_id": "functions.rules",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(a)(i) Pythagoras",
+      "text": "Use of Pythagoras theorem to determine lengths and distances",
+      "subtopic_id": "plane-mensuration.lengths",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(a)(i) sine and cosine rules",
+      "text": "Use of sine and cosine rules to determine lengths and distances",
+      "subtopic_id": "trigonometry.sine-cosine-rules",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(a)(ii)",
+      "text": "Lengths of arcs of circles, perimeters of sectors and segments",
+      "subtopic_id": "plane-mensuration.circles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(a)(iii) longitudes",
+      "text": "Longitudes and latitudes: distances along longitudes and their corresponding angles",
+      "subtopic_id": "earth.great-circles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(a)(iii) latitudes",
+      "text": "Distances along latitudes and their corresponding angles",
+      "subtopic_id": "earth.parallels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(b)(i)",
+      "text": "Areas of triangles (half base times height) and special quadrilaterals; compound shapes",
+      "subtopic_id": "plane-mensuration.perimeter-area",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(b)(i) similar figures",
+      "text": "Areas of similar figures",
+      "subtopic_id": "solids.similar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(b)(i) half ab sin C",
+      "text": "Area of a triangle = half ab sin C",
+      "subtopic_id": "trigonometry.sine-cosine-rules",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(b)(ii)",
+      "text": "Areas of circles, sectors and segments",
+      "subtopic_id": "plane-mensuration.circles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(b)(iii)",
+      "text": "Surface areas of cubes, cuboids, cylinders, pyramids, right triangular prisms, cones and spheres; sector and cone",
+      "subtopic_id": "solids.surface-area",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(c)(i)",
+      "text": "Volumes of cubes, cuboids, cylinders, cones, right pyramids and spheres; compound shapes",
+      "subtopic_id": "solids.volume",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "C(c)(ii)",
+      "text": "Volumes of similar solids",
+      "subtopic_id": "solids.similar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(a)(i)",
+      "text": "Angles at a point add up to 360 degrees; the degree as unit; acute, obtuse, reflex angles",
+      "subtopic_id": "angles.at-point",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(a)(ii)",
+      "text": "Adjacent angles on a straight line are supplementary",
+      "subtopic_id": "angles.at-point",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(a)(iii)",
+      "text": "Vertically opposite angles are equal",
+      "subtopic_id": "angles.at-point",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(b)(i)",
+      "text": "Alternate angles are equal",
+      "subtopic_id": "angles.parallel-lines",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(b)(ii)",
+      "text": "Corresponding angles are equal",
+      "subtopic_id": "angles.parallel-lines",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(b)(iii)",
+      "text": "Interior opposite angles are supplementary",
+      "subtopic_id": "angles.parallel-lines",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(b)(iv)",
+      "text": "Intercept theorem; proportional division of a line segment",
+      "subtopic_id": "triangles.similar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(i)",
+      "text": "The sum of the angles of a triangle is 2 right angles (proof may be required)",
+      "subtopic_id": "triangles.angle-properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(ii)",
+      "text": "The exterior angle of a triangle equals the sum of the two interior opposite angles",
+      "subtopic_id": "triangles.angle-properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(iii)",
+      "text": "Congruent triangles: conditions SSS, SAS, etc.",
+      "subtopic_id": "triangles.congruent",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(iv)",
+      "text": "Properties of special triangles: isosceles, equilateral, right-angled",
+      "subtopic_id": "triangles.angle-properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(v)",
+      "text": "Properties of special quadrilaterals: parallelogram, rhombus, square, rectangle, trapezium",
+      "subtopic_id": "triangles.quadrilaterals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(vi)",
+      "text": "Properties of similar triangles: equiangular properties and ratio of sides",
+      "subtopic_id": "triangles.similar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(vi) areas",
+      "text": "Ratio of areas of similar triangles",
+      "subtopic_id": "solids.similar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(vii)",
+      "text": "The sum of the angles of a polygon, (n - 2)180 degrees",
+      "subtopic_id": "triangles.polygons",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(viii)",
+      "text": "Property of exterior angles of a polygon",
+      "subtopic_id": "triangles.polygons",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(c)(ix)",
+      "text": "Parallelograms on the same base and between the same parallels are equal in area",
+      "subtopic_id": "triangles.quadrilaterals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(d)(i)",
+      "text": "Chords: angles subtended by chords, perpendicular bisectors of chords",
+      "subtopic_id": "circles.chords",
+      "status": "covered",
+      "note": "Angles subtended by chords at the centre and circumference sit in circles.angles.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(d)(ii)",
+      "text": "Angle at the centre is twice the angle at the circumference",
+      "subtopic_id": "circles.angles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(d)(iii)",
+      "text": "Angle subtended at the circumference by a diameter is a right angle",
+      "subtopic_id": "circles.angles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(d)(iv)",
+      "text": "Angles in the same segment are equal",
+      "subtopic_id": "circles.angles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(d)(v)",
+      "text": "Angles in opposite segments are supplementary",
+      "subtopic_id": "circles.angles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(d)(vi)",
+      "text": "Perpendicularity of tangent and radius",
+      "subtopic_id": "circles.tangents",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(d)(vii)",
+      "text": "Angle between tangent and chord equals the angle in the alternate segment",
+      "subtopic_id": "circles.tangents",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(e)(i)",
+      "text": "Construction: bisectors of angles and line segments",
+      "subtopic_id": "construction.constructions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(e)(ii)",
+      "text": "Construction: line parallel or perpendicular to a given line",
+      "subtopic_id": "construction.constructions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(e)(iii)",
+      "text": "Construction of angles 90, 60, 45, 30 degrees, combinations, and an angle equal to a given angle",
+      "subtopic_id": "construction.constructions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(e)(iv)",
+      "text": "Construction of triangles and quadrilaterals from sufficient data",
+      "subtopic_id": "construction.constructions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(f)(i)",
+      "text": "Locus of points at a given distance from a given point",
+      "subtopic_id": "construction.loci",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(f)(ii)",
+      "text": "Locus of points equidistant from two given points",
+      "subtopic_id": "construction.loci",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(f)(iii)",
+      "text": "Locus of points equidistant from two given straight lines",
+      "subtopic_id": "construction.loci",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "D(f)(iv)",
+      "text": "Locus of points at a given distance from a given straight line",
+      "subtopic_id": "construction.loci",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "E(i)",
+      "text": "Concept of the x-y plane",
+      "subtopic_id": "coordinate-geometry.distance-midpoint",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "E(ii)",
+      "text": "Coordinates of points on the x-y plane",
+      "subtopic_id": "coordinate-geometry.distance-midpoint",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "E(ii) midpoint and distance",
+      "text": "Midpoint of two points, distance between two points",
+      "subtopic_id": "coordinate-geometry.distance-midpoint",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "E(ii) gradient",
+      "text": "Gradient (slope) of a line",
+      "subtopic_id": "coordinate-geometry.gradient",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "E(ii) equation",
+      "text": "Equation of a line in the forms y = mx + c and y - y1 = m(x - x1)",
+      "subtopic_id": "coordinate-geometry.equations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(a)(i)",
+      "text": "Sine, cosine and tangent of acute angles, using right-angled triangles",
+      "subtopic_id": "trigonometry.ratios",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(a)(ii)",
+      "text": "Use of tables of trigonometric ratios",
+      "subtopic_id": "trigonometry.ratios",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(a)(iii)",
+      "text": "Trigonometric ratios of 30, 45 and 60 degrees without tables",
+      "subtopic_id": "trigonometry.ratios",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(a)(iv)",
+      "text": "Sine, cosine and tangent of angles from 0 to 360 degrees, related to the unit circle",
+      "subtopic_id": "trigonometry.general-angles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(a)(v)",
+      "text": "Graphs of sine and cosine, e.g. y = a sin x, y = b cos x",
+      "subtopic_id": "trigonometry.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(a)(vi)",
+      "text": "Graphs of trigonometric ratios; simultaneous linear and trigonometric equations, e.g. y = a sin x + b cos x",
+      "subtopic_id": "trigonometry.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(b)(i)",
+      "text": "Calculating angles of elevation and depression",
+      "subtopic_id": "trigonometry.elevation-depression",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(b)(ii)",
+      "text": "Application of elevation and depression to heights and distances",
+      "subtopic_id": "trigonometry.elevation-depression",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(c)(i)",
+      "text": "Bearing of one point from another, notation 035 degrees and N35E",
+      "subtopic_id": "trigonometry.bearings",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "F(c)(ii)",
+      "text": "Calculation of distances and angles in bearings, sine and cosine rules may be used",
+      "subtopic_id": "trigonometry.bearings",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "G(i)",
+      "text": "Differentiation of algebraic functions: meaning of dy/dx, standard derivatives of basic functions",
+      "subtopic_id": "differentiation.algebraic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "G(i) gradient",
+      "text": "Gradient of a curve at a point as the differential coefficient; velocity from distance, e.g. s = 2t^3 + 4",
+      "subtopic_id": "differentiation.rates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "G(i) applications",
+      "text": "Application to real life: maximum and minimum values, rates of change",
+      "subtopic_id": "differentiation.max-min",
+      "status": "covered",
+      "note": "Rates of change sit in differentiation.rates.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "G(ii)",
+      "text": "Integration of simple algebraic functions: meaning and concept",
+      "subtopic_id": "integration.indefinite",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "G(ii) definite",
+      "text": "Evaluation of simple definite integrals of algebraic functions",
+      "subtopic_id": "integration.definite-area",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(i)",
+      "text": "Frequency distribution: tables, class intervals, class mark and class boundary",
+      "subtopic_id": "data-presentation.frequency-tables",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(ii) pie and bar",
+      "text": "Pie charts and bar charts, reading and drawing simple inferences",
+      "subtopic_id": "data-presentation.charts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(ii) histograms",
+      "text": "Histograms and frequency polygons, equal class intervals only",
+      "subtopic_id": "data-presentation.histograms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(iii) mean",
+      "text": "Mean for discrete and grouped data, assumed mean acceptable",
+      "subtopic_id": "averages.mean",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(iii) median and mode",
+      "text": "Median and mode for discrete and grouped data; mode from histogram",
+      "subtopic_id": "averages.median-mode",
+      "status": "covered",
+      "note": "Grouped median is estimated from the ogive, which sits in averages.ogive.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(iv)",
+      "text": "Cumulative frequency curve (ogive): median, quartiles, percentiles, everyday applications",
+      "subtopic_id": "averages.ogive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(v) range",
+      "text": "Range",
+      "subtopic_id": "dispersion.range-deviation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(v) quartile range",
+      "text": "Semi-interquartile and interquartile range",
+      "subtopic_id": "dispersion.range-deviation",
+      "status": "covered",
+      "note": "From an ogive these sit in averages.ogive.",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(v) mean deviation",
+      "text": "Mean deviation as the mean of absolute deviations from the mean",
+      "subtopic_id": "dispersion.range-deviation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(v) variance and SD",
+      "text": "Variance and standard deviation",
+      "subtopic_id": "dispersion.variance-sd",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(a)(v) notes grouped SD",
+      "text": "Standard deviation of grouped data",
+      "subtopic_id": "dispersion.variance-sd",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(b)(i)",
+      "text": "Experimental and theoretical probability, equally likely events",
+      "subtopic_id": "probability.single-event",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(b)(ii)",
+      "text": "Addition of probabilities for mutually exclusive and independent events, with and without replacement",
+      "subtopic_id": "probability.combined-events",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "H(b)(iii)",
+      "text": "Multiplication of probabilities for independent events; 'and' and 'or'",
+      "subtopic_id": "probability.combined-events",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(a) directed line segment",
+      "text": "Vectors as a directed line segment",
+      "subtopic_id": "vectors.representation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(a) components",
+      "text": "Cartesian components of a vector",
+      "subtopic_id": "vectors.representation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(a) magnitude",
+      "text": "Magnitude of a vector",
+      "subtopic_id": "vectors.representation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(a) equal, zero, parallel",
+      "text": "Equal vectors, zero vector, parallel vectors",
+      "subtopic_id": "vectors.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(a) operations",
+      "text": "Addition and subtraction of vectors, multiplication of a vector by a scalar",
+      "subtopic_id": "vectors.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(a) notes bearing form",
+      "text": "Vector in the form (5, 060 degrees) and its components",
+      "subtopic_id": "vectors.representation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(b) reflection",
+      "text": "Reflection of points and shapes in the axes and lines x = k, y = x, y = kx; mirror lines",
+      "subtopic_id": "transformation.reflection",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(b) rotation",
+      "text": "Rotation about the origin and another point, angle of rotation from -180 to 180 degrees",
+      "subtopic_id": "transformation.rotation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(b) translation",
+      "text": "Translation using a translation vector",
+      "subtopic_id": "transformation.translation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "wassce",
+      "ref": "I(b) enlargement",
+      "text": "Enlargement with a given centre and scale factor; use of given scales to enlarge or reduce",
+      "subtopic_id": "transformation.enlargement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.1(a)",
+      "text": "Operations in different number bases from 2 to 10",
+      "subtopic_id": "number-bases.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.1(b)",
+      "text": "Conversion from one base to another including fractional parts",
+      "subtopic_id": "number-bases.conversion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(a)",
+      "text": "Fractions and decimals",
+      "subtopic_id": "fractions.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(b)",
+      "text": "Significant figures",
+      "subtopic_id": "fractions.approximation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(c)",
+      "text": "Decimal places",
+      "subtopic_id": "fractions.approximation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(d)",
+      "text": "Percentage errors",
+      "subtopic_id": "percentages.error",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(e)",
+      "text": "Simple interest",
+      "subtopic_id": "percentages.interest",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(f)",
+      "text": "Profit and loss percent",
+      "subtopic_id": "percentages.profit-loss",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(g) ratio and proportion",
+      "text": "Ratio and proportion",
+      "subtopic_id": "ratio.proportion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(g) rate",
+      "text": "Rate",
+      "subtopic_id": "ratio.rates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(h) shares",
+      "text": "Shares",
+      "subtopic_id": "financial.shares-bonds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.2(h) VAT",
+      "text": "Value added tax (VAT)",
+      "subtopic_id": "financial.taxes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.3(a)",
+      "text": "Laws of indices",
+      "subtopic_id": "indices.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.3(b)",
+      "text": "Standard form",
+      "subtopic_id": "indices.standard-form",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.3(c)",
+      "text": "Laws of logarithm",
+      "subtopic_id": "indices.log-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.3(d)",
+      "text": "Logarithm of any positive number to a given base",
+      "subtopic_id": "indices.log-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.3(e)",
+      "text": "Change of bases in logarithm and application",
+      "subtopic_id": "indices.log-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.3(f)",
+      "text": "Relationship between indices and logarithm",
+      "subtopic_id": "indices.log-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.3(g) simplify",
+      "text": "Surds: simplify and perform basic operations (objectives iv, v)",
+      "subtopic_id": "surds.simplify",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.3(g) rationalise",
+      "text": "Surds: rationalize (objective iv)",
+      "subtopic_id": "surds.rationalise",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.4(a)",
+      "text": "Types of sets: empty, universal, complements, subsets, finite, infinite, disjoint",
+      "subtopic_id": "sets.notation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.4(b)",
+      "text": "Algebra of sets, cardinality, set symbols",
+      "subtopic_id": "sets.notation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "I.4(c)",
+      "text": "Venn diagrams and their applications, not more than 3 sets",
+      "subtopic_id": "sets.venn",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.1(a)",
+      "text": "Change of subject of formula",
+      "subtopic_id": "expressions.change-of-subject",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.1(b)",
+      "text": "Factor and remainder theorems",
+      "subtopic_id": "expressions.polynomials",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.1(c) up to degree 2",
+      "text": "Factorization by regrouping, difference of two squares, perfect squares (objective iv)",
+      "subtopic_id": "expressions.expansion-factorisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.1(c) cubics",
+      "text": "Factorization of polynomials of degree 3, cubic expressions",
+      "subtopic_id": "expressions.polynomials",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.1(d) multiplication",
+      "text": "Multiplication of polynomials of degree not more than 3",
+      "subtopic_id": "expressions.expansion-factorisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.1(d) division",
+      "text": "Division of polynomials of degree not more than 3",
+      "subtopic_id": "expressions.polynomials",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.1(e)",
+      "text": "Roots of polynomials not exceeding degree 3",
+      "subtopic_id": "expressions.polynomials",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.1(f)",
+      "text": "Simultaneous equations including one linear one quadratic",
+      "subtopic_id": "quadratic-equations.linear-quadratic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.1(g)",
+      "text": "Graphs of polynomials of degree not greater than 3, including maximum and minimum values",
+      "subtopic_id": "graphs.curves",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.2(a)",
+      "text": "Direct variation",
+      "subtopic_id": "variation.direct-inverse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.2(b)",
+      "text": "Inverse variation",
+      "subtopic_id": "variation.direct-inverse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.2(c)",
+      "text": "Joint variation",
+      "subtopic_id": "variation.joint-partial",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.2(d)",
+      "text": "Partial variation",
+      "subtopic_id": "variation.joint-partial",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.2(e)",
+      "text": "Percentage increase and decrease in variation",
+      "subtopic_id": "variation.direct-inverse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.3(a) analytical",
+      "text": "Analytical solution of linear inequalities",
+      "subtopic_id": "inequalities.linear",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.3(a) graphical",
+      "text": "Graphical solution of linear inequalities; interpret graphs of inequalities",
+      "subtopic_id": "inequalities.graphical",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.3(b)",
+      "text": "Quadratic inequalities with integral roots only",
+      "subtopic_id": "inequalities.quadratic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.4(a) A.P.",
+      "text": "nth term of an arithmetic progression",
+      "subtopic_id": "sequences.ap",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.4(a) G.P.",
+      "text": "nth term of a geometric progression",
+      "subtopic_id": "sequences.gp",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.4(b) A.P.",
+      "text": "Sum of an A.P.",
+      "subtopic_id": "sequences.ap",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.4(b) G.P.",
+      "text": "Sum of a G.P.",
+      "subtopic_id": "sequences.gp",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.4 objective iii",
+      "text": "Sum to infinity of a given G.P.",
+      "subtopic_id": "sequences.gp",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.5(a)",
+      "text": "Properties of closure, commutativity, associativity and distributivity",
+      "subtopic_id": "binary-operations.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.5(b)",
+      "text": "Identity and inverse elements (simple cases only)",
+      "subtopic_id": "binary-operations.properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.6(a)",
+      "text": "Algebra of matrices not exceeding 3 x 3",
+      "subtopic_id": "matrices.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.6(b)",
+      "text": "Determinants of matrices not exceeding 3 x 3",
+      "subtopic_id": "matrices.determinants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "II.6(c)",
+      "text": "Inverses of 2 x 2 matrices",
+      "subtopic_id": "matrices.inverse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.1(a) angles and lines",
+      "text": "Properties of angles and lines; types of lines and angles",
+      "subtopic_id": "angles.at-point",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.1(a) parallel lines",
+      "text": "Properties of angles on parallel lines",
+      "subtopic_id": "angles.parallel-lines",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.1(b) triangles",
+      "text": "Polygons: triangles",
+      "subtopic_id": "triangles.angle-properties",
+      "status": "covered",
+      "note": "Congruent and similar triangles also serve this item.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.1(b) quadrilaterals",
+      "text": "Polygons: quadrilaterals",
+      "subtopic_id": "triangles.quadrilaterals",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.1(b) general polygons",
+      "text": "General polygons",
+      "subtopic_id": "triangles.polygons",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.1(c) angles",
+      "text": "Circles: angle properties and cyclic quadrilaterals",
+      "subtopic_id": "circles.angles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.1(c) chords",
+      "text": "Circles: intersecting chords",
+      "subtopic_id": "circles.chords",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.1(d)",
+      "text": "Construction, including special angles 30, 45, 60, 75, 90 degrees",
+      "subtopic_id": "construction.constructions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.2(a) lengths",
+      "text": "Lengths of plane geometrical figures",
+      "subtopic_id": "plane-mensuration.lengths",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.2(a) areas",
+      "text": "Perimeters and areas of triangles, quadrilaterals and composite figures",
+      "subtopic_id": "plane-mensuration.perimeter-area",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.2(b)",
+      "text": "Lengths of arcs and chords of a circle",
+      "subtopic_id": "plane-mensuration.circles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.2(c)",
+      "text": "Perimeters and areas of sectors and segments of circles",
+      "subtopic_id": "plane-mensuration.circles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.2(d) surface areas",
+      "text": "Surface areas of simple solids and composite figures",
+      "subtopic_id": "solids.surface-area",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.2(d) volumes",
+      "text": "Volumes of simple solids and composite figures",
+      "subtopic_id": "solids.volume",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.2(e) latitude and longitude",
+      "text": "The earth as a sphere: longitudes and latitudes, distance along a meridian",
+      "subtopic_id": "earth.great-circles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.2(e) parallels",
+      "text": "Distance between two points on the earth's surface along a parallel of latitude (objective iv)",
+      "subtopic_id": "earth.parallels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.3",
+      "text": "Locus in 2 dimensions: parallel lines, perpendicular bisectors, angle bisectors and circles",
+      "subtopic_id": "construction.loci",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.4(a) midpoint",
+      "text": "Midpoint of a line segment",
+      "subtopic_id": "coordinate-geometry.distance-midpoint",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.4(a) gradient",
+      "text": "Gradient of a line segment",
+      "subtopic_id": "coordinate-geometry.gradient",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.4(b)",
+      "text": "Distance between two points",
+      "subtopic_id": "coordinate-geometry.distance-midpoint",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.4(c)",
+      "text": "Parallel and perpendicular lines",
+      "subtopic_id": "coordinate-geometry.parallel-perpendicular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.4(d)",
+      "text": "Equations of straight lines: two-point, point-slope, slope-intercept and general forms",
+      "subtopic_id": "coordinate-geometry.equations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.5(a) ratios",
+      "text": "Trigonometrical ratios of angles, special angles 30, 45, 60, 75, 90, 105, 135 degrees",
+      "subtopic_id": "trigonometry.ratios",
+      "status": "covered",
+      "note": "135 degrees sits in trigonometry.general-angles.",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.5(a) -360 to 360",
+      "text": "Sine, cosine and tangent of angles between -360 and 360 degrees (objective i)",
+      "subtopic_id": "trigonometry.general-angles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.5(b)",
+      "text": "Angles of elevation and depression",
+      "subtopic_id": "trigonometry.elevation-depression",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.5(c)",
+      "text": "Bearings",
+      "subtopic_id": "trigonometry.bearings",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.5(d)",
+      "text": "Areas and solutions of triangle",
+      "subtopic_id": "trigonometry.sine-cosine-rules",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.5(e)",
+      "text": "Graphs of sine and cosine",
+      "subtopic_id": "trigonometry.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "III.5(f)",
+      "text": "Sine and cosine formulae",
+      "subtopic_id": "trigonometry.sine-cosine-rules",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "IV.1(a)",
+      "text": "Limit of a function",
+      "subtopic_id": "differentiation.limits",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "IV.1(b) algebraic",
+      "text": "Differentiation of explicit algebraic functions",
+      "subtopic_id": "differentiation.algebraic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "IV.1(b) trigonometric",
+      "text": "Differentiation of simple trigonometrical functions: sine, cosine and tangent",
+      "subtopic_id": "differentiation.trigonometric",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "IV.2(a)",
+      "text": "Rate of change",
+      "subtopic_id": "differentiation.rates",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "IV.2(b)",
+      "text": "Maxima and minima",
+      "subtopic_id": "differentiation.max-min",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "IV.3(a)",
+      "text": "Integration of explicit algebraic and simple trigonometrical functions",
+      "subtopic_id": "integration.indefinite",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "IV.3(b)",
+      "text": "Area under the curve (simple cases only)",
+      "subtopic_id": "integration.definite-area",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.1(a)",
+      "text": "Frequency distribution",
+      "subtopic_id": "data-presentation.frequency-tables",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.1(b) histogram",
+      "text": "Histogram",
+      "subtopic_id": "data-presentation.histograms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.1(b) bar and pie",
+      "text": "Bar chart and pie chart",
+      "subtopic_id": "data-presentation.charts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.2(a) mean",
+      "text": "Mean of ungrouped and grouped data",
+      "subtopic_id": "averages.mean",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.2(a) median and mode",
+      "text": "Mode and median of ungrouped and grouped data",
+      "subtopic_id": "averages.median-mode",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.2(b)",
+      "text": "Cumulative frequency; ogive for median, quartiles and percentiles",
+      "subtopic_id": "averages.ogive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.3 range and mean deviation",
+      "text": "Range and mean deviation of ungrouped and grouped data",
+      "subtopic_id": "dispersion.range-deviation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.3 variance and SD",
+      "text": "Variance and standard deviation of ungrouped and grouped data",
+      "subtopic_id": "dispersion.variance-sd",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.4(a)",
+      "text": "Linear and circular arrangements",
+      "subtopic_id": "permutations.arrangements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.4(b)",
+      "text": "Arrangements involving repeated objects",
+      "subtopic_id": "permutations.arrangements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.4 combination",
+      "text": "Simple problems involving combination (topic title and objective)",
+      "subtopic_id": "permutations.selections",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.5(a)",
+      "text": "Experimental probability: tossing a coin, throwing a die",
+      "subtopic_id": "probability.single-event",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "utme",
+      "ref": "V.5(b)",
+      "text": "Addition and multiplication of probabilities, mutually exclusive and independent cases",
+      "subtopic_id": "probability.combined-events",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W1",
+      "text": "Basic operations of integers: addition, subtraction, multiplication and division",
+      "subtopic_id": "fractions.rational-numbers",
+      "status": "covered",
+      "note": "Revision of JSS 3 work in the same week skipped.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2",
+      "text": "Number base conversions, to and from base ten, bicimals, between bases",
+      "subtopic_id": "number-bases.conversion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3",
+      "text": "Binary numbers: addition, subtraction, multiplication and division in base two",
+      "subtopic_id": "number-bases.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4",
+      "text": "Modular arithmetic: concept, operations, applications to daily life",
+      "subtopic_id": "number-bases.modular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5 (a)",
+      "text": "Revision of standard form",
+      "subtopic_id": "indices.standard-form",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5 (b)",
+      "text": "Rounding off, significant figures, decimal places",
+      "subtopic_id": "fractions.approximation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6",
+      "text": "Indices: laws, negative and fractional indices, equations with indices",
+      "subtopic_id": "indices.laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8",
+      "text": "Logarithms to base 10, multiplication and division using logarithm tables",
+      "subtopic_id": "indices.log-tables",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9 (a)",
+      "text": "Relationship between indices and logarithms",
+      "subtopic_id": "indices.log-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9 (b)",
+      "text": "Calculations involving powers and roots with logarithms",
+      "subtopic_id": "indices.log-tables",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10 (a)",
+      "text": "Simple equation: change of subject",
+      "subtopic_id": "expressions.change-of-subject",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10 (b)",
+      "text": "Direct and inverse variation and applications",
+      "subtopic_id": "variation.direct-inverse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10 (c)",
+      "text": "Joint and partial variation and applications",
+      "subtopic_id": "variation.joint-partial",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W1",
+      "text": "Quadratic equation by factorization and completing the square",
+      "subtopic_id": "quadratic-equations.solving",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2 (a)",
+      "text": "General form of quadratic equation leading to the formula method",
+      "subtopic_id": "quadratic-equations.solving",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2 (b)",
+      "text": "Sum and product of quadratic roots",
+      "subtopic_id": "quadratic-equations.roots",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3",
+      "text": "Quadratic equation by graphical method: roots from graphs, minimum and maximum values, line of symmetry",
+      "subtopic_id": "graphs.curves",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4",
+      "text": "Idea of sets: notation, types and operations",
+      "subtopic_id": "sets.notation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W5",
+      "text": "Venn diagrams in problems involving two and three sets",
+      "subtopic_id": "sets.venn",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7 (a)",
+      "text": "Trigonometric ratios of acute angles, use of trigonometric tables",
+      "subtopic_id": "trigonometry.ratios",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7 (b)",
+      "text": "Chord determination",
+      "subtopic_id": "plane-mensuration.circles",
+      "status": "covered",
+      "note": "Chord length from the angle it subtends.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7 (c)",
+      "text": "Graphs of sine and cosine",
+      "subtopic_id": "trigonometry.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8 (a)",
+      "text": "Application of sine, cosine and tangent to right triangles",
+      "subtopic_id": "trigonometry.ratios",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8 (b)",
+      "text": "Angles of elevation and depression",
+      "subtopic_id": "trigonometry.elevation-depression",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8 (c)",
+      "text": "Bearing and distances",
+      "subtopic_id": "trigonometry.bearings",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9",
+      "text": "Circle and its properties: arc length, sector perimeter and area",
+      "subtopic_id": "plane-mensuration.circles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W10",
+      "text": "Logic: simple statements, negatives, contrapositives, conditional statements",
+      "subtopic_id": "logic.statements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1 (a)",
+      "text": "Total surface area of cube, cuboid, cylinder, prism, cone, pyramid",
+      "subtopic_id": "solids.surface-area",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1 (b)",
+      "text": "Volumes of cube, cuboid, cylinder, prism, cone, pyramid",
+      "subtopic_id": "solids.volume",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2 (a)",
+      "text": "Volumes of frustums of cone and pyramids",
+      "subtopic_id": "solids.volume",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2 (b)",
+      "text": "Proofs: angle sum of a triangle is 180 degrees; exterior angle",
+      "subtopic_id": "triangles.angle-properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3",
+      "text": "Geometrical construction: bisecting a line segment, constructing angles 90, 45, 135, 22.5, 30, 60, 120, 150 degrees",
+      "subtopic_id": "construction.constructions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4 (a)",
+      "text": "Construction of quadrilaterals, parallelograms and equilateral triangles",
+      "subtopic_id": "construction.constructions",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4 (b)",
+      "text": "Locus of moving points",
+      "subtopic_id": "construction.loci",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5 (a)",
+      "text": "Deductive proof: sum of angles in triangles",
+      "subtopic_id": "triangles.angle-properties",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5 (b)",
+      "text": "Deductive proof: angles on straight lines",
+      "subtopic_id": "angles.at-point",
+      "status": "covered",
+      "note": "Placed by the how_to_use rule that a proof goes to the subtopic of its theorem; the covers line does not name proofs.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5 (c)",
+      "text": "Deductive proof: parallel lines cut by transversals",
+      "subtopic_id": "angles.parallel-lines",
+      "status": "covered",
+      "note": "Placed by the how_to_use rule that a proof goes to the subtopic of its theorem.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5 (d)",
+      "text": "Deductive proof: congruent triangles, parallelogram properties",
+      "subtopic_id": "triangles.congruent",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5 (e)",
+      "text": "Deductive proof: intercept theorem",
+      "subtopic_id": "triangles.similar",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6 (a)",
+      "text": "Collection, tabulation and presentation of ungrouped data",
+      "subtopic_id": "data-presentation.frequency-tables",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6 (b)",
+      "text": "Range of ungrouped data",
+      "subtopic_id": "dispersion.range-deviation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6 (c)",
+      "text": "Median and mode of ungrouped data",
+      "subtopic_id": "averages.median-mode",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8 (a)",
+      "text": "Collection, tabulation and presentation of grouped data",
+      "subtopic_id": "data-presentation.frequency-tables",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8 (b)",
+      "text": "Range of grouped data",
+      "subtopic_id": "dispersion.range-deviation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8 (c)",
+      "text": "Median and mode of grouped data",
+      "subtopic_id": "averages.median-mode",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9 (a)",
+      "text": "Calculation of range for grouped data from collected records",
+      "subtopic_id": "dispersion.range-deviation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9 (b)",
+      "text": "Calculation of median and mode for grouped data from collected records",
+      "subtopic_id": "averages.median-mode",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10 (a)",
+      "text": "Statistical graphs: bar charts and pie charts",
+      "subtopic_id": "data-presentation.charts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10 (b)",
+      "text": "Statistical graphs: histograms",
+      "subtopic_id": "data-presentation.histograms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10 (c)",
+      "text": "Statistical graphs: cumulative frequency curves",
+      "subtopic_id": "averages.ogive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W11 (a)",
+      "text": "Mean deviation for grouped data",
+      "subtopic_id": "dispersion.range-deviation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W11 (b)",
+      "text": "Variance and standard deviation for grouped data",
+      "subtopic_id": "dispersion.variance-sd",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1",
+      "text": "Logarithm of numbers greater and less than one; reciprocals; accuracy of results",
+      "subtopic_id": "indices.log-tables",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2 (a)",
+      "text": "Approximations and significant figures",
+      "subtopic_id": "fractions.approximation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2 (b)",
+      "text": "Calculations using standard form",
+      "subtopic_id": "indices.standard-form",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2 (c)",
+      "text": "Percentage error",
+      "subtopic_id": "percentages.error",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3 (a)",
+      "text": "Concept of sequence and series",
+      "subtopic_id": "sequences.patterns",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3 (b)",
+      "text": "Terms and sum of arithmetic progressions, problem solving",
+      "subtopic_id": "sequences.ap",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4",
+      "text": "Geometric progressions: nth term, sum of first n terms, geometric mean",
+      "subtopic_id": "sequences.gp",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5 (a)",
+      "text": "Construction of quadratic equations from sum and product of roots",
+      "subtopic_id": "quadratic-equations.roots",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5 (b)",
+      "text": "Word problems leading to quadratic equations",
+      "subtopic_id": "quadratic-equations.word-problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7",
+      "text": "Simultaneous equations by elimination and substitution; word problems",
+      "subtopic_id": "linear-equations.simultaneous",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8 (a)",
+      "text": "Simultaneous equations: one linear and one quadratic",
+      "subtopic_id": "quadratic-equations.linear-quadratic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8 (b)",
+      "text": "Graphical method to solve quadratic equations",
+      "subtopic_id": "graphs.intersection",
+      "status": "covered",
+      "note": "Roots read from a single drawn curve sit in graphs.curves.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9 (a)",
+      "text": "Straight line graphs: gradient of a straight line",
+      "subtopic_id": "coordinate-geometry.gradient",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9 (b)",
+      "text": "Gradient of a curve; drawing tangents to a curve",
+      "subtopic_id": "graphs.gradient",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W1",
+      "text": "Linear inequality in one variable and its graph",
+      "subtopic_id": "inequalities.linear",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2 (a)",
+      "text": "Graphs of linear inequalities in two variables",
+      "subtopic_id": "inequalities.graphical",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W2 (b)",
+      "text": "Maximum and minimum values of simultaneous linear inequalities",
+      "subtopic_id": "inequalities.linear-programming",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W3",
+      "text": "Application of linear inequalities in real life; introduction to linear programming",
+      "subtopic_id": "inequalities.linear-programming",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W4",
+      "text": "Algebraic fractions: simplification and operations",
+      "subtopic_id": "algebraic-fractions.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5 (a)",
+      "text": "Substitution in algebraic fractions",
+      "subtopic_id": "expressions.formulating",
+      "status": "covered",
+      "note": "Evaluating an expression by substitution.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5 (b)",
+      "text": "Simultaneous equations involving fractions",
+      "subtopic_id": "linear-equations.simultaneous",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W5 (c)",
+      "text": "Undefined fractions",
+      "subtopic_id": "algebraic-fractions.undefined",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7 (a)",
+      "text": "Logic: simple and compound statements, logical operations, truth tables, conditional statements",
+      "subtopic_id": "logic.statements",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W7 (b)",
+      "text": "Logic: indirect proofs",
+      "subtopic_id": "logic.arguments",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W8",
+      "text": "Deductive proof of circle geometry",
+      "subtopic_id": "circles.angles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W9",
+      "text": "Circle theorems and their proofs",
+      "subtopic_id": "circles.angles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2 W10",
+      "text": "Tangent from an external point",
+      "subtopic_id": "circles.tangents",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W1",
+      "text": "Tangent properties of a circle, angles in alternate segment, two tangents from an external point",
+      "subtopic_id": "circles.tangents",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2",
+      "text": "Derivation of sine rule and cosine rule and their applications",
+      "subtopic_id": "trigonometry.sine-cosine-rules",
+      "status": "covered",
+      "note": "Derivation is not named in the covers line; placed by the how_to_use proof rule.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3 (a)",
+      "text": "Bearing and distances",
+      "subtopic_id": "trigonometry.bearings",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3 (b)",
+      "text": "Elevation and depression",
+      "subtopic_id": "trigonometry.elevation-depression",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4 (a)",
+      "text": "Class boundaries, class mark and cumulative frequencies of grouped data",
+      "subtopic_id": "data-presentation.frequency-tables",
+      "status": "covered",
+      "note": "Cumulative frequency tables sit in averages.ogive.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4 (b)",
+      "text": "Histogram",
+      "subtopic_id": "data-presentation.histograms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5",
+      "text": "Cumulative frequency curve (ogive): median, quartile, percentile and decile",
+      "subtopic_id": "averages.ogive",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7 (a)",
+      "text": "Mean of grouped data",
+      "subtopic_id": "averages.mean",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7 (b)",
+      "text": "Median and mode of grouped data",
+      "subtopic_id": "averages.median-mode",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W8",
+      "text": "Probability: introduction, dice, coins and playing cards",
+      "subtopic_id": "probability.single-event",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9",
+      "text": "Probability: addition and multiplication rules, mutually exclusive, independent and complementary events, with or without replacement",
+      "subtopic_id": "probability.combined-events",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W1 (a)",
+      "text": "Theory of logarithms: laws of logarithms",
+      "subtopic_id": "indices.log-laws",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W1 (b)",
+      "text": "Application of logarithmic equations and indices",
+      "subtopic_id": "indices.log-equations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2 (a)",
+      "text": "Rational and irrational numbers",
+      "subtopic_id": "fractions.rational-numbers",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2 (b)",
+      "text": "Basic operations with surds",
+      "subtopic_id": "surds.simplify",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2 (c)",
+      "text": "Conjugate of binomial surds",
+      "subtopic_id": "surds.rationalise",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3 (a)",
+      "text": "Application of surds to trigonometrical ratios",
+      "subtopic_id": "trigonometry.ratios",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3 (b)",
+      "text": "Graphs of sine and cosine for angles 0 to 360 degrees",
+      "subtopic_id": "trigonometry.graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4 (a)",
+      "text": "Matrices: types, order, notation, basic operations, transpose",
+      "subtopic_id": "matrices.operations",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4 (b)",
+      "text": "Determinants of 2 x 2 and 3 x 3 matrices",
+      "subtopic_id": "matrices.determinants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4 (c)",
+      "text": "Inverse of a 2 x 2 matrix and application to simultaneous equations",
+      "subtopic_id": "matrices.inverse",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5 (a)",
+      "text": "Linear and quadratic equations: one linear and one quadratic",
+      "subtopic_id": "quadratic-equations.linear-quadratic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5 (b)",
+      "text": "Word problems leading to one linear and one quadratic equation",
+      "subtopic_id": "quadratic-equations.linear-quadratic",
+      "status": "partial",
+      "note": "Solving the pair is covered; forming the pair from a word problem is not named (quadratic-equations.word-problems covers forming a single quadratic, linear-equations.simultaneous covers word problems for two linear equations only).",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6 (a)",
+      "text": "Surface area of spheres and hemispheres, solid and hollow",
+      "subtopic_id": "solids.surface-area",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6 (b)",
+      "text": "Volume of spheres and hemispheres, solid and hollow",
+      "subtopic_id": "solids.volume",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7 (a)",
+      "text": "Identification of longitude and latitude, North and South, meridian, equator",
+      "subtopic_id": "earth.great-circles",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7 (b)",
+      "text": "Calculation of length of parallel of latitude",
+      "subtopic_id": "earth.parallels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W1 (a)",
+      "text": "Interest on bonds and debentures using logarithm table",
+      "subtopic_id": "financial.shares-bonds",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W1 (b)",
+      "text": "Problems on taxes and value added tax",
+      "subtopic_id": "financial.taxes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2",
+      "text": "Cartesian coordinate graphs; distance between two points; midpoint",
+      "subtopic_id": "coordinate-geometry.distance-midpoint",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3 (a)",
+      "text": "Gradient and intercepts of a line",
+      "subtopic_id": "coordinate-geometry.gradient",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3 (b)",
+      "text": "Angle between two intersecting straight lines and application",
+      "subtopic_id": "coordinate-geometry.parallel-perpendicular",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W4",
+      "text": "Differentiation: meaning, first principles, standard derivatives",
+      "subtopic_id": "differentiation.algebraic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5 (a)",
+      "text": "Rules of differentiation: sum and difference, product, quotient",
+      "subtopic_id": "differentiation.algebraic",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5 (b)",
+      "text": "Maximum and minimum application",
+      "subtopic_id": "differentiation.max-min",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6 (a)",
+      "text": "Integration: definition and evaluation of simple algebraic functions",
+      "subtopic_id": "integration.indefinite",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6 (b)",
+      "text": "Methods of integration: substitution, partial fraction, integration by parts",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "The taxonomy scope_rule excludes these as beyond both syllabi; algebraic-fractions.operations covers partial fractions only as algebra, not as a method of integration.",
+      "proposed": "integration: new subtopic 'Methods of integration: substitution, by parts and partial fractions'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6 (c)",
+      "text": "Area under the curve",
+      "subtopic_id": "integration.definite-area",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6 (d)",
+      "text": "Use of Simpson's rule",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "The taxonomy scope_rule excludes it as beyond both syllabi.",
+      "proposed": "integration: new subtopic 'Approximate area by Simpson's rule'"
+    }
+  ],
+  "unmapped_subtopics": [
+    "percentages.basic",
+    "permutations.factorials"
+  ],
+  "summary": {
+    "wassce": {
+      "covered": 166,
+      "partial": 1,
+      "missing": 0
+    },
+    "utme": {
+      "covered": 99,
+      "partial": 0,
+      "missing": 0
+    },
+    "sow": {
+      "covered": 115,
+      "partial": 1,
+      "missing": 2
+    }
+  },
+  "taxonomy_version": "1.1",
+  "sources": {
+    "wassce": "syllabi\\mathematics-waec.txt",
+    "utme": "syllabi\\mathematics-jamb.txt",
+    "sow": "syllabi\\mathematics-sow.txt"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "slug": "mathematics-utme",
+  "taxonomy_version": "1.1",
+  "sample": 80,
+  "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "cost_usd": 1.43,
+  "agree_subtopic": 76,
+  "agree_topic": 78,
+  "nofit": 2,
+  "disagreements": [
+    {
+      "year": 2015,
+      "q_number": 6,
+      "stem": "If the end points of one side of square RSTU are (−1, −1) and S(3, −1), find the area of the square.",
+      "sonnet": "coordinate-geometry.distance-midpoint",
+      "opus": "plane-mensuration.perimeter-area",
+      "notes": [
+        "also fits plane-mensuration.perimeter-area, since the quantity asked for is an area. The distance formula is the substantive step (finding the side length), and coordinate-geometry.distance-midpoint already sends the perimeter of a coordinate figure here, but its covers line does not name area, so this is a guess by analogy.",
+        "also fits coordinate-geometry.distance-midpoint: the side length comes from coordinates, and that subtopic claims lengths and perimeters from coordinates but not areas; placed by the quantity asked (area)"
+      ]
+    },
+    {
+      "year": 2018,
+      "q_number": 39,
+      "stem": "Find the area of a triangle ∆PQR where line |PQ|= 36 cm, |2|= 15cm and angle ∠PQR = 90°.",
+      "sonnet": "trigonometry.sine-cosine-rules",
+      "opus": "plane-mensuration.perimeter-area",
+      "notes": [
+        "angle PQR is 90 degrees, so this is really base times height, plane-mensuration.perimeter-area, with no trigonometry needed. The plane-mensuration.perimeter-area sorting rule sends any area from two sides and an included angle to trigonometry.sine-cosine-rules with no exception for a right angle, so I followed it as written.",
+        "stem garbled (|2| is presumably |QR|); half base times height on a right angle"
+      ]
+    },
+    {
+      "year": 2022,
+      "q_number": 14,
+      "stem": "Find the differential coefficient of the curve 2x⁴ − 3x³ + x² − 1/x −6 at point x = 1.",
+      "sonnet": "differentiation.rates",
+      "opus": "differentiation.algebraic",
+      "notes": [
+        "also fits differentiation.algebraic, since the question is really just computing dy/dx and substituting x = 1. differentiation.rates covers 'the derivative as the gradient of a curve at a point', which is the closest match, but the covers lines do not clearly separate a plain evaluation from a gradient application.",
+        "also fits differentiation.rates, which claims the derivative as the gradient at a point; the skill tested is differentiating powers including 1/x, with a trivial substitution after"
+      ]
+    },
+    {
+      "year": 2017,
+      "q_number": 9,
+      "stem": "From the diagram above, the value of x is?",
+      "sonnet": "angles.at-point",
+      "opus": "angles",
+      "notes": [
+        "the stem is only 'from the diagram above, the value of x is', with no diagram in input.json and no other text to say what kind of figure it is. It could equally be angles.at-point, angles.parallel-lines, triangles.angle-properties or a circle theorem. Best guess only.",
+        "not a taxonomy gap: the diagram is missing, so the angle fact tested cannot be known; parent angles is a guess, the options (80 to 110 degrees) would equally suit a polygon, triangle or cyclic quadrilateral"
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "coordinate-geometry.distance-midpoint",
+        "detail": "The covers line names the perimeter of a figure found from vertex coordinates but not its area. Q2 asks for the area of a square from two given vertices, and there is no explicit home for that step. Either widen this covers line to include area, or add a sorting rule pointing area-from-coordinates questions to plane-mensuration.perimeter-area."
+      },
+      {
+        "kind": "overlap",
+        "where": "trigonometry.sine-cosine-rules / plane-mensuration.perimeter-area",
+        "detail": "The plane-mensuration.perimeter-area sorting rule sends any triangle area from two sides and an included angle to trigonometry.sine-cosine-rules, with no exception for a right angle. Q5 gives two sides and a 90 degree included angle, which is just half base times height and needs no trigonometry at all. The rule should carve out the 90 degree case back to plane-mensuration.perimeter-area."
+      },
+      {
+        "kind": "overlap",
+        "where": "differentiation.rates / differentiation.algebraic",
+        "detail": "Q31 asks for 'the differential coefficient of the curve ... at point x = 1', which is just computing dy/dx and substituting a value. differentiation.algebraic covers computing the derivative itself; differentiation.rates covers 'the derivative as the gradient of a curve at a point'. Those two descriptions overlap for any question that computes a derivative and evaluates it at a point without an explicit gradient, tangent or rate framing. A sorting rule is needed to say whether a bare 'evaluate dy/dx at x = a' with no further use belongs to differentiation.algebraic or differentiation.rates."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "trigonometry",
+        "detail": "No subtopic or covers line mentions radian measure or converting radians to degrees; Q20 sets x = pi/6 rad. Add it to trigonometry.general-angles or as trigonometry.radians. Double-angle identities such as sin squared minus cos squared = minus cos 2A also have no home beyond the simple identities in trigonometry.ratios."
+      },
+      {
+        "kind": "overlap",
+        "where": "construction.loci",
+        "detail": "Both construction.loci (equidistant from two points) and coordinate-geometry.parallel-perpendicular (the perpendicular bisector of a segment) claim the locus equidistant from two coordinate points (Q28). Add a rule: a locus given as an equation from coordinates goes to coordinate-geometry.parallel-perpendicular, a described or drawn locus to construction.loci."
+      },
+      {
+        "kind": "overlap",
+        "where": "coordinate-geometry.distance-midpoint",
+        "detail": "It claims lengths and the perimeter of a figure from coordinates, but an area from coordinates (Q2, area of a square from two vertices) is not ruled on; the how_to_use quantity rule sends it to plane-mensuration.perimeter-area, which contradicts giving perimeter to distance-midpoint. Say which one owns area and perimeter from coordinates, and make them consistent."
+      },
+      {
+        "kind": "overlap",
+        "where": "differentiation.algebraic",
+        "detail": "The value of the derivative at a point with no mention of gradient or tangent (Q31, differential coefficient at x = 1) fits both differentiation.algebraic and differentiation.rates. Add a rule: evaluating dy/dx at a point stays in algebraic unless the question uses the gradient for something (an unknown coefficient, a tangent, a rate)."
+      },
+      {
+        "kind": "overlap",
+        "where": "matrices.inverse",
+        "detail": "A matrix equation AX = B asking for one unknown (Q34) can be solved by multiplying out and elimination, which is matrices.operations, or by the inverse; the rules cover only an explicit inverse or determinant method. Rule on matrix-form equations: place in matrices.inverse whatever method is used."
+      },
+      {
+        "kind": "overlap",
+        "where": "number-bases.operations",
+        "detail": "The conversion versus operations rule keys on whether the working is done in the base, which is the student's choice. For (11 base two) cubed (Q63) either route works. Key the rule on the stem instead: an operation symbol in the stem sends it to operations."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "data-presentation.charts",
+        "detail": "The kind-of-data rule separates categories (charts) from continuous class intervals (histograms) but says nothing about discrete numerical data such as marks or scores shown as a bar chart (Q80). Say where a bar chart of discrete values goes; charts is the natural home."
+      },
+      {
+        "kind": "overlap",
+        "where": "indices.laws",
+        "detail": "Simplifying an algebraic expression with fractional powers of a binomial (Q18, x squared times (x squared minus 1) to the minus half minus (x squared minus 1) to the half) fits indices.laws and algebraic-fractions.operations. Add a rule: a fractional or negative power of an algebraic expression goes to indices.laws."
+      },
+      {
+        "kind": "overlap",
+        "where": "probability.single-event",
+        "detail": "single-event covers one trial with a die and sends two or more trials to combined-events, but two dice thrown once (Q22, Q60) is arguably one trial with 36 outcomes; only the example in combined-events decides it. State the rule outright: two or more dice or coins, even thrown together, go to combined-events."
+      },
+      {
+        "kind": "misplaced",
+        "where": "functions.rules",
+        "detail": "functions and expressions.formulating carry jamb null, but UTME papers test evaluating f(y + 2) (Q42). If the UTME tests it, the syllabus reference or scope_rule note should say so, as it already does for parallel and perpendicular lines on the WASSCE side."
+      }
+    ]
+  }
+}

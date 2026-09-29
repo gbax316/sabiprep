@@ -1,0 +1,328 @@
+{
+  "changes": [
+    {
+      "kind": "added",
+      "where": "concepts.origin-of-state",
+      "evidence": "UTME matchtest, sonnet and opus findings, missing in concepts: no subtopic for theories of the origin of the state (force, social contract, divine right, organic, evolutionary); Q36 has no real home.",
+      "change": "Added concepts.origin-of-state for the theories of the state's origin, with a sorting rule against concepts.state-nation. A student needs a different body of knowledge (the theories and their thinkers) from the meaning and features of the state."
+    },
+    {
+      "kind": "added",
+      "where": "forms.classification",
+      "evidence": "UTME matchtest, opus finding, missing in forms: Aristotle's classification of governments (good and perverted forms of rule by one, few and many) spans three subtopics and has no home as a scheme (Q15).",
+      "change": "Added forms.classification for Aristotle's scheme and other bases of classification, with a sorting rule: the scheme itself goes here, one form's features go to that form. Added a pointer to it in forms.rule-by-few."
+    },
+    {
+      "kind": "added",
+      "where": "parties.types",
+      "evidence": "WAEC matchtest, opus finding, too-narrow parties.parties: types of party (elite, mass, broker, ideological), the manifesto and campaigning are not covered; five questions (Q3, Q18, Q39, Q45, Q79) hit this.",
+      "change": "Added parties.types for kinds of party, manifestos and campaigning, with sorting rules against parties.parties, parties.systems and elections.elections, and a matching rule in parties.parties. Five questions show it is a separate body of knowledge from a party's definition, organisation and functions, so it is a new subtopic rather than a wider parties.parties."
+    },
+    {
+      "kind": "added",
+      "where": "intl-orgs.general",
+      "evidence": "UTME matchtest, opus finding, missing in intl-orgs (Q28), and sonnet finding, too-narrow intl-orgs: every subtopic is built round one organisation, so a question on which of several organisations Nigeria does or does not belong to (including NATO) fits only the parent.",
+      "change": "Added intl-orgs.general for the meaning, types and examples of international organisations, Nigeria's memberships and bodies it is not in, with a sorting rule: one named organisation goes to its subtopic, several go here."
+    },
+    {
+      "kind": "added",
+      "where": "post-independence.compared",
+      "evidence": "WAEC matchtest disagreement 2024 Q42 (features of most independent constitutions of West African states; sonnet constitution.meaning, opus post-independence.first-republic) and the sonnet and opus findings, missing in post-independence (Q10).",
+      "change": "Added post-independence.compared, the counterpart of pre-independence.compared, for features shared by the independence constitutions of Nigeria and West African states, with sorting rules in it, in post-independence.first-republic, in pre-independence.compared and in constitution.meaning."
+    },
+    {
+      "kind": "widened",
+      "where": "concepts.state-nation",
+      "evidence": "Coverage, WASSCE 1(i), partial: 'Definition of state, features, structure and functions'; the structure and functions of the state are in no covers line.",
+      "change": "Added the structure and functions of the state to its covers line, with a sorting rule separating them from government.functions and citizenship.duties, and a matching rule in government.functions."
+    },
+    {
+      "kind": "widened",
+      "where": "government.meaning",
+      "evidence": "UTME matchtest, opus finding, missing in government: no home for the meaning of politics and political science or their key terms (polis) (Q76).",
+      "change": "Added the meaning of politics and political science and terms such as polis. It is a close relative of government as a field of study, so it widens this subtopic rather than adding government.politics."
+    },
+    {
+      "kind": "widened",
+      "where": "nigeria-parties.second-republic",
+      "evidence": "Coverage, WASSCE 15, partial: sources of finance is named only for First Republic parties.",
+      "change": "Added sources of finance to the Second Republic parties."
+    },
+    {
+      "kind": "widened",
+      "where": "nigeria-parties.third-republic",
+      "evidence": "Coverage, WASSCE 15, partial: achievements and failures are not named for Third Republic parties, and sources of finance only for the First Republic.",
+      "change": "Added formation, objectives, funding by government, achievements and failures to the SDP and NRC."
+    },
+    {
+      "kind": "widened",
+      "where": "nigeria-parties.fourth-republic",
+      "evidence": "Coverage, WASSCE 15, partial: objectives, achievements and failures are not named for Fourth Republic parties, and sources of finance only for the First Republic.",
+      "change": "Added objectives, sources of finance, achievements and failures to the Fourth Republic parties."
+    },
+    {
+      "kind": "widened",
+      "where": "military.impact",
+      "evidence": "Coverage, WASSCE 16, partial: military rule in Ghana, Sierra Leone, The Gambia and Liberia; the effects of military rule in West African states are not covered because military.impact is Nigerian only, though the scope_rule already places WASSCE 2025 Q32 (West African framing) here.",
+      "change": "Widened military.impact to the effects of military rule in West African states in general, matching the West African framing military.causes already has. The regimes of each named country stay out, per the scope_rule (see not_changed)."
+    },
+    {
+      "kind": "widened",
+      "where": "foreign-policy.nigeria",
+      "evidence": "Coverage, WASSCE 18, partial: the advantages and disadvantages of Nigeria's foreign policy are in no covers line.",
+      "change": "Added the advantages and disadvantages of Nigeria's foreign policy."
+    },
+    {
+      "kind": "widened",
+      "where": "constitution.types",
+      "evidence": "Coverage, scheme of work SS1 T2 Lagos W4 and SS2 T2 Modified W5-6, partial: the confederal constitution is not named in constitution.types.",
+      "change": "Added the confederal constitution to the types, and extended the sorting rule so the features of a confederal state go to types."
+    },
+    {
+      "kind": "widened",
+      "where": "local-government.structure",
+      "evidence": "Coverage, scheme of work SS2 T1 Modified W8, partial: types of local government (single-tier and multi-tier) are in no covers line.",
+      "change": "Added the types of local government, single-tier and multi-tier."
+    },
+    {
+      "kind": "widened",
+      "where": "pre-independence.lyttelton",
+      "evidence": "Coverage, scheme of work SS2 T2 Lagos W6, partial: the 1954 Lagos conference is in no covers line.",
+      "change": "Added the 1954 Lagos conference that finalised the Lyttelton Constitution."
+    },
+    {
+      "kind": "widened",
+      "where": "pre-independence.macpherson",
+      "evidence": "UTME matchtest disagreement 2021 Q33 (which colonial constitution gave the Western region a bicameral legislature; sonnet lyttelton, opus macpherson). The answer-wins rule already exists; the split came because no covers line named the fact.",
+      "change": "Named the bicameral legislatures in the North and West, with a House of Chiefs added in the West, in the Macpherson covers line, so the existing answer-wins rule can be applied."
+    },
+    {
+      "kind": "widened",
+      "where": "foreign-policy.major-powers",
+      "evidence": "UTME matchtest, sonnet finding, missing in foreign-policy, and opus finding, too-narrow foreign-policy.major-powers: Nigeria's relations with Middle Eastern states, such as the 1973 break with Israel, have no home (Q66).",
+      "change": "Renamed it 'Relations with major powers and other non-African states' (id kept) and added states outside Africa, including the Middle East and the 1973 break with Israel, with a sorting rule in it and in foreign-policy.africa: relations with a non-African state go here even when the motive was African solidarity."
+    },
+    {
+      "kind": "widened",
+      "where": "principles.accountability",
+      "evidence": "WAEC matchtest disagreement 2024 Q9 (weak performance of state institutions in West African states; sonnet public-admin.civil-service, opus principles.accountability), opus finding, missing in principles (Q43), and sonnet finding, too-narrow public-admin.civil-service (Q43).",
+      "change": "Renamed it 'Accountability, good governance and its challenges' (id kept) and added corruption and weak state institutions in general, a close relative of accountability and good governance, with sorting rules in it and in public-admin.civil-service: general weakness goes here, one institution's problem to that institution, corruption as a cause of coups to military.causes."
+    },
+    {
+      "kind": "widened",
+      "where": "colonial.indirect-rule",
+      "evidence": "WAEC matchtest, opus finding, missing in colonial: no subtopic for British colonial policy as a whole (divide and rule, exploitation, features of British administration); Q32 splits across indirect-rule and impact.",
+      "change": "Renamed it 'British colonial policy and indirect rule' (id kept) and widened it to British administrative policy as a whole, including divide and rule, which is how JAMB II.2(b) frames it. A new subtopic was not needed because the content is a close relative of indirect rule."
+    },
+    {
+      "kind": "widened",
+      "where": "types.federal",
+      "evidence": "WAEC matchtest, opus finding, too-narrow types.federal: quasi-federalism is not named in types.federal or types.unitary (Q63).",
+      "change": "Added quasi-federalism to types.federal, with a sorting rule in both types.federal and types.unitary sending a quasi-federal system here."
+    },
+    {
+      "kind": "widened",
+      "where": "elections.systems",
+      "evidence": "WAEC matchtest, opus finding, too-narrow elections.systems: the electoral college and indirect election are not named in systems or elections.elections (Q41).",
+      "change": "Added indirect election through an electoral college to elections.systems, and a sorting rule in elections.elections sending it there."
+    },
+    {
+      "kind": "widened",
+      "where": "elections.franchise",
+      "evidence": "WAEC matchtest, opus finding, too-narrow elections.systems: the electorate is not named in elections.franchise (Q5).",
+      "change": "Added the electorate, the body of people entitled to vote, to elections.franchise."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "public-admin.commissions",
+      "evidence": "UTME matchtest disagreement 2016 Q42 (which commission the 1979 Constitution set up; sonnet federalism.problems, opus elections.commission) and opus finding, overlap public-admin.commissions (Q1): three covers lines claim the question.",
+      "change": "Added the same rule to public-admin.commissions, elections.commission and post-independence.1979-1989: a question asking which commission a constitution set up goes to the subtopic of the commission that is the correct answer (electoral body to elections.commission, Federal Character Commission to federalism.problems, others to public-admin.commissions), not to the constitution."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "military.impact",
+      "evidence": "UTME matchtest disagreement 2021 Q7 (WAI introduced under which regime; sonnet military.impact, opus military.regimes), sonnet finding, overlap military.regimes / military.impact (Q46, Q52), and opus finding, overlap military.regimes (Q46, Q52).",
+      "change": "Named regime programmes and campaigns (NYSC, WAI, MAMSER, DFRRI, SAP) in military.impact and added a rule to military.impact and military.regimes: a named programme goes to military.impact even when the question asks which regime introduced it. A separate military.programmes subtopic was not needed, since the programmes are the achievements impact already holds."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "post-independence.first-republic",
+      "evidence": "UTME matchtest disagreement 2022 Q25 (Leader of the Opposition in the First Republic; sonnet nigeria-parties.first-republic, opus post-independence.first-republic) and opus finding, missing post-independence.first-republic: First Republic politics (coalition government, Leader of the Opposition, 1962 Western crisis) is split three ways (Q67).",
+      "change": "Added a rule to post-independence.first-republic, nigeria-parties.first-republic and types.parliamentary: who held a First Republic office (Prime Minister, President, Leader of the Opposition) goes to post-independence.first-republic; parties, coalitions and crises such as the 1962 Western Region crisis go to nigeria-parties.first-republic, whose covers line now names them; the opposition in parliamentary systems in general stays in types.parliamentary."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "principles.separation",
+      "evidence": "UTME matchtest, sonnet finding, overlap organs.judiciary / principles.separation (Q31), and opus finding, overlap principles.separation: veto and legislative oversight are one arm checking another, and no rule says which wins (Q27, Q31). WAEC matchtest, opus finding, overlap types.presidential: impeachment is named nowhere and fits presidential and principles.separation (Q35).",
+      "change": "Named the checking powers (veto and override, oversight, confirming appointments, impeachment, judicial review) in principles.separation and ruled that a question whose correct answer is a checking power goes there even when the stem asks what one arm can do. Matching rules added to organs.legislature, organs.judiciary, legislation.law-making (assent and veto only as stages in a bill's passage) and types.presidential (impeachment to principles.separation)."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "types.presidential",
+      "evidence": "WAEC matchtest, opus finding, overlap types.presidential: the contrast rule (system whose feature is the correct answer) breaks on negative questions such as which system does not practise collective responsibility (Q75).",
+      "change": "Rewrote the contrast rule in types.presidential and types.parliamentary: the question goes to the system that owns the feature being tested, which in a negative question is the system that has the feature named in the stem."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "principles.rule-of-law",
+      "evidence": "WAEC matchtest, sonnet finding, overlap principles.rule-of-law / organs.judiciary: a rule-of-law question whose answer is an independent judiciary could be read as going to organs.judiciary (Q72).",
+      "change": "Added a rule to principles.rule-of-law and organs.judiciary: what the rule of law needs goes to rule-of-law even when the answer is an independent judiciary; judicial independence for its own sake goes to organs.judiciary."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "legislation.delegated",
+      "evidence": "UTME matchtest, opus finding, overlap legislation.law-making: bye-laws are listed in both legislation.law-making and legislation.delegated, and local-government.structure is a third claimant (Q72).",
+      "change": "Listed bye-laws in one place, legislation.delegated, with a rule that every bye-law question goes there; removed them from the list of kinds of law in legislation.law-making and added pointers from legislation.law-making and local-government.structure."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "forms.rule-by-few",
+      "evidence": "UTME matchtest, opus finding, overlap forms.rule-by-few: a question asking for the form of government under a dictator, answered by fascism, fits both forms.rule-by-few and ideologies.totalitarianism (Q41).",
+      "change": "Named dictatorship in forms.rule-by-few and added a rule to it and to ideologies.totalitarianism: rule by a dictator goes to forms.rule-by-few unless the correct answer is fascism, Nazism or totalitarianism."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "constitution.meaning",
+      "evidence": "UTME matchtest, opus finding, overlap constitution.meaning: a question on constitutional supremacy that names the 1999 Constitution is pulled away from the general principle (Q54).",
+      "change": "Added a rule to constitution.meaning and post-independence.1999: a general principle such as supremacy goes to constitution.meaning even when the stem names a Nigerian constitution; the named constitution wins only when the answer is a feature of it alone."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "citizenship.rights",
+      "evidence": "WAEC matchtest disagreement 2020 Q17 (redresses available at the courts; sonnet organs.judiciary, opus citizenship.rights) and opus finding, overlap citizenship.rights (Q61).",
+      "change": "Named the court remedies (habeas corpus, mandamus, certiorari, prohibition, injunction, damages) in citizenship.rights and ruled that every court-remedy question goes there, with a matching rule in organs.judiciary."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "organs.legislature",
+      "evidence": "WAEC matchtest, sonnet finding, overlap organs.legislature / parties.parties on whips (Q13, Q71), and opus finding, too-narrow organs.legislature: officers is generic and whips and house leaders are not named (Q13, Q71).",
+      "change": "Named the legislature's officers (Speaker, Senate President, clerk, majority and minority leaders, whips) and added a rule to organs.legislature and parties.parties: whips and house leaders go to organs.legislature even when the stem asks about party discipline."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "colonial.indirect-rule",
+      "evidence": "WAEC matchtest, sonnet finding, overlap colonial.indirect-rule / colonial.impact: an option set bundling divide and rule, economic exploitation and indirect rule as British strategy has no rule (Q32). Opus finding, overlap colonial.british-structure: indirect-rule versus impact for limits on chiefs (Q37).",
+      "change": "Added a rule to colonial.indirect-rule and colonial.impact: British strategy as a whole, and how British policy used or limited the chiefs at the time, go to colonial.indirect-rule; lasting effects such as economic exploitation or weakened traditional authority go to colonial.impact."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "colonial.british-structure",
+      "evidence": "WAEC matchtest, sonnet finding, overlap colonial.british-structure / colonial.indirect-rule, and opus finding, overlap colonial.british-structure: how a crown colony was governed (direct rule) has no rule (Q58).",
+      "change": "Added a rule to colonial.british-structure and colonial.indirect-rule: how a crown colony or protectorate was governed, including direct rule through the governor and Legislative Council, goes to british-structure; direct and indirect rule compared as policies go to indirect-rule."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "nationalism.movements",
+      "evidence": "WAEC matchtest, sonnet finding, overlap nationalism.movements / pre-independence.clifford: what a nationalist movement's activity achieved, where the achievement is the elective principle, has no rule (Q9).",
+      "change": "Added a rule to nationalism.movements and pre-independence.clifford: a question whose correct answer is a feature of a named constitution goes to that constitution even when the stem asks what nationalist pressure won."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "nationalism.meaning",
+      "evidence": "WAEC matchtest, opus finding, overlap nationalism.meaning: its factors and effects are not separated from the parties and strategies in nationalism.movements (Q27, Q29, Q67), and the nationalist press should be named in one of them.",
+      "change": "Named the nationalist press in nationalism.movements and added a rule to both: why nationalism arose and what it achieved in general go to nationalism.meaning; the goals, strategies and activities of a named movement or party, including the press, go to nationalism.movements."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "foreign-policy.concepts",
+      "evidence": "UTME matchtest, opus finding, misplaced foreign-policy.concepts: what an international organisation is sits under foreign-policy.concepts, but a student would look for it under intl-orgs (Q30).",
+      "change": "Removed what an international organisation is from foreign-policy.concepts and added a rule sending the meaning and types of international organisations to intl-orgs.general."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "pre-independence.compared",
+      "evidence": "Coverage, unmapped_subtopics: pre-independence.compared has no source item behind it. It is tested in WASSCE 2025 Q30, and WAEC matchtest 2024 Q42 shows the same comparative pattern for the later constitutions.",
+      "change": "Kept it, since a real paper tests it, and its covers line now says so plainly. Added sorting rules against post-independence.compared and constitution.meaning."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "Coverage, WASSCE 11(b): Ghana pre-colonial, the Akan and the Talensi (missing).",
+      "reason": "Left out by the scope_rule: SabiPrep serves Nigerian candidates and Section B country lists are not Nigerian content. The coverage map itself proposes it only if Ghanaian candidates are served."
+    },
+    {
+      "finding": "Coverage, WASSCE 11(c): Sierra Leone pre-colonial, the Mende and Temne (missing).",
+      "reason": "Left out by the scope_rule; proposed only if Sierra Leonean candidates are served."
+    },
+    {
+      "finding": "Coverage, WASSCE 11(d): The Gambia pre-colonial, the Wolof, Mandingo and Jola (missing).",
+      "reason": "Left out by the scope_rule; proposed only if Gambian candidates are served."
+    },
+    {
+      "finding": "Coverage, WASSCE 11(e): Liberia pre-colonial, the Vai and the Kru (missing).",
+      "reason": "Left out by the scope_rule; proposed only if Liberian candidates are served."
+    },
+    {
+      "finding": "Coverage, WASSCE 14(i)(b): Ghana pre-independence constitutions (missing).",
+      "reason": "Left out by the scope_rule. Questions framed across British West Africa already go to pre-independence.compared."
+    },
+    {
+      "finding": "Coverage, WASSCE 14(i)(c): Sierra Leone pre-independence constitutions (missing).",
+      "reason": "Left out by the scope_rule; West African framing goes to pre-independence.compared."
+    },
+    {
+      "finding": "Coverage, WASSCE 14(i)(d): The Gambia pre-independence constitutions (missing).",
+      "reason": "Left out by the scope_rule; West African framing goes to pre-independence.compared."
+    },
+    {
+      "finding": "Coverage, WASSCE 14(ii)(b): Ghana post-independence constitutions (missing).",
+      "reason": "Left out by the scope_rule. West African framing now goes to the new post-independence.compared; each country's constitutions one by one stay out."
+    },
+    {
+      "finding": "Coverage, WASSCE 14(ii)(c): Sierra Leone post-independence constitutions (missing).",
+      "reason": "Left out by the scope_rule; West African framing goes to post-independence.compared."
+    },
+    {
+      "finding": "Coverage, WASSCE 14(ii)(d): The Gambia post-independence constitutions (missing).",
+      "reason": "Left out by the scope_rule; West African framing goes to post-independence.compared."
+    },
+    {
+      "finding": "Coverage, WASSCE 14(ii)(e): Liberia constitutions, 1947 and 1985 (missing).",
+      "reason": "Left out by the scope_rule; West African framing goes to post-independence.compared."
+    },
+    {
+      "finding": "Coverage, WASSCE 15: development of major political parties in Sierra Leone, The Gambia and Liberia (missing).",
+      "reason": "Left out by the scope_rule; proposed only if those candidates are served."
+    },
+    {
+      "finding": "Coverage, WASSCE 16: military rule in Ghana, Sierra Leone, The Gambia and Liberia, the regimes of each country (the remainder of the partial item).",
+      "reason": "The causes and the effects in West African states in general are now covered (military.causes, and military.impact as widened). The named regimes of each other country are Section B country content left out by the scope_rule."
+    },
+    {
+      "finding": "Coverage, WASSCE 17: unitary systems of Sierra Leone, The Gambia and Liberia (missing).",
+      "reason": "Left out by the scope_rule. The unitary system in general is in types.unitary."
+    },
+    {
+      "finding": "Coverage, WASSCE 18: foreign policies of Ghana, Sierra Leone, The Gambia and Liberia (missing).",
+      "reason": "Left out by the scope_rule; proposed only if those candidates are served."
+    },
+    {
+      "finding": "Coverage, scheme of work SS2 T3 W7: conflict resolution and management, peace education (missing).",
+      "reason": "Outside the subject: Civic Education content in neither syllabus, and the coverage map marks it so. The scope_rule already leaves it out until a Government paper tests it."
+    },
+    {
+      "finding": "Coverage, scheme of work SS1 T2 Modified W7: post-independence constitutions (partial).",
+      "reason": "A general week split across the post-independence subtopics; the coverage map says nothing is missing."
+    },
+    {
+      "finding": "Coverage, scheme of work SS1 T2 Modified W11: development of political parties (partial).",
+      "reason": "A general week split across the nigeria-parties subtopics; the coverage map says nothing is missing."
+    },
+    {
+      "finding": "Coverage, scheme of work SS2 T3 W5-6: military rule in Nigeria (partial).",
+      "reason": "A general fortnight split across the military subtopics; the coverage map says nothing is missing."
+    },
+    {
+      "finding": "Coverage, scheme of work SS2 T3 W8-9: local government administration in Nigeria (partial).",
+      "reason": "A general fortnight split across the local-government subtopics; the coverage map says nothing is missing."
+    },
+    {
+      "finding": "Coverage, scheme of work SS2 T3 W10-11: Nigeria and the world (partial).",
+      "reason": "A general fortnight split across the foreign-policy subtopics; the coverage map says nothing is missing."
+    },
+    {
+      "finding": "Legacy topic 'Contemporary issues in governance and international relations' maps to the parent principles (raised in the WAEC opus finding that nothing inside principles receives it).",
+      "reason": "The widened principles.accountability now holds the challenges of governance inside that parent. The legacy name spans governance and international relations, so by the legacy rule it stays on the parent rather than being guessed into one subtopic."
+    }
+  ]
+}

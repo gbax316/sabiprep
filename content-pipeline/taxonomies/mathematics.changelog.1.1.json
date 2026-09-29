@@ -1,0 +1,174 @@
+{
+  "changes": [
+    {
+      "kind": "added",
+      "where": "permutations.factorials",
+      "evidence": "Placement test, UTME, Sonnet finding (missing, permutations.arrangements): equations written purely in factorial notation, such as n over 9 factorial plus 1 over 8 factorial equals 100 over 100 factorial (Q65), have no home. Opus finding (too-narrow, permutations.arrangements): factorial notation on its own (Q65) has no place; add a covers clause or a permutations.factorials subtopic.",
+      "change": "Added permutations.factorials, 'Factorial notation and nPr, nCr expressions', first in the permutations topic: evaluating and simplifying factorial, nPr and nCr expressions and solving equations in them with no counting situation. It is a separate subtopic, not a widened covers line, because manipulating factorials algebraically is a different skill from counting arrangements. Sorting rule on all three permutations subtopics: a question that describes objects to arrange or choose goes to arrangements or selections; a bare expression or equation goes to factorials."
+    },
+    {
+      "kind": "widened",
+      "where": "graphs.curves",
+      "evidence": "Placement test, UTME, disagreement 2020 Q32 (minimum value of y = x² minus 6x + 5: Sonnet graphs.curves, Opus differentiation.max-min). Sonnet finding (missing, graphs.curves): no subtopic covers the max or min of a quadratic found algebraically, by completing the square, with no graph and no calculus.",
+      "change": "Widened graphs.curves to name the maximum or minimum value and turning point of a quadratic with no drawn graph, found by completing the square or from x = minus b/2a, with the 2020 Q32 function as the example. Renamed it 'Linear, quadratic and cubic graphs and turning points'. Added a sorting rule: the max or min of a quadratic goes here whatever method is used, unless the stem asks for differentiation or stationary points, the function is not quadratic, or it is a practical optimisation problem."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "differentiation.max-min",
+      "evidence": "Placement test, UTME, Opus finding (overlap, differentiation.max-min): the max or min of a quadratic with no graph (Q18, the 2020 Q32 question) fits differentiation.max-min and graphs.curves equally, and the vertex method has no home.",
+      "change": "Added the matching rule to differentiation.max-min: the max or min of a quadratic goes to graphs.curves unless the stem asks for differentiation, dy/dx or stationary points; a function that is not a quadratic, or a practical optimisation problem, stays here. Also added a pointer on quadratic-equations.solving that a quadratic's maximum or minimum, even by completing the square, goes to graphs.curves."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "expressions.polynomials",
+      "evidence": "Placement test, UTME, Sonnet finding (overlap, expressions.polynomials) and Opus finding (overlap, expressions.polynomials): multiplying a quadratic by a linear factor (Q49) fits both expressions.expansion-factorisation ('expanding brackets') and expressions.polynomials ('multiplying polynomials of degree up to three').",
+      "change": "Following Opus's suggested rule, multiplying polynomials now goes to expressions.expansion-factorisation whatever the degree; expressions.polynomials keeps division, the remainder and factor theorems, factorising cubics and roots. Removed 'multiplying' from the polynomials covers line, named the product of two polynomials in the expansion-factorisation covers line, added the rule to both, and added UTME II.1(d) to expansion-factorisation's syllabus reference (II.1(c)-(d)) because multiplication of polynomials now sits there."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "fractions.operations",
+      "evidence": "Placement test, UTME, Sonnet finding (overlap, fractions.operations): arithmetic on very small or large decimals, such as (0.00045 × 2.50)/(0.00009 × 0.5) (Q68), sits between fractions.operations and indices.standard-form. Opus finding (overlap, indices.standard-form): decimal arithmetic whose answer is given in standard form (Q32) fits both.",
+      "change": "Added the same rule to fractions.operations and indices.standard-form: decimal arithmetic goes to indices.standard-form when its numbers are given in standard form or the answer is asked for in standard form, and otherwise to fractions.operations, however small or large the numbers. Named the Q68 case in the fractions.operations covers line and the answer-in-standard-form case in the standard-form covers line."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "data-presentation.histograms",
+      "evidence": "Placement test, UTME, Opus finding (overlap, data-presentation.histograms): papers call bar charts of categorical data 'histograms' (Q26, days of the week).",
+      "change": "Added a rule to data-presentation.histograms and data-presentation.charts: place by the kind of data, not the name the stem uses. A chart of categories goes to charts even when the stem calls it a histogram; numerical data in continuous class intervals goes to histograms."
+    },
+    {
+      "kind": "widened",
+      "where": "quadratic-equations.roots",
+      "evidence": "Placement test, WASSCE, Sonnet finding (missing, quadratic-equations) and Opus finding (too-narrow, quadratic-equations.roots): a root shared by two quadratics, used to find an unknown coefficient (Q52: x² minus 5x + 6 = 0 and x² + px + 6 = 0), is named in no covers line and splits between solving and roots.",
+      "change": "Widened quadratic-equations.roots to name a common root of two quadratics used to find a coefficient, with Q52 as the example. It is widened, not given a new subtopic, because it is a close relative of forming equations from roots. Added a sorting rule to it and to quadratic-equations.solving: a common root used to find a coefficient goes to roots, even though the first step is solving one equation."
+    },
+    {
+      "kind": "widened",
+      "where": "linear-equations.simultaneous",
+      "evidence": "Placement test, WASSCE, Sonnet finding (too-narrow, linear-equations.simultaneous): Q4 is a system of three equations in three unknowns from angles on a straight line (m + n = 110, n + r = 130, m + r = 120), with no rule against angles.at-point.",
+      "change": "Widened linear-equations.simultaneous to include three linear equations in three unknowns where a paper sets them, with Q4 as the example, and recorded it in source.scope_rule as WASSCE testing past its syllabus. Added a sorting rule to it and to angles.at-point: when a figure only supplies the equations and the work is solving them together, the question goes to simultaneous; when one angle fact gives the answer directly, it goes to the geometry subtopic."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "number-bases.conversion",
+      "evidence": "Placement test, WASSCE, Sonnet finding (overlap, number-bases.conversion / number-bases.operations): Q54 subtracts within an unknown base (6244 minus 1621 = 4323 in base x); the working is subtraction but the unknown is the base, and the rule does not say which wins.",
+      "change": "Added a rule to both number-bases.conversion and number-bases.operations: when the base is the unknown, an equality with no operation (21 in base five equals 14 in base x) goes to conversion, and one containing a sum, difference or product (Q54) goes to operations. Named the Q54 case in the operations covers line."
+    },
+    {
+      "kind": "widened",
+      "where": "averages.median-mode",
+      "evidence": "Placement test, WASSCE, Opus finding (misplaced, dispersion.range-deviation): the averages.ogive rule sends quartiles of a short listed set to dispersion.range-deviation, but a quartile is a measure of location, so Q7 (first quartile of ten values) has no natural home.",
+      "change": "Widened averages.median-mode to take quartiles and percentiles of listed or tabulated data, with Q7 as the example, and renamed it 'Median, mode and quartiles'. Rewrote the averages.ogive rule so a single quartile of a listed set goes to median-mode and a quartile range of a listed set to dispersion.range-deviation, and added the matching rule to both of those."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "sets.venn",
+      "evidence": "Placement test, WASSCE, Opus finding (overlap, sets.venn): the rule sending a probability from a Venn diagram to probability.single-event also catches Q33, where the student must build the diagram and find the intersection and the probability step is a trivial division.",
+      "change": "Added a rule to sets.venn and probability.single-event: when the number in a region must be worked out from given totals, the question goes to sets.venn even if the last step is a probability; a probability read straight from a diagram or table whose counts are given stays in probability.single-event."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "sets.notation",
+      "evidence": "Placement test, WASSCE, disagreement 2015 Q42 ('Describe the shaded portion in the diagram above': Sonnet sets.notation, Opus sets.venn).",
+      "change": "Added a rule to sets.notation and sets.venn: describing or shading a region of a drawn Venn diagram goes to sets.venn, even when the answer is written in set notation; set notation with no diagram stays in sets.notation. Named describing a shaded region in set notation in the sets.venn covers line."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "ratio.proportion",
+      "evidence": "Placement test, WASSCE, Opus finding (overlap, ratio.proportion): map scales sit in ratio.proportion and area scale factors in solids.similar, so an area on a map (Q57) fits both.",
+      "change": "Added a rule to ratio.proportion and solids.similar: a length or distance from a map scale goes to ratio.proportion; an area on a map or scale drawing, which needs the square of the scale, goes to solids.similar. Named map areas in the solids.similar covers line."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "plane-mensuration.perimeter-area",
+      "evidence": "Placement test, WASSCE, Opus finding (misplaced, solids.similar): area scale factors of plane figures live under the solids parent, so Q16 (a rectangle with its sides doubled, find the new area) must choose between plane-mensuration.perimeter-area and a solids subtopic. The finding offers two fixes: move similar figures to its own parent, or add a rule to perimeter-area for enlarged shapes.",
+      "change": "Took the second fix, a rule, because moving the subtopic would change its id and invalidate placements already made. Added a rule to plane-mensuration.perimeter-area and solids.similar: the new area of a plane shape whose every length is scaled by the same factor goes to solids.similar; a shape whose sides change by different amounts stays in perimeter-area. The solids.similar covers line now names plane figures and the Q16 case."
+    },
+    {
+      "kind": "widened",
+      "where": "coordinate-geometry.parallel-perpendicular",
+      "evidence": "Placement test, WASSCE, Opus finding (missing, coordinate-geometry.parallel-perpendicular): the WAEC syllabus reference is null, yet a WASSCE question (Q39) tests a line parallel to a given line through a point.",
+      "change": "Checked the WAEC reference against the coverage map: the WASSCE E items are the x-y plane, coordinates, midpoint and distance, gradient, and the equation of a line, with no item for parallel or perpendicular lines, so the WAEC reference stays null. Added to the covers line that WASSCE papers test it anyway, and added the same point to source.scope_rule."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "variation.joint-partial",
+      "evidence": "Placement test, WASSCE, disagreement 2022 Q9 ('M varies directly as n and inversely as the square of p': Sonnet variation.direct-inverse, Opus variation.joint-partial).",
+      "change": "The rule already existed on variation.direct-inverse (two or more variables on the right go to joint-partial) but not on joint-partial. Added the reciprocal rule to variation.joint-partial: any relation with two or more variables on the right goes here, even when each part is described as direct or inverse. Named the mixed direct-and-inverse case, with Q9 as the example."
+    },
+    {
+      "kind": "widened",
+      "where": "coordinate-geometry.distance-midpoint",
+      "evidence": "Coverage: WASSCE E(i) 'Concept of the x-y plane' and E(ii) 'Coordinates of points on the x-y plane', both partial, only implied by graphs.curves; scheme of work SS3 T2 W2, partial: 'the Cartesian plane and plotting points is not named in any coordinate-geometry covers line'.",
+      "change": "Widened coordinate-geometry.distance-midpoint to name the x-y (Cartesian) plane and plotting and reading the coordinates of a point, renamed it 'Coordinates, distance and midpoint', and changed its WAEC reference to E(i)-(ii). Added a sorting rule to it and to graphs.curves: plotting a table of values to draw a line or curve goes to graphs.curves; placing or reading a single point goes here."
+    },
+    {
+      "kind": "widened",
+      "where": "trigonometry.graphs",
+      "evidence": "Coverage: WASSCE F(a)(vi), partial: 'Missing: the graph of tan x, and a straight line drawn with a trigonometric graph to solve a linear and a trigonometric equation together is not named.'",
+      "change": "Widened trigonometry.graphs to name y = tan x and a straight line drawn on the same axes as a trigonometric graph to solve a linear and a trigonometric equation together. Renamed it 'Graphs of trigonometric functions'. Added a sorting rule to it and to graphs.intersection: a straight line drawn on a trigonometric graph goes to trigonometry.graphs."
+    },
+    {
+      "kind": "widened",
+      "where": "trigonometry.ratios",
+      "evidence": "Coverage: UTME III.5(a), partial: 'Missing: exact values for 75 and 105 degrees, which need compound angles, are not named; the covers line gives exact values only for 30, 45 and 60.'",
+      "change": "Widened trigonometry.ratios to name exact values for 75 and 105 degrees found by writing them as sums of 30, 45 and 60 degrees. Added a sorting rule to it and to trigonometry.general-angles: 75 and 105 degrees built from sums of special angles go to ratios, even though 105 is beyond 90; 120, 135 and 150 from their related acute angle go to general-angles, whose covers line now names them."
+    },
+    {
+      "kind": "widened",
+      "where": "triangles.angle-properties",
+      "evidence": "Coverage: scheme of work SS1 T3 W2, partial: 'Missing: proving the theorems; no covers line names proof.' (proofs of the angle sum of a triangle and the exterior angle).",
+      "change": "Widened triangles.angle-properties to name the deductive proofs of the angle sum and the exterior angle theorem, with a sorting rule that a proof goes to the subtopic whose theorem it proves. Added the same general rule to how_to_use so that proofs elsewhere in geometry are placed the same way."
+    },
+    {
+      "kind": "widened",
+      "where": "triangles.congruent",
+      "evidence": "Coverage: scheme of work SS1 T3 W5, partial: 'Missing: deductive proof as a skill; no covers line names proof, though WASSCE D(c) and D(d) say formal proofs may be required.'",
+      "change": "Widened triangles.congruent to name deductive proofs that rest on congruent triangles, such as the properties of a parallelogram. Added a sorting rule sending a proof of the triangle angle facts to triangles.angle-properties and a proof of a circle theorem to the circles subtopic that holds it."
+    },
+    {
+      "kind": "widened",
+      "where": "circles.angles",
+      "evidence": "Coverage: scheme of work SS2 T2 W8 'Deductive proof of circle geometry' and SS2 T2 W9 'Circle theorems: theorems and proofs', both partial: 'Missing: proving the theorems; no covers line names proof.'",
+      "change": "Widened circles.angles to name the deductive proofs of its theorems, with a sorting rule that a proof of a chord or tangent theorem goes to circles.chords or circles.tangents, following the new how_to_use rule."
+    },
+    {
+      "kind": "widened",
+      "where": "indices.log-tables",
+      "evidence": "Coverage: scheme of work SS2 T1 W1, partial: 'Missing: reciprocals (reading and using tables of reciprocals) is not named in any covers line.'",
+      "change": "Widened indices.log-tables to name reading and using tables of reciprocals, squares and square roots, the other tables the WASSCE allows. Renamed it 'Calculations with logarithm and reciprocal tables'. It is widened, not split, because reading a reciprocal table is a close relative of reading log tables."
+    },
+    {
+      "kind": "widened",
+      "where": "data-presentation.frequency-tables",
+      "evidence": "Coverage: scheme of work SS1 T3 W6 and SS1 T3 W8, partial: 'Collecting data is not named in any covers line.'",
+      "change": "Widened data-presentation.frequency-tables to begin with collecting data."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "Placement test, UTME, disagreement 2016 Q6 ('From the diagram above, find the value of ∠OTQ': Sonnet circles.tangents, Opus circles.angles).",
+      "reason": "The diagram is missing from the input, and both models say the boundary is already clear: if T is a point of contact the tangent rule on circles.angles sends it to circles.tangents, otherwise it stays in circles.angles. This is an input defect, not a tree defect."
+    },
+    {
+      "finding": "Placement test, UTME, disagreement 2022 Q3 ('If 3log₂ᵃ + 5log₂ᵃ − 6log₂ᵃ find the value of': Sonnet indices.log-laws, Opus indices.log-equations).",
+      "reason": "The stem is garbled, with no object and no right-hand side. The existing rule already decides it: an unknown to find goes to indices.log-equations, simplifying with nothing to solve goes to indices.log-laws. The models split on how to read the broken stem, not on the rule."
+    },
+    {
+      "finding": "Placement test, WASSCE, disagreement 2024 Q38 ('Find the value of x in the diagram': Sonnet angles.at-point, Opus angles).",
+      "reason": "The diagram is missing and the stem has no mathematics in it. Both models call it an input defect, not a tree gap."
+    },
+    {
+      "finding": "Placement test, WASSCE, disagreement 2016 Q28 ('How many students are in the club?': Sonnet data-presentation.frequency-tables, Opus sets.venn).",
+      "reason": "The table or diagram the stem refers to is missing from the input. Both models call it a data gap, not a tree gap."
+    },
+    {
+      "finding": "Coverage: scheme of work SS3 T2 W6, partial: integration by substitution, by partial fractions and by parts, and Simpson's rule are missing.",
+      "reason": "source.scope_rule leaves these out on purpose until a paper is seen to test them. Neither placement test, 160 questions across 2014 to 2025, found a question on them, so the evidence does not call for a change."
+    },
+    {
+      "finding": "Coverage: unmapped_subtopics lists percentages.basic.",
+      "reason": "Not merged. The instruction is to keep an unmapped subtopic only if a real paper tests it, and the evidence files in this folder list questions only by number, so I could not confirm a specific paper question placed here. It is kept because it is the base skill of the percentages topic, which both syllabi name as a heading (WASSCE A(m), UTME I.2), and because fractions.operations already sends percentage questions here; merging it into profit-loss or interest would leave a plain percentage question with no fitting home. Its covers line now says why it exists. This needs checking at the gate: if the re-run placement test puts no question here, merge it into percentages.profit-loss."
+    }
+  ]
+}
