@@ -1,0 +1,2881 @@
+{
+  "sources": {
+    "waec": {
+      "file": "syllabi/economics-waec.txt",
+      "items": 105
+    },
+    "jamb": {
+      "file": "syllabi/economics-jamb.txt",
+      "items": 126
+    },
+    "sow": {
+      "file": "syllabi/economics-sow.txt",
+      "items": 85,
+      "note": "Revision, Examination and Closing weeks are excluded as non-content. SS3 Term 3 was not found (see provenance header)."
+    }
+  },
+  "items": [
+    {
+      "source": "waec",
+      "ref": "WAEC-1.0",
+      "text": "Definition and scope of economics (topic title)",
+      "subtopic_id": "basics.meaning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-1.1",
+      "text": "Scarcity and choice, scale of preference, opportunity cost",
+      "subtopic_id": "basics.scarcity-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-1.2",
+      "text": "Production possibility curve",
+      "subtopic_id": "basics.ppc",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-1.3",
+      "text": "Economic activities: production, distribution, consumption",
+      "subtopic_id": "basics.economic-activities",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-1.4",
+      "text": "Classification of economic activities (primary, secondary, tertiary) and relative contributions",
+      "subtopic_id": "basics.economic-activities",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-2",
+      "text": "Factors of production: land, labour, capital, entrepreneurship, meaning, characteristics, importance",
+      "subtopic_id": "factors.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-3a",
+      "text": "Types of economic systems: capitalism, socialism, mixed economy",
+      "subtopic_id": "systems.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-3b",
+      "text": "Basic features of each economic system",
+      "subtopic_id": "systems.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-3c",
+      "text": "Advantages and disadvantages of each economic system",
+      "subtopic_id": "systems.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-3d",
+      "text": "Economic problems of society and approaches to solving them under each system",
+      "subtopic_id": "systems.economic-problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-4",
+      "text": "Basic tools: tables, graphs, charts",
+      "subtopic_id": "tools.tables-graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-4b",
+      "text": "Basic statistical measures: arithmetic mean, median, mode and simple applications",
+      "subtopic_id": "tools.central-tendency",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-5.1",
+      "text": "Concept and law of demand, demand schedules and curve, exceptional demand curves",
+      "subtopic_id": "demand.law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-5.2",
+      "text": "Types of demand: derived, composite, joint, competitive",
+      "subtopic_id": "demand.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-5.3",
+      "text": "Factors determining demand; shift of vs movement along a demand curve",
+      "subtopic_id": "demand.determinants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-5.4",
+      "text": "Elasticity of demand: concept, types (price, income, cross), measurement",
+      "subtopic_id": "demand.elasticity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-5.5",
+      "text": "Importance of elasticity of demand to consumers, producers and government",
+      "subtopic_id": "demand.elasticity-uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-6.1",
+      "text": "Concept and law of supply, supply schedules and curve",
+      "subtopic_id": "supply.law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-6.2",
+      "text": "Types of supply: composite, complementary, competitive",
+      "subtopic_id": "supply.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-6.3",
+      "text": "Factors determining supply; shift of vs movement along a supply curve",
+      "subtopic_id": "supply.determinants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-6.4",
+      "text": "Concept and measurement of elasticity of supply and its importance to producers and government",
+      "subtopic_id": "supply.elasticity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-7.1",
+      "text": "Utility concepts: total, average, marginal utility, calculation of utility schedules",
+      "subtopic_id": "consumer.utility",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-7.2",
+      "text": "Law of diminishing marginal utility; relationship between TU, AU, MU",
+      "subtopic_id": "consumer.utility",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-7.3",
+      "text": "Relationship between marginal utility and the demand curve",
+      "subtopic_id": "consumer.utility",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-7.4",
+      "text": "Concept and determination of consumer equilibrium; effects of price changes on it",
+      "subtopic_id": "consumer.equilibrium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-8.1",
+      "text": "Concept of the market; interaction of demand and supply",
+      "subtopic_id": "price.market-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-8.2",
+      "text": "Price determination under free and regulated markets",
+      "subtopic_id": "price.market-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-8.3",
+      "text": "Equilibrium price and quantity in product and factor markets; algebraic determination",
+      "subtopic_id": "price.equilibrium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-8.4",
+      "text": "Effects of changes in supply and demand on equilibrium prices and quantities",
+      "subtopic_id": "price.changes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-8.5",
+      "text": "Price controls: maximum and minimum price regulations, effects, rationing, black market",
+      "subtopic_id": "price.controls",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-9.1",
+      "text": "Division of labour and specialization",
+      "subtopic_id": "production.division-labour",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-9.2",
+      "text": "Scale of production: internal and external economies",
+      "subtopic_id": "production.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-9.3",
+      "text": "Total, average and marginal productivity and the law of variable proportions",
+      "subtopic_id": "production.productivity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-10.1",
+      "text": "Cost concepts: total, average, marginal, variable, fixed cost; short run and long run costs",
+      "subtopic_id": "costs.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-10.1b",
+      "text": "Short run and long run costs",
+      "subtopic_id": "costs.short-long-run",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-10.2",
+      "text": "Economist's vs accountant's view of cost (opportunity cost and money cost)",
+      "subtopic_id": "costs.views",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-10.3",
+      "text": "Revenue concepts: total, average, marginal revenue; marginal revenue product",
+      "subtopic_id": "costs.revenue",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-11.1",
+      "text": "Concept of a market; characteristics of market structures",
+      "subtopic_id": "price.market-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-11.2",
+      "text": "Determination of price and output under perfect competition",
+      "subtopic_id": "markets.perfect",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-11.3",
+      "text": "Determination of price and output under monopoly",
+      "subtopic_id": "markets.monopoly",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-11.4",
+      "text": "Determination of price and output under monopolistic competition",
+      "subtopic_id": "markets.imperfect",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-11.5",
+      "text": "Price discrimination",
+      "subtopic_id": "markets.monopoly",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-12.1",
+      "text": "Sole proprietorship, partnership, private and public joint-stock companies, co-operatives",
+      "subtopic_id": "business.private",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-12.2",
+      "text": "Statutory corporations and joint ventures",
+      "subtopic_id": "business.public",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-12.3",
+      "text": "Sources of funds for business enterprises",
+      "subtopic_id": "business.finance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-12.4",
+      "text": "General and basic problems of business enterprises",
+      "subtopic_id": "business.private",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-12.5",
+      "text": "Privatization and commercialization as solutions to problems of public enterprises",
+      "subtopic_id": "business.privatisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-12.6",
+      "text": "Indigenization and nationalization policies",
+      "subtopic_id": "business.privatisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-13.1",
+      "text": "Process of distribution: role of producers, wholesalers, retailers, co-operatives",
+      "subtopic_id": "distribution.channels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-13.2",
+      "text": "Role of government agencies in product distribution and problems of distribution and their solutions",
+      "subtopic_id": "distribution.problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-14a.1",
+      "text": "Determination and implication of size and growth of population; rural-urban migration",
+      "subtopic_id": "population.size-growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-14a.2",
+      "text": "Malthusian theory of population",
+      "subtopic_id": "population.theories",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-14a.3",
+      "text": "Geographical, age, sex and occupational distribution of population",
+      "subtopic_id": "population.structure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-14a.4",
+      "text": "Importance and problems of census",
+      "subtopic_id": "population.census",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-14a.5",
+      "text": "Population and economic development: under-population, optimum population, over-population",
+      "subtopic_id": "population.size-growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-14b.1",
+      "text": "Labour force and human capital, efficiency and mobility of labour, factors affecting size of labour force",
+      "subtopic_id": "labour.force",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-14b.2",
+      "text": "Supply of and demand for labour: wage determination",
+      "subtopic_id": "labour.wages",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-14b.3",
+      "text": "Unemployment and underemployment",
+      "subtopic_id": "labour.unemployment",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-14b.4",
+      "text": "Trade unions, employers' associations, government policies on labour and wages",
+      "subtopic_id": "labour.wages",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-15.1",
+      "text": "Structure of agriculture (food crops, export crops, livestock, fisheries); systems of agriculture",
+      "subtopic_id": "agriculture.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-15.2",
+      "text": "Importance of agriculture to the national economy",
+      "subtopic_id": "agriculture.importance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-15.3",
+      "text": "Marketing of agricultural products (commodity boards); agricultural policies (minimum prices)",
+      "subtopic_id": "agriculture.marketing-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-15.4",
+      "text": "Problems of agriculture and remedies",
+      "subtopic_id": "agriculture.problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-16.1",
+      "text": "Meaning and types of industry; plant, firm, industry, industrial estate",
+      "subtopic_id": "industry.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-16.2",
+      "text": "Location of industry, localization",
+      "subtopic_id": "industry.location",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-16.3",
+      "text": "Role of industrialization in economic development; link between agricultural and industrial development",
+      "subtopic_id": "industry.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-16.4",
+      "text": "Strategies of industrialization",
+      "subtopic_id": "industry.strategies",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-16.5",
+      "text": "Problems of industrialization",
+      "subtopic_id": "industry.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-17.1",
+      "text": "Meaning of major national income concepts: GDP, GNP, NNP",
+      "subtopic_id": "national-income.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-17.2",
+      "text": "Different ways of measuring national income and their problems",
+      "subtopic_id": "national-income.measurement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-17.3",
+      "text": "Uses and limitations of national income data; trends and structure of national income",
+      "subtopic_id": "national-income.uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-18a.1",
+      "text": "Money: definition, historical development, barter and its problems, types, characteristics, functions",
+      "subtopic_id": "money.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-18a.2",
+      "text": "Supply of and demand for money",
+      "subtopic_id": "money.demand-supply",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-18a.3",
+      "text": "Value of money and the price level",
+      "subtopic_id": "money.value",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-18b",
+      "text": "Inflation: meaning, types, causes, effects and control",
+      "subtopic_id": "inflation.types-causes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-18b.2",
+      "text": "Effects and control of inflation",
+      "subtopic_id": "inflation.effects-control",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-19.1",
+      "text": "Types of financial institutions: traditional, central bank, commercial bank, development bank, merchant bank, insurance, building societies",
+      "subtopic_id": "financial.types",
+      "status": "covered",
+      "note": "Central bank specifically also maps to financial.central-bank and commercial bank to financial.deposit-banks.",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-19.2",
+      "text": "Development and functions of financial institutions",
+      "subtopic_id": "financial.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-19.3",
+      "text": "Money and capital markets: meaning, types and functions",
+      "subtopic_id": "financial.markets",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-20.1",
+      "text": "Fiscal policy and objectives of public finance",
+      "subtopic_id": "public-finance.fiscal-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-20.2",
+      "text": "Sources of government revenue",
+      "subtopic_id": "public-finance.revenue",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-20.3",
+      "text": "Taxation: types (direct/indirect), objectives, merits, demerits, incidence, canons, rates",
+      "subtopic_id": "public-finance.taxation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-20.4",
+      "text": "Incidence and effects of taxes",
+      "subtopic_id": "public-finance.incidence",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-20.5",
+      "text": "Composition/structure and effects of public expenditure",
+      "subtopic_id": "public-finance.expenditure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-20.6",
+      "text": "Government budget and the national debt",
+      "subtopic_id": "public-finance.budget-debt",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-21.1",
+      "text": "Meaning of economic development; distinction between growth and development",
+      "subtopic_id": "development.meaning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-21.2",
+      "text": "Characteristics and problems of developing countries",
+      "subtopic_id": "development.problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-21.3",
+      "text": "Elements of development planning (objectives, problems); types of plans",
+      "subtopic_id": "development.planning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-22a.1",
+      "text": "Differences between domestic and international trade; basis of international trade; absolute and comparative cost advantage",
+      "subtopic_id": "trade.basis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-22a.2",
+      "text": "Terms of trade: definition and measurement",
+      "subtopic_id": "trade.terms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-22a.3",
+      "text": "Commercial policy objectives and instruments: tariffs (types), direct control",
+      "subtopic_id": "trade.protection",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-22a.4",
+      "text": "Trend and structure of West African countries' external trade",
+      "subtopic_id": "trade.structure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-22b.1",
+      "text": "Role of money in international transactions; meaning and components of balance of payments",
+      "subtopic_id": "bop.components",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-22b.2",
+      "text": "Balance of payments disequilibrium",
+      "subtopic_id": "bop.disequilibrium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-22b.3",
+      "text": "Balance of payments adjustment: exchange rate policy, exchange control, monetary and fiscal policies",
+      "subtopic_id": "bop.exchange-rate",
+      "status": "covered",
+      "note": "Exchange control and monetary/fiscal adjustment tools also touch bop.disequilibrium.",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-22b.4",
+      "text": "Financing of balance of payments deficit: reserves and international borrowing",
+      "subtopic_id": "bop.disequilibrium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-23.1",
+      "text": "Economic integration: objectives, levels, features",
+      "subtopic_id": "integration.forms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-23.2",
+      "text": "Development and problems of economic integration in West Africa: ECOWAS",
+      "subtopic_id": "integration.ecowas",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-24.1",
+      "text": "OPEC: development and role",
+      "subtopic_id": "natural-resources.oil",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-24.2",
+      "text": "ECA: development and role",
+      "subtopic_id": "organisations.others",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-24.3",
+      "text": "IMF: development and role",
+      "subtopic_id": "organisations.finance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-24.4",
+      "text": "IBRD (World Bank): development and role",
+      "subtopic_id": "organisations.finance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-24.5",
+      "text": "AfDB: development and role",
+      "subtopic_id": "organisations.finance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-24.6",
+      "text": "UNCTAD: development and role",
+      "subtopic_id": "organisations.others",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "waec",
+      "ref": "WAEC-25",
+      "text": "Development of major natural resources (petroleum, gold, diamond, timber, groundnut); effects on West African economies",
+      "subtopic_id": "natural-resources.major",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-1a",
+      "text": "Basic concepts: wants, scarcity, choice, scale of preference, opportunity cost, rationality",
+      "subtopic_id": "basics.scarcity-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-1a.2",
+      "text": "Production, distribution, consumption as basic concepts",
+      "subtopic_id": "basics.economic-activities",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-1b.i",
+      "text": "Economic problems of what, how, for whom to produce, and efficiency of resource use",
+      "subtopic_id": "systems.economic-problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-1b.ii",
+      "text": "Application of PPF to solution of economic problems",
+      "subtopic_id": "basics.ppc",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-2a",
+      "text": "Types of economic systems: free enterprise, centrally planned, mixed",
+      "subtopic_id": "systems.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-2b",
+      "text": "Solutions to economic problems under different systems",
+      "subtopic_id": "systems.economic-problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-2c",
+      "text": "Contemporary issues: economic reforms (deregulation, banking sector consolidation, cashless policy)",
+      "subtopic_id": "systems.reforms",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-3a.i",
+      "text": "Inductive and deductive methods",
+      "subtopic_id": "tools.methods",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-3a.ii",
+      "text": "Positive and normative reasoning",
+      "subtopic_id": "tools.methods",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-3b.i",
+      "text": "Tables, charts and graphs",
+      "subtopic_id": "tools.tables-graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-3b.ii",
+      "text": "Measures of central tendency: mean, median, mode and their applications",
+      "subtopic_id": "tools.central-tendency",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-3b.iii",
+      "text": "Measures of dispersion: variance, standard deviation, range and their applications",
+      "subtopic_id": "tools.dispersion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-3b.iv",
+      "text": "Merits and demerits of the analytical tools",
+      "subtopic_id": "tools.tables-graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-4a",
+      "text": "Meaning and determinants of demand; demand schedules/curves; quantity demanded vs demand",
+      "subtopic_id": "demand.determinants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-4a.ii",
+      "text": "Demand schedules and curves",
+      "subtopic_id": "demand.law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-4b",
+      "text": "Types of demand: composite, derived, competitive, joint",
+      "subtopic_id": "demand.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-4c",
+      "text": "Types, nature and determinants of elasticity and their measurement (price, income, cross)",
+      "subtopic_id": "demand.elasticity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-4d",
+      "text": "Importance of elasticity of demand to consumers, producers and government",
+      "subtopic_id": "demand.elasticity-uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-5a.i",
+      "text": "Utility: cardinal, ordinal, total, average, marginal",
+      "subtopic_id": "consumer.utility",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-5a.ii",
+      "text": "Indifference curve and budget line",
+      "subtopic_id": "consumer.indifference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-5b",
+      "text": "Diminishing marginal utility and the law of demand",
+      "subtopic_id": "consumer.utility",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-5c",
+      "text": "Consumer equilibrium using indifference curve and marginal analyses",
+      "subtopic_id": "consumer.equilibrium",
+      "status": "partial",
+      "note": "Marginal-utility equilibrium goes to consumer.equilibrium; the indifference-curve half of the same clause belongs to consumer.indifference. No single subtopic covers both halves of 5c at once.",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-5d",
+      "text": "Effects of shift in the budget line and the indifference curve",
+      "subtopic_id": "consumer.indifference",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-5e",
+      "text": "Consumer surplus and its applications",
+      "subtopic_id": "consumer.surplus",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-6a",
+      "text": "Meaning and determinants of supply; supply schedules/curves; quantity supplied vs supply",
+      "subtopic_id": "supply.determinants",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-6a.ii",
+      "text": "Supply schedules and supply curves",
+      "subtopic_id": "supply.law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-6b",
+      "text": "Types of supply: joint/complementary, competitive, composite",
+      "subtopic_id": "supply.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-6c",
+      "text": "Elasticity of supply: determinants, measurement, nature, applications",
+      "subtopic_id": "supply.elasticity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-7a",
+      "text": "The concepts of market and price",
+      "subtopic_id": "price.market-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-7b",
+      "text": "Functions of the price system",
+      "subtopic_id": "price.market-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-7c.i",
+      "text": "Equilibrium price and quantity in product and factor markets",
+      "subtopic_id": "price.equilibrium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-7c.ii",
+      "text": "Price legislation and its effects",
+      "subtopic_id": "price.controls",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-7d",
+      "text": "Effects of changes in supply and demand on equilibrium price and quantity",
+      "subtopic_id": "price.changes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-8a",
+      "text": "Meaning and types of production",
+      "subtopic_id": "basics.economic-activities",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-8b",
+      "text": "TP, AP, MP and the law of variable proportion",
+      "subtopic_id": "production.productivity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-8c",
+      "text": "Division of labour and specialization",
+      "subtopic_id": "production.division-labour",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-8d",
+      "text": "Scale of production: internal and external economies of scale and their implications",
+      "subtopic_id": "production.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-8e",
+      "text": "Production functions and returns to scale",
+      "subtopic_id": "production.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-8f",
+      "text": "Producers' equilibrium: isoquant-isocost and marginal analyses",
+      "subtopic_id": "production.producer-equilibrium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-8g",
+      "text": "Factors affecting productivity",
+      "subtopic_id": "production.productivity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-9a",
+      "text": "Cost concepts: fixed, variable, total, average, marginal",
+      "subtopic_id": "costs.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-9b",
+      "text": "Revenue concepts: total, average, marginal revenue",
+      "subtopic_id": "costs.revenue",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-9c",
+      "text": "Accountants' and economists' notions of cost",
+      "subtopic_id": "costs.views",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-9d",
+      "text": "Short-run and long-run costs",
+      "subtopic_id": "costs.short-long-run",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-9e",
+      "text": "The marginal cost and the supply curve of a firm",
+      "subtopic_id": "costs.short-long-run",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-10a",
+      "text": "Perfectly competitive market: assumptions, characteristics, short-run and long-run equilibrium",
+      "subtopic_id": "markets.perfect",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-10b.i",
+      "text": "Imperfect market: pure monopoly, discriminatory monopoly, monopolistic competition",
+      "subtopic_id": "markets.monopoly",
+      "status": "partial",
+      "note": "Pure/discriminatory monopoly maps to markets.monopoly; monopolistic competition in the same clause maps to markets.imperfect. Split across two subtopics as the covers lines intend.",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-10b.ii",
+      "text": "Short-run and long-run equilibrium positions of imperfect markets",
+      "subtopic_id": "markets.imperfect",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-10c",
+      "text": "Break-even/shut-down analysis in the various markets",
+      "subtopic_id": "markets.profit-shutdown",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-11a",
+      "text": "The concepts of GNP, GDP, NI, NNP",
+      "subtopic_id": "national-income.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-11b",
+      "text": "National income measurements and their problems",
+      "subtopic_id": "national-income.measurement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-11c",
+      "text": "Uses and limitations of national income estimates",
+      "subtopic_id": "national-income.uses",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-11d",
+      "text": "The circular flow of income (two- and three-sector models)",
+      "subtopic_id": "national-income.circular-flow",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-11e",
+      "text": "The concepts of consumption, investment and savings",
+      "subtopic_id": "national-income.consumption-saving",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-11f",
+      "text": "The multiplier and its effects",
+      "subtopic_id": "national-income.multiplier",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-11g",
+      "text": "Elementary theory of income determination and equilibrium national income",
+      "subtopic_id": "national-income.multiplier",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-12a",
+      "text": "Types, characteristics and functions of money",
+      "subtopic_id": "money.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-12b",
+      "text": "Demand for money and the supply of money",
+      "subtopic_id": "money.demand-supply",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-12c",
+      "text": "Quantity theory of money (Fisher equation)",
+      "subtopic_id": "money.value",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-12d",
+      "text": "The value of money and the price level",
+      "subtopic_id": "money.value",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-12e",
+      "text": "Inflation: types and causes",
+      "subtopic_id": "inflation.types-causes",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-12e.2",
+      "text": "Inflation: measurement, calculating and interpreting the consumer price index",
+      "subtopic_id": "inflation.measurement",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-12e.3",
+      "text": "Inflation: effects and control",
+      "subtopic_id": "inflation.effects-control",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-12f",
+      "text": "Deflation: measurement, effects and control",
+      "subtopic_id": "inflation.deflation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-13a",
+      "text": "Types and functions of financial institutions (traditional, central bank, mortgage, merchant, insurance, building societies)",
+      "subtopic_id": "financial.types",
+      "status": "covered",
+      "note": "Central bank specifically also maps to financial.central-bank.",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-13b",
+      "text": "Role of financial institutions in economic development",
+      "subtopic_id": "financial.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-13c",
+      "text": "Money and capital markets",
+      "subtopic_id": "financial.markets",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-13d",
+      "text": "Financial sector regulations",
+      "subtopic_id": "financial.central-bank",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-13e",
+      "text": "Deposit money banks and the creation of money",
+      "subtopic_id": "financial.deposit-banks",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-13f",
+      "text": "Monetary policy and its instruments",
+      "subtopic_id": "financial.monetary-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-13g",
+      "text": "Challenges facing financial institutions in Nigeria",
+      "subtopic_id": "financial.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-14a",
+      "text": "Meaning and objectives of public finance",
+      "subtopic_id": "public-finance.fiscal-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-14b",
+      "text": "Fiscal policy and its instruments",
+      "subtopic_id": "public-finance.fiscal-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-14c",
+      "text": "Sources of government revenue (taxes, royalties, rents, grants, aids)",
+      "subtopic_id": "public-finance.revenue",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-14d",
+      "text": "Principles of taxation",
+      "subtopic_id": "public-finance.taxation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-14e",
+      "text": "Tax incidence and its effects",
+      "subtopic_id": "public-finance.incidence",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-14f",
+      "text": "Effects of public expenditure",
+      "subtopic_id": "public-finance.expenditure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-14g",
+      "text": "Government budget and public debts",
+      "subtopic_id": "public-finance.budget-debt",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-14h",
+      "text": "Revenue allocation and resource control in Nigeria",
+      "subtopic_id": "public-finance.revenue",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-15a",
+      "text": "Meaning and scope of economic growth and development",
+      "subtopic_id": "development.meaning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-15b",
+      "text": "Indicators of growth and development",
+      "subtopic_id": "development.meaning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-15c",
+      "text": "Factors affecting growth and development",
+      "subtopic_id": "development.problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-15d",
+      "text": "Problems of development in Nigeria",
+      "subtopic_id": "development.problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-15e",
+      "text": "Development planning in Nigeria",
+      "subtopic_id": "development.planning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-16a",
+      "text": "Types and features of agriculture",
+      "subtopic_id": "agriculture.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-16b",
+      "text": "The role of agriculture in economic development",
+      "subtopic_id": "agriculture.importance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-16c",
+      "text": "Problems of agriculture",
+      "subtopic_id": "agriculture.problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-16d",
+      "text": "Agricultural policies and their effects",
+      "subtopic_id": "agriculture.marketing-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-16e",
+      "text": "Instability in agricultural incomes: causes, effects, solutions",
+      "subtopic_id": "agriculture.marketing-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-17a",
+      "text": "Concepts and effects of location and localization of industry in Nigeria",
+      "subtopic_id": "industry.location",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-17b",
+      "text": "Strategies of industrialization in Nigeria",
+      "subtopic_id": "industry.strategies",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-17c",
+      "text": "Industrialization and economic development in Nigeria",
+      "subtopic_id": "industry.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-17d",
+      "text": "Funding and management of business organizations",
+      "subtopic_id": "business.finance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-17e",
+      "text": "Factors determining the size of firms",
+      "subtopic_id": "production.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-18a",
+      "text": "Development of major natural resources (petroleum, gold, diamond, timber)",
+      "subtopic_id": "natural-resources.major",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-18b",
+      "text": "Contributions of the oil and non-oil sectors to the Nigerian economy",
+      "subtopic_id": "natural-resources.oil",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-18c",
+      "text": "Linkage effects",
+      "subtopic_id": "natural-resources.oil",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-18d",
+      "text": "Upstream/downstream of the oil sector",
+      "subtopic_id": "natural-resources.oil",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-18e",
+      "text": "The role of NNPC and OPEC in the oil sector",
+      "subtopic_id": "natural-resources.oil",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-18f",
+      "text": "Challenges facing natural resources exploitation",
+      "subtopic_id": "natural-resources.major",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-19a",
+      "text": "Private enterprises: sole proprietorship, partnership, limited liability companies, co-operatives",
+      "subtopic_id": "business.private",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-19b",
+      "text": "Problems of private enterprises",
+      "subtopic_id": "business.private",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-19c",
+      "text": "Public enterprises and their problems",
+      "subtopic_id": "business.public",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-19d",
+      "text": "Funding and management of business organizations",
+      "subtopic_id": "business.finance",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-19e",
+      "text": "Factors determining the size of firms",
+      "subtopic_id": "production.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-19f",
+      "text": "Privatization and commercialization as solutions to the problems of public enterprises",
+      "subtopic_id": "business.privatisation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-20a",
+      "text": "Meaning and theories of population",
+      "subtopic_id": "population.theories",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-20b",
+      "text": "Census: importance and problems",
+      "subtopic_id": "population.census",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-20c",
+      "text": "Size and growth: over-population, under-population, optimum population",
+      "subtopic_id": "population.size-growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-20d",
+      "text": "Structure and distribution of population",
+      "subtopic_id": "population.structure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-20e",
+      "text": "Population policy and economic development",
+      "subtopic_id": "population.size-growth",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-21a",
+      "text": "Meaning and basis for international trade (absolute and comparative costs)",
+      "subtopic_id": "trade.basis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-21b",
+      "text": "Balance of trade and balance of payments: problems and corrective measures",
+      "subtopic_id": "bop.disequilibrium",
+      "status": "covered",
+      "note": "The definitional half (meaning/components of balance of trade and BOP) also maps to bop.components.",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-21c",
+      "text": "Composition and direction of Nigeria's foreign trade",
+      "subtopic_id": "trade.structure",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-21d",
+      "text": "Exchange rate: meaning, types, determination",
+      "subtopic_id": "bop.exchange-rate",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-22",
+      "text": "ECOWAS: roles and relevance",
+      "subtopic_id": "integration.ecowas",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-22.2",
+      "text": "AU, EU, ECA, EEC, OECD, WTO: roles and relevance",
+      "subtopic_id": "organisations.others",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-22.3",
+      "text": "IMF, World Bank, IBRD, ADB (AfDB), UNCTAD: roles and relevance",
+      "subtopic_id": "organisations.finance",
+      "status": "partial",
+      "note": "UNCTAD is a trade/development body, not a finance body; organisations.others (which names UNCTAD explicitly) is the better fit for that one item within this clause, while IMF/World Bank/IBRD/AfDB fit organisations.finance.",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-23a",
+      "text": "Types and features of factors of production",
+      "subtopic_id": "factors.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-23a.2",
+      "text": "Rewards of factors of production",
+      "subtopic_id": "factors.rewards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-23b.1",
+      "text": "Determination of wages",
+      "subtopic_id": "labour.wages",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-23b.2",
+      "text": "Determination of interest and profit",
+      "subtopic_id": "factors.rewards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-23c.1",
+      "text": "Marginal productivity theory of wages",
+      "subtopic_id": "labour.wages",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-23c.2",
+      "text": "Liquidity preference theory of interest",
+      "subtopic_id": "factors.rewards",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-23d",
+      "text": "Factor mobility and efficiency",
+      "subtopic_id": "labour.force",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "jamb",
+      "ref": "JAMB-23e",
+      "text": "Unemployment and its solutions",
+      "subtopic_id": "labour.unemployment",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W1",
+      "text": "Meaning of Economics",
+      "subtopic_id": "basics.meaning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W2",
+      "text": "Economics as a science, an art or a social science",
+      "subtopic_id": "basics.meaning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W3",
+      "text": "Basic concepts of economics (wants, scarcity, choice, scale of preference)",
+      "subtopic_id": "basics.scarcity-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W4",
+      "text": "Opportunity cost and its importance",
+      "subtopic_id": "basics.scarcity-choice",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W5",
+      "text": "Basic economic problems of society (what, how, for whom; production possibility curve)",
+      "subtopic_id": "systems.economic-problems",
+      "status": "covered",
+      "note": "The PPC half of this week also maps to basics.ppc.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W6",
+      "text": "Basic tools of economic analysis",
+      "subtopic_id": "tools.tables-graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W7",
+      "text": "Data collection and presentation",
+      "subtopic_id": "tools.tables-graphs",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W8",
+      "text": "Theory of production (meaning)",
+      "subtopic_id": "basics.economic-activities",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W9",
+      "text": "Land as a factor of production",
+      "subtopic_id": "factors.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T1 W10",
+      "text": "Labour as a factor of production",
+      "subtopic_id": "factors.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W1",
+      "text": "Capital as a factor of production; the entrepreneur",
+      "subtopic_id": "factors.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W2",
+      "text": "Division of labour; specialisation",
+      "subtopic_id": "production.division-labour",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W3",
+      "text": "Scale of production",
+      "subtopic_id": "production.scale",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W4",
+      "text": "Firm and industry; types of business organisation",
+      "subtopic_id": "industry.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W5",
+      "text": "Business organisations (private and public)",
+      "subtopic_id": "business.private",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W6",
+      "text": "Public enterprises",
+      "subtopic_id": "business.public",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W7",
+      "text": "Population (meaning and concepts)",
+      "subtopic_id": "population.size-growth",
+      "status": "partial",
+      "note": "An intro week on 'population concepts' without a named subtopic; closest is population.size-growth, though population.theories (meaning and theories, JAMB 20a) is a plausible alternative reading.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W8",
+      "text": "Population census",
+      "subtopic_id": "population.census",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W9",
+      "text": "Theories of population (Malthusian theory)",
+      "subtopic_id": "population.theories",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T2 W10",
+      "text": "Labour market (labour force, mobility)",
+      "subtopic_id": "labour.force",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W1",
+      "text": "Distributive trade",
+      "subtopic_id": "distribution.channels",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W2",
+      "text": "Middlemen (elimination arguments, distribution problems in Nigeria, government roles)",
+      "subtopic_id": "distribution.problems",
+      "status": "covered",
+      "note": "The channel/middleman-elimination half also maps to distribution.channels.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W3",
+      "text": "Money (meaning, origin, barter and its problems, types)",
+      "subtopic_id": "money.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W4",
+      "text": "Financial institutions (commercial banks, central bank functions, monetary policy instruments)",
+      "subtopic_id": "financial.deposit-banks",
+      "status": "covered",
+      "note": "Central bank functions also map to financial.central-bank and monetary policy instruments to financial.monetary-policy.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W5",
+      "text": "Concept of demand (law of demand, demand schedules, types, determinants)",
+      "subtopic_id": "demand.law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W6",
+      "text": "Concept of supply (law of supply, supply schedules, types, determinants)",
+      "subtopic_id": "supply.law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W7",
+      "text": "Price determination (equilibrium price/quantity, price system, price-fixing methods)",
+      "subtopic_id": "price.equilibrium",
+      "status": "covered",
+      "note": "Price-system content also maps to price.market-system.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W8",
+      "text": "Nature of the Nigerian economy (industrial structure, sectoral contributions, geopolitical zones)",
+      "subtopic_id": "basics.economic-activities",
+      "status": "partial",
+      "note": "Sectoral contribution content is covered; 'geopolitical zones' as a geography-of-Nigeria detail is not economics content in either syllabus and has no subtopic (not treated as a gap, since it is outside the subject's scope).",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W9",
+      "text": "Agriculture (meaning, farming systems, importance, problems, solutions)",
+      "subtopic_id": "agriculture.types",
+      "status": "covered",
+      "note": "This intro week also touches agriculture.importance and agriculture.problems, split into their own subtopics elsewhere in the syllabi.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS1 T3 W10",
+      "text": "Mining (meaning, mineral types, uses, locations)",
+      "subtopic_id": "natural-resources.major",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W1",
+      "text": "Measures of central tendency of grouped data",
+      "subtopic_id": "tools.central-tendency",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W2",
+      "text": "Measures of dispersion of grouped data",
+      "subtopic_id": "tools.dispersion",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W3",
+      "text": "Theory of consumer behaviour (utility concepts)",
+      "subtopic_id": "consumer.utility",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W4",
+      "text": "Demand and supply equilibrium",
+      "subtopic_id": "price.equilibrium",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W5",
+      "text": "Elasticity of demand",
+      "subtopic_id": "demand.elasticity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W6",
+      "text": "Elasticity of supply",
+      "subtopic_id": "supply.elasticity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W7",
+      "text": "Income elasticity of demand",
+      "subtopic_id": "demand.elasticity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W8",
+      "text": "Cross elasticity of demand",
+      "subtopic_id": "demand.elasticity",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W9",
+      "text": "Price control / legislation",
+      "subtopic_id": "price.controls",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T1 W10",
+      "text": "Rationing and hoarding",
+      "subtopic_id": "price.controls",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2A W1-2",
+      "text": "Revision of theory of demand; theory of supply",
+      "subtopic_id": "demand.law",
+      "status": "covered",
+      "note": "Also revises supply.law.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2A W3",
+      "text": "Abnormal supply curve",
+      "subtopic_id": "supply.law",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2A W4",
+      "text": "Price determination in a free market",
+      "subtopic_id": "price.market-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2A W5",
+      "text": "The price system",
+      "subtopic_id": "price.market-system",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2A W6",
+      "text": "Public finance",
+      "subtopic_id": "public-finance.fiscal-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2A W7",
+      "text": "Taxation",
+      "subtopic_id": "public-finance.taxation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2A W8",
+      "text": "Uses of taxation",
+      "subtopic_id": "public-finance.taxation",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2A W9",
+      "text": "Budget; revenue allocation in Nigeria; national debt",
+      "subtopic_id": "public-finance.budget-debt",
+      "status": "covered",
+      "note": "Revenue allocation also maps to public-finance.revenue.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2A W10",
+      "text": "Agricultural policies in Nigeria and marketing of agricultural commodities",
+      "subtopic_id": "agriculture.marketing-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W1",
+      "text": "Production concepts (production possibility curve, law of variable proportion)",
+      "subtopic_id": "production.productivity",
+      "status": "covered",
+      "note": "The PPC half also maps to basics.ppc.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W2",
+      "text": "Cost concepts (TC, FC, VC, AFC, MC)",
+      "subtopic_id": "costs.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W3",
+      "text": "Revenue concepts (total, average, marginal revenue)",
+      "subtopic_id": "costs.revenue",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W4",
+      "text": "Economic systems (capitalism, socialism, mixed economy, welfarism)",
+      "subtopic_id": "systems.types",
+      "status": "partial",
+      "note": "'Welfarism' is not named in the subtopic's covers line (only capitalism, socialism, mixed economy); treated as a minor terminology gap, not a missing subtopic.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W5",
+      "text": "Labour market fundamentals",
+      "subtopic_id": "labour.force",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W6",
+      "text": "Supply and demand for labour; wage determination; unemployment",
+      "subtopic_id": "labour.wages",
+      "status": "covered",
+      "note": "Unemployment half also maps to labour.unemployment.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W7",
+      "text": "Market structure (perfect and imperfect)",
+      "subtopic_id": "markets.perfect",
+      "status": "covered",
+      "note": "Imperfect-market half also maps to markets.imperfect.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W8",
+      "text": "Imperfect market types; price discrimination",
+      "subtopic_id": "markets.imperfect",
+      "status": "covered",
+      "note": "Price discrimination half also maps to markets.monopoly.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W9",
+      "text": "Industries in Nigeria",
+      "subtopic_id": "industry.development",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T2B W10",
+      "text": "Location and localisation of industry",
+      "subtopic_id": "industry.location",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W1",
+      "text": "Revision of last term's work; money",
+      "subtopic_id": "money.nature",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W2",
+      "text": "Financial institutions",
+      "subtopic_id": "financial.types",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W3",
+      "text": "Inflation and deflation",
+      "subtopic_id": "inflation.types-causes",
+      "status": "covered",
+      "note": "Deflation half also maps to inflation.deflation.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W4",
+      "text": "Public finance",
+      "subtopic_id": "public-finance.fiscal-policy",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W5",
+      "text": "Sources of government revenue (taxation)",
+      "subtopic_id": "public-finance.revenue",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W6",
+      "text": "Budget",
+      "subtopic_id": "public-finance.budget-debt",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W7",
+      "text": "Capital market",
+      "subtopic_id": "financial.markets",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W8",
+      "text": "National income",
+      "subtopic_id": "national-income.concepts",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W9",
+      "text": "Theory of income determination",
+      "subtopic_id": "national-income.multiplier",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS2 T3 W10",
+      "text": "Theory of the multiplier",
+      "subtopic_id": "national-income.multiplier",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W1",
+      "text": "Economic lessons from the Asian Tigers, Japan, Europe and America",
+      "subtopic_id": null,
+      "status": "missing",
+      "note": "Comparative development case studies (Asian Tigers etc.) are not named in either syllabus and no subtopic's covers line reaches them.",
+      "proposed": "New subtopic under parent 'development': development.comparative-models, 'International development models and lessons (Asian Tigers, Japan, other newly industrialised economies) applied to Nigeria.'"
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W2",
+      "text": "Human capital development",
+      "subtopic_id": "labour.force",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W3",
+      "text": "Petroleum and the Nigerian economy",
+      "subtopic_id": "natural-resources.oil",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W4",
+      "text": "Manufacturing and construction industry",
+      "subtopic_id": "industry.development",
+      "status": "partial",
+      "note": "No subtopic names 'manufacturing' or 'construction' specifically; covered at the general industry/production-sector level only.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W5",
+      "text": "Service industries",
+      "subtopic_id": "basics.economic-activities",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W6",
+      "text": "Agencies that regulate the financial markets",
+      "subtopic_id": "financial.central-bank",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W7",
+      "text": "Functions and roles of financial regulatory agencies",
+      "subtopic_id": "financial.central-bank",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W8",
+      "text": "International trade I: domestic and international trade",
+      "subtopic_id": "trade.basis",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W9",
+      "text": "International trade II: globalisation",
+      "subtopic_id": "trade.protection",
+      "status": "partial",
+      "note": "'Globalisation' as a named concept is not in either syllabus and no subtopic covers line uses the word; closest in spirit is trade.protection (commercial policy, the flip side of trade liberalisation) and integration.forms.",
+      "proposed": "Could be folded into trade.protection's covers line as 'trade liberalisation and globalisation', or left as a scheme-of-work-only enrichment topic with no dedicated subtopic."
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T1 W10",
+      "text": "Balance of payments",
+      "subtopic_id": "bop.components",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W1",
+      "text": "Economic growth and economic development",
+      "subtopic_id": "development.meaning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W2",
+      "text": "Economic development planning",
+      "subtopic_id": "development.planning",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W3",
+      "text": "International economic organisations",
+      "subtopic_id": "organisations.finance",
+      "status": "covered",
+      "note": "Also maps to organisations.others depending on the specific body discussed.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W4",
+      "text": "Current economic plans (MDGs, NEEDS, Vision 2020)",
+      "subtopic_id": "development.planning",
+      "status": "partial",
+      "note": "'Nigeria's development plans' is in the covers line, but MDGs/NEEDS/Vision 2020 are not named examples.",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W5",
+      "text": "Economic development challenges",
+      "subtopic_id": "development.problems",
+      "status": "covered",
+      "note": "",
+      "proposed": ""
+    },
+    {
+      "source": "sow",
+      "ref": "SS3 T2 W6",
+      "text": "Economic reform programmes (and economic integration in West Africa)",
+      "subtopic_id": "systems.reforms",
+      "status": "covered",
+      "note": "The integration-in-West-Africa half of this week also maps to integration.ecowas.",
+      "proposed": ""
+    }
+  ],
+  "unmapped_subtopics": [],
+  "summary": {
+    "waec": {
+      "covered": 105,
+      "partial": 0,
+      "missing": 0
+    },
+    "jamb": {
+      "covered": 123,
+      "partial": 3,
+      "missing": 0
+    },
+    "sow": {
+      "covered": 78,
+      "partial": 6,
+      "missing": 1
+    }
+  }
+}

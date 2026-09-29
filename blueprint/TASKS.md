@@ -186,6 +186,80 @@ would still duplicate, so import each year once.
 
 ---
 
+## 2026-09-29: every subject, to the standard
+
+**Ask, verbatim:** "the UTME biology here [...] and here is that of WAEC [...] remember it
+is still supposed to match with the diagrams. for the gates - it was supposed to match
+with the syllabus and scheme of work for both exams, use /os-fresh-eyes, do a review and
+ensure all topics are gotten, and the designed system for matching questions to their
+topics work. Lets batch Topics with subs, designed to get the student mastery, a birds eye
+view all the entire body of knowledge they need, but every one break into subs for wider
+and deeper knowledge. /dev-pm run all these design your plan for these questions, get a
+reviewer, get a quality agent, ensure the diagrams are done to precision, for subjects like
+english where a passage spans over more than one question, or physics, maths where a
+diagram spans more than one questions, design how the system manages such." Then: "where
+codex usage is out use claude to finish", and "for questions where you cannot confirm with
+certainty [...] design the need review batch so we can work through those".
+
+**Done looks like:** every subject's tree passes `content-pipeline/standards/taxonomy.md`
+(both syllabi and the scheme of work mapped, placement test at 90 and 95 percent), every
+subject's first paper at its gate, every question the system cannot confirm in the review
+batch rather than the import.
+
+**Budget:** measured $6 a paper and about $4 a subject for its tree (build, coverage,
+placement test twice, one revision). About 21 subject-exam files and 210 papers: roughly
+$1,400 on the Claude side at full run, less where Codex carries the reviews.
+
+**Sources in hand:** twelve new files extracted (UTME Biology, eleven WAEC subjects). The
+WAEC Mathematics file needed a heading fix and now yields all 547 questions.
+
+### Trees
+
+- [x] **TAX-01** The standard: `content-pipeline/standards/taxonomy.md`. Topics give the
+      bird's-eye view, stamped with where the scheme of work teaches them, so the tree reads
+      SS1 to SS3; subtopics give the depth.
+- [ ] **TAX-02** Economics: coverage mapped (WAEC 105/105, JAMB 123 of 126 fully, scheme
+      78 of 85 fully, 1 missing); placement test 91 and 95 percent. Revision running.
+- [ ] **TAX-03** Biology: coverage mapped. JAMB 25 of 32 fully, 2 missing (Nigerian biomes,
+      sanitation); scheme 61 of 72, 7 missing (irritability, tolerance, culturing,
+      reproductive health). Placement test, then revision.
+- [ ] **TAX-04** The other ten subjects: sources (both syllabi and the scheme), build,
+      coverage, placement test, revision. Chemistry, Physics, Mathematics, English,
+      Government, CRS, Literature, Civic Education, Agricultural Science, Geography.
+
+### Sources still needed from Chidera
+
+- [ ] **SRC-01** Diagrams the questions refer to but no folder holds. Agricultural Science
+      about 50, Geography about 48 plus the Ijamo map (CON-07), UTME Biology about 30, Maths
+      about 25, Chemistry about 15, Physics about 12, a few elsewhere. Question-level list in
+      `content-pipeline/work/missing-diagrams.json`. Subjects with heavy gaps wait for them.
+
+### Diagrams to precision
+
+- [x] **DIA-01** Schematic subjects draw every diagram by hand, the trace only a guide;
+      Biology and Agricultural Science trace. Check compares labels character by character.
+- [ ] **DIA-02** Prove the hand-drawn route on one Maths and one Physics paper at their gates.
+
+### Shared passages and diagrams
+
+- [x] **GRP-01** The export gives every group a key, including questions that share only a
+      diagram. Teaching keeps a group in one chunk; check 12 stops sibling leaks.
+- [ ] **GRP-02** v2 app, recorded for PLAN.md: select and order whole groups (the old app
+      shuffles question by question, `lib/api.ts`, and can serve question 5 without 4); store
+      a passage once, not per row; render the underline and italic markers (CON-09).
+
+### Reviewer, quality, and what cannot be confirmed
+
+- [x] **REV-01** Codex out: `lanes.py` runs the review on Claude, a different model, and tags
+      it. Keys resting on two Claude models are labelled same-family.
+- [x] **REV-02** The review batch: `review_queue.py` gathers every question that cannot be
+      confirmed; `review_page.py` shows each as a student sees it, with its reason and the
+      diagram beside the redraw, and saves Orezi's decisions to a file.
+- [ ] **REV-03** Apply saved decisions back into the pipeline, each logged.
+- [ ] **REV-04** When Codex is back, re-derive and re-review what ran same-family.
+
+---
+
 ## Needs an answer a console holds
 
 Not repository-visible, so they are findings rather than blanks. Each names where the answer

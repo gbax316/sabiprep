@@ -3,5 +3,19 @@
   "subject": "Economics",
   "source": "../../Exam Questions/WAEC QUESTIONS/WAEC QUESTIONS/2025-2020 WAEC ECONOMICS.docx",
   "diagram_root": "../../Exam Questions/Economics WAEC Digrams",
-  "diagram_route": "author"
+  "diagram_route": "author",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/economics-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/economics-jamb.txt"
+    },
+    {
+      "exam": "SOW",
+      "path": "../syllabi/economics-sow.txt"
+    }
+  ]
 }

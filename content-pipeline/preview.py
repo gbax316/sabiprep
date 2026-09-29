@@ -137,12 +137,16 @@ def main():
         from collections import Counter
         placed = Counter(teach[q].get('subtopic_id') for q in keyed)
         rows = []
-        for tp in tax['topics']:
+        # Topics in teaching order: where the scheme of work first teaches
+        # them, SS1 to SS3, so the tree reads as the path through the subject.
+        order = lambda tp: (tp.get('taught_in') or ['SS9 T9'])[0]
+        for tp in sorted(tax['topics'], key=order):
             subs = ''.join(
                 f'<li><span class="{"n" if placed[s["id"]] else "n z"}">{placed[s["id"]]}</span>{e(s["name"])}'
                 f' <span class="z">{e(s["id"])}</span></li>' for s in tp['subtopics'])
             total = sum(placed[s['id']] for s in tp['subtopics'])
-            rows.append(f'<li><span class="{"n" if total else "n z"}">{total}</span>{e(tp["name"])}<ul>{subs}</ul></li>')
+            when = ', '.join(tp.get('taught_in') or []) or 'not in the scheme of work'
+            rows.append(f'<li><span class="{"n" if total else "n z"}">{total}</span>{e(tp["name"])} <span class="z">{e(when)}</span><ul>{subs}</ul></li>')
         cls_path = os.path.join(out, f'{a.slug}.classified.{u}.json')
         findings = json.load(open(cls_path, encoding='utf8')).get('taxonomy_findings', []) if os.path.exists(cls_path) else []
         find_html = ''.join(f'<li>{e(x.get("kind", ""))} at {e(x.get("where", ""))}: {e(x.get("detail", ""))}</li>' for x in findings)             or '<li>None. Every question found a clear place.</li>'

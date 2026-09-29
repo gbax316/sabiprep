@@ -1,0 +1,222 @@
+{
+  "from_version": "1.0",
+  "to_version": "1.1",
+  "changes": [
+    {
+      "kind": "widened",
+      "where": "tools.methods",
+      "evidence": "Matchtest disagreement 2019 UTME Q29 ('A stock variable is measured', sonnet national-income.concepts, opus tools.methods); sonnet finding missing at national-income (stock versus flow); opus finding missing at tools (stock and flow variables, economic variables and functions).",
+      "change": "Widened the covers line to hold the basic concepts of economic analysis: variables and functions, and stock and flow variables. Renamed to 'Scientific method and basic concepts of analysis'. Kept under tools rather than a new subtopic because it is the same kind of analytical groundwork the subtopic already teaches. Named the paper test in source.scope_rule."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "tools.methods / national-income.concepts",
+      "evidence": "Matchtest disagreement 2019 UTME Q29, where the two models split between these two subtopics.",
+      "change": "Both covers lines now say that whether a quantity is a stock or a flow goes to tools.methods."
+    },
+    {
+      "kind": "widened",
+      "where": "inflation.effects-control",
+      "evidence": "Matchtest disagreement 2020 UTME Q39 ('Philip's curve is used to explain the relationship between', sonnet inflation.types-causes, opus inflation.effects-control); sonnet finding missing at inflation (Phillips curve); opus finding missing at inflation (add to inflation.effects-control or a new subtopic).",
+      "change": "Added the Phillips curve and the inflation-unemployment trade-off to the covers line, with 'Every Phillips curve question goes here'. Widened rather than added, because it is the cost side of controlling inflation. Named the paper test in source.scope_rule."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "inflation.types-causes / inflation.effects-control / labour.unemployment",
+      "evidence": "Matchtest disagreement 2020 UTME Q39; both models named labour.unemployment as the other candidate parent.",
+      "change": "inflation.types-causes and labour.unemployment now send the Phillips curve to inflation.effects-control."
+    },
+    {
+      "kind": "widened",
+      "where": "trade.basis",
+      "evidence": "Matchtest disagreement 2020 UTME Q38 ('Nigerian economy is', sonnet systems.types, opus trade.basis); sonnet finding missing at systems (open versus closed economy); opus finding missing at trade (add to trade.basis or national-income.circular-flow).",
+      "change": "Added open and closed economies to the covers line. Chose trade.basis over systems.types because openness is about trade with the rest of the world, not ownership and control, and over national-income.circular-flow because JAMB 11d stops at the three-sector model. Named the paper test in source.scope_rule."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "trade.basis / systems.types / national-income.circular-flow",
+      "evidence": "Matchtest disagreement 2020 UTME Q38 and the sonnet finding that placed the concept under systems.",
+      "change": "trade.basis says every open-or-closed question goes there even when the options include capitalist, socialist or mixed; systems.types and national-income.circular-flow send the open-or-closed question to trade.basis."
+    },
+    {
+      "kind": "widened",
+      "where": "demand.law, supply.law",
+      "evidence": "Matchtest disagreement 2023 UTME Q37 ('At what value of P, will Q = 23 units', sonnet price.equilibrium, opus supply.law); opus finding overlap at demand.law (neither covers evaluating a demand or supply function outside equilibrium, Q54).",
+      "change": "Both covers lines now include demand or supply equations and solving one for price or quantity at a given value."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "demand.law / supply.law / price.equilibrium",
+      "evidence": "Matchtest disagreement 2023 UTME Q37; opus finding overlap at demand.law (Q54 drifts to price.equilibrium).",
+      "change": "price.equilibrium says a question that solves only one equation goes to demand.law or supply.law, even inside a set on the same equations; demand.law and supply.law say that setting the two equations equal goes to price.equilibrium."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "demand.law / supply.law",
+      "evidence": "Sonnet finding overlap at demand.law / supply.law (a single stem asking the price relationship in both, Q7); opus finding overlap at demand.law (the same Q7).",
+      "change": "Both covers lines now say a question on the laws of demand and supply together goes to demand.law. Not split further, because the skill is the same law applied twice."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "national-income.measurement / national-income.multiplier",
+      "evidence": "Matchtest disagreement 2017 UTME Q12 (national income from G, I, C, imports and MPC = 0.82; sonnet national-income.measurement, opus national-income.multiplier).",
+      "change": "Both covers lines now say a national income question that gives an MPC or MPS goes to national-income.multiplier, and adding up expenditure with no propensity given goes to national-income.measurement."
+    },
+    {
+      "kind": "widened",
+      "where": "public-finance.revenue",
+      "evidence": "Matchtest disagreement 2018 UTME Q40 ('Government capacity to raise tax revenue in Nigeria is being hampered by', sonnet public-finance.taxation, opus public-finance.revenue); sonnet finding overlap at public-finance.taxation / public-finance.revenue (neither names obstacles to collection, Q38).",
+      "change": "Added what hampers government's capacity to raise revenue, tax revenue included (evasion, corruption, informal sector, instability), to the covers line."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "public-finance.revenue / public-finance.taxation",
+      "evidence": "Matchtest disagreement 2018 UTME Q40 and the sonnet overlap finding on the same border.",
+      "change": "Both covers lines now say obstacles to raising tax revenue in general go to public-finance.revenue; a specific tax still goes to public-finance.taxation."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "financial.monetary-policy / inflation.effects-control",
+      "evidence": "Sonnet finding overlap at financial.monetary-policy / inflation.effects-control (policy stance and its inflation purpose in one stem, Q39); opus finding overlap at financial.monetary-policy (what contractionary monetary policy is for, Q39).",
+      "change": "Named expansionary and contractionary monetary policy in financial.monetary-policy. Both covers lines now say a question that names a monetary instrument or stance goes to financial.monetary-policy even when the purpose is inflation control, and one that asks how to control inflation without naming an instrument goes to inflation.effects-control."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "business.finance / financial.markets",
+      "evidence": "Sonnet finding overlap at business.finance / financial.markets (which institution a firm approaches to raise funds, answer the stock exchange, Q59).",
+      "change": "Both covers lines now say where a firm goes to raise funds belongs to business.finance even when the answer is the stock exchange; how the stock exchange works stays in financial.markets."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "national-income.uses / development.meaning",
+      "evidence": "Opus finding overlap at national-income.uses (per capita income as a living-standard measure sits in both with no sorting rule, Q30).",
+      "change": "Both covers lines now say per capita income as a measure of living standards goes to national-income.uses, per capita income as one development indicator set against others goes to development.meaning, and calculating it goes to national-income.concepts."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "price.market-system / systems.economic-problems / systems.types",
+      "evidence": "Opus finding overlap at price.market-system (the price mechanism is claimed by three subtopics, Q46, Q50, Q52).",
+      "change": "All three covers lines now carry one rule: the functions of the price mechanism in a market go to price.market-system, how a system uses it to answer what, how and for whom goes to systems.economic-problems, and which system a description fits goes to systems.types."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "financial.types / financial.deposit-banks",
+      "evidence": "Opus finding overlap at financial.deposit-banks (challenges facing banks in Nigeria are only in financial.types, which sends commercial banks away, Q34).",
+      "change": "Both covers lines now say challenges facing banks in Nigeria, commercial banks included, go to financial.types, which keeps JAMB 13g in one place."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "population.size-growth / population.structure",
+      "evidence": "Opus finding overlap at population.size-growth (migration against geographical distribution, a question on why people move to an area, Q9).",
+      "change": "Both covers lines now say why people move into or out of an area goes to population.size-growth, and how a population is spread across areas goes to population.structure."
+    },
+    {
+      "kind": "widened",
+      "where": "development.problems",
+      "evidence": "Opus finding overlap at development.problems (mono-product economies fit development.problems and trade.structure equally and neither names the concept, Q75).",
+      "change": "Named dependence on one main export (a mono-product economy) among the features and problems of developing countries."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "development.problems / trade.structure",
+      "evidence": "Opus finding overlap at development.problems (Q75).",
+      "change": "Both covers lines now say the mono-product economy as a feature or problem goes to development.problems, and what Nigeria exports and to whom goes to trade.structure."
+    },
+    {
+      "kind": "widened",
+      "where": "natural-resources.oil",
+      "evidence": "Opus finding too-narrow at natural-resources.oil (problems of the oil and gas industry are not covered, Q47).",
+      "change": "Added the problems of the oil and gas industry (pipeline vandalism and oil theft, low refining capacity, price swings, Niger Delta unrest) to the covers line."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "natural-resources.oil / natural-resources.major",
+      "evidence": "Opus finding too-narrow at natural-resources.oil (Q47): the widening creates a border with natural-resources.major, which holds JAMB 18f, challenges of natural resources exploitation.",
+      "change": "Both covers lines now say challenges of exploiting natural resources in general go to natural-resources.major and problems particular to oil and gas go to natural-resources.oil."
+    },
+    {
+      "kind": "widened",
+      "where": "organisations.others",
+      "evidence": "Opus finding too-narrow at organisations.others (UN specialised agencies such as WHO are not covered, and the scope rule should say where general UN questions go, Q21).",
+      "change": "Added the United Nations and its specialised agencies (WHO, FAO, ILO, UNESCO) with 'every general UN question goes here', and named them in source.scope_rule as content papers test outside both syllabi."
+    },
+    {
+      "kind": "widened",
+      "where": "business.privatisation",
+      "evidence": "Opus finding too-narrow at business.privatisation (power sector unbundling of NEPA/PHCN fits only by inference, Q53).",
+      "change": "Named the unbundling of NEPA into PHCN and the sale of its successor companies as a Nigerian privatisation case, and named it in source.scope_rule."
+    },
+    {
+      "kind": "widened",
+      "where": "development.problems",
+      "evidence": "Coverage missing item SS3 T1 W1 'Economic lessons from the Asian Tigers, Japan, Europe and America' (proposed new subtopic development.comparative-models).",
+      "change": "Widened the covers line to include the lessons Nigeria can draw from the development of the Asian Tigers, Japan, Europe and America, instead of adding the proposed subtopic. The lessons are case studies of the factors that promote growth and development, which this subtopic already holds, so they need no separate skill; neither syllabus names them and no paper in the test asked about them."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "consumer.indifference / consumer.equilibrium",
+      "evidence": "Coverage partial item JAMB-5c 'Consumer equilibrium using indifference curve and marginal analyses' (no single subtopic covers both halves).",
+      "change": "consumer.equilibrium already sent indifference-map equilibrium to consumer.indifference; consumer.indifference now carries the matching rule, sending equilibrium found by marginal utility per naira to consumer.equilibrium. The clause stays split across the two subtopics, each half with one home."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "organisations.finance / organisations.others",
+      "evidence": "Coverage partial item JAMB-22.3 'IMF, World Bank, IBRD, ADB (AfDB), UNCTAD' (UNCTAD is a trade and development body, better placed in organisations.others).",
+      "change": "organisations.finance now says UNCTAD goes to organisations.others, and organisations.others now says the IMF and World Bank go to organisations.finance."
+    },
+    {
+      "kind": "widened",
+      "where": "population.theories",
+      "evidence": "Coverage partial item SS1 T2 W7 'Population (meaning and concepts)' (no named subtopic; size-growth or theories).",
+      "change": "Added the meaning of population and its basic terms to population.theories, matching JAMB 20a 'Meaning and theories of population', and population.size-growth now sends the meaning of population there."
+    },
+    {
+      "kind": "widened",
+      "where": "systems.types",
+      "evidence": "Coverage partial item SS2 T2B W4 'Economic systems (capitalism, socialism, mixed economy, welfarism)' (welfarism not named).",
+      "change": "Named welfarism (the welfare state) alongside the three systems, and named it in source.scope_rule as scheme-of-work content."
+    },
+    {
+      "kind": "widened",
+      "where": "industry.development",
+      "evidence": "Coverage partial item SS3 T1 W4 'Manufacturing and construction industry' (no subtopic names them beyond the sector level).",
+      "change": "Added the role and problems of Nigeria's manufacturing and construction industries to the covers line."
+    },
+    {
+      "kind": "sorting-rule",
+      "where": "industry.development / basics.economic-activities",
+      "evidence": "Coverage partial item SS3 T1 W4: basics.economic-activities already names manufacturing and construction as secondary production, so the widening creates a border.",
+      "change": "Both covers lines now say classifying manufacturing or construction as secondary production goes to basics.economic-activities, and their role and problems in Nigeria go to industry.development."
+    },
+    {
+      "kind": "widened",
+      "where": "trade.protection",
+      "evidence": "Coverage partial item SS3 T1 W9 'International trade II: globalisation' (proposed folding into trade.protection as trade liberalisation and globalisation).",
+      "change": "Added trade liberalisation and globalisation, as the opposite of protection, to the covers line, and named globalisation in source.scope_rule as scheme-of-work content."
+    },
+    {
+      "kind": "widened",
+      "where": "development.planning",
+      "evidence": "Coverage partial item SS3 T2 W4 'Current economic plans (MDGs, NEEDS, Vision 2020)' (not named examples).",
+      "change": "Named the MDGs, NEEDS and Vision 20:2020 among Nigeria's development plans and programmes."
+    }
+  ],
+  "not_changed": [
+    {
+      "finding": "Matchtest disagreement 2023 UTME Q18 ('It can be said that the goods is', sonnet demand.elasticity, opus supply.elasticity).",
+      "reason": "The stem's table is missing, so neither model could see whether the data were demand or supply. The border is already sorted: demand.elasticity and supply.elasticity each hold only their own curve, so a complete question has one home. This is an input defect to fix in the question, not the tree."
+    },
+    {
+      "finding": "Coverage partial item JAMB-10b.i 'Imperfect market: pure monopoly, discriminatory monopoly, monopolistic competition'.",
+      "reason": "The clause is split across markets.monopoly and markets.imperfect on purpose, as the coverage note says, and each covers line already names its half without overlap. No question falls between them."
+    },
+    {
+      "finding": "Coverage partial item SS1 T3 W8 'Nature of the Nigerian economy (industrial structure, sectoral contributions, geopolitical zones)'.",
+      "reason": "The sectoral content is covered by basics.economic-activities. Geopolitical zones are geography of Nigeria, outside the subject and outside both syllabi, which the standard accepts as a scheme-of-work gap."
+    },
+    {
+      "finding": "Coverage unmapped_subtopics (empty).",
+      "reason": "Every subtopic has at least one source item behind it, so nothing needed keeping or merging on this ground. No id was merged and merged_into is empty."
+    }
+  ]
+}

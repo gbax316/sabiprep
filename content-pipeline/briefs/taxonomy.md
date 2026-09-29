@@ -3,6 +3,7 @@ You are building the topic taxonomy for {{subject}} on SabiPrep, an exam-practic
 ## Inputs, in your working directory
 
 - `syllabus-*.txt`: the official syllabus text for each exam available. {{syllabus_note}}
+- `standard.md`: the taxonomy standard. It is the bar the tree is judged against at the gate: read it before anything else.
 - `reference.json`: the finished Biology taxonomy. It is the model for the shape, the grain and the quality of every field. Read it fully before starting, including `why`, `source`, `how_to_use` and `legacy_note`.
 - `legacy-topics.json`: the {{subject}} topic names already in the live database. Every one must be folded into your taxonomy. Questions already sit on these topics, and they will move to wherever you fold them.
 - `sample-items.json`: real questions from the most recent paper of each exam, stem and options only. Use them to check that your subtopics are where real questions land.

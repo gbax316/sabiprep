@@ -1,8 +1,9 @@
 {
   "subject": "Economics",
-  "version": "1.0",
+  "version": "1.1",
   "status": "proposal",
-  "why": "The live database holds 25 broad Economics topics, most of them a whole syllabus topic or several joined together, so a student cannot see which part of a topic they are weak on. Version 1.0 is the first two-level taxonomy: parent topics at the grain of the numbered topics in the WAEC and JAMB syllabi, and subtopics at the grain of their sub-areas, with one subtopic citing both exams wherever they cover the same content. It was checked against the 39 surviving items of the 2024 UTME paper; every one lands on a single subtopic, and the four that test content outside both syllabi are placed and explained in the scope rule. No WASSCE paper was available to check against, so the subtopics cited only to WAEC have not yet been tested on a real WASSCE paper. Every one of the 25 legacy database topics is folded in. Nothing in the database is changed by this file.",
+  "merged_into": {},
+  "why": "The live database holds 25 broad Economics topics, most of them a whole syllabus topic or several joined together, so a student cannot see which part of a topic they are weak on. Version 1.0 is the first two-level taxonomy: parent topics at the grain of the numbered topics in the WAEC and JAMB syllabi, and subtopics at the grain of their sub-areas, with one subtopic citing both exams wherever they cover the same content. It was checked against the 39 surviving items of the 2024 UTME paper; every one lands on a single subtopic, and the four that test content outside both syllabi are placed and explained in the scope rule. No WASSCE paper was available to check against, so the subtopics cited only to WAEC have not yet been tested on a real WASSCE paper. Every one of the 25 legacy database topics is folded in. Nothing in the database is changed by this file. Version 1.1 revises 1.0 from its coverage map and its placement test on 80 UTME questions from 2014 to 2024: it gives the missing concepts a home by widening existing subtopics and adds sorting rules on every border the two models split on. No subtopic is added, split or merged, so every placement made against 1.0 stays valid.",
   "source": {
     "documents": [
       {
@@ -20,7 +21,7 @@
         "provenance_note": "Third-party reproduction. The official copy is on jamb.gov.ng behind its syllabus portal. Topic list cross-checked against a second copy on kofastudy.com."
       }
     ],
-    "scope_rule": "Neither syllabus limits the objective paper to part of its content: WAEC Paper 1 is fifty multiple choice questions on the whole syllabus, and the UTME is objective throughout. So every topic in both syllabi is placed. The 2024 UTME paper also tested four things outside both syllabi, and each is placed where it sits most naturally rather than given a subtopic of its own: economists and the history of economic thought (Q27, Luca Paciolo as the odd one out among economists) under basics.meaning; the theorists of international trade (Q5, Smith and Ricardo) under trade.basis; current Nigerian office holders and institutions (Q32, the CBN governor; Q33, the Bank of Industry headquarters) under financial.central-bank and financial.types; and oligopoly and duopoly (Q15 options), which neither syllabus names, under markets.imperfect. Where one syllabus goes further than the other, the subtopic cites only that syllabus and the other is null. JAMB only: scientific method, measures of dispersion, indifference curves, consumer surplus, isoquants, rent, interest and profit, the circular flow, consumption and saving, the multiplier, the consumer price index, deflation, monetary policy and economic reforms. WAEC only: distributive trade, meaning and types of industry, terms of trade, commercial policy and protection, and the levels of economic integration."
+    "scope_rule": "Neither syllabus limits the objective paper to part of its content: WAEC Paper 1 is fifty multiple choice questions on the whole syllabus, and the UTME is objective throughout. So every topic in both syllabi is placed. The 2024 UTME paper also tested four things outside both syllabi, and each is placed where it sits most naturally rather than given a subtopic of its own: economists and the history of economic thought (Q27, Luca Paciolo as the odd one out among economists) under basics.meaning; the theorists of international trade (Q5, Smith and Ricardo) under trade.basis; current Nigerian office holders and institutions (Q32, the CBN governor; Q33, the Bank of Industry headquarters) under financial.central-bank and financial.types; and oligopoly and duopoly (Q15 options), which neither syllabus names, under markets.imperfect. The placement test on UTME papers from 2014 to 2024 found more content outside both syllabi, placed the same way: stock and flow variables (2019 Q29) under tools.methods; the Phillips curve (2020 Q39) under inflation.effects-control; open and closed economies (2020 Q38) under trade.basis; the UN specialised agencies such as WHO under organisations.others; and the unbundling and sale of the power sector (NEPA, PHCN) under business.privatisation. The scheme of work adds welfarism, globalisation, lessons from the Asian Tigers and Japan, and the MDGs, NEEDS and Vision 20:2020, each named in the covers line of the subtopic that holds it. Where one syllabus goes further than the other, the subtopic cites only that syllabus and the other is null. JAMB only: scientific method, measures of dispersion, indifference curves, consumer surplus, isoquants, rent, interest and profit, the circular flow, consumption and saving, the multiplier, the consumer price index, deflation, monetary policy and economic reforms. WAEC only: distributive trade, meaning and types of industry, terms of trade, commercial policy and protection, and the levels of economic integration."
   },
   "how_to_use": "Place a question by what a student must know or do to answer it, not by words in the stem. A question that mentions a tax but asks for an elasticity coefficient goes under elasticity; one that mentions elasticity but asks who bears a tax goes under tax incidence. A question that makes the student calculate goes where the calculation is taught. Read the covers line before choosing; where two subtopics look close, the covers line says which one wins.",
   "topics": [
@@ -67,7 +68,7 @@
             "waec": "1",
             "jamb": "1a, 8a"
           },
-          "covers": "Production, distribution and consumption as economic activities; primary, secondary and tertiary production (extractive, manufacturing, construction, services, direct and indirect production); and the relative contribution of each sector to output, employment, savings, investment and foreign exchange. A question on productivity or on TP, AP and MP goes to production.productivity."
+          "covers": "Production, distribution and consumption as economic activities; primary, secondary and tertiary production (extractive, manufacturing, construction, services, direct and indirect production); and the relative contribution of each sector to output, employment, savings, investment and foreign exchange. A question on productivity or on TP, AP and MP goes to production.productivity. Classifying manufacturing or construction as secondary production goes here; the role and problems of Nigeria's manufacturing and construction industries go to industry.development."
         }
       ]
     },
@@ -87,7 +88,7 @@
             "waec": "3(a)-(c)",
             "jamb": "2a"
           },
-          "covers": "Free enterprise, centrally planned and mixed economies: their basic features, advantages and disadvantages, and identifying a system from a description."
+          "covers": "Free enterprise, centrally planned and mixed economies, and welfarism (the welfare state): their basic features, advantages and disadvantages, and identifying a system from a description, even when the description is that prices decide what is produced. The functions of the price mechanism itself go to price.market-system. Whether an economy is open or closed is a question of trade and goes to trade.basis, even when the options mix it with capitalist, socialist or mixed."
         },
         {
           "id": "systems.economic-problems",
@@ -96,7 +97,7 @@
             "waec": "3(d)",
             "jamb": "1b(i), 2b"
           },
-          "covers": "What to produce, how to produce, for whom to produce and efficiency of resource use, and how the price mechanism, central planning or a mix answers each. A question that only asks what scarcity is goes to basics.scarcity-choice."
+          "covers": "What to produce, how to produce, for whom to produce and efficiency of resource use, and how the price mechanism, central planning or a mix answers each. A question that only asks what scarcity is goes to basics.scarcity-choice. A question on how a system uses the price mechanism to answer what, how and for whom goes here; one on the functions of the price mechanism in a market (rationing, allocating, signalling) goes to price.market-system; one that asks which system a description fits goes to systems.types."
         },
         {
           "id": "systems.reforms",
@@ -120,12 +121,12 @@
       "subtopics": [
         {
           "id": "tools.methods",
-          "name": "Scientific method in economics",
+          "name": "Scientific method and basic concepts of analysis",
           "syllabus": {
             "waec": null,
             "jamb": "3a"
           },
-          "covers": "Inductive and deductive reasoning, and positive and normative statements, including classifying a given statement."
+          "covers": "Inductive and deductive reasoning, and positive and normative statements, including classifying a given statement; and the basic concepts of economic analysis: variables and functions, and stock and flow variables (a stock is measured at a point in time, a flow over a period), which neither syllabus names but the 2019 UTME tested (Q29). Whether a quantity such as wealth, capital or income is a stock or a flow goes here, not to national-income.concepts."
         },
         {
           "id": "tools.tables-graphs",
@@ -172,7 +173,7 @@
             "waec": "5",
             "jamb": "4a(i)-(ii)"
           },
-          "covers": "Meaning of demand, effective demand, the law of demand, individual and market demand schedules and curves, and exceptional demand curves (Giffen, Veblen and ostentatious goods, expectation of price change). Tested in 2024 UTME Q19."
+          "covers": "Meaning of demand, effective demand, the law of demand, individual and market demand schedules and curves, demand equations and solving one for price or quantity at a given value, and exceptional demand curves (Giffen, Veblen and ostentatious goods, expectation of price change). Tested in 2024 UTME Q19. A question that asks about the laws of demand and supply together goes here. Setting the demand and supply equations equal to find equilibrium goes to price.equilibrium."
         },
         {
           "id": "demand.determinants",
@@ -228,7 +229,7 @@
             "waec": "6",
             "jamb": "6a(i)-(ii)"
           },
-          "covers": "Meaning of supply, the law of supply, individual and market supply schedules and curves, and exceptional supply curves such as the backward-bending supply of labour. Tested in 2024 UTME Q20."
+          "covers": "Meaning of supply, the law of supply, individual and market supply schedules and curves, supply equations and solving one for price or quantity at a given value (2023 UTME Q37), and exceptional supply curves such as the backward-bending supply of labour. Tested in 2024 UTME Q20. A question that asks about the laws of demand and supply together goes to demand.law. Setting the demand and supply equations equal to find equilibrium goes to price.equilibrium."
         },
         {
           "id": "supply.determinants",
@@ -293,7 +294,7 @@
             "waec": null,
             "jamb": "5a(ii), 5c-d"
           },
-          "covers": "Indifference curves and their properties, the budget line and its shifts, equilibrium where the budget line touches an indifference curve, and income and substitution effects. Tested in 2024 UTME Q10. A curve of inputs giving equal output is an isoquant and goes to production.producer-equilibrium."
+          "covers": "Indifference curves and their properties, the budget line and its shifts, equilibrium where the budget line touches an indifference curve, and income and substitution effects. Tested in 2024 UTME Q10. Equilibrium found by comparing marginal utility per naira goes to consumer.equilibrium. A curve of inputs giving equal output is an isoquant and goes to production.producer-equilibrium."
         },
         {
           "id": "consumer.surplus",
@@ -322,7 +323,7 @@
             "waec": "8",
             "jamb": "7a-b"
           },
-          "covers": "Meaning of market and price, types of market, and the functions of the price system (rationing, allocating resources, signalling)."
+          "covers": "Meaning of market and price, types of market, and the functions of the price system (rationing, allocating resources, signalling). A question on what the price mechanism does in a market goes here; one on how an economic system uses it to answer what, how and for whom goes to systems.economic-problems; one that asks which system a description fits goes to systems.types."
         },
         {
           "id": "price.equilibrium",
@@ -331,7 +332,7 @@
             "waec": "8",
             "jamb": "7c(i)"
           },
-          "covers": "Finding equilibrium price and quantity from a schedule, a graph or demand and supply equations, excess demand and excess supply, and equilibrium in factor markets. Tested in 2024 UTME Q38 and Q39."
+          "covers": "Finding equilibrium price and quantity from a schedule, a graph or demand and supply equations, excess demand and excess supply, and equilibrium in factor markets. Tested in 2024 UTME Q38 and Q39. A question that solves only the demand or only the supply equation at a given price or quantity goes to demand.law or supply.law, even inside a set of questions on the same equations."
         },
         {
           "id": "price.changes",
@@ -557,7 +558,7 @@
             "waec": "12",
             "jamb": "19f"
           },
-          "covers": "Privatisation and commercialisation as solutions to the problems of public enterprises, the difference between them and their merits and demerits, and indigenisation and nationalisation policies."
+          "covers": "Privatisation and commercialisation as solutions to the problems of public enterprises, the difference between them and their merits and demerits, indigenisation and nationalisation policies, and Nigerian cases such as the unbundling of NEPA into PHCN and the sale of its successor companies, which neither syllabus names but UTME papers test."
         },
         {
           "id": "business.finance",
@@ -566,7 +567,7 @@
             "waec": "12",
             "jamb": "17d, 19d"
           },
-          "covers": "Internal and external sources of funds: ordinary and preference shares, debentures, loans, overdrafts and retained profit, and how businesses are managed and controlled. Tested in 2024 UTME Q8. How the stock exchange works goes to financial.markets."
+          "covers": "Internal and external sources of funds: ordinary and preference shares, debentures, loans, overdrafts and retained profit, and how businesses are managed and controlled. Tested in 2024 UTME Q8. A question on where a firm goes to raise funds goes here, even when the answer is the stock exchange; how the stock exchange works goes to financial.markets."
         }
       ]
     },
@@ -615,7 +616,7 @@
             "waec": "14(a)",
             "jamb": "20a"
           },
-          "covers": "The Malthusian theory and its criticisms, the demographic transition theory, and their relevance to Nigeria. Optimum population as a size goes to population.size-growth."
+          "covers": "The meaning of population and its basic terms, the Malthusian theory and its criticisms, the demographic transition theory, and their relevance to Nigeria. Optimum population as a size goes to population.size-growth."
         },
         {
           "id": "population.census",
@@ -633,7 +634,7 @@
             "waec": "14(a)",
             "jamb": "20c, 20e"
           },
-          "covers": "Birth rate, death rate and migration as determinants of size and growth, rural-urban migration, under-population, optimum population and over-population, and population policy and economic development."
+          "covers": "Birth rate, death rate and migration as determinants of size and growth, rural-urban migration, under-population, optimum population and over-population, and population policy and economic development. Why people move into or out of an area (push and pull factors) goes here; how a population is spread across areas goes to population.structure. The meaning of population goes to population.theories."
         },
         {
           "id": "population.structure",
@@ -642,7 +643,7 @@
             "waec": "14(a)",
             "jamb": "20d"
           },
-          "covers": "Age, sex, occupational and geographical distribution, the dependency ratio, and population pyramids."
+          "covers": "Age, sex, occupational and geographical distribution, the dependency ratio, and population pyramids. How a population is spread across areas goes here; why people move into or out of an area goes to population.size-growth."
         }
       ]
     },
@@ -680,7 +681,7 @@
             "waec": "14(b)(ii)",
             "jamb": "23e"
           },
-          "covers": "Types of unemployment (structural, frictional, seasonal, cyclical, disguised), underemployment, their causes in Nigeria and solutions."
+          "covers": "Types of unemployment (structural, frictional, seasonal, cyclical, disguised), underemployment, their causes in Nigeria and solutions. The Phillips curve, which links unemployment to inflation, goes to inflation.effects-control."
         }
       ]
     },
@@ -774,7 +775,7 @@
             "waec": "16",
             "jamb": "17c"
           },
-          "covers": "The role of industry in development, the problems of industrialising in Nigeria and West Africa, and the link between agricultural and industrial development."
+          "covers": "The role of industry in development, the problems of industrialising in Nigeria and West Africa, the role and problems of Nigeria's manufacturing and construction industries, and the link between agricultural and industrial development. Classifying manufacturing or construction as secondary production goes to basics.economic-activities."
         }
       ]
     },
@@ -794,7 +795,7 @@
             "waec": "25",
             "jamb": "18a, 18f"
           },
-          "covers": "Where petroleum, gold, diamond, tin, timber, groundnut and other resources are found and how they were developed, their positive and negative effects on West African economies, environmental damage from exploitation, and how it can be controlled."
+          "covers": "Where petroleum, gold, diamond, tin, timber, groundnut and other resources are found and how they were developed, their positive and negative effects on West African economies, environmental damage from exploitation, and how it can be controlled. Challenges of exploiting natural resources in general go here; problems particular to the oil and gas industry go to natural-resources.oil."
         },
         {
           "id": "natural-resources.oil",
@@ -803,7 +804,7 @@
             "waec": "24 (OPEC)",
             "jamb": "18b-e"
           },
-          "covers": "Contributions of the oil and non-oil sectors, linkage effects, upstream and downstream activities, and the roles of NNPC and OPEC. Every OPEC question goes here, including its founding and membership, because both syllabi treat OPEC through oil."
+          "covers": "Contributions of the oil and non-oil sectors, linkage effects, upstream and downstream activities, the roles of NNPC and OPEC, and the problems of the oil and gas industry (pipeline vandalism and oil theft, low refining capacity and fuel imports, oil price swings, unrest in the Niger Delta). Every OPEC question goes here, including its founding and membership, because both syllabi treat OPEC through oil. Challenges of exploiting natural resources in general go to natural-resources.major."
         }
       ]
     },
@@ -823,7 +824,7 @@
             "waec": "21",
             "jamb": "15a-b"
           },
-          "covers": "The difference between economic growth and economic development, and indicators such as per capita income, life expectancy, literacy and the human development index."
+          "covers": "The difference between economic growth and economic development, and indicators such as per capita income, life expectancy, literacy and the human development index. Per capita income as one indicator of development set against others goes here; per capita income as a measure of living standards over time or between countries goes to national-income.uses."
         },
         {
           "id": "development.problems",
@@ -832,7 +833,7 @@
             "waec": "21",
             "jamb": "15c-d"
           },
-          "covers": "Factors that promote or hinder growth and development, and the characteristics and problems of developing countries, Nigeria in particular."
+          "covers": "Factors that promote or hinder growth and development, the lessons Nigeria can draw from the development of the Asian Tigers, Japan, Europe and America, and the characteristics and problems of developing countries, Nigeria in particular, including dependence on one main export (a mono-product economy). The mono-product economy as a feature or problem goes here; what Nigeria exports and to whom goes to trade.structure."
         },
         {
           "id": "development.planning",
@@ -841,7 +842,7 @@
             "waec": "21",
             "jamb": "15e"
           },
-          "covers": "Objectives and elements of a development plan, types of plan (short, medium, long term, rolling), Nigeria's development plans, and the problems of planning."
+          "covers": "Objectives and elements of a development plan, types of plan (short, medium, long term, rolling), Nigeria's development plans and programmes such as the MDGs, NEEDS and Vision 20:2020, and the problems of planning."
         }
       ]
     },
@@ -861,7 +862,7 @@
             "waec": "17",
             "jamb": "11a"
           },
-          "covers": "GDP, GNP, NNP, national income, per capita income, depreciation and net factor income from abroad, and calculating one from another."
+          "covers": "GDP, GNP, NNP, national income, per capita income, depreciation and net factor income from abroad, and calculating one from another. Whether a quantity is a stock or a flow goes to tools.methods."
         },
         {
           "id": "national-income.measurement",
@@ -870,7 +871,7 @@
             "waec": "17",
             "jamb": "11b"
           },
-          "covers": "Output, income and expenditure methods, double counting, and the problems of measurement such as unrecorded subsistence output and unpaid services (2024 UTME Q21)."
+          "covers": "Output, income and expenditure methods, double counting, and the problems of measurement such as unrecorded subsistence output and unpaid services (2024 UTME Q21). A question that adds up consumption, investment, government spending and net exports with no propensity given goes here; one that gives an MPC or MPS and asks for national income goes to national-income.multiplier."
         },
         {
           "id": "national-income.uses",
@@ -879,7 +880,7 @@
             "waec": "17",
             "jamb": "11c"
           },
-          "covers": "Using national income figures to compare living standards over time and between countries, why such comparisons mislead, and trends and structure of national income."
+          "covers": "Using national income figures to compare living standards over time and between countries, why such comparisons mislead, and trends and structure of national income. Per capita income as a measure of living standards goes here; per capita income as one indicator of development set against others such as life expectancy or the HDI goes to development.meaning; calculating it goes to national-income.concepts."
         },
         {
           "id": "national-income.circular-flow",
@@ -888,7 +889,7 @@
             "waec": null,
             "jamb": "11d"
           },
-          "covers": "The two-sector and three-sector circular flow models, injections and leakages."
+          "covers": "The two-sector and three-sector circular flow models, injections and leakages. What an open or closed economy is goes to trade.basis."
         },
         {
           "id": "national-income.consumption-saving",
@@ -906,7 +907,7 @@
             "waec": null,
             "jamb": "11f-g"
           },
-          "covers": "Calculating the multiplier from MPC or MPS, its effect on income, and elementary determination of equilibrium national income. A question that only asks for MPC goes to national-income.consumption-saving."
+          "covers": "Calculating the multiplier from MPC or MPS, its effect on income, and elementary determination of equilibrium national income. A question that only asks for MPC goes to national-income.consumption-saving. A national income question that gives an MPC or MPS goes here, even when it also lists consumption, investment, government spending and trade figures (2017 UTME Q12); adding up expenditure with no propensity given goes to national-income.measurement."
         }
       ]
     },
@@ -964,7 +965,7 @@
             "waec": "18(b)",
             "jamb": "12e"
           },
-          "covers": "Demand-pull, cost-push, creeping, galloping and hyperinflation, and what causes each. A question on whether deficit financing is inflationary goes to public-finance.budget-debt."
+          "covers": "Demand-pull, cost-push, creeping, galloping and hyperinflation, and what causes each. A question on whether deficit financing is inflationary goes to public-finance.budget-debt. The Phillips curve goes to inflation.effects-control."
         },
         {
           "id": "inflation.measurement",
@@ -982,7 +983,7 @@
             "waec": "18(b)",
             "jamb": "12e"
           },
-          "covers": "Who gains and who loses from inflation (debtors, creditors, fixed-income earners) and how monetary, fiscal and direct measures control it. The instruments themselves go to financial.monetary-policy and public-finance.fiscal-policy."
+          "covers": "Who gains and who loses from inflation (debtors, creditors, fixed-income earners), how monetary, fiscal and direct measures control it, and the Phillips curve and the trade-off between inflation and unemployment, which neither syllabus names but the 2020 UTME tested (Q39). Every Phillips curve question goes here. A question that names a monetary instrument or stance (such as contractionary monetary policy) goes to financial.monetary-policy, and one that names a fiscal instrument goes to public-finance.fiscal-policy, even when the purpose is to control inflation; a question that asks how inflation can be controlled without naming an instrument goes here."
         },
         {
           "id": "inflation.deflation",
@@ -1011,7 +1012,7 @@
             "waec": "19",
             "jamb": "13a-b, 13g"
           },
-          "covers": "Traditional institutions (esusu, money lenders), development banks such as the Bank of Industry (2024 UTME Q33), merchant and mortgage banks, insurance companies and building societies: what each does, their role in development, and the challenges facing them in Nigeria. Commercial banks go to financial.deposit-banks and the CBN to financial.central-bank."
+          "covers": "Traditional institutions (esusu, money lenders), development banks such as the Bank of Industry (2024 UTME Q33), merchant and mortgage banks, insurance companies and building societies: what each does, their role in development, and the challenges facing them in Nigeria. Commercial banks go to financial.deposit-banks and the CBN to financial.central-bank, but challenges facing banks in Nigeria, commercial banks included, go here."
         },
         {
           "id": "financial.central-bank",
@@ -1029,7 +1030,7 @@
             "waec": "19",
             "jamb": "13e"
           },
-          "covers": "Functions of commercial (deposit money) banks, types of account, and how banks create credit, including calculating deposits created from a cash reserve ratio."
+          "covers": "Functions of commercial (deposit money) banks, types of account, and how banks create credit, including calculating deposits created from a cash reserve ratio. Challenges facing banks in Nigeria go to financial.types."
         },
         {
           "id": "financial.markets",
@@ -1038,7 +1039,7 @@
             "waec": "19",
             "jamb": "13c"
           },
-          "covers": "The difference between money and capital markets, their institutions and instruments (treasury bills, bonds, shares), and the stock exchange."
+          "covers": "The difference between money and capital markets, their institutions and instruments (treasury bills, bonds, shares), and the stock exchange. Where a firm goes to raise funds goes to business.finance, even when the answer is the stock exchange."
         },
         {
           "id": "financial.monetary-policy",
@@ -1047,7 +1048,7 @@
             "waec": null,
             "jamb": "13f"
           },
-          "covers": "Open market operations, bank rate, reserve requirements, special deposits and moral suasion, and their effects. A question that asks which tool is fiscal and which monetary goes to public-finance.fiscal-policy."
+          "covers": "Open market operations, bank rate, reserve requirements, special deposits and moral suasion, expansionary and contractionary monetary policy, and their effects. A question that names a monetary instrument or stance goes here, even when its purpose is to control inflation; one that asks how inflation can be controlled without naming an instrument goes to inflation.effects-control. A question that asks which tool is fiscal and which monetary goes to public-finance.fiscal-policy."
         }
       ]
     },
@@ -1076,7 +1077,7 @@
             "waec": "20",
             "jamb": "14c, 14h"
           },
-          "covers": "Sources of government revenue (taxes, royalties, rents, fees, grants and aid), revenue allocation between tiers of government in Nigeria and its criteria, and resource control. A question on a specific tax goes to public-finance.taxation."
+          "covers": "Sources of government revenue (taxes, royalties, rents, fees, grants and aid), what hampers government's capacity to raise revenue, tax revenue included (evasion, corruption, a large informal sector, instability; 2018 UTME Q40), revenue allocation between tiers of government in Nigeria and its criteria, and resource control. A question on a specific tax goes to public-finance.taxation; a question on obstacles to raising tax revenue in general goes here."
         },
         {
           "id": "public-finance.taxation",
@@ -1085,7 +1086,7 @@
             "waec": "20",
             "jamb": "14d"
           },
-          "covers": "Direct and indirect taxes, their objectives, merits and demerits, the canons of taxation, and proportional, progressive and regressive rates, including calculating tax paid."
+          "covers": "Direct and indirect taxes, their objectives, merits and demerits, the canons of taxation, and proportional, progressive and regressive rates, including calculating tax paid. A question on what hampers government's capacity to raise tax revenue in general goes to public-finance.revenue."
         },
         {
           "id": "public-finance.incidence",
@@ -1132,7 +1133,7 @@
             "waec": "22(a)",
             "jamb": "21a"
           },
-          "covers": "Differences between domestic and international trade, why countries trade, absolute and comparative advantage and working them out from a table, and the theorists behind them (Smith, Ricardo, 2024 UTME Q5)."
+          "covers": "Differences between domestic and international trade, why countries trade, absolute and comparative advantage and working them out from a table, the theorists behind them (Smith, Ricardo, 2024 UTME Q5), and open and closed economies (whether a country trades with the rest of the world), which neither syllabus names but the 2020 UTME tested (Q38). Every question on whether an economy is open or closed goes here, even when the options include capitalist, socialist or mixed."
         },
         {
           "id": "trade.terms",
@@ -1150,7 +1151,7 @@
             "waec": "22(a)",
             "jamb": null
           },
-          "covers": "Objectives of commercial policy, tariffs and their types, quotas, embargoes and other direct controls, arguments for and against protection, and dumping (2024 UTME Q7). Using exchange rate changes to protect industry goes to bop.exchange-rate."
+          "covers": "Objectives of commercial policy, tariffs and their types, quotas, embargoes and other direct controls, arguments for and against protection, dumping (2024 UTME Q7), and trade liberalisation and globalisation as the opposite of protection. Using exchange rate changes to protect industry goes to bop.exchange-rate."
         },
         {
           "id": "trade.structure",
@@ -1159,7 +1160,7 @@
             "waec": "22(a)",
             "jamb": "21c"
           },
-          "covers": "What Nigeria and other West African countries export and import, and who their main trading partners are."
+          "covers": "What Nigeria and other West African countries export and import, and who their main trading partners are. Dependence on a single export as a feature or problem of a developing economy (a mono-product economy) goes to development.problems."
         }
       ]
     },
@@ -1246,7 +1247,7 @@
             "waec": "24",
             "jamb": "22"
           },
-          "covers": "The IMF, IBRD (World Bank) and AfDB: when they were set up, what they do, and their relevance to Nigeria and West Africa."
+          "covers": "The IMF, IBRD (World Bank) and AfDB: when they were set up, what they do, and their relevance to Nigeria and West Africa. UNCTAD, though JAMB lists it beside these, goes to organisations.others."
         },
         {
           "id": "organisations.others",
@@ -1255,7 +1256,7 @@
             "waec": "24",
             "jamb": "22"
           },
-          "covers": "UNCTAD, ECA, WTO, OECD, AU and the EU (EEC): functions and relevance, and telling regional from global bodies (2024 UTME Q28). OPEC goes to natural-resources.oil and ECOWAS to integration.ecowas."
+          "covers": "UNCTAD, ECA, WTO, OECD, AU and the EU (EEC): functions and relevance, and telling regional from global bodies (2024 UTME Q28). Also the United Nations and its specialised agencies (such as WHO, FAO, ILO and UNESCO), which neither syllabus names but UTME papers test; every general UN question goes here. The IMF and World Bank go to organisations.finance, OPEC to natural-resources.oil and ECOWAS to integration.ecowas."
         }
       ]
     }

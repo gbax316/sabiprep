@@ -144,3 +144,41 @@ pre-flight, because the model passed the same text once and failed it once.
 **Model assignment follows the routing roster.** Deriving, ruling, teaching, fixing, drawing
 and the taxonomy on Opus; classification and alt text on Sonnet; every Claude-written artifact
 reviewed by Codex. Set in `content-pipeline/pipeline.json`, not in code.
+
+## D8: The standard a subject's tree must meet, and what happens when a check cannot run
+
+2026-09-29. The first two rulings are Orezi's; the rest are defaults made while building
+them, each with its reason.
+
+**A tree answers to three sources: the WAEC syllabus, the JAMB syllabus, and the SS1 to
+SS3 scheme of work.** Orezi's direction. Biology's tree had been built from the WAEC
+syllabus alone; mapping the other two found real holes (Nigerian biomes, sanitation,
+irritability, reproductive health). The standard is `content-pipeline/standards/taxonomy.md`.
+
+**Topics are the bird's-eye view, subtopics the depth.** Orezi's direction. Each topic is
+stamped with where the scheme of work teaches it, from the coverage map, so the top of the
+tree reads as the path from SS1 to SS3, and shows what the exams test that no scheme week
+teaches. *Rejected:* a third level of strands. The teaching order already gives the
+overview without another layer to place questions into.
+
+**Matching is measured, not asserted.** Eighty questions from every year are placed twice,
+independently, by two models. The bar is 90 percent on the subtopic and 95 on the topic,
+and every disagreement is fixed with a sorting rule or accepted as two-sided. Economics
+1.0 scored 91 and 95, and both models found the same three missing concepts on their own.
+
+**When Codex is out, Claude finishes, and says so.** Orezi's instruction. The review or
+second derivation runs on a Claude model different from the author's, in the same
+isolation, and every result carries its lane. *Rejected:* stopping the run until Codex
+resets, and presenting a same-family review as independent. Same-family work is re-run on
+Codex when it is back (REV-04).
+
+**Anything the system cannot confirm waits for a person.** Orezi's direction. An unsettled
+key, an unreadable question, a missing or failed diagram, held teaching: each goes to the
+review batch with its reason, never into the import. What ships but deserves a look (an
+alt-text dispute, a same-family key) is queued too, marked as shipping.
+
+**Schematic diagrams are drawn, organic ones traced.** Typed labels do not survive tracing:
+an "x" became "r", an "M" a broken glyph, and a caption fragment rode along, each passed
+by the fidelity score. Maths, Physics, Chemistry, Economics and Geography draw every
+diagram by hand from the original, with the trace as a guide to positions. Biology and
+Agricultural Science keep tracing, where the drawing itself is the content.

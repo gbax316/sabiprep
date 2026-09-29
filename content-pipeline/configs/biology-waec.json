@@ -4,5 +4,19 @@
   "source": "../../Exam Questions/2025-2015 WASSCE BIOLOGY QUESTIONS.docx",
   "diagram_root": "../../Exam Questions/Biology WAEC Diagrams",
   "notes": "Reference subject. The only one where questions and diagrams both arrived intact, so the pipeline is proved here before the resent subjects run through it.",
-  "diagram_route": "trace"
+  "diagram_route": "trace",
+  "syllabi": [
+    {
+      "exam": "WASSCE",
+      "path": "../syllabi/biology-waec.txt"
+    },
+    {
+      "exam": "UTME",
+      "path": "../syllabi/biology-jamb.txt"
+    },
+    {
+      "exam": "SOW",
+      "path": "../syllabi/biology-sow.txt"
+    }
+  ]
 }

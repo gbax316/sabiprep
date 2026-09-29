@@ -911,8 +911,10 @@ def live_topics(cfg):
     want = cfg.get('db_subject') or cfg['subject']
     match = [s for s in subs if s['name'].strip().lower() == want.lower()]
     if not match:
-        raise StageError(f'no live subject named {want!r}; live subjects are {sorted(s["name"] for s in subs)}. '
-                         'Set db_subject in the config.')
+        # A subject the app does not have yet has nothing to fold in. It must
+        # be created in the database before its first import.
+        print(f'  no live subject named {want!r}: nothing to fold in')
+        return []
     rows = get(f"/rest/v1/topics?select=name,status&subject_id=eq.{match[0]['id']}&order=name")
     return sorted({r['name'] for r in rows})
 
@@ -948,9 +950,9 @@ def cmd_taxonomy(slug, rebuild=False):
     if os.path.exists(path) and not rebuild:
         print(f'{os.path.relpath(path, HERE)} already exists; --rebuild to replace it')
         return 0
-    syl = cfg.get('syllabi') or []
+    syl = subject_syllabi(cfg)          # both exams and the scheme of work, from every config of the subject
     if not syl:
-        print('no syllabi listed in the config. Add "syllabi": [{"exam": "UTME", "path": "../syllabi/<file>.txt"}]')
+        print('no syllabi listed in any config for this subject. Add "syllabi": [{"exam": "UTME", "path": "../syllabi/<file>.txt"}]')
         return 1
     st = load_state(slug, cfg)
     ctx = Ctx(slug, 'taxonomy', st)
@@ -966,10 +968,12 @@ def cmd_taxonomy(slug, rebuild=False):
             sample.append({'exam': it['exam_brand'], 'year': y, 'q_number': it['q_number'],
                            'stem': it['stem'], 'options': it['options']})
     files = {'legacy-topics.json': legacy, 'sample-items.json': sample,
+             'standard.md': ('copy', os.path.join(HERE, 'standards', 'taxonomy.md')),
              'reference.json': ('copy', os.path.join(HERE, 'taxonomies', 'biology.json'))}
-    for s in syl:
-        files[f"syllabus-{s['exam'].lower()}.txt"] = ('copy', os.path.normpath(os.path.join(HERE, 'configs', s['path'])))
-    note = ', '.join(f"syllabus-{s['exam'].lower()}.txt is the {s['exam']} syllabus" for s in syl)
+    names = {'wassce': 'the WASSCE syllabus', 'utme': 'the UTME syllabus', 'sow': 'the SS1 to SS3 scheme of work'}
+    for k, p in syl.items():
+        files[f'syllabus-{k}.txt'] = ('copy', p)
+    note = ', '.join(f'syllabus-{k}.txt is {names.get(k, k)}' for k in syl)
     ctx.log(f'taxonomy: {len(legacy)} legacy topics, {len(sample)} sample questions from {siblings}')
     wd = claude_worker(ctx, 'build', 'taxonomy.md', {'syllabus_note': note + '.'}, files, 'taxonomy',
                        lambda w: taxonomy_errors(read_out(w), legacy))
@@ -1080,6 +1084,198 @@ def cmd_adopt(slug, unit, note):
     return 0
 
 
+def subject_slugs(cfg):
+    return sorted(f[:-5] for f in os.listdir(os.path.join(HERE, 'configs'))
+                  if load_config(f[:-5])['subject'] == cfg['subject'])
+
+
+def subject_syllabi(cfg):
+    """Every syllabus and scheme of work listed by any config for this subject."""
+    seen = {}
+    for s in subject_slugs(cfg):
+        for x in load_config(s).get('syllabi') or []:
+            seen.setdefault(x['exam'].lower(), os.path.normpath(os.path.join(HERE, 'configs', x['path'])))
+    return seen
+
+
+def coverage_path(cfg):
+    return os.path.join(HERE, 'taxonomies', f'{subject_key(cfg)}.coverage.json')
+
+
+def stamp_taught_in(cfg):
+    """Mark every topic and subtopic with where the scheme of work teaches it
+    (SS1 T1 and so on), from the coverage map. Deterministic. It turns the
+    top of the tree into the bird's-eye view in teaching order, and shows
+    what the exams test that no scheme week teaches."""
+    import re as _re
+    cov, tax = jload(coverage_path(cfg)), jload(taxonomy_path(cfg))
+    if not cov or not tax:
+        return
+    when = {}
+    for i in cov['items']:
+        m = _re.match(r'SS\s*(\d)\s*(?:T|Term\s*)(\d)', str(i.get('ref', '')), _re.I)
+        if i.get('source') == 'sow' and i.get('subtopic_id') and m:
+            for key in (i['subtopic_id'], i['subtopic_id'].split('.')[0]):
+                when.setdefault(key, set()).add(f'SS{m.group(1)} T{m.group(2)}')
+    for t in tax['topics']:
+        t['taught_in'] = sorted(when.get(t['id'], []))
+        for s in t['subtopics']:
+            s['taught_in'] = sorted(when.get(s['id'], []))
+    jsave(taxonomy_path(cfg), tax)
+
+
+def cmd_coverage(slug):
+    """Map every syllabus and scheme-of-work item onto the tree (standards/taxonomy.md, check 1)."""
+    cfg = load_config(slug)
+    syl = subject_syllabi(cfg)
+    missing = [k for k in ('wassce', 'utme', 'sow') if k not in syl]
+    if missing:
+        print(f'{cfg["subject"]}: no {missing} source listed in any config; the standard needs all three')
+        if len(missing) == 3:
+            return 1
+    st = load_state(slug, cfg)
+    ctx = Ctx(slug, 'taxonomy', st)
+    tax = jload(taxonomy_path(cfg))
+    parents, subs = tax_index(tax)
+    files = {'taxonomy.json': ('copy', taxonomy_path(cfg))}
+    for k, p in syl.items():
+        files[f'syllabus-{k}.txt'] = ('copy', p)
+    note = ', '.join(f'syllabus-{k}.txt' for k in syl) + ' are the sources.'
+
+    def val(wd):
+        d = read_out(wd)
+        if not d or not isinstance(d.get('items'), list) or not d['items']:
+            return ['output.json missing or has no items']
+        return [f"item {i.get('ref')} maps to unknown id {i.get('subtopic_id')}" for i in d['items']
+                if i.get('subtopic_id') and i['subtopic_id'] not in subs and i['subtopic_id'] not in parents]
+    wd = claude_worker(ctx, 'coverage', 'coverage.md', {'sources_note': note}, files, 'taxonomy', val)
+    d = read_out(wd)
+    d.update(taxonomy_version=tax.get('version'), sources={k: os.path.relpath(p, HERE) for k, p in syl.items()})
+    jsave(coverage_path(cfg), d)
+    st['taxonomy_cost_usd'] = round(st.get('taxonomy_cost_usd', 0) + ctx.cost, 2)
+    save_state(st)
+    from collections import Counter
+    for k in syl:
+        c = Counter(i['status'] for i in d['items'] if i['source'] == k)
+        print(f"  {k:<7} covered {c.get('covered', 0):>3}  partial {c.get('partial', 0):>3}  missing {c.get('missing', 0):>3}")
+    stamp_taught_in(cfg)
+    print(f"  unmapped subtopics: {d.get('unmapped_subtopics') or 'none'}; cost ${round(ctx.cost, 2)}")
+    return 0
+
+
+def cmd_revise(slug):
+    """Revise the tree once from its coverage map and placement tests, then re-test."""
+    cfg = load_config(slug)
+    cov = jload(coverage_path(cfg))
+    tests = [t for t in (jload(os.path.join(OUT, f'{s}.matchtest.json')) for s in subject_slugs(cfg)) if t]
+    if not cov or not tests:
+        print('run coverage and matchtest first')
+        return 1
+    st = load_state(slug, cfg)
+    ctx = Ctx(slug, 'taxonomy', st)
+    try:
+        legacy = live_topics(cfg)
+    except StageError:
+        legacy = []
+    old = jload(taxonomy_path(cfg))
+
+    def val(wd):
+        t = read_out(wd)
+        errs = taxonomy_errors(t, legacy)
+        if not read_out(wd, 'changelog.json'):
+            errs.append('changelog.json missing')
+        return errs
+    wd = claude_worker(ctx, 'revise', 'taxonomy-revise.md', {},
+                       {'taxonomy.json': ('copy', taxonomy_path(cfg)), 'coverage.json': cov,
+                        'matchtest.json': {'tests': tests}, 'legacy-topics.json': legacy,
+                        'standard.md': ('copy', os.path.join(HERE, 'standards', 'taxonomy.md'))},
+                       'taxonomy', val)
+    new, log = read_out(wd), read_out(wd, 'changelog.json')
+    jsave(os.path.join(HERE, 'taxonomies', f"{subject_key(cfg)}.changelog.{new.get('version')}.json"), log)
+    jsave(taxonomy_path(cfg), new)
+    st['taxonomy_cost_usd'] = round(st.get('taxonomy_cost_usd', 0) + ctx.cost, 2)
+    save_state(st)
+    from collections import Counter
+    kinds = Counter(c['kind'] for c in log['changes'])
+    n_old = sum(len(t['subtopics']) for t in old['topics'])
+    n_new = sum(len(t['subtopics']) for t in new['topics'])
+    print(f"{cfg['subject']} {old.get('version')} -> {new.get('version')}: {dict(kinds)}; "
+          f"subtopics {n_old} -> {n_new}; {len(log.get('not_changed', []))} findings not acted on; cost ${round(ctx.cost, 2)}")
+    return 0
+
+
+def cmd_matchtest(slug, sample, seed=7):
+    """Is placement reliable? Place a sample of questions from across the years
+    twice, independently, on two different models that cannot see each other,
+    and measure how often they agree. Agreement is evidence the tree's
+    boundaries are clear enough to place by; each disagreement shows a boundary
+    that is not. Runs on every question in the extraction, keyed or not,
+    because placement does not depend on the answer."""
+    import random
+    cfg = load_config(slug)
+    tax = jload(taxonomy_path(cfg))
+    if not tax:
+        print(f'no taxonomy for {cfg["subject"]}')
+        return 1
+    parents, subs = tax_index(tax)
+    items = [json.loads(l) for l in open(os.path.join(OUT, f'{slug}.items.jsonl'), encoding='utf8')]
+    items = [i for i in items if len(i['options']) >= 2 and not i.get('needs_human')]
+    rng = random.Random(seed)
+    by_year = {}
+    for i in items:
+        by_year.setdefault(i['year'], []).append(i)
+    pick, years = [], sorted(by_year)
+    while len(pick) < min(sample, len(items)):         # round-robin across years
+        for y in years:
+            if by_year[y] and len(pick) < sample:
+                pick.append(by_year[y].pop(rng.randrange(len(by_year[y]))))
+    for n, i in enumerate(pick, 1):
+        i['_n'] = n
+    rows = [{'q_number': i['_n'], 'stem': i['stem'], 'options': i['options'],
+             'passage_text': i.get('passage_text'), 'answer': 'not needed for placement'} for i in pick]
+    st = load_state(slug, cfg)
+    ctx = Ctx(slug, 'taxonomy', st)
+    ctx.work = os.path.join(HERE, 'work', slug, 'matchtest')
+    os.makedirs(ctx.work, exist_ok=True)
+    want = [r['q_number'] for r in rows]
+
+    def val(wd):
+        d = read_out(wd)
+        if not d or not isinstance(d.get('items'), list):
+            return ['output.json missing or has no items list']
+        got = {x.get('q_number'): x for x in d['items']}
+        return ([f'Q{q} missing' for q in want if q not in got]
+                + [f'Q{q} id not in taxonomy' for q in want if q in got
+                   and got[q].get('subtopic_id') not in subs and got[q].get('subtopic_id') not in parents])
+    placed = {}
+    for model in ('sonnet', 'opus'):
+        PIPE['models']['classify'] = model
+        wd = claude_worker(ctx, f'classify-{model}', 'classify.md', {'count': len(rows), 'unit': 'sample across years'},
+                           {'input.json': {'unit': 'sample', 'items': rows},
+                            'taxonomy.json': ('copy', taxonomy_path(cfg))}, 'classify', val)
+        placed[model] = {x['q_number']: x for x in read_out(wd)['items']}
+    parent = lambda sid: sid.split('.')[0]
+    same_sub = [q for q in want if placed['sonnet'][q]['subtopic_id'] == placed['opus'][q]['subtopic_id']]
+    same_top = [q for q in want if parent(placed['sonnet'][q]['subtopic_id']) == parent(placed['opus'][q]['subtopic_id'])]
+    nofit = [q for q in want if 'nofit' in (placed['sonnet'][q].get('confidence'), placed['opus'][q].get('confidence'))]
+    report = {'slug': slug, 'taxonomy_version': tax.get('version'), 'sample': len(want),
+              'years': sorted({i['year'] for i in pick}), 'cost_usd': round(ctx.cost, 2),
+              'agree_subtopic': len(same_sub), 'agree_topic': len(same_top), 'nofit': len(nofit),
+              'disagreements': [{'year': pick[q - 1]['year'], 'q_number': pick[q - 1]['q_number'],
+                                 'stem': pick[q - 1]['stem'][:160], 'sonnet': placed['sonnet'][q]['subtopic_id'],
+                                 'opus': placed['opus'][q]['subtopic_id'],
+                                 'notes': [placed[m][q].get('note', '') for m in ('sonnet', 'opus')]}
+                                for q in want if q not in same_sub],
+              'findings': {m: read_out(os.path.join(ctx.work, f'classify-{m}')).get('taxonomy_findings', [])
+                           for m in placed}}
+    jsave(os.path.join(OUT, f'{slug}.matchtest.json'), report)
+    n = len(want)
+    print(f"{slug}: {n} questions from {len(report['years'])} years, placed twice independently")
+    print(f"  same subtopic {len(same_sub)}/{n} ({len(same_sub) / n:.0%}), same topic {len(same_top)}/{n} "
+          f"({len(same_top) / n:.0%}), no fit {len(nofit)}; cost ${report['cost_usd']}")
+    return 0
+
+
 def cmd_status(slug=None):
     slugs = [slug] if slug else sorted(f[:-5] for f in os.listdir(os.path.join(HERE, 'configs')))
     for s in slugs:
@@ -1111,6 +1307,9 @@ def main():
     p = sub.add_parser('taxonomy'); p.add_argument('slug'); p.add_argument('--rebuild', action='store_true')
     p = sub.add_parser('run'); p.add_argument('slug'); p.add_argument('--unit'); p.add_argument('--from', dest='start', choices=STAGES)
     p = sub.add_parser('approve'); p.add_argument('slug'); p.add_argument('--note', default='')
+    p = sub.add_parser('coverage'); p.add_argument('slug')
+    p = sub.add_parser('revise'); p.add_argument('slug')
+    p = sub.add_parser('matchtest'); p.add_argument('slug'); p.add_argument('--sample', type=int, default=80)
     p = sub.add_parser('adopt'); p.add_argument('slug'); p.add_argument('--unit', required=True); p.add_argument('--note', required=True)
     a = ap.parse_args()
     if a.cmd == 'status':
@@ -1121,6 +1320,12 @@ def main():
         return cmd_run(a.slug, a.unit, a.start)
     if a.cmd == 'approve':
         return cmd_approve(a.slug, a.note)
+    if a.cmd == 'coverage':
+        return cmd_coverage(a.slug)
+    if a.cmd == 'revise':
+        return cmd_revise(a.slug)
+    if a.cmd == 'matchtest':
+        return cmd_matchtest(a.slug, a.sample)
     if a.cmd == 'adopt':
         return cmd_adopt(a.slug, a.unit, a.note)
 

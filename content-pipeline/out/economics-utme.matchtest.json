@@ -1,0 +1,207 @@
+{
+  "slug": "economics-utme",
+  "taxonomy_version": "1.0",
+  "sample": 80,
+  "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "cost_usd": 1.34,
+  "agree_subtopic": 73,
+  "agree_topic": 76,
+  "nofit": 5,
+  "disagreements": [
+    {
+      "year": 2019,
+      "q_number": 29,
+      "stem": "A stock variable is measured",
+      "sonnet": "national-income.concepts",
+      "opus": "tools.methods",
+      "notes": [
+        "tests the stock versus flow distinction, which no subtopic covers; nearest parent is national-income where income (flow) and wealth (stock) concepts already live",
+        "Stock versus flow variables. No subtopic covers basic analytical concepts (stock and flow, variables, functions). Missing subtopic under tools; tools.methods is the nearest parent member."
+      ]
+    },
+    {
+      "year": 2018,
+      "q_number": 40,
+      "stem": "Government capacity to raise tax revenue in Nigeria is being hampered by",
+      "sonnet": "public-finance.taxation",
+      "opus": "public-finance.revenue",
+      "notes": [
+        "also fits public-finance.revenue, since what hampers government capacity to raise tax revenue sits between the taxation subtopic and the revenue subtopic and neither covers line names obstacles to collection",
+        "Constraints on revenue generally, not a specific tax."
+      ]
+    },
+    {
+      "year": 2020,
+      "q_number": 39,
+      "stem": "Philip's curve is used to explain the relationship between",
+      "sonnet": "inflation.types-causes",
+      "opus": "inflation.effects-control",
+      "notes": [
+        "tests the Phillips curve, which links inflation and unemployment; neither inflation nor labour subtopics name it, best guess is inflation.types-causes or labour.unemployment",
+        "Phillips curve (inflation and unemployment trade-off) has no home. Missing subtopic or covers entry under inflation; labour.unemployment is the other candidate parent."
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 18,
+      "stem": "It can be said that the goods is",
+      "sonnet": "demand.elasticity",
+      "opus": "supply.elasticity",
+      "notes": [
+        "",
+        "Classify elasticity from a table that is missing. Likely the same table as Q12 (supply), but if it is a demand table it goes to demand.elasticity. Input defect as much as boundary."
+      ]
+    },
+    {
+      "year": 2020,
+      "q_number": 38,
+      "stem": "Nigerian economy is",
+      "sonnet": "systems.types",
+      "opus": "trade.basis",
+      "notes": [
+        "tests whether Nigeria is an open economy, a trade-openness classification that neither systems.types (capitalism, socialism, mixed) nor any trade subtopic names",
+        "Open versus closed economy is not in any covers line. Missing: a place for open and closed economies, most naturally under trade or in national-income.circular-flow (four-sector model)."
+      ]
+    },
+    {
+      "year": 2023,
+      "q_number": 37,
+      "stem": "At what value of P, will Q, = 23 units",
+      "sonnet": "price.equilibrium",
+      "opus": "supply.law",
+      "notes": [
+        "also fits supply.law, this sub-question only solves the supply equation for a given quantity rather than finding equilibrium, but it is part of a demand-and-supply-equation set whose other parts ask for equilibrium",
+        "Evaluating a supply function for P, not equilibrium. price.equilibrium is the only covers line with equations; supply.law has schedules but not functions."
+      ]
+    },
+    {
+      "year": 2017,
+      "q_number": 12,
+      "stem": "Determine the level of a nation’s national income if government expenditure is 15, investment is 20 consumption is ₦25, output is ₦10, import 8 and MPC = 0.82",
+      "sonnet": "national-income.measurement",
+      "opus": "national-income.multiplier",
+      "notes": [
+        "",
+        "Equilibrium national income with MPC. Stem data look garbled (output given alongside C, I, G, M)."
+      ]
+    }
+  ],
+  "findings": {
+    "sonnet": [
+      {
+        "kind": "missing",
+        "where": "national-income",
+        "detail": "The stock versus flow distinction (a common basic concept, e.g. wealth as a stock, income as a flow) has no subtopic under national-income or basics. Q28 tests it directly and has to be forced onto national-income.concepts."
+      },
+      {
+        "kind": "missing",
+        "where": "inflation",
+        "detail": "The Phillips curve, linking inflation and unemployment, is not named under inflation or labour. Q40 tests it directly with no natural home; it sits across two parents (inflation and labour.unemployment)."
+      },
+      {
+        "kind": "missing",
+        "where": "systems",
+        "detail": "Open versus closed economy is a standard classification distinct from capitalism, socialism and mixed economy, but systems.types only covers the latter three. Q51 tests it and has no subtopic."
+      },
+      {
+        "kind": "overlap",
+        "where": "demand.law / supply.law",
+        "detail": "A single-stem question can ask for the price relationship in both demand and supply at once (Q7). Each subtopic covers only its own law, so a combined question has no single home."
+      },
+      {
+        "kind": "overlap",
+        "where": "financial.monetary-policy / inflation.effects-control",
+        "detail": "The covers lines split the monetary policy instrument from how it controls inflation, but a question naming a policy stance (contractionary vs expansionary) and its inflation purpose in one stem (Q39) sits on both sides at once."
+      },
+      {
+        "kind": "overlap",
+        "where": "public-finance.taxation / public-finance.revenue",
+        "detail": "Neither subtopic's covers line addresses what limits government's ability to collect tax (e.g. political instability), so a question on obstacles to tax revenue (Q38) could go to either."
+      },
+      {
+        "kind": "overlap",
+        "where": "business.finance / financial.markets",
+        "detail": "business.finance covers a firm's sources of funds but explicitly routes how the stock exchange works to financial.markets. A question asking which institution a firm approaches to raise funds, where the answer is the stock exchange (Q59), sits exactly on that line."
+      }
+    ],
+    "opus": [
+      {
+        "kind": "missing",
+        "where": "tools",
+        "detail": "No place for basic analytical concepts such as stock and flow variables, economic variables and functions (Q28). Add a subtopic under tools or widen tools.methods."
+      },
+      {
+        "kind": "missing",
+        "where": "inflation",
+        "detail": "Phillips curve and the inflation-unemployment trade-off have no home (Q40). Add to inflation.effects-control covers or a new subtopic."
+      },
+      {
+        "kind": "missing",
+        "where": "trade",
+        "detail": "Open versus closed economy is nowhere (Q51). Add to trade.basis covers or national-income.circular-flow."
+      },
+      {
+        "kind": "overlap",
+        "where": "demand.law",
+        "detail": "demand.law and supply.law split a question that asks both laws at once (Q7), and neither covers evaluating a demand or supply function outside equilibrium (Q54), which drifts to price.equilibrium."
+      },
+      {
+        "kind": "overlap",
+        "where": "national-income.uses",
+        "detail": "Per capita income as a living-standard measure sits in both national-income.uses and development.meaning with no sorting rule (Q30)."
+      },
+      {
+        "kind": "overlap",
+        "where": "financial.monetary-policy",
+        "detail": "inflation.effects-control claims monetary measures to control inflation and financial.monetary-policy claims instruments and their effects; a question on what contractionary monetary policy is for fits both (Q39)."
+      },
+      {
+        "kind": "overlap",
+        "where": "price.market-system",
+        "detail": "The price mechanism is claimed by price.market-system, systems.economic-problems and, via system features, systems.types (Q46, Q50, Q52). Needs one sorting rule."
+      },
+      {
+        "kind": "overlap",
+        "where": "financial.deposit-banks",
+        "detail": "Challenges facing banks in Nigeria are only in financial.types, which sends commercial banks away to financial.deposit-banks, whose covers line has no challenges (Q34)."
+      },
+      {
+        "kind": "overlap",
+        "where": "population.size-growth",
+        "detail": "Migration sits in population.size-growth while geographical distribution sits in population.structure; a question on why people move to an area straddles both (Q9)."
+      },
+      {
+        "kind": "overlap",
+        "where": "development.problems",
+        "detail": "Mono-product (single export) economies fit development.problems and trade.structure equally; neither names the concept (Q75)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "natural-resources.oil",
+        "detail": "Covers contributions, linkages, NNPC and OPEC but not problems of the oil and gas industry, a common question type (Q47)."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "organisations.others",
+        "detail": "Covers line lists UNCTAD, ECA, WTO, OECD, AU, EU but not UN specialised agencies such as WHO (Q21); the scope rule should say where general UN questions go."
+      },
+      {
+        "kind": "too-narrow",
+        "where": "business.privatisation",
+        "detail": "Scope rule lists off-syllabus current-affairs items but not power sector unbundling of NEPA/PHCN (Q53); it fits here only by inference."
+      }
+    ]
+  }
+}
