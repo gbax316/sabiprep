@@ -1,0 +1,17 @@
+[
+  {
+    "q_number": 13,
+    "why": "defective",
+    "detail": "The matrix is printed as (5 x₂; 3 x₁), which is not a readable 2 by 2 determinant with a single unkn"
+  },
+  {
+    "q_number": 27,
+    "why": "defective",
+    "detail": "As printed, dy/dx = 2px + 3 = 9 at x = 1 gives p = 3, which is not an option. The stem is also self-"
+  },
+  {
+    "q_number": 30,
+    "why": "defective",
+    "detail": "The stem has lost its equals sign, and the two natural repairs give different options. Reading '= 1'"
+  }
+]

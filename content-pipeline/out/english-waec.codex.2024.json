@@ -7,7 +7,7 @@
       "q_number": 1,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "'Invaluable' means extremely valuable, so its opposite in this context is 'useless'. 'Insincere' and 'preposterous' relate to honesty/absurdity, not value, and 'impossible' is unrelated in meaning.",
+      "reasoning": "Invaluable means extremely valuable, so its opposite is useless (worthless). Insincere, impossible, and preposterous relate to different qualities (honesty, feasibility, absurdity) and do not oppose value.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -16,7 +16,7 @@
       "q_number": 2,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "'Culpable' means guilty or blameworthy, so its direct opposite is 'innocent'. 'Accountable' is actually close in meaning to culpable rather than opposite, making it the strongest distractor to reject.",
+      "reasoning": "Culpable means deserving blame or guilty, so its direct opposite is innocent. Accountable is close in meaning to culpable rather than opposite, and ignorant/honest do not address guilt.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -25,7 +25,7 @@
       "q_number": 3,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "'Rigid' (inflexible in opinion) is best opposed by 'tolerant' (open to others' views). 'Critical' is a near-synonym of rigid in this sense, and 'apprise' is not even a matching part of speech.",
+      "reasoning": "Rigid (inflexible in opinion) is directly opposed by tolerant (open to others' views). Wary and critical do not oppose rigidity, and 'apprise' is not even an adjective fitting the slot.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -34,7 +34,7 @@
       "q_number": 4,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "'Affable' means friendly and easy to talk to; 'antagonistic' (hostile, opposed) is its clearest opposite. 'Guarded' and 'suspicious' suggest wariness rather than open hostility, making them weaker opposites.",
+      "reasoning": "Affable means friendly and easy to approach, so its opposite is antagonistic (hostile). Guarded, cautious, and suspicious suggest wariness but not outright hostility, making them weaker opposites.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -42,26 +42,26 @@
     "5": {
       "q_number": 5,
       "answer": "C",
-      "confidence": "certain",
-      "reasoning": "'Castigated' means severely criticized or punished, so 'commended' (praised) is the clear opposite. 'Exonerated' means cleared of blame, which is close but not truly opposite in the sense of praise versus blame required here.",
+      "confidence": "probable",
+      "reasoning": "Castigated means severely criticized or blamed, so the natural opposite is commended (praised). Exonerated (cleared of blame) is a plausible near-opposite too, but commended better matches the criticize/praise pairing implied by the sentence.",
       "solvable": true,
-      "issue": "",
+      "issue": "Exonerated is a defensible alternative opposite to castigated, since both address removal of blame versus praise.",
       "lane": "claude-sonnet"
     },
     "6": {
       "q_number": 6,
       "answer": "D",
       "confidence": "probable",
-      "reasoning": "'Eulogized' means praised highly and publicly, so its strongest opposite is 'denounced' (condemned publicly). 'Criticized' is a defensible alternative but is a milder, more general term, whereas 'denounced' matches the public, formal intensity of 'eulogized'.",
+      "reasoning": "Eulogized means highly praised, and denounced (openly condemned) matches that intensity as its opposite. Criticized is a weaker word that could also fit loosely, making it a plausible but less precise distractor.",
       "solvable": true,
-      "issue": "Both 'criticized' (B) and 'denounced' (D) are grammatically valid opposites; 'denounced' is chosen as the closer match in intensity.",
+      "issue": "Criticized is a defensible alternative since it also contrasts with praise, though denounced better matches the strength of 'eulogized'.",
       "lane": "claude-sonnet"
     },
     "7": {
       "q_number": 7,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "'Generous' is most directly opposed by 'mean' (stingy). 'Indifferent' describes lack of feeling rather than stinginess, so it does not capture the direct antonym relationship as precisely as 'mean'.",
+      "reasoning": "Generous means willing to give freely, so its opposite is mean (stingy). Indifferent, sympathetic, and nasty describe attitude or temperament rather than stinginess.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -70,7 +70,7 @@
       "q_number": 8,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "'Calm' is directly opposed by 'restless'. 'Angry' and 'hungry' are possible states but are not the standard antonym of 'calm', which centers on stillness versus agitation.",
+      "reasoning": "Calm is directly opposed by restless (agitated, unable to stay still). Hungry, angry, and cheerful are unrelated states that do not specifically oppose calmness.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -79,7 +79,7 @@
       "q_number": 9,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "'Self-effacing' means modest and retiring, avoiding attention; its opposite is 'conceited' (vain, self-important). 'Aggressive' describes forcefulness rather than vanity, so it is a weaker match than 'conceited'.",
+      "reasoning": "Self-effacing means modest and avoiding attention, so its opposite is conceited (vain, self-important). Aggressive, lousy, and unfriendly describe other traits that do not oppose modesty.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -87,17 +87,17 @@
     "10": {
       "q_number": 10,
       "answer": "B",
-      "confidence": "probable",
-      "reasoning": "'Prudent' (careful and wise, especially with money) is most naturally opposed by 'extravagant' (wasteful with money) in a household context. 'Mindless' is a defensible general opposite of 'prudent', but 'extravagant' fits the domestic/financial framing of a husband's conduct more precisely.",
+      "confidence": "certain",
+      "reasoning": "Prudent means careful and sensible, especially with money, so its opposite is extravagant (wasteful, spending recklessly). Mindless and mean do not capture the financial-carefulness contrast implied.",
       "solvable": true,
-      "issue": "Both 'extravagant' (B) and 'mindless' (D) could serve as opposites of 'prudent'; 'extravagant' is chosen as the better contextual fit.",
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "11": {
       "q_number": 11,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "\"Margin\" is the standard collocation for the numerical gap by which an election or contest is won, e.g. \"won by a margin of twenty votes\". \"Surplus\" refers to an excess amount left over, not a winning gap, so it does not fit the context.",
+      "reasoning": "\"Margin\" is the standard word for the numerical gap between winner and loser in a vote or contest, as in \"won by a margin of twenty votes.\" \"Surplus\" refers to excess quantity of a resource, not a vote gap, so it does not fit.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -106,7 +106,7 @@
       "q_number": 12,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "\"Adjourned\" means a meeting is formally closed/postponed once its agenda has been dealt with, which fits \"since all items had been dismissed (i.e. dealt with)\". \"Dissolved\" applies to permanently disbanding a body or organization, not simply closing a single meeting.",
+      "reasoning": "\"Adjourned\" means a meeting is formally closed or paused after its business is concluded, which fits since all agenda items had been dealt with. \"Dissolved\" is used for permanently disbanding a body or organization, not for ending a single meeting session.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -115,7 +115,7 @@
       "q_number": 13,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "\"Seek redress\" is a fixed legal collocation meaning to seek a remedy for a grievance, exactly matching \"aggrieved persons should seek ... in the court of law\". \"Litigation\" is the process of taking legal action itself, not something one \"seeks\" as a remedy.",
+      "reasoning": "\"Seek redress\" is a fixed collocation meaning to seek remedy or compensation for a grievance, especially in a court of law. \"Litigation\" is the process of taking legal action itself, not something one \"seeks\" as a remedy in this context.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -124,7 +124,7 @@
       "q_number": 14,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "\"Herd\" is the correct collective noun for cows/cattle. \"Flock\" is used for sheep or birds, so it is the wrong collective noun despite being a plausible group word.",
+      "reasoning": "\"Herd\" is the correct collective noun for cows/cattle. \"Flock\" applies to sheep or birds, \"gang\" to elephants, and \"skein\" to geese in flight, none of which fit cows.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -133,16 +133,16 @@
       "q_number": 15,
       "answer": "C",
       "confidence": "probable",
-      "reasoning": "\"Monument\" commonly refers to a structure of historical importance, matching \"stands as a historic ______\" (as in \"historical monument\"). \"Edifice\" merely means a large building and lacks the specific historical-significance sense the sentence requires, making \"monument\" the stronger fit, though \"edifice\" remains a defensible alternative.",
+      "reasoning": "\"Monument\" fits because a historic first-of-its-kind building preserved for its significance is commonly described as a historic monument. \"Edifice\" (a large building) is a defensible alternative since the sentence explicitly calls it a building, making this a close call between the two options.",
       "solvable": true,
-      "issue": "Both \"monument\" and \"edifice\" are semantically plausible for a historic building, so the choice is not fully unambiguous.",
+      "issue": "Both 'monument' and 'edifice' are plausible completions for 'historic ___' describing a preserved historic building.",
       "lane": "claude-sonnet"
     },
     "16": {
       "q_number": 16,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "\"Rejuvenated\" means made to feel young and energetic again, which naturally pairs with \"refreshed\" after a vacation. \"Reloaded\" and \"remodeled\" are not used to describe a person's physical/mental state and are semantically inappropriate.",
+      "reasoning": "\"Rejuvenated\" means made to feel young and energetic again, which naturally follows \"refreshed\" after a vacation. \"Reloaded\" and \"remodeled\" do not describe a person's physical/mental state and are not idiomatic here.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -151,7 +151,7 @@
       "q_number": 17,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "A \"dermatologist\" is the medical specialist who treats skin diseases, directly matching \"unusual skin disease\". \"Cardiologist\" treats the heart, which is unrelated to the condition described.",
+      "reasoning": "A dermatologist is the medical specialist who treats skin diseases, matching the sentence directly. A cardiologist treats the heart, so it does not fit a skin condition.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -160,7 +160,7 @@
       "q_number": 18,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "\"Diagnosis\" is the doctor's identification of a disease from its signs, matching \"was that the patient was suffering from cancer\". \"Prescription\" refers to the treatment/medication ordered, not the identification of the illness.",
+      "reasoning": "\"Diagnosis\" is the doctor's identification of a disease based on symptoms/tests, fitting \"suffering from cancer.\" \"Prescription\" refers to medication instructions, not the identification of the illness, so it does not fit.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -169,7 +169,7 @@
       "q_number": 19,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "\"Incentive\" means something that motivates or encourages a person to work harder, exactly matching \"to make him work harder in school\". \"Interest\" or \"offer\" do not carry this specific motivational sense.",
+      "reasoning": "\"Incentive\" means something that motivates or encourages a person to work harder, matching the sentence's purpose clause. \"Offer\" and \"attraction\" do not carry the specific sense of motivating effort.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -178,16 +178,16 @@
       "q_number": 20,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "\"Weather forecast\" is the fixed, standard collocation for a prediction of future weather conditions. \"Broadcast\" refers to the medium of transmission generally, not the specific weather report, so it does not fit as precisely.",
+      "reasoning": "\"Weather forecast\" is the standard fixed term for a prediction of future weather conditions. \"Broadcast\" refers to the transmission medium, not the content of the weather report, so it is the weaker distractor.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
     },
     "21": {
       "q_number": 21,
-      "answer": "B",
+      "answer": "C",
       "confidence": "probable",
-      "reasoning": "To \"jangle someone's nerves\" is an idiom meaning to irritate or upset them, making them agitated or on edge. \"Annoy\" captures this best; \"harass\" and \"tease\" imply repeated deliberate provocation not inherent in the idiom, while \"disturb\" is too weak and general.",
+      "reasoning": "To 'jangle someone's nerves' means to unsettle or agitate their nerves, which maps most literally onto 'disturb'. 'Annoy' and 'harass' describe general irritation but lose the specific nervous/agitation sense carried by 'nerve' in the idiom.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -196,7 +196,7 @@
       "q_number": 22,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "\"Swept off her feet\" is a well-known idiom meaning to fall suddenly and deeply in love with someone. \"Surprised\" or \"confused\" do not capture the romantic connotation, and \"trusted completely\" misrepresents the meaning entirely.",
+      "reasoning": "'Swept off her feet' is a standard idiom for falling suddenly and deeply in love with someone. 'Pleasantly surprised' or 'confused' do not capture the romantic sense central to the idiom.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -205,7 +205,7 @@
       "q_number": 23,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "\"Kept abreast of events\" means to stay well-informed or up to date on current happenings. \"Mindful\" and \"curious\" do not convey the sense of being current with information, and \"involved in\" wrongly implies active participation rather than awareness.",
+      "reasoning": "'Kept abreast of events' means staying up to date and well-informed about what is happening. 'Mindful' or 'curious' about events do not convey the sense of active, current knowledge that 'abreast' implies.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -214,7 +214,7 @@
       "q_number": 24,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "\"Last but one\" means the item immediately preceding the last one, i.e., the penultimate one. Option D correctly states this, while A and B wrongly suggest it is the final building, and C reverses the position.",
+      "reasoning": "'Last but one' means the penultimate item, i.e., the one immediately before the last. Option A describes the very last building, which is a different position altogether.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -223,7 +223,7 @@
       "q_number": 25,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "\"Easy on the eye\" is an idiom meaning visually attractive or pleasant to look at. \"Grandiose\" and \"expensive\" describe unrelated qualities, and \"cool\" does not match the idiom's meaning.",
+      "reasoning": "'Easy on the eye' is an idiom meaning visually pleasing or attractive. 'Grandiose' or 'expensive' describe scale or cost, not visual appeal, so they are weaker distractors.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -232,16 +232,16 @@
       "q_number": 26,
       "answer": "B",
       "confidence": "probable",
-      "reasoning": "A nonchalant (indifferent, unconcerned) attitude typically provokes irritation in an observer who expects more concern or seriousness. \"Baffles\" is plausible since indifference can also confuse an observer, but \"irritates\" is the more idiomatic collocation with nonchalance in WAEC usage; \"amazes\" and \"amuses\" do not fit the negative connotation of nonchalance.",
+      "reasoning": "A nonchalant (indifferent, unconcerned) attitude typically provokes irritation in others because it signals carelessness about matters that should matter. 'Baffles', 'amazes', and 'amuses' do not fit the negative reaction such an attitude usually causes.",
       "solvable": true,
-      "issue": "The stem reads \"That nonchalant attitude of Jonah's attitude ……\", with \"attitude\" appearing twice, which looks like a duplication/typo in the source text but does not prevent selecting the best-fitting completion.",
+      "issue": "The sentence stem repeats 'attitude' twice ('that nonchalant attitude of Jonah's attitude'), which appears to be a transcription duplication, but the intended meaning is still clear.",
       "lane": "claude-sonnet"
     },
     "27": {
       "q_number": 27,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "\"Through thick and thin\" means remaining loyal and supportive during both good times and bad. \"Accompany anywhere\" and \"prepared for any eventuality\" miss the good/bad contrast central to the idiom, and \"always advise you\" is unrelated.",
+      "reasoning": "'Through thick and thin' means remaining loyal and supportive during both good and bad times. Options about accompanying someone everywhere or always advising them describe different, unrelated behaviours.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -250,7 +250,7 @@
       "q_number": 28,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "\"Under the weather\" is a common idiom meaning slightly unwell or ill. It has nothing to do with sadness, literal rain, or being abroad, ruling out the other options.",
+      "reasoning": "'Under the weather' is a common idiom meaning slightly unwell or ill. It has no literal connection to actual rain or being outside the country, ruling out those distractors.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -259,7 +259,7 @@
       "q_number": 29,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "\"Beaten at his own game\" means someone was defeated using the very methods or tactics he himself employed. \"Leaked strategies,\" \"missed the target,\" and \"forgot his tactics\" describe different scenarios not captured by this idiom.",
+      "reasoning": "'Beaten at his own game' means someone was defeated using the very tactics or methods they themselves employed. This differs from merely leaking strategies, missing a target, or forgetting tactics.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -268,7 +268,7 @@
       "q_number": 30,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "\"Pull through\" means to recover or survive an illness. The other options (gaining immunity, dying, or prolonged suffering) either contradict or are unrelated to this meaning.",
+      "reasoning": "'Pull through' an illness means to survive and recover from it. The sentence expresses doubt about Father's recovery, not about dying or gaining immunity, which rules out the other options.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -277,7 +277,7 @@
       "q_number": 31,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Apparent means clear or evident to the observer, matching 'evident' exactly. 'Noticed', 'recognized', and 'acknowledged' describe acts of perception or admission, not the quality of being clearly visible or obvious.",
+      "reasoning": "Apparent means clear or evident from the available facts. Noticed and recognized describe acts of perception rather than the quality of being obvious, and acknowledged implies admission, so evident is the closest match.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -286,7 +286,7 @@
       "q_number": 32,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Impounded means officially seized and held by an authority, which corresponds to 'confiscated'. 'Intercepted', 'delayed', and 'screened' describe stopping or checking goods but not the act of legally seizing them.",
+      "reasoning": "Impounded means officially seized and held, which matches confiscated. Intercepted and delayed only suggest the goods were stopped in transit, and screened means merely inspected, none of which capture the seizure implied by impounded.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -294,17 +294,17 @@
     "33": {
       "q_number": 33,
       "answer": "D",
-      "confidence": "probable",
-      "reasoning": "Wane means to gradually grow smaller or weaker, which is closest to 'decrease'. 'Dissipate' and 'disappear' imply complete vanishing rather than gradual diminishing, and 'deteriorate' implies worsening in quality rather than reducing in degree.",
+      "confidence": "certain",
+      "reasoning": "Wane means to gradually grow smaller or weaker, i.e. decrease. Dissipate and disappear are too extreme, implying trust vanished entirely, while deteriorate refers to a decline in quality rather than a diminishing amount, so decrease fits best.",
       "solvable": true,
-      "issue": "Wane and decrease are close, but deteriorate is also defensible depending on interpretation of trust weakening in quality versus quantity.",
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "34": {
       "q_number": 34,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Ominous means giving the impression that something bad is about to happen, which matches 'portentous'. 'Forbidden' and 'suspicious' do not capture the sense of foreboding, and 'prophetic' merely means predictive without the negative connotation.",
+      "reasoning": "Ominous means giving the impression that something bad is going to happen, which matches portentous (foreboding of evil). Forbidden and suspicious describe unrelated qualities, and prophetic simply means predictive without the negative connotation ominous carries.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -313,7 +313,7 @@
       "q_number": 35,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Fringe refers to the outer border or edge of an area, matching 'edge' precisely. 'Limit' and 'outside' are too general, and 'middle' is the opposite meaning.",
+      "reasoning": "Fringe refers to the outer border or edge of an area, so edge is the nearest match. Limit and outside are too general, and middle is the opposite meaning.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -322,7 +322,7 @@
       "q_number": 36,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Spurned means to reject an offer with disdain, which matches 'rebuffed'. 'Denied' and 'refuted' relate to disputing claims or facts, not rejecting an offer, and 'defined' is unrelated in meaning.",
+      "reasoning": "Spurned means to reject with disdain or contempt, which matches rebuffed. Denied and refuted relate to disputing a claim or fact, not rejecting an offer of help, so they do not fit the context.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -331,7 +331,7 @@
       "q_number": 37,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Eventually means after some time or in the end, which matches 'finally'. 'Actually' and 'presently' relate to current or real states, and 'lately' means recently, none of which convey the sense of an end result after delay.",
+      "reasoning": "Eventually means after a period of time or delay, i.e. in the end, matching finally. Actually and presently refer to current or factual states, and lately refers to recent time, none of which convey the sense of something happening after a wait.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -340,7 +340,7 @@
       "q_number": 38,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Inquisitive means eager to know or learn things, matching 'curious'. 'Naughty', 'playful', and 'troublesome' describe behavior traits unrelated to the desire for knowledge.",
+      "reasoning": "Inquisitive means having a strong desire to know or learn things, matching curious. Naughty, playful, and troublesome describe behavior unrelated to a desire for knowledge.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -349,7 +349,7 @@
       "q_number": 39,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Audacious means showing a willingness to take bold risks, matching 'daring'. 'Smart' relates to intelligence, and 'active' and 'agile' describe physical capability rather than boldness or risk-taking.",
+      "reasoning": "Audacious describes a willingness to take bold risks, matching daring, as shown by jumping off high fences. Smart, active, and agile describe skill or energy rather than the risk-taking boldness implied by audacious.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -358,7 +358,7 @@
       "q_number": 40,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Menacingly means in a threatening manner, matching 'threateningly' directly. 'Stealthily' and 'cunningly' imply secrecy or cleverness, and 'calculatedly' implies deliberateness, none of which convey the sense of intimidation.",
+      "reasoning": "Menacingly means in a manner that threatens harm, matching threateningly. Stealthily and cunningly describe sly or secretive behavior, and calculatedly refers to deliberateness, none of which convey the sense of threat present in menacingly.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -367,7 +367,7 @@
       "q_number": 41,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "The sentence reports past speech with a future-in-the-past time reference ('by then'), which requires 'would have finished' (future perfect in reported speech). 'will have finished' is wrong because the reporting verb 'said' requires backshift from 'will' to 'would'.",
+      "reasoning": "Reported speech shifts the future perfect ('will have finished') back to 'would have finished'. 'will have finished' (A) is incorrect tense for reported past speech, and 'would finish' (D) lacks the perfect aspect needed for an action completed by a past point in time.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -376,7 +376,7 @@
       "q_number": 42,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "English adjective order places age before colour before material, so 'new blue silk' is correct. The distractors scramble this order (e.g. colour before age, or material before age/colour), which sounds unnatural to a native speaker.",
+      "reasoning": "English adjective order places age before colour before material: 'new blue silk dress'. The other orderings (blue silk new, blue new silk, silk blue new) violate this standard sequence and sound unnatural.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -385,7 +385,7 @@
       "q_number": 43,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "This is a hypothetical/unreal conditional ('If I were an eagle...'), which requires the subjunctive 'were' regardless of subject. 'was' is the common but incorrect informal alternative in formal grammar tested here.",
+      "reasoning": "This is a hypothetical/subjunctive conditional ('If I were...'), which requires 'were' regardless of subject number. 'was' (A) is commonly used informally but is not the standard subjunctive form tested in this context.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -394,7 +394,7 @@
       "q_number": 44,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "'Chalk' as a substance/material is uncountable, so it takes 'some chalk' rather than a plural or singular countable form. 'chalks' and 'a chalk' wrongly treat it as countable, and 'many chalk' would need 'chalks' anyway.",
+      "reasoning": "'Chalk' is an uncountable noun in this sense, so it takes 'some' rather than a number or plural form. 'chalks' and 'a chalk' wrongly treat it as countable, and 'many chalks' also incorrectly pluralizes it.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -403,7 +403,7 @@
       "q_number": 45,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Reported speech requires backshift of tense ('ate' to 'had eaten') and shift of time/place deictics ('yesterday' to 'the previous day', 'here' to 'there'). Option A applies both shifts correctly, while the others retain unshifted deictics or tense.",
+      "reasoning": "Reported speech requires the verb to shift back to past perfect ('had eaten') and the deictic markers 'here'/'yesterday' to shift to 'there'/'the previous day'. Options B, C, and D each retain at least one direct-speech marker or wrong tense inappropriate for reported speech.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -412,7 +412,7 @@
       "q_number": 46,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "'Balanced diet' is the standard collocation for a healthy eating pattern containing all necessary nutrients. 'complete', 'mixed', and 'delicious' are not the conventional nutritional term used in this context.",
+      "reasoning": "'Balanced diet' is the fixed collocation used for healthy eating containing the right proportion of nutrients. 'complete', 'mixed', and 'delicious' do not carry this specific nutritional meaning.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -421,7 +421,7 @@
       "q_number": 47,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "'Rustle up' is the fixed phrasal verb meaning to prepare food quickly, matching 'I can rustle up an omelette'. The other particles do not form a recognized idiom with 'rustle' in this sense.",
+      "reasoning": "'Rustle up' is the idiomatic phrasal verb meaning to quickly prepare food. 'rustle out/on/off' are not established collocations with this meaning.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -430,16 +430,16 @@
       "q_number": 48,
       "answer": "A",
       "confidence": "probable",
-      "reasoning": "'Very unhappy' is the standard, grammatically safe intensifier + adjective construction. 'too' would imply an excessive degree with an unstated negative consequence, making 'very' the more directly fitting choice, though 'too' is also plausible without further context.",
+      "reasoning": "'Very' is the standard intensifier for a plain adjective like 'unhappy'. 'Too' is a defensible distractor since it can colloquially mean 'very', but strictly 'too' implies an excessive degree with an unstated consequence, making 'very' the safer, unambiguous choice; 'much' and 'such' are grammatically wrong before a bare adjective.",
       "solvable": true,
-      "issue": "Without more surrounding context, both 'very' and 'too' are grammatically defensible intensifiers before 'unhappy'.",
+      "issue": "Both 'very' and 'too' are somewhat defensible without more context on intended register.",
       "lane": "claude-sonnet"
     },
     "49": {
       "q_number": 49,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "'Considerably' is the standard adverb used to modify a comparative adjective like 'cheaper' (e.g. 'considerably cheaper'). 'greatly', 'strongly', and 'most' do not idiomatically collocate with comparative forms in this way.",
+      "reasoning": "'Considerably' is the natural adverb to modify a comparative adjective like 'cheaper' (e.g., 'considerably cheaper'). 'greatly' does not collocate well with 'cheaper', 'strongly' is not used with price comparisons, and 'most' is a superlative marker, not suited to a comparative form.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -448,7 +448,7 @@
       "q_number": 50,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "'Dented' is the standard word for damage to a car's metal bodywork (like the boot/trunk) in an accident, describing an inward depression from impact. 'cracked' and 'chipped' suit brittle materials like glass or paint, and 'marked' is too vague for accident damage to metal.",
+      "reasoning": "'Dented' is the standard term for damage to a car's metal bodywork, such as the boot, in an accident. 'cracked' and 'chipped' apply better to glass, plastic, or paint, and 'marked' is too vague for accident damage to a car boot.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -457,7 +457,7 @@
       "q_number": 51,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "\"An environment in which they can grow\" correctly uses the relative preposition-pronoun combination modifying 'environment'. 'What' cannot follow a noun antecedent this way, 'from where' misuses a locative adverb, and 'in that' is not idiomatic in this relative clause structure.",
+      "reasoning": "\"In which\" correctly introduces a relative clause modifying \"environment\" (an environment in which X can grow). \"What\" cannot follow a noun antecedent this way, and \"from where\"/\"in that\" are not standard relative constructions here.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -466,7 +466,7 @@
       "q_number": 52,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "The idiom is \"cannot but + verb\", meaning cannot help but do something, giving \"we cannot but admire them\". 'Yet', 'though', and 'however' do not fit this fixed construction after 'cannot'.",
+      "reasoning": "\"Cannot but admire\" is a fixed idiomatic construction meaning \"cannot help but admire\". \"Yet\", \"though\", and \"however\" do not fit this collocation with \"cannot\".",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -475,7 +475,7 @@
       "q_number": 53,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "\"Fell through\" is the idiom meaning a plan failed to materialize, exactly fitting the context of a plan collapsing at the last moment. 'Fell down', 'fell on', and 'fell off' do not carry this idiomatic meaning.",
+      "reasoning": "\"Fell through\" is the idiom meaning a plan failed or did not happen. \"Fell down\", \"fell on\", and \"fell off\" have literal or unrelated meanings that don't fit a plan failing.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -483,17 +483,17 @@
     "54": {
       "q_number": 54,
       "answer": "B",
-      "confidence": "probable",
-      "reasoning": "Since the subject of the main clause is 'you' and the verb is 'think' (not the special 'I think' parenthetical case), the tag question agrees with the main clause: \"You think I am hungry, don't you?\" The exception where tags attach to the subordinate clause applies only when the main clause is first-person 'I think/believe/suppose'.",
+      "confidence": "certain",
+      "reasoning": "The tag question must agree with the main clause \"You think\", which is affirmative, so the tag is negative: \"don't you?\". \"Aren't I\"/\"isn't I\" wrongly tag the subordinate clause \"I am hungry\" instead of the main verb \"think\".",
       "solvable": true,
-      "issue": "Tag-question attachment rules for 'You think...' versus the special 'I think...' exception are a known point of disagreement in some teaching materials, so 'aren't I' is a defensible alternate reading.",
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "55": {
       "q_number": 55,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "\"Broke into tears\" is the standard idiom for suddenly beginning to cry. The other phrasal combinations ('broke to', 'broke up', 'broke with') do not convey this meaning.",
+      "reasoning": "\"Broke into tears\" is the correct idiom for suddenly starting to cry. \"Broke to\", \"broke up\", and \"broke with\" are not valid collocations with \"tears\".",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -502,7 +502,7 @@
       "q_number": 56,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "The past perfect \"had eaten\" is required to show an action completed before another past action (arriving). 'Could have eat' and 'have eaten' are ungrammatical in tense, and 'must had eaten' incorrectly combines a modal with 'had' instead of 'have'.",
+      "reasoning": "The past perfect \"had eaten\" correctly shows an action completed before another past action (\"before I arrived\"). \"Could have eat\" and \"must had eaten\" are grammatically malformed, and \"have eaten\" lacks the needed past-tense auxiliary.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -511,7 +511,7 @@
       "q_number": 57,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "\"Next to nothing\" is a fixed idiom meaning almost nothing, fitting the context of a false expert who knew almost nothing. 'Everything', 'something', and 'anything' do not fit this idiomatic phrase.",
+      "reasoning": "\"Next to nothing\" is a set idiom meaning \"almost nothing\", fitting the contrast with his false claim of expertise. \"Everything\", \"something\", and \"anything\" do not form this idiomatic phrase and contradict the intended meaning.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -520,7 +520,7 @@
       "q_number": 58,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "\"Having bought\" is the correct perfect participial form showing a completed prior action before advising his daughter. The other options ('having being to buy', 'having buying', 'having been buying') are grammatically malformed or convey the wrong aspect.",
+      "reasoning": "\"Having bought\" is the correct perfect participle form showing a completed action before the main clause. The other options (\"having being to buy\", \"having buying\", \"having been buying\") are grammatically incorrect or imply an ongoing rather than completed action.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -529,7 +529,7 @@
       "q_number": 59,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "The correct collocation is \"deficiency in\" a vitamin or nutrient. 'Deficiency on/from/for' are not standard English collocations.",
+      "reasoning": "\"Deficiency in\" is the correct preposition collocation (deficiency in a vitamin/nutrient). \"On\", \"from\", and \"for\" do not collocate correctly with \"deficiency\" in this sense.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -538,7 +538,7 @@
       "q_number": 60,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "The superlative 'earliest' correctly compares this submission to all previous ones: \"This is the earliest he has submitted his assignment since joining the class.\" 'Early' (base form) and 'later'/'lately' do not fit grammatically after 'the' in this superlative comparison structure.",
+      "reasoning": "The superlative \"earliest\" is needed after \"the\" to compare this instance against all others since joining the class. \"Early\" and \"later\"/\"lately\" are not grammatically correct in this superlative slot.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -547,7 +547,7 @@
       "q_number": 61,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "The idiom 'make do with' means to manage using what is available, which fits the context of not borrowing. 'Make up' (invent/reconcile), 'make out' (perceive/succeed) and 'make over' (transfer/renovate) do not fit the sense of managing with existing resources.",
+      "reasoning": "The idiom \"make do with\" means to manage using what is available, which fits the sense of using what one has rather than borrowing. \"Make up\", \"make out\", and \"make over\" carry unrelated meanings (invent/reconcile, discern/succeed, transfer/renovate) that do not fit.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -556,7 +556,7 @@
       "q_number": 62,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "'Somewhat hasty' correctly means 'to some degree hasty', fitting an adjective modifier position. 'More' would require a comparison ('more hasty than'), 'much' needs 'too' to premodify an adjective this way ('much too hasty'), and 'scarcely' would contradict the idea of being hasty in punishment.",
+      "reasoning": "\"Somewhat hasty\" correctly expresses a moderate degree of haste, a natural collocation before an adjective. \"Much hasty\" is ungrammatical (much needs a comparative or \"too\"), \"more hasty\" without an explicit comparison is incomplete, and \"scarcely hasty\" reverses the intended critical meaning.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -565,7 +565,7 @@
       "q_number": 63,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "The main clause is affirmative ('should treat'), so the tag question must be negative, and 'everybody' is conventionally referred back to with 'they' in tag questions. 'Should we' and 'should they' are wrong because they are not negated, and 'shouldn't we' shifts person from 'everybody' to 'we'.",
+      "reasoning": "\"Everybody\" is referred to with the plural pronoun \"their\", so the tag must use \"they\"; since the main clause is affirmative, the tag must be negative, giving \"shouldn't they\". Options A and D are affirmative tags, which are wrong after an affirmative statement, and C wrongly shifts the pronoun to \"we\".",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -574,7 +574,7 @@
       "q_number": 64,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "'Crossroads' is treated as a singular noun in the fixed idiom 'at a crossroads', meaning a point of decision. 'A crossroad', 'some cross road' and 'the crossroad' are not the standard idiomatic form.",
+      "reasoning": "\"Crossroads\" is a fixed noun that keeps its -s form even in the singular, so it takes the singular article: \"at a crossroads\" (a dilemma). \"A crossroad\" and \"the crossroad\" wrongly treat it as a regular singular noun, and \"some cross road\" is both ungrammatical and misspelled as two words.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -583,7 +583,7 @@
       "q_number": 65,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "The phrasal verb 'play down' means to minimize the importance of something, which fits 'playing down the problems'. 'Play off', 'play up' (to emphasize/misbehave) and 'play out' do not carry this meaning of minimizing.",
+      "reasoning": "The phrasal verb \"play down\" means to minimize or understate something, which fits a company downplaying its problems. \"Play up\" would mean to exaggerate or emphasize, the opposite sense, while \"play off\" and \"play out\" do not form idiomatic collocations with \"problems\" here.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -592,7 +592,7 @@
       "q_number": 66,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "'Ought not to have walked' is the grammatically correct structure for expressing that a past action was inadvisable. 'Need not to' is ungrammatical (should be 'need not have'), 'might not have' would question possibility rather than advisability, and 'would not have' doesn't fit the sense of a warning about the past.",
+      "reasoning": "\"Ought not to have walked\" correctly expresses that an action occurred but was inadvisable, matching the context of criticizing a past risky action. \"Need not to\" is ungrammatical (the correct form is \"need not have\"), and \"would not\"/\"might not\" change the meaning to choice or possibility rather than inadvisability.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -600,17 +600,17 @@
     "67": {
       "q_number": 67,
       "answer": "B",
-      "confidence": "probable",
-      "reasoning": "'Price tag' is the standard compound noun for a label showing an item's price, requiring no apostrophe or plural form, making option B correct. Options C and D are printed identically as 'prices tag', which is a transcription defect, but neither reading is grammatically valid, so B remains the unambiguous best choice.",
+      "confidence": "certain",
+      "reasoning": "\"Price tag\" is the standard noun-noun compound for a tag showing an item's price, used without an apostrophe or plural marking on \"price\". \"Price's tag\" wrongly adds a possessive apostrophe, and the two \"prices tag\" options incorrectly pluralize \"price\" as a modifier.",
       "solvable": true,
-      "issue": "Options C and D are both printed as 'prices tag', an apparent transcription duplication/typo, though it does not affect the correctness of option B.",
+      "issue": "Options C and D are identical (\"prices tag\"), an apparent transcription duplication, but this does not affect the correctness of the answer since B is unambiguously correct.",
       "lane": "claude-sonnet"
     },
     "68": {
       "q_number": 68,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "The indefinite pronoun 'one' requires the matching possessive 'one's' for formal grammatical agreement. 'His', 'their' and 'your' mismatch the subject 'one' in person/number and register.",
+      "reasoning": "The indefinite pronoun \"one\" requires the matching possessive determiner \"one's\" for agreement, as in \"One has to be careful of one's friends.\" \"His\", \"their\", and \"your\" all shift to a different, non-agreeing person or number.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -619,7 +619,7 @@
       "q_number": 69,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "'Sell-by date' is the established compound term for the date by which a consumable should be sold. 'Sell-out', 'sell-off' and 'sell-on' are unrelated phrasal compounds not used with 'date' in this sense.",
+      "reasoning": "\"Sell-by date\" is the fixed compound term for the date by which a perishable product should be sold. \"Sell-out\", \"sell-off\", and \"sell-on\" are unrelated fixed expressions (relating to selling all stock, discount sales, and reselling, respectively) that do not combine with \"dates\" in this sense.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -628,7 +628,7 @@
       "q_number": 70,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "The correct collocation is 'judge someone by their past', indicating the standard/basis of judgement. 'From', 'at' and 'for' do not collocate correctly with 'judge' in this sense.",
+      "reasoning": "\"Judge someone by something\" is the standard collocation for evaluating a person based on a criterion, as in \"don't judge a book by its cover.\" \"From\", \"at\", and \"for\" do not form this idiomatic pairing with \"judge\" in this sense.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -637,7 +637,7 @@
       "q_number": 71,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "\"Tenure\" specifically denotes the fixed period a person holds an office, which fits \"the tenure of the local government chairman would soon elapse.\" \"Period\" is too generic and lacks the office-holding sense, while \"reign\" implies monarchy, not an elected chairman.",
+      "reasoning": "\"Tenure\" is the standard collocation for a period of holding an office, as in \"the chairman's tenure would soon elapse.\" \"Period\" is too generic and does not collocate as naturally with holding a political office in this context.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -646,7 +646,7 @@
       "q_number": 72,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "The election process begins with political parties selecting the people who will contest, i.e. \"candidates.\" \"Aspirants\" refers to those seeking a party's nomination before selection, not the outcome of the selection process described here.",
+      "reasoning": "\"Candidates\" is the correct term for people put forward for election. \"Aspirants\" refers to those seeking a party's nomination before becoming candidates, which is a step earlier and less fitting once the process moves to a public contest.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -655,16 +655,16 @@
       "q_number": 73,
       "answer": "D",
       "confidence": "probable",
-      "reasoning": "\"Manifestoes\" are documents registered parties issue to the public to state their intentions on assuming office, matching the clause \"...to public to inform them of their intentions when they assume office.\" The surrounding sentence is awkwardly worded/garbled (missing a word such as \"parties who present\"), so the fit is by meaning rather than clean grammar.",
+      "reasoning": "The clause describes candidates informing the public \"of their intentions when they assume office,\" which is precisely what a manifesto is. The sentence structure is somewhat garbled/duplicated in the passage, so certainty is slightly reduced, but \"manifestoes\" is the only option matching the described content.",
       "solvable": true,
-      "issue": "The clause \"by registered ___73___ to public\" is grammatically garbled, likely missing a word (e.g. 'parties who present'); the answer is inferred from the definition-like clause that follows rather than clean sentence structure.",
+      "issue": "The passage text around this gap appears duplicated/garbled (repeated clauses about polling), making the exact syntax awkward, though the intended vocabulary answer is still identifiable from context.",
       "lane": "claude-sonnet"
     },
     "74": {
       "q_number": 74,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "\"Canvassing for votes\" is the standard collocation for campaigning to solicit support ahead of an election. \"Lobbying\" refers to influencing officials/legislation, not seeking votes from the electorate.",
+      "reasoning": "\"Canvassing for votes\" is the fixed, standard English expression for seeking public support in an election. \"Lobbying\" refers to influencing officials/legislators, not soliciting votes from the electorate.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -673,7 +673,7 @@
       "q_number": 75,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "\"Universal suffrage\" is the fixed term for the right of all adult citizens to vote, exactly as defined in the following clause. \"Right\" is too generic and does not form the set phrase \"universal right.\"",
+      "reasoning": "\"Universal suffrage\" is a fixed political term meaning the right of all adult citizens to vote, which matches the passage exactly. None of the other options form a recognized collocation with \"universal.\"",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -682,7 +682,7 @@
       "q_number": 76,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "A citizen who meets the age and registration requirements is \"eligible\" to vote. \"Approved\" or \"recommended\" would require some authority granting individual permission, which is not how voting eligibility works.",
+      "reasoning": "\"Eligible to vote\" is the standard phrase for someone who legally qualifies to vote, matching the condition \"provided he/she is duly registered.\" \"Recommended\" or \"approved\" do not fit the sense of legal qualification.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -690,26 +690,26 @@
     "77": {
       "q_number": 77,
       "answer": "C",
-      "confidence": "certain",
-      "reasoning": "\"Polling station\" is the standard term for the designated place voters go to cast their ballots. \"Booth\" refers to the individual voting compartment within a station, not the location voters travel to.",
+      "confidence": "probable",
+      "reasoning": "Voters first go to the polling \"station\" (the general venue) where officials check their names against the voters' register before they proceed to vote; \"booth\" more specifically denotes the small cubicle used for casting the vote in secret, which comes after the register check described here.",
       "solvable": true,
-      "issue": "",
+      "issue": "The passage repeats this clause twice with slightly different wording, suggesting the source text is duplicated/garbled, but the vocabulary choice is still inferable from context.",
       "lane": "claude-sonnet"
     },
     "78": {
       "q_number": 78,
       "answer": "B",
       "confidence": "probable",
-      "reasoning": "Voters go through the voter's register for \"accreditation\" (verification of identity/eligibility) before casting their vote, which is the standard election-process term. The sentence is a garbled duplication of an earlier line and omits a connector before \"the person of their choice,\" but accreditation is the intended process being described.",
+      "reasoning": "In the Nigerian electoral process, voters go through the register for \"accreditation\" (verification of identity/eligibility) before casting their vote for their preferred candidate. \"Endorsement,\" \"validation,\" and \"approval\" are not the standard terms used for this stage.",
       "solvable": true,
-      "issue": "This sentence duplicates and garbles the earlier '...go to the polling ...77... go through the voter's register for the person of their choice' line, seemingly merging two ideas (accreditation, then voting) without a proper connector.",
+      "issue": "The surrounding sentence is duplicated/garbled in the passage, which slightly obscures the exact syntax, though the intended term is still identifiable from electoral-process context.",
       "lane": "claude-sonnet"
     },
     "79": {
       "q_number": 79,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Vote counting at the point of voting is conducted by the \"presiding officer\" in the presence of party agents. The \"returning officer\" instead collates and announces results, which is described separately in the next blank.",
+      "reasoning": "Vote counting at the polling unit is conducted by the \"presiding officer\" in the presence of party agents who supervise/observe. The \"returning officer\" instead collates results from multiple polling units and announces the overall winner, which is a later stage.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -718,7 +718,7 @@
       "q_number": 80,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "After votes are counted, the winner is formally \"announced\" by the returning officer. \"Appointed\" or \"chosen\" would misrepresent an elected outcome as one decided by selection rather than the vote count.",
+      "reasoning": "After votes are counted, the winner of an election is \"announced\" by the election official. \"Chosen,\" \"appointed,\" and \"called\" do not fit the standard procedure of declaring election results.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -729,51 +729,51 @@
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.0817,
+      "cost_usd": 0.1004,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.0978,
+      "cost_usd": 0.0921,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.0984,
+      "cost_usd": 0.0861,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.0906,
+      "cost_usd": 0.0763,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.0925,
+      "cost_usd": 0.0836,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.1143,
+      "cost_usd": 0.0825,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.0966,
+      "cost_usd": 0.1156,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.135,
+      "cost_usd": 0.1255,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     }
   ],
-  "fallback_cost_usd": 0.8069
+  "fallback_cost_usd": 0.7621
 }

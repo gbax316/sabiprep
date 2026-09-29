@@ -1,0 +1,310 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "keyed": 42,
+    "defective": 8
+  },
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "2": {
+      "q_number": 2,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "3": {
+      "q_number": 3,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "4": {
+      "q_number": 4,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "5": {
+      "q_number": 5,
+      "state": "defective",
+      "answer": null,
+      "reason": "3 − 2x − x² = −(x² + 2x − 3) = −(x + 3)(x − 1) = (x + 3)(1 − x), which expands back to 3 − 3x + x − x² = 3 − 2x − x². As stored, however, the item has only options A and B, with the source's options C and D run into the text of B, so the correct factorization exists only inside a malformed option B and no stored letter holds it. The case for keying D is that the mathematics is unambiguous, but D is not an option in the record and keying B would mark a string containing three expressions as correct. Split B into B (x + 3)(x + 1), C (x − 3)(1 − x) and D (x + 3)(1 − x); once repaired, the key is D."
+    },
+    "6": {
+      "q_number": 6,
+      "state": "defective",
+      "answer": null,
+      "reason": "The question text is incomplete after “If P, = 1.8”. | The stem is truncated. The given condition (the values of P and Q) and the question itself are both missing."
+    },
+    "7": {
+      "q_number": 7,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with claude"
+    },
+    "8": {
+      "q_number": 8,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "9": {
+      "q_number": 9,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "10": {
+      "q_number": 10,
+      "state": "defective",
+      "answer": null,
+      "reason": "The numerator is printed as '2⅓ + 5/2 1', which is not a readable number. Taking 5/2 at face value gives (2⅓ + 2½)/¼ = 19⅓, which is not an option, and the only way to reach an option is to reconstruct the term as 1½, giving 15⅓ (B). The argument for B is that it is the sole reading consistent with the options, but choosing a reading because it matches an option is back-solving, not something a student can do from the printed stem. The source term, probably 3/2 or 1½, must be checked and restored before any key is published; if it is 1½ the key is B."
+    },
+    "11": {
+      "q_number": 11,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with claude"
+    },
+    "12": {
+      "q_number": 12,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "13": {
+      "q_number": 13,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "14": {
+      "q_number": 14,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "third review, sided with claude"
+    },
+    "15": {
+      "q_number": 15,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "16": {
+      "q_number": 16,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "17": {
+      "q_number": 17,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "18": {
+      "q_number": 18,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "19": {
+      "q_number": 19,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "20": {
+      "q_number": 20,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "21": {
+      "q_number": 21,
+      "state": "defective",
+      "answer": null,
+      "reason": "The answer choices are missing. | The options are empty. The options printed under Q22 (10√2 cm … 25√2 cm) appear to belong to this question; with those options the answer would be C (20√2 cm)."
+    },
+    "22": {
+      "q_number": 22,
+      "state": "defective",
+      "answer": null,
+      "reason": "The options contradict the question and do not include the correct gradient, 7/5. | The options are wrong: they are square perimeters in cm, apparently shifted from Q21. This question's own options are missing."
+    },
+    "23": {
+      "q_number": 23,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "24": {
+      "q_number": 24,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "25": {
+      "q_number": 25,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "26": {
+      "q_number": 26,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "27": {
+      "q_number": 27,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "28": {
+      "q_number": 28,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "29": {
+      "q_number": 29,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "30": {
+      "q_number": 30,
+      "state": "defective",
+      "answer": null,
+      "reason": "The diagram confirms the right angle at Q, so PR is the hypotenuse and PR = QR/cos 60° = 2 ÷ ½ = 4 cm, which is option B. However option C, '2√4 cm', simplifies exactly to 4 cm, so two options state the same correct length and an examiner could not mark C wrong. The argument for keying B is that it is the simplified form, but an unsimplified correct value is still correct, so this is not a matter of preference. C is almost certainly a misprint of 2√3 cm (the length of PQ); once C is corrected, the key is B."
+    },
+    "31": {
+      "q_number": 31,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "32": {
+      "q_number": 32,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "33": {
+      "q_number": 33,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "34": {
+      "q_number": 34,
+      "state": "defective",
+      "answer": null,
+      "reason": "Equal volumes alone do not fix the cylinder's height, because πR²h = ⅓πr²(24) has a solution for any h once the radii are free. The intended answer of 8 cm (B) needs the condition that the two solids have the same base radius, and the stem does not state it. The case for B is that this is a familiar textbook problem and students would assume equal radii, but the assumption supplies a missing fact rather than correcting a typo. The stem should be repaired to say the cylinder and cone have the same base radius, after which the key is B."
+    },
+    "35": {
+      "q_number": 35,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "36": {
+      "q_number": 36,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "37": {
+      "q_number": 37,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "38": {
+      "q_number": 38,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "39": {
+      "q_number": 39,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "40": {
+      "q_number": 40,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "41": {
+      "q_number": 41,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "42": {
+      "q_number": 42,
+      "state": "defective",
+      "answer": null,
+      "reason": "Missing or garbled ladder question stem and diagram. | The stem is corrupted: the data for the ladder problem have been replaced by Q41's circle text, and there is no diagram."
+    },
+    "43": {
+      "q_number": 43,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "44": {
+      "q_number": 44,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "45": {
+      "q_number": 45,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "46": {
+      "q_number": 46,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "47": {
+      "q_number": 47,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "48": {
+      "q_number": 48,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "49": {
+      "q_number": 49,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "cross-family agreement, both certain"
+    },
+    "50": {
+      "q_number": 50,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "cross-family agreement, both certain"
+    }
+  }
+}

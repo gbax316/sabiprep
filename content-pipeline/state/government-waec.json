@@ -2,14 +2,14 @@
   "slug": "government-waec",
   "subject": "Government",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T16:00:06",
     "note": ""
   },
   "units": {
     "2025": {
-      "status": "running",
+      "status": "done",
       "stages": {
         "derive": {
           "status": "done",
@@ -52,11 +52,102 @@
           "summary": "49 written in 2 part(s); answer challenges none; style scan: REVIEW (7 across 7 location(s))",
           "seconds": 435,
           "cost_usd": 2.75
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T15:45:29",
+          "summary": "49 reviewed, 13 fail, fact errors [34]",
+          "seconds": 804,
+          "cost_usd": 2.49
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T15:53:34",
+          "summary": "13 accepted, 2 rejected; style scan: REVIEW (7 across 7 location(s))",
+          "seconds": 485,
+          "cost_usd": 2.72
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T15:57:47",
+          "summary": "13 changed items re-reviewed, 6 still fail [7, 17, 26, 42, 46, 50]",
+          "seconds": 252,
+          "cost_usd": 0.0
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T16:00:00",
+          "summary": "6 ruled on the last pass, held none; style scan: REVIEW (7 across 7 location(s))",
+          "seconds": 132,
+          "cost_usd": 0.58
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T16:00:00",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T16:00:00",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T16:00:00",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T16:00:00",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T16:00:00",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:00:00",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T16:00:04",
+          "summary": "PREVIEW (no image base set): government-waec.2025.PREVIEW.csv, 1 held, 2 pre-flight flags; style scan: REVIEW (9 across 7 location(s))",
+          "seconds": 3,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T16:00:05",
+          "summary": "government-waec.2025.preview.html",
+          "seconds": 1,
+          "cost_usd": 0.0
         }
       },
-      "error": ""
+      "error": "",
+      "held": [
+        {
+          "q_number": 18,
+          "why": "defective",
+          "detail": "The option list is damaged: only A and B exist as options, option C is missing, and the text of D ('"
+        }
+      ]
     }
   },
-  "cost_usd": 15.27,
+  "cost_usd": 21.06,
   "taxonomy_cost_usd": 10.72
 }

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 110 690 540" preserveAspectRatio="xMidYMid meet" role="img">
+<!-- Authored by hand, not traced: automatic tracing damages the typed labels in this subject's diagrams, so the trace was used only as a guide to positions. Coordinates follow the original 800x800 scan. Nothing omitted as unreadable. -->
+<title>Parallel lines SR and UW with crossing lines at V (WASSCE 2025 Q43-44)</title>
+<desc>Two straight lines cross at a point V, forming an X shape. One line runs from S at the upper left, through V, down to T at the lower right. The other runs from U at the lower left, through V, up to W at the upper right. A separate ray from S goes up to R, marked with a double arrow; the line from V to W is marked with a matching double arrow. At S, the angle between ray SR and the line down to V is marked 45°. At V, the angle between line VW and line VT is marked x. At T, the angle between line VT and line UT is marked 20°. At U, the angle between line UV and line UT is shown with an arc but no number.</desc>
+<g stroke="#E2E8F0" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- lines -->
+  <line x1="189" y1="337" x2="530" y2="148"/>
+  <line x1="189" y1="337" x2="684" y2="610"/>
+  <line x1="118" y1="608" x2="682" y2="298"/>
+  <line x1="118" y1="608" x2="684" y2="610"/>
+  <!-- double arrows (parallel marks) on SR and VW -->
+  <polyline points="337.9,263.4 342.8,251.6 330.2,249.5"/>
+  <polyline points="345.0,259.6 349.8,247.8 337.2,245.7"/>
+  <polyline points="570.3,368.4 575.2,356.6 562.6,354.4"/>
+  <polyline points="577.3,364.5 582.2,352.7 569.6,350.5"/>
+  <!-- angle arcs -->
+  <path d="M213.5,323.4 A28,28 0 0 1 213.5,350.5"/>
+  <path d="M421,441.4 A24,24 0 0 1 421,464.6"/>
+  <path d="M157.4,586.3 A45,45 0 0 1 163,608.2"/>
+  <path d="M644.6,588.2 A45,45 0 0 0 639,609.8"/>
+</g>
+<g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="30">
+  <text x="548" y="161">R</text>
+  <text x="691" y="304">W</text>
+  <text x="152" y="343">S</text>
+  <text x="389" y="436">V</text>
+  <text x="82" y="620">U</text>
+  <text x="699" y="621">T</text>
+  <text x="225" y="349">45°</text>
+  <text x="433" y="462" font-size="28">x</text>
+  <text x="570" y="606">20°</text>
+</g>
+</svg>

@@ -1,0 +1,421 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "fail",
+      "failed_checks": [
+        2,
+        12
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 says, \"One is about a clash between age groups, the other about a clash between ways of life\" and then points to \"the customs and ideas each one defends.\" This closely paraphrases the correct option, so the student can answer without analysing the play. It also gives away sibling Question 3's answer, \"The old and the new.\"",
+      "fix": "Hint 3: Two options remain. Which one can you support with several events across the play, such as the bride-price dispute, the railway story and Sidi's final choice?",
+      "lane": "codex"
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "\"A comedy is a play with a light, amusing mood that ends happily\" incorrectly makes a happy ending essential to every comedy. Hint 3's description of farce as \"wild, silly action with little sense\" is also inaccurate: farce is defined by exaggerated, improbable situations and physical humour, not action that lacks sense.",
+      "fix": "Hint 3: Two labels for comic drama remain. One usually builds humour through wit and character; the other relies mainly on exaggerated, improbable situations and physical comedy. Which pattern fits Soyinka's play better?\n\nReplace the opening principle with: Comedy mainly uses humour and often ends happily, sometimes in marriage or reconciliation. The Lion and the Jewel uses wit and satire and closes with Sidi's wedding procession.\n\nReplace the B and D lines with:\nB. tragedy: tragedy centres on a serious downfall that brings suffering, and no such downfall structures this play.\nD. farce: farce relies mainly on exaggerated, improbable situations and physical comedy, while this play relies more on wit, satire and character.",
+      "lane": "codex"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "fail",
+      "failed_checks": [
+        4,
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The claims \"The iya-ilu ... is not one of the pair the play names,\" \"The two drums the play names are the bata and the gangan\" and \"it is not the partner the play names with the gangan\" are false. A stage direction explicitly names \"gangan\" and \"iya ilu.\" The settled answer can be retained, but the teaching must not deny that wording. Also, \"The printed paper runs a fourth option, Gangan and Omele, into this line\" folds the fourth distractor into C instead of giving it its own labelled line.",
+      "fix": "Hint 2: Check the spellings carefully. One option resembles a drum name in the text but prints it incorrectly.\n\nReplace the principle and How to tell with:\nThe Lion and the Jewel is set in Ilujinle, and Yoruba drumming accompanies its dance and mime scenes. For this item, the expected pair is bata and gangan.\n\nHow to tell: option B gives the settled pair. The stage directions also explicitly mention gangan and iya ilu, so do not claim that iya-ilu is absent from the play.\n\nWhy not the others:\nA. Gangan and Iya-llu: as printed, Iya-llu does not match the text's name iya ilu.\nC. Bata and Omele: this is not the settled pair.\nD. Gangan and Omele: this is not the settled pair.",
+      "lane": "codex"
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "\"To accept something is to agree to it quietly\" is false as a general definition. Acceptance means agreeing or going along with something, but it does not have to be quiet.",
+      "fix": "To accept something is to agree to it or go along with it, even without joy.",
+      "lane": "codex"
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 says, \"Of the three left, two are ordinary insults for a silly person. The word Jimmy uses mocks Cliff's lack of learning.\" This identifies fool and idiot as the two rejects, leaving peasant as the only possible choice without requiring the student to recall the scene.",
+      "fix": "Hint 3: Return to Jimmy's exact words immediately after he asks whether the Sunday papers make Cliff feel ignorant. Which noun does he use next?",
+      "lane": "codex"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 says, \"Does the play set illusion against something similar to it, or against its opposite?\" With the two remaining choices, the student can select \"reality\" simply because it is the opposite of \"illusion\", without considering the play.",
+      "fix": "Both remaining options include illusion. Recall the scenes at Theseus's court and compare them with the enchanted events in the wood before choosing the pair that covers both.",
+      "lane": "codex"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 says, \"the tenants' age, or the kind of tenancy they hold under the rent law of the time. Which one would stop a landlord from removing them by law?\" The repeated reference to law makes the tenancy choice automatic, so the student need not recall the novel.",
+      "fix": "Two options remain. Recall what the novel calls these tenants after Mr Noble's court cases, then choose the detail that gives them protection from eviction.",
+      "lane": "codex"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The claims “endless, unrewarded labour” and “the little reward they receive” are not supported by the poem. It presents servitude, anguish, collective pain and fading memory, but also says that the women “celebrate their gains.” The distractor explanation “nothing in the poem is joyful or thrilling” is therefore an unscoped and false absolute. The dominant tone is still lamentation. See the [poet’s published text](https://farouksesay.com/the-song-of-the-women-of-my-land/).",
+      "fix": "Replace “In Song of the Women of My Land, Oumar Farouk Sesay mourns the endless, unrewarded labour and pain of the women of his land” with “In Song of the Women of My Land, Oumar Farouk Sesay mourns the women’s servitude, collective pain and fading place in memory.”\n\nReplace the How to tell sentence with “How to tell: the persona dwells on the women’s anguish, servitude and dying song. Although the women use song to celebrate their gains, the dominant voice grieves over their suffering and the loss of their memory.”\n\nReplace the C line with “C. Excitement: the women’s songs sometimes celebrate their gains, but excitement is not the poem’s dominant feeling; sorrow and loss are.”",
+      "lane": "codex"
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The statements “written in unrhymed lines,” “the line endings do not rhyme in pairs or in turn” and “which the poem does not do” are false. The poem contains alternating rhymes in places and rhyming pairs near its end. The statement “blank verse is the one that means unrhymed verse” is also incomplete: strict blank verse is unrhymed iambic pentameter, not merely any unrhymed poetry. The hints use the same false all-or-nothing test by asking “whether the line endings rhyme at all.” See the [poem and rhyme analysis](https://aseiclass.com/catalog/lit_in_eng_raider_treasure.php) and the [definition of blank verse](https://www.poetryfoundation.org/categories/blank-verse).",
+      "fix": "Replace the hints with:\n\nHint 1: A rhyme label should describe the poem’s overall pattern. Check whether one scheme continues through the whole poem, not whether a few line endings rhyme.\n\nHint 2: A sonnet has fourteen lines, and this poem has twenty-three. Some sections rhyme, but the same pattern does not continue throughout.\n\nHint 3: Compare the pattern across all five stanzas. Does one rhyming arrangement govern the entire poem, or do the rhymes change from section to section?\n\nReplace the solution after the answer line with:\n\nBlank verse strictly means unrhymed iambic pentameter, so Raider of the Treasure Trove is not strict blank verse. The poem has no single rhyme scheme that continues through all twenty-three lines, although it contains clear rhymes in several places. The settled key therefore uses blank verse as the closest available option in a loose classroom sense.\n\nHow to tell: do not say that the line endings never rhyme. The first stanza contains alternate rhymes, such as life with strive and dreams with streams. The ending also contains rhyming pairs, including mind with behind and berth with earth. The examiner’s choice rests on the absence of one sustained scheme across the whole poem, not on a complete absence of rhyme.\n\nWhy not the others:\nB. Sonnet: a sonnet has fourteen lines, while this poem has twenty-three.\nC. Couplet: the poem contains rhyming couplets in places, especially near the end, but it is not composed entirely of couplets.\nD. Alternate Rhyme: alternate rhyme appears in parts of the poem, especially the first stanza, but it does not govern the whole poem.\n\nExam tip: examine the entire poem before naming its rhyme pattern. A pattern found in one stanza may not describe the whole work.",
+      "lane": "codex"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The definition “a didactic poem teaches a lesson openly” appears in the hints and the B distractor explanation. This is too absolute. Didactic poetry is intended to instruct or convey a clear moral or message, but it does not have to preach openly. Satire and didactic purpose can also overlap. See the [definition of didactic poetry](https://www.poetryfoundation.org/education/glossary/didactic-poetry).",
+      "fix": "Replace hint 1 with “Ask what the poet chiefly does with the retired driver: praise him, focus on instructing the reader, or mock his behaviour to expose its foolishness.”\n\nReplace hint 3 with “Of the three left, one names a kind of work that uses mockery to criticise, one names a mocking or contemptuous tone, and one names poetry chiefly intended to instruct. Which best describes the poem’s dominant method?”\n\nReplace the B line with “B. didactic: the poem carries a warning, but satirical is the better classification because its dominant method is to expose the driver’s folly through irony and mockery.”",
+      "lane": "codex"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The statements “Metaphor is a single comparison” and “a metaphor is one comparison” are false absolutes. A metaphor can be extended through a whole work. Indeed, allegory is commonly defined as an extended metaphor whose characters, places and objects carry figurative meanings. See the [definitions of allegory](https://www.poetryfoundation.org/education/glossary/allegory) and [metaphor](https://staging.poetryfoundation.org/education/glossary/metaphor).",
+      "fix": "Replace hint 2 with “Metaphor is a comparison that may be brief or extended, while irony depends on a contrast between what appears or is said and what is meant. Now ask which term best describes the poem’s complete animal narrative.”\n\nReplace the A line with “A. metaphorical poem: metaphor is present and may be extended, but allegorical poem is the more precise classification because the complete animal narrative carries a second meaning about human politics.”",
+      "lane": "codex"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The claims \"it closes with hope and determination that Africa will be free\" and \"the final lines turn towards the future and the struggle for freedom\" overstate the text. The closing affirms that Africa and its people remain living and \"imperishable\"; it does not explicitly predict freedom or describe a future struggle. See the [poem text](https://www.library.uneswa.ac.sz/pastpapers/quest/huma/eng/2017/eng114s2017.pdf).",
+      "fix": "Hint 3: Two sad options and one hopeful option remain. Do Neto's final lines present Africa as defeated, or as still living and enduring?\n\nPrinciple: An optimistic ending looks forward with hope. Although Agostinho Neto's The Grieved Lands of Africa describes Africa's suffering under slavery and colonial oppression, it closes by affirming that the grieved lands still live through their living, \"imperishable\" people.\n\nHow to tell: the body of the poem is full of grief, but the final lines say that the grieved lands \"live\" because \"we are living\" and are \"imperishable particles\" of Africa. This turns the ending from sorrow towards endurance and hope.",
+      "lane": "codex"
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 says one option is \"simply the speaker's feeling towards the creatures.\" Since tone means the speaker's attitude or feeling, this identifies D as the non-symbolic option without leaving a real decision for the student.",
+      "fix": "Hint 3: Two options remain: the setting and the tone. Re-read the movement from sunset into darkness and the speaker's reaction when he recognises the bats. Which of the two adds symbolic meaning to the poem?",
+      "lane": "codex"
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The words \"ends unsure whether they were led all that way for 'Birth or Death'\" misreport the ending. The speaker asks that question, but then says the Birth was certain, describes it as like the death of his old life, and finally says, \"I should be glad of another death.\" See the [full poem](https://poets.org/poem/journey-magi/print).",
+      "fix": "How to tell: the speaker, one of the wise men, recalls the hard journey in a plain, conversational voice. He asks whether the journey was for \"Birth or Death\", then explains that the Birth felt like the death of his old life. This ambiguity and plain speech are Modernist features.",
+      "lane": "codex"
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The distractor explanation \"the trees are felled, not replaced by factories, so industry is not the subject\" uses a false test. Industrialisation can damage nature without a factory replacing the trees, and the poem can be read against the background of nineteenth-century development. Environmental degradation is the better answer because it names the poem's direct focus. The [poem itself](https://www.poetryfoundation.org/poems/44390/binsey-poplars) does not state why the trees were felled.",
+      "fix": "A. Industrialization: industrial development may form part of the poem's background, but the poem's direct focus is the human destruction of the natural environment.",
+      "lane": "codex"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The statement that a limerick \"ends with a joke\" presents a common convention as a universal rule. Limericks are characteristically humorous and often end with a punchline, but not every limerick ends with a literal joke.",
+      "fix": "How to tell: count the lines and listen for the rhyme. A typical limerick has five lines, rhymes AABBA, has a bouncy rhythm and often ends with a punchline.",
+      "lane": "codex"
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "fail",
+      "failed_checks": [
+        2,
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "Hint 2 indirectly gives the answer through \"the world outside: hills, rivers, flowers and birds\", which maps immediately to Nature. The distractor explanation \"ordinary people appear in some Romantic poems, but they are not what the movement is known for celebrating\" is also false. Ordinary and rural people were an important concern of English Romanticism, especially in Wordsworth's poetry. Wordsworth explicitly said that he chose \"subjects from common life\" in his [Preface to Lyrical Ballads](https://assets.pubpub.org/8usy9tgezsapugim4tuynuwut7mozi25.pdf).",
+      "fix": "Hint 2: Life and people are broad subjects found in every literary period, so they do not identify Romantic poetry.\n\nHint 3: Beauty and nature can both appear in Romantic poetry. Think of the repeated subjects in Wordsworth, Shelley and Keats, then choose the more specific movement-wide interest.\n\nA. Beauty: Romantic poets valued beauty, but beauty is a broad quality found throughout literature; nature is the more specific feature tested here.\n\nD. People: Romantic poets often wrote about ordinary people, but \"people\" is too broad to be the defining answer here; love of nature is the more specific feature the question tests.",
+      "lane": "codex"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "fail",
+      "failed_checks": [
+        2,
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "Hint 3 gives away B by saying \"a single turning moment in a tragedy, not a long process\" when the two remaining options contrast \"sudden\" with \"gradual\". The claim that peripeteia \"names a moment in the middle of the action\" is also too restrictive; a reversal may occur later in the plot. The definition \"an action meant to bring one result suddenly brings the opposite one\" mistakes Aristotle's Oedipus example for the complete definition. Finally, \"the news reveals that he killed his father and married his mother\" compresses the events inaccurately. The messenger reveals that Oedipus was adopted; this begins the discovery completed through the shepherd's evidence. Aristotle's definition and messenger example appear in [Poetics](https://ioe.ucc.edu.gh/sites/default/files/2023-05/Aristotle.%20The%20Poetics.pdf).",
+      "fix": "Hint 2: The term has nothing to do with jokes or with the ending that explains everything. It names a reversal within the action.\n\nHint 3: You are left with two options about the hero's fortune. Think about whether Aristotle's \"reversal\" describes the hero's whole life story or the point at which events change direction.\n\nPrinciple: Peripeteia is Aristotle's term for a reversal in the plot: the action turns from one state to its opposite, usually changing the hero's fortune from good to bad.\n\nHow to tell: in Sophocles' Oedipus Rex, the messenger comes intending to reassure Oedipus, but reveals that Oedipus was adopted. This begins the discovery of Oedipus's true identity and produces the opposite of the messenger's intended effect. That reversal is the peripeteia.",
+      "lane": "codex"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "“The poem is about that change, not about a real tree and a real building” creates a false either-or. The tree and cathedral can be objects in the poem while also representing the change from an indigenous tradition to a foreign order. “Nothing about them is exaggerated” is also too absolute: “a huge, senseless cathedral of doom” can carry exaggeration, although hyperbole is not the main device represented by the pair.",
+      "fix": "Replace “The poem is about that change, not about a real tree and a real building.” with “The tree and cathedral are objects in the poem, but they also represent the larger change from the people’s tradition to a foreign order.” Replace “C. hyperbolic: nothing about them is exaggerated.” with “C. hyperbolic: although the description of the cathedral may sound exaggerated, the tree and cathedral mainly function as symbols.”",
+      "lane": "codex"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    }
+  ],
+  "fallback_cost_usd": 0
+}

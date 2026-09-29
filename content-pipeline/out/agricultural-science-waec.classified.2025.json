@@ -11,13 +11,13 @@
       "q_number": 2,
       "subtopic_id": "demand-supply.features",
       "confidence": "clear",
-      "note": "tests that irrigation evens out seasonality, the feature named in this subtopic's covers line"
+      "note": ""
     },
     {
       "q_number": 3,
       "subtopic_id": "crop-improvement.aims",
-      "confidence": "clear",
-      "note": "options are all aims of crop improvement (short maturity, resistance etc), so this goes here even though the stem asks why research matters"
+      "confidence": "overlap",
+      "note": "Stem asks why agricultural research matters, which points to development.institutes, but the correct option (short maturity period) and the two distractor patterns (susceptibility, reduced resistance) are aims of crop improvement (early maturity, disease resistance, pest resistance). The crop-improvement.aims covers line has a sorting rule for exactly this case: options that are aims of improving a crop go there even when the stem asks why research matters. But development.institutes's own covers line cites this same question, WASSCE 2025 Q3, as its worked example. The taxonomy contradicts itself on where Q3 belongs; I followed the more specific exception rule."
     },
     {
       "q_number": 4,
@@ -50,6 +50,24 @@
       "note": ""
     },
     {
+      "q_number": 11,
+      "subtopic_id": "soil.water",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "soil.water",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "soil.water",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
       "q_number": 14,
       "subtopic_id": "soil-formation.profile",
       "confidence": "clear",
@@ -58,12 +76,6 @@
     {
       "q_number": 17,
       "subtopic_id": "soil-fertility.nutrients",
-      "confidence": "clear",
-      "note": "starts from a symptom (purple leaves), so it goes here even though the answer is a fertilizer"
-    },
-    {
-      "q_number": 18,
-      "subtopic_id": "irrigation.irrigation",
       "confidence": "clear",
       "note": ""
     },
@@ -83,13 +95,13 @@
       "q_number": 23,
       "subtopic_id": "processing-storage.storage",
       "confidence": "clear",
-      "note": "drying before storage to prevent mould, not the fungal disease itself"
+      "note": ""
     },
     {
       "q_number": 24,
       "subtopic_id": "crop-diseases.bacterial-nematode",
       "confidence": "clear",
-      "note": "blackarm is a bacterial disease of cotton"
+      "note": ""
     },
     {
       "q_number": 25,
@@ -101,7 +113,7 @@
       "q_number": 26,
       "subtopic_id": "crop-diseases.fungal",
       "confidence": "clear",
-      "note": "gummosis is fungal; budding on resistant stock stays with the disease it prevents"
+      "note": ""
     },
     {
       "q_number": 27,
@@ -131,7 +143,13 @@
       "q_number": 33,
       "subtopic_id": "crop-diseases.fungal",
       "confidence": "clear",
-      "note": "sigatoka of banana is fungal, controlled by fungicide"
+      "note": ""
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "weeds.identification",
+      "confidence": "clear",
+      "note": ""
     },
     {
       "q_number": 35,
@@ -143,7 +161,7 @@
       "q_number": 36,
       "subtopic_id": "farm-animals.products",
       "confidence": "clear",
-      "note": "which product comes from a living vs slaughtered animal"
+      "note": ""
     },
     {
       "q_number": 37,
@@ -173,7 +191,7 @@
       "q_number": 41,
       "subtopic_id": "livestock-management.poultry",
       "confidence": "clear",
-      "note": "floor space and stocking arithmetic"
+      "note": ""
     },
     {
       "q_number": 42,
@@ -191,7 +209,7 @@
       "q_number": 44,
       "subtopic_id": "animal-health.fungal-protozoan",
       "confidence": "clear",
-      "note": "coccidiosis (protozoan) and ringworm (fungal) both treated with sulpha drugs; fowl pox (viral, excluded from answer) lives elsewhere"
+      "note": ""
     },
     {
       "q_number": 45,
@@ -218,13 +236,25 @@
       "note": ""
     },
     {
+      "q_number": 49,
+      "subtopic_id": "farm-management.accounts",
+      "confidence": "clear",
+      "note": ""
+    },
+    {
       "q_number": 50,
       "subtopic_id": "marketing.functions",
       "confidence": "clear",
       "note": ""
     }
   ],
-  "taxonomy_findings": [],
+  "taxonomy_findings": [
+    {
+      "kind": "overlap",
+      "where": "development.institutes / crop-improvement.aims",
+      "detail": "The two covers lines contradict each other over the same real question, WASSCE 2025 Q3. development.institutes cites Q3 as its own worked example for why research matters. But crop-improvement.aims carries an explicit exception for stems that ask why research matters when the options are aims of crop improvement such as early maturity, which is exactly Q3's shape (short maturity period, disease susceptibility, pest resistance as options). One of the two citations is wrong and should be removed so the border has a single worked example instead of two that disagree."
+    }
+  ],
   "year": 2025,
   "paper": 1,
   "taxonomy_version": "1.1"

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="290 100 240 575" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+  <!-- Authored by hand, not traced: the diagrams in this subject carry typed labels, which tracing damages.
+       Coordinates follow the original 2025_Q1.png (800x800) with the rejected trace used only as a guide to positions.
+       Nothing omitted as unreadable. -->
+  <title id="t">Pulley system raising a 10kg load</title>
+  <desc id="d">A fixed support at the top, shown with diagonal hatching, holds a hook. Below the hook hangs a block containing two pulleys, one above the other. A single cord loops down from this upper block to a lower block that also contains two pulleys, one above the other, and continues back up between the two blocks. One end of the cord runs off to the upper right, ending in an arrow pointing down and away from the pulleys. The lower block hangs from a short link connected to a trapezoid-shaped load labelled "10kg".</desc>
+  <defs>
+    <!-- the straps are opaque in the original: pulley rims do not show through them -->
+    <mask id="strapMask" maskUnits="userSpaceOnUse" x="290" y="100" width="240" height="575">
+      <rect x="290" y="100" width="240" height="575" fill="white"/>
+      <polygon points="401,171 418,171 414,351 397,351" fill="black"/>
+      <polygon points="393,398 411,398 406,574 388,574" fill="black"/>
+    </mask>
+  </defs>
+
+  <g fill="none" stroke="#E2E8F0" stroke-linecap="round" stroke-linejoin="round">
+    <!-- fixed support -->
+    <line x1="339" y1="129" x2="478" y2="129" stroke-width="3.5"/>
+    <g stroke-width="2.5">
+      <line x1="350" y1="128" x2="359" y2="116"/>
+      <line x1="364" y1="128" x2="373" y2="116"/>
+      <line x1="378" y1="128" x2="387" y2="116"/>
+      <line x1="392" y1="128" x2="401" y2="116"/>
+      <line x1="406" y1="128" x2="415" y2="116"/>
+      <line x1="420" y1="128" x2="429" y2="116"/>
+      <line x1="434" y1="128" x2="443" y2="116"/>
+      <line x1="448" y1="128" x2="457" y2="116"/>
+      <line x1="462" y1="128" x2="471" y2="116"/>
+    </g>
+
+    <!-- hook from support to upper block -->
+    <path d="M413 131 V150 C420 151 421 158 414 159 C407 160 407 166 410 171" stroke-width="2.5"/>
+
+    <!-- pulleys -->
+    <g stroke-width="4" mask="url(#strapMask)">
+      <circle cx="410" cy="221" r="37"/>
+      <circle cx="408" cy="294" r="27"/>
+      <circle cx="402" cy="448" r="26"/>
+      <circle cx="399" cy="522" r="39"/>
+    </g>
+
+    <!-- blocks (straps) -->
+    <polygon points="401,171 418,171 414,351 397,351" stroke-width="3"/>
+    <polygon points="393,398 411,398 406,574 388,574" stroke-width="3"/>
+
+    <!-- cord -->
+    <g stroke-width="3">
+      <!-- outer left: upper large pulley to lower large pulley -->
+      <path d="M373 222 C354 316 348 440 360 524"/>
+      <!-- right: upper small pulley to lower large pulley -->
+      <path d="M430 279 C444 310 448 420 438 522"/>
+      <!-- inner left: upper small pulley to lower small pulley -->
+      <path d="M381 296 C372 340 366 400 376 448"/>
+      <!-- from bottom of upper block to lower small pulley -->
+      <path d="M407 351 C414 368 424 400 428 448"/>
+      <!-- free end (effort) -->
+      <path d="M428 187 C446 194 452 208 458 228 C472 272 492 340 509 428"/>
+      <!-- arrowhead -->
+      <path d="M497 409 L509 429 L513 406"/>
+    </g>
+
+    <!-- link from lower block to load -->
+    <path d="M398 574 C405 576 405 581 400 585" stroke-width="2.5"/>
+
+    <!-- load -->
+    <path d="M304 659 L340 606 Q344 600 352 600 L448 600 Q455 600 459 606 L483 659 Z" stroke-width="3"/>
+  </g>
+
+  <g fill="#E2E8F0">
+    <!-- axles -->
+    <circle cx="409" cy="224" r="2.2"/>
+    <circle cx="407" cy="295" r="2.2"/>
+    <circle cx="401" cy="448" r="2.2"/>
+    <circle cx="398" cy="523" r="2.2"/>
+    <!-- knob on top of load -->
+    <path d="M390 600 L392 587 Q396 583 401 585 L404 600 Z"/>
+    <text x="394" y="644" font-family="Arial, Helvetica, sans-serif" font-size="28" text-anchor="middle">10kg</text>
+  </g>
+</svg>

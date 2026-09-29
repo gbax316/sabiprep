@@ -1,0 +1,1161 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "verified": 37,
+    "agreed-soft": 11,
+    "unsolvable": 2
+  },
+  "verdicts": {
+    "1": {
+      "q_number": 1,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 1,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The diagram shows a 4-pulley block-and-tackle (VR = 4). Load = 10kg x 10 = 100N, so MA = 100/70 = 1.4286. Efficiency = MA/VR x 100% = 1.4286/4 x 100% = 35.7%. The distractor 50.0% would result from wrongly taking VR = 2, ignoring the second pulley pair.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 1,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The block and tackle has four pulleys (two in each block), so VR = 4. MA = load/effort = 100/70 = 1.43, efficiency = 1.43/4 x 100% = 35.7%. 50% would come from wrongly taking VR as about 2.9.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 2,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Work done is the area under the force-displacement graph. From 0-10m, F is constant at 50N giving 500J. From 10-20m, F falls to the marked value of 15N at 20m, giving a trapezoid area of (50+15)/2 x 10 = 325J. Total work = 500 + 325 = 825J. The distractor 750J would come from wrongly assuming F=10N at 20m rather than the marked 15N.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 2,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Work = area under the F-x graph from 0 to 20 m: rectangle 50 x 10 = 500 J plus trapezium (50+15)/2 x 10 = 325 J, total 825 J. 500 J counts only the first 10 m.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Dispersion is the splitting of white light into its constituent colors, which is exactly how a rainbow forms as sunlight is refracted and dispersed by raindrops. Eclipse, shadow and mirage involve blocking of light or refraction due to temperature gradients, not dispersion.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A rainbow forms when water droplets split sunlight into its colours. Eclipses and shadows come from light travelling in straight lines, and a mirage comes from refraction and total internal reflection.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 4,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "White reflects most incident light and heat rather than absorbing it, keeping the wearer cooler on a bright noon day. Black absorbs most radiation and would make the wearer hotter, making it the strongest wrong distractor.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 4,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "White reflects most of the radiant energy that falls on it, so it absorbs the least heat. Black absorbs the most and is the worst choice.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 5,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "When an object is placed between the focus and optical center of a converging lens, the lens acts as a magnifying glass, producing an image that is erect, virtual and magnified. Option A describes the case when the object is beyond 2F (or between F and 2F), which is incorrect here since the object is inside the focal length.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 5,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "An object between the principal focus and the optical centre of a converging lens gives a virtual, erect, magnified image, as in a magnifying glass. A real, inverted, magnified image needs the object between F and 2F.",
+        "solvable": true,
+        "issue": "'center' means the optical centre of the lens."
+      },
+      "extract_anomaly": null
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 6,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "In crossed electric and magnetic fields, a charged particle travels undeflected only when the electric force balances the magnetic force, which occurs at v = E/B; this ratio defines the velocity selector. 'Lorentz ratio' is not a standard term, making it the weaker distractor.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 6,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "In crossed fields, a charge passes through undeflected when qE = qvB, so v = E/B. This arrangement is called the velocity selector. Strictly E/B is the selected velocity, not a 'ratio' name, but none of the other options fits.",
+        "solvable": true,
+        "issue": "The wording is loose: E/B is the velocity that the velocity selector picks out."
+      },
+      "extract_anomaly": null
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 7,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Loudness depends on amplitude, and M has a larger amplitude (1.5cm) than K (0.5cm) at the same frequency, so M is louder than K. Pitch depends on frequency, and since both notes have the same frequency (2000Hz), option C is false.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 7,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Loudness depends on amplitude, and M has the larger amplitude (1.5 cm against 0.5 cm), so M is louder. Pitch depends on frequency, which is the same for both, so C is wrong. A keyboard and a guitar have different timbres.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Period T = 60s/20 = 3s. Using T = 2*pi*sqrt(L/g): 3 = 2(3.14)*sqrt(0.8/g), so sqrt(0.8/g) = 0.4777, giving 0.8/g = 0.2282 and g = 3.5 ms^-2. The other options result from small rounding or arithmetic slips in solving for g.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 8,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "T = 60/20 = 3 s. g = 4 pi^2 L / T^2 = 4 x 9.8596 x 0.8 / 9 = 3.5 m/s^2.",
+        "solvable": true,
+        "issue": "'plant' should read 'planet' and '20 oscillating' should read '20 oscillations'."
+      },
+      "extract_anomaly": null
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 9,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Since both portions are the same liquid with equal mass (2kg each), the final temperature is simply the average of the two temperatures: (61+21)/2 = 41C. No specific heat capacity is needed since it cancels out with equal masses of the same substance.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 9,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Equal masses of the same liquid in a lagged vessel settle at the mean temperature: (61 + 21)/2 = 41 C. 50 C would ignore the heat balance.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 10,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "No diagram or answer options were provided for this question, so the direction of the induced current cannot be determined.",
+        "solvable": false,
+        "issue": "Missing diagram and missing answer options (A-D) for this question; the source material provides neither, so the question cannot be answered.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 10,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "The question asks the reader to pick one of several diagrams, but no diagrams and no options were supplied.",
+        "solvable": false,
+        "issue": "Options and diagrams are missing."
+      },
+      "extract_anomaly": "options-not-in-text"
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "This is the exact statement of the zeroth law of thermodynamics: if two systems are each in thermal equilibrium with a third, they are in thermal equilibrium with each other. The other laws (first, second, third) deal with energy conservation, entropy, and absolute zero respectively, not transitivity of thermal equilibrium.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "This is the zeroth law of thermodynamics, which defines thermal equilibrium and temperature. The first law is about conservation of energy.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 12,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "In a series RLC circuit the peak supply voltage is the phasor sum of VR and (VL - VC), since inductive and capacitive voltages are 180° out of phase: V = sqrt(VR^2 + (VL-VC)^2) = sqrt(3^2 + (6-2)^2) = sqrt(9+16) = 5V. Simply adding all three voltages arithmetically (11V) ignores the phase relationships and is the common wrong-answer trap.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 12,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "In a series RLC circuit the supply voltage is V = sqrt(V_R^2 + (V_L - V_C)^2) = sqrt(3^2 + (6-2)^2) = 5 V. 11 V is the plain arithmetic sum, which ignores the phase differences.",
+        "solvable": true,
+        "issue": "The question sentence is missing. It presumably asked for the peak e.m.f. of the source. The diagram gives R 3V, C 2V, L 6V."
+      },
+      "extract_anomaly": null
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 13,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The distance between successive troughs equals one wavelength, 3.5 cm. Wave speed = 31.5 cm / 1.5 s = 21 cm/s, so frequency = speed/wavelength = 21/3.5 = 6.0 Hz. Using distance between crests and trough (half wavelength) would wrongly give 12 Hz, the likely distractor.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 13,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "lambda = 3.5 cm and v = 31.5/1.5 = 21 cm/s, so f = v/lambda = 6.0 Hz. 9 Hz would come from a slip in the arithmetic.",
+        "solvable": true,
+        "issue": "'triple' should read 'ripples'. Option A '30Hz' is probably '3.0Hz'."
+      },
+      "extract_anomaly": null
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 14,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Using n_A v_A = n_B v_B (both equal c), v_B = v_A(n_A/n_B) = (2.0×10^8)(1.5/1.2) = 2.5×10^8 ms-1, matching option B, and consistent with n_A=1.5 giving c=3.0×10^8 m/s as expected. The stated speed '20 × 10^8 ms-1' is physically impossible (faster than light) and is almost certainly a typo for 2.0×10^8 ms-1 with a dropped decimal point; the intended value and answer are otherwise unambiguous.",
+        "solvable": true,
+        "issue": "The given speed in medium A, 20 × 10⁸ ms⁻¹, exceeds the speed of light and is inconsistent with refractive index 1.5; it is treated as a typo for 2.0 × 10⁸ ms⁻¹, which yields a clean answer matching option B.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 14,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "n v is constant, so v_B = 1.5 x 2.0e8 / 1.2 = 2.5e8 m/s. This matches option B.",
+        "solvable": true,
+        "issue": "The given speed '20 x 10^8' must be a typo for 2.0 x 10^8 m/s. Taken literally it would give 2.5 x 10^9, which is not among the options."
+      },
+      "extract_anomaly": null
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 15,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Frequency f = v/λ = 360/600 = 0.6 Hz, so period T = 1/f = 1/0.6 = 1.667 s. Option A (60s) mistakenly uses λ/v inverted with wrong units, and this is the correct direct computation.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 15,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "T = lambda/v = 600/360 = 1.667 s. 0.167 s is out by a factor of ten.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 16,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A lever with the effort applied between the load and the fulcrum is a class 3 lever, exemplified by sugar tongs (fulcrum at the bend, effort applied by the fingers in the middle, load held at the tips). Pliers are a class 1 lever (fulcrum between load and effort) and a wheelbarrow is a class 2 lever (load between fulcrum and effort), so both are wrong classifications for this arrangement.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 16,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Sugar tongs are a third-class lever, with the effort between the fulcrum and the load. Pliers are first class and a wheelbarrow is second class.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 17,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The 3Ω and 2Ω resistors are in parallel, and this combination is in series with the 6Ω resistor, so 1.5A is the total current through the parallel combination. By the current divider rule, current through the 3Ω resistor = 1.5 × (2/(3+2)) = 0.6A. Mistakenly dividing 1.5A using the 3Ω resistor's own value in the numerator would give the wrong distractor 0.9A.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 17,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The 6 ohm resistor is in series with the 3 ohm and 2 ohm resistors in parallel, so the full 1.5 A splits between them. Current in 3 ohm = 1.5 x 2/(3+2) = 0.60 A. 0.90 A is the share through the 2 ohm resistor.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 18,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The parallel combination of 3Ω and 2Ω gives (3×2)/(3+2) = 1.2Ω, so total external resistance = 1.2 + 6 = 7.2Ω. Terminal p.d. = I × R_total = 1.5 × 7.2 = 10.8V, since the terminal voltage equals the voltage across the entire external circuit when internal resistance is not indicated.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 18,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "External resistance = 6 + (3x2)/(3+2) = 7.2 ohm, so terminal p.d. = I R = 1.5 x 7.2 = 10.80 V. 7.20 V is the resistance value, not the voltage.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 19,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The nucleus is centrally located (I), is positively charged due to protons (III), and decays when unstable (IV) — all true. Statement II is false because the nucleus contains only nucleons (protons and neutrons), not electrons, which orbit outside the nucleus.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 19,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The nucleus is at the centre of the atom, is positive because of its protons, and decays when it is unstable. Statement II is false because electrons are outside the nucleus.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 20,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The mass decays from 16g to 1g, a factor of 16 = 2^4, meaning exactly 4 half-lives have elapsed in 40 days. Half-life = 40/4 = 10.0 days.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 20,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "16 g to 1 g is 16 -> 8 -> 4 -> 2 -> 1, which is 4 half-lives. Half-life = 40/4 = 10 days.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 21,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Perforated (porous) pads absorb sound energy instead of reflecting it, cutting down repeated reflections that cause reverberation. They do not increase intensity or loudness (they absorb energy) and do not alter frequency, so those options are wrong.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 21,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Perforated or porous pads absorb sound, which cuts down repeated reflections (reverberation). They do not raise the loudness or change the frequency.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 22,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "At the lowest point, tension supplies both the centripetal force and support against gravity: T = mg + mv²/r = (10×10) + (10×5²/1.2) = 100 + 208.3 = 308.3 N. Options that omit the mg term or use wrong radius/speed give the smaller distractor values.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 22,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "At the lowest point T - mg = mv^2/r, so T = 100 + 10 x 25/1.2 = 100 + 208.3 = 308.3 N. 208.3 N leaves out the weight.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 23,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A normal near point is about 25 cm; a near point farther away (30 cm) means the eye cannot focus on close objects, which is long-sightedness (hypermetropia). Myopia is the opposite defect (cannot see distant objects clearly), so it is wrong.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 23,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "A near point of 30 cm is farther than the normal 25 cm, so near objects are hard to see, which is long sight (hypermetropia). Presbyopia also moves the near point outward, but it is an age-related condition and nothing in the stem mentions age.",
+        "solvable": true,
+        "issue": "Presbyopia is somewhat defensible."
+      },
+      "extract_anomaly": null
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "White light results from combining the three primary colours red, green and blue (II), from combining the three secondary colours magenta, yellow and cyan which together contain each primary twice (I), and from a secondary colour with its complementary primary such as magenta and green (III). Yellow, red and green (IV) contains no blue component, so it cannot form white light.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Red + blue + green give white. Magenta + green are complementary, so they give white. Magenta + yellow + cyan together contain all three primaries, so additive mixing gives white. Yellow + red + green has no blue, so IV fails.",
+        "solvable": true,
+        "issue": "'While' should read 'White'. Statement I holds only for additive mixing of lights. Mixing them as pigments gives black, which would point towards D."
+      },
+      "extract_anomaly": null
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 25,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "The diagram shows a mirror curved outward (convex) toward the incident rays, with rays striking it from many directions and diverging widely after reflection. A convex mirror's diverging reflection gives a wide field of view with a diminished image, which is exactly why it is used as a surveillance mirror; a make-up mirror or microscope reflector instead needs a concave (converging) mirror.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 25,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "The hatching is on the upper, outer side of the curve, so the reflecting face bulges towards the incoming light. That makes it a convex mirror, and the reflected rays diverge. Convex mirrors give a wide field of view, so they are used as surveillance (and driving) mirrors. Make-up mirrors and microscope reflectors are concave.",
+        "solvable": true,
+        "issue": "Option D 'depressing mirror' looks garbled, possibly from 'driving mirror', which would also be convex and would compete with A."
+      },
+      "extract_anomaly": null
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 26,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Particles located between two adjacent nodes (i.e., within the same segment) all vibrate in phase with each other, only with different amplitudes; particles in neighbouring segments (separated by a node) are the ones out of phase. So statement A is the false one, while C correctly states particles between adjacent nodes are in phase.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 26,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "All particles between two adjacent nodes vibrate in phase, so A is the false statement. B, C and D are true properties of stationary waves.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 27,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A pipe closed at one end only supports odd harmonics (1st, 3rd, 5th, ... of the fundamental) because a node must exist at the closed end and an antinode at the open end. Even multiples are not possible in this configuration, ruling out options B and C.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 27,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A pipe closed at one end supports only odd harmonics (f, 3f, 5f...), so its overtones are odd multiples of the fundamental. All integer multiples belong to an open pipe.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 28,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "512 g halves successively: 512→256→128→64 g, which is three halvings, so n = 3. Since 2^3 = 8 and 512/64 = 8, this confirms 3 half-lives, not 8 as a distractor might suggest by misreading the ratio itself as the count.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 28,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "512/64 = 8 = 2^3, so 3 half-lives have passed. 8 is the ratio, not the number of half-lives.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 29,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Destructive interference occurs when waves arrive out of phase by half a wavelength (or an odd multiple of it), causing crest to meet trough. A full wavelength path difference (option A) instead gives constructive interference since the waves are back in phase.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 29,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Destructive interference happens when the path difference is an odd multiple of half a wavelength. A path difference of one wavelength gives constructive interference.",
+        "solvable": true,
+        "issue": "'interface' should read 'interfere'."
+      },
+      "extract_anomaly": null
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 30,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A step-up transformer increases voltage, which requires more turns on the secondary coil than the primary, i.e., fewer turns in the primary than in the secondary. Equal turns (option C) would give no voltage change, and coil separation (option D) is irrelevant to stepping up voltage.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 30,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A step-up transformer has fewer turns on the primary than on the secondary (Ns > Np). Option B describes a step-down transformer.",
+        "solvable": true,
+        "issue": "Option A repeats 'than in the primary coil' by mistake. The meaning is still clear."
+      },
+      "extract_anomaly": null
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 31,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "The SI unit of magnetic flux density is the tesla (T), defined as one weber per square metre. Watt (power), newton per metre, and coulomb (charge) are units of unrelated quantities.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 31,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Magnetic flux density is measured in tesla (Wb/m^2). 'Walt' is probably a garbled 'watt' or 'weber'. The weber is the unit of flux, not flux density.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 32,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Household electricity meters record the total electrical energy consumed over time, measured in kilowatt-hours, since customers are billed for energy used, not instantaneous power. Power or voltage alone would not reflect cost of consumption over a period.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 32,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "House meters measure the electrical energy used, in kWh, and that is what is billed. Power is only the rate of use.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 33,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A dry Leclanche cell produces electrical energy through internal chemical reactions, so the energy is stored chemically before use. It is not stored as electrical, nuclear, or thermal energy while at rest.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 33,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "A Leclanche cell stores chemical energy and turns it into electrical energy when it is used.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "A microphone converts sound waves (pressure variations) into an electrical signal, the reverse of what a loudspeaker does. Option A describes a loudspeaker's function, not a microphone's.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "A microphone turns sound energy into electrical signals. A loudspeaker does the reverse.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 35,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The elapsed time from 1300 hours to 1700 hours GMT is 4 hours, during which the sample decayed to 1/16 of its original amount, i.e. (1/2)^4, meaning 4 half-lives occurred in 4 hours. Therefore each half-life is 1 hour.",
+        "solvable": true,
+        "issue": "The initial time is given as '13100 hour GMT', which appears to be a typo for 1300 hours; interpreted as such since it gives a consistent, sensible answer.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 35,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "1/16 = (1/2)^4, so 4 half-lives have passed. Reading the start time as 1300 hours gives 4 hours from 1300 to 1700, so the half-life is 1 hour. 4 hours would be the total time elapsed.",
+        "solvable": true,
+        "issue": "'13100 hour' is garbled. I assumed it means 1300 hours."
+      },
+      "extract_anomaly": null
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A rocket propelled into space works by expelling exhaust gases downward (action), which pushes the rocket upward (reaction), a direct illustration of Newton's third law. The other options describe motion under applied or frictional forces without highlighting an explicit action-reaction pair.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A rocket moves by action and reaction: it pushes exhaust gases backward and the gases push the rocket forward. That is Newton's third law. An accelerating car mainly illustrates the second law.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 37,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Power equals force times velocity, so halving both force and velocity gives P_new = (F/2)(v/2) = FV/4, a quarter of the original power, i.e. reduced by three-quarters (to a quarter of its value). This matches option B, 'reduced by a quarter' meaning to a quarter of the original.",
+        "solvable": true,
+        "issue": "Option B's wording 'reduced by a quarter' is ambiguous between 'reduced to a quarter' and 'reduced by 25%', but given the physics (P scales to FV/4) and standard WAEC phrasing conventions, it is intended to mean the power becomes a quarter of its original value.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 37,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "P = Fv, so halving both gives P/4. Option B is the only one that fits this. Read literally, 'reduced by a quarter' would mean 3P/4.",
+        "solvable": true,
+        "issue": "The option is worded loosely. It should say 'reduced to a quarter'."
+      },
+      "extract_anomaly": null
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 38,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "For an inclined plane, velocity ratio = 1/sin(theta) = 1/sin45° = 1/0.7071 ≈ 1.41. This is the standard formula for the mechanical velocity ratio of an inclined plane.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 38,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "VR = 1/sin(theta) = 1/sin 45 = 1.41. 0.71 is sin 45 itself.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 39,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "When a lift and its contents fall freely with acceleration equal to g, the apparent weight (normal reaction) becomes zero, so the body experiences weightlessness. This differs from cases of upward or downward acceleration less than g, which only reduce or increase apparent weight.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 39,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "When the lift accelerates down at g, the reaction is R = m(g - a) = 0, so the body is weightless. 'Less than its weight' applies when a < g.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 40,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "By Bernoulli's principle, for a fluid in steady flow, pressure and velocity are inversely related along a streamline (P + 1/2 ρv^2 = constant), so an increase in pressure corresponds to a decrease in velocity. This is the basis of many fluid flow phenomena such as flow through constrictions.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 40,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "By Bernoulli's principle, for a fluid in steady flow, higher pressure goes with lower speed. So the velocity decreases.",
+        "solvable": true,
+        "issue": "The stem is terse and ungrammatical. It is presumably a Bernoulli question about flowing oil."
+      },
+      "extract_anomaly": null
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 41,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "For ¹⁴₆C, the mass number (14) is protons plus neutrons, and the atomic number (6) is the proton count, so neutrons = 14 - 6 = 8. Option A (6) is the proton count, a common mix-up but incorrect for neutrons.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 41,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Neutrons = A - Z = 14 - 6 = 8. 6 is the proton number.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 42,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Using the linear resistance-temperature relation R_θ = R0 + (θ/100)(R100 - R0) = 12.0 + (10/100)(20.0 - 12.0) = 12.0 + 0.8 = 12.8 Ω. Options A and B are duplicated in the source (both 12.8 Ω); the computed value clearly rules out C (13.2 Ω) and D (13.4 Ω).",
+        "solvable": true,
+        "issue": "Options A and B are identical (both 12.8 Ω) in the supplied question text; the correct numeric answer is 12.8 Ω.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 42,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "R = 12 + (20 - 12) x 10/100 = 12.8 ohm. This matches both A and B.",
+        "solvable": true,
+        "issue": "Options A and B are identical (12.8 ohm), so the key could be either letter. I chose A."
+      },
+      "extract_anomaly": null
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 43,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Alpha decay reduces the mass number by 4 and the atomic number by 2: 226-4=222 and 88-2=86, giving ²²²₈₆X. Option B keeps the atomic number unchanged (88), which would violate conservation of charge/nucleon number in alpha emission.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 43,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Alpha emission lowers A by 4 and Z by 2: 226 - 4 = 222 and 88 - 2 = 86. So X is 222/86 (radon).",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 44,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "λ = h/(mv) = 6.67×10⁻³⁴ / (0.0025 × 250) = 6.67×10⁻³⁴ / 0.625 = 1.07×10⁻³³ m by direct calculation, which shares the mantissa of option C (1.07×10⁻³⁴m) but differs by a factor of ten in the exponent from all listed options.",
+        "solvable": true,
+        "issue": "Direct computation gives 1.07×10⁻³³ m, an order of magnitude away from every option; option C matches the mantissa exactly, suggesting a printed exponent error in the source, so the intended answer is likely C despite the mismatch.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 44,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "lambda = h/(mv) = 6.67e-34 / (0.0025 x 250) = 6.67e-34 / 0.625 = 1.07e-33 m. Option C has the right mantissa, 1.07, but the exponent is -34, one power of ten off.",
+        "solvable": true,
+        "issue": "The options appear to have an exponent typo (1.07 x 10^-34 against the correct 1.07 x 10^-33). The constant listed as 'c = 1.6e-19 C' is not needed."
+      },
+      "extract_anomaly": null
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 45,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "No answer options were provided for this question, so a single correct letter cannot be selected.",
+        "solvable": false,
+        "issue": "Answer options A-D are missing from the source for this question.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 45,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "F = qvB = 1.6e-19 x 5.0e5 x 0.25 = 2.0e-14 N, but no options were supplied to choose from.",
+        "solvable": false,
+        "issue": "Options are missing. Also, '90 ℃' should read 90 degrees (angle) and the charge unit is printed as C^-1."
+      },
+      "extract_anomaly": "options-not-in-text"
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 46,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Rays that appear to spread out from (originate at) a single point form a divergent beam. A convergent beam instead moves toward a point, which is the opposite behavior described.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 46,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Rays that spread out as if coming from a point make a divergent beam. A convergent beam meets at a point.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 47,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A sound made of many unrelated frequencies superimposed with no fixed pattern is defined as noise, unlike a musical note which has a fundamental frequency plus related harmonics. Harmonics (A) specifically refers to related, not unrelated, frequency components.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 47,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Noise is an irregular mixture of many unrelated frequencies. A note has a regular frequency with related harmonics.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 48,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "At uniform velocity the applied force equals frictional force, so F = 200 N; normal reaction N = mg = 80×10 = 800 N. Coefficient of friction μ = F/N = 200/800 = 0.25, matching option A.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 48,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "At uniform velocity, friction equals the applied force: mu = F/(mg) = 200/800 = 0.25. 0.40 has no basis in the data.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 49,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The ability of a metal to be drawn into thin wires is ductility, a property platinum has to a high degree. Malleability (D) instead refers to being hammered/rolled into sheets, not drawn into wires.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 49,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Ductility is the ability to be drawn into wires. Malleability is the ability to be hammered into sheets.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 50,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The SI unit of inductance is the Henry, named after Joseph Henry. Farad (B) is the unit of capacitance, a common confusion but incorrect here.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 50,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Inductance is measured in henry (H). The farad is the unit of capacitance.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    }
+  }
+}

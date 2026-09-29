@@ -1,0 +1,488 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "fail",
+      "failed_checks": [
+        2,
+        8
+      ],
+      "fact_error": true,
+      "notes": "Check 2: Hint 3 says, “A pun plays on meaning rather than on sound. Test the option left over”. Hint 2 has already ruled out A and C, so this rules out D and directs the student to the only remaining option. Check 8: Hint 1 says, “vowel sounds (a, e, i, o, u)”. These are vowel letters, not the full set of English vowel sounds. Hint 3 also says, “A pun plays on meaning rather than on sound.” This is false because a pun can depend on two words that sound alike.",
+      "fix": "Replace Hint 1 with: “English speech sounds can be grouped as vowel sounds and consonant sounds. Focus on which kind of sound the question says is repeated.”\n\nReplace Hint 3 with: “Of the two options left, one is based on a repeated vowel sound and one on a double meaning or a sound-alike word. In ‘the light of the fire is high’, what feature links ‘light’, ‘fire’ and ‘high’?”",
+      "lane": "codex"
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 says, “Centre stage is the middle of the acting area, which is hidden when the curtain is closed. Which remaining term names the front part of the stage”. Hint 2 has already eliminated backstage and balcony, so this eliminates centre stage and explicitly directs the student to the remaining answer.",
+      "fix": "Replace Hint 3 with: “Of the two stage terms left, one names the middle of the acting area and the other is associated with the front edge of a traditional stage. Use the curtain and the audience as your landmarks: which position does the stem describe?”",
+      "lane": "codex"
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Hint 3 says, \"Impunity means acting as if you will never be punished.\" Impunity is freedom or exemption from punishment, not merely behaving as though punishment will not occur.",
+      "fix": "Impunity means freedom from punishment, and nothing in the lines suggests wrongdoing that could be punished. Of the two options left, do the lines show her love for the men, or a strong belief in herself?",
+      "lane": "codex"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "fail",
+      "failed_checks": [
+        11
+      ],
+      "fact_error": true,
+      "notes": "The solution states the syllabus comparison as a universal fact: \"Each genre is divided into units. Prose is divided into chapters, drama into acts and scenes, and poetry into stanzas\" and later, \"a chapter is a main division of prose.\" Not every prose work has chapters, not every play has acts and scenes, and not every poem is divided into stanzas. The examiner's analogy should be taught with appropriate scope.",
+      "fix": "Longer prose works such as novels are often divided into chapters, plays may be divided into acts and scenes, and poems may be arranged in stanzas. A stanza is a group of lines that forms a section of a poem. In this analogy, a stanza does in a poem what a chapter does in a novel: it marks off a main section.\n\nHow to tell: a chapter is a main division of a longer prose work such as a novel. The matching main division of a poem is the stanza.\n\nExam tip: in 'A is to B as C is to D' questions, state the link in the first pair as a short sentence ('a chapter is a main section of a longer prose work such as a novel'), then test each option with the same sentence.",
+      "lane": "codex"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The statements \"Two options give nature a living quality\" and \"C. fallacy: read as pathetic fallacy\" incorrectly treat \"fallacy\" as another name for \"pathetic fallacy\". A fallacy is an error in reasoning; it does not attribute feelings to nature.",
+      "fix": "Hint 3: Decide between an error in reasoning and a figure that makes the sea act like a living creature. Does \"eats\" present faulty logic, or make the sea seem alive?\n\nC. fallacy: a fallacy is an error in reasoning; the title is figurative language, not a faulty argument.",
+      "lane": "codex"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The explanation \"a moralistic speaker preaches about good manners and right conduct in general\" defines moralistic too narrowly. A moralistic tone makes moral judgments or lectures people about right and wrong; it is not specifically about good manners or necessarily about conduct in general.",
+      "fix": "C. moralistic: a moralistic tone makes moral judgments or lectures people about right and wrong; here, the dominant tone comes from the speaker's outrage at cruelty and theft.",
+      "lane": "codex"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The solution moves from uncertainty to certainty: \"what he longs for may not happen\" becomes \"He knows his longing will not be met in reality.\" The latter claim is not supported by the poem and contradicts the earlier qualifier. The speaker is uncertain about seeing Alberta again; he does not know that it will never happen.",
+      "fix": "How to tell: the speaker can hold Alberta only while 'dreaming', and he calls the experience a 'delusion' and a 'mirage', which present it as imagined rather than physically present. The poem also opens with 'I know not' when he will see her again. He doubts that his longing will be met in reality, which gives the lines a gloomy, uncertain note.",
+      "lane": "codex"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "fail",
+      "failed_checks": [
+        12
+      ],
+      "fact_error": false,
+      "notes": "The hints disclose the answer to sibling question 34. Hint 1 asks \"who would need to argue that he is as good a match as another man\", hint 2 says \"The speaker talks about his own love and his own right\", and hint 3 calls him \"a young man pleading his own case.\" Together, these reveal that the speaker is defending his right.",
+      "fix": "Hint 1: Focus on two clues in the speech: the title 'my lord' and the repeated comparison with 'he'. Work out the relationship among those three people.\nHint 2: The words 'my lord' point to the listener's rank, while 'he' points to the speaker's rival. Test each option against both clues.\nHint 3: Of the pairs left, which has one of Hermia's suitors speaking to the ruler of Athens?",
+      "lane": "codex"
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11,
+        12
+      ],
+      "fact_error": true,
+      "notes": "Hint 2 says \"a claim is argued before a ruler\", which gives away sibling question 34's answer that the speaker is defending his right. The solution also makes two false universal claims: \"The scenes about law, marriage choices and the Duke's judgement belong to Athens\" and \"The scenes of fairy magic belong to the wood.\" Theseus makes a marriage ruling while in the wood in Act 4 Scene 1, and the fairies visit the palace in Act 5. \"this is the setting of the fairy scenes from Act 2 onward\" repeats the overstatement. \"plan to escape to the wood\" is also imprecise because the wood is their meeting point on the way out of Athens, not their final destination.",
+      "fix": "Hint 2: This speech occurs before the lovers enter the wood. Decide which of the play's main locations contains the Duke's palace.\n\nA Midsummer Night's Dream opens at Duke Theseus's palace in Athens and later moves to a wood near the city. This speech belongs to the opening palace scene, before the lovers enter the wood.\n\nHow to tell: this speech comes from Act 1 Scene 1. Egeus brings his complaint to Theseus at the palace, and Lysander answers him there. After the hearing, Lysander and Hermia plan to meet in the wood and then flee Athens.\n\nC. a wood near Athens: much of the lovers' confusion and the fairy action occurs there, but this opening hearing takes place at Theseus's palace.",
+      "lane": "codex"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The claim \"the mistakes with the love-juice come later, and they are put right in Acts 3 and 4, not here\" is inaccurate. Puck makes the relevant mistake later in Act 2 by charming Lysander, and Puck corrects it in Act 3. Titania's enchantment, removed in Act 4, was deliberate rather than a mistake. See [Folger, Act 2 Scene 2](https://www.folger.edu/explore/shakespeares-works/a-midsummer-nights-dream/read/2/2/) and [Folger, Act 3 Scene 2](https://www.folger.edu/explore/shakespeares-works/a-midsummer-nights-dream/read/3/2/).",
+      "fix": "D. reversing his mistake: Oberon is deliberately enchanting Titania here, not reversing a mistake. Puck mistakenly charms Lysander later in Act 2, and that error is corrected in Act 3.",
+      "lane": "codex"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "fail",
+      "failed_checks": [
+        11
+      ],
+      "fact_error": true,
+      "notes": "The absolute claim \"Nobody who wants to forgive someone, or who needs their love, wishes this on them\" is not literally true because people can have mixed motives. It also changes the meaning of \"the need to love\" to needing another person's love.",
+      "fix": "Look at the creatures listed: a lynx, a bear, a leopard, a boar with bristled hair, and 'some vile thing'. This does not suggest forgiveness or a need to love. Ask which remaining motive best fits what the speaker wants the sleeper to suffer.",
+      "lane": "codex"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The sequence \"Oberon uses the love-juice first on his own queen, Titania... He then sends Puck\" is wrong. Oberon orders Puck to seek the Athenian man before Oberon applies the juice to Titania, although Titania is the first person actually anointed. See [Folger, Act 2 Scene 1](https://www.folger.edu/explore/shakespeares-works/a-midsummer-nights-dream/read/2/1/) and [Folger, Act 2 Scene 2](https://www.folger.edu/explore/shakespeares-works/a-midsummer-nights-dream/read/2/2/).",
+      "fix": "Oberon uses the love-juice on his own queen, Titania, as revenge in their quarrel. Before doing so, he orders Puck to use it on an Athenian man; Puck later charms the wrong man, causing the mix-ups among the young lovers.",
+      "lane": "codex"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The line \"D. Thisby: she is a character in the workmen's play, acted by Flute\" treats the misspelled option as the character's name. The character is Thisbe. See [Folger, Act 1 Scene 2](https://www.folger.edu/explore/shakespeares-works/a-midsummer-nights-dream/read/1/2/).",
+      "fix": "D. Thisby: this refers to Thisbe, a character in the workmen's play who is acted by Flute and has no part in this scene.",
+      "lane": "codex"
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "fail",
+      "failed_checks": [
+        1,
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 1 says 'Think about the name for the speech that opens a play and explains what is coming.' That is a periphrastic definition of 'Prologue' itself, which is option D's exact text, so it names the answer in disguise rather than orienting attention to a feature of the passage (contrast the worked example's hint 1, which points to features to examine, not a definition matching one option). It also fails the hint-1 test: it would not help on a different characters question, since it is tailored to this one answer. Hint 3 compounds this: 'Ask which option names the one who stands outside the story and speaks to the audience about it' is again the definition of Prologue, so a student who knows the term can answer from hint 3 alone without thinking, which is exactly the failure case the standard names. Hint 2 ('He is not appearing as a character inside the story of the two lovers') already eliminates all three distractors at once, leaving hints 1 and 3 nothing to do but restate the answer's definition.",
+      "fix": "hint1: Notice that Quince is naming and describing every other player in these lines, this man, this beauteous lady, and so on. Ask what part Quince himself is playing while he is doing that describing.\nhint2: Wall is the workman with lime and rough-cast, and Lion is the workman in the beast skin who roars later in the same speech, both are parts played inside the lovers' story by other men Quince points to.\nhint3: Narrow to Moonshine and the one saying these lines. Moonshine carries a lantern, dog and bush of thorn, and Quince carries none of those as he speaks. So which part is left for him?",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.5182,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) web search: ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/us"
+    }
+  ],
+  "fallback_cost_usd": 0.5182
+}

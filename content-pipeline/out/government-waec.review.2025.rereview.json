@@ -1,0 +1,150 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "Hint 2 violates the separate hint rule that it must not state the answer indirectly. The words \"The media's most important governance role is linked to accountability: making leaders answer to the people for what they do\" closely restate option A. The solution also makes the false absolute claim that \"a media that serves one party cannot hold the whole government to account\". A partisan outlet may still scrutinise a government, although its coverage may not be impartial.",
+      "fix": "Replace hint 2 with: \"Compare roles that serve citizens generally with roles that promote a particular party. Which kind better supports democratic governance?\"\n\nReplace the D line with: \"D. advancing the political ideology of parties: this is partisan work for a political party rather than the media's general democratic role of informing citizens and scrutinising those in power.\"",
+      "lane": "codex"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The claim \"job cuts reduce capacity rather than build it\" is an unscoped generalisation. Removing unnecessary posts can sometimes improve efficiency without reducing a corporation's productive capacity. The better reason is that job cuts alone do not address the weaknesses identified in the solution.",
+      "fix": "Replace the C line with: \"C. direct control by government and job cuts: too much government interference can worsen poor performance, while job cuts alone do not fix outdated equipment, weak management or obsolete methods.\"",
+      "lane": "codex"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 gives away the choice through the words \"which one weighs a strength against a weakness, as a critical lesson should?\" Option B is the only remaining option whose wording contains both a benefit and a risk, so the student can select it by its sentence structure without applying knowledge of nationalism.",
+      "fix": "Replace hint 3 with: \"Compare the remaining claims with what nationalism did in West Africa and with how a strong national identity can affect different groups within a state. Which claim is supported by both parts of that evidence?\"",
+      "lane": "codex"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "fail",
+      "failed_checks": [
+        10
+      ],
+      "fact_error": false,
+      "notes": "The wording “A constitution limits power rather than exists to protect one arm's power” and “a constitution limits the executive's power rather than exists to protect it” is ungrammatical and may make a student stumble.",
+      "fix": "Hint 2: “A constitution limits power; it does not exist to protect the power of one arm of government. Encouraging reforms is about change, which pulls against predictability and stability.” Why not B: “B. protects the executive powers: a constitution limits executive power; it does not exist merely to protect it.”",
+      "lane": "codex"
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The claim “members are neighbours that share borders” is inaccurate. ECOWAS members are in the same region, but they do not all border one another, and Cabo Verde is an island state.",
+      "fix": "“C. geographical isolation: ECOWAS members are West African states in the same region, and many share borders; geographical isolation would separate states rather than bind them.”",
+      "lane": "codex"
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "fail",
+      "failed_checks": [
+        2,
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "Check 2: Hint 3 asks “Which of the two helps citizens take part in it?”, which is a near-direct paraphrase of “facilitating citizen engagement” and makes the choice without requiring further thought. Checks 8 and 11: “civil society organisations work mainly through lawful means such as advocacy and peaceful protest, not by deliberately breaking the law” is too categorical. Some civil society organisations use or encourage peaceful civil disobedience, although it is not their broad or usual contribution to democratic governance.",
+      "fix": "Hint 3: “Two options remain. Compare their scope: is the question asking for one possible tactic or for the general role civil society plays in a democracy?” How to tell: “the question asks for the broadest contribution. Facilitating citizen engagement and activism covers the many ways civil society helps people take part in public affairs.” Why not B: “B. encouraging civil disobedience: some civil society organisations may use peaceful civil disobedience, but it is not their broad or usual contribution to democratic governance.”",
+      "lane": "codex"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    }
+  ],
+  "fallback_cost_usd": 0
+}

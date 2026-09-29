@@ -1,0 +1,476 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "To three significant figures, 0.0364891 rounds to 0.0365 because the next digit is 8. In standard form this is 3.65 × 10⁻²; option C incorrectly truncates instead of rounding.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "21₅ = 2(5) + 1 = 11, while 14ₓ = x + 4. Hence x + 4 = 11, giving x = 7; the other values do not make the numerals equal.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "√200 = 10√2 and √72 = 6√2. Their difference is 4√2, whereas 8√2 would result from simplifying √72 incorrectly.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Interpreting the expression as 2logₓ((1 − √x)/√x) = 0, the logarithm must be zero, so its argument equals 1. Thus 1 − √x = √x, giving √x = 1/2 and x = 1/4; option A confuses x with √x.",
+      "solvable": true,
+      "issue": "The logarithm notation is garbled, but the standard interpretation leads unambiguously to option B.",
+      "lane": "codex"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "3 − 2x − x² = (x + 3)(1 − x), since expansion gives 3 − 3x + x − x². Option A instead expands to x² − 2x − 3, which has different signs.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Inverse-square variation requires enough paired values to determine the constant and a clearly stated unknown to calculate. The question ends after “If P, = 1.8” and therefore supplies neither a complete condition nor the requested quantity.",
+      "solvable": false,
+      "issue": "The question text is incomplete after “If P, = 1.8”.",
+      "lane": "codex"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Taken literally, 2 ≤ x ≥ 6 means x ≥ 6, which makes M = {6,7,8,9,10}; then M′ ∩ N′ = {1,2,3}, absent from the options. If the first condition was intended to be 2 ≤ x ≤ 6, the result would instead be option C, so correcting the text would change the answer.",
+      "solvable": false,
+      "issue": "The definition of M is garbled as “2 ≤ x ≥ 6”; its literal result is not among the options.",
+      "lane": "codex"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "“If and only if” is represented by the biconditional symbol ⇔. Since q means the sun is shining and p means the weather is warm, the statement is q ⇔ p; the negated alternatives do not directly represent the given sentence.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The equation factors as (d − 12)(d + 8) = 0 because −12 × 8 = −96 and −12 + 8 = −4. Therefore d = 12 or d = −8; option D has the signs attached to the wrong magnitudes.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The numerator contains the malformed term “5/2 1,” and the denominator “12 − 11 ¾” does not identify the intended mixed numbers reliably. Different plausible reconstructions give different values, so no option can be selected without guessing.",
+      "solvable": false,
+      "issue": "The mathematical expression is garbled, especially “5/2 1” and “12 − 11 ¾”.",
+      "lane": "codex"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The operator between (x⁻ⁿ)⁴ and 1/x⁶ is missing, so no complete relation is stated. If equality was intended, comparing x⁻⁴ⁿ = x⁻⁶ would give n = 3/2, but that cannot be assumed from the text supplied.",
+      "solvable": false,
+      "issue": "A relation sign, presumably '=', is missing between the two expressions.",
+      "lane": "codex"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Factorizing gives x² + 4xy + 3y² = (x + y)(x + 3y). Substitution gives 1 × 5 = 5; option D incorrectly treats the result as 5².",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Since log₄16 = 2, log_y36 must also equal 2. Therefore y² = 36, and the valid positive logarithmic base is y = 6; −6 cannot be a real logarithmic base.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "NONE",
+      "confidence": "certain",
+      "reasoning": "At a 4% loss, ₦105,000 represents 96% of the cost price. Thus the cost price is ₦105,000 ÷ 0.96 = ₦109,375, which is absent from the options as written.",
+      "solvable": false,
+      "issue": "No option equals ₦109,375; option D appears typographically corrupted as ₦1098,375.00.",
+      "lane": "codex"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "If P is the original population, then P(1.02)² = 83,232. Hence P = 83,232 ÷ 1.0404 = 80,000, so rounding does not change it; 81,000 would produce a larger final population.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "From T₃ = a + 2d = 9 and T₉ = a + 8d = −27, subtracting gives 6d = −36, so d = −6. Therefore T₅ = T₃ + 2d = 9 − 12 = −3; option D is the common difference, not the fifth term.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Rearranging gives c/r = 1/p − b/t = (t − pb)/(pt). Taking the reciprocal and multiplying by c gives r = pct/(t − pb); the plus-sign alternative results from subtracting the fractions incorrectly.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "For spheres, volume is proportional to r³, and 1.6:5.4 = 8:27, so the radii are in the ratio 2:3. Surface area is proportional to r², giving 4:9; 2:3 is only the radius ratio.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "The cost price is $500 ÷ 1.08. For a 16% profit, the new price is ($500 ÷ 1.08) × 1.16 = $537.037…, which rounds to $537.04; $580 incorrectly applies 16% directly to the former selling price.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The curved surface area of a cylinder is 2πrh. Thus 2 × 22/7 × 8 × 14 = 704 cm²; 352 cm² results from omitting the factor of 2.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "NONE",
+      "confidence": "certain",
+      "reasoning": "A diagonal of 10 cm gives side length 10/√2 = 5√2 cm, so the perimeter is 20√2 cm. However, all four answer options are blank, so no option letter can be selected.",
+      "solvable": false,
+      "issue": "The answer choices are missing.",
+      "lane": "codex"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "NONE",
+      "confidence": "certain",
+      "reasoning": "Rearranging 7x − 5y + 3 = 0 gives y = (7/5)x + 3/5, so the gradient is 7/5. None of the supplied options is a gradient; they appear to be lengths belonging to Question 21.",
+      "solvable": false,
+      "issue": "The options contradict the question and do not include the correct gradient, 7/5.",
+      "lane": "codex"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Multiplying the inequality by 6 gives 2(k − 4) − 3(k + 1) < 1, hence −k < 12. Dividing by −1 reverses the inequality, giving k > −12; option A results from mishandling this sign reversal.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The exterior angle is 180° − 150° = 30°, so the number of sides is 360°/30° = 12. Fifteen sides would instead give an interior angle of 156°.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Since cos 62° = sin(90° − 62°) = sin 28°, the listed solution satisfies x − 46° = 28°. Thus x = 74°; 62° would give sin 16°, not sin 28°.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Let the smaller odd integer be n, so the next is n + 2. Then 5n + 3(n + 2) = 222 gives 8n = 216 and n = 27; 29 is the larger integer, not the smaller one.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "After Kwakye receives 20%, the remaining amount is $9,600. Sabina receives 5/8 of this remainder, which is $6,000; $9,600 is the full remainder rather than her share.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The number offering both subjects is 21 + 28 − 42 = 7, so the number offering Government only is 28 − 7 = 21. The required probability is therefore 21/42 = 1/2, not 1/3.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Using V = (1/3)πr²h gives 8316 = 6 × (22/7)r², so r² = 441. Therefore r = 21 cm; 14 cm does not produce the stated volume.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Since PR is the hypotenuse, cos 60° = QR/PR = 2/PR, giving PR = 4 cm. Option C, 2√4 cm, also simplifies to 4 cm, so it is mathematically identical to option B.",
+      "solvable": true,
+      "issue": "Options B and C are both mathematically correct because 2√4 cm = 4 cm; B is selected as the conventional simplified form.",
+      "lane": "codex"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The ratio totals 15 parts, so each part is 180° ÷ 15 = 12°. The smallest and largest angles are 24° and 96°, giving a difference of 72°; 48° is only four ratio-parts.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The arc length is (120/360) × 2 × (22/7) × 21 = 44 cm. The 22 cm option results from omitting the factor of 2 in the circumference.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The mean height is 6 cm, and the squared deviations sum to 16 + 1 + 1 + 16 = 34. Thus, the variance is 34 ÷ 4 = 8.5 cm²; 6.0 is the mean, not the variance.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Equal volumes alone do not determine the cylinder's height because the cylinder and cone may have different base radii. The expected 8 cm follows only if their base areas are equal, but that condition is absent.",
+      "solvable": false,
+      "issue": "The relationship between the cylinder's and cone's base radii or base areas is missing.",
+      "lane": "codex"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A reverse bearing differs by 180°, so the bearing of G from F is 064° + 180° = 244°. The 116° option incorrectly subtracts 64° from 180°.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The interior angles of a hexagon sum to 720°, giving 107 + 2x + 150 + 95 + 2x − 15 + 123 = 720. Hence 4x = 260 and x = 65; 120 does not satisfy the angle sum.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Since ∠PMQ = 34°, arc PT is 68°; the external-secant theorem then gives 28° = ½(arc NM − 68°), so arc NM is 124°. Therefore ∠NTM = 62°, and its supplementary exterior angle ∠QTN is 118°; 62° itself is not the requested exterior angle.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "From the external-secant relation, arc MN is 124°. The inscribed angle ∠MPN is half this arc, so it is 62°; 34° instead corresponds to the given angle subtending arc PT.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The coordinate differences are 5 and 12, so the distance is √(5² + 12²) = √169 = 13 units. The 12-unit option accounts only for the vertical displacement.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Opposite angles QRS and QPS in the cyclic quadrilateral sum to 180°, while the minor central angle QOS equals twice ∠QPS. Thus 5x + (6x + 24)/2 = 180, giving x = 21 and ∠QPS = 75°; 150° is the central angle QOS, not the inscribed angle.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "∠STR = 37° subtends arc SR, so arc SR = 74°. Also, ∠QRT = 59° subtends arc QT, so ∠SPR = ½(74° + 118°) = 96°; 84° would come from using the wrong pair of arcs.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question text is garbled and repeats the circle information from Question 41. It provides neither a ladder diagram nor the angle and height or distance needed to calculate its length.",
+      "solvable": false,
+      "issue": "Missing or garbled ladder question stem and diagram.",
+      "lane": "codex"
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Since SR is parallel to UW and ST is a transversal, the acute angle between VW and VT equals the 45° angle between SR and ST. Thus x = 45°, not 135°, which is the supplementary angle inside triangle UVT.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The interior angle at V in triangle UVT is supplementary to x, so it is 180° − 45° = 135°. Hence y = 180° − 135° − 20° = 25°; 45° ignores the given 20° angle at T.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The odd outcomes are {1, 3, 5}, while the prime outcomes are {2, 3, 5}. Their union is {1, 2, 3, 5}, giving 4/6 = 2/3; 1/2 counts only the odd outcomes.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The circles representing smart people and the speaker's friends overlap, showing that some friends are smart. Neither circle contains the other, so the diagram does not show that all smart people are friends or that no friend is smart.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The total frequency is 41 and the sum of the students' ages is 609. The mean is 609/41 ≈ 14.85, which rounds to 15 rather than 14.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "With 41 students, the median is the 21st observation. The cumulative frequency reaches 17 at age 14 and 30 at age 15, so the 21st observation is 15, not 14.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "If Ajoke will be 31 in x years, her present age is 31 − x. Chioma is six years younger, so her present age is 31 − x − 6 = 25 − x; adding x would incorrectly make her older as the waiting time increases.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The expression is undefined when its denominator is zero. Solving 2x + 1 = 0 gives x = −1/2; −2/3 makes the numerator zero, not the denominator.",
+      "solvable": true,
+      "issue": "",
+      "lane": "codex"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    }
+  ],
+  "fallback_cost_usd": 0
+}

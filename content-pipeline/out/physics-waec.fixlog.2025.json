@@ -1,0 +1,94 @@
+{
+  "entries": [
+    {
+      "q_number": 1,
+      "source": "codex",
+      "finding": "working rounds MA to 1.43, and 1.43 ÷ 4 × 100% gives 35.75%, not 35.7%",
+      "decision": "accepted",
+      "reason": "A student following the shown steps gets 35.75%, which rounds to 35.8%, not option B. The rounding is a real slip in the working.",
+      "change": "MA carried as 1.429 in both working lines (1.429 ÷ 4 × 100% = 35.7%).",
+      "round": 1
+    },
+    {
+      "q_number": 33,
+      "source": "codex",
+      "finding": "exam tip 'for any cell or battery, stored energy is chemical' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "A solar cell is a cell in the same subtopic and stores no chemical energy, so the tip is false as a universal.",
+      "change": "Exam tip scoped to chemical cells (Leclanche, Daniell, lead-acid), with one sentence noting a solar cell changes light to electrical energy.",
+      "round": 1
+    },
+    {
+      "q_number": 33,
+      "source": "check-11",
+      "finding": "hint2 'A cell only makes a current when substances inside it react' and principle 'A cell stores energy in the chemicals inside it' carry the same unscoped absolute",
+      "decision": "accepted",
+      "reason": "Same defect as the exam tip. Fixing the tip alone would leave the solution contradicting it.",
+      "change": "Hint 2 now reads 'A chemical cell like this one makes a current...'; principle now reads 'A chemical cell, such as the Leclanche cell, stores energy...'.",
+      "round": 1
+    },
+    {
+      "q_number": 39,
+      "source": "codex",
+      "finding": "hint 3 lets the student answer without thinking",
+      "decision": "accepted",
+      "reason": "Hint 3 states the result for the student ('when the reaction becomes exactly zero'), so it only remains to match zero reaction to 'weightless'. Hint 2 giving R = m(g − a) is its proper job as the decisive principle, so it is kept. Codex's proposed hint 3 still names the zero outcome in effect, so a different wording is used.",
+      "change": "Hint 3 rewritten to narrow to two without stating R: 'Your value of R rules out feeling heavier and feeling your normal weight. Does it describe a body that feels a little lighter, or one that feels no weight at all?' Hint 2 unchanged.",
+      "round": 1
+    },
+    {
+      "q_number": 44,
+      "source": "codex",
+      "finding": "solution asserts option C's exponent is the misprint, while the answer_challenge says the stem mass or option C",
+      "decision": "accepted",
+      "reason": "The item cannot tell which number was misprinted, so stating one as fact teaches an unsupported claim and disagrees with its own answer_challenge. Codex's proposed wording is only partly adopted: its claim that a 2.5 g bullet is 'unrealistically light' is itself false (small-calibre bullets are about 2.6 g), so the solution does not pick a culprit.",
+      "change": "Sentence replaced with: 'The digits 1.07 match option C, but its power of ten is one lower than this working gives, so either the mass or option C was misprinted in the paper. C is still the only option whose digits fit the correct method.' answer_challenge kept on the item.",
+      "round": 1
+    },
+    {
+      "q_number": 37,
+      "source": "check-11",
+      "finding": "'D. constant: that needs one factor to halve while the other doubles' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "Power stays constant for any change that keeps Fv the same, not only halve-and-double.",
+      "change": "Now reads 'that needs the product Fv to stay the same, for example one factor halving while the other doubles.'",
+      "round": 1
+    },
+    {
+      "q_number": 40,
+      "source": "check-11",
+      "finding": "Bernoulli stated as 'pressure plus kinetic energy per unit volume stays the same along the flow' without the level-flow condition",
+      "decision": "accepted",
+      "reason": "The sum without the height term holds only for flow at one height. One short qualifier scopes it.",
+      "change": "Principle adds 'at the same height'; How to tell reads 'along a level flow'.",
+      "round": 1
+    },
+    {
+      "q_number": 17,
+      "source": "check-12",
+      "finding": "Q17 and Q18 share diagram 2025_Q17-18.png; checked hints for sibling leaks",
+      "decision": "rejected",
+      "reason": "No leak. Q17's hints never give the 7.2 Ω total or the 10.80 V terminal p.d., and Q18's hints use only the 1.5 A printed in Q17's stem, not Q17's answer of 0.60 A. No item in this paper carries a passage_id.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 37,
+      "source": "codex",
+      "finding": "\"The option wording means reduced to a quarter\" teaches that 'by a quarter' equals 'to a quarter'",
+      "decision": "accepted",
+      "reason": "Reducing a value by a quarter strictly leaves three-quarters; the sentence states a false equivalence as fact. The key B stays, since the examiner uses it for the quarter result.",
+      "change": "Replaced the sentence with: \"Option B is the one the examiner uses for this result. Strictly, reducing something by a quarter would leave three-quarters of it, so here read the option as \"reduced to a quarter\".\" Shorter than Codex's proposed wording; rest of item unchanged.",
+      "round": 2
+    },
+    {
+      "q_number": 37,
+      "source": "check-11",
+      "finding": "scan for unscoped absolutes",
+      "decision": "rejected",
+      "reason": "No other unscoped absolute or simplification found; the item has no passage_id so check 12 does not apply.",
+      "change": "",
+      "round": 2
+    }
+  ]
+}

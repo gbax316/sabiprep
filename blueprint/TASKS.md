@@ -222,8 +222,11 @@ WAEC Mathematics file needed a heading fix and now yields all 547 questions.
 - [x] **TAX-02 to TAX-04** All twelve trees meet the standard (`da762b2`); fresh-test
       scores are in that commit. Coverage gaps left are WAEC content set only for Ghana,
       Sierra Leone, The Gambia or Liberia, excluded by stated scope rules.
-- [ ] **GATE-01** First paper of every subject-exam file run to its gate (19 running, four at
-      a time, on the new trees). Biology WAEC 2025 and Economics UTME 2024 re-placed.
+- [ ] **GATE-01** Every subject-exam file's first paper is at its gate (all 21). Orezi reviews
+      `out/gates.html` and approves per subject; approval runs that subject's other years.
+      Claude-side spend to here: $307 (trees $131, papers about $7 each).
+- [ ] **REV-04** Codex was out for every paper run on 2026-09-29 (limit resets 20:46), so 617
+      keys rest on two Claude models. Re-derive and re-review those on Codex when it is back.
 
 ### Sources still needed from Chidera
 
@@ -254,7 +257,6 @@ WAEC Mathematics file needed a heading fix and now yields all 547 questions.
       confirmed; `review_page.py` shows each as a student sees it, with its reason and the
       diagram beside the redraw, and saves Orezi's decisions to a file.
 - [ ] **REV-03** Apply saved decisions back into the pipeline, each logged.
-- [ ] **REV-04** When Codex is back, re-derive and re-review what ran same-family.
 
 ---
 

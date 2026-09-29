@@ -1,146 +1,308 @@
 {
   "entries": [
     {
-      "q_number": 4,
+      "q_number": 3,
       "source": "codex",
-      "finding": "hint 3 rules out guarded and suspicious by verdict, leaving only antagonistic",
+      "finding": "wary called 'closer to rigid than opposite to it'",
       "decision": "accepted",
-      "reason": "Calling both 'only a lack of friendliness' eliminates two of the three survivors, so hint 3 makes the choice.",
-      "change": "hint3 now drops suspicious (about trust) and leaves a real two-way choice between guarded and antagonistic. I wrote my own wording because Codex's version ('matching the full strength of affable') was awkward.",
+      "reason": "Wary and rigid describe different qualities; the comparison is loose and could mislead.",
+      "change": "A line now says wary means cautious or suspicious, which is not the same as accepting views different from your own.",
+      "round": 1
+    },
+    {
+      "q_number": 9,
+      "source": "codex",
+      "finding": "conceited glossed as 'wants attention'; exam tip generalises to all self- adjectives",
+      "decision": "accepted",
+      "reason": "Conceited means thinking too highly of yourself, not attention-seeking; words like self-employed break the tip's rule.",
+      "change": "Dropped 'and wants attention' from the principle; exam tip now scoped to words describing how a person sees themselves.",
+      "round": 1
+    },
+    {
+      "q_number": 12,
+      "source": "codex",
+      "finding": "'Meetings are not dismissed' absolute; suspended glossed as 'stopped before the business is finished'",
+      "decision": "accepted",
+      "reason": "Unscoped absolute (check 11); suspension is a temporary pause to resume later, which is the real clash with a finished agenda.",
+      "change": "Hint 2 and A/B lines: dismissed is used mostly for people or cases and is not the usual word for closing a meeting; suspended means paused for a while, to carry on later.",
+      "round": 1
+    },
+    {
+      "q_number": 14,
+      "source": "codex",
+      "finding": "'each kind of animal has its own' collective noun",
+      "decision": "accepted",
+      "reason": "Unscoped absolute; group words overlap (flock and herd of goats) and not every animal has one.",
+      "change": "Principle now says many kinds of animal have their own group word, and herd is the usual one for cows.",
+      "round": 1
+    },
+    {
+      "q_number": 15,
+      "source": "codex",
+      "finding": "artefact defined as 'a small object'",
+      "decision": "accepted",
+      "reason": "Artefacts are not necessarily small; the definition is wrong as stated.",
+      "change": "Hint 2 and B line: an artefact usually names a handmade object such as a tool or pot, not the usual word for a landmark building.",
+      "round": 1
+    },
+    {
+      "q_number": 16,
+      "source": "codex",
+      "finding": "revived glossed only as brought back from fainting or near death, 'too strong for a holiday'",
+      "decision": "accepted",
+      "reason": "Revive also means restore strength or energy, so 'too strong' is not accurate; the real reason is the natural pairing with refreshed.",
+      "change": "Hint 3 and B line: revived is most often used for bringing someone round after fainting or collapse; 'refreshed and rejuvenated' is the natural pair.",
+      "round": 1
+    },
+    {
+      "q_number": 17,
+      "source": "codex",
+      "finding": "hint 1: 'Specialist doctors are named after the part of the body they treat'",
+      "decision": "accepted",
+      "reason": "Unscoped absolute; gynaecologist and paediatrician are named after patient groups. The solution already said 'Many'.",
+      "change": "Hint 1 now reads 'Many specialist doctors are named after the part of the body or the group of patients they treat'.",
+      "round": 1
+    },
+    {
+      "q_number": 19,
+      "source": "codex",
+      "finding": "hint 3 defines offer, then asks for 'a reward that pushes someone to do more'",
+      "decision": "accepted",
+      "reason": "Hint 3 as written defines incentive, so it makes the choice for the student.",
+      "change": "Hint 3 now sends the student back to the purpose clause to decide which of the two words that purpose defines.",
+      "round": 1
+    },
+    {
+      "q_number": 20,
+      "source": "codex",
+      "finding": "broadcast glossed as 'the act' not the programme; prediction 'not the word used with weather'",
+      "decision": "accepted",
+      "reason": "A broadcast is also the programme itself, and 'weather prediction' is valid English; the point is that 'weather forecast' is the set phrase.",
+      "change": "Hint 2, B and C lines reworded. Kept 'The other words do not form this set phrase', which is true.",
+      "round": 1
+    },
+    {
+      "q_number": 22,
+      "source": "codex",
+      "finding": "hints 2 and 3 name 'romance' so only one option survives",
+      "decision": "accepted",
+      "reason": "With romance named in hint 2 and asked for again in hint 3, the choice is made for the student.",
+      "change": "Hint 2 now describes a sudden, powerful feeling towards a person; hint 3 asks which option matches the strength of 'completely swept off her feet'.",
+      "round": 1
+    },
+    {
+      "q_number": 24,
+      "source": "codex",
+      "finding": "hint 3 'one is vague, the other gives an exact place' gives away D",
+      "decision": "accepted",
+      "reason": "Form alone points to D without interpreting 'last but one'.",
+      "change": "Hint 3 now asks the student to count back one place from the last building and match that position.",
+      "round": 1
+    },
+    {
+      "q_number": 25,
+      "source": "codex",
+      "finding": "grandiose line reads as 'not pleasant to look at'",
+      "decision": "accepted",
+      "reason": "The line can be read as saying grandiose buildings are unattractive, which is false.",
+      "change": "A line: grandiose is about size and show, not about being pleasant to look at.",
+      "round": 1
+    },
+    {
+      "q_number": 29,
+      "source": "codex",
+      "finding": "C line asserts 'he did not forget anything'",
+      "decision": "accepted",
+      "reason": "The sentence does not establish that; only that the idiom is not about forgetting.",
+      "change": "C line: the idiom is not about forgetting; it means someone else used his tactics against him.",
+      "round": 1
+    },
+    {
+      "q_number": 30,
+      "source": "codex",
+      "finding": "placement should be idioms.phrasal-verbs",
+      "decision": "held",
+      "reason": "The taxonomy's two sorting rules conflict here: idioms.idioms claims the 'This means that' format and 'most of WASSCE 2024 Q21 to Q30', while idioms.phrasal-verbs claims any verb and particle. The draft already carries a placement_challenge naming exactly this. Placement belongs to the classifier and adjudication, not the teaching fixer, and the teaching reads correctly under either id.",
+      "change": "No change; subtopic_id and placement_challenge kept for adjudication.",
       "round": 1
     },
     {
       "q_number": 31,
       "source": "codex",
-      "finding": "hint 2's 'seeing something or admitting it' sweeps in noticed too, leaving only evident",
+      "finding": "noticed glossed as 'something a person does with their eyes'",
       "decision": "accepted",
-      "reason": "'Seeing something' covers A as well as C, so hint 2 eliminated all three distractors and contradicted hint 3's two-way narrowing.",
-      "change": "hint2 now names only recognized and acknowledged as actions a person does, leaving noticed and evident for hint 3.",
+      "reason": "People notice sounds, smells and facts too.",
+      "change": "A line: noticed is something a person does, seeing or becoming aware of something.",
       "round": 1
     },
     {
-      "q_number": 44,
+      "q_number": 32,
       "source": "codex",
-      "finding": "hint 2 'no plural -s and no a' eliminates A, B and D at once",
+      "finding": "delayed: 'the owner still gets the goods later'",
       "decision": "accepted",
-      "reason": "Applied to the options, the rule leaves only C before hint 3 is read.",
-      "change": "hint2 now removes only the -s options. hint3 now narrows to two: one counts chalk as a single item and one measures it as an amount. Codex's hint 3 was not used because it contained 'never take', an unscoped absolute, and still made the choice.",
+      "reason": "Unscoped claim; delay does not guarantee delivery.",
+      "change": "B line: delayed means held up or made late, not officially taken away and kept.",
       "round": 1
     },
     {
-      "q_number": 44,
-      "source": "check-11",
-      "finding": "solution: an uncountable noun 'has no plural form and does not take a or an'",
-      "decision": "accepted",
-      "reason": "Unscoped absolute. Uncountable nouns do sometimes take a (a knowledge of) or a plural (colored chalks).",
-      "change": "Solution principle now reads 'It normally has no plural form'. hint2 carries the same 'normally'.",
-      "round": 1
-    },
-    {
-      "q_number": 46,
+      "q_number": 37,
       "source": "codex",
-      "finding": "hint 2 states the textbook definition of a balanced diet",
+      "finding": "lately glossed as 'in the past few days'",
       "decision": "accepted",
-      "reason": "Giving the definition in hint 2 names the answer indirectly. Codex's replacement was rejected because 'the right mix' points toward the distractor 'mixed'.",
-      "change": "hint2 now eliminates delicious (taste) and mixed (varied but can be unbalanced), which leaves balanced and complete for hint 3. hint3 is unchanged.",
+      "reason": "Lately covers the recent past generally, not only a few days.",
+      "change": "B line: lately means recently, in the recent past.",
       "round": 1
     },
     {
-      "q_number": 50,
+      "q_number": 38,
       "source": "codex",
-      "finding": "hint 3 is the dictionary definition of dent",
+      "finding": "hint 1 says a shorter word is hidden inside inquisitive",
       "decision": "accepted",
-      "reason": "'A hollow pushed into a metal surface by a knock' defines the answer and does not narrow to two. Codex's fix was rejected because it also rules out marked, which leaves one option.",
-      "change": "hint3 now contrasts the two survivors: a spot or light scratch, or the shape of the metal being changed. The student must match each description to its word.",
+      "reason": "No such word is literally inside inquisitive; inquire is a word-family link.",
+      "change": "Hint 1 now points to words in the same family, such as inquire.",
       "round": 1
     },
     {
-      "q_number": 51,
+      "q_number": 39,
       "source": "codex",
-      "finding": "hint 2 unreadable: 'What does not refer back ... that cannot come straight after a preposition'",
+      "finding": "exam tip: a semicolon always means the second part explains the marked word",
       "decision": "accepted",
-      "reason": "Accepted under check 10. Without quotation marks, 'what' and 'that' read as ordinary words rather than as the option words. The fact_error flag is rejected: read as intended, both claims are correct.",
-      "change": "hint2 now quotes 'what' and 'that' and states which word each rule applies to.",
+      "reason": "A semicolon joins related clauses but does not by itself signal an example; the tip was an unscoped rule.",
+      "change": "Exam tip scoped to cases where the words after the semicolon or 'for example' give an example of the marked word.",
       "round": 1
     },
     {
-      "q_number": 55,
+      "q_number": 40,
       "source": "codex",
-      "finding": "hint 3 uses the word 'into', matching option D's text",
+      "finding": "hint 2 claims 'the crowd saw the criminal coming'; tip calls menace a word inside menacingly",
       "decision": "accepted",
-      "reason": "'Moving suddenly into a new state' lets a student match the word 'into' against the option text without thinking.",
-      "change": "hint3 now contrasts giving someone news with suddenly starting to do something, and no longer contains 'into'.",
-      "round": 1
-    },
-    {
-      "q_number": 64,
-      "source": "codex",
-      "finding": "hint 3 describes the answer's shape ('ends in -s, used with a')",
-      "decision": "accepted",
-      "reason": "Only C both starts with a and ends in -s, so scanning for that shape finds the answer without any grammar. Codex's 'finish the sentence yourself' version was rejected as long and vague.",
-      "change": "hint3 now eliminates the crossroad (uses the) and some cross road (split word). It then asks whether a word like series or species keeps its final s when it means one, which leaves a choice between A and C.",
-      "round": 1
-    },
-    {
-      "q_number": 70,
-      "source": "codex",
-      "finding": "hint 3 contains 'by' in 'judging a book by looking at its cover'",
-      "decision": "accepted",
-      "reason": "The answer word appears right next to 'Which preposition does it use?'. Codex's replacement was rejected: it treats for and by as the survivors, but hint 2 has already removed for, so the survivors are from and by.",
-      "change": "hint3 now recalls the proverb without using by, from, at or for.",
+      "reason": "The sentence does not say the crowd saw him, and menace is not literally inside menacingly (the e drops).",
+      "change": "Hint 2 now contrasts hiding with showing danger; exam tip now speaks of the base word, allowing for spelling changes.",
       "round": 1
     },
     {
       "q_number": 41,
-      "source": "check-11",
-      "finding": "solution: reported verbs 'move one step back' stated as universal",
+      "source": "codex",
+      "finding": "backshift and 'by then needs the perfect' stated as compulsory; will finish/would finish said to lose completion",
       "decision": "accepted",
-      "reason": "The tense shift after a past reporting verb is not obligatory when what was said is still true. One qualifier scopes it.",
-      "change": "Solution principle now reads 'normally move one step back'.",
+      "reason": "Backshift is the usual pattern, not compulsory, and 'would finish by then' can express completion in ordinary English. The real fault of C and D is dropping the perfect form of the original words.",
+      "change": "Hint 2, principle and exam tip scoped with 'usually' / 'the usual pattern in these questions'; C and D lines now say they drop the perfect form of the original 'will have finished'. Answer and hint 3 unchanged.",
+      "round": 1
+    },
+    {
+      "q_number": 43,
+      "source": "codex",
+      "finding": "'were' for every subject stated for all unreal conditions",
+      "decision": "accepted",
+      "reason": "Only true when the verb needed is 'be'; other unreal conditions use knew, had and so on.",
+      "change": "Principle and exam tip scoped to an if-clause that needs a form of 'be'.",
       "round": 1
     },
     {
       "q_number": 45,
-      "source": "check-11",
-      "finding": "solution: 'the verb moves one step back' stated as universal",
+      "source": "codex",
+      "finding": "backshift and time/place shifts stated as universal; B said to copy the words 'with no changes at all'",
       "decision": "accepted",
-      "reason": "The same unscoped rule as Q41.",
-      "change": "Solution principle now reads 'normally moves one step back'.",
+      "reason": "Unscoped absolutes (check 11); the stem already changed I to he, so B's line was imprecise.",
+      "change": "Hint 2 and principle scoped with 'usually'; B line now says it keeps the verb, place word and time word exactly as spoken. Exam tip already said 'Common shifts' and was left.",
+      "round": 1
+    },
+    {
+      "q_number": 48,
+      "source": "codex",
+      "finding": "'too' said to need a result; tip says choose 'very' if nothing follows",
+      "decision": "accepted",
+      "reason": "'Too + adjective' can stand alone ('She was too unhappy'); the real contrast is high degree against excess. The tip as written would mislead.",
+      "change": "Hint 3, principle, How to tell, B line and exam tip reframed around degree versus excess; a following result is now only a strong sign of 'too'.",
+      "round": 1
+    },
+    {
+      "q_number": 56,
+      "source": "claude-sonnet",
+      "finding": "hint 3 'which uses the past form of have' is a text-match after hint 2",
+      "decision": "accepted",
+      "reason": "After hint 2 names had + past participle, hint 3 let the student scan for 'had' without thinking.",
+      "change": "Hint 3 now contrasts tying the eating to the present with placing it before 'arrived' and asks which order the sentence needs.",
+      "round": 1
+    },
+    {
+      "q_number": 66,
+      "source": "claude-sonnet",
+      "finding": "hint 3 says 'the last option', which points to D, already ruled out",
+      "decision": "accepted",
+      "reason": "Misdirection: the intended comparison is B against C, and 'says the action was wrong' does not describe D.",
+      "change": "Hint 3 now names 'ought not to' in place of 'the last option'.",
+      "round": 1
+    },
+    {
+      "q_number": 67,
+      "source": "check-11",
+      "finding": "exam tip 'keep the first noun singular and plain' stated as a rule",
+      "decision": "accepted",
+      "reason": "Real exceptions exist (sports car, customs officer); the solution already said 'usually' and the tip should match.",
+      "change": "Exam tip now says the first noun usually stays singular and plain.",
       "round": 1
     },
     {
       "q_number": 71,
       "source": "check-12",
-      "finding": "cloze group Q71 to Q80 read together for sibling leaks",
-      "decision": "rejected",
-      "reason": "No hint names or defines a sibling's answer. Hints say 'polling place' and 'polling unit', never 'station'. None mentions accreditation, eligibility, suffrage, manifestoes or announcing outside its own item. The s02, s04, s06, s08 and s10 groups share only an instruction line, and no hint gives away another item's answer.",
+      "finding": "cloze passage Q71 to Q80 read together for sibling leaks",
+      "decision": "no_change",
+      "reason": "No hint names or defines a sibling's key. Q77 hint 3 mentions the register being checked, but Q78 asks for the name of that check and its own hint 1 already calls it a check. Q79 hints describe officials by stage without naming the announcing step asked in Q80. Other sections share only a section instruction, not content.",
       "change": "",
       "round": 1
     },
     {
-      "q_number": 70,
+      "q_number": 16,
       "source": "codex",
-      "finding": "hint 3 lets the student answer by recalling the proverb Don't judge a book by its cover (check 2)",
+      "finding": "revived described as 'most often used for bringing someone round after fainting or collapse'",
       "decision": "accepted",
-      "reason": "The proverb is so well known that asking which preposition follows judge a book in it hands over by without any reasoning; hint 3 must narrow to two and leave the choice to the student.",
-      "change": "Rewrote hint 3 to name the two remaining options, give the judging from pattern, and ask which one names the basis of the opinion. Kept it shorter than Codex's proposed fix. The proverb stays in the solution, which is read after answering.",
+      "reason": "Revived is commonly used for regaining strength or energy generally (the tea revived her), so the frequency claim is wrong and the stated reason for rejecting B is not the real distinction. The real distinction is that rejuvenated adds the sense of feeling young again.",
+      "change": "Hint 3 and the B line of Why not the others reworded to describe revived as a general word for getting back strength or energy, with rejuvenated adding the sense of feeling young again. Hint 3 still leaves the choice to the student.",
       "round": 2
     },
     {
-      "q_number": 70,
-      "source": "check-11",
-      "finding": "no unscoped absolutes or syllabus simplifications found",
+      "q_number": 37,
+      "source": "codex",
+      "finding": "hint 3 defines all three remaining options in option order",
+      "decision": "accepted",
+      "reason": "The three meanings are listed in the same order as B, C, D, so a student can map them by position and read off the answer without knowing the words. The standard asks hint 3 to narrow to two.",
+      "change": "Hint 3 now rules out lately and leaves the student to choose between presently and finally.",
+      "round": 2
+    },
+    {
+      "q_number": 43,
+      "source": "codex",
+      "finding": "hint 3's 'If I ___ you' lets the student fill the gap from a memorised idiom",
+      "decision": "accepted",
+      "reason": "'If I were you' is a stock phrase, so the example hands over the form for this blank without any reasoning about the unreal condition.",
+      "change": "Hint 3 now contrasts the ordinary past tense of 'be' with the subjunctive form used with every subject, and asks the student which is which, with no model sentence.",
+      "round": 2
+    },
+    {
+      "q_number": 67,
+      "source": "codex",
+      "finding": "'(The paper printed C and D with the same wording.)' states an unverified claim about the source paper",
+      "decision": "accepted",
+      "reason": "We only know that C and D are identical in our item data, not what the original paper printed, so the sentence should describe the item as given. The proposed replacement option D 'prices' tag' was rejected because it is a guess and would change the item's option text. The settled answer B is correct whatever D was, so no hold is needed.",
+      "change": "D line now reads: 'in this version of the question it has the same wording as C, so it fails for the same reason, a plural first noun.' Option text left unchanged.",
+      "round": 2
+    },
+    {
+      "q_number": 43,
+      "source": "check-12",
+      "finding": "sibling leaks across passage english-language-wassce-2024-s10 (Q43, Q67)",
       "decision": "rejected",
-      "reason": "Claims such as judge at is not used for the basis of a judgement are accurate as written; no change needed.",
+      "reason": "The hints for Q43 and Q67 cover unrelated points (subjunctive, noun modifiers), and neither gives away another item's answer in the group. Q16 and Q37 are the only draft items from their own groups.",
       "change": "",
       "round": 2
     },
     {
-      "q_number": 70,
-      "source": "check-12",
-      "finding": "passage s10 is a set of independent sentences; no hint touches a sibling's answer",
+      "q_number": 16,
+      "source": "check-11",
+      "finding": "absolutes and scoping reviewed on all four items",
       "decision": "rejected",
-      "reason": "The hints discuss only judge + preposition, which no other question in the section tests.",
+      "reason": "No unscoped absolutes found. Q67 already hedges with 'usually', Q43 scopes 'were' to standard written English and WASSCE, and Q43 D is scoped to 'modern English'.",
       "change": "",
       "round": 2
     }

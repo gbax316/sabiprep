@@ -1,0 +1,432 @@
+{
+  "subject": "Physics",
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "machines.ma-vr-efficiency",
+      "difficulty": "hard",
+      "hint1": "Efficiency compares what a machine actually does with what it would do if there were no friction. For a pulley system, start by counting the pulleys in the diagram.",
+      "hint2": "For a block and tackle, the velocity ratio (VR) equals the total number of pulleys in both blocks. The mechanical advantage (MA) is load ÷ effort, with the load written as a weight in newtons.",
+      "hint3": "The load weighs 10 kg × 10 m/s² = 100 N, so MA = 100 ÷ 70. Divide this by the VR you counted, then multiply by 100%.",
+      "solution": "Answer: B. 35.7%\n\nEfficiency = MA ÷ VR × 100%. The mechanical advantage (MA) is how many times the machine actually multiplies your force. The velocity ratio (VR) is what it would multiply by if there were no friction and the moving block weighed nothing. Their ratio shows how much of that ideal you really get.\n\nHow to tell:\nThe diagram has two pulleys in the upper block and two in the lower block, so VR = 4.\nLoad = mg = 10 kg × 10 m/s² = 100 N\nMA = load ÷ effort = 100 N ÷ 70 N = 1.43\nEfficiency = MA ÷ VR × 100% = 1.43 ÷ 4 × 100%\nEfficiency = 35.7%\n\nWhy not the others:\nA. 20.0%: this would need a VR of about 7, but the diagram has 4 pulleys.\nC. 50.0%: this would need a VR of about 2.9, which does not match the 4 pulleys shown.\nD. 75.0%: this would need a VR of about 1.9, fewer than the pulleys shown.\n\nExam tip: in block and tackle questions, count every pulley in both blocks to get the VR, turn any mass into a weight with W = mg, then use efficiency = MA ÷ VR × 100%."
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "energy.work",
+      "difficulty": "medium",
+      "hint1": "On a force-displacement graph, the work done comes from the shape of the graph, not from one force reading. Look at how the force changes between 0 and 20 m.",
+      "hint2": "Work done is the area under the graph between the two displacements. Split the region from 0 to 20 m into a rectangle and a trapezium.",
+      "hint3": "The rectangle from 0 to 10 m has a height of 50 N. The trapezium from 10 m to 20 m has parallel sides of 50 N and 15 N. Work out each area and add them.",
+      "solution": "Answer: B. 825J\n\nWork done = force × distance moved in the direction of the force. When the force changes, you add up force × distance over each small step, and that total is the area under the force-displacement graph.\n\nHow to tell:\nFrom 0 to 10 m the force stays at 50 N: area = 50 N × 10 m = 500 J\nFrom 10 m to 20 m the force falls from 50 N to 15 N (the dashed line at 20 m meets the graph at 15 N): area = ½ × (50 N + 15 N) × 10 m = 325 J\nTotal work = 500 J + 325 J = 825 J\n\nWhy not the others:\nA. 1000J: this is 50 N × 20 m, which treats the force as 50 N the whole way; it is also the area for the full 30 m.\nC. 750J: this treats the sloping part as a triangle falling to zero at 20 m, but the graph still reads 15 N there.\nD. 500J: this is the first 10 m alone and misses the sloping part.\n\nExam tip: for work from a force-displacement graph, read the force at both ends of the range asked for, then split the area into rectangles, triangles and trapeziums and add them."
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "dispersion.spectrum",
+      "difficulty": "easy",
+      "hint1": "Recall what dispersion means. What happens to white light when it passes through a prism or a drop of water?",
+      "hint2": "Shadows and eclipses happen because light travels in straight lines and gets blocked. Neither of them produces any colours.",
+      "hint3": "Of the two left, one is caused by layers of hot air near the ground bending light. The other needs white light to be split into its colours. Which is which?",
+      "solution": "Answer: C. Rainbow\n\nDispersion is the splitting of white light into its colours: red, orange, yellow, green, blue, indigo and violet. It happens because each colour is refracted (bent) by a slightly different amount when it enters glass or water.\n\nHow to tell: sunlight entering raindrops is refracted and reflected inside them, and each colour comes out at a slightly different angle. That spreads the colours into the band of a rainbow.\n\nWhy not the others:\nA. Eclipse: the moon or the earth blocks sunlight, which comes from light travelling in straight lines, not from splitting colours.\nB. Shadow: it forms where an opaque object blocks light travelling in straight lines, with no colours separated.\nD. Mirage: it comes from light bending through layers of hot air near the ground, together with total internal reflection, not from splitting colours.\n\nExam tip: link each light effect to its cause. Straight-line travel gives shadows and eclipses, bending in hot air gives mirages, and dispersion gives rainbows and the spectrum from a prism."
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "heat-transfer.radiation",
+      "difficulty": "easy",
+      "hint1": "Think about how the colour of a surface affects how much of the sun's radiant heat it takes in.",
+      "hint2": "Dark, dull surfaces are good absorbers of radiant heat, so black is the worst choice under a hot sun.",
+      "hint3": "Of the colours left, which one reflects nearly all the light falling on it instead of taking some of it in?",
+      "solution": "Answer: D. white\n\nA surface that reflects radiant energy absorbs less of it, so it stays cooler. White and light colours are good reflectors, while dark, dull colours are good absorbers.\n\nHow to tell: white reflects nearly all the colours of sunlight, and much of the heat radiation that comes with them, so a white shirt takes in the least heat at noon.\n\nWhy not the others:\nA. red: it absorbs the other colours of sunlight, so it warms up more than white.\nB. black: it absorbs nearly all the light and radiant heat falling on it, so it is the hottest choice.\nC. green: like red, it absorbs most colours of sunlight except green, so it warms up more than white.\n\nExam tip: good absorbers of radiant heat are dark and dull; good reflectors are white or shiny. Use this for clothing, roofs, kettles and solar heaters."
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "lenses.images",
+      "difficulty": "easy",
+      "hint1": "For a converging lens, the position of the object compared with the principal focus F decides what kind of image forms.",
+      "hint2": "When the object is closer to the lens than F, the rays leaving the lens spread apart and never meet on the far side. So no image can be caught on a screen, which rules out the real images.",
+      "hint3": "You are left with two virtual, erect images. Think about how a magnifying glass is used: does it make small print look bigger or smaller?",
+      "solution": "Answer: C. erect, virtual and magnified\n\nWhen an object is between the principal focus F and the optical centre of a converging lens, the rays leaving the lens spread out. They seem to come from a point farther back on the same side as the object, so the image is virtual, erect and larger than the object.\n\nHow to tell: this is how a converging lens is used as a magnifying glass. You hold it close to the print, and the letters look upright and bigger.\n\nWhy not the others:\nA. real, inverted and magnified: this happens when the object is between F and 2F.\nB. real, inverted and diminished: this happens when the object is beyond 2F.\nD. erect, virtual and diminished: this is the image formed by a diverging lens, not by a converging lens with the object inside F.\n\nExam tip: for a converging lens, an object inside F gives a virtual, erect, magnified image. An object beyond F gives a real, inverted image, magnified between F and 2F and diminished beyond 2F."
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "magnetic-force.moving-charge",
+      "difficulty": "easy",
+      "hint1": "Think about a charged particle feeling an electric force and a magnetic force at the same time, pushing in opposite directions.",
+      "hint2": "The particle goes straight through when the two forces balance, qE = qvB. Electrochemical equivalence belongs to electrolysis, not to charges moving in fields.",
+      "hint3": "Cancel q in qE = qvB and see what kind of quantity E ÷ B turns out to be. Then decide which remaining name describes an arrangement that works using that quantity.",
+      "solution": "Answer: C. Velocity selector\n\nIn crossed fields, the electric force qE pushes a charge one way and the magnetic force qvB pushes it the other way. The two cancel for one particular speed, so particles at that speed pass straight through while faster or slower ones are bent aside.\n\nHow to tell:\nForces balance: qE = qvB\nCancel q: E = vB\nSo v = E ÷ B\nE ÷ B is the speed that gets through undeflected. The arrangement that picks out this speed is called a velocity selector, and the question uses that name for the ratio.\n\nWhy not the others:\nA. Lorentz ratio: this is not a standard term; the Lorentz force is the force on a moving charge, not the ratio E ÷ B.\nB. Change ratio: this is not a physics term for anything in crossed fields.\nD. Electrochemical equivalence: this comes from electrolysis, where the electrochemical equivalent is the mass deposited by one coulomb of charge.\n\nExam tip: when a question sets an electric force against a magnetic force on a moving charge, write qE = qvB and cancel q. The undeflected speed is v = E ÷ B."
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "sound.characteristics",
+      "difficulty": "medium",
+      "hint1": "Each property of a sound is linked to one feature of the wave. Compare the amplitudes of the two notes, then compare their frequencies.",
+      "hint2": "Pitch depends on frequency, and both notes are 2000 Hz. So neither note has a higher pitch than the other.",
+      "hint3": "That leaves loudness and timbre. Loudness depends on amplitude, and timbre depends on the instrument playing the note. Which statement fits the numbers?",
+      "solution": "Answer: B. M is louder than K\n\nLoudness depends on amplitude: a larger amplitude carries more energy, so the sound is louder. Pitch depends on frequency, and timbre (the quality that makes instruments sound different) depends on the overtones each instrument adds to the note.\n\nHow to tell:\nAmplitude of K = 0.5 cm, amplitude of M = 1.5 cm, so M has the larger amplitude and is louder.\nBoth notes are 2000 Hz, so their pitch is the same.\n\nWhy not the others:\nA. K is louder than M: K has the smaller amplitude, so it is the quieter note.\nC. M has a higher pitch than K: both notes are 2000 Hz, so they have the same pitch.\nD. K and M have same timbre: a keyboard and a guitar produce different overtones, so their timbres differ.\n\nExam tip: match each word to its cause. Loudness goes with amplitude, pitch goes with frequency, and timbre goes with overtones, which depend on the instrument."
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "shm.pendulum-spring",
+      "difficulty": "medium",
+      "hint1": "The time for one complete swing of a pendulum depends on its length and on g. Start by finding that time, the period.",
+      "hint2": "Period T = total time ÷ number of oscillations. Then use T = 2π√(L/g) and rearrange it to make g the subject.",
+      "hint3": "Rearranged, g = 4π²L ÷ T². Put in L = 0.8 m and your value of T, then compare with the options.",
+      "solution": "Answer: C. 3.5 ms⁻²\n\nThe period of a simple pendulum is T = 2π√(L/g). It depends on the length and on the pull of gravity, so timing a pendulum of known length lets you work out g on any planet.\n\nHow to tell:\nT = 60 s ÷ 20 = 3 s\nSquare both sides of T = 2π√(L/g): T² = 4π²L ÷ g\nSo g = 4π²L ÷ T²\ng = 4 × 3.14² × 0.8 m ÷ (3 s)²\ng = 4 × 9.86 × 0.8 ÷ 9\ng = 31.55 ÷ 9 = 3.5 m/s²\n\nWhy not the others:\nA. 2.5 ms⁻²: putting this into T = 2π√(L/g) gives a period of about 3.55 s, not 3 s.\nB. 3.0 ms⁻²: this gives a period of about 3.24 s, not 3 s.\nD. 3.8 ms⁻²: this gives a period of about 2.88 s, not 3 s.\n\nExam tip: in pendulum questions, find T from total time ÷ number of oscillations first, then use g = 4π²L ÷ T². Check your answer by putting it back into T = 2π√(L/g)."
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "heat-capacity.mixtures",
+      "difficulty": "medium",
+      "hint1": "In a lagged vessel, heat loss to the surroundings is ignored, so the heat lost by the hot part equals the heat gained by the cold part.",
+      "hint2": "Write mass × specific heat capacity × temperature change for each part. Both parts are the same liquid, so the specific heat capacity is the same on both sides and cancels.",
+      "hint3": "The masses are equal too, so the hot part must fall by the same number of degrees as the cold part rises. Where does that put the final temperature between 21 °C and 61 °C?",
+      "solution": "Answer: B. 41°C\n\nWhen a hot and a cold portion are mixed and no heat escapes, the heat lost by the hot part equals the heat gained by the cold part. The lagging lets us ignore heat lost to the surroundings, and the heat taken by the vessel itself is treated as negligible here.\n\nHow to tell:\nLet the final temperature be θ.\nHeat lost by the hot liquid = 2 × c × (61 − θ)\nHeat gained by the cold liquid = 2 × c × (θ − 21)\n2c(61 − θ) = 2c(θ − 21)\n61 − θ = θ − 21\n2θ = 82\nθ = 41 °C\n\nWhy not the others:\nA. 50°C: the hot part would lose 11 °C while the cold part gained 29 °C, which breaks heat lost = heat gained for equal masses.\nC. 30°C: the hot part would lose 31 °C while the cold part gained 9 °C, again unequal.\nD. 15°C: this is below 21 °C, and mixing cannot make the mixture colder than its coldest part.\n\nExam tip: for equal masses of the same substance, the final temperature is halfway between the two starting temperatures. For unequal masses, write heat lost = heat gained and solve for θ."
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "temperature.concept",
+      "difficulty": "easy",
+      "hint1": "Each law of thermodynamics is about a different idea: equal temperature, energy, the direction heat flows, or absolute zero. Decide which idea this statement is about.",
+      "hint2": "The first law is about conservation of energy, and the second law is about the direction heat flows. Neither is about bodies sharing the same temperature.",
+      "hint3": "Of the two left, one is about absolute zero. The other is the basis for comparing temperatures with a thermometer. Which fits the statement?",
+      "solution": "Answer: A. zeroth law of thermodynamics\n\nTwo bodies are in thermal equilibrium when no net heat flows between them, because they are at the same temperature. The zeroth law says that if A and B are each in equilibrium with C, then A and B are in equilibrium with each other. This is what lets a thermometer, playing the part of C, compare the temperatures of other bodies.\n\nHow to tell: the statement is about two bodies being in thermal equilibrium through a third body. That is the zeroth law, almost word for word.\n\nWhy not the others:\nB. first law of thermodynamics: it is about conservation of energy, heat supplied = increase in internal energy + work done.\nC. second law of thermodynamics: it is about heat flowing on its own from hot to cold, and no engine turning all its heat into work.\nD. third law of thermodynamics: it is about absolute zero, the lowest possible temperature.\n\nExam tip: link each law to one idea. Zeroth: equal temperature. First: energy conservation. Second: direction of heat flow. Third: absolute zero."
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "ac-circuits.rlc",
+      "difficulty": "hard",
+      "hint1": "The question sentence is missing, but the options are voltages, so it wants the peak e.m.f. of the supply. In an a.c. circuit, the voltages across a resistor, a capacitor and an inductor do not reach their peaks at the same moment. Think about what that means for adding them.",
+      "hint2": "The inductor voltage and the capacitor voltage point in opposite directions, so they partly cancel. The resistor voltage is at right angles to both, so it is combined by Pythagoras.",
+      "hint3": "First find VL − VC from the values printed under L and C. Then use V = √(VR² + (VL − VC)²).",
+      "solution": "Answer: D. 5.0V\n\nIn a series a.c. circuit the same current flows through every part, but the voltages peak at different times. The inductor voltage is a quarter cycle ahead of the current, the capacitor voltage is a quarter cycle behind it, and the resistor voltage is in step with it. So the voltages are added as vectors (called phasors), not as plain numbers.\n\nHow to tell:\nThe question sentence is missing from the paper. The diagram gives the peak voltage across each part, so it is asking for the peak e.m.f. of the supply.\nFrom the diagram: VR = 3 V, VC = 2 V, VL = 6 V\nVL and VC act in opposite directions: VL − VC = 6 V − 2 V = 4 V\nVR is at right angles to this, so V = √(VR² + (VL − VC)²)\nV = √(3² + 4²) V\nV = √(9 + 16) V = √25 V = 5.0 V\n\nWhy not the others:\nA. 11.0V: this is 3 + 2 + 6, a plain sum that ignores the phase differences.\nB. 9.0V: this is 3 + 6, which adds VR and VL and leaves out VC.\nC. 8.0V: this is 6 + 2, which adds VL and VC when one should be taken from the other.\n\nExam tip: in a series RLC circuit, take the capacitor voltage from the inductor voltage first, then combine the result with the resistor voltage by Pythagoras. A simple total of the three voltages is a trap."
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "waves.equation",
+      "difficulty": "medium",
+      "hint1": "To find a frequency you need the wave speed and the wavelength. Work out what each piece of information in the question gives you. The word triple is a misprint for ripples.",
+      "hint2": "The distance between two successive troughs is one full wavelength. The wave speed is distance travelled ÷ time taken.",
+      "hint3": "Find the speed in cm/s, then use f = v ÷ λ with λ = 3.5 cm.",
+      "solution": "Answer: B. 6.0Hz\n\nFor any wave, speed = frequency × wavelength, v = fλ. The vibrator sets the frequency, so once you know the speed and the wavelength, f = v ÷ λ.\n\nHow to tell:\nWavelength λ = distance between successive troughs = 3.5 cm\nSpeed v = 31.5 cm ÷ 1.5 s = 21 cm/s\nf = v ÷ λ = 21 cm/s ÷ 3.5 cm = 6.0 Hz\n\nWhy not the others:\nA. 30Hz: this would need a speed of 30 × 3.5 = 105 cm/s, five times what the data give.\nC. 9.0Hz: this is 31.5 cm ÷ 3.5 cm, the number of wavelengths in the distance, without dividing by the time.\nD. 12.0Hz: this takes the wavelength as half of 3.5 cm, but successive troughs are a whole wavelength apart.\n\nExam tip: crest to crest, or trough to trough, is one wavelength; a crest to the next trough is half a wavelength. Find the speed from distance ÷ time, then f = v ÷ λ with both in the same length unit."
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "refraction.laws",
+      "difficulty": "medium",
+      "hint1": "When light passes from one medium into another, its speed changes. Recall how the refractive index of a medium is linked to the speed of light in it.",
+      "hint2": "Refractive index n = c ÷ v, so n × v = c for every medium. The printed 20 × 10⁸ ms⁻¹ must be a misprint for 2.0 × 10⁸ ms⁻¹, because light in a medium cannot travel faster than it does in a vacuum, 3.0 × 10⁸ ms⁻¹.",
+      "hint3": "Set nA × vA = nB × vB. Medium B has the smaller refractive index, so light in B is faster than 2.0 × 10⁸ ms⁻¹. Work out by how much.",
+      "solution": "Answer: B. 2.5 × 10⁸ ms−¹\n\nRefractive index n = c ÷ v, where c is the speed of light in a vacuum and v is its speed in the medium. So n × v equals c for every medium, and light travels faster in a medium with a smaller refractive index.\n\nHow to tell:\nThe printed 20 × 10⁸ ms⁻¹ is faster than light in a vacuum, so it is a misprint for 2.0 × 10⁸ ms⁻¹. Check: 1.5 × 2.0 × 10⁸ = 3.0 × 10⁸ ms⁻¹, which is c.\nnA × vA = nB × vB\n1.5 × 2.0 × 10⁸ ms⁻¹ = 1.2 × vB\nvB = 3.0 × 10⁸ ms⁻¹ ÷ 1.2\nvB = 2.5 × 10⁸ ms⁻¹\n\nWhy not the others:\nA. 1.8 × 10⁸ ms−¹: this is slower than in medium A, but B has the smaller refractive index, so light must be faster in B.\nC. 2.7 × 10⁸ ms−¹: this gives n = 3.0 × 10⁸ ÷ 2.7 × 10⁸ ≈ 1.11, not 1.2.\nD. 3.0 × 10⁸ ms−¹: this is the speed of light in a vacuum, where n = 1.\n\nExam tip: use n₁v₁ = n₂v₂, since both equal c. A bigger refractive index means slower light, and no speed in a medium can be above 3.0 × 10⁸ ms⁻¹."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "waves.equation",
+      "difficulty": "medium",
+      "hint1": "The period is the time for one complete wave. Think about how it links to frequency, and how frequency links to speed and wavelength.",
+      "hint2": "v = fλ gives f = v ÷ λ, and T = 1 ÷ f. Put together, T = λ ÷ v.",
+      "hint3": "Divide 600 m by 360 m/s and watch the decimal point. Is the answer more or less than 1 s?",
+      "solution": "Answer: C. 1.667s\n\nIn one period a wave moves forward by exactly one wavelength. So period = wavelength ÷ speed, T = λ ÷ v, which is the same as T = 1 ÷ f.\n\nHow to tell:\nf = v ÷ λ = 360 m/s ÷ 600 m = 0.6 Hz\nT = 1 ÷ f = 1 ÷ 0.6 Hz = 1.667 s\nCheck: T = λ ÷ v = 600 m ÷ 360 m/s = 1.667 s\n\nWhy not the others:\nA. 60.000s: in 60 s the wave would travel 21 600 m, far more than one wavelength.\nB. 6.000s: in 6 s the wave would travel 2160 m, more than three wavelengths.\nD. 0.167s: the decimal point has slipped one place; in 0.167 s the wave travels only 60 m.\n\nExam tip: T = λ ÷ v. Check your answer by asking how far the wave moves in that time: it should be exactly one wavelength."
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "machines.types",
+      "difficulty": "easy",
+      "hint1": "Levers are sorted into three classes by which of the three points, effort, load or fulcrum, sits in the middle.",
+      "hint2": "With the fulcrum in the middle it is a first-class lever, as in pliers. With the load in the middle it is a second-class lever, as in a wheelbarrow.",
+      "hint3": "Picture using each of the two left. In which one do your fingers press between the hinge at one end and the object gripped at the other?",
+      "solution": "Answer: C. sugar tongs\n\nThe class of a lever depends on what lies in the middle. When the effort is between the fulcrum and the load, it is a third-class lever. Such a lever needs an effort larger than the load, but it moves the load farther and gives fine control.\n\nHow to tell: sugar tongs are hinged at one end (the fulcrum), grip the sugar at the other end (the load), and you squeeze them in the middle (the effort).\n\nWhy not the others:\nA. pliers: the hinge (fulcrum) is between your hand and the jaws, so it is a first-class lever.\nB. wheelbarrow: the load sits between the wheel (fulcrum) and your hands, so it is a second-class lever.\nD. table knife: when cutting it works mainly as a wedge, and it is not the textbook example of a lever with the effort in the middle.\n\nExam tip: name the item in the middle. Fulcrum in the middle: first class. Load in the middle: second class. Effort in the middle: third class, as in tongs, forceps and the forearm."
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "current-electricity.resistors",
+      "difficulty": "medium",
+      "hint1": "Look at how the three resistors are connected. Which one carries the whole current, and which ones share it?",
+      "hint2": "The 6 Ω resistor is in series with the pair, so all 1.5 A flows into the 3 Ω and 2 Ω pair and splits between them. Resistors in parallel have the same voltage across them.",
+      "hint3": "In a parallel pair, the smaller resistor takes the larger share of the current. Share 1.5 A so that current × resistance comes out the same for the 3 Ω and the 2 Ω.",
+      "solution": "Answer: D. 0.60A\n\nCurrent splits between parallel branches so that each branch has the same voltage across it. The smaller resistance therefore takes the larger current, in inverse proportion to the resistance.\n\nHow to tell:\nThe 6 Ω is in series with the parallel pair, so the full 1.5 A enters the pair.\nCurrent in 3 Ω = 1.5 A × 2 Ω ÷ (3 Ω + 2 Ω)\nCurrent in 3 Ω = 1.5 × 2 ÷ 5 = 0.60 A\nCheck: current in 2 Ω = 1.5 A − 0.60 A = 0.90 A\nVoltage across 3 Ω = 0.60 A × 3 Ω = 1.8 V, and across 2 Ω = 0.90 A × 2 Ω = 1.8 V, which are equal.\n\nWhy not the others:\nA. 1.20A: 1.2 is the combined resistance of the pair in ohms, not a current.\nB. 0.90A: this is the current in the 2 Ω resistor, which takes the larger share.\nC. 0.75A: this splits 1.5 A equally, which would be right only if the two resistors were equal.\n\nExam tip: for two resistors in parallel, the current in one = total current × the other resistance ÷ the sum of the two. Check that both branches get the same voltage."
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "electric-cells.emf-internal",
+      "difficulty": "medium",
+      "hint1": "The terminal p.d. is the voltage across everything connected outside the battery. Start by finding the total resistance of that outside circuit.",
+      "hint2": "Combine the 3 Ω and 2 Ω in parallel first, using product ÷ sum, then add the 6 Ω in series. The current through the 6 Ω, given in the previous question, is the current the battery supplies.",
+      "hint3": "Multiply that current by the total outside resistance you found.",
+      "solution": "Answer: C. 10.80V\n\nThe terminal p.d. of a battery is the voltage across its terminals while current flows, which is the voltage across the whole external circuit. By Ohm's law it equals the current × the total external resistance, V = IR.\n\nHow to tell:\nParallel pair: R = (3 Ω × 2 Ω) ÷ (3 Ω + 2 Ω) = 6 ÷ 5 = 1.2 Ω\nTotal external resistance = 1.2 Ω + 6 Ω = 7.2 Ω\nCurrent from the battery = 1.5 A, the current through the 6 Ω, which carries the full current\nTerminal p.d. = 1.5 A × 7.2 Ω = 10.80 V\n\nWhy not the others:\nA. 7.20V: 7.2 is the external resistance in ohms, not the voltage.\nB. 7.50V: this matches 1.5 A × 5 Ω, which adds 3 Ω and 2 Ω in series and leaves out the 6 Ω.\nD. 11.25V: this matches 1.5 A × 7.5 Ω, which uses a wrong total resistance instead of 7.2 Ω.\n\nExam tip: terminal p.d. = current × external resistance. Reduce parallel groups first, add the series resistors, then multiply by the current."
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "nucleus.composition",
+      "difficulty": "medium",
+      "hint1": "Picture the atom as a small, dense centre with particles moving around it. Test each statement against that picture, one at a time.",
+      "hint2": "Every option includes I, so the position of the nucleus is agreed. Focus on II, III and IV: what charge do protons carry, and what can an unstable nucleus do?",
+      "hint3": "Now check II carefully: which particles are called nucleons, and where are the electrons found? Keep the option that matches every true statement and no false one.",
+      "solution": "Answer: B. I, III, and IV only\n\nThe nucleus is the small, dense centre of the atom. It holds the protons and neutrons, which together are called nucleons. The electrons are outside the nucleus, moving around it.\n\nHow to tell:\nI is true: the nucleus is at the centre of the atom.\nII is false: electrons are not nucleons, and they are found outside the nucleus.\nIII is true: protons are positive and neutrons have no charge, so the nucleus is positive.\nIV is true: an unstable nucleus breaks down (decays) by giving out radiation such as alpha or beta particles.\n\nWhy not the others:\nA. I, II and IV only: it includes II, which is false, and leaves out III, which is true.\nC. I, II and III only: it includes II and leaves out IV.\nD. I and II only: it includes II and leaves out III and IV.\n\nExam tip: in roman-numeral questions, find one statement you are sure is false and strike out every option that contains it. Then check what is left against the other statements."
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "nucleus.half-life",
+      "difficulty": "medium",
+      "hint1": "Half-life is the time for half of a radioactive sample to decay. Think about how many times the mass has halved.",
+      "hint2": "Halve 16 g step by step until you reach 1 g, and count the halvings.",
+      "hint3": "Those halvings took 40 days in total. Share the 40 days equally among them.",
+      "solution": "Answer: C. 10.0days\n\nIn each half-life, half of the undecayed atoms decay, so the mass left halves. Counting the halvings gives the number of half-lives, and total time ÷ number of half-lives gives the half-life.\n\nHow to tell:\n16 g → 8 g → 4 g → 2 g → 1 g\nThat is 4 halvings, so 4 half-lives.\nHalf-life = 40 days ÷ 4 = 10.0 days\n\nWhy not the others:\nA. 2.5days: this is 40 ÷ 16, dividing by how many times smaller the mass became instead of the number of halvings.\nB. 5.0days: this means 8 half-lives in 40 days, which would leave 16 g ÷ 256 = 0.0625 g, not 1 g.\nD. 15.0days: this means fewer than 3 half-lives in 40 days, which would leave about 2.5 g, not 1 g.\n\nExam tip: write the fraction left as (½)ⁿ, where n is the number of half-lives. Here 1/16 = (½)⁴. Then half-life = total time ÷ n."
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "sound.echoes",
+      "difficulty": "easy",
+      "hint1": "Think about what happens to sound in a hall with hard, bare walls and ceilings.",
+      "hint2": "Soft, porous or perforated materials absorb sound energy instead of reflecting it. Taking energy out of the sound cannot make it louder or more intense.",
+      "hint3": "Absorbing sound leaves its frequency unchanged. Think about what listeners hear when sound keeps bouncing between hard walls.",
+      "solution": "Answer: C. reduce the effect of reverberation of sound waves\n\nReverberation is the lingering of a sound caused by many reflections from walls, floor and ceiling arriving one after another. Too much of it blurs speech and music. Perforated pads absorb much of the sound that hits them, so fewer strong reflections come back.\n\nHow to tell: the pads take in sound energy rather than bouncing it back, which cuts down the repeated reflections that cause reverberation.\n\nWhy not the others:\nA. increase the intensity of soundwaves: absorbing sound energy lowers the intensity of the reflected sound, it does not raise it.\nB. increase the loudness of sound waves: loudness depends on intensity, so absorbing sound makes the room quieter, not louder.\nD. decrease the frequency of sound waves: absorbing materials reduce how much sound is reflected but do not change its frequency.\n\nExam tip: soft or porous materials in halls, cinemas and studios are there to control reverberation. Hard, smooth surfaces reflect sound well; soft or porous ones absorb it."
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "circular-motion.centripetal",
+      "difficulty": "hard",
+      "hint1": "At the lowest point of a vertical circle, two forces act on the bucket along the string. Name them and their directions.",
+      "hint2": "Tension pulls up towards the centre and weight pulls down. Their difference supplies the centripetal force: T − mg = mv² ÷ r.",
+      "hint3": "Work out mv² ÷ r with v = 5 m/s, then decide whether the weight is added to it or taken away from it to get T.",
+      "solution": "Answer: D. 308.3 N\n\nA body moving in a circle needs a net force towards the centre, the centripetal force mv² ÷ r. At the lowest point the centre is above the bucket, so the tension must hold up the weight and also provide this extra upward force.\n\nHow to tell:\nCentripetal force = mv² ÷ r = 10 kg × (5 m/s)² ÷ 1.2 m = 250 ÷ 1.2 = 208.3 N\nWeight = mg = 10 kg × 10 m/s² = 100 N\nT − mg = mv² ÷ r\nT = 208.3 N + 100 N = 308.3 N\n\nWhy not the others:\nA. 41.7 N: this is 10 × 5 ÷ 1.2, using v instead of v² and leaving out the weight.\nB. 141.7 N: this adds the weight to 41.7 N, which again uses v instead of v².\nC. 208.3 N: this is the centripetal force alone and leaves out the weight.\n\nExam tip: in a vertical circle, at the lowest point T = mg + mv² ÷ r, and at the highest point T = mv² ÷ r − mg. Remember to square the speed."
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "optical-instruments.eye",
+      "difficulty": "medium",
+      "hint1": "The near point is the closest distance at which an eye can see an object clearly. Compare this man's near point with the normal value.",
+      "hint2": "The normal near point is taken as 25 cm. A near point farther than that means objects held close look blurred.",
+      "hint3": "Two options describe a near point that has moved outward. One is the general long-sight defect; the other is the loss of focusing power that comes with age. Does the question give any clue about age?",
+      "solution": "Answer: A. hypermetropia\n\nHypermetropia (long sight) is when the eye sees distant objects clearly but not near ones, because the image of a near object falls behind the retina. This pushes the near point farther than the normal 25 cm.\n\nHow to tell: this man's near point is 30 cm, farther than the normal 25 cm, so he cannot focus on objects closer than 30 cm. That is long sight.\n\nWhy not the others:\nB. myopia: short sight blurs distant objects; the near point is usually closer than normal, not farther.\nC. presbyopia: it also moves the near point outward, but it is the loss of focusing power that comes with age, and nothing in the question points to age.\nD. astigmatism: it comes from an unevenly curved cornea or lens, so lines in some directions look blurred; it is not judged by the near point.\n\nExam tip: a near point beyond 25 cm points to long sight (hypermetropia). A far point nearer than normal points to short sight (myopia). Choose presbyopia when the question mentions old age."
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "dispersion.colour",
+      "difficulty": "hard",
+      "hint1": "The question is about mixing coloured lights (read While as White). Recall the primary colours of light and what they give when all three are added.",
+      "hint2": "Red, green and blue lights together make white. A secondary colour plus the primary colour it is missing, its complementary colour, also makes white.",
+      "hint3": "Write each colour as primaries: magenta = red + blue, yellow = red + green, cyan = green + blue. White needs red, green and blue all present. Check each of I to IV.",
+      "solution": "Answer: B. I, II and III only\n\nWhen coloured lights are added, white forms when red, green and blue are all present. Each secondary colour is two primaries: magenta = red + blue, yellow = red + green, cyan = green + blue. This is mixing lights, which follows different rules from mixing paints.\n\nHow to tell:\nI. magenta + yellow + cyan contains red, blue and green, so it gives white.\nII. red + blue + green are the three primaries, so they give white.\nIII. magenta + green = red + blue + green, so it gives white. Magenta and green are complementary colours.\nIV. yellow + red + green contains no blue, so it gives a yellowish light, not white.\n\nWhy not the others:\nA. II only: I and III also give white.\nC. I and IV only: IV has no blue, and it leaves out II and III.\nD. II and III only: it leaves out I, which also contains all three primaries.\n\nExam tip: break every colour of light into its primaries, then check for red, green and blue. Mixing paints works by taking colours away, so do not use paint rules for lights."
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "reflection.curved",
+      "difficulty": "medium",
+      "hint1": "Decide which way the mirror curves as seen by the light arriving from below. The short hatch lines mark the back of a mirror.",
+      "hint2": "The hatching is on the upper side of the curve, so the shiny face is the lower side, and it bulges towards the incoming light. Notice whether the reflected rays come together or spread apart.",
+      "hint3": "A mirror of this shape gives small, upright images and shows a wide area. Two of the uses listed need a magnified image of something close. Which use needs a wide view instead?",
+      "solution": "Answer: A. surveillance mirror\n\nA convex mirror bulges towards the light. It spreads reflected rays apart, so for any real object it forms a small, upright, virtual image and shows a wide area in a small space.\n\nHow to tell: the hatch lines, which mark the back of the mirror, are on the upper side of the curve. So the reflecting face is the lower side, which bulges towards the rays coming up from below, and the reflected rays spread apart. That makes it a convex mirror, and its wide field of view is why it is used for surveillance in shops and at blind corners.\n\nWhy not the others:\nB. make-up mirror: this uses a concave mirror, which gives a magnified, upright image when the face is close to it.\nC. reflector in microscope: this uses a concave or plane mirror to direct light onto the specimen.\nD. depressing mirror: this is not a standard name for any mirror use.\n\nExam tip: hatching marks the back of a mirror. If the shiny side bulges towards the light, it is convex: think wide view, surveillance and driving mirrors. If it curves in, it is concave: think magnifying, shaving, make-up and headlamp mirrors."
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "waves.superposition",
+      "difficulty": "medium",
+      "hint1": "The question asks which statement is not true. Picture a stationary wave: points that stay still, with loops of movement between them.",
+      "hint2": "Nodes are points of no movement and antinodes are points of largest movement. Neighbouring nodes are half a wavelength apart, and particles in one loop move with different amplitudes, largest at the antinode.",
+      "hint3": "Two statements say opposite things about the phase of particles in one loop between adjacent nodes. Decide whether those particles move up and down together or at different times.",
+      "solution": "Answer: A. particles between adjacent nodes vibrate out of phase with each other\n\nIn a stationary wave, the particles in one loop between two neighbouring nodes all move up together and down together, so they are in phase. They differ in how far they move. Particles in the next loop, across a node, move the opposite way, so they are out of phase with the first loop.\n\nHow to tell: statement A says particles between adjacent nodes are out of phase. They are in phase, so A is the statement that is not true.\n\nWhy not the others:\nB. successive nodes or antinodes occur at intervals of half a wavelength: this is true; neighbouring nodes, or neighbouring antinodes, are λ ÷ 2 apart.\nC. particle between adjacent nodes vibrates in phase with each other: this is true; particles within one loop move in step.\nD. particles between adjacent nodes have different amplitudes: this is true; the amplitude rises from zero at a node to a maximum at the antinode.\n\nExam tip: in a stationary wave, the same loop means the same phase and neighbouring loops mean opposite phase. When a question asks which is not true, mark each statement true or false before looking at the letters."
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "sound.pipes",
+      "difficulty": "easy",
+      "hint1": "Think about what must happen at each end of the pipe. At the closed end the air cannot move, and at the open end it moves the most.",
+      "hint2": "So the closed end is a node and the open end is an antinode. The fundamental fits a quarter of a wavelength into the pipe: L = λ ÷ 4.",
+      "hint3": "The next pattern that fits still needs a node at one end and an antinode at the other, so it fits three quarters of a wavelength. What multiple of the fundamental frequency is that, and what comes after it?",
+      "solution": "Answer: A. odd integer multiples of the fundamental frequency\n\nA pipe closed at one end must have a node at the closed end and an antinode at the open end. The patterns that fit this hold ¼, ¾, 5/4 of a wavelength and so on, so the frequencies are f₀, 3f₀, 5f₀ and so on.\n\nHow to tell:\nFundamental: L = λ ÷ 4, so f₀ = v ÷ 4L\nFirst overtone: L = 3λ ÷ 4, so frequency = 3v ÷ 4L = 3f₀\nSecond overtone: L = 5λ ÷ 4, so frequency = 5f₀\nThe multiples are 3, 5, 7 and so on, all odd.\n\nWhy not the others:\nB. even integer multiples of the fundamental frequency: even multiples such as 2f₀ do not fit a node at one end and an antinode at the other.\nC. all integer multiples of the fundamental frequency: this is the pattern for a pipe open at both ends, or a stretched string.\nD. prime integer multiples of the fundamental: primes include 2, which is even and does not occur, and leave out 9, which is odd and does occur.\n\nExam tip: closed pipe: f₀, 3f₀, 5f₀ (odd multiples). Open pipe or string: f₀, 2f₀, 3f₀ (all multiples). Sketch the node or antinode at each end to check."
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "nucleus.half-life",
+      "difficulty": "easy",
+      "hint1": "Each half-life halves the mass that is left. Count the halvings needed to get from the starting mass to the final mass.",
+      "hint2": "The mass has fallen by a factor of 512 ÷ 64. That factor is not itself the number of half-lives.",
+      "hint3": "Write that factor as a power of 2, or halve 512 g step by step until you reach 64 g.",
+      "solution": "Answer: D. 3\n\nIn each half-life the undecayed mass halves. After n half-lives the mass left is the starting mass × (½)ⁿ, so the number of half-lives is the number of halvings.\n\nHow to tell:\n512 g → 256 g → 128 g → 64 g\nThat is 3 halvings.\nCheck: 512 ÷ 64 = 8 = 2³, so n = 3.\n\nWhy not the others:\nA. 8: this is the factor by which the mass fell, 512 ÷ 64, not the number of halvings.\nB. 6: six half-lives would leave 512 g ÷ 64 = 8 g.\nC. 4: four half-lives would leave 32 g.\n\nExam tip: the number of half-lives is the power of 2 in (starting amount ÷ amount left). For example, 8 = 2³, 16 = 2⁴, 32 = 2⁵."
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "waves.superposition",
+      "difficulty": "easy",
+      "hint1": "Interference depends on whether a crest from one wave meets a crest or a trough from the other.",
+      "hint2": "A path difference of a whole number of wavelengths brings the waves back into step, which gives constructive interference.",
+      "hint3": "For destructive interference a crest must meet a trough. How far apart are a crest and the next trough on a wave?",
+      "solution": "Answer: B. one-half wavelength\n\nTwo waves cancel (destructive interference) when a crest from one arrives together with a trough from the other. They are then out of step by half a cycle.\n\nHow to tell: a crest and the next trough are half a wavelength apart, so a path difference of λ ÷ 2, or 3λ ÷ 2, 5λ ÷ 2 and so on, makes crest meet trough.\n\nWhy not the others:\nA. one wavelength: the waves arrive in step, crest on crest, giving constructive interference.\nC. one-quarter wavelength: the waves are only partly out of step, so they do not cancel fully.\nD. one-eight wave length: the waves are nearly in step, so they mostly add rather than cancel.\n\nExam tip: constructive for a path difference of 0, λ, 2λ and so on; destructive for ½λ, 1½λ, 2½λ and so on."
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "induction.transformers",
+      "difficulty": "easy",
+      "hint1": "A transformer changes the size of an a.c. voltage. Recall how the voltage ratio depends on the number of turns in each coil.",
+      "hint2": "Vs ÷ Vp = Ns ÷ Np. Equal turns would leave the voltage unchanged, and the distance between the coils is not what steps the voltage up.",
+      "hint3": "To step the voltage up, Vs must be bigger than Vp. What does that need Ns to be compared with Np?",
+      "solution": "Answer: A. less number of turns in the primary coil than in the primary coil than in the secondary coil\n\nThe voltage ratio of a transformer equals its turns ratio: Vs ÷ Vp = Ns ÷ Np. A step-up transformer makes the output (secondary) voltage bigger than the input (primary) voltage, so the secondary coil needs more turns than the primary.\n\nHow to tell: the option repeats the words in the primary coil by a printing error. It means fewer turns on the primary than on the secondary, Np less than Ns, which gives Vs bigger than Vp.\n\nWhy not the others:\nB. more number of turns in the primary coil than in the secondary coil: this gives a smaller output voltage, a step-down transformer.\nC. equal number of turns in the primary coil and the secondary coil: this gives an output voltage equal to the input.\nD. its primary coil far away from the secondary coil: this lets magnetic flux leak away and lowers efficiency; it does not step the voltage up.\n\nExam tip: the coil with more turns has the higher voltage. Step-up means more turns on the secondary; step-down means more turns on the primary."
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "magnetism.fields",
+      "difficulty": "easy",
+      "hint1": "Keep the quantities apart: magnetic flux, magnetic flux density, power and charge each have their own unit.",
+      "hint2": "The coulomb is the unit of charge, and the watt (misprinted here) is the unit of power. Neither measures a magnetic field.",
+      "hint3": "Flux density is flux per square metre. The unit of flux is the weber, so flux density is weber per square metre, which has its own one-word name.",
+      "solution": "Answer: A. tesla\n\nMagnetic flux density B tells you how concentrated a magnetic field is: the flux passing through each square metre. Its SI unit is the tesla (T), where 1 T = 1 Wb/m², one weber per square metre.\n\nHow to tell: from F = BIL, B = F ÷ IL, so 1 T = 1 N ÷ (1 A × 1 m). The tesla is a newton per ampere-metre.\n\nWhy not the others:\nB. walt: this is most likely a misprint for watt, the unit of power.\nC. newton per meter: this is the unit of a spring constant or of surface tension; the tesla also needs an ampere, N/(A m).\nD. coulomb: this is the unit of electric charge.\n\nExam tip: flux Φ is in weber (Wb); flux density B is in tesla (T) = Wb/m². Check any unit with a formula such as F = BIL."
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "electrical-energy.cost",
+      "difficulty": "easy",
+      "hint1": "Think about what your family's electricity bill is actually charged for, and the unit printed on it.",
+      "hint2": "The bill grows the longer appliances stay on. So the meter must record something that builds up over time, not something read at one instant.",
+      "hint3": "The kilowatt-hour is a power multiplied by a time. Which of the four quantities is power × time?",
+      "solution": "Answer: B. energy\n\nYou pay for how much electrical energy you use. Energy is power × time, so a meter that adds up the energy used over days and weeks is what lets the supplier work out the bill.\n\nHow to tell: the meter reading is in kilowatt-hours (kWh). A kilowatt-hour is 1 kW of power used for 1 hour, which is a quantity of energy (1 kWh = 3.6 × 10⁶ J). The more hours appliances run, the higher the reading climbs.\n\nWhy not the others:\nA. power: power is how fast energy is used at one moment, in watts, and does not add up the total over time.\nC. voltage: the supply voltage stays roughly the same whether you use a little or a lot, so it cannot show how much you used.\nD. current: current changes from moment to moment and leaves out how long it flowed, so it cannot give the bill on its own.\n\nExam tip: check the unit. kWh is a unit of energy, not of power, so anything measured or billed in kWh is energy."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "electric-cells.types",
+      "difficulty": "easy",
+      "hint1": "Ask what is inside a cell before it is connected to anything, and what happens inside it when it starts to work.",
+      "hint2": "A cell only makes a current when substances inside it react with each other. The energy is held in those substances until then.",
+      "hint3": "Electrical energy is what the cell gives out when a current flows. What form was that energy in before it came out?",
+      "solution": "Answer: A. chemical\n\nA cell stores energy in the chemicals inside it. When the cell is connected in a circuit, those chemicals react and the chemical energy is changed into electrical energy.\n\nHow to tell: the Leclanche cell contains chemicals, a zinc case, a carbon rod and a paste of ammonium chloride with manganese(IV) oxide. When a current is drawn, the zinc reacts and is slowly used up. That is a chemical change releasing stored energy.\n\nWhy not the others:\nB. electrical: this is the energy the cell gives out when a current flows, not the form it is kept in.\nC. nuclear: nuclear energy is held in the nucleus of atoms and is released in reactors, not in a torch cell.\nD. thermal: thermal energy is heat, and a cell does not store heat to make a current.\n\nExam tip: for any cell or battery, stored energy is chemical, and the change when it is used is chemical → electrical."
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "energy.forms-conservation",
+      "difficulty": "easy",
+      "hint1": "For an energy-change question, ask two things: what goes into the device, and what comes out of it.",
+      "hint2": "A microphone is what you speak into on a stage. What reaches it is your voice, and what leaves it goes along a wire to an amplifier.",
+      "hint3": "Only two options start with the energy that actually reaches a microphone. Which of those ends with what travels along the wire?",
+      "solution": "Answer: B. sound to electrical\n\nA microphone picks up sound and turns it into an electrical signal that can be amplified, recorded or sent along a wire.\n\nHow to tell: sound waves make a thin diaphragm inside the microphone vibrate. The vibration produces a changing electrical signal that follows the pattern of the sound. Input: sound. Output: electrical.\n\nWhy not the others:\nA. electrical to sound: this is the reverse, the change in a loudspeaker.\nC. electrical to mechanical: this is the change in an electric motor.\nD. sound to mechanical: the diaphragm does vibrate on the way, but the microphone's useful output is an electrical signal, not movement.\n\nExam tip: for a device's energy change, name the useful output, not an in-between step. Microphone and loudspeaker are a matched pair doing opposite changes."
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "nucleus.half-life",
+      "difficulty": "medium",
+      "hint1": "Two things are needed: how much time passed, and how many times the amount was halved in that time. The start time is misprinted, so read it as the most sensible hour on the same day.",
+      "hint2": "Write 1/16 as ½ multiplied by itself a number of times. That number is how many half-lives went by.",
+      "hint3": "You now have the total time and the number of half-lives. One of them divided by the other gives the half-life.",
+      "solution": "Answer: C. 1 hour\n\nThe half-life is the time taken for half of a radioactive sample to decay. Each half-life halves what is left, so the fraction left tells you how many half-lives have passed, and the total time shared among them gives one half-life.\n\nHow to tell:\nStart time: 1300 hours (the paper prints 13100, which can only mean 1300)\nTime taken: 1700 − 1300 = 4 hours\nFraction left: 1/16 = ½ × ½ × ½ × ½ = (½)⁴\nNumber of half-lives: 4\nHalf-life = 4 hours ÷ 4 = 1 hour\nCheck with the mass: 16 g → 8 g → 4 g → 2 g → 1 g, and 1 g out of 16 g is 1/16.\n\nWhy not the others:\nA. 4 hours: this is the total time, which is only one half-life if half the sample is left, not 1/16.\nB. 2 hours: this gives 2 half-lives in 4 hours, leaving ¼, not 1/16.\nD. 0.5 hour: this gives 8 half-lives in 4 hours, leaving 1/256, not 1/16.\n\nExam tip: turn the fraction left into a power of ½ to count the half-lives, then divide the total time by that number. Do not give the total time as the half-life."
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "newtons-laws.third-law",
+      "difficulty": "medium",
+      "hint1": "Recall what each of Newton's three laws is about, and match the law to the kind of situation it best explains.",
+      "hint2": "The third law says that when one body pushes on another, the second pushes back equally hard in the opposite direction. Look for the case where a body moves forward because of what it pushes out behind it.",
+      "hint3": "An example of speeding up because of a resultant force belongs to the second law. Of the remaining situations, which one moves by throwing something out in the opposite direction?",
+      "solution": "Answer: C. a rocket propelled into space\n\nNewton's third law says that to every action there is an equal and opposite reaction. Action and reaction act on two different bodies. A rocket is the standard example: it pushes hot gases out backward, and the gases push the rocket forward.\n\nHow to tell: the rocket burns fuel and forces the exhaust gases out of its tail (action). The gases push back on the rocket with an equal force in the opposite direction (reaction), and that push drives it upward, even with no air or ground to push against.\n\nWhy not the others:\nA. A ball rolling on the ground: this shows a body keeping its motion until friction slows it, which is the first law.\nB. an accelerating car: a resultant force producing acceleration is the second law, F = ma.\nD. pedaling of bicycle: this is taught as a force turning the wheels through the pedals and chain, not as the textbook action and reaction example.\n\nExam tip: action and reaction pairs exist whenever bodies push on each other, but examiners want the clearest case. Rocket, gun recoil, jet engine and swimming point to the third law."
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "energy.power",
+      "difficulty": "medium",
+      "hint1": "Find the formula that links power to force and velocity, then see how the answer changes when each input changes.",
+      "hint2": "Power = force × velocity. When two quantities that are multiplied together both change, multiply their two changes.",
+      "hint3": "Work out ½ × ½. Then find the option that describes power ending up at that fraction of its first value.",
+      "solution": "Answer: B. reduced by a quarter\n\nPower is the rate of doing work. Work is force × distance, so power = force × distance ÷ time = force × velocity. Power therefore depends on both force and velocity multiplied together.\n\nHow to tell:\nFirst power: P = Fv\nNew force: ½F\nNew velocity: ½v\nNew power = ½F × ½v = ¼Fv = ¼P\nSo the power falls to a quarter of its first value. The option wording means reduced to a quarter.\n\nWhy not the others:\nA. doubled: power could only double if the product Fv doubled, but both factors fell.\nC. reduced by half: that happens when only one of force or velocity is halved.\nD. constant: that needs one factor to halve while the other doubles.\n\nExam tip: when a quantity is a product, such as P = Fv or P = IV, multiply the changes. Halving both factors gives a quarter, not a half."
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "machines.ma-vr-efficiency",
+      "difficulty": "medium",
+      "hint1": "Velocity ratio compares how far the effort moves with how far the load is raised. Picture pushing a load up a slope.",
+      "hint2": "On an inclined plane the effort moves along the slope while the load rises only by the height. For angle θ, the velocity ratio = 1 ÷ sin θ.",
+      "hint3": "sin 45° ≈ 0.707. Take care to divide 1 by it, not to use sin 45° itself as the answer.",
+      "solution": "Answer: C. 1.41\n\nVelocity ratio (VR) is the distance moved by the effort divided by the distance moved by the load. On an inclined plane the effort moves the full length of the slope, L, while the load is raised only by the height, h. Since h = L sin θ, the ratio is L ÷ h = 1 ÷ sin θ.\n\nHow to tell:\nVR = 1 ÷ sin θ\nsin 45° = 0.707\nVR = 1 ÷ 0.707\nVR ≈ 1.41 (no unit, because it is a ratio of two distances)\n\nWhy not the others:\nA. 0.71: this is sin 45° itself, and a slope's VR is more than 1 because the slope is longer than the height.\nB. 1.00: this would mean the effort moves only as far as the load rises, which is lifting straight up at 90°.\nD. 1.71: this comes from adding 1 to sin 45°, which is not the formula.\n\nExam tip: for an inclined plane, VR = 1 ÷ sin θ, and the answer is always above 1 for a slope less steep than vertical. The gentler the slope, the bigger the VR."
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "newtons-laws.second-law",
+      "difficulty": "hard",
+      "hint1": "In lift questions, what you feel as your weight is the push of the floor on you, called the reaction. Think about how that push changes with the lift's acceleration.",
+      "hint2": "For a lift accelerating downward, reaction R = m(g − a), where a is the lift's acceleration. Put a = g into it.",
+      "hint3": "A smaller reaction means you feel lighter. What does it mean when the reaction becomes exactly zero?",
+      "solution": "Answer: D. is weightless\n\nWhat a body feels as its weight, or what a scale in the lift reads, is the reaction of the floor on it, called its apparent weight. When the lift accelerates downward, the floor pushes up less. If the acceleration equals g, the floor does not need to push at all.\n\nHow to tell:\nForces on the body: weight mg down, reaction R up\nResultant force downward: mg − R = ma\nSo R = m(g − a)\nWith a = g: R = m(g − g) = 0\nThe reaction is zero, so the body is weightless. The pull of gravity on it has not gone away, but nothing pushes back on it, so it feels no weight and a scale reads zero.\n\nWhy not the others:\nA. weight less than its actual weight: this is true when the lift accelerates downward at less than g, not at g.\nB. weights more than its actual weight: this happens when the lift accelerates upward.\nC. weights exactly its own weight: this happens when the lift is at rest or moving at a steady speed.\n\nExam tip: in lift questions, compare the acceleration with g. Up: heavier. Down at less than g: lighter. Down at g, as in free fall: weightless."
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "fluids.flow",
+      "difficulty": "medium",
+      "hint1": "This question is about a moving fluid. Recall the principle that links the speed of a flowing fluid to its pressure.",
+      "hint2": "Bernoulli's principle: in the steady flow of a fluid, where the speed is high the pressure is low, and where the speed is low the pressure is high.",
+      "hint3": "Pressure and speed move in opposite directions in this principle. The pressure has gone up, so which way does the speed go?",
+      "solution": "Answer: B. decreased\n\nBernoulli's principle says that for a fluid in steady (smooth) flow, the pressure plus the kinetic energy per unit volume stays the same along the flow. So if one goes up, the other must go down: higher pressure goes with lower speed.\n\nHow to tell: along the flow, pressure + ½ρv² is constant, where ρ is the density and v the speed. If the pressure increases, ½ρv² must get smaller, so the speed v falls. The oil moves more slowly where its pressure is higher.\n\nWhy not the others:\nA. increased: this would make pressure and ½ρv² rise together, which breaks the constant sum.\nC. constant: the speed must change when the pressure changes, to keep the sum fixed.\nD. increase than decreased: nothing in the principle makes the speed first rise and then fall.\n\nExam tip: in Bernoulli questions, pressure and speed are opposites: fast flow, low pressure; slow flow, high pressure. The same idea explains aerofoils, spray guns and two sheets of paper pulled together when you blow between them."
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "nucleus.composition",
+      "difficulty": "easy",
+      "hint1": "In nuclide notation, the number at the top and the number at the bottom each count something different in the nucleus.",
+      "hint2": "The top number (nucleon number) counts protons plus neutrons. The bottom number (proton number) counts protons only.",
+      "hint3": "Take the protons away from the total number of particles in the nucleus. What is left?",
+      "solution": "Answer: B. 8\n\nThe nucleus is made of protons and neutrons, together called nucleons. The top number, A, is the total number of nucleons, and the bottom number, Z, is the number of protons. So the neutrons are what is left when you subtract Z from A.\n\nHow to tell:\nNucleon number A = 14\nProton number Z = 6\nNeutrons N = A − Z\nN = 14 − 6 = 8\n\nWhy not the others:\nA. 6: this is the proton number, Z.\nC. 14: this is the nucleon number, protons and neutrons together.\nD. 20: this adds the two numbers, 14 + 6, instead of subtracting.\n\nExam tip: in nuclide notation, neutrons = top − bottom, protons = bottom, and in a neutral atom electrons = bottom."
+    },
+    {
+      "q_number": 43,
+      "subtopic_id": "nucleus.decay-equations",
+      "difficulty": "medium",
+      "hint1": "In any nuclear equation, the top numbers must add up the same on both sides, and so must the bottom numbers.",
+      "hint2": "An alpha particle is ⁴₂He. It carries away 4 from the nucleon number and 2 from the proton number.",
+      "hint3": "Work out 226 − 4 and 88 − 2, then find the option that has both of those numbers.",
+      "solution": "Answer: A. ²²² ₈₆ X\n\nIn a nuclear equation, nucleon number (top) and proton number (bottom) are both conserved: the totals on the left equal the totals on the right. An alpha particle carries away 2 protons and 2 neutrons, so the nucleus left behind has 4 fewer nucleons and 2 fewer protons.\n\nHow to tell:\nTop numbers: 226 = A + 4, so A = 226 − 4 = 222\nBottom numbers: 88 = Z + 2, so Z = 88 − 2 = 86\nDaughter nuclide: ²²²₈₆X (this is radon)\n\nWhy not the others:\nB. ²²² ₈₈ X: the proton number is left at 88, so the 2 protons carried off by the alpha particle are not accounted for.\nC. ²³⁰ ₈₆ X: the 4 has been added to the nucleon number instead of subtracted.\nD. ²³² ₈₈ X: the nucleon number goes up and the proton number is unchanged, so neither side balances.\n\nExam tip: alpha decay lowers the top number by 4 and the bottom by 2. Beta decay leaves the top number the same and raises the bottom by 1. Gamma changes neither."
+    },
+    {
+      "q_number": 44,
+      "subtopic_id": "atom.duality",
+      "difficulty": "medium",
+      "answer_challenge": "As printed, no option is correct: λ = h ÷ mv = 6.67 × 10⁻³⁴ ÷ (0.0025 × 250) = 1.07 × 10⁻³³ m, but option C reads 1.07 × 10⁻³⁴ m. C is still the only option with the right digits, so it stays the key and the solution teaches it as a printing slip, but the stem (mass 0.025 kg) or option C should be corrected before shipping. The stray 'c = 1.6 × 10⁻¹⁹ C' is the electron charge and can be removed.",
+      "hint1": "A moving particle also behaves like a wave. The formula for its wavelength uses the Planck constant and the particle's momentum.",
+      "hint2": "de Broglie wavelength λ = h ÷ (mv). Work out the momentum mv first. The value marked c in the bracket is not needed.",
+      "hint3": "Divide 6.67 × 10⁻³⁴ by your momentum and compare the digits you get with the options. Check the power of ten carefully.",
+      "solution": "Answer: C. 1.07 × 10⁻³⁴m\n\nEvery moving particle has a wave nature. Its de Broglie wavelength is λ = h ÷ p, where h is the Planck constant and p = mv is its momentum. A large momentum gives a very short wavelength, which is why we never notice the wave behaviour of everyday objects like bullets.\n\nHow to tell:\nMomentum p = mv = 0.0025 kg × 250 m/s = 0.625 kg m/s\nλ = h ÷ p = 6.67 × 10⁻³⁴ Js ÷ 0.625 kg m/s\nλ ≈ 10.7 × 10⁻³⁴ m = 1.07 × 10⁻³³ m\nThe digits 1.07 match option C. The printed power of ten in C is one too small, a printing slip in the paper, and no other option fits correct working. The value 1.6 × 10⁻¹⁹ C in the bracket is the charge of an electron and is not used.\n\nWhy not the others:\nA. 6.67 × 10⁻³⁸m: this is just the digits of h with a different power of ten, without dividing by the momentum.\nB. 5.34 × 10⁻³⁵m: its value is half of option C, as if the momentum had been doubled.\nD. 2.13 × 10⁻³⁴m: its value is twice option C, as if the momentum had been halved.\n\nExam tip: for de Broglie questions, find mv first, then λ = h ÷ mv. Ignore constants you do not need, and if no option matches exactly, choose the one whose digits match your working."
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "light.sources",
+      "difficulty": "easy",
+      "hint1": "Beams of light are named by what their rays do as they travel: meet, spread out, or stay side by side.",
+      "hint2": "If rays appear to come from one point, trace them forward. Are they getting closer together or further apart as they go?",
+      "hint3": "One kind of beam has rays moving towards a point, another has rays moving away from a point. Which one is described here?",
+      "solution": "Answer: B. divergent\n\nA beam is a group of rays. Beams are named by how their rays behave: rays that spread out from a point form a divergent beam, rays that come together at a point form a convergent beam, and rays that stay the same distance apart form a parallel beam.\n\nHow to tell: rays that appear to come from a single point must spread further apart as they travel away from it, like the light from a torch bulb or a candle flame. Spreading apart is divergence.\n\nWhy not the others:\nA. convergent: the rays move towards a point and meet there, the opposite of coming from one.\nC. parallel: the rays stay the same distance apart, like light from a very distant source such as the sun.\nD. circular: this is not one of the types of beam.\n\nExam tip: diverge means spread out, converge means come together. Rays from a point diverge, rays towards a point converge, and rays from very far away are taken as parallel."
+    },
+    {
+      "q_number": 47,
+      "subtopic_id": "sound.characteristics",
+      "difficulty": "easy",
+      "hint1": "Think about the difference between a pleasant musical sound and an unpleasant jumble of sound, in terms of the frequencies they contain.",
+      "hint2": "A musical sound has a main frequency plus other frequencies that are whole-number multiples of it, so they are related. The key word in this question is unrelated.",
+      "hint3": "Set aside the options that describe a property of a sound rather than a kind of sound. Of what remains, which one is irregular rather than regular?",
+      "solution": "Answer: C. noise\n\nA musical note is regular: it has a main (fundamental) frequency and other frequencies related to it. Noise is irregular: it is a mixture of many frequencies with no pattern connecting them, so it sounds unpleasant.\n\nHow to tell: the stem says many unrelated frequencies superimposed, that is, laid on top of each other. No fundamental and no pattern means the sound is not musical. That is the definition of noise.\n\nWhy not the others:\nA. harmonics: these are frequencies related to the fundamental as whole-number multiples, not unrelated ones.\nB. note: a note is a regular sound with a fundamental and related overtones.\nD. pitch: pitch is how high or low a sound is, set by its frequency, and is a property, not a kind of sound.\n\nExam tip: related frequencies make a musical note, unrelated frequencies make noise. Pitch, loudness and quality are properties of a sound, not names for types of sound."
+    },
+    {
+      "q_number": 48,
+      "subtopic_id": "friction.solid",
+      "difficulty": "medium",
+      "hint1": "Uniform velocity means the speed and direction do not change. Ask what that says about the forces along the floor.",
+      "hint2": "With no acceleration, the push forward is balanced by friction backward. The coefficient of friction μ = friction ÷ normal reaction.",
+      "hint3": "On a level floor the normal reaction equals the weight, mg. Find the weight, then divide.",
+      "solution": "Answer: A. 0.25\n\nThe coefficient of friction, μ, is the frictional force divided by the normal reaction (the push of the floor up on the box). When the box moves at uniform velocity there is no acceleration, so the forces balance and friction equals the applied push.\n\nHow to tell:\nUniform velocity, so friction F = push = 200 N\nNormal reaction R = mg = 80 kg × 10 m/s² = 800 N\nμ = F ÷ R\nμ = 200 N ÷ 800 N = 0.25 (no unit, because it is a ratio of two forces)\n\nWhy not the others:\nB. 0.40: this does not come from 200 N ÷ 800 N.\nC. 0.50: this would need a normal reaction of 400 N, half the box's weight.\nD. 0.65: this does not come from any correct use of the data.\n\nExam tip: constant velocity means zero resultant force, so friction equals the applied force. On a level floor, μ = force ÷ mg."
+    },
+    {
+      "q_number": 49,
+      "subtopic_id": "elasticity.behaviour",
+      "difficulty": "easy",
+      "hint1": "Several properties of solids describe how they change shape under force. Each one has its own name for a particular kind of shaping.",
+      "hint2": "One property is being pulled into a wire, another is being hammered or rolled into a flat sheet.",
+      "hint3": "Two of the options describe shaping a metal. Which one is about drawing, not hammering?",
+      "solution": "Answer: B. ductile\n\nA ductile material can be stretched and pulled into thin wires without breaking. Platinum, gold and copper are good examples, which is why copper is used for electrical wiring.\n\nHow to tell: the stem says thin wires can be drawn, meaning pulled out long and thin. Being drawn into wire is exactly what ductility means.\n\nWhy not the others:\nA. crystalline: this describes how the atoms are arranged in a regular pattern, not the ability to be pulled into wire.\nC. hard: a hard material resists scratching and denting, which does not make it easy to draw into wire.\nD. malleable: this means able to be hammered or rolled into thin sheets, not drawn into wires.\n\nExam tip: ductile goes with wires, malleable goes with sheets, brittle means it breaks without bending."
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "induction.inductance",
+      "difficulty": "easy",
+      "hint1": "Many units in electricity are named after scientists. Recall which quantity each named unit belongs to.",
+      "hint2": "Inductance belongs to a coil, and is about how the coil opposes a change in the current through it.",
+      "hint3": "One option is the unit of capacitance and another is the unit of charge. Of the other two, which belongs to a coil in a circuit rather than to how often something repeats?",
+      "solution": "Answer: C. Henry\n\nInductance is the property of a coil that opposes changes in the current through it, by producing an induced e.m.f. Its S.I. unit is the henry (H), named after the scientist Joseph Henry. A coil has an inductance of 1 H when a current changing at 1 A per second induces an e.m.f. of 1 V in it.\n\nHow to tell: match the quantity to its unit. Inductance (L) is measured in henry.\n\nWhy not the others:\nA. Hertz: this is the unit of frequency, the number of cycles per second.\nB. Farad: this is the unit of capacitance, for capacitors.\nD. Coulomb: this is the unit of electric charge.\n\nExam tip: learn the circuit trio together: resistance in ohm (Ω), capacitance in farad (F), inductance in henry (H)."
+    }
+  ]
+}

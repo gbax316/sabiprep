@@ -2,66 +2,46 @@
   {
     "q_number": 5,
     "why": "defective",
-    "detail": "The question references 'the diagram below' illustrating a brooding equipment, but no image was atta"
+    "detail": "This question depends on a diagram of brooding equipment described in the shared stem, but no image "
   },
   {
     "q_number": 6,
     "why": "defective",
-    "detail": "The question depends on identifying the illustrated brooding equipment from 'the diagram below', but"
-  },
-  {
-    "q_number": 11,
-    "why": "defective",
-    "detail": "Missing data: mass of empty dish and mass of dish + fresh soil are not given, so the mass of fresh s"
-  },
-  {
-    "q_number": 12,
-    "why": "defective",
-    "detail": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute "
-  },
-  {
-    "q_number": 13,
-    "why": "defective",
-    "detail": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute "
+    "detail": "This question depends on identifying the brooding equipment shown in a diagram referenced by the sha"
   },
   {
     "q_number": 15,
     "why": "defective",
-    "detail": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram "
+    "detail": "The diagram illustrating the soil analysis tool is missing; no image was attached for questions 15-1"
   },
   {
     "q_number": 16,
     "why": "defective",
-    "detail": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram "
+    "detail": "The diagram illustrating the soil analysis tool is missing; no image was attached for questions 15-1"
+  },
+  {
+    "q_number": 18,
+    "why": "ambiguous",
+    "detail": "The options follow a clear pattern: B is the textbook definition of surface irrigation, C of sub-sur"
   },
   {
     "q_number": 21,
     "why": "defective",
-    "detail": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled"
+    "detail": "The referenced crop diagram (labelling parts I-III) was not attached, so part II cannot be identifie"
   },
   {
     "q_number": 22,
     "why": "defective",
-    "detail": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled"
+    "detail": "The referenced crop diagram (labelling parts I-III) was not attached, so part III cannot be identifi"
   },
   {
     "q_number": 28,
     "why": "defective",
-    "detail": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | T"
+    "detail": "The farmland survey diagram was not attached, so the shape and relationship between AB, DC and EF ca"
   },
   {
     "q_number": 29,
     "why": "defective",
-    "detail": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | T"
-  },
-  {
-    "q_number": 34,
-    "why": "ambiguous",
-    "detail": "Waterleaf produces small dehiscent capsules that split to release many tiny seeds, and standard Nige"
-  },
-  {
-    "q_number": 49,
-    "why": "ambiguous",
-    "detail": "The four options form a two-by-two grid: A and C differ by the ₦30,000 marketing cost, and B and D a"
+    "detail": "Depends on the farmland area from question 28, which is unsolvable due to the missing survey diagram"
   }
 ]

@@ -1,0 +1,130 @@
+{
+  "checker": "codex",
+  "unit": "2025",
+  "results": {
+    "2025_Q30": {
+      "stem": "2025_Q30",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q30.authored.svg",
+      "lane": "claude-sonnet"
+    },
+    "2025_Q37-38": {
+      "stem": "2025_Q37-38",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q37-38.authored.svg",
+      "lane": "claude-sonnet"
+    },
+    "2025_Q40": {
+      "stem": "2025_Q40",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q40.authored.svg",
+      "lane": "claude-sonnet"
+    },
+    "2025_Q41": {
+      "stem": "2025_Q41",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q41.authored.svg",
+      "lane": "claude-sonnet"
+    },
+    "2025_Q43-44": {
+      "stem": "2025_Q43-44",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q43-44.authored.svg",
+      "lane": "claude-sonnet"
+    },
+    "2025_Q46": {
+      "stem": "2025_Q46",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q46.authored.svg",
+      "lane": "claude-sonnet"
+    },
+    "2025_Q47-48": {
+      "stem": "2025_Q47-48",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2025_Q47-48.authored.svg",
+      "lane": "claude-sonnet"
+    }
+  },
+  "no_svg": [],
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0794,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0957,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1298,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0825,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1106,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1263,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0793,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.7036
+}

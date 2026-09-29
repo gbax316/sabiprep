@@ -1,0 +1,1162 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "verified": 36,
+    "agreed-soft": 9,
+    "disagree": 3,
+    "unsolvable": 2
+  },
+  "verdicts": {
+    "1": {
+      "q_number": 1,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 1,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "An epic is a long narrative poem celebrating the deeds of a hero, so heroism is its dominant theme. Sorrow or victory may feature as episodes, but they are not the defining thematic concern of the genre.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 1,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "An epic celebrates the deeds of a hero, so heroism is its dominant theme. Victory often occurs in epics but is an outcome, not the governing theme.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 2,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The sentence plays on the two meanings of 'mouse' (the rodent and the computer device), which is the definition of a pun. Zeugma is the strongest distractor since it also involves a word working in two senses, but zeugma requires one governing word (usually a verb) to apply grammatically to two different objects at once, which is not clearly the structure here.",
+        "solvable": true,
+        "issue": "The example sentence is oddly phrased/possibly garbled, making the intended device slightly ambiguous between pun and zeugma.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 2,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The sentence plays on two meanings of 'mouse' (the rodent and the computer mouse), which is a pun. It is not zeugma because no single verb governs two objects in different senses.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 3,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Tone refers to the speaker's or writer's attitude toward the subject matter, conveyed through word choice and style. Plot and setting concern story structure and place, not attitude.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 3,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Tone is by definition the speaker's attitude towards the subject. Plot, rhythm and setting do not express attitude directly.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 4,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Assonance is the repetition of vowel sounds within nearby words. Alliteration repeats consonant sounds, so it is the main distractor but refers to a different sound category.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 4,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Assonance is the repetition of vowel sounds. Alliteration repeats initial consonant sounds.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 5,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The proscenium is the arch/frame at the front of a stage that separates the stage from the audience, i.e., the area in front of the curtain. Backstage and balcony refer to other, unrelated parts of the theatre.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 5,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The proscenium (including its apron) is the part of the stage in front of the curtain. Backstage is behind it, and centre stage is the middle of the acting area.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 6,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Pathetic fallacy attributes human emotion or reaction to nature, as when the wind's violence mirrors the shock of the king's murder. Transferred epithet is the closest distractor but applies an adjective from one noun to another, which is not what happens here.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 6,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Nature (the wind) responding violently to a human event attributes human feeling to nature, which is pathetic fallacy. It is not mere hyperbole because nothing is exaggerated.",
+        "solvable": true,
+        "issue": "Typo in source: 'kind' should be 'king'; this does not affect the answer."
+      },
+      "extract_anomaly": null
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 7,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "\"Amponsah's residence\" describes the place where the action occurs, which is the setting. It is not a type of scene (interlude) or a performance technique (monologue).",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 7,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "'Amponsah's residence' at the head of the scene states where the action takes place, which is the setting. It is not a curtain raiser or interlude.",
+        "solvable": true,
+        "issue": "Stem misspells 'Amponsah' as 'Amponash'."
+      },
+      "extract_anomaly": null
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 8,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Kwaku and Adwoa are the persons participating in the story's action, making them characters; the people performing these roles on stage would be actors, but within the text itself they are characters. This is the standard literary term for figures named in a script's dialogue.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 8,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Kwaku and Adwoa are people in the play's script, so they are characters. Actors are the real people who play them on stage.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 9,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Adwoa's muttered remark is spoken so that only the audience hears it while other characters do not, which is the definition of an aside. A soliloquy is the main distractor but requires the character to be alone on stage speaking at length, not a brief muttered remark to herself while other action continues.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 9,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Adwoa mutters the line to herself while another character (Kwaku) is present and is not meant to hear it, which is an aside. A soliloquy is spoken by a character who is alone on stage.",
+        "solvable": true,
+        "issue": "Stem reads 'drop dead' but the passage reads 'stop dead'; this does not affect the answer."
+      },
+      "extract_anomaly": null
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 10,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "\"Muttering to herself\" is a bracketed instruction telling the actor how to deliver the line, which is a stage direction. It is not a curtain call, rehearsal, or musical interlude, none of which fit the bracketed descriptive text.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 10,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The bracketed instruction to the actor, [Muttering to herself], is a stage direction. The other options are theatrical events, not script instructions.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 11,
+        "solvable": true,
+        "answer": "C",
+        "confidence": "certain",
+        "issue": "",
+        "reasoning": "A foil is a character deliberately used to contrast with another, usually the protagonist, to highlight particular qualities. Antagonist (A) is a character opposing the protagonist, not necessarily a contrast device, so it is the weaker distractor here.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 11,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "A foil is a character who contrasts with another and so highlights that character's qualities. An antagonist opposes the protagonist but need not serve as a contrast.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 12,
+        "solvable": true,
+        "answer": "B",
+        "confidence": "probable",
+        "issue": "Both litotes and paradox could be argued, but litotes (understatement via negation of the opposite) fits best.",
+        "reasoning": "Litotes is understatement achieved by negating the contrary, e.g. saying 'not pleasant' instead of 'unpleasant' or 'bad'. Paradox (C) would require a statement that is self-contradictory yet true, which this is not.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 12,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Saying 'not pleasant' to mean 'unpleasant' or bad is understatement through negation, which is litotes. It contains no paradox.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 13,
+        "solvable": true,
+        "answer": "A",
+        "confidence": "certain",
+        "issue": "",
+        "reasoning": "A canon is the body of literary works widely accepted as authoritative or of the highest quality within a tradition. Compilation (B) merely means a gathering of works without implying acceptance or prestige.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 13,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "The canon is the body of literary works widely accepted as authoritative or important. A compilation is simply any collection.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 14,
+        "solvable": true,
+        "answer": "D",
+        "confidence": "certain",
+        "issue": "",
+        "reasoning": "The speaker's poise ('cool as you please') and the men's submissive reaction show she exudes self-confidence. She does not adore or disrespect men; the tone is assured rather than impudent, ruling out 'impunity'.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 14,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The lines come from Maya Angelou's 'Phenomenal Woman'. The speaker walks in 'as cool as you please' and men stand or kneel, so she exudes self-confidence. She does not disrespect men; she describes their reaction to her.",
+        "solvable": true,
+        "issue": "'And to man' is probably a typing error for 'And to a man'."
+      },
+      "extract_anomaly": null
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "disagree",
+      "answer": null,
+      "codex": {
+        "q_number": 15,
+        "solvable": true,
+        "answer": "A",
+        "confidence": "probable",
+        "issue": "The line could be read as a loose simile because of the 'as...as' pattern, but 'as you please' is an idiomatic intensifier rather than a comparison to a concrete image, making exaggeration the stronger reading.",
+        "reasoning": "'Just as cool as you please' overstates the speaker's composure for effect, which is hyperbole/exaggeration. A true simile needs an explicit comparison to another object or being, which is absent here.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 15,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "The 'as ... as' comparative structure is what WAEC-level questions treat as simile. Strictly it is an idiom, and exaggeration is arguably defensible, but the as-comparison points to simile.",
+        "solvable": true,
+        "issue": "The expression is an idiom rather than a true simile, so 'exaggeration' is somewhat defensible."
+      },
+      "extract_anomaly": null
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "disagree",
+      "answer": null,
+      "codex": {
+        "q_number": 16,
+        "solvable": true,
+        "answer": "D",
+        "confidence": "probable",
+        "issue": "Contrast is also defensible since 'stand' and 'fall down on their knees' are opposite physical actions, but the balanced 'stand or fall' construction is the clearer example of parallelism.",
+        "reasoning": "The two verb phrases joined by 'or' ('stand' / 'fall down on their knees') share the same grammatical construction, which is parallelism. Apostrophe and metonymy do not apply since there is no direct address to an absent entity nor substitution of an associated term.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 16,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The line sets two opposite reactions side by side, standing and falling to their knees, which is contrast. Parallelism needs repeated grammatical structures, and there is no such repetition here.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 17,
+        "solvable": true,
+        "answer": "D",
+        "confidence": "certain",
+        "issue": "",
+        "reasoning": "A stanza is the structural unit of a poem analogous to a chapter in prose, both being divisions that organize the larger work. A 'line' (B) is a smaller unit within a stanza, not the equivalent of a chapter.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 17,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "A chapter is a major division of prose, and a stanza is the equivalent division of a poem. Act and scene are divisions of drama.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 18,
+        "solvable": false,
+        "answer": "NONE",
+        "confidence": "certain",
+        "issue": "The extract for questions 18 and 19 is referenced ('Read the extract below') but the actual text was not provided, so the question cannot be answered.",
+        "reasoning": "No poem or passage text is given for this shared stem, making it impossible to determine which literary device or mood it evokes.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 18,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "The extract for questions 18 and 19 is missing. The passage_text contains only the instruction line.",
+        "solvable": false,
+        "issue": "The extract text for Q18-19 is missing from the source."
+      },
+      "extract_anomaly": null
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 19,
+        "solvable": false,
+        "answer": "NONE",
+        "confidence": "certain",
+        "issue": "The extract for questions 18 and 19 is referenced ('Read the extract below') but the actual text was not provided, so the question cannot be answered.",
+        "reasoning": "No poem or passage text is given for this shared stem, making it impossible to determine the feeling it evokes.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 19,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "The extract for questions 18 and 19 is missing, so the feeling it evokes cannot be determined.",
+        "solvable": false,
+        "issue": "The extract text for Q18-19 is missing from the source."
+      },
+      "extract_anomaly": null
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 20,
+        "solvable": true,
+        "answer": "D",
+        "confidence": "certain",
+        "issue": "",
+        "reasoning": "The title 'The Sea Eats the Land at Home' attributes the human/animal action of eating to the sea, which is personification. It is not chiasmus (a reversed grammatical structure) nor an epithet (a descriptive nickname).",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 20,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The sea is given the human or animate action of eating, which is personification. It is not chiasmus, because nothing is reversed.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 21,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The speaker catalogues cruelty and theft inflicted by man in charged, indignant language ('slaughtered with hideous cruelty', 'stolen from us'), which conveys anger rather than mere moralising. 'Guilty' is wrong because the narrator blames man, not itself, and 'abusive' overstates the register since no insults are hurled directly.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 21,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Old Major's speech in Animal Farm is indignant and full of resentment at man's exploitation ('stolen', 'hideous cruelty', 'only real enemy'), so it is angry. 'Moralistic' is somewhat defensible because the speech condemns wrongdoing, but the dominant tone is indignation.",
+        "solvable": true,
+        "issue": "'Moralistic' is a possible alternative reading."
+      },
+      "extract_anomaly": null
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 22,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "'To the last atom of our strength' exaggerates the extent of the animals' exertion for rhetorical effect, which is the definition of hyperbole. It is not irony or antithesis since there is no contrast of opposites, and not metonymy since no substitution of an associated term occurs.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 22,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "'The last atom of our strength' is an exaggeration for emphasis, which is hyperbole. No opposites are balanced, so it is not antithesis.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 23,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The speaker asks the question only to answer it immediately himself ('Because nearly the whole of the produce...'), which is the hallmark of a rhetorical question used for persuasive emphasis. It is not an inference question since no answer is left to the reader, and it carries no sarcastic or proverbial quality.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 23,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The speaker asks the question for effect and then answers it himself, which is a rhetorical question. It is not sarcasm or an adage.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 24,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The narrator instructs the audience on the cause of their suffering and directs them toward a moral and political lesson ('This, comrades, is the answer to all our problems'), which is a didactic voice. It is not colloquial or comical, and though some imagery appears, the voice itself is not fundamentally metaphoric.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 24,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "Old Major is instructing and enlightening his 'comrades' about the cause of their misery and what to do about it, so his voice is didactic. It is formal oratory rather than colloquial, and it is not comical.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "agreed-soft",
+      "answer": "A",
+      "codex": {
+        "q_number": 25,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "The promise that removing man will abolish hunger and overwork 'forever' offers a hopeful vision of future deliverance, evoking expectancy rather than despair. 'Hopelessness' is the opposite of the forward-looking claim being made, and there is no hint of spite or fear in this closing assurance.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 25,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "The line promises a future freed from hunger and overwork, so it evokes hopeful expectancy. 'Spite' is a weaker alternative because the line looks forward to relief rather than dwelling on malice.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 26,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The poem is a short, personal expression of intimate feeling addressed to an individual (Alberta), which is characteristic of a lyric. It lacks the narrative scale of an epic and the mournful ritual purpose of a dirge, and it is not structured as a formal, elevated ode.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 26,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "It is a short, personal poem expressing a speaker's feelings for a beloved, which is a lyric. It is not an elevated ode addressing a subject, a lament (dirge) or a heroic narrative (epic).",
+        "solvable": true,
+        "issue": "Option C reads 'a lyrics' and option A reads 'adirge' (typing errors). The poem text has duplicated lines and typos ('voce', 'wort')."
+      },
+      "extract_anomaly": null
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 27,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The speaker longs to see the beloved's smile again and dreams of 'holding and fondling' her remembered presence, which expresses yearning desire for her company. 'Anger' and 'gratitude' do not fit the wistful longing tone, though 'devotion' is a plausible secondary reading.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 27,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "The speaker longs to see the beloved again and fantasises about holding and fondling her, which expresses desire. 'Devotion' is defensible, but the sensual yearning favours desire.",
+        "solvable": true,
+        "issue": "'Devotion' is also defensible."
+      },
+      "extract_anomaly": null
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 28,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Repeating the same grammatical structure ('My eyes will rest... My ears will drink...') across successive lines is parallelism, a structural device rather than a figure of comparison. It is not alliteration (no repeated initial sounds) nor a metaphor or simile (no comparison being drawn between two unlike things).",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 28,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "The repeated grammatical frame 'My eyes will ... / My ears will ...' is parallelism. The alliteration is incidental and is not the device being tested.",
+        "solvable": true,
+        "issue": "'My ears will drink' does not appear in the extract as typed (lines are duplicated or garbled), but the structure is clear from the stem."
+      },
+      "extract_anomaly": null
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 29,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Visual imagery dominates the poem through repeated references to 'brightness of smile', 'eyes will rest', and 'silver moonshine'. Although touch and hearing appear briefly ('velvety texture', 'softness of voice'), sight imagery recurs most and anchors the poem's central images.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 29,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Visual images dominate: brightness of smile, eyes resting, silver moonshine and mirage. There are some auditory and tactile touches (voice, velvety texture), but sight is the most prominent.",
+        "solvable": true,
+        "issue": "The extract appears truncated or garbled, so the whole poem's balance of images cannot be fully checked."
+      },
+      "extract_anomaly": null
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 30,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "Calling the imagined embrace a 'delusion' and 'mirage' signals that the speaker knows the reunion he craves is not real, giving the line a wistful, pessimistic undertone about the uncertainty of ever truly having her again. It is not didactic or pedantic since no lesson is being taught, and 'dramatic' does not capture the resigned, illusory quality of the closing image.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 30,
+        "answer": "D",
+        "confidence": "uncertain",
+        "reasoning": "The speaker admits that what he will hold are only 'delusions' and a 'mirage', and he is unsure when he will see the beloved again, which gives a resigned or pessimistic note. 'Dramatic' is possible, and none of the options fits perfectly.",
+        "solvable": true,
+        "issue": "The options fit poorly; 'dramatic' is a possible alternative."
+      },
+      "extract_anomaly": null
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 31,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "This is Lysander's speech to Duke Theseus ('my lord') in Act 1 Scene 1, defending his claim to Hermia against Demetrius, with Egeus present as the accuser. The strongest distractor, D (Theseus and Egeus), is wrong because Theseus and Egeus are both listeners here, not speaker and addressee.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 31,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "In Act 1 Scene 1, Lysander argues his claim to Hermia before Duke Theseus ('my lord'). Egeus is present but is not the one addressed.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 32,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Lysander compares his birth and fortune to Demetrius's, whom Egeus favours as Hermia's suitor. Egeus (B) is the father making the accusation, not the rival being compared to, so he is ruled out.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 32,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Lysander compares his lineage and fortune with those of his rival Demetrius, whom Egeus favours.",
+        "solvable": true,
+        "issue": "Option B misspells 'Egeus' as 'Eqeus'."
+      },
+      "extract_anomaly": null
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 33,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "This exchange occurs in Act 1 Scene 1, set in Theseus's court in Athens, before the lovers flee to the wood. The wood-related options (A, C, D) belong to later scenes and are incorrect for this courtroom-style confrontation.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 33,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Act 1 Scene 1 takes place in Athens, at Theseus's palace. The wood scenes come later.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Lysander explicitly asks 'Why should not I then prosecute my right?', asserting his claim to marry Hermia rather than accepting blame or seeking reconciliation. There is no arrest being resisted at this point, ruling out option C.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "'Why should not I then prosecute my right?' shows that Lysander is defending his right to marry Hermia. He is not accepting blame or seeking reconciliation.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 35,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Lysander reveals that Demetrius had wooed and won the heart of Helena, Nedar's daughter, before turning his affections to Hermia. Hermia (B) is ruled out since she is the woman both men are contesting, not Nedar's daughter.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 35,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Helena is the daughter of Nedar, and Demetrius wooed her before turning to Hermia. Hermia is Egeus's daughter.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 36,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "This is Oberon's incantation in Act 2 Scene 2 as he squeezes the love-potion onto the sleeping Titania's eyelids. Puck (C) later uses a different charm on Lysander with different wording, so he is not the speaker here.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 36,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Oberon speaks the charm as he squeezes the love-juice on the sleeping Titania's eyes (Act 2 Scene 2). Puck's charm is spoken over Lysander and is different.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 37,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Oberon speaks these lines while applying the flower's love-juice to Titania's closed eyes, i.e. administering the potion. He is not picking herbs at this moment (that happens earlier) nor proposing to anyone, ruling out A and C.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 37,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Oberon recites the charm while applying the flower's juice to Titania's eyelids. He is not picking herbs or reversing a mistake.",
+        "solvable": true,
+        "issue": "'picking herba' is a typing error for 'herbs'."
+      },
+      "extract_anomaly": null
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 38,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Oberon enchants Titania to punish her for defying him over the changeling boy, hoping she wakes to dote on some vile creature. This is spite, not a desire to please or a need to love, which rules out A and D.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 38,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Oberon wants to punish Titania for refusing to give him the changeling boy, hence 'Wake when some vile thing is near'. He is not trying to please her.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 39,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Oberon applies the potion directly to the sleeping Titania's eyes, not to any of the Athenian lovers. Lysander (C) is instead the target of Puck's separate charm later in the play, so he does not fit this extract.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 39,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "The charm is laid on the sleeping Titania. Its references to beasts and 'some vile thing' fit his revenge on her.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 40,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "Oberon and Titania are the King and Queen of the fairies, husband and wife, so 'lovers' best captures their relationship despite their quarrel over the changeling boy. 'Enemies' is a defensible distractor given their bitter feud at this point, but their marital bond makes 'lovers' the intended answer.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 40,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "Oberon and Titania are husband and wife, the fairy king and queen, so 'lovers' is the intended answer. They are estranged at this point, which makes 'enemies' arguable.",
+        "solvable": true,
+        "issue": "Estranged spouses; 'enemies' is arguable."
+      },
+      "extract_anomaly": null
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 41,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "This is Hermia's outburst at Demetrius in Act 3 Scene 2 of A Midsummer Night's Dream, when she believes he has killed Lysander in his sleep. Helena is never this confrontational toward Demetrius, and Oberon/Titania are not part of this human quarrel.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 41,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Hermia uses 'maiden's patience' and accuses Demetrius of killing Lysander in Act 3 Scene 2. Helena never makes this accusation.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 42,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Hermia is berating Demetrius, whom she accuses of murdering Lysander. Egeus, Oberon, and Lysander are not the targets of this speech in the scene.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 42,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Hermia is speaking to Demetrius, whom she suspects of killing the sleeping Lysander.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 43,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Hermia fears Demetrius has slain Lysander, her beloved, while he slept. Bottom, Demetrius, and Thisby are irrelevant to this accusation.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 43,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Hermia thinks Lysander has been slain, because he deserted her while she slept. Bottom and Thisby are not involved.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 44,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Calling Demetrius 'thou serpent' directly equates him with a serpent without using 'like' or 'as', which is a metaphor. Apostrophe would require addressing an absent or non-human entity as if present, but Demetrius is present and being spoken to directly, not invoked as an abstraction.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 44,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Calling Demetrius 'thou serpent' identifies him directly with a snake, without 'like' or 'as', which is a metaphor. The address to a present person is not apostrophe in the technical sense.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 45,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Hermia explicitly accuses Demetrius of having slain Lysander while he slept, calling him a serpent worse than an adder for this act. She is not accusing him of unfaithfulness or of killing Bottom.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 45,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "'Hast thou slain him ... killed him sleeping?' accuses Demetrius of killing Lysander. Bottom is not involved.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 46,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Quince delivers this introductory speech explaining the roles to the noble audience before the mechanicals' play proper begins, which is the function of the Prologue in the play-within-a-play.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 46,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "Quince delivers the Prologue that introduces the players in the mechanicals' play in Act 5. Snout is Wall, Snug is Lion and Starveling is Moonshine.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "disagree",
+      "answer": null,
+      "codex": {
+        "q_number": 47,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Immediately after Quince's Prologue speech, Snout enters in character to introduce himself as Wall, beginning his lines about presenting the wall that divides the lovers. Theseus and the young lovers only comment briefly between segments, not as the next scripted speaker.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 47,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "After Quince's Prologue ends and the players exit, Theseus speaks next ('I wonder if the lion be to speak'), and then Demetrius replies. The extract is truncated, but the question refers to the end of the Prologue speech.",
+        "solvable": true,
+        "issue": "The extract is truncated, so 'after Quince's speech' relies on knowledge of the full text."
+      },
+      "extract_anomaly": null
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 48,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Bottom the weaver is cast as Pyramus in the mechanicals' play, as established earlier when the parts are assigned in Act 1 Scene 2. Flute plays Thisby, Snout plays Wall, and Starveling plays Moonshine.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 48,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Nick Bottom plays Pyramus. Flute plays Thisby.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 49,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Quince's speech identifies the man daubed with lime and rough-cast as the actor presenting Wall, and Snout is the mechanical assigned to play Wall. Bottom, Flute, and Starveling play other roles.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 49,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Tom Snout the tinker plays Wall, presented 'with lime and rough-cast'.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 50,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The text states directly that the man with lantern, dog, and bush of thorn 'presenteth Moonshine,' the traditional emblems used to represent moonlight in the mechanicals' play. Lion, Prologue, and Wall are separate roles carried by other props and actors.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 50,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The man with lantern, dog and bush of thorn 'presenteth Moonshine', a part played by Starveling. Lion carries no lantern.",
+        "solvable": true,
+        "issue": "The stem is incomplete (it has no verb), but the intended meaning is clear from the extract."
+      },
+      "extract_anomaly": null
+    }
+  }
+}

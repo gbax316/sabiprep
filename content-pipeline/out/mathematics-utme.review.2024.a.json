@@ -1,0 +1,389 @@
+{
+  "reviewer": "codex",
+  "year": 2024,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "\"Use π = 22/7\" and \"π = 22/7\" state an approximation as an exact equality. π is not exactly 22/7. \"this comes from using π = 3 instead of 22/7\" repeats the same error. The exam tip says \"use the value of π the question gives\", but the question gives no value of π. The lines \"C. 20 m: this is 2 m² short\" and \"D. 24 m: this is 2 m² more\" also compare quantities with incompatible units, even though the answer line correctly notes the unit misprint.",
+      "fix": "Replace hint 2 with: \"The region is a sector with radius 6 m and angle 70°. Its area is the fraction 70/360 of the whole circle's area, πr². Keep π until the end, then choose the closest option.\"\n\nReplace the working with: \"r = 6 m, θ = 70°\nArea = (70/360) × π × 6²\n= 7π m²\n≈ 21.99 m²\nTherefore the nearest option is B, 22 m². The options incorrectly print m instead of m².\"\n\nReplace the distractor explanations with: \"A. 21 m: treating the printed unit as a typo, 21 m² comes from using the rough approximation π ≈ 3; 7π m² ≈ 21.99 m².\nC. 20 m: treating the printed unit as a typo, 20 m² is less than 7π m² ≈ 21.99 m².\nD. 24 m: treating the printed unit as a typo, 24 m² is greater than 7π m² ≈ 21.99 m².\"\n\nReplace the exam tip with: \"Exam tip: in tethered-animal questions, the rope is the radius and the angle it swings through is the sector angle, so use (θ/360) × πr². Use a stated approximation for π; if none is stated, keep π until the end and choose the closest option. Write an area in square units.\"",
+      "lane": "codex"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The explanation for option A says, \"the remainders are read in the wrong order\". This is false: the remainders are 1, 7, 1, so reversing their order still gives 171₈, not 117₈. The statement that 117₈ equals 79 in base ten is correct.",
+      "fix": "A. 117₈: this equals 1 × 64 + 1 × 8 + 7 = 79 in base ten, not 121.",
+      "lane": "codex"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "fail",
+      "failed_checks": [
+        5,
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "“Exam tip: for a missing number in a base sum, rearrange first (X = a − b), and always check by putting your answer back into the original sum.” The question contains a subtraction, not a sum, and X = a − b is not the rule for every missing-number problem. It applies specifically when a − X = b.",
+      "fix": "Exam tip: for a missing number in a subtraction, rearrange first. If a − X = b, then X = a − b. Always check by putting your answer back into the original subtraction.",
+      "lane": "codex"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "fail",
+      "failed_checks": [
+        2,
+        6
+      ],
+      "fact_error": false,
+      "notes": "“Watch the sign of n: the midpoint's y-value is 0, so 6 and n must cancel out.” This effectively supplies n = −6, and only option C has −6 as its second value, so hint 3 identifies the answer without requiring both equations to be solved. The solution also uses ASCII hyphens instead of the Unicode minus sign in “Answer: C. (4,-6)”, “B. (-4,6)” and “D. (-6,4)”.",
+      "fix": "hint3: Multiply each midpoint equation by 2, then subtract the known coordinate to isolate the unknown. Keep the order asked for, m first and then n.\n\nAnswer: C. (4,−6)\n\nB. (−4,6): m = −4 gives (−4 + 6)/2 = 1, not 5, and n = 6 gives (6 + 6)/2 = 6, not 0.\nD. (−6,4): m = −6 gives (−6 + 6)/2 = 0, not 5; the values have been swapped round.",
+      "lane": "codex"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "“An odd root, such as a cube root, keeps the sign; an even root, such as a square root, gives ±.” This is overgeneralised. The square-root operation gives the principal non-negative root. When solving an even-power equation, ± applies only when the right-hand side is positive. The settled option D remains correct because it contains the actual value 2/3.",
+      "fix": "Exam tip: to find r from two terms of a G.P., divide the later term by the earlier one and solve the resulting power equation. An odd power equation such as r³ = q has one real solution with the same sign as q. An even power equation such as r² = q gives r = ±√q only when q is positive.",
+      "lane": "codex"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "“If every value is multiplied by k, every distance is multiplied by k too, so the standard deviation is multiplied by k.” Also, “when all the data share a factor k, the standard deviation is k times the standard deviation of the data without k.” In general the scale factor is |k|, not k. The question states that k is positive, but these general statements do not carry that condition.",
+      "fix": "If every value is multiplied by k, every distance from the mean is multiplied by |k|, so the standard deviation is multiplied by |k|. Since k is positive here, this is k.\n\nExam tip: when all the data share a factor k, the standard deviation is |k| times the standard deviation of the data without k. If k is positive, this is k times the original standard deviation. Here 2, 3, 4, 5, 6 has standard deviation √2, so k must be 1.",
+      "lane": "codex"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "“every line of the form 7x + 5y = k has gradient −7/5 and is parallel to 7x + 5y = 12.” When k = 12, it is the same line, not a distinct parallel line under the school definition of parallel lines.",
+      "fix": "Parallel distinct lines have equal gradients. For a line ax + by = c, the gradient is −a/b, so every line of the form 7x + 5y = k has gradient −7/5. When k ≠ 12, it is a distinct line parallel to 7x + 5y = 12. The given point fixes k.",
+      "lane": "codex"
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "“for a tube open at both ends use 2πrh alone.” A tube can have inner and outer curved surfaces. The formula 2πrh alone applies to the syllabus model of an open cylinder whose material thickness is ignored, so the current wording is an unscoped simplification.",
+      "fix": "Exam tip: in the syllabus model, for a closed cylinder use 2πr(r + h). For a cylinder open at one end use 2πrh + πr². For a cylinder open at both ends use 2πrh.",
+      "lane": "codex"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The claims “a bottom of 225 = 15 × 15 belongs to two picks”, “the two-pick bottom of 225” and “A bottom such as 225 = 15 × 15 points to two picks, so it does not fit a single pick” are false as general rules. A denominator of 225 does not by itself prove that there were two picks. For example, the correct single-pick probability can be written as 11/15 = 165/225. Two picks without replacement would also not use 15 × 15.",
+      "fix": "Why not the others:\nA. 189/225: this simplifies to 21/25, which is not equal to 11/15.\nB. 11/225: this divides the 11 favourable marbles by 225, but one pick has 15 equally likely outcomes.\nC. 8/15: this is the probability of green alone and leaves out the 3 red marbles.\n\nExam tip: for a single pick with “or” between two colours, add the counts of those colours and divide by the total number of marbles. Check that the numerator counts the favourable marbles and the denominator counts all the marbles.",
+      "lane": "codex"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The exam tip says, \"for ax² + bx + c > 0 with a positive, the answer lies outside the roots; for ax² + bx + c < 0, it lies between them.\" This is not true for every quadratic with a > 0. It requires two distinct real roots.",
+      "fix": "Exam tip: if ax² + bx + c has two distinct real roots and a > 0, the expression is positive outside the roots and negative between them. Test one number from each region to be sure.",
+      "lane": "codex"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "I agree with the answer challenge: C is correct for the intended corrected stem, 4x + 5 = 3y/(4x − 5), while the printed stem gives x = (5 ± √(3y))/4 and matches no option. The distractor explanation, \"it has no square root and no ±, so it is neither x² nor x,\" uses false reasoning. An expression for x² should not contain a square root or ±; D fails as x² because its denominator is 4 instead of 16. The exam tip, \"when the letter you want appears squared, the last step is a square root. The answer then carries ±,\" is also too broad. Merely having x² in an equation does not mean square rooting is the final step, and a restriction on x can determine its sign.",
+      "fix": "D. (3y + 25)/4: x² is (3y + 25)/16, not (3y + 25)/4, and x must include the square root and ±.\n\nExam tip: when you have isolated x² = A and no restriction fixes the sign of x, write x = ±√A. If A = p/q with p ≥ 0 and q > 0, then √A = √p/√q. Spot (a + b)(a − b) early because it becomes a² − b².",
+      "lane": "codex"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The exam tip says, “A restricted count is always smaller than the unrestricted one.” This is not universally true: a condition may exclude no arrangements, so the two counts can be equal. The valid general rule is that a condition cannot increase the count.",
+      "fix": "Exam tip: for \"must come together\" questions, count the group as one item, arrange all the items, then multiply by the ways to arrange inside the group. A count with a condition cannot be larger than the unrestricted count, and it is smaller when the condition excludes at least one arrangement.",
+      "lane": "codex"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The exam tip says, “'or' between cases means add, 'and' between stages means multiply.” This is too absolute. Counts for “or” cases can be added directly only when the cases do not overlap. The colour cases here do not overlap, but the stated general rule omits that condition.",
+      "fix": "Exam tip: when “or” cases do not overlap, add their counts. When a choice is made in successive stages, use the multiplication rule. Before choosing, check the answer against the total with no condition, which here is ¹¹C₂; any option above it is impossible.",
+      "lane": "codex"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    }
+  ],
+  "fallback_cost_usd": 0
+}

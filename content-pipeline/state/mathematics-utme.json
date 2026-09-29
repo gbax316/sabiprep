@@ -2,17 +2,161 @@
   "slug": "mathematics-utme",
   "subject": "Mathematics",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2024",
+    "at": "2026-09-29T16:25:56",
     "note": ""
   },
   "units": {
     "2024": {
-      "status": "running",
-      "stages": {},
-      "error": ""
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T15:43:38",
+          "summary": "39/39 codex, 39/39 claude",
+          "seconds": 500,
+          "cost_usd": 1.05
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T15:43:39",
+          "summary": "agreed-soft 5, disagree 1, unsolvable 2, verified 31",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T15:45:18",
+          "summary": "8 ruled: defective 3, key 5",
+          "seconds": 99,
+          "cost_usd": 0.29
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T15:45:19",
+          "summary": "defective 3, keyed 36",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T15:48:17",
+          "summary": "clear 36; 0 taxonomy findings",
+          "seconds": 177,
+          "cost_usd": 0.45
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T15:57:08",
+          "summary": "36 written in 2 part(s); answer challenges [35]; style scan: REVIEW (7 across 5 location(s))",
+          "seconds": 531,
+          "cost_usd": 2.37
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T16:05:25",
+          "summary": "36 reviewed, 13 fail, fact errors [8, 15, 18, 20, 21, 22, 23, 25, 34, 35, 38, 39]",
+          "seconds": 496,
+          "cost_usd": 0.0
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T16:10:51",
+          "summary": "16 accepted, 3 rejected; style scan: REVIEW (7 across 5 location(s))",
+          "seconds": 326,
+          "cost_usd": 1.57
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:16:10",
+          "summary": "14 changed items re-reviewed, 0 still fail ",
+          "seconds": 319,
+          "cost_usd": 0.74
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T16:16:11",
+          "summary": "every changed item passed",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T16:16:25",
+          "summary": "1 diagrams, 1 traced now, 1 need authoring ['2024_Q12']",
+          "seconds": 14,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T16:17:09",
+          "summary": "1 written, 0 already had alt text",
+          "seconds": 43,
+          "cost_usd": 0.09
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T16:21:16",
+          "summary": "authored ['2024_Q12']",
+          "seconds": 247,
+          "cost_usd": 0.84
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T16:24:10",
+          "summary": "1 checked, failed ['2024_Q12']",
+          "seconds": 174,
+          "cost_usd": 0.11
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T16:24:38",
+          "summary": "alt rewritten ['2024_Q12'], redrawn none",
+          "seconds": 27,
+          "cost_usd": 0.1
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:25:53",
+          "summary": "re-checked ['2024_Q12']; not passing none",
+          "seconds": 75,
+          "cost_usd": 0.1
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T16:25:56",
+          "summary": "PREVIEW (no image base set): mathematics-utme.2024.PREVIEW.csv, 3 held, 0 pre-flight flags; style scan: REVIEW (12 across 10 location(s))",
+          "seconds": 2,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T16:25:56",
+          "summary": "mathematics-utme.2024.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 13,
+          "why": "defective",
+          "detail": "The matrix is printed as (5 x₂; 3 x₁), which is not a readable 2 by 2 determinant with a single unkn"
+        },
+        {
+          "q_number": 27,
+          "why": "defective",
+          "detail": "As printed, dy/dx = 2px + 3 = 9 at x = 1 gives p = 3, which is not an option. The stem is also self-"
+        },
+        {
+          "q_number": 30,
+          "why": "defective",
+          "detail": "The stem has lost its equals sign, and the two natural repairs give different options. Reading '= 1'"
+        }
+      ]
     }
   },
-  "cost_usd": 0
+  "cost_usd": 7.71
 }

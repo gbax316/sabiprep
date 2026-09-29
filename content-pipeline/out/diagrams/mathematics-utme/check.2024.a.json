@@ -1,0 +1,30 @@
+{
+  "checker": "codex",
+  "unit": "2024",
+  "results": {
+    "2024_Q12": {
+      "stem": "2024_Q12",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "fail",
+      "alt_checks": [
+        "A1"
+      ],
+      "alt_notes": "Quote: \"Going clockwise from the top, the sectors appear in the order Medical, Food, Education, House rent, Miscellaneous.\" This reverses the actual direction: the boundary at the top separates Medical (left) from Food (right), so moving clockwise from that top point the sectors are encountered in the order Food, Education, House rent, Miscellaneous, Medical — not starting with Medical. Replace with: \"Going clockwise from the top, the sectors appear in the order Food, Education, House rent, Miscellaneous, Medical.\"",
+      "svg": "2024_Q12.authored.svg",
+      "lane": "claude-sonnet"
+    }
+  },
+  "no_svg": [],
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.113,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.113
+}

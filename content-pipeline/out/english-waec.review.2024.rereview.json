@@ -3,8 +3,118 @@
   "year": 2024,
   "paper": 1,
   "reviews": {
-    "4": {
-      "q_number": 4,
+    "3": {
+      "q_number": 3,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Hint 3 says of revived and rejuvenated: 'One is most often used for bringing someone round after fainting or collapse; the other means feeling young and full of energy again.' The solution repeats this for the distractor: 'B. revived: this is most often used for bringing someone round after fainting or collapse, and \"refreshed and rejuvenated\" is the natural pair for how a holiday leaves you.' This is not an accurate account of how 'revived' is most often used. Its central senses include being restored to strength, energy or freshness generally (a good sleep revived me, the tea revived her), not predominantly medical resuscitation after fainting or collapse. 'Refreshed and revived' is itself a common, natural English pairing, so the stated reason for ruling out B is a wrong claim about the word, not a sound distinction. The answer A is still correct (rejuvenated is the stronger, more specific pair, meaning made to feel young again), but the justification given is a fact error and should be reworded to the real distinction: rejuvenated specifically carries the sense of renewed youthfulness/vigour, which revived does not.",
+      "fix": "Hint 3: 'Revived and rejuvenated both mean given new life. Revived is a general word for regaining strength or energy, for example after illness or exhaustion. Rejuvenated more specifically means feeling young and full of energy again. Which one adds that extra sense of youthfulness to \"refreshed\" after a holiday?' Solution, Why not the others, B: 'B. revived: this is a general word for regaining strength or energy, and it does not carry the specific sense of feeling young again that \"rejuvenated\" adds, which is the better partner for \"refreshed\" here.'",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -21,6 +131,53 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
+    "32": {
+      "q_number": 32,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 does not narrow to two and does not leave the choice to the student: 'Among the time words left, one means recently, one means soon or now, and one means at the end of a wait. Match each one, then choose.' It hands the student a complete 1:1 definition for all three remaining options (lately, presently, finally), given in the same order as the options themselves, so the student only has to spot that 'at the end of a wait' is near-identical to hint 2's own definition of eventually ('in the end, after a long wait or effort') and read off finally as option D. No independent reasoning or elimination is left; this is a full answer key, not a nudge.",
+      "fix": "Lately points to something recent, not to the end of a wait, so that one is out. Between presently and finally, only one of them also means at last, after trying or waiting. Which one is it?",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
     "41": {
       "q_number": 41,
       "verdict": "pass",
@@ -30,13 +187,15 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "44": {
-      "q_number": 44,
-      "verdict": "pass",
-      "failed_checks": [],
+    "43": {
+      "q_number": 43,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
       "fact_error": false,
-      "notes": "",
-      "fix": "",
+      "notes": "Hint 3 reads: \"Between the two past forms, which one does standard written English use with 'I' in an unreal condition, as in the advice 'If I ___ you'?\" This leans on the fixed, widely memorised idiom 'If I were you' to fill the blank. A student who knows that stock phrase can paste 'were' straight from rote memory of a different sentence, without applying any reasoning about this question's own subject ('I ... an eagle') or about the subjunctive rule taught in hint 2. That fails the hint 3 test: a student can answer by reading hint 3 alone, without thinking.",
+      "fix": "The present forms do not suit an imagined situation. Between the two past forms, which one is the special subjunctive form that standard English uses for every subject, not just the ordinary past tense of 'be'?",
       "lane": "claude-sonnet"
     },
     "45": {
@@ -48,8 +207,8 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "46": {
-      "q_number": 46,
+    "48": {
+      "q_number": 48,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -57,8 +216,8 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "50": {
-      "q_number": 50,
+    "56": {
+      "q_number": 56,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -66,8 +225,8 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "51": {
-      "q_number": 51,
+    "66": {
+      "q_number": 66,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -75,33 +234,15 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "55": {
-      "q_number": 55,
-      "verdict": "pass",
-      "failed_checks": [],
-      "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
-    },
-    "64": {
-      "q_number": 64,
-      "verdict": "pass",
-      "failed_checks": [],
-      "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
-    },
-    "70": {
-      "q_number": 70,
+    "67": {
+      "q_number": 67,
       "verdict": "fail",
       "failed_checks": [
-        2
+        8
       ],
-      "fact_error": false,
-      "notes": "Hint 3 reads: \"Between the two left, recall the proverb warning that a book's cover is a poor guide to what is inside. Which preposition follows judge a book in that proverb?\" By this point hint 2 has already eliminated 'at' and 'for', leaving only 'from' and 'by'. The proverb 'Don't judge a book by its cover' maps almost word-for-word onto the question ('Don't judge the boy ... his past'), so a student only has to recall this extremely common saying to get 'by' without reasoning about what the two remaining prepositions actually mean or how they function differently after 'judge'. This is a bare recall shortcut, not the intended elimination-by-understanding, so it fails the hint-3 test: a student can answer from hint 3 alone without thinking.",
-      "fix": "Between the two left, think about how each one is normally used with judge. From usually appears in the phrase judging from something, describing what you are inferring from (judging from his smile, he passed) rather than what standard is applied to a person. By is used right after judge and the person or thing being judged, to name the basis of the judgement. Which pattern matches judge the boy ... his past?",
+      "fact_error": true,
+      "notes": "The question stem prints options C and D as literally identical text ('C. prices tag' and 'D. prices tag'), and the solution treats this as an established fact about the source exam rather than flagging it as a probable data error: 'D. prices tag: it makes the same error as C, a plural first noun. (The paper printed C and D with the same wording.)' A real WAEC objective item would not deliberately print two identical distractors; the far more likely explanation is a transcription/OCR slip that dropped a character from D (most plausibly an apostrophe, giving 'prices' tag' as the plural-possessive distractor, which would pair naturally with A's singular-possessive error and complete the four-way contrast: singular possessive, plain singular, plain plural, plural possessive). Stating 'The paper printed C and D with the same wording' as settled fact, when it is actually an unverified guess papering over a likely data defect, is a fact error, and it teaches the student that exams sometimes contain meaningless duplicate options, which is not a reliable exam-technique lesson.",
+      "fix": "Before this can be taught, the source option D must be re-checked against the original paper. Pending that, the option and explanation should read: D. prices' tag: adding an apostrophe after the plural still wrongly makes 'price' possessive; the first noun in a noun-modifier phrase should stay singular and plain, as in 'price tag'. Remove the sentence '(The paper printed C and D with the same wording.)' since it presents an unverified guess as settled fact.",
       "lane": "claude-sonnet"
     }
   },
@@ -110,15 +251,27 @@
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.2872,
+      "cost_usd": 0.2745,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.2438,
+      "cost_usd": 0.37,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3968,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2851,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     }
   ],
-  "fallback_cost_usd": 0.531
+  "fallback_cost_usd": 1.3264
 }

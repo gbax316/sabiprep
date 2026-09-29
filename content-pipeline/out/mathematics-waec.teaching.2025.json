@@ -1,0 +1,387 @@
+{
+  "subject": "Mathematics",
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "fractions.approximation",
+      "difficulty": "easy",
+      "hint1": "There are two jobs here: first round the number to three significant figures, then write the rounded number in standard form. Do them in that order.",
+      "hint2": "Significant figures are counted from the first non-zero digit, so the zeros at the front do not count. Look at the digit after the third significant figure to decide whether to round up. A positive number smaller than 1 gets a negative power of 10 in standard form.",
+      "hint3": "The first three significant digits are 3, 6 and 4, and the digit after them is 8. Decide whether the 4 stays or goes up, then check the sign of the power of 10.",
+      "solution": "Answer: D. 3.65 × 10⁻²\n\nSignificant figures are counted from the first non-zero digit, and you round by looking at the next digit: 5 or more rounds up, less than 5 leaves it. Standard form writes a number as A × 10ⁿ with A between 1 and 10, and a number between 0 and 1 gets a negative power of 10.\n\nHow to tell:\nThe first non-zero digit is 3, so the three significant figures are 3, 6 and 4.\nThe next digit is 8, which is 5 or more, so the 4 rounds up to 5.\n0.0364891 ≈ 0.0365 (3 s.f.)\nThe decimal point moves 2 places to the right to give 3.65, so the power is −2.\n0.0365 = 3.65 × 10⁻²\n\nWhy not the others:\nA. 3.65 × 10²: this equals 365, but the original number is less than 1, so the power must be negative.\nB. 2.64 × 10²: the first figure is 3, not 2, and the power has the wrong sign.\nC. 3.64 × 10⁻²: this cuts off the digits instead of rounding, but the 8 that follows means the 4 must go up to 5.\n\nExam tip: for a number less than 1, count how many places the decimal point moves to reach just after the first non-zero digit. That count, with a minus sign, is the power of 10. Round first, then write the standard form."
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "number-bases.conversion",
+      "difficulty": "medium",
+      "hint1": "Numbers in different bases are hard to compare directly. Change both of them into base ten first.",
+      "hint2": "A two-digit number written ab in base n is worth a × n + b in base ten. Use this on 21₅, then write 14ₓ in terms of x.",
+      "hint3": "21₅ becomes a whole number in base ten, and 14ₓ becomes x + 4. Set them equal and solve.",
+      "solution": "Answer: D. 7\n\nIn any base, each place is worth a power of that base: the right-hand digit counts units and the next digit counts lots of the base. Two numerals in different bases are equal when they have the same value in base ten.\n\nHow to tell:\n21₅ = 2 × 5 + 1 = 11\n14ₓ = 1 × x + 4 = x + 4\nx + 4 = 11\nx = 7\nCheck: 14₇ = 7 + 4 = 11\n\nWhy not the others:\nA. 4: the digit 4 cannot appear in base 4, because the digits in base n run from 0 to n − 1.\nB. 5: 14₅ = 5 + 4 = 9, not 11.\nC. 6: 14₆ = 6 + 4 = 10, not 11.\n\nExam tip: to find an unknown base, convert both sides to base ten, set them equal and solve. Then check that the base is bigger than every digit used in that number."
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "surds.simplify",
+      "difficulty": "easy",
+      "hint1": "Surds can be subtracted like algebra terms once they have the same number under the root sign. Simplify each surd first.",
+      "hint2": "Look for the largest perfect square that divides each number: 200 = 100 × 2 and 72 = 36 × 2.",
+      "hint3": "Both √200 and √72 become a whole number times √2. Subtract the whole numbers and keep the √2.",
+      "solution": "Answer: B. 4√2\n\n√(a × b) = √a × √b, so a perfect square factor under the root can be taken out as a whole number. Surds can then be added or subtracted when the number left under the root is the same, just as 10y − 6y = 4y.\n\nHow to tell:\n√200 = √(100 × 2) = 10√2\n√72 = √(36 × 2) = 6√2\n10√2 − 6√2 = 4√2\n\nWhy not the others:\nA. 8√2: this would need √72 = 2√2, but (2√2)² is only 8.\nC. 2√2: 10√2 − 6√2 leaves 4 lots of √2, not 2.\nD. 10√2: this is √200 on its own, with √72 not yet taken away.\n\nExam tip: before adding or subtracting surds, simplify each one using its largest perfect square factor (4, 9, 16, 25, 36, 49, 64, 100). If they end with the same surd, combine the numbers in front."
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "indices.log-equations",
+      "difficulty": "hard",
+      "hint1": "The equation says twice a logarithm equals zero. Think about what that tells you about the logarithm on its own, and then about the number inside it.",
+      "hint2": "If 2 × (something) = 0, the something is 0. For any allowed base, a logarithm is 0 exactly when the number inside it is 1, because any base to the power 0 gives 1.",
+      "hint3": "Set (1 − √x)/√x equal to 1 and solve for √x first. The question asks for x, so check which step you stop at.",
+      "solution": "Answer: B. ¼\n\nThe stem is read as 2 logₓ((1 − √x)/√x) = 0. Dividing by 2 leaves a logarithm equal to 0. Since b⁰ = 1 for any allowed base b, the logarithm of a number is 0 exactly when that number is 1, so the fraction inside must equal 1.\n\nHow to tell:\n2 logₓ((1 − √x)/√x) = 0\nlogₓ((1 − √x)/√x) = 0\n(1 − √x)/√x = 1\n1 − √x = √x\n1 = 2√x\n√x = ½\nx = (½)² = ¼\nCheck: with x = ¼, √x = ½, so (1 − ½) ÷ ½ = 1, and the logarithm of 1 is 0. A base of ¼ is positive and not 1, so it is allowed.\n\nWhy not the others:\nA. ½: this is √x, the step before the last; it still has to be squared to give x.\nC. 1: then (1 − 1)/1 = 0, and the logarithm of 0 is not defined; a base of 1 is not allowed either.\nD. 0: √0 = 0 would put 0 in the denominator, which is undefined.\n\nExam tip: when a logarithm is set equal to 0, write 'the number inside = 1' and solve that. When the working passes through √x, remember to square at the end."
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "sets.notation",
+      "difficulty": "medium",
+      "hint1": "MI and NI stand for M′ and N′, the complements of M and N. List the members of µ, M and N before doing anything else.",
+      "hint2": "The condition for M is printed as 2 ≤ x ≥ 6, which is a misprint of 2 ≤ x ≤ 6. M′ is everything in µ that is not in M, and N′ is everything in µ that is not in N. M′ ∩ N′ is what the two complements share.",
+      "hint3": "M′ ∩ N′ is the same as (M ∪ N)′. Work out which numbers are in M or N, then see what is left of µ.",
+      "solution": "Answer: C. {1, 9, 10}\n\nThe complement of a set, written with a dash, is everything in the universal set that is not in that set. The intersection ∩ keeps only the members common to both sets. So M′ ∩ N′ is the members of µ that are in neither M nor N.\n\nHow to tell:\nThe stem has two misprints: 2 ≤ x ≥ 6 is read as 2 ≤ x ≤ 6, and MI ∩ NI means M′ ∩ N′.\nµ = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}\nM = {2, 3, 4, 5, 6}\nN = {4, 5, 6, 7, 8}\nM′ = {1, 7, 8, 9, 10}\nN′ = {1, 2, 3, 9, 10}\nM′ ∩ N′ = {1, 9, 10}\n\nWhy not the others:\nA. {1, 7, 8}: 7 and 8 are in N, so they are not in N′.\nB. {1, 8, 9}: 8 is in N, and 10 is missing.\nD. {1, 8, 10}: 8 is in N, and 9 is missing.\n\nExam tip: M′ ∩ N′ = (M ∪ N)′. Find everything that is in M or N, then list what is left in the universal set."
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "logic.statements",
+      "difficulty": "easy",
+      "hint1": "Match each part of the sentence to its letter, and match the joining words to a symbol.",
+      "hint2": "⇔ stands for 'if and only if', and ~ means 'not'. An option that puts 'not' in front of just one statement changes what the sentence claims.",
+      "hint3": "Read each remaining option aloud in words, replacing p and q with their sentences. Which one reads exactly like the sentence you were given?",
+      "solution": "Answer: D. q ⇔ p\n\n'If and only if' is the biconditional, written ⇔. To write a sentence in symbols, replace each simple statement by its letter and each joining phrase by its symbol, keeping every 'not' the sentence has and adding none.\n\nHow to tell:\n'The sun is shining' is q.\n'if and only if' is ⇔.\n'the weather is warm' is p.\nSo the sentence is q ⇔ p.\n\nWhy not the others:\nA. p ⇔ ~q: this says 'the weather is warm if and only if the sun is not shining', which changes the meaning.\nB. ~p ⇔ ~q: this says 'the weather is not warm if and only if the sun is not shining'; it is true in the same cases, but it is a reworded statement, not the sentence as written.\nC. ~q ⇔ ~p: this says 'the sun is not shining if and only if the weather is not warm', again a reworded statement with 'not' added to both parts.\n\nExam tip: read each option back into words. The correct translation uses the same statements, the same connective and the same number of 'not's as the sentence."
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "quadratic-equations.solving",
+      "difficulty": "medium",
+      "hint1": "This quadratic can be solved by factorising. Look at the number term and the coefficient of d.",
+      "hint2": "You need two numbers that multiply to give −96 and add to give −4. Because the product is negative, one number is positive and the other is negative.",
+      "hint3": "The pair is made from 8 and 12, with one of them negative. Choose the signs so the sum is −4, then remember that each root has the opposite sign to the number in its bracket.",
+      "solution": "Answer: C. d = −8, 12\n\nIf two brackets multiply to give 0, at least one of them must be 0. So factorise the quadratic, then set each bracket equal to 0.\n\nHow to tell:\nTwo numbers that multiply to −96 and add to −4: −12 and 8.\nd² − 4d − 96 = (d − 12)(d + 8)\n(d − 12)(d + 8) = 0\nd − 12 = 0, so d = 12\nd + 8 = 0, so d = −8\nCheck: 12² − 4(12) − 96 = 144 − 48 − 96 = 0\n\nWhy not the others:\nA. d = 8, 12: two positive roots multiply to a positive number, but here the roots must multiply to −96.\nB. d = −8, −12: two negative roots also multiply to a positive number.\nD. d = 8, −12: these add up to −4, but the roots of d² − 4d − 96 = 0 must add up to +4; these solve d² + 4d − 96 = 0.\n\nExam tip: for x² + bx + c = 0, the two roots add up to −b and multiply to give c. Use this to check the options quickly."
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "indices.laws",
+      "difficulty": "medium",
+      "hint1": "An equals sign has dropped out of the stem: it means (x⁻ⁿ)⁴ = 1/x⁶. Aim to write both sides as a single power of x.",
+      "hint2": "A power of a power multiplies the indices: (xᵃ)ᵇ = xᵃᵇ. A fraction such as 1/x⁶ can be written with a negative index: x⁻⁶.",
+      "hint3": "With both sides as x to some power, the indices must be equal. Set them equal and solve, watching the signs.",
+      "solution": "Answer: C. 3/2\n\nWhen two powers of the same base are equal, their indices are equal. So rewrite each side as one power of x and compare the indices.\n\nHow to tell:\nThe stem is read as (x⁻ⁿ)⁴ = 1/x⁶, since the = sign was lost in printing.\n(x⁻ⁿ)⁴ = x⁻⁴ⁿ\n1/x⁶ = x⁻⁶\nx⁻⁴ⁿ = x⁻⁶\n−4n = −6\nn = 6/4 = 3/2\n\nWhy not the others:\nA. −2/3: the fraction is upside down and the sign is wrong.\nB. −3/2: the minus signs on both sides cancel, so n is positive.\nD. ⅔: the fraction is upside down, since 4n = 6 gives n = 6 ÷ 4, not 4 ÷ 6.\n\nExam tip: write every term as a power of the same base, turning fractions like 1/xᵏ into x⁻ᵏ, then equate the indices."
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "expressions.expansion-factorisation",
+      "difficulty": "medium",
+      "hint1": "Before solving for x and y, see whether the expression you must find is built from the two expressions you are given.",
+      "hint2": "Try to factorise x² + 4xy + 3y² into two brackets. You need two numbers that multiply to 3 and add to 4.",
+      "hint3": "Once factorised, each bracket matches one of the given facts. Replace each bracket with its value and work out the result.",
+      "solution": "Answer: B. 5\n\nIf an expression factorises into brackets whose values you already know, you can find its value without finding x and y. Here the quadratic expression splits into exactly the two given brackets.\n\nHow to tell:\nx² + 4xy + 3y² = (x + y)(x + 3y)\n= 1 × 5\n= 5\nCheck by solving: subtracting the equations gives 2y = 4, so y = 2 and x = −1.\n(−1)² + 4(−1)(2) + 3(2)² = 1 − 8 + 12 = 5\n\nWhy not the others:\nA. 1: this is only the value of x + y.\nC. 10: this is 2 × 5, but nothing in the expression doubles; the brackets multiply to 1 × 5.\nD. 25: this is 5², but only one bracket equals 5 and the other equals 1.\n\nExam tip: when you are given the values of simple expressions like x + y, try factorising the expression you must find into those same pieces."
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "indices.log-equations",
+      "difficulty": "medium",
+      "hint1": "The left side has no unknown in it. Work out its value first.",
+      "hint2": "log₄ 16 asks: 4 to what power gives 16? Whatever that number is, log_y 36 has the same value.",
+      "hint3": "If log_y 36 = k, then yᵏ = 36. Find the positive y that makes this true.",
+      "solution": "Answer: C. 6\n\nlogₐ b = c means the same as aᶜ = b. Changing a logarithm into index form turns the equation into one you can solve. The base of a logarithm must be positive and not 1.\n\nHow to tell:\nlog₄ 16 = 2, because 4² = 16\nlog_y 36 = 2\ny² = 36\ny = 6 (y = −6 is rejected, because a base must be positive)\n\nWhy not the others:\nA. 3: 3² = 9, not 36.\nB. 4: this copies the base from the left side, but 4² = 16, not 36.\nD. 8: 8² = 64, not 36.\n\nExam tip: to solve a logarithm equation, rewrite it in index form: logₐ b = c becomes aᶜ = b."
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "percentages.profit-loss",
+      "difficulty": "medium",
+      "hint1": "At a loss, the selling price is less than the cost price. Decide which of the two prices the 4% is worked out on.",
+      "hint2": "Loss percent is worked out on the cost price. So the selling price is (100 − 4)% = 96% of the cost price, which is not the same as the selling price plus 4% of ₦105,000.",
+      "hint3": "Solve 96% of the cost price = ₦105,000. Then compare your answer with the options carefully, digit by digit.",
+      "solution": "Answer: D. ₦1098,375.00 (a misprint of ₦109,375.00)\n\nUnless a question says otherwise, profit and loss percentages are worked out on the cost price. A 4% loss means the article was sold for 96% of what it cost, so you divide the selling price by 96% to get back to the cost price.\n\nHow to tell:\nSelling price = 96% of cost price\n0.96 × cost price = ₦105,000\nCost price = ₦105,000 ÷ 0.96\nCost price = ₦109,375.00\nOption D is printed as ₦1098,375.00 with a stray 8: its comma is in the wrong place, and a cost price over a million naira cannot give a ₦105,000 sale at a 4% loss. It is meant to be ₦109,375.00.\nCheck: 4% of ₦109,375 is ₦4,375, and ₦109,375 − ₦4,375 = ₦105,000.\n\nWhy not the others:\nA. ₦100,800.00: this is 96% of ₦105,000, taking the loss off the selling price, but at a loss the cost price must be more than the selling price.\nB. ₦105,400.00: this is only ₦400 above the selling price, far less than a 4% loss.\nC. ₦109,200.00: this adds 4% of the selling price, but the 4% is of the cost price.\n\nExam tip: at a loss, selling price = (100 − loss%)% of cost price; at a profit, selling price = (100 + profit%)% of cost price. Divide to get back to the cost price instead of adding or taking away a percentage of the selling price."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "percentages.interest",
+      "difficulty": "medium",
+      "hint1": "The population grows by a percentage of its new size each year, just like compound interest. Work backwards from the final figure.",
+      "hint2": "Each year the population is multiplied by 1.02. After 2 years, final population = original population × 1.02².",
+      "hint3": "Divide 83,232 by 1.02², which is 1.0404, then round to the nearest thousand.",
+      "solution": "Answer: A. 80,000\n\nGrowth by a fixed percentage each year multiplies the amount by (1 + r/100) every year, so after n years it has been multiplied by (1 + r/100)ⁿ. To go back to the start, divide by that factor.\n\nHow to tell:\nLet P be the original population.\nP × 1.02 × 1.02 = 83,232\nP × 1.0404 = 83,232\nP = 83,232 ÷ 1.0404\nP = 80,000\nTo the nearest thousand: 80,000\nCheck: 80,000 × 1.02 = 81,600, and 81,600 × 1.02 = 83,232.\n\nWhy not the others:\nB. 81,000: this is close to the population after 1 year (81,600), not at the start.\nC. 82,000: 82,000 × 1.0404 ≈ 85,313, which is too large.\nD. 83,000: this is just the final population rounded, with no growth removed.\n\nExam tip: for growth at r% a year for n years, final = original × (1 + r/100)ⁿ. Taking off 2 × 2% in one step ignores that each year's growth is on the new total, and can give a wrong answer."
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "sequences.ap",
+      "difficulty": "medium",
+      "hint1": "Write each given term using the first term a and the common difference d.",
+      "hint2": "In an AP the nth term is a + (n − 1)d. So the third term is a + 2d and the ninth term is a + 8d. Subtract one equation from the other to find d.",
+      "hint3": "Going from the third term to the fifth term you add d twice. Find d, then step forward from 9.",
+      "solution": "Answer: C. −3\n\nIn an arithmetic progression the same number, the common difference d, is added each time, so the nth term is a + (n − 1)d. Two known terms give two equations, which fix both a and d.\n\nHow to tell:\na + 2d = 9\na + 8d = −27\nSubtract: 6d = −36, so d = −6\na = 9 − 2(−6) = 21\nFifth term = a + 4d = 21 + 4(−6) = 21 − 24 = −3\nCheck: ninth term = 21 + 8(−6) = 21 − 48 = −27\n\nWhy not the others:\nA. 18: the terms go down by 6 each time after 9, so the fifth term must be less than 9.\nB. 3: this is 9 − 6, only one step on from the third term, but the fifth term is two steps on.\nD. −6: this is the common difference d, not a term.\n\nExam tip: to find d quickly from two terms, divide the difference of the terms by the difference of their positions: (−27 − 9) ÷ (9 − 3) = −6."
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "expressions.change-of-subject",
+      "difficulty": "hard",
+      "hint1": "r appears only once, in the bottom of a fraction. Get that fraction on its own on one side first.",
+      "hint2": "Move b/t to the other side: c/r = 1/p − b/t. Then write the right side as one single fraction over pt.",
+      "hint3": "When c/r equals a single fraction, turn both sides upside down and multiply by c. Check the sign between t and pb, and check whether t is still in the top.",
+      "solution": "Answer: A. r = pct/(t − pb)\n\nTo make a letter that sits in a denominator the subject, get its fraction alone, combine the other side into one fraction, then turn both sides upside down. Turning each term upside down separately does not work.\n\nHow to tell:\n1/p = b/t + c/r\nc/r = 1/p − b/t\nc/r = t/(pt) − pb/(pt)\nc/r = (t − pb)/(pt)\nr/c = pt/(t − pb)\nr = pct/(t − pb)\n\nWhy not the others:\nB. r = pct/(t + pb): the sign should be minus, because b/t was taken away from 1/p.\nC. r = pc/(t − pb): the t from the common denominator pt has been lost.\nD. r = pc/(t + pb): the t has been lost and the sign is wrong.\n\nExam tip: combine into one fraction before turning upside down. 1/(a − b) is not equal to 1/a − 1/b, so the combining step cannot be skipped."
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "solids.similar",
+      "difficulty": "medium",
+      "hint1": "Ball bearings are spheres, and any two spheres are similar. Think about how lengths, areas and volumes compare between similar solids.",
+      "hint2": "If lengths are in the ratio k, areas are in the ratio k² and volumes in the ratio k³. Start by simplifying the volume ratio 1.6 : 5.4.",
+      "hint3": "The volume ratio simplifies to two perfect cubes. Take cube roots to get the length ratio, then square that.",
+      "solution": "Answer: A. 4 : 9\n\nFor similar solids, if lengths are in the ratio k, then areas are in the ratio k² and volumes in the ratio k³. So from volumes, take the cube root to get lengths, then square to get areas.\n\nHow to tell:\nVolume ratio = 1.6 : 5.4 = 16 : 54 = 8 : 27\nLength ratio = ∛8 : ∛27 = 2 : 3\nArea ratio = 2² : 3² = 4 : 9\n\nWhy not the others:\nB. 2 : 3: this is the ratio of the radii, not of the surface areas.\nC. 3 : 8: this does not come from 8 : 27 by any cube root or square.\nD. 5 : 12: this does not come from 8 : 27 by any cube root or square.\n\nExam tip: for similar solids, go volume → cube root → length → square → area, or the reverse. The volume ratio cannot be used for areas directly."
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "percentages.profit-loss",
+      "difficulty": "hard",
+      "hint1": "There are two different profit percentages here. First find the one amount that both of them are worked out on.",
+      "hint2": "Profit percent is worked out on the cost price. $500 is 108% of the cost price.",
+      "hint3": "Find the cost price from $500, then find 116% of it.",
+      "solution": "Answer: A. $537.04\n\nUnless a question says otherwise, profit percent is taken on the cost price, so both the 8% and the 16% are percentages of the same cost price. Find the cost price first, then apply the new percentage to it.\n\nHow to tell:\n108% of cost price = $500\nCost price = 500 ÷ 1.08 = $462.96 (to the nearest cent)\nNew selling price = 116% of cost price\n= 1.16 × 500 ÷ 1.08\n= 580 ÷ 1.08\n= $537.04\n\nWhy not the others:\nB. $540.00: this adds another 8% of $500, but the percentages are of the cost price, not the selling price.\nC. $573.04: this swaps two digits of the correct answer, and would give about 24% profit.\nD. $580,00: this is 116% of $500, treating the old selling price as if it were the cost price.\n\nExam tip: new selling price = old selling price × (100 + new %) ÷ (100 + old %). Here that is 500 × 116 ÷ 108."
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "solids.surface-area",
+      "difficulty": "easy",
+      "hint1": "Curved surface means the side of the cylinder only, not the flat circles at the top and bottom.",
+      "hint2": "If you unroll the curved side it becomes a rectangle. One side is the height, and the other is the circumference of the base, 2πr.",
+      "hint3": "Multiply 2 × 22/7 × 8 × 14. Cancel the 7 into the 14 first.",
+      "solution": "Answer: B. 704 cm²\n\nThe curved side of a cylinder unrolls into a rectangle whose length is the circumference of the base, 2πr, and whose width is the height h. So the curved surface area is 2πrh.\n\nHow to tell:\nCurved surface area = 2πrh\n= 2 × 22/7 × 8 × 14\n= 2 × 22 × 8 × 2\n= 704 cm²\n\nWhy not the others:\nA. 562 cm²: this does not come from 2πrh with r = 8 cm and h = 14 cm.\nC. 352 cm²: this is πrh, with the 2 in 2πr left out.\nD. 680 cm²: this does not come from 2πrh with these values.\n\nExam tip: curved surface area of a cylinder = 2πrh. A closed cylinder's total surface area adds the two circular ends, 2πr². Read whether the question says curved or total."
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "inequalities.linear",
+      "difficulty": "medium",
+      "hint1": "Clear the fractions first by multiplying every term by a number that all the denominators divide into.",
+      "hint2": "The LCM of 3, 2 and 6 is 6. Multiply every term by 6, including the right side, then expand carefully: the minus in front of the second bracket applies to both terms inside it.",
+      "hint3": "You should reach −k < 12. Think about what happens to the inequality sign when you divide both sides by a negative number.",
+      "solution": "Answer: D. k > −12\n\nAn inequality is solved like an equation, with one extra rule: multiplying or dividing both sides by a negative number reverses the inequality sign.\n\nHow to tell:\n⅓(k − 4) − ½(k + 1) < ⅙\nMultiply every term by 6:\n2(k − 4) − 3(k + 1) < 1\n2k − 8 − 3k − 3 < 1\n−k − 11 < 1\n−k < 12\nk > −12 (dividing by −1 reverses the sign)\nCheck with k = 0: ⅓(−4) − ½(1) = −1⅚, which is less than ⅙, so k = 0 must be in the answer.\n\nWhy not the others:\nA. k < −6: this leaves out k = 0, which satisfies the inequality.\nB. k > 6: this also leaves out k = 0, which satisfies the inequality.\nC. k < −12: the sign was not reversed when dividing by −1.\n\nExam tip: test an easy value such as 0 in the original inequality. It quickly rules out options that wrongly include or exclude it, and catches a missed sign reversal."
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "triangles.polygons",
+      "difficulty": "easy",
+      "hint1": "For a regular polygon, the exterior angles are easier to work with than the interior angles.",
+      "hint2": "An interior angle and its exterior angle lie on a straight line, so they add up to 180°. The exterior angles of a polygon add up to 360°.",
+      "hint3": "Find one exterior angle, then work out how many of them make 360°.",
+      "solution": "Answer: C. 12\n\nThe exterior angles of a polygon add up to 360°, and in a regular polygon they are all equal. So the number of sides is 360° divided by one exterior angle.\n\nHow to tell:\nExterior angle = 180° − 150° = 30°\nNumber of sides = 360° ÷ 30° = 12\n\nWhy not the others:\nA. 6: a regular hexagon has interior angles of 120°.\nB. 9: a regular 9-sided polygon has interior angles of 140°.\nD. 15: a regular 15-sided polygon has interior angles of 156°.\n\nExam tip: for a regular polygon, number of sides = 360° ÷ exterior angle, where exterior angle = 180° − interior angle."
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "trigonometry.ratios",
+      "difficulty": "medium",
+      "hint1": "One side of the equation uses sine and the other uses cosine. Look for a way to write both with the same ratio.",
+      "hint2": "For acute angles, the sine of an angle equals the cosine of the angle that makes it up to 90°: sin θ = cos(90° − θ).",
+      "hint3": "Write cos 62° as the sine of an acute angle, then set x − 46 equal to that angle.",
+      "solution": "Answer: C. 74\n\nIn a right-angled triangle the two acute angles add up to 90°, and the side opposite one of them is next to the other. So the sine of an acute angle equals the cosine of its complement: sin θ = cos(90° − θ).\n\nHow to tell:\ncos 62° = sin(90° − 62°) = sin 28°\nsin(x − 46)° = sin 28°\nTaking the acute angle, as the syllabus expects here:\nx − 46 = 28\nx = 74\n\nWhy not the others:\nA. 46: this gives sin 0° = 0, but cos 62° is not 0.\nB. 62: this gives sin 16°, not sin 28°.\nD. 90: this gives sin 44°, which equals cos 46°, not cos 62°.\n\nExam tip: when sin A = cos B with both angles acute, A + B = 90°. Here (x − 46) + 62 = 90."
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "linear-equations.one-variable",
+      "difficulty": "medium",
+      "hint1": "Consecutive odd integers are 2 apart. Call the smaller one n and write the bigger one in terms of n.",
+      "hint2": "The bigger integer is n + 2. Turn the words into an equation: 5 times the smaller plus 3 times the bigger equals 222.",
+      "hint3": "Solve 5n + 3(n + 2) = 222, check that n is odd, and make sure you give the smaller of the two.",
+      "solution": "Answer: C. 27\n\nConsecutive odd integers go up in steps of 2, so if the smaller is n the bigger is n + 2. Writing the words as an equation in n gives a linear equation to solve.\n\nHow to tell:\n5n + 3(n + 2) = 222\n5n + 3n + 6 = 222\n8n = 216\nn = 27\nCheck: 5 × 27 + 3 × 29 = 135 + 87 = 222\n\nWhy not the others:\nA. 31: 5 × 31 + 3 × 33 = 254, not 222.\nB. 29: this is the bigger integer, not the smaller.\nD. 25: 5 × 25 + 3 × 27 = 206, not 222.\n\nExam tip: consecutive integers differ by 1, while consecutive odd or consecutive even integers differ by 2. Write them as n and n + 2 before forming the equation, and check which one the question asks for."
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "ratio.proportion",
+      "difficulty": "medium",
+      "hint1": "Work in two stages: first Kwakye's share, then the sharing of what is left.",
+      "hint2": "Kwakye takes 20% of $12,000. Only the remainder is shared in the ratio 5 : 3, so it is split into 5 + 3 = 8 equal parts.",
+      "hint3": "Find the remainder, then work out what 5 of the 8 parts are worth.",
+      "solution": "Answer: C. $6,000.00\n\nTo share in a ratio, add the ratio numbers to get the total parts, then give each person their number of parts. Here the ratio applies only to what is left after Kwakye's 20%.\n\nHow to tell:\nKwakye: 20% of $12,000 = $2,400\nRemainder: $12,000 − $2,400 = $9,600\nTotal parts: 5 + 3 = 8\nSabina: 5/8 × $9,600 = $6,000\nOwusu: 3/8 × $9,600 = $3,600\nCheck: $2,400 + $6,000 + $3,600 = $12,000\n\nWhy not the others:\nA. $2,400.00: this is Kwakye's share.\nB. $3,600.00: this is Owusu's share, the 3 parts.\nD. $9,600.00: this is the whole remainder shared by Sabina and Owusu together.\n\nExam tip: when a percentage is taken off first and the rest is shared in a ratio, apply the ratio to the remainder, not to the full amount."
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "sets.venn",
+      "difficulty": "medium",
+      "hint1": "Every student offers at least one subject, and 21 + 28 is more than 42. A two-circle Venn diagram helps you sort this out.",
+      "hint2": "Adding 21 and 28 counts the students who offer both subjects twice. The amount by which the total goes over 42 is the number offering both.",
+      "hint3": "Take the 'both' number away from the Government total to get Government only, then divide by 42.",
+      "solution": "Answer: C. 1/2\n\nWhen two groups overlap, adding their sizes counts the overlap twice: n(H ∪ G) = n(H) + n(G) − n(H ∩ G). Once the overlap is known, each 'only' region is found by subtraction, and a probability is that count divided by the class size.\n\nHow to tell:\nBoth subjects = 21 + 28 − 42 = 7\nGovernment only = 28 − 7 = 21\nHistory only = 21 − 7 = 14\nProbability of Government only = 21/42 = 1/2\n\nWhy not the others:\nA. 1/6: this is 7/42, the probability of offering both subjects.\nB. 1/3: this is 14/42, the probability of offering History only.\nD. 3/4: no region gives this; even all Government students give 28/42 = 2/3.\n\nExam tip: in two-set problems, find the overlap first with n(A ∪ B) = n(A) + n(B) − n(A ∩ B). The 'only' regions then come from subtracting the overlap."
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "solids.volume",
+      "difficulty": "medium",
+      "hint1": "You are given the volume and the height, so work backwards through the formula for the volume of a cone.",
+      "hint2": "Volume of a cone = ⅓πr²h. Put in V = 8,316 cm³, h = 18 cm and π = 22/7, then make r² the subject.",
+      "hint3": "Simplify ⅓ × 18 first, find r², then take its square root.",
+      "solution": "Answer: A. 21 cm\n\nThe volume of a cone is one third of the volume of a cylinder with the same base and height: V = ⅓πr²h. With V and h known, the formula becomes an equation in r².\n\nHow to tell:\n⅓ × 22/7 × r² × 18 = 8,316\n6 × 22/7 × r² = 8,316\n132/7 × r² = 8,316\nr² = 8,316 × 7 ÷ 132\nr² = 441\nr = √441 = 21 cm\n\nWhy not the others:\nB. 14 cm: this gives a volume of 3,696 cm³.\nC. 28 cm: this gives a volume of 14,784 cm³.\nD. 42 cm: this gives a volume of 33,264 cm³.\n\nExam tip: when finding a radius from a volume, get r² alone before taking the square root. With π = 22/7, look for the 7 to cancel; the radius often comes out as a multiple of 7."
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "triangles.angle-properties",
+      "difficulty": "medium",
+      "hint1": "The three angles of a triangle add up to 180°. A ratio tells you how many equal parts each angle has.",
+      "hint2": "Add the ratio numbers to find the total number of parts, then find what one part is worth in degrees.",
+      "hint3": "The smallest angle has 2 parts and the largest has 8. How many parts is the difference, and what is that in degrees?",
+      "solution": "Answer: D. 72°\n\nThe angles of a triangle add up to 180°. A ratio such as 2 : 5 : 8 splits the 180° into equal parts, so find the value of one part and multiply.\n\nHow to tell:\nTotal parts = 2 + 5 + 8 = 15\nOne part = 180° ÷ 15 = 12°\nSmallest angle = 2 × 12° = 24°\nLargest angle = 8 × 12° = 96°\nDifference = 96° − 24° = 72°\n\nWhy not the others:\nA. 12°: this is the value of one part only.\nB. 24°: this is the smallest angle, not the difference.\nC. 48°: this is 4 parts, but the difference is 8 − 2 = 6 parts.\n\nExam tip: in ratio questions, find total parts, then the value of one part, then multiply. For a difference, multiply the difference in parts directly: 6 × 12° = 72°."
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "plane-mensuration.circles",
+      "difficulty": "easy",
+      "hint1": "An arc is a fraction of the whole circumference. Decide what fraction of a full turn 120° is.",
+      "hint2": "Arc length = (θ ÷ 360°) × 2πr, where θ is the angle at the centre.",
+      "hint3": "120/360 simplifies to a simple fraction. Find the full circumference with r = 21 cm, then take that fraction of it.",
+      "solution": "Answer: C. 44 cm\n\nThe angle at the centre tells you what fraction of the full circle the sector is, so the arc is that same fraction of the circumference 2πr.\n\nHow to tell:\nCircumference = 2 × 22/7 × 21 = 132 cm\nFraction of the circle = 120° ÷ 360° = ⅓\nArc length = ⅓ × 132 = 44 cm\n\nWhy not the others:\nA. 11 cm: this is a twelfth of the circumference, not a third.\nB. 22 cm: this uses πr instead of 2πr.\nD. 66 cm: this is half the circumference, the arc for 180°.\n\nExam tip: arc length uses 2πr and sector area uses πr². Both are multiplied by θ ÷ 360°."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "dispersion.variance-sd",
+      "difficulty": "medium",
+      "hint1": "Variance measures how spread out the values are around the mean. Start by finding the mean height.",
+      "hint2": "Variance = the average of the squared deviations: take each value minus the mean, square it, add the squares, and divide by the number of values.",
+      "hint3": "The mean is a whole number, and the squared deviations come in two matching pairs. Add them and divide by 4.",
+      "solution": "Answer: C. 8.5\n\nVariance is the average of the squared distances of the values from the mean. In WASSCE it is found as Σ(x − mean)² ÷ n, dividing by the number of values n.\n\nHow to tell:\nMean = (2 + 5 + 7 + 10) ÷ 4 = 24 ÷ 4 = 6 cm\nDeviations from the mean: −4, −1, 1, 4\nSquared deviations: 16, 1, 1, 16\nSum = 34\nVariance = 34 ÷ 4 = 8.5 cm²\nSome books divide by n − 1 for a sample, which gives 11.3; that is not an option, and the WASSCE method divides by n.\n\nWhy not the others:\nA. 7.2: this does not come from the squared deviations of these heights.\nB. 6.0: this is the mean, not the variance.\nD. 9.1: this does not come from the squared deviations of these heights.\n\nExam tip: check that the deviations add up to 0 before squaring them; if they do not, the mean is wrong. The standard deviation is the square root of the variance, so read which one the question asks for."
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "trigonometry.bearings",
+      "difficulty": "easy",
+      "hint1": "A bearing is measured clockwise from north at the point you are measuring from. Here the two bearings are taken from opposite ends of the same line.",
+      "hint2": "The north lines at F and G are parallel, so the bearing of G from F differs from the bearing of F from G by 180°.",
+      "hint3": "064° is less than 180°. Decide whether to add or subtract 180°.",
+      "solution": "Answer: C. 244°\n\nLooking back along a line faces the opposite direction, which is a half turn. Because the north lines at the two points are parallel, the back bearing differs from the bearing by exactly 180°.\n\nHow to tell:\nBearing of F from G = 064°\nBearing of G from F = 064° + 180° = 244°\n\nWhy not the others:\nA. 128°: this is 2 × 64°, which has nothing to do with reversing a direction.\nB. 180°: this would put G due south of F.\nD. 116°: this is 180° − 64°, which is the angle measured anticlockwise from north at F, but bearings are measured clockwise.\n\nExam tip: for a back bearing, add 180° if the bearing is less than 180°, and subtract 180° if it is more than 180°."
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "triangles.polygons",
+      "difficulty": "medium",
+      "hint1": "First find the total of the interior angles of a six-sided polygon.",
+      "hint2": "The sum of the interior angles of a polygon with n sides is (n − 2) × 180°. A hexagon has n = 6.",
+      "hint3": "Add all six angles, set the total equal to your angle sum, and solve for x.",
+      "solution": "Answer: B. 65\n\nA polygon with n sides, such as this hexagon, can be cut into n − 2 triangles from one corner, so its interior angles add up to (n − 2) × 180°. Setting the given angles equal to that total gives one equation in x.\n\nHow to tell:\nSum of angles = (6 − 2) × 180° = 720°\n107 + 2x + 150 + 95 + 2x − 15 + 123 = 720\n4x + 460 = 720\n4x = 260\nx = 65\nCheck: 2x = 130° and 2x − 15 = 115°, and 107 + 130 + 150 + 95 + 115 + 123 = 720.\n\nWhy not the others:\nA. 57: 4 × 57 + 460 = 688, not 720.\nC. 106: 4 × 106 + 460 = 884, not 720.\nD. 120: this is each interior angle of a regular hexagon, not x.\n\nExam tip: for a missing angle in a polygon, find the angle sum with (n − 2) × 180° first, then add the given angles and form one equation."
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "circles.angles",
+      "difficulty": "hard",
+      "placement_challenge": "circles.angles: the decisive step is 'angles in the same segment are equal' (∠PNT = ∠PMT, both on chord PT), a circle theorem listed under circles.angles; the straight-line and triangle angle facts only finish the working.",
+      "hint1": "∠QTN is the angle at T between TQ and TN. It is one of the angles of triangle QTN, and the angle at Q is already given.",
+      "hint2": "Angles in the same segment are equal: two angles at the circumference that stand on the same chord, on the same side of it, are equal. Look for an angle in triangle QTN that stands on the same chord as the 34° angle at M.",
+      "hint3": "Once you know the angle at N in triangle QTN, the three angles at Q, N and T must add up to 180°.",
+      "solution": "Answer: D. 118°\n\nAngles at the circumference standing on the same chord, in the same segment, are equal. This lets you move the 34° angle at M across to N, and then the angle sum of triangle QTN finishes the job.\n\nHow to tell:\nIn the diagram, Q, P and N lie on one straight line, Q, T and M lie on another, and P, N, M and T are on the circle.\n∠PMT = ∠PMQ = 34°, because T lies on QM.\n∠PNT = ∠PMT = 34°, because both stand on chord PT (same segment).\nIn triangle QTN: ∠TQN = 28° and ∠QNT = 34°.\n∠QTN = 180° − 28° − 34° = 118°\n\nWhy not the others:\nA. 152°: this is 180° − 28°, using the angle at Q but leaving out the angle at N.\nB. 146°: this is 180° − 34°, using the angle at N but leaving out the angle at Q.\nC. 124°: this is 180° − 28° − 28°, using the 28° at Q twice instead of the 34° angle at N.\n\nExam tip: when one angle at the circumference is given, look for other angles standing on the same chord, because they are equal. Then finish with the angle sum of a triangle or angles on a straight line."
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "triangles.angle-properties",
+      "difficulty": "medium",
+      "hint1": "Look for a triangle in the diagram that contains both marked angles, 28° and 34°.",
+      "hint2": "Q, P and N lie on one straight line, so ∠MPN sits outside triangle QPM. An exterior angle of a triangle equals the sum of the two interior angles opposite it.",
+      "hint3": "Which two interior angles of triangle QPM are opposite the corner P? Combine them using that rule.",
+      "solution": "Answer: A. 62°\n\nAn exterior angle of a triangle equals the sum of the two interior angles opposite it. ∠MPN lies outside triangle QPM, on the straight line QPN, so it is the exterior angle of that triangle at P.\n\nHow to tell:\nQ, P and N lie on one straight line, and Q, T and M lie on another.\nIn triangle QPM, ∠PQM = 28° and ∠PMQ = 34°.\n∠MPN is the exterior angle at P, so ∠MPN = ∠PQM + ∠PMQ\n∠MPN = 28° + 34°\n∠MPN = 62°\nCheck: ∠QPM = 180° − 28° − 34° = 118°, and 118° + 62° = 180° on the straight line QPN.\n\nWhy not the others:\nB. 56°: this is 2 × 28°, and no rule doubles the angle at Q here.\nC. 34°: this is the angle at M, only one of the two interior opposite angles.\nD. 28°: this is the angle at Q, only one of the two interior opposite angles.\n\nExam tip: when two lines from an outside point cut a circle, look for a triangle with that outside point as a corner. An angle on the straight extension of one of its sides is an exterior angle, and it equals the sum of the two interior opposite angles."
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "coordinate-geometry.distance-midpoint",
+      "difficulty": "medium",
+      "hint1": "The towns are points on the x-y plane. The distance between them is the length of the straight line joining them.",
+      "hint2": "Find how far apart the points are across (the change in x) and up (the change in y). These two gaps are the shorter sides of a right-angled triangle, and the distance is its longest side.",
+      "hint3": "The gaps are 3 − (−2) and 7 − (−5). Square each gap, add the squares, then take the square root.",
+      "solution": "Answer: C. 13 units\n\nThe distance between two points is the longest side of a right-angled triangle whose other two sides are the change in x and the change in y. So, by Pythagoras, distance = √[(x₂ − x₁)² + (y₂ − y₁)²].\n\nHow to tell:\nChange in x = 3 − (−2) = 5 units\nChange in y = 7 − (−5) = 12 units\nDistance² = 5² + 12² = 25 + 144 = 169\nDistance = √169 = 13 units\n\nWhy not the others:\nA. 114 units: far too big, since the straight distance cannot be more than 5 + 12 = 17 units, the path across and then up.\nB. 25 units: this is 5², a square that was never added to 12² or square-rooted.\nD. 12 units: this is only the change in y, the vertical gap, and leaves out the horizontal gap of 5.\n\nExam tip: taking away a negative coordinate means adding, so 3 − (−2) = 5. Watch the signs, and check that your distance is longer than either gap but shorter than the two gaps added together."
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "circles.angles",
+      "difficulty": "hard",
+      "hint1": "Note where R, O and P sit compared with the chord QS. Two circle theorems link the angles at R, O and P.",
+      "hint2": "The angle at the centre is twice the angle at the circumference standing on the same arc, so ∠QPS = ½∠QOS. Also, QRSP is a cyclic quadrilateral, so its opposite angles add up to 180°.",
+      "hint3": "Write ∠QRS + ½∠QOS = 180° using the expressions in x and solve for x. Then work out ∠QPS itself, not ∠QOS or ∠QRS.",
+      "solution": "Answer: A. 75°\n\nThe angle an arc makes at the centre is twice the angle it makes at any point on the rest of the circle. The opposite angles of a cyclic quadrilateral (a four-sided shape with all four corners on the circle) add up to 180°.\n\nHow to tell:\n∠QOS and ∠QPS both stand on the small arc QS, so ∠QPS = ½(6x + 24)° = (3x + 12)°.\nQRSP is a cyclic quadrilateral, so ∠QRS + ∠QPS = 180°.\n5x + 3x + 12 = 180\n8x = 168\nx = 21\n∠QPS = 3 × 21 + 12 = 75°\nCheck: ∠QRS = 5 × 21 = 105°, and 105° + 75° = 180°. ∠QOS = 6 × 21 + 24 = 150°, which is twice 75°.\n\nWhy not the others:\nB. 87°: this comes from halving only the 6x and not the 24, giving 3x + 24 = 63 + 24 = 87.\nC. 105°: this is ∠QRS, the angle opposite P in the quadrilateral.\nD. 150°: this is ∠QOS, the angle at the centre, which is twice the angle asked for.\n\nExam tip: when angles are given in terms of x, write one equation from a circle theorem, solve for x, then substitute into the angle the question actually asks for. The other angles in the figure are often placed among the options."
+    },
+    {
+      "q_number": 41,
+      "subtopic_id": "circles.angles",
+      "difficulty": "hard",
+      "hint1": "Two chords cross inside the circle at P. Look for an angle on the circle that stands on the same arc as the 37° angle.",
+      "hint2": "Angles in the same segment are equal: ∠STR and ∠SQR both stand on arc SR. That gives you a second angle in triangle PQR, next to the 59° angle.",
+      "hint3": "Find ∠QPR from the angle sum of triangle PQR. ∠SPR lies next to it on the straight line SQ, so decide which of the two angles at P the question wants.",
+      "solution": "Answer: B. 96°\n\nAngles in the same segment are equal, because they stand on the same arc. Once a missing angle is found this way, the angle sum of a triangle, or its exterior angle, finishes the job.\n\nHow to tell:\nChords TR and SQ cross at P.\n∠SQR and ∠STR both stand on arc SR, so ∠SQR = ∠STR = 37°.\nIn triangle PQR: ∠PQR = 37° and ∠PRQ = 59°.\n∠QPR = 180° − 37° − 59° = 84°\nS, P and Q lie on one straight line, so ∠SPR = 180° − 84° = 96°.\nOr directly: ∠SPR is the exterior angle of triangle PQR at P, so ∠SPR = 37° + 59° = 96°.\nThe diagram also prints O beside P. The working does not use the centre, so that label can be ignored.\n\nWhy not the others:\nA. 121°: this is 180° − 59°, which ignores the 37° angle altogether.\nC. 84°: this is ∠QPR (equal to ∠SPT opposite it), the angle inside triangle PQR, not ∠SPR next to it.\nD. 59°: this is ∠QRT, one of the given angles, not an angle at P.\n\nExam tip: when chords cross inside a circle, look for pairs of angles on the circle that stand on the same arc. Then check which angle at the crossing point the question names, because neighbouring angles there add up to 180°."
+    },
+    {
+      "q_number": 43,
+      "subtopic_id": "angles.parallel-lines",
+      "difficulty": "medium",
+      "hint1": "Find the pair of lines marked with arrows as parallel, and the straight line that crosses both of them.",
+      "hint2": "SR is parallel to UW, and the straight line through S, V and T crosses both. Angles in matching positions at the two crossings are corresponding angles, and corresponding angles are equal.",
+      "hint3": "At S, the 45° angle lies between the parallel line going up to the right and the crossing line going down to the right. Is x at V in the same position, and so equal to it, or does it make 180° with it?",
+      "solution": "Answer: C. 45°\n\nWhen a straight line crosses two parallel lines, the angles in matching positions at each crossing are called corresponding angles, and they are equal.\n\nHow to tell:\nSR is parallel to UW, and the line through S, V and T crosses both.\nAt S, the 45° angle lies between SR (going up to the right) and ST (going down to the right).\nAt V, x lies between VW (going up to the right) and VT (going down to the right).\nThey are in matching positions, so they are corresponding angles.\nx = ∠RST = 45°\n\nWhy not the others:\nA. 20°: this is ∠VTU, the angle at T, which is not at either parallel line.\nB. 65°: this adds the 20° at T to 45°, but the angle at T plays no part in finding x.\nD. 135°: this is 180° − 45°, which is ∠UVT, the angle beside x on the straight line UW, not x itself.\n\nExam tip: with parallel lines, first decide whether the two angles are corresponding or alternate (equal) or co-interior (adding up to 180°). Tracing an F shape or a Z shape through the two angles helps you decide."
+    },
+    {
+      "q_number": 44,
+      "subtopic_id": "triangles.angle-properties",
+      "difficulty": "medium",
+      "hint1": "y is inside triangle UVT. Look at how the angle x at V is connected to this triangle.",
+      "hint2": "U, V and W lie on one straight line, so x is an exterior angle of triangle UVT. An exterior angle equals the sum of the two interior angles opposite it.",
+      "hint3": "The interior angles opposite x are y at U and the 20° at T. Use the value of x you found from the parallel lines to write an equation, then solve it for y.",
+      "solution": "Answer: B. 25°\n\nAn exterior angle of a triangle equals the sum of the two interior angles opposite it. This works because the exterior angle and the interior angle beside it make 180°, and so do the three interior angles.\n\nHow to tell:\nFrom the parallel lines, x = ∠RST = 45° (corresponding angles).\nU, V and W lie on a straight line, so x is the exterior angle of triangle UVT at V.\nx = y + 20°\n45° = y + 20°\ny = 45° − 20° = 25°\nCheck: ∠UVT = 180° − 45° = 135°, and 25° + 20° + 135° = 180°.\n\nWhy not the others:\nA. 20°: this is the angle at T, not the angle at U.\nC. 45°: this is x, the exterior angle, which is y plus the 20° at T.\nD. 135°: this is ∠UVT, the third angle of the triangle.\n\nExam tip: when one side of a triangle runs straight on past a corner, the angle outside equals the sum of the two far inside angles. It saves finding the third angle first."
+    },
+    {
+      "q_number": 45,
+      "subtopic_id": "probability.single-event",
+      "difficulty": "medium",
+      "hint1": "List all six outcomes of the die, then pick out the ones that match the description.",
+      "hint2": "'Or' means an outcome counts if it is odd, prime, or both. Remember that 1 is not a prime number, and 2 is.",
+      "hint3": "Some numbers are both odd and prime. Count each of them once only, then divide by 6.",
+      "solution": "Answer: C. 2/3\n\nFor one throw of a fair die, probability = number of outcomes that fit ÷ total number of outcomes. For 'odd or prime', an outcome counts once if it is odd, prime, or both.\n\nHow to tell:\nOutcomes: 1, 2, 3, 4, 5, 6\nOdd numbers: 1, 3, 5\nPrime numbers: 2, 3, 5\nOdd or prime: 1, 2, 3, 5, which is 4 outcomes (3 and 5 counted once)\nProbability = 4/6 = 2/3\n\nWhy not the others:\nA. 1/2: this counts only the odd numbers, or only the primes, 3 out of 6.\nB. 1/3: this counts only the numbers that are both odd and prime, 3 and 5, which is 2 out of 6.\nD. 3/4: this cannot come from counting outcomes out of 6, because it would need 4½ outcomes.\n\nExam tip: for an 'or' question, write out the combined list and remove repeats before counting. Adding 3/6 + 3/6 = 1 counts 3 and 5 twice."
+    },
+    {
+      "q_number": 46,
+      "subtopic_id": "logic.arguments",
+      "difficulty": "medium",
+      "hint1": "For each pair of circles, note whether one lies completely inside the other, whether they overlap, or whether they are apart.",
+      "hint2": "A circle completely inside another means 'all of these are those'. Two circles that only overlap mean 'some of these are those'. Circles with no shared region mean 'none of these are those'.",
+      "hint3": "Look closely at circle F. Which other circles does it share a region with, and does it lie completely inside any of them?",
+      "solution": "Answer: B. Some of my friends are smart\n\nIn a Venn diagram, a circle drawn completely inside another shows that all members of the inner set belong to the outer set. Circles that overlap show that some members belong to both. In these questions, a drawn overlap is taken to mean the shared region has members.\n\nHow to tell:\nP lies completely inside C, so all pharmacists are smart.\nF overlaps C, but F is not inside C and C is not inside F.\nThe shared region of F and C holds my friends who are smart, so some of my friends are smart.\n\nWhy not the others:\nA. All pharmacists are my friends: P only partly overlaps F, so part of P lies outside F.\nC. All smart people are my friends: C is not inside F, and most of C lies outside F.\nD. None of my friends is smart: F and C overlap, so some friends are smart.\n\nExam tip: translate the picture before reading the options. Inside means 'all', overlap means 'some', apart means 'none'. Then test each option against those facts."
+    },
+    {
+      "q_number": 47,
+      "subtopic_id": "averages.mean",
+      "difficulty": "medium",
+      "hint1": "The table is a frequency table: the bottom row tells you how many students have each age. The average here means the mean.",
+      "hint2": "Mean = (sum of each age × its number of students) ÷ (total number of students).",
+      "hint3": "Add the bottom row for the total number of students. Work out 13 × 3, 14 × 14 and so on, add them, divide, then round to the nearest whole number.",
+      "solution": "Answer: C. 15\n\nThe mean of a frequency table is the total of all the values divided by how many values there are. Each age must be multiplied by its frequency (the number of students with that age), because every student's age counts once.\n\nHow to tell:\nNumber of students = 3 + 14 + 13 + 8 + 3 = 41\n13 × 3 = 39\n14 × 14 = 196\n15 × 13 = 195\n16 × 8 = 128\n17 × 3 = 51\nTotal of ages = 39 + 196 + 195 + 128 + 51 = 609 years\nMean = 609 ÷ 41 ≈ 14.85 years\nTo the nearest whole number: 15 years\n\nWhy not the others:\nA. 13: this is the youngest age, well below the centre of the data.\nB. 14: this is the mode, the most common age, or 14.85 cut short instead of rounded.\nD. 16: this is too high, since far more students are 14 or 15 than 16 or 17.\n\nExam tip: for the mean of a frequency table, add an f × x column and divide its total by the total frequency, not by the number of columns. Round only at the end."
+    },
+    {
+      "q_number": 48,
+      "subtopic_id": "averages.median-mode",
+      "difficulty": "medium",
+      "hint1": "The median is the middle value when every student's age is listed in order, from youngest to oldest.",
+      "hint2": "With n students, the median is the ((n + 1) ÷ 2)th value. Count the total number of students first.",
+      "hint3": "Add the frequencies from the youngest age upwards as a running total, and find the first age at which the running total reaches the middle position.",
+      "solution": "Answer: B. 15\n\nThe median is the middle value of the data in order. In a frequency table each age appears as many times as its frequency, so a running total (cumulative frequency) shows which age holds the middle position.\n\nHow to tell:\nTotal students = 3 + 14 + 13 + 8 + 3 = 41\nMiddle position = (41 + 1) ÷ 2 = 21st student\nRunning totals: age 13 → 3, age 14 → 3 + 14 = 17, age 15 → 17 + 13 = 30\nStudents 18 to 30 are all aged 15, so the 21st student is 15.\nMedian = 15 years\n\nWhy not the others:\nA. 14: this is the mode, and the 14-year-olds are only the 4th to 17th students, short of the 21st.\nC. 16: the 16-year-olds are the 31st to 38th students, past the middle.\nD. 17: this is the oldest age, the 39th to 41st students.\n\nExam tip: for a median from a frequency table, find the middle position from the total frequency, not from the list of ages, then use running totals to see which value holds that position."
+    },
+    {
+      "q_number": 49,
+      "subtopic_id": "expressions.formulating",
+      "difficulty": "medium",
+      "hint1": "Deal with one person at a time, and be clear whether each age is the age now or the age in x years' time.",
+      "hint2": "To go from a future age back to the present, take away the years still to come. The older person's age minus the age gap gives the younger person's age.",
+      "hint3": "Write Ajoke's present age first. Then use the 6-year gap to get Chioma's present age from it.",
+      "solution": "Answer: A. 25 − x\n\nA future age minus the number of years still to come gives the present age. Two people keep the same age gap as the years pass, so the younger one's age is the older one's age minus the gap.\n\nHow to tell:\nIn x years Ajoke will be 31, so now Ajoke is (31 − x) years old.\nChioma is 6 years younger than Ajoke.\nChioma's present age = (31 − x) − 6\n= 25 − x years\nCheck with x = 5: Ajoke is 26 now, Chioma is 20, and 25 − 5 = 20.\n\nWhy not the others:\nB. 31 + x: this adds the years instead of taking them away, and it also ignores the 6-year gap.\nC. 25 + x: this adds x instead of taking it away, but a present age must be less than the age in x years' time.\nD. 31 − x: this is Ajoke's present age, not Chioma's.\n\nExam tip: in age problems, write each person's present age first, then move forward in time by adding or back in time by subtracting. Test your expression with a small number such as x = 1."
+    },
+    {
+      "q_number": 50,
+      "subtopic_id": "algebraic-fractions.undefined",
+      "difficulty": "easy",
+      "hint1": "A fraction has no value when it asks you to divide by zero.",
+      "hint2": "Whether the fraction is undefined depends on the denominator, the bottom expression. Set it equal to zero.",
+      "hint3": "Solve that equation carefully: moving the +1 across the equals sign changes its sign.",
+      "solution": "Answer: B. −1/2\n\nDivision by zero has no answer, so an algebraic fraction is undefined for any value of x that makes its denominator zero.\n\nHow to tell:\nDenominator: 2x + 1\n2x + 1 = 0\n2x = −1\nx = −1/2\nCheck: 2 × (−½) + 1 = −1 + 1 = 0\n\nWhy not the others:\nA. 1/2: this drops the minus sign, and 2 × ½ + 1 = 2, not 0.\nC. −2/3: this makes the numerator 3x + 2 zero, so the fraction equals zero, which is allowed.\nD. 2/3: this uses the numerator and loses the sign as well, and 2 × ⅔ + 1 = 7/3, not 0.\n\nExam tip: 'undefined' points to the denominator equal to zero, while 'equal to zero' points to the numerator equal to zero. Both values often appear among the options, so check which one the question asks for."
+    }
+  ]
+}

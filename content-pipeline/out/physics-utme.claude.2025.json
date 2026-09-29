@@ -1,0 +1,328 @@
+{
+  "deriver": "claude",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A convex lens forms a virtual, erect, magnified image only when the object lies between the optical centre and F. At F the image is at infinity, and beyond F the image is real.",
+      "solvable": true,
+      "issue": ""
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "C = εA/d, so halving d doubles C (10 μF to 20 μF). Quadrupling would need d reduced to a quarter.",
+      "solvable": true,
+      "issue": ""
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "P is proportional to T only when T is on an absolute scale, so the P–T graph passes through the origin on the Kelvin scale. On Celsius or Fahrenheit the line cuts the temperature axis away from zero.",
+      "solvable": true,
+      "issue": "Rankine is also an absolute scale, so strictly a P–T graph on Rankine also passes through the origin. B is the syllabus answer, but A is technically defensible."
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Volume of the ice is 90/0.9 = 100 cm³ and volume of the water is 90/1 = 90 cm³, so the volume changes by 10 cm³ (a decrease). 9 cm³ comes from a wrong subtraction.",
+      "solvable": true,
+      "issue": ""
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "N30°E gives components 10 sin30 = 5 m east and 10 cos30 = 8.66 m north. Total east = 11 m, so R = √(121 + 75) = √196 = 14.0 m. 16 m would be the plain sum of the magnitudes, which is not an option.",
+      "solvable": true,
+      "issue": ""
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "At constant velocity the applied force equals mg = 290 N, so P = Fv = 290 × 5 = 1450 W. The other options do not come from any consistent calculation.",
+      "solvable": true,
+      "issue": ""
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Waves on a plucked string are transverse, mechanical waves that have crests and troughs. So 'longitudinal' is the false statement.",
+      "solvable": true,
+      "issue": ""
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Using the gas relation v ∝ √T: v = 1000 × √(298/273) = 1000 × 1.04478 ≈ 1044.8 m/s, which rounds to 1045 m/s. 1044 m/s (B) is the truncated value and is the strongest distractor.",
+      "solvable": true,
+      "issue": "The premise is physically flawed: v ∝ √T holds for gases, not solids, and sound in solids generally slows as temperature rises. The setter clearly intends the gas formula. B (1044, truncated) is close enough to be picked by a truncating key."
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "eV = KEmax gives V = 2.20×10⁻¹⁹ / 1.6×10⁻¹⁹ = 1.375 V, which is ≈ 1.4 V to 2 s.f. The next nearest options, 1.50 V and 1.55 V, are clearly further away.",
+      "solvable": true,
+      "issue": "The unit J is missing from the KE value, and the minus sign is missing from 1.6 × 10¹⁹ J (it should be 10⁻¹⁹). The exact value 1.375 V is not an option, so C is the nearest."
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "Pressure = force/area, and force = momentum transferred per second, so pressure = momentum imparted to the wall per second per unit area. C says 'rate of change ... per second', which counts time twice and is dimensionally wrong if taken literally.",
+      "solvable": true,
+      "issue": "C is probably the setter's intended wording ('rate of change of momentum per unit area') with a redundant 'per second' added. A and C both describe the intended idea, so the key may be C."
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "An object floats because the upthrust (the weight of fluid displaced) equals its weight, not because 'the weight of the fluid is more than the object'. A, B and C are correct statements of flotation.",
+      "solvable": true,
+      "issue": ""
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Q = mcΔθ = 1 × 4200 × 30 = 126000 J, so t = 126000/750 = 168 s. 84 s would need half the temperature rise.",
+      "solvable": true,
+      "issue": "Option D reads '28g', probably a typo for '28s'. It does not affect the answer."
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Microwaves pass through the ionosphere and atmosphere with little absorption, so they are used for satellite links. UV and gamma are strongly absorbed, and IR is absorbed by water vapour.",
+      "solvable": true,
+      "issue": ""
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Saturated vapour pressure depends on temperature and on the nature of the liquid (its intermolecular forces), not on the exposed surface area. Surface area changes only the rate of evaporation, not the equilibrium vapour pressure.",
+      "solvable": true,
+      "issue": ""
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Emission and absorption of radiation depend on surface properties: dull black surfaces radiate and absorb better than shiny white ones. Thermal conductivity governs conduction, not radiation.",
+      "solvable": true,
+      "issue": ""
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Expansion joints (gaps or rollers) let the bridge expand freely without buckling. Painting it white reduces heating slightly but does not accommodate the expansion.",
+      "solvable": true,
+      "issue": ""
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "At constant velocity mg sinθ = μ mg cosθ, so μ = tan45° = 1.0. 0.71 is sin45° or cos45°, not the ratio.",
+      "solvable": true,
+      "issue": ""
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Adding mass high up (on the roof) raises the centre of gravity directly and is the textbook example. Flattening the tyres lowers it, and the wheelbase does not change its height.",
+      "solvable": true,
+      "issue": "Removing the engine (a heavy, low-mounted mass) would also raise the centre of gravity, possibly by more depending on the masses. B is the intended answer."
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "h_w ρ_w = h_Hg ρ_Hg gives h_w = 0.76 × 13600/1000 = 10.34 m ≈ 10.3 m. 13.6 m ignores the 0.76 factor.",
+      "solvable": true,
+      "issue": ""
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A thermocouple works by the thermoelectric (Seebeck) effect, producing an emf at the junction of two dissimilar metals, whereas the mercury thermometer uses thermal expansion. C wrongly attributes expansion to the thermocouple.",
+      "solvable": true,
+      "issue": ""
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A thermocouple junction is small and has a very low heat capacity, so it responds quickly to rapidly changing temperatures. Resistance and gas thermometers are accurate but slow to respond.",
+      "solvable": true,
+      "issue": ""
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Heat lost by the water = heat gained by the ice: 0.5×4200×(60−T) = 0.2×336000 + 0.2×4200×T, so 126000 − 2100T = 67200 + 840T and T = 20°C. 0°C would apply only if the water could not melt all the ice, but it can (126000 J > 67200 J).",
+      "solvable": true,
+      "issue": ""
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Total heat = 0.5×2100×10 + 0.5×336000 + 0.5×4200×100 + 0.5×2.26×10⁶ = 10500 + 168000 + 210000 + 1130000 = 1,518,500 J, so t ≈ 1519 s at 1000 W. None of the options (1790, 1980, 2220, 2400 s) matches, and no obvious slip reproduces any of them.",
+      "solvable": false,
+      "issue": "Data and options are inconsistent: the correct result (~1519 s) is not among the options. A data value was probably mistyped (for example the mass or the heater power)."
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A liquid boils when its vapour pressure equals the external pressure. A higher pressure needs a higher vapour pressure, so the molecules need more energy (a higher temperature). A states the opposite.",
+      "solvable": true,
+      "issue": ""
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The first resonance in a closed tube is at L = λ/4 = v/(4f) = 340/2048 = 0.166 m ≈ 0.17 m. 0.33 m is λ/2, which is the answer for an open tube.",
+      "solvable": true,
+      "issue": ""
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "k = 20π rad/m, so Δφ = kΔx = 20π × 0.05 = π rad (equivalently λ = 0.1 m and the points are λ/2 apart). π/2 would correspond to λ/4.",
+      "solvable": true,
+      "issue": ""
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Pitch is set by frequency and loudness by amplitude (intensity). Velocity depends on the medium and determines neither.",
+      "solvable": true,
+      "issue": ""
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "KEmax = hf − φ, which is independent of the light's intensity; intensity changes only the number of electrons emitted. Frequency and work function directly change the KE.",
+      "solvable": true,
+      "issue": ""
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Water is optically denser than air, so light slows down and bends toward the normal. Bending away from the normal happens when light passes from a denser to a less dense medium.",
+      "solvable": true,
+      "issue": ""
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A red object reflects only red light and absorbs other colours. Under green light it absorbs all the incident light and reflects nothing, so it looks black.",
+      "solvable": true,
+      "issue": ""
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Two identical 6 V, 1 Ω cells in parallel give an emf of 6 V and an internal resistance of 0.5 Ω, so I = 6/(3 + 0.5) = 1.71 A. That is not an option; 1.5 A is the single-cell current (6/4) and would be the answer only if the second cell were ignored.",
+      "solvable": false,
+      "issue": "The correct value (≈1.71 A) is missing from the options, so the options are inconsistent with the stem. 'lowing' is a typo for 'flowing'."
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "For opposite currents, the fields of the two wires at the midpoint point the same way, so they add and the resultant is the sum of the two fields. A would be true for currents in the same direction.",
+      "solvable": true,
+      "issue": "B is also a true statement: at a midpoint in the plane of the wires, each wire's field is perpendicular to that plane. C is the intended answer."
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Soft iron is easily magnetised and demagnetised (low retentivity), so the magnet can be switched off. B describes steel, which suits permanent magnets.",
+      "solvable": true,
+      "issue": ""
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "E0 = NBAω, so increasing the speed of rotation (ω) increases the peak emf. Fewer turns or slower rotation reduce it, and wire thickness does not appear in the formula.",
+      "solvable": true,
+      "issue": ""
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Eddy currents are induced (by Faraday's law) when the magnetic flux through a bulk conductor changes. Rotation matters only if it causes such a flux change, and resistive heating is a consequence of eddy currents, not their cause.",
+      "solvable": true,
+      "issue": ""
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "E = 5×10⁻⁴ × (3×10⁸)² = 5×10⁻⁴ × 9×10¹⁶ = 4.5×10¹³ J. 9.0×10¹³ J would come from a doubled mass.",
+      "solvable": true,
+      "issue": "The instruction '(Use c = 3 × 10⁸m/s)' has been attached to the text of option D; it belongs in the stem. It does not affect the answer."
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "After 3 half-lives N = N0/8 = 2.4×10²⁰/8 = 3.0×10¹⁹. 6.0×10¹⁹ is what remains after only 2 half-lives.",
+      "solvable": true,
+      "issue": ""
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The band gap is the forbidden energy gap between the top of the valence band and the bottom of the conduction band. The Fermi level lies inside the gap and does not define it.",
+      "solvable": true,
+      "issue": ""
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Under reverse bias the applied field pulls majority carriers away from the junction, so the depletion layer widens. Forward bias narrows it.",
+      "solvable": true,
+      "issue": ""
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The physics is clear: a transistor is the three-terminal device used as a switch and as an amplifier, while Zener diodes, photodiodes and LEDs are two-terminal devices that cannot amplify. The options object is empty, though, so no option letter can be returned.",
+      "solvable": false,
+      "issue": "The options were merged into the stem and the options object is empty. The 'A.' label and the word 'terminals' are lost ('consists of three Zener diode B. Transistor ...'). Reading the embedded letters gives A = Zener diode, B = Transistor, C = Photodiode, D = LED, so once the options are restored the answer is B (Transistor)."
+    }
+  },
+  "failures": []
+}

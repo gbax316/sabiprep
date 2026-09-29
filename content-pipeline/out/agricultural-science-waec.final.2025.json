@@ -2,9 +2,9 @@
   "year": 2025,
   "paper": 1,
   "counts": {
-    "keyed": 37,
-    "defective": 11,
-    "ambiguous": 2
+    "keyed": 41,
+    "defective": 8,
+    "ambiguous": 1
   },
   "answers": {
     "1": {
@@ -17,7 +17,7 @@
       "q_number": 2,
       "state": "keyed",
       "answer": "A",
-      "evidence": "third review, sided with both"
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
     },
     "3": {
       "q_number": 3,
@@ -35,13 +35,13 @@
       "q_number": 5,
       "state": "defective",
       "answer": null,
-      "reason": "The question references 'the diagram below' illustrating a brooding equipment, but no image was attached or provided for this question, so the specific equipment cannot be identified to determine its disadvantage. | The diagram of the brooding equipment is missing; the paper was supplied with no diagrams."
+      "reason": "This question depends on a diagram of brooding equipment described in the shared stem, but no image was attached with the task, so the equipment cannot be identified and the question cannot be answered. | The diagram of the brooding equipment is missing (diagram_files is empty)."
     },
     "6": {
       "q_number": 6,
       "state": "defective",
       "answer": null,
-      "reason": "The question depends on identifying the illustrated brooding equipment from 'the diagram below', but no image was attached or provided, so it cannot be determined which alternative equipment (hover, coal pot, gas lamp) performs a similar function. | The diagram of the brooding equipment is missing."
+      "reason": "This question depends on identifying the brooding equipment shown in a diagram referenced by the shared stem, but no image was attached with the task, so the equipment cannot be identified and the question cannot be answered. | The diagram of the brooding equipment is missing (diagram_files is empty)."
     },
     "7": {
       "q_number": 7,
@@ -69,21 +69,21 @@
     },
     "11": {
       "q_number": 11,
-      "state": "defective",
-      "answer": null,
-      "reason": "Missing data: mass of empty dish and mass of dish + fresh soil are not given, so the mass of fresh soil cannot be derived from the single value provided. | The passage data is truncated: the empty dish mass and the dish + fresh soil mass are missing."
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
     },
     "12": {
       "q_number": 12,
-      "state": "defective",
-      "answer": null,
-      "reason": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute moisture lost. | The passage data is truncated: the dish + fresh soil mass is missing."
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
     },
     "13": {
       "q_number": 13,
-      "state": "defective",
-      "answer": null,
-      "reason": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute percentage moisture. | The passage data is truncated. Even with the full data, the key depends on whether the percentage is taken on a fresh-weight or dry-weight basis (for example 25% vs 33%)."
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
     },
     "14": {
       "q_number": 14,
@@ -95,13 +95,13 @@
       "q_number": 15,
       "state": "defective",
       "answer": null,
-      "reason": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram of the soil analysis tool is missing."
+      "reason": "The diagram illustrating the soil analysis tool is missing; no image was attached for questions 15-16. | The diagram of the soil analysis tool is missing (diagram_files is empty)."
     },
     "16": {
       "q_number": 16,
       "state": "defective",
       "answer": null,
-      "reason": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram is missing, and no option matches 'I only'. The item appears defective, or depends on a particle-size scale in which fine sand is below 0.05mm."
+      "reason": "The diagram illustrating the soil analysis tool is missing; no image was attached for questions 15-16. | The diagram is missing; on standard particle-size limits, no option matches."
     },
     "17": {
       "q_number": 17,
@@ -111,9 +111,9 @@
     },
     "18": {
       "q_number": 18,
-      "state": "keyed",
-      "answer": "B",
-      "evidence": "third review, sided with both"
+      "state": "ambiguous",
+      "answer": null,
+      "reason": "The options follow a clear pattern: B is the textbook definition of surface irrigation, C of sub-surface irrigation and D of drip irrigation, which suggests the setter used the other irrigation types as distractors and intended A, a commonly listed feature of sprinkler irrigation (it uses a relatively small quantity of water). Against A, it is an advantage rather than a definition, and drip irrigation uses even less water. The derivers' case for B is that sprinkled water does fall on the surface of the farmland, but B's wording is the standard definition of surface irrigation, which a well-prepared student is taught to contrast with overhead irrigation. No option defines overhead irrigation as spraying water from above like rain, so A and B are both defensible and a student cannot tell which the setter wanted."
     },
     "19": {
       "q_number": 19,
@@ -131,19 +131,19 @@
       "q_number": 21,
       "state": "defective",
       "answer": null,
-      "reason": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled diagram of the crop is missing."
+      "reason": "The referenced crop diagram (labelling parts I-III) was not attached, so part II cannot be identified. | The crop diagram is missing (diagram_files is empty)."
     },
     "22": {
       "q_number": 22,
       "state": "defective",
       "answer": null,
-      "reason": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled diagram of the crop is missing."
+      "reason": "The referenced crop diagram (labelling parts I-III) was not attached, so part III cannot be identified. | The crop diagram is missing (diagram_files is empty)."
     },
     "23": {
       "q_number": 23,
       "state": "keyed",
       "answer": "C",
-      "evidence": "third review, sided with claude"
+      "evidence": "third review, sided with codex"
     },
     "24": {
       "q_number": 24,
@@ -161,7 +161,7 @@
       "q_number": 26,
       "state": "keyed",
       "answer": "A",
-      "evidence": "third review, sided with both"
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
     },
     "27": {
       "q_number": 27,
@@ -173,13 +173,13 @@
       "q_number": 28,
       "state": "defective",
       "answer": null,
-      "reason": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | The survey diagram is missing. The trapezium interpretation giving 100 m² (B) is likely but unverified."
+      "reason": "The farmland survey diagram was not attached, so the shape and relationship between AB, DC and EF cannot be determined. | The farmland diagram is missing (diagram_files is empty)."
     },
     "29": {
       "q_number": 29,
       "state": "defective",
       "answer": null,
-      "reason": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | The survey diagram is missing, so the area is unverified. If the area is 100 m² the answer is D (888); B (444) would be the number of stands or holes, not plants."
+      "reason": "Depends on the farmland area from question 28, which is unsolvable due to the missing survey diagram. | The farmland diagram is missing; this question depends on Q28's area."
     },
     "30": {
       "q_number": 30,
@@ -207,9 +207,9 @@
     },
     "34": {
       "q_number": 34,
-      "state": "ambiguous",
-      "answer": null,
-      "reason": "Waterleaf produces small dehiscent capsules that split to release many tiny seeds, and standard Nigerian texts usually describe its spread by seeds and stem cuttings without fixing a single dispersal agent. The case for D is that the capsule opens by splitting, which some sources call explosive dehiscence. The case for C is that the seeds are small and light enough to be carried by wind, and some sources list wind. Neither deriver was confident, and the syllabus texts do not settle it, so a well-prepared student could not tell whether C or D was intended."
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "third review, sided with both"
     },
     "35": {
       "q_number": 35,
@@ -297,9 +297,9 @@
     },
     "49": {
       "q_number": 49,
-      "state": "ambiguous",
-      "answer": null,
-      "reason": "The four options form a two-by-two grid: A and C differ by the ₦30,000 marketing cost, and B and D add ₦3,800, which is the value of the 5 trays eaten by the family at ₦760 per tray (total cost of ₦380,000 over 500 trays). The case for A is the plain formula of revenue minus production and marketing cost. However, farm accounting in Nigerian texts credits produce consumed at home as non-cash income, and the stem goes out of its way to state the 1 percent family consumption, which suggests the setter intended B. Because a well-prepared student could not tell whether home consumption was meant to be credited, both A and B are defensible."
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with claude"
     },
     "50": {
       "q_number": 50,

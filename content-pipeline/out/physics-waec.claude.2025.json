@@ -1,0 +1,408 @@
+{
+  "deriver": "claude",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The block and tackle has four pulleys (two in each block), so VR = 4. MA = load/effort = 100/70 = 1.43, efficiency = 1.43/4 x 100% = 35.7%. 50% would come from wrongly taking VR as about 2.9.",
+      "solvable": true,
+      "issue": ""
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Work = area under the F-x graph from 0 to 20 m: rectangle 50 x 10 = 500 J plus trapezium (50+15)/2 x 10 = 325 J, total 825 J. 500 J counts only the first 10 m.",
+      "solvable": true,
+      "issue": ""
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A rainbow forms when water droplets split sunlight into its colours. Eclipses and shadows come from light travelling in straight lines, and a mirage comes from refraction and total internal reflection.",
+      "solvable": true,
+      "issue": ""
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "White reflects most of the radiant energy that falls on it, so it absorbs the least heat. Black absorbs the most and is the worst choice.",
+      "solvable": true,
+      "issue": ""
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "An object between the principal focus and the optical centre of a converging lens gives a virtual, erect, magnified image, as in a magnifying glass. A real, inverted, magnified image needs the object between F and 2F.",
+      "solvable": true,
+      "issue": "'center' means the optical centre of the lens."
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "In crossed fields, a charge passes through undeflected when qE = qvB, so v = E/B. This arrangement is called the velocity selector. Strictly E/B is the selected velocity, not a 'ratio' name, but none of the other options fits.",
+      "solvable": true,
+      "issue": "The wording is loose: E/B is the velocity that the velocity selector picks out."
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Loudness depends on amplitude, and M has the larger amplitude (1.5 cm against 0.5 cm), so M is louder. Pitch depends on frequency, which is the same for both, so C is wrong. A keyboard and a guitar have different timbres.",
+      "solvable": true,
+      "issue": ""
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "T = 60/20 = 3 s. g = 4 pi^2 L / T^2 = 4 x 9.8596 x 0.8 / 9 = 3.5 m/s^2.",
+      "solvable": true,
+      "issue": "'plant' should read 'planet' and '20 oscillating' should read '20 oscillations'."
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Equal masses of the same liquid in a lagged vessel settle at the mean temperature: (61 + 21)/2 = 41 C. 50 C would ignore the heat balance.",
+      "solvable": true,
+      "issue": ""
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question asks the reader to pick one of several diagrams, but no diagrams and no options were supplied.",
+      "solvable": false,
+      "issue": "Options and diagrams are missing."
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "This is the zeroth law of thermodynamics, which defines thermal equilibrium and temperature. The first law is about conservation of energy.",
+      "solvable": true,
+      "issue": ""
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "D",
+      "confidence": "probable",
+      "reasoning": "In a series RLC circuit the supply voltage is V = sqrt(V_R^2 + (V_L - V_C)^2) = sqrt(3^2 + (6-2)^2) = 5 V. 11 V is the plain arithmetic sum, which ignores the phase differences.",
+      "solvable": true,
+      "issue": "The question sentence is missing. It presumably asked for the peak e.m.f. of the source. The diagram gives R 3V, C 2V, L 6V."
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "lambda = 3.5 cm and v = 31.5/1.5 = 21 cm/s, so f = v/lambda = 6.0 Hz. 9 Hz would come from a slip in the arithmetic.",
+      "solvable": true,
+      "issue": "'triple' should read 'ripples'. Option A '30Hz' is probably '3.0Hz'."
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "n v is constant, so v_B = 1.5 x 2.0e8 / 1.2 = 2.5e8 m/s. This matches option B.",
+      "solvable": true,
+      "issue": "The given speed '20 x 10^8' must be a typo for 2.0 x 10^8 m/s. Taken literally it would give 2.5 x 10^9, which is not among the options."
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "T = lambda/v = 600/360 = 1.667 s. 0.167 s is out by a factor of ten.",
+      "solvable": true,
+      "issue": ""
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Sugar tongs are a third-class lever, with the effort between the fulcrum and the load. Pliers are first class and a wheelbarrow is second class.",
+      "solvable": true,
+      "issue": ""
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "The 6 ohm resistor is in series with the 3 ohm and 2 ohm resistors in parallel, so the full 1.5 A splits between them. Current in 3 ohm = 1.5 x 2/(3+2) = 0.60 A. 0.90 A is the share through the 2 ohm resistor.",
+      "solvable": true,
+      "issue": ""
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "External resistance = 6 + (3x2)/(3+2) = 7.2 ohm, so terminal p.d. = I R = 1.5 x 7.2 = 10.80 V. 7.20 V is the resistance value, not the voltage.",
+      "solvable": true,
+      "issue": ""
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The nucleus is at the centre of the atom, is positive because of its protons, and decays when it is unstable. Statement II is false because electrons are outside the nucleus.",
+      "solvable": true,
+      "issue": ""
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "16 g to 1 g is 16 -> 8 -> 4 -> 2 -> 1, which is 4 half-lives. Half-life = 40/4 = 10 days.",
+      "solvable": true,
+      "issue": ""
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Perforated or porous pads absorb sound, which cuts down repeated reflections (reverberation). They do not raise the loudness or change the frequency.",
+      "solvable": true,
+      "issue": ""
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "At the lowest point T - mg = mv^2/r, so T = 100 + 10 x 25/1.2 = 100 + 208.3 = 308.3 N. 208.3 N leaves out the weight.",
+      "solvable": true,
+      "issue": ""
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "A near point of 30 cm is farther than the normal 25 cm, so near objects are hard to see, which is long sight (hypermetropia). Presbyopia also moves the near point outward, but it is an age-related condition and nothing in the stem mentions age.",
+      "solvable": true,
+      "issue": "Presbyopia is somewhat defensible."
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "Red + blue + green give white. Magenta + green are complementary, so they give white. Magenta + yellow + cyan together contain all three primaries, so additive mixing gives white. Yellow + red + green has no blue, so IV fails.",
+      "solvable": true,
+      "issue": "'While' should read 'White'. Statement I holds only for additive mixing of lights. Mixing them as pigments gives black, which would point towards D."
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "The hatching is on the upper, outer side of the curve, so the reflecting face bulges towards the incoming light. That makes it a convex mirror, and the reflected rays diverge. Convex mirrors give a wide field of view, so they are used as surveillance (and driving) mirrors. Make-up mirrors and microscope reflectors are concave.",
+      "solvable": true,
+      "issue": "Option D 'depressing mirror' looks garbled, possibly from 'driving mirror', which would also be convex and would compete with A."
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "All particles between two adjacent nodes vibrate in phase, so A is the false statement. B, C and D are true properties of stationary waves.",
+      "solvable": true,
+      "issue": ""
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A pipe closed at one end supports only odd harmonics (f, 3f, 5f...), so its overtones are odd multiples of the fundamental. All integer multiples belong to an open pipe.",
+      "solvable": true,
+      "issue": ""
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "512/64 = 8 = 2^3, so 3 half-lives have passed. 8 is the ratio, not the number of half-lives.",
+      "solvable": true,
+      "issue": ""
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Destructive interference happens when the path difference is an odd multiple of half a wavelength. A path difference of one wavelength gives constructive interference.",
+      "solvable": true,
+      "issue": "'interface' should read 'interfere'."
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A step-up transformer has fewer turns on the primary than on the secondary (Ns > Np). Option B describes a step-down transformer.",
+      "solvable": true,
+      "issue": "Option A repeats 'than in the primary coil' by mistake. The meaning is still clear."
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Magnetic flux density is measured in tesla (Wb/m^2). 'Walt' is probably a garbled 'watt' or 'weber'. The weber is the unit of flux, not flux density.",
+      "solvable": true,
+      "issue": ""
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "House meters measure the electrical energy used, in kWh, and that is what is billed. Power is only the rate of use.",
+      "solvable": true,
+      "issue": ""
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A Leclanche cell stores chemical energy and turns it into electrical energy when it is used.",
+      "solvable": true,
+      "issue": ""
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A microphone turns sound energy into electrical signals. A loudspeaker does the reverse.",
+      "solvable": true,
+      "issue": ""
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "1/16 = (1/2)^4, so 4 half-lives have passed. Reading the start time as 1300 hours gives 4 hours from 1300 to 1700, so the half-life is 1 hour. 4 hours would be the total time elapsed.",
+      "solvable": true,
+      "issue": "'13100 hour' is garbled. I assumed it means 1300 hours."
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A rocket moves by action and reaction: it pushes exhaust gases backward and the gases push the rocket forward. That is Newton's third law. An accelerating car mainly illustrates the second law.",
+      "solvable": true,
+      "issue": ""
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "P = Fv, so halving both gives P/4. Option B is the only one that fits this. Read literally, 'reduced by a quarter' would mean 3P/4.",
+      "solvable": true,
+      "issue": "The option is worded loosely. It should say 'reduced to a quarter'."
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "VR = 1/sin(theta) = 1/sin 45 = 1.41. 0.71 is sin 45 itself.",
+      "solvable": true,
+      "issue": ""
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "When the lift accelerates down at g, the reaction is R = m(g - a) = 0, so the body is weightless. 'Less than its weight' applies when a < g.",
+      "solvable": true,
+      "issue": ""
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "By Bernoulli's principle, for a fluid in steady flow, higher pressure goes with lower speed. So the velocity decreases.",
+      "solvable": true,
+      "issue": "The stem is terse and ungrammatical. It is presumably a Bernoulli question about flowing oil."
+    },
+    "41": {
+      "q_number": 41,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Neutrons = A - Z = 14 - 6 = 8. 6 is the proton number.",
+      "solvable": true,
+      "issue": ""
+    },
+    "42": {
+      "q_number": 42,
+      "answer": "A",
+      "confidence": "probable",
+      "reasoning": "R = 12 + (20 - 12) x 10/100 = 12.8 ohm. This matches both A and B.",
+      "solvable": true,
+      "issue": "Options A and B are identical (12.8 ohm), so the key could be either letter. I chose A."
+    },
+    "43": {
+      "q_number": 43,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Alpha emission lowers A by 4 and Z by 2: 226 - 4 = 222 and 88 - 2 = 86. So X is 222/86 (radon).",
+      "solvable": true,
+      "issue": ""
+    },
+    "44": {
+      "q_number": 44,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "lambda = h/(mv) = 6.67e-34 / (0.0025 x 250) = 6.67e-34 / 0.625 = 1.07e-33 m. Option C has the right mantissa, 1.07, but the exponent is -34, one power of ten off.",
+      "solvable": true,
+      "issue": "The options appear to have an exponent typo (1.07 x 10^-34 against the correct 1.07 x 10^-33). The constant listed as 'c = 1.6e-19 C' is not needed."
+    },
+    "45": {
+      "q_number": 45,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "F = qvB = 1.6e-19 x 5.0e5 x 0.25 = 2.0e-14 N, but no options were supplied to choose from.",
+      "solvable": false,
+      "issue": "Options are missing. Also, '90 ℃' should read 90 degrees (angle) and the charge unit is printed as C^-1."
+    },
+    "46": {
+      "q_number": 46,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Rays that spread out as if coming from a point make a divergent beam. A convergent beam meets at a point.",
+      "solvable": true,
+      "issue": ""
+    },
+    "47": {
+      "q_number": 47,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Noise is an irregular mixture of many unrelated frequencies. A note has a regular frequency with related harmonics.",
+      "solvable": true,
+      "issue": ""
+    },
+    "48": {
+      "q_number": 48,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "At uniform velocity, friction equals the applied force: mu = F/(mg) = 200/800 = 0.25. 0.40 has no basis in the data.",
+      "solvable": true,
+      "issue": ""
+    },
+    "49": {
+      "q_number": 49,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Ductility is the ability to be drawn into wires. Malleability is the ability to be hammered into sheets.",
+      "solvable": true,
+      "issue": ""
+    },
+    "50": {
+      "q_number": 50,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Inductance is measured in henry (H). The farad is the unit of capacitance.",
+      "solvable": true,
+      "issue": ""
+    }
+  },
+  "failures": []
+}

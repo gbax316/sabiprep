@@ -1,0 +1,332 @@
+{
+  "subject": "Physics",
+  "year": 2025,
+  "paper": 1,
+  "taxonomy_version": "1.1",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "lenses.images",
+      "difficulty": "easy",
+      "hint1": "Think about where the object sits compared with the focal point, and whether the rays leaving the lens come together or spread out.",
+      "hint2": "A real image forms where rays actually meet on the far side of the lens. A virtual image forms when the rays leaving the lens spread apart, so they only seem to come from a point on the same side as the object.",
+      "hint3": "As an object moves in towards the lens, the real image moves further away and grows. With the object at F, the image is at infinity. What happens when the object is moved even closer than F?",
+      "solution": "Answer: A. Between the lens and the focal point (F)\n\nA convex lens bends rays inward. If the object is far enough away, the bent rays meet on the other side and form a real image. If the object is closer than F, the lens cannot bend the rays enough to make them meet, so they spread out and appear to come from a point behind the object. That point is a virtual image.\n\nHow to tell: this is the magnifying glass arrangement. Hold a convex lens close to print, with the print nearer than F, and you see an upright, enlarged, virtual image.\n\nWhy not the others:\nB. At the focal point (F): the rays leave the lens parallel, so the image is said to be at infinity, not a virtual image.\nC. Beyond the focal point (F): the rays meet on the far side of the lens, giving a real, inverted image.\nD. At infinity: parallel rays are brought together at F, giving a real image there.\n\nExam tip: for a convex lens, object inside F gives a virtual, upright, magnified image. Object beyond F gives a real, inverted image."
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "capacitors.capacitance",
+      "difficulty": "medium",
+      "hint1": "Recall the formula for the capacitance of a parallel plate capacitor, and notice which quantities are on the top and which on the bottom.",
+      "hint2": "C = εA/d, where A is the area of the plates and d is the distance between them. Capacitance goes up when d goes down.",
+      "hint3": "C depends on 1/d, not on 1/d². If d becomes d/2, what does 1/d become?",
+      "solution": "Answer: A. It will double\n\nThe capacitance of a parallel plate capacitor is C = εA/d, where ε is the permittivity of the material between the plates, A is the plate area and d is the gap. Bringing the plates closer lets them hold more charge for the same voltage, so C rises as d falls.\n\nHow to tell:\nC = εA/d, so C ∝ 1/d\nNew gap = d/2\nNew C = εA ÷ (d/2) = 2 × εA/d\nNew C = 2 × 10 μF = 20 μF\n\nWhy not the others:\nB. Remain the same: C depends on the gap, so changing d must change C.\nC. It will be halved: this is what happens if the gap is doubled, not halved.\nD. It will quadruple: that would need the gap cut to a quarter, since C depends on 1/d, not 1/d².\n\nExam tip: write C = εA/d and change one quantity at a time. A change in A or ε changes C by the same factor in the same direction. A change in d changes C by the same factor in the opposite direction."
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "gas-laws.charles-pressure",
+      "difficulty": "easy",
+      "hint1": "Think about what zero means on each temperature scale, and what the pressure of a gas would be at that zero.",
+      "hint2": "At fixed volume, a gas's pressure is directly proportional to its temperature when the temperature is counted from absolute zero, the coldest possible temperature, where the pressure would fall to zero.",
+      "hint3": "Celsius and Fahrenheit both put their zero above absolute zero, so their lines cut the temperature axis away from the origin. Of the two scales left, which is the thermodynamic scale used in the syllabus?",
+      "solution": "Answer: B. Thermodynamic (Kelvin)\n\nThe pressure law says that for a fixed mass of gas at constant volume, P is directly proportional to T, the absolute temperature. Direct proportion gives a straight line through the origin, and that needs T to be counted from absolute zero, where the gas pressure would fall to zero.\n\nHow to tell: on the Kelvin scale, 0 K is absolute zero, so P = 0 when T = 0 and the line passes through the origin. On the Celsius scale, absolute zero is −273 °C, so a graph of P against temperature in °C is still straight but cuts the temperature axis at −273 °C, not at the origin.\n\nWhy not the others:\nA. Rankine: it is also counted from absolute zero, but it is not a syllabus scale; the examiner means the thermodynamic (Kelvin) scale.\nC. Celsius: 0 °C is the freezing point of water, where a gas still has pressure, so the line misses the origin.\nD. Fahrenheit: its zero is also above absolute zero, so the line misses the origin.\n\nExam tip: in the syllabus, when a gas law graph (P against T, or V against T) must pass through the origin, the temperature is in kelvin. Convert with T = θ + 273."
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "fluids.density",
+      "difficulty": "medium",
+      "hint1": "The mass stays the same when ice melts. Think about how volume is found from mass and density.",
+      "hint2": "Volume = mass ÷ density. Work out the volume of 90 g as ice, then the volume of the same 90 g as water.",
+      "hint3": "You should now have two volumes. The change in volume is their difference, not either volume on its own.",
+      "solution": "Answer: A. 10 cm³\n\nMelting does not change the mass, but it changes the density, so the volume must change. Ice is less dense than water, so the ice takes up more space than the water it melts into.\n\nHow to tell:\nVolume of ice = mass ÷ density = 90 g ÷ 0.9 g/cm³ = 100 cm³\nVolume of water = 90 g ÷ 1 g/cm³ = 90 cm³\nChange in volume = 100 cm³ − 90 cm³ = 10 cm³ (a decrease)\n\nWhy not the others:\nB. 0 cm³: this would need ice and water to have the same density, but they differ.\nC. 900 cm³: this is far larger than either volume, and comes from a wrong step such as dividing 90 by 0.1.\nD. 9 cm³: this comes from multiplying 90 by 0.9 instead of dividing, giving 81, then subtracting from 90.\n\nExam tip: for melting or freezing questions, keep the mass fixed, find each volume with V = m ÷ ρ, then subtract."
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "vectors.addition",
+      "difficulty": "hard",
+      "hint1": "Displacement is a vector, so the two legs cannot just be added as numbers. Sketch the path first.",
+      "hint2": "Split the second leg into an east part and a north part. N30°E means 30° measured from north towards east, so the east part is 10 sin 30° and the north part is 10 cos 30°.",
+      "hint3": "Add the two east parts, keep the north part, then use Pythagoras. Your answer must be less than 6 + 10 = 16 m, because the legs point in different directions.",
+      "solution": "Answer: D. 14.0 m\n\nHow far he is from the start is the size of his resultant displacement. To add vectors in different directions, split each into east and north components, add the components, then combine them with Pythagoras.\n\nHow to tell:\nFirst leg: 6.0 m east, 0 m north\nSecond leg, east part: 10.0 × sin 30° = 10.0 × 0.5 = 5.0 m\nSecond leg, north part: 10.0 × cos 30° = 10.0 × 0.866 = 8.66 m\nTotal east = 6.0 + 5.0 = 11.0 m\nTotal north = 8.66 m\nResultant = √(11.0² + 8.66²) = √(121 + 75) = √196 = 14.0 m\n\nWhy not the others:\nA. 12.0 m: too small; the east part alone is 11.0 m, and the 8.66 m north part adds to it.\nB. 17.0 m: it is bigger than 6 + 10 = 16 m, and two displacements cannot add to more than the sum of their sizes.\nC. 15.0 m: it does not come from the correct components; swapping sin and cos by mistake gives about 15.5 m, close to this value.\n\nExam tip: for a bearing like N30°E, the angle is measured from north, so the north part uses cos and the east part uses sin. Check that your answer lies between the difference and the sum of the two lengths."
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "energy.power",
+      "difficulty": "medium",
+      "hint1": "Power is how fast work is done. Think about the force needed to lift the load and how fast the load moves.",
+      "hint2": "At constant velocity the load is not speeding up, so the pull needed equals the weight of the load. A single fixed pulley, taken as frictionless, changes the direction of the pull, not its size.",
+      "hint3": "Find the weight with W = mg, then use P = Fv with the speed given.",
+      "solution": "Answer: D. 1450 W\n\nPower is the rate of doing work, and for a force moving something at a steady speed, P = Fv. At constant velocity the forces balance, so the pull equals the weight. With a single fixed pulley, taken as ideal with no friction, the boy's pull equals the weight of the load.\n\nHow to tell:\nWeight = mg = 29 kg × 10 m/s² = 290 N\nForce needed = 290 N (constant velocity, single fixed pulley)\nPower = Fv = 290 N × 5 m/s = 1450 W\n\nWhy not the others:\nA. 40 W: far too small; it does not come from any correct use of force and speed.\nB. 100 W: this would need a pull of only 20 N at 5 m/s, much less than the 290 N weight.\nC. 250 W: this would need a pull of only 50 N at 5 m/s, which cannot hold up a 29 kg load.\n\nExam tip: when a load is lifted at constant speed, power = mgv: mass × g × speed."
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "waves.types",
+      "difficulty": "easy",
+      "hint1": "Think about how the parts of the string move compared with the direction the wave travels along it.",
+      "hint2": "When a string is plucked, each part of it moves up and down while the wave runs along the string. A wave whose particles vibrate at right angles to its direction of travel is called transverse.",
+      "hint3": "A longitudinal wave moves its particles back and forth along the direction of travel, making compressions and rarefactions. Compare that with how the parts of a plucked string move, then look for the statement that does not fit.",
+      "solution": "Answer: C. It is longitudinal\n\nThe wave on a plucked string is a transverse mechanical wave. Transverse means the parts of the string vibrate at right angles to the direction the wave travels. Mechanical means it needs a material, here the string, to travel through.\n\nHow to tell: a plucked string moves up and down while the wave runs along it. In a longitudinal wave, such as sound in air, the particles move back and forth along the direction of travel, making compressions and rarefactions instead of crests and troughs. That does not describe a string wave, so it is the false statement.\n\nWhy not the others:\nA. It has a crest: true, a transverse wave has crests (high points) and troughs (low points).\nB. It is transverse: true, the string moves at right angles to the direction the wave travels.\nD. It is mechanical: true, the wave needs the string to travel through.\n\nExam tip: in 'which is not true' questions about waves, first name the wave type. Crests and troughs go with transverse waves; compressions and rarefactions go with longitudinal waves."
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "sound.transmission",
+      "difficulty": "medium",
+      "hint1": "Only the temperature changes between the two conditions, so you need the rule that links the speed of sound to temperature.",
+      "hint2": "The rule this question uses is v ∝ √T, with T in kelvin. So v₂/v₁ = √(T₂/T₁).",
+      "hint3": "Change both temperatures to kelvin by adding 273, find the square root of their ratio, then multiply by 1000 m/s. Round to the nearest whole number rather than cutting off the decimal.",
+      "solution": "Answer: C. 1045 m/s\n\nThe question expects the rule that the speed of sound is proportional to the square root of the absolute temperature, v ∝ √T. In the syllabus this rule is given for sound in a gas; the setter applies it here to a solid, and it is the method that gives one of the options.\n\nHow to tell:\nT₁ = 0 + 273 = 273 K\nT₂ = 25 + 273 = 298 K\nv₂ = v₁ × √(T₂/T₁)\nv₂ = 1000 × √(298/273)\nv₂ = 1000 × √1.0916 = 1000 × 1.0448\nv₂ = 1044.8 m/s ≈ 1045 m/s\n\nWhy not the others:\nA. 1043 m/s: too low; it does not match 1044.8 m/s at any sensible rounding.\nB. 1044 m/s: this cuts off the decimal instead of rounding; 1044.8 rounds up to 1045.\nD. 1042 m/s: too low; it comes from an arithmetic slip, not from √(298/273).\n\nExam tip: for speed of sound against temperature, change °C to kelvin first, use v₂ = v₁ × √(T₂/T₁), and round 0.5 and above upward."
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "atom.photoelectric",
+      "difficulty": "medium",
+      "hint1": "Stopping potential is about energy. Think about how much energy an electron loses when it moves against a potential difference.",
+      "hint2": "An electron moving through a potential difference V gains or loses energy eV. To stop the fastest electrons, eV must equal their maximum kinetic energy.",
+      "hint3": "Divide the kinetic energy by the charge on an electron, 1.6 × 10⁻¹⁹ C. Then pick the option nearest to your result.",
+      "solution": "Answer: C. 1.40 V\n\nThe stopping potential is the reverse voltage that just stops the fastest photoelectrons. The electric field takes energy eV from each electron, so the fastest ones stop when eV equals the maximum kinetic energy: eV = KEmax.\n\nHow to tell:\nKEmax = 2.20 × 10⁻¹⁹ J\ne = 1.6 × 10⁻¹⁹ C (the question prints 1.6 × 10¹⁹, a slip for 10⁻¹⁹)\nV = KEmax ÷ e = (2.20 × 10⁻¹⁹) ÷ (1.6 × 10⁻¹⁹)\nV = 1.375 V ≈ 1.4 V\n\nWhy not the others:\nA. 1.60 V: this is just the number from the value of e; it is 0.225 V away from the working.\nB. 1.50 V: it is 0.125 V away from 1.375 V, much further than 1.40 V.\nD. 1.55 V: it is 0.175 V away, and no rounding of 1.375 gives it.\n\nExam tip: for stopping potential, use V = KEmax ÷ e with the energy in joules. If the energy is given in eV, the stopping potential in volts is the same number."
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "matter.kinetic-theory",
+      "difficulty": "hard",
+      "hint1": "Start from the basic definition of pressure as force per unit area, then ask what a force means for molecules hitting a wall.",
+      "hint2": "By Newton's second law, force is the rate of change of momentum, which is the momentum passed on each second. Pressure is that force divided by the area.",
+      "hint3": "Pressure needs time to appear exactly once and area once. Read each option carefully for both, remembering that 'rate of change' already means 'per second'.",
+      "solution": "Answer: A. Momentum imparted to the wall per second per unit area\n\nIn kinetic theory, gas molecules hit the wall and bounce back, passing momentum to it. Force is the momentum passed on per second (Newton's second law), and pressure is force per unit area. So pressure is the momentum passed to the wall per second per unit area.\n\nHow to tell:\nPressure = force ÷ area\nForce = momentum passed on ÷ time = momentum per second\nSo pressure = momentum per second ÷ area\nOption A says exactly this.\n\nWhy not the others:\nB. Change in momentum per unit volume: it has no time in it and divides by volume, not area.\nC. Rate of change of momentum imparted to the wall per second per unit area: 'rate of change' already means per second, so adding 'per second' counts time twice.\nD. Change in momentum imparted to the wall per unit area: it has no time in it, so it is not a force per area.\n\nExam tip: check a definition with units. Pressure is N/m², which is (kg m/s) per second per m². An option that leaves out time, or counts it twice, cannot be right."
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "fluids.flotation",
+      "difficulty": "medium",
+      "hint1": "Recall the law of flotation and what the upthrust on a body in a fluid is equal to.",
+      "hint2": "A floating object is in balance: upthrust up equals weight down. By Archimedes' principle, the upthrust equals the weight of fluid pushed aside (displaced).",
+      "hint3": "Three options follow from the law of flotation or from comparing densities. Look for the statement that compares the object with the wrong quantity of fluid.",
+      "solution": "Answer: D. An object floats because the weight of the fluid is more than that of the object\n\nThe law of flotation says a floating object displaces its own weight of the fluid it floats in. It floats because the upthrust, which equals the weight of fluid displaced, balances its weight. The total weight of fluid in the container is not what decides it.\n\nHow to tell: what matters is the fluid pushed aside by the part of the object below the surface, not how much fluid there is altogether. D compares the object with the whole fluid, so it is the incorrect statement.\n\nWhy not the others:\nA. An object floats because the upthrust experienced by the object equals the weight of the object: correct, the two forces balance on a floating object.\nB. A floating object displaces its own weight of liquid: correct, this is the law of flotation.\nC. An object floats when its density is less than that of the liquid: correct, a body less dense than the liquid floats.\n\nExam tip: in flotation questions the key phrase is 'weight of fluid displaced'. A statement that uses the whole fluid instead is wrong."
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "heat-capacity.specific",
+      "difficulty": "medium",
+      "hint1": "This question links electrical power to heat. Find the heat needed first, then the time.",
+      "hint2": "Heat needed Q = mcΔθ. Power is energy per second, so time = energy ÷ power.",
+      "hint3": "The temperature rise is 50 − 20 = 30 °C. Put that into Q = mcΔθ, then divide by 750 W.",
+      "solution": "Answer: C. 168s\n\nA heater of power P gives out P joules each second. Taking all of it to go into the water, the time needed is the heat required divided by the power.\n\nHow to tell:\nΔθ = 50 − 20 = 30 °C (a rise of 30 °C is the same as a rise of 30 K)\nQ = mcΔθ = 1 kg × 4200 J/kg K × 30 K = 126 000 J\nt = Q ÷ P = 126 000 J ÷ 750 W = 168 s\n\nWhy not the others:\nA. 84s: half the correct time; it matches a rise of only 15 °C.\nB. 112s: this matches a rise of 20 °C, as if the starting temperature were used as the rise.\nD. 28g: g is a unit of mass, not time, so it cannot be the answer.\n\nExam tip: for heater questions, use Pt = mcΔθ and solve for the unknown. Subtract the two temperatures to get Δθ before you multiply."
+    },
+    {
+      "q_number": 13,
+      "subtopic_id": "em-waves.spectrum",
+      "difficulty": "easy",
+      "hint1": "Think about which parts of the electromagnetic spectrum pass through the air easily and which are soaked up by it.",
+      "hint2": "The atmosphere absorbs most of the ultraviolet and gamma rays that reach it, which is why little of either gets down to the ground.",
+      "hint3": "Two options remain. Water vapour in the air soaks up much of one of them. Which passes through more freely and is also used for radar and mobile phone links?",
+      "solution": "Answer: B. Microwaves\n\nSatellite links need a wave that passes through the whole atmosphere with little absorption and can be sent as a narrow beam. Microwaves do this, so they are used for satellite TV, GPS and satellite phone links.\n\nHow to tell: of the waves listed, microwaves are the ones that cross the atmosphere with little loss. The others are largely absorbed on the way.\n\nWhy not the others:\nA. Gamma rays: they are largely absorbed by the atmosphere and are harmful to living things.\nC. Ultraviolet rays: most ultraviolet is absorbed high in the atmosphere, partly by the ozone layer.\nD. Infrared rays: water vapour and carbon dioxide in the air absorb much of it.\n\nExam tip: link each part of the spectrum to its best-known use: radio waves for broadcasting, microwaves for satellites and radar, infrared for remote controls and heating, ultraviolet for sterilising, X-rays for imaging bones, gamma rays for treating cancer."
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "vapours.pressure",
+      "difficulty": "medium",
+      "hint1": "Separate two ideas: how fast a liquid evaporates, and the pressure its vapour reaches once the space above it is saturated.",
+      "hint2": "Saturated vapour pressure is reached when molecules leave the liquid and return to it at the same rate. Its value depends on how easily molecules escape, which is set by how fast they move and how strongly they attract each other.",
+      "hint3": "The nature of the liquid and its intermolecular forces are really the same idea. Decide between the other two: which one would change a pressure reading taken once the vapour is saturated?",
+      "solution": "Answer: B. Surface area exposed\n\nSaturated vapour pressure is the pressure of a vapour in balance with its liquid: molecules leave and return at the same rate. It depends on how easily molecules escape, which is set by the temperature and by the forces between the molecules of that liquid.\n\nHow to tell: a bigger surface lets more molecules escape each second, but it also lets more return each second, so the balance point, and the pressure, stay the same. Surface area changes how fast the vapour builds up (the rate of evaporation), not the final vapour pressure.\n\nWhy not the others:\nA. Nature of the liquid: different liquids have different vapour pressures; ether's is much higher than water's at the same temperature.\nC. Temperature: warmer molecules move faster and escape more easily, so the vapour pressure rises.\nD. Intermolecular forces: stronger attraction holds molecules in the liquid, giving a lower vapour pressure.\n\nExam tip: surface area and wind change the rate of evaporation. Temperature and the type of liquid change the saturated vapour pressure. Keep the two lists apart."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "heat-transfer.radiation",
+      "difficulty": "easy",
+      "hint1": "Ask which method of heat transfer this is, and at what part of an object it happens.",
+      "hint2": "Radiation is given out and taken in at the surface of an object. It needs no contact and no material to travel through.",
+      "hint3": "One option belongs to conduction. Of the rest, ask whether each describes the surface of the object or the amount of material in it.",
+      "solution": "Answer: B. Colour and surface texture\n\nRadiation is heat carried by infrared waves given out and taken in at the surface of an object. How well a surface does this depends on its colour and texture: dull black surfaces are the best radiators and absorbers, and shiny, polished or silvery surfaces are the poorest. The temperature of the surface matters too, but it is not an option here.\n\nHow to tell: in the Leslie cube experiment, every face is at the same temperature, yet the dull black face gives out far more radiant heat than the shiny face. The only thing that differs is the surface.\n\nWhy not the others:\nA. Mass of the object: mass affects how much heat an object stores, not how well its surface radiates.\nC. Thermal conductivity: this controls conduction through a material, not radiation from its surface.\nD. Volume of the material: like mass, it affects heat stored, not how the surface radiates.\n\nExam tip: link each method to its key factor: conduction to thermal conductivity, convection to the movement of a fluid, radiation to the colour, texture and temperature of the surface."
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "expansion.applications",
+      "difficulty": "easy",
+      "hint1": "When steel heats up it gets longer. Think about what happens to a long structure if that extra length has nowhere to go.",
+      "hint2": "The expansion of a steel bridge cannot be stopped, and the force it would set up if it were held fixed is very large. The design must give the steel room to lengthen and shorten.",
+      "hint3": "Some options try to reduce how hot the bridge gets, but a warmer bridge still expands. Look for the option that lets the length change safely.",
+      "solution": "Answer: C. Use of expansion joints\n\nSteel expands when heated. If a long bridge were held fixed at both ends, the force from that expansion could bend or crack it. Expansion joints are gaps, often with rollers or interlocking plates, that let each section lengthen and shorten freely.\n\nHow to tell: steel lengthens by about 12 mm per 100 m for each 10 °C rise, so warming this bridge from 15 °C to 45 °C lengthens it by about 3.6 cm. That movement has to go somewhere, and the joint gives it room.\n\nWhy not the others:\nA. Use of thinner beams: thin steel still expands by the same fraction, and it makes the bridge weaker.\nB. Painting the surface white: it reduces heating a little, but the bridge still expands and needs room to move.\nD. Using insulating materials: it slows heat flow but does not stop the steel warming and expanding over a hot season.\n\nExam tip: for bridges, railway lines and pipes, the answer is to leave room for expansion: gaps, joints, rollers or loops. Reducing the heating does not remove the need for that room."
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "friction.solid",
+      "difficulty": "hard",
+      "hint1": "Constant velocity means no acceleration. Think about what that tells you about the forces along the slope.",
+      "hint2": "Along the slope, the weight pulls the block down with mg sin θ, and friction μR acts up the slope, where the normal reaction R = mg cos θ. At constant velocity these balance.",
+      "hint3": "Set mg sin θ = μ mg cos θ. See what cancels, then put θ = 45° into what is left.",
+      "solution": "Answer: A. 1.0\n\nA body moving at constant velocity has no resultant force on it. On a slope, the weight pulls the block down the plane with mg sin θ, and friction acts up the plane. Friction equals μR, and the normal reaction R = mg cos θ. Balancing them shows that μ depends on the angle alone.\n\nHow to tell:\nForce down the slope = mg sin θ\nFriction up the slope = μR = μ mg cos θ\nConstant velocity: mg sin θ = μ mg cos θ\nCancel mg: μ = sin θ ÷ cos θ = tan θ\nμ = tan 45° = 1.0\nThe 5 kg mass and g = 9.8 m/s² cancel out, so they are not needed.\n\nWhy not the others:\nB. 0.87: this is sin 60° or cos 30°, which have nothing to do with a 45° slope.\nC. 0.71: this is sin 45° or cos 45° on its own, not their ratio.\nD. 0.5: this is sin 30°, and comes from using the wrong angle.\n\nExam tip: for a block sliding down a slope at constant speed, μ = tan θ. Watch for extra data, such as mass and g, that cancel out."
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "equilibrium.stability",
+      "difficulty": "medium",
+      "hint1": "The centre of gravity is the point where the whole weight of a body seems to act. Think about how adding or removing mass at different heights moves it.",
+      "hint2": "The centre of gravity moves towards mass that is added and away from mass that is removed. Its height changes when that mass is above or below it.",
+      "hint3": "Flattening the tyres lowers the whole vehicle, and the wheelbase is measured along the ground, not upward. For the two options left, compare where each mass sits with the vehicle's centre of gravity.",
+      "solution": "Answer: B. Adding mass to the roof\n\nThe centre of gravity is the point where the whole weight of a body appears to act. It moves towards added mass, so mass added high on the roof raises it. A higher centre of gravity makes a vehicle easier to tip over.\n\nHow to tell: the roof is the highest part of the vehicle, well above its centre of gravity, so a load there lifts the centre of gravity. This is why buses with luggage piled on the roof are less stable on bends.\n\nWhy not the others:\nA. Removing the engine: the engine sits low, so removing it could raise the centre of gravity a little, but by an amount that depends on masses and heights not given, far less clearly than a roof load.\nC. Flattening the tires: the whole vehicle sits lower, so the centre of gravity goes down, not up.\nD. Reducing the wheelbase: this changes the size of the base, which affects stability, but not the height of the centre of gravity.\n\nExam tip: a low centre of gravity and a wide base make a body more stable. Adding weight high up makes it less stable."
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "fluids.atmospheric",
+      "difficulty": "medium",
+      "hint1": "Both columns hold up the same air pressure. Think about the formula for the pressure under a column of liquid.",
+      "hint2": "The pressure under a column is P = hρg. If two columns give the same pressure, h₁ρ₁g = h₂ρ₂g, and g cancels.",
+      "hint3": "Water is less dense than mercury by a factor of 13 600 ÷ 1000, so its column must be taller by the same factor. Change 760 mm to metres before you multiply.",
+      "solution": "Answer: B. 10.3m\n\nThe pressure at the bottom of a liquid column is P = hρg. The same air pressure holds up both columns, so a less dense liquid needs a taller column to give the same pressure.\n\nHow to tell:\nHeight of mercury = 760 mm = 0.76 m\nWater height × 1000 = 0.76 × 13 600 (g cancels)\nWater height = 0.76 × 13 600 ÷ 1000\nWater height = 0.76 × 13.6 = 10.336 m ≈ 10.3 m\n\nWhy not the others:\nA. 7.6m: this is 760 mm with the decimal point moved; it ignores the densities.\nC. 13.6m: this uses the density ratio but forgets to multiply by 0.76 m.\nD. 1.0m: water is much less dense than mercury, so its column must be much taller than 0.76 m, and 1.0 m is barely taller.\n\nExam tip: for columns of different liquids at the same pressure, use h₁ρ₁ = h₂ρ₂. The less dense liquid stands taller."
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "temperature.thermometers",
+      "difficulty": "easy",
+      "hint1": "Every thermometer works by some property that changes with temperature. Ask what property each of these two uses.",
+      "hint2": "A mercury-in-glass thermometer uses the expansion of mercury in a narrow tube. A thermocouple is made of two different metal wires joined together, and its reading is shown on a meter.",
+      "hint3": "A thermocouple is also used in hot furnaces, and it does not rely on expansion to work. Weigh the two options left: is each one a true statement about how these thermometers work?",
+      "solution": "Answer: D. the thermocouple uses thermoelectric effect to measure temperature\n\nEvery thermometer relies on a thermometric property, something that changes steadily with temperature. The mercury thermometer uses the expansion of a liquid. The thermocouple uses the thermoelectric effect: when the two junctions of two different metals are at different temperatures, a small emf (voltage) is produced, and it grows with the temperature difference.\n\nHow to tell: a thermocouple has two different wires, such as copper and iron, joined at two junctions. One junction is kept cold, the other is placed where the temperature is wanted, and a meter reads the voltage. Nothing in it relies on expansion.\n\nWhy not the others:\nA. the thermocouple measures only very low temperatures: it has a wide range and is often used for high temperatures, such as in furnaces.\nB. the mercury thermometer is not calibrated: it is calibrated, using fixed points such as the ice point and the steam point.\nC. the thermocouple uses expansion of metal: expansion is the principle of liquid-in-glass and bimetallic thermometers, not of the thermocouple.\n\nExam tip: learn each thermometer with its thermometric property: liquid-in-glass with expansion of a liquid, resistance thermometer with electrical resistance, constant-volume gas thermometer with gas pressure, thermocouple with the emf at a junction of two metals."
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "temperature.thermometers",
+      "difficulty": "medium",
+      "hint1": "To follow a temperature that changes quickly, the thermometer itself must warm up or cool down quickly. Think about what makes that possible.",
+      "hint2": "A thermometer responds quickly if its sensing part is very small, so it needs little heat to reach the new temperature. A large bulb of liquid or gas takes time to warm through.",
+      "hint3": "Set aside the two with large bulbs. Of the two electrical thermometers left, which has the smaller sensing part?",
+      "solution": "Answer: D. Thermocouple\n\nTo follow a rapid change, the sensor must reach the new temperature almost at once. That needs a very small heat capacity, meaning it takes little heat to change its temperature. A thermocouple's sensing part is a tiny junction of two wires, so it responds very quickly, and its reading is electrical, so it can be recorded continuously.\n\nHow to tell: a mercury bulb, a gas bulb or a coil of resistance wire in its casing must warm through before the reading changes. A thin wire junction warms almost at once.\n\nWhy not the others:\nA. Mercury-in-glass thermometer: the mercury and glass bulb take time to warm, so it lags behind quick changes.\nB. Constant volume gas thermometer: it is very accurate but bulky and slow, and suits careful standard measurements.\nC. Resistance thermometer: it is accurate for steady temperatures, but its coil and casing respond more slowly than a thermocouple junction.\n\nExam tip: for 'which thermometer' questions, match the job: rapidly changing or very high temperatures point to a thermocouple, very accurate steady readings to a resistance or gas thermometer, body temperature to a clinical thermometer."
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "change-of-state.latent-heat",
+      "difficulty": "hard",
+      "hint1": "In a mixture with no heat loss, heat lost by the warm water equals heat gained by the ice. Think about the two separate things the ice needs heat for.",
+      "hint2": "The ice first melts at 0 °C, which takes mL with no change in temperature. Then the melted water warms from 0 °C to the final temperature T. Meanwhile the warm water cools from 60 °C to T.",
+      "hint3": "First check that the warm water can melt all the ice: compare the heat it gives out cooling to 0 °C with mL. Then write 0.5 × 4200 × (60 − T) = 0.2 × 336 000 + 0.2 × 4200 × T and solve for T.",
+      "solution": "Answer: C. 20°C\n\nIn a mixture with no heat loss, heat lost by the hot body equals heat gained by the cold body. The ice gains heat in two stages: latent heat to melt at 0 °C, then more heat to warm the melted water up to the final temperature.\n\nHow to tell:\nHeat the water gives out cooling to 0 °C = 0.5 × 4200 × 60 = 126 000 J\nHeat to melt all the ice = mL = 0.2 × 336 000 = 67 200 J\n126 000 J is more than 67 200 J, so all the ice melts and T is above 0 °C.\nHeat lost by warm water = 0.5 × 4200 × (60 − T) = 126 000 − 2100T\nHeat gained by ice = 67 200 + 0.2 × 4200 × T = 67 200 + 840T\n126 000 − 2100T = 67 200 + 840T\n58 800 = 2940T\nT = 20 °C\n\nWhy not the others:\nA. 0°C: this would be the answer if the water could not melt all the ice, but it has more than enough heat.\nB. 10°C: the heat does not balance; T = 10 gives 105 000 J lost against 75 600 J gained.\nD. 30°C: the heat does not balance; T = 30 gives 63 000 J lost against 92 400 J gained.\n\nExam tip: when ice is added to warm water, first check whether all of it melts. Then write heat lost = mcΔθ for the warm water and heat gained = mL + mcΔθ for the ice."
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "change-of-state.melting-boiling",
+      "difficulty": "medium",
+      "hint1": "Recall the condition for a liquid to boil, and what the pressure above the liquid has to do with it.",
+      "hint2": "A liquid boils when its saturated vapour pressure equals the pressure acting on its surface. Vapour pressure rises as the liquid gets hotter.",
+      "hint3": "If the pressure on the liquid is raised, a higher vapour pressure, and so a higher temperature, is needed before bubbles can form. Two options say more energy is needed; decide which one gives the correct reason.",
+      "solution": "Answer: C. The molecules require more energy to overcome atmospheric pressure\n\nA liquid boils when its saturated vapour pressure equals the pressure acting on its surface. Raising that outside pressure means the vapour pressure must climb higher before bubbles of vapour can form. Vapour pressure rises with temperature, so the molecules must be hotter, with more energy, and the boiling point goes up. Here 'atmospheric pressure' means the pressure acting on the liquid.\n\nHow to tell: this is how a pressure cooker works. Trapped steam raises the pressure inside, so water boils at about 120 °C instead of 100 °C and food cooks faster. On a high mountain, where air pressure is lower, water boils below 100 °C.\n\nWhy not the others:\nA. The molecules need less kinetic energy to escape: this is the reverse; higher pressure means they need more energy.\nB. The density of the liquid increases: liquids hardly compress, and density is not what sets the boiling point.\nD. The specific latent heat increases with pressure: this is not the reason, and in fact the latent heat of vaporisation gets smaller at higher pressure.\n\nExam tip: link boiling to vapour pressure. The boiling point rises when the pressure on the liquid rises, and falls when it drops. Pressure cookers and high mountains are the usual examples."
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "sound.pipes",
+      "difficulty": "medium",
+      "hint1": "Think about the stationary wave in a tube closed at one end: what must happen to the air at the closed end and at the open end?",
+      "hint2": "The closed end is a node (the air cannot move) and the open end is an antinode (the air moves most). The shortest length that fits one node and one antinode is a quarter of a wavelength.",
+      "hint3": "Find λ = v ÷ f first, then take the fraction of it that fits the shortest closed tube. Take care not to use the fraction for a tube open at both ends.",
+      "solution": "Answer: B. 0.17m\n\nIn a tube closed at one end, the air at the closed end cannot move, so there is a node there, and the open end is an antinode. The shortest tube that fits this pattern holds a quarter of a wavelength: L = λ/4. This first resonance is the fundamental.\n\nHow to tell:\nλ = v ÷ f = 340 ÷ 512 = 0.664 m\nL = λ ÷ 4 = 0.664 ÷ 4 = 0.166 m ≈ 0.17 m\n(End correction is ignored here.)\n\nWhy not the others:\nA. 0.08m: this is about λ/8, which cannot fit a node at one end and an antinode at the other.\nC. 0.33m: this is λ/2, the shortest length for a tube open at both ends.\nD. 0.66m: this is a whole wavelength, which is not a resonance length for a closed tube; the next one after λ/4 is 3λ/4 ≈ 0.50 m.\n\nExam tip: for a closed tube, resonances come at λ/4, 3λ/4, 5λ/4. For a tube open at both ends, at λ/2, λ, 3λ/2. Find λ = v ÷ f first."
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "waves.progressive",
+      "difficulty": "medium",
+      "hint1": "Compare the given equation with the standard form of a progressive wave, y = A sin(ωt − kx), and match each part.",
+      "hint2": "The number in front of x is k = 2π/λ. It tells you how much the phase changes for each metre along the wave.",
+      "hint3": "Phase difference = k × distance between the points. Read k from the equation, multiply by 0.05 m, and compare with the options.",
+      "solution": "Answer: B. π radians\n\nIn the equation of a progressive wave, y = A sin(ωt − kx), the term kx shows how the phase changes along the wave. Two points a distance Δx apart differ in phase by kΔx, where k = 2π/λ. The phase changes by 2π for every whole wavelength.\n\nHow to tell:\nCompare y = 0.1 sin(400πt − 20πx) with y = A sin(ωt − kx)\nk = 20π rad/m\nPhase difference = k × Δx = 20π × 0.05 = π rad\nCheck: λ = 2π ÷ k = 2π ÷ 20π = 0.1 m. The points are 0.05 m apart, which is half a wavelength, and half of 2π is π.\n\nWhy not the others:\nA. π/2 radians: this is for points a quarter of a wavelength apart, 0.025 m.\nC. 2π radians: this is for points a whole wavelength apart, 0.1 m.\nD. 3π radians: this is for points one and a half wavelengths apart, 0.15 m.\n\nExam tip: phase difference = (2π/λ) × distance apart. Find λ from the number in front of x: λ = 2π ÷ that number."
+    },
+    {
+      "q_number": 27,
+      "subtopic_id": "sound.characteristics",
+      "difficulty": "easy",
+      "hint1": "Pitch and loudness are what your ear hears. Match each one to the wave property that changes it.",
+      "hint2": "Pitch is how high or low a note sounds. Loudness is how strong it sounds. Think of a guitar string: what changes when you play a higher note, and what changes when you pluck the same string harder?",
+      "hint3": "The speed of sound in air is the same for high and low notes, and for soft and loud ones, so it sets neither. Check the order asked: pitch first, loudness second.",
+      "solution": "Answer: A. Frequency and amplitude\n\nPitch is how high or low a note sounds, and it is set by the frequency: the number of vibrations each second. Loudness is how strong the sound seems, and it depends on the intensity, which grows with the amplitude, the size of the vibration.\n\nHow to tell: a shorter or tighter guitar string vibrates more times each second and gives a higher note. Plucking the same string harder makes it swing wider and gives a louder note of the same pitch.\n\nWhy not the others:\nB. Wavelength and velocity: velocity is set by the medium and is the same for loud and soft sounds in air.\nC. Amplitude and wavelength: amplitude gives loudness, not pitch, and wavelength does not set loudness.\nD. Frequency and velocity: frequency is right for pitch, but velocity does not set loudness.\n\nExam tip: learn the pairs: pitch with frequency, loudness with amplitude, quality (timbre) with overtones. Then read the order the question asks for."
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "atom.photoelectric",
+      "difficulty": "easy",
+      "hint1": "Recall Einstein's photoelectric equation and list every quantity that appears in it.",
+      "hint2": "Light arrives as photons. Each photon gives all its energy, hf, to one electron. The electron uses part of it, the work function, to escape the metal and keeps the rest as kinetic energy.",
+      "hint3": "Brighter light of the same colour sends more photons each second. Does that change the energy each single photon carries?",
+      "solution": "Answer: C. Intensity of the incident light\n\nEinstein's photoelectric equation is KEmax = hf − W. Each photon hands its energy hf to a single electron, the electron uses W, the work function, to escape, and it keeps the rest as kinetic energy. Intensity (brightness) does not appear in the equation.\n\nHow to tell: brighter light at the same frequency sends more photons per second, so more electrons come out each second and the current rises. But each photon still carries the same energy hf, so each electron's maximum kinetic energy is unchanged.\n\nWhy not the others:\nA. Frequency of the incident light: higher frequency means more energy per photon, so more kinetic energy.\nB. Work function of the material: a larger work function uses up more of the photon's energy, leaving less kinetic energy.\nD. Planck's constant: it is a fixed constant, but it sets the energy of each photon, E = hf, so it is part of the equation for the kinetic energy.\n\nExam tip: in the photoelectric effect, intensity controls how many electrons come out; frequency and work function control how much energy each one has."
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "refraction.laws",
+      "difficulty": "easy",
+      "hint1": "Think about whether light moves faster in air or in water, and what a change of speed does to the direction of a ray.",
+      "hint2": "Light slows down when it enters an optically denser material and speeds up when it leaves one. Is water optically denser or less dense than air?",
+      "hint3": "A ray that slows down swings closer to the normal, and one that speeds up swings away from it. Two options pair speed and direction correctly; decide which of those fits air into water.",
+      "solution": "Answer: B. It slows down and bends toward the normal\n\nRefraction happens because light changes speed when it crosses into a different material. Water is optically denser than air, so light slows down in it. When a ray slows down, it bends toward the normal, the line drawn at right angles to the surface where the ray crosses.\n\nHow to tell: the refractive index of water is about 1.33, so light in water travels at about 3 × 10⁸ ÷ 1.33 ≈ 2.25 × 10⁸ m/s, slower than in air. By Snell's law, n = sin i ÷ sin r, and n greater than 1 means the angle of refraction r is smaller than the angle of incidence i, so the ray bends toward the normal.\n\nWhy not the others:\nA. It speeds up and bends toward the normal: light slows down in water, and speeding up would bend it away from the normal.\nC. It slows down and bends away from the normal: a ray that slows down bends toward the normal, not away.\nD. It speeds up and bends away from the normal: this happens when light goes from water into air, the reverse direction.\n\nExam tip: into a denser medium, slower and toward the normal. Into a less dense medium, faster and away from the normal. For light, the speed change and the bending go together."
+    },
+    {
+      "q_number": 30,
+      "subtopic_id": "dispersion.colour",
+      "difficulty": "medium",
+      "hint1": "The colour an object seems to have depends on which colours of light it sends back to your eye. Start by asking which colours a red object sends back.",
+      "hint2": "In the syllabus, a red object reflects red light and absorbs the other colours. An object that sends no light back to the eye looks black.",
+      "hint3": "Two options are about brightness or about the lights acting on each other, not about the object's surface. Choose between the two that describe what the surface does with green light.",
+      "solution": "Answer: B. Red objects absorb green light\n\nWe see an object's colour from the light it reflects into our eyes. In the syllabus, a red object is taken to reflect red light and absorb all other colours. Under pure green light there is no red for it to reflect, and the green that falls on it is absorbed, so no light returns to the eye and it looks black.\n\nHow to tell: in white light, which contains all colours, the object reflects the red part and looks red. Take away the red, as green light does, and it has nothing it can reflect.\n\nWhy not the others:\nA. Red objects reflect green light: if it reflected green, it would look green, not black.\nC. Green light is brighter than red light: brightness does not explain it; the object looks black under dim or bright green light.\nD. Red and green light cancel each other out: there is no red light present to cancel, and red and green lights added together make yellow, not black.\n\nExam tip: an object shows its own colour when that colour is in the light falling on it. If the light contains none of the colours it reflects, it looks black."
+    },
+    {
+      "q_number": 33,
+      "subtopic_id": "magnetism.magnets",
+      "difficulty": "easy",
+      "hint1": "An electromagnet is meant to be switched on and off. Think about what the core must do when the current starts and when it stops.",
+      "hint2": "Consider what should happen to the core's magnetism when the current is switched off, for example in a crane lifting scrap iron that must let go of its load.",
+      "hint3": "Steel keeps its magnetism after the current stops, which suits permanent magnets. Decide which option describes the property an electromagnet core needs instead.",
+      "solution": "Answer: C. It is easily magnetized and demagnetized\n\nAn electromagnet must be strong while the current is on and lose its magnetism when the current is switched off. Soft iron is easily magnetised, so it makes the field much stronger, and it loses almost all its magnetism when the current stops. It is said to have low retentivity, meaning it keeps little magnetism.\n\nHow to tell: in a scrapyard crane or an electric bell, the magnet must let go the moment the current stops. A core that stayed magnetised would keep holding the scrap iron or the bell's arm.\n\nWhy not the others:\nA. It is a good conductor of electricity: the current flows in the coil, not the core, so conductivity is not why iron is chosen.\nB. It retains magnetism permanently: this describes steel, which is chosen for permanent magnets.\nD. It has a high resistance to magnetic reversal: this is also a property of steel, a hard magnetic material, not of soft iron.\n\nExam tip: soft iron for things that must switch on and off, such as electromagnets, relays and transformer cores; steel for things that must stay magnetised, such as permanent magnets."
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "induction.generators",
+      "difficulty": "easy",
+      "hint1": "Recall the formula for the peak (maximum) EMF of a coil turning in a magnetic field, and list the quantities that appear in it.",
+      "hint2": "The peak EMF is E₀ = NBAω. Anything that makes N, B, A or ω smaller lowers the peak EMF, and anything not in the formula does not change it.",
+      "hint3": "Two of the options change ω, the angular speed. One makes ω bigger and one makes it smaller. Which one raises E₀?",
+      "solution": "Answer: B. Increasing the speed of rotation\n\nA turning coil produces an EMF because the magnetic flux through it keeps changing. The faster the flux changes, the bigger the EMF. The peak EMF is E₀ = NBAω, where N is the number of turns, B the field strength, A the area of the coil and ω the angular speed (how fast it turns).\n\nHow to tell: E₀ is directly proportional to ω. Spinning the coil faster makes the flux change faster, so ω rises and E₀ rises with it. Doubling the speed doubles the peak EMF.\n\nWhy not the others:\nA. Decreasing the number of turns: E₀ is proportional to N, so fewer turns give a smaller peak EMF.\nC. Rotating the coil slower: this lowers ω, so the peak EMF falls.\nD. Using thinner wire: wire thickness is not in E₀ = NBAω. It raises the coil's resistance, which can reduce the current, but not the induced EMF.\n\nExam tip: for any \"what increases the peak EMF of a generator\" question, write E₀ = NBAω and check each option against N, B, A and ω. More turns, a stronger field, a bigger coil or faster turning all raise it."
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "induction.eddy",
+      "difficulty": "easy",
+      "hint1": "Eddy currents are induced currents. Think about what Faraday's law says is needed to induce any current.",
+      "hint2": "An induced current needs a change in the magnetic flux linking the conductor. Heating is something eddy currents produce, not something that produces them.",
+      "hint3": "Movement can produce eddy currents only if it makes the magnetic flux through the metal change. So is the true cause the motion itself, or the changing flux?",
+      "solution": "Answer: C. A changing magnetic field cutting across the conductor\n\nEddy currents are small loops of induced current that swirl inside a solid piece of metal. Like every induced current, they follow Faraday's law: a current is induced when the magnetic flux through the conductor changes.\n\nHow to tell: the question asks for the cause. The one thing every case of eddy currents has in common is a changing magnetic flux through the metal, for example the changing field inside a transformer core, or a metal plate swinging between magnet poles.\n\nWhy not the others:\nA. Rapid mechanical rotation of the conductor: rotation causes eddy currents only when it makes the flux through the metal change. Spinning a metal disc where there is no magnetic field induces none.\nB. Heating of the conductor by resistance: this heating is a result of eddy currents flowing, not their cause.\nD. The alignment of atomic dipoles within the material: that describes how a material becomes magnetised, not how a current is induced.\n\nExam tip: whenever a question asks what causes an induced current or EMF, look for the option about a changing magnetic flux or a changing field. Heat is usually the effect, not the cause."
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "nucleus.binding-energy",
+      "difficulty": "medium",
+      "hint1": "Substitute into E = Δmc², and take care with the powers of ten.",
+      "hint2": "Square the speed of light first: (3 × 10⁸)² means 3² and (10⁸)² together.",
+      "hint3": "(3 × 10⁸)² = 9 × 10¹⁶ m²/s². Now multiply this by 5 × 10⁻⁴ kg, multiplying the numbers and adding the powers of ten.",
+      "solution": "Answer: B. 4.5 × 10¹³J\n\nWhen a nucleus forms or splits, a small amount of mass seems to vanish. This missing mass, the mass defect Δm, has been turned into energy, and E = Δmc² gives how much. Because c is so large, a tiny mass gives a huge energy.\n\nHow to tell:\nΔm = 5 × 10⁻⁴ kg, c = 3 × 10⁸ m/s\nc² = (3 × 10⁸)² = 9 × 10¹⁶ m²/s²\nE = Δmc² = 5 × 10⁻⁴ × 9 × 10¹⁶\nE = (5 × 9) × 10⁻⁴⁺¹⁶ = 45 × 10¹² J\nE = 4.5 × 10¹³ J\n\nWhy not the others:\nA. 4.5 × 10¹⁰J: the right digits but three powers of ten too small, a slip with the indices.\nC. 3.0 × 10¹³J: this comes from doubling the 3 instead of squaring it, giving 6 × 10¹⁶ in place of 9 × 10¹⁶.\nD. 9.0 × 10¹³J: twice the correct value, as if the mass were 1 × 10⁻³ kg.\n\nExam tip: in E = Δmc² questions, write c² = 9 × 10¹⁶ m²/s² before anything else, then multiply the numbers and add the powers separately. Options with the right digits and the wrong power are there to catch index slips."
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "nucleus.half-life",
+      "difficulty": "medium",
+      "hint1": "Work out how many half-lives fit into the time given before you do any other arithmetic.",
+      "hint2": "Each half-life halves the number of undecayed atoms. After n half-lives the number left is the starting number divided by 2ⁿ.",
+      "hint3": "Three half-lives have passed. Halve 2.4 × 10²⁰ once, then again, then once more, and see which option matches.",
+      "solution": "Answer: A. 3.0 × 10¹⁹\n\nThe half-life is the time taken for half of the undecayed atoms in a sample to decay. So in every half-life the number left is cut in half, whatever number you start with.\n\nHow to tell:\nNumber of half-lives = 3 hours ÷ 1 hour = 3\nAfter 1 half-life: 2.4 × 10²⁰ ÷ 2 = 1.2 × 10²⁰\nAfter 2 half-lives: 1.2 × 10²⁰ ÷ 2 = 6.0 × 10¹⁹\nAfter 3 half-lives: 6.0 × 10¹⁹ ÷ 2 = 3.0 × 10¹⁹\nCheck: 2.4 × 10²⁰ ÷ 2³ = 2.4 × 10²⁰ ÷ 8 = 3.0 × 10¹⁹ atoms\n\nWhy not the others:\nB. 4.8 × 10¹⁹: this is one fifth of the starting number, which no whole number of halvings gives.\nC. 6.0 × 10¹⁹: this is what is left after only 2 half-lives.\nD. 1.2 × 10²⁰: this is what is left after only 1 half-life.\n\nExam tip: in half-life questions, first find n = time ÷ half-life, then divide the starting amount by 2ⁿ. The wrong options are often the values after one or two fewer halvings."
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "electronics.semiconductors",
+      "difficulty": "easy",
+      "hint1": "Picture the energy band diagram of a solid: the band that holds the bonding electrons, the band where electrons are free to move, and the gap between them.",
+      "hint2": "The band gap is the forbidden gap that an electron must jump across to become free to carry current. The nucleus and the inner-shell electrons play no part in this jump.",
+      "hint3": "An electron leaves the band where it was held in a bond and lands in the band where it can move freely. Which option names those two bands?",
+      "solution": "Answer: C. Conduction band and valence band\n\nIn a solid, electrons can only have energies inside certain bands. The valence band holds electrons bound in the bonds between atoms. The conduction band is the higher band where electrons are free to move and carry current. The band gap is the energy gap between the top of the valence band and the bottom of the conduction band.\n\nHow to tell: for a semiconductor to conduct, an electron must gain enough energy, for example from heat, to jump from the valence band up into the conduction band. The size of that jump is the band gap. A semiconductor has a small gap, an insulator a large one, and in a metal the bands overlap.\n\nWhy not the others:\nA. Valence band and core level: core levels belong to the inner electrons held tightly near the nucleus, which take no part in conduction.\nB. Conduction band and nucleus: the nucleus is not an energy band, so this is not a band gap.\nD. Valence band and Fermi level: the Fermi level is a reference energy that lies inside the gap in a semiconductor, not the edge of the gap.\n\nExam tip: when a question mentions the band gap, think of the jump from the valence band to the conduction band. A small gap means semiconductor, a large gap means insulator, and no gap means conductor."
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "electronics.diodes",
+      "difficulty": "easy",
+      "hint1": "Recall how the external battery is connected in forward bias and in reverse bias, and what each does to the charge carriers near the junction.",
+      "hint2": "The depletion region is the thin layer at the junction with no free charge carriers. It widens when carriers are pulled away from the junction and narrows when they are pushed towards it. Heat and light mainly create extra carriers rather than pulling them away.",
+      "hint3": "In one type of bias, current flows easily. In the other, almost no current flows. Which one pulls the carriers back from the junction?",
+      "solution": "Answer: B. Reverse biased\n\nThe depletion region is a thin layer at the p-n junction that has lost its free charge carriers, so it acts as a barrier to current. Its width depends on whether the applied voltage pushes carriers towards the junction or pulls them away.\n\nHow to tell: in reverse bias, the positive terminal is joined to the n-side and the negative terminal to the p-side. The positive terminal attracts electrons in the n-side away from the junction, and the negative terminal attracts holes in the p-side away from it. More of the region near the junction is left without carriers, so the depletion region widens and hardly any current flows.\n\nWhy not the others:\nA. Forward biased: the battery pushes electrons and holes towards the junction, so the depletion region narrows and current flows.\nC. The diode is heated: heat creates extra electrons and holes, which raises the current. In the syllabus, bias is what changes the width of the depletion region.\nD. The diode is illuminated by light: light also creates extra electrons and holes, as in a photodiode, which raises the current rather than widening the layer.\n\nExam tip: for p-n junction questions, remember reverse bias means a wide barrier and almost no current, while forward bias means a narrow barrier and easy current."
+    }
+  ]
+}

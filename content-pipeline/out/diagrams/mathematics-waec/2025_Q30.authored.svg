@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 150 610 490" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+  <!-- Authored by hand, not traced: the diagrams in this subject carry typed labels, which tracing damages.
+       Coordinates follow the original 800x800 image. Nothing omitted as unreadable. -->
+  <title id="t">Right-angled triangle PQR</title>
+  <desc id="d">A triangle with P at the top, Q at the bottom left, and R at the bottom right. A small square marks a right angle at Q. The side from Q to R is labelled 2 cm. The angle at R, between side RQ and side RP, is marked 60°.</desc>
+  <g fill="none" stroke="#E2E8F0" stroke-linejoin="miter">
+    <!-- triangle -->
+    <path d="M150 211 L152 578 L650 578 Z" stroke-width="4"/>
+    <!-- right-angle mark at Q -->
+    <path d="M152 546 L191 546 L191 578" stroke-width="3"/>
+    <!-- angle arc at R -->
+    <path d="M612 578 A38 38 0 0 1 619.4 555.5" stroke-width="3.5"/>
+    <!-- degree sign -->
+    <circle cx="588.5" cy="544.5" r="3.5" stroke-width="1.8"/>
+  </g>
+  <g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="30">
+    <text x="139" y="202" text-anchor="middle">P</text>
+    <text x="140" y="622" text-anchor="middle">Q</text>
+    <text x="662" y="611" text-anchor="middle">R</text>
+    <text x="394" y="622" text-anchor="middle">2 cm</text>
+    <text x="566" y="572" text-anchor="middle">60</text>
+  </g>
+</svg>

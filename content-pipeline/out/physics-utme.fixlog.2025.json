@@ -1,0 +1,76 @@
+{
+  "entries": [
+    {
+      "q_number": 6,
+      "source": "check-11",
+      "finding": "Hint 2 states 'A single fixed pulley changes the direction of the pull, not its size' as universal; it holds only for an ideal pulley",
+      "decision": "accepted",
+      "reason": "Syllabus idealisation stated as fact in the hint; the solution already scopes it as 'taken as ideal with no friction', so the hint should match.",
+      "change": "Hint 2 now reads 'A single fixed pulley, taken as frictionless, changes the direction of the pull, not its size.'",
+      "round": 1
+    },
+    {
+      "q_number": 7,
+      "source": "codex",
+      "finding": "Check 2: hint 3 confirms crest, transverse and mechanical as true, so the one unconfirmed option is the answer without thought",
+      "decision": "accepted",
+      "reason": "Valid. For a 'which is NOT true' question, hint 3 ticked off three options and left C by elimination alone.",
+      "change": "Replaced hint 3 with a description of longitudinal motion (back and forth along the direction of travel, compressions and rarefactions) and asked the student to compare it with how a plucked string moves. Wrote a shorter version than Codex's fix, which re-described transverse motion already given in hint 2.",
+      "round": 1
+    },
+    {
+      "q_number": 15,
+      "source": "check-11",
+      "finding": "Solution says 'shiny white or silvery surfaces are the poorest' radiators",
+      "decision": "accepted",
+      "reason": "White paint is not a poor infrared radiator. The syllabus contrast is dull black against shiny or polished, as in the Leslie cube the solution cites.",
+      "change": "Changed 'shiny white or silvery' to 'shiny, polished or silvery'.",
+      "round": 1
+    },
+    {
+      "q_number": 20,
+      "source": "codex",
+      "finding": "Check 2: hint 3 describes the thermoelectric effect and asks 'Which option names that effect?', a word match to D",
+      "decision": "accepted",
+      "reason": "Valid. The hint defines the effect and asks the student to find its name, so no reasoning is needed.",
+      "change": "Hint 3 now rules out A and C by their content (used in hot furnaces, nothing expands) and asks the student to judge whether each of the two options left is true. Shorter than Codex's wording.",
+      "round": 1
+    },
+    {
+      "q_number": 0,
+      "source": "check-12",
+      "finding": "Sibling leak check across the paper",
+      "decision": "no_change_needed",
+      "reason": "No item has a passage_id, shared stem or diagram, so there are no siblings. Items on the same topic (Q20 and Q21 on thermocouples, Q9 and Q28 on the photoelectric effect) are separate questions, and none of their hints answers the other.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 20,
+      "source": "codex",
+      "finding": "hint3 \"nothing in it expands\" is a false absolute; the wires do expand when heated",
+      "decision": "accepted",
+      "reason": "The metal wires of a thermocouple expand like any solid; the true claim is that the thermocouple does not use expansion for its reading, which the solution already says.",
+      "change": "hint3: \"and nothing in it expands\" replaced with \"and it does not rely on expansion to work\".",
+      "round": 2
+    },
+    {
+      "q_number": 20,
+      "source": "check-11",
+      "finding": "rest of item checked for unscoped absolutes",
+      "decision": "rejected",
+      "reason": "Solution says \"Nothing in it relies on expansion\", which is true; no other absolute or syllabus simplification stated as universal.",
+      "change": "",
+      "round": 2
+    },
+    {
+      "q_number": 20,
+      "source": "check-12",
+      "finding": "sibling leak check",
+      "decision": "rejected",
+      "reason": "passage_id is null; the item has no siblings sharing a stem.",
+      "change": "",
+      "round": 2
+    }
+  ]
+}

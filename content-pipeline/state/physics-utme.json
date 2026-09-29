@@ -1,0 +1,167 @@
+{
+  "slug": "physics-utme",
+  "subject": "Physics",
+  "gate": {
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T16:59:43",
+    "note": ""
+  },
+  "units": {
+    "2025": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T16:22:34",
+          "summary": "40/40 codex, 40/40 claude",
+          "seconds": 396,
+          "cost_usd": 1.23
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T16:22:35",
+          "summary": "agreed-soft 5, disagree 1, unsolvable 3, verified 31",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T16:23:39",
+          "summary": "6 ruled: ambiguous 1, key 5",
+          "seconds": 64,
+          "cost_usd": 0.23
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T16:23:40",
+          "summary": "ambiguous 1, defective 3, keyed 36",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T16:25:55",
+          "summary": "clear 36; 0 taxonomy findings",
+          "seconds": 134,
+          "cost_usd": 0.48
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T16:32:47",
+          "summary": "36 written in 2 part(s); answer challenges none; style scan: REVIEW (1 across 1 location(s))",
+          "seconds": 412,
+          "cost_usd": 1.8
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T16:47:42",
+          "summary": "36 reviewed, 2 fail, fact errors none",
+          "seconds": 894,
+          "cost_usd": 1.57
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T16:52:29",
+          "summary": "4 accepted, 1 rejected; style scan: REVIEW (1 across 1 location(s))",
+          "seconds": 287,
+          "cost_usd": 1.4
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:59:00",
+          "summary": "4 changed items re-reviewed, 1 still fail [20]",
+          "seconds": 391,
+          "cost_usd": 0.37
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T16:59:40",
+          "summary": "1 ruled on the last pass, held none; style scan: REVIEW (1 across 1 location(s))",
+          "seconds": 39,
+          "cost_usd": 0.29
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T16:59:40",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T16:59:41",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T16:59:41",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T16:59:41",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T16:59:41",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:59:41",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T16:59:43",
+          "summary": "PREVIEW (no image base set): physics-utme.2025.PREVIEW.csv, 4 held, 0 pre-flight flags; style scan: REVIEW (1 across 1 location(s))",
+          "seconds": 2,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T16:59:43",
+          "summary": "physics-utme.2025.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 23,
+          "why": "defective",
+          "detail": "Correct computation from the given constants (≈1519 s) does not correspond to any of the four option"
+        },
+        {
+          "q_number": 31,
+          "why": "defective",
+          "detail": "The physically correct current (≈1.71A) computed from the stated EMF, internal resistance and extern"
+        },
+        {
+          "q_number": 32,
+          "why": "ambiguous",
+          "detail": "For opposite currents, the right-hand grip rule shows the two fields at the midpoint point the same "
+        },
+        {
+          "q_number": 40,
+          "why": "defective",
+          "detail": "Question stem is garbled/incomplete (missing word after 'three' and missing option label 'A.'), and "
+        }
+      ]
+    }
+  },
+  "cost_usd": 7.37
+}

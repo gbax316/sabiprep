@@ -7,41 +7,46 @@
       "q_number": 1,
       "verdict": "fail",
       "failed_checks": [
-        10
+        8,
+        11
       ],
-      "fact_error": false,
-      "notes": "Hint 3 says: 'Only one of them is the round-sounding lease term taught with the Act.' Ninety-nine is not a round number, a round number is one like 100. A student who takes 'round-sounding' literally is pushed toward D (100), the wrong option, which is the opposite of what the hint is meant to do. The facts elsewhere (Land Use Act 1978, Governor, certificate of occupancy up to 99 years) are correct.",
-      "fix": "The two long figures differ by just one year. Only one of them is the exact term the Land Use Act sets for a certificate of occupancy, the other is simply the nearby century figure students sometimes confuse it with.",
-      "lane": "claude-sonnet"
+      "fact_error": true,
+      "notes": "The settled answer remains C, but the teaching overstates what the legislation itself says. Section 8 of the [Land Use Act](https://www.placng.org/lawsofnigeria/print.php?sn=228) requires a statutory right of occupancy to have a definite term but does not itself prescribe 99 years. The inaccurate wording appears repeatedly: \"the exact figure fixed by the Act\", \"this statutory right of occupancy is granted for a term of up to 99 years\", \"The term fixed for it is 99 years\", \"not the term set by the Act\", and \"it is not the term in the Act\". The statement \"The two short terms are far too short\" is also unsafe because individual grants can have terms shorter than 99 years. The syllabus convention of up to 99 years needs to be taught as the examination answer without claiming that the Act expressly fixes that number.",
+      "fix": "Replace hint 3 with: \"For this syllabus question, the two short terms are not the recognised examination figure. Between the two long terms, recall the maximum term normally associated with a statutory certificate of occupancy.\"\n\nReplace the principle and How to tell with: \"Under Nigeria's Land Use Act of 1978, land in each state is vested in the governor and held in trust for the people. A certificate of occupancy provides evidence of a right to occupy and use land for a definite term. For this syllabus question, the recognised maximum term is 99 years.\n\nHow to tell: the examination figure normally associated with a statutory certificate of occupancy is 99 years.\"\n\nReplace the distractor lines with: \"A. 20 years: this is not the recognised examination term.\nB. 59 years: this is not the recognised examination term.\nD. 100 years: this is a tempting round figure, but the recognised examination term is 99 years.\"\n\nReplace the exam tip with: \"Exam tip: for syllabus questions on Nigeria's land law, link the Land Use Act to three facts: 1978, land is vested in the governor and held in trust, and a statutory certificate of occupancy is normally treated as running for up to 99 years.\"",
+      "lane": "codex"
     },
     "2": {
       "q_number": 2,
-      "verdict": "pass",
-      "failed_checks": [],
-      "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The wording \"Irrigation is the option that removes that dependence\" is an unscoped absolute. Irrigation reduces dependence on seasonal rainfall by supplying water during dry periods, but it does not remove every climatic or seasonal limit. The distractor explanation \"weeding, mulching and similar practices help crops within the season but do not change when the crop can be grown\" is also too absolute. Mulching and other cultural practices can conserve moisture and extend or shift the growing period, although they do not by themselves supply dependable dry-season water.",
+      "fix": "Replace How to tell with: \"How to tell: the main cause tested here is dependence on seasonal rainfall. Irrigation is the option that directly reduces this dependence by supplying water during dry periods.\"\n\nReplace the C distractor line with: \"C. employing cultural cultivation practices: weeding, mulching and similar practices can help crops and may extend the growing period, but they do not by themselves supply the water needed for dependable dry-season production.\"",
+      "lane": "codex"
     },
     "3": {
       "q_number": 3,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The distractor explanation \"research develops improved varieties to replace low-yielding local ones\" wrongly treats local varieties as generally low-yielding and replacement as the universal aim. Local varieties can possess useful adaptations and may be cultivated, conserved or used as breeding material. The relevant point is that promoting local varieties by itself does not necessarily improve maturity, yield or resistance.",
+      "fix": "Replace the A distractor line with: \"A. promotes the use of local varieties of crops: promoting local varieties by itself does not necessarily produce improved traits such as early maturity, higher yield or greater resistance, although local varieties can provide useful traits for breeding.\"",
+      "lane": "codex"
+    },
+    "4": {
+      "q_number": 4,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
-    },
-    "4": {
-      "q_number": 4,
-      "verdict": "fail",
-      "failed_checks": [
-        1
-      ],
-      "fact_error": false,
-      "notes": "Hint 1 says: \"Break the instrument's name into parts: 'hygro' comes from a Greek word about wetness.\" This decodes the exact word the answer turns on before any narrowing has happened, so it does hint 2's or hint 3's job at the hint 1 stage. It also fails the standard's calibration test for hint 1: decoding 'hygro' would not help a student on a different climatic-factor instrument question (wind speed, daylength, pressure), so it is pitched too specifically for a first hint. By hint 3 ('Which fits hygro?') the chain built on hint 1 leaves nothing left to work out.",
-      "fix": "Each weather factor has its own measuring instrument. Before you decide, work out which option describes a condition of the air itself, not how fast it moves, how hard it presses down, or how long the sun is out.",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "7": {
       "q_number": 7,
@@ -50,7 +55,7 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "8": {
       "q_number": 8,
@@ -59,16 +64,19 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "9": {
       "q_number": 9,
-      "verdict": "pass",
-      "failed_checks": [],
-      "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The wording confuses sedimentary strata with every kind of geological layering. The hint says, \"Rocks formed from cooled molten rock do not build up in layers.\" Igneous rocks can occur in layers, including successive basalt lava flows and magmatic layering in gabbro. The same error appears in \"so it is made of crystals, not layers\" and \"not laid down in layers\". The syllabus distinction is that limestone is characteristically sedimentary and may show sedimentary strata, while the other options are igneous. Crystals and layers are not mutually exclusive.",
+      "fix": "Replace hint 2 with: \"Sedimentary strata form when sediments are deposited in successive layers and are later compacted and cemented. Igneous rocks form from cooled molten material, so sedimentary strata are not their identifying feature.\"\n\nReplace How to tell with: \"How to tell: limestone is a sedimentary rock. Many limestones form from calcium carbonate deposited in water, often from shells, so limestone commonly occurs in strata. The other three options are igneous rocks, for which sedimentary strata are not a characteristic feature.\"\n\nReplace the distractor lines with: \"A. gabbro: it is an igneous rock with coarse, interlocking crystals; sedimentary strata are not its characteristic feature.\nC. granite: it is an igneous rock with coarse, interlocking crystals, not a sedimentary rock characterized by strata.\nD. basalt: it is an igneous rock formed when lava cools quickly; lava flows may occur in layers, but these are not sedimentary strata.\"\n\nReplace the exam tip with: \"Exam tip: link each feature to a rock group. Sedimentary strata and fossils point to sedimentary rock, interlocking crystals formed from molten material point to igneous rock, and rock changed by heat and pressure is metamorphic.\"",
+      "lane": "codex"
     },
     "10": {
       "q_number": 10,
@@ -77,7 +85,38 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
+      "lane": "codex"
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "fail",
+      "failed_checks": [
+        5,
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The exam tip says, \"check the answer is smaller than both.\" Water lost must be less than the fresh-soil mass, but it is not necessarily less than the dried-soil mass. A very wet sample may contain more water than dry matter, so this is a false universal check and may mislead students on another question.",
+      "fix": "Exam tip: subtract the dried reading from the fresh reading. The water lost must be less than the fresh soil mass; do not assume that it must also be less than the dried soil mass.",
+      "lane": "codex"
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
     },
     "14": {
       "q_number": 14,
@@ -86,7 +125,7 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "17": {
       "q_number": 17,
@@ -95,50 +134,44 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
-    },
-    "18": {
-      "q_number": 18,
-      "verdict": "fail",
-      "failed_checks": [
-        2,
-        11
-      ],
-      "fact_error": false,
-      "notes": "Hint 3 resolves the question by explicit statement rather than asking the student to supply the deciding fact themselves: 'One describes a method; the other describes a saving in water, which is really a feature of drip irrigation. Which one fits water sprayed from above?' By telling the student outright that the water-saving option 'is really a feature of drip irrigation', the hint eliminates it in the hint's own words, leaving only one option, so the closing question is rhetorical and answerable without thought (unlike the worked example's hint 3, which requires the student to recall an unstated body-plan fact). Separately, the solution uses 'surface' in two conflicting senses: the principle explains the answer text 'supplies water to crops on the surface of farmland' by saying 'the water lands on top of the crop and the land surface', while the exam tip defines 'surface' as a distinct irrigation type: 'surface, flowing over the land in furrows or basins'. A student could easily read this as overhead irrigation being called 'surface irrigation', which is the wrong category in this same syllabus (surface irrigation is flooding/furrow/basin/border, a different type from overhead).",
-      "fix": "Hint 3: 'Two options are left. Think about where the sprayed water actually ends up landing, rather than how much water each method uses, then decide which one matches water falling from above like rain.'\n\nSolution principle (replace the existing paragraph): 'Overhead irrigation, such as a sprinkler, sprays water into the air above the crop so that it falls like rain onto the plants and the ground below. The option calls this delivering water to the surface of the farmland because the water lands on top of the land itself, unlike water sent through buried pipes or delivered straight to the roots. This is different from what the syllabus calls surface irrigation (flooding, furrow, basin and border), where water is let to flow along the ground instead of being sprayed from above.'",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "19": {
       "q_number": 19,
       "verdict": "fail",
       "failed_checks": [
-        2
+        5,
+        8,
+        11
       ],
-      "fact_error": false,
-      "notes": "Hint 3 states the content of both remaining options and leaves only a rhetorical question: 'One option places animal waste close to water. The other left cuts out synthetic chemicals altogether. Which one prevents pollution?' This adds no fact the student must recall; hint 2 already established the rule ('any option that adds farm chemicals to the land is a source of pollution, not a way to prevent it'), so combining that rule with hint 3's restatement answers the question by plain logic alone, with no domain knowledge required, unlike the worked example's hint 3, which requires the student to recall an unstated fact (cockroach body plan) to reach the answer.",
-      "fix": "Hint 3: 'A way to prevent pollution has to stop chemicals or waste from reaching the soil and water in the first place, not just move them somewhere else. Between the two remaining options, which farming approach does that?'",
-      "lane": "claude-sonnet"
+      "fact_error": true,
+      "notes": "The claims \"A practice that adds any of these cannot prevent pollution,\" \"Organic farming keeps synthetic chemicals off the farm\" and \"The practice that removes them is the preventive one\" are too absolute. Pollution can also be prevented by controlling the amount, timing and movement of a potential pollutant. Organic farming reduces reliance on synthetic fertilizers and pesticides, but manure and other organic wastes can still pollute water when poorly managed. The settled answer remains correct at WASSCE level.",
+      "fix": "Hint 2: Excess fertilizer and herbicide residues can wash into rivers and ponds, while poorly managed animal waste near water can pollute it. Look for the practice that reduces these risks.\n\nPrinciple: At WASSCE level, organic farming is treated as reducing reliance on synthetic fertilizers and pesticides through manure, compost, crop rotation and biological pest control. When organic wastes are managed properly, this lowers the risk of farm pollution.\n\nHow to tell: among these options, organic farming is the practice intended to reduce pollution risk. The other options can contribute to pollution when fertilizers, herbicides or poultry waste reach water in harmful amounts.\n\nC. siting poultry farms near rivers: droppings and other waste can wash into the water.\n\nExam tip: in pollution questions, ask which practice reduces the chance that harmful amounts of chemicals or waste will reach soil or water.",
+      "lane": "codex"
     },
     "20": {
       "q_number": 20,
       "verdict": "fail",
       "failed_checks": [
-        2
+        8,
+        11
       ],
-      "fact_error": false,
-      "notes": "Hint 3 states the deciding fact itself instead of asking the student to supply it: 'Yam sprouts new shoots from its tuber, which is a feature of stems. Which fits?' Because the hint already tells the student that sprouting shoots is a stem feature, the closing 'Which fits?' is rhetorical and answerable without further thought, unlike the worked example's hint 3, which requires the student to recall an unstated fact (which insect has that body plan) rather than being told the connecting fact outright.",
-      "fix": "Hint 3: 'You are left with root and stem. Think about where a plant normally grows new buds and shoots from, and which of these two organs does that.'",
-      "lane": "claude-sonnet"
+      "fact_error": true,
+      "notes": "Hint 3 says, \"leaves make food rather than store it.\" This is an unscoped and false generalisation because some leaves or modified leaves store food. The relevant fact is specifically that the yam leaf is not the crop's main storage organ.",
+      "fix": "A sett is a piece cut off for planting, and yam leaves are not its main food-storage organ. Between root and stem, recall which group yam shares with Irish potato in the storage-organ list.",
+      "lane": "codex"
     },
     "23": {
       "q_number": 23,
-      "verdict": "pass",
-      "failed_checks": [],
-      "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The statements \"Nematodes live in the soil and attack roots in the field,\" \"Neither depends on how wet the harvested grain is\" and \"not harvested grain\" are false as universal claims. Many agriculturally important nematodes are soil-borne root pests, but some attack seeds or above-ground plant parts, and nematode activity can depend on moisture. The valid distinction is that nematodes are not the usual cause of moisture-related mould spoilage in stored produce.",
+      "fix": "Hint 2: In this syllabus context, nematodes are mainly treated as field pests of roots, while viruses multiply only inside living plant cells. Neither is the usual cause of moisture-related spoilage of damp harvested produce.\n\nA. nematodes: in this syllabus context, they are mainly field pests of roots, not the usual cause of moisture-related spoilage in stored produce.",
+      "lane": "codex"
     },
     "24": {
       "q_number": 24,
@@ -147,40 +180,40 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "25": {
       "q_number": 25,
       "verdict": "fail",
       "failed_checks": [
-        2
+        8,
+        11
       ],
-      "fact_error": false,
-      "notes": "Hint 3 states the full mechanism and its consequence rather than leaving a fact for the student to supply: 'The bran is rich in vitamins, minerals and protein. Once it is removed, what happens to the grain as food?' Given that bran being nutrient-rich is stated outright, the closing question follows by plain logic with no additional recall needed, unlike the worked example's hint 3, which withholds the deciding fact (body plan) and requires the student to know it themselves.",
-      "fix": "Hint 3: 'Bran contains nutrients the rest of the grain does not carry on its own. Think about whether losing that layer would make the grain larger, harder, more likely to sprout, or less nutritious, and pick the option that matches losing a nutrient-rich layer.'",
-      "lane": "claude-sonnet"
+      "fact_error": true,
+      "notes": "\"These outer parts hold much of the grain's B vitamins, minerals, protein and fibre\" overstates the protein loss because most of the grain's protein remains in the endosperm. \"It also takes off the germ\", \"Polishing rubs off the bran and the germ\", and \"polished rice cannot sprout\" are unscoped claims because polishing can remove or damage only part of the germ. [FAO](https://www.fao.org/4/t0567e/T0567E08.htm)",
+      "fix": "Replace hint 2 with: Polishing removes material, so it cannot add to the amount of grain. It also removes bran and can remove or damage the germ, the part that would grow into a new plant.\n\nReplace the solution's first two sentences with: Polishing removes the bran and can remove or damage the germ, giving white, shiny rice. These parts are rich in B vitamins, minerals and fibre and contain some protein, so polished rice is less nutritious than brown rice.\n\nReplace the D line with: D. increases the germination rate of grains: polishing can remove or damage the germ, so it reduces rather than increases the grain's ability to sprout.",
+      "lane": "codex"
     },
     "26": {
       "q_number": 26,
       "verdict": "fail",
       "failed_checks": [
-        2
+        8,
+        11
       ],
-      "fact_error": false,
-      "notes": "Hint 3 gives the answer away through the disease's own defining symptom instead of requiring reasoning. Quote: \"Which of these diseases attacks the base of the trunk near the soil, making the bark ooze gum?\" The phrase \"ooze gum\" is the literal origin of the name \"gummosis\", so a student can match the word alone, with no disease knowledge needed, and the wording nearly repeats the solution's own \"How to tell\" (\"making the bark crack and ooze gum\"). This fails the hint 3 test: a student can answer by reading hint 3 alone, without thinking.",
-      "fix": "Of the diseases left, which one attacks the collar and roots at the base of the tree, rather than the leaves, twigs or fruit?",
-      "lane": "claude-sonnet"
+      "fact_error": true,
+      "notes": "\"Sour orange is valued for resisting a soil-borne fungus\" and \"is caused by a soil-borne fungus, Phytophthora\" state that Phytophthora is a true fungus. It is an oomycete, although the syllabus groups gummosis with fungal diseases. The simplification is not scoped. [UC Integrated Pest Management](https://ipm.ucanr.edu/home-and-landscape/phytophthora-gummosis-of-citrus/)",
+      "fix": "Replace the last sentence of hint 2 with: Sour orange is valued for resisting a soil-borne, fungus-like pathogen.\n\nReplace the solution's opening with: In the syllabus, gummosis, also called foot rot, is grouped with fungal diseases. It is caused by Phytophthora, a soil-borne, fungus-like organism.",
+      "lane": "codex"
     },
     "27": {
       "q_number": 27,
-      "verdict": "fail",
-      "failed_checks": [
-        2
-      ],
+      "verdict": "pass",
+      "failed_checks": [],
       "fact_error": false,
-      "notes": "Hint 3 tells the student to resolve only one of the three items and then choose, which mechanically solves the question because only one answer option (B) excludes vegetables while the other three all include it. Quote: \"Decide about vegetables first: are they grown on large long-term estates, or in gardens and small plots and replanted often? Then choose.\" No judgement about fruits or beverages is needed at all; ruling out vegetables alone selects B by elimination, without the student thinking through the full item. This fails the hint 3 test.",
-      "fix": "For each of the three, fruits, vegetables and beverages, decide whether it is a perennial crop grown on a large permanent estate or a short-season crop grown in smaller plots, then pick the option that fits all three.",
-      "lane": "claude-sonnet"
+      "notes": "",
+      "fix": "",
+      "lane": "codex"
     },
     "30": {
       "q_number": 30,
@@ -189,16 +222,19 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "31": {
       "q_number": 31,
-      "verdict": "pass",
-      "failed_checks": [],
-      "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "\"a nitrogen-fixing tree must be a legume\" is a false absolute. Non-leguminous trees such as Casuarina can also fix nitrogen through associations with Frankia bacteria. [USDA Forest Service](https://research.fs.usda.gov/silvics/casuarina)",
+      "fix": "Replace the How to tell line with: How to tell: among these options, Leucaena is the nitrogen-fixing legume, and, like Gliricidia, it is a standard syllabus example of a tree used in alley cropping.",
+      "lane": "codex"
     },
     "32": {
       "q_number": 32,
@@ -207,28 +243,37 @@
         2
       ],
       "fact_error": false,
-      "notes": "Hint 3 states the answer's defining trait before asking the question it is meant to help the student answer. Quote: \"Allamanda has woody, bushy stems with bright yellow trumpet flowers and is often used as a hedge. Is it tall with one trunk, or low and bushy?\" Having already called the stems \"bushy\", the follow-up question \"low and bushy?\" is answered by the hint's own wording, so the student need not think through the tree-versus-shrub distinction at all.",
-      "fix": "Allamanda has bright yellow trumpet-shaped flowers and woody stems, and is often trained as a hedge. Does it grow from one tall main trunk, or from several stems close to the ground?",
-      "lane": "claude-sonnet"
+      "notes": "Hint 3 says, \"which form fits a bushy flowering plant used in hedges and garden borders?\" The word \"bushy\" effectively supplies \"shrub\", so the student can answer without recalling anything about Allamanda.",
+      "fix": "Replace hint 3 with: Grasses have narrow leaves with parallel veins, which Allamanda does not have. Between a tree and a shrub, compare Allamanda's usual height and stem arrangement with the features of those two forms.",
+      "lane": "codex"
     },
     "33": {
       "q_number": 33,
-      "verdict": "fail",
-      "failed_checks": [
-        2
-      ],
-      "fact_error": false,
-      "notes": "Hint 2 eliminates all three wrong options at once by naming their shared viral cause, leaving only the correct option untouched, and hint 3 then simply points at what remains. Quote hint 2: \"Mosaic, swollen shoot and leaf curl are signs of disease caused by viruses, which fungicides cannot kill.\" Since A, B and C are cassava mosaic, swollen shoot and leaf curl respectively, this rules out three of the four options in one line. Quote hint 3: \"Once you know three of the diseases share one cause, check the fourth: is it caused by a fungus?\" This directs the student straight to option D without weighing it against any remaining candidate, so the student can answer without thinking.",
-      "fix": "hint2: Cassava mosaic and cotton leaf curl are caused by viruses, which fungicides cannot kill. hint3: Between swollen shoot of cocoa and sigatoka of banana, one is viral and one is fungal. Which of the two is caused by a fungus?",
-      "lane": "claude-sonnet"
-    },
-    "35": {
-      "q_number": 35,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
       "notes": "",
       "fix": "",
+      "lane": "codex"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "Keteku is misdescribed as a Muturu cross. Keteku is a cross between N'Dama and zebu (White Fulani) cattle, not Muturu and zebu; Muturu is a separate, small humpless breed with no part in Keteku's ancestry. The error appears twice: hint3 says 'Between Keteku, a Muturu cross, and White Fulani, which breed is known for giving milk as well as beef?' and the solution says 'B. keteku: a cross between Muturu and zebu cattle, kept mainly for beef and work.'",
+      "fix": "hint3: \"Red Bororo, the large deep-red zebu, is kept mainly for beef. Between Keteku, an N'Dama cross, and White Fulani, which breed is known for giving milk as well as beef?\"\nsolution distractor B: \"B. keteku: a cross between N'Dama and zebu (White Fulani) cattle, kept mainly for beef and work.\"",
       "lane": "claude-sonnet"
     },
     "36": {
@@ -269,22 +314,22 @@
     },
     "40": {
       "q_number": 40,
-      "verdict": "fail",
-      "failed_checks": [
-        2
-      ],
-      "fact_error": false,
-      "notes": "Hint 3 resolves both remaining options for the student instead of leaving the final step to them: \"Heat stress also lowers fertility. Of the options left, which outcome follows from eating less?\" The first sentence explains away option C (litter size falls because of fertility, not feed), and the second sentence points directly at option D by tying it to 'eating less', which is a near-automatic link (less feed intake to less milk) that needs no real thought once C has been explained away. A student can pick D straight from this hint without weighing the two options.",
-      "fix": "hint3: Heat stress affects an animal's reproduction as well as its feed intake. Of the two options left, think about which one changes from day to day with how much the animal eats right now, and which one is decided much earlier, around mating and pregnancy.",
-      "lane": "claude-sonnet"
-    },
-    "41": {
-      "q_number": 41,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
       "notes": "",
       "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 does the calculation for the student instead of bringing them to the final step. It states: \"You should have 180 m² of floor. Now divide it by 0.36 m² per bird and match your result to the options.\" This hands over both the area (which is itself distractor C) and the exact operation to perform, leaving the student nothing to work out but a single division. A student who reads hint 3 alone, without thinking about how to set up the problem, can reach the answer.",
+      "fix": "hint3: \"Find the total floor area of the house first, then divide it by the 0.36 m² each bird needs. Which option is closest to your answer?\"",
       "lane": "claude-sonnet"
     },
     "42": {
@@ -294,16 +339,19 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "43": {
       "q_number": 43,
-      "verdict": "pass",
-      "failed_checks": [],
-      "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "\"Wool is the soft hair, called the fleece, that grows on one kind of farm animal\" and \"Only sheep grow wool\" state the syllabus convention as a universal fact. Wool-like fibres described as wool can also come from certain goats and rabbits. The distractor explanation \"a male goat or rabbit, which gives hair or fur rather than wool\" repeats the overgeneralisation.",
+      "fix": "Replace hint 2 with: \"Wool is fleece removed by shearing. In this syllabus, identify the farm animal associated with that fleece.\"\n\nReplace the principle with: \"At WASSCE syllabus depth, wool is treated as the fleece of sheep. A ram is a male sheep, so wool can be obtained from a ram.\"\n\nReplace the final sentence under How to tell with: \"Among these options, ram is the name for the male sheep.\"\n\nReplace the explanation for B with: \"B. buck: a buck is a male goat or rabbit; in this syllabus, wool is associated with sheep's fleece.\"",
+      "lane": "codex"
     },
     "44": {
       "q_number": 44,
@@ -312,7 +360,7 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "45": {
       "q_number": 45,
@@ -321,7 +369,7 @@
       "fact_error": false,
       "notes": "",
       "fix": "",
-      "lane": "claude-sonnet"
+      "lane": "codex"
     },
     "46": {
       "q_number": 46,
@@ -330,70 +378,77 @@
         2
       ],
       "fact_error": false,
-      "notes": "hint2 names and rules out all three wrong options at once: 'Maize, yam and plantain are staple foods that West African families eat every day. Most of the harvest is used within the country.' With three of the four options eliminated by name, cocoa is already the only option left before the student even reaches hint3. hint3 then removes any need to think at all: 'Which crop on the list is grown mainly so its beans can be shipped abroad to make chocolate?' 'beans' and 'chocolate' identify cocoa uniquely and directly, so a student can answer from this clause alone without engaging with the food-crop-versus-cash-crop reasoning the hint is supposed to build. This fails the hint3 test: a student reading hint3 alone, without thinking, can answer.",
-      "fix": "hint2: Maize and yam are staple foods eaten daily in most West African homes, with little left over to sell abroad.\nhint3: Between the two crops left, think about which one is dried, packed and shipped abroad in large quantities, and which one is usually eaten fresh by the family soon after harvest.",
-      "lane": "claude-sonnet"
+      "notes": "Hint 2 says, \"Maize, yam and plantain are staple foods, mostly eaten in the countries where they are grown.\" This eliminates A, C and D by name, leaving B as the answer before Hint 3. The hint sequence therefore hands over the choice indirectly.",
+      "fix": "Replace hint 2 with: \"Major export crops are cash crops produced mainly for foreign markets, while staple food crops are consumed mainly within the producing country.\"",
+      "lane": "codex"
     },
     "47": {
       "q_number": 47,
-      "verdict": "pass",
+      "verdict": "fail",
       "failed_checks": [],
       "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
+      "notes": "The non-numbered difficulty rule fails. \"difficulty: easy\" is inconsistent with the standard because the question requires applying the cost-per-unit formula and carrying out a division, rather than recalling one fact.",
+      "fix": "difficulty: medium",
+      "lane": "codex"
     },
     "48": {
       "q_number": 48,
-      "verdict": "pass",
-      "failed_checks": [],
+      "verdict": "fail",
+      "failed_checks": [
+        6
+      ],
       "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
+      "notes": "The working uses the ASCII-style fraction \"1/100 × 500\" instead of Unicode mathematical notation. The non-numbered difficulty rule also fails: \"difficulty: easy\" should be medium because the student must calculate a percentage and subtract it from the total.",
+      "fix": "difficulty: medium\n\nReplace the working line with: \"Family use = 1% of 500 = 1 ÷ 100 × 500 = 5 trays\"",
+      "lane": "codex"
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "fail",
+      "failed_checks": [
+        11
+      ],
+      "fact_error": true,
+      "notes": "Hint 2 says, \"In farm accounts, produce eaten by the farmer's family is also counted as income, valued at the full cost of each tray.\" Recording home consumption is correct, but valuation at full cost per tray is not a universal farm-accounting rule. The solution properly limits that method with \"In this question\", but the hint does not.",
+      "fix": "Replace hint 2 with: \"Total cost includes both the production cost and the marketing cost. Produce eaten by the farmer's family is also included when finding the farm's total income. For this question, value those trays at the total cost per tray.\"",
+      "lane": "codex"
     },
     "50": {
       "q_number": 50,
-      "verdict": "pass",
-      "failed_checks": [],
-      "fact_error": false,
-      "notes": "",
-      "fix": "",
-      "lane": "claude-sonnet"
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The claims \"Advertisement raises demand\" and \"advertisement tells buyers about the produce and increases demand\" are stated as automatic effects, although advertising can increase demand but does not always do so. The line \"whose main purpose is to raise demand and so the price\" also incorrectly implies that increased demand necessarily raises the price. Similarly, \"Processing turns raw produce into a form that keeps longer and sells for more\" is too absolute because not every form of processing extends shelf life or guarantees a higher selling price. The answer, subtopic, distractor coverage, hint progression, exam tip and plain-text formatting are otherwise suitable.",
+      "fix": "Replace hint 3 with: \"Advertisement can attract more buyers, grading separates produce by quality, and processing can add value. Decide whether each function could help a farmer obtain a better price.\"\n\nReplace the How to tell paragraph with: \"How to tell: advertisement can make more buyers aware of the produce and may increase demand. Processing can add value by turning raw produce into a more useful or longer-lasting form, such as cassava into garri. Grading sorts produce into quality classes, allowing higher-quality produce to command a better price. Therefore, each of the three could help the farmer get a better price.\"\n\nReplace option C's explanation with: \"C. II and III: it leaves out advertisement, which can attract more buyers and strengthen the farmer's ability to ask for a better price.\"",
+      "lane": "codex"
     }
   },
   "failures": [],
   "lanes": [
     {
-      "family": "claude",
-      "model": "sonnet",
-      "cost_usd": 0.4993,
-      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
+    },
+    {
+      "family": "codex"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.5333,
-      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
-    },
-    {
-      "family": "claude",
-      "model": "sonnet",
-      "cost_usd": 0.371,
-      "codex_error": "TimeoutExpired: Command '['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only', '--output-schema', 'C:\\\\Users\\\\orezi\\\\dev\\\\qodeup\\\\sabiprep\\\\content-pipeline\\\\schemas\\\\review-batch.schema.json'"
-    },
-    {
-      "family": "claude",
-      "model": "sonnet",
-      "cost_usd": 0.2411,
-      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
-    },
-    {
-      "family": "claude",
-      "model": "sonnet",
-      "cost_usd": 0.3217,
-      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+      "cost_usd": 0.3594,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) uberculate ... ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings"
     }
   ],
-  "fallback_cost_usd": 1.9664
+  "fallback_cost_usd": 0.3594
 }

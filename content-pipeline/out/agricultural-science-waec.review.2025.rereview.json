@@ -12,8 +12,17 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "4": {
-      "q_number": 4,
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -30,8 +39,8 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "18": {
-      "q_number": 18,
+    "12": {
+      "q_number": 12,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -41,6 +50,17 @@
     },
     "19": {
       "q_number": 19,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 fails the standard's own test: \"if a student can answer by reading hint 3 alone, without thinking, it is too strong.\" The final sentence of hint 3, \"Between the two options left, which one adds a chemical to the field and which one avoids it?\", answers itself: the stem asks what could PREVENT pollution, and \"avoids\" a chemical is transparently the preventive answer, so the student maps straight to organic farming from the word \"avoids\" without weighing any agricultural fact. This is compounded by hint 2, which already names the pollution mechanism of every wrong option (\"Excess fertilizer and herbicide can wash into rivers and ponds, and animal waste close to water pollutes it\"), so by hint 3 no independent thought is required at all.",
+      "fix": "A poultry farm beside a river lets droppings wash straight into the water, and inorganic fertilizer can run off into streams. Between spraying herbicide and practicing organic farming, recall which one still relies on synthetic chemicals and which one manages weeds, pests and soil fertility using only natural methods.",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -48,8 +68,8 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "20": {
-      "q_number": 20,
+    "23": {
+      "q_number": 23,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -75,8 +95,8 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "27": {
-      "q_number": 27,
+    "31": {
+      "q_number": 31,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -93,8 +113,8 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "33": {
-      "q_number": 33,
+    "35": {
+      "q_number": 35,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -102,8 +122,17 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "40": {
-      "q_number": 40,
+    "41": {
+      "q_number": 41,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
@@ -120,13 +149,33 @@
       "fix": "",
       "lane": "claude-sonnet"
     },
-    "47": {
-      "q_number": 47,
+    "48": {
+      "q_number": 48,
       "verdict": "pass",
       "failed_checks": [],
       "fact_error": false,
       "notes": "",
       "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 fails the hint-3 test: a student can answer without thinking. Hint 2 already gives the decisive principle (a buyer pays more when produce is wanted by many, of known good quality, or turned into a more useful form) and asks the student to check each of the three against it. Hint 3 then does that matching FOR the student instead of leaving it to them: 'Advertisement can raise demand, grading sorts produce by quality, and processing can add value.' Each clause states outright that the corresponding roman numeral satisfies the price-raising test from hint 2, so all a student has to do is notice that all three were just confirmed and pick D. The closing line 'Decide whether each one on its own could help a farmer ask a better price' does not restore genuine ambiguity, because the deciding facts were already handed over in the same sentence.",
+      "fix": "Test I, II and III one at a time against the idea in hint 2: does telling more buyers about the produce fit, does sorting it into quality grades fit, does turning it into another product fit? Combine only the ones you find actually fit.",
       "lane": "claude-sonnet"
     }
   },
@@ -135,15 +184,21 @@
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.2969,
+      "cost_usd": 0.2584,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.4001,
+      "cost_usd": 0.2825,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.4993,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     }
   ],
-  "fallback_cost_usd": 0.697
+  "fallback_cost_usd": 1.0402
 }

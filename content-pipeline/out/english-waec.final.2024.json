@@ -2,8 +2,7 @@
   "year": 2024,
   "paper": 1,
   "counts": {
-    "keyed": 78,
-    "ambiguous": 1,
+    "keyed": 79,
     "defective": 1
   },
   "answers": {
@@ -29,7 +28,7 @@
       "q_number": 4,
       "state": "keyed",
       "answer": "D",
-      "evidence": "third review, sided with both"
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
     },
     "5": {
       "q_number": 5,
@@ -65,7 +64,7 @@
       "q_number": 10,
       "state": "keyed",
       "answer": "B",
-      "evidence": "third review, sided with both"
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
     },
     "11": {
       "q_number": 11,
@@ -129,9 +128,9 @@
     },
     "21": {
       "q_number": 21,
-      "state": "ambiguous",
-      "answer": null,
-      "reason": "To jangle someone's nerves is glossed in standard dictionaries both as to irritate someone (Merriam-Webster: to excite to tense irritation) and as to make someone nervous or upset (Cambridge, Collins). The first gloss points to annoy (B) and the second to disturb (C), and both are fair interpretations of the idiom. Codex's case that disturb is too general has force, but so does the case that annoy misses the unsettling, nervous element. Harass and tease wrongly add deliberate, repeated provocation. A well-prepared student cannot tell whether the setter wanted B or C, so no key should be forced."
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
     },
     "22": {
       "q_number": 22,
@@ -161,7 +160,7 @@
       "q_number": 26,
       "state": "defective",
       "answer": null,
-      "reason": "This item sits in the interpretation section, where each sentence contains an expression whose meaning must be chosen, but the stem reads 'That nonchalant attitude of Jonah's attitude', with 'attitude' repeated and the expression to be interpreted lost. Codex's argument that indifference tends to irritate an observer is a guess about the reader's reaction, not an interpretation of anything in the sentence, and baffles is equally supportable on that basis. The original probably said something like 'gets on my nerves', which would give B, but that cannot be recovered from the printed text. The question as given cannot be answered on principle."
+      "reason": "This item belongs to the interpretation section, where a sentence containing an idiom is followed by 'This means that...', but the stem as extracted has collapsed the two into 'That nonchalant attitude of Jonah's attitude', so the expression being interpreted is missing. Codex's case for irritates is a guess about how people generally react to nonchalance, not an interpretation of any given sentence. Baffles, amazes and amuses are equally possible reactions without the missing idiom. The item cannot be answered from what is on the page and needs the original sentence restored."
     },
     "27": {
       "q_number": 27,
@@ -203,7 +202,7 @@
       "q_number": 33,
       "state": "keyed",
       "answer": "D",
-      "evidence": "third review, sided with both"
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
     },
     "34": {
       "q_number": 34,
@@ -329,7 +328,7 @@
       "q_number": 54,
       "state": "keyed",
       "answer": "B",
-      "evidence": "third review, sided with both"
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
     },
     "55": {
       "q_number": 55,
@@ -407,7 +406,7 @@
       "q_number": 67,
       "state": "keyed",
       "answer": "B",
-      "evidence": "third review, sided with both"
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
     },
     "68": {
       "q_number": 68,

@@ -4,7 +4,7 @@
   "gate": {
     "status": "awaiting",
     "unit": "2025",
-    "at": "2026-09-29T13:16:24",
+    "at": "2026-09-29T16:25:47",
     "note": ""
   },
   "units": {
@@ -13,128 +13,128 @@
       "stages": {
         "derive": {
           "status": "done",
-          "at": "2026-09-29T12:30:17",
+          "at": "2026-09-29T15:42:52",
           "summary": "50/50 codex, 50/50 claude",
-          "seconds": 767,
+          "seconds": 418,
           "cost_usd": 1.01
         },
         "compare": {
           "status": "done",
-          "at": "2026-09-29T12:30:17",
-          "summary": "agreed-soft 10, disagree 2, unsolvable 12, verified 26",
+          "at": "2026-09-29T15:42:52",
+          "summary": "agreed-soft 9, disagree 2, unsolvable 9, verified 30",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "third": {
           "status": "done",
-          "at": "2026-09-29T12:31:50",
-          "summary": "13 ruled: ambiguous 2, key 11",
+          "at": "2026-09-29T15:44:25",
+          "summary": "12 ruled: ambiguous 1, key 11",
           "seconds": 92,
-          "cost_usd": 0.36
+          "cost_usd": 0.32
         },
         "settle": {
           "status": "done",
-          "at": "2026-09-29T12:31:50",
-          "summary": "ambiguous 2, defective 11, keyed 37",
-          "seconds": 0,
+          "at": "2026-09-29T15:44:26",
+          "summary": "ambiguous 1, defective 8, keyed 41",
+          "seconds": 1,
           "cost_usd": 0.0
         },
         "classify": {
           "status": "done",
-          "at": "2026-09-29T12:34:07",
-          "summary": "clear 37; 0 taxonomy findings",
+          "at": "2026-09-29T15:46:43",
+          "summary": "clear 40, overlap 1; 1 taxonomy findings",
           "seconds": 136,
-          "cost_usd": 0.53
+          "cost_usd": 0.49
         },
         "teach": {
           "status": "done",
-          "at": "2026-09-29T12:37:46",
-          "summary": "37 written in 2 part(s); answer challenges none; style scan: REVIEW (5 across 5 location(s))",
-          "seconds": 218,
-          "cost_usd": 1.22
+          "at": "2026-09-29T15:54:31",
+          "summary": "41 written in 2 part(s); answer challenges none; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 468,
+          "cost_usd": 2.35
         },
         "review": {
           "status": "done",
-          "at": "2026-09-29T13:04:36",
-          "summary": "37 reviewed, 12 fail, fact errors none",
-          "seconds": 1610,
-          "cost_usd": 1.97
+          "at": "2026-09-29T16:09:17",
+          "summary": "41 reviewed, 20 fail, fact errors [1, 2, 3, 9, 12, 19, 20, 23, 25, 26, 31, 35, 43, 49, 50]",
+          "seconds": 885,
+          "cost_usd": 0.36
         },
         "fix": {
           "status": "done",
-          "at": "2026-09-29T13:11:04",
-          "summary": "15 accepted, 1 rejected; style scan: REVIEW (6 across 6 location(s))",
-          "seconds": 388,
-          "cost_usd": 2.17
+          "at": "2026-09-29T16:15:58",
+          "summary": "19 accepted, 5 rejected; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 401,
+          "cost_usd": 2.08
         },
         "recheck": {
           "status": "done",
-          "at": "2026-09-29T13:16:15",
-          "summary": "14 changed items re-reviewed, 0 still fail ",
-          "seconds": 310,
-          "cost_usd": 0.7
+          "at": "2026-09-29T16:24:48",
+          "summary": "19 changed items re-reviewed, 2 still fail [19, 50]",
+          "seconds": 529,
+          "cost_usd": 1.04
         },
         "final-fix": {
           "status": "done",
-          "at": "2026-09-29T13:16:15",
-          "summary": "every changed item passed",
-          "seconds": 0,
-          "cost_usd": 0.0
+          "at": "2026-09-29T16:25:45",
+          "summary": "2 ruled on the last pass, held none; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 56,
+          "cost_usd": 0.31
         },
         "trace": {
           "status": "done",
-          "at": "2026-09-29T13:16:15",
+          "at": "2026-09-29T16:25:45",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "alt": {
           "status": "done",
-          "at": "2026-09-29T13:16:15",
+          "at": "2026-09-29T16:25:45",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "author": {
           "status": "done",
-          "at": "2026-09-29T13:16:15",
+          "at": "2026-09-29T16:25:45",
           "summary": "nothing to author",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "diagram-check": {
           "status": "done",
-          "at": "2026-09-29T13:16:15",
+          "at": "2026-09-29T16:25:45",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "diagram-repair": {
           "status": "done",
-          "at": "2026-09-29T13:16:15",
+          "at": "2026-09-29T16:25:45",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "diagram-recheck": {
           "status": "done",
-          "at": "2026-09-29T13:16:15",
+          "at": "2026-09-29T16:25:45",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "export": {
           "status": "done",
-          "at": "2026-09-29T13:16:22",
-          "summary": "PREVIEW (no image base set): agricultural-science-waec.2025.PREVIEW.csv, 13 held, 1 pre-flight flags; style scan: REVIEW (8 across 8 location(s))",
-          "seconds": 7,
+          "at": "2026-09-29T16:25:47",
+          "summary": "PREVIEW (no image base set): agricultural-science-waec.2025.PREVIEW.csv, 9 held, 1 pre-flight flags; style scan: REVIEW (8 across 8 location(s))",
+          "seconds": 1,
           "cost_usd": 0.0
         },
         "preview": {
           "status": "done",
-          "at": "2026-09-29T13:16:24",
+          "at": "2026-09-29T16:25:47",
           "summary": "agricultural-science-waec.2025.preview.html",
-          "seconds": 1,
+          "seconds": 0,
           "cost_usd": 0.0
         }
       },
@@ -143,67 +143,47 @@
         {
           "q_number": 5,
           "why": "defective",
-          "detail": "The question references 'the diagram below' illustrating a brooding equipment, but no image was atta"
+          "detail": "This question depends on a diagram of brooding equipment described in the shared stem, but no image "
         },
         {
           "q_number": 6,
           "why": "defective",
-          "detail": "The question depends on identifying the illustrated brooding equipment from 'the diagram below', but"
-        },
-        {
-          "q_number": 11,
-          "why": "defective",
-          "detail": "Missing data: mass of empty dish and mass of dish + fresh soil are not given, so the mass of fresh s"
-        },
-        {
-          "q_number": 12,
-          "why": "defective",
-          "detail": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute "
-        },
-        {
-          "q_number": 13,
-          "why": "defective",
-          "detail": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute "
+          "detail": "This question depends on identifying the brooding equipment shown in a diagram referenced by the sha"
         },
         {
           "q_number": 15,
           "why": "defective",
-          "detail": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram "
+          "detail": "The diagram illustrating the soil analysis tool is missing; no image was attached for questions 15-1"
         },
         {
           "q_number": 16,
           "why": "defective",
-          "detail": "No diagram/image was attached for questions 15 and 16, though the stem refers to one. | The diagram "
+          "detail": "The diagram illustrating the soil analysis tool is missing; no image was attached for questions 15-1"
+        },
+        {
+          "q_number": 18,
+          "why": "ambiguous",
+          "detail": "The options follow a clear pattern: B is the textbook definition of surface irrigation, C of sub-sur"
         },
         {
           "q_number": 21,
           "why": "defective",
-          "detail": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled"
+          "detail": "The referenced crop diagram (labelling parts I-III) was not attached, so part II cannot be identifie"
         },
         {
           "q_number": 22,
           "why": "defective",
-          "detail": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided. | The labelled"
+          "detail": "The referenced crop diagram (labelling parts I-III) was not attached, so part III cannot be identifi"
         },
         {
           "q_number": 28,
           "why": "defective",
-          "detail": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | T"
+          "detail": "The farmland survey diagram was not attached, so the shape and relationship between AB, DC and EF ca"
         },
         {
           "q_number": 29,
           "why": "defective",
-          "detail": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided. | T"
-        },
-        {
-          "q_number": 34,
-          "why": "ambiguous",
-          "detail": "Waterleaf produces small dehiscent capsules that split to release many tiny seeds, and standard Nige"
-        },
-        {
-          "q_number": 49,
-          "why": "ambiguous",
-          "detail": "The four options form a two-by-two grid: A and C differ by the ₦30,000 marketing cost, and B and D a"
+          "detail": "Depends on the farmland area from question 28, which is unsolvable due to the missing survey diagram"
         }
       ]
     }

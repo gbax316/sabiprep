@@ -2,137 +2,152 @@
   "slug": "english-waec",
   "subject": "English Language",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2024",
+    "at": "2026-09-29T16:35:21",
     "note": ""
   },
   "units": {
     "2024": {
-      "status": "failed",
+      "status": "done",
       "stages": {
         "derive": {
           "status": "done",
-          "at": "2026-09-29T14:05:37",
+          "at": "2026-09-29T15:45:50",
           "summary": "80/80 codex, 80/80 claude",
-          "seconds": 435,
-          "cost_usd": 1.35
+          "seconds": 596,
+          "cost_usd": 1.41
         },
         "compare": {
           "status": "done",
-          "at": "2026-09-29T14:05:37",
-          "summary": "agreed-soft 17, disagree 1, unsolvable 1, verified 61",
+          "at": "2026-09-29T15:45:51",
+          "summary": "agreed-soft 13, unsolvable 1, verified 66",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "third": {
           "status": "done",
-          "at": "2026-09-29T14:06:56",
-          "summary": "19 ruled: ambiguous 1, defective 1, key 17",
-          "seconds": 78,
-          "cost_usd": 0.32
+          "at": "2026-09-29T15:47:15",
+          "summary": "14 ruled: defective 1, key 13",
+          "seconds": 83,
+          "cost_usd": 0.29
         },
         "settle": {
           "status": "done",
-          "at": "2026-09-29T14:06:57",
-          "summary": "ambiguous 1, defective 1, keyed 78",
+          "at": "2026-09-29T15:47:15",
+          "summary": "defective 1, keyed 79",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "classify": {
           "status": "done",
-          "at": "2026-09-29T14:09:13",
-          "summary": "clear 77, overlap 1; 1 taxonomy findings",
-          "seconds": 136,
-          "cost_usd": 0.42
+          "at": "2026-09-29T15:49:57",
+          "summary": "clear 78, overlap 1; 1 taxonomy findings",
+          "seconds": 161,
+          "cost_usd": 0.5
         },
         "teach": {
           "status": "done",
-          "at": "2026-09-29T14:15:40",
-          "summary": "78 written in 4 part(s); answer challenges none; style scan: REVIEW (16 across 9 location(s))",
-          "seconds": 386,
-          "cost_usd": 4.59
+          "at": "2026-09-29T15:57:11",
+          "summary": "79 written in 4 part(s); answer challenges none; style scan: REVIEW (25 across 9 location(s))",
+          "seconds": 434,
+          "cost_usd": 4.05
         },
         "review": {
           "status": "done",
-          "at": "2026-09-29T14:59:12",
-          "summary": "78 reviewed, 9 fail, fact errors [51]",
-          "seconds": 2612,
-          "cost_usd": 3.35
+          "at": "2026-09-29T16:16:25",
+          "summary": "79 reviewed, 26 fail, fact errors [3, 9, 12, 14, 15, 16, 17, 20, 25, 29, 31, 32, 37, 38, 39, 40, 41, 43, 45, 48]",
+          "seconds": 1153,
+          "cost_usd": 1.65
         },
         "fix": {
           "status": "done",
-          "at": "2026-09-29T15:06:54",
-          "summary": "12 accepted, 1 rejected; style scan: REVIEW (16 across 9 location(s))",
-          "seconds": 461,
+          "at": "2026-09-29T16:25:47",
+          "summary": "26 accepted, 2 rejected; style scan: REVIEW (25 across 9 location(s))",
+          "seconds": 561,
           "cost_usd": 2.58
         },
         "recheck": {
           "status": "done",
-          "at": "2026-09-29T15:18:43",
-          "summary": "11 changed items re-reviewed, 1 still fail [70]",
-          "seconds": 708,
-          "cost_usd": 0.53
+          "at": "2026-09-29T16:34:04",
+          "summary": "26 changed items re-reviewed, 4 still fail [16, 37, 43, 67]",
+          "seconds": 497,
+          "cost_usd": 1.33
         },
         "final-fix": {
           "status": "done",
-          "at": "2026-09-29T15:19:40",
-          "summary": "1 ruled on the last pass, held none; style scan: REVIEW (16 across 9 location(s))",
-          "seconds": 57,
-          "cost_usd": 0.37
+          "at": "2026-09-29T16:35:19",
+          "summary": "4 ruled on the last pass, held none; style scan: REVIEW (25 across 9 location(s))",
+          "seconds": 74,
+          "cost_usd": 0.5
         },
         "trace": {
           "status": "done",
-          "at": "2026-09-29T15:19:40",
+          "at": "2026-09-29T16:35:19",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "alt": {
           "status": "done",
-          "at": "2026-09-29T15:19:40",
+          "at": "2026-09-29T16:35:19",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "author": {
           "status": "done",
-          "at": "2026-09-29T15:19:40",
+          "at": "2026-09-29T16:35:19",
           "summary": "nothing to author",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "diagram-check": {
           "status": "done",
-          "at": "2026-09-29T15:19:40",
+          "at": "2026-09-29T16:35:19",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "diagram-repair": {
           "status": "done",
-          "at": "2026-09-29T15:19:41",
+          "at": "2026-09-29T16:35:19",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "diagram-recheck": {
           "status": "done",
-          "at": "2026-09-29T15:19:41",
+          "at": "2026-09-29T16:35:19",
           "summary": "no diagrams",
           "seconds": 0,
           "cost_usd": 0.0
         },
         "export": {
-          "status": "failed",
-          "at": "2026-09-29T15:22:09",
-          "summary": "the CSV fails an import rule:  missing question_text\n    row 75 (2024 ''): duplicate question text of row 74\n    row 76 (2024 ''): missing question_text\n    row 76 (2024 ''): duplicate question text of row 75\n    row 77 (2024 ''): missing question_text\n    row 77 (2024 ''): duplicate question text of row 76\n    row 78 (2024 ''): missing question_text\n    row 78 (2024 ''): duplicate question text of row 77\n    row 79 (2024 ''): missing question_text\n    row 79 (2024 ''): duplicate question text of row 78\n  gaps the import misses: 1 FLAG\n    row 66 (2024 'Did you notice that the ...... had been '): two options are identical\n",
+          "status": "done",
+          "at": "2026-09-29T16:35:21",
+          "summary": "PREVIEW (no image base set): english-waec.2024.PREVIEW.csv, 1 held, 1 pre-flight flags; style scan: REVIEW (407 across 124 location(s))",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T16:35:21",
+          "summary": "english-waec.2024.preview.html",
+          "seconds": 0,
           "cost_usd": 0.0
         }
       },
-      "error": "export: the CSV fails an import rule:  missing question_text\n    row 75 (2024 ''): duplicate question text of row 74\n    row 76 (2024 ''): missing question_text\n    row 76 (2024 ''): duplicate question text of row 75\n    row 77 (2024 ''): missing question_text\n    row 77 (2024 ''): duplicate question text of row 76\n    row 78 (2024 ''): missing question_text\n    row 78 (2024 ''): duplicate question text of row 77\n    row 79 (2024 ''): missing question_text\n    row 79 (2024 ''): duplicate question text of row 78\n  gaps the import misses: 1 FLAG\n    row 66 (2024 'Did you notice that the ...... had been '): two options are identical\n"
+      "error": "",
+      "held": [
+        {
+          "q_number": 26,
+          "why": "defective",
+          "detail": "This item belongs to the interpretation section, where a sentence containing an idiom is followed by"
+        }
+      ]
     }
   },
-  "cost_usd": 24.83,
+  "cost_usd": 23.63,
   "taxonomy_cost_usd": 11.32
 }

@@ -1,0 +1,310 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "keyed": 47,
+    "defective": 3
+  },
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "2": {
+      "q_number": 2,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "3": {
+      "q_number": 3,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "4": {
+      "q_number": 4,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "5": {
+      "q_number": 5,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "6": {
+      "q_number": 6,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "7": {
+      "q_number": 7,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "8": {
+      "q_number": 8,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "9": {
+      "q_number": 9,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "10": {
+      "q_number": 10,
+      "state": "defective",
+      "answer": null,
+      "reason": "Missing diagram and missing answer options (A-D) for this question; the source material provides neither, so the question cannot be answered. | Options and diagrams are missing."
+    },
+    "11": {
+      "q_number": 11,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "12": {
+      "q_number": 12,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "third review, sided with both"
+    },
+    "13": {
+      "q_number": 13,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "14": {
+      "q_number": 14,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "15": {
+      "q_number": 15,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "16": {
+      "q_number": 16,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "17": {
+      "q_number": 17,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "18": {
+      "q_number": 18,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "19": {
+      "q_number": 19,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "20": {
+      "q_number": 20,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "21": {
+      "q_number": 21,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "22": {
+      "q_number": 22,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "23": {
+      "q_number": 23,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "24": {
+      "q_number": 24,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "25": {
+      "q_number": 25,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with both"
+    },
+    "26": {
+      "q_number": 26,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "27": {
+      "q_number": 27,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "28": {
+      "q_number": 28,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "29": {
+      "q_number": 29,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "30": {
+      "q_number": 30,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "31": {
+      "q_number": 31,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "32": {
+      "q_number": 32,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "33": {
+      "q_number": 33,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "34": {
+      "q_number": 34,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "35": {
+      "q_number": 35,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "36": {
+      "q_number": 36,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "37": {
+      "q_number": 37,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "38": {
+      "q_number": 38,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "39": {
+      "q_number": 39,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "40": {
+      "q_number": 40,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "41": {
+      "q_number": 41,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "42": {
+      "q_number": 42,
+      "state": "defective",
+      "answer": null,
+      "reason": "The physics is clear: R = 12.0 + (20.0 - 12.0) x 10/100 = 12.8 ohm. But options A and B are both printed as 12.8 ohm, so the correct value sits under two letters and one of them must be a transcription error of some other value. Keying A, as both derivers did, would mark a student who picks B wrong despite doing the calculation correctly, and we cannot tell which letter the setter keyed. The option text must be corrected from the source before any key is assigned."
+    },
+    "43": {
+      "q_number": 43,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "44": {
+      "q_number": 44,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "45": {
+      "q_number": 45,
+      "state": "defective",
+      "answer": null,
+      "reason": "Answer options A-D are missing from the source for this question. | Options are missing. Also, '90 ℃' should read 90 degrees (angle) and the charge unit is printed as C^-1."
+    },
+    "46": {
+      "q_number": 46,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "47": {
+      "q_number": 47,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "48": {
+      "q_number": 48,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "49": {
+      "q_number": 49,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "50": {
+      "q_number": 50,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    }
+  }
+}

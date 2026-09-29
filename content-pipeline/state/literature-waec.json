@@ -2,18 +2,162 @@
   "slug": "literature-waec",
   "subject": "Literature in English",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T16:30:09",
     "note": ""
   },
   "units": {
     "2025": {
-      "status": "running",
-      "stages": {},
-      "error": ""
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T15:40:18",
+          "summary": "50/50 codex, 50/50 claude",
+          "seconds": 1123,
+          "cost_usd": 1.03
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T15:40:19",
+          "summary": "agreed-soft 9, disagree 3, unsolvable 2, verified 36",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T15:41:48",
+          "summary": "12 ruled: ambiguous 1, key 11",
+          "seconds": 89,
+          "cost_usd": 0.29
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T15:41:50",
+          "summary": "ambiguous 1, defective 2, keyed 47",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T15:44:42",
+          "summary": "clear 47; 0 taxonomy findings",
+          "seconds": 172,
+          "cost_usd": 0.43
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T15:52:19",
+          "summary": "47 written in 2 part(s); answer challenges none; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 456,
+          "cost_usd": 3.15
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T16:09:14",
+          "summary": "47 reviewed, 14 fail, fact errors [4, 14, 17, 20, 21, 30, 33, 37, 38, 39, 43]",
+          "seconds": 1015,
+          "cost_usd": 0.52
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T16:18:14",
+          "summary": "19 accepted, 1 rejected; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 540,
+          "cost_usd": 2.82
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:25:53",
+          "summary": "13 changed items re-reviewed, 2 still fail [5, 33]",
+          "seconds": 458,
+          "cost_usd": 0.79
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T16:27:22",
+          "summary": "2 ruled on the last pass, held none; style scan: REVIEW (4 across 4 location(s))",
+          "seconds": 89,
+          "cost_usd": 0.41
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T16:27:22",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T16:27:22",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T16:27:22",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T16:27:22",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T16:27:22",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:27:22",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T16:30:09",
+          "summary": "PREVIEW (no image base set): literature-waec.2025.PREVIEW.csv, 3 held, 5 pre-flight flags; style scan: REVIEW (39 across 18 location(s))",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T16:30:09",
+          "summary": "literature-waec.2025.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 15,
+          "why": "ambiguous",
+          "detail": "The 'as ... as' frame is the marker WAEC students are taught to read as simile, so D is what many se"
+        },
+        {
+          "q_number": 18,
+          "why": "defective",
+          "detail": "The extract for questions 18 and 19 is referenced ('Read the extract below') but the actual text was"
+        },
+        {
+          "q_number": 19,
+          "why": "defective",
+          "detail": "The extract for questions 18 and 19 is referenced ('Read the extract below') but the actual text was"
+        }
+      ]
     }
   },
-  "cost_usd": 8.28,
+  "cost_usd": 17.72,
   "taxonomy_cost_usd": 8.28
 }

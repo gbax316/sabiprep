@@ -2,12 +2,187 @@
   "slug": "mathematics-waec",
   "subject": "Mathematics",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T16:54:25",
     "note": ""
   },
-  "units": {},
-  "cost_usd": 12.38,
+  "units": {
+    "2025": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T16:04:00",
+          "summary": "50/50 codex, 50/50 claude",
+          "seconds": 232,
+          "cost_usd": 0.74
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T16:04:01",
+          "summary": "agreed-soft 3, unsolvable 10, verified 37",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T16:05:57",
+          "summary": "9 ruled: defective 4, key 5",
+          "seconds": 116,
+          "cost_usd": 0.47
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T16:05:57",
+          "summary": "defective 8, keyed 42",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T16:09:01",
+          "summary": "clear 41, overlap 1; 2 taxonomy findings",
+          "seconds": 183,
+          "cost_usd": 0.51
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T16:15:29",
+          "summary": "42 written in 2 part(s); answer challenges none; style scan: REVIEW (7 across 7 location(s))",
+          "seconds": 388,
+          "cost_usd": 2.17
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T16:29:47",
+          "summary": "42 reviewed, 1 fail, fact errors none",
+          "seconds": 857,
+          "cost_usd": 2.34
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T16:34:49",
+          "summary": "5 accepted, 5 rejected; style scan: REVIEW (7 across 7 location(s))",
+          "seconds": 302,
+          "cost_usd": 1.52
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:42:17",
+          "summary": "5 changed items re-reviewed, 1 still fail [37]",
+          "seconds": 447,
+          "cost_usd": 0.35
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T16:43:04",
+          "summary": "1 ruled on the last pass, held none; style scan: REVIEW (7 across 7 location(s))",
+          "seconds": 47,
+          "cost_usd": 0.34
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T16:43:23",
+          "summary": "7 diagrams, 7 traced now, 7 need authoring ['2025_Q30', '2025_Q37-38', '2025_Q40', '2025_Q41', '2025_Q43-44', '2025_Q46', '2025_Q47-48']",
+          "seconds": 18,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T16:46:16",
+          "summary": "7 written, 0 already had alt text",
+          "seconds": 173,
+          "cost_usd": 0.31
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T16:48:06",
+          "summary": "authored ['2025_Q30', '2025_Q37-38', '2025_Q40', '2025_Q41', '2025_Q43-44', '2025_Q46', '2025_Q47-48']",
+          "seconds": 109,
+          "cost_usd": 1.71
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T16:54:14",
+          "summary": "7 checked, failed none",
+          "seconds": 368,
+          "cost_usd": 0.7
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T16:54:14",
+          "summary": "nothing failed",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:54:15",
+          "summary": "re-checked none; not passing none",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T16:54:22",
+          "summary": "PREVIEW (no image base set): mathematics-waec.2025.PREVIEW.csv, 8 held, 0 pre-flight flags; style scan: REVIEW (21 across 12 location(s))",
+          "seconds": 7,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T16:54:25",
+          "summary": "mathematics-waec.2025.preview.html",
+          "seconds": 3,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 5,
+          "why": "defective",
+          "detail": "3 − 2x − x² = −(x² + 2x − 3) = −(x + 3)(x − 1) = (x + 3)(1 − x), which expands back to 3 − 3x + x − "
+        },
+        {
+          "q_number": 6,
+          "why": "defective",
+          "detail": "The question text is incomplete after “If P, = 1.8”. | The stem is truncated. The given condition (t"
+        },
+        {
+          "q_number": 10,
+          "why": "defective",
+          "detail": "The numerator is printed as '2⅓ + 5/2 1', which is not a readable number. Taking 5/2 at face value g"
+        },
+        {
+          "q_number": 21,
+          "why": "defective",
+          "detail": "The answer choices are missing. | The options are empty. The options printed under Q22 (10√2 cm … 25"
+        },
+        {
+          "q_number": 22,
+          "why": "defective",
+          "detail": "The options contradict the question and do not include the correct gradient, 7/5. | The options are "
+        },
+        {
+          "q_number": 30,
+          "why": "defective",
+          "detail": "The diagram confirms the right angle at Q, so PR is the hypotenuse and PR = QR/cos 60° = 2 ÷ ½ = 4 c"
+        },
+        {
+          "q_number": 34,
+          "why": "defective",
+          "detail": "Equal volumes alone do not fix the cylinder's height, because πR²h = ⅓πr²(24) has a solution for any"
+        },
+        {
+          "q_number": 42,
+          "why": "defective",
+          "detail": "Missing or garbled ladder question stem and diagram. | The stem is corrupted: the data for the ladde"
+        }
+      ]
+    }
+  },
+  "cost_usd": 23.54,
   "taxonomy_cost_usd": 12.38
 }

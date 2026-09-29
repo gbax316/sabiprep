@@ -1,0 +1,211 @@
+{
+  "entries": [
+    {
+      "q_number": 4,
+      "source": "codex",
+      "finding": "check 8: hint 1 lists vowel letters '(a, e, i, o, u)' as vowel sounds",
+      "decision": "accepted",
+      "reason": "Letters are not sounds; English has more vowel sounds than five letters.",
+      "change": "Hint 1: dropped the letter list; now 'vowel sounds and consonant sounds'.",
+      "round": 1
+    },
+    {
+      "q_number": 4,
+      "source": "codex",
+      "finding": "check 8/11: hint 3 'A pun plays on meaning rather than on sound' is false",
+      "decision": "accepted",
+      "reason": "A pun can rest on sound-alike words, so the absolute is wrong. The solution's D line had the same gap.",
+      "change": "Hint 3 rewritten; D line now 'a word with two meanings, or on words that sound alike, not on a repeated vowel sound'.",
+      "round": 1
+    },
+    {
+      "q_number": 4,
+      "source": "codex",
+      "finding": "check 2: hint 3 rules out D and points to the only option left",
+      "decision": "accepted",
+      "reason": "After hint 2 dropped A and C, hint 3 dropped D and said 'test the option left over', so the student did not have to choose.",
+      "change": "Hint 3 now narrows to two (pun and assonance) and leaves the choice to the student.",
+      "round": 1
+    },
+    {
+      "q_number": 5,
+      "source": "codex",
+      "finding": "check 2: hint 3 eliminates centre stage and names the remaining answer's features",
+      "decision": "accepted",
+      "reason": "Hint 3 removed the last distractor and asked 'which remaining term', which makes the choice for the student.",
+      "change": "Hint 3 now describes both remaining terms and asks which position the stem describes.",
+      "round": 1
+    },
+    {
+      "q_number": 14,
+      "source": "codex",
+      "finding": "check 8: hint 3 'Impunity means acting as if you will never be punished'",
+      "decision": "accepted",
+      "reason": "Impunity is freedom from punishment. The hint also disagreed with the solution's own C line.",
+      "change": "Hint 3: 'Impunity means freedom from punishment, and nothing in the lines suggests wrongdoing that could be punished.'",
+      "round": 1
+    },
+    {
+      "q_number": 17,
+      "source": "codex",
+      "finding": "check 11: 'Prose is divided into chapters, drama into acts and scenes, and poetry into stanzas' stated as universal",
+      "decision": "accepted",
+      "reason": "Short stories and essays have no chapters, and not every play or poem is divided this way. One qualifier fixes it.",
+      "change": "Principle scoped ('In the syllabus, each genre is taken as having its own main unit: longer prose works such as novels...'); How to tell and the exam tip now say 'novel'. The rest was not changed.",
+      "round": 1
+    },
+    {
+      "q_number": 20,
+      "source": "codex",
+      "finding": "check 8: 'fallacy' treated as pathetic fallacy ('read as pathetic fallacy'; hint 3 'Two options give nature a living quality')",
+      "decision": "accepted",
+      "reason": "On its own a fallacy is a mistake in reasoning, and hint 3's claim was false. The examiner likely meant pathetic fallacy as the lure, so both readings are covered briefly.",
+      "change": "Hint 3 and the C line now define fallacy as a mistake in reasoning, and still reject the pathetic-fallacy reading.",
+      "round": 1
+    },
+    {
+      "q_number": 21,
+      "source": "codex",
+      "finding": "check 8: moralistic defined as preaching 'about good manners and right conduct in general'",
+      "decision": "accepted",
+      "reason": "The definition was too narrow: moralistic means lecturing about right and wrong. Hint 3 had the same wording.",
+      "change": "C line and hint 3 now read 'lectures others about right and wrong'.",
+      "round": 1
+    },
+    {
+      "q_number": 30,
+      "source": "codex",
+      "finding": "check 8/11: 'He knows his longing will not be met' contradicts 'may not happen'",
+      "decision": "accepted",
+      "reason": "Self-contradiction. The poem shows doubt ('I know not'), not certainty.",
+      "change": "'He knows his longing will not be met' became 'He doubts that his longing will be met'.",
+      "round": 1
+    },
+    {
+      "q_number": 31,
+      "source": "codex",
+      "finding": "check 12: hints leak Q34 ('his own right', 'pleading his own case')",
+      "decision": "accepted",
+      "reason": "Hint 2's 'his own right' is nearly Q34's key 'defending his right', and hint 3's 'pleading his own case' points the same way.",
+      "change": "All three hints reworded around comparison with a rival ('as well derived as he'). They no longer mention a right, a case or a hearing. Codex's suggested hints were not used, because they dropped the rank clue the student needs.",
+      "round": 1
+    },
+    {
+      "q_number": 33,
+      "source": "codex",
+      "finding": "check 12: hint 2 'a claim is argued before a ruler' leaks Q34",
+      "decision": "accepted",
+      "reason": "'A claim is argued' is Q34's answer in other words.",
+      "change": "Hint 2 now points to 'my lord' and the father's complaint, and asks where the Duke would hear it.",
+      "round": 1
+    },
+    {
+      "q_number": 33,
+      "source": "codex",
+      "finding": "check 8/11: 'scenes of fairy magic belong to the wood' and similar absolutes; 'escape to the wood' imprecise",
+      "decision": "accepted",
+      "reason": "Theseus gives a ruling in the wood in Act 4, and the fairies bless the palace in Act 5. The lovers plan to meet in the wood and then flee Athens.",
+      "change": "Principle scoped to 'the opening scenes... most of the fairy magic'; How to tell now 'plan to meet in the wood and flee Athens'; C line 'where most of the fairy scenes... take place'.",
+      "round": 1
+    },
+    {
+      "q_number": 37,
+      "source": "codex",
+      "finding": "check 8: 'mistakes... put right in Acts 3 and 4'",
+      "decision": "accepted",
+      "reason": "Puck's mistake comes later in Act 2 Scene 2 and is put right in Act 3. Titania's charm was on purpose, not a mistake.",
+      "change": "D line: 'no mistake with the love-juice has been made yet; Puck charms the wrong Athenian later in this scene, and that is put right in Act 3.'",
+      "round": 1
+    },
+    {
+      "q_number": 38,
+      "source": "codex",
+      "finding": "check 11: hint 2 'Nobody who wants to forgive someone, or who needs their love, wishes this on them'",
+      "decision": "accepted",
+      "reason": "The absolute 'nobody' is unscoped, and 'needs their love' misreads option D, the need to love.",
+      "change": "Hint 2 ends 'A wish like this does not suggest forgiveness or an act of love.'",
+      "round": 1
+    },
+    {
+      "q_number": 39,
+      "source": "codex",
+      "finding": "check 8: 'uses the love-juice first on Titania... He then sends Puck'",
+      "decision": "accepted",
+      "reason": "Oberon orders Puck in Act 2 Scene 1, before he anoints Titania in Act 2 Scene 2. Titania is still the first person charmed, so hint 1 stands.",
+      "change": "Principle: 'Before that, he has told Puck to use it on an Athenian man, and Puck's mistake with it leads to the mix-ups...'",
+      "round": 1
+    },
+    {
+      "q_number": 43,
+      "source": "codex",
+      "finding": "check 8: 'Thisby' should be 'Thisbe'",
+      "decision": "rejected",
+      "reason": "'Thisby' is a standard spelling used in many editions, and it is the spelling on the paper, in both the option and the extract. It is a spelling variant, not an error.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 46,
+      "source": "codex",
+      "finding": "check 1: hint 1 defines Prologue ('the speech that opens a play and explains what is coming')",
+      "decision": "accepted",
+      "reason": "Hint 1 gave the answer's definition, which names the answer in disguise.",
+      "change": "Hint 1 now points to Quince describing the other players and asks what part he himself plays.",
+      "round": 1
+    },
+    {
+      "q_number": 46,
+      "source": "codex",
+      "finding": "check 2: hint 3 'the one who stands outside the story and speaks to the audience'",
+      "decision": "accepted",
+      "reason": "Accepted in part. With hint 2 having dropped all three distractors, hint 3 had nothing left to narrow. A definition-style hint 3 is allowed by the worked example, so the new one keeps that kind of cue but narrows to two. Codex's proposed hint 3 was not used because it describes Moonshine's lantern, which gives away Q50.",
+      "change": "Hint 2 now drops only Wall and Lion. Hint 3 narrows to one part inside the story and one outside it, and asks which Quince is taking.",
+      "round": 1
+    },
+    {
+      "q_number": 31,
+      "source": "check-12",
+      "finding": "new Q31 hints checked against Q32 to Q35",
+      "decision": "accepted",
+      "reason": "Checked that the rewritten hints do not name Demetrius, Athens, a right or Helena. 'Theseus, who is hearing the case' was cut to 'Theseus, the Duke' so it gives no hint of a trial to Q33 or Q34.",
+      "change": "Included in the Q31 hint rewrite above.",
+      "round": 1
+    },
+    {
+      "q_number": 46,
+      "source": "check-12",
+      "finding": "Codex's proposed Q46 hint 3 would leak Q50 (lantern, dog and bush of thorn = Moonshine)",
+      "decision": "accepted",
+      "reason": "Q50 asks which part the man with the lantern plays. The new Q46 hints never mention Moonshine or the lantern.",
+      "change": "Q46 hints written without Moonshine or the lantern.",
+      "round": 1
+    },
+    {
+      "q_number": 5,
+      "source": "codex",
+      "finding": "check 2: hint 3 ('linked with the front edge... Use the curtain and the audience as your landmarks') lets the student answer by matching the stem's wording",
+      "decision": "accepted",
+      "reason": "Calling one term 'the front edge' and pointing back to 'in front of the curtain' hands over the proscenium without thought. Codex's proposed wording was not used: it says the term 'only makes sense because of the curtain', but the proscenium is named after the arch, not the curtain, so that line would teach a wrong idea.",
+      "change": "Hint 3 rewritten: 'Two stage terms are left. Imagine the main curtain closed: which of the two areas would the audience still be able to see?' The student must still know which area lies in front of the curtain line.",
+      "round": 2
+    },
+    {
+      "q_number": 33,
+      "source": "codex",
+      "finding": "check 2: hint 3 'Three of the options are ways of naming the wood' leaves B by counting words",
+      "decision": "accepted",
+      "reason": "Scanning the options for 'wood' leaves only B, with no knowledge of the play needed. Codex's proposed wording was not used because it names Lysander and Hermia as the lovers, which answers sibling Q31 (speaker: Lysander), and 'at court' comes close to naming Athens outright.",
+      "change": "Hint 3 rewritten: 'Place this speech in the story: does it come before or after the young lovers escape from the city? Then choose the option that names where the characters are at that moment.'",
+      "round": 2
+    },
+    {
+      "q_number": 33,
+      "source": "check-12",
+      "finding": "hint 2 leaks Q31: 'The speaker calls his listener my lord... Think about where the Duke would hear such a complaint' tells the student that the listener is the Duke (Theseus)",
+      "decision": "accepted",
+      "reason": "Q31 asks for the speaker and the listener, and the answer is C, Lysander and Theseus. Knowing that the listener is the Duke narrows Q31 to C straight away.",
+      "change": "Hint 2 rewritten: 'A father's complaint about his daughter's marriage lies in the background of this speech. Think about where in the play that quarrel is first brought out in public.' The mention of the Duke and of the listener is removed.",
+      "round": 2
+    }
+  ]
+}

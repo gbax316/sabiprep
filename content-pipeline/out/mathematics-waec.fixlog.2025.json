@@ -1,0 +1,121 @@
+{
+  "entries": [
+    {
+      "q_number": 37,
+      "source": "codex",
+      "finding": "check 9: subtopic angles.at-point is plainly wrong; the decisive step is angles in the same segment (circles.angles)",
+      "decision": "held",
+      "reason": "The finding is correct: circles.angles covers 'angles in the same segment', and angles.at-point covers nothing in this working. But the standard says the classifier owns placement and the author flags a wrong one with placement_challenge, which this item already carries, naming circles.angles. The challenge stays on the item and carries the correction to the placement stage. The fixer does not overwrite subtopic_id.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 37,
+      "source": "codex",
+      "finding": "option C line states 62°, the settled answer to sibling Q38",
+      "decision": "accepted",
+      "reason": "A solution is allowed to name a fact a sibling depends on only when it cannot explain its own answer without it. Here it can. In practice mode Q37's solution is read before Q38 is tried, and 62° is exactly Q38's key. Codex's proposed wording is wrong, because the angle vertically opposite ∠QTN is 118°, not 62°, so I did not use it. Instead I explained 124° by a real slip that does not need 62°.",
+      "change": "C line now reads: '124°: this is 180° − 28° − 28°, using the 28° at Q twice instead of the 34° angle at N.'",
+      "round": 1
+    },
+    {
+      "q_number": 1,
+      "source": "check-11",
+      "finding": "hint2 'A number smaller than 1 gets a negative power of 10' is false for negative numbers",
+      "decision": "accepted",
+      "reason": "This is an unscoped claim. −36 is smaller than 1 but is −3.6 × 10¹. The solution already says 'between 0 and 1'.",
+      "change": "hint2: 'A number smaller than 1' became 'A positive number smaller than 1'.",
+      "round": 1
+    },
+    {
+      "q_number": 14,
+      "source": "check-11",
+      "finding": "solution 'Profit and loss percentages are worked out on the cost price.' is a convention stated as universal",
+      "decision": "accepted",
+      "reason": "Some questions state a percentage on the selling price. Q19 already scopes the same rule with 'Unless a question says otherwise'. One qualifier fixes it and keeps the two items consistent.",
+      "change": "Principle now begins 'Unless a question says otherwise, profit and loss percentages are worked out on the cost price.'",
+      "round": 1
+    },
+    {
+      "q_number": 24,
+      "source": "check-11",
+      "finding": "solution 'The exterior angles of any polygon add up to 360°' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "'Any' is not literally true, because it fails for polygons with a corner pointing inwards. Dropping 'any' keeps the syllabus fact without the absolute.",
+      "change": "'The exterior angles of any polygon' became 'The exterior angles of a polygon'.",
+      "round": 1
+    },
+    {
+      "q_number": 36,
+      "source": "check-11",
+      "finding": "solution 'Any polygon with n sides can be cut into n − 2 triangles from one corner' is an unscoped absolute",
+      "decision": "accepted",
+      "reason": "Cutting from one corner does not always work for a polygon with an inward-pointing corner. Dropping 'Any' and tying the claim to this hexagon removes the absolute.",
+      "change": "'Any polygon with n sides can be cut' became 'A polygon with n sides, such as this hexagon, can be cut'.",
+      "round": 1
+    },
+    {
+      "q_number": 37,
+      "source": "check-12",
+      "finding": "hints of Q37 against sibling Q38 (shared diagram 2025_Q37-38)",
+      "decision": "no_change_needed",
+      "reason": "Q37's hints use the same-segment theorem and the triangle QTN angle sum. They do not mention the exterior angle at P or ∠MPN. The only leak was the solution's 62°, which is logged above.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 38,
+      "source": "check-12",
+      "finding": "hints of Q38 against sibling Q37",
+      "decision": "no_change_needed",
+      "reason": "Q38's hints point to triangle QPM and its exterior angle, and give no value for ∠QTN. The solution's check line gives ∠QPM = 118°, but that is read after answering and is a different angle.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 43,
+      "source": "check-12",
+      "finding": "hints of Q43 against sibling Q44 (passage mathematics-wassce-2025-s03)",
+      "decision": "no_change_needed",
+      "reason": "Q43's hints cover only the corresponding angles at S and V and never mention y, triangle UVT or the exterior angle. Q44's hint3 refers to 'the value of x you found' without stating it. I checked the diagram: x at V sits between VW and VT, which matches the 45° at S.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 47,
+      "source": "check-12",
+      "finding": "hints of Q47 against sibling Q48 (passage mathematics-wassce-2025-s04)",
+      "decision": "no_change_needed",
+      "reason": "Q47's hints give the mean method and the total of the bottom row only. There are no running totals and no middle position, so nothing points to the median. Q48's hints do not state the mean. I checked the frequencies against the table: 3, 14, 13, 8, 3.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 37,
+      "source": "codex",
+      "finding": "check 9: subtopic angles.at-point is plainly wrong; decisive step is angles in the same segment",
+      "decision": "accepted",
+      "reason": "The question turns on ∠PNT = ∠PMT (same segment, chord PT), a circle theorem. circles.angles ('Angles in a circle and cyclic quadrilaterals') exists in the taxonomy and matches; the author's placement_challenge already named it. Geometry verified against the diagram.",
+      "change": "subtopic_id angles.at-point → circles.angles; placement_challenge kept on the item; hints and solution unchanged",
+      "round": 2
+    },
+    {
+      "q_number": 37,
+      "source": "check-11",
+      "finding": "absolutes or unscoped simplifications",
+      "decision": "rejected",
+      "reason": "The only general claim, that angles in the same segment standing on the same chord are equal, is literally true. No absolutes or contradictions.",
+      "change": "",
+      "round": 2
+    },
+    {
+      "q_number": 37,
+      "source": "check-12",
+      "finding": "hints leaking sibling Q38 (∠MPN = 62°)",
+      "decision": "rejected",
+      "reason": "Q37 hints deal only with triangle QTN and the same-segment angle at N; none mention the exterior angle at P or the sum 28° + 34°, so Q38's answer is not given away.",
+      "change": "",
+      "round": 2
+    }
+  ]
+}

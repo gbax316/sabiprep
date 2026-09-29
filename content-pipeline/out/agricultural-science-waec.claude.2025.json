@@ -7,25 +7,25 @@
       "q_number": 1,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Under Nigeria's Land Use Act (1978) a statutory certificate of occupancy is granted for a term of up to 99 years. 100 years is not the statutory term.",
+      "reasoning": "Under Nigeria's Land Use Act 1978, a statutory certificate of occupancy is granted for a maximum term of 99 years. 100 years is a distractor with no basis in the Act.",
       "solvable": true,
       "issue": ""
     },
     "2": {
       "q_number": 2,
       "answer": "A",
-      "confidence": "probable",
-      "reasoning": "Irrigation allows crops to be produced all year round, including the dry season, so supply stops being seasonal. Extension services and cultural practices do not remove dependence on rainfall. Exporting during scarce periods would make scarcity worse.",
+      "confidence": "certain",
+      "reasoning": "Seasonality comes from crops depending on rainfall, so irrigation allows production all year round. Extension services and cultural practices do not remove the dependence on rain, and exporting during scarce periods would make scarcity worse.",
       "solvable": true,
-      "issue": "Storage or processing would be the textbook answer but is not offered; irrigation is the best of the options given. 'scare' is a typo for 'scarce'."
+      "issue": "'scare' is a typo for 'scarce' in D."
     },
     "3": {
       "q_number": 3,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Research develops improved varieties, for example early-maturing, high-yielding and resistant ones. C and D describe undesirable traits, and A is the opposite of what research aims for.",
+      "reasoning": "Research develops improved varieties, including early-maturing ones. The other options describe undesirable outcomes: susceptibility, reduced resistance, and holding on to unimproved local varieties.",
       "solvable": true,
-      "issue": "Stem reads 'crops that short maturity period' (a word such as 'have' is missing); this does not affect the answer."
+      "issue": "B is missing a word ('that have short maturity period')."
     },
     "4": {
       "q_number": 4,
@@ -33,29 +33,29 @@
       "confidence": "certain",
       "reasoning": "A hygrometer measures relative humidity. Wind speed is measured with an anemometer and atmospheric pressure with a barometer.",
       "solvable": true,
-      "issue": "'relative humility' is a typo for 'relative humidity'; 'used to agriculture' should read 'used in agriculture'."
+      "issue": "'humility' is a typo for 'humidity'; 'used to agriculture' should read 'used in agriculture'."
     },
     "5": {
       "q_number": 5,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "The answer depends on which brooding heat source is illustrated (for example a kerosene stove or lamp, a hover, or an electric bulb), and each has a different disadvantage.",
+      "reasoning": "The answer depends on which brooding equipment is illustrated, for example a kerosene lamp versus an electric bulb or an infrared heater.",
       "solvable": false,
-      "issue": "The diagram of the brooding equipment is missing; the paper was supplied with no diagrams."
+      "issue": "The diagram of the brooding equipment is missing (diagram_files is empty)."
     },
     "6": {
       "q_number": 6,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "Whether hover, coal pot or gas lamp count as 'other' equipment depends on what the illustrated item is. For example, if the illustration is a hover, then I is not 'other'.",
+      "reasoning": "Which alternatives count as 'other' depends on the illustrated equipment, which is not available.",
       "solvable": false,
-      "issue": "The diagram of the brooding equipment is missing."
+      "issue": "The diagram of the brooding equipment is missing (diagram_files is empty)."
     },
     "7": {
       "q_number": 7,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "The finger-like tines of a hand fork are called prongs. 'Gangs' refers to sets of discs or tines on tractor implements, not to hand tools.",
+      "reasoning": "The finger-like projections of a fork are its prongs (tines). Gangs are sets of discs or tines on implements such as harrows.",
       "solvable": true,
       "issue": ""
     },
@@ -63,7 +63,7 @@
       "q_number": 8,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Maintenance keeps machines working, prolongs their life and prevents accidents, which preserves or increases salvage value. Reducing salvage value is therefore not a reason for maintenance.",
+      "reasoning": "Maintenance raises or preserves salvage value; it does not reduce it. The other three options are genuine reasons for maintaining machines.",
       "solvable": true,
       "issue": ""
     },
@@ -71,7 +71,7 @@
       "q_number": 9,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Strata (layers) are characteristic of sedimentary rocks such as limestone. Gabbro, granite and basalt are igneous rocks with no stratification.",
+      "reasoning": "Limestone is a sedimentary rock, laid down in layers (strata). Gabbro, granite and basalt are igneous rocks and are not stratified.",
       "solvable": true,
       "issue": ""
     },
@@ -79,39 +79,39 @@
       "q_number": 10,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Capillary water is held in micropores against gravity and is the form available to plant roots. Gravitational water drains away, and hygroscopic water is held too tightly for roots to take up.",
+      "reasoning": "Capillary water is held in micropores and is the main water available to plant roots. Gravitational water drains away quickly and hygroscopic water is held too tightly to absorb.",
       "solvable": true,
-      "issue": ""
+      "issue": "D reads 'hygroscopic' without 'water'; the stem says 'groundwater' where soil water is meant."
     },
     "11": {
       "q_number": 11,
-      "answer": "NONE",
-      "confidence": "uncertain",
-      "reasoning": "Finding the fresh soil mass needs the mass of the empty dish and of the dish plus fresh soil. Only 'dish + dried soil = 55g' is given.",
-      "solvable": false,
-      "issue": "The passage data is truncated: the empty dish mass and the dish + fresh soil mass are missing."
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Mass of fresh soil = (dish + fresh soil) - empty dish = 70 - 10 = 60 g. 45 g is the mass of the dry soil.",
+      "solvable": true,
+      "issue": "The passage reads 'Mass of dish + fresh dish'; it should be 'fresh soil'."
     },
     "12": {
       "q_number": 12,
-      "answer": "NONE",
-      "confidence": "uncertain",
-      "reasoning": "Moisture lost is (dish + fresh soil) minus (dish + dried soil), and the first value is not given.",
-      "solvable": false,
-      "issue": "The passage data is truncated: the dish + fresh soil mass is missing."
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Moisture lost = (dish + fresh soil) - (dish + dried soil) = 70 - 55 = 15 g. 45 g is the dry soil mass, not the water lost.",
+      "solvable": true,
+      "issue": "The passage typo 'fresh dish' should read 'fresh soil'."
     },
     "13": {
       "q_number": 13,
-      "answer": "NONE",
-      "confidence": "uncertain",
-      "reasoning": "Percentage moisture needs both the moisture lost and the soil mass, and neither can be derived from the single value given.",
-      "solvable": false,
-      "issue": "The passage data is truncated. Even with the full data, the key depends on whether the percentage is taken on a fresh-weight or dry-weight basis (for example 25% vs 33%)."
+      "answer": "B",
+      "confidence": "probable",
+      "reasoning": "On a fresh-weight basis, the usual school formula, moisture % = 15/60 x 100 = 25%. On a dry-weight basis it is 15/45 x 100 = 33.3%, which is option D, so the choice depends on which basis is intended.",
+      "solvable": true,
+      "issue": "Both bases appear among the options (B on fresh weight, D on dry weight); the stem does not say which."
     },
     "14": {
       "q_number": 14,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Granular (crumb) structure is typical of the organic-rich topsoil, horizon A, where root activity and humus promote aggregation. Horizon B usually has blocky or prismatic structure.",
+      "reasoning": "Granular (crumb) structure is typical of the humus-rich topsoil, the A horizon. Blocky and prismatic structures are typical of the B horizon.",
       "solvable": true,
       "issue": ""
     },
@@ -119,23 +119,23 @@
       "q_number": 15,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "Q16's mention of a 0.05mm diameter suggests a sieve, which would be used for texture (B). However, the tool cannot be identified without the diagram.",
+      "reasoning": "The tool is probably a sieve (for texture), but the diagram that identifies it is not available.",
       "solvable": false,
-      "issue": "The diagram of the soil analysis tool is missing."
+      "issue": "The diagram of the soil analysis tool is missing (diagram_files is empty)."
     },
     "16": {
       "q_number": 16,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "With a 0.05mm opening only silt (0.002 to 0.05mm) would pass. Fine sand (at least 0.05mm under USDA, 0.02 to 0.2mm under ISSS) and coarse sand would not pass, or would pass only in part. No option is 'I only'.",
+      "reasoning": "This depends on the illustrated tool. Even if it is taken as a 0.05 mm sieve, only silt (0.002-0.05 mm) would pass, and no option is 'I only'.",
       "solvable": false,
-      "issue": "The diagram is missing, and no option matches 'I only'. The item appears defective, or depends on a particle-size scale in which fine sand is below 0.05mm."
+      "issue": "The diagram is missing; on standard particle-size limits, no option matches."
     },
     "17": {
       "q_number": 17,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Purple colouration of leaves is the classic sign of phosphorus deficiency, corrected with a phosphate fertilizer such as single superphosphate. Muriate of potash supplies potassium, and ammonium sulphate supplies nitrogen.",
+      "reasoning": "Purple colouration of leaves is the classic sign of phosphorus deficiency, corrected with single superphosphate. Muriate of potash supplies K and ammonium sulphate supplies N.",
       "solvable": true,
       "issue": ""
     },
@@ -143,15 +143,15 @@
       "q_number": 18,
       "answer": "B",
       "confidence": "uncertain",
-      "reasoning": "Overhead (sprinkler) irrigation sprays water from above onto the crop and the land surface. C describes sub-surface irrigation and D describes drip irrigation. A (little volume of water) is really a feature of drip irrigation, so B is the closest remaining option.",
+      "reasoning": "Overhead (sprinkler) irrigation sprays water over the crop and the land surface like rain; B is the closest option. C describes sub-surface irrigation and D describes drip irrigation, while A could loosely describe sprinkler water efficiency.",
       "solvable": true,
-      "issue": "None of the options is a clean definition of overhead irrigation. B reads more like surface irrigation, so the item may be poorly worded."
+      "issue": "No option cleanly defines overhead irrigation; B reads more like surface irrigation."
     },
     "19": {
       "q_number": 19,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Organic farming avoids synthetic fertilizers and pesticides, which reduces agricultural pollution. Options A, B and C are all sources of pollution.",
+      "reasoning": "Organic farming avoids synthetic agrochemicals, which reduces pollution. The other options are practices that cause pollution.",
       "solvable": true,
       "issue": ""
     },
@@ -159,7 +159,7 @@
       "q_number": 20,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "The yam tuber is a modified underground stem (stem tuber) that stores food. A sett is a cut piece used for planting, not a storage organ.",
+      "reasoning": "The yam tuber is a modified stem, so yam stores food in its stem. A sett is a cut piece used for planting, not a storage organ.",
       "solvable": true,
       "issue": ""
     },
@@ -167,31 +167,31 @@
       "q_number": 21,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "The options (detasseling, shelling) show the crop is maize, but part II could be the tassel (detasseling) or the cob (shelling). This cannot be decided without the labelled diagram.",
+      "reasoning": "The crop and the part labelled II can only be identified from the missing diagram (possibly maize).",
       "solvable": false,
-      "issue": "The labelled diagram of the crop is missing."
+      "issue": "The crop diagram is missing (diagram_files is empty)."
     },
     "22": {
       "q_number": 22,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "Identifying the part labelled III requires the labelled diagram.",
+      "reasoning": "The part labelled III can only be identified from the diagram.",
       "solvable": false,
-      "issue": "The labelled diagram of the crop is missing."
+      "issue": "The crop diagram is missing (diagram_files is empty)."
     },
     "23": {
       "q_number": 23,
-      "answer": "C",
-      "confidence": "probable",
-      "reasoning": "Reducing grain moisture is done mainly to prevent mould (fungal) growth and aflatoxin contamination, for example by Aspergillus in maize. Bacteria, viruses and nematodes are not the main storage contaminants controlled by drying.",
-      "solvable": true,
-      "issue": "The diagram is missing, but the answer does not depend on it; the crop is evidently maize. Confidence is lowered only because the illustration could not be checked."
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The illustrated crop is not shown, so the question cannot be answered from the diagram. For a cereal such as maize, high moisture favours fungal (aflatoxin) contamination, but the diagram is required to confirm the crop.",
+      "solvable": false,
+      "issue": "The crop diagram is missing (diagram_files is empty)."
     },
     "24": {
       "q_number": 24,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Blackarm (bacterial blight, Xanthomonas) is a disease of cotton. It does not affect citrus, yam or plantain.",
+      "reasoning": "Blackarm (bacterial blight, Xanthomonas) is a disease of cotton. Citrus, yam and plantain do not get blackarm.",
       "solvable": true,
       "issue": ""
     },
@@ -199,15 +199,15 @@
       "q_number": 25,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Polishing removes the bran and aleurone layers, which contain vitamins (especially thiamine), minerals and protein, so nutritive value falls. It does not increase quantity or germination.",
+      "reasoning": "Polishing removes the bran and aleurone layers, which carry B vitamins, protein and minerals, so it lowers nutritive value. It does not increase quantity or germination rate.",
       "solvable": true,
       "issue": ""
     },
     "26": {
       "q_number": 26,
       "answer": "A",
-      "confidence": "probable",
-      "reasoning": "Sour orange rootstock is resistant to Phytophthora gummosis (foot rot), so sweet orange is budded onto it to avoid that disease. Canker and scab affect the aerial parts, so the rootstock does not protect against them.",
+      "confidence": "certain",
+      "reasoning": "Sour orange rootstock is resistant to Phytophthora foot rot (gummosis), so sweet orange is budded onto it to prevent gummosis. Canker and scab affect the aerial parts and are not controlled by rootstock choice.",
       "solvable": true,
       "issue": ""
     },
@@ -215,7 +215,7 @@
       "q_number": 27,
       "answer": "B",
       "confidence": "probable",
-      "reasoning": "Plantation agriculture involves large estates of perennial crops, such as fruits (oil palm, citrus, banana) and beverages (cocoa, coffee, tea). Vegetables are short-season crops grown in market gardens, not on plantations.",
+      "reasoning": "Plantation agriculture is large-scale growing of perennial tree crops such as fruits (citrus, oil palm) and beverages (cocoa, coffee, tea). Vegetables are short-season crops that are normally not grown on plantations, although large vegetable estates could make D arguable.",
       "solvable": true,
       "issue": "'Plantation agricultural' is a typo for 'agriculture'."
     },
@@ -223,39 +223,39 @@
       "q_number": 28,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "If the plot is a trapezium with parallel sides AB and DC and height EF, the area is 0.5 x (15 + 10) x 8 = 100 m² (option B). The shape cannot be confirmed without the diagram.",
+      "reasoning": "The shape of the farmland and the roles of AB, DC and EF (parallel sides and height of a trapezium, for example) can only be seen in the diagram.",
       "solvable": false,
-      "issue": "The survey diagram is missing. The trapezium interpretation giving 100 m² (B) is likely but unverified."
+      "issue": "The farmland diagram is missing (diagram_files is empty)."
     },
     "29": {
       "q_number": 29,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "This depends on the area in Q28. If the area is 100 m², there are 100 / (0.25 x 0.90) = 444 holes, which at two seeds per hole gives 888 plants (D).",
+      "reasoning": "Plant population needs the area from Q28, which depends on the missing diagram.",
       "solvable": false,
-      "issue": "The survey diagram is missing, so the area is unverified. If the area is 100 m² the answer is D (888); B (444) would be the number of stands or holes, not plants."
+      "issue": "The farmland diagram is missing; this question depends on Q28's area."
     },
     "30": {
       "q_number": 30,
       "answer": "C",
       "confidence": "probable",
-      "reasoning": "Heat treatment (for example soaking in hot water) softens hard seed coats and is the standard school method for breaking dormancy. Soil treatment and sterilization do not break dormancy.",
+      "reasoning": "Heat treatment (for example soaking in hot water) is the standard school method for breaking seed-coat dormancy. Refrigeration (cold stratification) also breaks dormancy in some seeds, so B is defensible.",
       "solvable": true,
-      "issue": "B (refrigeration, i.e. cold stratification) is also a genuine dormancy-breaking method, so two options are defensible."
+      "issue": "Both B (cold stratification) and C (heat treatment) are recognised methods of breaking dormancy."
     },
     "31": {
       "q_number": 31,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Leucaena leucocephala is a leguminous, nitrogen-fixing tree widely used in alley cropping. Tectona grandis (teak) and Terminalia superba are non-leguminous timber trees.",
+      "reasoning": "Leucaena leucocephala is a leguminous, nitrogen-fixing tree widely used in alley cropping. Tectona grandis (teak) and Terminalia superba are not legumes.",
       "solvable": true,
-      "issue": "'Tertulia Africana' in option D is probably a garbled name, but this does not affect the answer."
+      "issue": "D 'Tertulia Africana' is garbled (probably Terminalia or Tetrapleura), but this does not affect the answer."
     },
     "32": {
       "q_number": 32,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Allamanda is an ornamental flowering shrub (sometimes climbing). It is not a tree or a grass.",
+      "reasoning": "Allamanda is an ornamental flowering shrub (sometimes grown as a climber). It is not a tree or a grass.",
       "solvable": true,
       "issue": ""
     },
@@ -263,7 +263,7 @@
       "q_number": 33,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Sigatoka (leaf spot) of banana is caused by the fungus Mycosphaerella and is controlled with fungicides. Cassava mosaic, cocoa swollen shoot and cotton leaf curl are viral diseases.",
+      "reasoning": "Sigatoka (leaf spot) of banana is caused by a Mycosphaerella fungus and is controlled with fungicides. Cassava mosaic, swollen shoot of cocoa and cotton leaf curl are viral diseases.",
       "solvable": true,
       "issue": ""
     },
@@ -271,31 +271,31 @@
       "q_number": 34,
       "answer": "D",
       "confidence": "uncertain",
-      "reasoning": "Talinum triangulare (waterleaf) produces capsules that split open to scatter many small seeds, and this is usually listed as dispersal by explosive (dehiscent) mechanism. Wind and animals are less commonly cited.",
+      "reasoning": "Talinum triangulare (waterleaf) sets many tiny seeds in capsules that split open and scatter them, which fits an explosive or dehiscent mechanism. Some sources stress spread by animals or water instead, so this is uncertain.",
       "solvable": true,
-      "issue": "Textbook sources differ on the dispersal agent for waterleaf, so A or C may be keyed."
+      "issue": "Textbook sources disagree on the main dispersal agent of Talinum."
     },
     "35": {
       "q_number": 35,
       "answer": "C",
-      "confidence": "probable",
-      "reasoning": "White Fulani (Bunaji) is kept for both milk and beef, so it is a dual-purpose breed. Red Bororo is mainly beef and draught, and Muturu is a small beef breed.",
+      "confidence": "certain",
+      "reasoning": "White Fulani (Bunaji) is kept for both milk and beef, so it is dual-purpose. Muturu and Keteku are mainly beef or draught breeds, and Red Bororo is mainly beef.",
       "solvable": true,
-      "issue": "Keteku is sometimes also described as multipurpose."
+      "issue": ""
     },
     "36": {
       "q_number": 36,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Eggs and milk are obtained from living animals. Chevon (goat meat) is obtained only after slaughter.",
+      "reasoning": "Eggs and milk are taken from living animals. Chevon is goat meat, which is obtained only after slaughter.",
       "solvable": true,
       "issue": ""
     },
     "37": {
       "q_number": 37,
       "answer": "D",
-      "confidence": "certain",
-      "reasoning": "In ruminants, water is absorbed from undigested residue mainly in the colon (large intestine). The duodenum digests food and absorbs nutrients, and the rectum stores faeces.",
+      "confidence": "probable",
+      "reasoning": "Water is absorbed from undigested residue mainly in the colon of the large intestine. The caecum also absorbs some water but is mainly a site of fermentation.",
       "solvable": true,
       "issue": ""
     },
@@ -303,7 +303,7 @@
       "q_number": 38,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "The rumen stores feed temporarily and ferments it, and its microbes synthesize B-vitamins and vitamin K, not vitamins A and D. So III is the exception.",
+      "reasoning": "The rumen stores feed temporarily and ferments it, and its microbes synthesise B-complex vitamins and vitamin K, not vitamins A and D. So III is the exception.",
       "solvable": true,
       "issue": ""
     },
@@ -311,7 +311,7 @@
       "q_number": 39,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Semen is collected using an artificial vagina, by massage of the ampullae, or by electro-ejaculation. A catheter is used for insemination (depositing semen), not for collecting it.",
+      "reasoning": "A catheter is used to deposit semen during insemination, not to collect it. The artificial vagina, massage and electro-ejaculation are all collection methods.",
       "solvable": true,
       "issue": ""
     },
@@ -319,15 +319,15 @@
       "q_number": 40,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Heat stress lowers feed intake and so reduces milk yield. Water intake increases under heat stress, so B is wrong.",
+      "reasoning": "Heat stress lowers feed intake and so reduces milk production. Heat-stressed animals drink more water and eat less, so A and B are the reverse of what happens.",
       "solvable": true,
-      "issue": "'little size' is a typo for 'litter size'."
+      "issue": "'little size' in C is a typo for 'litter size'."
     },
     "41": {
       "q_number": 41,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Floor area = 9 x 20 = 180 m², and 180 / 0.36 = 500 birds. Option C (180) is the area, not the number of birds.",
+      "reasoning": "Floor area = 9 m x 20 m = 180 m²; 180 / 0.36 = 500 birds. 180 is the floor area itself, not the number of birds.",
       "solvable": true,
       "issue": "'children' is a typo for 'chickens'."
     },
@@ -335,7 +335,7 @@
       "q_number": 42,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Open-sided poultry houses allow free air movement, which gives adequate ventilation and removes heat and ammonia in hot climates. Open sides would not protect birds from wind or keep them warm.",
+      "reasoning": "Open sides allow free air movement, giving adequate ventilation in hot climates. Open sides do not shield birds from wind or keep them warm.",
       "solvable": true,
       "issue": ""
     },
@@ -343,7 +343,7 @@
       "q_number": 43,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "A ram is a male sheep, and sheep produce wool. A boar is a pig, a buck a male goat or rabbit, and a cock a fowl.",
+      "reasoning": "A ram is a male sheep, and sheep produce wool. A boar is a male pig, a buck a male goat or rabbit, and a cock a male fowl.",
       "solvable": true,
       "issue": ""
     },
@@ -351,23 +351,23 @@
       "q_number": 44,
       "answer": "A",
       "confidence": "probable",
-      "reasoning": "Sulpha drugs (sulphonamides) treat coccidiosis, and sulphur-based preparations are used against ringworm (favus). Fowl pox is viral, has no drug cure and is controlled by vaccination.",
+      "reasoning": "Coccidiosis is treated with sulphonamide (sulpha) drugs, and ringworm with sulphur-based preparations. Fowl pox is viral, has no drug cure and is controlled by vaccination.",
       "solvable": true,
-      "issue": "Including ringworm depends on reading 'drugs containing sulphur' broadly."
+      "issue": "'Drugs containing sulphur' fits coccidiosis (sulpha drugs) clearly; ringworm treatment is less standard."
     },
     "45": {
       "q_number": 45,
       "answer": "C",
       "confidence": "probable",
-      "reasoning": "Pollination of crops by bees is generally regarded as their most important contribution to humans, being worth more than honey or wax. Beeswax is a minor by-product.",
+      "reasoning": "The economic value of bee pollination to crop production far exceeds the value of hive products, so it is regarded as their most important function. Beeswax (A) is a genuine product but is secondary, and honey is not offered as an option.",
       "solvable": true,
-      "issue": "Honey, the usual rival answer, is not offered."
+      "issue": ""
     },
     "46": {
       "q_number": 46,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Cocoa is a major export cash crop of West Africa (Côte d'Ivoire, Ghana, Nigeria). Maize, yam and plantain are mainly food crops consumed locally.",
+      "reasoning": "Cocoa is a major export crop of West Africa (Côte d'Ivoire, Ghana, Nigeria). Maize, yam and plantain are mainly grown for local food.",
       "solvable": true,
       "issue": ""
     },
@@ -375,7 +375,7 @@
       "q_number": 47,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "The cost of production per tray is ₦350,000 / 500 = ₦700. ₦760 would include the marketing cost ((350,000 + 30,000) / 500), which is not a production cost.",
+      "reasoning": "Cost of production per tray = ₦350,000 / 500 = ₦700. ₦760 wrongly adds the marketing cost, which is not a production cost.",
       "solvable": true,
       "issue": ""
     },
@@ -383,25 +383,25 @@
       "q_number": 48,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "1% of 500 is 5 trays consumed, so 500 - 5 = 495 trays were sold. Option A (4000) is not a sensible value.",
+      "reasoning": "1% of 500 trays = 5 trays consumed, so 500 - 5 = 495 trays were sold. 490 would mean 2% was consumed.",
       "solvable": true,
-      "issue": ""
+      "issue": "Option A '4000' looks like a typing error, but it does not affect the answer."
     },
     "49": {
       "q_number": 49,
-      "answer": "A",
-      "confidence": "probable",
-      "reasoning": "Net profit = revenue - (production cost + marketing cost) = 500,000 - (350,000 + 30,000) = ₦120,000. C (150,000) ignores the marketing cost.",
+      "answer": "B",
+      "confidence": "uncertain",
+      "reasoning": "The simple calculation, sales ₦500,000 - production ₦350,000 - marketing ₦30,000, gives ₦120,000 (A). The options are built around adding the value of the 5 trays the family ate, valued at total cost per tray (₦380,000/500 = ₦760 x 5 = ₦3,800), which gives ₦123,800 (B); counting home consumption as non-cash income is standard in farm accounts. A and B are both defensible.",
       "solvable": true,
-      "issue": "B (₦123,800) equals 120,000 plus the 5 consumed trays valued at ₦760 each, so the examiner may intend to credit home consumption. The wording 'earned ₦500,000 ... after incurring a marketing cost' could also be read as net of marketing, which gives C or D."
+      "issue": "It is unclear whether home consumption should be counted as income, and at what value. A (₦120,000) is also defensible, and 'earned ... after incurring marketing cost' could even mean ₦500,000 is already net of marketing (giving C or D)."
     },
     "50": {
       "q_number": 50,
       "answer": "D",
       "confidence": "probable",
-      "reasoning": "Grading lets produce be sold by quality, processing adds value, and advertisement raises demand. All three help farmers command better prices.",
+      "reasoning": "Advertisement raises demand, processing adds value and grading lets produce be sold at quality-based prices, so all three help farmers get better prices. An examiner might leave out advertisement, which makes C defensible.",
       "solvable": true,
-      "issue": "C (processing and grading only) is defensible if advertisement is seen as mainly promoting sales rather than setting price."
+      "issue": ""
     }
   },
   "failures": []

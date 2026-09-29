@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="110 230 610 380" preserveAspectRatio="xMidYMid meet" role="img">
+<!-- Authored by hand, not traced: the diagram carries typed labels that automatic tracing damages. Redrawn from 2025_Q12.png; nothing omitted as unreadable. -->
+<title>Series R–C–L circuit with a.c. source</title>
+<desc>A circuit loop with a circle containing a wavy line at the top of the loop. Along the bottom of the loop, three components are connected in series from left to right: a rectangle labelled "R" with "3V" printed beneath it, two short parallel lines labelled "C" with "2V" printed beneath it, and a coil labelled "L" with "6V" printed beneath it.</desc>
+<g fill="none" stroke="#E2E8F0" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter">
+  <!-- top wire with a.c. source -->
+  <path d="M347 287 H145 V540 H222"/>
+  <path d="M415 287 H678 V540 H582"/>
+  <circle cx="381" cy="288" r="34"/>
+  <path d="M364 293 C368 278 377 278 381 288 S394 298 398 283" stroke-linecap="round"/>
+  <!-- resistor R -->
+  <rect x="222" y="527" width="76" height="26"/>
+  <!-- capacitor C -->
+  <path d="M298 540 H373 M395 540 H490"/>
+  <path d="M373 518 V560 M395 518 V560" stroke-width="4" stroke-linecap="butt"/>
+  <!-- inductor L: seven turns -->
+  <path stroke-linecap="round" d="M490 540 C492 547 495 550 499 550
+    C493 549 493 529 504.5 529 C516 529 516 549 510 550
+    C504 549 504 529 515.5 529 C527 529 527 549 521 550
+    C515 549 515 529 526.5 529 C538 529 538 549 532 550
+    C526 549 526 529 537.5 529 C549 529 549 549 543 550
+    C537 549 537 529 548.5 529 C560 529 560 549 554 550
+    C548 549 548 529 559.5 529 C571 529 571 549 565 550
+    C559 549 559 529 570.5 529 C582 529 582 549 576 550
+    C579 550 581 546 582 540"/>
+</g>
+<g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="30" font-style="italic" text-anchor="middle">
+  <text x="258" y="515">R</text>
+  <text x="385" y="507">C</text>
+  <text x="532" y="515">L</text>
+  <text x="258" y="593">3V</text>
+  <text x="385" y="593">2V</text>
+  <text x="530" y="588">6V</text>
+</g>
+</svg>

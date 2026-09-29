@@ -1,0 +1,333 @@
+{
+  "subject": "Mathematics",
+  "year": 2024,
+  "paper": 1,
+  "taxonomy_version": "1.1",
+  "items": [
+    {
+      "q_number": 1,
+      "subtopic_id": "differentiation.trigonometric",
+      "difficulty": "medium",
+      "hint1": "This is about differentiating sine and cosine when the angle is a multiple of x, such as 2x. Think about what the chain rule does to the number in front of x.",
+      "hint2": "The derivative of sin kx is k cos kx, and the derivative of cos kx is −k sin kx. The angle stays 2x after differentiating, so any option written with sin x or cos x cannot be right.",
+      "hint3": "Of the options that keep the angle 2x, compare the sign and the number in front of the sine term with your own working. One option has a stray printed letter in it; read it as if that letter were not there.",
+      "solution": "Answer: C. 2cos 2x + 2sin 2x (printed as \"2 cos 2x + e 2sin 2x\", with a stray e)\n\nWhen the angle is kx, the chain rule multiplies the derivative by k. So the derivative of sin kx is k cos kx, and the derivative of cos kx is −k sin kx. Here k = 2, so both terms pick up a factor of 2, and the angle stays 2x.\n\nHow to tell:\ny = sin 2x − cos 2x\nd/dx(sin 2x) = 2cos 2x\nd/dx(cos 2x) = −2sin 2x\nd/dx(−cos 2x) = −(−2sin 2x) = +2sin 2x\ndy/dx = 2cos 2x + 2sin 2x\nThe \"e\" in option C is a typing error in the paper. Without it, C reads 2cos 2x + 2sin 2x.\n\nWhy not the others:\nA. 2 sin x + cos x: the angle has changed from 2x to x, which differentiating does not do.\nB. 2 cos 2x + sin 2x: the sine term has lost the factor of 2 that the chain rule gives it.\nD. 2 sin x − cos x: the angle has changed to x, and the second term has the wrong sign.\n\nExam tip: when differentiating sin kx or cos kx, write the k in front straight away, and remember that a minus in front of cos becomes a plus after differentiating."
+    },
+    {
+      "q_number": 2,
+      "subtopic_id": "coordinate-geometry.distance-midpoint",
+      "difficulty": "medium",
+      "hint1": "Perimeter is the sum of the three side lengths. With coordinates, find each length from the points, one side at a time.",
+      "hint2": "Two of the sides are straight up or straight across, because their end points share an x-value or a y-value, so their lengths are just differences. The third side is slanted and needs the distance formula √((x₂ − x₁)² + (y₂ − y₁)²).",
+      "hint3": "The two straight sides add to a whole number. The slanted side joins (3,5) to (6,2). Simplify its square root, then check that both the whole number and the surd in your total match an option.",
+      "solution": "Answer: A. 6 + 3√2\n\nThe distance between two points is √((x₂ − x₁)² + (y₂ − y₁)²). When two points share an x or a y coordinate, the side is vertical or horizontal, and its length is simply the difference of the other coordinates.\n\nHow to tell:\nCall the third point C(6,2).\nAB: A(3,2) to B(3,5), same x, length = 5 − 2 = 3\nAC: A(3,2) to C(6,2), same y, length = 6 − 3 = 3\nBC: √((6 − 3)² + (2 − 5)²) = √(9 + 9) = √18 = √9 × √2 = 3√2\nPerimeter = 3 + 3 + 3√2 = 6 + 3√2\n\nWhy not the others:\nB. 6 + 2√3: the slanted side is √18 = 3√2, not √12 = 2√3.\nC. 2 + √10: the two straight sides alone already add up to 6.\nD. 3 + 6√2: the whole number and the surd have been swapped; the straight sides give 6 and the slanted side gives 3√2.\n\nExam tip: in perimeter questions from coordinates, look first for sides that are vertical or horizontal. They need no formula, and only the slanted sides need the distance formula."
+    },
+    {
+      "q_number": 3,
+      "subtopic_id": "number-bases.operations",
+      "difficulty": "medium",
+      "hint1": "In base 7 the only digits allowed are 0 to 6, and each place is worth 7 times the place to its right. You can subtract column by column, or change both numbers to base ten first.",
+      "hint2": "When you borrow in base 7, you add 7 to the column, not 10. Also, any option containing a digit of 7 or more cannot be a base 7 number.",
+      "hint3": "In the units column, borrowing gives 5 + 7 = 12, and 12 − 6 tells you the last digit. Carry on borrowing the same way. Two options look very alike, so check the order of the middle digits carefully.",
+      "solution": "Answer: C. 2456₇\n\nSubtraction in base 7 works like ordinary subtraction, except that borrowing 1 from the next column brings 7, not 10, into the column you are working on.\n\nHow to tell (right to left):\nUnits: 5 − 6 cannot be done, so borrow: 5 + 7 = 12, and 12 − 6 = 6\nSevens: the 4 has lent 1, so it is 3; 3 − 5 cannot be done, so borrow: 3 + 7 = 10, and 10 − 5 = 5\nForty-nines: the 0 has lent 1, so borrow again: 0 + 7 − 1 = 6, and 6 − 2 = 4\nNext column: the 0 has lent 1, so borrow again: 0 + 7 − 1 = 6, and 6 − 4 = 2\nLast column: the 2 has lent 1, so 1 − 1 = 0\nResult: 2456₇\nCheck in base ten: 20045₇ = 4835 and 14256₇ = 3912, so the difference is 923, and 2456₇ = 2 × 343 + 4 × 49 + 5 × 7 + 6 = 923.\n\nWhy not the others:\nA. 5328₇: it contains the digit 8, which cannot appear in base 7.\nB. 5640₇: it ends in 0, but the units column gives 6.\nD. 2546₇: the middle digits 4 and 5 are swapped; it equals 965 in base ten, not 923.\n\nExam tip: in base questions, first strike out any option with a digit equal to or bigger than the base, then work out the units digit, which is the quickest column to check."
+    },
+    {
+      "q_number": 4,
+      "subtopic_id": "number-bases.conversion",
+      "difficulty": "medium",
+      "hint1": "Each place in a binary number is worth twice the place to its right. After the point, the places are worth halves, quarters, and so on.",
+      "hint2": "Work out the whole-number part and the part after the point separately. The places before the point, from the right, are worth 1, 2, 4, 8 and 16. The places after the point are worth ½ and ¼.",
+      "hint3": "The part after the point is ½ + ¼. Two options end with that decimal. Count the digits before the point carefully to decide the whole-number part.",
+      "solution": "Answer: A. 23.75₁₀\n\nIn base 2, each place before the point is worth a power of 2 (1, 2, 4, 8, 16, and so on), and each place after the point is worth a fraction (½, ¼, ⅛, and so on). Multiply each digit by its place value and add.\n\nHow to tell:\nWhole part, 10111₂:\n1 × 16 + 0 × 8 + 1 × 4 + 1 × 2 + 1 × 1 = 16 + 0 + 4 + 2 + 1 = 23\nFraction part, .11₂:\n1 × ½ + 1 × ¼ = 0.5 + 0.25 = 0.75\nTotal = 23.75₁₀\n\nWhy not the others:\nB. 15.23₁₀: the whole part is wrong, and .23 is not the value of .11₂, which is ½ + ¼ = 0.75.\nC. 15.75₁₀: the fraction is right, but 15 is 1111₂; the leading 1 of 10111₂ is in the 16s place, not the 8s place.\nD. 75.23₁₀: this is far too big, since a five-digit binary whole number is less than 32.\n\nExam tip: for a binary number with a point, write the place values above the digits first: 16, 8, 4, 2, 1 before the point and ½, ¼ after it. Then add only the places that hold a 1."
+    },
+    {
+      "q_number": 5,
+      "subtopic_id": "surds.rationalise",
+      "difficulty": "hard",
+      "hint1": "When a surd sits in the denominator, the usual step is to rationalise it: multiply top and bottom by something that removes the surd. Simplify any surd you can before you start.",
+      "hint2": "√28 = √4 × √7 = 2√7, so the only surd in the question is √7, and options containing √3 cannot come from it. Multiply top and bottom by 2 − √7, the conjugate of 2 + √7, because (2 + √7)(2 − √7) = 4 − 7 has no surd.",
+      "hint3": "The denominator becomes −3. Expand the top carefully, then divide every term by −3 and check the sign of each term in your result.",
+      "solution": "Answer: D. (4√7 − 2)/3\n\nTo rationalise a denominator of the form a + √b, multiply top and bottom by its conjugate, a − √b. The product (a + √b)(a − √b) = a² − b is a whole number, so the surd leaves the denominator.\n\nHow to tell:\n√28 = √4 × √7 = 2√7, so the expression is (8 + 2√7)/(2 + √7)\nMultiply top and bottom by (2 − √7)\nTop: (8 + 2√7)(2 − √7) = 16 − 8√7 + 4√7 − 2 × 7 = 16 − 4√7 − 14 = 2 − 4√7\nBottom: (2 + √7)(2 − √7) = 4 − 7 = −3\nResult: (2 − 4√7)/(−3) = (4√7 − 2)/3\nRough check: √7 ≈ 2.65, so (8 + 5.29)/(2 + 2.65) ≈ 2.86, and (10.58 − 2)/3 ≈ 2.86.\n\nWhy not the others:\nA. (4 − 2√3)/3: it contains √3, but the only surd in the question is √7.\nB. (4√(7 + 2))/3: the 2 has the wrong sign and sits under the root; as printed it equals 4√9 ÷ 3 = 4, not about 2.86.\nC. (−4√3 − 2)/3: it contains √3 and is negative, but the expression is a positive number divided by a positive number.\n\nExam tip: in rationalising questions, simplify every surd first so you know which surd the answer must contain, then use a rough decimal check to confirm the final form."
+    },
+    {
+      "q_number": 6,
+      "subtopic_id": "triangles.polygons",
+      "difficulty": "medium",
+      "hint1": "This is about the angles of a polygon. Recall the rule that links the sum of the interior angles to the number of sides.",
+      "hint2": "The sum of the interior angles is (n − 2) × 180°. Use it to find n first. In a regular polygon every interior angle is equal, so one angle is the total shared equally among the n corners.",
+      "hint3": "Once you have n, one angle is 1260° ÷ n. As a check, the exterior angle, 180° minus the interior angle, must divide 360° into exactly n equal parts.",
+      "solution": "Answer: C. 140°\n\nA polygon with n sides can be cut into (n − 2) triangles from one corner, so its interior angles add up to (n − 2) × 180°. In a regular polygon all the interior angles are equal, so each one is the total divided by n.\n\nHow to tell:\n(n − 2) × 180° = 1260°\nn − 2 = 1260 ÷ 180 = 7\nn = 9\nOne interior angle = 1260° ÷ 9 = 140°\nCheck: exterior angle = 180° − 140° = 40°, and 360° ÷ 40° = 9 sides.\n\nWhy not the others:\nA. 120°: this is the interior angle of a regular hexagon, whose angles add to 720°, not 1260°.\nB. 126°: the exterior angle would be 54°, and 360° ÷ 54° is not a whole number of sides.\nD. 146°: the exterior angle would be 34°, and 360° ÷ 34° is not a whole number of sides.\n\nExam tip: for regular polygon questions, check any answer through its exterior angle. The exterior angle is 180° minus the interior angle, and 360° divided by it must give a whole number of sides."
+    },
+    {
+      "q_number": 7,
+      "subtopic_id": "sequences.gp",
+      "difficulty": "medium",
+      "hint1": "This is about the sum to infinity of a geometric progression. Recall the formula that links the first term, the common ratio and that sum.",
+      "hint2": "S∞ = a/(1 − r), which can be used because r lies between −1 and 1. Take care with the sign: r is negative here, so 1 − r becomes 1 plus a half.",
+      "hint3": "You should reach 100 = a ÷ (3/2). To undo dividing by 3/2, decide whether 100 must be multiplied by 3/2 or by 2/3, and check by putting your value back in.",
+      "solution": "Answer: A. 150\n\nWhen the common ratio r lies between −1 and 1, the terms of a G.P. get smaller and smaller, and their total settles at S∞ = a/(1 − r), where a is the first term.\n\nHow to tell:\nS∞ = a/(1 − r)\n100 = a/(1 − (−½))\n100 = a/(1 + ½) = a/(3/2)\na = 100 × 3/2 = 150\nCheck: 150 ÷ 1.5 = 100\n\nWhy not the others:\nB. 200/3: this multiplies 100 by 2/3 instead of 3/2; it would give a sum of only about 44.4.\nC. 150/3: this equals 50, which gives a sum of 50 ÷ 1.5 ≈ 33.3, not 100.\nD. 133.33: this gives 133.33 ÷ 1.5 ≈ 88.9, not 100, so 1 − r has been handled wrongly.\n\nExam tip: in sum to infinity questions, put the ratio in brackets with its sign, as in 1 − (−½), so that a negative ratio correctly makes the denominator bigger than 1."
+    },
+    {
+      "q_number": 8,
+      "subtopic_id": "plane-mensuration.circles",
+      "difficulty": "medium",
+      "hint1": "Picture the goat at the end of a tight rope, moving from one point to another around the pole. The rope acts as a radius, and the ground it sweeps over is part of a circle.",
+      "hint2": "The region is a sector with radius 6 m and angle 70°. Its area is the fraction 70/360 of the whole circle's area, πr². No value of π is given, so take π as 22/7.",
+      "hint3": "Simplify before multiplying: 70/360 × 22/7 × 36. Notice that 70 and 7 cancel, and so do 36 and 360. The answer is in square metres, even though the options print only m.",
+      "solution": "Answer: B. 22 m (the unit should be m², since this is an area)\n\nThe goat can reach every point within one rope length of the pole, so the ground it covers while moving through an angle is a sector of a circle. A sector with angle θ is the fraction θ/360 of the whole circle, so its area is (θ/360) × πr².\n\nHow to tell:\nr = 6 m, θ = 70°, taking π as 22/7\nArea = (70/360) × (22/7) × 6²\n= (70/360) × (22/7) × 36\n= 10 × 22 × 36 ÷ 360\n= 7920 ÷ 360\n= 22 m²\nWith π left as π, the area is 7π m² ≈ 21.99 m², so 22 m² is still the closest option.\n\nWhy not the others:\nA. 21 m: this comes from taking π as 3 instead of 22/7; (70/360) × 3 × 36 = 21.\nC. 20 m: this is 2 m² short of what the sector formula gives with these numbers.\nD. 24 m: this is 2 m² more than what the sector formula gives with these numbers.\n\nExam tip: in tethered-animal questions, the rope is the radius and the angle it swings through is the sector angle, so use (θ/360) × πr². Use the value of π the question gives, or 22/7 if none is given, and write the answer in square units."
+    },
+    {
+      "q_number": 9,
+      "subtopic_id": "averages.mean",
+      "difficulty": "medium",
+      "hint1": "An average (mean) is the total divided by how many there are. To combine two groups, you need their totals, not just their two averages.",
+      "hint2": "Find the total age of the female teachers and the total age of the male teachers from their averages. Simply averaging 40 and 25 does not work, because the two groups are not the same size.",
+      "hint3": "Add the two totals and divide by all 12 teachers. Your answer should lie between 25 and 40, nearer to 25 because there are more male teachers.",
+      "solution": "Answer: C. 30\n\nThe mean is the total of all the values divided by the number of values. When two groups are combined, their totals add and so do their numbers, so the bigger group pulls the combined mean closer to its own mean.\n\nHow to tell:\nTotal age of female teachers = 4 × 40 = 160 years\nTotal age of male teachers = 8 × 25 = 200 years\nTotal age of all teachers = 160 + 200 = 360 years\nNumber of teachers = 4 + 8 = 12\nMean = 360 ÷ 12 = 30 years\n\nWhy not the others:\nA. 28: 12 × 28 = 336, which is 24 years short of the true total of 360.\nB. 25: this is the male teachers' average alone, which ignores the four older female teachers.\nD. 31: 12 × 31 = 372, which is 12 years more than the true total of 360.\n\nExam tip: to combine means from groups of different sizes, go back to totals: total = mean × number, add the totals, then divide by the full count."
+    },
+    {
+      "q_number": 10,
+      "subtopic_id": "permutations.selections",
+      "difficulty": "medium",
+      "hint1": "In a committee the order of choosing does not matter, so this is about combinations. When a committee is drawn from two groups, handle each group separately.",
+      "hint2": "The number of ways to choose r people from n is ⁿCᵣ. Choose the men from the men and the women from the women, then multiply the two counts together.",
+      "hint3": "Look closely at the women: 3 are needed and there are exactly 3. How many ways are there to choose all of them? Then work out ⁵C₃ for the men.",
+      "solution": "Answer: C. 10\n\nA committee is a selection, so order does not matter and we count combinations, written ⁿCᵣ for choosing r from n. When two separate choices are made one after the other, their numbers of ways multiply.\n\nHow to tell:\nMen: choose 3 from 5\n⁵C₃ = (5 × 4 × 3) ÷ (3 × 2 × 1) = 60 ÷ 6 = 10 ways\nWomen: choose 3 from 3\n³C₃ = 1 way, since all three must be picked\nTotal = 10 × 1 = 10 ways\n\nWhy not the others:\nA. 30: this multiplies by 3 for the women, but there is only one way to pick all three of them.\nB. 20: this is ⁶C₃, which does not describe choosing 3 from 5 men and 3 from 3 women.\nD. 150: with only one way to choose the women, the total cannot be more than the 10 ways of choosing the men.\n\nExam tip: in committee questions, split by group, work out ⁿCᵣ for each group, then multiply. A group that must be taken whole contributes exactly 1 way."
+    },
+    {
+      "q_number": 11,
+      "subtopic_id": "dispersion.range-deviation",
+      "difficulty": "hard",
+      "hint1": "The mean deviation measures how far, on average, the numbers are from their mean. You need all the numbers first, and here two of them depend on c.",
+      "hint2": "Use the mean to find c: five numbers with a mean of 6 must add up to 5 × 6 = 30. Then find each number's distance from 6, ignoring minus signs.",
+      "hint3": "Once you know c, list the five numbers, write each one's distance from 6 without a minus sign, add them and divide by 5. The distances add up to a whole number.",
+      "solution": "Answer: A. 2.0\n\nThe mean deviation is the mean of the distances of the values from their mean, with every distance counted as positive. So you need the mean, then each value's distance from it, then the average of those distances.\n\nHow to tell:\nSum needed = 5 × 6 = 30\n2 + 5 + (c + 2) + 7 + (c + 1) = 17 + 2c\n17 + 2c = 30, so 2c = 13 and c = 6.5\nNumbers: 2, 5, 8.5, 7, 7.5\nDistances from 6: 4, 1, 2.5, 1, 1.5\nSum of distances = 4 + 1 + 2.5 + 1 + 1.5 = 10\nMean deviation = 10 ÷ 5 = 2.0\n\nWhy not the others:\nB. 2.4: this would need the distances to add up to 12, not 10.\nC. 1.6: this would need the distances to add up to 8, not 10.\nD. 2.2: this would need the distances to add up to 11, not 10.\n\nExam tip: for mean deviation, write the distances from the mean in a row with no minus signs, add them, then divide by how many numbers there are. If the data contain an unknown and the mean is given, use total = mean × count to find the unknown first."
+    },
+    {
+      "q_number": 12,
+      "subtopic_id": "data-presentation.charts",
+      "difficulty": "medium",
+      "hint1": "Read the pie chart: each sector is labelled with a percentage of the whole monthly income. Find the two sectors the question names.",
+      "hint2": "Add the percentages of the Food and Medical sectors, then take that percentage of ₦120,000. It helps to know that 10% of ₦120,000 is ₦12,000.",
+      "hint3": "Read the percentage printed inside each of the two sectors, not the one in a neighbouring sector. Then find your combined percentage of ₦120,000 exactly.",
+      "solution": "Answer: B. ₦66,000\n\nIn a pie chart the whole circle stands for the whole amount, here the ₦120,000 income. Each sector's percentage tells you what fraction of that amount it represents, so the percentages of two sectors can be added before changing to money.\n\nHow to tell:\nFrom the chart: Food = 30%, Medical = 25%\nFood and Medical together = 30% + 25% = 55%\nAmount = 55/100 × ₦120,000\n= 0.55 × ₦120,000\n= ₦66,000\n\nWhy not the others:\nA. ₦76,000: this is about 63% of the income, and no two sectors on the chart add up to that.\nC. ₦56,000: this is about 47% of the income, less than Food and Medical together.\nD. ₦48,000: this is 40% of the income, which is Medical and House rent (25% + 15%), not Food and Medical.\n\nExam tip: in pie chart questions, add the percentages (or angles) of the sectors you need first, then change to money once. If the chart shows angles, divide by 360° instead of 100%."
+    },
+    {
+      "q_number": 14,
+      "subtopic_id": "fractions.operations",
+      "difficulty": "medium",
+      "hint1": "This tests the order of operations with mixed numbers. Do the part in brackets first, and turn mixed numbers into improper fractions before multiplying.",
+      "hint2": "3⅓ = 10/3 and 2¼ = 9/4. Multiply these, cancelling where you can, then do the subtraction and the addition from left to right. Every number left in the working is a whole number or a half, so an answer in fifths cannot be right.",
+      "hint3": "The bracket works out bigger than 5½, so the answer is negative. Finish the working carefully to decide between the negative options.",
+      "solution": "Answer: D. −1½\n\nBrackets are worked first, and a mixed number must be changed to an improper fraction before it is multiplied. Multiplying the whole parts and the fraction parts separately gives the wrong product.\n\nHow to tell:\n3⅓ = 10/3 and 2¼ = 9/4\n3⅓ × 2¼ = 10/3 × 9/4 = 90/12 = 15/2 = 7½\n5½ − 7½ + ½\n= −2 + ½\n= −1½\n\nWhy not the others:\nA. ½: this would need the bracket to be 5½, but it is 7½.\nB. ⅗: every number in the working is a whole number or a half, so the answer cannot be in fifths.\nC. −½: this would need the bracket to be 6½, but it is 7½.\n\nExam tip: change every mixed number to an improper fraction before multiplying or dividing, and cancel before you multiply to keep the numbers small."
+    },
+    {
+      "q_number": 15,
+      "subtopic_id": "number-bases.conversion",
+      "difficulty": "medium",
+      "hint1": "To change a number to base 8 (octal), a safe route is through base ten: first find its value in base ten, then divide by 8 again and again.",
+      "hint2": "Use base 3 place values: from the right they are 1, 3, 9 and 27. Multiply each digit by its place value and add. A proper base 3 number uses only 0, 1 and 2, so this numeral is misprinted; use the place values on the digits as printed, as the examiner did.",
+      "hint3": "The base ten value is between 64 and 511, so the octal answer has exactly three digits. Divide by 8 repeatedly and read the remainders in the correct order.",
+      "solution": "Answer: B. 171₈\n\nTo convert between two bases that are not base ten, go through base ten. Multiply each digit by its place value to get the base ten value, then divide again and again by the new base and read the remainders from the last one back to the first. Note: base 3 uses only the digits 0, 1 and 2, so 4104₃ is misprinted in the paper. The examiner's answer comes from using base 3 place values on the digits as printed.\n\nHow to tell:\nBase 3 place values from the right: 1, 3, 9, 27\n4104₃ → 4 × 27 + 1 × 9 + 0 × 3 + 4 × 1\n= 108 + 9 + 0 + 4 = 121\nNow divide by 8:\n121 ÷ 8 = 15 remainder 1\n15 ÷ 8 = 1 remainder 7\n1 ÷ 8 = 0 remainder 1\nReading the remainders from the last to the first: 171₈\nCheck: 1 × 64 + 7 × 8 + 1 = 121\n\nWhy not the others:\nA. 117₈: this equals 1 × 64 + 1 × 8 + 7 = 79 in base ten, not 121.\nC. 17111₈: a five-digit octal number is at least 4096, far more than 121.\nD. 1711₈: a four-digit octal number is at least 512, more than 121.\n\nExam tip: after repeated division, read the remainders from the last one up to the first. Check by counting digits: a three-digit octal number lies between 64 and 511."
+    },
+    {
+      "q_number": 16,
+      "subtopic_id": "integration.indefinite",
+      "difficulty": "medium",
+      "hint1": "Before integrating a fraction, see whether you can split it into simpler terms by dividing each part of the top by the bottom.",
+      "hint2": "(2x + 1)/(2x) = 2x/(2x) + 1/(2x) = 1 + 1/(2x). The integral of 1 is x, and the integral of 1/x is ln|x|, the natural logarithm. (The options print ln as In.)",
+      "hint3": "Write 1/(2x) as ½ × 1/x and decide what number stays in front of ln|x|. Check your choice by differentiating it back.",
+      "solution": "Answer: A. x + ½ ln|x| + c (ln is printed as \"In\")\n\nIntegration reverses differentiation. Split the fraction into separate terms, integrate each one, and add one constant c. The integral of 1/x is ln|x|, so a number multiplying 1/x stays in front of ln|x|.\n\nHow to tell:\n(2x + 1)/(2x) = 2x/(2x) + 1/(2x) = 1 + ½ × 1/x\n∫1 dx = x\n∫½ × 1/x dx = ½ ln|x|\nResult: x + ½ ln|x| + c\nCheck: d/dx(x + ½ ln|x|) = 1 + ½ × 1/x = 1 + 1/(2x)\n\nWhy not the others:\nB. 1 + 1/(2x) + c: this is the split-up fraction itself, not its integral.\nC. x + 2 ln|x| + c: the number in front should be ½, not 2; this differentiates to 1 + 2/x.\nD. x + ln|2x| + c: ln|2x| differentiates to 1/x, not 1/(2x), so this gives 1 + 1/x.\n\nExam tip: to integrate a fraction whose bottom is a single term, divide each top term by the bottom first. Then check your answer by differentiating it back to the question."
+    },
+    {
+      "q_number": 17,
+      "subtopic_id": "percentages.interest",
+      "difficulty": "easy",
+      "hint1": "This is simple interest. Recall the formula that links interest, principal, rate and time.",
+      "hint2": "I = PRT/100, where P is the amount invested, R the rate per cent per year and T the time in years. Put in I = 27, P = 225 and R = 4, and leave T as the unknown.",
+      "hint3": "225 × 4 ÷ 100 is the interest earned in one year. How many years of that make ₦27?",
+      "solution": "Answer: C. 3 years\n\nSimple interest is paid only on the original amount, so the same interest is earned every year. That is why I = PRT/100: the interest for one year, P × R/100, is multiplied by the number of years T.\n\nHow to tell:\nI = PRT/100\n27 = (225 × 4 × x)/100\n27 = 900x/100\n27 = 9x\nx = 27 ÷ 9 = 3 years\n\nWhy not the others:\nA. 1 year: one year earns only ₦9.\nB. 2 years: two years earn ₦18.\nD. 4 years: four years earn ₦36.\n\nExam tip: in simple interest questions, find the interest for one year first (P × R/100). The time is then the total interest divided by that yearly amount."
+    },
+    {
+      "q_number": 18,
+      "subtopic_id": "number-bases.operations",
+      "difficulty": "medium",
+      "hint1": "An unknown number sits inside a subtraction in base 3. Think about how you would find a missing number in an ordinary subtraction.",
+      "hint2": "If 121₃ − X = 11₃, then X = 121₃ − 11₃. Do this subtraction in base 3, or change to base ten, subtract, and change back. The place values in base 3 are 1, 3, 9 and 27.",
+      "hint3": "121₃ is 16 in base ten and 11₃ is 4. Find X in base ten, write it in base 3 using the place values 9, 3 and 1, and check it by putting it back into the subtraction.",
+      "solution": "Answer: D. 110₃\n\nIf a − X = b, then X = a − b. The same rule holds in any base, so find 121₃ − 11₃. Going through base ten is safe, as long as you convert back at the end.\n\nHow to tell:\n121₃ = 1 × 9 + 2 × 3 + 1 = 16\n11₃ = 1 × 3 + 1 = 4\nX = 16 − 4 = 12\n12 = 1 × 9 + 1 × 3 + 0 × 1 = 110₃\nCheck in base 3: 121₃ − 110₃ = 11₃\n\nWhy not the others:\nA. 1101₃: this equals 37, which is bigger than 121₃ (16), so the result would be negative.\nB. 101₃: this equals 10, and 16 − 10 = 6 = 20₃, not 11₃.\nC. 11₃: this is the result of the subtraction, not the number taken away; 121₃ − 11₃ = 110₃.\n\nExam tip: for a missing number in a subtraction, rearrange first. If a − X = b, then X = a − b. Always check by putting your answer back into the original subtraction."
+    },
+    {
+      "q_number": 19,
+      "subtopic_id": "coordinate-geometry.distance-midpoint",
+      "difficulty": "medium",
+      "hint1": "The midpoint of two points is found by averaging their x-coordinates and averaging their y-coordinates. Set up one equation for each coordinate.",
+      "hint2": "Midpoint = ((x₁ + x₂)/2, (y₁ + y₂)/2). So (m + 6)/2 must equal the midpoint's x-value, and (6 + n)/2 must equal its y-value.",
+      "hint3": "Solve each equation for its unknown: multiply both sides by 2, then take away the known coordinate. Keep the order asked for, m first and then n.",
+      "solution": "Answer: C. (4,−6)\n\nThe midpoint sits halfway between two points, so each of its coordinates is the average of the matching coordinates of the two points.\n\nHow to tell:\nx: (m + 6)/2 = 5\nm + 6 = 10\nm = 4\ny: (6 + n)/2 = 0\n6 + n = 0\nn = −6\nSo m = 4 and n = −6\nCheck: the points are (4,6) and (6,−6), and their midpoint is (10/2, 0/2) = (5,0).\n\nWhy not the others:\nA. (4,1): n = 1 gives (6 + 1)/2 = 3.5, not 0.\nB. (−4,6): m = −4 gives (−4 + 6)/2 = 1, not 5, and n = 6 gives (6 + 6)/2 = 6, not 0.\nD. (−6,4): m = −6 gives (−6 + 6)/2 = 0, not 5; the values have been swapped round.\n\nExam tip: to find an unknown end point, double the midpoint value and subtract the known coordinate: m = 2 × 5 − 6 and n = 2 × 0 − 6."
+    },
+    {
+      "q_number": 20,
+      "subtopic_id": "sequences.gp",
+      "difficulty": "medium",
+      "hint1": "In a G.P., each term is the one before it multiplied by the common ratio r. Write the given terms using the first term a and r.",
+      "hint2": "The nth term is arⁿ⁻¹, so the 3rd term is ar² and the 6th term is ar⁵. Dividing the 6th term by the 3rd removes a and leaves a power of r.",
+      "hint3": "You should get r³ = 32/108. Simplify the fraction fully, then take the cube root of the top and of the bottom.",
+      "solution": "Answer: D. ±2/3\n\nIn a G.P. the nth term is arⁿ⁻¹. Dividing one term by an earlier term cancels the first term a and leaves r raised to the number of steps between them. The 3rd and 6th terms are 3 steps apart, so their ratio is r³.\n\nHow to tell:\n3rd term: ar² = 108\n6th term: ar⁵ = 32\nar⁵ ÷ ar² = r³ = 32/108\n32/108 = 8/27 (dividing top and bottom by 4)\nr = ∛(8/27) = 2/3\nNote: the options are all printed with ±. Strictly, a cube root has only one real value, so r = 2/3; a ratio of −2/3 would give r³ = −8/27. D is the option that contains 2/3.\n\nWhy not the others:\nA. ±1/3: (1/3)³ = 1/27, not 8/27.\nB. ±2/5: (2/5)³ = 8/125, not 8/27.\nC. ±1/2: (1/2)³ = 1/8, not 8/27.\n\nExam tip: to find r from two terms of a G.P., divide the later term by the earlier one and solve the power of r that you get. An odd power such as r³ = 8/27 has one real solution, with the same sign as the number. An even power such as r² = 4/9 has two, r = ±2/3."
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "dispersion.variance-sd",
+      "difficulty": "hard",
+      "hint1": "Standard deviation measures how spread out data are about their mean. When every value carries the same factor k, keep k in the working and see how it appears in the result.",
+      "hint2": "Find the mean first. Then square each value's distance from the mean, add the squares, and divide by the number of values to get the variance. The standard deviation is the square root of the variance.",
+      "hint3": "The mean is 4k, and the variance comes out as a number times k². Take the square root, set it equal to √2, and remember that k is positive.",
+      "solution": "Answer: A. 1\n\nThe standard deviation is the square root of the variance, and the variance is the mean of the squared distances from the mean. If every value is multiplied by a positive number k, every distance from the mean is multiplied by k too, so the standard deviation is multiplied by k.\n\nHow to tell:\nData in order: 2k, 3k, 4k, 5k, 6k\nMean = (2k + 3k + 4k + 5k + 6k) ÷ 5 = 20k ÷ 5 = 4k\nDistances from the mean: −2k, −k, 0, k, 2k\nSquares: 4k², k², 0, k², 4k²\nSum of squares = 10k²\nVariance = 10k² ÷ 5 = 2k² (in the syllabus, divide by the number of values)\nStandard deviation = √(2k²) = k√2, since k is positive\nk√2 = √2, so k = 1\n\nWhy not the others:\nB. 0.5: this gives a standard deviation of 0.5√2, which is half of √2.\nC. 3: this gives a standard deviation of 3√2.\nD. 4: this gives a standard deviation of 4√2; the 4 belongs to the mean, 4k, not to k.\n\nExam tip: when all the data share a positive factor k, the standard deviation is k times the standard deviation of the data without k. Here 2, 3, 4, 5, 6 has standard deviation √2, so k must be 1."
+    },
+    {
+      "q_number": 22,
+      "subtopic_id": "coordinate-geometry.parallel-perpendicular",
+      "difficulty": "medium",
+      "hint1": "Parallel lines have the same gradient (slope). Think about how to read the gradient of a line written in the form ax + by = c.",
+      "hint2": "Rearrange 7x + 5y = 12 into the form y = mx + c to read its gradient m. A parallel line must have the same gradient, so check the gradient of each option and also check that (5,7) lies on it.",
+      "hint3": "A line parallel to 7x + 5y = 12 can be written 7x + 5y = k for some number k. Use the point (5,7) to find k.",
+      "solution": "Answer: B. 7x + 5y = 70\n\nParallel lines have equal gradients. For a line ax + by = c the gradient is −a/b, so every line of the form 7x + 5y = k has gradient −7/5. For any k other than 12, it is a line parallel to 7x + 5y = 12. Only the number k changes, and the given point fixes it.\n\nHow to tell:\nGiven line: 7x + 5y = 12, so 5y = −7x + 12 and y = −7/5 x + 12/5\nGradient = −7/5\nParallel line: 7x + 5y = k\nThrough (5,7): k = 7 × 5 + 5 × 7 = 35 + 35 = 70\nEquation: 7x + 5y = 70\n\nWhy not the others:\nA. 5x + 7y = 20: the numbers are swapped, so its gradient is −5/7, and (5,7) gives 25 + 49 = 74, not 20.\nC. xy = 7: this is a curve, not a straight line.\nD. 15x + 17y = 9: its gradient is −15/17, and (5,7) gives 75 + 119 = 194, not 9.\n\nExam tip: for a line parallel to ax + by = c, keep ax + by exactly as it is and find the new right-hand side by putting in the given point."
+    },
+    {
+      "q_number": 23,
+      "subtopic_id": "solids.surface-area",
+      "difficulty": "medium",
+      "hint1": "A closed cylinder has three surfaces: a curved side and two circular ends. Total surface area means all three added together.",
+      "hint2": "Curved surface = 2πrh and each end = πr², so the total is 2πrh + 2πr², which can be written 2πr(r + h). Use π = 22/7.",
+      "hint3": "Work out 2 × 22/7 × 3 × (3 + 12). It gives a fraction over 7; change it to a decimal correct to two places.",
+      "solution": "Answer: C. 282.86 cm²\n\nIf you cut a closed cylinder open, you get a rectangle (the curved side) and two circles (the ends). The rectangle's length is the circumference 2πr and its width is the height h, so its area is 2πrh. Each circle has area πr².\n\nHow to tell:\nr = 3 cm, h = 12 cm, π = 22/7\nCurved surface = 2πrh = 2 × 22/7 × 3 × 12 = 1584/7 ≈ 226.29 cm²\nTwo ends = 2πr² = 2 × 22/7 × 3² = 396/7 ≈ 56.57 cm²\nTotal = 1584/7 + 396/7 = 1980/7 ≈ 282.86 cm²\nShortcut: 2πr(r + h) = 2 × 22/7 × 3 × 15 = 1980/7 ≈ 282.86 cm²\n\nWhy not the others:\nA. 251.88 cm²: this is less than the full total, so part of the surface has been missed or worked out wrongly.\nB. 94.29 cm²: this is 2π(r + h) = 660/7, which forgets to multiply by r = 3.\nD. 88e.32 cm²: this option is misprinted, and no reading of it equals 1980/7.\n\nExam tip: for a closed cylinder use 2πr(r + h). For a cylinder open at one end use 2πrh + πr², and for a thin tube open at both ends use 2πrh alone."
+    },
+    {
+      "q_number": 24,
+      "subtopic_id": "triangles.polygons",
+      "difficulty": "medium",
+      "hint1": "This is about the interior and exterior angles of a regular polygon. Recall the two facts that link them to each other and to the number of sides.",
+      "hint2": "At each corner, the interior angle and the exterior angle lie on a straight line, so they add to 180°. The exterior angles of a polygon add to 360°, so for a regular polygon the number of sides is 360° divided by one exterior angle.",
+      "hint3": "The ratio 1 : 19 splits 180° into 1 + 19 = 20 equal parts, and the exterior angle is one part. Find it, then divide 360° by it.",
+      "solution": "Answer: B. 40\n\nAt each corner of a polygon the interior and exterior angles make a straight line, so they add to 180°. The exterior angles of a polygon add up to 360°, and in a regular polygon they are all equal, so the number of sides is 360° ÷ one exterior angle.\n\nHow to tell:\nExterior : interior = 1 : 19, so 180° is split into 1 + 19 = 20 parts\nExterior angle = 180° ÷ 20 = 9°\nInterior angle = 19 × 9° = 171°\nNumber of sides = 360° ÷ 9° = 40\n\nWhy not the others:\nA. 30: the exterior angle would be 12° and the interior 168°, a ratio of 1 : 14.\nC. 36: the exterior angle would be 10° and the interior 170°, a ratio of 1 : 17.\nD. 38: the exterior angle would not be a whole number of degrees, and the ratio would be 1 : 18, not 1 : 19.\n\nExam tip: in polygon questions, work through the exterior angle. It is usually easier to find, and 360° divided by it gives the number of sides straight away."
+    },
+    {
+      "q_number": 25,
+      "subtopic_id": "probability.single-event",
+      "difficulty": "easy",
+      "hint1": "Probability of an event = number of ways it can happen ÷ total number of equally likely outcomes. Count everything in the bag first.",
+      "hint2": "Only one marble is picked, so the bottom of the fraction is the total number of marbles, not that number squared. A marble cannot be red and green at once, so the red and green counts can be added.",
+      "hint3": "Put the red and green marbles together over the total. Be careful to include both colours, not just one of them.",
+      "solution": "Answer: D. 11/15\n\nWhen all outcomes are equally likely, probability = favourable outcomes ÷ total outcomes. A single marble cannot be both red and green, so the number of favourable marbles is simply red plus green.\n\nHow to tell:\nTotal marbles = 4 + 8 + 3 = 15\nRed or green = 3 + 8 = 11\nP(red or green) = 11/15\n\nWhy not the others:\nA. 189/225: this simplifies to 21/25, which is not equal to 11/15.\nB. 11/225: this puts the 11 favourable marbles over 225, but one pick has only 15 equally likely outcomes.\nC. 8/15: this is the probability of green alone and leaves out the 3 red marbles.\n\nExam tip: for a single pick with \"or\" between two colours, add the counts of those colours and divide by the total number of marbles. The top counts the marbles you want, and the bottom counts every marble once."
+    },
+    {
+      "q_number": 26,
+      "subtopic_id": "sets.notation",
+      "difficulty": "easy",
+      "hint1": "This is about the complement of a set, marked with a dash ', which means everything not in that set. Think about what happens to a union or an intersection when you take its complement.",
+      "hint2": "Sketch two overlapping circles X and Y. Shade everything outside X, then also shade everything outside Y. Notice which region is left unshaded.",
+      "hint3": "Only one region stays unshaded. Find the option that means everything except that region, and be careful not to mix up ∪ and ∩ inside the brackets.",
+      "solution": "Answer: C. (X ∩ Y)'\n\nBy De Morgan's law, the complement of an intersection is the union of the complements: (X ∩ Y)' = X' ∪ Y'. In words, an element is not in both X and Y exactly when it is outside X or outside Y.\n\nHow to tell:\nX' is everything outside X.\nY' is everything outside Y.\nX' ∪ Y' is everything outside X together with everything outside Y.\nThe only part not covered is the overlap, X ∩ Y.\nSo X' ∪ Y' is everything except X ∩ Y, which is (X ∩ Y)'.\n\nWhy not the others:\nA. X ∩ Y': this is only the part of X outside Y, a much smaller region.\nB. X' ∩ Y': this is only the region outside both sets, which equals (X ∪ Y)'.\nD. (X ∪ Y)': this is the region outside both sets, which equals X' ∩ Y', not X' ∪ Y'.\n\nExam tip: in De Morgan questions, the dash moves outside the brackets and ∪ and ∩ swap: X' ∪ Y' = (X ∩ Y)' and X' ∩ Y' = (X ∪ Y)'. Sketch a Venn diagram if you are unsure."
+    },
+    {
+      "q_number": 28,
+      "subtopic_id": "probability.combined-events",
+      "difficulty": "medium",
+      "hint1": "With two dice there are 6 × 6 = 36 equally likely outcomes. Turn the condition into a list of allowed sums, then count the outcomes that give them.",
+      "hint2": "The sum of two dice is between 2 and 12. List the factors of 12 in that range; 1 is a factor of 12 but cannot be a sum.",
+      "hint3": "Count the ordered pairs for each allowed sum; for example, a sum of 3 comes from (1,2) and (2,1). Do not forget the larger factors at the end of your list.",
+      "solution": "Answer: B. 1/3\n\nWhen two fair dice are thrown, each of the 36 ordered pairs is equally likely. The probability is the number of pairs that meet the condition divided by 36. Order matters: (1,2) and (2,1) are different outcomes.\n\nHow to tell:\nFactors of 12: 1, 2, 3, 4, 6, 12\nPossible sums with two dice: 2 to 12, so 1 is out\nSum 2: (1,1), 1 way\nSum 3: (1,2), (2,1), 2 ways\nSum 4: (1,3), (2,2), (3,1), 3 ways\nSum 6: (1,5), (2,4), (3,3), (4,2), (5,1), 5 ways\nSum 12: (6,6), 1 way\nTotal = 1 + 2 + 3 + 5 + 1 = 12 ways\nP = 12/36 = 1/3\n\nWhy not the others:\nA. 1/6: this is 6/36, which counts only the sums 2, 3 and 4 and misses 6 and 12.\nC. 1/9: this is 4/36, far fewer than the 12 pairs that work.\nD. 1/12: this is 3/36, which also counts far too few pairs.\n\nExam tip: for two-dice questions, list the target sums first, then count the ordered pairs for each. A sum of 7 has the most pairs (6), and the count drops by one for each step away from 7."
+    },
+    {
+      "q_number": 29,
+      "subtopic_id": "expressions.polynomials",
+      "difficulty": "medium",
+      "hint1": "When a polynomial is divided by something like (y − a), there is a quick way to find the remainder without long division.",
+      "hint2": "The remainder theorem: when g(y) is divided by (y − a), the remainder is g(a). So the remainder on dividing by (y − 1) is g(1).",
+      "hint3": "Substitute y = 1 into y² + qy + 5, set the result equal to 9, and solve for q.",
+      "solution": "Answer: A. 3\n\nThe remainder theorem says that when a polynomial g(y) is divided by (y − a), the remainder is g(a). This works because g(y) = (y − a) × (quotient) + remainder, and putting y = a makes the first part zero.\n\nHow to tell:\nDivisor (y − 1), so a = 1\ng(1) = 1² + q × 1 + 5 = 6 + q\n6 + q = 9\nq = 3\n\nWhy not the others:\nB. 4: g(1) = 1 + 4 + 5 = 10, not 9.\nC. 2: g(1) = 1 + 2 + 5 = 8, not 9.\nD. 1: g(1) = 1 + 1 + 5 = 7, not 9.\n\nExam tip: when dividing by (y − a), put y = a; when dividing by (y + a), put y = −a. Watch the sign change."
+    },
+    {
+      "q_number": 31,
+      "subtopic_id": "binary-operations.evaluating",
+      "difficulty": "medium",
+      "hint1": "A binary operation is a rule for combining two numbers. Replace a with the first number and b with the second, exactly as the rule says.",
+      "hint2": "Here a = −½ and b = 2. Work out the top, b² − a², and the bottom, 2ab, separately. Squaring removes the minus sign of a on the top, but it stays in 2ab on the bottom.",
+      "hint3": "The top is a positive fraction and the bottom is a negative number. Divide the top by the bottom carefully, and check which way up your answer should be.",
+      "solution": "Answer: A. −15/8\n\nA binary operation defines how to combine two numbers. To evaluate it, put the first number in place of a and the second in place of b, then simplify the top and the bottom separately before dividing.\n\nHow to tell:\na = −½, b = 2\nTop: b² − a² = 2² − (−½)² = 4 − ¼ = 15/4\nBottom: 2ab = 2 × (−½) × 2 = −2\na ∇ b = (15/4) ÷ (−2) = 15/4 × (−½) = −15/8\n\nWhy not the others:\nB. 8/15: this is upside down and has lost the minus sign.\nC. −8/15: this has the right sign but is upside down; it divides −2 by 15/4 instead of 15/4 by −2.\nD. 15/8: this loses the minus sign that comes from a being negative in 2ab.\n\nExam tip: in binary operation questions, put negative numbers in brackets when you substitute. Squaring makes them positive, but a product with only one negative number stays negative."
+    },
+    {
+      "q_number": 32,
+      "subtopic_id": "indices.log-laws",
+      "difficulty": "medium",
+      "hint1": "This is about the laws of logarithms. Write the number inside the log, 0.4, as a fraction and see how it is built from the numbers inside M and N.",
+      "hint2": "0.4 = 4/10 = 2/5. The quotient law, log(a ÷ b) = log a − log b, turns a division inside a log into a subtraction. The stem is misprinted: read M as logₓ2 and N as logₓ5.",
+      "hint3": "Split logₓ(2/5) with the quotient law and match each log to M or N. You can test an option by rebuilding it: for example, 2M − N = logₓ(4/5).",
+      "solution": "Answer: D. M − N\n\nThe quotient law of logarithms says log(a/b) = log a − log b, in any base. So the log of a fraction can be written as the log of the top minus the log of the bottom. Note: the stem is misprinted as M = 2logₓ²; the intended meaning is M = logₓ2 and N = logₓ5.\n\nHow to tell:\n0.4 = 4/10 = 2/5\nlogₓ0.4 = logₓ(2/5)\n= logₓ2 − logₓ5\n= M − N\n\nWhy not the others:\nA. 2M − N: this is 2logₓ2 − logₓ5 = logₓ(4/5) = logₓ0.8.\nB. M + 2N: this is logₓ2 + 2logₓ5 = logₓ(2 × 25) = logₓ50.\nC. ½M: this is ½logₓ2 = logₓ√2, which does not involve 5 at all.\n\nExam tip: to write a log in terms of given logs, first write the number as a product or quotient of the given numbers (0.4 = 2/5, 50 = 2 × 5², 0.8 = 2²/5). Then multiplying becomes +, dividing becomes −, and powers come down in front."
+    },
+    {
+      "q_number": 34,
+      "subtopic_id": "inequalities.quadratic",
+      "difficulty": "hard",
+      "hint1": "This is a quadratic inequality. Bring every term to one side so that the other side is 0, then factorise.",
+      "hint2": "x² + 5x + 6 > 0 factorises as (x + 2)(x + 3) > 0. A product is positive when both brackets are positive or both are negative, so the answer lies outside the two roots, not between them.",
+      "hint3": "The roots are −3 and −2. Test a number from each region, such as x = −4, x = −2.5 and x = 0, in the original inequality. One option is misprinted and has lost its > sign, so read each option with care.",
+      "solution": "Answer: B. x < −3 and x – 2 (a misprint for x < −3 or x > −2)\n\nTo solve a quadratic inequality, bring everything to one side, factorise and find the roots. The graph of y = x² + 5x + 6 is a U-shaped curve that dips below the x-axis only between its roots, so it is above zero outside them.\n\nHow to tell:\nx² + 5x > −6\nx² + 5x + 6 > 0\n(x + 2)(x + 3) > 0\nRoots: x = −3 and x = −2\nSolution: outside the roots, x < −3 or x > −2\nCheck x = −4: 16 − 20 = −4, and −4 > −6 is true, so numbers below −3 work.\nCheck x = −2.5: 6.25 − 12.5 = −6.25, and −6.25 > −6 is false, so numbers between −3 and −2 do not work.\nCheck x = 0: 0 > −6 is true, so numbers above −2 work.\nOption B has lost its > sign, and its \"and\" should be \"or\", since no number can be both below −3 and above −2.\n\nWhy not the others:\nA. x < −3 and x > 2: the second root is −2, not 2; x = 0 works but this leaves it out.\nC. x > −3 and x < 2: this includes x = −2.5, which does not work, and leaves out x = −4, which does.\nD. x > −3 and x < −2: this is exactly the region between the roots, where the inequality fails.\n\nExam tip: when ax² + bx + c has two different roots and a is positive, the expression is positive outside the roots and negative between them. Test one number from each region to be sure."
+    },
+    {
+      "q_number": 35,
+      "subtopic_id": "expressions.change-of-subject",
+      "difficulty": "medium",
+      "answer_challenge": "Key C is right for the intended question but not for the stem as printed. As printed, (4x − 5)² = 3y gives x = (5 ± √(3y))/4, which matches no option. The stem should be corrected to 4x + 5 = 3y/(4x − 5), and options B and C have misplaced brackets: they should read ±√(3y + 25)/16 and ±√(3y + 25)/4. Hints and solution are written for the corrected stem.",
+      "hint1": "A sign was lost in printing: the left side should read 4x + 5. To make x the subject, first clear the fraction by multiplying both sides by its denominator.",
+      "hint2": "After clearing the fraction you have (4x + 5)(4x − 5) = 3y. This is a difference of two squares, (a + b)(a − b) = a² − b², so it becomes 16x² − 25 = 3y.",
+      "hint3": "Get x² on its own, then take the square root of both sides. Remember the ± and remember that the square root applies to the top and the bottom of the fraction.",
+      "solution": "Answer: C. ±√(3y + 25)/4\n\nNote: the question as printed has lost a sign. It should read 4x + 5 = 3y/(4x − 5). As printed, no option fits.\n\nTo make x the subject, undo what has been done to x in reverse order. Here the two brackets form a difference of two squares, (a + b)(a − b) = a² − b², so the x terms collapse into a single x² term, and a square root undoes the square at the end.\n\nHow to tell:\n4x + 5 = 3y/(4x − 5)\nMultiply both sides by (4x − 5): (4x + 5)(4x − 5) = 3y\nDifference of two squares: 16x² − 25 = 3y\nAdd 25 to both sides: 16x² = 3y + 25\nDivide by 16: x² = (3y + 25)/16\nSquare root both sides: x = ±√(3y + 25)/√16\nSince √16 = 4: x = ±√(3y + 25)/4\n\nWhy not the others:\nA. ±√(3y + 5)/4: uses 5 instead of 5² = 25, but the 5 is squared when the brackets are multiplied out.\nB. ±√(3y + 25)/16: the square root was taken of the top but not the bottom, and √16 is 4, not 16.\nD. (3y + 25)/4: this is not x, which needs a square root and ±, and it is not x² either, which is (3y + 25)/16.\n\nExam tip: once you have x² on its own and nothing in the question fixes the sign of x, take the square root of both sides and write ±. Every part of the fraction, top and bottom, goes under the root. Spot (a + b)(a − b) early, because it turns straight into a² − b²."
+    },
+    {
+      "q_number": 36,
+      "subtopic_id": "matrices.determinants",
+      "difficulty": "hard",
+      "hint1": "A matrix is called singular when its determinant is zero. So work out the determinant in terms of x.",
+      "hint2": "Expand along the top row. Multiply each top entry by the 2 by 2 determinant left when you cover that entry's row and column, and use the signs +, −, + across the row.",
+      "hint3": "Your three terms should simplify to a number plus or minus x. Set that expression equal to zero and solve for x.",
+      "solution": "Answer: C. 3\n\nA square matrix is singular when its determinant is zero, which means it has no inverse. So the unknown entry is found by writing the determinant in terms of x and setting it equal to zero.\n\nHow to tell: expand along the top row, with signs +, −, +.\nFirst term: 1 × [(−1)(−6) − (1)(3)] = 1 × (6 − 3) = 3\nSecond term: −1 × [(3)(−6) − (1)(x)] = −1 × (−18 − x) = 18 + x\nThird term: −2 × [(3)(3) − (−1)(x)] = −2 × (9 + x) = −18 − 2x\nAdd them: 3 + 18 + x − 18 − 2x = 3 − x\nSingular means determinant = 0: 3 − x = 0\nSo x = 3\n\nWhy not the others:\nA. 8: the determinant would be 3 − 8 = −5, not zero.\nB. 5: the determinant would be 3 − 5 = −2, not zero.\nD. 2: the determinant would be 3 − 2 = 1, not zero.\n\nExam tip: for any \"find x so the matrix is singular\" question, set the determinant to zero. On a 3 by 3, keep the +, −, + signs on the top row, because a lost minus sign is the most common slip. You can also check each option by substituting it back."
+    },
+    {
+      "q_number": 37,
+      "subtopic_id": "trigonometry.ratios",
+      "difficulty": "hard",
+      "hint1": "The expression to find can be split into two fractions over cosθ. Think about which trigonometric ratio sinθ/cosθ gives.",
+      "hint2": "From the given equation, collect the cosθ term on one side: cosθ = √2 sinθ − sinθ = (√2 − 1)sinθ. From this you can find tanθ, rationalising the denominator.",
+      "hint3": "Write (cosθ − sinθ)/cosθ as 1 − sinθ/cosθ and put in your value of tanθ. Two options differ only by sign, so check yours carefully.",
+      "solution": "Answer: B. −√2\n\nDividing each term of the top by cosθ turns the expression into 1 − tanθ, because sinθ/cosθ = tanθ. So the task becomes finding tanθ from the given equation.\n\nHow to tell:\nsinθ + cosθ = √2 sinθ\ncosθ = √2 sinθ − sinθ = (√2 − 1)sinθ\ntanθ = sinθ/cosθ = 1/(√2 − 1)\nRationalise: multiply top and bottom by (√2 + 1)\ntanθ = (√2 + 1)/(2 − 1) = √2 + 1\n(cosθ − sinθ)/cosθ = cosθ/cosθ − sinθ/cosθ = 1 − tanθ\n= 1 − (√2 + 1) = −√2\n\nWhy not the others:\nA. √2: the right size but the wrong sign. Since tanθ is bigger than 1, 1 − tanθ is negative.\nC. 1: this would need tanθ = 0, so sinθ = 0, and then the given equation would force cosθ = 0 too, which cannot happen.\nD. −1: this would need tanθ = 2, but tanθ here is √2 + 1, about 2.41.\n\nExam tip: when an expression has one trigonometric ratio underneath, divide every term by it. Here that turns sin and cos into tan. Then use the given equation to find tanθ, and rationalise any surd in the denominator."
+    },
+    {
+      "q_number": 38,
+      "subtopic_id": "permutations.arrangements",
+      "difficulty": "medium",
+      "hint1": "When some letters must stay together, treat that group as one single item first, then count arrangements.",
+      "hint2": "Find the vowels in MATRIX and glue them into one block. Count how many items you are now arranging, and how many ways they can be put in a line.",
+      "hint3": "You have counted the arrangements of the items. Now ask whether the letters inside the vowel block can change places, and how many ways they can. Two options differ by exactly that factor.",
+      "solution": "Answer: B. 240 ways\n\nIf certain letters must stay together, glue them into one block and arrange the block with the other letters. Then multiply by the number of ways the letters can be ordered inside the block, because swapping them gives a new arrangement.\n\nHow to tell:\nMATRIX has 6 different letters. The vowels are A and I.\nGlue A and I into one block: items are (AI), M, T, R, X, which is 5 items.\nArrange 5 items in a line: 5 × 4 × 3 × 2 × 1 = 120\nOrder inside the block: AI or IA, which is 2 ways\nTotal: 120 × 2 = 240 ways\n\nWhy not the others:\nA. 120 ways: this forgets that the two vowels can swap inside the block.\nC. 720 ways: this is 6 × 5 × 4 × 3 × 2 × 1, every arrangement of the 6 letters with no condition at all.\nD. 1520 ways: with no condition there are only 720 arrangements, so a count with a condition cannot be larger.\n\nExam tip: for \"must come together\" questions, count the group as one item, arrange all the items, then multiply by the ways to arrange inside the group. A count with a condition can never be larger than the count with no condition, which rules out options that are too large."
+    },
+    {
+      "q_number": 39,
+      "subtopic_id": "permutations.selections",
+      "difficulty": "medium",
+      "hint1": "Choosing balls where order does not matter is a selection, so use combinations, nCr.",
+      "hint2": "Same colour means both balls come from one colour group. Count each colour on its own: choose 2 of the blues, 2 of the greens, and 2 of the yellows.",
+      "hint3": "The three colour cases cannot happen at the same time, so decide whether to add or multiply them. As a check, any 2 balls from all 11 can be chosen in only ¹¹C₂ = 55 ways.",
+      "solution": "Answer: C. 17 ways\n\nWhen a choice can happen in one of several separate cases, count each case and add them. Here the pair is either both blue, both green or both yellow, and each case is a selection where order does not matter, so each uses nCr.\n\nHow to tell:\nBoth blue: ⁵C₂ = (5 × 4)/(2 × 1) = 10\nBoth green: ⁴C₂ = (4 × 3)/(2 × 1) = 6\nBoth yellow: ²C₂ = 1\nThe cases are separate, so add: 10 + 6 + 1 = 17 ways\n\nWhy not the others:\nA. 60 ways: this multiplies 10 × 6 × 1 instead of adding. Multiplying is for choices made together, not for separate cases.\nB. 20 ways: this is 5 × 4, one blue and one green, which is two different colours.\nD. 120 ways: any 2 balls from 11 can be chosen in only ¹¹C₂ = 55 ways, so no answer can be bigger than 55.\n\nExam tip: when \"or\" cases cannot happen together, add their counts; when a choice is made in stages, one after the other, multiply. Before choosing, check the answer against the total with no condition, which here is ¹¹C₂; any option above it is impossible."
+    },
+    {
+      "q_number": 40,
+      "subtopic_id": "solids.volume",
+      "difficulty": "medium",
+      "hint1": "The volume of a cylinder is πr²h, and the water level is the height h. Put the volume and the radius in matching units before you divide.",
+      "hint2": "1 litre = 1000 cm³, so 1000 litres = 1 m³. Convert the volume to m³ and the radius to metres.",
+      "hint3": "Divide the volume in m³ by the base area π × 0.5² in m². Some options differ by a factor of 10, so check your conversion before choosing.",
+      "solution": "Answer: A. 12.73 m\n\nThe water in the tank is itself a cylinder, so its volume is πr²h. Knowing the volume and the radius, the height is the volume divided by the area of the circular base. The units must match first: litres become cubic metres.\n\nHow to tell:\nVolume: 1000 litres = 1 m³, so 10,000 litres = 10 m³\nRadius: 50 cm = 0.5 m\nBase area: πr² = 22/7 × 0.5 × 0.5 = 22/7 × 0.25 ≈ 0.7857 m²\nHeight: h = V ÷ πr² = 10 ÷ 0.7857 ≈ 12.73 m\n\nWhy not the others:\nB. 5.06 m: 0.7857 × 5.06 ≈ 3.98 m³, only about 4,000 litres.\nC. 1.27 m: 0.7857 × 1.27 ≈ 1 m³, only 1,000 litres. This is a slip of a factor of 10.\nD. 0.51 m: 0.7857 × 0.51 ≈ 0.40 m³, only about 400 litres.\n\nExam tip: in capacity questions, convert first: 1 litre = 1000 cm³ and 1 m³ = 1000 litres. Then check your answer by multiplying back, base area × height, to see if it gives the stated volume."
+    }
+  ]
+}

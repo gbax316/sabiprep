@@ -1,0 +1,28 @@
+{
+  "checker": "codex",
+  "unit": "2024",
+  "results": {
+    "2024_Q12": {
+      "stem": "2024_Q12",
+      "drawing": "pass",
+      "drawing_checks": [],
+      "drawing_notes": "",
+      "alt": "pass",
+      "alt_checks": [],
+      "alt_notes": "",
+      "svg": "2024_Q12.authored.svg",
+      "lane": "claude-sonnet"
+    }
+  },
+  "no_svg": [],
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0999,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.0999
+}

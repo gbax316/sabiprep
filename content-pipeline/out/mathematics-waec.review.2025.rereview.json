@@ -1,0 +1,64 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "fail",
+      "failed_checks": [
+        9
+      ],
+      "fact_error": false,
+      "notes": "subtopic_id is plainly the wrong place. The item is placed on \"angles.at-point (Angles and parallel lines > Angles at a point and on a straight line): Types of angle (acute, obtuse, reflex), angles at a point, adjacent angles on a straight line, vertically opposite angles, and complementary and supplementary angles.\" None of that covers what the question actually tests. The solution's own working shows the decisive step is a circle theorem, not an angle-at-a-point fact: \"Angles at the circumference standing on the same chord, in the same segment, are equal. This lets you move the 34° angle at M across to N, and then the angle sum of triangle QTN finishes the job.\" The skill tested is angles in the same segment (a circle theorem) combined with the triangle angle sum, not angles at a point on a straight line. The geometry itself checks out (I verified P, T, N, M lie on the circle with N and M on the same arc relative to chord PT, so ∠PNT = ∠PMT = 34° is valid, and 180 − 28 − 34 = 118° is correct), so this is a placement problem, not a fact_error.",
+      "fix": "Reassign subtopic_id to this subject's circle-theorems subtopic (the one covering angles in the same segment / angles subtended by the same chord), not angles.at-point. It does not belong under \"Angles at a point and on a straight line,\" since no straight-line or point-angle fact is what decides this question.",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3485,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.3485
+}

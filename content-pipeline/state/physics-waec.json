@@ -2,12 +2,162 @@
   "slug": "physics-waec",
   "subject": "Physics",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T17:30:09",
     "note": ""
   },
-  "units": {},
-  "cost_usd": 15.79,
+  "units": {
+    "2025": {
+      "status": "done",
+      "stages": {
+        "derive": {
+          "status": "done",
+          "at": "2026-09-29T16:33:16",
+          "summary": "50/50 codex, 50/50 claude",
+          "seconds": 436,
+          "cost_usd": 1.06
+        },
+        "compare": {
+          "status": "done",
+          "at": "2026-09-29T16:33:16",
+          "summary": "agreed-soft 11, unsolvable 2, verified 37",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "third": {
+          "status": "done",
+          "at": "2026-09-29T16:34:29",
+          "summary": "11 ruled: defective 1, key 10",
+          "seconds": 72,
+          "cost_usd": 0.33
+        },
+        "settle": {
+          "status": "done",
+          "at": "2026-09-29T16:34:29",
+          "summary": "defective 3, keyed 47",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T16:36:58",
+          "summary": "clear 47; 0 taxonomy findings",
+          "seconds": 149,
+          "cost_usd": 0.54
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T16:44:39",
+          "summary": "47 written in 2 part(s); answer challenges [44]; style scan: REVIEW (10 across 9 location(s))",
+          "seconds": 460,
+          "cost_usd": 2.67
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T16:56:43",
+          "summary": "47 reviewed, 4 fail, fact errors [1, 33, 44]",
+          "seconds": 723,
+          "cost_usd": 2.0
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T17:03:05",
+          "summary": "7 accepted, 1 rejected; style scan: REVIEW (10 across 9 location(s))",
+          "seconds": 382,
+          "cost_usd": 1.87
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T17:11:31",
+          "summary": "6 changed items re-reviewed, 1 still fail [37]",
+          "seconds": 504,
+          "cost_usd": 0.57
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T17:12:03",
+          "summary": "1 ruled on the last pass, held none; style scan: REVIEW (10 across 9 location(s))",
+          "seconds": 32,
+          "cost_usd": 0.27
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T17:12:11",
+          "summary": "5 diagrams, 5 traced now, 5 need authoring ['2025_Q1', '2025_Q12', '2025_Q17-18', '2025_Q2', '2025_Q25']",
+          "seconds": 7,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T17:13:36",
+          "summary": "5 written, 0 already had alt text",
+          "seconds": 85,
+          "cost_usd": 0.2
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T17:17:43",
+          "summary": "authored ['2025_Q1', '2025_Q12', '2025_Q17-18', '2025_Q2', '2025_Q25']",
+          "seconds": 246,
+          "cost_usd": 2.48
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T17:30:07",
+          "summary": "5 checked, failed none",
+          "seconds": 743,
+          "cost_usd": 0.75
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T17:30:07",
+          "summary": "nothing failed",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T17:30:07",
+          "summary": "re-checked none; not passing none",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T17:30:08",
+          "summary": "PREVIEW (no image base set): physics-waec.2025.PREVIEW.csv, 3 held, 0 pre-flight flags; style scan: REVIEW (20 across 16 location(s))",
+          "seconds": 1,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T17:30:09",
+          "summary": "physics-waec.2025.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "error": "",
+      "held": [
+        {
+          "q_number": 10,
+          "why": "defective",
+          "detail": "Missing diagram and missing answer options (A-D) for this question; the source material provides nei"
+        },
+        {
+          "q_number": 42,
+          "why": "defective",
+          "detail": "The physics is clear: R = 12.0 + (20.0 - 12.0) x 10/100 = 12.8 ohm. But options A and B are both pri"
+        },
+        {
+          "q_number": 45,
+          "why": "defective",
+          "detail": "Answer options A-D are missing from the source for this question. | Options are missing. Also, '90 ℃"
+        }
+      ]
+    }
+  },
+  "cost_usd": 28.53,
   "taxonomy_cost_usd": 15.79
 }

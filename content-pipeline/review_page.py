@@ -77,6 +77,9 @@ def main():
     a = ap.parse_args()
     rows = json.load(open(os.path.join(OUT, 'review-queue.json'), encoding='utf8'))['items']
     rows = [r for r in rows if (not a.slug or r['slug'] == a.slug) and (r['held'] or not a.held_only)]
+    # A key resting on two Claude models needs Codex, not a person: it is re-derived on
+    # Codex when Codex is back (REV-04), so it stays off the page unless something else is wrong.
+    rows = [r for r in rows if any(x['kind'] != 'same-family' for x in r['reasons'])]
     e = html.escape
     groups = {}
     for r in rows:

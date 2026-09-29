@@ -2,14 +2,14 @@
   "slug": "literature-utme",
   "subject": "Literature in English",
   "gate": {
-    "status": "open",
-    "unit": null,
-    "at": null,
+    "status": "awaiting",
+    "unit": "2025",
+    "at": "2026-09-29T16:15:56",
     "note": ""
   },
   "units": {
     "2025": {
-      "status": "running",
+      "status": "done",
       "stages": {
         "derive": {
           "status": "done",
@@ -38,10 +38,120 @@
           "summary": "ambiguous 2, keyed 38",
           "seconds": 1,
           "cost_usd": 0.0
+        },
+        "classify": {
+          "status": "done",
+          "at": "2026-09-29T15:36:43",
+          "summary": "clear 38; 0 taxonomy findings",
+          "seconds": 184,
+          "cost_usd": 0.39
+        },
+        "teach": {
+          "status": "done",
+          "at": "2026-09-29T15:45:11",
+          "summary": "38 written in 2 part(s); answer challenges none; style scan: REVIEW (9 across 8 location(s))",
+          "seconds": 507,
+          "cost_usd": 2.11
+        },
+        "review": {
+          "status": "done",
+          "at": "2026-09-29T16:00:18",
+          "summary": "38 reviewed, 19 fail, fact errors [2, 4, 7, 22, 23, 24, 25, 26, 29, 30, 31, 32, 33, 37]",
+          "seconds": 906,
+          "cost_usd": 0.0
+        },
+        "fix": {
+          "status": "done",
+          "at": "2026-09-29T16:07:42",
+          "summary": "22 accepted, 0 rejected; style scan: REVIEW (11 across 9 location(s))",
+          "seconds": 444,
+          "cost_usd": 2.41
+        },
+        "recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:15:04",
+          "summary": "20 changed items re-reviewed, 1 still fail [26]",
+          "seconds": 442,
+          "cost_usd": 1.21
+        },
+        "final-fix": {
+          "status": "done",
+          "at": "2026-09-29T16:15:52",
+          "summary": "1 ruled on the last pass, held none; style scan: REVIEW (11 across 9 location(s))",
+          "seconds": 47,
+          "cost_usd": 0.28
+        },
+        "trace": {
+          "status": "done",
+          "at": "2026-09-29T16:15:52",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "alt": {
+          "status": "done",
+          "at": "2026-09-29T16:15:52",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "author": {
+          "status": "done",
+          "at": "2026-09-29T16:15:52",
+          "summary": "nothing to author",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-check": {
+          "status": "done",
+          "at": "2026-09-29T16:15:52",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-repair": {
+          "status": "done",
+          "at": "2026-09-29T16:15:53",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "diagram-recheck": {
+          "status": "done",
+          "at": "2026-09-29T16:15:53",
+          "summary": "no diagrams",
+          "seconds": 0,
+          "cost_usd": 0.0
+        },
+        "export": {
+          "status": "done",
+          "at": "2026-09-29T16:15:55",
+          "summary": "PREVIEW (no image base set): literature-utme.2025.PREVIEW.csv, 2 held, 3 pre-flight flags; style scan: REVIEW (68 across 36 location(s))",
+          "seconds": 2,
+          "cost_usd": 0.0
+        },
+        "preview": {
+          "status": "done",
+          "at": "2026-09-29T16:15:56",
+          "summary": "literature-utme.2025.preview.html",
+          "seconds": 0,
+          "cost_usd": 0.0
         }
       },
-      "error": ""
+      "error": "",
+      "held": [
+        {
+          "q_number": 13,
+          "why": "ambiguous",
+          "detail": "Both love (A) and revenge (C) are standardly taught as the dominant theme of Wuthering Heights. The "
+        },
+        {
+          "q_number": 36,
+          "why": "ambiguous",
+          "detail": "Both nostalgic (A) and critical (D) are directly supported by the extract. The first four lines look"
+        }
+      ]
     }
   },
-  "cost_usd": 1.39
+  "cost_usd": 7.79
 }

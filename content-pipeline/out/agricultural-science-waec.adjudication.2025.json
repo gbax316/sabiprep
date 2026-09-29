@@ -2,95 +2,88 @@
   "year": 2025,
   "paper": 1,
   "rulings": {
-    "2": {
-      "q_number": 2,
+    "13": {
+      "q_number": 13,
       "ruling": "key",
-      "answer": "A",
-      "reasoning": "Seasonality comes from dependence on rainfall, and irrigation lets crops be produced in the dry season, which is the only option that removes the seasonal gap in supply. Storage and processing would be the fuller textbook answer, but they are not offered, and their absence does not make another option correct. Extension services and cultural practices raise output within a season but leave it tied to the rains. Exporting during scarce periods is about distribution and would worsen local scarcity rather than remove seasonality.",
+      "answer": "B",
+      "reasoning": "Moisture lost is 70 - 55 = 15 g and the fresh soil mass is 70 - 10 = 60 g, so moisture percentage is 15/60 x 100 = 25%. Nigerian secondary texts compute soil moisture percentage on the fresh soil mass as the standard school formula. The dry-weight basis giving 33% (D) is the strongest rival, but it is the gravimetric convention of soil physics, not the one taught at this level, and the stem says 'moisture in the soil sample', which points to the sample as collected. D is a distractor for the wrong denominator.",
       "sided_with": "both"
     },
     "18": {
       "q_number": 18,
-      "ruling": "key",
-      "answer": "B",
-      "reasoning": "Overhead (sprinkler) irrigation sprays water over the crop so it falls on the plants and the soil surface like rain, and B is the only option consistent with that. C is sub-surface irrigation and D is drip or trickle irrigation, both standard contrasting methods in Nigerian texts. A is the strongest rival, since sprinklers are sometimes said to use less water than flood irrigation, but saving water is an advantage of the method, not a definition, and low water volume is the defining feature of drip irrigation. The wording of B is loose, but an examiner would accept only B.",
-      "sided_with": "both"
+      "ruling": "ambiguous",
+      "answer": null,
+      "reasoning": "The options follow a clear pattern: B is the textbook definition of surface irrigation, C of sub-surface irrigation and D of drip irrigation, which suggests the setter used the other irrigation types as distractors and intended A, a commonly listed feature of sprinkler irrigation (it uses a relatively small quantity of water). Against A, it is an advantage rather than a definition, and drip irrigation uses even less water. The derivers' case for B is that sprinkled water does fall on the surface of the farmland, but B's wording is the standard definition of surface irrigation, which a well-prepared student is taught to contrast with overhead irrigation. No option defines overhead irrigation as spraying water from above like rain, so A and B are both defensible and a student cannot tell which the setter wanted.",
+      "sided_with": "neither"
     },
     "23": {
       "q_number": 23,
       "ruling": "key",
       "answer": "C",
-      "reasoning": "The diagram for questions 21 to 23 is missing, which is the strongest argument for treating the item as unsolvable. However, the answer does not depend on which crop is shown: reducing moisture before harvest and storage is taught for every field crop as a way to prevent mould growth and fungal toxins such as aflatoxin. Bacteria, viruses and nematodes are not the contaminants that drying is meant to control in any crop a WAEC paper would illustrate. A well-prepared student reaches C without the picture.",
-      "sided_with": "claude"
-    },
-    "26": {
-      "q_number": 26,
-      "ruling": "key",
-      "answer": "A",
-      "reasoning": "Sour orange is the standard rootstock for sweet orange in West African citrus production because it resists gummosis (Phytophthora foot rot) at the collar and roots. The rootstock can only protect against a disease that attacks the part it supplies. Canker and citrus scab attack leaves, twigs and fruit of the scion, and powdery mildew is not a citrus disease taught at this level. The probable hedge was over-cautious.",
-      "sided_with": "both"
+      "reasoning": "Although the diagram is missing, the sibling question's maize-part options identify the crop as a grain crop, and the answer does not depend on the exact crop anyway. Drying grain in the field before harvest is taught as a way to stop mould growth and aflatoxin contamination, which are fungal. Bacteria (D) also need moisture, but grain drying in Nigerian texts is linked to moulds and mycotoxins, not bacterial contamination, while nematodes and viruses are field pests and pathogens unrelated to grain moisture. The missing diagram does not stop a student from answering, so the question is answerable.",
+      "sided_with": "codex"
     },
     "27": {
       "q_number": 27,
       "ruling": "key",
       "answer": "B",
-      "reasoning": "Plantation agriculture in Nigerian texts means large estates of perennial tree crops such as oil palm, citrus and rubber, and beverage crops such as cocoa, coffee and tea. The strongest case for D is that vegetables can be grown on a large scale, but large-scale vegetable growing is classed as market gardening or horticulture, not plantation agriculture. Vegetables are short-season arable crops, which is the opposite of the plantation model. B is the answer an examiner would mark.",
+      "reasoning": "Plantation agriculture is large-scale monocropping of perennial tree crops, and Nigerian texts give fruits such as citrus and oil palm and beverages such as cocoa, coffee and tea as the typical examples. Vegetables are short-season crops grown on small holdings and market gardens. The case for D, that large vegetable estates exist, is a strained reading and not what the syllabus associates with the term. The typo 'agricultural' does not change the meaning.",
       "sided_with": "both"
     },
     "30": {
       "q_number": 30,
       "ruling": "key",
       "answer": "C",
-      "reasoning": "Heat treatment, including soaking in hot water, is one of the standard dormancy-breaking methods listed in Nigerian Agricultural Science texts alongside scarification and acid treatment. The strongest case for B is that cold stratification genuinely breaks dormancy in temperate seeds. However, at this syllabus level refrigeration appears as a seed storage method that keeps seeds dormant and viable, not as a way to end dormancy, so a well-prepared student would not pick it over heat treatment. Soil treatment and sterilization are not dormancy-breaking methods.",
+      "reasoning": "Heat treatment, such as soaking hard-coated seeds in hot water, is the dormancy-breaking method Nigerian texts give, alongside scarification and acid treatment. The strongest case for B is cold stratification, which does break dormancy in temperate seeds. However, the word 'refrigeration' appears in this syllabus under seed and produce storage, where low temperature keeps seeds dormant and viable rather than breaking dormancy. Soil treatment and sterilization are not dormancy-breaking methods, so C is the one answer an examiner would mark correct.",
       "sided_with": "both"
     },
     "34": {
       "q_number": 34,
-      "ruling": "ambiguous",
-      "answer": null,
-      "reasoning": "Waterleaf produces small dehiscent capsules that split to release many tiny seeds, and standard Nigerian texts usually describe its spread by seeds and stem cuttings without fixing a single dispersal agent. The case for D is that the capsule opens by splitting, which some sources call explosive dehiscence. The case for C is that the seeds are small and light enough to be carried by wind, and some sources list wind. Neither deriver was confident, and the syllabus texts do not settle it, so a well-prepared student could not tell whether C or D was intended.",
-      "sided_with": "neither"
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "Talinum triangulare (waterleaf) forms small capsules that split open when mature and fling out numerous tiny seeds, and Nigerian weed tables classify it as dispersed by an explosive mechanism. The seeds have no hooks, fleshy covering, wings or floats that would suit animal, wind or water dispersal. The seeds may be moved incidentally by water runoff or animals, but that is secondary and not the main mechanism the syllabus teaches. The claimed disagreement among sources does not reach the level of a genuine alternative key.",
+      "sided_with": "both"
     },
     "35": {
       "q_number": 35,
       "ruling": "key",
       "answer": "C",
-      "reasoning": "White Fulani (Bunaji) is the breed Nigerian texts cite as dual-purpose, kept for both milk and beef. The strongest rival is Keteku, sometimes described as used for meat and work, but texts classify it mainly as a beef and trypanotolerant crossbreed, not as the dual-purpose example. Muturu is a small beef breed and Red Bororo is kept mainly for beef. C is the textbook answer.",
+      "reasoning": "White Fulani (Bunaji) is the standard Nigerian example of a dual-purpose breed, kept for both milk and beef. Muturu is a small trypanotolerant beef breed, Keteku is a Muturu cross used mainly for beef and draught, and Red Bororo is kept mainly for beef. Keteku is the strongest rival because it is sometimes described as multipurpose, but texts do not present it as the dual-purpose example the way they do White Fulani. The typo 'as' does not affect the meaning.",
       "sided_with": "both"
     },
     "37": {
       "q_number": 37,
       "ruling": "key",
       "answer": "D",
-      "reasoning": "Standard texts teach that water is absorbed from undigested residue in the colon of the large intestine, where the faeces are formed. The strongest case for A is that the caecum absorbs some water too, but its role in the syllabus is microbial fermentation of fibre, not water reabsorption. The duodenum digests food and absorbs nutrients, and the rectum only stores faeces. D is the answer an examiner would mark.",
+      "reasoning": "In ruminants, water is reabsorbed from undigested residue mainly in the colon of the large intestine before the faeces are formed. The caecum is the strongest rival because it does absorb some water, but texts describe it mainly as a site of microbial fermentation. The rectum mainly stores faeces, and the duodenum is a site of digestion in the small intestine. The colon is the answer the marking scheme would expect.",
       "sided_with": "both"
     },
     "44": {
       "q_number": 44,
       "ruling": "key",
       "answer": "A",
-      "reasoning": "Fowl pox is a viral disease with no drug cure; it is controlled by vaccination, so every option containing III is wrong. That leaves only A. Sulpha drugs such as sulphaquinoxaline are the standard treatment for coccidiosis. The strongest doubt is whether ringworm counts as treatable with sulphur drugs, but sulphur-based ointments are a recognised treatment for favus. Even if that point were contested, A is the only option that excludes fowl pox.",
+      "reasoning": "Coccidiosis is treated with sulphonamide (sulpha) drugs, and ringworm is traditionally treated with sulphur-based ointments and fungicides. Fowl pox is a viral disease with no drug cure and is controlled by vaccination, so any option that includes III is wrong. Treating ringworm with sulphur is less standard than treating coccidiosis with sulpha drugs, but A is the only option that leaves out fowl pox, so no rival survives. The key is A.",
       "sided_with": "both"
     },
     "45": {
       "q_number": 45,
       "ruling": "key",
       "answer": "C",
-      "reasoning": "Texts present pollination as the most important benefit of bees to humans because it supports the yield of many crops, and that benefit is worth far more than any hive product. The strongest rival is A, since beeswax is a real product of beekeeping, but it is a minor by-product. B is vague and D is marginal. Honey, the answer that would compete most strongly, is not offered.",
+      "reasoning": "Pollination of crops by bees is worth far more to agriculture than any product from the hive, and texts give it as the most important function of bees. Beeswax (A) and raw materials (B) are real benefits, but they are secondary, and the most valuable hive product, honey, is not even offered. Research use (D) is minor. The superlative 'most important' makes C the one key.",
       "sided_with": "both"
     },
     "49": {
       "q_number": 49,
-      "ruling": "ambiguous",
-      "answer": null,
-      "reasoning": "The four options form a two-by-two grid: A and C differ by the ₦30,000 marketing cost, and B and D add ₦3,800, which is the value of the 5 trays eaten by the family at ₦760 per tray (total cost of ₦380,000 over 500 trays). The case for A is the plain formula of revenue minus production and marketing cost. However, farm accounting in Nigerian texts credits produce consumed at home as non-cash income, and the stem goes out of its way to state the 1 percent family consumption, which suggests the setter intended B. Because a well-prepared student could not tell whether home consumption was meant to be credited, both A and B are defensible.",
-      "sided_with": "neither"
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Total cost is 350,000 + 30,000 = 380,000 naira, or 760 naira per tray. The family consumed 1% of output, which is 5 trays worth 3,800 naira, and Nigerian farm accounting counts home consumption as part of farm income. Net profit is therefore 500,000 + 3,800 - 380,000 = 123,800 naira. Option A (120,000) is the strongest rival, but it ignores the home-consumption figure that the stem gives on purpose, and the 3,800 built into both B and D shows the setter meant it to be counted. C and D come from leaving out the marketing cost, which the stem says was incurred.",
+      "sided_with": "claude"
     },
     "50": {
       "q_number": 50,
       "ruling": "key",
       "answer": "D",
-      "reasoning": "Nigerian texts give grading as a way to obtain better prices through quality differentiation, and processing as adding value so the produce fetches a higher price. Advertisement is also listed as a marketing function that creates awareness and raises demand, and higher demand lets farmers ask a better price. The strongest case for C is that advertisement promotes sales rather than setting prices, but the stem asks what enables better prices, and demand directly affects price. All three statements are true, so D is the answer an examiner would mark.",
+      "reasoning": "All three are marketing functions that raise the price a farmer can command: grading allows prices by quality class, processing adds value and extends shelf life, and advertisement raises demand. Codex left out processing on the grounds that it is value addition rather than a marketing function, but Nigerian texts list processing among the marketing functions, and value addition is exactly how it earns a better price. The case for C, which drops advertisement, is weaker, because texts give increased demand and better prices as the main purpose of advertising. A well-prepared student would take all three.",
       "sided_with": "claude"
     }
   }

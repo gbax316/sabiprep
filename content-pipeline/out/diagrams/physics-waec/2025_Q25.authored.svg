@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 230 610 320" preserveAspectRatio="xMidYMid meet" role="img">
+  <!-- Authored by hand, not traced: automatic tracing damages the typed labels
+       in this subject's diagrams, so each is redrawn. Coordinates follow the
+       original 800x800 scan (2025_Q25.png). Nothing omitted as unreadable. -->
+  <title>Beam of light incident on a curved mirror</title>
+  <desc>A shallow curved line arches upward like a wide dome, with a row of short tick marks lining its upper edge along its whole length. Below the curve, several straight lines meet the underside of the curve at different points along its length. At each meeting point, the lines carry arrowheads pointing away from the curve in two directions that spread apart from one another, rather than converging toward a single point below the curve.</desc>
+  <defs>
+    <!-- region above the mirror curve, keeping the hatching on the back (upper) side -->
+    <clipPath id="above">
+      <path d="M178,272 C230,370 490,445 592,264 L592,150 L178,150 Z"/>
+    </clipPath>
+  </defs>
+
+  <g fill="none" stroke="#E2E8F0" stroke-linecap="round" stroke-linejoin="round">
+    <!-- mirror -->
+    <path d="M178,272 C230,370 490,445 592,264" stroke-width="6"/>
+    <!-- hatching on the back of the mirror: short strokes normal to the curve -->
+    <path d="M178,272 C230,370 490,445 592,264" stroke-width="44" stroke-linecap="butt"
+          stroke-dasharray="4 16" stroke-dashoffset="-24" clip-path="url(#above)"/>
+
+    <g stroke-width="5">
+      <!-- two rays meeting the mirror at the left point -->
+      <path d="M256,341 L122,503"/>
+      <path d="M256,341 L340,528"/>
+      <!-- two rays meeting the mirror at the middle point -->
+      <path d="M366,373 L237,532"/>
+      <path d="M366,373 L435,532"/>
+      <!-- vertical ray and the slanted ray leaving the same point -->
+      <path d="M488,355 L488,528"/>
+      <path d="M489,355 L625,522"/>
+      <!-- vertical ray (no arrowhead in the original) and slanted ray at the right point -->
+      <path d="M546,318 L546,522"/>
+      <path d="M547,318 L688,497"/>
+    </g>
+
+    <!-- arrowheads (open chevrons), as printed -->
+    <g stroke-width="5">
+      <path d="M206.7,424.2 L185,428 L185,406"/>
+      <path d="M287.7,446.2 L293.7,425 L313.5,434.6"/>
+      <path d="M291.7,488.8 L270,492 L270,470"/>
+      <path d="M389,461.1 L395.1,440 L414.8,449.7"/>
+      <path d="M473.9,441.9 L488,425 L502.1,441.9"/>
+      <path d="M590.9,457 L590,479 L568.5,474.3"/>
+      <path d="M616.1,382.3 L615,404.3 L593.5,399.4"/>
+    </g>
+  </g>
+</svg>

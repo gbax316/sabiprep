@@ -1,0 +1,395 @@
+{
+  "deriver": "codex",
+  "year": 2025,
+  "paper": 1,
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "A convex lens forms a virtual, upright, magnified image only when the object is placed between the lens and its focal point (the magnifying-glass configuration), since the refracted rays diverge and must be traced backward to meet. Placing the object at or beyond F produces converging rays that meet on the far side, giving a real image instead.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Capacitance of a parallel plate capacitor is C = ε0A/d, so C is inversely proportional to plate separation d. Halving d doubles C, from 10 μF to 20 μF. The 'quadruple' distractor would only apply if the separation were quartered, not halved.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Pressure law states P = P0(1 + t/273) on the Celsius scale, which gives a straight line that intercepts the pressure axis, not the origin, when plotted against Celsius temperature. Only on the thermodynamic (Kelvin) scale, where P ∝ T with zero pressure at absolute zero, does the P-T graph pass through the origin.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Volume of 90 g of ice = 90/0.9 = 100 cm³; after melting, volume of 90 g of water = 90/1 = 90 cm³. The change (decrease) in volume is 100 − 90 = 10 cm³, matching option A rather than the raw mass value of 90 (not an option) or other distractors.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Resolving into East(x)/North(y) components: first leg (6,0); second leg N30°E gives (10 sin30°, 10 cos30°) = (5, 8.66). Summing gives (11, 8.66), whose magnitude is √(11² + 8.66²) ≈ 14.0 m. The 17.0 m distractor would result from simply adding the two magnitudes (6+10=16, close to 17), ignoring the angle between them.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A single (fixed) pulley changes only the direction of the force, not its magnitude, so the boy must exert a force equal to the weight, mg = 29×10 = 290 N. Power = Fv = 290×5 = 1450 W, matching option D; the lower-value distractors would only apply if a movable pulley halved the effort force.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "A wave on a plucked string is transverse (particle vibration perpendicular to wave travel), mechanical, and exhibits crests and troughs, so it is not longitudinal. 'Longitudinal' describes waves like sound where particle motion is parallel to propagation, which does not apply here.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Speed of sound in a solid varies as v ∝ √T (T in kelvin), so v2 = 1000 × √(298/273) ≈ 1000 × 1.0448 ≈ 1045 m/s. The other options are close distractors from rounding differences but 1045 m/s is the correctly computed value.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "Stopping potential V = KEmax/e = 2.20×10⁻¹⁹ J / 1.6×10⁻¹⁹ C = 1.375 V, which rounds to the closest given option, 1.40 V. The question's own conversion factor is printed as '1.6 × 10¹⁹J' without the negative exponent, which is a likely typo for the standard 1.6×10⁻¹⁹ J used in this calculation; option B (1.50 V) is a plausible but less accurate alternative if different rounding is assumed.",
+      "solvable": true,
+      "issue": "The stated conversion '1eV = 1.6 × 10¹⁹J' is missing the negative sign (should be 1.6 × 10⁻¹⁹ J); the standard value was used to compute the answer, and the result (1.375 V) does not exactly match any option, so 1.40 V was chosen as the nearest value.",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "In kinetic theory, gas pressure arises from molecules colliding with the container wall, and is defined as the rate of change of momentum delivered to the wall per unit area (i.e., force per unit area). 'Momentum imparted per second per unit area' (option A) is dimensionally equivalent but the precise, standard derivation phrase is the rate of change of momentum, making C the best match over the incomplete phrasing in A.",
+      "solvable": true,
+      "issue": "Options A and C are nearly synonymous phrasings of the same physical quantity (momentum change per second per area vs rate of change of momentum per second per area); C was chosen as it matches the standard textbook definition more precisely.",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A floating object experiences upthrust equal to its own weight, and displaces its own weight of liquid, both of which are correct statements of Archimedes' principle. Option D wrongly compares the object's weight to the total weight of the fluid rather than the weight of fluid displaced, which is not the correct condition for floatation.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Heat required Q = mcΔT = 1 × 4200 × 30 = 126000 J. Time = Q/P = 126000/750 = 168 s. The other options result from arithmetic slips such as using the wrong ΔT or misplacing a decimal.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Microwaves pass through the atmosphere with minimal absorption and are the standard band for satellite communication. Gamma and ultraviolet rays are strongly absorbed/blocked by the atmosphere, and infrared is easily absorbed by water vapour and other gases, making them unsuitable.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Vapour pressure is an equilibrium property that depends on the liquid's nature, temperature, and intermolecular forces, but not on the exposed surface area. Surface area affects the rate of evaporation, not the equilibrium vapour pressure value, which is the key distractor here.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Radiative heat transfer depends strongly on the emissivity of the surface, which is governed by colour and surface texture (dark, matte surfaces radiate/absorb more than shiny, light ones). Thermal conductivity is relevant to conduction, not radiation, making it the main distractor.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Expansion joints allow a bridge's length to change with temperature without inducing damaging stress, which is the standard engineering solution for thermal expansion. Painting white reduces heat absorption but does not accommodate the expansion that still occurs.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "For a block sliding down an incline at constant velocity, friction balances the component of gravity along the slope, giving μ = tanθ. Here tan45° = 1.0, so μ = 1.0; the mass and g are irrelevant since they cancel out, ruling out any answer derived from using them directly.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "18": {
+      "q_number": 18,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Adding mass high up, such as on the roof, shifts the vehicle's center of mass upward, directly raising the center of gravity. Removing the engine or flattening tires would generally lower the center of gravity or have minimal effect, and reducing wheelbase affects stability, not height of the center of gravity.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Equal pressure requires ρ_Hg × h_Hg = ρ_water × h_water, so h_water = 0.76 × (13600/1000) ≈ 10.3 m. This large height is expected since water is much less dense than mercury, ruling out the smaller values like 7.6 m or 1.0 m.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A thermocouple generates an EMF via the thermoelectric (Seebeck) effect at a junction of two dissimilar metals, whereas a mercury-in-glass thermometer relies on the thermal expansion of mercury. Option C wrongly attributes metal expansion to the thermocouple, which is actually the mercury thermometer's underlying principle (via glass/mercury expansion, not metal).",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "A thermocouple has very low thermal mass and produces an almost instantaneous voltage response to temperature change, making it best suited for rapid changes. A mercury-in-glass thermometer relies on slow bulk expansion of liquid and cannot respond quickly.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Heat lost by water cooling to T equals heat gained melting the ice plus heating the melt-water to T: 0.5x4200x(60-T) = 0.2x336000 + 0.2x4200xT, which solves to T = 20°C. The strongest distractor, 30°C, ignores the large latent heat absorbed in melting the ice.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Summing the four stages (warming ice 10°C, melting, warming water 100°C, vaporizing) for 0.5 kg gives 10,500 + 168,000 + 210,000 + 1,130,000 = 1,518,500 J, so at 1000 W the time is about 1519 s, which does not match any offered option (all of which exceed 1750 s).",
+      "solvable": false,
+      "issue": "Correct computation from the given constants (≈1519 s) does not correspond to any of the four options, indicating an inconsistency between the stated data and the answer choices.",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "At higher pressure, molecules must acquire more kinetic energy to overcome the greater external pressure and escape into the vapour phase, so boiling requires a higher temperature. The distractor about latent heat is wrong because latent heat of vaporization actually decreases, not increases, as pressure rises toward the critical point.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "For a tube closed at one end, the shortest resonant length is a quarter wavelength: λ = v/f = 340/512 ≈ 0.664 m, so L = λ/4 ≈ 0.17 m. The distractor 0.33 m corresponds to a half wavelength, which applies to an open tube, not a closed one.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The wave number is k = 20π rad/m, so the phase difference between points 0.05 m apart is Δφ = kΔx = 20π x 0.05 = π radians. 2π radians would only apply if the separation were one full wavelength (0.1 m), not 0.05 m.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Pitch is perceived from the frequency of a sound wave, while loudness is perceived from its amplitude. Wavelength and velocity are related to frequency but are not themselves what the ear interprets as pitch or loudness.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "By Einstein's photoelectric equation KE = hf − φ, the kinetic energy depends on the light's frequency and the material's work function, but not on the light's intensity; intensity only changes the number of photoelectrons emitted per second. Frequency, by contrast, directly and strongly affects the ejected electrons' kinetic energy, making it the wrong choice for 'does not affect'.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Water is optically denser than air, so light slows down on entering it and bends toward the normal, per Snell's law. Option D is wrong because light cannot simultaneously speed up while entering a denser medium.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "A red object appears red in white light because it reflects red and absorbs other colours, including green; under pure green light there is no red component to reflect and the green light is absorbed, so the object appears black. Option A is wrong because it is precisely the reflection of green (not red) that a genuinely red object lacks.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "Two identical cells (6V, 1Ω each) in parallel give an equivalent EMF of 6V and equivalent internal resistance of 0.5Ω (r/2); with the 3Ω series resistor the total resistance is 3.5Ω, so the current is 6/3.5 ≈ 1.71A. This value does not match any of the four given options (1.0A, 1.2A, 1.5A, 2.0A).",
+      "solvable": false,
+      "issue": "The physically correct current (≈1.71A) computed from the stated EMF, internal resistance and external resistor does not match any of the four answer options, indicating an error in the option set or in transcribed values.",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "With currents flowing in opposite directions in the two wires, the magnetic fields produced by each wire point in the same direction at the midpoint, so they add rather than cancel, giving a field equal to the sum of the two individual fields. Option A is wrong because that cancellation only happens for currents in the same direction; option D is wrong because the field magnitude from each wire depends on distance to the first power (B ∝ 1/d), not its square.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Soft iron has low retentivity (low coercivity), so it magnetizes quickly when current flows and loses its magnetism almost instantly when the current is switched off, which is essential for an electromagnet that must be turned on and off. Option B is wrong because permanent magnetism is undesirable in an electromagnet core; that property belongs to hard steel used in permanent magnets, not electromagnets.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "The peak induced EMF in a rotating coil is ε₀ = NBAω, which is directly proportional to the angular speed ω, so increasing the rotation speed increases the maximum EMF. Option C is wrong because slowing the rotation reduces ω and hence reduces the peak EMF, the opposite effect.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "Eddy currents are induced circulating currents caused by a changing magnetic flux cutting across a conductor, in accordance with Faraday's law of electromagnetic induction. Option A is a weaker distractor because mechanical rotation only induces eddy currents insofar as it produces a changing flux through the conductor; the changing field/flux is the actual physical cause.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "E = Δmc² = 5×10⁻⁴ kg × (3×10⁸ m/s)² = 5×10⁻⁴ × 9×10¹⁶ = 4.5×10¹³ J. Option A (4.5×10¹⁰J) is off by three orders of magnitude, corresponding to a common error of forgetting to square the speed of light correctly.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "After 3 hours with a 1-hour half-life, 3 half-lives have elapsed, so the remaining atoms = N0/2³ = 2.4×10²⁰/8 = 3.0×10¹⁹. Option D (1.2×10²⁰) is the amount remaining after only 1 half-life, a common error of not applying the halving three times.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "answer": "C",
+      "confidence": "certain",
+      "reasoning": "The band gap is defined as the energy difference between the top of the valence band and the bottom of the conduction band, determining whether a material is a conductor, semiconductor, or insulator. Option D is wrong because the Fermi level is a reference energy level, not the boundary used to define the band gap.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Under reverse bias, majority charge carriers are pulled further away from the junction, widening the depletion region and increasing its resistance to current flow. Option A is wrong because forward bias narrows the depletion region as carriers are pushed toward and across the junction.",
+      "solvable": true,
+      "issue": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "answer": "NONE",
+      "confidence": "uncertain",
+      "reasoning": "The question stem is garbled ('consists of three ... Zener diode') with a missing word and a missing 'A.' label merged into the stem text, and the source explicitly notes that no options could be reliably read for this question.",
+      "solvable": false,
+      "issue": "Question stem is garbled/incomplete (missing word after 'three' and missing option label 'A.'), and the source flags that options could not be read reliably, so the option set cannot be trusted despite 'Transistor' being the obvious intended answer.",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.0833,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1493,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1621,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2648,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.6595
+}

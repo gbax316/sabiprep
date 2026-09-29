@@ -65,31 +65,31 @@
       "q_number": 11,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "election register"
+      "note": "election register: margin"
     },
     {
       "q_number": 12,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "meeting register"
+      "note": ""
     },
     {
       "q_number": 13,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "law register"
+      "note": "legal register: redress"
     },
     {
       "q_number": 14,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "collective noun, matches the herd of cattle example in the covers line"
+      "note": "collective noun choice (herd), listed by name in the covers line"
     },
     {
       "q_number": 15,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "building register"
+      "note": "building/heritage register: monument"
     },
     {
       "q_number": 16,
@@ -101,13 +101,13 @@
       "q_number": 17,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "health register"
+      "note": "health register: dermatologist"
     },
     {
       "q_number": 18,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "health register"
+      "note": "health register: diagnosis"
     },
     {
       "q_number": 19,
@@ -119,55 +119,61 @@
       "q_number": 20,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "press register"
+      "note": "press register: forecast"
+    },
+    {
+      "q_number": 21,
+      "subtopic_id": "idioms.idioms",
+      "confidence": "clear",
+      "note": "jangle someone's nerves is an idiom, tested in the This means that format"
     },
     {
       "q_number": 22,
       "subtopic_id": "idioms.idioms",
       "confidence": "clear",
-      "note": "swept off her feet is a fixed idiom"
+      "note": "swept off her feet is an idiom"
     },
     {
       "q_number": 23,
       "subtopic_id": "idioms.idioms",
       "confidence": "clear",
-      "note": "kept abreast of is a fixed idiom"
+      "note": "kept abreast of is an idiom"
     },
     {
       "q_number": 24,
       "subtopic_id": "idioms.sentence-interpretation",
       "confidence": "clear",
-      "note": "the last but one turns on literal wording, not an idiom"
+      "note": "the last but one turns on literal word order and quantity, not an idiom"
     },
     {
       "q_number": 25,
       "subtopic_id": "idioms.idioms",
       "confidence": "clear",
-      "note": "easy on the eye is a fixed idiom"
+      "note": "easy on the eye is an idiom"
     },
     {
       "q_number": 27,
       "subtopic_id": "idioms.idioms",
       "confidence": "clear",
-      "note": "through thick and thin"
+      "note": "through thick and thin is an idiom, listed by name in the covers line"
     },
     {
       "q_number": 28,
       "subtopic_id": "idioms.idioms",
       "confidence": "clear",
-      "note": "under the weather"
+      "note": "under the weather is an idiom, listed by name in the covers line"
     },
     {
       "q_number": 29,
       "subtopic_id": "idioms.idioms",
       "confidence": "clear",
-      "note": "beaten at his own game is a fixed idiom"
+      "note": "beaten at his own game is an idiom"
     },
     {
       "q_number": 30,
       "subtopic_id": "idioms.idioms",
       "confidence": "overlap",
-      "note": "pull through reads as a verb plus particle, which the idioms.idioms sorting rule sends to idioms.phrasal-verbs, but the taxonomy's own list of phrasal verbs tested in this paper (Q47, Q53, Q55, Q61, Q65) does not include Q30, and groups Q21 to Q30 under idioms.idioms and idioms.sentence-interpretation instead"
+      "note": "pull through here is tested for its idiomatic meaning (recover) inside the This means that sentence format, which idioms.idioms explicitly claims; but pull through is structurally a phrasal verb, so idioms.phrasal-verbs also fits by content. Placed under idioms.idioms because that subtopic's sorting rule claims the This means that format, while idioms.phrasal-verbs is written for gap-fill particle questions."
     },
     {
       "q_number": 31,
@@ -233,37 +239,37 @@
       "q_number": 41,
       "subtopic_id": "verbs.sequence",
       "confidence": "clear",
-      "note": "would have finished, tense forced by the past reporting verb said"
+      "note": "would have finished, forced by said that"
     },
     {
       "q_number": 42,
       "subtopic_id": "word-classes.adjectives-adverbs",
       "confidence": "clear",
-      "note": "order of adjectives before a noun"
+      "note": "order of adjectives: new blue silk"
     },
     {
       "q_number": 43,
       "subtopic_id": "verbs.mood-conditionals",
       "confidence": "clear",
-      "note": "subjunctive were after if"
+      "note": "subjunctive were in an if clause"
     },
     {
       "q_number": 44,
       "subtopic_id": "word-classes.nouns",
       "confidence": "clear",
-      "note": "uncountable noun chalk"
+      "note": "uncountable noun: some chalk"
     },
     {
       "q_number": 45,
       "subtopic_id": "verbs.sequence",
       "confidence": "clear",
-      "note": "reported speech, tense and time word changed"
+      "note": "reported speech, yesterday becomes the previous day"
     },
     {
       "q_number": 46,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "balanced diet is the collocation example in the covers line"
+      "note": "collocation: a balanced diet"
     },
     {
       "q_number": 47,
@@ -275,31 +281,31 @@
       "q_number": 48,
       "subtopic_id": "word-classes.adjectives-adverbs",
       "confidence": "clear",
-      "note": "intensifier before an adjective"
+      "note": "intensifier: very"
     },
     {
       "q_number": 49,
       "subtopic_id": "word-classes.adjectives-adverbs",
       "confidence": "clear",
-      "note": "adverb of degree"
+      "note": "adverb of degree: considerably"
     },
     {
       "q_number": 50,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "dented boot is the collocation example in the covers line"
+      "note": "collocation: a dented boot"
     },
     {
       "q_number": 51,
       "subtopic_id": "word-classes.pronouns",
       "confidence": "clear",
-      "note": "relative pronoun in which"
+      "note": "relative pronoun: in which"
     },
     {
       "q_number": 52,
       "subtopic_id": "idioms.idioms",
       "confidence": "clear",
-      "note": "cannot but is a listed fixed expression"
+      "note": "fixed frame: cannot but"
     },
     {
       "q_number": 53,
@@ -317,25 +323,25 @@
       "q_number": 55,
       "subtopic_id": "idioms.phrasal-verbs",
       "confidence": "clear",
-      "note": "broke into"
+      "note": "broke into tears"
     },
     {
       "q_number": 56,
       "subtopic_id": "verbs.tenses",
       "confidence": "clear",
-      "note": "tense fixed by the order of events, before I arrived is the covers line's own example"
+      "note": "past perfect fixed by order of events (before I arrived), no governing verb of saying or thinking"
     },
     {
       "q_number": 57,
       "subtopic_id": "idioms.idioms",
       "confidence": "clear",
-      "note": "next to nothing is a listed fixed expression"
+      "note": "fixed frame: next to nothing"
     },
     {
       "q_number": 58,
       "subtopic_id": "verbs.non-finite",
       "confidence": "clear",
-      "note": "having bought, perfect participle"
+      "note": "perfect participle: having bought"
     },
     {
       "q_number": 59,
@@ -347,7 +353,7 @@
       "q_number": 60,
       "subtopic_id": "word-classes.adjectives-adverbs",
       "confidence": "clear",
-      "note": "superlative earliest"
+      "note": "superlative: earliest"
     },
     {
       "q_number": 61,
@@ -359,7 +365,7 @@
       "q_number": 62,
       "subtopic_id": "word-classes.adjectives-adverbs",
       "confidence": "clear",
-      "note": "somewhat, adverb of degree"
+      "note": "adverb of degree: somewhat"
     },
     {
       "q_number": 63,
@@ -371,37 +377,37 @@
       "q_number": 64,
       "subtopic_id": "word-classes.nouns",
       "confidence": "clear",
-      "note": "a crossroads, a noun always plural"
+      "note": "noun always plural: a crossroads"
     },
     {
       "q_number": 65,
       "subtopic_id": "idioms.phrasal-verbs",
       "confidence": "clear",
-      "note": "play down"
+      "note": "playing down"
     },
     {
       "q_number": 66,
       "subtopic_id": "verbs.modals",
       "confidence": "clear",
-      "note": "ought not to have walked, perfect modal form"
+      "note": "perfect modal: ought not to have walked"
     },
     {
       "q_number": 67,
       "subtopic_id": "word-classes.nouns",
       "confidence": "clear",
-      "note": "price tag, a noun used as a modifier"
+      "note": "noun as modifier: price tag"
     },
     {
       "q_number": 68,
       "subtopic_id": "concord.pronoun-antecedent",
       "confidence": "clear",
-      "note": "one and one's is the covers line's own example"
+      "note": "one's agreeing with one"
     },
     {
       "q_number": 69,
       "subtopic_id": "vocabulary.word-choice",
       "confidence": "clear",
-      "note": "sell-by dates is the collocation example in the covers line"
+      "note": "collocation: sell-by dates"
     },
     {
       "q_number": 70,
@@ -413,7 +419,7 @@
       "q_number": 71,
       "subtopic_id": "comprehension.cloze",
       "confidence": "clear",
-      "note": "election gapped passage"
+      "note": ""
     },
     {
       "q_number": 72,
@@ -474,7 +480,7 @@
     {
       "kind": "overlap",
       "where": "idioms.idioms / idioms.phrasal-verbs",
-      "detail": "Q30, pull through that fever, is a verb plus particle whose meaning is more than the sum of its parts, which by the idioms.idioms sorting rule should go to idioms.phrasal-verbs. But the taxonomy's source note lists only Q47, Q53, Q55, Q61, Q65 as the phrasal verbs tested in this paper, and separately assigns the whole Q21 to Q30 block to idioms.idioms and idioms.sentence-interpretation. The general sorting rule and the specific real-paper citation point two different ways for this question, and a future two-word verb of this kind, such as pull through, get over, come round, used in a This means that sentence will hit the same fork."
+      "detail": "Q30 tests the idiomatic meaning of the phrasal verb pull through inside a This means that sentence. idioms.idioms claims the This means that format by rule, while idioms.phrasal-verbs is content-defined as verbs with a particle whose meaning is more than the sum of the parts, which pull through also satisfies. The two subtopics have no rule that names format versus content when a phrasal verb is tested through whole-sentence interpretation rather than a gap-fill particle question, so this boundary is left to the classifier's judgement."
     }
   ],
   "year": 2024,

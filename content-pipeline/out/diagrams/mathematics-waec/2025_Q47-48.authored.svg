@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 268 680 264" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+  <!-- Authored by hand, not traced: the table's typed labels are damaged by automatic tracing, so it was redrawn from the original (2025_Q47-48.png). Nothing omitted; all text in the original is legible. -->
+  <title id="t">Ages of students in a class</title>
+  <desc id="d">A table with two rows. The top row, labelled 'Age (Years)', lists the values 13, 14, 15, 16, 17. The bottom row, labelled 'Number of students', lists 3, 14, 13, 8, 3, each aligned under its corresponding age.</desc>
+  <g fill="none" stroke="#E2E8F0" stroke-width="3">
+    <rect x="76" y="284" width="648" height="231"/>
+    <line x1="76" y1="371" x2="724" y2="371"/>
+    <line x1="364" y1="284" x2="364" y2="515"/>
+    <line x1="436" y1="284" x2="436" y2="515"/>
+    <line x1="508" y1="284" x2="508" y2="515"/>
+    <line x1="580" y1="284" x2="580" y2="515"/>
+    <line x1="652" y1="284" x2="652" y2="515"/>
+  </g>
+  <g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="28" text-anchor="middle">
+    <text x="208" y="339">Age (Years)</text>
+    <text x="400" y="339">13</text>
+    <text x="472" y="339">14</text>
+    <text x="544" y="339">15</text>
+    <text x="616" y="339">16</text>
+    <text x="688" y="339">17</text>
+    <text x="208" y="427">Number of</text>
+    <text x="208" y="472">students</text>
+    <text x="400" y="427">3</text>
+    <text x="472" y="427">14</text>
+    <text x="544" y="427">13</text>
+    <text x="616" y="427">8</text>
+    <text x="688" y="427">3</text>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 205 600 385" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+  <!-- Authored by hand, not traced: the diagrams in this subject carry typed labels, which tracing damages.
+       Coordinates follow the original scan (2025_Q17-18.png, 800x800). Nothing omitted as unreadable. -->
+  <title>Circuit for questions 17 and 18</title>
+  <desc>A rectangular circuit loop. Along the bottom edge is a battery symbol, shown as one long and one short parallel line. Along the top edge, starting from the left, two resistors are drawn side by side between the same pair of wires, one above the other, labelled "3Ω" and "2Ω". The wire from this pair continues to a single resistor labelled "6Ω", which connects to the rest of the loop back to the battery.</desc>
+  <g fill="none" stroke="#E2E8F0" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- left side of loop -->
+    <polyline points="248,537 131,537 131,316 212,316"/>
+    <!-- parallel pair -->
+    <polyline points="250,274 212,274 212,360 250,360"/>
+    <polyline points="307,274 348,274 348,360 307,360"/>
+    <!-- wire to 6 ohm and right side of loop -->
+    <line x1="348" y1="320" x2="548" y2="320"/>
+    <polyline points="606,322 664,322 664,540 297,540"/>
+  </g>
+  <g fill="none" stroke="#E2E8F0" stroke-width="5">
+    <rect x="250" y="264" width="57" height="21"/>
+    <rect x="250" y="349" width="57" height="22"/>
+    <rect x="548" y="310" width="58" height="24"/>
+  </g>
+  <!-- battery: plates as in the original -->
+  <g stroke="#E2E8F0" stroke-width="7">
+    <line x1="248" y1="513" x2="248" y2="563"/>
+    <line x1="265.5" y1="529" x2="265.5" y2="550"/>
+    <line x1="280.5" y1="514" x2="280.5" y2="563"/>
+    <line x1="297" y1="529" x2="297" y2="550"/>
+  </g>
+  <g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="30" text-anchor="middle">
+    <text x="279" y="255">3Ω</text>
+    <text x="279" y="339">2Ω</text>
+    <text x="576" y="302">6Ω</text>
+  </g>
+</svg>

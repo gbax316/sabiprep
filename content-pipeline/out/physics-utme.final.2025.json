@@ -1,0 +1,251 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "counts": {
+    "keyed": 36,
+    "defective": 3,
+    "ambiguous": 1
+  },
+  "answers": {
+    "1": {
+      "q_number": 1,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "2": {
+      "q_number": 2,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "3": {
+      "q_number": 3,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "4": {
+      "q_number": 4,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "5": {
+      "q_number": 5,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "6": {
+      "q_number": 6,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "7": {
+      "q_number": 7,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "8": {
+      "q_number": 8,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "9": {
+      "q_number": 9,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "third review, sided with both"
+    },
+    "10": {
+      "q_number": 10,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "third review, sided with claude"
+    },
+    "11": {
+      "q_number": 11,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "12": {
+      "q_number": 12,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "13": {
+      "q_number": 13,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "14": {
+      "q_number": 14,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "15": {
+      "q_number": 15,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "16": {
+      "q_number": 16,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "17": {
+      "q_number": 17,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "18": {
+      "q_number": 18,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "third review, sided with both"
+    },
+    "19": {
+      "q_number": 19,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "20": {
+      "q_number": 20,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "21": {
+      "q_number": 21,
+      "state": "keyed",
+      "answer": "D",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "22": {
+      "q_number": 22,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "23": {
+      "q_number": 23,
+      "state": "defective",
+      "answer": null,
+      "reason": "Correct computation from the given constants (≈1519 s) does not correspond to any of the four options, indicating an inconsistency between the stated data and the answer choices. | Data and options are inconsistent: the correct result (~1519 s) is not among the options. A data value was probably mistyped (for example the mass or the heater power)."
+    },
+    "24": {
+      "q_number": 24,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "25": {
+      "q_number": 25,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "26": {
+      "q_number": 26,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "27": {
+      "q_number": 27,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "28": {
+      "q_number": 28,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "29": {
+      "q_number": 29,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "30": {
+      "q_number": 30,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "31": {
+      "q_number": 31,
+      "state": "defective",
+      "answer": null,
+      "reason": "The physically correct current (≈1.71A) computed from the stated EMF, internal resistance and external resistor does not match any of the four answer options, indicating an error in the option set or in transcribed values. | The correct value (≈1.71 A) is missing from the options, so the options are inconsistent with the stem. 'lowing' is a typo for 'flowing'."
+    },
+    "32": {
+      "q_number": 32,
+      "state": "ambiguous",
+      "answer": null,
+      "reason": "For opposite currents, the right-hand grip rule shows the two fields at the midpoint point the same way, so they add and C is correct as the setter intends. However, the field of a long straight wire at any point in the plane containing both wires is perpendicular to that plane, so at the midpoint each field, and hence the resultant, is directed perpendicular to the plane, making B equally true. B is not a strained reading; it follows directly from the syllabus field pattern of a straight conductor, and a student who applies the grip rule carefully would find both B and C correct. The pairing of A with C suggests the setter focused on add versus cancel, but keying C would penalise a correct answer, so the item should be treated as ambiguous between B and C."
+    },
+    "33": {
+      "q_number": 33,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "34": {
+      "q_number": 34,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "35": {
+      "q_number": 35,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "36": {
+      "q_number": 36,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "37": {
+      "q_number": 37,
+      "state": "keyed",
+      "answer": "A",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "38": {
+      "q_number": 38,
+      "state": "keyed",
+      "answer": "C",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "39": {
+      "q_number": 39,
+      "state": "keyed",
+      "answer": "B",
+      "evidence": "same-family agreement (claude-sonnet stood in for Codex), both certain"
+    },
+    "40": {
+      "q_number": 40,
+      "state": "defective",
+      "answer": null,
+      "reason": "Question stem is garbled/incomplete (missing word after 'three' and missing option label 'A.'), and the source flags that options could not be read reliably, so the option set cannot be trusted despite 'Transistor' being the obvious intended answer. | The options were merged into the stem and the options object is empty. The 'A.' label and the word 'terminals' are lost ('consists of three Zener diode B. Transistor ...'). Reading the embedded letters gives A = Zener diode, B = Transistor, C = Photodiode, D = LED, so once the options are restored the answer is B (Transistor)."
+    }
+  }
+}

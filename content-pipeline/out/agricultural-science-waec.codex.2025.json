@@ -7,7 +7,7 @@
       "q_number": 1,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Under Nigeria's Land Use Act (1978), a Certificate of Occupancy grants rights to use land for a maximum term of 99 years. This is a fixed statutory figure, so the other durations listed are not defensible alternatives.",
+      "reasoning": "Under Nigeria's Land Use Act 1978, a statutory certificate of occupancy grants rights of use for a term of 99 years. The other options do not correspond to the statutory term fixed by the Act.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -16,7 +16,7 @@
       "q_number": 2,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Irrigation allows crop production outside the natural rainy season, directly eliminating the seasonal gap in produce availability. Extension services and cultural practices may improve yields but do not remove seasonality, and exporting during scarce periods addresses distribution, not production timing.",
+      "reasoning": "Irrigation allows crops to be grown outside their normal rainy-season window, so produce becomes available year-round rather than only in season. Extension services and cultural practices do not directly overcome the dependence on rainfall timing, and exporting during scarce periods addresses distribution, not the seasonality of production itself.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -25,7 +25,7 @@
       "q_number": 3,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Agricultural research develops improved crop varieties, including those with shorter maturity periods, which boosts productivity and turnover. Options C and D describe undesirable traits (susceptibility to disease, reduced pest resistance) that research aims to avoid, not achieve.",
+      "reasoning": "A key goal of agricultural research is breeding improved varieties that mature faster, boosting turnover and productivity. Options A, C and D describe outcomes research actually works against (retaining unimproved local varieties, increasing disease susceptibility, or reducing pest resistance).",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -34,7 +34,7 @@
       "q_number": 4,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "A hygrometer measures relative humidity in the atmosphere. Wind speed is measured by an anemometer, daylength by a photometer/observation, and atmospheric pressure by a barometer, ruling out the other options.",
+      "reasoning": "A hygrometer measures relative humidity in the atmosphere. Wind speed is measured by an anemometer, daylength by direct observation/photoperiod recording, and atmospheric pressure by a barometer.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -45,7 +45,7 @@
       "confidence": "uncertain",
       "reasoning": "",
       "solvable": false,
-      "issue": "The question references 'the diagram below' illustrating a brooding equipment, but no image was attached or provided for this question, so the specific equipment cannot be identified to determine its disadvantage.",
+      "issue": "This question depends on a diagram of brooding equipment described in the shared stem, but no image was attached with the task, so the equipment cannot be identified and the question cannot be answered.",
       "lane": "claude-sonnet"
     },
     "6": {
@@ -54,14 +54,14 @@
       "confidence": "uncertain",
       "reasoning": "",
       "solvable": false,
-      "issue": "The question depends on identifying the illustrated brooding equipment from 'the diagram below', but no image was attached or provided, so it cannot be determined which alternative equipment (hover, coal pot, gas lamp) performs a similar function.",
+      "issue": "This question depends on identifying the brooding equipment shown in a diagram referenced by the shared stem, but no image was attached with the task, so the equipment cannot be identified and the question cannot be answered.",
       "lane": "claude-sonnet"
     },
     "7": {
       "q_number": 7,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "The finger-like projections of a hand fork are called prongs (or tines), which penetrate and loosen the soil. Gangs, rings, and rods are unrelated terms not used to describe hand fork parts.",
+      "reasoning": "The finger-like metal projections of a hand fork are called prongs (or tines). Gangs, rings and rods are not the terms used for this part of the tool.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -70,7 +70,7 @@
       "q_number": 8,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Maintenance is done to prolong useful life, prevent accidents, and keep machines in good working condition, all of which help preserve or increase resale (salvage) value rather than reduce it. Reducing salvage value contradicts the purpose of maintenance, making it the correct 'not a reason' answer.",
+      "reasoning": "Maintaining farm machines aims to prolong useful life, prevent accidents, and keep them in good working condition; proper maintenance actually raises or preserves resale/salvage value rather than reducing it. So 'reduce the salvage value' is the statement that is not a valid reason for maintenance.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -79,7 +79,7 @@
       "q_number": 9,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Limestone is a sedimentary rock typically characterized by visible strata (layers) formed through deposition over time. Gabbro, granite, and basalt are igneous rocks that form from cooled magma/lava and do not exhibit stratification.",
+      "reasoning": "Limestone is a sedimentary rock typically deposited in layers, giving it a stratified (strata) structure. Gabbro, granite and basalt are igneous rocks, which form from cooled magma/lava and do not characteristically show strata.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -88,43 +88,43 @@
       "q_number": 10,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Capillary water is held in the soil pores against gravity by surface tension and is the main form of water available for plant root absorption. Gravitational water drains away quickly, hygroscopic water is too tightly bound to soil particles for roots to absorb, and precipitation water is not yet retained in the soil profile.",
+      "reasoning": "Capillary water is held in the soil pores against gravity by surface tension and is the main form of soil water available for plant root absorption. Gravitational water drains away too quickly to be used, precipitation water is not yet soil-held water, and hygroscopic water is bound too tightly to soil particles for roots to extract.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
     },
     "11": {
       "q_number": 11,
-      "answer": "NONE",
-      "confidence": "uncertain",
-      "reasoning": "The shared stem gives only the mass of dish + dried soil (55g). Computing the mass of fresh soil requires the mass of the empty dish and/or the mass of dish + fresh soil, neither of which is provided.",
-      "solvable": false,
-      "issue": "Missing data: mass of empty dish and mass of dish + fresh soil are not given, so the mass of fresh soil cannot be derived from the single value provided.",
+      "answer": "D",
+      "confidence": "certain",
+      "reasoning": "Mass of fresh soil = (dish + fresh soil) − empty dish = 70g − 10g = 60g. The other options result from arithmetic errors, e.g. confusing dried soil mass (45g) with fresh soil mass.",
+      "solvable": true,
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "12": {
       "q_number": 12,
-      "answer": "NONE",
-      "confidence": "uncertain",
-      "reasoning": "Moisture lost is the difference between fresh soil mass and dried soil mass. Without the mass of the empty dish or the dish + fresh soil mass, dried soil mass and fresh soil mass cannot be isolated from the single given value.",
-      "solvable": false,
-      "issue": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute moisture lost.",
+      "answer": "A",
+      "confidence": "certain",
+      "reasoning": "Mass of moisture lost = mass of fresh soil (60g) − mass of dried soil (55g − 10g = 45g) = 15g. Option B (45g) is actually the dried soil mass, a common distractor from misreading the question.",
+      "solvable": true,
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "13": {
       "q_number": 13,
-      "answer": "NONE",
-      "confidence": "uncertain",
-      "reasoning": "Percentage moisture requires moisture lost and fresh soil mass, both of which depend on data not supplied in the stem.",
-      "solvable": false,
-      "issue": "Missing data: the stem lacks the mass of empty dish and mass of dish + fresh soil needed to compute percentage moisture.",
+      "answer": "B",
+      "confidence": "certain",
+      "reasoning": "Percentage moisture = (moisture lost / mass of fresh soil) × 100 = (15/60) × 100 = 25%. Using dried soil mass as the denominator instead (15/45 ≈ 33%) yields the distractor D, which is incorrect since percentage moisture is conventionally based on the fresh soil mass.",
+      "solvable": true,
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "14": {
       "q_number": 14,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Horizon A (topsoil) is rich in organic matter and biological activity, which binds mineral particles into crumb-like aggregates giving it a granular structure. Horizon B (subsoil) is typically blocky or prismatic due to clay accumulation, and horizon C is the weathered parent material with little developed structure.",
+      "reasoning": "Horizon A (topsoil) is rich in humus and biological activity, which binds particles into crumbly granular aggregates. Horizon B (subsoil) typically shows blocky or prismatic structure due to clay accumulation, not granular structure.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -133,25 +133,25 @@
       "q_number": 15,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "The question depends on a diagram of a soil-analysis tool that was not attached to this task, so the tool cannot be identified.",
+      "reasoning": "The question depends on a diagram of a soil analysis tool that was referenced in the stem but not actually provided/attached, so the tool cannot be identified.",
       "solvable": false,
-      "issue": "No diagram/image was attached for questions 15 and 16, though the stem refers to one.",
+      "issue": "The diagram illustrating the soil analysis tool is missing; no image was attached for questions 15-16.",
       "lane": "claude-sonnet"
     },
     "16": {
       "q_number": 16,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "This question depends on identifying the illustrated tool (a sieve, based on the stated 0.05mm mesh diameter), but no diagram was attached, so which particle sizes pass through cannot be confirmed from the image.",
+      "reasoning": "This question depends on identifying the illustrated tool from the missing diagram to reason about particle sizes relative to its 0.05mm opening.",
       "solvable": false,
-      "issue": "No diagram/image was attached for questions 15 and 16, though the stem refers to one.",
+      "issue": "The diagram illustrating the soil analysis tool is missing; no image was attached for questions 15-16.",
       "lane": "claude-sonnet"
     },
     "17": {
       "q_number": 17,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Purple/reddish discolouration of leaves is a classic sign of phosphorus deficiency, corrected by applying a phosphate fertilizer such as single superphosphate. Ammonium sulphate supplies nitrogen (deficiency causes yellowing, not purpling), and muriate of potash supplies potassium (deficiency causes leaf scorch/necrosis at margins).",
+      "reasoning": "Purple/reddish-purple leaf colouration in cowpea and other crops is a classic symptom of phosphorus deficiency, corrected by applying a phosphate fertilizer such as single superphosphate. Muriate of potash addresses potassium deficiency (leaf scorch/necrosis), not the purple symptom.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -160,16 +160,16 @@
       "q_number": 18,
       "answer": "B",
       "confidence": "probable",
-      "reasoning": "Overhead (sprinkler) irrigation sprays water from above so it falls onto the crop and land surface like artificial rainfall, matching 'supplies water to crops on the surface of farmland'. Option D describes drip/trickle irrigation (water delivered directly to the root zone) and option C describes subsurface irrigation, both of which are distinct methods from overhead irrigation.",
+      "reasoning": "Overhead irrigation uses sprinklers positioned above the crop to apply water over the surface of the farmland, similar to rainfall, matching option B. Options C and D describe subsurface and drip irrigation respectively, and A describes water-conserving methods like drip irrigation, not overhead irrigation.",
       "solvable": true,
-      "issue": "Option A ('little volume of water') is also loosely associated with efficient irrigation methods, but it describes drip irrigation rather than overhead irrigation, so B remains the best fit.",
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "19": {
       "q_number": 19,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Organic farming avoids synthetic agrochemicals that runoff into water bodies and degrade soil, directly preventing agricultural pollution. Applying inorganic fertilizers and siting poultry farms near rivers are themselves sources of pollution, and herbicide spraying introduces chemical residues into the environment.",
+      "reasoning": "Organic farming avoids synthetic chemical inputs that cause agricultural pollution (e.g. fertilizer runoff, herbicide/pesticide contamination), making it the preventive practice. Applying inorganic fertilizers and siting poultry farms near rivers are themselves sources of agricultural pollution.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -178,7 +178,7 @@
       "q_number": 20,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "The edible yam tuber is a modified underground stem that stores food reserves, not a root. A sett is simply a piece of the tuber used for planting, not the storage organ itself.",
+      "reasoning": "The yam tuber is a swollen underground stem that stores food reserves, not a root. A sett is a piece of yam tuber used for planting, not the storage organ itself, making it an incorrect distractor.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -187,34 +187,34 @@
       "q_number": 21,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "This question depends on a diagram of a crop with parts labelled I, II, III, but no image was attached or found in the working directory. Without seeing which part is labelled II, the farm operation performed on it cannot be determined.",
+      "reasoning": "This question asks which operation is performed on the part labelled II in a crop diagram, but no diagram image was attached to this task. The four options (detasseling, shelling, dehiscing, polishing) each correspond to a different plant part, so the labelled part cannot be inferred from the text alone.",
       "solvable": false,
-      "issue": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided.",
+      "issue": "The referenced crop diagram (labelling parts I-III) was not attached, so part II cannot be identified.",
       "lane": "claude-sonnet"
     },
     "22": {
       "q_number": 22,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "This question depends on a diagram of a crop with parts labelled I, II, III, but no image was attached or found in the working directory. Without seeing which part is labelled III, its identity cannot be determined.",
+      "reasoning": "This question asks for the identity of the part labelled III, which requires seeing the diagram. All four options (peduncle, tassel, silk, husk) are genuine maize parts, so no single answer can be selected without the image.",
       "solvable": false,
-      "issue": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided.",
+      "issue": "The referenced crop diagram (labelling parts I-III) was not attached, so part III cannot be identified.",
       "lane": "claude-sonnet"
     },
     "23": {
       "q_number": 23,
-      "answer": "NONE",
-      "confidence": "uncertain",
-      "reasoning": "While the general agricultural principle (reducing moisture reduces fungal contamination, e.g. aflatoxin) is well established, this question explicitly asks about 'the illustrated crop,' whose identity depends on the missing diagram, so the crop-specific context cannot be confirmed.",
-      "solvable": false,
-      "issue": "Referenced crop diagram (for questions 21-23) is missing; no image file was provided.",
+      "answer": "C",
+      "confidence": "probable",
+      "reasoning": "The options for question 22 (tassel, silk, husk) indicate the illustrated crop is maize. Reducing the moisture content of maize grain before/at harvest is a standard practice to prevent mould growth and mycotoxin (fungal) contamination during storage, whereas bacteria, viruses and nematodes are not the primary concern addressed by drying grain. The crop identity is inferred from context rather than seen directly, since the diagram itself was not attached.",
+      "solvable": true,
+      "issue": "The crop diagram was not attached; the crop was inferred to be maize from the maize-specific part names (tassel, silk, husk) used as answer options in question 22.",
       "lane": "claude-sonnet"
     },
     "24": {
       "q_number": 24,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Blackarm disease, caused by the bacterium Xanthomonas citri pv. malvacearum (formerly Xanthomonas campestris pv. malvacearum), is a well-known bacterial disease of cotton affecting leaves, stems, and bolls. Citrus, yam, and plantain are affected by different named diseases (e.g. citrus canker, yam mosaic, plantain black sigatoka), not blackarm.",
+      "reasoning": "Blackarm (bacterial blight) of cotton is caused by Xanthomonas campestris pv. malvacearum and is a well-known cotton disease in West African agriculture. Citrus, yam and plantain are affected by other named diseases (e.g. canker, anthracnose, Sigatoka) and not blackarm.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -223,7 +223,7 @@
       "q_number": 25,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Polishing rice removes the outer bran and germ layers, which strips away vitamins, minerals, and protein, thereby reducing the nutritive value of the grain. It does not increase grain quantity or germination rate, and it actually makes the grain smoother rather than affecting hardness in the way the distractor suggests.",
+      "reasoning": "Polishing rice removes the outer bran and germ layers, which strips away vitamins, minerals and fibre, thereby reducing the nutritive value of the grain. It does not increase quantity or germination rate, and while it makes grains smoother it does not meaningfully reduce hardness.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -232,7 +232,7 @@
       "q_number": 26,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Sour orange rootstock is traditionally used for budding sweet orange scions because it is resistant to gummosis (Phytophthora foot rot), a soil-borne disease that attacks the root collar. Canker, citrus scab, and powdery mildew are not the primary reasons for this specific rootstock choice.",
+      "reasoning": "Sour orange rootstock is traditionally used for sweet orange scions because it is resistant to Phytophthora root and collar rot, which causes gummosis. Canker, citrus scab and powdery mildew are foliage/fruit diseases not primarily controlled by rootstock choice in this way.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -241,43 +241,43 @@
       "q_number": 27,
       "answer": "B",
       "confidence": "probable",
-      "reasoning": "Plantation agriculture is classically associated with tree/perennial cash crops grown in large monoculture blocks, notably beverage crops (cocoa, coffee, tea) and fruit crops (oil palm, rubber, banana); vegetables are typically grown on smaller mixed or arable farms rather than plantations. The strongest distractor including vegetables (option D) is weaker because vegetable production is not characteristically plantation-based.",
+      "reasoning": "Plantation agriculture in West Africa is dominated by tree/perennial cash crops such as oil palm and citrus (fruits) and cocoa, coffee and tea (beverages). Vegetables are typically grown on small-scale or garden farms rather than large plantations, so option B (I and III) fits best.",
       "solvable": true,
-      "issue": "",
+      "issue": "Whether oil palm/citrus count strictly as 'fruits' vs a separate category is arguable, but the standard WASSCE classification supports fruits and beverages as plantation crops.",
       "lane": "claude-sonnet"
     },
     "28": {
       "q_number": 28,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "This question requires the farmland survey diagram to know the shape and how AB, DC, and EF relate geometrically (e.g. as a trapezium with parallel sides and a height), but no image was attached or found.",
+      "reasoning": "Calculating the farmland area from AB, DC and EF requires seeing the survey diagram to know the shape (e.g. trapezium, combined triangles) and how these lengths relate geometrically. Without the diagram, the correct area formula cannot be determined with confidence.",
       "solvable": false,
-      "issue": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided.",
+      "issue": "The farmland survey diagram was not attached, so the shape and relationship between AB, DC and EF cannot be determined.",
       "lane": "claude-sonnet"
     },
     "29": {
       "q_number": 29,
       "answer": "NONE",
       "confidence": "uncertain",
-      "reasoning": "Calculating plant population requires the farmland area from the diagram in question 28, which is unavailable because the survey diagram was not provided.",
+      "reasoning": "This calculation requires the farmland area established in question 28, which itself cannot be determined because the survey diagram was not attached.",
       "solvable": false,
-      "issue": "Referenced farmland survey diagram (for questions 28-29) is missing; no image file was provided.",
+      "issue": "Depends on the farmland area from question 28, which is unsolvable due to the missing survey diagram.",
       "lane": "claude-sonnet"
     },
     "30": {
       "q_number": 30,
       "answer": "C",
-      "confidence": "certain",
-      "reasoning": "Heat treatment (e.g. hot water or dry heat scarification) softens or cracks hard seed coats and breaks physical dormancy, a standard method taught for seeds like those of leguminous crops. Refrigeration is used to break dormancy requiring chilling in some temperate seeds but is not the general syllabus answer here, while soil treatment and sterilization are not recognized dormancy-breaking methods.",
+      "confidence": "probable",
+      "reasoning": "Heat treatment (e.g. soaking in hot water) is a standard scarification method used to break dormancy in hard-coated seeds common in tropical/West African agriculture, such as many leguminous seeds. Refrigeration (cold stratification) breaks dormancy mainly in temperate species and is less emphasized in this syllabus, while soil treatment and sterilization are not recognized dormancy-breaking methods.",
       "solvable": true,
-      "issue": "",
+      "issue": "Refrigeration is also a valid dormancy-breaking method (cold stratification) for some seed types, making this a defensible alternative to heat treatment.",
       "lane": "claude-sonnet"
     },
     "31": {
       "q_number": 31,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Leucaena leucocephala is a fast-growing leguminous forest tree that fixes atmospheric nitrogen via root nodules and is the classic hedgerow species used in alley cropping. Tectona grandis (teak) and Terminalia superba are non-leguminous timber trees that do not fix nitrogen, ruling them out.",
+      "reasoning": "Leucaena leucocephala is a fast-growing nitrogen-fixing legume tree widely used as a hedgerow species in alley cropping systems. Tectona grandis (teak) and Terminalia superba are timber trees that do not fix nitrogen, ruling them out.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -286,7 +286,7 @@
       "q_number": 32,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Allamanda (Allamanda cathartica) is a woody, sprawling ornamental shrub/climber grown for its showy yellow flowers, commonly used as a hedge or fence plant in Nigerian gardens. It is not a tree, grass, or seed, so those options are clearly wrong.",
+      "reasoning": "Allamanda is a flowering ornamental shrub/climber commonly grown for its showy yellow flowers. It is not a tree, grass, or seed, making the other options clearly wrong.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -295,34 +295,34 @@
       "q_number": 33,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Sigatoka disease of banana is caused by a fungus (Mycosphaerella species) and is controllable by fungicide application. Cassava mosaic, swollen shoot of cocoa, and cotton leaf curl are all viral diseases, which fungicides cannot control.",
+      "reasoning": "Sigatoka disease of banana is caused by a fungus (Mycosphaerella species) and is controllable with fungicides. Cassava mosaic, swollen shoot of cocoa, and cotton leaf curl are all viral diseases, which fungicides cannot control.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
     },
     "34": {
       "q_number": 34,
-      "answer": "C",
+      "answer": "D",
       "confidence": "probable",
-      "reasoning": "Talinum triangulare (waterleaf) produces tiny, light, dust-like seeds in dehiscent capsules that are readily carried by wind, which is the standard WAEC-level answer for its dispersal mode. Animal dispersal is less fitting since the seeds lack hooks, fleshy coats, or other adaptations for attachment or ingestion.",
+      "reasoning": "Talinum triangulare (waterleaf) produces small dehiscent capsules that burst open explosively when dry, scattering the tiny seeds around the parent plant. The seeds are not adapted with hooks, wings, or floats for animal, wind, or water dispersal.",
       "solvable": true,
-      "issue": "Dispersal mechanism for this species is not universally emphasized in basic texts, so wind versus explosive mechanism is not stated with full certainty.",
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "35": {
       "q_number": 35,
       "answer": "C",
       "confidence": "probable",
-      "reasoning": "White Fulani (Bunaji) cattle are widely cited in Nigerian agricultural science texts as a dual-purpose breed kept for both milk and beef production. Muturu and Red Bororo are typically classified primarily as beef/trypanotolerant or beef breeds, while Keteku is a draught-oriented crossbreed, making White Fulani the strongest fit.",
+      "reasoning": "White Fulani (Bunaji) cattle are commonly classified as a dual-purpose breed, kept for both milk and meat production. Muturu and Ndama-type breeds are primarily meat/trypanotolerant breeds, while Keteku is mainly a draught/work breed.",
       "solvable": true,
-      "issue": "Keteku is sometimes also described as dual-purpose (work and meat) in some references, so the two options are not entirely free of ambiguity.",
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "36": {
       "q_number": 36,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Eggs are laid and milk is secreted by animals that remain alive, so both are obtainable without slaughtering the animal. Chevon (goat meat) can only be obtained after the animal is killed, so any option including II is wrong, leaving I and III (B) correct.",
+      "reasoning": "Eggs and milk can both be collected from a living animal without harming it, but chevon (goat meat) requires slaughtering the animal. Hence only I and III qualify.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -330,17 +330,17 @@
     "37": {
       "q_number": 37,
       "answer": "D",
-      "confidence": "probable",
-      "reasoning": "In ruminants, the colon is the major site of water reabsorption from undigested residues as digesta is compacted into faeces. The caecum is mainly involved in microbial fermentation of fibrous material rather than bulk water absorption, making it a weaker choice than the colon.",
+      "confidence": "certain",
+      "reasoning": "In ruminants, the colon (large intestine) is the main site for absorption of water from the undigested residue after the small intestine has absorbed nutrients. The caecum and rectum play lesser roles, and the duodenum is part of the small intestine involved in nutrient digestion, not final water absorption.",
       "solvable": true,
-      "issue": "Some texts attribute a share of water absorption to the caecum as well, so caecum versus colon is not entirely unambiguous.",
+      "issue": "",
       "lane": "claude-sonnet"
     },
     "38": {
       "q_number": 38,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "The rumen temporarily stores ingested feed and hosts microbial fermentation, but rumen microbes synthesize B-complex vitamins and vitamin K, not vitamins A and D, which must be obtained from the diet or sunlight. Therefore III alone is the exception, matching option C.",
+      "reasoning": "The rumen serves as a temporary storage site and a fermentation chamber where microbes break down feed, but it synthesizes B-complex vitamins and vitamin K, not vitamins A and D. So III is the exception.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -349,7 +349,7 @@
       "q_number": 39,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Semen is routinely collected using an artificial vagina, the massage (manual) method, or electro-ejaculation, all standard techniques in animal reproduction. A catheter is used for tasks like urine sampling or artificial insemination delivery, not for collecting semen from the male animal.",
+      "reasoning": "Semen is collected using an artificial vagina, manual massage (of the ampullae/accessory glands), or electro-ejaculation, but a catheter is used for tasks like urine sampling or artificial insemination, not for collecting semen.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -358,7 +358,7 @@
       "q_number": 40,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Heat stress suppresses appetite and diverts energy to thermoregulation, leading to reduced milk yield in dairy animals, while feed intake typically falls and water intake rises as the animal tries to cool down. This makes reduced milk production the correct outcome, contradicting the increased feed intake and reduced water intake options.",
+      "reasoning": "Heat stress causes reduced feed intake and increased water intake in farm animals, along with reduced milk production due to metabolic and physiological strain. Increased feed intake, reduced water intake, and increased litter size are the opposite of what actually occurs under heat stress.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -367,7 +367,7 @@
       "q_number": 41,
       "answer": "D",
       "confidence": "certain",
-      "reasoning": "Floor area = 9m x 20m = 180m². Number of birds = 180 / 0.36 = 500. The other options come from miscalculating the area or dividing incorrectly.",
+      "reasoning": "House area = 9m x 20m = 180m². At 0.36m² per adult chicken, capacity = 180/0.36 = 500 birds. No other option matches this direct division.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -376,7 +376,7 @@
       "q_number": 42,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Open sides allow free air movement, promoting adequate ventilation which removes heat, moisture and ammonia from the house. It does not protect from strong winds or keep birds warm, which are the opposite effects.",
+      "reasoning": "Open-sided poultry houses allow free air movement, which promotes adequate ventilation and removes excess heat, moisture and ammonia. They do not particularly protect birds from strong winds or keep birds warm, which are functions of closed/curtained sides.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -385,7 +385,7 @@
       "q_number": 43,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "A ram is a male sheep, and sheep are the source of wool. A boar and buck (male pig and male goat/antelope) do not produce wool, and a cock is poultry which produces feathers, not wool.",
+      "reasoning": "Wool is the fleece obtained from sheep, and a ram is a male sheep. A boar is a male pig, a buck is a male goat, and a cock is a male chicken, none of which produce wool.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -393,8 +393,8 @@
     "44": {
       "q_number": 44,
       "answer": "A",
-      "confidence": "certain",
-      "reasoning": "Sulphur-based drugs (e.g. sulphonamides) are used to treat coccidiosis and ringworm. Fowl pox is a viral disease and is not treated with sulphur drugs, so options including III are wrong.",
+      "confidence": "probable",
+      "reasoning": "Sulphur-based drugs (sulphonamides) are used to treat coccidiosis, and sulphur compounds are also used topically to treat ringworm (a fungal skin infection). Fowl pox is a viral disease that is prevented by vaccination rather than cured with sulphur drugs, so III is excluded.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -403,7 +403,7 @@
       "q_number": 45,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "Bees are most valuable to humans as pollinating agents, which boosts crop yields far beyond the value of beeswax or honey production. Producing beeswax is a minor by-product benefit compared to pollination's agricultural impact.",
+      "reasoning": "Bees are most valued for pollinating crops, which boosts food production on a wide scale; this economic and ecological role outweighs honey/beeswax production or research use. Producing beeswax and raw materials are minor benefits compared to pollination's impact on agriculture.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -412,7 +412,7 @@
       "q_number": 46,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Cocoa is a major foreign exchange earner and export crop for West African countries like Nigeria, Ghana and Ivory Coast. Maize, yam and plantain are mainly food/staple crops for local consumption, not major exports.",
+      "reasoning": "Cocoa is a major foreign exchange earner and export crop for West African countries such as Ghana, Nigeria and Cote d'Ivoire. Maize, yam and plantain are chiefly food crops for local consumption, not major exports.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -421,7 +421,7 @@
       "q_number": 47,
       "answer": "B",
       "confidence": "certain",
-      "reasoning": "Cost per tray = total cost / total trays produced = ₦350,000 / 500 = ₦700.00. This uses total production cost over all trays produced, not just those sold.",
+      "reasoning": "Cost per tray = total cost / total trays produced = ₦350,000 / 500 = ₦700.00. This uses the total output (500 trays), not just the trays sold.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -430,7 +430,7 @@
       "q_number": 48,
       "answer": "C",
       "confidence": "certain",
-      "reasoning": "1% of 500 trays consumed by the family = 5 trays. Trays sold = 500 - 5 = 495.",
+      "reasoning": "Family consumption = 1% of 500 trays = 5 trays. Trays sold = 500 - 5 = 495.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
@@ -439,18 +439,18 @@
       "q_number": 49,
       "answer": "A",
       "confidence": "certain",
-      "reasoning": "Net profit = sales revenue - marketing cost - total production cost = ₦500,000 - ₦30,000 - ₦350,000 = ₦120,000.00.",
+      "reasoning": "Net profit = sales revenue - (total production cost + marketing cost) = ₦500,000 - (₦350,000 + ₦30,000) = ₦120,000.00.",
       "solvable": true,
       "issue": "",
       "lane": "claude-sonnet"
     },
     "50": {
       "q_number": 50,
-      "answer": "C",
+      "answer": "B",
       "confidence": "probable",
-      "reasoning": "Processing and grading standardize produce quality, allowing farmers to negotiate and fix better prices based on defined quality standards. Advertisement promotes demand but does not itself establish price-differentiating quality standards, making it the weaker inclusion.",
+      "reasoning": "Advertisement creates demand awareness and grading sorts produce into quality classes, both of which help farmers negotiate and fix better prices. Processing changes the form of a product for value addition but is not primarily a price-fixing/marketing function in this context.",
       "solvable": true,
-      "issue": "Advertisement can indirectly support pricing through demand creation, so I and III combinations are also defensible depending on the syllabus emphasis.",
+      "issue": "",
       "lane": "claude-sonnet"
     }
   },
@@ -459,33 +459,33 @@
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.1075,
+      "cost_usd": 0.1053,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.1132,
+      "cost_usd": 0.1406,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.1332,
+      "cost_usd": 0.1875,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.1017,
+      "cost_usd": 0.0839,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     },
     {
       "family": "claude",
       "model": "sonnet",
-      "cost_usd": 0.1197,
+      "cost_usd": 0.0792,
       "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
     }
   ],
-  "fallback_cost_usd": 0.5753
+  "fallback_cost_usd": 0.5965
 }

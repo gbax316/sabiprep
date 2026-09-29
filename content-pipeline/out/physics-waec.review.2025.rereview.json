@@ -1,0 +1,73 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "fail",
+      "failed_checks": [
+        8
+      ],
+      "fact_error": true,
+      "notes": "The solution states as fact: \"So the power falls to a quarter of its first value. The option wording means reduced to a quarter.\" This claim about what the wording means is false. \"Reduced by a quarter\" and \"reduced to a quarter\" are not the same thing: reducing a value BY a quarter (25%) leaves three-quarters of it, it does not leave a quarter of it. They only happen to coincide for the special case of one-half (reduced by half = reduced to half), which is likely why the author generalised the pattern here, but it does not hold for a quarter. The physics working (power falls to 1/4 = a drop of 3/4) is correct, but asserting that 'reduced by a quarter' literally means 'reduced to a quarter' teaches a false equivalence a student could carry into the next question, e.g. wrongly reading 'reduced by a third' as 'reduced to a third'.",
+      "fix": "So the power falls to a quarter of its first value, a drop of three-quarters. Read the option's wording carefully: reducing something BY a quarter would normally leave three-quarters of it, but here 'reduced by a quarter' is used to mean the power ends up as a quarter of its start value, so treat it as 'reduced to a quarter' for this option.",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "Answer_challenge: agree. Using the stem exactly as printed (mass 0.0025 kg, v = 250 m/s), p = mv = 0.625 kg m/s and lambda = h / p = 6.67e-34 / 0.625 = 1.07e-33 m, one power of ten above option C's printed 1.07e-34 m. The digits 1.07 match no option except C, so C correctly stays the key, and the solution is transparent about the mismatch rather than hiding it, so it does not mislead the student. I agree the likely source of the error is the stem's mass: 0.025 kg (not 0.0025 kg) gives p = 6.25 kg m/s and lambda = 6.67e-34 / 6.25 = 1.07e-34 m, matching option C exactly. Recommend correcting the stem's mass to 0.025 kg upstream before shipping; once fixed, the 'either the mass or option C was misprinted' aside in the solution should be removed and the working simplified to a clean derivation of 1.07 x 10^-34 m.",
+      "fix": "",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.571,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 0.571
+}

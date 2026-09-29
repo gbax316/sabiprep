@@ -1,0 +1,62 @@
+{
+  "year": 2024,
+  "paper": 1,
+  "rulings": {
+    "1": {
+      "q_number": 1,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "As printed, y = sin 2x − cos 2x gives dy/dx = 2cos 2x + 2sin 2x, and option C is exactly this apart from a stray 'e', which is an obvious typing artifact in the option rather than a change of meaning. The strongest case for B is Codex's reading of the stem as sin 2x − cos²x, whose derivative 2cos 2x + 2sin x cos x does simplify to B. But that reading requires rewriting an intact-looking stem, whereas C requires only deleting a stray character from an option, so the printed question points to C. Option C should be cleaned to read 2cos 2x + 2sin 2x.",
+      "sided_with": "claude"
+    },
+    "13": {
+      "q_number": 13,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "The matrix is printed as (5 x₂; 3 x₁), which is not a readable 2 by 2 determinant with a single unknown. Taken literally it involves two unknowns and cannot fix x. The reconstruction |5 x; 3 x| gives 2x = 14 and x = 7 (A), which Codex prefers, but the equally natural |5 2; 3 x| gives 5x − 6 = 14 and x = 4 (B). Because plausible repairs lead to different options, the entries must be recovered from the source paper before the question can be keyed.",
+      "sided_with": "claude"
+    },
+    "15": {
+      "q_number": 15,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Evaluating 4104 with base 3 place values gives 4(27) + 1(9) + 0(3) + 4 = 121, and 121 = 1(64) + 7(8) + 1 = 171₈, which is option B exactly. The only argument against a key is that 4 is not a valid base 3 digit, which is a genuine flaw in the setting. However, no option other than B arises from any reading of the numeral, and A (117₈ = 79) is only a digit reversal distractor, so the setter's intended answer is unambiguous. The stem should carry an editorial note about the invalid digit.",
+      "sided_with": "both"
+    },
+    "27": {
+      "q_number": 27,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "As printed, dy/dx = 2px + 3 = 9 at x = 1 gives p = 3, which is not an option. The stem is also self-contradictory, since (1, 0) lies on the curve only when p = 5, which conflicts with the gradient condition. Codex's repair to px³ gives p = 2 (B), but it does not remove the point contradiction, and other one-symbol repairs (for example a different gradient value) reach other options such as 3.5 (A). The question cannot be keyed without the original stem.",
+      "sided_with": "claude"
+    },
+    "30": {
+      "q_number": 30,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "The stem has lost its equals sign, and the two natural repairs give different options. Reading '= 1' with t = √(k+2) gives t² − t − 6 = 0, t = 3 and k = 7 (B), which both derivers chose. But the printed minus sign before 1 is equally consistent with '= −1', which gives t² + t − 6 = 0, t = 2 and k = 2, and option C is offered. Since the damage decides between B and C and neither reconstruction is clearly preferred, the original stem must be recovered.",
+      "sided_with": "neither"
+    },
+    "32": {
+      "q_number": 32,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "log_x 0.4 = log_x (2/5) = log_x 2 − log_x 5, so with M = log_x 2 and N = log_x 5 the answer is M − N (D). The printed 'M = 2logₓ²' is garbled notation in which the 2 appears both as a coefficient and as a superscript, and a literal coefficient would give ½M − N, which is not offered. No reading of the notation produces A, B or C, so D is the only answer the setter can have intended. The stem should be corrected to M = log_x 2.",
+      "sided_with": "both"
+    },
+    "34": {
+      "q_number": 34,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "x² + 5x + 6 > 0 factorises as (x + 2)(x + 3) > 0, so x < −3 or x > −2. Option B, 'x < −3 and x – 2', is this with the '>' lost, and D is the complementary interval. The strongest case for A is that 'x > 2' might be 'x > −2' with a lost minus sign, but if A were the correct option then B would be a duplicate, so A must be an original distractor and B the intended answer. Option B should be repaired to read x < −3 or x > −2.",
+      "sided_with": "both"
+    },
+    "35": {
+      "q_number": 35,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "As printed, (4x − 5)² = 3y gives x = (5 ± √(3y))/4, which matches no option, so one sign in the stem has been lost. The options all build on 3y + 25, showing the setter intended a difference of squares, and either repair (4x + 5 on one side) gives 16x² − 25 = 3y and x = ±√(3y + 25)/4, which is C with misplaced brackets. The case for calling it defective is that the printed stem does not yield C, but unlike a genuine fork, every sensible repair reaches the same option, and A, B and D do not follow from any of them. The stem should be corrected to 4x + 5 = 3y/(4x − 5).",
+      "sided_with": "both"
+    }
+  }
+}

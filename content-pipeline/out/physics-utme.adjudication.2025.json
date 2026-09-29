@@ -1,0 +1,48 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "rulings": {
+    "3": {
+      "q_number": 3,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "The pressure law gives P proportional to T only when T is measured from absolute zero, so the P-T graph passes through the origin on the thermodynamic (Kelvin) scale, while Celsius and Fahrenheit graphs cut the axis away from zero. The strongest case for A is that Rankine is also an absolute scale, so strictly its graph would also pass through the origin. However, Rankine is not part of the Nigerian secondary syllabus or standard texts, and the option B label 'Thermodynamic (Kelvin)' uses the exact syllabus term, so the setter's intent is clear. A well-prepared student at this level would choose B and an examiner would mark only B.",
+      "sided_with": "both"
+    },
+    "8": {
+      "q_number": 8,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "Applying the relation v proportional to the square root of absolute temperature, v = 1000 x sqrt(298/273) = 1000 x 1.0448 = 1044.8 m/s, which rounds to 1045 m/s. Option B (1044 m/s) is only reached by truncating rather than rounding, which is not the standard convention. The physical objection that the square-root law belongs to gases rather than solids is valid, but the setter clearly intends that formula and no other method yields any of the options. C is the answer an examiner would accept.",
+      "sided_with": "both"
+    },
+    "9": {
+      "q_number": 9,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "The stopping potential satisfies eV = KEmax, so V = 2.20 x 10^-19 / 1.6 x 10^-19 = 1.375 V, which is 1.4 V to two significant figures. The missing J unit and the missing minus sign in the conversion factor are obvious typographical slips that do not change the intended calculation. The nearest rival, 1.50 V, is 0.125 V away compared with 0.025 V for 1.40 V, so no reasonable rounding favours B or D. C is the only defensible choice.",
+      "sided_with": "both"
+    },
+    "10": {
+      "q_number": 10,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "Pressure is force per unit area, and force is the momentum transferred per second, so pressure equals the momentum imparted to the wall per second per unit area, which is option A word for word and the standard kinetic theory statement. The strongest case for C is that 'rate of change of momentum per unit area' is also a standard phrasing of pressure. But C adds 'per second' to 'rate of change', counting time twice and giving a quantity with the wrong dimensions, so as printed it is incorrect. B and D lack the time factor entirely, leaving A as the only literally correct statement.",
+      "sided_with": "claude"
+    },
+    "18": {
+      "q_number": 18,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Adding mass high up on the roof moves the combined centre of gravity upward, and this is the standard textbook illustration of loss of stability in vehicles. Flattening the tyres lowers the vehicle and so lowers the centre of gravity, and reducing the wheelbase changes the base area, not the height of the centre of gravity. The strongest case for A is that removing a heavy, low-mounted engine could also raise the centre of gravity, but the effect depends on unstated masses and heights and an engine's centre is not far below the vehicle's own centre of gravity. At syllabus level B is the unambiguous intended answer.",
+      "sided_with": "both"
+    },
+    "32": {
+      "q_number": 32,
+      "ruling": "ambiguous",
+      "answer": null,
+      "reasoning": "For opposite currents, the right-hand grip rule shows the two fields at the midpoint point the same way, so they add and C is correct as the setter intends. However, the field of a long straight wire at any point in the plane containing both wires is perpendicular to that plane, so at the midpoint each field, and hence the resultant, is directed perpendicular to the plane, making B equally true. B is not a strained reading; it follows directly from the syllabus field pattern of a straight conductor, and a student who applies the grip rule carefully would find both B and C correct. The pairing of A with C suggests the setter focused on add versus cancel, but keying C would penalise a correct answer, so the item should be treated as ambiguous between B and C.",
+      "sided_with": "neither"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "year": 2025,
+  "paper": 1,
+  "rulings": {
+    "6": {
+      "q_number": 6,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "A charge passes undeflected through crossed fields when qE = qvB, so E/B is the speed picked out by the arrangement known in Nigerian texts as the velocity selector. The strongest objection is that E/B is strictly a velocity, not the name of a device, so the wording is loose. Still, Lorentz ratio, change ratio and electrochemical equivalence are not standard names for E/B at all, and the examiner plainly wants C. A well-prepared student will pick C without hesitation.",
+      "sided_with": "both"
+    },
+    "12": {
+      "q_number": 12,
+      "ruling": "key",
+      "answer": "D",
+      "reasoning": "The diagram shows a series circuit with peak voltages R 3 V, C 2 V and L 6 V, and the options can only be asking for the peak e.m.f. of the source. The phasor sum is sqrt(3^2 + (6 - 2)^2) = 5 V. The missing question sentence is the strongest reason to hesitate, but no other target fits the options: 11 V is the arithmetic sum, 9 V is R plus L and 8 V is L plus C, all standard distractors. D is the answer an examiner would mark.",
+      "sided_with": "both"
+    },
+    "14": {
+      "q_number": 14,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Since n v = c for both media, v_B = v_A n_A / n_B. The printed 20 x 10^8 m/s is faster than light and cannot be right, while 2.0 x 10^8 m/s is exactly what n = 1.5 requires, so the dropped decimal point is self-evident. With that reading v_B = 2.0 x 10^8 x 1.5 / 1.2 = 2.5 x 10^8 m/s. The literal value gives 2.5 x 10^9 m/s, which is not offered, so no option competes with B.",
+      "sided_with": "both"
+    },
+    "23": {
+      "q_number": 23,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "The normal near point is 25 cm, and a near point farther away than that means close objects cannot be focused, which Nigerian texts call long sight or hypermetropia. The strongest case for C is that presbyopia also moves the near point outward. However, presbyopia is defined by age-related loss of accommodation, and the stem gives no age or other clue pointing to it. The standard textbook link between a distant near point and a named defect is hypermetropia, so A is the key.",
+      "sided_with": "both"
+    },
+    "24": {
+      "q_number": 24,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "The stem asks about white light (the 'While' is a typo), so additive mixing of coloured lights applies. Red, green and blue give white; magenta and green are complementary and give white; magenta, yellow and cyan together contain each primary twice and also give white. Yellow, red and green contain no blue, so IV fails and options A, C and D are excluded or incomplete. The argument for D rests on treating I as pigment mixing, which gives black, but the question is explicitly about light, so B is the answer.",
+      "sided_with": "both"
+    },
+    "25": {
+      "q_number": 25,
+      "ruling": "key",
+      "answer": "A",
+      "reasoning": "The hatching is on the upper side of the curve, so the reflecting face bulges towards the light arriving from below, making it a convex mirror with diverging reflected rays. Convex mirrors give a wide field of view and are used as surveillance mirrors. Make-up mirrors and microscope reflectors are concave. The strongest worry is that D is a garble of 'driving mirror', which would also be convex, but it is more plausibly a garble of 'dressing mirror', a plane mirror, and even as printed it names nothing a student could choose over A.",
+      "sided_with": "both"
+    },
+    "35": {
+      "q_number": 35,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "The start time '13100 hour' can only be a corruption of 1300 hours, since 1300 to 1700 is a sensible interval on the same day. A fraction of 1/16 left means (1/2)^4, so four half-lives passed in 4 hours, giving a half-life of 1 hour. The strongest distractor is A, 4 hours, which is the elapsed time rather than the half-life. C is the key.",
+      "sided_with": "both"
+    },
+    "37": {
+      "q_number": 37,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "Power is force times velocity, so halving both gives (F/2)(v/2) = Fv/4, a quarter of the original power. The strongest objection is that 'reduced by a quarter' read literally means a fall to three-quarters, which is not the physics result. No option offers that literal value, and the setter clearly meant 'reduced to a quarter'; doubled, halved and constant have no physical support. B is the only option a prepared student would choose.",
+      "sided_with": "both"
+    },
+    "40": {
+      "q_number": 40,
+      "ruling": "key",
+      "answer": "B",
+      "reasoning": "This is a Bernoulli question: for steady flow along a streamline, P + (1/2)pv^2 is constant, so where the pressure of the oil is higher its speed is lower. The strongest alternative reading is that a larger pressure difference drives faster flow, which would favour A. But the stem refers to the pressure in the oil, not a driving pressure difference, and the Nigerian syllabus teaches this topic through Bernoulli's principle. B is the key.",
+      "sided_with": "both"
+    },
+    "42": {
+      "q_number": 42,
+      "ruling": "defective",
+      "answer": null,
+      "reasoning": "The physics is clear: R = 12.0 + (20.0 - 12.0) x 10/100 = 12.8 ohm. But options A and B are both printed as 12.8 ohm, so the correct value sits under two letters and one of them must be a transcription error of some other value. Keying A, as both derivers did, would mark a student who picks B wrong despite doing the calculation correctly, and we cannot tell which letter the setter keyed. The option text must be corrected from the source before any key is assigned.",
+      "sided_with": "neither"
+    },
+    "44": {
+      "q_number": 44,
+      "ruling": "key",
+      "answer": "C",
+      "reasoning": "As printed, lambda = h/(mv) = 6.67 x 10^-34 / (0.0025 x 250) = 1.07 x 10^-33 m, one power of ten from option C. C matches the mantissa exactly and would be exact if the mass were 0.025 kg, so the error is a single misprinted power of ten, in either the mass or the option. The other options do not fit any sensible working (B and D correspond to masses of 0.05 kg and 0.0125 kg), so a student who does the calculation correctly lands only on C. It stays a key, but the stem or option should be corrected, and the stray 'c = 1.6 x 10^-19 C', which is not needed, can be removed.",
+      "sided_with": "both"
+    }
+  }
+}

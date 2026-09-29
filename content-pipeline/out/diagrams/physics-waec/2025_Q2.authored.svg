@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 660 470" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+<!-- Authored by hand, not traced: the diagrams in this subject carry typed labels, which tracing damages.
+     Positions follow the original print (the 15 N guide sits where the paper printed it, not to a strict scale).
+     Nothing omitted: every element of the original was legible.
+     WARNING: the supplied alt text (used as desc, as instructed) says the line rises from the origin to the peak.
+     The original prints no such segment: only dashed guides reach (10, 50), and the settled answer (825 J = 50x10 + area 10-20 m)
+     depends on that. The alt text needs correcting upstream. -->
+
+<title id="t">Force against displacement graph</title>
+<desc id="d">A line graph with the vertical axis labelled "Force/N" and the horizontal axis labelled "Displacement/m". The origin is marked "0,0". The horizontal axis has marks at 10, 20 and 30. The line starts at the origin and rises in a straight segment to a peak above the 10 mark, level with a dashed guide line at 50 on the vertical axis. From that peak the line falls in a straight segment, passing near the 20 mark at the height of a dashed guide line at 15 on the vertical axis, and reaching the horizontal axis at the 30 mark.</desc>
+<g stroke="#E2E8F0" fill="none" stroke-width="4">
+  <!-- axes -->
+  <line x1="144" y1="50" x2="144" y2="466"/>
+  <line x1="87" y1="402" x2="505" y2="402"/>
+  <!-- ticks on the displacement axis -->
+  <line x1="245" y1="402" x2="245" y2="420"/>
+  <line x1="346" y1="402" x2="346" y2="420"/>
+  <line x1="431" y1="383" x2="431" y2="422"/>
+  <!-- graph line: the only solid line, from (10, 50) down to (30, 0); the original draws nothing solid between the origin and (10, 50) -->
+  <line x1="245" y1="135" x2="430" y2="402"/>
+  <!-- dashed guide lines -->
+  <g stroke-dasharray="12 10">
+    <line x1="148" y1="135" x2="245" y2="135"/>
+    <line x1="245" y1="135" x2="245" y2="400"/>
+    <line x1="148" y1="282" x2="346" y2="282"/>
+    <line x1="346" y1="282" x2="346" y2="400"/>
+  </g>
+</g>
+<!-- arrowheads -->
+<g fill="#E2E8F0">
+  <polygon points="144,25 159,66 144,58 129,66"/>
+  <polygon points="526,402 486,387 494,402 486,417"/>
+</g>
+<g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif">
+  <text x="130" y="94" font-size="28" text-anchor="end">Force/<tspan font-style="italic">N</tspan></text>
+  <text x="135" y="145" font-size="30" text-anchor="end">50</text>
+  <text x="135" y="293" font-size="30" text-anchor="end">15</text>
+  <text x="136" y="456" font-size="30" text-anchor="end">0,0</text>
+  <text x="245" y="455" font-size="30" text-anchor="middle">10</text>
+  <text x="346" y="455" font-size="30" text-anchor="middle">20</text>
+  <text x="431" y="455" font-size="30" text-anchor="middle">30</text>
+  <text x="479" y="456" font-size="24">Displacement/<tspan font-style="italic">m</tspan></text>
+</g>
+</svg>

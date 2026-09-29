@@ -1,0 +1,521 @@
+{
+  "reviewer": "codex",
+  "year": 2025,
+  "paper": 1,
+  "reviews": {
+    "1": {
+      "q_number": 1,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "fail",
+      "failed_checks": [
+        1
+      ],
+      "fact_error": false,
+      "notes": "Hint 1 reads: 'Look for the concept that describes a state's supreme power over its own territory, with no outside body above it.' This is not attention-orienting, it is the definition of sovereignty itself, matching the solution's own wording almost clause for clause ('the supreme and final power a state has to make and enforce laws within its territory, free from control by any outside power'). A student who reads hint 1 already has the decisive principle and does not need hints 2 or 3 to choose D. Applying the standard's own test, this hint would not help on a different question in the same subtopic (e.g. types of sovereignty, or where sovereignty is located) because it is built to match this stem's exact phrasing rather than to orient attention. This functionally hands over the answer without naming it by letter.",
+      "fix": "Hint 1: Focus on the exact words in the stem: a state's right 'to govern itself' and to keep its 'territorial integrity' 'without external intervention'. Ask what kind of quality this is: something a state already holds over itself, not a relationship between two states and not a goal a people are working toward.",
+      "lane": "claude-sonnet"
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 reads: 'Set aside any option whose wording does not make sense as a media role. Which remaining option connects the media to government being answerable to citizens?' Only two usable options remain at this stage (A and D, since option C is missing from this item's data). Asking which option 'connects the media to government being answerable to citizens' is a near-synonym restatement of option A's own text, 'holds government accountable to the people'. A student can pick A straight from this sentence without weighing anything, which fails the hint 3 test ('if a student can answer by reading hint 3 alone, without thinking, it is too strong'). The lead-in to this is already set up in hint 2, which states 'The media's most important governance role is linked to accountability: making leaders answer to the people for what they do', so by hint 3 the answer's content has effectively already been given twice.",
+      "fix": "Hint 3: Set aside any option whose wording does not make sense as a media role. Between what is left, ask which one works for the benefit of the whole society, and which one works only for a single party's benefit.",
+      "lane": "claude-sonnet"
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 eliminates all three distractors in one line, not just the weakest one, so by the time the student reaches hint 3 there is nothing left to choose. The offending sentence is: 'Any option that reduces competition or silences opposition works against democracy.' 'Reduces competition' rules out both A (centralizing power) and D (limiting competition), and 'silences opposition' rules out C (suppressing dissent). That leaves only B (providing voter choice), so the answer has already been handed over indirectly at hint 2, which the hint table forbids ('Must not: State the answer, even indirectly'). Hint 3's own wording ('which ones take away from it', plural) implies it expected more than one option to still be in play at that stage, confirming hint 2 over-eliminated. The rest of the item (hint 1, solution structure, plain text, Why not the others covering A/C/D, the exam tip) is fine.",
+      "fix": "Replace hint2 with: \"Democracy depends on people's freedom to disagree. An option that talks about silencing opposition works against democracy, not for it.\" This removes only C (suppressing dissent), leaving A, B and D for hint 3's 'key word' comparison to narrow down, as hint 3's plural phrasing already assumes.",
+      "lane": "claude-sonnet"
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 is too strong. It reads: \"Two options are left. One is about controlling the corporation more tightly. The other is about building its ability to perform. Which one makes the most of its potential?\" The final question just echoes the stem's own words (\"maximizing the potentials\") back at the student, so 'building its ability to perform' obviously wins by wording alone, with no need to know anything about public corporations. A student could answer from this sentence with no subject knowledge at all.",
+      "fix": "Two options are left. One increases control over staff and spending. The other improves equipment, methods and skills. Recall which of these your textbook names as the standard remedy for outdated, poorly performing public corporations.",
+      "lane": "claude-sonnet"
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 is too strong. It reads: \"Two options are left. One says it 'eliminates' a burden entirely. The other is about using special knowledge. Which is a sound reason for it?\" 'Using special knowledge' is just a paraphrase of the correct option's own words ('by experts'), and 'which is a sound reason for it' directly echoes the stem's 'why is delegated legislation a key component'. A student can match the paraphrase to the answer without knowing anything about delegated legislation.",
+      "fix": "Two options are left: one claims delegated legislation removes elected officials' stress altogether, the other says it lets a different body write technical rules. Recall the three reasons your textbook gives for delegated legislation: expertise, time, and speed. Which of the two matches one of them?",
+      "lane": "claude-sonnet"
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 is too strong. It reads: \"Two options are left. One is about culture. The other is about people's confidence in government. Which is a contribution to governance rather than to culture?\" The hint has already labelled one option 'about... government' and the closing question then just asks for 'a contribution to governance rather than to culture', which is answered by re-reading the hint's own labels. No subject knowledge is needed to pick correctly.",
+      "fix": "Two options are left: one about preserving cultural distinctiveness, the other about traditional rulers' day-to-day work, such as mobilising communities and settling local disputes. Which of these two is the role your textbook lists under local government and democratic governance?",
+      "lane": "claude-sonnet"
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "fail",
+      "failed_checks": [
+        10
+      ],
+      "fact_error": false,
+      "notes": "In 'Why not the others', option D's reason uses the word 'assent': \"the legislative councils in crown colonies were dominated by the Governor, and their laws needed his assent, so they did not have full powers under colonial rule.\" 'Assent' is a formal word a fourteen to sixteen year old is likely to stumble over when a plainer word says the same thing.",
+      "fix": "the legislative councils in crown colonies were dominated by the Governor, and their laws needed his approval, so they did not have full powers under colonial rule.",
+      "lane": "claude-sonnet"
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 2 already eliminates option A ('an option limiting it to the economy with \"only\" is too narrow'), leaving B, C, D. Hint 3 then eliminates both remaining wrong options at once: 'Two options describe nationalism as disregarding rights or values, which does not fit the movements you studied. Compare them with the one remaining: which reads as a lesson drawn from both sides of nationalism's record?' By the phrase 'the one remaining', only B is left standing after hints 2 and 3, so the student is not really choosing between two options, they are being told which single option survives. This fails the hint-3 test: a student who reads hint 3 (on top of hint 2) reaches the answer without weighing any real alternative. Hint 3's job is to narrow to two, not to zero.",
+      "fix": "hint3: One of the two remaining options says nationalism disregards rights for loyalty and militance, which does not fit the movements you studied. Between the other two, which one names both a strength and a weakness of nationalism, rather than only a fault?",
+      "lane": "claude-sonnet"
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "33": {
+      "q_number": 33,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "fail",
+      "failed_checks": [
+        8,
+        11
+      ],
+      "fact_error": true,
+      "notes": "The solution's principle paragraph states an unscoped absolute that is not literally true: \"A state that is not secure cannot pursue trade, culture or anything else, so security comes first.\" States in the real world routinely conduct trade and cultural exchange while facing significant insecurity (border disputes, insurgencies, and so on), so \"cannot ... anything else\" is a false universal claim, exactly the kind of absolute the standard warns against (nothing/only/never/always/cannot). The rest of the item is sound: hint 1 orients on national interest without naming the answer, hint 2 eliminates B and C without naming the answer, hint 3 narrows to two options while leaving the final choice to the student, all three distractors (A, B, C) are addressed in Why not the others, the solution is plain text with no markdown, and the exam tip transfers to other 'determinant of foreign policy' questions.",
+      "fix": "A state that is not secure struggles to pursue trade, culture or anything else, so security comes first.",
+      "lane": "claude-sonnet"
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "41": {
+      "q_number": 41,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "42": {
+      "q_number": 42,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 lets the student answer without thinking. It reads: \"Two options remain. One is about the work of a single arm of government. The other is about government as a whole. Which would make the whole state predictable?\" This is not a new discriminating fact, it is a restatement of hint 1, which already said \"Think about what a constitution lays down for the whole system of government, not for one arm of it.\" By hint 3 the student has twice been told the decisive test is whole-government versus single-arm, and the question stem itself already says the context is \"predictability and stability of the state\" (the whole state). So the final question \"which would make the whole state predictable\" resolves itself with no independent reasoning or recall required, it is pure pattern-matching back to wording already supplied. Everything else in the item is sound: hint 1 and hint 2 do not name or rule out options by letter, the solution is plain text with no markdown, Why not the others covers A, B and D accurately, and I found no factual errors.",
+      "fix": "Replace hint 3 with a version that requires an actual reasoning step rather than repeating hint 1's framing: \"Two options remain. Ask yourself: would a country still have predictable, stable government if only the judiciary followed fixed rules, but the executive and the legislature did not? What does that tell you about which option covers the whole system of government?\"",
+      "lane": "claude-sonnet"
+    },
+    "43": {
+      "q_number": 43,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "44": {
+      "q_number": 44,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "45": {
+      "q_number": 45,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 lets the student answer without thinking. It reads: \"Two options remain. One is a possible result of privatisation that workers fear. The other is the benefit its supporters promise. Which one is a reason to advocate it?\" Hint 1 already primed the student toward the same framing: \"what supporters of handing them to private owners hoped would change.\" The question stem itself asks for a reason people \"advocate\" privatisation, so telling the student that one remaining option is literally \"the benefit its supporters promise\" answers the stem's own wording directly, with no content recall needed to tell the two options apart. Aside from this, the item is solid: hint 1 and hint 2 do not name options, the solution is plain text, Why not the others correctly covers A, C and D, and I found no factual errors.",
+      "fix": "Replace hint 3 with a version that requires recalling the actual syllabus argument rather than just repeating the stem's word \"advocate\": \"Two options remain. Recall the standard case made for privatisation in the syllabus: private owners, driven by profit, are said to run a corporation better than the state does. Which option names that outcome?\"",
+      "lane": "claude-sonnet"
+    },
+    "46": {
+      "q_number": 46,
+      "verdict": "fail",
+      "failed_checks": [
+        2
+      ],
+      "fact_error": false,
+      "notes": "Hint 3 lets the student answer without thinking. It reads: \"Two options remain. Ask whether the members are held together by how different they are, or by a shared purpose written into the treaty that created the community.\" Hint 1 already set up this exact framing: \"Recall why West African states came together in Lagos in 1975 to form this community. What did they set out to do together?\" That is already \"a shared purpose written into the treaty.\" Hint 3 then just repeats the same idea as one half of a binary against \"how different they are\", which is an obvious non-answer to \"what binds members together\". No new fact or reasoning step is required between hint 1 and hint 3. The rest of the item is sound: no options are named in hints 1 or 2, the solution is plain text, Why not the others covers B, C and D accurately, and the Treaty of Lagos date (1975) is correct.",
+      "fix": "Replace hint 3 with a version that requires the student to reason about timing rather than just restating hint 1's \"shared purpose\" framing: \"Two options remain. Members such as Nigeria, Ghana and Senegal already differed in language and colonial history before 1975, so a difference that existed before the community was even formed cannot be what binds it. What kind of purpose, built deliberately through the treaty, could bind such different states together instead?\"",
+      "lane": "claude-sonnet"
+    },
+    "47": {
+      "q_number": 47,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "48": {
+      "q_number": 48,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "49": {
+      "q_number": 49,
+      "verdict": "pass",
+      "failed_checks": [],
+      "fact_error": false,
+      "notes": "",
+      "fix": "",
+      "lane": "claude-sonnet"
+    },
+    "50": {
+      "q_number": 50,
+      "verdict": "fail",
+      "failed_checks": [
+        11
+      ],
+      "fact_error": false,
+      "notes": "Why not the others, option B states an unscoped absolute that then contradicts the hedge right next to it: \"deliberately breaking laws is not their role in democratic governance; they work mainly through lawful means such as advocacy and peaceful protest.\" \"is not their role\" is an absolute (compare check 11's flagged words: never/always/only/has no role), but the same sentence immediately hedges with \"mainly\", which is a self-contradiction, and civil society organisations (including anomic and protest-oriented groups) do sometimes use civil disobedience as a lawful-in-intent tactic, so the flat \"is not their role\" overstates the syllabus simplification. Rest of the item passes: hint 1 orients without naming options, hint 2 gives an eliminating principle without stating the answer, hint 3 narrows to two without making the choice outright, the solution is plain text with no markdown, all three distractors (A, B, D) are covered in Why not the others, the exam tip transfers to any 'only' qualifier question, subtopic_id matches the placement note's own worked example (WASSCE 2025 Q50), and no other facts are wrong.",
+      "fix": "B. encouraging civil disobedience: civil society organisations work mainly through lawful means such as advocacy and peaceful protest, not by deliberately breaking the law.",
+      "lane": "claude-sonnet"
+    }
+  },
+  "failures": [],
+  "lanes": [
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3398,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3983,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.5342,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.2403,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.3739,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.1728,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    },
+    {
+      "family": "claude",
+      "model": "sonnet",
+      "cost_usd": 0.429,
+      "codex_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0) onStart hook: SessionStart Failed ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt"
+    }
+  ],
+  "fallback_cost_usd": 2.4883
+}

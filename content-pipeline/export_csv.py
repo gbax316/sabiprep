@@ -174,6 +174,21 @@ def main():
             'image_width': w, 'image_height': h,
         })
 
+    # The import rejects repeated question text, but papers repeat short stems
+    # across different extracts ("The speaker is", under two poems). Where a
+    # stem repeats and the rows sit on different passages, each says which
+    # questions its extract serves, which is true and keeps the rows distinct.
+    from collections import Counter
+    seen = Counter(r['question_text'].strip().lower() for r in rows)
+    by_pid = {}
+    for q, it in items.items():
+        if it['passage_id']:
+            by_pid.setdefault(it['passage_id'], []).append(q)
+    for r in rows:
+        if seen[r['question_text'].strip().lower()] > 1 and r['passage_id'] in by_pid:
+            qs = sorted(by_pid[r['passage_id']])
+            r['question_text'] = f"{r['question_text'].rstrip()} (questions {qs[0]} to {qs[-1]})"
+
     path = os.path.join(out, f'{a.slug}.{u}.import.csv')
     with open(path, 'w', newline='', encoding='utf-8-sig') as fh:
         wr = csv.DictWriter(fh, fieldnames=COLUMNS)

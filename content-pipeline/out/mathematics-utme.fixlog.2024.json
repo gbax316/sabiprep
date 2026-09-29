@@ -1,0 +1,175 @@
+{
+  "entries": [
+    {
+      "q_number": 8,
+      "source": "codex",
+      "finding": "\"Use π = 22/7\" / \"π = 22/7\" state an approximation as exact; tip says use the π the question gives, but none is given",
+      "decision": "accepted",
+      "reason": "Check 11: the approximation was stated as an equality, and the tip pointed to a value the question does not give. Scoping to 'take π as 22/7' keeps the examiner's answer of exactly 22.",
+      "change": "Hint 2 ends 'No value of π is given, so take π as 22/7.' Working reads 'taking π as 22/7' and adds that with π kept exact the area is 7π ≈ 21.99 m², still closest to 22. Option A reads 'taking π as 3'. Tip: 'Use the value of π the question gives, or 22/7 if none is given'.",
+      "round": 1
+    },
+    {
+      "q_number": 8,
+      "source": "codex",
+      "finding": "C and D lines compare m² with options printed in m; keep π exact until the end",
+      "decision": "rejected",
+      "reason": "The answer line and hint 3 already say the printed unit m should be m². Keeping π to the end is not needed when 22/7 is the syllabus value, and it would move the teaching away from the examiner's exact 22.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 15,
+      "source": "codex",
+      "finding": "A: \"the remainders are read in the wrong order\" is false (1,7,1 reversed is still 171)",
+      "decision": "accepted",
+      "reason": "Check 8, a factual error: reversing 1, 7, 1 gives 171 again, not 117.",
+      "change": "A now reads '117₈: this equals 1 × 64 + 1 × 8 + 7 = 79 in base ten, not 121.'",
+      "round": 1
+    },
+    {
+      "q_number": 18,
+      "source": "codex",
+      "finding": "Exam tip calls a subtraction a 'base sum' and states X = a − b without its condition",
+      "decision": "accepted",
+      "reason": "The question is a subtraction, and the rule holds only when a − X = b.",
+      "change": "Tip rewritten: 'for a missing number in a subtraction, rearrange first. If a − X = b, then X = a − b. Always check ... original subtraction.'",
+      "round": 1
+    },
+    {
+      "q_number": 19,
+      "source": "codex",
+      "finding": "Hint 3 \"6 and n must cancel out\" hands over n = −6, and only C has −6",
+      "decision": "accepted",
+      "reason": "Check 2: the student can read the answer off hint 3 without solving anything.",
+      "change": "Hint 3 now reads 'Solve each equation for its unknown: multiply both sides by 2, then take away the known coordinate. Keep the order asked for, m first and then n.'",
+      "round": 1
+    },
+    {
+      "q_number": 19,
+      "source": "codex",
+      "finding": "ASCII hyphens as minus signs in (4,-6), (-4,6), (-6,4)",
+      "decision": "accepted",
+      "reason": "Check 6: the standard uses Unicode notation, and the rest of the solution already uses −.",
+      "change": "Answer line and B and D lines use − in place of -.",
+      "round": 1
+    },
+    {
+      "q_number": 20,
+      "source": "codex",
+      "finding": "\"an even root, such as a square root, gives ±\" is overgeneralised",
+      "decision": "accepted",
+      "reason": "Check 11: √ gives only the non-negative root. The ± comes from solving an even power equation with a positive right side.",
+      "change": "Tip rewritten in terms of solving the power: r³ = 8/27 has one real solution with the same sign as the number, and r² = 4/9 has two, r = ±2/3.",
+      "round": 1
+    },
+    {
+      "q_number": 21,
+      "source": "codex",
+      "finding": "Scaling by k multiplies SD by k; in general it is |k|",
+      "decision": "accepted",
+      "reason": "Check 11: the general statement is true only for positive k. Scoped to a positive k, which the question gives, instead of bringing in |k|, which is harder for the reader.",
+      "change": "Principle now reads 'multiplied by a positive number k'. Tip now reads 'share a positive factor k'.",
+      "round": 1
+    },
+    {
+      "q_number": 22,
+      "source": "codex",
+      "finding": "\"every line 7x + 5y = k ... is parallel to 7x + 5y = 12\" includes k = 12, the same line",
+      "decision": "accepted",
+      "reason": "Check 11, an unscoped absolute. One short qualifier fixes it.",
+      "change": "Principle now reads '... has gradient −7/5. For any k other than 12, it is a line parallel to 7x + 5y = 12.'",
+      "round": 1
+    },
+    {
+      "q_number": 23,
+      "source": "codex",
+      "finding": "\"tube open at both ends use 2πrh alone\" ignores the inner and outer surfaces",
+      "decision": "accepted",
+      "reason": "Check 11: the formula holds only when the thickness is ignored. The one-word scope 'thin' fixes it without a lecture. Codex's full tip rewrite is not needed.",
+      "change": "Tip now reads 'for a thin tube open at both ends use 2πrh alone'.",
+      "round": 1
+    },
+    {
+      "q_number": 25,
+      "source": "codex",
+      "finding": "\"a bottom of 225 = 15 × 15 belongs to two picks\" is false as a rule (11/15 = 165/225)",
+      "decision": "accepted",
+      "reason": "Checks 8 and 11: the denominator alone does not prove there were two picks, and the tip taught it as a rule.",
+      "change": "A now reads 'simplifies to 21/25, which is not equal to 11/15'. B now reads 'puts the 11 favourable marbles over 225, but one pick has only 15 equally likely outcomes'. The tip's 225 sentence is replaced with 'The top counts the marbles you want, and the bottom counts every marble once.'",
+      "round": 1
+    },
+    {
+      "q_number": 34,
+      "source": "codex",
+      "finding": "Tip 'outside the roots / between them' needs two distinct real roots",
+      "decision": "accepted",
+      "reason": "Check 11: the rule fails when there are no real roots or only a repeated root.",
+      "change": "Tip now reads 'when ax² + bx + c has two different roots and a is positive, the expression is positive outside the roots and negative between them.'",
+      "round": 1
+    },
+    {
+      "q_number": 35,
+      "source": "codex",
+      "finding": "D reasoning 'no square root and no ±, so neither x² nor x' is faulty",
+      "decision": "accepted",
+      "reason": "Check 8: having no root does not stop an expression being x². D fails as x² because its denominator should be 16.",
+      "change": "D now reads 'this is not x, which needs a square root and ±, and it is not x² either, which is (3y + 25)/16.'",
+      "round": 1
+    },
+    {
+      "q_number": 35,
+      "source": "codex",
+      "finding": "Tip 'when the letter appears squared, the last step is a square root, answer carries ±' too broad",
+      "decision": "accepted",
+      "reason": "Check 11: the ± applies once x² is on its own and nothing fixes the sign of x.",
+      "change": "Tip now reads 'once you have x² on its own and nothing in the question fixes the sign of x, take the square root of both sides and write ±.' Codex's √(p/q) condition clause was not adopted, because it is beyond syllabus depth. The answer_challenge was kept.",
+      "round": 1
+    },
+    {
+      "q_number": 38,
+      "source": "codex",
+      "finding": "\"A restricted count is always smaller than the unrestricted one\" false in general",
+      "decision": "accepted",
+      "reason": "Check 11: a condition can exclude nothing, and then the counts are equal. The true rule is that the count cannot be larger.",
+      "change": "Tip now reads 'A count with a condition can never be larger than the count with no condition'.",
+      "round": 1
+    },
+    {
+      "q_number": 39,
+      "source": "codex",
+      "finding": "\"'or' between cases means add\" omits the non-overlap condition",
+      "decision": "accepted",
+      "reason": "Check 11: adding is valid only for cases that cannot happen together.",
+      "change": "Tip now reads 'when \"or\" cases cannot happen together, add their counts; when a choice is made in stages, one after the other, multiply.'",
+      "round": 1
+    },
+    {
+      "q_number": 31,
+      "source": "check-11",
+      "finding": "Tip \"a plain product keeps the minus sign\" is false for two negative factors",
+      "decision": "accepted",
+      "reason": "Unscoped absolute: (−2) × (−3) is positive.",
+      "change": "Tip now reads 'a product with only one negative number stays negative'.",
+      "round": 1
+    },
+    {
+      "q_number": 12,
+      "source": "check-8",
+      "finding": "Verified sector percentages against diagram 2024_Q12.png",
+      "decision": "rejected",
+      "reason": "The diagram shows Food 30%, Medical 25%, Education 25%, House rent 15% and Miscellaneous 5%. Every claim in the solution matches it, so nothing needs to change.",
+      "change": "",
+      "round": 1
+    },
+    {
+      "q_number": 0,
+      "source": "check-12",
+      "finding": "Sibling leaks across shared stems",
+      "decision": "rejected",
+      "reason": "No item in items.json has a passage_id or a shared stem, so there are no sibling groups to check.",
+      "change": "",
+      "round": 1
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 200 710 370" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+<!-- Authored by hand, not traced: the diagrams in this subject carry typed labels, which tracing damages. Coordinates follow the original 2025_Q37-38.png (800x800 image space). Nothing omitted as unreadable. -->
+<title id="t">Circle with secants from Q, angles 28° and 34°</title>
+<desc id="d">A circle with four points on its edge: P and N near the top, and T and M near the bottom right. A point Q sits outside the circle to the left. A straight line runs from Q through P and on to N. Another straight line runs from Q through T and on to M. Inside the circle, a line joins P to M and another joins T to N, and these two lines cross each other. At Q, the angle between line QN and line QM is marked 28°. At M, the angle between chord MP and the line MT, which continues on to Q, is marked 34°.</desc>
+<g fill="none" stroke="#E2E8F0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="537" cy="399.5" r="168"/>
+  <!-- Q-P-N -->
+  <line x1="93" y1="505" x2="614" y2="250"/>
+  <!-- Q-T-M -->
+  <line x1="93" y1="505" x2="667" y2="505"/>
+  <!-- chords P-M and T-N -->
+  <line x1="371" y1="369" x2="667" y2="505"/>
+  <line x1="407" y1="505" x2="614" y2="250"/>
+  <!-- angle arc at Q -->
+  <path d="M151 505 A58 58 0 0 0 145.1 479.6"/>
+  <!-- angle arc at M -->
+  <path d="M622 505 A45 45 0 0 1 626.1 486.2"/>
+</g>
+<g fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="28">
+  <text x="615" y="241">N</text>
+  <text x="346" y="360">P</text>
+  <text x="58" y="535">Q</text>
+  <text x="382" y="545">T</text>
+  <text x="675" y="537">M</text>
+  <text x="163" y="497">28°</text>
+  <text x="538" y="499">34°</text>
+</g>
+</svg>

@@ -1,0 +1,909 @@
+{
+  "year": 2024,
+  "paper": 1,
+  "counts": {
+    "disagree": 1,
+    "verified": 31,
+    "unsolvable": 2,
+    "agreed-soft": 5
+  },
+  "verdicts": {
+    "1": {
+      "q_number": 1,
+      "verdict": "disagree",
+      "answer": null,
+      "codex": {
+        "q_number": 1,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Reading the question as y = sin 2x − cos² x (a common OCR slip swapping the exponent placement), dy/dx = 2cos2x + 2 sinx cosx = 2cos2x + sin2x, which matches option B exactly. Option D uses single-angle terms that don't arise from either sin2x or cos²x.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 1,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "dy/dx = 2cos2x + 2sin2x. Option C reads '2 cos 2x + e 2sin 2x', which is this with a stray 'e'. B (2cos2x + sin2x) drops the factor 2 on the sine term, so it is wrong.",
+        "solvable": true,
+        "issue": "Option C has a stray 'e' from typing up; read as 2cos2x + 2sin2x. No option is correct as printed."
+      },
+      "extract_anomaly": null
+    },
+    "2": {
+      "q_number": 2,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 2,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "AB = 3 (vertical side), AC = 3 (horizontal side), and BC = √(3²+3²) = 3√2 by the distance formula, giving perimeter 6 + 3√2. No other option sums the three side lengths correctly.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 2,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "AB = 3 (vertical), AC = 3 (horizontal), BC = √(9+9) = 3√2, so the perimeter is 6 + 3√2. D swaps the coefficients.",
+        "solvable": true,
+        "issue": "Third vertex is unlabelled (C missing), which does not affect the answer."
+      },
+      "extract_anomaly": null
+    },
+    "3": {
+      "q_number": 3,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Converting to base 10: 20045₇ = 4835 and 14256₇ = 3912, so the difference is 923, which converts back to 2456₇. Option D (2546₇) is a digit-transposition distractor of the correct answer.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 3,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "20045₇ = 4835 and 14256₇ = 3912. The difference is 923 = 2·343 + 4·49 + 5·7 + 6 = 2456₇. D transposes digits, and A contains an 8, which is not a base-7 digit.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "4": {
+      "q_number": 4,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 4,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "10111₂ = 16+4+2+1 = 23, and .11₂ = 0.5+0.25 = 0.75, giving 23.75₁₀. Option D just reverses the integer and fractional digit groupings.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 4,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "10111₂ = 16+4+2+1 = 23 and .11₂ = 0.5+0.25 = 0.75, giving 23.75. C wrongly drops the 16s place.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "5": {
+      "q_number": 5,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 5,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "√28 = 2√7, so the expression is 2(4+√7)/(2+√7); rationalizing by (√7−2) gives denominator 3 and numerator 2(2√7−1) = 4√7−2, i.e. (4√7−2)/3. Option A wrongly introduces √3 instead of √7.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 5,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "√28 = 2√7. Multiply by (2−√7)/(2−√7): numerator 16 − 8√7 + 4√7 − 14 = 2 − 4√7, denominator −3, giving (4√7 − 2)/3. B has the sign of the 2 wrong.",
+        "solvable": true,
+        "issue": "Option B is typeset badly: (4√(7+2))/3."
+      },
+      "extract_anomaly": null
+    },
+    "6": {
+      "q_number": 6,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 6,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Sum of interior angles 1260° = (n−2)×180° gives n = 9, so one interior angle = 1260/9 = 140°. Option B (126°) is the exterior-angle-style distractor from a different n.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 6,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "(n−2)·180 = 1260 gives n = 9, so each interior angle is 1260/9 = 140°. 120° would be a hexagon.",
+        "solvable": true,
+        "issue": "The degree sign is missing on 1260."
+      },
+      "extract_anomaly": null
+    },
+    "7": {
+      "q_number": 7,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 7,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "S∞ = a/(1−r) = a/(1+1/2) = 2a/3 = 100, so a = 150. Option B (200/3) results from mistakenly dividing rather than multiplying by 3/2.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 7,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "S∞ = a/(1−r), so a = 100·(1 + 1/2) = 150. D (133.33) would come from using r = +1/4 or a similar slip.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "8": {
+      "q_number": 8,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 8,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Sector area = (θ/360)πr² = (70/360)×(22/7)×36 = 22 m² exactly when π ≈ 22/7 is used. The other options come from small arithmetic slips in the same formula.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 8,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Sector area = (70/360)·(22/7)·6² = 22 m². 21 would need a different π or angle.",
+        "solvable": true,
+        "issue": "Units in the options are printed as 'm' instead of 'm²'."
+      },
+      "extract_anomaly": null
+    },
+    "9": {
+      "q_number": 9,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 9,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Total age of females = 4×40 = 160 and males = 8×25 = 200, so combined average = (160+200)/12 = 30. Option B (25) is just the male average, ignoring the females entirely.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 9,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Total age = 4·40 + 8·25 = 360 across 12 teachers, so the mean is 30. D is the unweighted-looking distractor.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "10": {
+      "q_number": 10,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 10,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Choosing 3 men from 5 gives C(5,3)=10 ways, and choosing 3 women from exactly 3 gives C(3,3)=1 way, so total = 10×1 = 10. Option A (30) mistakenly multiplies by an extra factor of 3.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 10,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "C(5,3)·C(3,3) = 10·1 = 10. 30 or 150 come from wrongly multiplying extra factors.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "11": {
+      "q_number": 11,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Sum of the five numbers must equal 5×6=30, so 17+2c=30 gives c=6.5, making the set 2,5,8.5,7,7.5. The absolute deviations from the mean sum to 10, giving a mean deviation of 10/5=2.0.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 11,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Sum = 17 + 2c = 30, so c = 6.5 and the data are 2, 5, 8.5, 7, 7.5. The absolute deviations from 6 are 4, 1, 2.5, 1, 1.5, which sum to 10, so the mean deviation is 10/5 = 2.0.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "12": {
+      "q_number": 12,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 12,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "From the pie chart, Food is 30% and Medical is 25%, totaling 55% of the ₦120,000 income, which is ₦66,000. The distractor ₦76,000 would wrongly include Education (25%) instead of Food or double-count a slice.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 12,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The pie chart shows Food 30% and Medical 25%, 55% in total. 0.55 × ₦120,000 = ₦66,000. A (₦76,000) does not match any pair of sectors.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "13": {
+      "q_number": 13,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 13,
+        "answer": "A",
+        "confidence": "probable",
+        "reasoning": "Taking the matrix as [[5, x],[3, x]] (the subscripts appear to be OCR artifacts rather than genuine entries), the determinant is 5x-3x=2x=14, giving x=7. The stray subscripts '2' and '1' in the question text are not standard matrix notation, so the entries were inferred as the most natural 2x2 form.",
+        "solvable": true,
+        "issue": "Matrix notation '(5 x2; 3 x1)' is garbled/non-standard; interpreted as [[5,x],[3,x]] since this yields a clean match with option A.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 13,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "The matrix is garbled as '(5 x₂; 3 x₁)'. Taken literally it has two variables (5x₁ − 3x₂ = 14), which cannot fix a single x. The readings |5 2; 3 x| (x = 4, B) and |5 x; 3 x| (x = 7, A) are both plausible, so the question cannot be resolved from the text.",
+        "solvable": false,
+        "issue": "The matrix entries are garbled (subscripts/misplaced entries). Candidate readings give B (x=4) or A (x=7)."
+      },
+      "extract_anomaly": null
+    },
+    "14": {
+      "q_number": 14,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 14,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "3⅓×2¼ = (10/3)×(9/4) = 90/12 = 7.5. Then 5.5 − 7.5 + 0.5 = −1.5 = −1½. The other options result from sign or multiplication errors.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 14,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "3⅓ × 2¼ = (10/3)(9/4) = 7½, and 5½ − 7½ + ½ = −1½. C (−½) comes from dropping the final +½ or a sign slip.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "15": {
+      "q_number": 15,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 15,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Treating the digits positionally, 4104 (base 3 place values) = 4×27+1×9+0×3+4 = 121 in decimal, which converts to 171 in octal (171×8^0+7×8+1×64=121... 1×64+7×8+1=121), matching option B exactly. Note the digit '4' is technically invalid in base 3 (digits should be 0-2), suggesting a typo in the source, but the intended computation clearly matches option B.",
+        "solvable": true,
+        "issue": "The digit '4' is invalid for base 3 (valid digits are 0-2), indicating a likely typo in the question; however, direct positional computation still uniquely matches option B.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 15,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Evaluating the digits positionally in base 3 gives 4·27 + 1·9 + 0·3 + 4 = 121, and 121 = 1·64 + 7·8 + 1 = 171₈. A (117₈ = 79) is a digit reversal.",
+        "solvable": true,
+        "issue": "4104₃ is not a valid base-3 numeral (digit 4). The answer assumes positional evaluation anyway, which gives an option exactly."
+      },
+      "extract_anomaly": null
+    },
+    "16": {
+      "q_number": 16,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 16,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "(2x+1)/(2x) = 1 + 1/(2x), and integrating term by term gives x + ½ln|x| + c. The other options either drop the ½ coefficient or mishandle the ln term.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 16,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "(2x+1)/(2x) = 1 + 1/(2x), which integrates to x + ½ln|x| + c. D (x + ln|2x|) has the coefficient of the log wrong.",
+        "solvable": true,
+        "issue": "'In' is printed for 'ln' in the options."
+      },
+      "extract_anomaly": null
+    },
+    "17": {
+      "q_number": 17,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 17,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Using I = PRT/100: 27 = 225×4×x/100 = 9x, so x = 3 years. Other options come from arithmetic slips in dividing 27 by 9.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 17,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "I = PRT/100, so 27 = 225·4·x/100 = 9x and x = 3 years.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "18": {
+      "q_number": 18,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 18,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "121₃ = 16 in decimal and 11₃ = 4 in decimal, so X = 16 − 4 = 12 in decimal, which converts to 110₃ (1×9+1×3+0=12). The other options do not correctly represent 12 in base 3.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 18,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "121₃ = 16 and 11₃ = 4, so X = 12 = 110₃. B (101₃ = 10) is wrong.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "19": {
+      "q_number": 19,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 19,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Midpoint formula gives (m+6)/2=5 so m=4, and (6+n)/2=0 so n=−6, yielding (m,n)=(4,−6). Option B swaps the sign incorrectly onto m instead of n.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 19,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "(m+6)/2 = 5 gives m = 4, and (6+n)/2 = 0 gives n = −6, so (4, −6). B swaps the signs and the order.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "20": {
+      "q_number": 20,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 20,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "ar²=108 and ar⁵=32, so r³ = 32/108 = 8/27, giving r = 2/3 (the real cube root, expressed as ±2/3 per the option format). Options with ±1/3 or ±1/2 do not satisfy r³=8/27.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 20,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "ar⁵/ar² = r³ = 32/108 = 8/27, so r = 2/3. D is the only option containing 2/3.",
+        "solvable": true,
+        "issue": "The options print '±', but a real cube root gives only +2/3. 'ration' is a typo for 'ratio'."
+      },
+      "extract_anomaly": null
+    },
+    "21": {
+      "q_number": 21,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 21,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "Mean of 2k,3k,4k,5k,6k is 4k, giving deviations -2k,-k,0,k,2k whose squares sum to 10k², so variance = 2k² and SD = k√2. Setting k√2 = √2 gives k = 1.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 21,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "The mean is 4k and the squared deviations are k²(4+1+0+1+4) = 10k², so the variance is 2k² and the SD is k√2 = √2, giving k = 1.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "22": {
+      "q_number": 22,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 22,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "A line parallel to 7x + 5y = 12 has the form 7x + 5y = c. Substituting (5,7) gives 35 + 35 = 70, so the equation is 7x + 5y = 70.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 22,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "A parallel line has the form 7x + 5y = c. Through (5,7), c = 35 + 35 = 70. A swaps the coefficients, so its gradient is different.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "23": {
+      "q_number": 23,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 23,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Total surface area of a closed cylinder = 2πr(h+r) = 2×(22/7)×3×15 = 1980/7 ≈ 282.86 cm². Option A (251.88) would correspond to using r+h incorrectly or a different radius.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 23,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "TSA = 2πr(r+h) = 2·(22/7)·3·15 = 1980/7 ≈ 282.86 cm². A (251.88) omits part of the area.",
+        "solvable": true,
+        "issue": "Option D has a stray 'e' (88e.32)."
+      },
+      "extract_anomaly": null
+    },
+    "24": {
+      "q_number": 24,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Exterior and interior angles sum to 180°, and the ratio 1:19 splits this into 20 equal parts, so exterior angle = 180/20 = 9°. Number of sides = 360/9 = 40.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 24,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Exterior = 180·1/20 = 9°, so n = 360/9 = 40. 38 would come from mishandling the ratio.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "25": {
+      "q_number": 25,
+      "verdict": "verified",
+      "answer": "D",
+      "codex": {
+        "q_number": 25,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "There are 15 marbles total, 3 red and 8 green, so P(red or green) = (3+8)/15 = 11/15. Options A and B (out of 225) reflect a spurious denominator not relevant to a single draw.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 25,
+        "answer": "D",
+        "confidence": "certain",
+        "reasoning": "P(red or green) = (3+8)/15 = 11/15, since these are mutually exclusive single picks. The 225 denominators wrongly treat it as two draws.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "26": {
+      "q_number": 26,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 26,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "By De Morgan's law, X' ∪ Y' = (X ∩ Y)'. Option D, (X ∪ Y)', equals X' ∩ Y' instead, which is a different expression.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 26,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "By De Morgan's law, X' ∪ Y' = (X ∩ Y)'. D, (X ∪ Y)', equals X' ∩ Y' instead.",
+        "solvable": true,
+        "issue": "'Yare' is a typo for 'Y are'."
+      },
+      "extract_anomaly": null
+    },
+    "27": {
+      "q_number": 27,
+      "verdict": "unsolvable",
+      "answer": null,
+      "codex": {
+        "q_number": 27,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Treating the curve as y = px³ + 3x − 8 (a likely transcription of px² since y = px²+3x−8 gives dy/dx=2px+3=9 at x=1, yielding p=3, which matches none of the options), dy/dx = 3px² + 3, and setting this equal to 9 at x=1 gives 3p+3=9, so p=2, matching option B exactly.",
+        "solvable": true,
+        "issue": "As literally stated (y = px² + 3x − 8), the gradient condition (2p+3=9 at x=1) gives p=3, which is not among the options; treating the curve as cubic (px³) instead resolves cleanly to p=2, matching option B, suggesting a transcription error in the exponent.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 27,
+        "answer": "NONE",
+        "confidence": "uncertain",
+        "reasoning": "dy/dx = 2px + 3, which equals 9 at x = 1, so p = 3, and 3 is not an option. The stem is also inconsistent: (1,0) on the curve would need p = 5.",
+        "solvable": false,
+        "issue": "No option matches p = 3, and the point (1,0) is not on the curve for any p consistent with gradient 9. Likely a transcription error (e.g. px³ would give p = 2, B)."
+      },
+      "extract_anomaly": null
+    },
+    "28": {
+      "q_number": 28,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 28,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Sums that are factors of 12 (2,3,4,6,12) occur in 1+2+3+5+1 = 12 of the 36 equally likely outcomes, giving probability 12/36 = 1/3.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 28,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "The factors of 12 reachable as a sum are 2, 3, 4, 6 and 12, with 1+2+3+5+1 = 12 outcomes, so P = 12/36 = 1/3. A (1/6) comes from missing some sums.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "29": {
+      "q_number": 29,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 29,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "By the remainder theorem, dividing by (y-1) gives remainder g(1) = 1 + q + 5 = 6 + q. Setting 6 + q = 9 gives q = 3.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 29,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "By the remainder theorem, g(1) = 1 + q + 5 = 9, so q = 3.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "30": {
+      "q_number": 30,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 30,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "Interpreting the garbled expression as √(k+2) − 6/√(k+2) = 1, and letting x = √(k+2), gives x² − x − 6 = 0, so x = 3 or x = −2. Since x must be non-negative, x = 3, giving k+2 = 9 and k = 7, matching option B.",
+        "solvable": true,
+        "issue": "The equation as given is missing an equals sign and a right-hand side (\"√(k+2) − 6/√(k+2) −1\"), so it was reconstructed as √(k+2) − 6/√(k+2) = 1, which resolves cleanly to an answer matching one of the options.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 30,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Reading it as √(k+2) − 6/√(k+2) = 1 and letting t = √(k+2) gives t² − t − 6 = 0, so t = 3 (t > 0) and k = 7. A (9) would come from t² = k without the +2.",
+        "solvable": true,
+        "issue": "The '=' sign is missing from the stem ('−1' should be '= 1'). The only sensible reconstruction is used."
+      },
+      "extract_anomaly": null
+    },
+    "31": {
+      "q_number": 31,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 31,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "With a=-1/2, b=2: b²-a²=4-1/4=15/4 and 2ab=2(-1/2)(2)=-2, so a∇b=(15/4)/(-2)=-15/8. The distractor 15/8 (D) results from dropping the sign of 2ab.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 31,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "a = −½, b = 2: (4 − ¼)/(2·(−½)·2) = (15/4)/(−2) = −15/8. D ignores the negative sign of a in the denominator.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "32": {
+      "q_number": 32,
+      "verdict": "agreed-soft",
+      "answer": "D",
+      "codex": {
+        "q_number": 32,
+        "answer": "D",
+        "confidence": "probable",
+        "reasoning": "Taking M=logₓ2 and N=logₓ5 (the stray factor of 2 in the given 'M = 2logₓ2' appears to be a transcription artifact, since it makes the result inexpressible in the given options), logₓ0.4=logₓ(2/5)=logₓ2−logₓ5=M−N. This is the standard form of this well-known question type and matches option D exactly.",
+        "solvable": true,
+        "issue": "As literally transcribed (M = 2logₓ2), logₓ0.4 works out to M/2 − N, which is not among the options; D is the answer if M is taken as logₓ2, which is likely the intended definition.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 32,
+        "answer": "D",
+        "confidence": "uncertain",
+        "reasoning": "log 0.4 = log(2/5) = log 2 − log 5. If M = log_x 2 and N = log_x 5, this is M − N (D). Read literally, M = 2log_x 2 = log_x 4 gives ½M − N, which is not an option.",
+        "solvable": true,
+        "issue": "The log notation is garbled (logₓ² etc.). As printed, M = 2log_x 2 makes the answer ½M − N, which is not offered. D assumes the '2' coefficient is a transcription error."
+      },
+      "extract_anomaly": null
+    },
+    "34": {
+      "q_number": 34,
+      "verdict": "agreed-soft",
+      "answer": "B",
+      "codex": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "probable",
+        "reasoning": "x²+5x>−6 rearranges to (x+3)(x+2)>0, giving roots −3 and −2; since the parabola opens upward, the inequality holds for x<−3 or x>−2. Option B, though garbled ('x < −3 and x – 2'), is the closest match to this correct range, with 'and' likely a misprint for 'or' and 'x–2' for 'x>−2'.",
+        "solvable": true,
+        "issue": "Option B text is garbled ('and x – 2' instead of 'or x > -2'), but it is the only option whose numbers match the correct solution x<-3 or x>-2.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 34,
+        "answer": "B",
+        "confidence": "uncertain",
+        "reasoning": "x² + 5x + 6 > 0 means (x+2)(x+3) > 0, so x < −3 or x > −2. B ('x < −3 and x – 2') looks like this with '> −' collapsed into a dash. D is the complementary interval, so it is wrong.",
+        "solvable": true,
+        "issue": "No option is correct as printed. B appears to be garbled 'x < −3, x > −2'. A ('x > 2') could also be the correct answer with a lost minus sign, so A and B are both candidates."
+      },
+      "extract_anomaly": null
+    },
+    "35": {
+      "q_number": 35,
+      "verdict": "agreed-soft",
+      "answer": "C",
+      "codex": {
+        "q_number": 35,
+        "answer": "C",
+        "confidence": "probable",
+        "reasoning": "As literally transcribed the equation (4x−5)=3y/(4x−5) gives (4x−5)²=3y, leading to x=(5±√(3y))/4, which matches none of the options. Taking the intended equation as a difference of squares, e.g. 4x+5=3y/(4x−5), gives (4x−5)(4x+5)=3y → 16x²−25=3y → x=±√(3y+25)/4, which matches option C exactly and produces clean numbers consistent with a genuine exam question.",
+        "solvable": true,
+        "issue": "The equation as transcribed ('4x – 5 = 3y/(4x − 5)') yields x=(5±√(3y))/4, not present among the options; one side is likely mistyped (should be 4x+5), and solving that version cleanly matches option C.",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 35,
+        "answer": "C",
+        "confidence": "uncertain",
+        "reasoning": "As printed, (4x−5)² = 3y gives x = (5 ± √(3y))/4, which matches no option. With denominator (4x + 5), 16x² − 25 = 3y gives x = ±√(3y+25)/4, which is C (garbled as '±(√(3y +) 25)/4').",
+        "solvable": true,
+        "issue": "The stem probably should read 3y/(4x + 5). Options B and C have misplaced brackets. As printed, no option is correct."
+      },
+      "extract_anomaly": null
+    },
+    "36": {
+      "q_number": 36,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Expanding the determinant along row 1 gives 1(6-3) - 1(-18-x) - 2(9+x) = 3 - x. Setting this to zero (singular matrix) gives x=3. No other option satisfies det=0.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 36,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "det = 1(6 − 3) − 1(−18 − x) − 2(9 + x) = 3 − x, which is 0 at x = 3. The other values give a nonzero determinant.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "37": {
+      "q_number": 37,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 37,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "From sinθ+cosθ=√2sinθ, cosθ=(√2−1)sinθ, so tanθ=1/(√2−1)=√2+1. Then (cosθ−sinθ)/cosθ=1−tanθ=1−(√2+1)=−√2, matching option B; option A (+√2) is the sign-error distractor.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 37,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "cosθ = (√2 − 1)sinθ, so tanθ = 1/(√2 − 1) = √2 + 1. The expression is 1 − tanθ = −√2. A has the wrong sign.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "38": {
+      "q_number": 38,
+      "verdict": "verified",
+      "answer": "B",
+      "codex": {
+        "q_number": 38,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "MATRIX has 6 distinct letters with vowels A and I. Grouping the vowels as one block gives 5 units (5! arrangements) times 2! internal arrangements of the vowel block, i.e. 120×2=240. Option A (120) is the distractor obtained by forgetting the internal vowel arrangement.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 38,
+        "answer": "B",
+        "confidence": "certain",
+        "reasoning": "Treat A and I as one block: 5! arrangements × 2! internal orders = 240. A (120) forgets that the vowels can swap.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "39": {
+      "q_number": 39,
+      "verdict": "verified",
+      "answer": "C",
+      "codex": {
+        "q_number": 39,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "Ways to pick 2 of the same colour: C(5,2)+C(4,2)+C(2,2)=10+6+1=17, matching option C. Option B (20) is a common miscalculation distractor.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 39,
+        "answer": "C",
+        "confidence": "certain",
+        "reasoning": "C(5,2) + C(4,2) + C(2,2) = 10 + 6 + 1 = 17. A (60) multiplies instead of adding.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    },
+    "40": {
+      "q_number": 40,
+      "verdict": "verified",
+      "answer": "A",
+      "codex": {
+        "q_number": 40,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "10,000 litres = 10,000,000 cm³; h=V/(πr²)=10,000,000/((22/7)×50²)=10,000,000/7857.14≈1272.7 cm ≈12.73 m, matching option A. Option C (1.27 m) is the distractor from a decimal-place error.",
+        "solvable": true,
+        "issue": "",
+        "lane": "claude-sonnet"
+      },
+      "claude": {
+        "q_number": 40,
+        "answer": "A",
+        "confidence": "certain",
+        "reasoning": "10,000 L = 10 m³ and r = 0.5 m, so h = 10/((22/7)·0.25) ≈ 12.73 m. C (1.27 m) is off by a factor of 10.",
+        "solvable": true,
+        "issue": ""
+      },
+      "extract_anomaly": null
+    }
+  }
+}
