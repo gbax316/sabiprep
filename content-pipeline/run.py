@@ -64,8 +64,18 @@ def jload(path, default=None):
 def jsave(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     tmp = path + '.tmp'
-    json.dump(data, open(tmp, 'w', encoding='utf8'), indent=2, ensure_ascii=False)
-    os.replace(tmp, path)
+    with open(tmp, 'w', encoding='utf8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    # Windows refuses the replace while any process (a reader, the virus
+    # scanner) has the target open, and one refusal failed a whole paper.
+    for wait in (0.5, 1, 2, 4, 8, 0):
+        try:
+            os.replace(tmp, path)
+            return
+        except PermissionError:
+            if not wait:
+                raise
+            time.sleep(wait)
 
 
 # ---------------------------------------------------------------- state
