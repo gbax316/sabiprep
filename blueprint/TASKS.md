@@ -295,7 +295,15 @@ second lane: about $1,200, and about a day of run time. Spend is in `run.py stat
       check rejects any other change. 17 of 44 unreadable questions repaired; the 27 it declined
       (an option missing, two run together, options drawn) stay separated with the reason.
 - [ ] **RUN-03** After the first pass: resume Agricultural Science 2025 (a Windows file lock
-      failed it; saves now retry) and re-run Biology UTME 2025 once more for Q25's repair.
+      failed it; saves now retry) and Economics WASSCE 2025 (a reviewer's JSON carried a raw
+      line break; now accepted), and re-run Biology UTME 2025 once more for Q25's repair.
+- [ ] **CON-08a** The four repeated year headers, read 2026-10-15. Each repeat restarts at
+      question 1 and none shares questions with a neighbouring year, except Maths UTME: its
+      second "2020" is the 2019 paper typed a second time (same order, 24 of 39 identical,
+      the rest the 2019 copy's typing damage). File titles name ranges that exclude the year
+      the extractor guessed for the other three (English UTME "2024-2015", English WAEC
+      "2024-2016", Government UTME "2025-2016"), so a second sitting of the labelled year is
+      likelier than a mislabelled earlier year. Chidera to confirm from the printed copies.
 - [ ] **SRC-04** 40 questions still name a diagram nobody has; second papers (239 questions)
       wait on their true year (CON-08).
 
