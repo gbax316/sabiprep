@@ -30,7 +30,7 @@ def _codex(prompt, schema_path, images, timeout):
     try:
         proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True,
                               encoding='utf8', timeout=timeout)
-        return json.loads(open(last, encoding='utf8').read().strip()), ''
+        return json.loads(open(last, encoding='utf8').read().strip(), strict=False), ''
     except Exception as e:
         why = (proc.stderr or '')[-400:] if proc else ''
         return None, f'{type(e).__name__}: {e} {why}'.strip()
@@ -65,7 +65,9 @@ def _claude(prompt, schema_path, images, timeout, model):
                            encoding='utf8', timeout=timeout)
         open(os.path.join(wd, 'session.json'), 'w', encoding='utf8').write(p.stdout or '')
         cost = float(json.loads(p.stdout).get('total_cost_usd') or 0) if p.stdout else 0.0
-        return json.load(open(os.path.join(wd, 'output.json'), encoding='utf8')), cost, ''
+        # strict=False: a model sometimes writes a raw line break inside a string,
+        # which is harmless content but fails a strict parse (it failed a paper).
+        return json.loads(open(os.path.join(wd, 'output.json'), encoding='utf8').read(), strict=False), cost, ''
     except Exception as e:
         return None, 0.0, f'{type(e).__name__}: {e}'
 
