@@ -12,7 +12,8 @@ holding the printed paper. What comes back in that column is one of:
   "...diagram form" the options are drawings, not text
 
 Each answered row becomes one entry in corrections/<slug>.json, keyed by unit
-and question ("2020-p2/9"). Corrections live beside the configs, not in out/,
+and question ("2020-p2/9"). Hand edits to an entry are listed under "edits" and
+survive a re-read as long as the person's answer is unchanged. Corrections live beside the configs, not in out/,
 because they are source data: re-extracting must never lose them. A later
 return of the same document merges in; an entry already present is replaced
 only when the new answer differs, and the old one is kept under "previous".
@@ -26,6 +27,8 @@ Usage:
 import argparse, json, os, re, sys
 
 import docx
+
+import notation
 
 from common import HERE
 
@@ -45,9 +48,26 @@ def slug_map():
     return m
 
 
+def para_text(p):
+    """A paragraph's text in reading order, equations rendered the way the
+    extractor renders them. Reading text nodes alone drops every equation, and
+    a logic question loses its operators ("m => n" becomes "m n")."""
+    out = []
+
+    def walk(el):
+        if el.tag in (notation.M + 'oMath', notation.M + 'oMathPara'):
+            out.append(notation.render(el))
+        elif el.tag == notation.W + 't':
+            out.append(el.text or '')
+        else:
+            for c in el:
+                walk(c)
+    walk(p)
+    return notation.normalise(''.join(out))
+
+
 def cell_text(tc):
-    ns = tc.tag.split('}')[0] + '}'
-    paras = [''.join(t.text or '' for t in p.iter(ns + 't')) for p in tc.iter(ns + 'p')]
+    paras = [para_text(p) for p in tc if p.tag == notation.W + 'p']
     return ' / '.join(p for p in paras if p.strip())
 
 
@@ -102,7 +122,7 @@ def main():
             continue
         paper = ORD.get(m.group(2)) or int(m.group(3) or 1)
         unit = m.group(1) if paper == 1 else f'{m.group(1)}-p{paper}'
-        c.update(flagged=flagged.split(':')[0], source=os.path.basename(a.docx), received=a.received)
+        c.update(flagged=flagged.split(':')[0], answer_raw=answer, source=os.path.basename(a.docx), received=a.received)
         per_slug.setdefault(slug, {})[f'{unit}/{m.group(4)}'] = c
 
     os.makedirs(os.path.join(HERE, 'corrections'), exist_ok=True)
@@ -112,7 +132,9 @@ def main():
         changed = 0
         for k, v in new.items():
             old = cur.get(k)
-            if old and {x: old.get(x) for x in ('kind', 'key', 'text')} == {x: v.get(x) for x in ('kind', 'key', 'text')}:
+            # Compared on what the person wrote, so a hand edit made after an
+            # earlier ingest (a missing "A." restored) survives a re-read.
+            if old and old.get('answer_raw') == v['answer_raw']:
                 continue
             if old:
                 v['previous'] = {x: old[x] for x in old if x != 'previous'}

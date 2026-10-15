@@ -1341,7 +1341,7 @@ def cmd_runall(workers, budget, redo_tag):
     for slug in slugs:
         cfg = load_config(slug)
         st = load_state(slug, cfg)
-        if st['gate']['status'] == 'awaiting':
+        if st['gate']['status'] != 'approved':
             st['gate'].update(status='approved', approved_at=now(), note=f'lifted for every file by D9 ({redo_tag})')
             save_state(st)
         for y, p in units(slug):
@@ -1354,20 +1354,24 @@ def cmd_runall(workers, budget, redo_tag):
             elif rec.get('status') != 'done':
                 jobs.append({'slug': slug, 'unit': u, 'year': y, 'from': None})
     jobs.sort(key=lambda j: (-j['year'], j['slug'], j['unit']))
+    # Spend is counted per finished paper, from that paper's own stage costs.
+    # A re-run from derive deletes the old stage records, so a difference of
+    # state totals would let money spent earlier offset money spent now.
     base, lock, active = total_spend(), threading.Lock(), set()
+    spent = [0.0]
     prog_path = os.path.join(OUT, 'runall.json')
-    prog = {'started': now(), 'budget_usd': budget, 'spend_at_start': round(base, 2), 'jobs': jobs}
+    prog = {'started': now(), 'budget_usd': budget, 'spend_before': round(base, 2), 'jobs': jobs}
     logdir = os.path.join(HERE, 'work', 'runall')
     os.makedirs(logdir, exist_ok=True)
     print(f'{len(jobs)} papers to run, {workers} at a time, budget ${budget} on top of ${base:.2f} already spent')
 
     def save():
-        prog['spent_since_start'] = round(total_spend() - base, 2)
+        prog['spent_since_start'] = round(spent[0], 2)
         jsave(prog_path, prog)
 
     def next_job():
         with lock:
-            if total_spend() - base >= budget:
+            if spent[0] >= budget:
                 return None
             for j in jobs:
                 if 'status' not in j and j['slug'] not in active:
@@ -1382,7 +1386,7 @@ def cmd_runall(workers, budget, redo_tag):
             j = next_job()
             if j is None:
                 with lock:
-                    if not any('status' not in x for x in jobs) or total_spend() - base >= budget:
+                    if not any('status' not in x for x in jobs) or spent[0] >= budget:
                         return
                 time.sleep(30)
                 continue
@@ -1394,14 +1398,16 @@ def cmd_runall(workers, budget, redo_tag):
                                      env={**os.environ, 'PYTHONIOENCODING': 'utf8'})
             with lock:
                 st = load_state(j['slug'], load_config(j['slug']))
-                ok = rc == 0 and st['units'].get(j['unit'], {}).get('status') == 'done'
-                if ok and j['from']:
-                    st['units'][j['unit']]['redone'] = redo_tag
+                urec = st['units'].get(j['unit'], {})
+                ok = rc == 0 and urec.get('status') == 'done'
+                spent[0] += sum(x.get('cost_usd', 0) for x in urec.get('stages', {}).values())
+                if ok:
+                    urec['redone'] = redo_tag
                     save_state(st)
                 j.update(status='done' if ok else 'failed', ended=now(), rc=rc)
                 active.discard(j['slug'])
                 save()
-                print(f"[{now()}] {j['slug']} {j['unit']} {j['status']}  spent ${total_spend() - base:.2f}", flush=True)
+                print(f"[{now()}] {j['slug']} {j['unit']} {j['status']}  spent ${spent[0]:.2f}", flush=True)
 
     ts = [threading.Thread(target=worker) for _ in range(workers)]
     for t in ts:
@@ -1412,7 +1418,7 @@ def cmd_runall(workers, budget, redo_tag):
     left = sum(1 for j in jobs if 'status' not in j)
     print(f"finished: {sum(j.get('status') == 'done' for j in jobs)} done, "
           f"{sum(j.get('status') == 'failed' for j in jobs)} failed, {left} not started; "
-          f"spent ${total_spend() - base:.2f}")
+          f"spent ${spent[0]:.2f}")
     return 0
 
 

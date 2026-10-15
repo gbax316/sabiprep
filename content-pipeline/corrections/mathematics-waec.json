@@ -3,6 +3,7 @@
   "kind": "key",
   "key": "B",
   "flagged": "Diagram",
+  "answer_raw": "B",
   "source": "SabiPrep - questions to check against the papers.docx",
   "received": "2026-10-15"
  },
@@ -10,13 +11,15 @@
   "kind": "text",
   "text": "14. Evaluate (0.42 ÷ 2.5)/(0.5 × 2.05), leaving the answer in standard form. / A. 1.639 × 10² B. 1.639 × 101 C. 1.639 × 10-1 D. 1.639 × 10-2",
   "flagged": "Typing",
+  "answer_raw": "14. Evaluate (0.42 ÷ 2.5)/(0.5 × 2.05), leaving the answer in standard form. / A. 1.639 × 10² B. 1.639 × 101 C. 1.639 × 10-1 D. 1.639 × 10-2",
   "source": "SabiPrep - questions to check against the papers.docx",
   "received": "2026-10-15"
  },
  "2019/31": {
   "kind": "text",
-  "text": "31. In the diagram, POS and ROT are straight lines, OPQR is a parallelogram, |OS| = |OT| and OST = 50. Calculate the value of OPQ.  A. 1000 B. 1200 C. 1400 D. 1600",
+  "text": "31. In the diagram, POS and ROT are straight lines, OPQR is a parallelogram, |OS| = |OT| and ∠OST = 50°. Calculate the value of ∠OPQ.  A. 1000 B. 1200 C. 1400 D. 1600",
   "flagged": "Typing",
+  "answer_raw": "31. In the diagram, POS and ROT are straight lines, OPQR is a parallelogram, |OS| = |OT| and ∠OST = 50°. Calculate the value of ∠OPQ.  A. 1000 B. 1200 C. 1400 D. 1600",
   "source": "SabiPrep - questions to check against the papers.docx",
   "received": "2026-10-15"
  },
@@ -24,27 +27,31 @@
   "kind": "text",
   "text": "21. Which of the following is not an exterior angle of a regular polygon? A. 30° B. 45° C. 60° D. 70°",
   "flagged": "Typing",
+  "answer_raw": "21. Which of the following is not an exterior angle of a regular polygon? A. 30° B. 45° C. 60° D. 70°",
   "source": "SabiPrep - questions to check against the papers.docx",
   "received": "2026-10-15"
  },
  "2022/15": {
   "kind": "text",
-  "text": "15. Consider the statements: / p: Stephen is intelligent / q: Stephen is good at Mathematics / If p  q, which of the following is a valid conclusion? A. If Stephen is a good at Mathematics, then he is intelligent B. If Stephen is not good at Mathematics, then he is not intelligent C. If Stephen is not intelligent, then he is not good at Mathematics D. If Stephen is not good at Mathematics, then he is intelligent",
+  "text": "15. Consider the statements: / p: Stephen is intelligent / q: Stephen is good at Mathematics / If p ⟹ q, which of the following is a valid conclusion? A. If Stephen is a good at Mathematics, then he is intelligent B. If Stephen is not good at Mathematics, then he is not intelligent C. If Stephen is not intelligent, then he is not good at Mathematics D. If Stephen is not good at Mathematics, then he is intelligent",
   "flagged": "Typing",
+  "answer_raw": "15. Consider the statements: / p: Stephen is intelligent / q: Stephen is good at Mathematics / If p ⟹ q, which of the following is a valid conclusion? A. If Stephen is a good at Mathematics, then he is intelligent B. If Stephen is not good at Mathematics, then he is not intelligent C. If Stephen is not intelligent, then he is not good at Mathematics D. If Stephen is not good at Mathematics, then he is intelligent",
   "source": "SabiPrep - questions to check against the papers.docx",
   "received": "2026-10-15"
  },
  "2023/28": {
   "kind": "text",
-  "text": "28. Consider the statement: / p: Siah is from Foya. / Q: Foya is in Lofa. / Write in symbolic form the statement: Siah is from Foya, then Foya is in Lofa. A. q  p B. p  q C. p  q D.  q  p",
+  "text": "28. Consider the statement: / p: Siah is from Foya. / Q: Foya is in Lofa. / Write in symbolic form the statement: Siah is from Foya, then Foya is in Lofa. A. q ⟹ p B. p ⇔ q C. p ⟹ q D. ~ q ⇔ p",
   "flagged": "Typing",
+  "answer_raw": "28. Consider the statement: / p: Siah is from Foya. / Q: Foya is in Lofa. / Write in symbolic form the statement: Siah is from Foya, then Foya is in Lofa. A. q ⟹ p B. p ⇔ q C. p ⟹ q D. ~ q ⇔ p",
   "source": "SabiPrep - questions to check against the papers.docx",
   "received": "2026-10-15"
  },
  "2024/16": {
   "kind": "text",
-  "text": "16. Consider the following statements:  / m : Edna is respectful    / n : Edna is brilliant.  / If m  n, which of the following is valid? A.  m   n B. n   m C.  n   m D. n  m",
+  "text": "16. Consider the following statements:  / m : Edna is respectful    / n : Edna is brilliant.  / If m ⟹ n, which of the following is valid? A. ~ m ⇒ ~ n B. n ⇒ ~ m C. ~ n ⇒ ~ m D. n ⇒ m",
   "flagged": "Typing",
+  "answer_raw": "16. Consider the following statements:  / m : Edna is respectful    / n : Edna is brilliant.  / If m ⟹ n, which of the following is valid? A. ~ m ⇒ ~ n B. n ⇒ ~ m C. ~ n ⇒ ~ m D. n ⇒ m",
   "source": "SabiPrep - questions to check against the papers.docx",
   "received": "2026-10-15"
  },
@@ -52,6 +59,7 @@
   "kind": "text",
   "text": "5. Factorize 3 – 2x – x². / A. (x − 3)(x + 1) / B. (x + 3)(x + 1 ) C. (x − 3)(1 − x) D. (x + 3)(1 − x)",
   "flagged": "Typing",
+  "answer_raw": "5. Factorize 3 – 2x – x². / A. (x − 3)(x + 1) / B. (x + 3)(x + 1 ) C. (x − 3)(1 − x) D. (x + 3)(1 − x)",
   "source": "SabiPrep - questions to check against the papers.docx",
   "received": "2026-10-15"
  }

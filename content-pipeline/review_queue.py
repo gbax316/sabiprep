@@ -68,10 +68,12 @@ def collect(slug):
                 why.append(('key', f"{f['state']}: {f.get('reason', '')}"))
             if it.get('needs_human') or it.get('anomaly'):
                 why.append(('source', it.get('anomaly') or 'the extractor could not read this question cleanly'))
-            # A person holding the paper gave the key, and the models reached the
-            # same letter without a drawing: the "diagram" was the wording ("drawn
+            # A person holding the paper gave the key, and the models had reached
+            # the same letter without a drawing: the "diagram" was the wording ("drawn
             # at random from the box"), not a figure the question needs.
-            confirmed = it.get('official_key') and f.get('state') == 'keyed' and f.get('answer') == it['official_key']
+            # Only when the models keyed it on their own first: a key the person's
+            # letter settled is no evidence that the drawing was unnecessary.
+            confirmed = "matches the paper's key" in (f.get('evidence') or '')
             if (not it.get('diagram_files') and not confirmed and not it.get('options_are_images')
                     and REF.search(it['stem'] + ' ' + (it.get('passage_text') or ''))):
                 why.append(('diagram', 'the question refers to a diagram, and no diagram file was supplied for it'))
