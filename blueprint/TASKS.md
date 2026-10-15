@@ -222,7 +222,7 @@ WAEC Mathematics file needed a heading fix and now yields all 547 questions.
 - [x] **TAX-02 to TAX-04** All twelve trees meet the standard (`da762b2`); fresh-test
       scores are in that commit. Coverage gaps left are WAEC content set only for Ghana,
       Sierra Leone, The Gambia or Liberia, excluded by stated scope rules.
-- [ ] **GATE-01** Every subject-exam file's first paper is at its gate (all 21). Orezi reviews
+- [x] **GATE-01** (lifted by D9) Every subject-exam file's first paper is at its gate (all 21). Orezi reviews
       `out/gates.html` and approves per subject; approval runs that subject's other years.
       Claude-side spend to here: $307 (trees $131, papers about $7 each).
 - [ ] **REV-04** Codex was out for every paper run on 2026-09-29 (limit resets 20:46), so 617
@@ -257,6 +257,42 @@ WAEC Mathematics file needed a heading fix and now yields all 547 questions.
       confirmed; `review_page.py` shows each as a student sees it, with its reason and the
       diagram beside the redraw, and saves Orezi's decisions to a file.
 - [ ] **REV-03** Apply saved decisions back into the pipeline, each logged.
+
+## 2026-10-15: sort every question end to end
+
+**Ask, verbatim:** "contained here [...] New_Diagrams are the missing diagrams for questions,
+where diagrams are not clear can you use the question and draw the possible diagram to solve
+the question. Also contained in the folder is a word dcoument that provides answers to the
+question you asked. /dev-pm handle this, I want to process all the questions we do not have
+issues with and have the one with one issue or the other seperated. We would then redesign
+the entire sabi prep app and make it useable with the questions we have passed while we fix
+the remaining questions. First set step is to sort out the questions end to end."
+
+**Done looks like:** every paper of all 21 files processed; each question either in its
+subject's import file (passed) or in the separated batch with its reason. The app redesign
+starts after, on the passed set.
+
+**Budget:** about 200 papers at roughly $6 each on the Claude side now Codex carries the
+second lane: about $1,200, and about a day of run time. Spend is in `run.py status`.
+
+### Sources in
+
+- [x] **SRC-02** Chidera's returned document: 199 of 387 rows answered, read into
+      `corrections/` (keys 36, full text 144, options as drawings 19). Typing problems fell
+      from 239 to 72.
+- [x] **SRC-03** 96 diagrams from `New_Diagrams`, six subjects given a diagram folder; 183
+      questions gained a drawing. `2021_Q28-20.png` (Civic) renamed `2021_Q28-30.png`.
+- [x] **DIA-03** Unclear originals: the drawer reconstructs only what the questions force and
+      lists it; the checker accepts a listed reconstruction (D9).
+
+### The run
+
+- [ ] **RUN-01** Re-run all 21 first papers from derive with Codex back (closes REV-04 and
+      takes in the corrections), then every other paper, newest year first across subjects.
+- [ ] **RUN-02** The sort: passed import files per subject, the separated batch with reasons,
+      and a count per subject of each.
+- [ ] **SRC-04** 40 questions still name a diagram nobody has; second papers (239 questions)
+      wait on their true year (CON-08).
 
 ---
 

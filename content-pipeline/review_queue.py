@@ -19,6 +19,8 @@ re-judges a question:
   placement   the author thinks it sits on the wrong subtopic (ships)
   same-family the key rests on two Claude models agreeing because Codex was out
               (ships; re-derive on Codex when it is back)
+  year        a second paper under one year header whose true year is unconfirmed
+  export      the export held it for a reason no stage above recorded
 
 Usage:
     python review_queue.py                 every subject
@@ -29,6 +31,7 @@ Writes out/review-queue.json
 import argparse, json, os, re, sys
 
 from common import HERE, OUT, all_items, load_config, unit_name
+from run import blocked_reason
 
 REF = re.compile(r'\b(diagrams?|figures? (?:below|above|shown)|fig\.|graphs? (?:below|above|shown)|(?:the|this) graph|'
                  r'illustrat(?:ed|ion) (?:below|above)|drawing|chart|map|table (?:below|above)|shown (?:below|above)|'
@@ -54,6 +57,9 @@ def collect(slug):
         teach = {t['q_number']: t for t in (jload(os.path.join(OUT, f'{slug}.teaching.{u}.json')) or {}).get('items', [])}
         verd = (jload(os.path.join(OUT, f'{slug}.verdicts.{u}.json')) or {}).get('verdicts', {})
         ran = bool(final)
+        blocked = blocked_reason(cfg, u)
+        held_at_export = {h['q_number']: f"{h['why']}: {h.get('detail', '')}"
+                          for h in jload(os.path.join(OUT, f'{slug}.{u}.held.json'), [])}
         for it in (i for i in items if i['year'] == year and i.get('paper', 1) == paper):
             q = it['q_number']
             why = []
@@ -62,8 +68,17 @@ def collect(slug):
                 why.append(('key', f"{f['state']}: {f.get('reason', '')}"))
             if it.get('needs_human') or it.get('anomaly'):
                 why.append(('source', it.get('anomaly') or 'the extractor could not read this question cleanly'))
-            if not it.get('diagram_files') and REF.search(it['stem'] + ' ' + (it.get('passage_text') or '')):
+            # A person holding the paper gave the key, and the models reached the
+            # same letter without a drawing: the "diagram" was the wording ("drawn
+            # at random from the box"), not a figure the question needs.
+            confirmed = it.get('official_key') and f.get('state') == 'keyed' and f.get('answer') == it['official_key']
+            if (not it.get('diagram_files') and not confirmed and not it.get('options_are_images')
+                    and REF.search(it['stem'] + ' ' + (it.get('passage_text') or ''))):
                 why.append(('diagram', 'the question refers to a diagram, and no diagram file was supplied for it'))
+            if blocked:
+                why.append(('year', blocked))
+            if ran and q in held_at_export and not why:
+                why.append(('export', held_at_export[q]))
             for rel in it.get('diagram_files') or []:
                 stem = os.path.splitext(os.path.basename(rel))[0]
                 s = status.get(stem, {})

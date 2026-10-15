@@ -37,6 +37,7 @@ Check the drawing:
 - D3: geometry is distorted enough to change an answer: a relative length, position, angle, proportion, or which label points at which part.
 - D4: the redraw is too cluttered, broken or faint to read at tablet size.
 Ignore differences that no question could depend on: paper texture, scan noise, slightly smoother curves, line weight.
+Where the original is too blurred or damaged to read an element, the redraw may supply it from what the questions require. When the drawer has said so (listed below as reconstructed), that element is not a D1 or D2 failure for differing from an illegible original. It fails only if it contradicts a legible part of the original, or does not let every question be answered as settled.
 
 Check the alt text, written for a student using a screen reader:
 - A1: it describes something the diagram does not show, or misdescribes what it does show.
@@ -73,12 +74,15 @@ def check_one(d, cfg, exam, workdir):
     orig = Image.open(d['original'])
     png = os.path.join(workdir, f"{d['stem']}.redraw.png")
     render(d['svg'], orig.size).save(png)
+    m = re.search(r'<!--\s*reconstructed:(.*?)-->', open(d['svg'], encoding='utf8').read(), re.S | re.I)
+    rebuilt = m.group(1).strip() if m else ''
     qs = '\n\n'.join(
         f"Question {q['q_number']}: {q['stem']}\n" + '\n'.join(f"  {k}. {v}" for k, v in sorted(q['options'].items()))
         + f"\n  Settled answer: {q['answer']}" for q in d['questions'])
     prompt = (PREAMBLE.format(exam=exam, subject=cfg['subject'])
               + f"\nDiagram: {d['stem']}\n"
               + (f"\nShared stem: {d['passage']}\n" if d['passage'] else '')
+              + (f"\nReconstructed by the drawer because the original is illegible there: {rebuilt}\n" if rebuilt else '')
               + f"\nThe questions it serves:\n{qs}\n\nAlt text:\n{d['alt'] or '(none written)'}\n\n"
               + f'Return one entry with stem "{d["stem"]}".')
     data, lane = second_family(prompt, SCHEMA, [d['original'], png])

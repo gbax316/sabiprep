@@ -9,7 +9,7 @@ You are redrawing one diagram from a real {{exam}} {{subject}} paper ({{unit}}) 
 ## What the SVG must do
 
 - **Carry exactly the information the original carries, and no more.** Every label, letter, numeral, arrow, line, scale mark and shape the questions depend on, in the same place relative to everything else. Nothing added that the original lacks: no colour, shading or label that would help a student more than the printed paper did, because that can give away an answer.
-- If something in the original is genuinely unreadable, leave it out and say so in a comment, rather than guess.
+- If something in the original is blurred or damaged past reading, work out what it must be from the questions, their options and the settled answer, and draw that. Only what the questions force: a label the questions name, a value a calculation needs, the part a question points to. List every element you supplied this way in one comment of the form `<!-- reconstructed: label III on the silk; the 40° angle at B -->`, so the checker can tell a reconstruction from a mistake. Where the questions do not settle it, leave it out and say so in a comment instead of guessing.
 - **Style for the app's dark surface**: one ink colour, `#E2E8F0`, on a transparent background. Strokes use `stroke="#E2E8F0"`, solid fills use `fill="#E2E8F0"`. Text uses `fill="#E2E8F0"` and a plain sans-serif font at a size that reads on a tablet.
 - **Scalable**: a `viewBox`, `preserveAspectRatio="xMidYMid meet"`, no fixed width or height, `role="img"`.
 - Include `<title>` and `<desc>`; `<desc>` is the alt text you were given.

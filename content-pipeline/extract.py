@@ -273,18 +273,55 @@ def index_diagrams(root):
             if not fn.lower().endswith(IMG_EXT):
                 continue
             full = os.path.join(dirpath, fn)
-            m = re.match(r'(20\d{2})[_\-\s]*Q\s*(\d+)(?:\s*[-–]\s*(\d+))?', fn, re.I)
+            # Searched, not anchored: some folders prefix the subject
+            # ("UTME-BIO-2015_Q34.png"). "2017_opt12.png" is the drawn options
+            # of question 12, kept apart from the question's own diagram.
+            m = re.search(r'(20\d{2})[_\-\s]*(Q|opt)\s*(\d+)(?:\s*[-–]\s*(\d+))?', fn, re.I)
             if not m:
                 unparsed.append(os.path.relpath(full, root))
                 continue
             year = int(m.group(1))
-            a = int(m.group(2))
-            b = int(m.group(3)) if m.group(3) else a
+            a = int(m.group(3))
+            b = int(m.group(4)) if m.group(4) else a
             if b < a:
-                a, b = b, a
+                # "2021_Q28-20" is a typo, and swapping it would bind nine
+                # questions to one drawing. Report it; the folder gets renamed.
+                unparsed.append(os.path.relpath(full, root) + ' (range runs backwards)')
+                continue
+            kind = 'opt' if m.group(2).lower() == 'opt' else 'q'
             for q in range(a, b + 1):
-                idx[(year, q)].append(full)
+                idx[(year, q) if kind == 'q' else ('opt', year, q)].append(full)
     return idx, unparsed
+
+
+def load_corrections(slug):
+    """What a person read off the printed paper, from ingest_review_doc.py."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'corrections', f'{slug}.json')
+    return json.load(open(path, encoding='utf8')) if os.path.exists(path) else {}
+
+
+def apply_correction(it, c, diagrams, root):
+    """Apply one correction to an extracted item. Returns a problem or None."""
+    it['correction'] = {k: c[k] for k in ('kind', 'source', 'received') if k in c}
+    if c['kind'] == 'key':
+        it['official_key'] = c['key']
+    elif c['kind'] == 'options-as-images':
+        it['options_are_images'] = True
+        it['option_image_files'] = [os.path.relpath(p, root or '.')
+                                    for p in diagrams.get(('opt', it['year'], it['q_number']), [])]
+    elif c['kind'] == 'text':
+        body = c['text'].replace(' / ', ' ').strip().rstrip('/').strip()
+        # The text as returned may carry the shared stem in front of the
+        # number. The stem is already bound; keep only the question.
+        m = re.search(rf'(?:^|\s){it["q_number"]}[\.\)]\s+', body)
+        if m:
+            body = body[m.end():]
+        stem, opts, problem = split_options(body)
+        if len(opts) < 2 or (problem and not (problem == 'empty-stem' and it.get('passage_text'))):
+            it['correction']['unparsed'] = True
+            return 'correction-unparsed'
+        it.update(stem=stem, options=opts, option_count=len(opts), raw=body, extract_problem=None)
+    return None
 
 
 def psfx(paper):
@@ -483,11 +520,6 @@ def extract(cfg):
             problems.append({'kind': 'section-instruction' if instr else 'inferred-stimulus',
                              'year': year, 'para': i, 'passage_id': pid, 'text': text[:160]})
 
-    # A diagram that binds to no extracted question is a real gap, not noise.
-    bound = {(it['year'], it['q_number']) for it in items if it['paper'] == 1}
-    orphan_images = sorted({os.path.relpath(p, cfg['diagram_root'])
-                            for (y, q), paths in diagrams.items()
-                            if (y, q) not in bound for p in paths}) if cfg.get('diagram_root') else []
 
     def label(y, p):
         return str(y) if p == 1 else f'{y}#{p}'
@@ -519,6 +551,36 @@ def extract(cfg):
         problems.append({'kind': 'repeated-year-header', 'year': h['year'], 'paper': h['paper'],
                          'para': h['para'], 'text': f'probably {guess}: {why}'})
 
+    # --- corrections read off the printed paper by a person ---
+    # Applied before the audit, so a question whose options came back whole
+    # is audited on its corrected text, not on the damaged typing.
+    corrections = load_corrections(cfg.get('slug', ''))
+    applied = set()
+    for it in items:
+        k = f"{it['year'] if it['paper'] == 1 else str(it['year']) + '-p' + str(it['paper'])}/{it['q_number']}"
+        if k in corrections:
+            applied.add(k)
+            prob = apply_correction(it, corrections[k], diagrams, cfg.get('diagram_root'))
+            if prob:
+                problems.append({'kind': prob, 'year': it['year'], 'q': it['q_number'],
+                                 'para': it['source_paragraph'], 'text': corrections[k].get('text', '')[:160]})
+    # A drawing of the options on disk is evidence enough that the paper
+    # prints its options as pictures, whether or not anyone said so.
+    for it in items:
+        opt = diagrams.get(('opt', it['year'], it['q_number'])) if it['paper'] == 1 else None
+        if opt and not it.get('options_are_images'):
+            it['options_are_images'] = True
+            it['option_image_files'] = [os.path.relpath(p, cfg.get('diagram_root') or '.') for p in opt]
+    for k in sorted(set(corrections) - applied):
+        problems.append({'kind': 'correction-unplaced', 'text': k})
+
+    # A diagram that binds to no extracted question is a real gap, not noise.
+    bound = {(it['year'], it['q_number']) for it in items if it['paper'] == 1}
+    bound |= {('opt', it['year'], it['q_number']) for it in items if it.get('option_image_files')}
+    orphan_images = sorted({os.path.relpath(p, cfg['diagram_root'])
+                            for k, paths in diagrams.items()
+                            if k not in bound for p in paths}) if cfg.get('diagram_root') else []
+
     # --- audit pass: make every gap visible rather than letting it pass ---
 
     # 1. Missing question numbers. A year that runs 1..50 with 49 items has lost
@@ -538,6 +600,12 @@ def extract(cfg):
     for it in items:
         it['needs_human'] = False
         it['anomaly'] = None
+        if it.get('options_are_images'):
+            # The paper prints the options as drawings. The import has text
+            # options only, so these wait for image options in the app.
+            it['needs_human'] = True
+            it['anomaly'] = 'options-are-drawings'
+            continue
         if it['option_count'] == 4:
             continue
         present = {m.group(1).upper() for rx in OPT_STYLES.values()

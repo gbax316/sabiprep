@@ -1322,6 +1322,100 @@ def cmd_status(slug=None):
     return 0
 
 
+def total_spend():
+    return sum((jload(os.path.join(HERE, 'state', f)) or {}).get('cost_usd', 0)
+               for f in os.listdir(os.path.join(HERE, 'state')) if f.endswith('.json'))
+
+
+def cmd_runall(workers, budget, redo_tag):
+    """Every subject, every paper, newest year first across subjects (D9).
+
+    One paper per subject at a time, because a subject's state file has one
+    writer. A first paper not yet re-run under `redo_tag` runs again from derive,
+    so corrections and the Codex lane reach it. Stops starting new papers once
+    the spend since launch passes the budget; papers already running finish.
+    Progress is in out/runall.json; a stopped run resumes where it left off."""
+    import threading
+    slugs = sorted(f[:-5] for f in os.listdir(os.path.join(HERE, 'configs')) if f.endswith('.json'))
+    jobs = []
+    for slug in slugs:
+        cfg = load_config(slug)
+        st = load_state(slug, cfg)
+        if st['gate']['status'] == 'awaiting':
+            st['gate'].update(status='approved', approved_at=now(), note=f'lifted for every file by D9 ({redo_tag})')
+            save_state(st)
+        for y, p in units(slug):
+            u = unit_name(y, p)
+            if blocked_reason(cfg, u):
+                continue
+            rec = st['units'].get(u, {})
+            if rec.get('status') == 'done' and rec.get('redone') != redo_tag:
+                jobs.append({'slug': slug, 'unit': u, 'year': y, 'from': 'derive'})
+            elif rec.get('status') != 'done':
+                jobs.append({'slug': slug, 'unit': u, 'year': y, 'from': None})
+    jobs.sort(key=lambda j: (-j['year'], j['slug'], j['unit']))
+    base, lock, active = total_spend(), threading.Lock(), set()
+    prog_path = os.path.join(OUT, 'runall.json')
+    prog = {'started': now(), 'budget_usd': budget, 'spend_at_start': round(base, 2), 'jobs': jobs}
+    logdir = os.path.join(HERE, 'work', 'runall')
+    os.makedirs(logdir, exist_ok=True)
+    print(f'{len(jobs)} papers to run, {workers} at a time, budget ${budget} on top of ${base:.2f} already spent')
+
+    def save():
+        prog['spent_since_start'] = round(total_spend() - base, 2)
+        jsave(prog_path, prog)
+
+    def next_job():
+        with lock:
+            if total_spend() - base >= budget:
+                return None
+            for j in jobs:
+                if 'status' not in j and j['slug'] not in active:
+                    j.update(status='running', started=now())
+                    active.add(j['slug'])
+                    save()
+                    return j
+            return None
+
+    def worker():
+        while True:
+            j = next_job()
+            if j is None:
+                with lock:
+                    if not any('status' not in x for x in jobs) or total_spend() - base >= budget:
+                        return
+                time.sleep(30)
+                continue
+            cmd = [sys.executable, os.path.join(HERE, 'run.py'), 'run', j['slug'], '--unit', j['unit']]
+            if j['from']:
+                cmd += ['--from', j['from']]
+            with open(os.path.join(logdir, f"{j['slug']}.{j['unit']}.log"), 'a', encoding='utf8') as lf:
+                rc = subprocess.call(cmd, cwd=HERE, stdout=lf, stderr=subprocess.STDOUT,
+                                     env={**os.environ, 'PYTHONIOENCODING': 'utf8'})
+            with lock:
+                st = load_state(j['slug'], load_config(j['slug']))
+                ok = rc == 0 and st['units'].get(j['unit'], {}).get('status') == 'done'
+                if ok and j['from']:
+                    st['units'][j['unit']]['redone'] = redo_tag
+                    save_state(st)
+                j.update(status='done' if ok else 'failed', ended=now(), rc=rc)
+                active.discard(j['slug'])
+                save()
+                print(f"[{now()}] {j['slug']} {j['unit']} {j['status']}  spent ${total_spend() - base:.2f}", flush=True)
+
+    ts = [threading.Thread(target=worker) for _ in range(workers)]
+    for t in ts:
+        t.start()
+    for t in ts:
+        t.join()
+    save()
+    left = sum(1 for j in jobs if 'status' not in j)
+    print(f"finished: {sum(j.get('status') == 'done' for j in jobs)} done, "
+          f"{sum(j.get('status') == 'failed' for j in jobs)} failed, {left} not started; "
+          f"spent ${total_spend() - base:.2f}")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest='cmd', required=True)
@@ -1333,6 +1427,7 @@ def main():
     p = sub.add_parser('coverage'); p.add_argument('slug')
     p = sub.add_parser('revise'); p.add_argument('slug')
     p = sub.add_parser('matchtest'); p.add_argument('slug'); p.add_argument('--sample', type=int, default=80); p.add_argument('--seed', type=int, default=7)
+    p = sub.add_parser('runall'); p.add_argument('--workers', type=int, default=6); p.add_argument('--budget', type=float, default=1400); p.add_argument('--redo-tag', default='D9')
     p = sub.add_parser('adopt'); p.add_argument('slug'); p.add_argument('--unit', required=True); p.add_argument('--note', required=True)
     a = ap.parse_args()
     if a.cmd == 'status':
@@ -1351,6 +1446,8 @@ def main():
         return cmd_revise(a.slug)
     if a.cmd == 'matchtest':
         return cmd_matchtest(a.slug, a.sample, a.seed)
+    if a.cmd == 'runall':
+        return cmd_runall(a.workers, a.budget, a.redo_tag)
     if a.cmd == 'adopt':
         return cmd_adopt(a.slug, a.unit, a.note)
 

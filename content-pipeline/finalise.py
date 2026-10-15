@@ -20,7 +20,7 @@ Usage:
 import argparse, json, os, sys
 from collections import Counter
 
-from common import unit_name
+from common import load_items, unit_name
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -38,6 +38,7 @@ def main():
     adj_path = os.path.join(out, f'{a.slug}.adjudication.{u}.json')
     rulings = json.load(open(adj_path, encoding='utf8'))['rulings'] if os.path.exists(adj_path) else {}
 
+    items = load_items(a.slug, a.year, a.paper)
     final = {}
     for k, v in verdicts.items():
         q = int(k)
@@ -63,6 +64,27 @@ def main():
         else:
             rec.update(state='needs-human', answer=None,
                        reason=f"verdict {v['verdict']} and no third-review ruling")
+        # The paper's own key, read off the printed page by a person. It is
+        # evidence, never a shortcut: models that derived the same letter are
+        # confirmed by it; models that derived a different one are not
+        # overruled by it, because the person may have misread the row too.
+        # The disagreement goes to a human with both letters shown. Where the
+        # models found two defensible options, the paper's key settles which
+        # one the examiner meant. A defective question stays held: a key
+        # cannot repair wording that contradicts it.
+        off = (items.get(q) or {}).get('official_key')
+        if off:
+            if rec['state'] == 'keyed' and rec['answer'] == off:
+                rec['evidence'] += "; matches the paper's key"
+            elif rec['state'] == 'keyed':
+                rec.update(state='needs-human', reason=f"the models keyed {rec['answer']}, the paper's key "
+                           f"as read by a person is {off}", answer=None, model_answer=rec['answer'])
+                rec.pop('evidence', None)
+            elif rec['state'] in ('ambiguous', 'needs-human'):
+                rec.update(state='keyed', answer=off, evidence=f"the paper's key, read by a person, settled "
+                           f"a question the models could not: {rec.get('reason', '')[:200]}")
+                rec.pop('reason', None)
+            rec['official_key'] = off
         final[str(q)] = rec
 
     counts = Counter(r['state'] for r in final.values())

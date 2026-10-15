@@ -182,3 +182,37 @@ an "x" became "r", an "M" a broken glyph, and a caption fragment rode along, eac
 by the fidelity score. Maths, Physics, Chemistry, Economics and Geography draw every
 diagram by hand from the original, with the trace as a guide to positions. Biology and
 Agricultural Science keep tracing, where the drawing itself is the content.
+
+## D9: A person's reading of the paper is evidence, and every question ends passed or separated
+
+2026-10-15. The first two rulings are Orezi's; the rest are defaults made while building
+them, each with its reason.
+
+**Every question runs end to end; anything with an issue is separated, not stopped.**
+Orezi's direction: process every question with no issue, separate the ones with any issue,
+and build the new app on the passed set while the rest are fixed. The per-subject gate (D7)
+is lifted for all 21 files on that instruction. *Rejected:* waiting for each gate page to be
+read first, which would hold the passed questions back from the app for the sake of the
+few that are wrong.
+
+**Where a diagram is unclear, the question decides what it must show.** Orezi's direction.
+The drawer supplies an illegible part from what the questions force (a named label, a value a
+calculation needs) and lists it in a `reconstructed:` comment; the checker in the other
+family treats a listed reconstruction as legitimate unless it contradicts a legible part or
+an answer. *Rejected:* inventing anything the questions do not force.
+
+**The paper's key, read by a person, confirms or settles; it never overrules.** Chidera's
+returned document gives keys for some questions. A key that matches the two models confirms
+them. A key that settles a question the models found two-sided keys it. A key that disagrees
+with both models separates the question with both letters shown, because the person can
+misread a row too (Biology WASSCE 2025 Q5: the models read the midrib as II, the row says
+C). A defective question stays separated: a key cannot repair wording that contradicts it.
+
+**Corrections are source data.** What comes back from Chidera lives in
+`content-pipeline/corrections/<slug>.json`, applied by the extractor, so re-extracting never
+loses it. `ingest_review_doc.py` reads the returned document; the same round trip repeats.
+
+**A drawing of the options on disk means the options are pictures.** Twenty such files
+sat unused in the older folders. The questions they belong to are separated until the app
+can show image options (a v2 requirement), not exported with empty options.
+
