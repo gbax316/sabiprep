@@ -56,6 +56,17 @@ def main():
                 rd = csv.DictReader(fh)
                 header = rd.fieldnames
                 got = list(rd)
+            # The export writes rows in question order, skipping what it held,
+            # so each row's question number is recoverable. The review batch can
+            # hold a question the export let through (the teaching author doubts
+            # the key, a damaged option letter): the sort is the last word, so
+            # such a row leaves the passed file and counts as separated.
+            exp_held = {h['q_number'] for h in jload(os.path.join(OUT, f'{slug}.{u}.held.json'), [])}
+            qs = [i['q_number'] for i in sorted((i for i in items if i['year'] == y and i.get('paper', 1) == p),
+                                               key=lambda i: i['q_number']) if i['q_number'] not in exp_held]
+            if len(qs) != len(got):
+                raise SystemExit(f'{slug} {u}: {len(got)} rows but {len(qs)} unheld questions; re-run the export')
+            got = [row for qn, row in zip(qs, got) if f'{slug}:{u}:{qn}' not in held]
             rows += got
             uploads.update(jload(csvp.replace('.import.csv', '.uploads.json').replace('.PREVIEW.csv', '.PREVIEW.uploads.json'), {}))
             c['passed'] += len(got)
