@@ -15,12 +15,18 @@
   "received": "2026-10-15"
  },
  "2019/38": {
-  "kind": "key",
+  "kind": "text",
   "key": "C",
   "flagged": "Typing",
   "answer_raw": "C",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "Cholera is mostly spread by A. air B. soil C. water D. noise",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  },
  "2021/32": {
   "kind": "key",

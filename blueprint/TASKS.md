@@ -291,6 +291,11 @@ second lane: about $1,200, and about a day of run time. Spend is in `run.py stat
       takes in the corrections), then every other paper, newest year first across subjects.
 - [ ] **RUN-02** The sort: passed import files per subject, the separated batch with reasons,
       and a count per subject of each.
+- [x] **SRC-05** `repair_typing.py`: a model restores lost option labels only, and a word-for-word
+      check rejects any other change. 17 of 44 unreadable questions repaired; the 27 it declined
+      (an option missing, two run together, options drawn) stay separated with the reason.
+- [ ] **RUN-03** After the first pass: resume Agricultural Science 2025 (a Windows file lock
+      failed it; saves now retry) and re-run Biology UTME 2025 once more for Q25's repair.
 - [ ] **SRC-04** 40 questions still name a diagram nobody has; second papers (239 questions)
       wait on their true year (CON-08).
 

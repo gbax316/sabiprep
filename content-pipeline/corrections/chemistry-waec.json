@@ -16,12 +16,18 @@
   "received": "2026-10-15"
  },
  "2016/40": {
-  "kind": "key",
+  "kind": "text",
   "key": "C",
   "flagged": "Typing",
   "answer_raw": "C",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "Which of the following is an example of a thermoplastic polymer? A. Bakelite B. Melamine C. Polyethene D. Urea-formaldehyde",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  },
  "2017/2": {
   "kind": "text",
@@ -47,12 +53,18 @@
   "received": "2026-10-15"
  },
  "2020/40": {
-  "kind": "key",
+  "kind": "text",
   "key": "D",
   "flagged": "Typing",
   "answer_raw": "D",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "Which of the following metals does not react with water to produce hydrogen? A. Lithium B. Potassium C. Sodium D. Zinc",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  },
  "2022/41": {
   "kind": "options-as-images",
@@ -78,12 +90,18 @@
   "received": "2026-10-15"
  },
  "2024/11": {
-  "kind": "key",
+  "kind": "text",
   "key": "C",
   "flagged": "Typing",
   "answer_raw": "C",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "Ethanedioic acid is an organic solid that can be purified by A. decantation. B. distillation. C. crystallization. D. filtration.",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  },
  "2024/9": {
   "kind": "text",

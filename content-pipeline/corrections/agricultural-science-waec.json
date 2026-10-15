@@ -1,0 +1,52 @@
+{
+ "2022/21": {
+  "kind": "text",
+  "answer_raw": null,
+  "text": "Swampy lands are most suitable for growing A. yam. B. rice. C. maize. D. tomato.",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
+ },
+ "2022/5": {
+  "kind": "text",
+  "answer_raw": null,
+  "text": "The part of the illustrated farm implement which enables it to roll over obstacles is labelled A. I. B. II C. III. D. IV.",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
+ },
+ "2023/20": {
+  "kind": "text",
+  "answer_raw": null,
+  "text": "Monocotyledonous crops are characterized by A. net-veined leaves. B. taproot system. C. parallel-veined leaves D. woody stems and branches.",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
+ },
+ "2024/43": {
+  "kind": "text",
+  "answer_raw": null,
+  "text": "The meat from a tender calf is A. beef B. mutton. C. veal. D. chevon.",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
+ },
+ "2024/48": {
+  "kind": "text",
+  "answer_raw": null,
+  "text": "The function of a farm manager is to A. make agricultural policies for the government. B. allocate available resources on the farm effectively. C. execute agricultural extension programmes. D. stabilise the prices of farm produce.",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
+ }
+}

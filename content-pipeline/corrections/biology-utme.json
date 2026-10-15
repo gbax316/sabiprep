@@ -1,19 +1,41 @@
 {
+ "2015/14": {
+  "kind": "text",
+  "answer_raw": null,
+  "text": "Which of the following is a major cause of constipation in humans? A. Lack of roughage. B. Vitamin B. C. Vitamin E. D. Lack of salts.",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
+ },
  "2022/27": {
-  "kind": "key",
+  "kind": "text",
   "key": "A",
   "flagged": "Typing",
   "answer_raw": "A",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "The light shading of the ventral part in fish is....... A. countershading B. disruptive colouration C. cryptic colouration D. dangerous colouration",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  },
  "2023/13": {
-  "kind": "key",
+  "kind": "text",
   "key": "B",
   "flagged": "Typing",
   "answer_raw": "B",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "The vegetative part of a plant is: A. leaves B. flowers C. stems D. roots",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  },
  "2023/16": {
   "kind": "key",
@@ -24,20 +46,32 @@
   "received": "2026-10-15"
  },
  "2023/9": {
-  "kind": "key",
+  "kind": "text",
   "key": "B",
   "flagged": "Typing",
   "answer_raw": "B",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "A man of AS genotype marries a woman of AS genotype, what is the probability of having a sickle cell anemia offspring? A. 0% B. 25% C. 50% D. 100%",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  },
  "2024/25": {
-  "kind": "key",
+  "kind": "text",
   "key": "A",
   "flagged": "Typing",
   "answer_raw": "A",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "Which of the following is found in arid land? A. Cactus B. Water lettuce C. Cotton D. Shea butter",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  },
  "2024/27": {
   "kind": "key",
@@ -48,11 +82,17 @@
   "received": "2026-10-15"
  },
  "2025/25": {
-  "kind": "key",
+  "kind": "text",
   "key": "C",
   "flagged": "Typing",
   "answer_raw": "C",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "What does the presence of tiny, non-functional hand and leg bones inside a whale's body suggest about its evolutionary history A. Whales are not related to land animals B. Whales never had legs in their evolutionary history C. Whales evolved from ancestors that had legs D. These bones serve a major function in swimming",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  }
 }

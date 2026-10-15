@@ -302,14 +302,15 @@ def load_corrections(slug):
 
 def apply_correction(it, c, diagrams, root):
     """Apply one correction to an extracted item. Returns a problem or None."""
-    it['correction'] = {k: c[k] for k in ('kind', 'source', 'received') if k in c}
-    if c['kind'] == 'key':
+    it['correction'] = {k: c[k] for k in ('kind', 'source', 'received', 'repaired') if k in c}
+    # An entry can carry a person's key and a label repair together.
+    if c.get('key'):
         it['official_key'] = c['key']
-    elif c['kind'] == 'options-as-images':
+    if c['kind'] == 'options-as-images':
         it['options_are_images'] = True
         it['option_image_files'] = [os.path.relpath(p, root or '.')
                                     for p in diagrams.get(('opt', it['year'], it['q_number']), [])]
-    elif c['kind'] == 'text':
+    elif c.get('text'):
         body = c['text'].replace(' / ', ' ').strip().rstrip('/').strip()
         # The text as returned may carry the shared stem in front of the
         # number. The stem is already bound; keep only the question.
@@ -703,9 +704,13 @@ def main():
     report['cloze_gaps_bound'] = bind_cloze(items)
     os.makedirs(a.outdir, exist_ok=True)
     slug = cfg['slug']
-    with open(os.path.join(a.outdir, f'{slug}.items.jsonl'), 'w', encoding='utf8') as f:
+    # Written whole and swapped in, because a paper may be running while the
+    # file is refreshed and must never read half of it.
+    path = os.path.join(a.outdir, f'{slug}.items.jsonl')
+    with open(path + '.tmp', 'w', encoding='utf8') as f:
         for it in items:
             f.write(json.dumps(it, ensure_ascii=False) + '\n')
+    os.replace(path + '.tmp', path)
     with open(os.path.join(a.outdir, f'{slug}.report.json'), 'w', encoding='utf8') as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 

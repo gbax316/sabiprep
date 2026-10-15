@@ -71,6 +71,16 @@
   "source": "SabiPrep - questions to check against the papers.docx",
   "received": "2026-10-15"
  },
+ "2022/12": {
+  "kind": "text",
+  "answer_raw": null,
+  "text": "Multi-party system is saddled with the problem of A. divisiveness. B. limited choice. C. weak opposition. D. political consciousness.",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
+ },
  "2022/41": {
   "kind": "text",
   "text": "41. The basic human rights of citizens in a state are A. freedom of movement, free education and free health. B. free social services, speech and religion. C. right to life, liberty and property. D. right to higher education, property and freedom of thought.",

@@ -24,11 +24,17 @@
   "received": "2026-10-15"
  },
  "2023/26": {
-  "kind": "key",
+  "kind": "text",
   "key": "C",
   "flagged": "Typing",
   "answer_raw": "C",
   "source": "SabiPrep - questions to check against the papers.docx",
-  "received": "2026-10-15"
+  "received": "2026-10-15",
+  "text": "Which of the following pairs are both substances deliquescent? A. CaCl₂ and HSO B. NaOH and MgSO₄.7H₂O C. CaCl₂ and NaOH D. CuO and NaCl E. CaCO₃ and MgCl₂",
+  "repaired": {
+   "by": "model (opus)",
+   "rule": "option labels only, words checked unchanged",
+   "on": "2026-10-15"
+  }
  }
 }
