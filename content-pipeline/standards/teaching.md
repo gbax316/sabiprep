@@ -69,6 +69,17 @@ nymph questions, check the hind legs first" is.
 **Show working for anything calculated.** Each step on its own line, units
 carried through, the final value stated with its unit.
 
+**Short sentences, everyday words.** The reader is fifteen, often reading in a
+second language, under exam pressure. In the hints and in every line of the
+solution, no sentence runs past 30 words, and most stay under 20. One idea to a
+sentence: where a sentence needs "and", "which" or a semicolon to carry a second
+idea, make it two. A list of four or more things goes on its own line after a
+colon, not inside a sentence. Use the subject's own term when the syllabus
+expects the student to know it (photosynthesis, mesocarp), and say what it means
+the first time; otherwise choose the everyday word ("use" not "utilise", "show"
+not "demonstrate"). A machine counts the words: the plain stage splits any
+sentence past 30, and the question bank reports every one it finds.
+
 ## Syllabus answers without false claims
 
 Past papers are built on the syllabus's simplifications. "Villi are for absorption,"
@@ -190,7 +201,9 @@ R2 rejects an item that fails any of these, and says which:
 7. The solution contradicts the verified answer.
 8. A fact in the solution is wrong.
 9. `subtopic_id` is not in the taxonomy, or plainly the wrong place for what the question tests.
-10. Language a fifteen-year-old would stumble over, where a plainer word exists.
+10. Language a fifteen-year-old would stumble over, where a plainer word exists, or a
+    sentence that carries two ideas where it should be two sentences. A sentence over 30
+    words always fails this check.
 11. A syllabus simplification stated as universal truth, an unscoped absolute, or a
     self-contradiction. Judge it at syllabus depth: a claim correctly scoped to the
     syllabus passes, even if university biology would add detail.

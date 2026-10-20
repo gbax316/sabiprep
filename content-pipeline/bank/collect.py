@@ -12,41 +12,10 @@ import json, os, re
 from common import HERE, OUT, all_items, load_config, subject_key, taxonomy_path, unit_name, units
 from sort_report import jload, unit_rows
 
-from .contract import paper_key, question_key
+from .contract import paper_key, question_key, solution_parts
 
 EXAMS = {'WASSCE': 'WAEC West African Senior School Certificate Examination',
          'UTME': 'JAMB Unified Tertiary Matriculation Examination'}
-
-
-def solution_parts(text):
-    """The solution in its parts, in order. The teaching standard writes every
-    solution the same way (standards/teaching.md): an Answer line, the
-    principle, "How to tell:" with the working one step to a line, "Why not the
-    others:" one line per option, and an Exam tip. A paragraph outside that
-    shape is kept as principle rather than lost."""
-    parts, section = [], 'principle'
-    heads = [('answer', r'answer\s*:'), ('step', r'how to tell\s*:'),
-             ('why_not', r'why not the others\s*:'), ('tip', r'exam tip\s*:')]
-    for block in re.split(r'\n\s*\n', (text or '').strip()):
-        lines = [l.strip() for l in block.split('\n') if l.strip()]
-        if not lines:
-            continue
-        hit = next(((k, rx) for k, rx in heads if re.match(rx, lines[0], re.I)), None)
-        if hit:
-            k, rx = hit
-            rest = re.sub(r'^' + rx + r'\s*', '', lines[0], flags=re.I)
-            lines = ([rest] if rest else []) + lines[1:]
-            if k == 'answer':
-                parts.append({'part': 'answer', 'option': None, 'text': lines[0] if lines else ''})
-                lines, section = lines[1:], 'principle'
-            else:
-                section = k
-        elif section in ('step', 'why_not'):
-            section = 'principle'        # a plain paragraph after a list closes it
-        for l in lines:
-            m = re.match(r'^([A-E])[\.\)]\s+(.*)$', l) if section == 'why_not' else None
-            parts.append({'part': section, 'option': m.group(1) if m else None, 'text': m.group(2) if m else l})
-    return parts
 
 
 def syllabus(v):

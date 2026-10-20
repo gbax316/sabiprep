@@ -35,6 +35,8 @@ from common import (HERE, OUT, load_config, load_items, parse_unit, subject_key,
                     taxonomy_path, unit_name, units)
 
 PIPE = json.load(open(os.path.join(HERE, 'pipeline.json'), encoding='utf8'))
+
+from bank.contract import long_sentences, solution_parts      # noqa: E402  one definition, shared
 STATE_DIR = os.path.join(HERE, 'state')
 BRIEFS = os.path.join(HERE, 'briefs')
 STANDARD = os.path.join(HERE, 'standards', 'teaching.md')
@@ -42,7 +44,7 @@ PY = sys.executable
 
 STAGES = ['derive', 'compare', 'third', 'settle', 'classify', 'teach', 'review', 'fix',
           'recheck', 'final-fix', 'trace', 'alt', 'author', 'diagram-check', 'diagram-repair',
-          'diagram-recheck', 'export', 'preview']
+          'diagram-recheck', 'plain', 'export', 'preview']
 
 TEACH_FIELDS = ('subtopic_id', 'difficulty', 'hint1', 'hint2', 'hint3', 'solution')
 
@@ -814,6 +816,111 @@ def s_diagram_recheck(ctx):
     return f're-checked {bad or "none"}; not passing {held or "none"}'
 
 
+HINTS = ('hint1', 'hint2', 'hint3')
+
+
+def same_teaching(old, new, limit):
+    """None when a rewrite is the same teaching in shorter sentences, else why
+    not: every number, the answer line, the order of the parts and the options
+    argued against are unchanged, nothing runs past the limit, and the length
+    has not swung."""
+    def text(i):
+        return ' '.join(str(i.get(f) or '') for f in (*HINTS, 'solution'))
+    if long_sentences([new.get(h) or '' for h in HINTS], new.get('solution'), limit):
+        return f'still has a sentence over {limit} words'
+    if (old.get('solution') or '').split('\n')[0] != (new.get('solution') or '').split('\n')[0]:
+        return 'the answer line changed'
+    if sorted(re.findall(r'\d+(?:\.\d+)?', text(old))) != sorted(re.findall(r'\d+(?:\.\d+)?', text(new))):
+        return 'a number changed'
+
+    def shape(i):
+        seq = [x['part'] for x in solution_parts(i.get('solution'))]
+        return [k for n, k in enumerate(seq) if not n or seq[n - 1] != k]
+    if shape(old) != shape(new):
+        return 'the order of the parts changed'
+    against = lambda i: sorted(x['option'] for x in solution_parts(i.get('solution')) if x['part'] == 'why_not')
+    if against(old) != against(new):
+        return 'the options argued against changed'
+    a, b = len(text(old).split()), len(text(new).split())
+    if not 0.8 <= b / max(a, 1) <= 1.4:
+        return f'the length went from {a} to {b} words'
+    return None
+
+
+def s_plain(ctx):
+    """Split every sentence that runs past the plain-language limit
+    (standards/teaching.md). The fixer rewrites only those sentences; a rewrite
+    is kept only when it is mechanically the same teaching (same_teaching) and
+    the other family's review finds no new fault in it. Anything else keeps the
+    reviewed text, and the bank goes on reporting it."""
+    t = jload(ctx.out('teaching'))
+    if not t:
+        return 'no teaching to check'
+    limit = PIPE['plain_max_words']
+    keyed = set(ctx.keyed())
+    todo = [i for i in t['items'] if i['q_number'] in keyed
+            and not str(i.get('review_status', '')).startswith('held')
+            and long_sentences([i.get(h) or '' for h in HINTS], i.get('solution'), limit)]
+    if not todo:
+        return f'no sentence over {limit} words'
+    reviews = []
+    for i in todo:
+        long = long_sentences([i.get(h) or '' for h in HINTS], i.get('solution'), limit)
+        reviews.append({'q_number': i['q_number'], 'verdict': 'fail', 'failed_checks': [10], 'fact_error': False,
+                        'notes': f'These sentences run past {limit} words: ' + ' | '.join(f'"{x}"' for x in long),
+                        'fix': ('Split each quoted sentence into shorter sentences of everyday words, one idea to a '
+                                'sentence, none over ' + str(limit) + ' words. Change nothing else: every fact, number, '
+                                'unit, option letter and the order of the parts stay exactly as they are.'),
+                        'lane': 'plain-language check'})
+    items, log = fixer(ctx, 'plain', todo, {'reviews': reviews}, False)
+    old = {i['q_number']: i for i in todo}
+    cand, kept_old, raised = {}, {}, {}
+    for n in items:
+        why = same_teaching(old[n['q_number']], n, limit)
+        if why:
+            kept_old[n['q_number']] = why
+        else:
+            cand[n['q_number']] = {**old[n['q_number']], **{f: n[f] for f in (*HINTS, 'solution')}}
+    accepted = {}
+    if cand:
+        path = ctx.out('teaching-plain')
+        jsave(path, {**{k: t[k] for k in ('subject', 'year', 'paper', 'taxonomy_version')},
+                     'items': list(cand.values())})
+        rev = run_review(ctx, 'plain', path, 'plain')
+        flat = lambda s: re.sub(r'\s+', ' ', s).strip().lower()
+        for q, n in cand.items():
+            r = rev['reviews'].get(str(q)) or {}
+            # Only a fault the rewrite brought in counts against it. Length is
+            # counted by same_teaching, not judged (check 10 is left out), and a
+            # fault whose quoted words all stand in the text that was already
+            # reviewed was there before: the rewrite is kept and the fault logged.
+            fault = r.get('fact_error') or set(r.get('failed_checks') or []) & {3, 4, 7, 8, 11}
+            quotes = re.findall(r'[“"]([^”"]{12,})[”"]', str(r.get('notes') or ''))
+            before = flat(' '.join(str(old[q].get(f) or '') for f in (*HINTS, 'solution')))
+            if not r:
+                kept_old[q] = 'no review returned'
+            elif not fault:
+                accepted[q] = n
+            elif quotes and all(flat(x) in before for x in quotes):
+                accepted[q] = n
+                raised[q] = str(r.get('notes'))[:300]
+            else:
+                kept_old[q] = 'the review found: ' + str(r.get('notes') or '')[:160]
+    by = {i['q_number']: i for i in t['items']}
+    by.update(accepted)
+    t['items'] = [by[i['q_number']] for i in t['items']]
+    jsave(ctx.out('teaching'), t)
+    fl = jload(ctx.out('fixlog')) or {'entries': []}
+    fl['entries'] += [{**e, 'round': 'plain'} for e in log]
+    fl['entries'] += [{'q_number': q, 'round': 'plain', 'decision': 'kept the reviewed text', 'why': w}
+                      for q, w in sorted(kept_old.items())]
+    fl['entries'] += [{'q_number': q, 'round': 'plain', 'decision': 'rewritten; the review raised a fault already in '
+                       'the reviewed text', 'why': w} for q, w in sorted(raised.items())]
+    jsave(ctx.out('fixlog'), fl)
+    return (f'{len(todo)} with a sentence over {limit} words: {len(accepted)} rewritten, '
+            f'{len(kept_old)} kept as reviewed, {len(raised)} older faults raised for a person')
+
+
 def s_export(ctx):
     base = os.environ.get(PIPE['image_base_env'])
     args = [*ctx.unit_args(), '--topic-mode', PIPE['topic_mode'],
@@ -846,7 +953,7 @@ FUNCS = {'derive': s_derive, 'compare': s_compare, 'third': s_third, 'settle': s
          'classify': s_classify, 'teach': s_teach, 'review': s_review, 'fix': s_fix,
          'recheck': s_recheck, 'final-fix': s_final_fix, 'trace': s_trace, 'alt': s_alt,
          'author': s_author, 'diagram-check': s_diagram_check, 'diagram-repair': s_diagram_repair,
-         'diagram-recheck': s_diagram_recheck, 'export': s_export, 'preview': s_preview}
+         'diagram-recheck': s_diagram_recheck, 'plain': s_plain, 'export': s_export, 'preview': s_preview}
 
 
 # ---------------------------------------------------------------- units
@@ -1364,8 +1471,12 @@ def cmd_runall(workers, budget, redo_tag):
             if blocked_reason(cfg, u):
                 continue
             rec = st['units'].get(u, {})
+            missing = next((s for s in STAGES if s not in rec.get('stages', {})), None)
             if rec.get('status') == 'done' and rec.get('redone') != redo_tag:
                 jobs.append({'slug': slug, 'unit': u, 'year': y, 'from': 'derive'})
+            elif rec.get('status') == 'done' and missing:
+                # A stage added since the paper finished runs, with what follows it.
+                jobs.append({'slug': slug, 'unit': u, 'year': y, 'from': missing})
             elif rec.get('status') != 'done':
                 # A paper stopped partway on text the extractor has since
                 # changed carries rerun_from, so it does not resume on old work.

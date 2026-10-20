@@ -17,6 +17,8 @@
   "topic_mode": "canonical",
   "image_base_env": "SABIPREP_IMAGE_BASE",
   "image_base_note": "The public storage URL the diagrams are uploaded to. Read from this environment variable, never written here. Unset means exports are written as PREVIEW files that cannot be mistaken for importable ones.",
+  "plain_max_words": 30,
+  "plain_note": "No sentence in a hint or in a solution's prose may run past this many words (standards/teaching.md). The plain stage splits the ones that do; the question bank measures them.",
   "trace_min_fidelity": 0.95,
   "style_scan_env": "STYLE_SCAN",
   "style_scan_default": "C:/Users/orezi/BaxAIOS/personal-os/os-references/scripts/style-scan.py",

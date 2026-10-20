@@ -7,7 +7,10 @@ applies to, whether failing it breaks the contract or is a quality flag, and
 where its fix belongs. evals.py runs every registered check on every build.
 """
 
-import re
+import json, os, re
+
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PLAIN_MAX_WORDS = json.load(open(os.path.join(HERE, 'pipeline.json'), encoding='utf8'))['plain_max_words']
 
 KEY = re.compile(r'^(wassce|utme)-[a-z]+(?:-[a-z]+)*-(20\d\d)-p(\d)-q(\d{2,3})$')
 
@@ -47,6 +50,50 @@ def options(q):
 
 def sentences(text):
     return [s for s in re.split(r'(?<=[.?!])\s+(?=[A-Z(])', text or '') if s.strip()]
+
+
+def solution_parts(text):
+    """The solution in its parts, in order. The teaching standard writes every
+    solution the same way (standards/teaching.md): an Answer line, the
+    principle, "How to tell:" with the working one step to a line, "Why not the
+    others:" one line per option, and an Exam tip. A paragraph outside that
+    shape is kept as principle rather than lost."""
+    parts, section = [], 'principle'
+    heads = [('answer', r'answer\s*:'), ('step', r'how to tell\s*:'),
+             ('why_not', r'why not the others\s*:'), ('tip', r'exam tip\s*:')]
+    for block in re.split(r'\n\s*\n', (text or '').strip()):
+        lines = [l.strip() for l in block.split('\n') if l.strip()]
+        if not lines:
+            continue
+        hit = next(((k, rx) for k, rx in heads if re.match(rx, lines[0], re.I)), None)
+        if hit:
+            k, rx = hit
+            rest = re.sub(r'^' + rx + r'\s*', '', lines[0], flags=re.I)
+            lines = ([rest] if rest else []) + lines[1:]
+            if k == 'answer':
+                parts.append({'part': 'answer', 'option': None, 'text': lines[0] if lines else ''})
+                lines, section = lines[1:], 'principle'
+            else:
+                section = k
+        elif section in ('step', 'why_not'):
+            section = 'principle'        # a plain paragraph after a list closes it
+        for l in lines:
+            m = re.match(r'^([A-E])[\.\)]\s+(.*)$', l) if section == 'why_not' else None
+            parts.append({'part': section, 'option': m.group(1) if m else None, 'text': m.group(2) if m else l})
+    return parts
+
+
+def long_sentences(hints, solution, limit=PLAIN_MAX_WORDS):
+    """Sentences past the plain-language limit, in the hints and every line of
+    the solution but the answer line. A line of working ("Cost price = 500 /
+    1.08") is arithmetic, not a sentence, and is not counted; the "How to tell"
+    of a biology question is prose, and is. The plain stage (run.py) and the
+    bank's check share this one definition."""
+    out = [s for h in hints for s in sentences(h) if len(s.split()) > limit]
+    out += [s for x in solution_parts(solution) if x['part'] != 'answer'
+            and not (x['part'] == 'step' and re.search(r'[=≈→]', x['text']))
+            for s in sentences(x['text']) if len(s.split()) > limit]
+    return out
 
 
 # ------------------------------------------------------------------ every question
@@ -129,10 +176,9 @@ def _steps(q, p):
 
 @check('plain-sentences', 'passed', 'quality', TEACHING)
 def _plain(q, p):
-    """No sentence in the solution runs past 30 words."""
-    long = [s for x in q['parts'] if x['part'] in ('principle', 'why_not', 'tip')
-            for s in sentences(x['text']) if len(s.split()) > 30]
-    return f'{len(long)} sentence(s) over 30 words, e.g. "{long[0][:60]}..."' if long else None
+    """No sentence in the hints or the solution's prose runs past the plain-language limit."""
+    long = long_sentences([q.get(h) or '' for h in ('hint1', 'hint2', 'hint3')], q.get('solution'))
+    return f'{len(long)} sentence(s) over {PLAIN_MAX_WORDS} words, e.g. "{long[0][:60]}..."' if long else None
 
 
 @check('hint-gives-answer', 'passed', 'quality', TEACHING)
