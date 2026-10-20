@@ -1522,15 +1522,28 @@ def cmd_runall(workers, budget, redo_tag):
     prog = {'started': now(), 'budget_usd': budget, 'spend_before': round(base, 2), 'jobs': jobs}
     logdir = os.path.join(HERE, 'work', 'runall')
     os.makedirs(logdir, exist_ok=True)
-    print(f'{len(jobs)} papers to run, {workers} at a time, budget ${budget} on top of ${base:.2f} already spent')
+    print(f'{len(jobs)} papers to run, {workers} at a time, budget ${budget} on top of ${base:.2f} already spent '
+          f'(change either in {os.path.relpath(os.path.join(logdir, "control.json"), HERE)})')
 
     def save():
         prog['spent_since_start'] = round(spent[0], 2)
         jsave(prog_path, prog)
 
+    # Workers, budget and a stop can be changed while the run goes, in
+    # work/runall/control.json: {"workers": 10, "budget": 1700, "stop": false}.
+    # A stop starts nothing new; papers already running finish. Changing the
+    # pace once meant stopping the driver and cutting papers off mid-run.
+    control = os.path.join(logdir, 'control.json')
+
+    def limits():
+        c = jload(control, {}) or {}
+        return (min(int(c.get('workers', workers)), len(slugs)), float(c.get('budget', budget)),
+                bool(c.get('stop')))
+
     def next_job():
         with lock:
-            if spent[0] >= budget:
+            cap, cash, stop = limits()
+            if stop or spent[0] >= cash or len(active) >= cap:
                 return None
             for j in jobs:
                 if 'status' not in j and j['slug'] not in active:
@@ -1545,7 +1558,8 @@ def cmd_runall(workers, budget, redo_tag):
             j = next_job()
             if j is None:
                 with lock:
-                    if not any('status' not in x for x in jobs) or spent[0] >= budget:
+                    cap, cash, stop = limits()
+                    if not any('status' not in x for x in jobs) or spent[0] >= cash or (stop and not active):
                         return
                 time.sleep(30)
                 continue
@@ -1569,7 +1583,9 @@ def cmd_runall(workers, budget, redo_tag):
                 save()
                 print(f"[{now()}] {j['slug']} {j['unit']} {j['status']}  spent ${spent[0]:.2f}", flush=True)
 
-    ts = [threading.Thread(target=worker) for _ in range(workers)]
+    # One thread per subject, the most that can ever run (one paper per subject
+    # at a time); control.json's worker count decides how many take work.
+    ts = [threading.Thread(target=worker) for _ in range(len(slugs))]
     for t in ts:
         t.start()
     for t in ts:
