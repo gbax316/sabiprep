@@ -818,107 +818,138 @@ def s_diagram_recheck(ctx):
 
 HINTS = ('hint1', 'hint2', 'hint3')
 
+# A split may drop the word that joined two ideas and bring in the word that
+# opens the second sentence. Nothing else may go or come: dropping "not" or
+# "usually", adding a fact, or moving words between hints is refused whatever a
+# reviewer says.
+JOINERS_OUT = {'and', 'which', 'who', 'whose', 'where', 'while', 'so', 'but', 'because', 'as', 'since',
+               'whereas', 'although', 'though', 'then', 'thus', 'hence', 'that'}
+OPENERS_IN = {'this', 'that', 'these', 'those', 'it', 'its', 'they', 'their', 'there', 'so', 'then', 'also', 'and',
+              'but', 'the', 'a', 'an', 'is', 'are', 'was', 'were', 'has', 'have', 'does', 'do', 'means', 'mean',
+              'here', 'each', 'one', 'both', 'as', 'result', 'because', 'of', 'in', 'which', 'what', 'why', 'how'}
 
-def same_teaching(old, new, limit):
-    """None when a rewrite is the same teaching in shorter sentences, else why
-    not: every number, the answer line, the order of the parts and the options
-    argued against are unchanged, nothing runs past the limit, and the length
-    has not swung."""
-    def text(i):
-        return ' '.join(str(i.get(f) or '') for f in (*HINTS, 'solution'))
-    if long_sentences([new.get(h) or '' for h in HINTS], new.get('solution'), limit):
+
+def words(text):
+    return [w.strip("'’") for w in re.findall(r'[^\s.,;:!?()\[\]"“”‘]+', (text or '').lower()) if w.strip("'’")]
+
+
+def field_ok(field, old, new, limit):
+    """None when a rewritten hint or solution is the same text in shorter
+    sentences, else why not. Words are compared as a multiset, so a number, a
+    unit, a "not" or a fact cannot go or come; only the joining and opening
+    words of a split may. The solution keeps its answer line, the order of its
+    parts and the options it argues against."""
+    from collections import Counter
+    if not (new or '').strip():
+        return 'came back empty'
+    if long_sentences([new] if field != 'solution' else [], new if field == 'solution' else '', limit):
         return f'still has a sentence over {limit} words'
-    if (old.get('solution') or '').split('\n')[0] != (new.get('solution') or '').split('\n')[0]:
-        return 'the answer line changed'
-    if sorted(re.findall(r'\d+(?:\.\d+)?', text(old))) != sorted(re.findall(r'\d+(?:\.\d+)?', text(new))):
-        return 'a number changed'
+    a, b = Counter(words(old)), Counter(words(new))
+    gone = [w for w in (a - b).elements() if w not in JOINERS_OUT]
+    came = [w for w in (b - a).elements() if w not in OPENERS_IN]
+    if gone or came:
+        return 'changed words, not only sentence breaks: ' + ', '.join(
+            [f'-{w}' for w in gone[:4]] + [f'+{w}' for w in came[:4]])
+    if field == 'solution':
+        if old.split('\n')[0] != new.split('\n')[0]:
+            return 'the answer line changed'
 
-    def shape(i):
-        seq = [x['part'] for x in solution_parts(i.get('solution'))]
-        return [k for n, k in enumerate(seq) if not n or seq[n - 1] != k]
-    if shape(old) != shape(new):
-        return 'the order of the parts changed'
-    against = lambda i: sorted(x['option'] for x in solution_parts(i.get('solution')) if x['part'] == 'why_not')
-    if against(old) != against(new):
-        return 'the options argued against changed'
-    a, b = len(text(old).split()), len(text(new).split())
-    if not 0.8 <= b / max(a, 1) <= 1.4:
-        return f'the length went from {a} to {b} words'
+        def shape(t):
+            seq = [x['part'] for x in solution_parts(t)]
+            return [k for n, k in enumerate(seq) if not n or seq[n - 1] != k]
+        if shape(old) != shape(new):
+            return 'the order of the parts changed'
+        against = lambda t: sorted(x['option'] for x in solution_parts(t) if x['part'] == 'why_not')
+        if against(old) != against(new):
+            return 'the options argued against changed'
     return None
 
 
 def s_plain(ctx):
     """Split every sentence that runs past the plain-language limit
-    (standards/teaching.md). The fixer rewrites only those sentences; a rewrite
-    is kept only when it is mechanically the same teaching (same_teaching) and
-    the other family's review finds no new fault in it. Anything else keeps the
-    reviewed text, and the bank goes on reporting it."""
+    (standards/teaching.md, pipeline.json plain_max_words). A worker splits only
+    the listed sentences (briefs/plain.md); a field is taken only when field_ok
+    finds the same words in shorter sentences, and only a field that held a long
+    sentence can change. The other family then reviews what changed, and only a
+    fault the rewrite brought in sends it back. Anything else keeps the reviewed
+    text, and the bank goes on reporting it."""
     t = jload(ctx.out('teaching'))
     if not t:
         return 'no teaching to check'
     limit = PIPE['plain_max_words']
     keyed = set(ctx.keyed())
-    todo = [i for i in t['items'] if i['q_number'] in keyed
-            and not str(i.get('review_status', '')).startswith('held')
-            and long_sentences([i.get(h) or '' for h in HINTS], i.get('solution'), limit)]
+    by = {i['q_number']: i for i in t['items']}
+    todo = {}
+    for q, i in by.items():
+        if q not in keyed or str(i.get('review_status', '')).startswith('held'):
+            continue
+        f = {h: long_sentences([i.get(h) or ''], '', limit) for h in HINTS}
+        f['solution'] = long_sentences([], i.get('solution'), limit)
+        f = {k: {'text': i.get(k), 'long': v} for k, v in f.items() if v}
+        if f:
+            todo[q] = f
     if not todo:
         return f'no sentence over {limit} words'
-    reviews = []
-    for i in todo:
-        long = long_sentences([i.get(h) or '' for h in HINTS], i.get('solution'), limit)
-        reviews.append({'q_number': i['q_number'], 'verdict': 'fail', 'failed_checks': [10], 'fact_error': False,
-                        'notes': f'These sentences run past {limit} words: ' + ' | '.join(f'"{x}"' for x in long),
-                        'fix': ('Split each quoted sentence into shorter sentences of everyday words, one idea to a '
-                                'sentence, none over ' + str(limit) + ' words. Change nothing else: every fact, number, '
-                                'unit, option letter and the order of the parts stay exactly as they are.'),
-                        'lane': 'plain-language check'})
-    items, log = fixer(ctx, 'plain', todo, {'reviews': reviews}, False)
-    old = {i['q_number']: i for i in todo}
-    cand, kept_old, raised = {}, {}, {}
-    for n in items:
-        why = same_teaching(old[n['q_number']], n, limit)
-        if why:
-            kept_old[n['q_number']] = why
+
+    def val(wd):
+        out = read_out(wd)
+        if not isinstance(out, dict) or not isinstance(out.get('items'), list):
+            return ['output.json is missing or has no items list']
+        got = {x.get('q_number'): x for x in out['items'] if isinstance(x, dict)}
+        return [f'Q{q} {k} missing' for q, f in todo.items() for k in f if not str((got.get(q) or {}).get(k) or '').strip()]
+    # Language is never a reason to stop a paper: if the worker cannot produce a
+    # usable split, the paper keeps its reviewed text and the bank reports it.
+    try:
+        wd = claude_worker(ctx, 'plain', 'plain.md', {'count': len(todo), 'limit': limit},
+                           {'long.json': {'items': [{'q_number': q, 'fields': f} for q, f in sorted(todo.items())]},
+                            'teaching.md': ('copy', STANDARD)}, 'plain', val)
+    except StageError as e:
+        return f'{len(todo)} with a sentence over {limit} words, kept as reviewed: the split did not run ({e})'
+    got = {x.get('q_number'): x for x in read_out(wd)['items'] if isinstance(x, dict)}
+    cand, kept_old, raised, refused = {}, {}, {}, []
+    for q, f in todo.items():
+        item = dict(by[q])
+        for k in f:
+            why = field_ok(k, by[q].get(k) or '', (got.get(q) or {}).get(k), limit)
+            if why:
+                refused.append({'q_number': q, 'field': k, 'why': why})
+            else:
+                item[k] = got[q][k]
+        if item != by[q]:
+            cand[q] = item
         else:
-            cand[n['q_number']] = {**old[n['q_number']], **{f: n[f] for f in (*HINTS, 'solution')}}
+            kept_old[q] = 'no field passed the word check'
     accepted = {}
     if cand:
         path = ctx.out('teaching-plain')
         jsave(path, {**{k: t[k] for k in ('subject', 'year', 'paper', 'taxonomy_version')},
                      'items': list(cand.values())})
         rev = run_review(ctx, 'plain', path, 'plain')
-        flat = lambda s: re.sub(r'\s+', ' ', s).strip().lower()
         for q, n in cand.items():
             r = rev['reviews'].get(str(q)) or {}
-            # Only a fault the rewrite brought in counts against it. Length is
-            # counted by same_teaching, not judged (check 10 is left out), and a
-            # fault whose quoted words all stand in the text that was already
-            # reviewed was there before: the rewrite is kept and the fault logged.
-            fault = r.get('fact_error') or set(r.get('failed_checks') or []) & {3, 4, 7, 8, 11}
-            quotes = re.findall(r'[“"]([^”"]{12,})[”"]', str(r.get('notes') or ''))
-            before = flat(' '.join(str(old[q].get(f) or '') for f in (*HINTS, 'solution')))
+            # The word check already holds every fact, number and word in place,
+            # so a fault the review raises here was in the reviewed text: the
+            # split is kept and the fault logged for a person. Only a review that
+            # did not come back keeps the old text.
             if not r:
                 kept_old[q] = 'no review returned'
-            elif not fault:
-                accepted[q] = n
-            elif quotes and all(flat(x) in before for x in quotes):
-                accepted[q] = n
+                continue
+            accepted[q] = n
+            if r.get('fact_error') or set(r.get('failed_checks') or []) - {10}:
                 raised[q] = str(r.get('notes'))[:300]
-            else:
-                kept_old[q] = 'the review found: ' + str(r.get('notes') or '')[:160]
-    by = {i['q_number']: i for i in t['items']}
     by.update(accepted)
     t['items'] = [by[i['q_number']] for i in t['items']]
     jsave(ctx.out('teaching'), t)
     fl = jload(ctx.out('fixlog')) or {'entries': []}
-    fl['entries'] += [{**e, 'round': 'plain'} for e in log]
+    fl['entries'] += [{**e, 'round': 'plain', 'decision': 'field kept as reviewed'} for e in refused]
     fl['entries'] += [{'q_number': q, 'round': 'plain', 'decision': 'kept the reviewed text', 'why': w}
                       for q, w in sorted(kept_old.items())]
-    fl['entries'] += [{'q_number': q, 'round': 'plain', 'decision': 'rewritten; the review raised a fault already in '
+    fl['entries'] += [{'q_number': q, 'round': 'plain', 'decision': 'split; the review raised a fault already in '
                        'the reviewed text', 'why': w} for q, w in sorted(raised.items())]
     jsave(ctx.out('fixlog'), fl)
-    return (f'{len(todo)} with a sentence over {limit} words: {len(accepted)} rewritten, '
-            f'{len(kept_old)} kept as reviewed, {len(raised)} older faults raised for a person')
+    return (f'{len(todo)} with a sentence over {limit} words: {len(accepted)} split, '
+            f'{len(kept_old)} kept as reviewed, {len(refused)} fields refused by the word check, '
+            f'{len(raised)} older faults raised for a person')
 
 
 def s_export(ctx):

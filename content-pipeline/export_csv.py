@@ -174,6 +174,24 @@ def main():
             'image_width': w, 'image_height': h,
         })
 
+    # A paper typed with the same question twice (Biology UTME 2024 has one, word
+    # for word, options and all): the first is kept, the repeat is held with the
+    # question it repeats, so one typing slip no longer stops a whole paper.
+    held_q = {h[0] for h in held}
+    row_q = [q for q in sorted(items) if q not in held_q]
+    assert len(row_q) == len(rows), 'every question not held has exactly one row'
+    first, keep = {}, []
+    for q, r in zip(row_q, rows):
+        sig = (r['question_text'].strip().lower(), tuple(r[f'option_{k}'].strip().lower() for k in 'abcde'),
+               r['passage_id'])
+        if sig in first:
+            held.append((q, 'repeated-question', f'the same question and options as Q{first[sig]} in this paper'))
+        else:
+            first[sig] = q
+            keep.append(r)
+    rows = keep
+    held.sort()
+
     # The import rejects repeated question text, but papers repeat short stems
     # across different extracts ("The speaker is", under two poems). Where a
     # stem repeats and the rows sit on different passages, each says which

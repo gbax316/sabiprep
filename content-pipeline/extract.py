@@ -185,7 +185,13 @@ def is_instruction(text):
     to refer back to, so it binds to all of them until the next instruction,
     stem or year.
     """
-    return bool(TASK_VERB.search(text) or SECTION_CUE.match(text))
+    return bool(TASK_VERB.search(text) or SECTION_CUE.match(text) or ORAL_CUE.search(text))
+
+
+# The Test of Orals states its task by the sound sought, and a typing slip can
+# take the verb with it ("From the word the word that has the same consonant
+# sound as the one represented by the letter(s) underlined").
+ORAL_CUE = re.compile(r'\bsame\s+(?:vowel|consonant)\s+sound|\brhymes?\s+with\b', re.I)
 
 
 def anchors(text):
@@ -222,13 +228,16 @@ def _run_from(marks):
     best = []
     for same_case in (str.isupper, str.islower, lambda c: True):
         run, expect = [], 'A'
-        for start, end, letter in marks:
+        for n, (start, end, letter) in enumerate(marks):
             if not same_case(letter):
                 continue
+            # "A. blood group A. B. blood group B.": an A touching the B after it
+            # ends option A's own text; it is not a second start.
+            ends_a = n + 1 < len(marks) and marks[n + 1][2].upper() == 'B' and marks[n + 1][0] == end
             if letter.upper() == expect:
                 run.append((start, end, expect))
                 expect = chr(ord(expect) + 1)
-            elif len(run) == 1 and letter.upper() == 'A' and start != run[0][1]:
+            elif len(run) == 1 and letter.upper() == 'A' and start != run[0][1] and not ends_a:
                 # A second A before any B: the first was in the stem ("from
                 # point A. Calculate", "an A.P.", "A. H. Mohammed's"). The
                 # options start at the later one. A twin straight after it is
@@ -381,7 +390,7 @@ def apply_correction(it, c, diagrams, root):
 # ("4.Express in index form"), and requiring one dropped six maths questions.
 # Without the space the next character must start a word, so a line that opens
 # with a decimal such as "2.5 kg" is never read as question 2.
-QNUM = re.compile(r'^(\d{1,3})[\.\)](?:\s+|(?=[A-Za-z(√∆∠|]))(.*)$')
+QNUM = re.compile(r'^(\d{1,3})[\.\)](?:\s+|(?=[A-Za-z(√∆∠|‘“"]))(.*)$')
 
 
 def psfx(paper):
@@ -414,7 +423,9 @@ def extract(cfg):
         """True when a paragraph starts something rather than continuing it."""
         return (year_header(t, subject) is not None
                 or QNUM.match(t) is not None
-                or stem_range(t) is not None)
+                or stem_range(t) is not None
+                or (len(t) < 60 and re.match(r'(TEST\s+OF\s+ORALS?\b|SECTION\s+\w+$|OBJECTIVE\b)', t, re.I)
+                    is not None))
 
     i = -1
     while i + 1 < len(paras):
@@ -486,6 +497,12 @@ def extract(cfg):
                     look = (look.rstrip() + ' ' + paras[j]).strip()
                     if n_opts(look) >= 2:
                         took = j
+                        # Options split over lines ("A. x B. y" then "C. z D. w"):
+                        # take the lines that carry on the run.
+                        while (took + 1 < len(paras) and not is_new_block(paras[took + 1])
+                               and re.match(rf'^\(?{chr(65 + n_opts(look))}[\.\)]', paras[took + 1], re.I)):
+                            took += 1
+                            look = (look.rstrip() + ' ' + paras[took]).strip()
                         break
                 if took is None:
                     took = min(j, i + 3)
@@ -499,8 +516,8 @@ def extract(cfg):
             # number is the next one.
             dpos = [m.end() for m in OPT_STYLE_LOOSE.finditer(body) if m.group(1).upper() == 'D']
             if dpos:
-                g = re.compile(rf'(?<!\d){qnum + 1}\s?[\.\)]\s*(?=[A-Z‘“"(])').search(body, dpos[0])
-                if g:
+                g = re.compile(rf'(?<!\d){qnum + 1}\s?\.\s*(?=[A-Z‘“"])').search(body, dpos[0])
+                if g and len(body[g.end():].split()) >= 3:
                     rest = body[g.start():].strip()
                     # Cut it off either way; give it its own paragraph only when
                     # it has words of its own and is not typed again just below.

@@ -224,6 +224,10 @@ def _log_argument(m):
     log₃²⁷ says (log₃)^27. In every case in the sources it is the argument."""
     base, arg = m.group(1), m.group(2)
     arg = arg[2:-1] if arg.startswith('^(') else arg[1:] if arg.startswith('^') else ''.join(_UNSUP[c] for c in arg)
+    # An argument with an operator keeps its brackets: log₃ˣ⁺¹ is log₃(x+1),
+    # not (log₃ x)+1.
+    if re.search(r'[+\-−*/×÷\s]', arg) and not (arg.startswith('(') and arg.endswith(')')):
+        arg = f'({arg})'
     return f'log{base}' + (arg if arg.startswith('(') else ' ' + arg)
 
 
