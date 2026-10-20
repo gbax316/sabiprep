@@ -143,6 +143,11 @@ def stem_range(text):
         m = re.search(r'\bin\s+(?:each\s+of\s+)?(?:the\s+)?questions?\s+'
                       r'(\d+\s*(?:-|–|to|and)\s*\d+(?:\s*(?:,|and)\s*\d+)*)', text, re.I)
     if not m:
+        # The literature texts in the UTME English papers: "Questions 11 to 15
+        # are based on Jerry Agada's The Successors."
+        m = re.search(r'^questions?\s+(\d+\s*(?:-|–|to|and)\s*\d+(?:\s*(?:,|and)\s*\d+)*)'
+                      r'\s+(?:are|is)\s+(?:based|drawn|taken)\s+(?:on|from)\b', text, re.I)
+    if not m:
         return None
     tail = m.group(1)
 
@@ -209,13 +214,29 @@ OPT_STYLE_LOOSE = re.compile(r'(?:(?<=\s)|^)([A-Ea-e])[\.\)]\s*')
 
 
 def _run_from(marks):
-    """Longest ascending run of option letters starting at A, no gaps."""
-    run, expect = [], 'A'
-    for start, end, letter in marks:
-        if letter.upper() == expect:
-            run.append((start, end, expect))
-            expect = chr(ord(expect) + 1)
-    return run
+    """Longest ascending run of option letters starting at A, no gaps. A run in
+    one letter case wins a tie with a mixed one: a maths variable is not a
+    label, and "the points M(−1, a) and N(2, −2) ... A. −2 B. −1" once opened
+    option A at "a)". Mixed runs still count, because typists do mix
+    ("A. biennials b. perennials C. annuals")."""
+    best = []
+    for same_case in (str.isupper, str.islower, lambda c: True):
+        run, expect = [], 'A'
+        for start, end, letter in marks:
+            if not same_case(letter):
+                continue
+            if letter.upper() == expect:
+                run.append((start, end, expect))
+                expect = chr(ord(expect) + 1)
+            elif len(run) == 1 and letter.upper() == 'A' and start != run[0][1]:
+                # A second A before any B: the first was in the stem ("from
+                # point A. Calculate", "an A.P.", "A. H. Mohammed's"). The
+                # options start at the later one. A twin straight after it is
+                # settled in split_options.
+                run = [(start, end, 'A')]
+        if len(run) > len(best):
+            best = run
+    return best
 
 
 def split_options(body):
@@ -246,6 +267,18 @@ def split_options(body):
     if len(best) < 2:
         return body.strip(), {}, 'only-one-option'
 
+    # A label straight after a twin of itself: "that of B. B. the pressure"
+    # (a point named B ends option A, the label is the second) against
+    # "propounded by A. A. V. Dicey" (the label, then a name's initial). A
+    # name follows the second when it is the initial.
+    rx = OPT_STYLES.get(best_style, OPT_STYLE_LOOSE)
+    marks = list(rx.finditer(body))
+    for n, (start, end, letter) in enumerate(best):
+        twin = next((m for m in marks if m.start() == end and m.group(1).upper() == letter), None)
+        nxt_start = best[n + 1][0] if n + 1 < len(best) else len(body)
+        if twin and twin.end() < nxt_start and not re.match(r'[A-Z][a-z]|[A-Z]\.', body[twin.end():]):
+            best[n] = (twin.start(), twin.end(), letter)
+
     stem = body[:best[0][0]].strip()
     opts = {}
     for i, (start, end, letter) in enumerate(best):
@@ -253,10 +286,25 @@ def split_options(body):
         opts[letter] = body[end:stop].strip().rstrip('.').strip()
 
     problem = None
+    # A label typed twice ("B. release of carbon (IV) oxide. B. release of
+    # oxygen") leaves which text belongs to which letter a guess. Counted in
+    # the run's own letter case, so "√(b/a)" and "(a, b)" in an upper-case
+    # paper are not labels; and a mark touching another ("B. A. Lavoisier",
+    # "Vitamin B. C. Vitamin E", "9600 C. B. 48250") is an initial or a unit.
+    spans = {(s0, e0) for s0, e0, _ in best}
+    cases = {m.group(1).isupper() for m in marks if (m.start(), m.end()) in spans}
+    touching = {n for n in range(len(marks)) for k in (n - 1, n + 1)
+                if 0 <= k < len(marks) and (marks[k].end() == marks[n].start() or marks[n].end() == marks[k].start())}
+    repeated = [m for n, m in enumerate(marks)
+                if m.start() > best[0][0] and (m.start(), m.end()) not in spans and n not in touching
+                and m.group(1).upper() in {l for _, _, l in best}
+                and (len(cases) > 1 or m.group(1).isupper() in cases)]
     if not stem:
         problem = 'empty-stem'
     elif any(not v for v in opts.values()):
         problem = 'empty-option'
+    elif repeated:
+        problem = 'repeated-option-label'
     return stem, opts, problem
 
 
@@ -306,6 +354,10 @@ def apply_correction(it, c, diagrams, root):
     # An entry can carry a person's key and a label repair together.
     if c.get('key'):
         it['official_key'] = c['key']
+    if c['kind'] == 'hold':
+        # The typed text cannot be trusted as it stands (two questions run
+        # together, say). It stays separated with the reason a person gave.
+        it['held_by_correction'] = c.get('reason', 'held by a person')
     if c['kind'] == 'options-as-images':
         it['options_are_images'] = True
         it['option_image_files'] = [os.path.relpath(p, root or '.')
@@ -323,6 +375,13 @@ def apply_correction(it, c, diagrams, root):
             return 'correction-unparsed'
         it.update(stem=stem, options=opts, option_count=len(opts), raw=body, extract_problem=None)
     return None
+
+
+# A question opens with its number. Typists sometimes leave no space after it
+# ("4.Express in index form"), and requiring one dropped six maths questions.
+# Without the space the next character must start a word, so a line that opens
+# with a decimal such as "2.5 kg" is never read as question 2.
+QNUM = re.compile(r'^(\d{1,3})[\.\)](?:\s+|(?=[A-Za-z(√∆∠|]))(.*)$')
 
 
 def psfx(paper):
@@ -349,11 +408,12 @@ def extract(cfg):
     # opens its own paper, keyed (year, paper), and the repeat is reported.
     paper_count, headers = {}, []
     paper = 1
+    oral_papers, paper_name = set(), None
 
     def is_new_block(t):
         """True when a paragraph starts something rather than continuing it."""
         return (year_header(t, subject) is not None
-                or re.match(r'^\d{1,3}[\.\)]\s', t) is not None
+                or QNUM.match(t) is not None
                 or stem_range(t) is not None)
 
     i = -1
@@ -369,36 +429,94 @@ def extract(cfg):
             headers.append({'para': i, 'year': year, 'paper': paper, 'text': text[:60]})
             pending_stems = []
             inferred = None
+            paper_name = None
+            continue
+        # WAEC English prints its Test of Orals after the objective paper under
+        # the same year, numbered from 1 again. It is WAEC's own Paper 3, so it
+        # opens paper 3 of that year (4 for a year whose header repeats).
+        # Without this every oral question was dropped as a duplicate number.
+        if year is not None and len(text) < 60 and re.search(r'\bTEST\s+OF\s+ORALS?\b', text, re.I):
+            paper = 2 + paper_count[year]
+            if (year, paper) in oral_papers:
+                raise SystemExit(f'{year}: a second Test of Orals under one header (para {i})')
+            oral_papers.add((year, paper))
+            paper_name = 'Test of Orals'
+            headers.append({'para': i, 'year': year, 'paper': paper, 'text': text[:60], 'oral': True})
+            pending_stems = []
+            inferred = None
             continue
         if re.fullmatch(r'(OBJECTIVE\s+QUESTIONS?|SECTION\s+[AB]\b.*)', text, re.I):
             continue
         if year is None:
             continue
 
-        qm = re.match(r'^(\d{1,3})[\.\)]\s+(.*)$', text)
+        qm = QNUM.match(text)
+        if qm and (year, paper, int(qm.group(1))) in seen:
+            # A number this paper has already used is not a question. Poems
+            # print line numbers ("5. Or I'd fall supine"), and reading one as
+            # question 5 swallowed the poem's next lines. It reads as text.
+            problems.append({'kind': 'duplicate-question-number', 'year': year,
+                             'paper': paper, 'q': int(qm.group(1)), 'para': i, 'text': text[:120]})
+            # One that carries its own options is a mistyped question, kept out
+            # as before rather than read as a passage.
+            if len({m.group(1).upper() for m in OPT_STYLE_LOOSE.finditer(qm.group(2))}) >= 3:
+                continue
+            # "13. Use the passage below to answer questions 19 to 21": the stray
+            # number is no part of the passage.
+            if stem_range(qm.group(2)):
+                text = qm.group(2)
+            qm = None
         if qm:
             qnum = int(qm.group(1))
             body = qm.group(2)
 
-            # A question whose options sit on the following paragraph. Absorb up
-            # to two continuation lines, but only lines that start nothing of
-            # their own, so a stem or the next question is never swallowed.
-            merged = 0
-            while merged < 2 and len(_run_from(
-                    [(m.start(), m.end(), m.group(1))
-                     for rx in OPT_STYLES.values() for m in rx.finditer(body)])) < 2:
-                nxt = i + 1
-                if nxt >= len(paras) or is_new_block(paras[nxt]):
-                    break
-                body = (body.rstrip() + ' ' + paras[nxt]).strip()
-                i = nxt
-                merged += 1
+            # A question whose options sit on the paragraphs after it. Look up
+            # to six lines ahead, through lines that start nothing of their own,
+            # and take them up to the line that completes the options: a logic
+            # question puts p, q and then the options on lines of their own, a
+            # poem extract runs four lines before its options. Where no options
+            # turn up, at most three lines are taken.
+            def n_opts(s):
+                return len(_run_from([(m.start(), m.end(), m.group(1))
+                                      for rx in OPT_STYLES.values() for m in rx.finditer(s)]))
+            if n_opts(body) < 2:
+                j, look, took = i, body, None
+                while j + 1 < len(paras) and j - i < 6 and not is_new_block(paras[j + 1]):
+                    j += 1
+                    look = (look.rstrip() + ' ' + paras[j]).strip()
+                    if n_opts(look) >= 2:
+                        took = j
+                        break
+                if took is None:
+                    took = min(j, i + 3)
+                body = ' '.join([body.rstrip()] + paras[i + 1:took + 1]).strip()
+                i = took
+
+            # The next question typed onto this one's last option ("D. Paniel.20.
+            # Joseph's intelligence was revealed when he A. ..."). Split it back
+            # off, so neither question loses its options and the next one is
+            # not dropped. Only after this question's own D, and only where the
+            # number is the next one.
+            dpos = [m.end() for m in OPT_STYLE_LOOSE.finditer(body) if m.group(1).upper() == 'D']
+            if dpos:
+                g = re.compile(rf'(?<!\d){qnum + 1}\s?[\.\)]\s*(?=[A-Z‘“"(])').search(body, dpos[0])
+                if g:
+                    rest = body[g.start():].strip()
+                    # Cut it off either way; give it its own paragraph only when
+                    # it has words of its own and is not typed again just below.
+                    again = any((qm2 := QNUM.match(paras[k])) and int(qm2.group(1)) == qnum + 1
+                                for k in range(i + 1, min(i + 4, len(paras))))
+                    # And only when this question kept options of its own: "A. B. C.
+                    # D.30. Which ... A. powdered carbon" is question 29's options
+                    # typed under 30, and splitting would give them to 30.
+                    head = split_options(body[:g.start()])[1]
+                    if (not again and sum(1 for v in head.values() if v) >= 2
+                            and len(re.sub(r'[A-E][\.\)]|[\s\d.]', '', rest)) > 3):
+                        paras.insert(i + 1, rest)
+                    body = body[:g.start()].strip()
+                    problems.append({'kind': 'next-question-split-off', 'year': year, 'q': qnum, 'para': i})
 
             key = (year, paper, qnum)
-            if key in seen:
-                problems.append({'kind': 'duplicate-question-number', 'year': year,
-                                 'paper': paper, 'q': qnum, 'para': i, 'text': text[:120]})
-                continue
             seen.add(key)
 
             stem, opts, problem = split_options(body)
@@ -436,6 +554,7 @@ def extract(cfg):
                 'exam_type': EXAM_TYPE_MAP.get(exam_brand, exam_brand),
                 'year': year,
                 'paper': paper,
+                'paper_name': paper_name,
                 'q_number': qnum,
                 'stem': stem,
                 'options': opts,
@@ -537,10 +656,11 @@ def extract(cfg):
     # never applied automatically.
     present = {h['year'] for h in headers}
     repeats = []
-    for n, h in enumerate(headers):
+    year_heads = [h for h in headers if not h.get('oral')]
+    for n, h in enumerate(year_heads):
         if h['paper'] == 1:
             continue
-        nxt = headers[n + 1]['year'] if n + 1 < len(headers) else None
+        nxt = year_heads[n + 1]['year'] if n + 1 < len(year_heads) else None
         cand = h['year'] - 1
         if cand not in present and (nxt is None or nxt < cand):
             guess, why = cand, f'no {cand} header in the file, and this sits where {cand} belongs in descending order'
@@ -601,6 +721,14 @@ def extract(cfg):
     for it in items:
         it['needs_human'] = False
         it['anomaly'] = None
+        if it.get('held_by_correction'):
+            it['needs_human'] = True
+            it['anomaly'] = 'source-damaged'
+            continue
+        if it.get('extract_problem') == 'repeated-option-label':
+            it['needs_human'] = True
+            it['anomaly'] = 'option-letter-damaged'
+            continue
         if it.get('options_are_images'):
             # The paper prints the options as drawings. The import has text
             # options only, so these wait for image options in the app.

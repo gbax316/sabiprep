@@ -214,8 +214,28 @@ def math_text(snippet, ns_decls):
     return ''.join(render(c) for c in root)
 
 
+_UNSUP = dict(zip('⁰¹²³⁴⁵⁶⁷⁸⁹ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻ⁽⁾⁻⁺',
+                   '0123456789abcdefghijklmnoprstuvwxyz()−+'))
+
+
+def _log_argument(m):
+    """'log₃²⁷' -> 'log₃ 27'. The typists set a logarithm's argument as a
+    superscript beside its subscript base, so read literally it is a power:
+    log₃²⁷ says (log₃)^27. In every case in the sources it is the argument."""
+    base, arg = m.group(1), m.group(2)
+    arg = arg[2:-1] if arg.startswith('^(') else arg[1:] if arg.startswith('^') else ''.join(_UNSUP[c] for c in arg)
+    return f'log{base}' + (arg if arg.startswith('(') else ' ' + arg)
+
+
 def normalise(text):
     text = text.replace('─', MINUS)
+    text = re.sub(r'log\s?([₀₁₂₃₄₅₆₇₈₉ₐₑₒₓₕₖₗₘₙₚₛₜ]+|_\((?:[^()]|\([^()]*\))*\))(\^\((?:[^()]|\([^()]*\))*\)|\^[\w.]+|[⁰¹²³⁴⁵⁶⁷⁸⁹ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻ⁽⁾⁻⁺]+)',
+                  _log_argument, text)
+    # A degree mark set as a superscript: "6^°" is 6°.
+    text = text.replace('^°', '°')
+    # "∫ sin8xdx": the differential reads apart from the integrand.
+    if '∫' in text:
+        text = re.sub(r'(?<=[x)\d²³⁴])d([xyθtu])\b', r' d\1', text)
     # Naira typed as "#": keyboards have no naira key. 89 times across the
     # UTME files, always before a number, and "#" is used for nothing else.
     return re.sub(r'#\s?(?=\d)', '₦', text)

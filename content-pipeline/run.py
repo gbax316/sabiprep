@@ -853,6 +853,11 @@ FUNCS = {'derive': s_derive, 'compare': s_compare, 'third': s_third, 'settle': s
 
 def blocked_reason(cfg, unit):
     year, paper = parse_unit(unit)
+    # A Test of Orals is paper 2 + its header's paper (extract.py): its year is
+    # as sure as the objective paper printed above it.
+    if cfg.get('oral_papers') and paper >= 3:
+        paper -= 2
+        unit = unit_name(year, paper)
     if paper > 1 and unit not in cfg.get('papers_confirmed', {}):
         return ('a second paper under one year header; its true year is unconfirmed (CON-08). '
                 'Confirm it, then list it under papers_confirmed in the config')
