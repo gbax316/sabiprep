@@ -1367,7 +1367,9 @@ def cmd_runall(workers, budget, redo_tag):
             if rec.get('status') == 'done' and rec.get('redone') != redo_tag:
                 jobs.append({'slug': slug, 'unit': u, 'year': y, 'from': 'derive'})
             elif rec.get('status') != 'done':
-                jobs.append({'slug': slug, 'unit': u, 'year': y, 'from': None})
+                # A paper stopped partway on text the extractor has since
+                # changed carries rerun_from, so it does not resume on old work.
+                jobs.append({'slug': slug, 'unit': u, 'year': y, 'from': rec.get('rerun_from')})
     jobs.sort(key=lambda j: (-j['year'], j['slug'], j['unit']))
     # Spend is counted per finished paper, from that paper's own stage costs.
     # A re-run from derive deletes the old stage records, so a difference of
@@ -1418,6 +1420,7 @@ def cmd_runall(workers, budget, redo_tag):
                 spent[0] += sum(x.get('cost_usd', 0) for x in urec.get('stages', {}).values())
                 if ok:
                     urec['redone'] = redo_tag
+                    urec.pop('rerun_from', None)
                     save_state(st)
                 j.update(status='done' if ok else 'failed', ended=now(), rc=rc)
                 active.discard(j['slug'])
@@ -1431,6 +1434,9 @@ def cmd_runall(workers, budget, redo_tag):
         t.join()
     save()
     left = sum(1 for j in jobs if 'status' not in j)
+    # The bank is rebuilt from what the run produced, and checked against the
+    # build before it (bank/).
+    subprocess.call([sys.executable, '-m', 'bank'], cwd=HERE, env={**os.environ, 'PYTHONIOENCODING': 'utf8'})
     print(f"finished: {sum(j.get('status') == 'done' for j in jobs)} done, "
           f"{sum(j.get('status') == 'failed' for j in jobs)} failed, {left} not started; "
           f"spent ${spent[0]:.2f}")

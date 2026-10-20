@@ -216,3 +216,37 @@ loses it. `ingest_review_doc.py` reads the returned document; the same round tri
 sat unused in the older folders. The questions they belong to are separated until the app
 can show image options (a v2 requirement), not exported with empty options.
 
+
+## D10: The question bank is built from the pipeline, never edited in place (2026-10-20)
+
+Orezi asked that the papers be stored so they are easy to access, connect, edit, query and
+save in recognisable patterns; that as years are added they connect, so patterns, predictions
+and new questions can be drawn from order and year; that answers, hints and solutions are in
+steps and simple language; and that new questions go through the same structure, with a
+builder that is self-improving, robust, segmented and specific.
+
+**One file, one key per question.** `python -m bank` builds `out/bank/sabiprep-bank.sqlite`:
+papers, passages, questions, the syllabus trees, and each solution broken into its parts
+(answer, principle, each working step, why each other option is wrong, exam tip). A question's
+key is what the paper prints: `wassce-mathematics-2024-p1-q08`. Topics and subtopics are keyed
+by subject as well, because trees reuse ids. Views give each subtopic's record across years,
+the subtopics nothing covers yet, and stems repeated across papers. *Rejected:* more CSVs per
+paper, which cannot be joined across years.
+
+**Edits go to the source, never the bank.** A change is a correction or a source fix, then a
+rebuild, so the bank never drifts from what the pipeline checked. New papers, years and
+subjects enter only through a config and the pipeline. *Rejected:* an editable bank, which
+would need its edits merged back into the pipeline by hand and would hold questions that never
+passed the checks.
+
+**It checks itself and reports, a person fixes.** Every question meets the checks in
+`bank/contract.py`; each build is measured and compared with the last, and a check that starts
+failing or fails more becomes a finding naming where its fix goes (extractor, teaching
+standard, correction, tree). Targets are first guesses until the full run sets a baseline:
+every source question in the bank, every passed question meeting the contract, working shown
+in steps for every calculated answer, 95% of solutions with no sentence over 30 words.
+*Rejected:* the bank repairing questions itself, which would be a second author nobody checks.
+
+**The bank's tables are the v2 content tables.** PLAN.md's papers and questions-with-position,
+plus the passages table the old app lacked. The Postgres migration is written from them when
+the redesign starts.

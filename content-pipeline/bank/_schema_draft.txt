@@ -1,0 +1,54 @@
+SCHEMA = """
+CREATE TABLE subjects (subject TEXT PRIMARY KEY, name TEXT NOT NULL);
+CREATE TABLE exams (exam TEXT PRIMARY KEY, name TEXT NOT NULL);
+CREATE TABLE topics (topic_id TEXT PRIMARY KEY, subject TEXT NOT NULL REFERENCES subjects,
+                     name TEXT NOT NULL, part TEXT, syllabus TEXT, position INTEGER);
+CREATE TABLE subtopics (subtopic_id TEXT PRIMARY KEY, topic_id TEXT NOT NULL REFERENCES topics,
+                        name TEXT NOT NULL, syllabus TEXT, covers TEXT, position INTEGER);
+CREATE TABLE papers (paper_key TEXT PRIMARY KEY, exam TEXT NOT NULL REFERENCES exams,
+                     subject TEXT NOT NULL REFERENCES subjects, year INTEGER NOT NULL,
+                     paper_no INTEGER NOT NULL, paper_name TEXT NOT NULL, pipeline_slug TEXT NOT NULL,
+                     question_count INTEGER NOT NULL, run_status TEXT NOT NULL,
+                     UNIQUE (exam, subject, year, paper_no));
+CREATE TABLE passages (passage_key TEXT PRIMARY KEY, paper_key TEXT NOT NULL REFERENCES papers,
+                       kind TEXT NOT NULL, text TEXT NOT NULL, first_question INTEGER, last_question INTEGER);
+CREATE TABLE questions (question_key TEXT PRIMARY KEY, paper_key TEXT NOT NULL REFERENCES papers,
+                        position INTEGER NOT NULL, passage_key TEXT REFERENCES passages,
+                        stem TEXT NOT NULL, option_a TEXT, option_b TEXT, option_c TEXT, option_d TEXT,
+                        option_e TEXT, options_are_images INTEGER NOT NULL DEFAULT 0, diagram_files TEXT,
+                        answer TEXT, answer_basis TEXT, paper_key_letter TEXT,
+                        status TEXT NOT NULL CHECK (status IN ('passed', 'separated', 'waiting')),
+                        separated_why TEXT, subtopic_id TEXT REFERENCES subtopics, difficulty TEXT,
+                        hint1 TEXT, hint2 TEXT, hint3 TEXT, solution TEXT,
+                        UNIQUE (paper_key, position));
+CREATE TABLE solution_parts (question_key TEXT NOT NULL REFERENCES questions, ord INTEGER NOT NULL,
+                             part TEXT NOT NULL CHECK (part IN ('answer', 'principle', 'step', 'why_not', 'tip')),
+                             option TEXT, text TEXT NOT NULL, PRIMARY KEY (question_key, ord));
+CREATE INDEX q_subtopic ON questions (subtopic_id);
+CREATE INDEX q_status ON questions (status);
+CREATE INDEX p_year ON papers (subject, exam, year);
+
+CREATE VIEW topic_by_year AS
+  SELECT p.subject, p.exam, t.topic_id, t.name AS topic, s.subtopic_id, s.name AS subtopic, p.year,
+         SUM(q.status = 'passed') AS passed, SUM(q.status = 'separated') AS separated
+  FROM questions q JOIN papers p USING (paper_key)
+  JOIN subtopics s ON s.subtopic_id = q.subtopic_id JOIN topics t ON t.topic_id = s.topic_id
+  GROUP BY p.subject, p.exam, s.subtopic_id, p.year;
+
+CREATE VIEW subtopic_history AS
+  SELECT subject, exam, topic, subtopic, subtopic_id,
+         COUNT(DISTINCT year) AS years_examined, MIN(year) AS first_year, MAX(year) AS last_year,
+         (SELECT MAX(year) FROM papers p2 WHERE p2.subject = tby.subject AND p2.exam = tby.exam) - MAX(year)
+           AS years_since,
+         SUM(passed + separated) AS questions,
+         GROUP_CONCAT(year || ':' || (passed + separated), ' ') AS per_year
+  FROM (SELECT * FROM topic_by_year ORDER BY year) tby
+  GROUP BY subject, exam, subtopic_id;
+
+CREATE VIEW repeated_stems AS
+  SELECT LOWER(TRIM(q.stem)) AS stem, COUNT(*) AS papers, GROUP_CONCAT(q.question_key, ' ') AS questions
+  FROM questions q WHERE LENGTH(q.stem) > 40
+  GROUP BY LOWER(TRIM(q.stem)) HAVING COUNT(DISTINCT q.paper_key) > 1;
+"""
+
+EXAM_NAMES = {'WASSCE': 'WAEC West African Senior School Certificate Examination',

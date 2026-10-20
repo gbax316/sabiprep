@@ -27,6 +27,31 @@ def jload(p, default=None):
     return json.load(open(p, encoding='utf8')) if os.path.exists(p) else default
 
 
+def unit_rows(slug, items, y, p, held):
+    """The passed rows of one paper, keyed by question number, or None when the
+    paper has not been exported yet. The export writes rows in question order,
+    skipping what it held, so each row's question number is recoverable. The
+    review batch can hold a question the export let through (the teaching
+    author doubts the key, a damaged option letter): the sort is the last word,
+    so such a row is left out."""
+    u = unit_name(y, p)
+    csvp = next((x for x in (os.path.join(OUT, f'{slug}.{u}.import.csv'),
+                             os.path.join(OUT, f'{slug}.{u}.PREVIEW.csv')) if os.path.exists(x)), None)
+    if not csvp or not os.path.exists(os.path.join(OUT, f'{slug}.final.{u}.json')):
+        return None
+    with open(csvp, encoding='utf-8-sig', newline='') as fh:
+        rd = csv.DictReader(fh)
+        header = rd.fieldnames
+        got = list(rd)
+    exp_held = {h['q_number'] for h in jload(os.path.join(OUT, f'{slug}.{u}.held.json'), [])}
+    qs = [i['q_number'] for i in sorted((i for i in items if i['year'] == y and i.get('paper', 1) == p),
+                                       key=lambda i: i['q_number']) if i['q_number'] not in exp_held]
+    if len(qs) != len(got):
+        raise SystemExit(f'{slug} {u}: {len(got)} rows but {len(qs)} unheld questions; re-run the export')
+    rows = {qn: row for qn, row in zip(qs, got) if f'{slug}:{u}:{qn}' not in held}
+    return {'rows': rows, 'header': header, 'csv': csvp}
+
+
 def main():
     os.makedirs(SORTED, exist_ok=True)
     queue = jload(os.path.join(OUT, 'review-queue.json'), {'items': []})['items']
@@ -43,30 +68,15 @@ def main():
         for y, p in units(slug):
             u = unit_name(y, p)
             n = sum(1 for i in items if i['year'] == y and i.get('paper', 1) == p)
-            csvp = next((x for x in (os.path.join(OUT, f'{slug}.{u}.import.csv'),
-                                     os.path.join(OUT, f'{slug}.{u}.PREVIEW.csv')) if os.path.exists(x)), None)
-            if not csvp or not os.path.exists(os.path.join(OUT, f'{slug}.final.{u}.json')):
+            got = unit_rows(slug, items, y, p, held)
+            if got is None:
                 sep = [r for k, r in held.items() if k.startswith(f'{slug}:{u}:')]
                 c['separated'] += len(sep)
                 c['waiting'] += n - len(sep)
                 for r in sep:
                     reasons.update({x['kind'] for x in r['reasons']})
                 continue
-            with open(csvp, encoding='utf-8-sig', newline='') as fh:
-                rd = csv.DictReader(fh)
-                header = rd.fieldnames
-                got = list(rd)
-            # The export writes rows in question order, skipping what it held,
-            # so each row's question number is recoverable. The review batch can
-            # hold a question the export let through (the teaching author doubts
-            # the key, a damaged option letter): the sort is the last word, so
-            # such a row leaves the passed file and counts as separated.
-            exp_held = {h['q_number'] for h in jload(os.path.join(OUT, f'{slug}.{u}.held.json'), [])}
-            qs = [i['q_number'] for i in sorted((i for i in items if i['year'] == y and i.get('paper', 1) == p),
-                                               key=lambda i: i['q_number']) if i['q_number'] not in exp_held]
-            if len(qs) != len(got):
-                raise SystemExit(f'{slug} {u}: {len(got)} rows but {len(qs)} unheld questions; re-run the export')
-            got = [row for qn, row in zip(qs, got) if f'{slug}:{u}:{qn}' not in held]
+            got, header, csvp = list(got['rows'].values()), got['header'], got['csv']
             rows += got
             uploads.update(jload(csvp.replace('.import.csv', '.uploads.json').replace('.PREVIEW.csv', '.PREVIEW.uploads.json'), {}))
             c['passed'] += len(got)

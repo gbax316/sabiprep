@@ -63,3 +63,6 @@ content-pipeline/syllabi/
 content-pipeline/out/review-queue.json
 content-pipeline/out/review-batch.html
 content-pipeline/out/gates.html
+
+# The question bank is a build product (python -m bank); its reports are kept.
+content-pipeline/out/bank/*.sqlite*

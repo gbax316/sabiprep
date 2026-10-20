@@ -317,6 +317,24 @@ second lane: about $1,200, and about a day of run time. Spend is in `run.py stat
       most), and re-export English WAEC 2023 (passage ids renumbered, content the same). The
       run stopped 2026-10-16 02:50 with 60 papers done, 7 cut off mid-run, 3 failed.
 
+### The question bank (D10)
+
+- [x] **BANK-01** `python -m bank`: every paper, passage and question in one SQLite file with
+      a permanent key, solutions in parts, pattern views, per-question checks, and a report
+      compared with the last build. First build 2026-10-20: 10,456 of 10,456 questions, 2,344
+      passed, 99.9% of passed meeting the contract. Rebuilt at the end of every run.
+- [ ] **BANK-02** Plain language: 553 of 2,344 passed solutions (24%) carry a sentence over 30
+      words. Tighten the teaching standard's sentence rule and let the review stage enforce it,
+      then measure again. Target 95% clean.
+- [ ] **BANK-03** Two passed questions break the contract (no answer line or no reasons
+      against the other options: Agricultural Science WASSCE 2025 Q49, Literature UTME 2025
+      Q23). Both papers are re-running; check them after.
+- [ ] **BANK-04** When the run finishes: the pattern report per subject (subtopics by year,
+      how long since each was examined, gaps on the tree), for Orezi to read before any
+      prediction is built on it.
+- [ ] **BANK-05** The v2 content migration, written from the bank's tables (D10), when the
+      redesign starts.
+
 ---
 
 ## Needs an answer a console holds
@@ -338,6 +356,10 @@ actually lives.
 ---
 
 ## Deferred
+
+- **BANK-06** New practice questions formed from the patterns (PLAN.md `question_variants`,
+  nothing unreviewed served). Parked until the full run fills the bank and BANK-04 is read:
+  three years of data cannot show a pattern worth predicting from.
 
 Parked deliberately. D1 in `decisions.md` accepts the whole of the old app's remaining risk
 until v2 replaces it, and `RETROFIT.md` carries the full "deliberately not doing" table. Only
