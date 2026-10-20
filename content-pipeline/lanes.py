@@ -13,13 +13,45 @@ so a same-family review or a same-family answer agreement is visible in the
 evidence and at the gate, and can be re-run on Codex later.
 """
 
-import json, os, re, shutil, subprocess, tempfile, time, uuid
+import datetime, json, os, re, shutil, subprocess, tempfile, time, uuid
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PIPE = json.load(open(os.path.join(HERE, 'pipeline.json'), encoding='utf8'))
 
 
+# Codex out of usage does not always fail fast: a call carrying a schema and
+# images hung for its full timeout (15 minutes) each time, and a paper spent an
+# hour in derive (2026-10-20). The first usage-limit message records when Codex
+# is back; until then every call goes straight to the Claude lane.
+OUT_UNTIL = os.path.join(HERE, 'work', '_lanes', 'codex-out-until.txt')
+
+
+def codex_out():
+    try:
+        until = datetime.datetime.fromisoformat(open(OUT_UNTIL, encoding='utf8').read().strip())
+    except (OSError, ValueError):
+        return None
+    return until if datetime.datetime.now() < until else None
+
+
+def note_limit(text):
+    """'try again at Oct 21st, 2026 12:02 AM' -> remember it (an hour on if unreadable)."""
+    if 'usage limit' not in (text or ''):
+        return
+    m = re.search(r'try again at (\w+) (\d+)\w*, (\d{4}) (\d+):(\d+) ([AP]M)', text)
+    try:
+        mon, day, year, hh, mm, ap = m.groups()
+        until = datetime.datetime.strptime(f'{mon} {day} {year} {hh}:{mm} {ap}', '%b %d %Y %I:%M %p')
+    except Exception:
+        until = datetime.datetime.now() + datetime.timedelta(hours=1)
+    os.makedirs(os.path.dirname(OUT_UNTIL), exist_ok=True)
+    open(OUT_UNTIL, 'w', encoding='utf8').write((until + datetime.timedelta(minutes=2)).isoformat(timespec='minutes'))
+
+
 def _codex(prompt, schema_path, images, timeout):
+    back = codex_out()
+    if back:
+        return None, f'Codex out of usage until {back:%H:%M}'
     with tempfile.NamedTemporaryFile('w+', suffix='.json', delete=False, encoding='utf8') as tf:
         last = tf.name
     cmd = ['codex', 'exec', '--skip-git-repo-check', '-s', 'read-only',
@@ -33,6 +65,7 @@ def _codex(prompt, schema_path, images, timeout):
         return json.loads(open(last, encoding='utf8').read().strip(), strict=False), ''
     except Exception as e:
         why = (proc.stderr or '')[-400:] if proc else ''
+        note_limit((proc.stderr or '') + (proc.stdout or '') if proc else '')
         return None, f'{type(e).__name__}: {e} {why}'.strip()
     finally:
         try:
