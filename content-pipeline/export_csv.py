@@ -183,7 +183,7 @@ def main():
     first, keep = {}, []
     for q, r in zip(row_q, rows):
         sig = (r['question_text'].strip().lower(), tuple(r[f'option_{k}'].strip().lower() for k in 'abcde'),
-               r['passage_id'])
+               r['passage_id'], tuple(items[q].get('diagram_files') or ()))
         if sig in first:
             held.append((q, 'repeated-question', f'the same question and options as Q{first[sig]} in this paper'))
         else:

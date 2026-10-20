@@ -508,6 +508,12 @@ def extract(cfg):
                     took = min(j, i + 3)
                 body = ' '.join([body.rstrip()] + paras[i + 1:took + 1]).strip()
                 i = took
+            # Options carried on to the next line ("1. Choose A. 1 B. 2" then
+            # "C. 3 D. 4"), whether or not the question line held some itself.
+            while (i + 1 < len(paras) and not is_new_block(paras[i + 1]) and 2 <= n_opts(body) < 5
+                   and re.match(rf'^\(?{chr(65 + n_opts(body))}[\.\)]', paras[i + 1], re.I)):
+                i += 1
+                body = (body.rstrip() + ' ' + paras[i]).strip()
 
             # The next question typed onto this one's last option ("D. Paniel.20.
             # Joseph's intelligence was revealed when he A. ..."). Split it back

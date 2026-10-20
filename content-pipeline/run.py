@@ -839,14 +839,19 @@ def field_ok(field, old, new, limit):
     unit, a "not" or a fact cannot go or come; only the joining and opening
     words of a split may. The solution keeps its answer line, the order of its
     parts and the options it argues against."""
-    from collections import Counter
-    if not (new or '').strip():
+    import difflib
+    if not isinstance(new, str) or not new.strip():
         return 'came back empty'
     if long_sentences([new] if field != 'solution' else [], new if field == 'solution' else '', limit):
         return f'still has a sentence over {limit} words'
-    a, b = Counter(words(old)), Counter(words(new))
-    gone = [w for w in (a - b).elements() if w not in JOINERS_OUT]
-    came = [w for w in (b - a).elements() if w not in OPENERS_IN]
+    # The words must read in the same order: "plants release oxygen and animals
+    # consume it" turned round has the same words and the opposite meaning.
+    a, b = words(old), words(new)
+    gone, came = [], []
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        if op != 'equal':
+            gone += [w for w in a[i1:i2] if w not in JOINERS_OUT]
+            came += [w for w in b[j1:j2] if w not in OPENERS_IN]
     if gone or came:
         return 'changed words, not only sentence breaks: ' + ', '.join(
             [f'-{w}' for w in gone[:4]] + [f'+{w}' for w in came[:4]])
@@ -896,7 +901,8 @@ def s_plain(ctx):
         if not isinstance(out, dict) or not isinstance(out.get('items'), list):
             return ['output.json is missing or has no items list']
         got = {x.get('q_number'): x for x in out['items'] if isinstance(x, dict)}
-        return [f'Q{q} {k} missing' for q, f in todo.items() for k in f if not str((got.get(q) or {}).get(k) or '').strip()]
+        return [f'Q{q} {k} missing or not text' for q, f in todo.items() for k in f
+                if not isinstance((got.get(q) or {}).get(k), str) or not got[q][k].strip()]
     # Language is never a reason to stop a paper: if the worker cannot produce a
     # usable split, the paper keeps its reviewed text and the bank reports it.
     try:
@@ -924,7 +930,12 @@ def s_plain(ctx):
         path = ctx.out('teaching-plain')
         jsave(path, {**{k: t[k] for k in ('subject', 'year', 'paper', 'taxonomy_version')},
                      'items': list(cand.values())})
-        rev = run_review(ctx, 'plain', path, 'plain')
+        try:
+            rev = run_review(ctx, 'plain', path, 'plain')
+        except Exception as e:
+            rev = {'reviews': {}}
+            ctx.log(f'  plain: the review did not run ({e}); every split keeps the reviewed text')
+        flat = lambda x: re.sub(r'\s+', ' ', x).strip().lower()
         for q, n in cand.items():
             r = rev['reviews'].get(str(q)) or {}
             # The word check already holds every fact, number and word in place,
@@ -933,6 +944,13 @@ def s_plain(ctx):
             # did not come back keeps the old text.
             if not r:
                 kept_old[q] = 'no review returned'
+                continue
+            # A fact error is the rewrite's unless every words it quotes stood
+            # in the reviewed text already.
+            quotes = re.findall(r'[“"]([^”"]{12,})[”"]', str(r.get('notes') or ''))
+            before = flat(' '.join(str(by[q].get(f) or '') for f in (*HINTS, 'solution')))
+            if r.get('fact_error') and not (quotes and all(flat(x) in before for x in quotes)):
+                kept_old[q] = 'the review found a fact error: ' + str(r.get('notes') or '')[:160]
                 continue
             accepted[q] = n
             if r.get('fact_error') or set(r.get('failed_checks') or []) - {10}:
@@ -1535,10 +1553,17 @@ def cmd_runall(workers, budget, redo_tag):
     # pace once meant stopping the driver and cutting papers off mid-run.
     control = os.path.join(logdir, 'control.json')
 
+    last_good = [{}]
+
     def limits():
-        c = jload(control, {}) or {}
-        return (min(int(c.get('workers', workers)), len(slugs)), float(c.get('budget', budget)),
-                bool(c.get('stop')))
+        # A file caught mid-save reads as the last good one, never as a crash.
+        try:
+            c = jload(control, {}) or {}
+            cap, cash, stop = min(int(c.get('workers', workers)), len(slugs)), float(c.get('budget', budget)), bool(c.get('stop'))
+            last_good[0] = (cap, cash, stop)
+        except Exception:
+            return last_good[0] or (workers, budget, False)
+        return cap, cash, stop
 
     def next_job():
         with lock:

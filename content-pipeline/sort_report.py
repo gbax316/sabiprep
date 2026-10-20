@@ -68,7 +68,10 @@ def main():
         for y, p in units(slug):
             u = unit_name(y, p)
             n = sum(1 for i in items if i['year'] == y and i.get('paper', 1) == p)
-            got = unit_rows(slug, items, y, p, held)
+            # A paper not finished now is not sorted from an old export (the
+            # bank does the same): mid re-run its rows are being rewritten.
+            done = (jload(os.path.join(HERE, 'state', f'{slug}.json'), {'units': {}})['units'].get(u) or {}).get('status')
+            got = unit_rows(slug, items, y, p, held) if done == 'done' else None
             if got is None:
                 sep = [r for k, r in held.items() if k.startswith(f'{slug}:{u}:')]
                 c['separated'] += len(sep)
