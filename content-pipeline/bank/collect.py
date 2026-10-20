@@ -61,15 +61,19 @@ def collect():
             u = unit_name(y, p)
             its = sorted((i for i in items if i['year'] == y and i.get('paper', 1) == p), key=lambda i: i['q_number'])
             pkey = paper_key(its[0]['exam_brand'], subj, y, p)
+            rstat = (state.get(u) or {}).get('status', 'not started')
             try:
-                got = unit_rows(slug, items, y, p, held)
+                # A paper not finished now is waiting, even with an old export on
+                # disk: mid re-run its answers and teaching are being rewritten,
+                # and reading the old rows beside them reports faults nobody made.
+                got = unit_rows(slug, items, y, p, held) if rstat == 'done' else None
             except SystemExit:
                 got = None               # extracted again since its export; the paper re-runs
             out['papers'].append({
                 'paper_key': pkey, 'exam': its[0]['exam_brand'], 'subject': subj, 'year': y, 'paper_no': p,
                 'paper_name': its[0].get('paper_name') or ('Objective' if p == 1 else 'Second paper, year to confirm'),
                 'pipeline_slug': slug, 'question_count': len(its),
-                'run_status': (state.get(u) or {}).get('status', 'not started')})
+                'run_status': rstat})
             final = jload(os.path.join(OUT, f'{slug}.final.{u}.json'), {'answers': {}})['answers']
             subs = {x['q_number']: x.get('subtopic_id')
                     for x in jload(os.path.join(OUT, f'{slug}.teaching.{u}.json'), {'items': []})['items']}
@@ -96,7 +100,7 @@ def collect():
                 f, row, hk = final.get(str(q), {}), rows.get(q), f'{slug}:{u}:{q}'
                 if row is not None:
                     status, why = 'passed', None
-                elif got is not None or hk in held:
+                elif got is not None or (hk in held and rstat == 'done'):
                     status = 'separated'
                     why = ('; '.join(r.get('detail') or r['kind'] for r in held[hk]['reasons']) if hk in held
                            else f.get('reason') or f.get('state') or 'held at export')
