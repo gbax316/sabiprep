@@ -323,9 +323,13 @@ second lane: about $1,200, and about a day of run time. Spend is in `run.py stat
       a permanent key, solutions in parts, pattern views, per-question checks, and a report
       compared with the last build. First build 2026-10-20: 10,456 of 10,456 questions, 2,344
       passed, 99.9% of passed meeting the contract. Rebuilt at the end of every run.
-- [ ] **BANK-02** Plain language: 553 of 2,344 passed solutions (24%) carry a sentence over 30
-      words. Tighten the teaching standard's sentence rule and let the review stage enforce it,
-      then measure again. Target 95% clean.
+- [x] **BANK-02** Plain language (2026-10-20): the standard now sets the limit (no sentence
+      over 30 words in hints or solutions, one idea each), and a plain stage before export
+      splits what runs over, kept only when every number, the answer line and the parts are
+      unchanged and Codex finds no new fault. Biology WASSCE 2023: 18 questions down to 4.
+      Measured on the wider definition (hints and prose working included): 642 of 2,344.
+- [ ] **BANK-02a** When the run ends, run `runall` once more: every paper finished before the
+      plain stage gets it (about 45 papers, about $1 each), then rebuild the bank and report.
 - [ ] **BANK-03** Two passed questions break the contract (no answer line or no reasons
       against the other options: Agricultural Science WASSCE 2025 Q49, Literature UTME 2025
       Q23). Both papers are re-running; check them after.
