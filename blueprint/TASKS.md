@@ -306,6 +306,16 @@ second lane: about $1,200, and about a day of run time. Spend is in `run.py stat
       likelier than a mislabelled earlier year. Chidera to confirm from the printed copies.
 - [ ] **SRC-04** 40 questions still name a diagram nobody has; second papers (239 questions)
       wait on their true year (CON-08).
+- [x] **SRC-06** (2026-10-20) Source files re-headed by Orezi with the year as Heading 1. Only
+      Government UTME's text changed: its second "2016" is now 2015, so it runs as 2015. English
+      UTME 2015, English WAEC 2016 and Maths UTME 2020 still repeat. CRS UTME has no 2018.
+- [x] **SRC-07** (2026-10-20) Test of Orals kept: it was dropped as duplicate numbers in every
+      WAEC English year (594 questions). It runs as paper 3 of its year. Audit of English
+      passages and maths notation fixed the extraction faults listed in commit b56ceb8; about
+      30 questions recovered across subjects, 10,456 in all.
+- [ ] **RUN-04** Re-run the 19 finished papers those fixes changed (Literature UTME 2023-2025
+      most), and re-export English WAEC 2023 (passage ids renumbered, content the same). The
+      run stopped 2026-10-16 02:50 with 60 papers done, 7 cut off mid-run, 3 failed.
 
 ---
 
