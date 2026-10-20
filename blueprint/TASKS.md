@@ -328,7 +328,7 @@ second lane: about $1,200, and about a day of run time. Spend is in `run.py stat
       splits what runs over, kept only when every number, the answer line and the parts are
       unchanged and Codex finds no new fault. Biology WASSCE 2023: 18 questions down to 4.
       Measured on the wider definition (hints and prose working included): 642 of 2,344.
-- [ ] **REV-05** Codex review of b56ceb8 to 8e40607 (extraction fixes, the bank, the plain
+- [x] **REV-05** (2026-10-21, Codex: seven findings, all fixed in 3168a32) Codex review of b56ceb8 to 8e40607 (extraction fixes, the bank, the plain
       stage) once its usage resets at 00:02 on 2026-10-21. Claude reviewed them meanwhile;
       its findings are fixed in 8e40607.
 - [ ] **RUN-05** The cap is raised (Orezi, 2026-10-20: "raise the cap if needed, keep running
