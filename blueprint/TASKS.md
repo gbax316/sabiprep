@@ -328,6 +328,14 @@ second lane: about $1,200, and about a day of run time. Spend is in `run.py stat
       splits what runs over, kept only when every number, the answer line and the parts are
       unchanged and Codex finds no new fault. Biology WASSCE 2023: 18 questions down to 4.
       Measured on the wider definition (hints and prose working included): 642 of 2,344.
+- [ ] **REV-05** Codex review of b56ceb8 to 8e40607 (extraction fixes, the bank, the plain
+      stage) once its usage resets at 00:02 on 2026-10-21. Claude reviewed them meanwhile;
+      its findings are fixed in 8e40607.
+- [ ] **RUN-05** The cap is raised (Orezi, 2026-10-20: "raise the cap if needed, keep running
+      everything"). A waiter starts a second `runall` with up to $400 more when the first pass
+      ends; it is not detached from the session, so if nothing follows the first pass, start it
+      by hand (work/continue_after.py). Failed papers so far are connection drops and the
+      Codex outage, which the second pass resumes.
 - [ ] **BANK-02a** When the run ends, run `runall` once more: every paper finished before the
       plain stage gets it (about 45 papers, about $1 each), then rebuild the bank and report.
 - [ ] **BANK-03** Two passed questions break the contract (no answer line or no reasons
