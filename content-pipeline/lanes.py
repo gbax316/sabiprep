@@ -48,6 +48,73 @@ def note_limit(text):
     open(OUT_UNTIL, 'w', encoding='utf8').write((until + datetime.timedelta(minutes=2)).isoformat(timespec='minutes'))
 
 
+# Claude has no lane to fall back to, so its limit is waited out rather than
+# skipped. On 2026-10-21 Claude hit its session limit at 05:00 while Codex was
+# out: every worker returned a 429 in seconds, 108 papers failed in 15 minutes
+# and the driver exited. Now the first 429 records the reset, and every worker
+# in every paper sleeps until then and repeats the same call.
+CLAUDE_OUT_UNTIL = os.path.join(HERE, 'work', '_lanes', 'claude-out-until.txt')
+
+
+def claude_limited(stdout):
+    """The reset time if this `claude -p --output-format json` result is a usage
+    limit, else None. 'resets 6:20am (Africa/Lagos)' reads as local time, the
+    next one if already past; an unreadable reset waits an hour and asks again."""
+    try:
+        sess = json.loads(stdout)
+    except Exception:
+        return None
+    if sess.get('api_error') != 'usage_limit_reached' and sess.get('api_error_status') != 429:
+        return None
+    now = datetime.datetime.now()
+    m = re.search(r'resets\s+(?:(\w{3})\w* (\d+),?\s+(?:at\s+)?)?(\d{1,2})(?::(\d{2}))?\s*([ap]m)',
+                  sess.get('result') or '', re.I)
+    if not m:
+        return now + datetime.timedelta(hours=1)
+    mon, day, hh, mm, ap = m.groups()
+    hour = int(hh) % 12 + (12 if ap.lower() == 'pm' else 0)
+    until = now.replace(hour=hour, minute=int(mm or 0), second=0, microsecond=0)
+    if mon:
+        try:
+            until = until.replace(month=datetime.datetime.strptime(mon, '%b').month, day=int(day))
+        except ValueError:
+            pass
+    if until <= now:
+        until += datetime.timedelta(days=1)
+    return until
+
+
+def note_claude_limit(until):
+    os.makedirs(os.path.dirname(CLAUDE_OUT_UNTIL), exist_ok=True)
+    open(CLAUDE_OUT_UNTIL, 'w', encoding='utf8').write(
+        (until + datetime.timedelta(minutes=2)).isoformat(timespec='minutes'))
+
+
+def wait_for_claude(log=print):
+    """Sleep until Claude's recorded reset, if one is still ahead."""
+    try:
+        until = datetime.datetime.fromisoformat(open(CLAUDE_OUT_UNTIL, encoding='utf8').read().strip())
+    except (OSError, ValueError):
+        return
+    if datetime.datetime.now() < until:
+        log(f'  Claude out of usage, waiting until {until:%a %H:%M}')
+        while datetime.datetime.now() < until:
+            time.sleep(60)
+
+
+def run_claude(cmd, text, cwd, timeout, log=print):
+    """subprocess.run for a `claude -p` worker that waits out a usage limit and
+    repeats the call, so a limit never counts as a failed attempt."""
+    while True:
+        wait_for_claude(log)
+        p = subprocess.run(cmd, input=text, cwd=cwd, capture_output=True, text=True,
+                           encoding='utf8', timeout=timeout)
+        until = claude_limited(p.stdout)
+        if until is None:
+            return p
+        note_claude_limit(until)
+
+
 def _codex(prompt, schema_path, images, timeout):
     back = codex_out()
     if back:
@@ -94,8 +161,7 @@ def _claude(prompt, schema_path, images, timeout, model):
            '--permission-mode', 'acceptEdits', '--output-format', 'json', '--no-session-persistence',
            '--allowedTools', 'Read', 'Write', 'Edit', 'Glob', 'Grep']
     try:
-        p = subprocess.run(cmd, input=text, cwd=wd, capture_output=True, text=True,
-                           encoding='utf8', timeout=timeout)
+        p = run_claude(cmd, text, wd, timeout)
         open(os.path.join(wd, 'session.json'), 'w', encoding='utf8').write(p.stdout or '')
         cost = float(json.loads(p.stdout).get('total_cost_usd') or 0) if p.stdout else 0.0
         # strict=False: a model sometimes writes a raw line break inside a string,

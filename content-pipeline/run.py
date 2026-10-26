@@ -33,6 +33,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 from common import (HERE, OUT, load_config, load_items, parse_unit, subject_key,
                     taxonomy_path, unit_name, units)
+from lanes import run_claude
 
 PIPE = json.load(open(os.path.join(HERE, 'pipeline.json'), encoding='utf8'))
 
@@ -217,8 +218,7 @@ def claude_worker(ctx, name, brief, subs, files, model_key, validate, add_dirs=(
         cmd += ['--allowedTools', 'Read', 'Write', 'Edit', 'Glob', 'Grep']
         t0 = time.time()
         try:
-            p = subprocess.run(cmd, input=text, cwd=wd, capture_output=True, text=True,
-                               encoding='utf8', timeout=PIPE['worker_timeout_minutes'] * 60)
+            p = run_claude(cmd, text, wd, PIPE['worker_timeout_minutes'] * 60, ctx.log)
         except subprocess.TimeoutExpired:
             raise StageError(f'{name}: worker timed out after {PIPE["worker_timeout_minutes"]} minutes')
         open(os.path.join(wd, f'session.{attempt}.json'), 'w', encoding='utf8').write(p.stdout or '')
