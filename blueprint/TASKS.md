@@ -342,6 +342,11 @@ second lane: about $1,200, and about a day of run time. Spend is in `run.py stat
       and the driver exited. $665.54 of its $1,557.89 spent. The papers resume where they
       stopped. Before restarting, the driver needs the Codex breaker's twin for Claude: on
       `usage_limit_reached`, pause until the reset instead of failing the paper.
+      **Restarted 2026-10-26 21:00** with that pause in place (f5ea45c): 109 papers, 10 at a
+      time, $892.35 left of the cap, in the "paper run" terminal tab via `work/runall/drive.ps1`,
+      log `work/runall/driver-2026-10-26.log`. Maths WAEC 2021 fails export again: its Q20 and
+      Q26 share the stem "Which of the following is not an exterior angle of a regular
+      polygon?" with different options, and the import's duplicate-text rule refuses the pair.
 - [ ] **BANK-02a** When the run ends, run `runall` once more: every paper finished before the
       plain stage gets it (about 45 papers, about $1 each), then rebuild the bank and report.
 - [ ] **BANK-03** Two passed questions break the contract (no answer line or no reasons
