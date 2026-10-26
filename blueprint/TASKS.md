@@ -336,6 +336,12 @@ second lane: about $1,200, and about a day of run time. Spend is in `run.py stat
       after Codex returns": at 00:06 work/handover.py stops the first driver, lets its papers
       finish, stamps them, and starts one driver with 10 workers on the rest of the cap. The
       driver now reads work/runall/control.json (workers, budget, stop) while it runs.
+      **Stopped 2026-10-21 05:18, found 2026-10-26.** The 10-worker driver did 79 papers, then
+      Claude hit its session limit (429 `usage_limit_reached`, reset 06:20) while Codex was out
+      until 05:34. Every worker returned nothing in seconds, so 108 papers failed in 15 minutes
+      and the driver exited. $665.54 of its $1,557.89 spent. The papers resume where they
+      stopped. Before restarting, the driver needs the Codex breaker's twin for Claude: on
+      `usage_limit_reached`, pause until the reset instead of failing the paper.
 - [ ] **BANK-02a** When the run ends, run `runall` once more: every paper finished before the
       plain stage gets it (about 45 papers, about $1 each), then rebuild the bank and report.
 - [ ] **BANK-03** Two passed questions break the contract (no answer line or no reasons
